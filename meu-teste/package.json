@@ -2,9 +2,10 @@
   "name": "meu-teste",
   "version": "1.0.0",
   "description": "Meu projeto com Agente",
-  "main": "index.js",
+  "main": "Agente.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node Agente.js",
+    "dev": "node Agente.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
