@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Raleway:wght@300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000000",
+              "on-tertiary-container": "#838484",
+              "primary-fixed": "#e2e2e2",
+              "secondary-fixed": "#e5e2e1",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed": "#1a1c1c",
+              "on-primary-fixed": "#1b1b1b",
+              "tertiary-container": "#1a1c1c",
+              "secondary": "#5f5e5e",
+              "on-secondary-fixed-variant": "#474646",
+              "on-secondary-fixed": "#1c1b1b",
+              "surface-container": "#eeeeee",
+              "surface-container-low": "#f3f3f4",
+              "surface-bright": "#f9f9f9",
+              "error": "#ba1a1a",
+              "inverse-on-surface": "#f0f1f1",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e2e2e2",
+              "on-primary-fixed-variant": "#474747",
+              "on-secondary-container": "#656464",
+              "surface-variant": "#e2e2e2",
+              "surface": "#f9f9f9",
+              "primary-container": "#1b1b1b",
+              "tertiary": "#000000",
+              "outline-variant": "#cfc4c5",
+              "primary-fixed-dim": "#c6c6c6",
+              "inverse-surface": "#2f3131",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#e3e2e2",
+              "surface-dim": "#dadada",
+              "on-primary-container": "#848484",
+              "on-error": "#ffffff",
+              "background": "#f9f9f9",
+              "surface-container-high": "#e8e8e8",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#c6c6c6",
+              "surface-tint": "#5e5e5e",
+              "on-background": "#1a1c1c",
+              "on-tertiary-fixed-variant": "#464747",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e5e2e1",
+              "tertiary-fixed-dim": "#c7c6c6",
+              "on-surface-variant": "#4c4546",
+              "outline": "#7e7576",
+              "on-error-container": "#93000a",
+              "on-surface": "#1a1c1c",
+              "secondary-fixed-dim": "#c8c6c5"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .hero-slider-container {
+            perspective: 1000px;
+        }
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .nav-line {
+            width: 40px;
+            height: 1px;
+            background-color: white;
+            transition: width 0.3s ease, opacity 0.3s ease;
+        }
+        .nav-btn:hover .nav-line {
+            width: 60px;
+        }
+        .text-justify-none { text-align-last: left; }
+        .masonry-item:nth-child(even) { margin-top: 4rem; }
+        .letter-spacing-huge { letter-spacing: 0.3em; }
+        .line-divider { height: 0.5px; width: 100px; background-color: currentColor; opacity: 0.3; }
+        .noise-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+        }
+        .custom-nav-line {
+            width: 40px;
+            height: 1px;
+            background-color: white;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .custom-nav-btn:hover .custom-nav-line {
+            width: 70px;
+        }
+        .testimonial-slide {
+            display: none;
+            animation: slideFade 0.6s ease-in-out forwards;
+        }
+        .testimonial-slide.active {
+            display: block;
+        }
+        @keyframes slideFade {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary">
+<header class="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-50 bg-transparent">
+<div class="text-lg font-serif tracking-tight text-white uppercase font-headline">
+        House Mazzutti
+    </div>
+<nav class="hidden md:flex items-center space-x-12 ml-auto mr-12">
+<a class="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="#">HOME</a>
+<a class="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="#">SOBRE</a>
+<a class="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="#">PORTFÓLIO</a>
+<a class="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="#">BLOG</a>
+<a class="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="#">CONTATO</a>
+</nav>
+<div class="flex items-center space-x-6 text-white">
+<button class="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform flex flex-col space-y-1.5 w-6">
+<span class="block w-full h-[1px] bg-current"></span>
+<span class="block w-full h-[1px] bg-current"></span>
+<span class="block w-full h-[1px] bg-current"></span>
+</button>
+</div>
+</header>
+<main>
+<section class="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style="height: 105vh;">
+<div class="absolute inset-0 z-0"><div class="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d]"></div></div>
+<div class="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
+<div class="max-w-4xl fade-in">
+<span class="font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block">STRATEGIC HOUSE</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light">
+                    A arquitetura do<br/>seu posicionamento.
+                </h1>
+<button class="group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+                    CONHEÇA O MÉTODO
+                </button>
+</div>
+</div>
+<div class="absolute inset-y-0 left-12 flex items-center z-20">
+<button class="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity">
+<div class="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
+<div class="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16"></div>
+<svg class="-ml-1" fill="none" height="20" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="20">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+</div>
+</button>
+</div>
+<div class="absolute inset-y-0 right-12 flex items-center z-20">
+<button class="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity">
+<div class="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
+<svg class="-mr-1" fill="none" height="20" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="20">
+<polyline points="9 18 15 12 9 6"></polyline>
+</svg>
+<div class="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16"></div>
+</div>
+</button>
+</div>
+</section>
+<section class="bg-white py-12 mx-auto" style="max-width: 95vw;">
+<div class="mb-12 text-center flex flex-col items-center">
+<span class="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">BRANDING &amp; POSICIONAMENTO</span>
+<h2 class="font-headline text-3xl text-black">Trabalhos Selecionados</h2>
+<div class="line-divider mt-6 text-black"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+<div class="relative group bg-white aspect-[4/3] overflow-hidden">
+<img alt="Minimalist architecture" class="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe4mdbRqXBNKzzngv3g_VBLp6GYZlgzzZZODsLL8bHFzPo4h2MQ_wh08IE0TeoTAnYp7r8cqXbKU7Xa5wklKFRY-ZWrYIpRSmFUuQapR_3VovlHbwzL2DnDZwXwFKOowF6p1RYMEOqh1_GwWe1FY9MUqL_MHVQ04dnmk4YyX2I1Nbz3zL-t4bcyXEQ_COqtJmLZiwYf076YUYpoITRuaCFPCaMTBWkm6LYq7RU4l8f9gyRN9hk8omSajhnHc8pNlB8BAi1ZerKdL0"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
+<p class="font-headline text-sm text-black italic">Projeto Essência</p>
+<p class="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Branding Estratégico</p>
+</div>
+</div>
+<div class="relative group bg-white aspect-[4/3] overflow-hidden">
+<img alt="Fashion portrait" class="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmEdY5S8J-r2-yA6KBnPbY8KJ_kzSWmaDtw4KI3V4XfuFw9crzbRkv8ODbEuL4WNOjSHEaBI3bT-J6Fg0SnQ7-F55Z7jP7UT2ZzHsyDIVGu2G67mWa2Qxorjl-Upf9isBLdGue5dKoH7891HWpO6iT5EbeCFrJCwFVIQo8-XVRq_ZaV_sJsyb9zfKO_Dm-QjDzX38uBl3zJodj4KP7GattGIKHVJ8Hkn24EzNVoNBWMnUB3avAJoDg_S2DzRoUhd5-bugSQgDzSB0"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
+<p class="font-headline text-sm text-black italic">Movimento Urbano</p>
+<p class="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Direção Criativa</p>
+</div>
+</div>
+<div class="relative group bg-white aspect-[4/3] overflow-hidden">
+<img alt="Tailoring detail" class="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADvGTrzOI5PEUbaeC7AW7usgMalF3qizDJJ0KUpcNG6m9gEpidT-mTLmb1F3zpPaKsm5aOEastKBq1gcgasPBFL2aQQT1TCsitpTNJuy9KBP4cgyFtyvk2nUo1WqXii9tLH0TPR_h0HV84zRlZFfEnEAJ344iW4H6sfL7IC47U5veqjHNq4WUq6MqzNrcQ8otKdLxpwV9j4bBHQPkyEGa7anAANlMNVkXbnsoFAoDyBX7opOcB3BSImGRftoLeyoU4cmneRk6ZgTk"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
+<p class="font-headline text-sm text-black italic">Alfaiataria Moderna</p>
+<p class="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Posicionamento</p>
+</div>
+</div>
+<div class="relative group bg-white aspect-[4/3] overflow-hidden">
+<img alt="Winding road" class="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKnc6oH_hYvu13IeEb61FyxFkY3Edhlt2km8Jry0SlDIZ7KlpeE-AVwYRezdk2O_XEVH34_DobRA7QJY4YofFZUSMXG3BeTc5IdaApkxKb3Z1Zd14giFedWaYlTg7jx83cIP-fHnIAPoHKE93UEOWCj_iGqRTd0q2BO_l4h_oMK2TIBNGbh5QW43fUo-FhcFxpTF9A5vIi9kKaAk-ZapE8zkT6Uk3Fe-VRw3DSK5F3AiqnbXBwPhBzkQ-MTLhF1bCsplLY712XU5c"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
+<p class="font-headline text-sm text-black italic">Horizonte</p>
+<p class="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Produção de Imagem</p>
+</div>
+</div>
+<div class="relative group bg-white aspect-[4/3] overflow-hidden">
+<img alt="Jewelry detail" class="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkA7crS5fwR9M1uHLxWGre8utOIQhLns1favg4_bqxW4l-Rhz-kocfZxJb59JIHoZo0AuTsli_xQD1X_z3OtXWtQY9FQl5HVclTTuNUMQKMWYswMESC7LVKN8Gt7F_wJV_yWoTwt54-Ob2IAfKZnaLu1muOYHzXGofG-8DJfHBXFuGu6w16J51hk_p07tLwwhj9yuhYxTb-0bc1SSn0oSkyr0OHqu7L7my2rY0YBwqS364_RTWjKGw1-ModtNWEmtX0VrKG9bErhw"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
+<p class="font-headline text-sm text-black italic">Prestigio</p>
+<p class="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Branding</p>
+</div>
+</div>
+<div class="relative group bg-white aspect-[4/3] overflow-hidden">
+<img alt="Interior design" class="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIHY560gS2ik_2GrZpF30j-g-u298R2IvVTv99wXYupz5jW7ePfhi3hHeOSQJ2w4D9995OdagrtsKYEq0WGyCiUbF4XqHAZy8VekCTL3M9cJodpb-uNjUXVWrV7ILlVTT2zmqMUAfKFTDlPXy7VUL9uEwNMf_12u39Nub3mRFN41ZWd3eCg9gWp2qZXBlD5S3HKhbGnZX9ITFbVDfNSTbkEuWv7VCiQZHtzcmfE_8zY8HzN17A0gHtn7s99IzT0-_ft0gKKjVhO8"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
+<p class="font-headline text-sm text-black italic">Espaço</p>
+<p class="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Curadoria</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
+<div class="max-w-[1260px] mx-auto text-center mb-12">
+<div class="mb-20">
+<span class="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">ATUAMOS COM</span>
+<h2 class="font-headline text-5xl text-black">Integrado. Estratégico. Intencional.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center space-y-4">
+<span class="material-symbols-outlined text-4xl font-extralight" data-icon="brush">brush</span>
+<h3 class="font-headline text-2xl">Branding Estratégico</h3>
+<p class="text-secondary leading-relaxed font-light text-sm max-w-xs">
+                        Construção de fundamentos de marca. DNA, tom de voz e narrativa que transformam negócios em autoridades de mercado.
+                    </p>
+</div>
+<div class="flex flex-col items-center space-y-4">
+<span class="material-symbols-outlined text-4xl font-extralight" data-icon="visibility">visibility</span>
+<h3 class="font-headline text-2xl">Direção Criativa</h3>
+<p class="text-secondary leading-relaxed font-light text-sm max-w-xs">
+                        A curadoria estética que traduz a estratégia em impacto visual. Onde a arte e o negócio se encontram.
+                    </p>
+</div>
+<div class="flex flex-col items-center space-y-4">
+<span class="material-symbols-outlined text-4xl font-extralight" data-icon="photo_camera">photo_camera</span>
+<h3 class="font-headline text-2xl">Produção de Imagem</h3>
+<p class="text-secondary leading-relaxed font-light text-sm max-w-xs">
+                        Execução técnica de alto padrão. Imagens que comunicam prestígio e desejo sem a necessidade de legendas.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="relative bg-zinc-50/50 px-12 overflow-hidden py-16">
+<div class="noise-overlay absolute inset-0"></div>
+<div class="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
+<div class="w-full lg:w-1/4 flex-shrink-0">
+<div class="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
+<img alt="B&amp;W editorial photography" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg"/>
+</div>
+</div>
+<div class="flex-grow w-full py-4">
+<div class="grid grid-cols-1 gap-y-8">
+<div class="max-w-xl text-left">
+<h2 class="font-headline text-xl md:text-2xl italic leading-snug mb-2">
+                            “Marcas fortes não disputam atenção. <br/>
+<span class="not-italic">Elas ocupam espaço.</span>”
+                        </h2>
+<p class="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Filosofia House</p>
+</div>
+<div class="flex justify-end">
+<div class="max-w-xl text-right">
+<h3 class="font-headline text-xl md:text-2xl leading-snug mb-2">
+                                A maioria constrói visibilidade. <br/>
+<span class="italic">Poucos constroem posição.</span>
+</h3>
+<p class="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Diferenciação</p>
+</div>
+</div>
+<div class="max-w-xl text-left">
+<p class="font-headline text-lg md:text-xl italic leading-snug text-zinc-800 mb-2">
+                            Não é sobre produzir conteúdo. É sobre o que sua marca comunica — com ou sem presença.
+                        </p>
+<p class="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Comunicação Intencional</p>
+</div>
+<div class="flex justify-end">
+<div class="max-w-xl text-right">
+<h3 class="font-headline text-xl md:text-2xl leading-tight mb-2">
+                                Existe um point onde a execução deixa de resolver. E a falta de direção começa a aparecer.
+                            </h3>
+<p class="font-headline text-lg italic text-zinc-400">É nesse ponto que entramos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
+<div class="max-w-[1400px] mx-auto">
+<div class="text-center mb-12">
+<span class="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
+<h2 class="font-headline text-3xl md:text-4xl text-black">Estratégia define. Imagem posiciona. Execução sustenta.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
+<div class="space-y-8 flex flex-col items-center text-center mb-12">
+<div class="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+<img class="w-full h-full object-cover grayscale" data-alt="professional male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk"/>
+<div class="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+<a class="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+<a class="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<p class="font-headline text-2xl font-medium">Lucas Mazzutti</p>
+<p class="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Direção Criativa</p>
+</div>
+</div>
+<div class="space-y-8 flex flex-col items-center text-center mb-12">
+<div class="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+<img class="w-full h-full object-cover grayscale" data-alt="professional female portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g"/>
+<div class="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+<a class="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+<a class="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<p class="font-headline text-2xl font-medium">Elena Silva</p>
+<p class="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Estratégia de Marca</p>
+</div>
+</div>
+<div class="space-y-8 flex flex-col items-center text-center mb-12">
+<div class="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+<img class="w-full h-full object-cover grayscale" data-alt="professional male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8"/>
+<div class="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+<a class="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+<a class="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<p class="font-headline text-2xl font-medium">Arthur Porto</p>
+<p class="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produção</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS SECTION -->
+<section class="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
+<div class="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
+<span class="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
+</div>
+<div class="absolute left-16 inset-y-0 flex items-center z-20">
+<button class="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onclick="prevSlide()">
+<div class="custom-nav-line mr-2"></div>
+<svg class="transform -translate-x-2" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="24">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+</button>
+</div>
+<div class="absolute right-16 inset-y-0 flex items-center z-20">
+<button class="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onclick="nextSlide()">
+<svg class="transform translate-x-2" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="24">
+<polyline points="9 18 15 12 9 6"></polyline>
+</svg>
+<div class="custom-nav-line ml-2"></div>
+</button>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center">
+<div class="mb-4">
+<span class="font-['Raleway'] uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
+<h2 class="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+</div>
+<div class="flex flex-col items-center">
+<div class="relative w-full overflow-hidden mb-1">
+<div class="testimonial-slide active" id="slide-0">
+<h3 class="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
+                            "A House Mazzutti trouxe uma clareza que eu não conseguia encontrar sozinho. Eles não apenas criaram uma marca, eles criaram um novo patamar para o meu negócio."
+                        </h3>
+<div class="pt-3">
+<p class="font-['Raleway'] uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">JULIANO R. — FOUNDER &amp; CEO</p>
+</div>
+</div>
+<div class="testimonial-slide" id="slide-1">
+<h3 class="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
+                            "O posicionamento estratégico mudou completamente a percepção do mercado sobre nossos serviços. A estética é apenas a ponta do iceberg."
+                        </h3>
+<div class="pt-3">
+<p class="font-['Raleway'] uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">MARINA S. — DIRETORA DE ARTE</p>
+</div>
+</div>
+<div class="testimonial-slide" id="slide-2">
+<h3 class="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
+                            "Trabalhar com o Lucas e sua equipe foi o melhor investmento do ano. Eles entendem de negócio tanto quanto entendem de design."
+                        </h3>
+<div class="pt-3">
+<p class="font-['Raleway'] uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">RICARDO M. — INVESTIDOR</p>
+</div>
+</div>
+</div>
+<div class="flex space-x-3 pt-4">
+<button class="indicator w-8 h-[1px] bg-white transition-opacity duration-300" id="indicator-0" onclick="goToSlide(0)"></button>
+<button class="indicator w-8 h-[1px] bg-white opacity-30 transition-opacity duration-300" id="indicator-1" onclick="goToSlide(1)"></button>
+<button class="indicator w-8 h-[1px] bg-white opacity-30 transition-opacity duration-300" id="indicator-2" onclick="goToSlide(2)"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- UNIFIED POSICIONAMENTO & AUTORIDADE SECTION - EDITED -->
+<section class="bg-white px-12 py-20">
+<div class="max-w-[1400px] mx-auto flex flex-col space-y-[24px]">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
+<!-- SWAPPED: Images now on the LEFT -->
+<div class="grid grid-cols-2 gap-[8px] order-2">
+<div class="col-span-2 aspect-square overflow-hidden bg-zinc-50">
+<img alt="B&amp;W large placeholder" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkiQLtRcTbgce0k0oFWm4mlyb7RRXITzmnT-XtfQ2olO6jM2s71xr5xw5V6Rnii-hngJvHHL34YpjPIRdRfovLcbKY4QBgolXMJczrB8f2Tm9x4X2zH9ScZqlnIyN5GerHmP_0Q-ZgBSqqlVvThL6zDNMpgCG6XnS-vN5fogJc7kw-W5MNIeyILgIK9WwgyNQSsPFS13O3DxvzFfViYPBfjKlLrMB8ClfVr3JjzfzVIpYs8kmvTZO6VDCdARfX9jRaozLBbYICmQ0"/>
+</div>
+<div class="overflow-hidden bg-zinc-100 aspect-[2/4]">
+<img alt="Man writing B&amp;W" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIHY560gS2ik_2GrZpF30j-g-u298R2IvVTv99wXYupz5jW7ePfhi3hHeOSQJ2w4D9995OdagrtsKYEq0WGyCiUbF4XqHAZy8VekCTL3M9cJodpb-uNjUXVWrV7ILlVTT2zmqMUAfKFTDlPXy7VUL9uEwNMf_12u39Nub3mRFN41ZWd3eCg9gWp2qZXBlD5S3HKhbGnZX9ITFbVDfNSTbkEuWv7VCiQZHtzcmfE_8zY8HzN17A0gHtn7s99IzT0-_ft0gKKjVhO8"/>
+</div>
+</div>
+<!-- SWAPPED: Text now on the RIGHT -->
+<div class="flex flex-col items-start text-left order-1">
+<!-- POSICIONAMENTO Block -->
+<div class="mb-12">
+<span class="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">POSICIONAMENTO</span>
+<h2 class="font-headline text-black leading-tight mb-4 md:text-4xl">Quando existe clareza — a comunicação simplifica.</h2>
+<p class="text-secondary leading-loose max-w-md font-light mb-6 text-[12px]">
+                    A simplicidade é o último estágio da sofisticação. Trabalhamos para remover o ruído e deixar apenas a essência do que torna sua marca única.
+                </p>
+<a class="inline-block px-10 py-5 border border-black text-black font-label uppercase tracking-[0.2em] text-[8px] hover:bg-black hover:text-white transition-all duration-300" href="#">
+                    LER MAIS
+                </a>
+</div>
+<!-- Visual Separator Image -->
+<div class="w-full h-48 overflow-hidden bg-zinc-100 mb-20">
+<img alt="Visual separator" class="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWM9LTdgigUXU-ARkrjEgnxbL1ujH595AoGTSmyL2KNSgbxAaA1i7Cd5cjAzXhsqSQFSrGjEvgaz37YmO-79RZCU6J6LMHEuV5Amyjj5amYPAyhB1X0ySQP297SeRH3SSOVsEyrYsOdPeQkKx4RWbKxD__UtjmT8LtPRflmw2q3N48kmA6vGLUcFUVO6N3JOLLktTEJv7YEA3jsWFXeu8Iu0vG81Y-n8JkXDK74k8WsYJOdrqtMyXzjGMECr7rqJju7Z2KHSO1dis"/>
+</div>
+<!-- AUTORIDADE Block - MOVED DOWN with mb-20 above -->
+<div class="flex flex-col items-start text-left mt-[120px]">
+<span class="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">AUTORIDADE</span>
+<h2 class="font-headline text-black leading-tight mb-4 md:text-4xl">Não é sobre parecer melhor.</h2>
+<p class="text-secondary leading-loose max-w-md font-light mb-6 text-[12px]">
+                    É sobre não precisar provar. Se ainda existe dúvida, falta estratégia. Se existe direção, o crescimento se torna consequência.
+                </p>
+<a class="inline-block px-10 py-5 border border-black text-black font-label uppercase tracking-[0.2em] text-[8px] hover:bg-black hover:text-white transition-all duration-300 mb-12" href="#">
+                    LER MAIS
+                </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
+<div class="noise-overlay absolute inset-0"></div>
+<div class="relative z-10 max-w-4xl mx-auto space-y-16">
+<h2 class="font-headline text-4xl md:text-7xl text-white leading-tight italic">
+                Se sua marca precisa de posicionamento — <span class="not-italic">seguimos.</span>
+</h2>
+<div class="flex flex-col items-center space-y-8">
+<a class="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="#">
+                    INICIAR CONVERSA ESTRATÉGICA
+                </a>
+<p class="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos tentativa. Mais direção.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+<div class="flex flex-col items-center text-center">
+<div class="text-3xl font-serif text-neutral-50 mb-12">House Mazzutti</div>
+<div class="flex space-x-8 mb-12">
+<a class="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
+<a class="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
+<a class="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">HOME</a>
+<a class="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">STUDIO</a>
+<a class="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">PORTFOLIO</a>
+<a class="font-label text-[10px] text-neutral-50 text-neutral-300 transition-colors" href="#">ABOUT</a>
+<a class="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">CONTACT</a>
+</nav>
+<div class="font-label text-[9px] text-neutral-700">
+                © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+            </div>
+</div>
+</footer>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const indicators = document.querySelectorAll('.indicator');
+
+    function goToSlide(index) {
+        if (slides.length === 0) return;
+        slides[currentSlide].classList.add('hidden');
+        slides[currentSlide].classList.remove('block');
+        if (indicators.length > 0) indicators[currentSlide].classList.add('opacity-30');
+
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides[currentSlide].classList.remove('hidden');
+        slides[currentSlide].classList.add('block');
+        if (indicators.length > 0) indicators[currentSlide].classList.remove('opacity-30');
+    }
+
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+</script></body></html>

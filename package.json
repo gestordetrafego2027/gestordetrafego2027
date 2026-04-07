@@ -1,0 +1,22 @@
+{
+  "name": "house-mazzutti-core",
+  "version": "1.0.0",
+  "description": "Digital Ecosystem - House Mazzutti",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "antigravity dev",
+    "build": "antigravity build",
+    "start": "antigravity start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "antigravity": "latest",
+    "dotenv": "^16.0.0",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
