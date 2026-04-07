@@ -1,17 +1,19 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@100..900&family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 @theme {
-  --font-headline: "Newsreader", serif;
-  --font-body: "Inter", sans-serif;
-  --font-label: "Raleway", sans-serif;
+  /* Mapping to next/font variables */
+  --font-headline: var(--font-newsreader), serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-label: var(--font-raleway), sans-serif;
 
+  /* Pure Aesthetic Branding */
   --color-primary: #000;
   --color-secondary: #fff;
   --color-background: #000;
   --color-on-background: #fff;
   
+  /* Luxury Breathing Room */
   --spacing-luxury: 12rem;
 }
 
@@ -83,4 +85,4 @@
 
 .nav-btn:hover .nav-line {
   width: 80px;
-}
+}
