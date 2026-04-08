@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 /**
  * HOME PAGE - HOUSE MAZZUTTI
@@ -47,18 +48,18 @@ export default function Home() {
                     House Mazzutti
                 </div>
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-                    <a
+                    <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="#"
+                        href="/"
                     >
                         HOME
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="#"
+                        href="/about"
                     >
                         SOBRE
-                    </a>
+                    </Link>
                     <a
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
                         href="#"
@@ -581,12 +582,12 @@ export default function Home() {
                         </a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <a
+                        <Link
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
-                            href="#"
+                            href="/"
                         >
                             HOME
-                        </a>
+                        </Link>
                         <a
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
                             href="#"
@@ -599,9 +600,9 @@ export default function Home() {
                         >
                             PORTFOLIO
                         </a>
-                        <a className="font-label text-[10px] text-neutral-300 transition-colors" href="#">
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">
                             ABOUT
-                        </a>
+                        </Link>
                         <a
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
                             href="#"
