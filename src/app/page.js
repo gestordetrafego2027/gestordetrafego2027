@@ -68,13 +68,13 @@ export default function Home() {
                     </Link>
                     <a
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="#"
+                        href="#blog"
                     >
                         BLOG
                     </a>
                     <a
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="#"
+                        href="#contato"
                     >
                         CONTATO
                     </a>
@@ -588,24 +588,21 @@ export default function Home() {
                         >
                             HOME
                         </Link>
-                        <a
+                        <Link
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
-                            href="#"
+                            href="/about"
                         >
-                            STUDIO
-                        </a>
+                            ABOUT
+                        </Link>
                         <Link
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
                             href="/portfolio"
                         >
                             PORTFOLIO
                         </Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">
-                            ABOUT
-                        </Link>
                         <a
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
-                            href="#"
+                            href="#contact"
                         >
                             CONTACT
                         </a>
