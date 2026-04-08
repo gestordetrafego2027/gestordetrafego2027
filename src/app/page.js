@@ -60,12 +60,12 @@ export default function Home() {
                     >
                         SOBRE
                     </Link>
-                    <a
+                    <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="#"
+                        href="/portfolio"
                     >
                         PORTFÓLIO
-                    </a>
+                    </Link>
                     <a
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
                         href="#"
@@ -594,12 +594,12 @@ export default function Home() {
                         >
                             STUDIO
                         </a>
-                        <a
+                        <Link
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
-                            href="#"
+                            href="/portfolio"
                         >
                             PORTFOLIO
-                        </a>
+                        </Link>
                         <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">
                             ABOUT
                         </Link>
