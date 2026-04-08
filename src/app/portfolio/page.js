@@ -107,14 +107,38 @@ export default function Portfolio() {
     <div className="page-portfolio selection:bg-black selection:text-white">
       <h1 className="sr-only">Portfólio de Branding Estratégico e Posicionamento de Marca</h1>
 
-      {/* TOP NAV BAR - SIMPLIFIED */}
-      <header className="fixed top-0 w-full z-50 flex justify-between items-center px-4 h-24 bg-transparent transition-opacity duration-300">
-        <div className="text-2xl font-headline tracking-tighter text-black ml-[60px] uppercase">
+      {/* TOP NAV BAR - FULL NAVIGATION */}
+      <header className="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-10 bg-transparent transition-opacity duration-300">
+        <div className="text-lg font-headline tracking-tight text-black uppercase font-light">
           <Link href="/">House Mazzutti</Link>
         </div>
-        <div className="flex items-center gap-4 pr-4">
-          <button className="material-symbols-outlined text-black hover:opacity-70 transition-opacity duration-300">
-            menu
+        
+        <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
+          <Link href="/" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+            HOME
+          </Link>
+          <Link href="/about" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+            SOBRE
+          </Link>
+          <Link href="/portfolio" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+            PORTFÓLIO
+          </Link>
+          <a href="#blog" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+            BLOG
+          </a>
+          <a href="#contato" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+            CONTATO
+          </a>
+        </nav>
+
+        <div className="flex items-center space-x-6 text-black md:hidden">
+          <button className="hover:opacity-70">
+            <span className="material-symbols-outlined">search</span>
+          </button>
+          <button className="flex flex-col space-y-1.5 w-6">
+            <span className="block w-full h-[1px] bg-black"></span>
+            <span className="block w-full h-[1px] bg-black"></span>
+            <span className="block w-full h-[1px] bg-black"></span>
           </button>
         </div>
       </header>
