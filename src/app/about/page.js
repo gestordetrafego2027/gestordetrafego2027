@@ -54,13 +54,13 @@ export default function About() {
                     <Link href="/about" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         SOBRE
                     </Link>
-                    <a href="#" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
+                    <Link href="/portfolio" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         PORTFÓLIO
-                    </a>
-                    <a href="#" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
+                    </Link>
+                    <a href="#blog" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         BLOG
                     </a>
-                    <a href="#" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
+                    <a href="#contato" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         CONTATO
                     </a>
                 </nav>
@@ -310,10 +310,9 @@ export default function About() {
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
                         <Link href="/" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">HOME</Link>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">STUDIO</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">PORTFOLIO</a>
-                        <Link href="/about" className="font-label text-[10px] text-neutral-300 transition-colors">ABOUT</Link>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">CONTACT</a>
+                        <Link href="/about" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">ABOUT</Link>
+                        <Link href="/portfolio" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">PORTFOLIO</Link>
+                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#contact">CONTACT</a>
                     </nav>
                     <div className="font-label text-[9px] text-neutral-700">
                         © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
