@@ -1,4 +1,4 @@
-import { Newsreader, Inter, Raleway } from "next/font/google";
+import { Newsreader, Inter, Raleway, Playfair_Display, Montserrat, Work_Sans } from "next/font/google";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -21,9 +21,29 @@ const raleway = Raleway({
   weight: ["300", "400"],
 });
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: ["300", "400", "700"],
+});
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  variable: "--font-worksans",
+  display: "swap",
+  weight: ["300", "400"],
+});
+
 export const metadata = {
-  title: "House Mazzutti | Estratégia e Posicionamento",
-  description: "A arquitetura do seu posicionamento estratégico e branding.",
+  title: "House Mazzutti | Branding Estratégico e Posicionamento de Marca",
+  description: "House Mazzutti é uma estrutura de construção de marca focada em branding estratégico, posicionamento de autoridade e direção criativa de alto padrão.",
 };
 
 export default function RootLayout({ children }) {
@@ -35,7 +55,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className={`${newsreader.variable} ${inter.variable} ${raleway.variable} antialiased`}>
+      <body className={`${newsreader.variable} ${inter.variable} ${raleway.variable} ${playfair.variable} ${montserrat.variable} ${workSans.variable} antialiased`}>
         {children}
       </body>
     </html>

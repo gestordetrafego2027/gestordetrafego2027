@@ -7,6 +7,11 @@
     --font-label: var(--font-inter), sans-serif;
     --font-raleway: var(--font-raleway), sans-serif;
 
+    /* Novas fontes da página Sobre */
+    --font-playfair: var(--font-playfair), serif;
+    --font-montserrat: var(--font-montserrat), sans-serif;
+    --font-worksans: var(--font-worksans), sans-serif;
+
     /* Sincronização com tailwind.config.mjs para v4 */
     --color-primary: #000000;
     --color-on-background: #1a1c1c;
@@ -17,6 +22,7 @@
     --radius-default: 0px;
     --radius-lg: 0px;
     --radius-xl: 0px;
+    --radius-full: 9999px;
 }
 
 @layer base {
@@ -78,6 +84,7 @@
         pointer-events: none;
     }
 
+    /* Testimonial Nav */
     .custom-nav-line {
         width: 40px;
         height: 1px;
@@ -102,4 +109,97 @@
         from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
     }
+
+    /* PROGRESS BAR ANIMATION (ABOUT PAGE) */
+    @keyframes progress-load {
+        from { width: 0; }
+        to { width: var(--target-width); }
+    }
+    
+    .animate-progress {
+        animation: progress-load 1.5s ease-out forwards;
+    }
+
+    .percentage-tag {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #000000;
+        color: #ffffff;
+        padding: 2px 6px;
+        font-size: 10px;
+        font-family: var(--font-worksans), sans-serif;
+        white-space: nowrap;
+    }
+
+    /* GHOST TEXT EFFECTS */
+    .ghost-text { 
+        -webkit-text-stroke: 1px rgba(255,255,255,0.1); 
+        color: transparent; 
+        pointer-events: none; 
+    }
+
+    .line-growth { 
+        transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); 
+    }
+
+    /* LOGO LAYER HOVER (ABOUT PAGE) */
+    .logo-container {
+        position: relative;
+        overflow: hidden;
+        height: 144px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-layer {
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        white-space: nowrap;
+        height: 144px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-layer-1 {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    .logo-layer-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .logo-container:hover .logo-layer-1 {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .logo-container:hover .logo-layer-2 {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .hover-transition-refined {
+        transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+}
+
+/* THEME SCOPING FOR ABOUT PAGE */
+.page-about {
+    --font-headline: var(--font-playfair), serif;
+    --font-body: var(--font-montserrat), sans-serif;
+    --font-label: var(--font-worksans), sans-serif;
+    
+    /* Color overrides for About */
+    --color-on-tertiary-container: #ee4546;
+    --color-on-tertiary-fixed-variant: #930015;
+    --color-on-tertiary-fixed: #410004;
+    --color-tertiary-container: #410004;
+    --color-custom-grey: #1a1a1a;
+    --color-custom-light: #f5f5f5;
 }
