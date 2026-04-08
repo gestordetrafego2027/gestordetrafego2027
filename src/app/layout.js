@@ -1,4 +1,4 @@
-import { Newsreader, Inter, Raleway, Playfair_Display, Montserrat, Work_Sans } from "next/font/google";
+import { Newsreader, Inter, Raleway, Playfair_Display, Montserrat, Work_Sans, Noto_Serif } from "next/font/google";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -41,6 +41,14 @@ const workSans = Work_Sans({
   weight: ["300", "400"],
 });
 
+const notoSerif = Noto_Serif({
+  subsets: ["latin"],
+  variable: "--font-notoserif",
+  display: "swap",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+});
+
 export const metadata = {
   title: "House Mazzutti | Branding Estratégico e Posicionamento de Marca",
   description: "House Mazzutti é uma estrutura de construção de marca focada em branding estratégico, posicionamento de autoridade e direção criativa de alto padrão.",
@@ -55,7 +63,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className={`${newsreader.variable} ${inter.variable} ${raleway.variable} ${playfair.variable} ${montserrat.variable} ${workSans.variable} antialiased`}>
+      <body className={`${newsreader.variable} ${inter.variable} ${raleway.variable} ${playfair.variable} ${montserrat.variable} ${workSans.variable} ${notoSerif.variable} antialiased`}>
         {children}
       </body>
     </html>

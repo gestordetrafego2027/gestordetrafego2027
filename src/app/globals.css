@@ -11,6 +11,7 @@
     --font-playfair: var(--font-playfair), serif;
     --font-montserrat: var(--font-montserrat), sans-serif;
     --font-worksans: var(--font-worksans), sans-serif;
+    --font-notoserif: var(--font-notoserif), serif;
 
     /* Sincronização com tailwind.config.mjs para v4 */
     --color-primary: #000000;
@@ -202,4 +203,94 @@
     --color-tertiary-container: #410004;
     --color-custom-grey: #1a1a1a;
     --color-custom-light: #f5f5f5;
+}
+
+/* THEME SCOPING FOR PORTFOLIO PAGE */
+.page-portfolio {
+    --font-headline: var(--font-notoserif), serif;
+    --font-body: var(--font-inter), sans-serif;
+    --font-label: var(--font-inter), sans-serif;
+
+    background-color: #ffffff;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 20;
+}
+
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#transition-line {
+    width: 0;
+    height: 1px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+.is-animating #transition-overlay {
+    opacity: 1;
+}
+
+.is-animating #transition-line {
+    width: 200px;
+}
+
+.fine-line {
+    height: 1px;
+    background-color: #000000;
+    width: 40px;
+    opacity: 0.2;
+}
+
+.nav-arrow {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+    color: #000000;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow:hover:not(:disabled) {
+    opacity: 1;
+}
+
+.nav-arrow:disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
 }
