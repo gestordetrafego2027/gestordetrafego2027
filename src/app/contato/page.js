@@ -82,7 +82,7 @@ export default function ContatoPage() {
             <section className="flex flex-col md:flex-row w-full bg-white py-[60px] px-[40px]">
                 {/* Col 1: Map */}
                 <div className="w-full md:w-[60%] h-[400px] md:h-auto bg-surface-container-lowest grayscale contrast-125 opacity-90 max-w-[760px] mx-auto !h-[430px]">
-                    <iframe frameBorder="0" height="430" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=pt&amp;q=Rua%20General%20Chagas%20Santos,%201058%20Vila%20Sa%C3%BAde%20S%C3%A3o%20Paulo&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style={{filter: "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)"}} width="100%">
+                    <iframe frameBorder="0" height="430" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=pt&amp;q=Rua%20General%20Chagas%20Santos,%201058%20Vila%20Sa%C3%BAde%20S%C3%A3o%20Paulo&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style={{ filter: "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)" }} width="100%">
                     </iframe>
                 </div>
                 {/* Col 2: Info */}
@@ -109,7 +109,7 @@ export default function ContatoPage() {
                             </a>
                         </div>
                     </div>
-                    <a className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center" href="https://wa.me/5511952347533" target="_blank" rel="noreferrer">
+                    <a className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center" href="https://wa.me/5511952347533" target="_blank" rel="noopener noreferrer">
                         AGENDAR DIAGNÓSTICO
                     </a>
                 </div>
@@ -153,7 +153,7 @@ export default function ContatoPage() {
             {/* 5. FOOTER (Shared) */}
             <footer className="w-full py-16 px-8 md:px-16 flex flex-col items-center gap-8 bg-[#0a0a0a] dark:bg-[#0a0a0a] text-white">
                 <div className="text-2xl font-['Newsreader'] italic text-white mb-4">
-                        House Mazzutti
+                    House Mazzutti
                 </div>
                 <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 max-w-2xl">
                     <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">INSTAGRAM</a>
@@ -168,7 +168,7 @@ export default function ContatoPage() {
                 </div>
                 <div className="mt-8 pt-8 border-t border-white/5 w-full text-center">
                     <p className="font-['Inter'] text-[10px] text-neutral-600 tracking-wider">
-                            © 2025 House Mazzutti. Todos os direitos reservados.
+                        © 2025 House Mazzutti. Todos os direitos reservados.
                     </p>
                 </div>
             </footer>

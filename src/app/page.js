@@ -72,12 +72,12 @@ export default function Home() {
                     >
                         BLOG
                     </a>
-                    <a
+                    <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="#contato"
+                        href="/contato"
                     >
                         CONTATO
-                    </a>
+                    </Link>
                 </nav>
                 <div className="flex items-center space-x-6 text-white">
                     <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
