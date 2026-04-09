@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Link from "next/link";
 
 export default function ContatoPage() {
     useEffect(() => {
@@ -55,12 +56,12 @@ export default function ContatoPage() {
                     HOUSE MAZZUTTI
                 </div>
                 <div className="hidden md:flex gap-8 items-center">
-                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">HOME</a>
-                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">SOBRE</a>
-                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">STUDIO</a>
-                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">PORTFÓLIO</a>
-                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">BLOG</a>
-                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black font-bold border-b border-black pb-1 hover:text-black transition-colors duration-150" href="#">CONTATO</a>
+                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/">HOME</Link>
+                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/sobre">SOBRE</Link>
+                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/studio">STUDIO</Link>
+                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/blog">BLOG</Link>
+                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black font-bold border-b border-black pb-1 hover:text-black transition-colors duration-150" href="/contato">CONTATO</Link>
                 </div>
                 <div className="md:hidden">
                     <span className="material-symbols-outlined text-black">menu</span>
@@ -159,12 +160,12 @@ export default function ContatoPage() {
                     <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">INSTAGRAM</a>
                     <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">LINKEDIN</a>
                     <span className="hidden md:inline text-neutral-800">|</span>
-                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">HOME</a>
-                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">SOBRE</a>
-                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">STUDIO</a>
-                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">PORTFÓLIO</a>
-                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">BLOG</a>
-                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-white underline" href="#">CONTATO</a>
+                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/">HOME</Link>
+                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/sobre">SOBRE</Link>
+                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/studio">STUDIO</Link>
+                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/blog">BLOG</Link>
+                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-white underline" href="/contato">CONTATO</Link>
                 </div>
                 <div className="mt-8 pt-8 border-t border-white/5 w-full text-center">
                     <p className="font-['Inter'] text-[10px] text-neutral-600 tracking-wider">
