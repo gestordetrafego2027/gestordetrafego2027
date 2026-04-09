@@ -51,18 +51,21 @@ export default function About() {
                     <Link href="/" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         HOME
                     </Link>
-                    <Link href="/about" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
+                    <Link href="/sobre" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         SOBRE
+                    </Link>
+                    <Link href="/studio" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
+                        STUDIO
                     </Link>
                     <Link href="/portfolio" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         PORTFÓLIO
                     </Link>
-                    <a href="#blog" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
+                    <Link href="/blog" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         BLOG
-                    </a>
-                    <a href="#contato" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
+                    </Link>
+                    <Link href="/contato" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         CONTATO
-                    </a>
+                    </Link>
                 </nav>
                 <div className="flex items-center space-x-6 text-white">
                     <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
@@ -310,9 +313,11 @@ export default function About() {
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
                         <Link href="/" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">HOME</Link>
-                        <Link href="/about" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">ABOUT</Link>
-                        <Link href="/portfolio" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">PORTFOLIO</Link>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#contact">CONTACT</a>
+                        <Link href="/sobre" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">SOBRE</Link>
+                        <Link href="/studio" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">STUDIO</Link>
+                        <Link href="/portfolio" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">PORTFÓLIO</Link>
+                        <Link href="/blog" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">BLOG</Link>
+                        <Link href="/contato" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">CONTATO</Link>
                     </nav>
                     <div className="font-label text-[9px] text-neutral-700">
                         © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.

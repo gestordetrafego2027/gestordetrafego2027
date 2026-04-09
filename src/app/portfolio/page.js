@@ -117,18 +117,21 @@ export default function Portfolio() {
           <Link href="/" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
             HOME
           </Link>
-          <Link href="/about" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+          <Link href="/sobre" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
             SOBRE
+          </Link>
+          <Link href="/studio" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+            STUDIO
           </Link>
           <Link href="/portfolio" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
             PORTFÓLIO
           </Link>
-          <a href="#blog" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+          <Link href="/blog" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
             BLOG
-          </a>
-          <a href="#contato" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+          </Link>
+          <Link href="/contato" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
             CONTATO
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center space-x-6 text-black md:hidden">

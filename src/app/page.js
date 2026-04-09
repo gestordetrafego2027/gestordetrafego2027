@@ -56,9 +56,15 @@ export default function Home() {
                     </Link>
                     <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="/about"
+                        href="/sobre"
                     >
                         SOBRE
+                    </Link>
+                    <Link
+                        className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
+                        href="/studio"
+                    >
+                        STUDIO
                     </Link>
                     <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
@@ -66,12 +72,12 @@ export default function Home() {
                     >
                         PORTFÓLIO
                     </Link>
-                    <a
+                    <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="#blog"
+                        href="/blog"
                     >
                         BLOG
-                    </a>
+                    </Link>
                     <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
                         href="/contato"
@@ -590,22 +596,34 @@ export default function Home() {
                         </Link>
                         <Link
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
-                            href="/about"
+                            href="/sobre"
                         >
-                            ABOUT
+                            SOBRE
+                        </Link>
+                        <Link
+                            className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
+                            href="/studio"
+                        >
+                            STUDIO
                         </Link>
                         <Link
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
                             href="/portfolio"
                         >
-                            PORTFOLIO
+                            PORTFÓLIO
                         </Link>
-                        <a
+                        <Link
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
-                            href="#contact"
+                            href="/blog"
                         >
-                            CONTACT
-                        </a>
+                            BLOG
+                        </Link>
+                        <Link
+                            className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
+                            href="/contato"
+                        >
+                            CONTATO
+                        </Link>
                     </nav>
                     <div className="font-label text-[9px] text-neutral-700">
                         © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
