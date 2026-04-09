@@ -57,7 +57,7 @@ export default function ContatoPage() {
                 </div>
                 <div className="hidden md:flex gap-8 items-center">
                     <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/">HOME</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/sobre">SOBRE</Link>
+                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/about">SOBRE</Link>
                     <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/studio">STUDIO</Link>
                     <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/portfolio">PORTFÓLIO</Link>
                     <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/blog">BLOG</Link>
@@ -161,7 +161,7 @@ export default function ContatoPage() {
                     <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">LINKEDIN</a>
                     <span className="hidden md:inline text-neutral-800">|</span>
                     <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/">HOME</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/sobre">SOBRE</Link>
+                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/about">SOBRE</Link>
                     <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/studio">STUDIO</Link>
                     <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/portfolio">PORTFÓLIO</Link>
                     <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/blog">BLOG</Link>

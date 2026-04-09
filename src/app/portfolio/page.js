@@ -117,7 +117,7 @@ export default function Portfolio() {
           <Link href="/" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
             HOME
           </Link>
-          <Link href="/sobre" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
+          <Link href="/about" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">
             SOBRE
           </Link>
           <Link href="/studio" className="font-body uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity">

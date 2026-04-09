@@ -56,7 +56,7 @@ export default function Home() {
                     </Link>
                     <Link
                         className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300"
-                        href="/sobre"
+                        href="/about"
                     >
                         SOBRE
                     </Link>
@@ -596,7 +596,7 @@ export default function Home() {
                         </Link>
                         <Link
                             className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors"
-                            href="/sobre"
+                            href="/about"
                         >
                             SOBRE
                         </Link>

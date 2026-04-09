@@ -51,7 +51,7 @@ export default function About() {
                     <Link href="/" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         HOME
                     </Link>
-                    <Link href="/sobre" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
+                    <Link href="/about" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
                         SOBRE
                     </Link>
                     <Link href="/studio" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
@@ -313,7 +313,7 @@ export default function About() {
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
                         <Link href="/" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">HOME</Link>
-                        <Link href="/sobre" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">SOBRE</Link>
+                        <Link href="/about" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">SOBRE</Link>
                         <Link href="/studio" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">STUDIO</Link>
                         <Link href="/portfolio" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">PORTFÓLIO</Link>
                         <Link href="/blog" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">BLOG</Link>
