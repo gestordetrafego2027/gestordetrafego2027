@@ -1,30 +1,36 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useEffect } from "react";
 
-export default function Contato() {
-    const [scrolled, setScrolled] = useState(false);
-
+export default function ContatoPage() {
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 80) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
+        const handleScroll = function() {
+            const nav = document.getElementById('main-nav');
+            if (nav) {
+                if (window.scrollY > 80) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
             }
         };
-
         window.addEventListener('scroll', handleScroll);
-        // Call it initially
+        // Initial setup
         handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
-        <div className="bg-[#131313] text-[#e5e2e1] min-h-screen antialiased flex flex-col">
+        <div className="dark antialiased">
             <style jsx global>{`
+                .material-symbols-outlined {
+                    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+                }
+                body {
+                    background-color: #131313;
+                    color: #e5e2e1;
+                }
                 ::-webkit-scrollbar {
                     width: 4px;
                 }
@@ -41,26 +47,20 @@ export default function Contato() {
                     background-color: #ffffff;
                     border-bottom: 0.5px solid #e0e0e0;
                 }
-                .material-symbols-outlined {
-                    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-                }
             `}</style>
 
             {/* 1. TOPNAVBAR (Shared) */}
-            <nav 
-                id="main-nav" 
-                className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 md:px-16 h-[80px] bg-transparent border-b-0 ${scrolled ? "scrolled" : ""}`}
-            >
+            <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 md:px-16 h-[80px] bg-transparent border-b-0" id="main-nav">
                 <div className="text-xl font-bold tracking-tighter text-black font-['Raleway']">
                     HOUSE MAZZUTTI
                 </div>
                 <div className="hidden md:flex gap-8 items-center">
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/">HOME</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/about">SOBRE</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/studio">STUDIO</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/blog">BLOG</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black font-bold border-b border-black pb-1 hover:text-black transition-colors duration-150" href="/contato">CONTATO</Link>
+                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">HOME</a>
+                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">SOBRE</a>
+                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">STUDIO</a>
+                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">PORTFÓLIO</a>
+                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="#">BLOG</a>
+                    <a className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black font-bold border-b border-black pb-1 hover:text-black transition-colors duration-150" href="#">CONTATO</a>
                 </div>
                 <div className="md:hidden">
                     <span className="material-symbols-outlined text-black">menu</span>
@@ -82,15 +82,7 @@ export default function Contato() {
             <section className="flex flex-col md:flex-row w-full bg-white py-[60px] px-[40px]">
                 {/* Col 1: Map */}
                 <div className="w-full md:w-[60%] h-[400px] md:h-auto bg-surface-container-lowest grayscale contrast-125 opacity-90 max-w-[760px] mx-auto !h-[430px]">
-                    <iframe 
-                        frameBorder="0" 
-                        height="430" 
-                        marginHeight="0" 
-                        marginWidth="0" 
-                        scrolling="no" 
-                        src="https://maps.google.com/maps?width=100%25&height=600&hl=pt&q=Rua%20General%20Chagas%20Santos,%201058%20Vila%20Sa%C3%BAde%20S%C3%A3o%20Paulo&t=&z=14&ie=UTF8&iwloc=B&output=embed" 
-                        style={{ filter: "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)" }} 
-                        width="100%">
+                    <iframe frameBorder="0" height="430" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=pt&amp;q=Rua%20General%20Chagas%20Santos,%201058%20Vila%20Sa%C3%BAde%20S%C3%A3o%20Paulo&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style={{filter: "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)"}} width="100%">
                     </iframe>
                 </div>
                 {/* Col 2: Info */}
@@ -117,14 +109,14 @@ export default function Contato() {
                             </a>
                         </div>
                     </div>
-                    <a className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center" href="https://wa.me/5511952347533" target="_blank" rel="noopener noreferrer">
+                    <a className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center" href="https://wa.me/5511952347533" target="_blank" rel="noreferrer">
                         AGENDAR DIAGNÓSTICO
                     </a>
                 </div>
             </section>
 
             {/* 4. CONTACT FORM SECTION */}
-            <section className="bg-[#0f0f0f] py-[60px] px-8 md:px-16 flex justify-center border-t-[0.5px] border-white/5 flex-grow">
+            <section className="bg-[#0f0f0f] py-[60px] px-8 md:px-16 flex justify-center border-t-[0.5px] border-white/5">
                 <div className="max-w-[700px] w-full">
                     <div className="text-center mb-16">
                         <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-500 mb-3">STRATEGIC HOUSE</p>
@@ -161,22 +153,22 @@ export default function Contato() {
             {/* 5. FOOTER (Shared) */}
             <footer className="w-full py-16 px-8 md:px-16 flex flex-col items-center gap-8 bg-[#0a0a0a] dark:bg-[#0a0a0a] text-white">
                 <div className="text-2xl font-['Newsreader'] italic text-white mb-4">
-                    House Mazzutti
+                        House Mazzutti
                 </div>
                 <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 max-w-2xl">
                     <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">INSTAGRAM</a>
                     <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">LINKEDIN</a>
                     <span className="hidden md:inline text-neutral-800">|</span>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/">HOME</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/about">SOBRE</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/studio">STUDIO</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/blog">BLOG</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-white underline" href="/contato">CONTATO</Link>
+                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">HOME</a>
+                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">SOBRE</a>
+                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">STUDIO</a>
+                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">PORTFÓLIO</a>
+                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">BLOG</a>
+                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-white underline" href="#">CONTATO</a>
                 </div>
                 <div className="mt-8 pt-8 border-t border-white/5 w-full text-center">
                     <p className="font-['Inter'] text-[10px] text-neutral-600 tracking-wider">
-                        © 2025 House Mazzutti. Todos os direitos reservados.
+                            © 2025 House Mazzutti. Todos os direitos reservados.
                     </p>
                 </div>
             </footer>
