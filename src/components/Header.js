@@ -12,6 +12,7 @@ export default function Header() {
                 <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/studio">STUDIO</Link>
                 <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/produtora">PRODUTORA</Link>
                 <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/agencia">AGÊNCIA</Link>
+                <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/angelo">ANGELO</Link>
                 <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/portfolio">PORTFÓLIO</Link>
                 <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/blog">BLOG</Link>
                 <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/contato">CONTATO</Link>
