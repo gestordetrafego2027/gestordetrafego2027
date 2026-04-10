@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ContatoPage() {
     useEffect(() => {
-        const handleScroll = function() {
+        const handleScroll = function () {
             const nav = document.getElementById('main-nav');
             if (nav) {
                 if (window.scrollY > 80) {
@@ -50,39 +50,23 @@ export default function ContatoPage() {
                 }
             `}</style>
 
-            {/* 1. TOPNAVBAR (Shared) */}
-            <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 md:px-16 h-[80px] bg-transparent border-b-0" id="main-nav">
-                <div className="text-xl font-bold tracking-tighter text-black font-['Raleway']">
-                    HOUSE MAZZUTTI
-                </div>
-                <div className="hidden md:flex gap-8 items-center">
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/">HOME</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/about">SOBRE</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/studio">STUDIO</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black/60 font-medium hover:text-black transition-colors duration-150" href="/blog">BLOG</Link>
-                    <Link className="font-['Raleway'] tracking-[0.1em] text-[12px] uppercase text-black font-bold border-b border-black pb-1 hover:text-black transition-colors duration-150" href="/contato">CONTATO</Link>
-                </div>
-                <div className="md:hidden">
-                    <span className="material-symbols-outlined text-black">menu</span>
-                </div>
-            </nav>
+
 
             {/* 2. HERO SECTION */}
-            <header className="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-50 bg-transparent">
-                <div className="text-lg font-serif tracking-tight text-white uppercase font-headline">
+            <header className="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-50 bg-white border-b border-[#e0e0e0]">
+                <div className="text-lg font-serif tracking-tight text-black uppercase font-headline">
                     House Mazzutti
                 </div>
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/">HOME</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/about">SOBRE</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/studio">STUDIO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/produtora">PRODUTORA</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/blog">BLOG</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/contato">CONTATO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/">HOME</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/about">SOBRE</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/studio">STUDIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/produtora">PRODUTORA</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/blog">BLOG</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/contato">CONTATO</Link>
                 </nav>
-                <div className="flex items-center space-x-6 text-white">
+                <div className="flex items-center space-x-6 text-black">
                     <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
                         <span className="material-symbols-outlined" data-icon="search">search</span>
                     </button>
@@ -124,8 +108,8 @@ export default function ContatoPage() {
                     <div className="space-y-8 mb-12">
                         <div>
                             <p className="font-['Inter'] font-light text-neutral-600 text-lg leading-relaxed">
-                                Rua General Chagas Santos, 1058<br/>
-                                Vila Saúde, São Paulo — SP<br/>
+                                Rua General Chagas Santos, 1058<br />
+                                Vila Saúde, São Paulo — SP<br />
                                 Brasil
                             </p>
                         </div>
@@ -157,20 +141,20 @@ export default function ContatoPage() {
                     <form className="space-y-12">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                             <div className="relative">
-                                <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="name" placeholder="NOME" type="text"/>
+                                <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="name" placeholder="NOME" type="text" />
                             </div>
                             <div className="relative">
-                                <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="email" placeholder="EMAIL" type="email"/>
+                                <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="email" placeholder="EMAIL" type="email" />
                             </div>
                         </div>
                         <div className="relative">
-                            <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="subject" placeholder="ASSUNTO" type="text"/>
+                            <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="subject" placeholder="ASSUNTO" type="text" />
                         </div>
                         <div className="relative">
                             <textarea className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all resize-none" id="message" placeholder="SUA MENSAGEM" rows="4"></textarea>
                         </div>
                         <div className="flex flex-col items-center gap-12 pt-8">
-                            <button className="w-full md:w-auto min-w-[280px] border-[0.5px] border-white px-10 py-5 font-['Raleway'] uppercase tracking-[0.2em] text-[12px] text-white hover:bg-white hover:text-black transition-all duration-300" onClick={() => window.location.href='mailto:contato@housemazzutti.com'} type="button">
+                            <button className="w-full md:w-auto min-w-[280px] border-[0.5px] border-white px-10 py-5 font-['Raleway'] uppercase tracking-[0.2em] text-[12px] text-white hover:bg-white hover:text-black transition-all duration-300" onClick={() => window.location.href = 'mailto:contato@housemazzutti.com'} type="button">
                                 ENVIAR MENSAGEM
                             </button>
                             <div className="text-center">
