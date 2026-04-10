@@ -8,7 +8,8 @@ export default function AngeloPage() {
         <div className="antialiased" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 300, backgroundColor: "#f9f9f9", color: "#1a1c1c" }}>
             <title>Angelo Mazzutti | Branding Estratégico e Posicionamento de Marca</title>
 
-            <style dangerouslySetInnerHTML={{ __html: `
+            <style dangerouslySetInnerHTML={{
+                __html: `
                 body { font-family: 'Montserrat', sans-serif; font-weight: 300; background-color: #f9f9f9; color: #1a1c1c; }
                 .font-serif { font-family: 'Playfair Display', serif; }
                 .font-label { font-family: 'Work Sans', sans-serif; letter-spacing: 0.2em; text-transform: uppercase; }
@@ -49,6 +50,7 @@ export default function AngeloPage() {
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/produtora">PRODUTORA</Link>
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/agencia">AGÊNCIA</Link>
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/angelo">ANGELO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/comunidade">COMUNIDADE</Link>
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/portfolio">PORTFÓLIO</Link>
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/blog">BLOG</Link>
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/contato">CONTATO</Link>
