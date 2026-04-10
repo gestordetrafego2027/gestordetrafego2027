@@ -94,6 +94,21 @@ export default function ContatoPage() {
                 </div>
             </header>
 
+            {/* HERO SECTION CONTATO */}
+            <section className="bg-white flex flex-col items-center justify-center text-center w-full h-[512px] pt-[80px]">
+                <div className="h-[1px] bg-[#e0e0e0] w-16 mb-8"></div>
+                <span className="font-[Raleway] uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">
+                    HOUSE MAZZUTTI
+                </span>
+                <h1 className="font-headline text-5xl md:text-6xl text-black mb-6">
+                    CONTATO
+                </h1>
+                <p className="font-headline text-black italic text-2xl font-light mb-8">
+                    Sua visão. Nossa estratégia.
+                </p>
+                <div className="h-[1px] bg-[#e0e0e0] w-16 mt-2"></div>
+            </section>
+
             {/* 3. MAP + INFO SECTION */}
             <section className="flex flex-col md:flex-row w-full bg-white py-[60px] px-[40px]">
                 {/* Col 1: Map */}
