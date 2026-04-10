@@ -9,7 +9,7 @@ export default function AgenciaPage() {
 
     const testimonials = [
         {
-            text: "A Produtora trouxe uma estratégia que não conseguíamos executar sozinhos. Eles não apenas criaram conteúdo, mas mudaram nossa percepção de marca.",
+            text: "A Agência  trouxe uma estratégia que não conseguíamos executar sozinhos. Eles não apenas criaram conteúdo, mas mudaram nossa percepção de marca.",
             author: "JULIANA T. — DIRETORA EXECUTIVA"
         },
         {
@@ -17,7 +17,7 @@ export default function AgenciaPage() {
             author: "RAFAEL S. — GERENTE DE MARKETING"
         },
         {
-            text: "Trabalhar com a Produtora foi investir em posicionamento real. A execução impecável é apenas o reflexo de uma estratégia muito bem feita.",
+            text: "Trabalhar com a Agência  foi investir em posicionamento real. A execução impecável é apenas o reflexo de uma estratégia muito bem feita.",
             author: "CARLA M. — CEO"
         }
     ]
@@ -400,7 +400,7 @@ export default function AgenciaPage() {
                                     <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">AUTORIDADE</span>
                                     <h2 className="font-headline text-black leading-tight mb-4 md:text-4xl">Execução com direção é controle absoluto.</h2>
                                     <p className="text-secondary leading-loose max-w-md font-light mb-6 text-[12px]">
-                                        A Produtora da House Mazzutti é responsável por transformar estratégia em resultado — com consistência, intenção e controle de percepção.
+                                        A Agência  da House Mazzutti é responsável por transformar estratégia em resultado — com consistência, intenção e controle de percepção.
                                     </p>
                                     <Link className="inline-block px-10 py-5 border border-black text-black font-label uppercase tracking-[0.2em] text-[8px] hover:bg-black hover:text-white transition-all duration-300 mb-12" href="/contato">
                                         CONHEÇA O MÉTODO
