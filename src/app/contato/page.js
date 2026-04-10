@@ -69,13 +69,28 @@ export default function ContatoPage() {
             </nav>
 
             {/* 2. HERO SECTION */}
-            <header className="relative pt-[80px] h-[512px] flex items-center justify-center overflow-hidden bg-white">
-                <div className="text-center z-10 px-8">
-                    <div className="w-24 h-[0.5px] bg-[#e0e0e0] mx-auto mb-8"></div>
-                    <p className="font-['Raleway'] uppercase tracking-[0.2em] text-[10px] text-black/70 mb-4">HOUSE MAZZUTTI</p>
-                    <h1 className="font-['Newsreader'] font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight text-black mb-6 uppercase">CONTATO</h1>
-                    <p className="font-['Newsreader'] italic text-lg md:text-xl text-black/80">Sua visão. Nossa estratégia.</p>
-                    <div className="w-24 h-[0.5px] bg-[#e0e0e0] mx-auto mt-8"></div>
+            <header className="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-50 bg-transparent">
+                <div className="text-lg font-serif tracking-tight text-white uppercase font-headline">
+                    House Mazzutti
+                </div>
+                <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/">HOME</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/about">SOBRE</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/studio">STUDIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/produtora">PRODUTORA</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/blog">BLOG</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/contato">CONTATO</Link>
+                </nav>
+                <div className="flex items-center space-x-6 text-white">
+                    <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
+                        <span className="material-symbols-outlined" data-icon="search">search</span>
+                    </button>
+                    <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform flex flex-col space-y-1.5 w-6">
+                        <span className="block w-full h-[1px] bg-current"></span>
+                        <span className="block w-full h-[1px] bg-current"></span>
+                        <span className="block w-full h-[1px] bg-current"></span>
+                    </button>
                 </div>
             </header>
 
@@ -152,25 +167,24 @@ export default function ContatoPage() {
             </section>
 
             {/* 5. FOOTER (Shared) */}
-            <footer className="w-full py-16 px-8 md:px-16 flex flex-col items-center gap-8 bg-[#0a0a0a] dark:bg-[#0a0a0a] text-white">
-                <div className="text-2xl font-['Newsreader'] italic text-white mb-4">
-                    House Mazzutti
-                </div>
-                <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 max-w-2xl">
-                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">INSTAGRAM</a>
-                    <a className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="#">LINKEDIN</a>
-                    <span className="hidden md:inline text-neutral-800">|</span>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/">HOME</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/about">SOBRE</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/studio">STUDIO</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-neutral-500 hover:text-white transition-colors duration-150" href="/blog">BLOG</Link>
-                    <Link className="font-['Raleway'] uppercase tracking-[0.1em] text-[10px] text-white underline" href="/contato">CONTATO</Link>
-                </div>
-                <div className="mt-8 pt-8 border-t border-white/5 w-full text-center">
-                    <p className="font-['Inter'] text-[10px] text-neutral-600 tracking-wider">
-                        © 2025 House Mazzutti. Todos os direitos reservados.
-                    </p>
+            <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+                <div className="flex flex-col items-center text-center">
+                    <div className="text-3xl font-serif text-neutral-50 mb-12">House Mazzutti</div>
+                    <div className="flex space-x-8 mb-12">
+                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
+                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
+                    </div>
+                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/blog">BLOG</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
+                    </nav>
+                    <div className="font-label text-[9px] text-neutral-700">
+                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                    </div>
                 </div>
             </footer>
         </div>

@@ -44,32 +44,21 @@ export default function About() {
 
             {/* HEADER */}
             <header className="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-50 bg-transparent">
-                <div className="text-lg font-headline tracking-tight text-white uppercase font-light">
+                <div className="text-lg font-serif tracking-tight text-white uppercase font-headline">
                     House Mazzutti
                 </div>
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-                    <Link href="/" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
-                        HOME
-                    </Link>
-                    <Link href="/about" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
-                        SOBRE
-                    </Link>
-                    <Link href="/studio" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
-                        STUDIO
-                    </Link>
-                    <Link href="/portfolio" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
-                        PORTFÓLIO
-                    </Link>
-                    <Link href="/blog" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
-                        BLOG
-                    </Link>
-                    <Link href="/contato" className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300">
-                        CONTATO
-                    </Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/">HOME</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/about">SOBRE</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/studio">STUDIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/produtora">PRODUTORA</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/blog">BLOG</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-white hover:opacity-70 transition-opacity duration-300" href="/contato">CONTATO</Link>
                 </nav>
                 <div className="flex items-center space-x-6 text-white">
                     <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
-                        <span className="material-symbols-outlined">search</span>
+                        <span className="material-symbols-outlined" data-icon="search">search</span>
                     </button>
                     <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform flex flex-col space-y-1.5 w-6">
                         <span className="block w-full h-[1px] bg-current"></span>
@@ -306,18 +295,18 @@ export default function About() {
             {/* FOOTER */}
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-3xl font-headline italic text-neutral-50 mb-12">House Mazzutti</div>
+                    <div className="text-3xl font-serif text-neutral-50 mb-12">House Mazzutti</div>
                     <div className="flex space-x-8 mb-12">
                         <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
                         <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <Link href="/" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">HOME</Link>
-                        <Link href="/about" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">SOBRE</Link>
-                        <Link href="/studio" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">STUDIO</Link>
-                        <Link href="/portfolio" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">PORTFÓLIO</Link>
-                        <Link href="/blog" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">BLOG</Link>
-                        <Link href="/contato" className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors">CONTATO</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/blog">BLOG</Link>
+                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
                     </nav>
                     <div className="font-label text-[9px] text-neutral-700">
                         © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
