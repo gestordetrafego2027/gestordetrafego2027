@@ -162,9 +162,9 @@ export default function Portfolio() {
                 <div className="fine-line"></div>
                 <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Contexto. Momento. Posicionamento. A estética é consequência.</p>
                 <div className="pt-[20px]">
-                  <a className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="#">
+                  <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
                     VER PROJETOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -191,9 +191,9 @@ export default function Portfolio() {
                 <div className="fine-line"></div>
                 <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Tudo parte de leitura. Porque imagem sem estratégia não sustenta. E execução sem direção não constrói.</p>
                 <div className="pt-[20px]">
-                  <a className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="#">
+                  <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-produtora">
                     EXPLORAR PROJETOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -220,9 +220,9 @@ export default function Portfolio() {
                 <div className="fine-line"></div>
                 <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Branding estratégico, posicionamento de marca e construção de autoridade através da imagem.</p>
                 <div className="pt-[20px]">
-                  <a className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="#">
+                  <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-agencia">
                     VER COMO APLICAMOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
