@@ -156,14 +156,14 @@ export default function Portfolio() {
             {/* Right/Bottom: Content */}
             <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex items-center justify-center p-8 md:p-24 overflow-y-auto">
               <div className="max-w-md w-full space-y-[27px]">
-                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">POSICIONAMENTO</span>
-                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">O QUE VOCÊ VÊ É RESULTADO.</h2>
-                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"O que sustenta não aparece. Nenhum projeto começa na imagem. Começa no entendimento."</p>
+                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">STUDIO</span>
+                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">DIREÇÃO DE IMAGEM E POSICIONAMENTO VISUAL</h2>
+                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Antes de qualquer câmera, existe direção."</p>
                 <div className="fine-line"></div>
-                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Contexto. Momento. Posicionamento. A estética é consequência.</p>
+                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">O Studio transforma posicionamento em imagem — com consistência, intenção e controle de percepção.</p>
                 <div className="pt-[20px]">
                   <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
-                    VER PROJETOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                    VER PROJETOS STUDIO <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
                   </Link>
                 </div>
               </div>
@@ -185,14 +185,14 @@ export default function Portfolio() {
             {/* Content */}
             <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex items-center justify-center p-8 md:p-24 overflow-y-auto">
               <div className="max-w-md w-full space-y-[27px]">
-                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">DIREÇÃO CRIATIVA</span>
-                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">O QUE PARECE SIMPLES FOI ESTRUTURADO.</h2>
-                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"O que parece natural foi direcionado. Nada aqui é aleatório."</p>
+                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">PRODUTORA</span>
+                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">PRODUÇÃO QUE SUSTENTA POSICIONAMENTO</h2>
+                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"O que parece natural foi direcionado."</p>
                 <div className="fine-line"></div>
-                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Tudo parte de leitura. Porque imagem sem estratégia não sustenta. E execução sem direção não constrói.</p>
+                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">A Produtora executa com intenção — vídeo, conteúdo e campanha conectados à estratégia da marca.</p>
                 <div className="pt-[20px]">
                   <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-produtora">
-                    EXPLORAR PROJETOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                    VER PROJETOS PRODUTORA <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
                   </Link>
                 </div>
               </div>
@@ -214,14 +214,14 @@ export default function Portfolio() {
             {/* Content */}
             <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex items-center justify-center p-8 md:p-24 overflow-y-auto">
               <div className="max-w-md w-full space-y-[27px]">
-                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">CONSTRUÇÃO</span>
-                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">CADA PROJETO É UMA RESPOSTA.</h2>
-                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"A uma pergunta que vem antes: o que essa marca precisa se tornar?"</p>
+                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">AGÊNCIA</span>
+                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">ESTRATÉGIA E DIREÇÃO DE MARCA</h2>
+                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Cada projeto é uma resposta. A uma pergunta que vem antes."</p>
                 <div className="fine-line"></div>
-                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Branding estratégico, posicionamento de marca e construção de autoridade através da imagem.</p>
+                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">A Agência estrutura o que sustenta tudo — posicionamento, narrativa e direção criativa.</p>
                 <div className="pt-[20px]">
                   <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-agencia">
-                    VER COMO APLICAMOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                    VER PROJETOS AGÊNCIA <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
                   </Link>
                 </div>
               </div>
