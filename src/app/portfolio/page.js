@@ -155,56 +155,16 @@ export default function Portfolio() {
             </div>
             {/* Right/Bottom: Content */}
             <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex items-center justify-center p-8 md:p-24 overflow-y-auto">
-              <div className="w-full max-w-[1200px] flex flex-col space-y-[27px]">
-                <div className="max-w-md w-full space-y-[27px]">
-                  <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">POSICIONAMENTO</span>
-                  <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">O QUE VOCÊ VÊ É RESULTADO.</h2>
-                  <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"O que sustenta não aparece. Nenhum projeto começa na imagem. Começa no entendimento."</p>
-                  <div className="fine-line"></div>
-                  <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Contexto. Momento. Posicionamento. A estética é consequência.</p>
-                  <div className="pt-[20px]">
-                    <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
-                      VER PROJETOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                    </Link>
-                  </div>
-                </div>
-
-                {/* 3 Cards Section */}
-                <div className="w-full pt-16">
-                  <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 w-full">
-                    {/* Card 1 */}
-                    <Link href="/portfolio-studio" className="group relative flex flex-col justify-between bg-white border border-[#e0e0e0] p-[40px] rounded-none hover:bg-black transition-colors duration-[400ms] min-h-[260px]">
-                      <div>
-                        <h3 className="font-headline uppercase text-lg text-black group-hover:text-white transition-colors duration-[400ms]">STUDIO</h3>
-                        <p className="font-body text-[13px] leading-relaxed mt-4 text-neutral-600 group-hover:text-neutral-300 transition-colors duration-[400ms]">Direção de imagem e posicionamento visual</p>
-                      </div>
-                      <div className="flex justify-end mt-8">
-                        <span className="material-symbols-outlined text-black group-hover:text-white transition-colors duration-[400ms]">arrow_forward</span>
-                      </div>
-                    </Link>
-
-                    {/* Card 2 */}
-                    <Link href="/portfolio-produtora" className="group relative flex flex-col justify-between bg-white border border-[#e0e0e0] p-[40px] rounded-none hover:bg-black transition-colors duration-[400ms] min-h-[260px]">
-                      <div>
-                        <h3 className="font-headline uppercase text-lg text-black group-hover:text-white transition-colors duration-[400ms]">PRODUTORA</h3>
-                        <p className="font-body text-[13px] leading-relaxed mt-4 text-neutral-600 group-hover:text-neutral-300 transition-colors duration-[400ms]">Produção de conteúdo e campanhas</p>
-                      </div>
-                      <div className="flex justify-end mt-8">
-                        <span className="material-symbols-outlined text-black group-hover:text-white transition-colors duration-[400ms]">arrow_forward</span>
-                      </div>
-                    </Link>
-
-                    {/* Card 3 */}
-                    <Link href="/portfolio-agencia" className="group relative flex flex-col justify-between bg-white border border-[#e0e0e0] p-[40px] rounded-none hover:bg-black transition-colors duration-[400ms] min-h-[260px]">
-                      <div>
-                        <h3 className="font-headline uppercase text-lg text-black group-hover:text-white transition-colors duration-[400ms]">AGÊNCIA</h3>
-                        <p className="font-body text-[13px] leading-relaxed mt-4 text-neutral-600 group-hover:text-neutral-300 transition-colors duration-[400ms]">Estratégia e direção de marca</p>
-                      </div>
-                      <div className="flex justify-end mt-8">
-                        <span className="material-symbols-outlined text-black group-hover:text-white transition-colors duration-[400ms]">arrow_forward</span>
-                      </div>
-                    </Link>
-                  </div>
+              <div className="max-w-md w-full space-y-[27px]">
+                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">POSICIONAMENTO</span>
+                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">O QUE VOCÊ VÊ É RESULTADO.</h2>
+                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"O que sustenta não aparece. Nenhum projeto começa na imagem. Começa no entendimento."</p>
+                <div className="fine-line"></div>
+                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Contexto. Momento. Posicionamento. A estética é consequência.</p>
+                <div className="pt-[20px]">
+                  <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
+                    VER PROJETOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                  </Link>
                 </div>
               </div>
             </div>
