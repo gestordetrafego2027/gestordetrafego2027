@@ -147,7 +147,7 @@ export default function ArticleContent() {
                 </article>
 
                 {/* Sidebar (Sticky) */}
-                <aside className="hidden lg:flex flex-col w-80 sticky" style={{ position: 'sticky', top: '100px', alignSelf: 'flex-start', height: 'fit-content' }}>
+                <aside className="hidden lg:flex flex-col w-80 sticky" style={{ position: 'sticky', top: '100px', alignSelf: 'flex-start', height: 'fit-content', maxHeight: 'calc(100vh - 120px)', overflowY: 'auto' }}>
                     {/* About Sidebar */}
                     <div className="mb-12 pb-10 hairline-b">
                         <img alt="Angelo Mazzutti" className="w-[100px] h-[100px] rounded-full object-cover grayscale mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdQRMa_7XqDCP1ZKTnhPTPm-3OOSyYV-qNgqf0TlX10XGbSFTUqm3jyFW-NIa6jerfgmLhIYr7MBJRV2OUHGx-U_xS6lJW11xEieP7lRAqpNfLkIn5JHOFg8zW69qCY0jq9B8tBMEa0h6DrqfmrEZIVy-AzaWvOjgXIbJ6Ja1m4X8kjJmKX1rbJrI0AAMC2NlANqSU-8Ss4nV0AsqteZvU2jc5nKfRFp_pG6QtFgqR5QzWFWjvtH5eCOCKHCV3J394LOZJqCrOX_CQ"/>
