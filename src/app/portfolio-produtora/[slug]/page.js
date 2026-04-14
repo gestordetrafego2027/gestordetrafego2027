@@ -73,8 +73,8 @@ export default function ProjetoProdutoraPage() {
                 <nav className="flex justify-between items-center w-full px-8 py-6 max-w-full">
                     <Link className="font-newsreader text-xl font-semibold tracking-widest text-black no-underline" href="/">HOUSE MAZZUTTI</Link>
                     <div className="hidden lg:flex items-center space-x-6">
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/home">HOME</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/sobre">SOBRE</Link>
+                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/">HOME</Link>
+                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/about">SOBRE</Link>
                         <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/studio">STUDIO</Link>
                         <Link className="text-black border-b border-black pb-1 font-inter text-[10px] uppercase tracking-[0.1em]" href="/produtora">PRODUTORA</Link>
                         <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/agencia">AGÊNCIA</Link>
