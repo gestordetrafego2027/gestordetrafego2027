@@ -70,7 +70,7 @@ export default function ArticleContent() {
                     {/* Metadata & Title */}
                     <div className="mb-10 text-center md:text-left">
                         <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-500 mb-4">STUDIO — BOOK</div>
-                        <h1 className="text-3xl md:text-5xl font-headline uppercase tracking-[0.15em] leading-tight text-zinc-900">
+                        <h1 className="text-xl md:text-2xl font-headline uppercase tracking-[0.15em] leading-tight text-zinc-900">
                             Book para Modelos: o que realmente define quem é escolhido no mercado
                         </h1>
                     </div>
@@ -147,7 +147,7 @@ export default function ArticleContent() {
                 </article>
 
                 {/* Sidebar (Sticky) */}
-                <aside className="hidden lg:flex flex-col w-80 sticky" style={{ position: 'sticky', top: '100px', alignSelf: 'flex-start', height: 'fit-content', maxHeight: 'calc(100vh - 120px)', overflowY: 'auto' }}>
+                <aside className="hidden lg:flex flex-col w-80 sticky" style={{ position: 'sticky', top: '100px', alignSelf: 'flex-start' }}>
                     {/* About Sidebar */}
                     <div className="mb-12 pb-10 hairline-b">
                         <img alt="Angelo Mazzutti" className="w-[100px] h-[100px] rounded-full object-cover grayscale mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdQRMa_7XqDCP1ZKTnhPTPm-3OOSyYV-qNgqf0TlX10XGbSFTUqm3jyFW-NIa6jerfgmLhIYr7MBJRV2OUHGx-U_xS6lJW11xEieP7lRAqpNfLkIn5JHOFg8zW69qCY0jq9B8tBMEa0h6DrqfmrEZIVy-AzaWvOjgXIbJ6Ja1m4X8kjJmKX1rbJrI0AAMC2NlANqSU-8Ss4nV0AsqteZvU2jc5nKfRFp_pG6QtFgqR5QzWFWjvtH5eCOCKHCV3J394LOZJqCrOX_CQ"/>
