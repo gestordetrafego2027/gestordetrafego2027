@@ -456,6 +456,58 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
+                            {/* STRUCTURE SELECTION */}
+                <section className="bg-white px-[40px]">
+                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
+                        <div className="max-w-[1440px] mx-auto">
+                            <div className="text-center mb-24">
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÍVEL</span>
+                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {[
+                                    {
+                                        title: "BOOK",
+                                        link: "/studio/book",
+                                        subtitle: '"Onde a imagem é construída com intenção"',
+                                        items: ["Book profissional", "Direção de imagem", "Ensaio estratégico", "Entrega high-end"]
+                                    },
+                                    {
+                                        title: "ENSAIO",
+                                        link: "/studio/ensaio",
+                                        subtitle: '"Onde a presença ganha forma e autoridade"',
+                                        items: ["Ensaio pessoal", "Direção de imagem", "Posicionamento visual", "Entrega premium"]
+                                    },
+                                    {
+                                        title: "COBERTURA",
+                                        link: "/studio/cobertura",
+                                        subtitle: '"Onde sua agenda vira narrativa visual"',
+                                        items: ["Acompanhamento real", "Captação estratégica", "Direção de presença", "Entrega premium"]
+                                    }
+                                ].map((card, idx) => (
+                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
+                                        <div>
+                                            <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
+                                            <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>
+                                            <ul className="space-y-4 mb-12">
+                                                {card.items.map((item, i) => (
+                                                    <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                                        <span className="material-symbols-outlined text-lg">check</span>
+                                                        <span>{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <Link href={card.link} className="w-full border border-black py-4 font-label uppercase text-[10px] tracking-widest hover:bg-black hover:text-white transition-all group-hover:border-white group-hover:text-white text-center block">
+                                            SAIBA MAIS
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
