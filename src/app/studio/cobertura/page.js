@@ -1,0 +1,460 @@
+'use client';
+
+import React, { useEffect } from 'react';
+import Link from 'next/link';
+
+export default function StudioCoberturaPage() {
+    useEffect(() => {
+        // Scripts e animações podem ser adicionados aqui
+    }, []);
+
+    return (
+        <div className="bg-surface text-on-surface font-body antialiased">
+            <title>House Mazzutti — STUDIO | Cobertura Externa</title>
+            <meta name="description" content="Acompanhamento premium de imagem pessoal em São Paulo com produção externa, direção de imagem e conteúdo em tempo real. Viva sua agenda com presença." />
+            
+            <style dangerouslySetInnerHTML={{ __html: `
+                .material-symbols-outlined {
+                    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+                }
+                .no-scrollbar::-webkit-scrollbar { display: none; }
+                .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                
+                .page-frame {
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+            `}} />
+
+            <h1 className="sr-only">Concierge Production em São Paulo | Produção Externa Premium</h1>
+            
+            {/* 1. HEADER */}
+            <nav className="top-0 left-0 w-full px-[100px] bg-transparent fixed pt-[40px] z-[9999]" id="main-nav" style={{ paddingTop: '65px' }}>
+                <div className="flex justify-between items-center w-full max-w-[1920px] mx-auto">
+                    <Link className="font-headline text-xl md:text-2xl tracking-tighter text-white uppercase ml-[20px]" href="/">HOUSE MAZZUTTI</Link>
+                    <div className="flex items-center gap-8 text-white mr-[10px]">
+                        <button className="hover:opacity-60 transition-opacity duration-300 flex items-center">
+                            <span className="material-symbols-outlined !text-4xl" data-icon="menu">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            {/* 2. HERO SECTION */}
+            <section className="relative h-screen w-full bg-white overflow-hidden px-[40px] pt-[25px] pb-[10px]">
+                <div className="relative w-full h-full bg-[#111111] flex items-center justify-end min-h-[calc(100vh-75px)] pb-[20px]">
+                    <div className="relative z-20 w-full px-[60px] flex justify-end pr-[120px]">
+                        <div className="w-full max-w-[600px] flex flex-col items-center text-center ml-[-10px]">
+                            {/* Geometric Icon */}
+                            <div className="mb-8">
+                                <svg className="w-[42px] h-[42px] text-white/80" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L3 12L12 22L21 12L12 2Z" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M12 2L12 22" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M3 12L21 12" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
+                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block">COBERTURA EXTERNA</span>
+                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight">Viver São Paulo exige presença. Nós produzimos a sua.</h1>
+                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed">Acompanhamento premium, direção de imagem e conteúdo em tempo real para transformar sua agenda em uma experiência visual de alto valor.</p>
+                            <div>
+                                <button className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
+                                    QUERO SER ACOMPANHADA
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 3. SERVICES */}
+            <section className="bg-white py-0 px-[40px] pt-[25px]">
+                <div className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
+                    <div className="max-w-[1440px] mx-auto px-6 text-center">
+                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block">COBERTURA EXTERNA</span>
+                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight">Não é cobertura. É produção de presença.</h2>
+                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16">Cada momento da sua agenda, conduzido com intenção.</p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
+                            <div className="flex flex-col items-center">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="location_on">location_on</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Acompanhamento Real</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Do hotel ao evento — presença ao longo de toda a jornada.</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="photo_camera">photo_camera</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Captação Estratégica</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Foto e vídeo com direção de imagem em tempo real.</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="style">style</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Suporte de Produção</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Beauty artist, stylist e produção de looks sob demanda.</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="movie_edit">movie_edit</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Conteúdo & Narrativa</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Reels, stories, teaser e bastidores com leitura estética.</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="auto_stories">auto_stories</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">São Paulo como Cenário</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Hotéis, eventos, restaurantes e locações selecionadas.</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="diamond">diamond</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Entrega Premium</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Curadoria de presença e construção de narrativa visual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ASYMMETRICAL GALLERY */}
+            <section className="bg-white px-[40px] py-0">
+                <div className="grid grid-cols-1 gap-0 -mt-[30px] max-h-[1200px] overflow-hidden" style={{ maxHeight: 'calc(100% - 80px)' }}>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
+                        <div className="relative aspect-square group overflow-hidden bg-black">
+                            <img alt="Studio B&W 1" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHE-jdbFcfmgWLndXT3HgFYpU_BQZkJU9VKpODSd6zwx-comSTwpD21JwyVF0y7eTk1OX4OMY-HI9a5ZwPfC7cuujymVf4WmAVwNUkoN4kD2ZDqA8PkgIwRWZVzrpB6aLLcMhlqVUAdjWfD1WetjRiuvq-nJX7Pr8LlYVjK_lpWHn9r15N5FObTud86hUeTna_1HFUkKdQ7TI9y2v7PuedkEdhyixd2Xs9F4kUuQ4iuPdeZigs5chjosAhkVJ2SvKMz_Zi2KMUi8sC" />
+                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
+                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">EDITORIAL</span>
+                                    <span className="text-white font-headline text-lg italic">Book</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative aspect-square group overflow-hidden bg-black">
+                            <img alt="Studio B&W 2" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyf4rGsunZdy5myR8J3NHtT2i6311OP1QSziyW6VEopX6KrDZQ8FzjqFROezSqTEdCeL1UEz68SKbmo4y6_8tIZn-Qd87T4BMCNw94eX716fioUxmsKQaYOgzUKBjMPO6KehiogAReAKUzI5wI6T-aopdya5SaU19XdbNZfGeBffxLoL_T2t4Nme5zHypUv21rXGrpMrMPAMGxOdZGYEGLoNOTAeyO5BK8ix-6FibtgMqUKrgiDJhW_KoRwXIdQdp4DEFNvKNIhiIZ" />
+                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
+                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">EDITORIAL</span>
+                                    <span className="text-white font-headline text-lg italic">Book</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative aspect-square group overflow-hidden bg-black">
+                            <img alt="Studio B&W 3" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEZTYqz5dlAC5B-gYUBRyg7hFwwSUQxX4AhhEq69XgzRVhLVa55T1rs5dC9LzBxfwdgrUBRDlfI4H7KXyQ223-LSMCzJLwsV7AfdzhkvflvC1Wuk7QyH24pBWpdLClyEyseI2qb1pAw0PREGv4f0etcdzdEOosUPk994Z8YVPsNBUhQJfXgKiWSe27ahWlFx2ukHPXTUm4yWxY6PA244YlWtNW-P6LvzAJt9sSMAbTJRLgsaSG-f0KRVI5Pjeo2A3RIUeNRF2ohmkv" />
+                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
+                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">EDITORIAL</span>
+                                    <span className="text-white font-headline text-lg italic">Book</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative aspect-square group overflow-hidden bg-black">
+                            <img alt="Studio B&W 4" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx5xaGklZZwAT2ann9AZ1LNezx6ylP80r5BeqYVN2DuOXwFWMSvPjPVnAyF2YnIf7ndsfC7aM9uzmKQLZ6omqt9C0XxODN9af8Ig4trBfWsSNbMvO39_iRLTCrsJCF3akrQjp9zkc_aR7dQhSyDBrfWhVhAoGibJGHhtLQ6dd0KCNXuvL3Cpt4KrENts3BgwN8N_JpyNoOfnea9sKE3QBwZErF5EKmeZLILDk0vNeA7hrVSvud6cwrKN1R3h5kDKEc1pzLAwwuP_CJ" />
+                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
+                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">EDITORIAL</span>
+                                    <span className="text-white font-headline text-lg italic">Book</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-0">
+                        <div className="relative aspect-[3/4] md:aspect-auto group overflow-hidden bg-black">
+                            <img alt="Portrait B&W" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQVxyV6brR8f-reCUvqMUfYoUpns0yLX5IOaBNCmpxPYJxRK4jHLpK8Djryg-HaiABUJHsug1Dhld-K3jlFuEM8Es3QRdwrF9fhoy28iSnQzn0yp3h2pNnIUTz6_t9mqIjJdhrYSPVX17a-BLyPKHbT0m-uHq40UfrR1usx7WQyikmVfoL-xFuoUvwWg_IrXdez2r1vm1IE-ZmfuFbV3hPeDYI5XzecdC0YS5_91ZhBxoCdeVAhGzFAhpOn_vw8dNyhUbxElnA6tz" />
+                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
+                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">EDITORIAL</span>
+                                    <span className="text-white font-headline text-lg italic">Book</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 gap-0">
+                            <div className="grid grid-cols-2 gap-0">
+                                <div className="relative aspect-square group overflow-hidden bg-black">
+                                    <img alt="Sub B&W 1" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxaVk2Lchxwx56P9gnReb9J3KQfAe-yt_OXYaJemGNsFCKEfiClTYJy3PXawG5YWL4U6T7e9I7buVFs2raeHtlCKXtYd8c3-xlY4dB1tkCEDjUB3pO6ntf16P770QPGzhkCPFcIBGihgVzFpdqF_RNX3ELR5tk1BUODEDC2yoa1SY4zP31V0bxyMrcZYhoaZ8zrxgvVkVYex0ZRN-ktAmmBv2oUxMmjCR817r-BC6wbCvdgkvMCI9EXYlVthe6Cpi9_Cd0AD0r6SW" />
+                                    <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                        <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
+                                            <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">EDITORIAL</span>
+                                            <span className="text-white font-headline text-lg italic">Book</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="relative aspect-square group overflow-hidden bg-black">
+                                    <img alt="Sub B&W 2" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN6o3rmcRIMUFrnGk9BlikGyErgn1cxd0Nan59VXcJ-szXJGppxE4EvhxMBa4vq6Qeq446LiyCI31jmxXBK48_9BE9G3AdHqd52xUwiyvuqg9BruQOCTc2kqyYpD_HuYkpkzyNLcH4f9BmWI8Lk67HWGORaVp11csp_1HvIBjvPqbZsJgWZcT5ffzkTSoKpUdTdPjskvcaX6s9-BeGvtovz0_ICHUpPtZb0ToIUGUfEnUIhvLFHeorJAzz7jzTiPDuDQZ60cRGb1rN" />
+                                    <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                        <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
+                                            <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">EDITORIAL</span>
+                                            <span className="text-white font-headline text-lg italic">Book</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative aspect-[2/1] group overflow-hidden bg-black">
+                                <img alt="Wide B&W" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIhMgtzfgqMlxkjJPTMUaoTvc1QiTqtDKjpdVBPhUdE1rEtsE0EKuZFJabikqvbDXQDHZ50-xRjSCI7ZF-rYKILQ5fALMKJYcFUtINFckDslUqbimINZmY_HXI3xSthcS5iWJeW4j7nm6re0yJo-IBKJN9u7BDAmzHxfsMDYf2T0MU-h2n9roi5tGZ4X-XwGz5yPg_Aua6Sb96roCpJjDSs3Gf2M3zx2sGEbSDbK33o1rMJ8H6_DkQapsR4o4vIS3mE4DjUsRtP5LZ" />
+                                <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                    <div className="bg-black/60 h-[86%] aspect-square flex flex-col items-center justify-center">
+                                        <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">EDITORIAL</span>
+                                        <span className="text-white font-headline text-lg italic">Book</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 4. TEAM SECTION */}
+            <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
+                <div className="max-w-[1400px] mx-auto">
+                    <div className="text-center mb-12">
+                        <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
+                        <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia define. Imagem posiciona. Execução sustenta.</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
+                        {/* Team Member 1: Lucas Mazzutti */}
+                        <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                            <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+                                <img className="w-full h-full object-cover grayscale" alt="professional male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
+                                <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+                                        <Link className="text-white hover:text-zinc-300 transition-colors" href="/angelo">
+                                            <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <p className="font-headline text-2xl font-medium">Lucas Mazzutti</p>
+                                <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Direção Criativa</p>
+                            </div>
+                        </div>
+                        {/* Team Member 2: Elena Silva */}
+                        <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                            <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+                                <img className="w-full h-full object-cover grayscale" alt="professional female portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
+                                <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+                                        <Link className="text-white hover:text-zinc-300 transition-colors" href="/about">
+                                            <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <p className="font-headline text-2xl font-medium">Elena Silva</p>
+                                <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Estratégia de Marca</p>
+                            </div>
+                        </div>
+                        {/* Team Member 3: Arthur Porto */}
+                        <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                            <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+                                <img className="w-full h-full object-cover grayscale" alt="professional male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
+                                <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+                                        <Link className="text-white hover:text-zinc-300 transition-colors" href="/produtora">
+                                            <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <p className="font-headline text-2xl font-medium">Arthur Porto</p>
+                                <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produção</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 6. QUOTE + VIDEO */}
+            <section className="bg-white px-[40px]">
+                <div className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-black">
+                    <img alt="Video Reel Preview" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIJolNlGXyY6byy38IAMCp6BioG4-zGYonIr-fh2jt-Y79LUqlS_WvgEtQLPhhAOGZWeE9-f_mPpcQ1KuB4pnKbBdakfikiA2PdPOYAS80Gx4AX7fPR143Zv3nLE15NF-x74AnVXceqSgBG3XQmLyiemq1iDlFy14deCLCGNNq7qeFS_RSLFZlJCfrjp9-G_CSo-dHRLppX2k25LR5lhAIiyz2AzaSidbjCIyT3x2mEFnLZVaQOh_KvW8OZNYjR0Wc7Oqyy96GiaTy" />
+                    <div className="relative z-10 text-center px-8">
+                        <button className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
+                            <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>
+                        </button>
+                        <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">"Presença de alto nível não acontece por acaso. Ela é construída."</h2>
+                        <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">E quando é bem construída, transforma qualquer agenda em narrativa.</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* 7. PRICING */}
+            <section className="bg-white px-[40px]">
+                <div className="bg-surface-container-lowest py-32 px-12 md:px-24">
+                    <div className="max-w-[1440px] mx-auto">
+                        <div className="text-center mb-24">
+                            <span className="font-label uppercase tracking-[0.2em] text-[10px] text-outline mb-4 block">ESCOLHA SEU NÍVEL</span>
+                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                                <div>
+                                    <h3 className="font-headline text-2xl mb-8">ESSENCIAL</h3>
+                                    <div className="mb-12">
+                                        <span className="text-4xl font-headline italic">R$ 1.2k</span>
+                                        <span className="text-xs font-label text-outline group-hover:text-white/50 block mt-2">ENTREGA EM 7 DIAS</span>
+                                    </div>
+                                    <ul className="space-y-4 mb-12">
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Acompanhamento 4h
+                                        </li>
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Fotografia profissional
+                                        </li>
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Direção de presença
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR</button>
+                            </div>
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group relative overflow-hidden">
+                                <div className="absolute top-6 right-6">
+                                    <span className="font-label text-[8px] tracking-widest bg-black text-white px-2 py-1 group-hover:bg-white group-hover:text-black">MOST POPULAR</span>
+                                </div>
+                                <div>
+                                    <h3 className="font-headline text-2xl mb-8">ESTRATÉGICO</h3>
+                                    <div className="mb-12">
+                                        <span className="text-4xl font-headline italic">R$ 2.8k</span>
+                                        <span className="text-xs font-label text-outline group-hover:text-white/50 block mt-2">ENTREGA EM 10 DIAS</span>
+                                    </div>
+                                    <ul className="space-y-4 mb-12">
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Acompanhamento 8h
+                                        </li>
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Foto e vídeo
+                                        </li>
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Reels e stories
+                                        </li>
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Suporte de produção
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR AGORA</button>
+                            </div>
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                                <div>
+                                    <h3 className="font-headline text-2xl mb-8">CONCIERGE</h3>
+                                    <div className="mb-12">
+                                        <span className="text-4xl font-headline italic">R$ 5.5k</span>
+                                        <span className="text-xs font-label text-outline group-hover:text-white/50 block mt-2">PRODUÇÃO FULL-DAY</span>
+                                    </div>
+                                    <ul className="space-y-4 mb-12">
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Acompanhamento full-day
+                                        </li>
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Equipe completa
+                                        </li>
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Direção editorial
+                                        </li>
+                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Publicação no blog House
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SOLICITAR ORÇAMENTO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 8. COMPARATIVE */}
+            <section className="bg-white px-[40px]">
+                <div className="bg-black text-white py-32 px-12 md:px-24">
+                    <div className="max-w-[1440px] mx-auto">
+                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight">O que muda ter uma estrutura de imagem.</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                            <div>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">COM ESTRUTURA</h3>
+                                <ul className="space-y-10">
+                                    <li className="flex items-start gap-6">
+                                        <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
+                                        <div>
+                                            <p className="font-headline text-lg mb-2">Presença Construída</p>
+                                            <p className="text-white/50 text-sm">Cada momento é acompanhado com direção e intenção.</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-6">
+                                        <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
+                                        <div>
+                                            <p className="font-headline text-lg mb-2">Conteúdo com Valor</p>
+                                            <p className="text-white/50 text-sm">Sua agenda vira material visual estratégico.</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-6">
+                                        <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
+                                        <div>
+                                            <p className="font-headline text-lg mb-2">Experiência Elevada</p>
+                                            <p className="text-white/50 text-sm">Você vive. A House transforma em imagem.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">SEM ESTRUTURA</h3>
+                                <ul className="space-y-10">
+                                    <li className="flex items-start gap-6 opacity-40">
+                                        <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
+                                        <div>
+                                            <p className="font-headline text-lg mb-2">Registros Aleatórios</p>
+                                            <p className="text-white/50 text-sm">Momentos importantes perdidos sem qualidade.</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-6 opacity-40">
+                                        <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
+                                        <div>
+                                            <p className="font-headline text-lg mb-2">Conteúdo Improvisado</p>
+                                            <p className="text-white/50 text-sm">Presença que não reflete o nível da experiência.</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-6 opacity-40">
+                                        <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
+                                        <div>
+                                            <p className="font-headline text-lg mb-2">Oportunidades Perdidas</p>
+                                            <p className="text-white/50 text-sm">Sua imagem não acompanha o que você construiu.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 9. FINAL CTA */}
+            <section className="bg-white px-[40px]">
+                <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug">Se sua agenda é importante, sua imagem também precisa ser.</h2>
+                    <button className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all">
+                        QUERO VIVER ESSA EXPERIÊNCIA
+                    </button>
+                </div>
+            </section>
+
+            {/* 10. FOOTER */}
+            <footer className="bg-black text-white py-24 px-12 border-t-[0.5px] border-zinc-900 flex flex-col items-center w-full text-center space-y-8">
+                <h2 className="text-2xl font-serif text-white mb-12 uppercase tracking-tight">House Mazzutti</h2>
+                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 mb-12">
+                    <div className="space-y-4">
+                        <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">SOCIAL</p>
+                        <div className="flex space-x-8 justify-center">
+                            <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://instagram.com/housemazzutti">INSTAGRAM</Link>
+                            <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://linkedin.com/company/housemazzutti">LINKEDIN</Link>
+                        </div>
+                    </div>
+                </div>
+                <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 pb-12">
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">CONTATO</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/about">SOBRE</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
+                </nav>
+                <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t-[0.5px] border-zinc-900">
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2025 House Mazzutti</p>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
+                </div>
+            </footer>
+        </div>
+    );
+}
