@@ -1,9 +1,142 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function BlogPage() {
+    const [activeCategory, setActiveCategory] = useState('todos');
+
+    const articles = [
+        {
+            categoria: "studio",
+            subcategoria: "Studio — Book",
+            titulo: "Book para Modelos: o que realmente define quem é escolhido no mercado",
+            excerpt: "Existe um momento silencioso na trajetória de quem deseja trabalhar com imagem: aquele em que você percebe que talvez não esteja sendo visto da forma certa.",
+            link: "/blog/book-para-modelos-quem-e-escolhido",
+            data: "Abril 2026"
+        },
+        {
+            categoria: "studio",
+            subcategoria: "Studio — Book",
+            titulo: "Book de Modelo: quando sua imagem começa a trabalhar por você",
+            excerpt: "Existe uma mudança sutil — mas poderosa — quando alguém passa a se ver como parte do mercado. A forma de olhar para si muda.",
+            link: "/blog/book-modelo-imagem-trabalha-por-voce",
+            data: "Abril 2026"
+        },
+        {
+            categoria: "studio",
+            subcategoria: "Studio — Ensaio",
+            titulo: "Ensaio Pessoal: o que realmente constrói uma imagem de autoridade",
+            excerpt: "Existe um ponto na trajetória profissional em que o crescimento deixa de depender apenas de competência. E passa a depender de percepção.",
+            link: "/blog/ensaio-pessoal-imagem-autoridade",
+            data: "Março 2026"
+        },
+        {
+            categoria: "studio",
+            subcategoria: "Studio — Ensaio",
+            titulo: "Ensaio Pessoal: quando sua imagem deixa de acompanhar sua trajetória",
+            excerpt: "Existe uma transição silenciosa na vida profissional. Ela não acontece quando você conquista algo novo.",
+            link: "/blog/ensaio-pessoal-imagem-lidera-percepcao",
+            data: "Março 2026"
+        },
+        {
+            categoria: "studio",
+            subcategoria: "Studio — Cobertura",
+            titulo: "Cobertura Externa em Tempo Real: o que realmente define uma presença de alto valor em São Paulo",
+            excerpt: "São Paulo é uma cidade que exige presença. Mas poucas pessoas realmente constroem essa presença de forma intencional.",
+            link: "/blog/cobertura-externa-presenca-alto-valor",
+            data: "Fevereiro 2026"
+        },
+        {
+            categoria: "studio",
+            subcategoria: "Studio — Cobertura",
+            titulo: "Cobertura Externa em Tempo Real: quando sua experiência em São Paulo se transforma em narrativa visual",
+            excerpt: "Algumas experiências merecem mais do que serem vividas. Merecem ser construídas.",
+            link: "/blog/cobertura-externa-narrativa-visual",
+            data: "Fevereiro 2026"
+        },
+        {
+            categoria: "agencia",
+            subcategoria: "Agência — Branding",
+            titulo: "Branding Project como Arquitetura de Valor",
+            excerpt: "Duas empresas podem entregar exatamente a mesma solução. Mas apenas uma será lembrada. Apenas uma será desejada.",
+            link: "/blog/branding-project-arquitetura-valor",
+            data: "Março 2026"
+        },
+        {
+            categoria: "agencia",
+            subcategoria: "Agência — Branding",
+            titulo: "Branding Project como Motor de Vendas",
+            excerpt: "A maioria das empresas comete o mesmo erro. Investe primeiro em tráfego. E só então percebe que algo não funciona.",
+            link: "/blog/branding-project-motor-vendas",
+            data: "Março 2026"
+        },
+        {
+            categoria: "agencia",
+            subcategoria: "Agência — Branding",
+            titulo: "Quanto investir em branding: o guia estratégico",
+            excerpt: "A pergunta mais comum sobre branding é direta: quanto custa? Mas a pergunta mais inteligente é outra.",
+            link: "/blog/quanto-investir-em-branding",
+            data: "Fevereiro 2026"
+        },
+        {
+            categoria: "agencia",
+            subcategoria: "Agência — Campanhas",
+            titulo: "Campaign de Lançamento: a arquitetura invisível",
+            excerpt: "Existe uma diferença silenciosa entre marcas que lançam e marcas que crescem. As primeiras comunicam. As segundas constroem presença.",
+            link: "/blog/campanha-lancamento-arquitetura-invisivel",
+            data: "Fevereiro 2026"
+        },
+        {
+            categoria: "agencia",
+            subcategoria: "Agência — Campanhas",
+            titulo: "Por que a maioria das campanhas falha",
+            excerpt: "Vivemos a era do excesso. Mais vídeos. Mais fotos. Mais posts. E, paradoxalmente, menos impacto.",
+            link: "/blog/por-que-campanhas-falham",
+            data: "Janeiro 2026"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Editorial de Moda",
+            titulo: "Editorial de Moda como Narrativa Visual",
+            excerpt: "Existe um momento sutil em que a moda deixa de ser apenas matéria. E passa a ser percepção.",
+            link: "/blog/editorial-moda-narrativa-visual",
+            data: "Janeiro 2026"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Editorial de Moda",
+            titulo: "Editorial de Moda orientado à performance",
+            excerpt: "Existe um momento silencioso entre ver e desejar. E outro, ainda mais decisivo, entre desejar e comprar.",
+            link: "/blog/editorial-moda-performance-vendas",
+            data: "Janeiro 2026"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Prod. Executiva",
+            titulo: "Por que boas ideias não garantem bons resultados?",
+            excerpt: "Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade e dilui.",
+            link: "/blog/por-que-boas-ideias-nao-garantem-resultados",
+            data: "Dezembro 2025"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Prod. Executiva",
+            titulo: "Produção Executiva: o sistema invisível que transforma ideias em campanhas",
+            excerpt: "Por trás de toda grande campanha existe uma estrutura que o público nunca vê — mas que define tudo.",
+            link: "/blog/producao-executiva-sistema-campanhas",
+            data: "Dezembro 2025"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Prod. Executiva",
+            titulo: "Por que campanhas caras falham",
+            excerpt: "Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas na prática não é assim.",
+            link: "/blog/por-que-campanhas-caras-falham",
+            data: "Dezembro 2025"
+        }
+    ];
+
     return (
         <div className="bg-white">
             <style dangerouslySetInnerHTML={{ __html: `
@@ -106,7 +239,29 @@ export default function BlogPage() {
                 main {
                     max-width: 1300px;
                     margin: 0 auto;
-                    padding: 80px 40px;
+                    padding: 40px 40px 80px 40px;
+                }
+
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                
+                @keyframes fadeOut {
+                    from { opacity: 1; transform: translateY(0); }
+                    to { opacity: 0; transform: translateY(10px); }
+                }
+
+                .animate-in {
+                    animation: fadeIn 0.4s ease forwards;
+                    display: block;
+                }
+
+                .animate-out {
+                    animation: fadeOut 0.3s ease forwards;
+                    pointer-events: none;
+                    position: absolute;
+                    visibility: hidden;
                 }
             `}} />
 
@@ -133,7 +288,7 @@ export default function BlogPage() {
             </header>
 
             {/* Hero Section */}
-            <section className="bg-white text-black px-8 flex items-center justify-center text-center border-t border-b border-[#e0e0e0]" style={{ borderTopWidth: '0.5px', borderBottomWidth: '0.5px', padding: '100px 0 40px 0' }}>
+            <section className="bg-white text-black px-8 flex items-center justify-center text-center border-t border-b border-[#e0e0e0]" style={{ borderTopWidth: '0.5px', borderBottomWidth: '0.5px', padding: '100px 0 40px 0', marginTop: '72px' }}>
                 <div className="max-w-4xl mx-auto">
                     <span className="label-text mb-4 block">House Mazzutti — Blog</span>
                     <h2 className="hero-title text-4xl md:text-[2.5rem] mb-4 leading-tight">"Nem tudo precisa ser dito. Mas o que é dito precisa ter direção."</h2>
@@ -141,398 +296,71 @@ export default function BlogPage() {
                 </div>
             </section>
 
+            {/* Filter Bar */}
+            <div className="flex justify-center items-center py-12" style={{ gap: '32px' }}>
+                {['todos', 'studio', 'agencia', 'produtora'].map(cat => (
+                    <button
+                        key={cat}
+                        onClick={() => setActiveCategory(cat)}
+                        style={{ 
+                            fontFamily: "'Raleway', sans-serif", 
+                            fontSize: '10px', 
+                            letterSpacing: '0.2em',
+                            textTransform: 'uppercase',
+                            background: 'none',
+                            border: 'none',
+                            color: activeCategory === cat ? '#000' : '#aaa',
+                            borderBottom: activeCategory === cat ? '0.5px solid #000' : '0.5px solid transparent',
+                            paddingBottom: '4px',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease'
+                        }}
+                    >
+                        {cat === 'agencia' ? 'AGÊNCIA' : cat}
+                    </button>
+                ))}
+            </div>
+
             {/* Blog Content */}
-            <main style={{ maxWidth: '1300px', margin: '0 auto', padding: '92px 40px 80px 40px' }}>
-                
-                {/* SEÇÃO 1: STUDIO */}
-                <section className="mb-24">
-                    <h2 className="label-text mb-4 text-[#000]" style={{ fontFamily: "'Raleway', sans-serif", textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '1rem' }}>STUDIO</h2>
-                    <div style={{ borderBottom: '0.5px solid #e0e0e0', width: '100%', marginBottom: '80px' }}></div>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Studio — Book</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/book-para-modelos-quem-e-escolhido">Book para Modelos: o que realmente define quem é escolhido no mercado</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Existe um momento silencioso na trajetória de quem deseja trabalhar com imagem: aquele em que você percebe que talvez não esteja sendo visto da forma certa."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/book-para-modelos-quem-e-escolhido">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Abril 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
+            <main style={{ position: 'relative' }}>
+                {articles.map((article, index) => {
+                    const isVisible = activeCategory === 'todos' || activeCategory === article.categoria;
+                    
+                    return (
+                        <article 
+                            key={index} 
+                            className={`group article-card border-gray-200 transition-all duration-300 ease-in-out ${isVisible ? 'opacity-100 max-h-[2000px] visible pb-20 mb-20 border-b relative' : 'opacity-0 max-h-0 invisible p-0 m-0 border-none absolute overflow-hidden pointer-events-none'}`}
+                        >
+                            <div className="image-placeholder mb-10 overflow-hidden"></div>
+                            <div className="text-center max-w-5xl mx-auto" style={{ transition: 'opacity 0.3s ease-in-out', opacity: isVisible ? 1 : 0 }}>
+                                <span className="category-label text-[#5E5E5E] mb-4 block">{article.subcategoria}</span>
+                                <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
+                                    <Link href={article.link}>{article.titulo}</Link>
+                                </h2>
+                                <p className="excerpt-text mb-8 font-light">
+                                    "{article.excerpt}"
+                                </p>
+                                <div className="mb-10">
+                                    <Link className="btn-outline" href={article.link}>Ler Artigo</Link>
+                                </div>
+                                <div className="flex justify-between items-center border-t border-gray-100 pt-6">
+                                    <span className="label-text text-gray-400">{article.data}</span>
+                                    <div className="flex space-x-4">
+                                        <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Studio — Book</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/book-modelo-imagem-trabalha-por-voce">Book de Modelo: quando sua imagem começa a trabalhar por você</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Existe uma mudança sutil — mas poderosa — quando alguém passa a se ver como parte do mercado. A forma de olhar para si muda."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/book-modelo-imagem-trabalha-por-voce">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Abril 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Studio — Ensaio</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/ensaio-pessoal-imagem-autoridade">Ensaio Pessoal: o que realmente constrói uma imagem de autoridade</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Existe um ponto na trajetória profissional em que o crescimento deixa de depender apenas de competência. E passa a depender de percepção."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/ensaio-pessoal-imagem-autoridade">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Março 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Studio — Ensaio</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/ensaio-pessoal-imagem-lidera-percepcao">Ensaio Pessoal: quando sua imagem deixa de acompanhar sua trajetória</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Existe uma transição silenciosa na vida profissional. Ela não acontece quando você conquista algo novo. Mas quando percebe que já não pode mais se apresentar da mesma forma."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/ensaio-pessoal-imagem-lidera-percepcao">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Março 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Studio — Cobertura</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/cobertura-externa-presenca-alto-valor">Cobertura Externa em Tempo Real: o que realmente define uma presença de alto valor em São Paulo</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "São Paulo é uma cidade que exige presença. Mas, na prática, poucas pessoas realmente constroem essa presença de forma intencional."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/cobertura-externa-presenca-alto-valor">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Fevereiro 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Studio — Cobertura</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/cobertura-externa-narrativa-visual">Cobertura Externa em Tempo Real: quando sua experiência em São Paulo se transforma em narrativa visual</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Algumas experiências merecem mais do que serem vividas. Merecem ser construídas."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/cobertura-externa-narrativa-visual">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Fevereiro 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div className="text-center mt-12 mb-8">
-                        <Link href="/blog?category=studio" className="label-text hover:text-gray-500 transition-colors" style={{ display: 'inline-block', paddingBottom: '4px' }}>VER TODOS &rarr;</Link>
-                    </div>
-                </section>
+                        </article>
+                    );
+                })}
 
                 {/* QUOTE BLOCK */}
-                <div className="quote-block article-card mb-24">
+                <div className="quote-block article-card mt-24" style={{ marginBottom: '0', border: 'none', position: 'relative' }}>
                     <div className="max-w-4xl mx-auto">
                         <h2 className="quote-text text-[2.5rem] md:text-[3rem] mb-6 italic leading-[1.1]">"Conteúdo sem direção é ruído. E ruído não posiciona."</h2>
                         <span className="label-text text-[#5E5E5E]">House Mazzutti</span>
                     </div>
                 </div>
-
-                {/* SEÇÃO 2: AGÊNCIA */}
-                <section className="mb-24">
-                    <h2 className="label-text mb-4 text-[#000]" style={{ fontFamily: "'Raleway', sans-serif", textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '1rem' }}>AGÊNCIA</h2>
-                    <div style={{ borderBottom: '0.5px solid #e0e0e0', width: '100%', marginBottom: '80px' }}></div>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Agência — Branding</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/branding-project-arquitetura-valor">Branding Project como Arquitetura de Valor</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Duas empresas podem entregar exatamente a mesma solução. Mas apenas uma será lembrada. Apenas uma será desejada."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/branding-project-arquitetura-valor">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Março 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Agência — Branding</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/branding-project-motor-vendas">Branding Project como Motor de Vendas</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "A maioria das empresas comete o mesmo erro. Investe primeiro em tráfego. Depois em conteúdo. E só então percebe que algo não funciona."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/branding-project-motor-vendas">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Março 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Agência — Branding</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/quanto-investir-em-branding">Quanto investir em branding: o guia estratégico</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "A pergunta mais comum sobre branding é direta: quanto custa? Mas a pergunta mais inteligente é outra."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/quanto-investir-em-branding">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Fevereiro 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Agência — Campanhas</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/campanha-lancamento-arquitetura-invisivel">Campaign de Lançamento: a arquitetura invisível</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Existe uma diferença silenciosa entre marcas que lançam e marcas que crescem. As primeiras comunicam. As segundas constroem presença."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/campanha-lancamento-arquitetura-invisivel">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Fevereiro 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Agência — Campanhas</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/por-que-campanhas-falham">Por que a maioria das campanhas falha</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Vivemos a era do excesso. Mais vídeos. Mais fotos. Mais posts. E, paradoxalmente, menos impacto."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/por-que-campanhas-falham">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Janeiro 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div className="text-center mt-12 mb-8">
-                        <Link href="/blog?category=agencia" className="label-text hover:text-gray-500 transition-colors" style={{ display: 'inline-block', paddingBottom: '4px' }}>VER TODOS &rarr;</Link>
-                    </div>
-                </section>
-
-                {/* SEÇÃO 3: PRODUTORA */}
-                <section>
-                    <h2 className="label-text mb-4 text-[#000]" style={{ fontFamily: "'Raleway', sans-serif", textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '1rem' }}>PRODUTORA</h2>
-                    <div style={{ borderBottom: '0.5px solid #e0e0e0', width: '100%', marginBottom: '80px' }}></div>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Produtora — Editorial de Moda</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/editorial-moda-narrativa-visual">Editorial de Moda como Narrativa Visual</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Existe um momento sutil em que a moda deixa de ser apenas matéria. E passa a ser percepção."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/editorial-moda-narrativa-visual">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Janeiro 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Produtora — Editorial de Moda</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/editorial-moda-performance-vendas">Editorial de Moda orientado à performance</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Existe um momento silencioso entre ver e desejar. E outro, ainda mais decisivo, entre desejar e comprar."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/editorial-moda-performance-vendas">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Janeiro 2026</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Produtora — Prod. Executiva</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/por-que-boas-ideias-nao-garantem-resultados">Por que boas ideias não garantem bons resultados?</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade, se dilui e perde identidade."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/por-que-boas-ideias-nao-garantem-resultados">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Dezembro 2025</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Produtora — Prod. Executiva</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/producao-executiva-sistema-campanhas">Produção Executiva: o sistema invisível que transforma ideias em campanhas</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Por trás de toda grande campanha existe uma estrutura que o público nunca vê — mas que define tudo."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/producao-executiva-sistema-campanhas">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Dezembro 2025</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article className="group article-card">
-                        <div className="image-placeholder mb-10 overflow-hidden"></div>
-                        <div className="text-center max-w-5xl mx-auto">
-                            <span className="category-label text-[#5E5E5E] mb-4 block">Produtora — Prod. Executiva</span>
-                            <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
-                                <Link href="/blog/por-que-campanhas-caras-falham">Por que campanhas caras falham</Link>
-                            </h2>
-                            <p className="excerpt-text mb-8 font-light">
-                                "Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas na prática não é assim."
-                            </p>
-                            <div className="mb-10">
-                                <Link className="btn-outline" href="/blog/por-que-campanhas-caras-falham">Ler Artigo</Link>
-                            </div>
-                            <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                                <span className="label-text text-gray-400">Dezembro 2025</span>
-                                <div className="flex space-x-4">
-                                    <span className="material-symbols-outlined text-gray-400 cursor-pointer text-sm">share</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div className="text-center mt-12 mb-8">
-                        <Link href="/blog?category=produtora" className="label-text hover:text-gray-500 transition-colors" style={{ display: 'inline-block', paddingBottom: '4px' }}>VER TODOS &rarr;</Link>
-                    </div>
-                </section>
             </main>
 
             {/* Footer */}
