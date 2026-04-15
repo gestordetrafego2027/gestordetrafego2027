@@ -3,7 +3,171 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function ArticleContent() {
+const articles = {
+  'book-para-modelos-quem-e-escolhido': {
+    categoria: 'Studio — Book',
+    titulo: 'Book para Modelos: o que realmente define quem é escolhido no mercado',
+    data: 'Abril 2026',
+    texto1: 'Existe um momento silencioso na trajetória de quem deseja trabalhar com imagem: aquele em que você percebe que talvez não esteja sendo visto da forma certa. Não é sobre beleza. Não é sobre potencial. É sobre como tudo isso está sendo apresentado. Muitos talentos deixam de avançar no mercado simplesmente porque não possuem um material capaz de traduzir quem realmente são.',
+    citacao: 'Um book bem construído não é portfólio. É posicionamento. É a diferença entre esperar uma oportunidade e criar uma.',
+    texto2: 'Um book fotográfico profissional não é apenas um ensaio. Ele é um instrumento de leitura. Agências, diretores de casting e marcas utilizam esse material para responder, rapidamente, perguntas essenciais: Essa pessoa é versátil? Ela entende câmera? Existe potencial comercial ou editorial?',
+    texto3: 'Trabalhar com imagem exige mais do que presença. Exige construção. O book é, muitas vezes, o primeiro capítulo dessa construção — não como um registro, mas como uma decisão consciente sobre como você deseja ser visto.',
+  },
+
+  'book-modelo-imagem-trabalha-por-voce': {
+    categoria: 'Studio — Book',
+    titulo: 'Book de Modelo: quando sua imagem começa a trabalhar por você',
+    data: 'Abril 2026',
+    texto1: 'Existe uma mudança sutil — mas poderosa — quando alguém passa a se ver como parte do mercado. A forma de olhar para si muda. A forma de se apresentar também. O que antes era apenas tirar fotos passa a ser entendido como construção de imagem.',
+    citacao: 'Sua imagem já comunica algo — mesmo quando não existe intenção. A diferença está em decidir o que ela deve comunicar.',
+    texto2: 'Um book não nasce para impressionar. Ele nasce para comunicar. Cada imagem carrega uma função: revelar potencial, indicar direção, criar leitura rápida. O mercado não procura apenas rostos bonitos. Procura rostos que funcionam em diferentes contextos.',
+    texto3: 'Existe um momento em que algo muda. O material começa a gerar retorno. Convites surgem. Respostas chegam. O olhar do mercado se abre. Isso não acontece por acaso. Acontece quando a imagem passa a estar alinhada com o que o mercado espera.',
+  },
+
+  'ensaio-pessoal-imagem-autoridade': {
+    categoria: 'Studio — Ensaio',
+    titulo: 'Ensaio Pessoal: o que realmente constrói uma imagem de autoridade',
+    data: 'Março 2026',
+    texto1: 'Existe um ponto na trajetória profissional em que o crescimento deixa de depender apenas de competência. E passa a depender de percepção. Você pode ter experiência, repertório, resultados — mas se sua imagem não traduz isso com clareza, o mercado não acessa essa informação.',
+    citacao: 'Em estágios mais avançados de carreira, não basta ser. É necessário ser percebida com precisão.',
+    texto2: 'O ensaio pessoal não deve ser entendido como um produto fotográfico. Ele é um instrumento de posicionamento visual. Ele estrutura percepção, define linguagem, orienta leitura de valor e estabelece hierarquia visual.',
+    texto3: 'O ensaio pessoal não é sobre se mostrar melhor. É sobre garantir que aquilo que você já construiu possa, finalmente, ser visto da forma correta.',
+  },
+
+  'ensaio-pessoal-imagem-lidera-percepcao': {
+    categoria: 'Studio — Ensaio',
+    titulo: 'Ensaio Pessoal: quando sua imagem deixa de acompanhar sua trajetória',
+    data: 'Março 2026',
+    texto1: 'Existe uma transição silenciosa na vida profissional. Ela não acontece quando você conquista algo novo. Mas quando percebe que já não pode mais se apresentar da mesma forma. A imagem que antes funcionava já não sustenta mais.',
+    citacao: 'Quando estética e intenção se encontram, o visual deixa de ser decorativo. A imagem passa a ter peso. A presença ganha consistência.',
+    texto2: 'Durante um ensaio pessoal bem conduzido, algo acontece além da imagem. Você se reposiciona. Não apenas diante da câmera — mas diante de si mesma. A forma como você se move muda. A forma como você sustenta o olhar muda.',
+    texto3: 'Você não precisa se tornar outra pessoa. Mas, em algum momento, precisa atualizar a forma como é vista. E quando isso é feito com direção, intenção e clareza, sua imagem deixa de ser apenas reflexo. E passa a ser extensão real da sua presença.',
+  },
+
+  'cobertura-externa-presenca-alto-valor': {
+    categoria: 'Studio — Cobertura',
+    titulo: 'Cobertura Externa em Tempo Real: o que realmente define uma presença de alto valor em São Paulo',
+    data: 'Fevereiro 2026',
+    texto1: 'São Paulo é uma cidade que exige presença. Mas, na prática, poucas pessoas realmente constroem essa presença de forma intencional. Entre compromissos, eventos, deslocamentos e agendas intensas, o que deveria ser uma experiência marcante muitas vezes se perde em registros aleatórios.',
+    citacao: 'Presença de alto nível não acontece por acaso. Ela é construída.',
+    texto2: 'A Cobertura Externa em Tempo Real não nasce como um serviço de cobertura tradicional. Ela nasce como uma estrutura de acompanhamento. Enquanto formatos comuns se limitam a registrar momentos, aqui o foco está em algo mais sofisticado: produzir presença ao longo da jornada.',
+    texto3: 'Existem agendas que passam. E existem agendas que marcam. A diferença entre elas raramente está no evento em si — mas na forma como ele é vivido, organizado e apresentado.',
+  },
+
+  'cobertura-externa-narrativa-visual': {
+    categoria: 'Studio — Cobertura',
+    titulo: 'Cobertura Externa em Tempo Real: quando sua experiência em São Paulo se transforma em narrativa visual',
+    data: 'Fevereiro 2026',
+    texto1: 'Algumas experiências merecem mais do que serem vividas. Merecem ser construídas. São agendas importantes, convites especiais, momentos que carregam significado — e que, quando bem conduzidos, se tornam algo maior do que o próprio acontecimento.',
+    citacao: 'Alguns momentos passam rapidamente. Outros permanecem. Não porque foram mais importantes — mas porque foram melhor construídos.',
+    texto2: 'Existe uma diferença sutil entre participar de um evento e realmente marcar presença. Ela não está apenas no look. Está na forma como tudo se organiza ao redor. A chegada. O tempo. O ritmo. A leitura visual.',
+    texto3: 'Quando existe intenção, cuidado e direção, até uma simples passagem pela cidade pode se transformar em algo memorável.',
+  },
+
+  'branding-project-arquitetura-valor': {
+    categoria: 'Agência — Branding',
+    titulo: 'Branding Project como Arquitetura de Valor',
+    data: 'Março 2026',
+    texto1: 'Existe um ponto silencioso — mas decisivo — dentro de qualquer negócio. Não é o produto. Não é o serviço. Não é nem mesmo o preço. É a forma como tudo isso é percebido. Duas empresas podem entregar exatamente a mesma solução. Mas apenas uma será lembrada. Apenas uma será desejada.',
+    citacao: 'Branding não é estética. É alavanca de crescimento.',
+    texto2: 'O Branding Project é um processo estruturado de desenvolvimento de marca que transforma uma ideia de negócio em um sistema completo de identidade, percepção e aplicação. Ele integra estratégia de marca, identidade visual, diretrizes e aplicações práticas.',
+    texto3: 'Todo negócio começa com uma ideia. Mas só cresce quando essa ideia se torna clara, reconhecível e desejada. O Branding Project existe para transformar isso em realidade.',
+  },
+
+  'branding-project-motor-vendas': {
+    categoria: 'Agência — Branding',
+    titulo: 'Branding Project como Motor de Vendas',
+    data: 'Março 2026',
+    texto1: 'A maioria das empresas comete o mesmo erro. Investe primeiro em tráfego. Depois em conteúdo. Depois em equipe comercial. E só então percebe que algo não funciona. Os leads não convertem como deveriam. O preço precisa ser justificado o tempo todo.',
+    citacao: 'Sem marca, você paga mais caro para crescer.',
+    texto2: 'Sem um Branding Project, toda ação de crescimento opera com atrito. Isso acontece porque a comunicação não é clara, a identidade não sustenta valor e a percepção não acompanha a entrega.',
+    texto3: 'Toda empresa quer crescer. Mas poucas percebem que o crescimento sustentável começa antes da venda. Começa na construção da marca.',
+  },
+
+  'quanto-investir-em-branding': {
+    categoria: 'Agência — Branding',
+    titulo: 'Quanto investir em branding: o guia estratégico',
+    data: 'Fevereiro 2026',
+    texto1: 'A pergunta mais comum sobre branding é direta: quanto custa? Mas a pergunta mais inteligente é outra: quanto vale construir uma marca que sustenta o crescimento do meu negócio? Porque branding não é um gasto isolado. É uma decisão estrutural.',
+    citacao: 'Economizar no branding pode sair caro — e de forma contínua.',
+    texto2: 'Muitas empresas olham para branding como criação de logo, escolha de cores, estética visual. E por isso tentam reduzir investimento e simplificar decisão. O problema é que isso gera marcas genéricas, falta de diferenciação e dificuldade de crescimento.',
+    texto3: 'Quanto investir em branding? A resposta mais honesta é: o suficiente para não precisar refazer depois. Porque branding não é algo que você faz várias vezes. É algo que você estrutura para sustentar o seu crescimento.',
+  },
+
+  'campanha-lancamento-arquitetura-invisivel': {
+    categoria: 'Agência — Campanhas',
+    titulo: 'Campaign de Lançamento: a arquitetura invisível',
+    data: 'Fevereiro 2026',
+    texto1: 'Existe uma diferença silenciosa — e decisiva — entre marcas que lançam e marcas que crescem. As primeiras comunicam. As segundas constroem presença. No ambiente atual, lançar deixou de ser um ato pontual. Passou a ser um processo estratégico de ocupação de espaço.',
+    citacao: 'Comunicação sem estrutura gera visibilidade. Comunicação estruturada gera crescimento.',
+    texto2: 'Uma Campaign de Lançamento é uma arquitetura estratégica que organiza múltiplos pontos de contato em torno de uma narrativa central, com o objetivo de gerar percepção consistente e impacto progressivo.',
+    texto3: 'No cenário atual, crescer não depende apenas de aparecer. Depende de como se aparece — e com que consistência. A Campaign de Lançamento é o que transforma intenção em estrutura. E estrutura em resultado.',
+  },
+
+  'por-que-campanhas-falham': {
+    categoria: 'Agência — Campanhas',
+    titulo: 'Por que a maioria das campanhas falha',
+    data: 'Janeiro 2026',
+    texto1: 'Vivemos a era do excesso. Mais vídeos. Mais fotos. Mais posts. Mais campanhas. E, paradoxalmente, menos impacto. A maioria das marcas não sofre por falta de conteúdo. Sofre por falta de direção.',
+    citacao: 'Não é sobre fazer mais. É sobre conectar melhor.',
+    texto2: 'Grande parte das marcas não falha por falta de qualidade. Falha por falta de integração. É comum encontrar vídeos bem produzidos que não se conectam com outros conteúdos, campanhas que não têm continuidade e estética inconsistente entre canais.',
+    texto3: 'Campanhas não falham por falta de talento. Elas falham por falta de estrutura. No cenário atual, não vence quem produz mais. Vence quem organiza melhor.',
+  },
+
+  'editorial-moda-narrativa-visual': {
+    categoria: 'Produtora — Editorial de Moda',
+    titulo: 'Editorial de Moda como Narrativa Visual',
+    data: 'Janeiro 2026',
+    texto1: 'Existe um momento sutil em que a moda deixa de ser apenas matéria. E passa a ser percepção. É quando o tecido já não comunica apenas textura, mas intenção. Quando a pose não mostra apenas uma roupa, mas sugere uma história.',
+    citacao: 'O valor deixou de estar apenas no que é vendido. E passou a estar na forma como é apresentado.',
+    texto2: 'O editorial de moda é uma produção visual estruturada para transformar uma coleção em narrativa. Mais do que fotografar produtos, ele organiza elementos como direção de arte, styling, casting, luz e cenário para criar uma leitura coesa de marca.',
+    texto3: 'Uma coleção pode existir. Mas nem sempre é percebida. O editorial é o que traduz. O que conecta. O que sustenta. E, principalmente, o que transforma produto em presença.',
+  },
+
+  'editorial-moda-performance-vendas': {
+    categoria: 'Produtora — Editorial de Moda',
+    titulo: 'Editorial de Moda orientado à performance',
+    data: 'Janeiro 2026',
+    texto1: 'Existe um momento silencioso entre ver e desejar. E outro, ainda mais decisivo, entre desejar e comprar. A maioria das marcas acredita que esse processo acontece de forma natural. Mas não acontece. Ele é conduzido.',
+    citacao: 'Imagem deixou de ser suporte. Ela passou a ser motor de performance.',
+    texto2: 'Um editorial orientado à performance é uma produção visual estruturada não apenas para posicionar — mas para gerar resultado mensurável. Ele organiza direção de arte, enquadramento, ritmo visual e linguagem corporal com um objetivo claro: aumentar a capacidade da imagem de gerar ação.',
+    texto3: 'Na moda, vender não é apenas oferecer. É conduzir percepção até a decisão. O editorial, quando bem construído, faz exatamente isso. Ele não apenas mostra. Ele direciona. E, no momento certo, ele converte.',
+  },
+
+  'por-que-boas-ideias-nao-garantem-resultados': {
+    categoria: 'Produtora — Prod. Executiva',
+    titulo: 'Por que boas ideias não garantem bons resultados?',
+    data: 'Dezembro 2025',
+    texto1: 'Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade, se dilui, se adapta demais e perde identidade. Isso é mais comum do que parece.',
+    citacao: 'Produção influencia performance. Conteúdos mais consistentes retêm mais atenção, aumentam engajamento e melhoram conversão.',
+    texto2: 'O investimento em conteúdo e campanhas aumentou. Mas junto com ele, aumentou o risco. Mais formatos significa mais complexidade. Mais equipe significa mais variáveis. Mais canais significa mais possibilidade de erro.',
+    texto3: 'Projetos bem estruturados têm menos surpresas, tomam decisões mais rápidas e executam com mais confiança. E isso impacta diretamente o resultado.',
+  },
+
+  'producao-executiva-sistema-campanhas': {
+    categoria: 'Produtora — Prod. Executiva',
+    titulo: 'Produção Executiva: o sistema invisível que transforma ideias em campanhas',
+    data: 'Dezembro 2025',
+    texto1: 'Existe um imaginário comum no mercado publicitário: acredita-se que campanhas são feitas de ideias brilhantes. E, de fato, são. Mas o que raramente se discute é que ideias não falham — execuções falham.',
+    citacao: 'Grandes campanhas não são feitas apenas com talento — são sustentadas por estrutura.',
+    texto2: 'Produção Executiva não é produção. É governança. É o que conecta criação, equipe, fornecedores, cronograma, orçamento e execução em um único fluxo coerente. Sem isso, cada área funciona bem — mas o todo falha.',
+    texto3: 'A House atua com uma visão clara: não basta criar bem, é preciso entregar com excelência. Por isso, a Produção Executiva conecta direção criativa, operação técnica, linguagem de marca e execução em set.',
+  },
+
+  'por-que-campanhas-caras-falham': {
+    categoria: 'Produtora — Prod. Executiva',
+    titulo: 'Por que campanhas caras falham',
+    data: 'Dezembro 2025',
+    texto1: 'Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas na prática, o que determina o resultado não é o valor investido. É a forma como esse investimento é organizado.',
+    citacao: 'O custo não está apenas no orçamento. Está na eficiência perdida.',
+    texto2: 'Muitas campanhas contam com bons profissionais em cada área. Mas sem um ponto central de coordenação, decisões se fragmentam, responsabilidades se sobrepõem e prioridades se confundem.',
+    texto3: 'Produção Executiva atua como uma camada de proteção. Ela não elimina imprevistos. Mas reduz significativamente o impacto deles. Ela transforma incerteza em previsibilidade.',
+  },
+};
+
+export default function ArticleContent({ slug }) {
+    const article = articles[slug] || articles['book-para-modelos-quem-e-escolhido'];
+
     return (
         <div className="bg-white text-zinc-800 m-0 p-0 antialiased font-sans">
             <style dangerouslySetInnerHTML={{ __html: `
@@ -51,7 +215,7 @@ export default function ArticleContent() {
             <section className="mt-0 hairline-b pt-7 pb-4 px-10 flex justify-between items-center bg-white">
                 <div className="text-[14px] font-label font-bold uppercase tracking-[0.2em] text-zinc-900">BLOG</div>
                 <div className="pr-[120px] font-headline italic text-zinc-500 text-[18px]">
-                    Home / Blog / Book para Modelos
+                    Home / Blog / {article.titulo}
                 </div>
             </section>
 
@@ -69,24 +233,24 @@ export default function ArticleContent() {
                     </div>
                     {/* Metadata & Title */}
                     <div className="mb-10 text-center md:text-left">
-                        <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-500 mb-4">STUDIO — BOOK</div>
+                        <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-500 mb-4">{article.categoria}</div>
                         <h1 className="text-xl md:text-2xl font-headline uppercase tracking-[0.15em] leading-tight text-zinc-900">
-                            Book para Modelos: o que realmente define quem é escolhido no mercado
+                            {article.titulo}
                         </h1>
                     </div>
                     {/* Body 1 */}
                     <div className="text-zinc-700 text-sm md:text-base leading-[1.9] font-body space-y-8 mb-12">
-                        <p>Existe uma diferença silenciosa entre modelos que são chamados e modelos que são escolhidos. No ecossistema da moda e da publicidade contemporânea, a imagem não é apenas um registro estético, mas um ativo de comunicação estratégica. O book fotográfico, muitas vezes reduzido a uma simples coleção de fotos, deve ser interpretado como um manifesto de versatilidade e posicionamento de marca pessoal.</p>
+                        <p>{article.texto1}</p>
                     </div>
                     {/* Blockquote */}
                     <div className="bg-zinc-950 text-white p-12 md:p-16 mb-12 text-center">
                         <blockquote className="font-headline italic text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
-                            "Um book bem construído não é portfólio. É posicionamento. É a ferramenta que remove a dúvida do diretor de casting."
+                            "{article.citacao}"
                         </blockquote>
                     </div>
                     {/* Body 2 */}
                     <div className="text-zinc-700 text-sm md:text-base leading-[1.9] font-body space-y-8 mb-12">
-                        <p>O mercado não escolhe quem tem mais fotos. Escolhe quem comunica com mais clareza sua capacidade de adaptação. Um profissional de sucesso entende que cada ensaio é uma oportunidade de demonstrar um arquétipo diferente, mantendo uma essência autêntica que os diretores de arte buscam para ancorar suas campanhas.</p>
+                        <p>{article.texto2}</p>
                     </div>
                     {/* Side-by-Side Images Grid */}
                     <div className="grid grid-cols-2 gap-4 mb-12 aspect-[3/2] overflow-hidden">
@@ -99,12 +263,12 @@ export default function ArticleContent() {
                     </div>
                     {/* Body 3 */}
                     <div className="text-zinc-700 text-sm md:text-base leading-[1.9] font-body space-y-8 mb-12">
-                        <p>Cada imagem tem uma função. Cada escolha de direção comunica algo. Desde a iluminação — que pode variar do hard-light dramático ao soft-box editorial — até a escolha do styling, tudo deve convergir para um objetivo único: tornar o modelo a solução visual para um problema de marketing. Na House Mazzutti, trabalhamos essa narrativa técnica para elevar o potencial de conversão de cada talento.</p>
+                        <p>{article.texto3}</p>
                     </div>
                     
                     {/* Article Footer */}
                     <footer className="pt-8 hairline-t flex justify-between items-center mb-16">
-                        <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400">Abril 2026</div>
+                        <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400">{article.data}</div>
                         <div className="flex items-center gap-2 text-zinc-400 cursor-pointer hover:text-zinc-900 transition-colors">
                             <span className="text-[10px] font-label font-bold uppercase tracking-widest">Share</span>
                             <span className="material-symbols-outlined">share</span>
