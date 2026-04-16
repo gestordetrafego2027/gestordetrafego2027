@@ -374,7 +374,7 @@ export default function AgenciaBrandingPage() {
                             <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Soluções para o seu negócio.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="100">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">ESSENCIAL</h3>
                                     <div className="mb-12">
@@ -417,7 +417,7 @@ export default function AgenciaBrandingPage() {
                                 </div>
                                 <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR AGORA</button>
                             </div>
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="300">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">BRAND SYSTEM</h3>
                                     <div className="mb-12">

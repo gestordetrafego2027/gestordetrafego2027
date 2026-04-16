@@ -182,17 +182,17 @@ export default function ProdutoraPublicidadePage() {
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Social First</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Conteúdo otimizado para redes sociais, Reels e TikTok com olhar premium.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="groups">groups</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Casting & Influência</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Seleção e gestão de talentos para cada projeto.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="settings">settings</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Estrutura & Operação</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Logística, fornecedores e cronograma sob controle total.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="600">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="diamond">diamond</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Entrega Consistente</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Qualidade garantida do briefing ao resultado final.</p>
@@ -374,7 +374,7 @@ export default function ProdutoraPublicidadePage() {
                             <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Invista em resultados reais.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="100">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">ESSENCIAL</h3>
                                     <div className="mb-12">
@@ -420,7 +420,7 @@ export default function ProdutoraPublicidadePage() {
                                 </div>
                                 <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR AGORA</button>
                             </div>
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="300">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">CAMPANHA COMPLETA</h3>
                                     <div className="mb-12">

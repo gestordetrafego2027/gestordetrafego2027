@@ -167,12 +167,12 @@ export default function ProdutoraModaPage() {
                         <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Soluções completas para a comunicação visual da sua marca.</p>
                         
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="style">style</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Direção de Moda</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Styling e direção criativa para garantir a coerência visual da marca.</p>
                             </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="photo_camera">photo_camera</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Fotografia Fashion</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Captação profissional com padrão editorial internacional.</p>
@@ -182,12 +182,12 @@ export default function ProdutoraModaPage() {
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Social Content</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Criação de conteúdo dinâmico para redes sociais com estética premium.</p>
                             </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="videocam">videocam</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Fashion Films</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Vídeos conceituais que transmitem a identidade e o movimento da coleção.</p>
                             </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="camera">camera</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Campanhas</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Produção de fotos para catálogos, lookbooks e campanhas de lançamento.</p>
@@ -374,7 +374,7 @@ export default function ProdutoraModaPage() {
                             <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Soluções para o seu negócio.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="100">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">ESSENCIAL</h3>
                                     <div className="mb-12">
@@ -420,7 +420,7 @@ export default function ProdutoraModaPage() {
                                 </div>
                                 <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR AGORA</button>
                             </div>
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="300">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">CAMPANHA COMPLETA</h3>
                                     <div className="mb-12">

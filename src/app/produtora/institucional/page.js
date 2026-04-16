@@ -172,27 +172,27 @@ export default function ProdutoraInstitucionalPage() {
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Perfil Corporativo</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Vídeos que apresentam a empresa, seus valores e infraestrutura.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="play_circle">play_circle</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Vídeo Explicativo</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Clareza sobre produto, serviço ou processo em até 3 minutos.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="school">school</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Treinamento & Educação</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Vídeo-aulas e conteúdo técnico para equipes e clientes.</p>
                             </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="event_available">event_available</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Cobertura de Eventos</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Registros premium de convenções, palestras e lançamentos.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="thumb_up">thumb_up</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Case de Sucesso</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Prova social estruturada para conversão e autoridade.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="600">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="diamond">diamond</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Banco de Imagem</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Ativos visuais estratégicos para todos os canais.</p>
@@ -374,7 +374,7 @@ export default function ProdutoraInstitucionalPage() {
                             <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">O valor da sua autoridade.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="100">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">ESSENCIAL</h3>
                                     <div className="mb-12">
@@ -417,7 +417,7 @@ export default function ProdutoraInstitucionalPage() {
                                 </div>
                                 <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR AGORA</button>
                             </div>
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="300">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">PRESENÇA COMPLETA</h3>
                                     <div className="mb-12">
@@ -477,7 +477,7 @@ export default function ProdutoraInstitucionalPage() {
                                     </li>
                                 </ul>
                             </div>
-                            <div>
+                            <div data-aos="fade-left">
                                 <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">SEM ESTRUTURA</h3>
                                 <ul className="space-y-10">
                                     <li className="flex items-start gap-6 opacity-40">
