@@ -47,6 +47,11 @@ export default function Header({ variant = 'dark' }) {
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/studio">STUDIO</Link>
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/produtora">PRODUTORA</Link>
                     <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/agencia">AGÊNCIA</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/angelo">ANGELO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/comunidade">COMUNIDADE</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/blog">BLOG</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/contato">CONTATO</Link>
                 </nav>
 
                 <div className="flex items-center space-x-6" style={{ color: textColor }}>
