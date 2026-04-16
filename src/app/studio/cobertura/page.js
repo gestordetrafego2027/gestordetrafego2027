@@ -2,11 +2,13 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function StudioCoberturaPage() {
     const [sideMenuOpen, setSideMenuOpen] = useState(false)
     useEffect(() => {
-        // Scripts e animações podem ser adicionados aqui
+        AOS.init({ duration: 800, once: true, easing: 'ease-out' })
     }, []);
 
     return (
@@ -143,10 +145,10 @@ export default function StudioCoberturaPage() {
                                     <path d="M3 12L21 12" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block">COBERTURA EXTERNA</span>
-                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight">Viver São Paulo exige presença. Nós produzimos a sua.</h1>
-                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed">Acompanhamento premium, direção de imagem e conteúdo em tempo real para transformar sua agenda em uma experiência visual de alto valor.</p>
-                            <div>
+                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">COBERTURA EXTERNA</span>
+                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">Viver São Paulo exige presença. Nós produzimos a sua.</h1>
+                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Acompanhamento premium, direção de imagem e conteúdo em tempo real para transformar sua agenda em uma experiência visual de alto valor.</p>
+                            <div data-aos="fade-up" data-aos-delay="400">
                                 <button className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
                                     QUERO SER ACOMPANHADA
                                 </button>
@@ -160,37 +162,37 @@ export default function StudioCoberturaPage() {
             <section className="bg-white py-0 px-[40px] pt-[25px]">
                 <div className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
-                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block">COBERTURA EXTERNA</span>
-                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight">Não é cobertura. É produção de presença.</h2>
-                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16">Cada momento da sua agenda, conduzido com intenção.</p>
+                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">COBERTURA EXTERNA</span>
+                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Não é cobertura. É produção de presença.</h2>
+                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Cada momento da sua agenda, conduzido com intenção.</p>
                         
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="location_on">location_on</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Acompanhamento Real</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Do hotel ao evento — presença ao longo de toda a jornada.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="photo_camera">photo_camera</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Captação Estratégica</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Foto e vídeo com direção de imagem em tempo real.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="style">style</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Suporte de Produção</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Beauty artist, stylist e produção de looks sob demanda.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="movie_edit">movie_edit</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Conteúdo & Narrativa</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Reels, stories, teaser e bastidores com leitura estética.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="auto_stories">auto_stories</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">São Paulo como Cenário</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Hotéis, eventos, restaurantes e locações selecionadas.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="600">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="diamond">diamond</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Entrega Premium</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Curadoria de presença e construção de narrativa visual.</p>
@@ -368,8 +370,8 @@ export default function StudioCoberturaPage() {
                 <div className="bg-surface-container-lowest py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
                         <div className="text-center mb-24">
-                            <span className="font-label uppercase tracking-[0.2em] text-[10px] text-outline mb-4 block">ESCOLHA SEU NÍVEL</span>
-                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
+                            <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block" data-aos="fade-up">TABELA DE INVESTIMENTO</span>
+                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Acompanhamento premium. Resultados reais.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
@@ -393,7 +395,7 @@ export default function StudioCoberturaPage() {
                                 </div>
                                 <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR</button>
                             </div>
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group relative overflow-hidden">
+                            <div className="p-12 border border-zinc-100 flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                                 <div className="absolute top-6 right-6">
                                     <span className="font-label text-[8px] tracking-widest bg-black text-white px-2 py-1 group-hover:bg-white group-hover:text-black">MOST POPULAR</span>
                                 </div>
@@ -453,9 +455,9 @@ export default function StudioCoberturaPage() {
             <section className="bg-white px-[40px]">
                 <div className="bg-black text-white py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
-                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight">O que muda ter uma estrutura de imagem.</h2>
+                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight" data-aos="fade-up">A sua agenda produzida.</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
-                            <div>
+                            <div data-aos="fade-right">
                                 <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">COM ESTRUTURA</h3>
                                 <ul className="space-y-10">
                                     <li className="flex items-start gap-6">
@@ -481,7 +483,7 @@ export default function StudioCoberturaPage() {
                                     </li>
                                 </ul>
                             </div>
-                            <div>
+                            <div data-aos="fade-left">
                                 <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">SEM ESTRUTURA</h3>
                                 <ul className="space-y-10">
                                     <li className="flex items-start gap-6 opacity-40">
@@ -515,8 +517,8 @@ export default function StudioCoberturaPage() {
             {/* 9. FINAL CTA */}
             <section className="bg-white px-[40px]">
                 <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
-                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug">Se sua agenda é importante, sua imagem também precisa ser.</h2>
-                    <button className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all">
+                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug" data-aos="fade-up" data-aos-delay="100">Não deixe São Paulo passar em branco.</h2>
+                    <button className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
                         QUERO VIVER ESSA EXPERIÊNCIA
                     </button>
                 </div>

@@ -2,11 +2,13 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function StudioEnsaioPage() {
     const [sideMenuOpen, setSideMenuOpen] = useState(false)
     useEffect(() => {
-        // Scripts e animações podem ser adicionados aqui
+        AOS.init({ duration: 800, once: true, easing: 'ease-out' })
     }, []);
 
     return (
@@ -143,10 +145,10 @@ export default function StudioEnsaioPage() {
                                     <path d="M3 12L21 12" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block">ENSAIO PESSOAL</span>
-                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight">Sua imagem precisa sustentar o que você já construiu.</h1>
-                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed">Ensaio pessoal com direção estratégica para profissionais, empreendedores e líderes que precisam de imagem alinhada ao seu posicionamento.</p>
-                            <div>
+                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">DIREÇÃO DE ENSAIO</span>
+                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">A imagem que você projeta define como o mundo te percebe.</h1>
+                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Ensaios fotográficos com direção de cena, moda e narrativa para quem busca autenticidade, autoridade e impacto visual exclusivo.</p>
+                            <div data-aos="fade-up" data-aos-delay="400">
                                 <button className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
                                     INICIAR MEU ENSAIO
                                 </button>
@@ -160,40 +162,40 @@ export default function StudioEnsaioPage() {
             <section className="bg-white py-0 px-[40px] pt-[25px]">
                 <div className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
-                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block">ENSAIO PESSOAL</span>
-                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight">Imagem que posiciona. Presença que comunica.</h2>
-                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16">Cada detalhe é dirigido com intenção.</p>
+                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">ENSAIO STUDIO</span>
+                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Não é sobre tirar fotos. É sobre criar ícones.</h2>
+                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Uma experiência pensada do conceito à curadoria.</p>
                         
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
-                            <div className="flex flex-col items-center">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="psychology">psychology</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Leitura de Perfil</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Antes de qualquer clique, definimos qual mercado você quer acessar.</p>
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="lightbulb">lightbulb</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Conceito Criativo</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Desenvolvimento da narrativa visual baseada na sua essência.</p>
                             </div>
-                            <div className="flex flex-col items-center">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="auto_awesome_motion">auto_awesome_motion</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Moodboard</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Criação de moodboard estratégico alinhado ao seu objetivo.</p>
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="checkroom">checkroom</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Styling & Moda</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Curadoria de looks que reforçam a mensagem desejada.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="movie_edit">movie_edit</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Direção no Set</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Direção completa de poses, expressão e presença.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="photo_camera">photo_camera</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Captação Técnica</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Imagem captada com padrão técnico de mercado.</p>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Set de Luxo</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Estúdio próprio com infraestrutura de nível internacional.</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="content_cut">content_cut</span>
                                 <h3 className="font-headline mb-4 tracking-tight !text-lg">Curadoria</h3>
                                 <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Seleção final das imagens que realmente posicionam.</p>
                             </div>
-                            <div className="flex flex-col items-center">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="diamond">diamond</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Entrega High-End</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Tratamento e entrega profissional. Pronto para agências.</p>
+                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="600">
+                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="auto_awesome">auto_awesome</span>
+                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Efeito House</h3>
+                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">A assinatura visual Mazzutti que te diferencia no mercado.</p>
                             </div>
                         </div>
                     </div>
@@ -368,11 +370,11 @@ export default function StudioEnsaioPage() {
                 <div className="bg-surface-container-lowest py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
                         <div className="text-center mb-24">
-                            <span className="font-label uppercase tracking-[0.2em] text-[10px] text-outline mb-4 block">ESCOLHA SEU NÍVEL</span>
-                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
+                            <span className="font-label uppercase tracking-[0.2em] text-[10px] text-outline mb-4 block" data-aos="fade-up">TABELA DE INVESTIMENTO</span>
+                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Projetos de impacto. Valores reais.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="100">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">ESSENCIAL</h3>
                                     <div className="mb-12">
@@ -393,7 +395,7 @@ export default function StudioEnsaioPage() {
                                 </div>
                                 <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR</button>
                             </div>
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group relative overflow-hidden">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                                 <div className="absolute top-6 right-6">
                                     <span className="font-label text-[8px] tracking-widest bg-black text-white px-2 py-1 group-hover:bg-white group-hover:text-black">MOST POPULAR</span>
                                 </div>
@@ -420,7 +422,7 @@ export default function StudioEnsaioPage() {
                                 </div>
                                 <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR AGORA</button>
                             </div>
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group">
+                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="300">
                                 <div>
                                     <h3 className="font-headline text-2xl mb-8">PREMIUM</h3>
                                     <div className="mb-12">
@@ -453,9 +455,9 @@ export default function StudioEnsaioPage() {
             <section className="bg-white px-[40px]">
                 <div className="bg-black text-white py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
-                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight">O que muda ter um Book com direção.</h2>
+                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight" data-aos="fade-up">A diferença está na direção.</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
-                            <div>
+                            <div data-aos="fade-right">
                                 <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">COM DIREÇÃO (HOUSE)</h3>
                                 <ul className="space-y-10">
                                     <li className="flex items-start gap-6">
@@ -481,7 +483,7 @@ export default function StudioEnsaioPage() {
                                     </li>
                                 </ul>
                             </div>
-                            <div>
+                            <div data-aos="fade-left">
                                 <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">SEM DIREÇÃO</h3>
                                 <ul className="space-y-10">
                                     <li className="flex items-start gap-6 opacity-40">
@@ -515,8 +517,8 @@ export default function StudioEnsaioPage() {
             {/* 9. FINAL CTA */}
             <section className="bg-white px-[40px]">
                 <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
-                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug">Se a sua imagem não sustenta quem você é — é hora de reconstruí-la.</h2>
-                    <button className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all">
+                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug" data-aos="fade-up" data-aos-delay="100">Sua nova imagem começa agora.</h2>
+                    <button className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
                         INICIAR DIAGNÓSTICO DO MEU ENSAIO
                     </button>
                 </div>
