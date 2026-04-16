@@ -84,6 +84,10 @@ export default function ComunidadePage() {
 
             {/* HEADER */}
             <Header variant="dark" />
+            {/* 
+
+
+
 
 
 

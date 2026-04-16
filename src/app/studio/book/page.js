@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Header from '@/app/components/Header';
 
 export default function StudioBookPage() {
