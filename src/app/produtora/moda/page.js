@@ -36,98 +36,127 @@ export default function ProdutoraModaPage() {
                 <div className="flex justify-between items-center w-full max-w-[1920px] mx-auto">
                     <Link className="font-headline text-xl md:text-2xl tracking-tighter text-white uppercase ml-[20px]" href="/">HOUSE MAZZUTTI</Link>
                     <div className="flex items-center gap-8 text-white mr-[10px]">
-                        <div className="cursor-pointer group" onClick={() => setSideMenuOpen(true)}>
-                            <div style={{width:'28px', height:'1px', background:'white', marginBottom:'7px', transition:'all 0.3s'}} 
-                                className="group-hover:w-[20px]"/>
-                            <div style={{width:'28px', height:'1px', background:'white', marginBottom:'7px', transition:'all 0.3s'}}/>
-                            <div style={{width:'28px', height:'1px', background:'white', transition:'all 0.3s'}}
-                                className="group-hover:w-[20px]"/>
-                        </div>
+                        <button
+                          onClick={() => setSideMenuOpen(true)}
+                          style={{background:'none', border:'none', cursor:'pointer',
+                                  padding:0, position:'relative', width:'28px', height:'28px'}}
+                          onMouseEnter={e => {
+                            const spans = e.currentTarget.querySelectorAll('span')
+                            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)'
+                            spans[1].style.opacity = '0'
+                            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)'
+                          }}
+                          onMouseLeave={e => {
+                            const spans = e.currentTarget.querySelectorAll('span')
+                            spans[0].style.transform = 'none'
+                            spans[1].style.opacity = '1'
+                            spans[2].style.transform = 'none'
+                          }}
+                        >
+                          <span style={{display:'block', width:'28px', height:'1px', 
+                            background:'white', position:'absolute', top:'6px', left:0,
+                            transition:'all 0.3s ease'}}/>
+                          <span style={{display:'block', width:'28px', height:'1px', 
+                            background:'white', position:'absolute', top:'14px', left:0,
+                            transition:'all 0.3s ease'}}/>
+                          <span style={{display:'block', width:'28px', height:'1px', 
+                            background:'white', position:'absolute', top:'22px', left:0,
+                            transition:'all 0.3s ease'}}/>
+                        </button>
                     </div>
                 </div>
             </nav>
 
             {sideMenuOpen && (
-              <div style={{position:'fixed', inset:0, zIndex:99999}}>
-                {/* Overlay escuro */}
-                <div 
-                  style={{position:'absolute', inset:0, background:'rgba(0,0,0,0.5)'}}
-                  onClick={() => setSideMenuOpen(false)}
-                />
-                {/* Painel lateral direito */}
+              <div style={{
+                position:'fixed', top:0, left:0, width:'100vw', height:'100vh',
+                zIndex:99999, background:'#0a0a0a',
+                display:'flex', flexDirection:'column',
+                animation:'menuOpen 0.5s ease forwards'
+              }}>
+                <style>{`
+                  @keyframes menuOpen { 
+                    from { opacity:0; } 
+                    to { opacity:1; } 
+                  }
+                `}</style>
+
+                {/* Topo: logo + fechar */}
                 <div style={{
-                  position:'absolute', right:0, top:0, bottom:0,
-                  width:'320px', background:'#0a0a0a',
-                  display:'flex', flexDirection:'column',
-                  padding:'60px 40px', justifyContent:'space-between'
+                  display:'flex', justifyContent:'space-between', 
+                  alignItems:'center', padding:'40px 60px'
                 }}>
-                  {/* Botão fechar */}
-                  <button 
-                    onClick={() => setSideMenuOpen(false)}
-                    style={{position:'absolute', top:'32px', right:'32px', 
-                            background:'none', border:'none', cursor:'pointer'}}
-                  >
-                    <div style={{width:'24px', height:'1px', background:'white', 
-                                 transform:'rotate(45deg)', marginBottom:'-1px'}}/>
-                    <div style={{width:'24px', height:'1px', background:'white', 
-                                 transform:'rotate(-45deg)'}}/>
-                  </button>
-
-                  {/* Logo */}
-                  <div>
-                    <p style={{fontFamily:'Newsreader, serif', fontSize:'18px', 
-                               fontStyle:'italic', color:'white', letterSpacing:'-0.02em',
-                               marginBottom:'60px'}}>
-                      HOUSE MAZZUTTI
-                    </p>
-
-                    {/* Links de navegação */}
-                    <nav style={{display:'flex', flexDirection:'column', gap:'24px'}}>
-                      {[
-                        {label:'HOME', href:'/'},
-                        {label:'SOBRE', href:'/about'},
-                        {label:'STUDIO', href:'/studio'},
-                        {label:'PRODUTORA', href:'/produtora'},
-                        {label:'AGÊNCIA', href:'/agencia'},
-                        {label:'ANGELO', href:'/angelo'},
-                        {label:'COMUNIDADE', href:'/comunidade'},
-                        {label:'PORTFÓLIO', href:'/portfolio'},
-                        {label:'BLOG', href:'/blog'},
-                        {label:'CONTATO', href:'/contato'},
-                      ].map(item => (
-                        <Link 
-                          key={item.label}
-                          href={item.href}
-                          onClick={() => setSideMenuOpen(false)}
-                          style={{fontFamily:'Raleway, sans-serif', fontSize:'10px',
-                                  fontWeight:'600', letterSpacing:'0.2em', 
-                                  textTransform:'uppercase', color:'#aaa',
-                                  textDecoration:'none', transition:'color 0.3s'}}
-                          onMouseEnter={e => e.target.style.color='white'}
-                          onMouseLeave={e => e.target.style.color='#aaa'}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </nav>
+                  <p style={{fontFamily:'Newsreader, serif', fontSize:'18px',
+                    fontStyle:'italic', color:'white', margin:0}}>
+                    HOUSE MAZZUTTI
+                  </p>
+                  <div onClick={() => setSideMenuOpen(false)}
+                    style={{cursor:'pointer', position:'relative', 
+                            width:'28px', height:'28px'}}>
+                    <span style={{display:'block', width:'28px', height:'1px', 
+                      background:'white', position:'absolute', top:'14px', 
+                      transform:'rotate(45deg)'}}/>
+                    <span style={{display:'block', width:'28px', height:'1px', 
+                      background:'white', position:'absolute', top:'14px', 
+                      transform:'rotate(-45deg)'}}/>
                   </div>
+                </div>
 
-                  {/* Rodapé do menu */}
-                  <div>
-                    <div style={{width:'100%', height:'0.5px', background:'#333', marginBottom:'32px'}}/>
-                    <div style={{display:'flex', gap:'24px'}}>
-                      <a href="#" style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
-                                          letterSpacing:'0.2em', textTransform:'uppercase',
-                                          color:'#666', textDecoration:'none'}}>
-                        INSTAGRAM
-                      </a>
-                      <a href="#" style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
-                                          letterSpacing:'0.2em', textTransform:'uppercase',
-                                          color:'#666', textDecoration:'none'}}>
-                        LINKEDIN
-                      </a>
-                    </div>
+                {/* Links centralizados no meio da tela */}
+                <nav style={{
+                  flex:1, display:'flex', flexDirection:'column',
+                  justifyContent:'center', alignItems:'center', gap:'20px'
+                }}>
+                  {[
+                    {label:'HOME', href:'/'},
+                    {label:'SOBRE', href:'/about'},
+                    {label:'STUDIO', href:'/studio'},
+                    {label:'PRODUTORA', href:'/produtora'},
+                    {label:'AGÊNCIA', href:'/agencia'},
+                    {label:'ANGELO', href:'/angelo'},
+                    {label:'COMUNIDADE', href:'/comunidade'},
+                    {label:'PORTFÓLIO', href:'/portfolio'},
+                    {label:'BLOG', href:'/blog'},
+                    {label:'CONTATO', href:'/contato'},
+                  ].map(item => (
+                    <Link key={item.label} href={item.href}
+                      onClick={() => setSideMenuOpen(false)}
+                      style={{
+                        fontFamily:'Newsreader, serif', 
+                        fontSize:'2.8rem',
+                        fontStyle:'italic', 
+                        fontWeight:'300', 
+                        color:'#444',
+                        textDecoration:'none', 
+                        transition:'color 0.3s',
+                        letterSpacing:'-0.02em',
+                        textAlign:'center'
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.color='white'}
+                      onMouseLeave={e => e.currentTarget.style.color='#444'}
+                    >{item.label}</Link>
+                  ))}
+                </nav>
+
+                {/* Rodapé */}
+                <div style={{
+                  display:'flex', justifyContent:'space-between', 
+                  alignItems:'center', padding:'40px 60px',
+                  borderTop:'0.5px solid #222'
+                }}>
+                  <div style={{display:'flex', gap:'32px'}}>
+                    <a href="#" style={{fontFamily:'Raleway, sans-serif', 
+                      fontSize:'9px', letterSpacing:'0.2em', 
+                      textTransform:'uppercase', color:'#555', 
+                      textDecoration:'none'}}>INSTAGRAM</a>
+                    <a href="#" style={{fontFamily:'Raleway, sans-serif', 
+                      fontSize:'9px', letterSpacing:'0.2em', 
+                      textTransform:'uppercase', color:'#555', 
+                      textDecoration:'none'}}>LINKEDIN</a>
                   </div>
+                  <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                    letterSpacing:'0.2em', textTransform:'uppercase', 
+                    color:'#333', margin:0}}>© 2025 HOUSE MAZZUTTI</p>
                 </div>
               </div>
             )}
