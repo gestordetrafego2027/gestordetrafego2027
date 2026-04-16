@@ -101,12 +101,7 @@ export default function Header({ variant = 'dark' }) {
                   padding:'60px 48px',
                   animation:'slideIn 0.5s cubic-bezier(0.4,0,0.2,1) forwards'
                 }}>
-                  <style>{`
-                    @keyframes slideIn { 
-                      from{transform:translateX(100%)} 
-                      to{transform:translateX(0)} 
-                    }
-                  `}</style>
+
             
                   <div>
                     <div style={{display:'flex', justifyContent:'space-between',
@@ -174,9 +169,13 @@ export default function Header({ variant = 'dark' }) {
               </>
             )}
 
-            <style jsx global>{`
+            <style>{`
                 .font-raleway { font-family: var(--font-raleway), sans-serif; }
                 .font-headline { font-family: var(--font-newsreader), serif; }
+                @keyframes slideIn { 
+                  from{transform:translateX(100%)} 
+                  to{transform:translateX(0)} 
+                }
             `}</style>
         </>
     );
