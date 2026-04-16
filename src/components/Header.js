@@ -56,102 +56,121 @@ export default function Header({ variant = 'dark' }) {
                     {/* ANIMATED HAMBURGER */}
                     <button
                         onClick={() => toggleMenu(true)}
-                        style={{
-                            background: 'none',
-                            border: 'none',
-                            cursor: 'pointer',
-                            padding: 0,
-                            position: 'relative',
-                            width: '36px',
-                            height: '36px'
-                        }}
+                        style={{background:'none', border:'none', cursor:'pointer',
+                                padding:0, position:'relative', width:'36px', height:'28px'}}
                         onMouseEnter={e => {
-                            const spans = e.currentTarget.querySelectorAll('span');
-                            spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
-                            spans[1].style.opacity = '0';
-                            spans[2].style.transform = 'rotate(-45deg) translate(8px, -8px)';
+                            const spans = e.currentTarget.querySelectorAll('span')
+                            spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)'
+                            spans[1].style.opacity = '0'
+                            spans[2].style.transform = 'rotate(-45deg) translate(8px, -8px)'
                         }}
                         onMouseLeave={e => {
-                            const spans = e.currentTarget.querySelectorAll('span');
-                            spans[0].style.transform = 'none';
-                            spans[1].style.opacity = '1';
-                            spans[2].style.transform = 'none';
+                            const spans = e.currentTarget.querySelectorAll('span')
+                            spans[0].style.transform = 'none'
+                            spans[1].style.opacity = '1'
+                            spans[2].style.transform = 'none'
                         }}
                     >
-                        <span className="block w-full h-[1px] mb-2 transition-transform duration-300" style={{ backgroundColor: textColor }}></span>
-                        <span className="block w-full h-[1px] mb-2 transition-opacity duration-300" style={{ backgroundColor: textColor }}></span>
-                        <span className="block w-full h-[1px] transition-transform duration-300" style={{ backgroundColor: textColor }}></span>
+                        <span style={{display:'block', width:'36px', height:'1px',
+                            background: textColor, position:'absolute', top:'4px', left:0,
+                            transition:'all 0.3s ease'}}/>
+                        <span style={{display:'block', width:'36px', height:'1px',
+                            background: textColor, position:'absolute', top:'14px', left:0,
+                            transition:'all 0.3s ease'}}/>
+                        <span style={{display:'block', width:'36px', height:'1px',
+                            background: textColor, position:'absolute', top:'24px', left:0,
+                            transition:'all 0.3s ease'}}/>
                     </button>
                 </div>
             </header>
 
-            {/* FULLSCREEN SIDE MENU OVERLAY */}
-            <div 
-                className={`fixed inset-0 z-[200] transition-opacity duration-500 ${sideMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-                style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
-                onClick={() => toggleMenu(false)}
-            >
+            {/* SIDE MENU */}
+            {sideMenuOpen && (
+              <>
                 <div 
-                    className={`absolute inset-y-0 right-0 w-full max-w-[320px] md:w-[25vw] bg-[#0a0a0a] shadow-2xl transition-transform duration-500 ease-in-out flex flex-col p-16 ${sideMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
-                    onClick={e => e.stopPropagation()}
-                >
-                    {/* CLOSE BUTTON */}
-                    <button 
+                  onClick={() => toggleMenu(false)}
+                  style={{position:'fixed', inset:0, zIndex:99998,
+                          background:'rgba(0,0,0,0.3)',
+                          animation:'fadeIn 0.4s ease'}}
+                />
+                <div style={{
+                  position:'fixed', top:0, right:0, bottom:0,
+                  width:'25vw', minWidth:'320px',
+                  background:'#0a0a0a', zIndex:99999,
+                  display:'flex', flexDirection:'column',
+                  justifyContent:'space-between',
+                  padding:'60px 48px',
+                  animation:'slideIn 0.5s cubic-bezier(0.4,0,0.2,1) forwards'
+                }}>
+                  <style>{`
+                    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+                    @keyframes slideIn { from{transform:translateX(100%)} to{transform:translateX(0)} }
+                  `}</style>
+            
+                  <div>
+                    <div style={{display:'flex', justifyContent:'space-between',
+                      alignItems:'center', marginBottom:'60px'}}>
+                      <p style={{fontFamily:'Newsreader, serif', fontSize:'16px',
+                        fontStyle:'italic', color:'white', margin:0}}>
+                        HOUSE MAZZUTTI
+                      </p>
+                      <div 
                         onClick={() => toggleMenu(false)}
-                        className="absolute top-10 right-10 text-white hover:opacity-50 transition-opacity"
-                    >
-                        <span className="material-symbols-outlined text-4xl font-light">close</span>
-                    </button>
-
-                    {/* BRANDING */}
-                    <div className="mb-16">
-                        <span className="text-white font-serif italic text-xl tracking-tight uppercase">HMZT</span>
+                        style={{cursor:'pointer', position:'relative', width:'24px', height:'24px'}}
+                      >
+                        <span style={{display:'block', width:'24px', height:'1px',
+                          background:'white', position:'absolute', top:'12px',
+                          transform:'rotate(45deg)'}}/>
+                        <span style={{display:'block', width:'24px', height:'1px',
+                          background:'white', position:'absolute', top:'12px',
+                          transform:'rotate(-45deg)'}}/>
+                      </div>
                     </div>
-
-                    {/* NAVIGATION LINKS */}
-                    <nav className="flex flex-col space-y-3 mb-auto">
-                        {[
-                            { name: 'HOME', href: '/' },
-                            { name: 'SOBRE', href: '/about' },
-                            { name: 'STUDIO', href: '/studio' },
-                            { name: 'PRODUTORA', href: '/produtora' },
-                            { name: 'AGÊNCIA', href: '/agencia' },
-                            { name: 'ANGELO', href: '/angelo' },
-                            { name: 'COMUNIDADE', href: '/comunidade' },
-                            { name: 'PORTFÓLIO', href: '/portfolio' },
-                            { name: 'BLOG', href: '/blog' },
-                            { name: 'CONTATO', href: '/contato' }
-                        ].map((link, idx) => (
-                            <Link 
-                                key={idx}
-                                href={link.href}
-                                onClick={() => toggleMenu(false)}
-                                className="text-white font-raleway uppercase tracking-[0.2em] text-[13px] font-light no-underline hover:underline"
-                                onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
-                                onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                    </nav>
-
-                    {/* FOOTER INFO */}
-                    <div className="mt-auto pt-16 border-t border-white/10 space-y-8">
-                        <div>
-                            <p className="text-[9px] uppercase tracking-[0.3em] font-light text-neutral-500 mb-4">FOLLOW US</p>
-                            <div className="flex space-x-6">
-                                <a href="#" className="text-white text-[10px] uppercase tracking-[0.2em] font-light hover:opacity-50 transition-opacity">Instagram</a>
-                                <a href="#" className="text-white text-[10px] uppercase tracking-[0.2em] font-light hover:opacity-50 transition-opacity">LinkedIn</a>
-                            </div>
-                        </div>
-
-                        <div className="space-y-2">
-                            <p className="text-[10px] font-light text-neutral-400">SAO PAULO / BRASIL</p>
-                            <p className="text-[9px] font-light text-neutral-600">© 2025 HOUSE MAZZUTTI</p>
-                        </div>
+            
+                    <div style={{marginBottom:'48px'}}>
+                      <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                        letterSpacing:'0.2em', textTransform:'uppercase',
+                        color:'#555', marginBottom:'16px'}}>LOCALIZAÇÃO</p>
+                      <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
+                        fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
+                        São Paulo, Brasil
+                      </p>
+                      <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
+                        fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:'0 0 0 0'}}>
+                        23.5505° S, 46.6333° W
+                      </p>
                     </div>
+            
+                    <div style={{width:'100%', height:'0.5px', 
+                      background:'#222', marginBottom:'48px'}}/>
+            
+                    <div>
+                      <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                        letterSpacing:'0.2em', textTransform:'uppercase',
+                        color:'#555', marginBottom:'16px'}}>FOLLOW US</p>
+                      <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
+                        <a href="https://instagram.com/housemazzutti" style={{fontFamily:'Newsreader, serif',
+                          fontSize:'14px', fontStyle:'italic', color:'#aaa',
+                          textDecoration:'none', transition:'color 0.3s'}}
+                          onMouseEnter={e => e.currentTarget.style.color='white'}
+                          onMouseLeave={e => e.currentTarget.style.color='#aaa'}
+                        >Instagram</a>
+                        <a href="https://linkedin.com/company/housemazzutti" style={{fontFamily:'Newsreader, serif',
+                          fontSize:'14px', fontStyle:'italic', color:'#aaa',
+                          textDecoration:'none', transition:'color 0.3s'}}
+                          onMouseEnter={e => e.currentTarget.style.color='white'}
+                          onMouseLeave={e => e.currentTarget.style.color='#aaa'}
+                        >LinkedIn</a>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                    letterSpacing:'0.2em', textTransform:'uppercase',
+                    color:'#333', margin:0}}>© 2025 HOUSE MAZZUTTI</p>
                 </div>
-            </div>
+              </>
+            )}
 
             <style jsx global>{`
                 .font-raleway { font-family: var(--font-raleway), sans-serif; }

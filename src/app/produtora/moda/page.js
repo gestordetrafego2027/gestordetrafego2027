@@ -1,12 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import Header from '@/components/Header';
 
 export default function ProdutoraModaPage() {
-    const [sideMenuOpen, setSideMenuOpen] = useState(false)
     useEffect(() => {
         AOS.init({ duration: 800, once: true, easing: 'ease-out' })
     }, []);
@@ -32,135 +28,8 @@ export default function ProdutoraModaPage() {
             <h1 className="sr-only">Editorial de Moda Profissional para Marcas e Campanhas</h1>
             
             {/* 1. HEADER */}
-            <nav className="top-0 left-0 w-full px-[100px] bg-transparent fixed pt-[40px] z-[9999]" id="main-nav" style={{ paddingTop: '65px' }}>
-                <div className="flex justify-between items-center w-full max-w-[1920px] mx-auto">
-                    <Link className="font-headline text-xl md:text-2xl tracking-tighter text-white uppercase ml-[20px]" href="/">HOUSE MAZZUTTI</Link>
-                    <div className="flex items-center gap-8 text-white mr-[10px]">
-                        <button
-                          onClick={() => { setSideMenuOpen(true); document.body.style.overflow = 'hidden' }}
-                          style={{background:'none', border:'none', cursor:'pointer',
-                                  padding:0, position:'relative', width:'28px', height:'28px'}}
-                          onMouseEnter={e => {
-                            const spans = e.currentTarget.querySelectorAll('span')
-                            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)'
-                            spans[1].style.opacity = '0'
-                            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)'
-                          }}
-                          onMouseLeave={e => {
-                            const spans = e.currentTarget.querySelectorAll('span')
-                            spans[0].style.transform = 'none'
-                            spans[1].style.opacity = '1'
-                            spans[2].style.transform = 'none'
-                          }}
-                        >
-                          <span style={{display:'block', width:'28px', height:'1px', 
-                            background:'white', position:'absolute', top:'6px', left:0,
-                            transition:'all 0.3s ease'}}/>
-                          <span style={{display:'block', width:'28px', height:'1px', 
-                            background:'white', position:'absolute', top:'14px', left:0,
-                            transition:'all 0.3s ease'}}/>
-                          <span style={{display:'block', width:'28px', height:'1px', 
-                            background:'white', position:'absolute', top:'22px', left:0,
-                            transition:'all 0.3s ease'}}/>
-                        </button>
-                    </div>
-                </div>
-            </nav>
+            <Header variant="dark" />
 
-            {sideMenuOpen && (
-              <div style={{
-                position:'fixed', top:0, left:0, width:'100vw', height:'100vh',
-                zIndex:99999, background:'#0a0a0a',
-                display:'flex', flexDirection:'column',
-                animation:'menuOpen 0.5s ease forwards'
-              }}>
-                <style>{`
-                  @keyframes menuOpen { 
-                    from { opacity:0; } 
-                    to { opacity:1; } 
-                  }
-                `}</style>
-
-                {/* Topo: logo + fechar */}
-                <div style={{
-                  display:'flex', justifyContent:'space-between', 
-                  alignItems:'center', padding:'40px 60px'
-                }}>
-                  <p style={{fontFamily:'Newsreader, serif', fontSize:'18px',
-                    fontStyle:'italic', color:'white', margin:0}}>
-                    HOUSE MAZZUTTI
-                  </p>
-                  <div onClick={() => { setSideMenuOpen(false); document.body.style.overflow = 'unset' }}
-                    style={{cursor:'pointer', position:'relative', 
-                            width:'28px', height:'28px'}}>
-                    <span style={{display:'block', width:'28px', height:'1px', 
-                      background:'white', position:'absolute', top:'14px', 
-                      transform:'rotate(45deg)'}}/>
-                    <span style={{display:'block', width:'28px', height:'1px', 
-                      background:'white', position:'absolute', top:'14px', 
-                      transform:'rotate(-45deg)'}}/>
-                  </div>
-                </div>
-
-                {/* Links centralizados no meio da tela */}
-                <nav style={{
-                  flex:1, display:'flex', flexDirection:'column',
-                  justifyContent:'center', alignItems:'center', gap:'12px',
-                  paddingBottom:'60px'
-                }}>
-                  {[
-                    {label:'HOME', href:'/'},
-                    {label:'SOBRE', href:'/about'},
-                    {label:'STUDIO', href:'/studio'},
-                    {label:'PRODUTORA', href:'/produtora'},
-                    {label:'AGÊNCIA', href:'/agencia'},
-                    {label:'ANGELO', href:'/angelo'},
-                    {label:'COMUNIDADE', href:'/comunidade'},
-                    {label:'PORTFÓLIO', href:'/portfolio'},
-                    {label:'BLOG', href:'/blog'},
-                    {label:'CONTATO', href:'/contato'},
-                  ].map(item => (
-                    <Link key={item.label} href={item.href}
-                      onClick={() => { setSideMenuOpen(false); document.body.style.overflow = 'unset' }}
-                      style={{
-                        fontFamily:'Newsreader, serif', 
-                        fontSize:'2.8rem',
-                        fontStyle:'italic', 
-                        fontWeight:'300', 
-                        color:'white',
-                        textDecoration:'none', 
-                        transition:'color 0.3s',
-                        letterSpacing:'-0.02em',
-                        textAlign:'center'
-                      }}
-                      onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
-                      onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}
-                    >{item.label}</Link>
-                  ))}
-                </nav>
-
-                {/* Rodapé */}
-                <div style={{
-                  display:'flex', justifyContent:'space-between', 
-                  alignItems:'center', padding:'40px 60px',
-                  borderTop:'0.5px solid #222'
-                }}>
-                  <div style={{display:'flex', gap:'32px'}}>
-                    <a href="#" style={{fontFamily:'Raleway, sans-serif', 
-                      fontSize:'9px', letterSpacing:'0.2em', 
-                      textTransform:'uppercase', color:'#555', 
-                      textDecoration:'none'}}>INSTAGRAM</a>
-                    <a href="#" style={{fontFamily:'Raleway, sans-serif', 
-                      fontSize:'9px', letterSpacing:'0.2em', 
-                      textTransform:'uppercase', color:'#555', 
-                      textDecoration:'none'}}>LINKEDIN</a>
-                  </div>
-                  <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
-                    letterSpacing:'0.2em', textTransform:'uppercase', 
-                    color:'#333', margin:0}}>© 2025 HOUSE MAZZUTTI</p>
-                </div>
-              </div>
-            )}
 
             {/* 2. HERO SECTION */}
             <section className="relative h-screen w-full bg-white overflow-hidden px-[40px] pt-[25px] pb-[10px]">
