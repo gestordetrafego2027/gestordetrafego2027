@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import Header from "@/components/Header";
 
 /**
  * PORTFOLIO PAGE - HOUSE MAZZUTTI
@@ -107,34 +108,7 @@ export default function Portfolio() {
     <div className="page-portfolio selection:bg-black selection:text-white">
       <h1 className="sr-only">Portfólio de Branding Estratégico e Posicionamento de Marca</h1>
 
-      {/* TOP NAV BAR - FULL NAVIGATION */}
-      <header className="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-50 bg-transparent">
-        <div className="text-lg font-serif tracking-tight text-black uppercase font-headline">
-          House Mazzutti
-        </div>
-        <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-          <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/">HOME</Link>
-          <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/about">SOBRE</Link>
-          <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/studio">STUDIO</Link>
-          <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/produtora">PRODUTORA</Link>
-          <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/agencia">AGÊNCIA</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/angelo">ANGELO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/comunidade">COMUNIDADE</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/portfolio">PORTFÓLIO</Link>
-          <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/blog">BLOG</Link>
-          <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light text-black hover:opacity-70 transition-opacity duration-300" href="/contato">CONTATO</Link>
-        </nav>
-        <div className="flex items-center space-x-6 text-black">
-          <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
-            <span className="material-symbols-outlined" data-icon="search">search</span>
-          </button>
-          <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform flex flex-col space-y-1.5 w-6">
-            <span className="block w-full h-[1px] bg-current"></span>
-            <span className="block w-full h-[1px] bg-current"></span>
-            <span className="block w-full h-[1px] bg-current"></span>
-          </button>
-        </div>
-      </header>
+      <Header variant="light" />
 
       {/* Transition Overlay */}
       <div id="transition-overlay">

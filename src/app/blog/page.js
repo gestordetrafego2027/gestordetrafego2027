@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Header from '@/components/Header';
 
 export default function BlogPage() {
     const [activeCategory, setActiveCategory] = useState('todos');
@@ -267,25 +268,7 @@ export default function BlogPage() {
 
             <h1 hidden>Blog de Branding Estratégico e Posicionamento de Marca</h1>
             
-            {/* Header */}
-            <header style={{ position: 'fixed', top: 0, width: '100%', zIndex: 50, background: '#ffffff', borderBottom: '0.5px solid #e0e0e0' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 48px' }}>
-                    <Link href="/" style={{ fontFamily: "'Newsreader', serif", fontStyle: 'italic', fontSize: '20px', letterSpacing: '-0.02em', color: '#000', textDecoration: 'none' }}>HOUSE MAZZUTTI</Link>
-                    <nav style={{ display: 'flex', gap: '24px' }}>
-                        <Link href="/" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>HOME</Link>
-                        <Link href="/about" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>SOBRE</Link>
-                        <Link href="/studio" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>STUDIO</Link>
-                        <Link href="/produtora" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>PRODUTORA</Link>
-                        <Link href="/agencia" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>AGÊNCIA</Link>
-                        <Link href="/angelo" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>ANGELO</Link>
-                        <Link href="/comunidade" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>COMUNIDADE</Link>
-                        <Link href="/portfolio" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>PORTFÓLIO</Link>
-                        <Link href="/blog" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>BLOG</Link>
-                        <Link href="/contato" style={{ fontFamily: "'Raleway', sans-serif", fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#000', textDecoration: 'none' }}>CONTATO</Link>
-                    </nav>
-                </div>
-                <div style={{ borderBottom: '0.5px solid #f0f0f0', width: '100%' }}></div>
-            </header>
+            <Header variant="light" />
 
             {/* Hero Section */}
             <section className="bg-white text-black px-8 flex items-center justify-center text-center border-t border-b border-[#e0e0e0]" style={{ borderTopWidth: '0.5px', borderBottomWidth: '0.5px', padding: '100px 0 40px 0', marginTop: '72px' }}>
