@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function AgenciaCampanhasPage() {
+    const [sideMenuOpen, setSideMenuOpen] = useState(false)
     useEffect(() => {
         // Scripts e animações podem ser adicionados aqui
     }, []);
@@ -33,12 +34,101 @@ export default function AgenciaCampanhasPage() {
                 <div className="flex justify-between items-center w-full max-w-[1920px] mx-auto">
                     <Link className="font-headline text-xl md:text-2xl tracking-tighter text-white uppercase ml-[20px]" href="/">HOUSE MAZZUTTI</Link>
                     <div className="flex items-center gap-8 text-white mr-[10px]">
-                        <button className="hover:opacity-60 transition-opacity duration-300 flex items-center">
-                            <span className="material-symbols-outlined !text-4xl" data-icon="menu">menu</span>
-                        </button>
+                        <div className="cursor-pointer group" onClick={() => setSideMenuOpen(true)}>
+                            <div style={{width:'28px', height:'1px', background:'white', marginBottom:'7px', transition:'all 0.3s'}} 
+                                className="group-hover:w-[20px]"/>
+                            <div style={{width:'28px', height:'1px', background:'white', marginBottom:'7px', transition:'all 0.3s'}}/>
+                            <div style={{width:'28px', height:'1px', background:'white', transition:'all 0.3s'}}
+                                className="group-hover:w-[20px]"/>
+                        </div>
                     </div>
                 </div>
             </nav>
+
+            {sideMenuOpen && (
+              <div style={{position:'fixed', inset:0, zIndex:99999}}>
+                {/* Overlay escuro */}
+                <div 
+                  style={{position:'absolute', inset:0, background:'rgba(0,0,0,0.5)'}}
+                  onClick={() => setSideMenuOpen(false)}
+                />
+                {/* Painel lateral direito */}
+                <div style={{
+                  position:'absolute', right:0, top:0, bottom:0,
+                  width:'320px', background:'#0a0a0a',
+                  display:'flex', flexDirection:'column',
+                  padding:'60px 40px', justifyContent:'space-between'
+                }}>
+                  {/* Botão fechar */}
+                  <button 
+                    onClick={() => setSideMenuOpen(false)}
+                    style={{position:'absolute', top:'32px', right:'32px', 
+                            background:'none', border:'none', cursor:'pointer'}}
+                  >
+                    <div style={{width:'24px', height:'1px', background:'white', 
+                                 transform:'rotate(45deg)', marginBottom:'-1px'}}/>
+                    <div style={{width:'24px', height:'1px', background:'white', 
+                                 transform:'rotate(-45deg)'}}/>
+                  </button>
+
+                  {/* Logo */}
+                  <div>
+                    <p style={{fontFamily:'Newsreader, serif', fontSize:'18px', 
+                               fontStyle:'italic', color:'white', letterSpacing:'-0.02em',
+                               marginBottom:'60px'}}>
+                      HOUSE MAZZUTTI
+                    </p>
+
+                    {/* Links de navegação */}
+                    <nav style={{display:'flex', flexDirection:'column', gap:'24px'}}>
+                      {[
+                        {label:'HOME', href:'/'},
+                        {label:'SOBRE', href:'/about'},
+                        {label:'STUDIO', href:'/studio'},
+                        {label:'PRODUTORA', href:'/produtora'},
+                        {label:'AGÊNCIA', href:'/agencia'},
+                        {label:'ANGELO', href:'/angelo'},
+                        {label:'COMUNIDADE', href:'/comunidade'},
+                        {label:'PORTFÓLIO', href:'/portfolio'},
+                        {label:'BLOG', href:'/blog'},
+                        {label:'CONTATO', href:'/contato'},
+                      ].map(item => (
+                        <Link 
+                          key={item.label}
+                          href={item.href}
+                          onClick={() => setSideMenuOpen(false)}
+                          style={{fontFamily:'Raleway, sans-serif', fontSize:'10px',
+                                  fontWeight:'600', letterSpacing:'0.2em', 
+                                  textTransform:'uppercase', color:'#aaa',
+                                  textDecoration:'none', transition:'color 0.3s'}}
+                          onMouseEnter={e => e.target.style.color='white'}
+                          onMouseLeave={e => e.target.style.color='#aaa'}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </nav>
+                  </div>
+
+                  {/* Rodapé do menu */}
+                  <div>
+                    <div style={{width:'100%', height:'0.5px', background:'#333', marginBottom:'32px'}}/>
+                    <div style={{display:'flex', gap:'24px'}}>
+                      <a href="#" style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                                          letterSpacing:'0.2em', textTransform:'uppercase',
+                                          color:'#666', textDecoration:'none'}}>
+                        INSTAGRAM
+                      </a>
+                      <a href="#" style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                                          letterSpacing:'0.2em', textTransform:'uppercase',
+                                          color:'#666', textDecoration:'none'}}>
+                        LINKEDIN
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* 2. HERO SECTION */}
             <section className="relative h-screen w-full bg-white overflow-hidden px-[40px] pt-[25px] pb-[10px]">
