@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
+import Header from "@/app/components/Header";
 
 /**
  * HOME PAGE - HOUSE MAZZUTTI

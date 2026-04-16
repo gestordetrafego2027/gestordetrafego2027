@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
+import Header from "@/app/components/Header";
 
 /**
  * PORTFOLIO PAGE - HOUSE MAZZUTTI
