@@ -37,7 +37,7 @@ export default function ProdutoraPublicidadePage() {
                     <Link className="font-headline text-xl md:text-2xl tracking-tighter text-white uppercase ml-[20px]" href="/">HOUSE MAZZUTTI</Link>
                     <div className="flex items-center gap-8 text-white mr-[10px]">
                         <button
-                          onClick={() => setSideMenuOpen(true)}
+                          onClick={() => { setSideMenuOpen(true); document.body.style.overflow = 'hidden' }}
                           style={{background:'none', border:'none', cursor:'pointer',
                                   padding:0, position:'relative', width:'28px', height:'28px'}}
                           onMouseEnter={e => {
@@ -90,7 +90,7 @@ export default function ProdutoraPublicidadePage() {
                     fontStyle:'italic', color:'white', margin:0}}>
                     HOUSE MAZZUTTI
                   </p>
-                  <div onClick={() => setSideMenuOpen(false)}
+                  <div onClick={() => { setSideMenuOpen(false); document.body.style.overflow = 'unset' }}
                     style={{cursor:'pointer', position:'relative', 
                             width:'28px', height:'28px'}}>
                     <span style={{display:'block', width:'28px', height:'1px', 
@@ -105,7 +105,8 @@ export default function ProdutoraPublicidadePage() {
                 {/* Links centralizados no meio da tela */}
                 <nav style={{
                   flex:1, display:'flex', flexDirection:'column',
-                  justifyContent:'center', alignItems:'center', gap:'20px'
+                  justifyContent:'center', alignItems:'center', gap:'12px',
+                  paddingBottom:'60px'
                 }}>
                   {[
                     {label:'HOME', href:'/'},
@@ -120,20 +121,20 @@ export default function ProdutoraPublicidadePage() {
                     {label:'CONTATO', href:'/contato'},
                   ].map(item => (
                     <Link key={item.label} href={item.href}
-                      onClick={() => setSideMenuOpen(false)}
+                      onClick={() => { setSideMenuOpen(false); document.body.style.overflow = 'unset' }}
                       style={{
                         fontFamily:'Newsreader, serif', 
                         fontSize:'2.8rem',
                         fontStyle:'italic', 
                         fontWeight:'300', 
-                        color:'#444',
+                        color:'white',
                         textDecoration:'none', 
                         transition:'color 0.3s',
                         letterSpacing:'-0.02em',
                         textAlign:'center'
                       }}
-                      onMouseEnter={e => e.currentTarget.style.color='white'}
-                      onMouseLeave={e => e.currentTarget.style.color='#444'}
+                      onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
+                      onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}
                     >{item.label}</Link>
                   ))}
                 </nav>
