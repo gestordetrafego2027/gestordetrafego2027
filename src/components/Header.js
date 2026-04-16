@@ -55,43 +55,41 @@ export default function Header({ variant = 'dark' }) {
                     
                     {/* ANIMATED HAMBURGER */}
                     <button
-                        onClick={() => toggleMenu(true)}
-                        style={{background:'none', border:'none', cursor:'pointer',
-                                padding:0, position:'relative', width:'36px', height:'28px'}}
-                        onMouseEnter={e => {
-                            const spans = e.currentTarget.querySelectorAll('span')
-                            spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)'
-                            spans[1].style.opacity = '0'
-                            spans[2].style.transform = 'rotate(-45deg) translate(8px, -8px)'
-                        }}
-                        onMouseLeave={e => {
-                            const spans = e.currentTarget.querySelectorAll('span')
-                            spans[0].style.transform = 'none'
-                            spans[1].style.opacity = '1'
-                            spans[2].style.transform = 'none'
-                        }}
+                      onClick={() => toggleMenu(true)}
+                      style={{background:'none', border:'none', cursor:'pointer',
+                              padding:0, position:'relative', width:'36px', height:'28px'}}
+                      onMouseEnter={e => {
+                        const spans = e.currentTarget.querySelectorAll('span')
+                        spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)'
+                        spans[1].style.opacity = '0'
+                        spans[2].style.transform = 'rotate(-45deg) translate(8px, -8px)'
+                      }}
+                      onMouseLeave={e => {
+                        const spans = e.currentTarget.querySelectorAll('span')
+                        spans[0].style.transform = 'none'
+                        spans[1].style.opacity = '1'
+                        spans[2].style.transform = 'none'
+                      }}
                     >
-                        <span style={{display:'block', width:'36px', height:'1px',
-                            background: textColor, position:'absolute', top:'4px', left:0,
-                            transition:'all 0.3s ease'}}/>
-                        <span style={{display:'block', width:'36px', height:'1px',
-                            background: textColor, position:'absolute', top:'14px', left:0,
-                            transition:'all 0.3s ease'}}/>
-                        <span style={{display:'block', width:'36px', height:'1px',
-                            background: textColor, position:'absolute', top:'24px', left:0,
-                            transition:'all 0.3s ease'}}/>
+                      <span style={{display:'block', width:'36px', height:'1px',
+                        background: textColor, position:'absolute', top:'4px', left:0,
+                        transition:'all 0.3s ease'}}/>
+                      <span style={{display:'block', width:'36px', height:'1px',
+                        background: textColor, position:'absolute', top:'14px', left:0,
+                        transition:'all 0.3s ease'}}/>
+                      <span style={{display:'block', width:'36px', height:'1px',
+                        background: textColor, position:'absolute', top:'24px', left:0,
+                        transition:'all 0.3s ease'}}/>
                     </button>
                 </div>
             </header>
 
-            {/* SIDE MENU */}
             {sideMenuOpen && (
               <>
                 <div 
                   onClick={() => toggleMenu(false)}
                   style={{position:'fixed', inset:0, zIndex:99998,
-                          background:'rgba(0,0,0,0.3)',
-                          animation:'fadeIn 0.4s ease'}}
+                          background:'rgba(0,0,0,0.3)'}}
                 />
                 <div style={{
                   position:'fixed', top:0, right:0, bottom:0,
@@ -103,8 +101,10 @@ export default function Header({ variant = 'dark' }) {
                   animation:'slideIn 0.5s cubic-bezier(0.4,0,0.2,1) forwards'
                 }}>
                   <style>{`
-                    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-                    @keyframes slideIn { from{transform:translateX(100%)} to{transform:translateX(0)} }
+                    @keyframes slideIn { 
+                      from{transform:translateX(100%)} 
+                      to{transform:translateX(0)} 
+                    }
                   `}</style>
             
                   <div>
@@ -116,7 +116,8 @@ export default function Header({ variant = 'dark' }) {
                       </p>
                       <div 
                         onClick={() => toggleMenu(false)}
-                        style={{cursor:'pointer', position:'relative', width:'24px', height:'24px'}}
+                        style={{cursor:'pointer', position:'relative', 
+                                width:'24px', height:'24px'}}
                       >
                         <span style={{display:'block', width:'24px', height:'1px',
                           background:'white', position:'absolute', top:'12px',
@@ -136,7 +137,7 @@ export default function Header({ variant = 'dark' }) {
                         São Paulo, Brasil
                       </p>
                       <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
-                        fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:'0 0 0 0'}}>
+                        fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
                         23.5505° S, 46.6333° W
                       </p>
                     </div>
@@ -149,13 +150,13 @@ export default function Header({ variant = 'dark' }) {
                         letterSpacing:'0.2em', textTransform:'uppercase',
                         color:'#555', marginBottom:'16px'}}>FOLLOW US</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
-                        <a href="https://instagram.com/housemazzutti" style={{fontFamily:'Newsreader, serif',
+                        <a href="#" style={{fontFamily:'Newsreader, serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',
                           textDecoration:'none', transition:'color 0.3s'}}
                           onMouseEnter={e => e.currentTarget.style.color='white'}
                           onMouseLeave={e => e.currentTarget.style.color='#aaa'}
                         >Instagram</a>
-                        <a href="https://linkedin.com/company/housemazzutti" style={{fontFamily:'Newsreader, serif',
+                        <a href="#" style={{fontFamily:'Newsreader, serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',
                           textDecoration:'none', transition:'color 0.3s'}}
                           onMouseEnter={e => e.currentTarget.style.color='white'}
