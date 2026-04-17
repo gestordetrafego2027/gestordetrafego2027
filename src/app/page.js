@@ -83,7 +83,7 @@ export default function Home() {
         const handleScroll = () => {
             if (parallaxEl) {
                 const rect = parallaxEl.closest('section').getBoundingClientRect();
-                const offset = rect.top * 0.4;
+                const offset = rect.top * 0.15;
                 parallaxEl.style.transform = `translateY(${offset}px)`;
             }
         };
