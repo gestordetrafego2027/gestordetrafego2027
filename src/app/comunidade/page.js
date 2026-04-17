@@ -179,7 +179,7 @@ export default function ComunidadePage() {
 
                 {/* GRID SECTION */}
                 <section className="bg-white py-12 mx-auto" style={{ maxWidth: "95vw" }}>
-                    <div className="mb-12 text-center flex flex-col items-center scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                    <div className="mb-12 text-center flex flex-col items-center">
                         <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">COMUNIDADE</span>
                         <h2 className="font-headline text-3xl text-black">University. Parceiros. Clientes. Colaboradores.</h2>
                         <div className="line-divider mt-6 text-black"></div>
@@ -200,7 +200,7 @@ export default function ComunidadePage() {
                 {/* ATUAMOS COM */}
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center mb-12">
-                        <div className="mb-20 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="mb-20">
                             <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">ATUAMOS COM</span>
                             <h2 className="font-headline text-5xl text-black">Conhecimento. Conexão. Continuidade.</h2>
                         </div>
@@ -210,7 +210,7 @@ export default function ComunidadePage() {
                                 { icon: "visibility", title: "Parceiros", desc: "Profissionais e marcas que compartilham o mesmo nível de exigência." },
                                 { icon: "photo_camera", title: "Colaboradores", desc: "Talentos que entendem que construção exige pensamento." },
                             ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center space-y-4 scroll-reveal" data-delay={i * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                                <div key={i} className="flex flex-col items-center space-y-4">
                                     <span className="material-symbols-outlined text-4xl font-extralight" data-icon={item.icon}>{item.icon}</span>
                                     <h3 className="font-headline text-2xl">{item.title}</h3>
                                     <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">{item.desc}</p>
@@ -224,12 +224,12 @@ export default function ComunidadePage() {
                 <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-16">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
-                        <div className="w-full lg:w-1/4 flex-shrink-0 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
                                 <img alt="B&W editorial photography" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" />
                             </div>
                         </div>
-                        <div className="flex-grow w-full py-4 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-8">
                                 <div className="max-w-xl text-left">
                                     <h2 className="font-headline text-xl md:text-2xl italic leading-snug mb-2">
@@ -254,13 +254,13 @@ export default function ComunidadePage() {
                 {/* ECOSSISTEMA - TEAM */}
                 <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1400px] mx-auto">
-                        <div className="text-center mb-12 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="text-center mb-12">
                             <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">ECOSSISTEMA</span>
                             <h2 className="font-headline text-3xl md:text-4xl text-black">Cada grupo tem um papel claro.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
                             {teamMembers.map((member, i) => (
-                                <div key={i} className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay={i * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                                <div key={i} className="space-y-8 flex flex-col items-center text-center mb-12">
                                     <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
                                         <img className="w-full h-full object-cover grayscale" src={member.src} alt={member.name} />
                                         <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
@@ -335,7 +335,7 @@ export default function ComunidadePage() {
                 <section className="bg-white px-12 py-20">
                     <div className="max-w-[1400px] mx-auto flex flex-col space-y-[24px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
-                            <div className="grid grid-cols-2 gap-[8px] order-2 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="grid grid-cols-2 gap-[8px] order-2">
                                 <div className="col-span-2 aspect-square overflow-hidden bg-zinc-50">
                                     <img alt="B&W large placeholder" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkiQLtRcTbgce0k0oFWm4mlyb7RRXITzmnT-XtfQ2olO6jM2s71xr5xw5V6Rnii-hngJvHHL34YpjPIRdRfovLcbKY4QBgolXMJczrB8f2Tm9x4X2zH9ScZqlnIyN5GerHmP_0Q-ZgBSqqlVvThL6zDNMpgCG6XnS-vN5fogJc7kw-W5MNIeyILgIK9WwgyNQSsPFS13O3DxvzFfViYPBfjKlLrMB8ClfVr3JjzfzVIpYs8kmvTZO6VDCdARfX9jRaozLBbYICmQ0" />
                                 </div>
@@ -343,7 +343,7 @@ export default function ComunidadePage() {
                                     <img alt="Man writing B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIHY560gS2ik_2GrZpF30j-g-u298R2IvVTv99wXYupz5jW7ePfhi3hHeOSQJ2w4D9995OdagrtsKYEq0WGyCiUbF4XqHAZy8VekCTL3M9cJodpb-uNjUXVWrV7ILlVTT2zmqMUAfKFTDlPXy7VUL9uEwNMf_12u39Nub3mRFN41ZWd3eCg9gWp2qZXBlD5S3HKhbGnZX9ITFbVDfNSTbkEuWv7VCiQZHtzcmfE_8zY8HzN17A0gHtn7s99IzT0-_ft0gKKjVhO8" />
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start text-left order-1 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="flex flex-col items-start text-left order-1">
                                 <div className="mb-12">
                                     <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">POSICIONAMENTO</span>
                                     <h2 className="font-headline text-black leading-tight mb-4 md:text-4xl">Quando existe clareza — a comunicação simplifica.</h2>
@@ -376,7 +376,7 @@ export default function ComunidadePage() {
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-4xl mx-auto space-y-16 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                    <div className="relative z-10 max-w-4xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-7xl text-white leading-tight italic">
                             Se você se conecta com o que a House constrói — <span className="not-italic">esse é o seu ponto de entrada.</span>
                         </h2>

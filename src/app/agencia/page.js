@@ -191,7 +191,7 @@ export default function AgenciaPage() {
                 </section>
                 {/* Section 1: Grid de Imagens */}
                 <section className="bg-white pt-16 pb-12 mx-auto" style={{ maxWidth: "95vw" }}>
-                    <div className="mb-12 text-center flex flex-col items-center scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                    <div className="mb-12 text-center flex flex-col items-center">
                         <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">ESPECIALIDADES</span>
                         <h2 className="font-headline text-3xl text-black max-w-3xl leading-snug">Trabalhamos com: branding estratégico / posicionamento de marca / construção de autoridade / direção de marca.</h2>
                         <div className="line-divider mt-6 text-black"></div>
@@ -244,26 +244,26 @@ export default function AgenciaPage() {
                 {/* Section 2: Cards Informativos */}
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center">
-                        <div className="mb-20 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="mb-20">
                             <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">DIREÇÃO ESTRATÉGICA</span>
                             <h2 className="font-headline text-5xl text-black">Fundamentos sólidos. Resultados previsíveis.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="flex flex-col items-center space-y-4">
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="lightbulb">lightbulb</span>
                                 <h3 className="font-headline text-2xl">O que precisa ser comunicado.</h3>
                                 <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
                                     Mensagem estratégica definida antes da execução.
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="150" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="flex flex-col items-center space-y-4">
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="film_strip">film_strip</span>
                                 <h3 className="font-headline text-2xl">Como deve ser executado.</h3>
                                 <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
                                     Direção criativa que transforma briefing em realidade.
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="300" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="flex flex-col items-center space-y-4">
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="trending_up">trending_up</span>
                                 <h3 className="font-headline text-2xl">E qual resultado deve gerar.</h3>
                                 <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
@@ -277,12 +277,12 @@ export default function AgenciaPage() {
                 <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
-                        <div className="w-full lg:w-1/4 flex-shrink-0 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
                                 <img alt="B&W production set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" />
                             </div>
                         </div>
-                        <div className="flex-grow w-full py-4 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-16">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                     <div className="text-left">
@@ -314,13 +314,13 @@ export default function AgenciaPage() {
                 {/* Section 4: Equipe */}
                 <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1400px] mx-auto">
-                        <div className="text-center mb-12 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="text-center mb-12">
                             <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
                             <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia define. Execução consolida. Imagem posiciona.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
                             {/* Membro 1 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
                                     <img alt="Lucas Mazzutti portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
@@ -336,7 +336,7 @@ export default function AgenciaPage() {
                                 </div>
                             </div>
                             {/* Membro 2 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="150" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
                                     <img alt="Elena Silva portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
@@ -352,7 +352,7 @@ export default function AgenciaPage() {
                                 </div>
                             </div>
                             {/* Membro 3 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="300" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
                                     <img alt="Arthur Porto portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
@@ -425,7 +425,7 @@ export default function AgenciaPage() {
                 <section className="bg-white px-12 py-20">
                     <div className="max-w-[1400px] mx-auto flex flex-col space-y-[24px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
-                            <div className="grid grid-cols-2 gap-[8px] order-2 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="grid grid-cols-2 gap-[8px] order-2">
                                 <div className="col-span-2 aspect-square overflow-hidden bg-zinc-50">
                                     <img alt="Large production set B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD390tuPTVaMwdAG0YbyGEqCfiXb9jr5PRBSHe8l_Ak3xZuG-3o_QXUkuBu-mtdK03LSC1sWcu-gGwE9YAM9PJuSSbN6vrTz7Y9DSEydYTiHiQRqSJmlWXxWiGMJu5kGJQwj3rU2lhmBJab9ySp0O7AEEj8uZ-mXtb6AHJRxS9uBratt_Obde2648xuz8Q6bEroADLXOT13Ee94D08afZo3CjH8nLmy1tiih7xBWZwvAWbuvF1BlVzRWPrEH2z_t63jeYSKQvLm11I" />
                                 </div>
@@ -433,7 +433,7 @@ export default function AgenciaPage() {
                                     <img alt="Close up lens B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp0WKohR-0E5jRvxI9Yq22k8wGUNJu46nl0f5q4ZgO1LLsF2AOAwl1DA19t3RzVDM1Ok1Oyaol8_h9IzldK2JUYYZ6TXWaosks1lwY4QKXmO9Rs952EqbUZgGp52mZr6Cqd90wOT8ELOFbrim0esrnAd8dWOyqlXVOLQwbzq99fUUm_Z2zrKmM9VGPJD9zAmPBgqCJZgSt_8mrC6XumHHWVXKwKJhBMndUGlB0cq20INbKFB1I3l0bXTXcnUfpdb64Co8Jffib_Fg" />
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start text-left order-1 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="flex flex-col items-start text-left order-1">
                                 {/* BLOCK 1 */}
                                 <div className="mb-12">
                                     <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">DIFFERENTIAL</span>
@@ -467,7 +467,7 @@ export default function AgenciaPage() {
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
                             Se sua marca faz, mas não cresce — <span className="not-italic">o problema não está no que você faz.</span>
                         </h2>
@@ -501,7 +501,7 @@ export default function AgenciaPage() {
                 <section className="bg-white px-[40px]">
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="text-center mb-24">
                                 <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÍVEL</span>
                                 <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
                             </div>

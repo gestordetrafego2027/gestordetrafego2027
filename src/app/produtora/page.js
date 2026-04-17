@@ -273,12 +273,12 @@ export default function ProdutoraPage() {
                 <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
-                        <div className="w-full lg:w-1/4 flex-shrink-0 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
                                 <img alt="B&W production set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" />
                             </div>
                         </div>
-                        <div className="flex-grow w-full py-4 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-16">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                     <div className="text-left">
@@ -421,7 +421,7 @@ export default function ProdutoraPage() {
                 <section className="bg-white px-12 py-20">
                     <div className="max-w-[1400px] mx-auto flex flex-col space-y-[24px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
-                            <div className="grid grid-cols-2 gap-[8px] order-2 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="grid grid-cols-2 gap-[8px] order-2">
                                 <div className="col-span-2 aspect-square overflow-hidden bg-zinc-50">
                                     <img alt="Large production set B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD390tuPTVaMwdAG0YbyGEqCfiXb9jr5PRBSHe8l_Ak3xZuG-3o_QXUkuBu-mtdK03LSC1sWcu-gGwE9YAM9PJuSSbN6vrTz7Y9DSEydYTiHiQRqSJmlWXxWiGMJu5kGJQwj3rU2lhmBJab9ySp0O7AEEj8uZ-mXtb6AHJRxS9uBratt_Obde2648xuz8Q6bEroADLXOT13Ee94D08afZo3CjH8nLmy1tiih7xBWZwvAWbuvF1BlVzRWPrEH2z_t63jeYSKQvLm11I" />
                                 </div>
@@ -429,7 +429,7 @@ export default function ProdutoraPage() {
                                     <img alt="Close up lens B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp0WKohR-0E5jRvxI9Yq22k8wGUNJu46nl0f5q4ZgO1LLsF2AOAwl1DA19t3RzVDM1Ok1Oyaol8_h9IzldK2JUYYZ6TXWaosks1lwY4QKXmO9Rs952EqbUZgGp52mZr6Cqd90wOT8ELOFbrim0esrnAd8dWOyqlXVOLQwbzq99fUUm_Z2zrKmM9VGPJD9zAmPBgqCJZgSt_8mrC6XumHHWVXKwKJhBMndUGlB0cq20INbKFB1I3l0bXTXcnUfpdb64Co8Jffib_Fg" />
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start text-left order-1 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="flex flex-col items-start text-left order-1">
                                 {/* BLOCK 1 */}
                                 <div className="mb-12">
                                     <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">DIFFERENTIAL</span>
@@ -463,7 +463,7 @@ export default function ProdutoraPage() {
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
                             Se sua produção não consolida posicionamento — <span className="not-italic">o problema não é a execução.</span>
                         </h2>
@@ -495,7 +495,7 @@ export default function ProdutoraPage() {
                 <section className="bg-white px-[40px]">
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="text-center mb-24">
                                 <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÍVEL</span>
                                 <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
                             </div>

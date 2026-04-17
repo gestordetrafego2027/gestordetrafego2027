@@ -182,11 +182,10 @@ export default function StudioPage() {
                         </button>
                     </div>
                 </section>
-                {/* Section 2: Trabalhos Selecionados */}
                 <section className="bg-white pt-16 pb-12 mx-auto" style={{ maxWidth: "95vw" }}>
-                    <div className="mb-12 text-center flex flex-col items-center scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">STUDIO</span>
-                        <h2 className="font-headline text-3xl text-black">Trabalhos Selecionados</h2>
+                    <div className="mb-12 text-center flex flex-col items-center">
+                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">ESPECIALIDADES</span>
+                        <h2 className="font-headline text-3xl text-black">Arquitetura. Interiores. Branding. Direção.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -234,48 +233,40 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
-                {/* Section 3: Integrado. Estratégico. Intencional. */}
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center">
-                        <div className="mb-20 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">STUDIO</span>
-                            <h2 className="font-headline text-5xl text-black">Integrado. Estratégico. Intencional.</h2>
+                        <div className="mb-20">
+                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">MÉTODO</span>
+                            <h2 className="font-headline text-5xl text-black">Conceito. Forma. Função.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="flex flex-col items-center space-y-4">
+                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="architecture">architecture</span>
+                                <h3 className="font-headline text-2xl">Arquitetura Autoral.</h3>
+                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">Projetos que transcendem o óbvio e definem novos padrões de estética.</p>
+                            </div>
+                            <div className="flex flex-col items-center space-y-4">
+                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="design_services">design_services</span>
+                                <h3 className="font-headline text-2xl">Design de Interiores.</h3>
+                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">Curadoria de materiais e mobiliário para criar experiências sensoriais.</p>
+                            </div>
+                            <div className="flex flex-col items-center space-y-4">
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="brush">brush</span>
-                                <h3 className="font-headline text-2xl">O que a marca é.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
-                                    Fundamentos de identity e essência traduzidos em diretrizes visuais.
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="150" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="visibility">visibility</span>
-                                <h3 className="font-headline text-2xl">O que precisa comunicar.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
-                                    A mensagem estratégica que cada frame deve carregar.
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="300" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="photo_camera">photo_camera</span>
-                                <h3 className="font-headline text-2xl">E como deve ser percebida.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
-                                    O resultado final: autoridade e desejo construídos através da lente.
-                                </p>
+                                <h3 className="font-headline text-2xl">Branding Espacial.</h3>
+                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">Sua marca traduzida em espaço físico e presença de mercado.</p>
                             </div>
                         </div>
                     </div>
                 </section>
-                {/* Section 4: Luz, Composição, Movimento, Expressão. */}
                 <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
-                        <div className="w-full lg:w-1/4 flex-shrink-0 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img alt="B&W editorial photography" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" />
+                                <img alt="B&W architectural detail" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" />
                             </div>
                         </div>
-                        <div className="flex-grow w-full py-4 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                        <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-16">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                     <div className="text-left">
@@ -304,17 +295,16 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
-                {/* Section 5: Equipe / QUEM ESTRUTURA */}
                 <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1400px] mx-auto">
-                        <div className="text-center mb-12 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia define. Imagem posiciona. Execução sustenta.</h2>
+                        <div className="text-center mb-12">
+                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM PROJETA</span>
+                            <h2 className="font-headline text-3xl md:text-4xl text-black">A equipe por trás da forma.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img className="w-full h-full object-cover grayscale" data-alt="professional male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
+                                    <img alt="Lucas Mazzutti portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
                                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
                                             <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
@@ -327,40 +317,39 @@ export default function StudioPage() {
                                     <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Direção Criativa</p>
                                 </div>
                             </div>
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="150" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img className="w-full h-full object-cover grayscale" data-alt="professional female portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
+                                    <img alt="Elena Silva portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
                                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
                                             <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <p className="font-headline text-2xl font-medium">Elena Silva</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Estratégia de Marca</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Design de Interiores</p>
                                 </div>
                             </div>
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="300" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img className="w-full h-full object-cover grayscale" data-alt="professional male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
+                                    <img alt="Arthur Porto portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
                                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
                                             <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <p className="font-headline text-2xl font-medium">Arthur Porto</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produção</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Arquiteto</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                {/* TESTIMONIALS SECTION */}
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
                         <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
@@ -411,11 +400,10 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
-                {/* Section 6: Posicionamento & Autoridade */}
                 <section className="bg-white px-12 py-20">
                     <div className="max-w-[1400px] mx-auto flex flex-col space-y-[24px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
-                            <div className="grid grid-cols-2 gap-[8px] order-2 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="grid grid-cols-2 gap-[8px] order-2">
                                 <div className="col-span-2 aspect-square overflow-hidden bg-zinc-50">
                                     <img alt="B&W large placeholder" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkiQLtRcTbgce0k0oFWm4mlyb7RRXITzmnT-XtfQ2olO6jM2s71xr5xw5V6Rnii-hngJvHHL34YpjPIRdRfovLcbKY4QBgolXMJczrB8f2Tm9x4X2zH9ScZqlnIyN5GerHmP_0Q-ZgBSqqlVvThL6zDNMpgCG6XnS-vN5fogJc7kw-W5MNIeyILgIK9WwgyNQSsPFS13O3DxvzFfViYPBfjKlLrMB8ClfVr3JjzfzVIpYs8kmvTZO6VDCdARfX9jRaozLBbYICmQ0" />
                                 </div>
@@ -423,8 +411,7 @@ export default function StudioPage() {
                                     <img alt="Portrait photography set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIHY560gS2ik_2GrZpF30j-g-u298R2IvVTv99wXYupz5jW7ePfhi3hHeOSQJ2w4D9995OdagrtsKYEq0WGyCiUbF4XqHAZy8VekCTL3M9cJodpb-uNjUXVWrV7ILlVTT2zmqMUAfKFTDlPXy7VUL9uEwNMf_12u39Nub3mRFN41ZWd3eCg9gWp2qZXBlD5S3HKhbGnZX9ITFbVDfNSTbkEuWv7VCiQZHtzcmfE_8zY8HzN17A0gHtn7s99IzT0-_ft0gKKjVhO8" />
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start text-left order-1 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                                {/* SIDE IMAGE + TEXT SECTION */}
+                            <div className="flex flex-col items-start text-left order-1">
                                 <div className="mb-12">
                                     <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">DIFFERENTIAL</span>
                                     <h2 className="font-headline text-black leading-tight mb-4 md:text-4xl">O que parece natural foi direcionado.</h2>
@@ -438,7 +425,6 @@ export default function StudioPage() {
                                 <div className="w-full h-48 overflow-hidden bg-zinc-100 mb-20">
                                     <img alt="Visual separator" className="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWM9LTdgigUXU-ARkrjEgnxbL1ujH595AoGTSmyL2KNSgbxAaA1i7Cd5cjAzXhsqSQFSrGjEvgaz37YmO-79RZCU6J6LMHEuV5Amyjj5amYPAyhB1X0ySQP297SeRH3SSOVsEyrYsOdPeQkKx4RWbKxD__UtjmT8LtPRflmw2q3N48kmA6vGLUcFUVO6N3JOLLktTEJv7YEA3jsWFXeu8Iu0vG81Y-n8JkXDK74k8WsYJOdrqtMyXzjGMECr7rqJju7Z2KHSO1dis" />
                                 </div>
-                                {/* AUTHORITY SECTION */}
                                 <div className="flex flex-col items-start text-left mt-[120px]">
                                     <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">AUTORIDADE</span>
                                     <h2 className="font-headline text-black leading-tight mb-4 md:text-4xl">Direção de imagem com estratégia, não execução isolada.</h2>
@@ -453,11 +439,10 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
-                {/* Section 7: Editorial text block */}
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
-                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510312305653-8ed496efbe75?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
                             Se sua imagem não representa o valor da sua marca — <span className="not-italic">o problema não é a produção.</span>
                         </h2>
@@ -489,7 +474,7 @@ export default function StudioPage() {
                 <section className="bg-white px-[40px]">
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+                            <div className="text-center mb-24">
                                 <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÍVEL</span>
                                 <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
                             </div>
