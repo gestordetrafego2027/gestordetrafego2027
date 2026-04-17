@@ -1,5 +1,7 @@
 'use client';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
