@@ -61,12 +61,14 @@ export default function Header({ variant = 'dark' }) {
     return (
         <>
             <header 
-                className="fixed top-0 w-full flex justify-between items-center px-12 py-4 z-[100]"
+                className="fixed top-0 w-full flex justify-between items-center px-12 z-[100]"
                 style={{ 
                     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
                     transition: 'transform 0.4s ease, background-color 0.3s ease',
                     backgroundColor: scrolled ? '#ffffff' : bgColor,
-                    borderBottom: scrolled ? '0.5px solid #e0e0e0' : 'none'
+                    borderBottom: scrolled ? '0.5px solid #e0e0e0' : 'none',
+                    paddingTop: '18px',
+                    paddingBottom: '18px'
                 }}
             >
                 <Link 
