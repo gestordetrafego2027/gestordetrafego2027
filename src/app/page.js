@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 
@@ -10,6 +10,18 @@ import Header from "@/app/components/Header";
  */
 export default function Home() {
     const [currentSlide, setCurrentSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            document.querySelectorAll('.hero-animate').forEach((el, i) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, i * 150);
+            });
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
 
     const testimonials = [
         {
@@ -56,15 +68,24 @@ export default function Home() {
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-4xl fade-in">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block">
+                            <span
+                                className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+                            >
                                 STRATEGIC HOUSE
                             </span>
-                            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light">
+                            <h1
+                                className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+                            >
                                 A arquitetura do
                                 <br />
                                 seu posicionamento.
                             </h1>
-                            <button className="group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+                            <button
+                                className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+                            >
                                 CONHEÇA O MÉTODO
                             </button>
                         </div>
