@@ -327,8 +327,8 @@ export default function ProdutoraPage() {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Lucas Mazzutti</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Direção Estratégica</p>
+                                    <p className="font-headline text-2xl font-medium">Ângelo Mazzutti</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Dir. Criativo e Publicitário</p>
                                 </div>
                             </div>
                             {/* Membro 2 */}
@@ -343,8 +343,8 @@ export default function ProdutoraPage() {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Elena Silva</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produção</p>
+                                    <p className="font-headline text-2xl font-medium">Mateus Sacavem</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produtor Executivo</p>
                                 </div>
                             </div>
                             {/* Membro 3 */}
@@ -359,8 +359,8 @@ export default function ProdutoraPage() {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Arthur Porto</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Direção Criativa</p>
+                                    <p className="font-headline text-2xl font-medium">Henry Almeida</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Gestor de IA</p>
                                 </div>
                             </div>
                         </div>
