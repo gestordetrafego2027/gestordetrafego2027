@@ -80,11 +80,18 @@ export default function Home() {
         });
 
         const parallaxEl = document.querySelector('.parallax-bg');
+        const testimonialBg = document.querySelector('.parallax-testimonial');
+
         const handleScroll = () => {
             if (parallaxEl) {
                 const rect = parallaxEl.closest('section').getBoundingClientRect();
                 const offset = rect.top * 0.15;
                 parallaxEl.style.transform = `translateY(${offset}px)`;
+            }
+            if (testimonialBg) {
+                const rect2 = testimonialBg.closest('section').getBoundingClientRect();
+                const offset2 = rect2.top * 0.1;
+                testimonialBg.style.transform = `translate(-50%, calc(-50% + ${offset2}px))`;
             }
         };
         window.addEventListener('scroll', handleScroll);
@@ -449,11 +456,22 @@ export default function Home() {
                 </section>
 
                 {/* TESTIMONIALS SECTION */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">
-                            DEPOIMENTOS
-                        </span>
+                <section 
+                    className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center py-20"
+                    style={{ minHeight: '500px' }}
+                >
+                    <div
+                        className="parallax-testimonial"
+                        style={{
+                            position: 'absolute', top: '50%', left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            fontSize: '10vw', fontFamily: 'Newsreader, serif',
+                            fontStyle: 'italic', color: 'rgba(255,255,255,0.04)', // Fixed to white/0.04 to be visible on black
+                            whiteSpace: 'nowrap', pointerEvents: 'none',
+                            userSelect: 'none', zIndex: 0
+                        }}
+                    >
+                        Depoimentos
                     </div>
 
                     {/* Navigation Arrows */}
@@ -508,7 +526,7 @@ export default function Home() {
                             <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
                         </div>
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1">
+                            <div className="relative w-full overflow-hidden mb-1" style={{ minHeight: '200px' }}>
                                 {testimonials.map((testimonial, i) => (
                                     <div
                                         key={i}
