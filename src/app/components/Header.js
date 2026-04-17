@@ -43,8 +43,10 @@ export default function Header({ variant = 'dark' }) {
         setSideMenuOpen(open);
         if (open) {
             document.body.style.overflow = 'hidden';
+            document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
         } else {
             document.body.style.overflow = 'unset';
+            document.body.style.paddingRight = '0px';
         }
     };
 
@@ -54,6 +56,7 @@ export default function Header({ variant = 'dark' }) {
             setSideMenuOpen(false);
             setClosing(false);
             document.body.style.overflow = 'unset';
+            document.body.style.paddingRight = '0px';
         }, 400);
     };
 
