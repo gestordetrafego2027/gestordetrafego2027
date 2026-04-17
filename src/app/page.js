@@ -62,7 +62,27 @@ export default function Home() {
                 }, i * 150);
             });
         }, 150);
-        return () => clearTimeout(timer);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, entry.target.dataset.delay || 0);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        return () => {
+            clearTimeout(timer);
+            observer.disconnect();
+        };
     }, [currentHeroSlide]);
 
     const testimonials = [
@@ -199,7 +219,12 @@ export default function Home() {
                             { title: "Prestigio", sub: "Branding", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDkA7crS5fwR9M1uHLxWGre8utOIQhLns1favg4_bqxW4l-Rhz-kocfZxJb59JIHoZo0AuTsli_xQD1X_z3OtXWtQY9FQl5HVclTTuNUMQKMWYswMESC7LVKN8Gt7F_wJV_yWoTwt54-Ob2IAfKZnaLu1muOYHzXGofG-8DJfHBXFuGu6w16J51hk_p07tLwwhj9yuhYxTb-0bc1SSn0oSkyr0OHqu7L7my2rY0YBwqS364_RTWjKGw1-ModtNWEmtX0VrKG9bErhw" },
                             { title: "Espaço", sub: "Curadoria", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDFIHY560gS2ik_2GrZpF30j-g-u298R2IvVTv99wXYupz5jW7ePfhi3hHeOSQJ2w4D9995OdagrtsKYEq0WGyCiUbF4XqHAZy8VekCTL3M9cJodpb-uNjUXVWrV7ILlVTT2zmqMUAfKFTDlPXy7VUL9uEwNMf_12u39Nub3mRFN41ZWd3eCg9gWp2qZXBlD5S3HKhbGnZX9ITFbVDfNSTbkEuWv7VCiQZHtzcmfE_8zY8HzN17A0gHtn7s99IzT0-_ft0gKKjVhO8" },
                         ].map((work, i) => (
-                            <div key={i} className="relative group bg-white aspect-[4/3] overflow-hidden">
+                            <div 
+                                key={i} 
+                                className="scroll-reveal relative group bg-white aspect-[4/3] overflow-hidden"
+                                data-delay={i * 100}
+                                style={{ opacity: 0, transform: 'translateY(40px)', transition: 'opacity 0.7s ease, transform 0.7s ease' }}
+                            >
                                 <img
                                     alt={work.title}
                                     className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0"
