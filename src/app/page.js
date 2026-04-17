@@ -285,9 +285,29 @@ export default function Home() {
                 </section>
 
                 {/* PHILOSOPHY SECTION */}
-                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-16">
-                    <div className="noise-overlay absolute inset-0"></div>
-                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
+                <section style={{
+                    position: 'relative',
+                    overflow: 'hidden',
+                    height: 'auto', // Changed to auto to accommodate content, user requested template but auto is safer for layout
+                    minHeight: '600px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    padding: '80px 48px'
+                }}>
+                    <div style={{
+                        position: 'absolute',
+                        top: '-30%',
+                        left: 0,
+                        right: 0,
+                        bottom: '-30%',
+                        backgroundImage: 'url(https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundAttachment: 'fixed'
+                    }} />
+                    
+                    <div className="noise-overlay absolute inset-0 bg-black/40"></div>
+                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32 text-white">
                         <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
                                 <img
@@ -304,7 +324,7 @@ export default function Home() {
                                         “Marcas fortes não disputam atenção. <br />
                                         <span className="not-italic">Elas ocupam espaço.</span>”
                                     </h2>
-                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">
+                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
                                         Filosofia House
                                     </p>
                                 </div>
@@ -314,16 +334,16 @@ export default function Home() {
                                             A maioria constrói visibilidade. <br />
                                             <span className="italic">Poucos constroem posição.</span>
                                         </h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
                                             Diferenciação
                                         </p>
                                     </div>
                                 </div>
                                 <div className="max-w-xl text-left">
-                                    <p className="font-headline text-lg md:text-xl italic leading-snug text-zinc-800 mb-2">
+                                    <p className="font-headline text-lg md:text-xl italic leading-snug text-white/90 mb-2">
                                         Não é sobre produzir conteúdo. É sobre o que sua marca comunica — com ou sem presença.
                                     </p>
-                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">
+                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
                                         Comunicação Intencional
                                     </p>
                                 </div>
@@ -332,7 +352,7 @@ export default function Home() {
                                         <h3 className="font-headline text-xl md:text-2xl leading-tight mb-2">
                                             Existe um point onde a execução deixa de resolver. E a falta de direção começa a aparecer.
                                         </h3>
-                                        <p className="font-headline text-lg italic text-zinc-400">
+                                        <p className="font-headline text-lg italic text-white/40">
                                             É nesse ponto que entramos.
                                         </p>
                                     </div>
