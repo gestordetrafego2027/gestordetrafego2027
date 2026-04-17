@@ -79,9 +79,20 @@ export default function Home() {
             observer.observe(el);
         });
 
+        const parallaxEl = document.querySelector('.parallax-bg');
+        const handleScroll = () => {
+            if (parallaxEl) {
+                const rect = parallaxEl.closest('section').getBoundingClientRect();
+                const offset = rect.top * 0.4;
+                parallaxEl.style.transform = `translateY(${offset}px)`;
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+
         return () => {
             clearTimeout(timer);
             observer.disconnect();
+            window.removeEventListener('scroll', handleScroll);
         };
     }, [currentHeroSlide]);
 
@@ -294,17 +305,19 @@ export default function Home() {
                     alignItems: 'center',
                     padding: '80px 48px'
                 }}>
-                    <div style={{
-                        position: 'absolute',
-                        top: '-30%',
-                        left: 0,
-                        right: 0,
-                        bottom: '-30%',
-                        backgroundImage: 'url(https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundAttachment: 'fixed'
-                    }} />
+                    <div 
+                        className="parallax-bg"
+                        style={{
+                            position: 'absolute',
+                            top: '-30%',
+                            left: 0,
+                            right: 0,
+                            bottom: '-30%',
+                            backgroundImage: 'url(https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=1920&q=80)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }} 
+                    />
                     
                     <div className="noise-overlay absolute inset-0 bg-black/40"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32 text-white">
