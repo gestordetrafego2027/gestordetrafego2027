@@ -14,6 +14,7 @@ import { usePathname } from 'next/navigation';
 export default function Header({ variant = 'dark' }) {
     const pathname = usePathname();
     const [sideMenuOpen, setSideMenuOpen] = useState(false);
+    const [closing, setClosing] = useState(false);
     const [visible, setVisible] = useState(true);
     const [scrolled, setScrolled] = useState(false);
     const lastScroll = useRef(0);
@@ -45,6 +46,15 @@ export default function Header({ variant = 'dark' }) {
         } else {
             document.body.style.overflow = 'unset';
         }
+    };
+
+    const closeMenu = () => {
+        setClosing(true);
+        setTimeout(() => {
+            setSideMenuOpen(false);
+            setClosing(false);
+            document.body.style.overflow = 'unset';
+        }, 400);
     };
 
     const isLightVariant = variant === 'light';
@@ -131,7 +141,7 @@ export default function Header({ variant = 'dark' }) {
             {sideMenuOpen && (
               <>
                 <div 
-                  onClick={() => toggleMenu(false)}
+                  onClick={() => closeMenu()}
                   style={{position:'fixed', inset:0, zIndex:99998,
                           background:'rgba(0,0,0,0.3)'}}
                 />
@@ -142,7 +152,9 @@ export default function Header({ variant = 'dark' }) {
                   display:'flex', flexDirection:'column',
                   justifyContent:'space-between',
                   padding:'60px 48px',
-                  animation:'slideIn 0.5s cubic-bezier(0.4,0,0.2,1) forwards'
+                  animation: closing 
+                    ? 'slideOut 0.4s cubic-bezier(0.4,0,0.2,1) forwards' 
+                    : 'slideIn 0.5s cubic-bezier(0.4,0,0.2,1) forwards'
                 }}>
 
             
@@ -154,7 +166,7 @@ export default function Header({ variant = 'dark' }) {
                         HOUSE MAZZUTTI
                       </p>
                       <div 
-                        onClick={() => toggleMenu(false)}
+                        onClick={() => closeMenu()}
                         style={{cursor:'pointer', position:'relative', 
                                 width:'24px', height:'24px'}}
                       >
@@ -218,6 +230,10 @@ export default function Header({ variant = 'dark' }) {
                 @keyframes slideIn { 
                   from{transform:translateX(100%)} 
                   to{transform:translateX(0)} 
+                }
+                @keyframes slideOut { 
+                  from{transform:translateX(0)} 
+                  to{transform:translateX(100%)} 
                 }
             `}</style>
         </>
