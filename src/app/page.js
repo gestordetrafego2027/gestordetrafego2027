@@ -90,7 +90,7 @@ export default function Home() {
             }
             if (testimonialBg) {
                 const rect2 = testimonialBg.closest('section').getBoundingClientRect();
-                const offset2 = rect2.top * -0.15;
+                const offset2 = rect2.top * -0.25;
                 testimonialBg.style.transform = `translate(-50%, calc(-50% + ${offset2}px))`;
             }
         };
@@ -466,7 +466,7 @@ export default function Home() {
                             position: 'absolute', top: '50%', left: '50%',
                             transform: 'translate(-50%, -50%)',
                             fontSize: '10vw', fontFamily: 'Newsreader, serif',
-                            fontStyle: 'italic', color: 'rgba(255,255,255,0.07)', // Increased visibility on black background
+                            fontStyle: 'italic', color: 'rgba(255,255,255,0.12)', // Increased visibility on black background
                             whiteSpace: 'nowrap', pointerEvents: 'none',
                             userSelect: 'none', zIndex: 0
                         }}
