@@ -42,11 +42,14 @@ export default function Header({ variant = 'dark' }) {
     const toggleMenu = (open) => {
         setSideMenuOpen(open);
         if (open) {
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
             document.body.style.overflow = 'hidden';
-            document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
+            document.body.style.paddingRight = scrollbarWidth + 'px';
+            document.documentElement.style.paddingRight = scrollbarWidth + 'px';
         } else {
             document.body.style.overflow = 'unset';
             document.body.style.paddingRight = '0px';
+            document.documentElement.style.paddingRight = '0px';
         }
     };
 
@@ -57,6 +60,7 @@ export default function Header({ variant = 'dark' }) {
             setClosing(false);
             document.body.style.overflow = 'unset';
             document.body.style.paddingRight = '0px';
+            document.documentElement.style.paddingRight = '0px';
         }, 400);
     };
 
