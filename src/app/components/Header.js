@@ -1,8 +1,9 @@
 // updated
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 /**
  * GLOBAL HEADER COMPONENT
@@ -11,7 +12,31 @@ import Link from 'next/link';
  * @param {string} variant - 'light' (white bg, black text) or 'dark' (transparent bg, white text)
  */
 export default function Header({ variant = 'dark' }) {
+    const pathname = usePathname();
     const [sideMenuOpen, setSideMenuOpen] = useState(false);
+    const [visible, setVisible] = useState(true);
+    const [scrolled, setScrolled] = useState(false);
+    const lastScroll = useRef(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const current = window.scrollY;
+            if (current <= 0) {
+                setVisible(true);
+                setScrolled(false);
+                return;
+            }
+            if (current > lastScroll.current && current > 80) {
+                setVisible(false);
+            } else {
+                setVisible(true);
+                setScrolled(true);
+            }
+            lastScroll.current = current;
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMenu = (open) => {
         setSideMenuOpen(open);
@@ -25,36 +50,47 @@ export default function Header({ variant = 'dark' }) {
     const isLightVariant = variant === 'light';
     const textColor = isLightVariant ? '#000000' : '#ffffff';
     const bgColor = isLightVariant ? '#ffffff' : 'transparent';
-    const borderColor = isLightVariant ? '#e0e0e0' : 'transparent';
+    const currentTextColor = scrolled ? '#000000' : textColor;
+
+    const getLinkStyle = (path) => ({
+        color: currentTextColor,
+        borderTop: pathname === path ? `0.5px solid ${currentTextColor}` : 'none',
+        paddingTop: pathname === path ? '4px' : '0'
+    });
 
     return (
         <>
             <header 
-                className="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-[100] transition-colors duration-300"
-                style={{ backgroundColor: bgColor, borderBottom: isLightVariant ? `0.5px solid ${borderColor}` : 'none' }}
+                className="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-[100]"
+                style={{ 
+                    transform: visible ? 'translateY(0)' : 'translateY(-100%)',
+                    transition: 'transform 0.4s ease, background-color 0.3s ease',
+                    backgroundColor: scrolled ? '#ffffff' : bgColor,
+                    borderBottom: scrolled ? '0.5px solid #e0e0e0' : 'none'
+                }}
             >
                 <Link 
                     href="/" 
                     className="text-lg font-serif tracking-tight uppercase font-headline no-underline"
-                    style={{ color: textColor }}
+                    style={{ color: currentTextColor }}
                 >
                     House Mazzutti
                 </Link>
 
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/">HOME</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/about">SOBRE</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/studio">STUDIO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/produtora">PRODUTORA</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/agencia">AGÊNCIA</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/angelo">ANGELO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/comunidade">COMUNIDADE</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/blog">BLOG</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={{ color: textColor }} href="/contato">CONTATO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
                 </nav>
 
-                <div className="flex items-center space-x-6" style={{ color: textColor }}>
+                <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
                     <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
                         <span className="material-symbols-outlined" data-icon="search">search</span>
                     </button>
@@ -78,13 +114,13 @@ export default function Header({ variant = 'dark' }) {
                       }}
                     >
                       <span style={{display:'block', width:'36px', height:'1px',
-                        background: textColor, position:'absolute', top:'4px', left:0,
+                        background: currentTextColor, position:'absolute', top:'4px', left:0,
                         transition:'all 0.3s ease'}}/>
                       <span style={{display:'block', width:'36px', height:'1px',
-                        background: textColor, position:'absolute', top:'14px', left:0,
+                        background: currentTextColor, position:'absolute', top:'14px', left:0,
                         transition:'all 0.3s ease'}}/>
                       <span style={{display:'block', width:'36px', height:'1px',
-                        background: textColor, position:'absolute', top:'24px', left:0,
+                        background: currentTextColor, position:'absolute', top:'24px', left:0,
                         transition:'all 0.3s ease'}}/>
                     </button>
                 </div>
