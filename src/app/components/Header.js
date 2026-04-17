@@ -42,14 +42,16 @@ export default function Header({ variant = 'dark' }) {
     const toggleMenu = (open) => {
         setSideMenuOpen(open);
         if (open) {
-            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-            document.body.style.overflow = 'hidden';
-            document.body.style.paddingRight = scrollbarWidth + 'px';
-            document.documentElement.style.paddingRight = scrollbarWidth + 'px';
+            const scrollY = window.scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
         } else {
-            document.body.style.overflow = 'unset';
-            document.body.style.paddingRight = '0px';
-            document.documentElement.style.paddingRight = '0px';
+            const scrollY = document.body.style.top;
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
         }
     };
 
@@ -58,9 +60,11 @@ export default function Header({ variant = 'dark' }) {
         setTimeout(() => {
             setSideMenuOpen(false);
             setClosing(false);
-            document.body.style.overflow = 'unset';
-            document.body.style.paddingRight = '0px';
-            document.documentElement.style.paddingRight = '0px';
+            const scrollY = document.body.style.top;
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
         }, 400);
     };
 
