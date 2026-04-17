@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
 
@@ -33,6 +33,59 @@ export default function ProdutoraPage() {
     const goToSlide = (index) => {
         setCurrentSlide(index)
     }
+
+    useEffect(() => {
+        // [1] HERO ANIMATION (TEXTOS)
+        document.querySelectorAll('.hero-animate').forEach((el) => {
+            el.style.opacity = '0'
+            el.style.transform = 'translateY(30px)'
+        })
+
+        const timer = setTimeout(() => {
+            document.querySelectorAll('.hero-animate').forEach((el, i) => {
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease'
+                    el.style.opacity = '1'
+                    el.style.transform = 'translateY(0)'
+                }, i * 150)
+            })
+        }, 150)
+
+        // [2] SCROLL REVEAL (OBSERVER)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1'
+                        entry.target.style.transform = 'translateY(0)'
+                    }, entry.target.dataset.delay || 0)
+                    observer.unobserve(entry.target)
+                }
+            })
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el)
+        })
+
+        // [3] PARALLAX BG EFFECT
+        const handleScroll = () => {
+            document.querySelectorAll('.parallax-bg').forEach((bg) => {
+                const rect = bg.parentElement.getBoundingClientRect()
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const offset = rect.top * 0.15
+                    bg.style.transform = `translateY(${offset}px)`
+                }
+            })
+        }
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            clearTimeout(timer)
+            observer.disconnect()
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
     return (
         <div className="bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary">
@@ -92,7 +145,7 @@ export default function ProdutoraPage() {
                 }
             `}} />
 
-            <Header />
+            <Header variant="dark" />
 
             <main>
                 {/* HERO */}
@@ -101,12 +154,12 @@ export default function ProdutoraPage() {
                         <div className="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d]"></div>
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
-                        <div className="max-w-4xl fade-in">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block">ESTRATÉGIA EM MOVIMENTO.</span>
-                            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light">
+                        <div className="max-w-4xl">
+                            <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>ESTRATÉGIA EM MOVIMENTO.</span>
+                            <h1 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 Execução sem direção é ruído. Aqui, tudo é construção.
                             </h1>
-                            <button className="group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+                            <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 [ Iniciar projeto ]
                             </button>
                         </div>
@@ -134,48 +187,48 @@ export default function ProdutoraPage() {
                 </section>
                 {/* Section 1: Grid de Imagens */}
                 <section className="bg-white pt-16 pb-12 mx-auto" style={{ maxWidth: "95vw" }}>
-                    <div className="mb-12 text-center flex flex-col items-center">
+                    <div className="mb-12 text-center flex flex-col items-center scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                         <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PRODUTORA</span>
                         <h2 className="font-headline text-3xl text-black">Campanhas. Conteúdo. Execução.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden">
+                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <img alt="Cinema camera silhouette" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2g_W6V8_54y_wl4wNVTKKVKCOpBDnKyZk6BpUeQX4Pmxi9_0PQjAcsE-i0Jst6J978iPC0wXGhVlUFESwHZs5TCCjT2nA1AUxQFDv6EAyQOIdQJvDIm-R8_KWVi6K5gc-Y_B-S9TVyJ3edBmqb3QEwn41-UybUIoVWi1h1jl67BScFL5S22V5kf3jnmeYelv2wO0eyudpQyli4oQxSWkzhxmtxWQCpqfJasoSa8aIeFWuBRa4IoAKh2LKERYocrlIiV7EgvFYYew" />
                             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
                                 <p className="font-headline text-sm text-black italic">Campanha Brand Identity</p>
                                 <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Produção Audiovisual</p>
                             </div>
                         </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden">
+                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="100" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <img alt="Director working on set" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRMDMKmUwLGwsouoaA7vjdod3kTqWELL3b1zowH4gDqcpICu6WNGz5Fq9wuhf0SGFf_G8JSHBuAY7KwYE6G8y7IUWjZoRy_GVxj9jODc0pmn2Liqg2LRNrpiRy83NLchgjQCNEdq3wuEBHikGsuQ-NhvlYRnsb4kZIHRL3O1EtvTv11LxL0ZvsRhBZmf9P5xTPjTPcipcObCTTgP04bS5gb6EC2wt-dCUus1MZMtbdZjdkL_Vb-_u08BpGcIwnpycHJswr3f9UXpg" />
                             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
                                 <p className="font-headline text-sm text-black italic">Narrativa Visual</p>
                                 <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Direção Criativa</p>
                             </div>
                         </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden">
+                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <img alt="Professional lighting equipment" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT0pOVXqBESHOzRNU1hI6FPj_bo47wZRS9PqIj_Aup9mJVy3CTwLKLv08oZV5l0o7-AvpA7tGKDmXwXv0zqPTpmdysSKFZdriDagO8Wq3wuhdAZbHa6qn3f59eXrQUWGfQLp3Ryyxpmd1KigMIq2n2kVuANmmQDqhgbp0eeBkR3C91iVQry8ZYTCe01wZOoQfx7XIZVD1iR-dv0zQxwbaM6lczztTK6XRP_D9tpr5YSkh4gY0peH0NhxvU4_BXefXaLpCDOfV7MlY" />
                             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
                                 <p className="font-headline text-sm text-black italic">Lançamento Estratégico</p>
                                 <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Execução com Direção</p>
                             </div>
                         </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden">
+                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <img alt="Action scene filming" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVJivpJ0VnE6CHpWpnIjrbbpiXTi5Poa8jvE3JumOJCHEna0D5Q6oCjJUdHd7ot8_bthWRL5SoEDyULzMLel1P9vtmUjWwqefSv4bd9yK2fWYe1ZlT6nh3IWG9wjRaQosD6Utm1Ig9ahn9DKRMLN8cy610DnLxz80now3DGSbxkysNEo7rNPEF9Miw2ex16HyF_xHkeroob3axAgyrT_clXCpZCjgbj_QI8kV189C8FBy8DGmzWx7i1vtaSJa2xUwE3zCV5tBGjHA" />
                             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
                                 <p className="font-headline text-sm text-black italic">Conteúdo de Impacto</p>
                                 <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Campanha Audiovisual</p>
                             </div>
                         </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden">
+                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="100" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <img alt="Studio setup B&W" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_6PXbyKGYvJxEbfzmXmRW19QciE4tJ9x-FZZvcUtReBGabFvxftvIdLDGss_UhG68_ITk3-kfWI0CkUuUjHH0YxkYi0Tg3xBrTgcnG860e_EoEYEmh7vX3vZCkobOLmDbCnGZskKBBteD-Jmj5INS1jizmQQiRezM3x8Wr4VAX6xNgci8xCyo3j-73qG5yVZhO-4B9WOW8eV54FdxYsDFoxMfle0q7JCCa1bGlsqr0wHz9I-EXgWR3FiQ6NmbFkqgZAp8vzRDNyk" />
                             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
                                 <p className="font-headline text-sm text-black italic">Posicionamento Visual</p>
                                 <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Produção de Imagem</p>
                             </div>
                         </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden">
+                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <img alt="Editing suite grayscale" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyUqrC1IPUBPww33DCYdPY-7rOtg3lbmED38AelB0tTYn2MqPYkcGERtvWHA4drxpuUpc6LjhAD_s412vsfHpePPmcnutpewD5ek8asJiuUlereQ0qIRuleREigir4zmljVvSfIYyk5MkWPNVHXDQmwE5WjptCHK-Ws4bZgkFm122i6hYLBxvKLJmJokhLA61Uy9tN1bBURioVEBydJuPBs0MMbox5XQFN21ybdZhxcrFInqC_LCTxyNJkl5oJMEIqnt8BgbsZ8Zg" />
                             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
                                 <p className="font-headline text-sm text-black italic">Processo Estratégico</p>
@@ -187,26 +240,26 @@ export default function ProdutoraPage() {
                 {/* Section 2: Cards Informativos */}
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center">
-                        <div className="mb-20">
+                        <div className="mb-20 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">PRODUTORA</span>
                             <h2 className="font-headline text-5xl text-black">Integrado. Estratégico. Intencional.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                            <div className="flex flex-col items-center space-y-4">
+                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="lightbulb">lightbulb</span>
                                 <h3 className="font-headline text-2xl">O que precisa ser comunicado.</h3>
                                 <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
                                     Mensagem estratégica definida antes da execução.
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center space-y-4">
+                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="150" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="film_strip">film_strip</span>
                                 <h3 className="font-headline text-2xl">Como deve ser executado.</h3>
                                 <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
                                     Direção criativa que transforma briefing em realidade.
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center space-y-4">
+                            <div className="flex flex-col items-center space-y-4 scroll-reveal" data-delay="300" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="trending_up">trending_up</span>
                                 <h3 className="font-headline text-2xl">E qual resultado deve gerar.</h3>
                                 <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
@@ -220,12 +273,12 @@ export default function ProdutoraPage() {
                 <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
-                        <div className="w-full lg:w-1/4 flex-shrink-0">
+                        <div className="w-full lg:w-1/4 flex-shrink-0 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
                                 <img alt="B&W production set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" />
                             </div>
                         </div>
-                        <div className="flex-grow w-full py-4">
+                        <div className="flex-grow w-full py-4 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <div className="grid grid-cols-1 gap-y-16">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                     <div className="text-left">
@@ -257,13 +310,13 @@ export default function ProdutoraPage() {
                 {/* Section 4: Equipe */}
                 <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1400px] mx-auto">
-                        <div className="text-center mb-12">
+                        <div className="text-center mb-12 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                             <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
                             <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia define. Execução consolida. Imagem posiciona.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
                             {/* Membro 1 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
                                     <img alt="Lucas Mazzutti portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
@@ -279,7 +332,7 @@ export default function ProdutoraPage() {
                                 </div>
                             </div>
                             {/* Membro 2 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="150" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
                                     <img alt="Elena Silva portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
@@ -295,7 +348,7 @@ export default function ProdutoraPage() {
                                 </div>
                             </div>
                             {/* Membro 3 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12 scroll-reveal" data-delay="300" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
                                     <img alt="Arthur Porto portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
@@ -368,7 +421,7 @@ export default function ProdutoraPage() {
                 <section className="bg-white px-12 py-20">
                     <div className="max-w-[1400px] mx-auto flex flex-col space-y-[24px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
-                            <div className="grid grid-cols-2 gap-[8px] order-2">
+                            <div className="grid grid-cols-2 gap-[8px] order-2 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <div className="col-span-2 aspect-square overflow-hidden bg-zinc-50">
                                     <img alt="Large production set B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD390tuPTVaMwdAG0YbyGEqCfiXb9jr5PRBSHe8l_Ak3xZuG-3o_QXUkuBu-mtdK03LSC1sWcu-gGwE9YAM9PJuSSbN6vrTz7Y9DSEydYTiHiQRqSJmlWXxWiGMJu5kGJQwj3rU2lhmBJab9ySp0O7AEEj8uZ-mXtb6AHJRxS9uBratt_Obde2648xuz8Q6bEroADLXOT13Ee94D08afZo3CjH8nLmy1tiih7xBWZwvAWbuvF1BlVzRWPrEH2z_t63jeYSKQvLm11I" />
                                 </div>
@@ -376,7 +429,7 @@ export default function ProdutoraPage() {
                                     <img alt="Close up lens B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp0WKohR-0E5jRvxI9Yq22k8wGUNJu46nl0f5q4ZgO1LLsF2AOAwl1DA19t3RzVDM1Ok1Oyaol8_h9IzldK2JUYYZ6TXWaosks1lwY4QKXmO9Rs952EqbUZgGp52mZr6Cqd90wOT8ELOFbrim0esrnAd8dWOyqlXVOLQwbzq99fUUm_Z2zrKmM9VGPJD9zAmPBgqCJZgSt_8mrC6XumHHWVXKwKJhBMndUGlB0cq20INbKFB1I3l0bXTXcnUfpdb64Co8Jffib_Fg" />
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start text-left order-1">
+                            <div className="flex flex-col items-start text-left order-1 scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 {/* BLOCK 1 */}
                                 <div className="mb-12">
                                     <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">DIFFERENTIAL</span>
@@ -409,7 +462,8 @@ export default function ProdutoraPage() {
                 {/* Section 7: Editorial CTA */}
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
+                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-16 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
                             Se sua produção não consolida posicionamento — <span className="not-italic">o problema não é a execução.</span>
                         </h2>
@@ -441,7 +495,7 @@ export default function ProdutoraPage() {
                 <section className="bg-white px-[40px]">
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24">
+                            <div className="text-center mb-24 scroll-reveal" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÍVEL</span>
                                 <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
                             </div>
@@ -467,7 +521,7 @@ export default function ProdutoraPage() {
                                         items: ["Vídeo institucional", "Vídeo explicativo", "Cases", "Cobertura de eventos"]
                                     }
                                 ].map((card, idx) => (
-                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
+                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                         <div>
                                             <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
                                             <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>
