@@ -21,12 +21,12 @@ export default function Header({ variant = 'dark' }) {
     useEffect(() => {
         const handleScroll = () => {
             const current = window.scrollY;
-            if (current <= 0) {
+            if (current < window.innerHeight * 0.9) {
                 setVisible(true);
                 setScrolled(false);
                 return;
             }
-            if (current > lastScroll.current && current > 80) {
+            if (current > lastScroll.current && current > window.innerHeight) {
                 setVisible(false);
             } else {
                 setVisible(true);
@@ -61,7 +61,7 @@ export default function Header({ variant = 'dark' }) {
     return (
         <>
             <header 
-                className="fixed top-0 w-full flex justify-between items-center px-12 py-10 z-[100]"
+                className="fixed top-0 w-full flex justify-between items-center px-12 py-4 z-[100]"
                 style={{ 
                     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
                     transition: 'transform 0.4s ease, background-color 0.3s ease',
@@ -71,23 +71,23 @@ export default function Header({ variant = 'dark' }) {
             >
                 <Link 
                     href="/" 
-                    className="text-lg font-serif tracking-tight uppercase font-headline no-underline"
+                    className="text-sm font-serif tracking-tight uppercase font-headline no-underline"
                     style={{ color: currentTextColor }}
                 >
                     House Mazzutti
                 </Link>
 
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
+                    <Link className="font-raleway uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
                 </nav>
 
                 <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
