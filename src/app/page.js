@@ -10,18 +10,60 @@ import Header from "@/app/components/Header";
  */
 export default function Home() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
+
+    const heroSlides = [
+        {
+            label: "STRATEGIC HOUSE",
+            title: <>A arquitetura do<br />seu posicionamento.</>,
+            buttonText: "CONHEÇA O MÉTODO"
+        },
+        {
+            label: "STRATEGIC HOUSE",
+            title: <>A arquitetura do<br />seu posicionamento.</>,
+            buttonText: "CONHEÇA O MÉTODO"
+        },
+        {
+            label: "STRATEGIC HOUSE",
+            title: <>A arquitetura do<br />seu posicionamento.</>,
+            buttonText: "CONHEÇA O MÉTODO"
+        }
+    ];
+
+    const nextHeroSlide = () => {
+        setCurrentHeroSlide((prev) => (prev + 1) % heroSlides.length);
+    };
+
+    const prevHeroSlide = () => {
+        setCurrentHeroSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    };
 
     useEffect(() => {
+        const interval = setInterval(() => {
+            nextHeroSlide();
+        }, 6000);
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        // Reset animations immediately
+        document.querySelectorAll('.hero-animate').forEach((el) => {
+            el.style.transition = 'none';
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+        });
+
         const timer = setTimeout(() => {
             document.querySelectorAll('.hero-animate').forEach((el, i) => {
                 setTimeout(() => {
+                    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
                     el.style.opacity = '1';
                     el.style.transform = 'translateY(0)';
                 }, i * 150);
             });
-        }, 100);
+        }, 150);
         return () => clearTimeout(timer);
-    }, []);
+    }, [currentHeroSlide]);
 
     const testimonials = [
         {
@@ -72,26 +114,27 @@ export default function Home() {
                                 className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
-                                STRATEGIC HOUSE
+                                {heroSlides[currentHeroSlide].label}
                             </span>
                             <h1
                                 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
-                                A arquitetura do
-                                <br />
-                                seu posicionamento.
+                                {heroSlides[currentHeroSlide].title}
                             </h1>
                             <button
                                 className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
-                                CONHEÇA O MÉTODO
+                                {heroSlides[currentHeroSlide].buttonText}
                             </button>
                         </div>
                     </div>
                     <div className="absolute inset-y-0 left-12 flex items-center z-20">
-                        <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity">
+                        <button 
+                            className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity"
+                            onClick={prevHeroSlide}
+                        >
                             <div className="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
                                 <div className="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16"></div>
                                 <svg
@@ -111,7 +154,10 @@ export default function Home() {
                         </button>
                     </div>
                     <div className="absolute inset-y-0 right-12 flex items-center z-20">
-                        <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity">
+                        <button 
+                            className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity"
+                            onClick={nextHeroSlide}
+                        >
                             <div className="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
                                 <svg
                                     className="-mr-1"
