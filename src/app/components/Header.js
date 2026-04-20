@@ -249,9 +249,8 @@ export default function Header({ variant = 'dark' }) {
             )}
 
             <style>{`
-                .font-raleway { font-family: var(--font-raleway), sans-serif; }
-                .font-label { font-family: var(--font-raleway), sans-serif; }
-                .font-headline { font-family: var(--font-playfair), serif; }
+                .font-label { font-family: var(--font-body), sans-serif; }
+                .font-headline { font-family: var(--font-headline), serif; }
                 @keyframes slideIn { 
                   from{transform:translateX(100%)} 
                   to{transform:translateX(0)} 

@@ -1,23 +1,17 @@
-import { Playfair_Display, Inter, Raleway } from 'next/font/google';
+import { Libre_Baskerville, Nunito_Sans } from 'next/font/google';
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '700'],
   style: ['normal', 'italic'],
-  variable: '--font-playfair'
+  variable: '--font-headline'
 });
 
-const inter = Inter({
+const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
-  variable: '--font-inter'
-});
-
-const raleway = Raleway({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-raleway'
+  variable: '--font-body'
 });
 
 export const metadata = {
@@ -27,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${playfair.variable} ${inter.variable} ${raleway.variable}`}>
+    <html lang="pt-BR" className={`${libreBaskerville.variable} ${nunitoSans.variable}`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
