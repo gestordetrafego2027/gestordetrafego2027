@@ -334,3 +334,12 @@ h3 { font-size: clamp(1.2rem, 2vw, 2rem); }
     opacity: 0.1;
     cursor: not-allowed;
 }
+
+p, span, a, li, div {
+  font-size: calc(1em + 2px) !important;
+}
+
+h1 { font-size: calc(1em + 20px) !important; }
+h2 { font-size: calc(1em + 14px) !important; }
+h3 { font-size: calc(1em + 8px) !important; }
+h4 { font-size: calc(1em + 4px) !important; }
