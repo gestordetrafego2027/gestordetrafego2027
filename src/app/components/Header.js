@@ -73,9 +73,9 @@ export default function Header({ variant = 'dark' }) {
     };
 
     const isLightVariant = variant === 'light';
-    const textColor = isLightVariant ? '#000000' : '#ffffff';
-    const bgColor = isLightVariant ? '#ffffff' : 'transparent';
-    const currentTextColor = scrolled ? '#000000' : textColor;
+    const currentTextColor = isLightVariant ? '#000000' : scrolled ? '#000000' : '#ffffff';
+    const currentBgColor = scrolled ? '#ffffff' : isLightVariant ? '#ffffff' : 'transparent';
+    const currentBorder = scrolled || isLightVariant ? '0.5px solid #e0e0e0' : 'none';
 
     const getLinkStyle = (path) => {
         const isActive = pathname === path || 
@@ -91,12 +91,16 @@ export default function Header({ variant = 'dark' }) {
     return (
         <>
             <header 
-                className="fixed top-0 w-full flex justify-between items-center px-12 z-[100]"
+                className="flex justify-between items-center px-12"
                 style={{ 
                     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
-                    transition: 'transform 0.4s ease, background-color 0.3s ease',
-                    backgroundColor: scrolled ? '#ffffff' : bgColor,
-                    borderBottom: scrolled ? '0.5px solid #e0e0e0' : 'none',
+                    transition: 'transform 0.4s ease',
+                    backgroundColor: currentBgColor,
+                    borderBottom: currentBorder,
+                    position: 'fixed',
+                    top: 0,
+                    width: '100%',
+                    zIndex: 100,
                     paddingTop: '28px',
                     paddingBottom: '28px'
                 }}
