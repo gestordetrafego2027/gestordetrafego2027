@@ -28,6 +28,12 @@ html {
 
 * { font-family: 'RocGrotesk', sans-serif; }
 
+body { font-size: 16px; }
+h1 { font-size: clamp(2.5rem, 5vw, 5rem); }
+h2 { font-size: clamp(1.8rem, 3vw, 3rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 2rem); }
+
+
 @theme {
     /* Mapeamento das variáveis das fontes configuradas no layout */
     --font-headline: var(--font-headline), serif;
