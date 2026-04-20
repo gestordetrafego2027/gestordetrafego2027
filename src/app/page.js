@@ -559,17 +559,17 @@ export default function Home() {
                 </section>
 
                 {/* BLOG SECTION */}
-                <section style={{ background: '#fff', padding: '80px 40px' }}>
+                <section style={{ background: '#fff', padding: '120px 80px' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
                         <div style={{ marginBottom: '60px' }}>
                             <p style={{
-                                fontSize: '10px', letterSpacing: '0.2em',
+                                fontSize: '12px', letterSpacing: '0.2em',
                                 textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
                             }}>
                                 BLOG
                             </p>
-                            <h2 style={{ fontSize: '2rem', fontWeight: '400', color: '#000' }}>
+                            <h2 style={{ fontSize: '2.8rem', fontWeight: '400', color: '#000' }}>
                                 Últimos Artigos
                             </h2>
                         </div>
@@ -599,18 +599,25 @@ export default function Home() {
                                 }
                             ].map((post, idx) => (
                                 <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div style={{ padding: '40px', border: '1px solid #eee', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', transition: 'background 0.3s' }} onMouseOver={(e) => e.currentTarget.style.background = '#fcfcfc'} onMouseOut={(e) => e.currentTarget.style.background = '#fff'}>
+                                    <div style={{ padding: '64px 48px', border: '1px solid #eee', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', transition: 'background 0.3s' }} onMouseOver={(e) => e.currentTarget.style.background = '#fcfcfc'} onMouseOut={(e) => e.currentTarget.style.background = '#fff'}>
                                         <div>
-                                            <p style={{ fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>
+                                            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>
                                                 {post.categoria}
                                             </p>
-                                            <h3 style={{ fontSize: '1.2rem', fontWeight: '400', lineHeight: '1.4', color: '#000', marginBottom: '40px' }}>
+                                            <h3 style={{ fontSize: '1.6rem', fontWeight: '400', lineHeight: '1.4', color: '#000', marginBottom: '40px' }}>
                                                 {post.titulo}
                                             </h3>
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <span style={{ fontSize: '9px', color: '#aaa' }}>{post.data}</span>
-                                            <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#000' }}>arrow_forward</span>
+                                            <span style={{ fontSize: '11px', color: '#aaa' }}>{post.data}</span>
+                                            <span style={{
+                                              fontSize: '20px',
+                                              display: 'inline-block',
+                                              transition: 'transform 0.3s ease'
+                                            }}
+                                            onMouseEnter={e => e.currentTarget.style.transform = 'translateX(8px)'}
+                                            onMouseLeave={e => e.currentTarget.style.transform = 'translateX(0)'}
+                                            >→</span>
                                         </div>
                                     </div>
                                 </Link>
