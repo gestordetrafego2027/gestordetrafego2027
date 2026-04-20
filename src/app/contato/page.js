@@ -24,7 +24,7 @@ export default function ContatoPage() {
     }, []);
 
     return (
-        <div className="dark antialiased">
+        <div className="dark antialiased" style={{minHeight: '101vh'}}>
             <style jsx global>{`
                 .material-symbols-outlined {
                     font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
