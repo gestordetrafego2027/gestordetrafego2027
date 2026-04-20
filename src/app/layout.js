@@ -1,14 +1,13 @@
-import { Fraunces, Outfit } from 'next/font/google';
+import { Syne, Urbanist } from 'next/font/google';
 import "./globals.css";
 
-const fraunces = Fraunces({
+const syne = Syne({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal', 'italic'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-headline'
 });
 
-const outfit = Outfit({
+const urbanist = Urbanist({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-body'
@@ -21,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${fraunces.variable} ${outfit.variable}`}>
+    <html lang="pt-BR" className={`${syne.variable} ${urbanist.variable}`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"

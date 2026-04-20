@@ -4,6 +4,8 @@ html {
   scrollbar-gutter: stable;
 }
 
+* { font-family: var(--font-body), sans-serif; }
+
 @theme {
     /* Mapeamento das variáveis das fontes configuradas no layout */
     --font-headline: var(--font-headline), serif;
@@ -192,11 +194,11 @@ html {
         transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
     }
 
-    .font-headline { font-family: var(--font-headline), serif; }
+    .font-headline { font-family: var(--font-headline), sans-serif; }
     .font-body { font-family: var(--font-body), sans-serif; }
     .font-label { font-family: var(--font-body), sans-serif; }
     .font-raleway { font-family: var(--font-body), sans-serif; }
-    .font-serif { font-family: var(--font-headline), serif; }
+    .font-serif { font-family: var(--font-headline), sans-serif; }
 }
 
 /* THEME SCOPING FOR ABOUT PAGE */
