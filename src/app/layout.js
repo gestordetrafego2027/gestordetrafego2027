@@ -1,17 +1,23 @@
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
+import { Playfair_Display, Inter, Raleway } from 'next/font/google';
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
-  variable: '--font-cormorant'
+  variable: '--font-playfair'
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
-  variable: '--font-dm-sans'
+  variable: '--font-inter'
+});
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-raleway'
 });
 
 export const metadata = {
@@ -21,7 +27,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="pt-BR" className={`${playfair.variable} ${inter.variable} ${raleway.variable}`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
