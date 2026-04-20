@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 html {
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
 }
 
 @theme {
