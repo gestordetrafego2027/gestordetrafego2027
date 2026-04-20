@@ -114,16 +114,16 @@ export default function Header({ variant = 'dark' }) {
                 </Link>
 
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
-                    <Link className="font-raleway uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[11px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
                 </nav>
 
                 <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
@@ -249,8 +249,8 @@ export default function Header({ variant = 'dark' }) {
             )}
 
             <style>{`
-                .font-raleway { font-family: var(--font-raleway), sans-serif; }
-                .font-headline { font-family: var(--font-newsreader), serif; }
+                .font-label { font-family: var(--font-dm-sans), sans-serif; }
+                .font-headline { font-family: var(--font-cormorant), serif; }
                 @keyframes slideIn { 
                   from{transform:translateX(100%)} 
                   to{transform:translateX(0)} 
