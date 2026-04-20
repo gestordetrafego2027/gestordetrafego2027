@@ -20,6 +20,10 @@ export default function Header({ variant = 'dark' }) {
     const lastScroll = useRef(0);
 
     useEffect(() => {
+        setVisible(true);
+        setScrolled(window.scrollY > window.innerHeight * 0.9);
+        lastScroll.current = window.scrollY;
+
         const handleScroll = () => {
             const current = window.scrollY;
             if (current < window.innerHeight * 0.9) {
@@ -37,7 +41,7 @@ export default function Header({ variant = 'dark' }) {
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [pathname]);
 
     const toggleMenu = (open) => {
         setSideMenuOpen(open);
