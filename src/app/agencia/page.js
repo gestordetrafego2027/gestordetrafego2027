@@ -453,13 +453,13 @@ export default function AgenciaPage() {
                                     categoria: 'Agência — Branding',
                                     titulo: 'Por que o branding é o ativo mais valioso de uma marca de luxo',
                                     data: 'Abril 2026',
-                                    slug: '/blog/branding-ativo-valioso-luxo'
+                                    slug: '/blog/branding-project-arquitetura-valor'
                                 },
                                 {
                                     categoria: 'IA — Futuro',
                                     titulo: 'O papel da Inteligência Artificial na direção criativa de 2026',
                                     data: 'Abril 2026',
-                                    slug: '/blog/ia-direcao-criativa-2026'
+                                    slug: '/blog/editorial-moda-narrativa-visual'
                                 }
                             ].map((post, idx) => (
                                 <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
