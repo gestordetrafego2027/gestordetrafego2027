@@ -1,14 +1,14 @@
-import { Bodoni_Moda, Josefin_Sans } from 'next/font/google';
+import { Fraunces, Outfit } from 'next/font/google';
 import "./globals.css";
 
-const bodoniModa = Bodoni_Moda({
+const fraunces = Fraunces({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
   variable: '--font-headline'
 });
 
-const josefinSans = Josefin_Sans({
+const outfit = Outfit({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-body'
@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${bodoniModa.variable} ${josefinSans.variable}`}>
+    <html lang="pt-BR" className={`${fraunces.variable} ${outfit.variable}`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
