@@ -24,15 +24,11 @@
 
 html {
   scrollbar-gutter: stable;
-  font-size: 18px !important;
 }
 
 * { font-family: 'RocGrotesk', sans-serif; }
 
-body { font-size: 18px !important; }
-h1 { font-size: clamp(2.5rem, 5vw, 5rem); }
-h2 { font-size: clamp(1.8rem, 3vw, 3rem); }
-h3 { font-size: clamp(1.2rem, 2vw, 2rem); }
+
 
 
 @theme {
@@ -333,37 +329,4 @@ h3 { font-size: clamp(1.2rem, 2vw, 2rem); }
 .nav-arrow:disabled {
     opacity: 0.1;
     cursor: not-allowed;
-}
-
-p, span, a, li, div {
-  font-size: calc(1em + 2px) !important;
-}
-
-h1 { font-size: calc(1em + 20px) !important; }
-h2 { font-size: calc(1em + 14px) !important; }
-h3 { font-size: calc(1em + 8px) !important; }
-h4 { font-size: calc(1em + 4px) !important; }
-
-* {
-  font-size: inherit !important;
-}
-
-html {
-  font-size: 18px !important;
-}
-
-.text-xs, [class*="text-[9px]"], [class*="text-[10px]"] {
-  font-size: 11px !important;
-}
-
-.text-sm {
-  font-size: 15px !important;
-}
-
-.text-base {
-  font-size: 18px !important;
-}
-
-.text-lg {
-  font-size: 20px !important;
 }
