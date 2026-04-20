@@ -73,11 +73,16 @@ export default function Header({ variant = 'dark' }) {
     const bgColor = isLightVariant ? '#ffffff' : 'transparent';
     const currentTextColor = scrolled ? '#000000' : textColor;
 
-    const getLinkStyle = (path) => ({
-        color: currentTextColor,
-        borderTop: pathname === path ? `0.5px solid ${currentTextColor}` : 'none',
-        paddingTop: pathname === path ? '4px' : '0'
-    });
+    const getLinkStyle = (path) => {
+        const isActive = pathname === path || 
+                         pathname === path + '/' || 
+                         (path !== '/' && pathname.startsWith(path))
+        return {
+            color: currentTextColor,
+            borderTop: isActive ? `0.5px solid ${currentTextColor}` : 'none',
+            paddingTop: isActive ? '4px' : '0'
+        }
+    };
 
     return (
         <>
