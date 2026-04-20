@@ -343,3 +343,27 @@ h1 { font-size: calc(1em + 20px) !important; }
 h2 { font-size: calc(1em + 14px) !important; }
 h3 { font-size: calc(1em + 8px) !important; }
 h4 { font-size: calc(1em + 4px) !important; }
+
+* {
+  font-size: inherit !important;
+}
+
+html {
+  font-size: 18px !important;
+}
+
+.text-xs, [class*="text-[9px]"], [class*="text-[10px]"] {
+  font-size: 11px !important;
+}
+
+.text-sm {
+  font-size: 15px !important;
+}
+
+.text-base {
+  font-size: 18px !important;
+}
+
+.text-lg {
+  font-size: 20px !important;
+}
