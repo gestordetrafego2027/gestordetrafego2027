@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Header from '@/app/components/Header';
 
 const articles = {
   'book-para-modelos-quem-e-escolhido': {
@@ -186,29 +187,7 @@ export default function ArticleContent({ slug }) {
             `}} />
 
             {/* TopAppBar */}
-            <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50">
-                <div className="flex justify-between items-center px-8 h-20 hairline-b">
-                    <Link href="/" className="text-2xl font-headline italic text-zinc-900 no-underline">HOUSE MAZZUTTI</Link>
-                    <nav className="hidden xl:flex items-center gap-6">
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/">HOME</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/about">SOBRE</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/studio">STUDIO</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/produtora">PRODUTORA</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/agencia">AGÊNCIA</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/angelo">ANGELO</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/comunidade">COMUNIDADE</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-900 border-b-[0.5px] border-zinc-900 pb-1" href="/blog">BLOG</Link>
-                        <Link className="text-[10px] font-bold uppercase tracking-[0.2em] font-label text-zinc-500 hover:text-zinc-900 transition-opacity" href="/contato">CONTATO</Link>
-                        <span className="material-symbols-outlined cursor-pointer text-zinc-900 ml-2">search</span>
-                    </nav>
-                    <div className="xl:hidden flex items-center gap-4">
-                        <span className="material-symbols-outlined cursor-pointer">search</span>
-                        <span className="material-symbols-outlined cursor-pointer">menu</span>
-                    </div>
-                </div>
-                <div className="h-[0.5px] w-full fine-line"></div>
-            </header>
+            <Header variant="light" />
             <div className="h-20 w-full"></div>
 
             {/* Title Block */}
