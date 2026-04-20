@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  overflow-y: scroll;
+}
+
 @theme {
     /* Mapeamento das variáveis das fontes configuradas no layout */
     --font-headline: var(--font-newsreader), serif;
