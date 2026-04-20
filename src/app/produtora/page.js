@@ -418,44 +418,63 @@ export default function ProdutoraPage() {
                     </div>
                 </section>
                 {/* Section 6: Posicionamento */}
-                <section className="bg-white px-12 py-20">
-                    <div className="max-w-[1400px] mx-auto flex flex-col space-y-[24px]">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
-                            <div className="grid grid-cols-2 gap-[8px] order-2">
-                                <div className="col-span-2 aspect-square overflow-hidden bg-zinc-50">
-                                    <img alt="Large production set B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD390tuPTVaMwdAG0YbyGEqCfiXb9jr5PRBSHe8l_Ak3xZuG-3o_QXUkuBu-mtdK03LSC1sWcu-gGwE9YAM9PJuSSbN6vrTz7Y9DSEydYTiHiQRqSJmlWXxWiGMJu5kGJQwj3rU2lhmBJab9ySp0O7AEEj8uZ-mXtb6AHJRxS9uBratt_Obde2648xuz8Q6bEroADLXOT13Ee94D08afZo3CjH8nLmy1tiih7xBWZwvAWbuvF1BlVzRWPrEH2z_t63jeYSKQvLm11I" />
-                                </div>
-                                <div className="overflow-hidden bg-zinc-100 aspect-[2/4]">
-                                    <img alt="Close up lens B&W" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp0WKohR-0E5jRvxI9Yq22k8wGUNJu46nl0f5q4ZgO1LLsF2AOAwl1DA19t3RzVDM1Ok1Oyaol8_h9IzldK2JUYYZ6TXWaosks1lwY4QKXmO9Rs952EqbUZgGp52mZr6Cqd90wOT8ELOFbrim0esrnAd8dWOyqlXVOLQwbzq99fUUm_Z2zrKmM9VGPJD9zAmPBgqCJZgSt_8mrC6XumHHWVXKwKJhBMndUGlB0cq20INbKFB1I3l0bXTXcnUfpdb64Co8Jffib_Fg" />
-                                </div>
-                            </div>
-                            <div className="flex flex-col items-start text-left order-1">
-                                {/* BLOCK 1 */}
-                                <div className="mb-12">
-                                    <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">DIFFERENTIAL</span>
-                                    <h2 className="font-headline text-black leading-tight mb-4 md:text-4xl">O que parece natural foi estruturado.</h2>
-                                    <p className="text-secondary leading-loose max-w-md font-light mb-6 text-[12px]">
-                                        O que parece simples foi direcionado. Porque execução não serve para aparecer. Serve para consolidar.
-                                    </p>
-                                    <Link className="inline-block px-10 py-5 border border-black text-black font-label uppercase tracking-[0.2em] text-[8px] hover:bg-black hover:text-white transition-all duration-300" href="/sobre">
-                                        LER MAIS
-                                    </Link>
-                                </div>
-                                <div className="w-full h-48 overflow-hidden bg-zinc-100 mb-20">
-                                    <img alt="Production detail separator" className="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-JiQuKue4NWoYyfl5LF7gWBrqMMHRWY2f-Y53KLRGC2L6aM0z9Nn9FrCy60tAMWsoSgwZlqu910SsICT7n1LVei-rf04CCbRzu2-IcdkN1K3w5A3eWMPaCg7KnhopQ9ibL0gzpfZm2kAI8cZlkHEu1jBOX8PX2Tla5pm8_M_rp0MoK3FfhPlOpMrQcWNgjzHSeV6gRa1Vr3HiyaP8eqDqOH1MWbV_bdVSUcw-fDCaHlOCYsC5KGAZ8NUNHfBuZf6X-c5_2m-HjI8" />
-                                </div>
-                                {/* BLOCK 2 */}
-                                <div className="flex flex-col items-start text-left mt-[120px]">
-                                    <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">AUTORIDADE</span>
-                                    <h2 className="font-headline text-black leading-tight mb-4 md:text-4xl">Execução com direção é controle absoluto.</h2>
-                                    <p className="text-secondary leading-loose max-w-md font-light mb-6 text-[12px]">
-                                        A Produtora da House Mazzutti é responsável por transformar estratégia em resultado — com consistência, intenção e controle de percepção.
-                                    </p>
-                                    <Link className="inline-block px-10 py-5 border border-black text-black font-label uppercase tracking-[0.2em] text-[8px] hover:bg-black hover:text-white transition-all duration-300 mb-12" href="/contato">
-                                        CONHEÇA O MÉTODO
-                                    </Link>
-                                </div>
-                            </div>
+                {/* BLOG SECTION */}
+                <section style={{ background: '#fff', padding: '80px 40px' }}>
+                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+
+                        <div style={{ marginBottom: '60px' }}>
+                            <p style={{
+                                fontSize: '10px', letterSpacing: '0.2em',
+                                textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
+                            }}>
+                                BLOG
+                            </p>
+                            <h2 style={{ fontSize: '2rem', fontWeight: '400', color: '#000' }}>
+                                Últimos Artigos
+                            </h2>
+                        </div>
+
+                        <div style={{
+                            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
+                            gap: '2px'
+                        }}>
+                            {[
+                                {
+                                    categoria: 'Studio — Book',
+                                    titulo: 'Book para Modelos: o que realmente define quem é escolhido no mercado',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/book-para-modelos-quem-e-escolhido'
+                                },
+                                {
+                                    categoria: 'Agência — Branding',
+                                    titulo: 'Por que o branding é o ativo mais valioso de uma marca de luxo',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/branding-ativo-valioso-luxo'
+                                },
+                                {
+                                    categoria: 'IA — Futuro',
+                                    titulo: 'O papel da Inteligência Artificial na direção criativa de 2026',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/ia-direcao-criativa-2026'
+                                }
+                            ].map((post, idx) => (
+                                <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <div style={{ padding: '40px', border: '1px solid #eee', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', transition: 'background 0.3s' }} onMouseOver={(e) => e.currentTarget.style.background = '#fcfcfc'} onMouseOut={(e) => e.currentTarget.style.background = '#fff'}>
+                                        <div>
+                                            <p style={{ fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>
+                                                {post.categoria}
+                                            </p>
+                                            <h3 style={{ fontSize: '1.2rem', fontWeight: '400', lineHeight: '1.4', color: '#000', marginBottom: '40px' }}>
+                                                {post.titulo}
+                                            </h3>
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                            <span style={{ fontSize: '9px', color: '#aaa' }}>{post.data}</span>
+                                            <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#000' }}>arrow_forward</span>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </section>

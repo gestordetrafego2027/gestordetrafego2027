@@ -1,0 +1,33 @@
+﻿<USER_REQUEST>
+Nos arquivos:
+src/app/page.js
+src/app/studio/page.js
+src/app/produtora/page.js
+src/app/agencia/page.js
+src/app/comunidade/page.js
+
+Localize a seÃ§Ã£o que vem depois dos depoimentos e 
+SUBSTITUA completamente por esta nova seÃ§Ã£o de blog:
+
+<section style={{background:'#fff', padding:'80px 40px'}}>
+  <div style={{maxWidth:'1400px', margin:'0 auto'}}>
+    
+    <div style={{marginBottom:'60px'}}>
+      <p style={{fontSize:'10px', letterSpacing:'0.2em', 
+        textTransform:'uppercase', color:'#aaa', marginBottom:'12px'}}>
+        BLOG
+      </p>
+      <h2 style={{fontSize:'2rem', fontWeight:'400', color:'#000'}}>
+        Ãšltimos Artigos
+      </h2>
+    </div>
+
+    <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', 
+      gap:'2px'}}>
+      {[
+        {
+          categoria: 'Studio â€” Book',
+          titulo: 'Book para Modelos: o que realmente define quem Ã© escolhido no mercado',
+          data: 'Abril 2026',
+          slug: '/blog/book-para-modelos-quem-e-escolhido'
+<truncated 3181 bytes>

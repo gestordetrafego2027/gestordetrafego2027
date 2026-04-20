@@ -400,42 +400,63 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
-                <section className="bg-white px-12 py-20">
-                    <div className="max-w-[1400px] mx-auto flex flex-col space-y-[24px]">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
-                            <div className="grid grid-cols-2 gap-[8px] order-2">
-                                <div className="col-span-2 aspect-square overflow-hidden bg-zinc-50">
-                                    <img alt="B&W large placeholder" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkiQLtRcTbgce0k0oFWm4mlyb7RRXITzmnT-XtfQ2olO6jM2s71xr5xw5V6Rnii-hngJvHHL34YpjPIRdRfovLcbKY4QBgolXMJczrB8f2Tm9x4X2zH9ScZqlnIyN5GerHmP_0Q-ZgBSqqlVvThL6zDNMpgCG6XnS-vN5fogJc7kw-W5MNIeyILgIK9WwgyNQSsPFS13O3DxvzFfViYPBfjKlLrMB8ClfVr3JjzfzVIpYs8kmvTZO6VDCdARfX9jRaozLBbYICmQ0" />
-                                </div>
-                                <div className="overflow-hidden bg-zinc-100 aspect-[2/4]">
-                                    <img alt="Portrait photography set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIHY560gS2ik_2GrZpF30j-g-u298R2IvVTv99wXYupz5jW7ePfhi3hHeOSQJ2w4D9995OdagrtsKYEq0WGyCiUbF4XqHAZy8VekCTL3M9cJodpb-uNjUXVWrV7ILlVTT2zmqMUAfKFTDlPXy7VUL9uEwNMf_12u39Nub3mRFN41ZWd3eCg9gWp2qZXBlD5S3HKhbGnZX9ITFbVDfNSTbkEuWv7VCiQZHtzcmfE_8zY8HzN17A0gHtn7s99IzT0-_ft0gKKjVhO8" />
-                                </div>
-                            </div>
-                            <div className="flex flex-col items-start text-left order-1">
-                                <div className="mb-12">
-                                    <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">DIFFERENTIAL</span>
-                                    <h2 className="font-headline text-black leading-tight mb-4 md:text-4xl">O que parece natural foi direcionado.</h2>
-                                    <p className="text-secondary leading-loose max-w-md font-light mb-6 text-[12px]">
-                                        O que parece simples foi estruturado. Porque imagem não serve para aparecer. Serve para posicionar.
-                                    </p>
-                                    <Link className="inline-block px-10 py-5 border border-black text-black font-label uppercase tracking-[0.2em] text-[8px] hover:bg-black hover:text-white transition-all duration-300" href="/sobre">
-                                        LER MAIS
-                                    </Link>
-                                </div>
-                                <div className="w-full h-48 overflow-hidden bg-zinc-100 mb-20">
-                                    <img alt="Visual separator" className="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWM9LTdgigUXU-ARkrjEgnxbL1ujH595AoGTSmyL2KNSgbxAaA1i7Cd5cjAzXhsqSQFSrGjEvgaz37YmO-79RZCU6J6LMHEuV5Amyjj5amYPAyhB1X0ySQP297SeRH3SSOVsEyrYsOdPeQkKx4RWbKxD__UtjmT8LtPRflmw2q3N48kmA6vGLUcFUVO6N3JOLLktTEJv7YEA3jsWFXeu8Iu0vG81Y-n8JkXDK74k8WsYJOdrqtMyXzjGMECr7rqJju7Z2KHSO1dis" />
-                                </div>
-                                <div className="flex flex-col items-start text-left mt-[120px]">
-                                    <span className="font-label uppercase tracking-[0.3em] text-zinc-400 mb-2 block text-[8px]">AUTORIDADE</span>
-                                    <h2 className="font-headline text-black leading-tight mb-4 md:text-4xl">Direção de imagem com estratégia, não execução isolada.</h2>
-                                    <p className="text-secondary leading-loose max-w-md font-light mb-6 text-[12px]">
-                                        O Studio da House Mazzutti é responsável por transformar posicionamento em imagem — com consistência, intenção e controle de percepção.
-                                    </p>
-                                    <Link className="inline-block px-10 py-5 border border-black text-black font-label uppercase tracking-[0.2em] text-[8px] hover:bg-black hover:text-white transition-all duration-300 mb-12" href="/contato">
-                                        CONHEÇA O MÉTODO
-                                    </Link>
-                                </div>
-                            </div>
+                {/* BLOG SECTION */}
+                <section style={{ background: '#fff', padding: '80px 40px' }}>
+                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+
+                        <div style={{ marginBottom: '60px' }}>
+                            <p style={{
+                                fontSize: '10px', letterSpacing: '0.2em',
+                                textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
+                            }}>
+                                BLOG
+                            </p>
+                            <h2 style={{ fontSize: '2rem', fontWeight: '400', color: '#000' }}>
+                                Últimos Artigos
+                            </h2>
+                        </div>
+
+                        <div style={{
+                            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
+                            gap: '2px'
+                        }}>
+                            {[
+                                {
+                                    categoria: 'Studio — Book',
+                                    titulo: 'Book para Modelos: o que realmente define quem é escolhido no mercado',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/book-para-modelos-quem-e-escolhido'
+                                },
+                                {
+                                    categoria: 'Agência — Branding',
+                                    titulo: 'Por que o branding é o ativo mais valioso de uma marca de luxo',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/branding-ativo-valioso-luxo'
+                                },
+                                {
+                                    categoria: 'IA — Futuro',
+                                    titulo: 'O papel da Inteligência Artificial na direção criativa de 2026',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/ia-direcao-criativa-2026'
+                                }
+                            ].map((post, idx) => (
+                                <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <div style={{ padding: '40px', border: '1px solid #eee', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', transition: 'background 0.3s' }} onMouseOver={(e) => e.currentTarget.style.background = '#fcfcfc'} onMouseOut={(e) => e.currentTarget.style.background = '#fff'}>
+                                        <div>
+                                            <p style={{ fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>
+                                                {post.categoria}
+                                            </p>
+                                            <h3 style={{ fontSize: '1.2rem', fontWeight: '400', lineHeight: '1.4', color: '#000', marginBottom: '40px' }}>
+                                                {post.titulo}
+                                            </h3>
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                            <span style={{ fontSize: '9px', color: '#aaa' }}>{post.data}</span>
+                                            <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#000' }}>arrow_forward</span>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </section>
