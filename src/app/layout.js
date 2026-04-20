@@ -1,9 +1,9 @@
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Epilogue } from 'next/font/google';
 import "./globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const epilogue = Epilogue({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
   variable: '--font-headline'
 });
@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${plusJakarta.variable}`}>
+    <html lang="pt-BR" className={`${epilogue.variable}`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
