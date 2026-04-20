@@ -195,6 +195,8 @@ html {
     .font-headline { font-family: var(--font-headline), serif; }
     .font-body { font-family: var(--font-body), sans-serif; }
     .font-label { font-family: var(--font-body), sans-serif; }
+    .font-raleway { font-family: var(--font-body), sans-serif; }
+    .font-serif { font-family: var(--font-headline), serif; }
 }
 
 /* THEME SCOPING FOR ABOUT PAGE */

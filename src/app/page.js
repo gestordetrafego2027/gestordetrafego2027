@@ -465,7 +465,7 @@ export default function Home() {
                         style={{
                             position: 'absolute', top: '50%', left: '50%',
                             transform: 'translate(-50%, -50%)',
-                            fontSize: '10vw', fontFamily: 'Newsreader, serif',
+                            fontSize: '10vw', fontFamily: 'var(--font-headline), serif',
                             fontStyle: 'italic', color: 'rgba(255,255,255,0.12)', // Increased visibility on black background
                             whiteSpace: 'nowrap', pointerEvents: 'none',
                             userSelect: 'none', zIndex: 0
