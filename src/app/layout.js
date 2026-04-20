@@ -1,16 +1,11 @@
-import { Syne, Urbanist } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import "./globals.css";
 
-const syne = Syne({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
   variable: '--font-headline'
-});
-
-const urbanist = Urbanist({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-body'
 });
 
 export const metadata = {
@@ -20,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${syne.variable} ${urbanist.variable}`}>
+    <html lang="pt-BR" className={`${plusJakarta.variable}`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
