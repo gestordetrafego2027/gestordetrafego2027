@@ -236,7 +236,7 @@ export default function Home() {
                 >
                     <div className="mb-12 text-center flex flex-col items-center">
                         <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">
-                            BRANDING & POSICIONAMENTO
+                            BRANDING & POSICIONAMENTO ESTRATÉGICO DE MARCAS E PERFIS
                         </span>
                         <h2 className="font-headline text-3xl text-black">Trabalhos Selecionados</h2>
                         <div className="line-divider mt-6 text-black"></div>
