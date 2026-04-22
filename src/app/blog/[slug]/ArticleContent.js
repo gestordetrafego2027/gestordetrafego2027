@@ -11,158 +11,143 @@ const articles = {
     data: 'Abril 2026',
     texto1: 'Existe um momento silencioso na trajetória de quem deseja trabalhar com imagem: aquele em que você percebe que talvez não esteja sendo visto da forma certa. Não é sobre beleza. Não é sobre potencial. É sobre como tudo isso está sendo apresentado. Muitos talentos deixam de avançar no mercado simplesmente porque não possuem um material capaz de traduzir quem realmente são.',
     citacao: 'Um book bem construído não é portfólio. É posicionamento. É a diferença entre esperar uma oportunidade e criar uma.',
-    texto2: 'Um book fotográfico profissional não é apenas um ensaio. Ele é um instrumento de leitura. Agências, diretores de casting e marcas utilizam esse material para responder, rapidamente, perguntas essenciais: Essa pessoa é versátil? Ela entende câmera? Existe potencial comercial ou editorial?',
-    texto3: 'Trabalhar com imagem exige mais do que presença. Exige construção. O book é, muitas vezes, o primeiro capítulo dessa construção — não como um registro, mas como uma decisão consciente sobre como você deseja ser visto.',
+    texto2: 'Um book fotográfico profissional não é apenas um ensaio. Ele é um instrumento de leitura. Agências, diretores de casting e marcas utilizam esse material para responder rapidamente: Essa pessoa é versátil? Ela entende câmera? Existe potencial comercial ou editorial? Um book eficiente é construído com intenção técnica e estratégica: direção de poses, expressão e linguagem, variedade de looks, luz e enquadramento, coerência estética.',
+    texto3: 'Trabalhar com imagem exige mais do que presença. Exige construção. O book é, muitas vezes, o primeiro capítulo dessa construção — não como um registro, mas como uma decisão consciente sobre como você deseja ser visto. E, no mercado atual, isso faz toda a diferença.',
   },
-
   'book-modelo-imagem-trabalha-por-voce': {
     categoria: 'Studio — Book',
     titulo: 'Book de Modelo: quando sua imagem começa a trabalhar por você',
     data: 'Abril 2026',
-    texto1: 'Existe uma mudança sutil — mas poderosa — quando alguém passa a se ver como parte do mercado. A forma de olhar para si muda. A forma de se apresentar também. O que antes era apenas tirar fotos passa a ser entendido como construção de imagem.',
+    texto1: 'Existe uma mudança sutil — mas poderosa — quando alguém passa a se ver como parte do mercado. A forma de olhar para si muda. A forma de se apresentar também. O que antes era apenas tirar fotos passa a ser entendido como construção de imagem. E é nesse ponto que o book deixa de ser uma opção e se torna uma ferramenta.',
     citacao: 'Sua imagem já comunica algo — mesmo quando não existe intenção. A diferença está em decidir o que ela deve comunicar.',
-    texto2: 'Um book não nasce para impressionar. Ele nasce para comunicar. Cada imagem carrega uma função: revelar potencial, indicar direção, criar leitura rápida. O mercado não procura apenas rostos bonitos. Procura rostos que funcionam em diferentes contextos.',
-    texto3: 'Existe um momento em que algo muda. O material começa a gerar retorno. Convites surgem. Respostas chegam. O olhar do mercado se abre. Isso não acontece por acaso. Acontece quando a imagem passa a estar alinhada com o que o mercado espera.',
+    texto2: 'Um book não nasce para impressionar. Ele nasce para comunicar. O mercado não procura apenas rostos bonitos. Procura rostos que funcionam em diferentes contextos. Um dos pontos mais sofisticados de um book é sua capacidade de transitar entre o comercial e o editorial. Quem está do outro lado observa: se existe verdade na expressão, se há domínio mínimo de corpo, se a imagem se sustenta em diferentes propostas.',
+    texto3: 'Existe um momento em que algo muda. O material começa a gerar retorno. Convites surgem. Respostas chegam. O olhar do mercado se abre. Isso não acontece por acaso. Acontece quando a imagem passa a estar alinhada com o que o mercado espera — sem perder autenticidade.',
   },
-
   'ensaio-pessoal-imagem-autoridade': {
     categoria: 'Studio — Ensaio',
     titulo: 'Ensaio Pessoal: o que realmente constrói uma imagem de autoridade',
     data: 'Março 2026',
-    texto1: 'Existe um ponto na trajetória profissional em que o crescimento deixa de depender apenas de competência. E passa a depender de percepção. Você pode ter experiência, repertório, resultados — mas se sua imagem não traduz isso com clareza, o mercado não acessa essa informação.',
+    texto1: 'Existe um ponto na trajetória profissional em que o crescimento deixa de depender apenas de competência. E passa a depender de percepção. Você pode ter experiência, repertório, resultados — mas se sua imagem não traduz isso com clareza, o mercado não acessa essa informação. No cenário atual, onde decisões são tomadas rapidamente e muitas vezes à distância, a imagem não apenas acompanha sua carreira. Ela passa a mediar a forma como você é interpretada.',
     citacao: 'Em estágios mais avançados de carreira, não basta ser. É necessário ser percebida com precisão.',
-    texto2: 'O ensaio pessoal não deve ser entendido como um produto fotográfico. Ele é um instrumento de posicionamento visual. Ele estrutura percepção, define linguagem, orienta leitura de valor e estabelece hierarquia visual.',
-    texto3: 'O ensaio pessoal não é sobre se mostrar melhor. É sobre garantir que aquilo que você já construiu possa, finalmente, ser visto da forma correta.',
+    texto2: 'O ensaio pessoal não deve ser entendido como um produto fotográfico. Ele é um instrumento de posicionamento visual. Ele estrutura percepção, define linguagem, orienta leitura de valor e estabelece hierarquia visual. Um ensaio pessoal bem estruturado trabalha com três camadas simultâneas: estética, simbólica e estratégica. Sem essas três camadas alinhadas, o material pode até ser bonito — mas não será funcional.',
+    texto3: 'Autoridade não é apenas construída por discurso. Ela é percebida visualmente. Um ensaio pessoal bem executado contribui diretamente para redução de atrito na percepção inicial, aumento de credibilidade imediata e fortalecimento da identidade profissional. O ensaio pessoal não é sobre se mostrar melhor. É sobre garantir que aquilo que você já construiu possa, finalmente, ser visto da forma correta.',
   },
-
   'ensaio-pessoal-imagem-lidera-percepcao': {
     categoria: 'Studio — Ensaio',
-    titulo: 'Ensaio Pessoal: quando sua imagem deixa de acompanhar sua trajetória',
+    titulo: 'Ensaio Pessoal: quando sua imagem deixa de acompanhar sua trajetória — e passa a liderar sua percepção',
     data: 'Março 2026',
-    texto1: 'Existe uma transição silenciosa na vida profissional. Ela não acontece quando você conquista algo novo. Mas quando percebe que já não pode mais se apresentar da mesma forma. A imagem que antes funcionava já não sustenta mais.',
+    texto1: 'Existe uma transição silenciosa na vida profissional. Ela não acontece quando você conquista algo novo. Mas quando percebe que já não pode mais se apresentar da mesma forma. A imagem que antes funcionava já não sustenta mais. Isso não tem relação com vaidade. Tem relação com coerência. O ensaio pessoal entra exatamente nesse ponto: não como uma melhoria superficial, mas como uma reorganização completa da forma como você será percebida.',
     citacao: 'Quando estética e intenção se encontram, o visual deixa de ser decorativo. A imagem passa a ter peso. A presença ganha consistência.',
-    texto2: 'Durante um ensaio pessoal bem conduzido, algo acontece além da imagem. Você se reposiciona. Não apenas diante da câmera — mas diante de si mesma. A forma como você se move muda. A forma como você sustenta o olhar muda.',
+    texto2: 'Durante um ensaio pessoal bem conduzido, você se reposiciona. Não apenas diante da câmera — mas diante de si mesma. A forma como você se move muda. A forma como você sustenta o olhar muda. A forma como você ocupa o espaço muda. Antes de qualquer palavra, sua imagem já comunicou: nível, posicionamento, segurança, sofisticação.',
     texto3: 'Você não precisa se tornar outra pessoa. Mas, em algum momento, precisa atualizar a forma como é vista. E quando isso é feito com direção, intenção e clareza, sua imagem deixa de ser apenas reflexo. E passa a ser extensão real da sua presença.',
   },
-
   'cobertura-externa-presenca-alto-valor': {
     categoria: 'Studio — Cobertura',
     titulo: 'Cobertura Externa em Tempo Real: o que realmente define uma presença de alto valor em São Paulo',
     data: 'Fevereiro 2026',
-    texto1: 'São Paulo é uma cidade que exige presença. Mas, na prática, poucas pessoas realmente constroem essa presença de forma intencional. Entre compromissos, eventos, deslocamentos e agendas intensas, o que deveria ser uma experiência marcante muitas vezes se perde em registros aleatórios.',
+    texto1: 'São Paulo é uma cidade que exige presença. Mas, na prática, poucas pessoas realmente constroem essa presença de forma intencional. Entre compromissos, eventos, deslocamentos e agendas intensas, o que deveria ser uma experiência marcante muitas vezes se perde em registros aleatórios e falta de suporte. A Cobertura Externa em Tempo Real não nasce como um serviço de cobertura tradicional. Ela nasce como uma estrutura de acompanhamento.',
     citacao: 'Presença de alto nível não acontece por acaso. Ela é construída.',
-    texto2: 'A Cobertura Externa em Tempo Real não nasce como um serviço de cobertura tradicional. Ela nasce como uma estrutura de acompanhamento. Enquanto formatos comuns se limitam a registrar momentos, aqui o foco está em algo mais sofisticado: produzir presença ao longo da jornada.',
-    texto3: 'Existem agendas que passam. E existem agendas que marcam. A diferença entre elas raramente está no evento em si — mas na forma como ele é vivido, organizado e apresentado.',
+    texto2: 'Esse tipo de serviço se conecta com um perfil específico: mulheres que ocupam posições de liderança, fundadoras e executivas, influenciadoras e especialistas. Existe um ponto em comum entre todas: a consciência de que presença não é apenas estar — é ser percebida. A estrutura se manifesta em camadas: direção de imagem, direção de presença, produção e suporte, captação estratégica.',
+    texto3: 'Existem agendas que passam. E existem agendas que marcam. A diferença entre elas raramente está no evento em si — mas na forma como ele é vivido, organizado e apresentado. Presença não é apenas estar no lugar certo. É garantir que esse momento exista da forma certa.',
   },
-
   'cobertura-externa-narrativa-visual': {
     categoria: 'Studio — Cobertura',
     titulo: 'Cobertura Externa em Tempo Real: quando sua experiência em São Paulo se transforma em narrativa visual',
     data: 'Fevereiro 2026',
-    texto1: 'Algumas experiências merecem mais do que serem vividas. Merecem ser construídas. São agendas importantes, convites especiais, momentos que carregam significado — e que, quando bem conduzidos, se tornam algo maior do que o próprio acontecimento.',
-    citacao: 'Alguns momentos passam rapidamente. Outros permanecem. Não porque foram mais importantes — mas porque foram melhor construídos.',
-    texto2: 'Existe uma diferença sutil entre participar de um evento e realmente marcar presença. Ela não está apenas no look. Está na forma como tudo se organiza ao redor. A chegada. O tempo. O ritmo. A leitura visual.',
-    texto3: 'Quando existe intenção, cuidado e direção, até uma simples passagem pela cidade pode se transformar em algo memorável.',
+    texto1: 'Algumas experiências merecem mais do que serem vividas. Merecem ser construídas. São Paulo oferece esse cenário. Mas a forma como você ocupa esse cenário é o que define tudo. Existe uma diferença sutil entre participar de um evento e realmente marcar presença. Ela não está apenas no look. Está na forma como tudo se organiza ao redor: a chegada, o tempo, o ritmo, a leitura visual.',
+    citacao: 'Quando existe intenção, cuidado e direção, até uma simples passagem pela cidade pode se transformar em algo memorável.',
+    texto2: 'Por trás de uma presença bem construída, existe uma estrutura invisível. Alguém cuidando dos detalhes. Esse cuidado não chama atenção — mas é exatamente ele que permite que tudo aconteça com leveza. São Paulo não precisa ser apenas um destino. Ela pode ser cenário. Quando existe direção, cada espaço passa a contribuir.',
+    texto3: 'Alguns momentos passam rapidamente. Outros permanecem. Não porque foram mais importantes — mas porque foram melhor construídos. E quando existe intenção, cuidado e direção, até uma simples passagem pela cidade pode se transformar em algo memorável.',
   },
-
   'branding-project-arquitetura-valor': {
     categoria: 'Agência — Branding',
     titulo: 'Branding Project como Arquitetura de Valor',
-    data: 'Março 2026',
-    texto1: 'Existe um ponto silencioso — mas decisivo — dentro de qualquer negócio. Não é o produto. Não é o serviço. Não é nem mesmo o preço. É a forma como tudo isso é percebido. Duas empresas podem entregar exatamente a mesma solução. Mas apenas uma será lembrada. Apenas uma será desejada.',
+    data: 'Abril 2026',
+    texto1: 'Existe um ponto silencioso — mas decisivo — dentro de qualquer negócio. Não é o produto. Não é o serviço. Não é nem mesmo o preço. É a forma como tudo isso é percebido. Duas empresas podem entregar exatamente a mesma solução. Mas apenas uma será lembrada. Apenas uma será desejada. Apenas uma será escolhida com facilidade. Esse ponto de diferença não está no que a empresa faz. Está na forma como ela constrói sua presença.',
     citacao: 'Branding não é estética. É alavanca de crescimento.',
-    texto2: 'O Branding Project é um processo estruturado de desenvolvimento de marca que transforma uma ideia de negócio em um sistema completo de identidade, percepção e aplicação. Ele integra estratégia de marca, identidade visual, diretrizes e aplicações práticas.',
-    texto3: 'Todo negócio começa com uma ideia. Mas só cresce quando essa ideia se torna clara, reconhecível e desejada. O Branding Project existe para transformar isso em realidade.',
+    texto2: 'O Branding Project é um processo estruturado de desenvolvimento de marca que transforma uma ideia de negócio em um sistema completo de identidade, percepção e aplicação. Ele integra quatro pilares: estratégia de marca, identidade visual, diretrizes e documentação, aplicações práticas. Marcas consistentes podem aumentar a receita em até 33%. Na House Mazzutti, o processo começa na leitura do mercado, concorrência, momento do negócio e ambição de crescimento.',
+    texto3: 'Todo negócio começa com uma ideia. Mas só cresce quando essa ideia se torna clara, reconhecível e desejada. O Branding Project existe para transformar isso em realidade. Não como estética. Mas como estrutura. Não como design. Mas como posicionamento.',
   },
-
   'branding-project-motor-vendas': {
     categoria: 'Agência — Branding',
     titulo: 'Branding Project como Motor de Vendas',
     data: 'Março 2026',
-    texto1: 'A maioria das empresas comete o mesmo erro. Investe primeiro em tráfego. Depois em conteúdo. Depois em equipe comercial. E só então percebe que algo não funciona. Os leads não convertem como deveriam. O preço precisa ser justificado o tempo todo.',
-    citacao: 'Sem marca, você paga mais caro para crescer.',
-    texto2: 'Sem um Branding Project, toda ação de crescimento opera com atrito. Isso acontece porque a comunicação não é clara, a identidade não sustenta valor e a percepção não acompanha a entrega.',
-    texto3: 'Toda empresa quer crescer. Mas poucas percebem que o crescimento sustentável começa antes da venda. Começa na construção da marca.',
+    texto1: 'A maioria das empresas comete o mesmo erro — e ele custa caro. Investe primeiro em tráfego. Depois em conteúdo. E só então percebe que algo não funciona. O problema raramente está no marketing. Está na base. Está na marca. Porque antes de alguém comprar, existe uma pergunta silenciosa: essa empresa me parece confiável, sólida e valiosa? Essa resposta não vem do produto. Vem do branding.',
+    citacao: 'Crescer não é apenas vender mais — é vender melhor.',
+    texto2: 'Empresas com branding consistente podem aumentar a conversão em até 23%. O Branding Project atua diretamente nos pontos que mais impactam vendas: redução de atrito na decisão, aumento de valor percebido, conversão mais eficiente e escala sustentável. Sem marca estruturada, toda ação de crescimento opera com atrito.',
+    texto3: 'O crescimento sustentável começa antes da venda. Começa na construção da marca. O Branding Project existe exatamente para isso: transformar o negócio em algo claro, confiável, desejado e valorizado. Porque no final, vender não deveria ser esforço constante. Deveria ser consequência de uma marca bem construída.',
   },
-
   'quanto-investir-em-branding': {
     categoria: 'Agência — Branding',
     titulo: 'Quanto investir em branding: o guia estratégico',
-    data: 'Fevereiro 2026',
-    texto1: 'A pergunta mais comum sobre branding é direta: quanto custa? Mas a pergunta mais inteligente é outra: quanto vale construir uma marca que sustenta o crescimento do meu negócio? Porque branding não é um gasto isolado. É uma decisão estrutural.',
-    citacao: 'Economizar no branding pode sair caro — e de forma contínua.',
-    texto2: 'Muitas empresas olham para branding como criação de logo, escolha de cores, estética visual. E por isso tentam reduzir investimento e simplificar decisão. O problema é que isso gera marcas genéricas, falta de diferenciação e dificuldade de crescimento.',
-    texto3: 'Quanto investir em branding? A resposta mais honesta é: o suficiente para não precisar refazer depois. Porque branding não é algo que você faz várias vezes. É algo que você estrutura para sustentar o seu crescimento.',
+    data: 'Março 2026',
+    texto1: 'A pergunta mais comum sobre branding é direta: quanto custa? Mas a pergunta mais inteligente é outra: quanto vale construir uma marca que sustenta o crescimento do meu negócio? Branding não é um gasto isolado. É uma decisão estrutural. Inconsistência de marca pode custar até 23% da receita anual. Economizar no branding pode sair caro — e de forma contínua.',
+    citacao: 'Quanto investir em branding? O suficiente para não precisar refazer depois.',
+    texto2: 'O investimento varia: baixo (R$500 a R$3.000) — criação básica sem estratégia; médio (R$3.000 a R$10.000) — identidade mais estruturada; estratégico (R$10.000 a R$25.000+) — posicionamento completo com manuais; premium (R$25.000 a R$100.000+) — marca como ativo competitivo real. Empresas com branding consistente reduzem desperdício de marketing em até 20%.',
+    texto3: 'Branding antes de marketing não é luxo — é lógica. Empresas mais estratégicas entendem que branding vem antes da escala, estrutura vem antes do crescimento. Porque branding não é algo que você faz várias vezes. É algo que você estrutura para sustentar o seu crescimento.',
   },
-
   'campanha-lancamento-arquitetura-invisivel': {
     categoria: 'Agência — Campanhas',
-    titulo: 'Campaign de Lançamento: a arquitetura invisível',
+    titulo: 'Campaign de Lançamento: a arquitetura invisível por trás das marcas que dominam atenção',
     data: 'Fevereiro 2026',
-    texto1: 'Existe uma diferença silenciosa — e decisiva — entre marcas que lançam e marcas que crescem. As primeiras comunicam. As segundas constroem presença. No ambiente atual, lançar deixou de ser um ato pontual. Passou a ser um processo estratégico de ocupação de espaço.',
+    texto1: 'Existe uma diferença silenciosa entre marcas que lançam e marcas que crescem. As primeiras comunicam. As segundas constroem presença. Uma Campaign de Lançamento é uma arquitetura estratégica que organiza múltiplos pontos de contato em torno de uma narrativa central. Ela define o que será comunicado, como será percebido, onde será distribuído, em que ritmo será apresentado e como será convertido em resultado.',
     citacao: 'Comunicação sem estrutura gera visibilidade. Comunicação estruturada gera crescimento.',
-    texto2: 'Uma Campaign de Lançamento é uma arquitetura estratégica que organiza múltiplos pontos de contato em torno de uma narrativa central, com o objetivo de gerar percepção consistente e impacto progressivo.',
-    texto3: 'No cenário atual, crescer não depende apenas de aparecer. Depende de como se aparece — e com que consistência. A Campaign de Lançamento é o que transforma intenção em estrutura. E estrutura em resultado.',
+    texto2: 'Marcas com presença consistente têm até 2,5x mais probabilidade de serem lembradas. Uma Campaign bem estruturada opera em três camadas: atração (conteúdos de alto impacto), aprofundamento (conteúdos que envolvem) e conversão (conteúdos direcionados para ação). A força não está em cada peça isoladamente. Está na sequência.',
+    texto3: 'Presença não se constrói por acaso. No cenário atual, crescer não depende apenas de aparecer. Depende de como se aparece — e com que consistência. A Campaign de Lançamento é o que transforma intenção em estrutura. E estrutura em resultado.',
   },
-
   'por-que-campanhas-falham': {
     categoria: 'Agência — Campanhas',
     titulo: 'Por que a maioria das campanhas falha',
     data: 'Janeiro 2026',
-    texto1: 'Vivemos a era do excesso. Mais vídeos. Mais fotos. Mais posts. Mais campanhas. E, paradoxalmente, menos impacto. A maioria das marcas não sofre por falta de conteúdo. Sofre por falta de direção.',
-    citacao: 'Não é sobre fazer mais. É sobre conectar melhor.',
-    texto2: 'Grande parte das marcas não falha por falta de qualidade. Falha por falta de integração. É comum encontrar vídeos bem produzidos que não se conectam com outros conteúdos, campanhas que não têm continuidade e estética inconsistente entre canais.',
-    texto3: 'Campanhas não falham por falta de talento. Elas falham por falta de estrutura. No cenário atual, não vence quem produz mais. Vence quem organiza melhor.',
+    texto1: 'Vivemos a era do excesso. Mais vídeos. Mais fotos. Mais posts. Mais campanhas. E, paradoxalmente, menos impacto. A maioria das marcas não sofre por falta de conteúdo. Sofre por falta de direção. Produzir não é o problema. O problema é produzir sem estrutura. Mais de 70% dos conteúdos produzidos por marcas não geram engajamento consistente.',
+    citacao: 'Campanhas não falham por falta de talento. Elas falham por falta de estrutura.',
+    texto2: 'Campanhas que realmente performam seguem uma lógica invisível: estratégia clara, narrativa central, arquitetura de conteúdo, direção estética com intenção, plano de distribuição e continuidade. Campanhas com storytelling estruturado têm até 2,3x mais retenção. Campanhas com consistência multicanal aumentam em até 90% a efetividade de marca.',
+    texto3: 'No cenário atual, não vence quem produz mais. Vence quem organiza melhor. Porque uma campanha não é sobre o que é criado. É sobre como tudo se conecta. E é essa conexão que transforma conteúdo em impacto — e impacto em crescimento real.',
   },
-
   'editorial-moda-narrativa-visual': {
-    categoria: 'Produtora — Editorial de Moda',
+    categoria: 'Produtora — Editorial',
     titulo: 'Editorial de Moda como Narrativa Visual',
-    data: 'Janeiro 2026',
-    texto1: 'Existe um momento sutil em que a moda deixa de ser apenas matéria. E passa a ser percepção. É quando o tecido já não comunica apenas textura, mas intenção. Quando a pose não mostra apenas uma roupa, mas sugere uma história.',
-    citacao: 'O valor deixou de estar apenas no que é vendido. E passou a estar na forma como é apresentado.',
-    texto2: 'O editorial de moda é uma produção visual estruturada para transformar uma coleção em narrativa. Mais do que fotografar produtos, ele organiza elementos como direção de arte, styling, casting, luz e cenário para criar uma leitura coesa de marca.',
+    data: 'Abril 2026',
+    texto1: 'Existe um momento sutil em que a moda deixa de ser apenas matéria. E passa a ser percepção. É quando o tecido já não comunica apenas textura, mas intenção. Quando a pose não mostra apenas uma roupa, mas sugere uma história. O editorial de moda nasce exatamente nesse ponto. Não como um ensaio. Mas como uma construção de linguagem.',
+    citacao: 'O editorial é o que traduz. O que conecta. O que sustenta. E, principalmente, o que transforma produto em presença.',
+    texto2: 'O editorial de moda é uma produção visual estruturada para transformar uma coleção em narrativa. Mais do que fotografar produtos, ele organiza direção de arte, styling, casting, luz, cenário e ritmo visual para criar uma leitura coesa de marca. Até 60% das decisões de compra são influenciadas por fatores visuais. Na House Mazzutti, o editorial começa pela leitura do momento da marca, do mercado e do posicionamento desejado.',
     texto3: 'Uma coleção pode existir. Mas nem sempre é percebida. O editorial é o que traduz. O que conecta. O que sustenta. E, principalmente, o que transforma produto em presença.',
   },
-
   'editorial-moda-performance-vendas': {
-    categoria: 'Produtora — Editorial de Moda',
-    titulo: 'Editorial de Moda orientado à performance',
-    data: 'Janeiro 2026',
-    texto1: 'Existe um momento silencioso entre ver e desejar. E outro, ainda mais decisivo, entre desejar e comprar. A maioria das marcas acredita que esse processo acontece de forma natural. Mas não acontece. Ele é conduzido.',
-    citacao: 'Imagem deixou de ser suporte. Ela passou a ser motor de performance.',
-    texto2: 'Um editorial orientado à performance é uma produção visual estruturada não apenas para posicionar — mas para gerar resultado mensurável. Ele organiza direção de arte, enquadramento, ritmo visual e linguagem corporal com um objetivo claro: aumentar a capacidade da imagem de gerar ação.',
-    texto3: 'Na moda, vender não é apenas oferecer. É conduzir percepção até a decisão. O editorial, quando bem construído, faz exatamente isso. Ele não apenas mostra. Ele direciona. E, no momento certo, ele converte.',
+    categoria: 'Produtora — Editorial',
+    titulo: 'Editorial de Moda orientado à performance: quando imagem passa a vender',
+    data: 'Março 2026',
+    texto1: 'Existe um momento silencioso entre ver e desejar. E outro, ainda mais decisivo, entre desejar e comprar. A maioria das marcas acredita que esse processo acontece de forma natural. Mas não acontece. Ele é conduzido. E, no cenário atual, essa condução é profundamente visual. Antes do preço. Antes da descrição. A imagem já determinou o caminho.',
+    citacao: 'Na moda, vender não é apenas oferecer. É conduzir percepção até a decisão.',
+    texto2: 'Um editorial orientado à performance é uma produção visual estruturada não apenas para posicionar — mas para gerar resultado mensurável. Imagens que performam têm leitura clara, foco bem definido, composição intencional, ausência de ruído, hierarquia visual. Elas guiam o olhar. E, ao guiar o olhar, guiam a decisão.',
+    texto3: 'O editorial, quando bem construído, não apenas mostra. Ele direciona. Na House Mazzutti, a imagem performa mas mantém linguagem premium, mantém identidade e mantém posicionamento. Sem cair no visual genérico de conversão. E, no momento certo, ele converte.',
   },
-
   'por-que-boas-ideias-nao-garantem-resultados': {
-    categoria: 'Produtora — Prod. Executiva',
-    titulo: 'Por que boas ideias não garantem bons resultados?',
-    data: 'Dezembro 2025',
-    texto1: 'Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade, se dilui, se adapta demais e perde identidade. Isso é mais comum do que parece.',
-    citacao: 'Produção influencia performance. Conteúdos mais consistentes retêm mais atenção, aumentam engajamento e melhoram conversão.',
-    texto2: 'O investimento em conteúdo e campanhas aumentou. Mas junto com ele, aumentou o risco. Mais formatos significa mais complexidade. Mais equipe significa mais variáveis. Mais canais significa mais possibilidade de erro.',
-    texto3: 'Projetos bem estruturados têm menos surpresas, tomam decisões mais rápidas e executam com mais confiança. E isso impacta diretamente o resultado.',
+    categoria: 'Produtora — Produção Executiva',
+    titulo: 'Por que boas ideias não garantem bons resultados',
+    data: 'Fevereiro 2026',
+    texto1: 'Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade, se dilui, se adapta demais e perde identidade. Projetos com múltiplos stakeholders têm até 50% mais chance de atraso quando não possuem gestão estruturada. O custo invisível da desorganização aparece em tempo perdido, energia da equipe, decisões refeitas e qualidade comprometida.',
+    citacao: 'ROI não depende só da mídia. A qualidade da produção impacta diretamente o desempenho da campanha.',
+    texto2: 'Produção Executiva atua em três níveis: controle (cronograma, orçamento, fluxo), integração (equipes, decisões, comunicação) e proteção (qualidade, conceito, entrega). Conteúdos mais consistentes retêm mais atenção, aumentam engajamento e melhoram conversão.',
+    texto3: 'Projetos bem estruturados têm menos surpresas, tomam decisões mais rápidas e executam com mais confiança. E isso impacta diretamente o resultado. A House Mazzutti atua reduzindo esse risco — com estrutura que organiza, integra, controla e entrega. Sem excesso. Sem ruído. Com precisão.',
   },
-
   'producao-executiva-sistema-campanhas': {
-    categoria: 'Produtora — Prod. Executiva',
-    titulo: 'Produção Executiva: o sistema invisível que transforma ideias em campanhas',
-    data: 'Dezembro 2025',
-    texto1: 'Existe um imaginário comum no mercado publicitário: acredita-se que campanhas são feitas de ideias brilhantes. E, de fato, são. Mas o que raramente se discute é que ideias não falham — execuções falham.',
+    categoria: 'Produtora — Produção Executiva',
+    titulo: 'Produção Executiva: o sistema invisível que transforma ideias em campanhas de alto impacto',
+    data: 'Fevereiro 2026',
+    texto1: 'Ideias não falham — execuções falham. Uma campanha pode nascer forte no conceito e ainda assim perder potência na prática. Não por falta de talento. Mas por falta de estrutura. Existe um imaginário comum: acredita-se que campanhas são feitas de ideias brilhantes. E, de fato, são. Mas o que raramente se discute é que ideias não falham — execuções falham.',
     citacao: 'Grandes campanhas não são feitas apenas com talento — são sustentadas por estrutura.',
-    texto2: 'Produção Executiva não é produção. É governança. É o que conecta criação, equipe, fornecedores, cronograma, orçamento e execução em um único fluxo coerente. Sem isso, cada área funciona bem — mas o todo falha.',
-    texto3: 'A House atua com uma visão clara: não basta criar bem, é preciso entregar com excelência. Por isso, a Produção Executiva conecta direção criativa, operação técnica, linguagem de marca e execução em set.',
+    texto2: 'Produção Executiva não é produção. É governança. É o que conecta criação, equipe, fornecedores, cronograma, orçamento e execução em um único fluxo coerente. Falhas não acontecem por falta de capacidade técnica. Elas acontecem por falhas de coordenação. Sem liderança executiva, surgem: briefing desalinhado, decisões conflitantes, retrabalho constante.',
+    texto3: 'A diferença entre uma campanha boa e uma campanha memorável não está apenas na ideia. Está na consistência entre conceito, execução, acabamento e entrega. A House Mazzutti atua com uma visão clara: não basta criar bem — é preciso entregar com excelência.',
   },
-
   'por-que-campanhas-caras-falham': {
-    categoria: 'Produtora — Prod. Executiva',
-    titulo: 'Por que campanhas caras falham',
-    data: 'Dezembro 2025',
-    texto1: 'Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas na prática, o que determina o resultado não é o valor investido. É a forma como esse investimento é organizado.',
-    citacao: 'O custo não está apenas no orçamento. Está na eficiência perdida.',
-    texto2: 'Muitas campanhas contam com bons profissionais em cada área. Mas sem um ponto central de coordenação, decisões se fragmentam, responsabilidades se sobrepõem e prioridades se confundem.',
-    texto3: 'Produção Executiva atua como uma camada de proteção. Ela não elimina imprevistos. Mas reduz significativamente o impacto deles. Ela transforma incerteza em previsibilidade.',
+    categoria: 'Produtora — Produção Executiva',
+    titulo: 'Por que campanhas com alto investimento falham',
+    data: 'Janeiro 2026',
+    texto1: 'Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas na prática, o que determina o resultado não é o valor investido. É a forma como esse investimento é organizado. Campanhas com orçamento elevado também enfrentam desalinhamento, retrabalho, perda de eficiência e queda de qualidade.',
+    citacao: 'Produção Executiva transforma incerteza em previsibilidade.',
+    texto2: 'O prejuízo de uma campanha se manifesta em três camadas: operacional (atrasos, ajustes constantes), criativa (perda de força do conceito, inconsistência visual) e estratégica (menor impacto, desgaste da marca). Raramente uma campanha falha por um único erro. O problema está no acúmulo.',
+    texto3: 'Projetos bem estruturados têm até 2,5x mais chance de atingir seus objetivos originais. Produção Executiva atua como uma camada de proteção. Ela não elimina imprevistos. Mas reduz significativamente o impacto deles. Transformando incerteza em previsibilidade.',
   },
 };
 
@@ -302,33 +287,33 @@ export default function ArticleContent({ slug }) {
                     <div className="mb-12">
                         <h4 className="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-zinc-900 mb-8 pt-8 hairline-t">RECENT POSTS</h4>
                         <div className="space-y-8 pb-8 hairline-b">
-                            <div className="flex gap-4 group cursor-pointer">
+                            <Link href="/blog/book-para-modelos-quem-e-escolhido" className="flex gap-4 group cursor-pointer block">
                                 <div className="w-[70px] h-[70px] bg-zinc-100 flex-shrink-0 overflow-hidden">
                                     <img alt="Book thumbnail" className="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDX6wTdzUl2QNWTtZBSxAeDh0J93DjPiGic0mgTBYHGc-EvviUC1elJVwLEUC0goHvSPesdvQfLm79X_lZ1-xfHqbJC4_qdIGLSHpFRdQyCTRyxAyDGfp_xJUzGfIRIrx8cvPfiexItlI8dQaN2iqc6LFonZg3vrZgEn5gazgtw6lvX6BzZKrPPv_KPwFhTlTYkP64hL8fPYen93C6_HaDp6fYeSO6xrP6mbxnakMPflUR7voxBTPNURTEv1SLt8VTWG7u2oGMH8Hl"/>
                                 </div>
                                 <div>
                                     <div className="text-[11px] font-label font-bold uppercase text-zinc-400 mb-1">ABRIL 2026</div>
-                                    <h5 className="text-[13px] font-body font-medium text-zinc-800 leading-snug group-hover:underline">Book para Modelos: mercado e escolha</h5>
+                                    <h5 className="text-[13px] font-body font-medium text-zinc-800 leading-snug group-hover:underline">Book para Modelos: quem é escolhido no mercado</h5>
                                 </div>
-                            </div>
-                            <div className="flex gap-4 group cursor-pointer">
+                            </Link>
+                            <Link href="/blog/branding-project-arquitetura-valor" className="flex gap-4 group cursor-pointer block">
                                 <div className="w-[70px] h-[70px] bg-zinc-100 flex-shrink-0 overflow-hidden">
                                     <img alt="Brand thumbnail" className="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4nkuGyCWUFwU27V9VeF92Nhs-ApxTMqxBVSLihmgKkSf6Z71yMbRQRLIMPly1dkwFlhJWv0jqnqkfkT5pC9CNSKybsiUGnlsJP93yARZcCKpyZyKl6k9CgDdG1R1jC-EDan90yUjEY0znFkA59wEWctGT5dRwz6aPkwp5B2kteg5Q_pHapbWoHhtBRU-VHo63rrECvUkUWKe9_q9_8oLvnHwrlGyNRNLJjC6ZAv82ADZ8Pyabb2O8ShTrcsZOTTsAPF3Ly3ORPBE"/>
                                 </div>
                                 <div>
-                                    <div className="text-[11px] font-label font-bold uppercase text-zinc-400 mb-1">MARÇO 2026</div>
-                                    <h5 className="text-[13px] font-body font-medium text-zinc-800 leading-snug group-hover:underline">Marcas fortes e a narrativa arquitetônica</h5>
+                                    <div className="text-[11px] font-label font-bold uppercase text-zinc-400 mb-1">ABRIL 2026</div>
+                                    <h5 className="text-[13px] font-body font-medium text-zinc-800 leading-snug group-hover:underline">Branding Project como Arquitetura de Valor</h5>
                                 </div>
-                            </div>
-                            <div className="flex gap-4 group cursor-pointer">
+                            </Link>
+                            <Link href="/blog/editorial-moda-narrativa-visual" className="flex gap-4 group cursor-pointer block">
                                 <div className="w-[70px] h-[70px] bg-zinc-100 flex-shrink-0 overflow-hidden">
                                     <img alt="Editorial thumbnail" className="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEUsXrbBijGl-UPNBSN2-5NrnxRA5XafwDUkwgUO_dKD0B3MjD0Mic86rhoKn4Nh2mNGRUwB14TIRtOZgwjlFNVHASQRL-Xa05rc9Kvf6kY2-ExPrEDCSK7XPYgdaD9QcrG6VIHD-q8-0zl20kagIUbwxmgUK7z9UdPWOFNBJuS1yD8-MRx-2wBsfccyuxXvlXlK5F4BL8G_G2ulEPWTPiuKiNYqQEwe0spD0nG0AnFWqL-_fzvIqqCY7bgGclccvDNud-QBtfzfCG"/>
                                 </div>
                                 <div>
-                                    <div className="text-[11px] font-label font-bold uppercase text-zinc-400 mb-1">MARÇO 2026</div>
-                                    <h5 className="text-[13px] font-body font-medium text-zinc-800 leading-snug group-hover:underline">Produção editorial no Studio Mazzutti</h5>
+                                    <div className="text-[11px] font-label font-bold uppercase text-zinc-400 mb-1">ABRIL 2026</div>
+                                    <h5 className="text-[13px] font-body font-medium text-zinc-800 leading-snug group-hover:underline">Editorial de Moda como Narrativa Visual</h5>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                     {/* Categories */}

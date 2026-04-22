@@ -20,7 +20,7 @@ export default function BlogPage() {
             categoria: "studio",
             subcategoria: "Studio — Book",
             titulo: "Book de Modelo: quando sua imagem começa a trabalhar por você",
-            excerpt: "Existe uma mudança sutil — mas poderosa — quando alguém passa a se ver como parte do mercado. A forma de olhar para si muda.",
+            excerpt: "Existe uma mudança sutil — mas poderosa — quando alguém passa a se ver como parte do mercado. A forma de olhar para si muda. A forma de se apresentar também.",
             link: "/blog/book-modelo-imagem-trabalha-por-voce",
             data: "Abril 2026"
         },
@@ -35,8 +35,8 @@ export default function BlogPage() {
         {
             categoria: "studio",
             subcategoria: "Studio — Ensaio",
-            titulo: "Ensaio Pessoal: quando sua imagem deixa de acompanhar sua trajetória",
-            excerpt: "Existe uma transição silenciosa na vida profissional. Ela não acontece quando você conquista algo novo.",
+            titulo: "Ensaio Pessoal: quando sua imagem deixa de acompanhar sua trajetória — e passa a liderar sua percepção",
+            excerpt: "Existe uma transição silenciosa na vida profissional. Ela não acontece quando você conquista algo novo. Mas quando percebe que já não pode mais se apresentar da mesma forma.",
             link: "/blog/ensaio-pessoal-imagem-lidera-percepcao",
             data: "Março 2026"
         },
@@ -44,7 +44,7 @@ export default function BlogPage() {
             categoria: "studio",
             subcategoria: "Studio — Cobertura",
             titulo: "Cobertura Externa em Tempo Real: o que realmente define uma presença de alto valor em São Paulo",
-            excerpt: "São Paulo é uma cidade que exige presença. Mas poucas pessoas realmente constroem essa presença de forma intencional.",
+            excerpt: "São Paulo é uma cidade que exige presença. Mas, na prática, poucas pessoas realmente constroem essa presença de forma intencional.",
             link: "/blog/cobertura-externa-presenca-alto-valor",
             data: "Fevereiro 2026"
         },
@@ -52,7 +52,7 @@ export default function BlogPage() {
             categoria: "studio",
             subcategoria: "Studio — Cobertura",
             titulo: "Cobertura Externa em Tempo Real: quando sua experiência em São Paulo se transforma em narrativa visual",
-            excerpt: "Algumas experiências merecem mais do que serem vividas. Merecem ser construídas.",
+            excerpt: "Algumas experiências merecem mais do que serem vividas. Merecem ser construídas. São Paulo oferece esse cenário.",
             link: "/blog/cobertura-externa-narrativa-visual",
             data: "Fevereiro 2026"
         },
@@ -60,15 +60,15 @@ export default function BlogPage() {
             categoria: "agencia",
             subcategoria: "Agência — Branding",
             titulo: "Branding Project como Arquitetura de Valor",
-            excerpt: "Duas empresas podem entregar exatamente a mesma solução. Mas apenas uma será lembrada. Apenas uma será desejada.",
+            excerpt: "Existe um ponto silencioso — mas decisivo — dentro de qualquer negócio. Não é o produto. Não é o serviço. Não é nem mesmo o preço. É a forma como tudo isso é percebido.",
             link: "/blog/branding-project-arquitetura-valor",
-            data: "Março 2026"
+            data: "Abril 2026"
         },
         {
             categoria: "agencia",
             subcategoria: "Agência — Branding",
             titulo: "Branding Project como Motor de Vendas",
-            excerpt: "A maioria das empresas comete o mesmo erro. Investe primeiro em tráfego. E só então percebe que algo não funciona.",
+            excerpt: "A maioria das empresas comete o mesmo erro — e ele custa caro. Investe primeiro em tráfego. Depois em conteúdo. E só então percebe que algo não funciona.",
             link: "/blog/branding-project-motor-vendas",
             data: "Março 2026"
         },
@@ -76,14 +76,14 @@ export default function BlogPage() {
             categoria: "agencia",
             subcategoria: "Agência — Branding",
             titulo: "Quanto investir em branding: o guia estratégico",
-            excerpt: "A pergunta mais comum sobre branding é direta: quanto custa? Mas a pergunta mais inteligente é outra.",
+            excerpt: "A pergunta mais comum sobre branding é direta: quanto custa? Mas a pergunta mais inteligente é outra: quanto vale construir uma marca que sustenta o crescimento do meu negócio?",
             link: "/blog/quanto-investir-em-branding",
-            data: "Fevereiro 2026"
+            data: "Março 2026"
         },
         {
             categoria: "agencia",
             subcategoria: "Agência — Campanhas",
-            titulo: "Campaign de Lançamento: a arquitetura invisível",
+            titulo: "Campaign de Lançamento: a arquitetura invisível por trás das marcas que dominam atenção",
             excerpt: "Existe uma diferença silenciosa entre marcas que lançam e marcas que crescem. As primeiras comunicam. As segundas constroem presença.",
             link: "/blog/campanha-lancamento-arquitetura-invisivel",
             data: "Fevereiro 2026"
@@ -92,49 +92,49 @@ export default function BlogPage() {
             categoria: "agencia",
             subcategoria: "Agência — Campanhas",
             titulo: "Por que a maioria das campanhas falha",
-            excerpt: "Vivemos a era do excesso. Mais vídeos. Mais fotos. Mais posts. E, paradoxalmente, menos impacto.",
+            excerpt: "Vivemos a era do excesso. Mais vídeos. Mais fotos. Mais posts. Mais campanhas. E, paradoxalmente, menos impacto.",
             link: "/blog/por-que-campanhas-falham",
             data: "Janeiro 2026"
         },
         {
             categoria: "produtora",
-            subcategoria: "Produtora — Editorial de Moda",
+            subcategoria: "Produtora — Editorial",
             titulo: "Editorial de Moda como Narrativa Visual",
-            excerpt: "Existe um momento sutil em que a moda deixa de ser apenas matéria. E passa a ser percepção.",
+            excerpt: "Existe um momento sutil em que a moda deixa de ser apenas matéria. E passa a ser percepção. É quando o tecido já não comunica apenas textura, mas intenção.",
             link: "/blog/editorial-moda-narrativa-visual",
-            data: "Janeiro 2026"
+            data: "Abril 2026"
         },
         {
             categoria: "produtora",
-            subcategoria: "Produtora — Editorial de Moda",
-            titulo: "Editorial de Moda orientado à performance",
+            subcategoria: "Produtora — Editorial",
+            titulo: "Editorial de Moda orientado à performance: quando imagem passa a vender",
             excerpt: "Existe um momento silencioso entre ver e desejar. E outro, ainda mais decisivo, entre desejar e comprar.",
             link: "/blog/editorial-moda-performance-vendas",
-            data: "Janeiro 2026"
+            data: "Março 2026"
         },
         {
             categoria: "produtora",
-            subcategoria: "Produtora — Prod. Executiva",
-            titulo: "Por que boas ideias não garantem bons resultados?",
-            excerpt: "Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade e dilui.",
+            subcategoria: "Produtora — Produção Executiva",
+            titulo: "Por que boas ideias não garantem bons resultados",
+            excerpt: "Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade, se dilui, se adapta demais e perde identidade.",
             link: "/blog/por-que-boas-ideias-nao-garantem-resultados",
-            data: "Dezembro 2025"
+            data: "Fevereiro 2026"
         },
         {
             categoria: "produtora",
-            subcategoria: "Produtora — Prod. Executiva",
-            titulo: "Produção Executiva: o sistema invisível que transforma ideias em campanhas",
-            excerpt: "Por trás de toda grande campanha existe uma estrutura que o público nunca vê — mas que define tudo.",
+            subcategoria: "Produtora — Produção Executiva",
+            titulo: "Produção Executiva: o sistema invisível que transforma ideias em campanhas de alto impacto",
+            excerpt: "Ideias não falham — execuções falham. Uma campanha pode nascer forte no conceito e ainda assim perder potência na prática.",
             link: "/blog/producao-executiva-sistema-campanhas",
-            data: "Dezembro 2025"
+            data: "Fevereiro 2026"
         },
         {
             categoria: "produtora",
-            subcategoria: "Produtora — Prod. Executiva",
-            titulo: "Por que campanhas caras falham",
-            excerpt: "Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas na prática não é assim.",
+            subcategoria: "Produtora — Produção Executiva",
+            titulo: "Por que campanhas com alto investimento falham",
+            excerpt: "Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas na prática, o que determina o resultado não é o valor investido.",
             link: "/blog/por-que-campanhas-caras-falham",
-            data: "Dezembro 2025"
+            data: "Janeiro 2026"
         }
     ];
 
