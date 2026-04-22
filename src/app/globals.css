@@ -31,6 +31,7 @@
 
 html {
   scrollbar-gutter: stable;
+  font-size: 15px;
 }
 
 /* Removido duplicata pois já está definido em utilities */
