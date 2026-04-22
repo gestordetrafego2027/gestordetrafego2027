@@ -277,7 +277,7 @@ export default function Home() {
                     <div className="max-w-[1260px] mx-auto text-center mb-12">
                         <div className="mb-20">
                             <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">
-                                ATUAMOS COM
+                                ATUAMOS COM FORMATO CONSULTIVO
                             </span>
                             <h2 className="font-headline text-5xl text-black">
                                 Integrado. Estratégico. Intencional.
@@ -354,8 +354,7 @@ export default function Home() {
                             <div className="grid grid-cols-1 gap-y-8">
                                 <div className="max-w-xl text-left">
                                     <h2 className="font-headline text-xl md:text-2xl italic leading-snug mb-2">
-                                        “Marcas fortes não disputam atenção. <br />
-                                        <span className="not-italic">Elas ocupam espaço.</span>”
+                                        Marcas fortes não disputam atenção. Elas ocupam espaço.
                                     </h2>
                                     <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
                                         Filosofia House
@@ -364,29 +363,28 @@ export default function Home() {
                                 <div className="flex justify-end">
                                     <div className="max-w-xl text-right">
                                         <h3 className="font-headline text-xl md:text-2xl leading-snug mb-2">
-                                            A maioria constrói visibilidade. <br />
-                                            <span className="italic">Poucos constroem posição.</span>
+                                            A maioria constrói visibilidade, mas poucos constroem verdadeiros legados visuais.
                                         </h3>
                                         <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
-                                            Diferenciação
+                                            Ângelo Mazzutti — Dir. Criativo e de Publicidade HMZT
                                         </p>
                                     </div>
                                 </div>
                                 <div className="max-w-xl text-left">
                                     <p className="font-headline text-lg md:text-xl italic leading-snug text-white/90 mb-2">
-                                        Não é sobre produzir conteúdo. É sobre o que sua marca comunica — com ou sem presença.
+                                        Não é sobre como vamos produzir conteúdo. E sim de como sua marca pode fazer isso da forma mais hábil e otimizada possível.
                                     </p>
                                     <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
-                                        Comunicação Intencional
+                                        Mateus Sacavem — Produtor HMZT
                                     </p>
                                 </div>
                                 <div className="flex justify-end">
                                     <div className="max-w-xl text-right">
                                         <h3 className="font-headline text-xl md:text-2xl leading-tight mb-2">
-                                            Existe um point onde a execução deixa de resolver. E a falta de direção começa a aparecer.
+                                            Existe um ponto onde a execução deixa de resolver. E a falta de direção começa a aparecer. É nesse ponto que entramos, para ajudar você e sua marca a se posicionarem de forma inteligente e clara.
                                         </h3>
-                                        <p className="font-headline text-lg italic text-white/40">
-                                            É nesse ponto que entramos.
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
+                                            Institucional House Mazzutti
                                         </p>
                                     </div>
                                 </div>
@@ -671,15 +669,15 @@ export default function Home() {
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-4xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-7xl text-white leading-tight italic">
-                            Se sua marca precisa de posicionamento — <span className="not-italic">seguimos.</span>
+                            Se a sua estratégia visual precisa de um novo posicionamento, entre em contato.
                         </h2>
                         <div className="flex flex-col items-center space-y-8">
-                            <a
+                            <Link
                                 className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300"
-                                href="#"
+                                href="/contato"
                             >
-                                INICIAR CONVERSA ESTRATÉGICA
-                            </a>
+                                ENTRE EM CONTATO
+                            </Link>
                             <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">
                                 Menos tentativa. Mais direção.
                             </p>
