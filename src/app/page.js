@@ -14,20 +14,26 @@ export default function Home() {
 
     const heroSlides = [
         {
-            label: "STRATEGIC HOUSE",
-            title: <>A arquitetura do<br />seu posicionamento.</>,
-            buttonText: "CONHEÇA O MÉTODO"
+            label: 'STUDIO',
+            titulo: 'Direção de imagem pessoal com estratégia.',
+            texto: 'A maioria das produções começa na estética. Nós começamos na estratégia.',
+            cta: 'CONHECER O STUDIO',
+            link: '/studio'
         },
         {
-            label: "STRATEGIC HOUSE",
-            title: <>A arquitetura do<br />seu posicionamento.</>,
-            buttonText: "CONHEÇA O MÉTODO"
+            label: 'PRODUTORA',
+            titulo: 'Direção e Produção de sets e campanhas publicitárias.',
+            texto: 'Integração e execução geral de mega projetos audiovisuais para TV e mídias online.',
+            cta: 'CONHECER A PRODUTORA',
+            link: '/produtora'
         },
         {
-            label: "STRATEGIC HOUSE",
-            title: <>A arquitetura do<br />seu posicionamento.</>,
-            buttonText: "CONHEÇA O MÉTODO"
-        }
+            label: 'AGÊNCIA',
+            titulo: 'Estratégia, posicionamento e direção de marca.',
+            texto: 'A consolidação do branding, da identidade visual e o lançamento digital de marcas.',
+            cta: 'CONHECER A AGÊNCIA',
+            link: '/agencia'
+        },
     ];
 
     const nextHeroSlide = () => {
@@ -149,23 +155,30 @@ export default function Home() {
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-4xl fade-in">
                             <span
-                                className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+                                className="hero-animate font-label uppercase tracking-widest text-[10px] mb-4 block"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#aaa', marginBottom: '16px' }}
                             >
                                 {heroSlides[currentHeroSlide].label}
                             </span>
                             <h1
-                                className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light"
+                                className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6 italic font-light"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
-                                {heroSlides[currentHeroSlide].title}
+                                {heroSlides[currentHeroSlide].titulo}
                             </h1>
-                            <button
-                                className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300"
+                            <p 
+                                className="hero-animate font-body text-base md:text-lg mb-10"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#ccc' }}
+                            >
+                                {heroSlides[currentHeroSlide].texto}
+                            </p>
+                            <Link
+                                href={heroSlides[currentHeroSlide].link}
+                                className="hero-animate inline-block group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
-                                {heroSlides[currentHeroSlide].buttonText}
-                            </button>
+                                {heroSlides[currentHeroSlide].cta}
+                            </Link>
                         </div>
                     </div>
                     <div className="absolute inset-y-0 left-12 flex items-center z-20">
