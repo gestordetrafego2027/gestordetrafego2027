@@ -202,6 +202,37 @@ export default function Header({ variant = 'dark' }) {
                           transform:'rotate(-45deg)'}}/>
                       </div>
                     </div>
+
+                    <nav style={{display:'flex', flexDirection:'column', 
+                      gap:'16px', marginBottom:'40px'}}>
+                      {[
+                        {label:'HOME', href:'/'},
+                        {label:'SOBRE', href:'/about'},
+                        {label:'STUDIO', href:'/studio'},
+                        {label:'PRODUTORA', href:'/produtora'},
+                        {label:'AGÊNCIA', href:'/agencia'},
+                        {label:'ANGELO', href:'/angelo'},
+                        {label:'COMUNIDADE', href:'/comunidade'},
+                        {label:'PORTFÓLIO', href:'/portfolio'},
+                        {label:'BLOG', href:'/blog'},
+                        {label:'CONTATO', href:'/contato'},
+                      ].map(item => (
+                        <Link key={item.label} href={item.href}
+                          onClick={() => closeMenu()}
+                          style={{
+                            fontFamily:'RocGrotesk, sans-serif',
+                            fontSize:'10px',
+                            letterSpacing:'0.2em',
+                            textTransform:'uppercase',
+                            color:'#aaa',
+                            textDecoration:'none',
+                            transition:'color 0.3s'
+                          }}
+                          onMouseEnter={e => e.currentTarget.style.color='white'}
+                          onMouseLeave={e => e.currentTarget.style.color='#aaa'}
+                        >{item.label}</Link>
+                      ))}
+                    </nav>
             
                     <div style={{marginBottom:'48px'}}>
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
