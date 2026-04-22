@@ -210,7 +210,7 @@ export default function ComunidadePage() {
                                 { icon: "visibility", title: "Parceiros", desc: "Profissionais e marcas que compartilham o mesmo nível de exigência." },
                                 { icon: "photo_camera", title: "Colaboradores", desc: "Talentos que entendem que construção exige pensamento." },
                             ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center space-y-4">
+                                <div key={i} className="flex flex-col items-center space-y-4" style={{ transition: 'transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
                                     <span className="material-symbols-outlined text-4xl font-extralight" data-icon={item.icon}>{item.icon}</span>
                                     <h3 className="font-headline text-2xl">{item.title}</h3>
                                     <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">{item.desc}</p>
