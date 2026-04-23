@@ -318,7 +318,7 @@ export default function ProdutoraPage() {
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
                                 <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">OTIMIZE OS RESULTADOS DA SUA MARCA</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Produção Executiva e Casting Artístico para Publicidade e Marketing de Conteúdo</h2>
+                                <h2 className="font-headline text-2xl md:text-3xl tracking-tight">Produção Executiva e Casting Artístico para Publicidade e Marketing de Conteúdo</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -364,156 +364,14 @@ export default function ProdutoraPage() {
                         </div>
                     </div>
                 </section>
-                {/* TESTIMONIALS SECTION */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
-                    </div>
-                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
-                            <div className="custom-nav-line mr-2"></div>
-                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextSlide}>
-                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div className="custom-nav-line ml-2"></div>
-                        </button>
-                    </div>
-                    <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1">
-                                {testimonials.map((testimonial, i) => (
-                                    <div key={i} className={`testimonial-slide ${currentSlide === i ? 'active' : ''}`}>
-                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
-                                            "{testimonial.text}"
-                                        </h3>
-                                        <div className="pt-3">
-                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{testimonial.author}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="flex space-x-3 pt-4">
-                                {testimonials.map((_, i) => (
-                                    <button
-                                        key={i}
-                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? 'opacity-100' : 'opacity-30'}`}
-                                        onClick={() => goToSlide(i)}
-                                    ></button>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* Section 6: Posicionamento */}
-                {/* BLOG SECTION */}
-                <section style={{ background: '#fff', padding: '160px 80px' }}>
-                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
-                        <div style={{ marginBottom: '60px' }}>
-                            <p style={{
-                                fontSize: '12px', letterSpacing: '0.2em',
-                                textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
-                            }}>
-                                BLOG
-                            </p>
-                            <h2 style={{ fontSize: '2.8rem', fontWeight: '400', color: '#000' }}>
-                                Últimos Artigos
-                            </h2>
-                        </div>
-
-                        <div style={{
-                            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
-                            gap: '2px'
-                        }}>
-                            {[
-                                {
-                                    categoria: 'Studio — Book',
-                                    titulo: 'Book para Modelos: o que realmente define quem é escolhido no mercado',
-                                    data: 'Abril 2026',
-                                    slug: '/blog/book-para-modelos-quem-e-escolhido'
-                                },
-                                {
-                                    categoria: 'Agência — Branding',
-                                    titulo: 'Por que o branding é o ativo mais valioso de uma marca de luxo',
-                                    data: 'Abril 2026',
-                                    slug: '/blog/branding-project-arquitetura-valor'
-                                },
-                                {
-                                    categoria: 'IA — Futuro',
-                                    titulo: 'O papel da Inteligência Artificial na direção criativa de 2026',
-                                    data: 'Abril 2026',
-                                    slug: '/blog/editorial-moda-narrativa-visual'
-                                }
-                            ].map((post, idx) => (
-                                <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div 
-                                      style={{
-                                        padding: '64px 48px',
-                                        border: '0.5px solid #e0e0e0',
-                                        background: '#fff',
-                                        height: '100%',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'space-between',
-                                        transition: 'background 0.3s, color 0.3s, transform 0.4s ease',
-                                        cursor: 'pointer',
-                                        color: '#000',
-                                        transform: 'translateY(0)'
-                                      }}
-                                      onMouseEnter={e => {
-                                        e.currentTarget.style.background = '#000';
-                                        e.currentTarget.style.color = '#fff';
-                                        e.currentTarget.style.transform = 'translateY(-6px)';
-                                      }}
-                                      onMouseLeave={e => {
-                                        e.currentTarget.style.background = '#fff';
-                                        e.currentTarget.style.color = '#000';
-                                        e.currentTarget.style.transform = 'translateY(0)';
-                                      }}
-                                    >
-                                        <div>
-                                            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>
-                                                {post.categoria}
-                                            </p>
-                                            <h3 style={{ fontSize: '1.6rem', fontWeight: '400', lineHeight: '1.4', color: 'inherit', marginBottom: '40px' }}>
-                                                {post.titulo}
-                                            </h3>
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <span style={{ fontSize: '11px', color: '#aaa' }}>{post.data}</span>
-                                            <span style={{
-                                              fontSize: '28px',
-                                              display: 'inline-block',
-                                              transition: 'transform 0.4s ease'
-                                            }}
-                                            onMouseEnter={e => e.currentTarget.style.transform = 'translateX(10px)'}
-                                            onMouseLeave={e => e.currentTarget.style.transform = 'translateX(0)'}
-                                            >→</span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </section>
                 {/* Section 7: Editorial CTA */}
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            Se sua produção não consolida posicionamento — <span className="not-italic">o problema não é a execução.</span>
+                            Não é sobre aparecer mais. <span className="not-italic">É sobre aparecer melhor.</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
                             <div className="space-y-4">
@@ -539,65 +397,7 @@ export default function ProdutoraPage() {
                         </div>
                     </div>
                 </section>
-                {/* Section 4: Equipe */}
-                <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                    <div className="max-w-[1400px] mx-auto">
-                        <div className="text-center mb-12">
-                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia define. Execução consolida. Imagem posiciona.</h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
-                            {/* Membro 1 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Lucas Mazzutti portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
-                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Ângelo Mazzutti</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Dir. Criativo e Publicitário</p>
-                                </div>
-                            </div>
-                            {/* Membro 2 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Elena Silva portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
-                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Mateus Sacavem</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produtor Executivo</p>
-                                </div>
-                            </div>
-                            {/* Membro 3 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Arthur Porto portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
-                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Henry Almeida</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Gestor de IA</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
             </main>
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
