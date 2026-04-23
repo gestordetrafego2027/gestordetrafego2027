@@ -161,7 +161,7 @@ export default function AgenciaPage() {
                                 Estratégia, posicionamento e direção de marca.
                             </h1>
                             <p className="hero-animate font-headline text-white/80 text-xl md:text-2xl font-light mb-12 max-w-2xl leading-relaxed" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                A consolidação do branding, da identidade visual e o lançamento digital de marcas.
+                                A consolidação do branding, da identidade visual até o plano de campanha integrada.
                             </p>
                             <Link href="/contato">
                                 <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
