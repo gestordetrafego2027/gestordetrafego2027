@@ -312,61 +312,54 @@ export default function ProdutoraPage() {
                         </div>
                     </div>
                 </section>
-                {/* Section 4: Equipe */}
-                <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                    <div className="max-w-[1400px] mx-auto">
-                        <div className="text-center mb-12">
-                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia define. Execução consolida. Imagem posiciona.</h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
-                            {/* Membro 1 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Lucas Mazzutti portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
-                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Ângelo Mazzutti</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Dir. Criativo e Publicitário</p>
-                                </div>
+                            {/* STRUCTURE SELECTION */}
+                <section className="bg-white px-[40px]">
+                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
+                        <div className="max-w-[1440px] mx-auto">
+                            <div className="text-center mb-24">
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">OTIMIZE OS RESULTADOS DA SUA MARCA</span>
+                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Produção Executiva e Casting Artístico para Publicidade e Marketing de Conteúdo</h2>
                             </div>
-                            {/* Membro 2 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Elena Silva portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
-                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                            
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {[
+                                    {
+                                        title: "EDITORIAL DE MODA",
+                                        link: "/produtora/moda",
+                                        subtitle: '"Onde a estratégia ganha forma e presença"',
+                                        items: ["Lookbook", "Campanha conceito", "Projeto audiovisual"]
+                                    },
+                                    {
+                                        title: "CAMPANHA PUBLICITÁRIA",
+                                        link: "/produtora/publicidade",
+                                        subtitle: '"Onde execução e estratégia se conectam"',
+                                        items: ["Direção Criativa", "Produção Executiva", "Casting Artístico"]
+                                    },
+                                    {
+                                        title: "CONTEÚDO",
+                                        link: "/produtora/institucional",
+                                        subtitle: '"Onde a empresa ganha presença e clareza"',
+                                        items: ["Eventos", "Educacionais", "Storytelling"]
+                                    }
+                                ].map((card, idx) => (
+                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
+                                        <div>
+                                            <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
+                                            <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>
+                                            <ul className="space-y-4 mb-12">
+                                                {card.items.map((item, i) => (
+                                                    <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                                        <span className="material-symbols-outlined text-lg">check</span>
+                                                        <span>{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </div>
+                                        <Link href={card.link} className="w-full border border-black py-4 font-label uppercase text-[10px] tracking-widest hover:bg-black hover:text-white transition-all group-hover:border-white group-hover:text-white text-center block">
+                                            SAIBA MAIS
+                                        </Link>
                                     </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Mateus Sacavem</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produtor Executivo</p>
-                                </div>
-                            </div>
-                            {/* Membro 3 */}
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Arthur Porto portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
-                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Henry Almeida</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Gestor de IA</p>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -546,54 +539,61 @@ export default function ProdutoraPage() {
                         </div>
                     </div>
                 </section>
-                            {/* STRUCTURE SELECTION */}
-                <section className="bg-white px-[40px]">
-                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÍVEL</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
-                            </div>
-                            
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {[
-                                    {
-                                        title: "EDITORIAL DE MODA",
-                                        link: "/produtora/moda",
-                                        subtitle: '"Onde a estratégia ganha forma e presença"',
-                                        items: ["Produção de conteúdo", "Direção de arte", "Lookbook", "Fashion film"]
-                                    },
-                                    {
-                                        title: "CAMPANHA PUBLICITÁRIA",
-                                        link: "/produtora/publicidade",
-                                        subtitle: '"Onde execução e estratégia se conectam"',
-                                        items: ["Produção executiva", "Direção criativa", "Audiovisual", "Gestão completa"]
-                                    },
-                                    {
-                                        title: "CONTEÚDO INSTITUCIONAL",
-                                        link: "/produtora/institucional",
-                                        subtitle: '"Onde a empresa ganha presença e clareza"',
-                                        items: ["Vídeo institucional", "Vídeo explicativo", "Cases", "Cobertura de eventos"]
-                                    }
-                                ].map((card, idx) => (
-                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                                        <div>
-                                            <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
-                                            <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>
-                                            <ul className="space-y-4 mb-12">
-                                                {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                                        <span className="material-symbols-outlined text-lg">check</span>
-                                                        <span>{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
+                {/* Section 4: Equipe */}
+                <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
+                    <div className="max-w-[1400px] mx-auto">
+                        <div className="text-center mb-12">
+                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
+                            <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia define. Execução consolida. Imagem posiciona.</h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
+                            {/* Membro 1 */}
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+                                    <img alt="Lucas Mazzutti portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
+                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                                         </div>
-                                        <Link href={card.link} className="w-full border border-black py-4 font-label uppercase text-[10px] tracking-widest hover:bg-black hover:text-white transition-all group-hover:border-white group-hover:text-white text-center block">
-                                            SAIBA MAIS
-                                        </Link>
                                     </div>
-                                ))}
+                                </div>
+                                <div className="space-y-2">
+                                    <p className="font-headline text-2xl font-medium">Ângelo Mazzutti</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Dir. Criativo e Publicitário</p>
+                                </div>
+                            </div>
+                            {/* Membro 2 */}
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+                                    <img alt="Elena Silva portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
+                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <p className="font-headline text-2xl font-medium">Mateus Sacavem</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produtor Executivo</p>
+                                </div>
+                            </div>
+                            {/* Membro 3 */}
+                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
+                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
+                                    <img alt="Arthur Porto portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
+                                    <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
+                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
+                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+                                            <a className="text-white hover:text-zinc-300 transition-colors" href="#"><svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <p className="font-headline text-2xl font-medium">Henry Almeida</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Gestor de IA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
