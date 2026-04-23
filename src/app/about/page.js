@@ -50,8 +50,8 @@ export default function About() {
                 <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#c8c8c8]">
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
                         <span className="font-label text-xs text-black">STRATEGIC HOUSE</span>
-                        <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">NOSSA ESTRUTURA</h2>
-                        <p className="text-lg md:text-xl font-headline italic text-[#555555] max-w-md">Não somos uma agência. Somos uma estrutura de construção de marca.</p>
+                        <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">Vamos além da publicidade.</h2>
+                        <p className="text-lg md:text-xl font-headline italic text-[#555555] max-w-md">Estruturamos o seu projeto para comunicar com precisão.</p>
                         
                         {/* Progress Bars */}
                         <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
