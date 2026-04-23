@@ -135,7 +135,36 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [3] STRUCTURE SELECTION */}
+                {/* [3] ORIGEM EDITORIAL */}
+                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
+                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                        <div className="max-w-lg space-y-8">
+                            <span className="font-label text-xs text-neutral-400">ORIGEM</span>
+                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">A House Mazzutti nasceu de uma convicção simples</h2>
+                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
+                                <p>Em um mercado saturado por excesso de informação, percebemos que o problema não era a falta de produção — mas a ausência de direção. Foi a partir disso que estruturamos um modelo capaz de integrar pensamento, construção e execução em um único fluxo.</p>
+                                <p>Cada marca que construímos é tratada como uma obra de curadoria, onde cada detalhe — do tom de voz à textura visual — é um ativo estratégico.</p>
+                                <p>No mercado saturado de ruído, a comunicação muitas vezes silenciosa e precisa é o que separa os líderes dos amadores.</p>
+                            </div>
+                            <div className="pt-8 italic font-headline text-3xl opacity-80">Angelo Mazzutti</div>
+                        </div>
+                    </div>
+                    {/* Vertical Divider */}
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
+                    
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
+                        <img 
+                            alt="Portrait profile in B&W" 
+                            className="absolute inset-0 w-full h-full object-cover grayscale" 
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+                            <h2 className="font-headline text-6xl md:text-8xl text-white/85 font-bold uppercase tracking-widest text-center select-none">SOBRE NÓS</h2>
+                        </div>
+                    </div>
+                </section>
+
+                {/* [4] STRUCTURE SELECTION */}
                 <section className="bg-white px-[40px]">
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
@@ -186,34 +215,6 @@ export default function About() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* [4] ORIGEM EDITORIAL */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-8">
-                            <span className="font-label text-xs text-neutral-400">ORIGEM</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">A House Mazzutti nasceu de uma convicção simples.</h2>
-                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
-                                <p>Acreditamos que a verdadeira distinção não grita; ela emana. No mercado saturado de ruído, a comunicação silenciosa mas precisa é o que separa os líderes dos seguidores.</p>
-                                <p>Cada marca que construímos é tratada como uma obra de curadoria, onde cada detalhe — do tom de voz à textura visual — é um ativo estratégico.</p>
-                            </div>
-                            <div className="pt-8 italic font-headline text-3xl opacity-80">Angelo Mazzutti</div>
-                        </div>
-                    </div>
-                    {/* Vertical Divider */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
-                    
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
-                        <img 
-                            alt="Portrait profile in B&W" 
-                            className="absolute inset-0 w-full h-full object-cover grayscale" 
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                            <h2 className="font-headline text-6xl md:text-8xl text-white/85 font-bold uppercase tracking-widest text-center select-none">SOBRE NÓS</h2>
                         </div>
                     </div>
                 </section>
