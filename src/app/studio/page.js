@@ -199,7 +199,7 @@ export default function StudioPage() {
                             <h1 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 Direção de imagem com arte e narrativa estética guiada!
                             </h1>
-                            <p className="hero-animate font-headline text-white/80 text-xl md:text-2xl font-light mb-12 max-w-2xl leading-relaxed" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                            <p className="hero-animate font-body text-base md:text-lg mb-10" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 É aqui onde potencializamos sua imagem e registramos os momentos mais marcantes da sua trajetória.
                             </p>
                             <Link href="/contato">
