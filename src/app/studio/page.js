@@ -603,7 +603,7 @@ export default function StudioPage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510312305653-8ed496efbe75?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            Se sua imagem não representa o valor da sua marca — <span className="not-italic">o problema não é a produção.</span>
+                            Se você ainda precisa se comunicar com clareza — <span className="not-italic">Sua imagem deixa de apenas aparecer, e passa a ser realmente vista e lembrada de forma planejada.</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
                             <div className="space-y-4">
@@ -623,7 +623,7 @@ export default function StudioPage() {
                         </div>
                         <div className="flex flex-col items-center space-y-8">
                             <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                INICIAR CONVERSA ESTRATÉGICA
+                                INICIAR CONVERSA AGORA
                             </Link>
                             <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos tentativa. Mais direção.</p>
                         </div>
