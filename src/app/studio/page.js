@@ -267,6 +267,46 @@ export default function StudioPage() {
                         </Link>
                     </div>
                 </section>
+                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
+                    <div className="noise-overlay absolute inset-0"></div>
+                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
+                        <div className="w-full lg:w-1/4 flex-shrink-0">
+                            <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
+                                <img alt="B&W architectural detail" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" />
+                            </div>
+                        </div>
+                        <div className="flex-grow w-full py-4">
+                            <div className="grid grid-cols-1 gap-y-16">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Luz.</h3>
+                                        <p className="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Direcionamento</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Composição.</h3>
+                                        <p className="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Equilíbrio</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Movimento.</h3>
+                                        <p className="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Dinâmica</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Expressão.</h3>
+                                        <p className="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Intenção</p>
+                                    </div>
+                                </div>
+                                <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
+                                    <p className="font-headline text-xl italic leading-relaxed text-zinc-800">
+                                        Antes de qualquer produção, definimos:<br />
+                                        — Qual percepção precisa ser construída<br />
+                                        — Qual posicionamento deve ser reforçado<br />
+                                        — Qual linguagem visual sustenta isso.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center">
                         <div className="mb-20">
@@ -305,46 +345,6 @@ export default function StudioPage() {
                                     <p>— Ajustes de fechamento</p>
                                     <p>— Arquivos em nuvem e privacidade</p>
                                     <p>— Processos de personalização</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
-                    <div className="noise-overlay absolute inset-0"></div>
-                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
-                        <div className="w-full lg:w-1/4 flex-shrink-0">
-                            <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img alt="B&W architectural detail" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" />
-                            </div>
-                        </div>
-                        <div className="flex-grow w-full py-4">
-                            <div className="grid grid-cols-1 gap-y-16">
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Luz.</h3>
-                                        <p className="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Direcionamento</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Composição.</h3>
-                                        <p className="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Equilíbrio</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Movimento.</h3>
-                                        <p className="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Dinâmica</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Expressão.</h3>
-                                        <p className="font-['Raleway'] font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Intenção</p>
-                                    </div>
-                                </div>
-                                <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
-                                    <p className="font-headline text-xl italic leading-relaxed text-zinc-800">
-                                        Antes de qualquer produção, definimos:<br />
-                                        — Qual percepção precisa ser construída<br />
-                                        — Qual posicionamento deve ser reforçado<br />
-                                        — Qual linguagem visual sustenta isso.
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -546,37 +546,6 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
-                <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
-                    <div className="noise-overlay absolute inset-0"></div>
-                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510312305653-8ed496efbe75?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
-                        <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            Se sua imagem não representa o valor da sua marca — <span className="not-italic">o problema não é a produção.</span>
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
-                            <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Deixa de:</p>
-                                <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Imagem genérica</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
-                                </ul>
-                            </div>
-                            <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Passa a:</p>
-                                <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Consistência visual</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Mais valor percebido</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="flex flex-col items-center space-y-8">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                INICIAR CONVERSA ESTRATÉGICA
-                            </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos tentativa. Mais direção.</p>
-                        </div>
-                    </div>
-                </section>
                             {/* STRUCTURE SELECTION */}
                 <section className="bg-white px-[40px]">
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
@@ -626,6 +595,37 @@ export default function StudioPage() {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
+                    <div className="noise-overlay absolute inset-0"></div>
+                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510312305653-8ed496efbe75?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
+                        <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
+                            Se sua imagem não representa o valor da sua marca — <span className="not-italic">o problema não é a produção.</span>
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
+                            <div className="space-y-4">
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Deixa de:</p>
+                                <ul className="text-white space-y-2 font-light">
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Imagem genérica</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
+                                </ul>
+                            </div>
+                            <div className="space-y-4">
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Passa a:</p>
+                                <ul className="text-white space-y-2 font-light">
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Consistência visual</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Mais valor percebido</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center space-y-8">
+                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
+                                INICIAR CONVERSA ESTRATÉGICA
+                            </Link>
+                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos tentativa. Mais direção.</p>
                         </div>
                     </div>
                 </section>
