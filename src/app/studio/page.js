@@ -339,8 +339,11 @@ export default function StudioPage() {
                                     </div>
                                 </div>
                                 <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
-                                    <p className="font-headline text-xl italic leading-snug text-zinc-800">
-                                        Aqui, cada detalhe responde a uma lógica. Nada é escolha estética isolada. Tudo é construção de percepção.
+                                    <p className="font-headline text-xl italic leading-relaxed text-zinc-800">
+                                        Antes de qualquer produção, definimos:<br />
+                                        — Qual percepção precisa ser construída<br />
+                                        — Qual posicionamento deve ser reforçado<br />
+                                        — Qual linguagem visual sustenta isso.
                                     </p>
                                 </div>
                             </div>
