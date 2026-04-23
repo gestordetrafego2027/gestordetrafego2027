@@ -270,24 +270,42 @@ export default function StudioPage() {
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center">
                         <div className="mb-20">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">MÉTODO</span>
-                            <h2 className="font-headline text-5xl text-black">Conceito. Forma. Função.</h2>
+                            <h2 className="font-headline text-5xl text-black mb-4">A maioria começa na produção.</h2>
+                            <p className="font-label uppercase tracking-[0.3em] text-[12px] text-zinc-400 block">Nós começamos no entendimento.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                            <div className="flex flex-col items-center space-y-4">
+                            <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="architecture">architecture</span>
-                                <h3 className="font-headline text-2xl">Arquitetura Autoral.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">Projetos que transcendem o óbvio e definem novos padrões de estética.</p>
+                                <h3 className="font-headline text-2xl uppercase tracking-wider">PRÉ PRODUÇÃO</h3>
+                                <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
+                                    <p>— Reunião de briefing pessoal</p>
+                                    <p>— Análise estratégica de perfil</p>
+                                    <p>— Definição de conceitos e staff</p>
+                                    <p>— Mood Board Geral</p>
+                                    <p>— Manual de poses/acting</p>
+                                </div>
                             </div>
-                            <div className="flex flex-col items-center space-y-4">
+                            <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="design_services">design_services</span>
-                                <h3 className="font-headline text-2xl">Design de Interiores.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">Curadoria de materiais e mobiliário para criar experiências sensoriais.</p>
+                                <h3 className="font-headline text-2xl uppercase tracking-wider">EXECUÇÃO</h3>
+                                <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
+                                    <p>— Call Sheet e preparação</p>
+                                    <p>— Roteiros visuais e trilhas</p>
+                                    <p>— Locações e cenografia</p>
+                                    <p>— Direção de cena e poses</p>
+                                    <p>— Equipe multi artística</p>
+                                </div>
                             </div>
-                            <div className="flex flex-col items-center space-y-4">
+                            <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined text-4xl font-extralight" data-icon="brush">brush</span>
-                                <h3 className="font-headline text-2xl">Branding Espacial.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">Sua marca traduzida em espaço físico e presença de mercado.</p>
+                                <h3 className="font-headline text-2xl uppercase tracking-wider">PÓS-PRODUÇÃO</h3>
+                                <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
+                                    <p>— Aprovação e escolha</p>
+                                    <p>— Edições finais</p>
+                                    <p>— Ajustes de fechamento</p>
+                                    <p>— Arquivos em nuvem e privacidade</p>
+                                    <p>— Processos de personalização</p>
+                                </div>
                             </div>
                         </div>
                     </div>
