@@ -76,7 +76,7 @@ export default function About() {
                 </section>
 
                 {/* [2] DEPOIMENTOS SECTION */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
+                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[500px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
                         <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
                     </div>
@@ -110,7 +110,7 @@ export default function About() {
                             <div className="relative w-full overflow-hidden mb-1">
                                 {testimonials.map((t, i) => (
                                     <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
-                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
+                                        <h3 className="font-headline text-xl md:text-2xl text-white leading-snug italic max-w-3xl mx-auto">
                                             "{t.text}"
                                         </h3>
                                         {t.author && (
