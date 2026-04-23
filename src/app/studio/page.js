@@ -143,6 +143,49 @@ export default function StudioPage() {
                     from { opacity: 0; transform: translateY(10px); }
                     to { opacity: 1; transform: translateY(0); }
                 }
+                .columns-gallery-container {
+                    height: 100vh;
+                    display: flex;
+                    width: 100%;
+                    overflow: hidden;
+                    background-color: #ffffff;
+                }
+                .gallery-column {
+                    flex: 1;
+                    height: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    border-right: 1px solid rgba(0, 0, 0, 0.05);
+                }
+                .gallery-column:last-child {
+                    border-right: none;
+                }
+                .column-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .project-item { position: relative; overflow: hidden; cursor: pointer; }
+                .project-overlay { 
+                    position: absolute; 
+                    top: 0; 
+                    left: 0; 
+                    width: 100%; 
+                    height: 100%; 
+                    background: rgba(0,0,0,1); 
+                    transform: translateY(-100%); 
+                    transition: transform 0.5s ease; 
+                    display: flex; 
+                    flex-direction: column; 
+                    align-items: center; 
+                    justify-content: center; 
+                    text-align: center;
+                    padding: 2rem;
+                    z-index: 10;
+                }
+                .gallery-column:hover .project-overlay { transform: translateY(0); }
+                .project-overlay h4 { color: white; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
+                .project-overlay span { color: white; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
             `}} />
 
 
@@ -187,55 +230,41 @@ export default function StudioPage() {
                         </button>
                     </div>
                 </section>
-                <section className="bg-white pt-16 pb-12 mx-auto" style={{ maxWidth: "95vw" }}>
+                <section className="bg-white pt-24 pb-0 w-full mx-auto">
                     <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">ESPECIALIDADES</span>
-                        <h2 className="font-headline text-3xl text-black">Arquitetura. Interiores. Branding. Direção.</h2>
+                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PORTFOLIO</span>
+                        <h2 className="font-headline text-3xl text-black">Books. Ensaios. Coberturas.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Minimalist architecture" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe4mdbRqXBNKzzngv3g_VBLp6GYZlgzzZZODsLL8bHFzPo4h2MQ_wh08IE0TeoTAnYp7r8cqXbKU7Xa5wklKFRY-ZWrYIpRSmFUuQapR_3VovlHbwzL2DnDZwXwFKOowF6p1RYMEOqh1_GwWe1FY9MUqL_MHVQ04dnmk4YyX2I1Nbz3zL-t4bcyXEQ_COqtJmLZiwYf076YUYpoITRuaCFPCaMTBWkm6LYq7RU4l8f9gyRN9hk8omSajhnHc8pNlB8BAi1ZerKdL0" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Projeto Essência</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Direção de Imagem</p>
+                    <div className="columns-gallery-container" style={{ height: '80vh' }}>
+                        <Link className="gallery-column project-item group" href="/portfolio-studio/projeto-essencia">
+                            <img alt="Project 1" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra"/>
+                            <div className="project-overlay">
+                                <span>Direção de Imagem</span>
+                                <h4>Projeto Essência</h4>
                             </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="100" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Fashion portrait" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmEdY5S8J-r2-yA6KBnPbY8KJ_kzSWmaDtw4KI3V4XfuFw9crzbRkv8ODbEuL4WNOjSHEaBI3bT-J6Fg0SnQ7-F55Z7jP7UT2ZzHsyDIVGu2G67mWa2Qxorjl-Upf9isBLdGue5dKoH7891HWpO6iT5EbeCFrJCwFVIQo8-XVRq_ZaV_sJsyb9zfKO_Dm-QjDzX38uBl3zJodj4KP7GattGIKHVJ8Hkn24EzNVoNBWMnUB3avAJoDg_S2DzRoUhd5-bugSQgDzSB0" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Movimento Urbano</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Direção Criativa</p>
+                        </Link>
+                        <Link className="gallery-column project-item group" href="/portfolio-studio/movimento-urbano">
+                            <img alt="Project 2" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB"/>
+                            <div className="project-overlay">
+                                <span>Direção Criativa</span>
+                                <h4>Movimento Urbano</h4>
                             </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Tailoring detail" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADvGTrzOI5PEUbaeC7AW7usgMalF3qizDJJ0KUpcNG6m9gEpidT-mTLmb1F3zpPaKsm5aOEastKBq1gcgasPBFL2aQQT1TCsitpTNJuy9KBP4cgyFtyvk2nUo1WqXii9tLH0TPR_h0HV84zRlZFfEnEAJ344iW4H6sfL7IC47U5veqjHNq4WUq6MqzNrcQ8otKdLxpwV9j4bBHQPkyEGa7anAANlMNVkXbnsoFAoDyBX7opOcB3BSImGRftoLeyoU4cmneRk6ZgTk" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Alfaiataria Moderna</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Posicionamento</p>
+                        </Link>
+                        <Link className="gallery-column project-item group" href="/portfolio-studio/alfaiataria-moderna">
+                            <img alt="Project 3" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5"/>
+                            <div className="project-overlay">
+                                <span>Posicionamento</span>
+                                <h4>Alfaiataria Moderna</h4>
                             </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Winding road" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKnc6oH_hYvu13IeEb61FyxFkY3Edhlt2km8Jry0SlDIZ7KlpeE-AVwYRezdk2O_XEVH34_DobRA7QJY4YofFZUSMXG3BeTc5IdaApkxKb3Z1Zd14giFedWaYlTg7jx83cIP-fHnIAPoHKE93UEOWCj_iGqRTd0q2BO_l4h_oMK2TIBNGbh5QW43fUo-FhcFxpTF9A5vIi9kKaAk-ZapE8zkT6Uk3Fe-VRw3DSK5F3AiqnbXBwPhBzkQ-MTLhF1bCsplLY712XU5c" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Horizonte</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Produção de Imagem</p>
+                        </Link>
+                        <Link className="gallery-column project-item group" href="/portfolio-studio/horizonte">
+                            <img alt="Project 4" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtDNB7cdME0kaLamJozRvfkiJws6GrvrXBnE5QRIkxB2ppxix4CG2r_LeyGl5XP-xuzQILDQ9-6ZIMjAYUHBdzn-iH8v6Lxpa6zwjO6xR4CnSkRVonntUc7FphscJZCyOhoEd8rxJtVVZ2nPrj287s6BVqdbOQ52N9vhkG5IWwtk5vxPNnArouHvfxTGaIBJYgAcsGk1qElyInif8vlUCMxZkTDnPAmv_bx8gd_oQ9L1BxaSnKbCHQ8jqgLy-kf1WgkTEZeSrrMLR"/>
+                            <div className="project-overlay">
+                                <span>Produção de Imagem</span>
+                                <h4>Horizonte</h4>
                             </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="100" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Jewelry detail" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkA7crS5fwR9M1uHLxWGre8utOIQhLns1favg4_bqxW4l-Rhz-kocfZxJb59JIHoZo0AuTsli_xQD1X_z3OtXWtQY9FQl5HVclTTuNUMQKMWYswMESC7LVKN8Gt7F_wJV_yWoTwt54-Ob2IAfKZnaLu1muOYHzXGofG-8DJfHBXFuGu6w16J51hk_p07tLwwhj9yuhYxTb-0bc1SSn0oSkyr0OHqu7L7my2rY0YBwqS364_RTWjKGw1-ModtNWEmtX0VrKG9bErhw" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Prestigio</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Branding</p>
-                            </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Interior design" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIHY560gS2ik_2GrZpF30j-g-u298R2IvVTv99wXYupz5jW7ePfhi3hHeOSQJ2w4D9995OdagrtsKYEq0WGyCiUbF4XqHAZy8VekCTL3M9cJodpb-uNjUXVWrV7ILlVTT2zmqMUAfKFTDlPXy7VUL9uEwNMf_12u39Nub3mRFN41ZWd3eCg9gWp2qZXBlD5S3HKhbGnZX9ITFbVDfNSTbkEuWv7VCiQZHtzcmfE_8zY8HzN17A0gHtn7s99IzT0-_ft0gKKjVhO8" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Espaço</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Curadoria</p>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 </section>
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
