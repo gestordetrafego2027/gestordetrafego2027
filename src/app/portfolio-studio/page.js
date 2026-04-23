@@ -39,7 +39,7 @@ export default function PortfolioStudioPage() {
                     left: 0; 
                     width: 100%; 
                     height: 100%; 
-                    background: rgba(255,255,255,0.9); 
+                    background: rgba(255,255,255,0.92); 
                     transform: translateY(-100%); 
                     transition: transform 0.5s ease; 
                     display: flex; 
