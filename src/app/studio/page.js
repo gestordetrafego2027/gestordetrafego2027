@@ -275,7 +275,7 @@ export default function StudioPage() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             <div className="flex flex-col items-center space-y-6">
-                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="architecture">architecture</span>
+                                <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="architecture">architecture</span>
                                 <h3 className="font-headline text-2xl uppercase tracking-wider">PRÉ PRODUÇÃO</h3>
                                 <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
                                     <p>— Reunião de briefing pessoal</p>
@@ -286,7 +286,7 @@ export default function StudioPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-6">
-                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="design_services">design_services</span>
+                                <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="design_services">design_services</span>
                                 <h3 className="font-headline text-2xl uppercase tracking-wider">EXECUÇÃO</h3>
                                 <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
                                     <p>— Call Sheet e preparação</p>
@@ -297,7 +297,7 @@ export default function StudioPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-6">
-                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="brush">brush</span>
+                                <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="brush">brush</span>
                                 <h3 className="font-headline text-2xl uppercase tracking-wider">PÓS-PRODUÇÃO</h3>
                                 <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
                                     <p>— Aprovação e escolha</p>
