@@ -39,7 +39,7 @@ export default function PortfolioStudioPage() {
                     left: 0; 
                     width: 100%; 
                     height: 100%; 
-                    background: rgba(0,0,0,1); 
+                    background: rgba(255,255,255,0.9); 
                     transform: translateY(-100%); 
                     transition: transform 0.5s ease; 
                     display: flex; 
@@ -51,8 +51,8 @@ export default function PortfolioStudioPage() {
                     z-index: 10;
                 }
                 .gallery-column:hover .project-overlay { transform: translateY(0); }
-                .project-overlay h4 { color: white; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
-                .project-overlay span { color: white; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
+                .project-overlay h4 { color: #000; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
+                .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
             `}} />
 
             <header style={{position: 'fixed', top: 0, width: '100%', zIndex: 50, background: 'white', borderBottom: '0.5px solid #e0e0e0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 48px'}}>
