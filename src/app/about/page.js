@@ -107,7 +107,7 @@ export default function About() {
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1">
+                            <div className="relative w-full overflow-hidden mb-1" style={{height: '200px', display: 'flex', alignItems: 'center'}}>
                                 {testimonials.map((t, i) => (
                                     <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
                                         <h3 className="font-headline text-lg text-white leading-snug italic max-w-3xl mx-auto">
