@@ -154,10 +154,10 @@ export default function StudioPage() {
                         <div className="max-w-4xl">
                             <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>STUDIO</span>
                             <h1 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Direção de imagem pessoal com estratégia.
+                                Direção de imagem com arte e narrativa estética guiada!
                             </h1>
                             <p className="hero-animate font-headline text-white/80 text-xl md:text-2xl font-light mb-12 max-w-2xl leading-relaxed" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                A maioria das produções começa na estética. Nós começamos na estratégia.
+                                É aqui onde potencializamos sua imagem e registramos os momentos mais marcantes da sua trajetória.
                             </p>
                             <Link href="/contato">
                                 <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
