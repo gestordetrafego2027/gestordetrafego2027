@@ -41,8 +41,8 @@ export default function PortfolioStudioPage() {
                     height: 100%; 
                     background: rgba(255,255,255,0.92) !important; 
                     color: #000 !important;
-                    transform: translateY(-100%); 
-                    transition: transform 0.5s ease; 
+                    opacity: 0;
+                    transition: opacity 0.4s ease; 
                     display: flex; 
                     flex-direction: column; 
                     align-items: center; 
@@ -51,7 +51,7 @@ export default function PortfolioStudioPage() {
                     padding: 2rem;
                     z-index: 10;
                 }
-                .gallery-column:hover .project-overlay { transform: translateY(0); }
+                .gallery-column:hover .project-overlay { opacity: 1; }
                 .project-overlay h4 { color: #000; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
                 .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
             `}} />
