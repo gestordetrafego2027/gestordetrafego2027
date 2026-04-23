@@ -157,10 +157,10 @@ export default function ProdutoraPage() {
                         <div className="max-w-4xl">
                             <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>PRODUTORA</span>
                             <h1 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Direção e Produção de sets e campanhas publicitárias.
+                                PRODUÇÃO E DIREÇÃO ARTÍSTICA PARA PUBLICIDADE
                             </h1>
                             <p className="hero-animate font-headline text-white/80 text-xl md:text-2xl font-light mb-12 max-w-2xl leading-relaxed" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Integração e execução geral de mega projetos audiovisuais para TV e mídias online.
+                                Produção audiovisual, campanhas e conteúdo estratégico com direção criativa e posicionamento de marca.
                             </p>
                             <Link href="/contato">
                                 <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
