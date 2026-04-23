@@ -164,42 +164,38 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [4] STRUCTURE SELECTION */}
+                {/* [4] COMO FUNCIONAMOS SECTION */}
                 <section className="bg-white px-[40px]">
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÌVEL</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">COMO FUNCIONAMOS</span>
+                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Nossa estrutura é organizada em quatro frentes complementares:</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {[
                                     {
                                         title: "AGÊNCIA",
-                                        subtitle: '"Onde estratégia e posicionamento são definidos"',
-                                        items: ["Diagnóstico de marca", "Definição de posicionamento", "Arquitetura de comunicação", "Identidade estratégica"]
+                                        items: ["Branding Project", "Web Development", "Campanha Integrada 360"]
                                     },
                                     {
                                         title: "STUDIO",
-                                        subtitle: '"Onde a imagem é construída com intenção"',
-                                        items: ["Book profissional", "Direção de imagem", "Ensaio editorial", "Produção visual"]
+                                        items: ["Book Model", "Ensaio Profissional", "Cobertura Pessoal"]
                                     },
                                     {
                                         title: "PRODUTORA",
-                                        subtitle: '"Onde a estratégia ganha forma e presença"',
-                                        items: ["Produção de conteúdo", "Vídeo estratégico", "Campanha de marca", "Presença digital"]
+                                        items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"]
                                     },
                                     {
-                                        title: "HOUSE COMMUNITY",
-                                        subtitle: '"Onde o crescimento se sustenta"',
-                                        items: ["Acompanhamento contínuo", "Comunidade estratégica", "Acesso a conteúdo", "Suporte de marca"]
+                                        title: "COMUNIDADE",
+                                        items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e Vagas"]
                                     }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
                                         <div>
                                             <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
-                                            <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>
+                                            {card.subtitle && <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>}
                                             <ul className="space-y-4 mb-12">
                                                 {card.items.map((item, i) => (
                                                     <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
