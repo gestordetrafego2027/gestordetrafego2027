@@ -214,8 +214,34 @@ export default function About() {
                         </div>
                     </div>
                 </section>
+                {/* [5] DIFERENCIAL SECTION */}
+                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/5">
+                            <h2 className="font-headline text-6xl md:text-8xl text-black/10 font-bold uppercase tracking-widest text-center select-none">HOUSE</h2>
+                        </div>
+                    </div>
+                    {/* Vertical Divider */}
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
+                    
+                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                        <div className="max-w-lg space-y-8">
+                            <span className="font-label text-xs text-neutral-400">DIFERENCIAL</span>
+                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">O que diferencia a House não é o que fazemos.</h2>
+                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
+                                <p>É como pensamos. Unimos:</p>
+                                <ul className="space-y-2">
+                                    <li>— sensibilidade estética</li>
+                                    <li>— inteligência estratégica</li>
+                                    <li>— experiência de mercado</li>
+                                    <li>— execução precisa</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                {/* [5] PARCEIROS */}
+                {/* [6] PARCEIROS */}
                 <section className="bg-white px-8 md:px-24 border-b border-neutral-100 py-[113px]">
                     <div className="max-w-7xl mx-auto">
                         <div className="flex flex-wrap justify-center items-center gap-[40px]">
@@ -239,7 +265,7 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [6] METODOLOGIA */}
+                {/* [7] METODOLOGIA */}
                 <section className="bg-black text-white py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                         <span className="ghost-text text-[20vw] font-headline uppercase select-none">MÉTODO</span>
