@@ -247,7 +247,7 @@ export default function ProdutoraPage() {
                     <div className="max-w-[1260px] mx-auto text-center">
                         <div className="mb-20">
                             <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">PRODUTORA</span>
-                            <h2 className="font-headline text-5xl text-black">MAIS QUE UMA PRODUÇÃO VISUAL, MÉTODO COMPROVADO</h2>
+                            <h2 className="font-label text-2xl md:text-3xl text-center">MAIS QUE UMA PRODUÇÃO VISUAL, MÉTODO COMPROVADO</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             <div className="flex flex-col items-center space-y-4">
