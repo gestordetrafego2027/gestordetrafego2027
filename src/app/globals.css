@@ -359,4 +359,19 @@ html {
     z-index: 10;
 }
 .gallery-column:hover .project-overlay { opacity: 1 !important; }
-.project-overlay h4, .project-overlay span { color: #000000 !important; }
+.project-overlay h4 { 
+    color: #000000; 
+    font-family: 'RocGrotesk', sans-serif; 
+    font-weight: 700; 
+    font-size: 18px; 
+    margin: 0; 
+    letter-spacing: -0.02em;
+}
+.project-overlay span { 
+    color: #000000; 
+    font-family: 'RocGrotesk', sans-serif; 
+    font-weight: 300; 
+    font-size: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.2em; 
+}
