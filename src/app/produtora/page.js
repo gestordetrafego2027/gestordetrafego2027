@@ -305,7 +305,7 @@ export default function ProdutoraPage() {
                                 </div>
                                 <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
                                     <p className="font-headline text-xl italic leading-snug text-zinc-800">
-                                        Aqui, cada detalhe responde a uma lógica. Nada é escolha estética isolada. Tudo é construção de posicionamento.
+                                        Antes de produzir, estruturamos. Na HMZT Produtora, atuamos na gestão completa de produção audiovisual, campanhas publicitárias, conteúdo estratégico e direção criativa para marcas e equipes de marketing que desafiam o convencional.
                                     </p>
                                 </div>
                             </div>
