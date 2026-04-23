@@ -159,7 +159,7 @@ export default function ProdutoraPage() {
                             <h1 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 PRODUÇÃO E DIREÇÃO ARTÍSTICA PARA PUBLICIDADE
                             </h1>
-                            <p className="hero-animate font-body text-base md:text-lg mb-10" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                            <p className="hero-animate font-body text-base md:text-lg mb-10 text-white/70" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 Produção audiovisual, campanhas e conteúdo estratégico com direção criativa e posicionamento de marca.
                             </p>
                             <Link href="/contato">
