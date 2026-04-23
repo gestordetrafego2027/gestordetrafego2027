@@ -109,12 +109,6 @@ export default function About() {
                             <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
                             <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
                         </div>
-                        
-                        <div className="max-w-3xl mx-auto mb-16">
-                            <p className="text-white/70 text-lg leading-relaxed">
-                                Da identidade visual à reputação de mercado, desenvolvemos projetos que orientam e sustentam o seu posicionamento com clareza, sofisticação e consistência. Unimos estratégia, direção criativa e produção audiovisual para transformar marcas e pessoas em presenças sólidas e relevantes no cenário digital e global.
-                            </p>
-                        </div>
 
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1">
