@@ -241,31 +241,7 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [6] PARCEIROS */}
-                <section className="bg-white px-8 md:px-24 border-b border-neutral-100 py-[113px]">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="flex flex-wrap justify-center items-center gap-[40px]">
-                            {[
-                                "https://lh3.googleusercontent.com/aida/ADBb0uhOGdjpFS3xe3PQ0SBANEJj9Lshi5iU1snnxg78KE9cu6q9SeduU7FrtyjVr7Aiwdb98Bh51O0y2M5iyUMrExkrhkblRt7z97iOw8Izlykk2aXRRSOOkty_W_o_oYuPgDPDJm82AfLka4UYlqYAgInyzkB9sHrM4CHkj6ALJZWz0GWOP76QaApK6LpgZKGqkWi6amp4e1ORrr_oVJ7qP9FrFcb4iZ2rsTIkeHbjgJR4mFdx6yB6dfZxmf96_CiFc9G0S7gJ1p_woA",
-                                "https://lh3.googleusercontent.com/aida/ADBb0ugo_3hkuhJlyqc1n9XklUnq-HhA81Yebiu0ILdw0Or3Qe9SRJlgM85Hxqu6bDcKV3dFdHxr5BU2lXQMowJ7l3r8_BZHQAdJ59FXcJLSh7d2GBQDSaQXu3A25wanLr1ybdPagmeH6DyDg7hcqMQaEmLTudCnZEiKziI_Z69v-7IPc7aSHU1yZdYKUGpR5jcc05jv2YYKgK4axBIBAknUwdyxJc5K3Af7rUQ6xDJjN8XKaomkDpjGeokvNwEtT2v9s6xboaXaeH_XDg",
-                                "https://lh3.googleusercontent.com/aida/ADBb0uidL1ApeQj61mELHcFLlZfhzQAVlxA-hD7vGs6dkwbhRlAskv0HkF5ryE5IB_O6EvvzbFcQBn1cPqUV4JrXaG98CEnMVlioeBfYEvx4X3ZigWJp7VmiAzyWoUvUepn1c6ye63qcGpXI9cnkiV9swx02Vwbrx8aMiBMdciOy0dDaJs_Ax4iVkgGzTh1WU9ajy-LgEf24EHs2KqfcaLQKR0H0CwkQ2F6jCo3HC-2y4w9S0-FMMzhSYDjw8D1YXVVXTnGNX_2zGduQ",
-                                "https://lh3.googleusercontent.com/aida/ADBb0uhURJdNpyZ1XMkEEA0sJUFYrLBW29mKuuhOrIYKJ7OUzBRffxy-CL_e5uEJu1gaB7vc5_SvOcwoGrJlnbuswB7Xrxfx_7yDneYf05sFYIw48RCp4keRWoXDqy9uzmzPq7zlD8CkcJYuG9LXwCYas5EERfjkViTdthsolOQrQJGCzaOfL9A5dCEHEebSFrrFbgGCHa_PFZ2pJwj6I5M8a0F5KULMW217fEezqT_hNdY0qUQXtjcdLWRRnUyjYpmx5LQL9xd8OienFg",
-                                "https://lh3.googleusercontent.com/aida/ADBb0ugVfWA5KDpg5JDeZ0GTthIh9l8hVMdD--LwM2nMXg7LyEAYhDnHUeR3c9XVCzmZOW10vkfN58NrraLcbqM2C0VZJZFJ34tkJkSBK0gKB5LLGiPAzqUaH5KHTHKvRMOl_Azr4Pe7lPIW3mjijldpZkWjQrizWWH5xLuebkepSW0hPJQ6FYCg5F_xNoaq5f1eNUayn7znm2IqIQtUMRdnVKAX8pFoCHltYf3cYM9oYP6FDqYZjXirIQe7M0kqWjgYV09EXK-5wiK8kA"
-                            ].map((src, i) => (
-                                <div key={i} className="logo-container cursor-default group h-[144px]">
-                                    <div className="logo-layer logo-layer-1 h-full">
-                                        <img alt={`Logo ${i+1}`} className="h-full w-auto object-contain grayscale" src={src}/>
-                                    </div>
-                                    <div className="logo-layer logo-layer-2 h-full">
-                                        <img alt={`Logo ${i+1}`} className="h-full w-auto object-contain grayscale" src={src}/>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* [7] METODOLOGIA */}
+                {/* [6] METODOLOGIA */}
                 <section className="bg-black text-white py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                         <span className="ghost-text text-[20vw] font-headline uppercase select-none">MÉTODO</span>
@@ -284,6 +260,30 @@ export default function About() {
                                     <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
                                     <div className="h-px bg-neutral-800 w-full"></div>
                                     <p className="text-xs text-neutral-400 leading-relaxed font-body">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* [7] PARCEIROS */}
+                <section className="bg-white px-8 md:px-24 border-b border-neutral-100 py-[113px]">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="flex flex-wrap justify-center items-center gap-[40px]">
+                            {[
+                                "https://lh3.googleusercontent.com/aida/ADBb0uhOGdjpFS3xe3PQ0SBANEJj9Lshi5iU1snnxg78KE9cu6q9SeduU7FrtyjVr7Aiwdb98Bh51O0y2M5iyUMrExkrhkblRt7z97iOw8Izlykk2aXRRSOOkty_W_o_oYuPgDPDJm82AfLka4UYlqYAgInyzkB9sHrM4CHkj6ALJZWz0GWOP76QaApK6LpgZKGqkWi6amp4e1ORrr_oVJ7qP9FrFcb4iZ2rsTIkeHbjgJR4mFdx6yB6dfZxmf96_CiFc9G0S7gJ1p_woA",
+                                "https://lh3.googleusercontent.com/aida/ADBb0ugo_3hkuhJlyqc1n9XklUnq-HhA81Yebiu0ILdw0Or3Qe9SRJlgM85Hxqu6bDcKV3dFdHxr5BU2lXQMowJ7l3r8_BZHQAdJ59FXcJLSh7d2GBQDSaQXu3A25wanLr1ybdPagmeH6DyDg7hcqMQaEmLTudCnZEiKziI_Z69v-7IPc7aSHU1yZdYKUGpR5jcc05jv2YYKgK4axBIBAknUwdyxJc5K3Af7rUQ6xDJjN8XKaomkDpjGeokvNwEtT2v9s6xboaXaeH_XDg",
+                                "https://lh3.googleusercontent.com/aida/ADBb0uidL1ApeQj61mELHcFLlZfhzQAVlxA-hD7vGs6dkwbhRlAskv0HkF5ryE5IB_O6EvvzbFcQBn1cPqUV4JrXaG98CEnMVlioeBfYEvx4X3ZigWJp7VmiAzyWoUvUepn1c6ye63qcGpXI9cnkiV9swx02Vwbrx8aMiBMdciOy0dDaJs_Ax4iVkgGzTh1WU9ajy-LgEf24EHs2KqfcaLQKR0H0CwkQ2F6jCo3HC-2y4w9S0-FMMzhSYDjw8D1YXVVXTnGNX_2zGduQ",
+                                "https://lh3.googleusercontent.com/aida/ADBb0uhURJdNpyZ1XMkEEA0sJUFYrLBW29mKuuhOrIYKJ7OUzBRffxy-CL_e5uEJu1gaB7vc5_SvOcwoGrJlnbuswB7Xrxfx_7yDneYf05sFYIw48RCp4keRWoXDqy9uzmzPq7zlD8CkcJYuG9LXwCYas5EERfjkViTdthsolOQrQJGCzaOfL9A5dCEHEebSFrrFbgGCHa_PFZ2pJwj6I5M8a0F5KULMW217fEezqT_hNdY0qUQXtjcdLWRRnUyjYpmx5LQL9xd8OienFg",
+                                "https://lh3.googleusercontent.com/aida/ADBb0ugVfWA5KDpg5JDeZ0GTthIh9l8hVMdD--LwM2nMXg7LyEAYhDnHUeR3c9XVCzmZOW10vkfN58NrraLcbqM2C0VZJZFJ34tkJkSBK0gKB5LLGiPAzqUaH5KHTHKvRMOl_Azr4Pe7lPIW3mjijldpZkWjQrizWWH5xLuebkepSW0hPJQ6FYCg5F_xNoaq5f1eNUayn7znm2IqIQtUMRdnVKAX8pFoCHltYf3cYM9oYP6FDqYZjXirIQe7M0kqWjgYV09EXK-5wiK8kA"
+                            ].map((src, i) => (
+                                <div key={i} className="logo-container cursor-default group h-[144px]">
+                                    <div className="logo-layer logo-layer-1 h-full">
+                                        <img alt={`Logo ${i+1}`} className="h-full w-auto object-contain grayscale" src={src}/>
+                                    </div>
+                                    <div className="logo-layer logo-layer-2 h-full">
+                                        <img alt={`Logo ${i+1}`} className="h-full w-auto object-contain grayscale" src={src}/>
+                                    </div>
                                 </div>
                             ))}
                         </div>
