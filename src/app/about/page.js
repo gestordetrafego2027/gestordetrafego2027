@@ -13,16 +13,12 @@ export default function About() {
 
     const testimonials = [
         {
-            text: "Da identidade visual à reputação de mercado, desenvolvemos projetos que orientam e sustentam o seu posicionamento com clareza, sofisticação e consistência. Unimos estratégia, direção criativa e produção audiovisual para transformar marcas e pessoas em presenças sólidas e relevantes no cenário digital e global.",
-            author: "JULIANO R. — FOUNDER & CEO",
+            text: "Da identidade visual à reputação de mercado, desenvolvemos projetos que orientam e sustentam o seu posicionamento com clareza, sofisticação e consistência.",
+            author: "",
         },
         {
-            text: "Trabalhar com o Lucas e sua equipe foi o melhor investmento do ano. Eles entendem de negócio tanto quanto entendem de design.",
-            author: "RICARDO M. — INVESTIDOR",
-        },
-        {
-            text: "Antes da House, eu aparecia. Depois, passei a ocupar espaço. A diferença é exatamente essa.",
-            author: "MARINA S. — EMPRESÁRIA",
+            text: "Unimos estratégia, direção criativa e produção audiovisual para transformar marcas e pessoas em presenças sólidas e relevantes no cenário digital e global.",
+            author: "",
         },
     ];
 
@@ -117,9 +113,11 @@ export default function About() {
                                         <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
                                             "{t.text}"
                                         </h3>
-                                        <div className="pt-3">
-                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
-                                        </div>
+                                        {t.author && (
+                                            <div className="pt-3">
+                                                <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                             </div>
