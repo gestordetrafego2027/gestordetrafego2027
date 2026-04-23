@@ -277,7 +277,7 @@ export default function StudioPage() {
                             <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="architecture">architecture</span>
                                 <h3 className="font-headline text-2xl uppercase tracking-wider">PRÉ PRODUÇÃO</h3>
-                                <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
+                                <div className="text-secondary leading-relaxed font-light text-base max-w-xs space-y-2">
                                     <p>— Reunião de briefing pessoal</p>
                                     <p>— Análise estratégica de perfil</p>
                                     <p>— Definição de conceitos e staff</p>
@@ -288,7 +288,7 @@ export default function StudioPage() {
                             <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="design_services">design_services</span>
                                 <h3 className="font-headline text-2xl uppercase tracking-wider">EXECUÇÃO</h3>
-                                <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
+                                <div className="text-secondary leading-relaxed font-light text-base max-w-xs space-y-2">
                                     <p>— Call Sheet e preparação</p>
                                     <p>— Roteiros visuais e trilhas</p>
                                     <p>— Locações e cenografia</p>
@@ -299,7 +299,7 @@ export default function StudioPage() {
                             <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="brush">brush</span>
                                 <h3 className="font-headline text-2xl uppercase tracking-wider">PÓS-PRODUÇÃO</h3>
-                                <div className="text-secondary leading-relaxed font-light text-sm max-w-xs space-y-2">
+                                <div className="text-secondary leading-relaxed font-light text-base max-w-xs space-y-2">
                                     <p>— Aprovação e escolha</p>
                                     <p>— Edições finais</p>
                                     <p>— Ajustes de fechamento</p>
