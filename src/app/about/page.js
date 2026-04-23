@@ -79,7 +79,71 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [2] STRUCTURE SELECTION */}
+                {/* [2] DEPOIMENTOS SECTION */}
+                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
+                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
+                    </div>
+                    
+                    {/* Navigation */}
+                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
+                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
+                            <div className="custom-nav-line mr-2"></div>
+                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
+                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextSlide}>
+                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                            <div className="custom-nav-line ml-2"></div>
+                        </button>
+                    </div>
+
+                    {/* Slides */}
+                    <div className="relative z-10 max-w-4xl mx-auto text-center">
+                        <div className="mb-4">
+                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
+                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                        </div>
+                        
+                        <div className="max-w-3xl mx-auto mb-16">
+                            <p className="text-white/70 text-lg leading-relaxed">
+                                Da identidade visual à reputação de mercado, desenvolvemos projetos que orientam e sustentam o seu posicionamento com clareza, sofisticação e consistência. Unimos estratégia, direção criativa e produção audiovisual para transformar marcas e pessoas em presenças sólidas e relevantes no cenário digital e global.
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <div className="relative w-full overflow-hidden mb-1">
+                                {testimonials.map((t, i) => (
+                                    <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
+                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
+                                            "{t.text}"
+                                        </h3>
+                                        <div className="pt-3">
+                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            {/* Indicators */}
+                            <div className="flex space-x-3 pt-4">
+                                {testimonials.map((_, i) => (
+                                    <button 
+                                        key={i} 
+                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"}`} 
+                                        onClick={() => goToSlide(i)}
+                                    ></button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* [3] STRUCTURE SELECTION */}
                 <section className="bg-white px-[40px]">
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
@@ -128,63 +192,6 @@ export default function About() {
                                             SAIBA MAIS
                                         </button>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* [3] DEPOIMENTOS SECTION */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
-                    </div>
-                    
-                    {/* Navigation */}
-                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
-                            <div className="custom-nav-line mr-2"></div>
-                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextSlide}>
-                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div className="custom-nav-line ml-2"></div>
-                        </button>
-                    </div>
-
-                    {/* Slides */}
-                    <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1">
-                                {testimonials.map((t, i) => (
-                                    <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
-                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
-                                            "{t.text}"
-                                        </h3>
-                                        <div className="pt-3">
-                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            {/* Indicators */}
-                            <div className="flex space-x-3 pt-4">
-                                {testimonials.map((_, i) => (
-                                    <button 
-                                        key={i} 
-                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"}`} 
-                                        onClick={() => goToSlide(i)}
-                                    ></button>
                                 ))}
                             </div>
                         </div>
