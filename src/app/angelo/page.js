@@ -48,7 +48,7 @@ export default function AngeloPage() {
 
             <main>
                 {/* [1] HERO FULLWIDTH */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center" style={{ backgroundColor: "#ffffff" }}>
+                <section className="min-h-[calc(100vh+20px)] flex items-center" style={{ backgroundColor: "#ffffff", borderBottom: '0.5px solid #e0e0e0' }}>
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
                         <span className="font-label text-xs text-black">ANGELO MAZZUTTI</span>
                         <h2 className="text-4xl md:text-6xl font-serif leading-tight text-black max-w-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -61,7 +61,6 @@ export default function AngeloPage() {
                             - Angelo Mazzutti
                         </p>
                     </div>
-                    <div style={{width: '100%', height: '0.5px', background: '#e0e0e0'}}></div>
                 </section>
 
                 {/* SEÇÃO QUEM É */}
