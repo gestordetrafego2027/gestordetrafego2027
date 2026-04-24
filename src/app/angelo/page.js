@@ -61,6 +61,7 @@ export default function AngeloPage() {
                             - Angelo Mazzutti
                         </p>
                     </div>
+                    <div style={{width: '100%', height: '0.5px', background: '#e0e0e0'}}></div>
                 </section>
 
                 {/* SEÇÃO QUEM É */}
