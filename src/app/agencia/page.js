@@ -275,41 +275,36 @@ export default function AgenciaPage() {
                         </div>
                     </div>
                 </section>
-                {/* Section 3: Conceitos em Colunas */}
-                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
+                <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato" style={{minHeight: 'auto', paddingTop: '80px', paddingBottom: '80px'}}>
                     <div className="noise-overlay absolute inset-0"></div>
-                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
-                        <div className="w-full lg:w-1/4 flex-shrink-0">
-                            <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img alt="B&W production set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" />
+                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
+                        <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
+                            DA CRIAÇÃO A <span className="not-italic">REPUTAÇÃO</span>
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
+                            <div className="space-y-4">
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Antes de qualquer ação, estruturamos:</p>
+                                <ul className="text-white space-y-2 font-light">
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>posicionamento de marca</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>estratégia de comunicação</span></li>
+                                </ul>
+                            </div>
+                            <div className="space-y-4">
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">&nbsp;</p>
+                                <ul className="text-white space-y-2 font-light">
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>narrativa e linguagem</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>direção de imagem</span></li>
+                                </ul>
                             </div>
                         </div>
-                        <div className="flex-grow w-full py-4">
-                            <div className="grid grid-cols-1 gap-y-16">
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Estratégia.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Clareza</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Narrativa.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Coerência</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Execução.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Precisão</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Resultado.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Consolidação</p>
-                                    </div>
-                                </div>
-                                <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
-                                    <p className="font-headline text-xl italic leading-snug text-zinc-800">
-                                        Aqui, cada detalhe responde a uma lógica. Nada é escolha estética isolada. Tudo é construção de posicionamento.
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="flex flex-col items-center space-y-8">
+                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px]" href="/contato">
+                                Entender como funciona a estratégia
+                            </Link>
+                            <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500 max-w-2xl leading-relaxed">
+                                A partir disso, tudo passa a ter lógica. O resultado não é apenas estratégia. É clareza aplicada. A Agência não executa isoladamente, ela direciona todo o sistema.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -508,36 +503,41 @@ export default function AgenciaPage() {
                         </div>
                     </div>
                 </section>
-                <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
+                {/* Section 3: Conceitos em Colunas */}
+                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
                     <div className="noise-overlay absolute inset-0"></div>
-                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
-                        <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            DA CRIAÇÃO A <span className="not-italic">REPUTAÇÃO</span>
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
-                            <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Antes de qualquer ação, estruturamos:</p>
-                                <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>posicionamento de marca</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>estratégia de comunicação</span></li>
-                                </ul>
-                            </div>
-                            <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">&nbsp;</p>
-                                <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>narrativa e linguagem</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>direção de imagem</span></li>
-                                </ul>
+                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
+                        <div className="w-full lg:w-1/4 flex-shrink-0">
+                            <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
+                                <img alt="B&W production set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" />
                             </div>
                         </div>
-                        <div className="flex flex-col items-center space-y-8">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                Entender como funciona a estratégia
-                            </Link>
-                            <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500 max-w-2xl leading-relaxed">
-                                A partir disso, tudo passa a ter lógica. O resultado não é apenas estratégia. É clareza aplicada. A Agência não executa isoladamente, ela direciona todo o sistema.
-                            </p>
+                        <div className="flex-grow w-full py-4">
+                            <div className="grid grid-cols-1 gap-y-16">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Estratégia.</h3>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Clareza</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Narrativa.</h3>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Coerência</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Execução.</h3>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Precisão</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Resultado.</h3>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Consolidação</p>
+                                    </div>
+                                </div>
+                                <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
+                                    <p className="font-headline text-xl italic leading-snug text-zinc-800">
+                                        Aqui, cada detalhe responde a uma lógica. Nada é escolha estética isolada. Tudo é construção de posicionamento.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
