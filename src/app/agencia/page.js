@@ -515,37 +515,36 @@ export default function AgenciaPage() {
                         </div>
                     </div>
                 </section>
-                {/* Section 7: Editorial CTA */}
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            Se sua marca faz, mas não cresce — <span className="not-italic">o problema não está no que você faz.</span>
+                            DA CRIAÇÃO A <span className="not-italic">REPUTAÇÃO</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
                             <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Deixa de:</p>
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Antes de qualquer ação, estruturamos:</p>
                                 <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>testar</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>ajustar</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>tentar</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>posicionamento de marca</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>estratégia de comunicação</span></li>
                                 </ul>
                             </div>
                             <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Passa a:</p>
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">&nbsp;</p>
                                 <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>construir</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>sustentar</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>crescer</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>narrativa e linguagem</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>direção de imagem</span></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-8">
                             <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                INICIAR DIAGNÓSTICO
+                                Entender como funciona a estratégia
                             </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos volume. Mais direção.</p>
+                            <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500 max-w-2xl leading-relaxed">
+                                A partir disso, tudo passa a ter lógica. O resultado não é apenas estratégia. É clareza aplicada. A Agência não executa isoladamente, ela direciona todo o sistema.
+                            </p>
                         </div>
                     </div>
                 </section>
