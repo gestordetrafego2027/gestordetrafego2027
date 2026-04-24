@@ -38,6 +38,11 @@ export default function AngeloPage() {
 
             {/* SEO Hidden H1 */}
             <h1 className="sr-only">Angelo Mazzutti | Branding Estratégico e Posicionamento de Marca</h1>
+            
+            <style>{`
+                header a, header div { color: #000 !important; }
+                header { border-bottom: 0.5px solid #e0e0e0 !important; }
+            `}</style>
 
             <Header variant="light" />
 
