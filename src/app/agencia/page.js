@@ -420,53 +420,40 @@ export default function AgenciaPage() {
                     </div>
                 </section>
 
-                {/* TESTIMONIALS SECTION */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
-                    </div>
-                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
-                            <div className="custom-nav-line mr-2"></div>
-                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextSlide}>
-                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div className="custom-nav-line ml-2"></div>
-                        </button>
-                    </div>
-                    <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1">
-                                {testimonials.map((testimonial, i) => (
-                                    <div key={i} className={`testimonial-slide ${currentSlide === i ? 'active' : ''}`}>
-                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
-                                            "{testimonial.text}"
-                                        </h3>
-                                        <div className="pt-3">
-                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{testimonial.author}</p>
-                                        </div>
-                                    </div>
-                                ))}
+                {/* Section 3: Conceitos em Colunas */}
+                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
+                    <div className="noise-overlay absolute inset-0"></div>
+                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
+                        <div className="w-full lg:w-1/4 flex-shrink-0">
+                            <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
+                                <img alt="B&W production set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" />
                             </div>
-                            <div className="flex space-x-3 pt-4">
-                                {testimonials.map((_, i) => (
-                                    <button
-                                        key={i}
-                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? 'opacity-100' : 'opacity-30'}`}
-                                        onClick={() => goToSlide(i)}
-                                    ></button>
-                                ))}
+                        </div>
+                        <div className="flex-grow w-full py-4">
+                            <div className="grid grid-cols-1 gap-y-16">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Estratégia.</h3>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Clareza</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Narrativa.</h3>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Coerência</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Execução.</h3>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Precisão</p>
+                                    </div>
+                                    <div className="text-left">
+                                        <h3 className="font-headline text-3xl italic mb-2">Resultado.</h3>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Consolidação</p>
+                                    </div>
+                                </div>
+                                <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
+                                    <p className="font-headline text-xl italic leading-snug text-zinc-800">
+                                        Aqui, cada detalhe responde a uma lógica. Nada é escolha estética isolada. Tudo é construção de posicionamento.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -564,41 +551,18 @@ export default function AgenciaPage() {
                     </div>
                 </section>
 
-                {/* Section 3: Conceitos em Colunas */}
-                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
+                {/* FINAL CTA SECTION */}
+                <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato-final" style={{minHeight: 'auto', paddingTop: '80px', paddingBottom: '80px'}}>
                     <div className="noise-overlay absolute inset-0"></div>
-                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
-                        <div className="w-full lg:w-1/4 flex-shrink-0">
-                            <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img alt="B&W production set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" />
-                            </div>
-                        </div>
-                        <div className="flex-grow w-full py-4">
-                            <div className="grid grid-cols-1 gap-y-16">
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Estratégia.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Clareza</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Narrativa.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Coerência</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Execução.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Precisão</p>
-                                    </div>
-                                    <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Resultado.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Consolidação</p>
-                                    </div>
-                                </div>
-                                <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
-                                    <p className="font-headline text-xl italic leading-snug text-zinc-800">
-                                        Aqui, cada detalhe responde a uma lógica. Nada é escolha estética isolada. Tudo é construção de posicionamento.
-                                    </p>
-                                </div>
-                            </div>
+                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
+                        <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
+                            SE VOCÊ SE CONECTA COM O QUE NÓS CONSTRUÍMOS.
+                        </h2>
+                        <div className="flex flex-col items-center space-y-8">
+                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px]" href="/contato">
+                                ENTRE EM CONTATO AGORA
+                            </Link>
                         </div>
                     </div>
                 </section>
