@@ -1,10 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 
 export default function AngeloPage() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const testimonials = [
+        {
+            text: "Da identidade visual à reputação de mercado, desenvolvemos projetos que orientam e sustentam o seu posicionamento com clareza, sofisticação e consistência.",
+            author: "",
+        },
+        {
+            text: "Unimos estratégia, direção criativa e produção audiovisual para transformar marcas e pessoas em presenças sólidas e relevantes no cenário digital e global.",
+            author: "",
+        },
+    ];
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    };
+
+    const goToSlide = (index) => {
+        setCurrentSlide(index);
+    };
+
     return (
         <div className="antialiased" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 300, backgroundColor: "#f9f9f9", color: "#1a1c1c" }}>
             <title>Angelo Mazzutti | Branding Estratégico e Posicionamento de Marca</title>
@@ -34,6 +59,9 @@ export default function AngeloPage() {
                 .logo-layer-2 { position: absolute; top: 0; left: 0; transform: translateY(-100%); opacity: 0; }
                 .logo-container:hover .logo-layer-1 { transform: translateY(100%); opacity: 0; }
                 .logo-container:hover .logo-layer-2 { transform: translateY(0); opacity: 1; }
+                .testimonial-slide { display: none; opacity: 0; }
+                .testimonial-slide.active { display: flex; opacity: 1; animation: fadeIn 0.8s ease-in-out forwards; }
+                @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
             ` }} />
 
             {/* SEO Hidden H1 */}
@@ -47,7 +75,7 @@ export default function AngeloPage() {
             <Header variant="light" />
 
             <main>
-                {/* [1] HERO FULLWIDTH */}
+                {/* 1. Bloco 1 (hero - manter) */}
                 <section className="min-h-[calc(100vh+20px)] flex items-center" style={{ backgroundColor: "#ffffff", borderBottom: '0.5px solid #e0e0e0' }}>
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
                         <span className="font-label text-xs text-black">ANGELO MAZZUTTI</span>
@@ -63,67 +91,33 @@ export default function AngeloPage() {
                     </div>
                 </section>
 
-                {/* SEÇÃO QUEM É */}
-                <section className="bg-white px-[40px]">
-                    <div className="bg-white py-32 px-12 md:px-12 lg:px-24">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24 max-w-4xl mx-auto">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESTRATEGISTA</span>
-                                <h2 className="text-4xl md:text-5xl tracking-tight mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
-                                    Meu trabalho começa antes de qualquer criação. Começa entendendo.
-                                </h2>
-                                <p className="font-light text-lg text-neutral-500 leading-relaxed">
-                                    Existe um erro comum no mercado: tratar imagem como acabamento. Algo que vem depois. Na prática, imagem é estrutura. É o que sustenta a percepção. E percepção define quem você atrai, quanto você vale e o espaço que você ocupa.
-                                </p>
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                {[
-                                    { title: "Campaign Lançamento", desc: "Estratégias integradas para um impacto memorável.", num: "SERVIÇO 01" },
-                                    { title: "Branding Project", desc: "Construção de identidade e posicionamento de marca.", num: "SERVIÇO 02" },
-                                    { title: "Web Development", desc: "Sites e plataformas que convertem e engajam.", num: "SERVIÇO 03" },
-                                ].map((card, i) => (
-                                    <div key={i} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-[400ms] ease-in-out hover:bg-black group hover-transition-refined">
-                                        <div>
-                                            <h3 className="text-2xl mb-4 group-hover:text-white uppercase" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
-                                            <p className="font-light text-sm text-neutral-500 mb-6 group-hover:text-white/70">{card.desc}</p>
-                                        </div>
-                                        <div className="h-px bg-neutral-200 group-hover:bg-neutral-800 w-full mb-6"></div>
-                                        <span className="font-label text-[10px] tracking-widest group-hover:text-white">{card.num}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                {/* 2. O que era bloco 6 (Nada começa na execução) */}
+                <section className="bg-black text-white py-40 overflow-hidden relative">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-[20vw] uppercase select-none ghost-text" style={{ fontFamily: "'Playfair Display', serif" }}>MÉTODO</span>
                     </div>
-                </section>
-
-                {/* SEÇÃO ESTRUTURA */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[600px] py-[131px]">
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50" style={{ color: "transparent", WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}>ESTRUTURA</span>
-                    </div>
-                    <div className="relative z-10 max-w-6xl mx-auto w-full">
-                        <div className="text-center mb-16">
-                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">ESTRUTURA</span>
-                            <h2 className="text-4xl text-white italic tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
-                                A House Mazzutti atua em três frentes complementares.
-                            </h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
+                        <h2 className="text-4xl md:text-5xl text-center mb-32 max-w-2xl mx-auto leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            Nada começa na execução. Tudo começa no entendimento.
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             {[
-                                { title: "Agência", desc: "Estratégia e direção criativa para lançamentos e branding." },
-                                { title: "Studio", desc: "Construção e posicionamento da imagem pessoal e profissional." },
-                                { title: "Produtora", desc: "Execução visual de alta qualidade para todos os formatos." },
-                            ].map((card, i) => (
-                                <div key={i} className="text-center p-8 border border-white/10 bg-white/5 backdrop-blur-sm">
-                                    <h3 className="text-3xl text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
-                                    <p className="text-white/70 font-light">{card.desc}</p>
+                                { num: "01 / CONTEXTO", bold: "Contexto.", desc: "Sem leitura do momento e do mercado, qualquer branding vira estética. E estética não sustenta posicionamento." },
+                                { num: "02 / DIREÇÃO", bold: "Direção.", desc: "Não executando. Direcionando. Defino o que a marca é, o que precisa comunicar e como deve ser percebida." },
+                                { num: "03 / CONSISTÊNCIA", bold: "Consistência.", desc: "Não busco impacto imediato. Busco consistência. Não busco volume. Busco valor." },
+                            ].map((item, i) => (
+                                <div key={i} className="space-y-6">
+                                    <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
+                                    <div className="h-px bg-neutral-800 w-full"></div>
+                                    <p className="text-xs text-neutral-400 leading-relaxed uppercase tracking-widest font-bold mb-2">{item.bold}</p>
+                                    <p className="text-xs text-neutral-400 leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
 
-                {/* SEÇÃO ORIGEM */}
+                {/* 3. O que era bloco 4 (TRAJETÓRIA - Ao longo dos anos...) */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
                     <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-8">
@@ -151,57 +145,7 @@ export default function AngeloPage() {
                     </div>
                 </section>
 
-                {/* SEÇÃO PARCEIROS */}
-                <section className="bg-white px-8 md:px-24 border-b border-neutral-100 py-[113px]">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="flex flex-wrap justify-center items-center gap-[15px]">
-                            {[
-                                "https://lh3.googleusercontent.com/aida/ADBb0uhOGdjpFS3xe3PQ0SBANEJj9Lshi5iU1snnxg78KE9cu6q9SeduU7FrtyjVr7Aiwdb98Bh51O0y2M5iyUMrExkrhkblRt7z97iOw8Izlykk2aXRRSOOkty_W_o_oYuPgDPDJm82AfLka4UYlqYAgInyzkB9sHrM4CHkj6ALJZWz0GWOP76QaApK6LpgZKGqkWi6amp4e1ORrr_oVJ7qP9FrFcb4iZ2rsTIkeHbjgJR4mFdx6yB6dfZxmf96_CiFc9G0S7gJ1p_woA",
-                                "https://lh3.googleusercontent.com/aida/ADBb0ugo_3hkuhJlyqc1n9XklUnq-HhA81Yebiu0ILdw0Or3Qe9SRJlgM85Hxqu6bDcKV3dFdHxr5BU2lXQMowJ7l3r8_BZHQAdJ59FXcJLSh7d2GBQDSaQXu3A25wanLr1ybdPagmeH6DyDg7hcqMQaEmLTudCnZEiKziI_Z69v-7IPc7aSHU1yZdYKUGpR5jcc05jv2YYKgK4axBIBAknUwdyxJc5K3Af7rUQ6xDJjN8XKaomkDpjGeokvNwEtT2v9s6xboaXaeH_XDg",
-                                "https://lh3.googleusercontent.com/aida/ADBb0uidL1ApeQj61mELHcFLlZfhzQAVlxA-hD7vGs6dkwbhRlAskv0HkF5ryE5IB_O6EvvzbFcQBn1cPqUV4JrXaG98CEnMVlioeBfYEvx4X3ZigWJp7VmiAzyWoUvUepn1c6ye63qcGpXI9cnkiV9swx02Vwbrx8aMiBMdciOy0dDaJs_Ax4iVkgGzTh1WU9ajy-LgEf24EHs2KqfcaLQKR0H0CwkQ2F6jCo3HC-2y4w9S0-FMMzhSYDjw8D1YXVVXTnGNX_2zGduQ",
-                                "https://lh3.googleusercontent.com/aida/ADBb0uhURJdNpyZ1XMkEEA0sJUFYrLBW29mKuuhOrIYKJ7OUzBRffxy-CL_e5uEJu1gaB7vc5_SvOcwoGrJlnbuswB7Xrxfx_7yDneYf05sFYIw48RCp4keRWoXDqy9uzmzPq7zlD8CkcJYuG9LXwCYas5EERfjkViTdthsolOQrQJGCzaOfL9A5dCEHEebSFrrFbgGCHa_PFZ2pJwj6I5M8a0F5KULMW217fEezqT_hNdY0qUQXtjcdLWRRnUyjYpmx5LQL9xd8OienFg",
-                                "https://lh3.googleusercontent.com/aida/ADBb0ugVfWA5KDpg5JDeZ0GTthIh9l8hVMdD--LwM2nMXg7LyEAYhDnHUeR3c9XVCzmZOW10vkfN58NrraLcbqM2C0VZJZFJ34tkJkSBK0gKB5LLGiPAzqUaH5KHTHKvRMOl_Azr4Pe7lPIW3mjijldpZkWjQrizWWH5xLuebkepSW0hPJQ6FYCg5F_xNoaq5f1eNUayn7znm2IqIQtUMRdnVKAX8pFoCHltYf3cYM9oYP6FDqYZjXirIQe7M0kqWjgYV09EXK-5wiK8kA",
-                            ].map((src, i) => (
-                                <div key={i} className="logo-container cursor-default group" style={{ height: "144px" }}>
-                                    <div className="logo-layer logo-layer-1 h-full">
-                                        <img alt={`Logo ${i + 1}`} className="h-full w-auto object-contain" src={src} />
-                                    </div>
-                                    <div className="logo-layer logo-layer-2 h-full">
-                                        <img alt={`Logo ${i + 1}`} className="h-full w-auto object-contain" src={src} />
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* SEÇÃO MÉTODO */}
-                <section className="bg-black text-white py-40 overflow-hidden relative">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-[20vw] uppercase select-none ghost-text" style={{ fontFamily: "'Playfair Display', serif" }}>MÉTODO</span>
-                    </div>
-                    <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-4xl md:text-5xl text-center mb-32 max-w-2xl mx-auto leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-                            Nada começa na execução. Tudo começa no entendimento.
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                            {[
-                                { num: "01 / CONTEXTO", bold: "Contexto.", desc: "Sem leitura do momento e do mercado, qualquer branding vira estética. E estética não sustenta posicionamento." },
-                                { num: "02 / DIREÇÃO", bold: "Direção.", desc: "Não executando. Direcionando. Defino o que a marca é, o que precisa comunicar e como deve ser percebida." },
-                                { num: "03 / CONSISTÊNCIA", bold: "Consistência.", desc: "Não busco impacto imediato. Busco consistência. Não busco volume. Busco valor." },
-                            ].map((item, i) => (
-                                <div key={i} className="space-y-6">
-                                    <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
-                                    <div className="h-px bg-neutral-800 w-full"></div>
-                                    <p className="text-xs text-neutral-400 leading-relaxed uppercase tracking-widest font-bold mb-2">{item.bold}</p>
-                                    <p className="text-xs text-neutral-400 leading-relaxed">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* SEÇÃO SERVIÇOS */}
+                {/* 4. O que era bloco 7 (SERVIÇOS - Visão sistêmica...) */}
                 <section className="bg-white py-32 px-12 md:px-24">
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
                         <div className="md:w-1/3">
@@ -227,7 +171,34 @@ export default function AngeloPage() {
                     </div>
                 </section>
 
-                {/* SEÇÃO CTA FINAL */}
+                {/* 5. O que era bloco 3 (ESTRUTURA - A House Mazzutti atua em três frentes) */}
+                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[600px] py-[131px]">
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
+                        <span className="font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50" style={{ color: "transparent", WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}>ESTRUTURA</span>
+                    </div>
+                    <div className="relative z-10 max-w-6xl mx-auto w-full">
+                        <div className="text-center mb-16">
+                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">ESTRUTURA</span>
+                            <h2 className="text-4xl text-white italic tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
+                                A House Mazzutti atua em três frentes complementares.
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                { title: "Agência", desc: "Estratégia e direção criativa para lançamentos e branding." },
+                                { title: "Studio", desc: "Construção e posicionamento da imagem pessoal e profissional." },
+                                { title: "Produtora", desc: "Execução visual de alta qualidade para todos os formatos." },
+                            ].map((card, i) => (
+                                <div key={i} className="text-center p-8 border border-white/10 bg-white/5 backdrop-blur-sm">
+                                    <h3 className="text-3xl text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
+                                    <p className="text-white/70 font-light">{card.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 6. O que era bloco 8 (Se você busca direção...) */}
                 <section className="bg-[#eeeeee] py-32 px-12 md:px-24">
                     <div className="max-w-4xl mx-auto text-center space-y-12">
                         <h2 className="text-4xl md:text-5xl italic" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -264,6 +235,106 @@ export default function AngeloPage() {
                             <p className="italic text-neutral-500" style={{ fontFamily: "'Playfair Display', serif" }}>
                                 Não é sobre aparecer mais. É sobre não precisar insistir.
                             </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 7. Seção de depoimentos */}
+                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[480px] max-h-[480px]">
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
+                        <span className="font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50" style={{ fontFamily: "'Montserrat', sans-serif" }}>DEPOIMENTOS</span>
+                    </div>
+                    
+                    {/* Navigation */}
+                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
+                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
+                            <div className="custom-nav-line mr-2"></div>
+                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
+                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextSlide}>
+                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                            <div className="custom-nav-line ml-2"></div>
+                        </button>
+                    </div>
+
+                    {/* Slides */}
+                    <div className="relative z-10 max-w-4xl mx-auto text-center">
+                        <div className="mb-4">
+                            <span className="uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1" style={{ fontFamily: "'Work Sans', sans-serif" }}>O QUE DIZEM</span>
+                            <h2 className="text-3xl text-white italic tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>Depoimentos</h2>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <div className="relative w-full overflow-hidden mb-1" style={{height: '200px', display: 'flex', alignItems: 'center'}}>
+                                {testimonials.map((t, i) => (
+                                    <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
+                                        <h3 className="text-lg text-white leading-snug italic max-w-3xl mx-auto" style={{ fontFamily: "'Playfair Display', serif" }}>
+                                            "{t.text}"
+                                        </h3>
+                                        {t.author && (
+                                            <div className="pt-3">
+                                                <p className="uppercase tracking-[0.35em] text-[10px] text-white/80 font-light" style={{ fontFamily: "'Work Sans', sans-serif" }}>{t.author}</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                            {/* Indicators */}
+                            <div className="flex space-x-3 pt-4">
+                                {testimonials.map((_, i) => (
+                                    <button 
+                                        key={i} 
+                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"}`} 
+                                        onClick={() => goToSlide(i)}
+                                    ></button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 8. O que era bloco de logos */}
+                <section className="bg-white px-8 md:px-24 border-b border-neutral-100 py-[113px]">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="flex flex-wrap justify-center items-center gap-[15px]">
+                            {[
+                                "https://lh3.googleusercontent.com/aida/ADBb0uhOGdjpFS3xe3PQ0SBANEJj9Lshi5iU1snnxg78KE9cu6q9SeduU7FrtyjVr7Aiwdb98Bh51O0y2M5iyUMrExkrhkblRt7z97iOw8Izlykk2aXRRSOOkty_W_o_oYuPgDPDJm82AfLka4UYlqYAgInyzkB9sHrM4CHkj6ALJZWz0GWOP76QaApK6LpgZKGqkWi6amp4e1ORrr_oVJ7qP9FrFcb4iZ2rsTIkeHbjgJR4mFdx6yB6dfZxmf96_CiFc9G0S7gJ1p_woA",
+                                "https://lh3.googleusercontent.com/aida/ADBb0ugo_3hkuhJlyqc1n9XklUnq-HhA81Yebiu0ILdw0Or3Qe9SRJlgM85Hxqu6bDcKV3dFdHxr5BU2lXQMowJ7l3r8_BZHQAdJ59FXcJLSh7d2GBQDSaQXu3A25wanLr1ybdPagmeH6DyDg7hcqMQaEmLTudCnZEiKziI_Z69v-7IPc7aSHU1yZdYKUGpR5jcc05jv2YYKgK4axBIBAknUwdyxJc5K3Af7rUQ6xDJjN8XKaomkDpjGeokvNwEtT2v9s6xboaXaeH_XDg",
+                                "https://lh3.googleusercontent.com/aida/ADBb0uidL1ApeQj61mELHcFLlZfhzQAVlxA-hD7vGs6dkwbhRlAskv0HkF5ryE5IB_O6EvvzbFcQBn1cPqUV4JrXaG98CEnMVlioeBfYEvx4X3ZigWJp7VmiAzyWoUvUepn1c6ye63qcGpXI9cnkiV9swx02Vwbrx8aMiBMdciOy0dDaJs_Ax4iVkgGzTh1WU9ajy-LgEf24EHs2KqfcaLQKR0H0CwkQ2F6jCo3HC-2y4w9S0-FMMzhSYDjw8D1YXVVXTnGNX_2zGduQ",
+                                "https://lh3.googleusercontent.com/aida/ADBb0uhURJdNpyZ1XMkEEA0sJUFYrLBW29mKuuhOrIYKJ7OUzBRffxy-CL_e5uEJu1gaB7vc5_SvOcwoGrJlnbuswB7Xrxfx_7yDneYf05sFYIw48RCp4keRWoXDqy9uzmzPq7zlD8CkcJYuG9LXwCYas5EERfjkViTdthsolOQrQJGCzaOfL9A5dCEHEebSFrrFbgGCHa_PFZ2pJwj6I5M8a0F5KULMW217fEezqT_hNdY0qUQXtjcdLWRRnUyjYpmx5LQL9xd8OienFg",
+                                "https://lh3.googleusercontent.com/aida/ADBb0ugVfWA5KDpg5JDeZ0GTthIh9l8hVMdD--LwM2nMXg7LyEAYhDnHUeR3c9XVCzmZOW10vkfN58NrraLcbqM2C0VZJZFJ34tkJkSBK0gKB5LLGiPAzqUaH5KHTHKvRMOl_Azr4Pe7lPIW3mjijldpZkWjQrizWWH5xLuebkepSW0hPJQ6FYCg5F_xNoaq5f1eNUayn7znm2IqIQtUMRdnVKAX8pFoCHltYf3cYM9oYP6FDqYZjXirIQe7M0kqWjgYV09EXK-5wiK8kA",
+                            ].map((src, i) => (
+                                <div key={i} className="logo-container cursor-default group" style={{ height: "144px" }}>
+                                    <div className="logo-layer logo-layer-1 h-full">
+                                        <img alt={`Logo ${i + 1}`} className="h-full w-auto object-contain" src={src} />
+                                    </div>
+                                    <div className="logo-layer logo-layer-2 h-full">
+                                        <img alt={`Logo ${i + 1}`} className="h-full w-auto object-contain" src={src} />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 9. Bloco CTA final */}
+                <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato-final" style={{minHeight: 'auto', paddingTop: '80px', paddingBottom: '80px'}}>
+                    <div className="noise-overlay absolute inset-0"></div>
+                    <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
+                        <h2 className="text-4xl md:text-6xl text-white leading-tight italic" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            SE VOCÊ SE CONECTA COM O QUE NÓS CONSTRUÍMOS.
+                        </h2>
+                        <div className="flex flex-col items-center space-y-8">
+                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px]" href="/contato">
+                                ENTRE EM CONTATO AGORA
+                            </Link>
                         </div>
                     </div>
                 </section>
