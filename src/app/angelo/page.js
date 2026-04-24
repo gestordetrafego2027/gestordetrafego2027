@@ -43,34 +43,18 @@ export default function AngeloPage() {
 
             <main>
                 {/* [1] HERO FULLWIDTH */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center" style={{ backgroundColor: "#c8c8c8" }}>
-                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#c8c8c8" }}>
+                <section className="min-h-[calc(100vh+20px)] flex items-center" style={{ backgroundColor: "#ffffff" }}>
+                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
                         <span className="font-label text-xs text-black">ANGELO MAZZUTTI</span>
-                        <h2 className="text-5xl md:text-7xl font-serif leading-tight text-black max-w-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                            Marca não se constrói com estética. Se constrói com leitura.
+                        <h2 className="text-4xl md:text-6xl font-serif leading-tight text-black max-w-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            Nenhuma marca se constrói apenas com estética. Se constrói com leitura e consistência.
                         </h2>
-                        <p className="text-lg md:text-xl italic text-[#555555] max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                            Branding estratégico, posicionamento de marca e construção de autoridade através da imagem.
+                        <p className="text-lg md:text-xl italic text-black max-w-2xl leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            Estrategista nato e diretor criativo à frente da House Mazzutti, Angelo possui formação em publicidade e mais de 15 anos de experiência em audiovisual. Seu olhar estratégico, aliado a uma criatividade apurada, garante que suas produções visuais sejam sustentadas por uma base analítica sólida e direcionamento estratégico consistente. Um profissional cujas campanhas se destacam pela precisão, eficiência e múltiplas sensibilidades criativas, com um portfólio que reúne marcas nacionais e internacionais.
                         </p>
-                        <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
-                            {[
-                                { label: "ESTRATÉGIA", value: "92%" },
-                                { label: "POSICIONAMENTO", value: "88%" },
-                                { label: "DIREÇÃO CRIATIVA", value: "95%" },
-                                { label: "PRODUÇÃO", value: "85%" },
-                            ].map((item, i) => (
-                                <div key={i} className="space-y-4">
-                                    <div className="flex justify-between font-label text-[12px] text-black">
-                                        <span>{item.label}</span>
-                                    </div>
-                                    <div className="h-[8px] bg-[#d5d5d5] w-full relative">
-                                        <div className="h-full bg-black animate-progress relative" style={{ width: item.value, "--target-width": item.value }}>
-                                            <span className="percentage-tag">{item.value}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <p className="text-lg font-serif italic text-black" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            - Angelo Mazzutti
+                        </p>
                     </div>
                 </section>
 
