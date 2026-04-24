@@ -31,14 +31,12 @@ export default function AngeloPage() {
     };
 
     return (
-        <div className="antialiased" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 300, backgroundColor: "#f9f9f9", color: "#1a1c1c" }}>
+        <div className="antialiased font-body" style={{ fontWeight: 300, backgroundColor: "#f9f9f9", color: "#1a1c1c" }}>
             <title>Angelo Mazzutti | Branding Estratégico e Posicionamento de Marca</title>
 
             <style dangerouslySetInnerHTML={{
                 __html: `
-                body { font-family: 'Montserrat', sans-serif; font-weight: 300; background-color: #f9f9f9; color: #1a1c1c; }
-                .font-serif { font-family: 'Playfair Display', serif; }
-                .font-label { font-family: 'Work Sans', sans-serif; letter-spacing: 0.2em; text-transform: uppercase; }
+                body { font-weight: 300; background-color: #f9f9f9; color: #1a1c1c; }
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 24; }
                 .ghost-text { -webkit-text-stroke: 1px rgba(255,255,255,0.1); color: transparent; pointer-events: none; }
                 .line-growth { transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); }
@@ -79,13 +77,13 @@ export default function AngeloPage() {
                 <section className="min-h-[calc(100vh+20px)] flex items-center" style={{ backgroundColor: "#ffffff", borderBottom: '0.5px solid #e0e0e0' }}>
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
                         <span className="font-label text-xs text-black">ANGELO MAZZUTTI</span>
-                        <h2 className="text-4xl md:text-6xl font-serif leading-tight text-black max-w-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        <h2 className="text-4xl md:text-6xl font-headline leading-tight text-black max-w-4xl">
                             Nenhuma marca se constrói apenas com estética. Se constrói com leitura e consistência.
                         </h2>
-                        <p className="text-lg md:text-xl italic text-black max-w-2xl leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        <p className="text-lg md:text-xl italic text-black max-w-2xl leading-relaxed font-body">
                             Estrategista nato e diretor criativo à frente da House Mazzutti, Angelo possui formação em publicidade e mais de 15 anos de experiência em audiovisual. Seu olhar estratégico, aliado a uma criatividade apurada, garante que suas produções visuais sejam sustentadas por uma base analítica sólida e direcionamento estratégico consistente. Um profissional cujas campanhas se destacam pela precisão, eficiência e múltiplas sensibilidades criativas, com um portfólio que reúne marcas nacionais e internacionais.
                         </p>
-                        <p className="text-lg font-serif italic text-black" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        <p className="text-lg font-raleway italic text-black">
                             - Angelo Mazzutti
                         </p>
                     </div>
@@ -94,10 +92,10 @@ export default function AngeloPage() {
                 {/* 2. O que era bloco 6 (Nada começa na execução) */}
                 <section className="bg-black text-white py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-[20vw] uppercase select-none ghost-text" style={{ fontFamily: "'Playfair Display', serif" }}>MÉTODO</span>
+                        <span className="text-[20vw] uppercase select-none ghost-text font-headline">MÉTODO</span>
                     </div>
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-4xl md:text-5xl text-center mb-32 max-w-2xl mx-auto leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        <h2 className="text-4xl md:text-5xl text-center mb-32 max-w-2xl mx-auto leading-tight font-headline">
                             Nada começa na execução. Tudo começa no entendimento.
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -109,8 +107,8 @@ export default function AngeloPage() {
                                 <div key={i} className="space-y-6">
                                     <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
                                     <div className="h-px bg-neutral-800 w-full"></div>
-                                    <p className="text-xs text-neutral-400 leading-relaxed uppercase tracking-widest font-bold mb-2">{item.bold}</p>
-                                    <p className="text-xs text-neutral-400 leading-relaxed">{item.desc}</p>
+                                    <p className="text-xs text-neutral-400 leading-relaxed uppercase tracking-widest font-bold mb-2 font-label">{item.bold}</p>
+                                    <p className="text-xs text-neutral-400 leading-relaxed font-body">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -122,14 +120,14 @@ export default function AngeloPage() {
                     <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-8">
                             <span className="font-label text-xs text-neutral-400">TRAJETÓRIA</span>
-                            <h2 className="text-4xl md:text-5xl font-serif leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">
                                 Ao longo dos anos, desenvolvi uma forma de leitura que conecta negócio, comportamento, imagem e posicionamento.
                             </h2>
-                            <div className="space-y-6 text-neutral-600 leading-relaxed">
+                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
                                 <p>Não como áreas separadas. Mas como sistema. A maioria das marcas hoje não precisa de mais produção. Precisa parar e se estruturar.</p>
                                 <p>Porque sem clareza: a comunicação força, a imagem confunde, o posicionamento não sustenta.</p>
                             </div>
-                            <div className="pt-8 italic text-3xl opacity-80" style={{ fontFamily: "'Playfair Display', serif" }}>Angelo Mazzutti</div>
+                            <div className="pt-8 italic text-3xl opacity-80 font-headline">Angelo Mazzutti</div>
                         </div>
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
@@ -140,7 +138,7 @@ export default function AngeloPage() {
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
                         />
                         <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                            <h2 className="text-6xl md:text-8xl text-white/[0.85] font-bold uppercase tracking-widest text-center select-none" style={{ fontFamily: "'Playfair Display', serif" }}>SOBRE NÓS</h2>
+                            <h2 className="text-6xl md:text-8xl text-white/[0.85] font-bold uppercase tracking-widest text-center select-none font-headline">SOBRE NÓS</h2>
                         </div>
                     </div>
                 </section>
@@ -150,7 +148,7 @@ export default function AngeloPage() {
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
                         <div className="md:w-1/3">
                             <span className="font-label text-xs text-neutral-500 mb-4 block">SERVIÇOS</span>
-                            <h2 className="text-4xl tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>Visão sistêmica e de longo prazo.</h2>
+                            <h2 className="text-4xl tracking-tight font-headline">Visão sistêmica e de longo prazo.</h2>
                         </div>
                         <div className="md:w-2/3 space-y-12">
                             {[
@@ -161,8 +159,8 @@ export default function AngeloPage() {
                             ].map((item, i) => (
                                 <div key={i} className="group border-b border-neutral-200 pb-8 flex justify-between items-end hover:border-black transition-colors cursor-default">
                                     <div>
-                                        <h4 className="text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h4>
-                                        <p className="text-neutral-500 font-light">{item.desc}</p>
+                                        <h4 className="text-2xl mb-2 font-headline">{item.title}</h4>
+                                        <p className="text-neutral-500 font-light font-body">{item.desc}</p>
                                     </div>
                                     <span className="font-label text-[10px] text-neutral-400">{item.num}</span>
                                 </div>
@@ -179,7 +177,7 @@ export default function AngeloPage() {
                     <div className="relative z-10 max-w-6xl mx-auto w-full">
                         <div className="text-center mb-16">
                             <span className="font-label uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">ESTRUTURA</span>
-                            <h2 className="text-4xl text-white italic tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            <h2 className="text-4xl text-white italic tracking-wide font-headline">
                                 A House Mazzutti atua em três frentes complementares.
                             </h2>
                         </div>
@@ -190,8 +188,8 @@ export default function AngeloPage() {
                                 { title: "Produtora", desc: "Execução visual de alta qualidade para todos os formatos." },
                             ].map((card, i) => (
                                 <div key={i} className="text-center p-8 border border-white/10 bg-white/5 backdrop-blur-sm">
-                                    <h3 className="text-3xl text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
-                                    <p className="text-white/70 font-light">{card.desc}</p>
+                                    <h3 className="text-3xl text-white mb-4 font-headline">{card.title}</h3>
+                                    <p className="text-white/70 font-light font-body">{card.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -201,13 +199,13 @@ export default function AngeloPage() {
                 {/* 6. O que era bloco 8 (Se você busca direção...) */}
                 <section className="bg-[#eeeeee] py-32 px-12 md:px-24">
                     <div className="max-w-4xl mx-auto text-center space-y-12">
-                        <h2 className="text-4xl md:text-5xl italic" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        <h2 className="text-4xl md:text-5xl italic font-headline">
                             Se você busca direção — não execução — estamos alinhados.
                         </h2>
                         <div className="grid md:grid-cols-2 gap-12 text-left pt-8">
                             <div className="space-y-6">
                                 <h4 className="font-label text-xs tracking-widest text-neutral-400">VOCÊ DEIXA DE:</h4>
-                                <ul className="space-y-4 font-light text-neutral-600">
+                                <ul className="space-y-4 font-light text-neutral-600 font-body">
                                     {["Parecer mais do mesmo", "Atrair desalinhado", "Depender de esforço constante"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
                                             <span className="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
@@ -218,7 +216,7 @@ export default function AngeloPage() {
                             </div>
                             <div className="space-y-6">
                                 <h4 className="font-label text-xs tracking-widest text-neutral-400">PASSA A:</h4>
-                                <ul className="space-y-4 font-light text-neutral-600">
+                                <ul className="space-y-4 font-light text-neutral-600 font-body">
                                     {["Ter clareza", "Construir percepção", "Sustentar valor"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
                                             <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
@@ -232,7 +230,7 @@ export default function AngeloPage() {
                             <Link href="/contato" className="px-12 py-5 bg-black text-white font-label text-xs tracking-[0.3em] uppercase hover:bg-neutral-800 transition-colors">
                                 Quero reposicionar minha marca
                             </Link>
-                            <p className="italic text-neutral-500" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            <p className="italic text-neutral-500 font-raleway">
                                 Não é sobre aparecer mais. É sobre não precisar insistir.
                             </p>
                         </div>
@@ -242,7 +240,7 @@ export default function AngeloPage() {
                 {/* 7. Seção de depoimentos */}
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[480px] max-h-[480px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50" style={{ fontFamily: "'Montserrat', sans-serif" }}>DEPOIMENTOS</span>
+                        <span className="font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50 font-headline">DEPOIMENTOS</span>
                     </div>
                     
                     {/* Navigation */}
@@ -266,20 +264,20 @@ export default function AngeloPage() {
                     {/* Slides */}
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
                         <div className="mb-4">
-                            <span className="uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1" style={{ fontFamily: "'Work Sans', sans-serif" }}>O QUE DIZEM</span>
-                            <h2 className="text-3xl text-white italic tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>Depoimentos</h2>
+                            <span className="uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1 font-label">O QUE DIZEM</span>
+                            <h2 className="text-3xl text-white italic tracking-wide font-headline">Depoimentos</h2>
                         </div>
 
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1" style={{height: '200px', display: 'flex', alignItems: 'center'}}>
                                 {testimonials.map((t, i) => (
                                     <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
-                                        <h3 className="text-lg text-white leading-snug italic max-w-3xl mx-auto" style={{ fontFamily: "'Playfair Display', serif" }}>
+                                        <h3 className="text-lg text-white leading-snug italic max-w-3xl mx-auto font-body">
                                             "{t.text}"
                                         </h3>
                                         {t.author && (
                                             <div className="pt-3">
-                                                <p className="uppercase tracking-[0.35em] text-[10px] text-white/80 font-light" style={{ fontFamily: "'Work Sans', sans-serif" }}>{t.author}</p>
+                                                <p className="uppercase tracking-[0.35em] text-[10px] text-white/80 font-light font-label">{t.author}</p>
                                             </div>
                                         )}
                                     </div>
@@ -328,7 +326,7 @@ export default function AngeloPage() {
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
-                        <h2 className="text-4xl md:text-6xl text-white leading-tight italic" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        <h2 className="text-4xl md:text-6xl text-white leading-tight italic font-headline">
                             SE VOCÊ SE CONECTA COM O QUE NÓS CONSTRUÍMOS.
                         </h2>
                         <div className="flex flex-col items-center space-y-8">
@@ -343,7 +341,7 @@ export default function AngeloPage() {
             {/* FOOTER */}
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-3xl text-neutral-50 mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>House Mazzutti</div>
+                    <div className="text-3xl text-neutral-50 mb-12 font-headline">House Mazzutti</div>
                     <div className="flex space-x-8 mb-12">
                         <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
                         <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
