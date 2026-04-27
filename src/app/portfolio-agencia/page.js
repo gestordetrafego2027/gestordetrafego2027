@@ -36,8 +36,12 @@ export default function PortfolioAgenciaPage() {
 
             {/* 1. HEADER (TopNavBar) */}
             <Header />
+            <style>{`
+              header { background: #fff !important; }
+              header a, header div, header span { color: #000 !important; }
+            `}</style>
 
-            <main className="pt-[92px]">
+            <main className="pt-[92px]" style={{ paddingTop: '120px' }}>
                 {/* 2. TITLE BLOCK */}
                 <section className="border-y-[0.5px] border-[#e0e0e0] px-[40px] py-[28px] bg-white flex justify-between items-center">
                     <h1 className="font-raleway text-[11px] uppercase tracking-[0.2em] text-black">PORTFÓLIO AGÊNCIA</h1>

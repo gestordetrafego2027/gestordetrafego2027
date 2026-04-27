@@ -61,7 +61,11 @@ export default function PortfolioStudioPage() {
             `}} />
 
             <Header />
-            <main className="min-h-screen">
+            <style>{`
+              header { background: #fff !important; }
+              header a, header div, header span { color: #000 !important; }
+            `}</style>
+            <main className="min-h-screen" style={{ paddingTop: '120px' }}>
                 <section className="columns-gallery-container">
                     <Link className="gallery-column project-item group" href="/portfolio-studio/projeto-essencia">
                         <img alt="Project 1" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra"/>
