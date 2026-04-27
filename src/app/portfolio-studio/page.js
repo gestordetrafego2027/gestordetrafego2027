@@ -58,6 +58,8 @@ export default function PortfolioStudioPage() {
                 }
                 .project-overlay h4 { color: #000; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
                 .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
+                .gallery-item .overlay { opacity: 0; transition: opacity 0.4s ease; background: rgba(255,255,255,0.92); }
+                .gallery-item:hover .overlay { opacity: 1; }
             `}} />
 
             <Header />
@@ -66,35 +68,51 @@ export default function PortfolioStudioPage() {
               header a, header div, header span { color: #000 !important; }
             `}</style>
             <main className="min-h-screen" style={{ paddingTop: '80px' }}>
-                <section className="columns-gallery-container">
-                    <Link className="gallery-column project-item group" href="/portfolio-studio/projeto-essencia">
-                        <img alt="Project 1" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra"/>
-                        <div className="project-overlay">
-                            <span>Direção de Imagem</span>
-                            <h4>Projeto Essência</h4>
-                        </div>
-                    </Link>
-                    <Link className="gallery-column project-item group" href="/portfolio-studio/movimento-urbano">
-                        <img alt="Project 2" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB"/>
-                        <div className="project-overlay">
-                            <span>Direção Criativa</span>
-                            <h4>Movimento Urbano</h4>
-                        </div>
-                    </Link>
-                    <Link className="gallery-column project-item group" href="/portfolio-studio/alfaiataria-moderna">
-                        <img alt="Project 3" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5"/>
-                        <div className="project-overlay">
-                            <span>Posicionamento</span>
-                            <h4>Alfaiataria Moderna</h4>
-                        </div>
-                    </Link>
-                    <Link className="gallery-column project-item group" href="/portfolio-studio/horizonte">
-                        <img alt="Project 4" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtDNB7cdME0kaLamJozRvfkiJws6GrvrXBnE5QRIkxB2ppxix4CG2r_LeyGl5XP-xuzQILDQ9-6ZIMjAYUHBdzn-iH8v6Lxpa6zwjO6xR4CnSkRVonntUc7FphscJZCyOhoEd8rxJtVVZ2nPrj287s6BVqdbOQ52N9vhkG5IWwtk5vxPNnArouHvfxTGaIBJYgAcsGk1qElyInif8vlUCMxZkTDnPAmv_bx8gd_oQ9L1BxaSnKbCHQ8jqgLy-kf1WgkTEZeSrrMLR"/>
-                        <div className="project-overlay">
-                            <span>Produção de Imagem</span>
-                            <h4>Horizonte</h4>
-                        </div>
-                    </Link>
+                <section className="bg-white w-full py-[16px] px-[40px]">
+                    <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
+                        <Link href="/portfolio-studio/projeto-essencia" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra" alt="Projeto Essência" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO DE IMAGEM</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Projeto Essência</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-studio/movimento-urbano" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB" alt="Movimento Urbano" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO CRIATIVA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Movimento Urbano</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-studio/alfaiataria-moderna" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5" alt="Alfaiataria Moderna" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">POSICIONAMENTO</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Alfaiataria Moderna</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-studio/horizonte" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtDNB7cdME0kaLamJozRvfkiJws6GrvrXBnE5QRIkxB2ppxix4CG2r_LeyGl5XP-xuzQILDQ9-6ZIMjAYUHBdzn-iH8v6Lxpa6zwjO6xR4CnSkRVonntUc7FphscJZCyOhoEd8rxJtVVZ2nPrj287s6BVqdbOQ52N9vhkG5IWwtk5vxPNnArouHvfxTGaIBJYgAcsGk1qElyInif8vlUCMxZkTDnPAmv_bx8gd_oQ9L1BxaSnKbCHQ8jqgLy-kf1WgkTEZeSrrMLR" alt="Horizonte" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">PRODUÇÃO DE IMAGEM</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Horizonte</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-studio/projeto-essencia" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB" alt="Projeto Essência 2" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO DE IMAGEM</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Projeto Essência</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-studio/movimento-urbano" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5" alt="Movimento Urbano 2" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO CRIATIVA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Movimento Urbano</span>
+                            </div>
+                        </Link>
+                    </div>
                 </section>
             </main>
         </div>
