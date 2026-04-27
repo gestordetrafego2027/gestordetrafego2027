@@ -644,6 +644,29 @@ export default function AgenciaPage() {
                     </div>
                 </div>
             </footer>
+            <style dangerouslySetInnerHTML={{ __html: `
+                .columns-gallery-container {
+                    height: 80vh;
+                    display: flex;
+                    width: 100%;
+                    overflow: hidden;
+                }
+                .gallery-column {
+                    flex: 1;
+                    height: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    border-right: 1px solid rgba(0, 0, 0, 0.05);
+                }
+                .gallery-column:last-child {
+                    border-right: none;
+                }
+                .column-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            `}} />
         </div>
     )
 }
