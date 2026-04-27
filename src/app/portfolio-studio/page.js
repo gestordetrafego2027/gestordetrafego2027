@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
 
 export default function PortfolioStudioPage() {
     return (
@@ -120,7 +119,16 @@ export default function PortfolioStudioPage() {
                     </div>
                 </section>
             </main>
-            <Footer />
+
+            {/* 4. FOOTER */}
+            <footer className="bg-[#0a0a0a] w-full flex justify-between items-center px-[48px] py-[32px] text-white">
+                <div className="font-newsreader italic text-lg text-white">HOUSE MAZZUTTI</div>
+                <div className="flex gap-8 items-center">
+                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="#">INSTAGRAM</Link>
+                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="#">LINKEDIN</Link>
+                </div>
+                <div className="font-manrope text-[10px] uppercase tracking-wider text-[#333]">Copyright © 2025 House Mazzutti</div>
+            </footer>
         </div>
     );
 }
