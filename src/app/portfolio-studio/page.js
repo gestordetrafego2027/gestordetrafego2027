@@ -58,7 +58,11 @@ export default function PortfolioStudioPage() {
                 }
                 .project-overlay h4 { color: #000; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
                 .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
-                .gallery-item .overlay { opacity: 0; transition: opacity 0.4s ease; background: rgba(255,255,255,1) !important; }
+                .gallery-item .overlay { 
+                    opacity: 0; 
+                    transition: opacity 0.4s ease; 
+                    background: rgba(255,255,255,1) !important; 
+                }
                 .gallery-item:hover .overlay { opacity: 1; }
             `}} />
 
@@ -119,6 +123,10 @@ export default function PortfolioStudioPage() {
                     </div>
                 </section>
             </main>
+            <footer style={{borderTop: '0.5px solid #e0e0e0', padding: '40px 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+              <span style={{fontFamily: 'RocGrotesk', fontSize: '11px', letterSpacing: '0.1em', color: '#888'}}>© 2025 House Mazzutti</span>
+              <span style={{fontFamily: 'RocGrotesk', fontSize: '11px', letterSpacing: '0.1em', color: '#888'}}>Todos os direitos reservados</span>
+            </footer>
         </div>
     );
 }
