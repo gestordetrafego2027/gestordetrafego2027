@@ -244,37 +244,36 @@ export default function AgenciaPage() {
                     </div>
                 </section>
                 {/* Section 2: Cards Informativos */}
-                <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                    <div className="max-w-[1260px] mx-auto text-center">
-                        <div className="mb-20">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">DIREÇÃO ESTRATÉGICA</span>
-                            <h2 className="font-headline text-5xl text-black">Fundamentos sólidos. Resultados previsíveis.</h2>
+                <div className="columns-gallery-container" style={{ height: '80vh' }}>
+                    <Link className="gallery-column project-item group" href="/portfolio-agencia/projeto-1">
+                        <img alt="Project 1" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra"/>
+                        <div className="project-overlay">
+                            <span>Branding</span>
+                            <h4>Projeto Agência 1</h4>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                            <div className="flex flex-col items-center space-y-4">
-                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="lightbulb">lightbulb</span>
-                                <h3 className="font-headline text-2xl">O que precisa ser comunicado.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
-                                    Mensagem estratégica definida antes da execução.
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center space-y-4">
-                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="film_strip">film_strip</span>
-                                <h3 className="font-headline text-2xl">Como deve ser executado.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
-                                    Direção criativa que transforma briefing em realidade.
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center space-y-4">
-                                <span className="material-symbols-outlined text-4xl font-extralight" data-icon="trending_up">trending_up</span>
-                                <h3 className="font-headline text-2xl">E qual resultado deve gerar.</h3>
-                                <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
-                                    Percepção, autoridade e posicionamento consolidados.
-                                </p>
-                            </div>
+                    </Link>
+                    <Link className="gallery-column project-item group" href="/portfolio-agencia/projeto-2">
+                        <img alt="Project 2" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB"/>
+                        <div className="project-overlay">
+                            <span>Publicidade</span>
+                            <h4>Projeto Agência 2</h4>
                         </div>
-                    </div>
-                </section>
+                    </Link>
+                    <Link className="gallery-column project-item group" href="/portfolio-agencia/projeto-3">
+                        <img alt="Project 3" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5"/>
+                        <div className="project-overlay">
+                            <span>RP e Eventos</span>
+                            <h4>Projeto Agência 3</h4>
+                        </div>
+                    </Link>
+                    <Link className="gallery-column project-item group" href="/portfolio-agencia/projeto-4">
+                        <img alt="Project 4" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtDNB7cdME0kaLamJozRvfkiJws6GrvrXBnE5QRIkxB2ppxix4CG2r_LeyGl5XP-xuzQILDQ9-6ZIMjAYUHBdzn-iH8v6Lxpa6zwjO6xR4CnSkRVonntUc7FphscJZCyOhoEd8rxJtVVZ2nPrj287s6BVqdbOQ52N9vhkG5IWwtk5vxPNnArouHvfxTGaIBJYgAcsGk1qElyInif8vlUCMxZkTDnPAmv_bx8gd_oQ9L1BxaSnKbCHQ8jqgLy-kf1WgkTEZeSrrMLR"/>
+                        <div className="project-overlay">
+                            <span>Estratégia</span>
+                            <h4>Projeto Agência 4</h4>
+                        </div>
+                    </Link>
+                </div>
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato" style={{minHeight: 'auto', paddingTop: '80px', paddingBottom: '80px'}}>
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
