@@ -55,7 +55,7 @@ export default function PortfolioStudioPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
 
                         <Link href="/portfolio-studio/amanda-oliveira" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/amanda-oliveira/capa.jpg" alt="Amanda Oliveira" />
+                            <img className="w-full h-full object-contain" src="/images/studio/amanda-oliveira/capa.jpg" alt="Amanda Oliveira" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Amanda Oliveira</span>
@@ -63,7 +63,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/ana-laura-saar" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/ana-laura-saar/capa.jpg" alt="Ana Laura Saar" />
+                            <img className="w-full h-full object-contain" src="/images/studio/ana-laura-saar/capa.jpg" alt="Ana Laura Saar" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Ana Laura Saar</span>
@@ -71,7 +71,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/chai-e-dai" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/chai-e-dai/capa.jpg" alt="Chai e Dai" />
+                            <img className="w-full h-full object-contain" src="/images/studio/chai-e-dai/capa.jpg" alt="Chai e Dai" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Chai e Dai</span>
@@ -79,7 +79,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/debora-pantaglione" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/debora-pantaglione/capa.jpg" alt="Debora Pantaglione" />
+                            <img className="w-full h-full object-contain" src="/images/studio/debora-pantaglione/capa.jpg" alt="Debora Pantaglione" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Debora Pantaglione</span>
@@ -87,7 +87,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/ana-rockenbach" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/ana-rockenbach/capa.jpg" alt="Ana Rockenbach" />
+                            <img className="w-full h-full object-contain" src="/images/studio/ana-rockenbach/capa.jpg" alt="Ana Rockenbach" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Ana Rockenbach</span>
@@ -95,7 +95,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/francine-massoco" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/francine-massoco/capa.jpg" alt="Francine Massoco" />
+                            <img className="w-full h-full object-contain" src="/images/studio/francine-massoco/capa.jpg" alt="Francine Massoco" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Francine Massoco</span>
@@ -103,7 +103,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/anna-laura" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/anna-laura/capa.jpg" alt="Anna Laura" />
+                            <img className="w-full h-full object-contain" src="/images/studio/anna-laura/capa.jpg" alt="Anna Laura" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Anna Laura</span>
@@ -111,7 +111,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/gab-cruz" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/gab-cruz/capa.jpg" alt="Gab Cruz" />
+                            <img className="w-full h-full object-contain" src="/images/studio/gab-cruz/capa.jpg" alt="Gab Cruz" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Gab Cruz</span>
@@ -119,7 +119,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/arielly" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/arielly/capa.jpg" alt="Arielly" />
+                            <img className="w-full h-full object-contain" src="/images/studio/arielly/capa.jpg" alt="Arielly" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Arielly</span>
@@ -127,7 +127,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/iasmim" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/iasmim/capa.jpg" alt="Iasmim" />
+                            <img className="w-full h-full object-contain" src="/images/studio/iasmim/capa.jpg" alt="Iasmim" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Iasmim</span>
@@ -135,7 +135,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/jamile-caroline" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/jamile-caroline/capa.jpg" alt="Jamile Caroline" />
+                            <img className="w-full h-full object-contain" src="/images/studio/jamile-caroline/capa.jpg" alt="Jamile Caroline" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jamile Caroline</span>
@@ -143,7 +143,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/jessica-bittelbrun" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/jessica-bittelbrun/capa.jpg" alt="Jessica Bittelbrun" />
+                            <img className="w-full h-full object-contain" src="/images/studio/jessica-bittelbrun/capa.jpg" alt="Jessica Bittelbrun" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jessica Bittelbrun</span>
@@ -151,7 +151,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/julia-moraes" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/julia-moraes/capa.jpg" alt="Julia Moraes" />
+                            <img className="w-full h-full object-contain" src="/images/studio/julia-moraes/capa.jpg" alt="Julia Moraes" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Julia Moraes</span>
@@ -159,7 +159,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/leticia-moraes" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/leticia-moraes/capa.jpg" alt="Leticia Moraes" />
+                            <img className="w-full h-full object-contain" src="/images/studio/leticia-moraes/capa.jpg" alt="Leticia Moraes" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Leticia Moraes</span>
@@ -167,7 +167,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/maria-eduarda" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/maria-eduarda/capa.jpg" alt="Maria Eduarda" />
+                            <img className="w-full h-full object-contain" src="/images/studio/maria-eduarda/capa.jpg" alt="Maria Eduarda" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Maria Eduarda</span>
@@ -175,7 +175,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/bruna-brummer" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/bruna-brummer/capa.jpg" alt="Bruna Brummer" />
+                            <img className="w-full h-full object-contain" src="/images/studio/bruna-brummer/capa.jpg" alt="Bruna Brummer" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Bruna Brummer</span>
@@ -183,7 +183,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/iza-feser" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/iza-feser/capa.jpg" alt="Iza Feser" />
+                            <img className="w-full h-full object-contain" src="/images/studio/iza-feser/capa.jpg" alt="Iza Feser" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Iza Feser</span>
@@ -191,7 +191,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/marina-machado" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/marina-machado/capa.jpg" alt="Marina Machado" />
+                            <img className="w-full h-full object-contain" src="/images/studio/marina-machado/capa.jpg" alt="Marina Machado" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Marina Machado</span>
@@ -199,7 +199,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/nataly-silva" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/nataly-silva/capa.jpg" alt="Nataly Silva" />
+                            <img className="w-full h-full object-contain" src="/images/studio/nataly-silva/capa.jpg" alt="Nataly Silva" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Nataly Silva</span>
@@ -207,7 +207,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/patricia-marafon" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/patricia-marafon/capa.jpg" alt="Patricia Marafon" />
+                            <img className="w-full h-full object-contain" src="/images/studio/patricia-marafon/capa.jpg" alt="Patricia Marafon" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Patricia Marafon</span>
@@ -215,7 +215,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/poliana-barreto" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/poliana-barreto/capa.jpg" alt="Poliana Barreto" />
+                            <img className="w-full h-full object-contain" src="/images/studio/poliana-barreto/capa.jpg" alt="Poliana Barreto" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Poliana Barreto</span>
@@ -223,7 +223,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/sara-henriches" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/sara-henriches/capa.jpg" alt="Sara Henriches" />
+                            <img className="w-full h-full object-contain" src="/images/studio/sara-henriches/capa.jpg" alt="Sara Henriches" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Sara Henriches</span>
@@ -231,7 +231,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/vitoria-boidt" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/vitoria-boidt/capa.jpg" alt="Vitória Boidt" />
+                            <img className="w-full h-full object-contain" src="/images/studio/vitoria-boidt/capa.jpg" alt="Vitória Boidt" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Vitória Boidt</span>
@@ -239,7 +239,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/andressa-gomiero" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/andressa-gomiero/capa.jpg" alt="Andressa Gomiero" />
+                            <img className="w-full h-full object-contain" src="/images/studio/andressa-gomiero/capa.jpg" alt="Andressa Gomiero" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Andressa Gomiero</span>
@@ -247,7 +247,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/fernanda-treml" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/fernanda-treml/capa.jpg" alt="Fernanda Treml" />
+                            <img className="w-full h-full object-contain" src="/images/studio/fernanda-treml/capa.jpg" alt="Fernanda Treml" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Fernanda Treml</span>
@@ -255,7 +255,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/nairicia-caberlon" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/nairicia-caberlon/capa.jpg" alt="Naírícia Caberlon" />
+                            <img className="w-full h-full object-contain" src="/images/studio/nairicia-caberlon/capa.jpg" alt="Naírícia Caberlon" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Naírícia Caberlon</span>
@@ -263,7 +263,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/thaisi-dias" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/thaisi-dias/capa.jpg" alt="Thaisi Dias" />
+                            <img className="w-full h-full object-contain" src="/images/studio/thaisi-dias/capa.jpg" alt="Thaisi Dias" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Thaisi Dias</span>
@@ -271,7 +271,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/brenda-mattos" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/brenda-mattos/capa.jpg" alt="Brenda Mattos" />
+                            <img className="w-full h-full object-contain" src="/images/studio/brenda-mattos/capa.jpg" alt="Brenda Mattos" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Brenda Mattos</span>
@@ -279,7 +279,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/gustavo-vioto" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/gustavo-vioto/capa.jpg" alt="Gustavo Vioto" />
+                            <img className="w-full h-full object-contain" src="/images/studio/gustavo-vioto/capa.jpg" alt="Gustavo Vioto" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Gustavo Vioto</span>
@@ -287,7 +287,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/paula-assuncao" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/paula-assuncao/capa.jpg" alt="Paula Assunção" />
+                            <img className="w-full h-full object-contain" src="/images/studio/paula-assuncao/capa.jpg" alt="Paula Assunção" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Paula Assunção</span>
@@ -295,7 +295,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/carol-costa" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/carol-costa/capa.jpg" alt="Carol Costa" />
+                            <img className="w-full h-full object-contain" src="/images/studio/carol-costa/capa.jpg" alt="Carol Costa" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Carol Costa</span>
@@ -303,7 +303,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/leif-sinclar" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/leif-sinclar/capa.jpg" alt="Leif Sinclar" />
+                            <img className="w-full h-full object-contain" src="/images/studio/leif-sinclar/capa.jpg" alt="Leif Sinclar" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Leif Sinclar</span>
@@ -311,7 +311,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/rebeca-cabral" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/rebeca-cabral/capa.jpg" alt="Rebeca Cabral" />
+                            <img className="w-full h-full object-contain" src="/images/studio/rebeca-cabral/capa.jpg" alt="Rebeca Cabral" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Rebeca Cabral</span>
@@ -319,7 +319,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/cynthia-andrade" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/cynthia-andrade/capa.jpg" alt="Cynthia Andrade" />
+                            <img className="w-full h-full object-contain" src="/images/studio/cynthia-andrade/capa.jpg" alt="Cynthia Andrade" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Cynthia Andrade</span>
@@ -327,7 +327,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/maria-tereza" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/maria-tereza/capa.jpg" alt="Maria Tereza" />
+                            <img className="w-full h-full object-contain" src="/images/studio/maria-tereza/capa.jpg" alt="Maria Tereza" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Maria Tereza</span>
@@ -335,7 +335,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/samara-samme" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/samara-samme/capa.jpg" alt="Samara Samme" />
+                            <img className="w-full h-full object-contain" src="/images/studio/samara-samme/capa.jpg" alt="Samara Samme" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Samara Samme</span>
@@ -343,7 +343,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/deise-smaniotto" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/deise-smaniotto/capa.jpg" alt="Deise Smaniotto" />
+                            <img className="w-full h-full object-contain" src="/images/studio/deise-smaniotto/capa.jpg" alt="Deise Smaniotto" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Deise Smaniotto</span>
@@ -351,7 +351,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/marjorie-rossi" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/marjorie-rossi/capa.jpg" alt="Marjorie Rossi" />
+                            <img className="w-full h-full object-contain" src="/images/studio/marjorie-rossi/capa.jpg" alt="Marjorie Rossi" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Marjorie Rossi</span>
@@ -359,7 +359,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/simonny" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/simonny/capa.jpg" alt="Simonny" />
+                            <img className="w-full h-full object-contain" src="/images/studio/simonny/capa.jpg" alt="Simonny" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Simonny</span>
@@ -367,7 +367,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/fernanda-costas" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/fernanda-costas/capa.jpg" alt="Fernanda Costas" />
+                            <img className="w-full h-full object-contain" src="/images/studio/fernanda-costas/capa.jpg" alt="Fernanda Costas" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Fernanda Costas</span>
@@ -375,7 +375,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/mileide-mihaile" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/mileide-mihaile/capa.jpg" alt="Mileide Mihaile" />
+                            <img className="w-full h-full object-contain" src="/images/studio/mileide-mihaile/capa.jpg" alt="Mileide Mihaile" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Mileide Mihaile</span>
@@ -383,7 +383,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/talita-dalbo" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="/images/studio/talita-dalbo/capa.jpg" alt="Talita Dalbó" />
+                            <img className="w-full h-full object-contain" src="/images/studio/talita-dalbo/capa.jpg" alt="Talita Dalbó" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Talita Dalbó</span>
