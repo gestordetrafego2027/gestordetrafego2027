@@ -59,11 +59,19 @@ export default function PortfolioStudioPage() {
                 .project-overlay h4 { color: #000; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
                 .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
                 .gallery-item .overlay { 
-                    opacity: 0; 
-                    transition: opacity 0.4s ease; 
+                    position: absolute;
+                    inset: 0;
+                    opacity: 0 !important;
+                    transition: opacity 0.4s ease !important;
                     background: rgba(255,255,255,1) !important; 
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
                 }
-                .gallery-item:hover .overlay { opacity: 1; }
+                .gallery-item:hover .overlay { 
+                    opacity: 1 !important; 
+                }
             `}} />
 
             <Header />
