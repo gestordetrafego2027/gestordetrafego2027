@@ -6,6 +6,10 @@ import Header from '@/app/components/Header'
 
 export default function StudioPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
+    const [currentGallerySlide, setCurrentGallerySlide] = useState(0)
+
+    const nextGallerySlide = () => setCurrentGallerySlide(prev => prev === 0 ? 1 : 0)
+    const prevGallerySlide = () => setCurrentGallerySlide(prev => prev === 1 ? 0 : 1)
 
     const testimonials = [
         {
@@ -236,35 +240,78 @@ export default function StudioPage() {
                         <h2 className="font-headline text-3xl text-black">Books. Ensaios. Coberturas.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
-                    <div className="columns-gallery-container" style={{ height: '80vh' }}>
-                        <Link className="gallery-column project-item group" href="/portfolio-studio/projeto-essencia">
-                            <img alt="Project 1" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra"/>
-                            <div className="project-overlay">
-                                <span>Direção de Imagem</span>
-                                <h4>Projeto Essência</h4>
-                            </div>
-                        </Link>
-                        <Link className="gallery-column project-item group" href="/portfolio-studio/movimento-urbano">
-                            <img alt="Project 2" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB"/>
-                            <div className="project-overlay">
-                                <span>Direção Criativa</span>
-                                <h4>Movimento Urbano</h4>
-                            </div>
-                        </Link>
-                        <Link className="gallery-column project-item group" href="/portfolio-studio/alfaiataria-moderna">
-                            <img alt="Project 3" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5"/>
-                            <div className="project-overlay">
-                                <span>Posicionamento</span>
-                                <h4>Alfaiataria Moderna</h4>
-                            </div>
-                        </Link>
-                        <Link className="gallery-column project-item group" href="/portfolio-studio/horizonte">
-                            <img alt="Project 4" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtDNB7cdME0kaLamJozRvfkiJws6GrvrXBnE5QRIkxB2ppxix4CG2r_LeyGl5XP-xuzQILDQ9-6ZIMjAYUHBdzn-iH8v6Lxpa6zwjO6xR4CnSkRVonntUc7FphscJZCyOhoEd8rxJtVVZ2nPrj287s6BVqdbOQ52N9vhkG5IWwtk5vxPNnArouHvfxTGaIBJYgAcsGk1qElyInif8vlUCMxZkTDnPAmv_bx8gd_oQ9L1BxaSnKbCHQ8jqgLy-kf1WgkTEZeSrrMLR"/>
-                            <div className="project-overlay">
-                                <span>Produção de Imagem</span>
-                                <h4>Horizonte</h4>
-                            </div>
-                        </Link>
+                    <div className="relative w-full group overflow-hidden" style={{ height: '80vh' }}>
+                        <div className="columns-gallery-container w-[200%] h-full flex" style={{ transform: `translateX(-${currentGallerySlide * 50}%)`, transition: 'transform 0.5s ease', width: '200%' }}>
+                            {/* Images 1 to 4 */}
+                            <Link className="gallery-column project-item group" href="/portfolio-studio/projeto-essencia" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
+                                <img alt="Project 1" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra"/>
+                                <div className="project-overlay">
+                                    <span>Direção de Imagem</span>
+                                    <h4>Projeto Essência</h4>
+                                </div>
+                            </Link>
+                            <Link className="gallery-column project-item group" href="/portfolio-studio/movimento-urbano" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
+                                <img alt="Project 2" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB"/>
+                                <div className="project-overlay">
+                                    <span>Direção Criativa</span>
+                                    <h4>Movimento Urbano</h4>
+                                </div>
+                            </Link>
+                            <Link className="gallery-column project-item group" href="/portfolio-studio/alfaiataria-moderna" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
+                                <img alt="Project 3" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5"/>
+                                <div className="project-overlay">
+                                    <span>Posicionamento</span>
+                                    <h4>Alfaiataria Moderna</h4>
+                                </div>
+                            </Link>
+                            <Link className="gallery-column project-item group" href="/portfolio-studio/horizonte" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
+                                <img alt="Project 4" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtDNB7cdME0kaLamJozRvfkiJws6GrvrXBnE5QRIkxB2ppxix4CG2r_LeyGl5XP-xuzQILDQ9-6ZIMjAYUHBdzn-iH8v6Lxpa6zwjO6xR4CnSkRVonntUc7FphscJZCyOhoEd8rxJtVVZ2nPrj287s6BVqdbOQ52N9vhkG5IWwtk5vxPNnArouHvfxTGaIBJYgAcsGk1qElyInif8vlUCMxZkTDnPAmv_bx8gd_oQ9L1BxaSnKbCHQ8jqgLy-kf1WgkTEZeSrrMLR"/>
+                                <div className="project-overlay">
+                                    <span>Produção de Imagem</span>
+                                    <h4>Horizonte</h4>
+                                </div>
+                            </Link>
+                            
+                            {/* Images 5 to 8 (Duplicated) */}
+                            <Link className="gallery-column project-item group" href="/portfolio-studio/projeto-essencia" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
+                                <img alt="Project 5" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra"/>
+                                <div className="project-overlay">
+                                    <span>Direção de Imagem</span>
+                                    <h4>Projeto Essência</h4>
+                                </div>
+                            </Link>
+                            <Link className="gallery-column project-item group" href="/portfolio-studio/movimento-urbano" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
+                                <img alt="Project 6" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB"/>
+                                <div className="project-overlay">
+                                    <span>Direção Criativa</span>
+                                    <h4>Movimento Urbano</h4>
+                                </div>
+                            </Link>
+                            <Link className="gallery-column project-item group" href="/portfolio-studio/alfaiataria-moderna" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
+                                <img alt="Project 7" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5"/>
+                                <div className="project-overlay">
+                                    <span>Posicionamento</span>
+                                    <h4>Alfaiataria Moderna</h4>
+                                </div>
+                            </Link>
+                            <Link className="gallery-column project-item group" href="/portfolio-studio/horizonte" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
+                                <img alt="Project 8" className="column-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtDNB7cdME0kaLamJozRvfkiJws6GrvrXBnE5QRIkxB2ppxix4CG2r_LeyGl5XP-xuzQILDQ9-6ZIMjAYUHBdzn-iH8v6Lxpa6zwjO6xR4CnSkRVonntUc7FphscJZCyOhoEd8rxJtVVZ2nPrj287s6BVqdbOQ52N9vhkG5IWwtk5vxPNnArouHvfxTGaIBJYgAcsGk1qElyInif8vlUCMxZkTDnPAmv_bx8gd_oQ9L1BxaSnKbCHQ8jqgLy-kf1WgkTEZeSrrMLR"/>
+                                <div className="project-overlay">
+                                    <span>Produção de Imagem</span>
+                                    <h4>Horizonte</h4>
+                                </div>
+                            </Link>
+                        </div>
+                        <button onClick={prevGallerySlide} className="absolute left-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12 rounded-full border-[0.5px] border-white/50 text-white bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all hover:bg-black/40">
+                            <svg fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button onClick={nextGallerySlide} className="absolute right-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12 rounded-full border-[0.5px] border-white/50 text-white bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all hover:bg-black/40">
+                            <svg fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </section>
                 <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
