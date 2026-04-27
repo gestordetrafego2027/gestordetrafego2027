@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link';
+import Header from '@/app/components/Header';
 
 export default function PortfolioStudioPage() {
     return (
@@ -59,21 +60,7 @@ export default function PortfolioStudioPage() {
                 .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
             `}} />
 
-            <header style={{position: 'fixed', top: 0, width: '100%', zIndex: 50, background: 'white', borderBottom: '0.5px solid #e0e0e0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 48px'}}>
-                <div style={{fontFamily: 'Raleway, sans-serif', fontWeight: 700, fontSize: '18px', color: '#000', letterSpacing: '-0.05em'}}>HOUSE MAZZUTTI</div>
-                <nav style={{display: 'flex', gap: '32px'}}>
-                    <Link href="/" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>HOME</Link>
-                    <Link href="/about" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>SOBRE</Link>
-                    <Link href="/studio" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>STUDIO</Link>
-                    <Link href="/produtora" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>PRODUTORA</Link>
-                    <Link href="/agencia" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>AGÊNCIA</Link>
-                    <Link href="/angelo" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>ANGELO</Link>
-                    <Link href="/comunidade" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>COMUNIDADE</Link>
-                    <Link href="/portfolio" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>PORTFÓLIO</Link>
-                    <Link href="/blog" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>BLOG</Link>
-                    <Link href="/contato" style={{fontFamily: 'Raleway, sans-serif', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#000', textDecoration: 'none'}}>CONTATO</Link>
-                </nav>
-            </header>
+            <Header />
             <main className="min-h-screen">
                 <section className="columns-gallery-container">
                     <Link className="gallery-column project-item group" href="/portfolio-studio/projeto-essencia">

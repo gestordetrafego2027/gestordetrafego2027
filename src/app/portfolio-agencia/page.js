@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Header from '@/app/components/Header';
 
 export default function PortfolioAgenciaPage() {
     return (
@@ -34,27 +35,7 @@ export default function PortfolioAgenciaPage() {
             `}} />
 
             {/* 1. HEADER (TopNavBar) */}
-            <nav className="fixed top-0 w-full z-50 rounded-none bg-white border-b-[0.5px] border-[#e0e0e0]">
-                <div className="flex justify-between items-center px-12 py-6 w-full">
-                    <Link className="text-xl font-newsreader italic text-black uppercase tracking-tighter" href="/">HOUSE MAZZUTTI</Link>
-                    <div className="hidden md:flex items-center gap-6">
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 hover:text-black transition-colors duration-300" href="/">HOME</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 hover:text-black transition-colors duration-300" href="/about">SOBRE</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 hover:text-black transition-colors duration-300" href="/studio">STUDIO</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 hover:text-black transition-colors duration-300" href="/produtora">PRODUTORA</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-black font-bold border-b border-black" href="/agencia">AGÊNCIA</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 hover:text-black transition-colors duration-300" href="/angelo">ANGELO</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 hover:text-black transition-colors duration-300" href="/comunidade">COMUNIDADE</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-black font-bold border-b border-black" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 hover:text-black transition-colors duration-300" href="/blog">BLOG</Link>
-                        <Link className="font-raleway text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 hover:text-black transition-colors duration-300" href="/contato">CONTATO</Link>
-                    </div>
-                    <div className="md:hidden">
-                        <span className="material-symbols-outlined text-black">menu</span>
-                    </div>
-                </div>
-                <div className="w-full h-[0.5px] bg-[#f0f0f0]"></div>
-            </nav>
+            <Header />
 
             <main className="pt-[92px]">
                 {/* 2. TITLE BLOCK */}

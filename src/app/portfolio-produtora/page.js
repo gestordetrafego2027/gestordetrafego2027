@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Header from '@/app/components/Header';
 
 export default function PortfolioProdutoraPage() {
   return (
@@ -78,24 +79,7 @@ export default function PortfolioProdutoraPage() {
     `
       }} />
 
-      <header className="fixed top-0 w-full z-50 bg-white">
-        <div className="flex justify-between items-center px-[48px] py-[20px] border-b-[0.5px] border-[#e0e0e0]">
-          <div className="text-2xl font-headline italic tracking-tighter text-zinc-900">HOUSE MAZZUTTI</div>
-          <nav className="hidden lg:flex gap-6">
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/">HOME</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/about">SOBRE</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/studio">STUDIO</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/produtora">PRODUTORA</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/agencia">AGÊNCIA</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/angelo">ANGELO</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/comunidade">COMUNIDADE</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/portfolio">PORTFÓLIO</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/blog">BLOG</Link>
-            <Link className="font-label text-[10px] uppercase tracking-[0.2em] text-zinc-900 hover:opacity-70 transition-opacity" href="/contato">CONTATO</Link>
-          </nav>
-        </div>
-        <div className="mt-[2px] border-b-[0.5px] border-[#f0f0f0] w-full"></div>
-      </header>
+      <Header />
       
       <div className="page-title-bar">
         <span className="page-title">PORTFÓLIO PRODUTORA</span>

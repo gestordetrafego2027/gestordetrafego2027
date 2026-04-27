@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import Header from '@/app/components/Header';
 
 export default function AnimatedContent() {
     useEffect(() => {
@@ -69,26 +70,7 @@ export default function AnimatedContent() {
                 }
             `}} />
 
-            <header className="static w-full bg-transparent" style={{borderBottom: '0.5px solid #e0e0e0'}}>
-                <nav className="flex justify-between items-center w-full px-8 py-6 max-w-full">
-                    <Link className="font-newsreader text-xl font-semibold tracking-widest text-black no-underline" href="/">HOUSE MAZZUTTI</Link>
-                    <div className="hidden lg:flex items-center space-x-6">
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/">HOME</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/about">SOBRE</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/studio">STUDIO</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/produtora">PRODUTORA</Link>
-                        <Link className="text-black border-b border-black pb-1 font-inter text-[10px] uppercase tracking-[0.1em]" href="/agencia">AGÊNCIA</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/angelo">ANGELO</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/comunidade">COMUNIDADE</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/blog">BLOG</Link>
-                        <Link className="text-black hover:opacity-70 transition-opacity font-inter text-[10px] uppercase tracking-[0.1em]" href="/contato">CONTATO</Link>
-                    </div>
-                    <div className="lg:hidden">
-                        <span className="material-symbols-outlined text-black">menu</span>
-                    </div>
-                </nav>
-            </header>
+            <Header />
 
             <main className="pt-16 pb-24 px-8 max-w-[1600px] mx-auto">
                 <div className="flex flex-col lg:flex-row gap-16">
