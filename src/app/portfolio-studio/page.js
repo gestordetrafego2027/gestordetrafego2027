@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
 
 export default function PortfolioStudioPage() {
     return (
@@ -58,11 +59,15 @@ export default function PortfolioStudioPage() {
                 }
                 .project-overlay h4 { color: #000; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
                 .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
-                .gallery-item .overlay { opacity: 0; transition: opacity 0.4s ease; background: rgba(255,255,255,0.92); }
+                .gallery-item .overlay { opacity: 0; transition: opacity 0.4s ease; background: rgba(255,255,255,1) !important; }
                 .gallery-item:hover .overlay { opacity: 1; }
             `}} />
 
             <Header />
+            <div style={{padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '0.5px solid #e0e0e0'}}>
+              <span style={{fontFamily: 'RocGrotesk', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase'}}>PORTFÓLIO STUDIO</span>
+              <span style={{fontFamily: 'RocGrotesk', fontSize: '11px', color: '#888'}}>Home / Portfólio / Studio</span>
+            </div>
             <style>{`
               header { background: #fff !important; }
               header a, header div, header span { color: #000 !important; }
@@ -115,6 +120,7 @@ export default function PortfolioStudioPage() {
                     </div>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }
