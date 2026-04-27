@@ -1,139 +1,139 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
 import Header from '@/app/components/Header';
 
 export default function PortfolioStudioPage() {
     return (
-        <div className="bg-white text-on-surface font-body selection:bg-primary selection:text-on-primary">
-            <style dangerouslySetInnerHTML={{__html: `
-                .material-symbols-outlined {
-                    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-                    font-size: 20px;
+        <div className="bg-white text-on-surface selection:bg-black selection:text-white min-h-screen">
+            <style dangerouslySetInnerHTML={{ __html: `
+                .font-newsreader { font-family: 'Newsreader', serif; font-style: italic; }
+                .font-raleway { font-family: 'Raleway', sans-serif; }
+                .font-manrope { font-family: 'Manrope', sans-serif; }
+                
+                /* Custom image hover transition for the gallery */
+                .gallery-item {
+                    min-height: 200px;
+                    aspect-ratio: 1 / 1;
                 }
-                .columns-gallery-container {
-                    height: 100vh;
-                    display: flex;
-                    width: 100%;
-                    overflow: hidden;
-                    background-color: #ffffff;
+                .gallery-item .overlay {
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                    background-color: rgba(255, 255, 255, 1) !important;
                 }
-                .gallery-column {
-                    flex: 1;
-                    height: 100%;
-                    position: relative;
-                    overflow: hidden;
-                    border-right: 1px solid rgba(0, 0, 0, 0.05);
+                .gallery-item:hover .overlay {
+                    opacity: 1;
                 }
-                .gallery-column:last-child {
-                    border-right: none;
-                }
-                .column-image {
-                    width: 100%;
-                    height: 100%;
+                .gallery-item img {
+                    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+                    min-height: 200px;
                     object-fit: cover;
                 }
-                .project-item { position: relative; overflow: hidden; cursor: pointer; }
-                .project-overlay { 
-                    position: absolute; 
-                    top: 0; 
-                    left: 0; 
-                    width: 100%; 
-                    height: 100%; 
-                    background: rgba(255,255,255,1) !important; 
-                    color: #000 !important;
-                    opacity: 0;
-                    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-                    display: flex; 
-                    flex-direction: column; 
-                    align-items: center; 
-                    justify-content: center; 
-                    text-align: center;
-                    padding: 2rem;
-                    z-index: 10;
-                }
-                .gallery-column:hover .project-overlay { 
-                    opacity: 1; 
-                    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-                }
-                .project-overlay h4 { color: #000; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
-                .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
-                .gallery-item .overlay { 
-                    position: absolute;
-                    inset: 0;
-                    opacity: 0 !important;
-                    transition: opacity 0.4s ease !important;
-                    background: rgba(255,255,255,1) !important; 
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .gallery-item:hover .overlay { 
-                    opacity: 1 !important; 
+                .gallery-item:hover img {
+                    transform: scale(1.02);
                 }
             `}} />
 
+            {/* 1. HEADER (TopNavBar) */}
             <Header />
-            <div style={{padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '0.5px solid #e0e0e0'}}>
-              <span style={{fontFamily: 'RocGrotesk', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase'}}>PORTFÓLIO STUDIO</span>
-              <span style={{fontFamily: 'RocGrotesk', fontSize: '11px', color: '#888'}}>Home / Portfólio / Studio</span>
-            </div>
             <style>{`
               header { background: #fff !important; }
               header a, header div, header span { color: #000 !important; }
             `}</style>
-            <main className="min-h-screen" style={{ paddingTop: '80px' }}>
+
+            <main className="pt-[92px]" style={{ paddingTop: '80px' }}>
+                {/* 2. TITLE BLOCK */}
+                <section className="border-y-[0.5px] border-[#e0e0e0] px-[40px] py-[28px] bg-white flex justify-between items-center">
+                    <h1 className="font-raleway text-[11px] uppercase tracking-[0.2em] text-black">PORTFÓLIO STUDIO</h1>
+                    <nav className="font-newsreader text-[16px] italic text-[#5f5e5e] pr-[120px]">
+                        Home / Portfólio / Studio
+                    </nav>
+                </section>
+
+                {/* 3. GALLERY */}
                 <section className="bg-white w-full py-[16px] px-[40px]">
+                    {/* Grid Rows Construction */}
                     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
+                        {/* ROW 1 (Images 1-3) */}
                         <Link href="/portfolio-studio/projeto-essencia" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxXFX7iKpq0zTawLFzSng94FTqC8QmssH8UIMx6iZPuEIeFFimi1DVlCzdNyAx-7ZzfPyqfr0PD6Y1do7BO7upE9uT3z0p7MEC9gOT_-QcmR7D7n9ILiUC72Uk3pncnUI-_utLLZq5O5bw8uWL8Uhc81cOJJrRI8pIlDbC50zmv068KM36T4yaevUGEelVmUiACfma2Mp-Jji656PY9miFy3wYlgOE1SMbeKRGv64DJYBquV2fYfxpF_O5NEfaOEoodNYyOVGYbra" alt="Projeto Essência" />
+                            <img className="w-full h-full object-cover" data-alt="minimalist architectural facade with sharp lines and shadows in black and white high contrast style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCztuNFdb8shwCRAv3Bsu4SLDMCrXwPCScq2UmxBq-ilHuM4g5pitixup6fwmEOljq9k-mL5gCmccZTIN6tMoXAKowDI3FfnecMoRJncD8aPO21PtLQ-n_VMm3WKjykHh6UHjl1HJ2D-zZpSw-L3NFHi8mJnADexpAXXffFhEmv86p2joH--zEyszj-rYgHWXQlvs6bJLCywkiYOuUCUOjppddkoBIFgiwlvcMt1twGd9BFYMyiTfjpLliZvBSR8oaXu2zFDxV23wYC" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO DE IMAGEM</span>
-                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Projeto Essência</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Projeto Essência</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-studio/movimento-urbano" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB" alt="Movimento Urbano" />
+                            <img className="w-full h-full object-cover" data-alt="close-up of premium textured paper stationery with embossed logo and elegant typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaVBgQgFKATgBv7IAzqL9qM4Z0tOA45C0RlXRtRe1despK8uCFmb6ABwY_fMH4NutVCsomWLpCHenS7G0evvSm03iraBQkv92ihmyxAYExwZaNV4uhl-VtIdGueKoqVA-k1k4IUb7ScMPVYMHvSKaNKhR4WKGJu14xSbY1cRXTS5OCGhMtsXXdyJWO510D4M-DidHUk90vSyXEOCg0EHsxMkdOGiO7P8ThFHyO-MKK2ebWOr10Cta-sW_kk2vX5cHN-of4egs8cHDy" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO CRIATIVA</span>
-                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Movimento Urbano</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Movimento Urbano</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-studio/alfaiataria-moderna" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5" alt="Alfaiataria Moderna" />
+                            <img className="w-full h-full object-cover" data-alt="modern interior design with concrete walls and a single designer chair in dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Y1aeRxCa2tGoLtb54iMboTpZUIQT_DGvvGANlOgw1_u7bPMiI3V9FsKiAeHPFdfPYURjyAAWg9t71txePJ1qJ0Lpo4BNxYoRPiLk1VuNiC3PvHreg9tsE1wFIK1FqltqL7f7OyX5LWQAJYYpGCHxfqxi-paF4BBi7-JXKpAE9It2vJ6OdmGdct0Uv8LRI3_XUTyhqS2fZOb1iYrvaiW4KqNrU3kvYcNtENEmWxVNo9G8zUhSxhN1HWfWOhvjG5-MbaGn9XDws9qX" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">POSICIONAMENTO</span>
-                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Alfaiataria Moderna</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Alfaiataria Moderna</span>
                             </div>
                         </Link>
+
+                        {/* ROW 2 (Images 4-6) */}
                         <Link href="/portfolio-studio/horizonte" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtDNB7cdME0kaLamJozRvfkiJws6GrvrXBnE5QRIkxB2ppxix4CG2r_LeyGl5XP-xuzQILDQ9-6ZIMjAYUHBdzn-iH8v6Lxpa6zwjO6xR4CnSkRVonntUc7FphscJZCyOhoEd8rxJtVVZ2nPrj287s6BVqdbOQ52N9vhkG5IWwtk5vxPNnArouHvfxTGaIBJYgAcsGk1qElyInif8vlUCMxZkTDnPAmv_bx8gd_oQ9L1BxaSnKbCHQ8jqgLy-kf1WgkTEZeSrrMLR" alt="Horizonte" />
+                            <img className="w-full h-full object-cover" data-alt="high fashion editorial shot of a model in monochromatic avant-garde clothing in a white studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAOb3woBBAoEhHQeiAQ-xxW3hLimXSW6porlTujq1nAdts17Dv-ZkWZKPDSApNbCWqc6t5c935JpSK-3awrXuStAd43B2ZYIYekyK6_JNupytAQpKYWVA5Hz34e-rgYm_KFcAcEGEqw6b8WIX6suAf_db6WfDZ5rR_LaYDNwpR2YkD-BQA_8gH2CHI3KbSCszqAugjfpPs_sQXib63AaPqk1F_dqgroQaAFh1YM8RRRyZ3k_FMHagcvQnYGnlHGv33p8NAzVYw6d6u" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">PRODUÇÃO DE IMAGEM</span>
-                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Horizonte</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Horizonte</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-studio/projeto-essencia" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeu4Q08taagUiEU0oRy_WfWhic5_qLyLr1nXiBqhc49nYHLtgfzpzEknKHC8c18ICqtqLpI81ZgZeonbUv0whZLdOv-wFF7-x62Kpc8fI3cLDkDInEk0QTvLeB7F2siMYzg5AlMqvEHYdV9DOMr5l9PhPHywbNjxQfqRb6RJISWTCL3R1yQdE1mz2ozPE26wr0Ij3x5GEULlpnWjhfOYPIb-guSnqGxsDWX_tlCcse-g3jZRoMhAZDIh0TzUEbKyPeee9Z9TOUIcB" alt="Projeto Essência 2" />
+                            <img className="w-full h-full object-cover" data-alt="top view of a minimal desk setup with a black notebook and designer pen on white marble" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACmVoRk5Gn_KW3DsDtr9XrS09UwwrCCEAbGicvAY27tenrMCK6Tgkd7ILsdxZMnzbaN-r77n5QPoKJzdBb5RnYGyxDFto1Ux2Ct0VESBaHSxCYwfSII07n2jPyg9NdK1cA18OVokoJFHNU9yNpDCbCg9akJpv70byTZgpWtwE4LBz78v4CWbSRNBfm7ibYSopMdXpOh583DhKfKGbK3BQHzKrJ7YPTtCBXuKdPpJI5oEu86xfD7Pc5VXezBgxXn5AIOVBu3_jHV59J" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO DE IMAGEM</span>
-                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Projeto Essência</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Projeto Essência</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-studio/movimento-urbano" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQL0BMQnfMGPt4hTwlz-SRUMnYZY4U5rG1WC6bylLDfghCKoScI3rtpRwlyty_5PL09Vbt5K5tjv2Pp4-F6DaT4vQQn32NU6RVnbTca6MvLSdJ3P2IaWqPQ8i_Sh1qc8zHS_87TVXHIWybRC-X8TV2IVZaLxtF8jU__u11uNp7rGD1OLQvEDOlyB1tqw8HHtm4tgB8JIsNQbhQqbg5JFrpCNdqI3FMcHyTCBsrPcfvRtxA_GMi4_VS4HK8umC5pps_0sPIO8q68n5" alt="Movimento Urbano 2" />
+                            <img className="w-full h-full object-cover" data-alt="abstract composition of shadows on a clean white wall creating geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT_2FMLfjs_zieDjYfygyjTNXZkZXayhW7NvUIf-CijoxSB23RvfKzilGeq2Sd2E5W8IZTKOFEGRkSOR-3MmbXOV260R7qdonIerI02IALz_UVIetf5BGLasaHz4VDyk4i0lYwxoviqSTvvZ_GS8sMZaZb4Nb888pWNU6iCyRECkI4B02pLGHTniF-Ev2roD7s9QKLQzF-nTXO65XDlp9OvJBuSnHJCEe3THSH1hxVkLWXdQfRMKfVSOZiXyG8JXTPUf--Bo4myuaw" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO CRIATIVA</span>
-                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Movimento Urbano</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Movimento Urbano</span>
+                            </div>
+                        </Link>
+
+                        {/* ROW 3 (Images 7-9) */}
+                        <Link href="/portfolio-studio/alfaiataria-moderna" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" data-alt="luxury perfume bottle on a glass surface with soft ethereal light and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvL81wIHgPu60U2O_M_riCy6TouA9EdeP4x7WdZxE9eXtp_G8kYsC1_2ghJAzVuZoDw-hkTdGWkU9IkdvmWQuWs0Va6RGxPN8D2XrE9pIX1Vznjl-hd9l0wjWU_J1ea1cXmfqPSE2LnGcmnUk36WgXlPf8q8u9O9Sd62fUeMg59KbN-kyBypj03GGwsb8LH96-bBLAazlcNRxh2w43j2VetfsXOu3EWUzuduXMjYVeyGLoH_RgDYiASoZ5KsZ1MPJRCo1eBlRS3Bdx" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">POSICIONAMENTO</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Alfaiataria Moderna</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-studio/horizonte" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" data-alt="detail of a textured architectural model made of white plaster and wood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi_UzmmY_T7ExfK1HnItZKNUYVjpMq3kKh-EgFVfDW_bwrKXQulS_R5Rn8LD-C3a9-7p19nJZaX4-4cNvw6UR2XeoNpMMyg_3RjeGXAxmWrR_tiCsNfFu_iJdZ8jIfcFKLG3lB__AEDjwER7pXsWLazFdRRi7boFbvz_Myv-LQbwu3-7becUO6JGgMX-NFaY39UPlLk42ef6JkXGifWVW93XJhQx0a3o6tnKck4fiKVbKMEpvA7qb2ues5XrvHGUfTmluMNAcrFnxn" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">PRODUÇÃO DE IMAGEM</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Horizonte</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-studio/projeto-essencia" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
+                            <img className="w-full h-full object-cover" data-alt="minimalist landscape of sand dunes in soft morning light with clean horizons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM799IOqRKKO04q9dNmIhjibtvzN8zrSCciBxHxAeeQbniWjYP2sPDgoOS4HUBARNrefLv11vIwtYfYS_SxJCrNpx4yk_wf9IZ9c-5tTESwvloP8FWo0AnGYT16dcctnZRKJNQAipKJR4ZAvwdPC7mhOeDSg8dkTM0Xwf2wmefxuLF_Z7JU1HM9SWHE0L-gbFiAs7m9oXBqMW1Jc9O9RYvxLQjUk4Zii3lNqO2NJIPBUpXE5-4AYcPK2qf943sjYWoz2_Bah08_uZf" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">DIREÇÃO DE IMAGEM</span>
+                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Projeto Essência</span>
                             </div>
                         </Link>
                     </div>
                 </section>
             </main>
-            <footer style={{borderTop: '0.5px solid #e0e0e0', padding: '40px 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-              <span style={{fontFamily: 'RocGrotesk', fontSize: '11px', letterSpacing: '0.1em', color: '#888'}}>© 2025 House Mazzutti</span>
-              <span style={{fontFamily: 'RocGrotesk', fontSize: '11px', letterSpacing: '0.1em', color: '#888'}}>Todos os direitos reservados</span>
+
+            {/* 4. FOOTER */}
+            <footer className="bg-[#0a0a0a] w-full flex justify-between items-center px-[48px] py-[32px] text-white">
+                <div className="font-newsreader italic text-lg text-white">HOUSE MAZZUTTI</div>
+                <div className="flex gap-8 items-center">
+                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="#">INSTAGRAM</Link>
+                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="#">LINKEDIN</Link>
+                </div>
+                <div className="font-manrope text-[10px] uppercase tracking-wider text-[#333]">Copyright © 2025 House Mazzutti</div>
             </footer>
         </div>
     );
