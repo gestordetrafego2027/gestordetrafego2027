@@ -39,10 +39,10 @@ export default function PortfolioStudioPage() {
                     left: 0; 
                     width: 100%; 
                     height: 100%; 
-                    background: rgba(255,255,255,0.92) !important; 
+                    background: rgba(255,255,255,1) !important; 
                     color: #000 !important;
                     opacity: 0;
-                    transition: opacity 0.4s ease; 
+                    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
                     display: flex; 
                     flex-direction: column; 
                     align-items: center; 
@@ -51,7 +51,10 @@ export default function PortfolioStudioPage() {
                     padding: 2rem;
                     z-index: 10;
                 }
-                .gallery-column:hover .project-overlay { opacity: 1; }
+                .gallery-column:hover .project-overlay { 
+                    opacity: 1; 
+                    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+                }
                 .project-overlay h4 { color: #000; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
                 .project-overlay span { color: #000; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
             `}} />
