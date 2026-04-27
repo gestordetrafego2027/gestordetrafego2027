@@ -85,7 +85,7 @@ export default function PortfolioProdutoraPage() {
         header a, header div, header span { color: #000 !important; }
       `}</style>
       
-      <div className="page-title-bar" style={{ paddingTop: '120px' }}>
+      <div className="page-title-bar" style={{ paddingTop: '80px' }}>
         <span className="page-title">PORTFÓLIO PRODUTORA</span>
         <span className="breadcrumb">Home / Portfólio / Produtora</span>
       </div>

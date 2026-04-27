@@ -71,8 +71,12 @@ export default function ProjetoProdutoraPage() {
             `}} />
 
             <Header />
+            <style>{`
+              header { background: #fff !important; border-bottom: 0.5px solid #e0e0e0 !important; }
+              header a, header div, header span { color: #000 !important; }
+            `}</style>
 
-            <main className="pt-16 pb-24 px-8 max-w-[1600px] mx-auto">
+            <main className="pt-16 pb-24 px-8 max-w-[1600px] mx-auto" style={{ paddingTop: '80px' }}>
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
