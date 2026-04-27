@@ -190,58 +190,7 @@ export default function ProdutoraPage() {
                         </button>
                     </div>
                 </section>
-                {/* Section 1: Grid de Imagens */}
-                <section className="bg-white pt-16 pb-12 mx-auto" style={{ maxWidth: "95vw" }}>
-                    <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PORTFOLIO PRODUTORA</span>
-                        <h2 className="font-headline text-3xl text-black">PUBLICIDADE - CONTENT MKT - SET DESIGN</h2>
-                        <div className="line-divider mt-6 text-black"></div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Cinema camera silhouette" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2g_W6V8_54y_wl4wNVTKKVKCOpBDnKyZk6BpUeQX4Pmxi9_0PQjAcsE-i0Jst6J978iPC0wXGhVlUFESwHZs5TCCjT2nA1AUxQFDv6EAyQOIdQJvDIm-R8_KWVi6K5gc-Y_B-S9TVyJ3edBmqb3QEwn41-UybUIoVWi1h1jl67BScFL5S22V5kf3jnmeYelv2wO0eyudpQyli4oQxSWkzhxmtxWQCpqfJasoSa8aIeFWuBRa4IoAKh2LKERYocrlIiV7EgvFYYew" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Campanha Brand Identity</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Produção Audiovisual</p>
-                            </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="100" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Director working on set" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRMDMKmUwLGwsouoaA7vjdod3kTqWELL3b1zowH4gDqcpICu6WNGz5Fq9wuhf0SGFf_G8JSHBuAY7KwYE6G8y7IUWjZoRy_GVxj9jODc0pmn2Liqg2LRNrpiRy83NLchgjQCNEdq3wuEBHikGsuQ-NhvlYRnsb4kZIHRL3O1EtvTv11LxL0ZvsRhBZmf9P5xTPjTPcipcObCTTgP04bS5gb6EC2wt-dCUus1MZMtbdZjdkL_Vb-_u08BpGcIwnpycHJswr3f9UXpg" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Narrativa Visual</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Direção Criativa</p>
-                            </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Professional lighting equipment" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT0pOVXqBESHOzRNU1hI6FPj_bo47wZRS9PqIj_Aup9mJVy3CTwLKLv08oZV5l0o7-AvpA7tGKDmXwXv0zqPTpmdysSKFZdriDagO8Wq3wuhdAZbHa6qn3f59eXrQUWGfQLp3Ryyxpmd1KigMIq2n2kVuANmmQDqhgbp0eeBkR3C91iVQry8ZYTCe01wZOoQfx7XIZVD1iR-dv0zQxwbaM6lczztTK6XRP_D9tpr5YSkh4gY0peH0NhxvU4_BXefXaLpCDOfV7MlY" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Lançamento Estratégico</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Execução com Direção</p>
-                            </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="0" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Action scene filming" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVJivpJ0VnE6CHpWpnIjrbbpiXTi5Poa8jvE3JumOJCHEna0D5Q6oCjJUdHd7ot8_bthWRL5SoEDyULzMLel1P9vtmUjWwqefSv4bd9yK2fWYe1ZlT6nh3IWG9wjRaQosD6Utm1Ig9ahn9DKRMLN8cy610DnLxz80now3DGSbxkysNEo7rNPEF9Miw2ex16HyF_xHkeroob3axAgyrT_clXCpZCjgbj_QI8kV189C8FBy8DGmzWx7i1vtaSJa2xUwE3zCV5tBGjHA" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Conteúdo de Impacto</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Campanha Audiovisual</p>
-                            </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="100" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Studio setup B&W" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_6PXbyKGYvJxEbfzmXmRW19QciE4tJ9x-FZZvcUtReBGabFvxftvIdLDGss_UhG68_ITk3-kfWI0CkUuUjHH0YxkYi0Tg3xBrTgcnG860e_EoEYEmh7vX3vZCkobOLmDbCnGZskKBBteD-Jmj5INS1jizmQQiRezM3x8Wr4VAX6xNgci8xCyo3j-73qG5yVZhO-4B9WOW8eV54FdxYsDFoxMfle0q7JCCa1bGlsqr0wHz9I-EXgWR3FiQ6NmbFkqgZAp8vzRDNyk" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Posicionamento Visual</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Produção de Imagem</p>
-                            </div>
-                        </div>
-                        <div className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay="200" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                            <img alt="Editing suite grayscale" className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyUqrC1IPUBPww33DCYdPY-7rOtg3lbmED38AelB0tTYn2MqPYkcGERtvWHA4drxpuUpc6LjhAD_s412vsfHpePPmcnutpewD5ek8asJiuUlereQ0qIRuleREigir4zmljVvSfIYyk5MkWPNVHXDQmwE5WjptCHK-Ws4bZgkFm122i6hYLBxvKLJmJokhLA61Uy9tN1bBURioVEBydJuPBs0MMbox5XQFN21ybdZhxcrFInqC_LCTxyNJkl5oJMEIqnt8BgbsZ8Zg" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                <p className="font-headline text-sm text-black italic">Processo Estratégico</p>
-                                <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">Controle de Percepção</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
                 {/* Section 2: Gallery */}
                 <section className="bg-white pt-24 pb-0 w-full mx-auto">
                     <div className="mb-12 text-center flex flex-col items-center">
