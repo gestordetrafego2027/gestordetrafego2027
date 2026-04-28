@@ -6,23 +6,23 @@ import Header from '@/app/components/Header';
 
 export default function ProjetoStudioPage() {
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => { 
-            entries.forEach(e => { 
-                if(e.isIntersecting) e.target.classList.add("visible"); 
-            }); 
-        }, { threshold: 0.1 }); 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add("visible");
+            });
+        }, { threshold: 0.1 });
         document.querySelectorAll(".info-col-anim").forEach(el => observer.observe(el));
 
         const infoCol = document.querySelector('.info-col');
         let currentY = 0;
         let targetY = 0;
-        
+
         const handleScroll = () => {
             targetY = Math.max(0, window.scrollY * 0.5);
         };
 
         window.addEventListener('scroll', handleScroll);
-        
+
         let animationFrameId;
         function animate() {
             currentY += (targetY - currentY) * 0.08;
@@ -40,7 +40,8 @@ export default function ProjetoStudioPage() {
 
     return (
         <div className="bg-surface text-on-surface antialiased">
-            <style dangerouslySetInnerHTML={{__html: `
+            <style dangerouslySetInnerHTML={{
+                __html: `
                 body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
                 .font-newsreader { font-family: 'Newsreader', serif; }
                 .font-inter { font-family: 'Inter', sans-serif; }
@@ -82,16 +83,16 @@ export default function ProjetoStudioPage() {
                     <div className="lg:w-2/3">
                         <div className="images-grid">
                             <div className="relative overflow-hidden group">
-                                <img alt="Architectural detail" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAVU5IcLwEy2U0gDo52S417SIZIkTqBpRKp-umWW21jk_P2A-CiMGM96C56TQqRq1V87ae0u-SZ8rRgG7oeLJmHfpDQHmhkf6hiDMTUxImdbm42MBoJZdr8uZBcs5FyiZ6Z-Tl5vsOdmxMaiDuysypUDYoTvOOkt4O-CH6a1JSyL9zD9hOtdCO_KhRQE2-3IwzTsB_atS76_2Yh24aObNroL_ah-dPlUh9Dv003teuBMxcZ_FNC3Xz6AdsKmTacsBWbFDp20Y7Wsc"/>
+                                <img alt="Architectural detail" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAVU5IcLwEy2U0gDo52S417SIZIkTqBpRKp-umWW21jk_P2A-CiMGM96C56TQqRq1V87ae0u-SZ8rRgG7oeLJmHfpDQHmhkf6hiDMTUxImdbm42MBoJZdr8uZBcs5FyiZ6Z-Tl5vsOdmxMaiDuysypUDYoTvOOkt4O-CH6a1JSyL9zD9hOtdCO_KhRQE2-3IwzTsB_atS76_2Yh24aObNroL_ah-dPlUh9Dv003teuBMxcZ_FNC3Xz6AdsKmTacsBWbFDp20Y7Wsc" />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img alt="Portrait sculpture" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoa7wVF9sDY_bVRgCbXawPmvrvjcan0epMoLbqhxiQjfZsIL26H7dQQTvm55i2feaDrrNk3K-JeCVHknR0ufxTVA27ahMsTu3H1kVGeiqLUO_I7rVIQ_E9uQcE9anpdsElbkIzhApw_ViKPv1VWEl6fPs7tzEliwICc0u7M_neiUVT62UgncBv8BdgJkg60-tYrZa8_IXi2V0fvZ5GlAK4Dqrg6K6XI0BJH_4FRvRjpm1Bf73kIuJgDxPBWor1XS8VaAU9TZLSF4s"/>
+                                <img alt="Portrait sculpture" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoa7wVF9sDY_bVRgCbXawPmvrvjcan0epMoLbqhxiQjfZsIL26H7dQQTvm55i2feaDrrNk3K-JeCVHknR0ufxTVA27ahMsTu3H1kVGeiqLUO_I7rVIQ_E9uQcE9anpdsElbkIzhApw_ViKPv1VWEl6fPs7tzEliwICc0u7M_neiUVT62UgncBv8BdgJkg60-tYrZa8_IXi2V0fvZ5GlAK4Dqrg6K6XI0BJH_4FRvRjpm1Bf73kIuJgDxPBWor1XS8VaAU9TZLSF4s" />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img alt="Close up texture hand" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCYgrLvUftwbIxYONAg4GDj_g11IpwqxMUA0WPkr20r6T_qusAS6uQs4lBQQMKZ2Gy367x85gsxFa2W0_94Gwrhco5_DvHwadS7Fg9IqTQXSWKWTXugk9h4u1qn7ueDjisGWDLfIdwPXoqGBRsZwszaTdwQn8vokhg5NYTQ8czrMt5ke5CgkXYhU_hdqloBtiPJZ7z2kB7tCKUWyzBk4MVPGxqP3or5ake9fZdUWUgt7Fzh3wgTB5gBUz-9L8exZch1FFwsiygJrg"/>
+                                <img alt="Close up texture hand" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCYgrLvUftwbIxYONAg4GDj_g11IpwqxMUA0WPkr20r6T_qusAS6uQs4lBQQMKZ2Gy367x85gsxFa2W0_94Gwrhco5_DvHwadS7Fg9IqTQXSWKWTXugk9h4u1qn7ueDjisGWDLfIdwPXoqGBRsZwszaTdwQn8vokhg5NYTQ8czrMt5ke5CgkXYhU_hdqloBtiPJZ7z2kB7tCKUWyzBk4MVPGxqP3or5ake9fZdUWUgt7Fzh3wgTB5gBUz-9L8exZch1FFwsiygJrg" />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img alt="Spiral staircase" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDWq23mfl1pQgRbban0OaoOKLTt25CIn3zM4JuOlLaylmxJxNOFyKO4F1RoloLCkCzNbNrK9OyTClkpn8ghhBZ5kObv4hU6GZxe2o8ZloSqKHSmvbNaSnrp4_liMCZ50FnB0KmSPmjMAKshykmB1aYEOnLBZs-MJ8R8pD39Yn_or-F5YawxWxuoNVLoOhkv_kkISKorvUlrMTLa4K_g0zhQSgs-Sf-xHdIn0JFEdukphuhuxa6ur3Q1qqckUkGyJSAuzuHtJMiuJM"/>
+                                <img alt="Spiral staircase" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDWq23mfl1pQgRbban0OaoOKLTt25CIn3zM4JuOlLaylmxJxNOFyKO4F1RoloLCkCzNbNrK9OyTClkpn8ghhBZ5kObv4hU6GZxe2o8ZloSqKHSmvbNaSnrp4_liMCZ50FnB0KmSPmjMAKshykmB1aYEOnLBZs-MJ8R8pD39Yn_or-F5YawxWxuoNVLoOhkv_kkISKorvUlrMTLa4K_g0zhQSgs-Sf-xHdIn0JFEdukphuhuxa6ur3Q1qqckUkGyJSAuzuHtJMiuJM" />
                             </div>
                         </div>
                     </div>
@@ -130,7 +131,7 @@ export default function ProjetoStudioPage() {
                     </div>
                 </div>
             </main>
-            
+
             {/* Navigation Links before footer */}
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">
                 <div className="flex justify-between items-center border-t border-outline-variant/15 pt-12">
