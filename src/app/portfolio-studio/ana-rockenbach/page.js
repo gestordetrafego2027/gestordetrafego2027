@@ -77,9 +77,9 @@ export default function AnaRockenbachPage() {
             `}</style>
 
             <main className="pt-16 pb-24 px-8 max-w-[1600px] mx-auto" style={{ paddingTop: '80px' }}>
-                <div className="flex flex-col lg:flex-row gap-16">
+                <div className="flex flex-row gap-16">
                     {/* Grid Layout */}
-                    <div className="lg:w-2/3">
+                    <div className="w-2/3">
                         <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', width: '100%'}}>
   <img src="/images/studio/ana-rockenbach/1.jpg" alt="Foto 1" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
   <img src="/images/studio/ana-rockenbach/2.jpg" alt="Foto 2" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
@@ -89,7 +89,7 @@ export default function AnaRockenbachPage() {
 </div>
                     </div>
                     {/* Content Sidebar */}
-                    <div className="lg:w-1/3">
+                    <div className="w-1/3">
                         <div className="info-col flex flex-col gap-[16px]">
                             <div className="space-y-1">
                                 <p className="info-col-anim font-inter text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Book</p>
