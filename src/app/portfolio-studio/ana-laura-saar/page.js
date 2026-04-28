@@ -92,6 +92,9 @@ export default function AnaLauraSaarPage() {
                           <div onClick={() => setSelectedImg('/images/studio/ana-laura-saar/3.jpg')} className="cursor-pointer">
                             <img alt="Foto 3" className="w-full aspect-[3/4] object-cover" src="/images/studio/ana-laura-saar/3.jpg"/>
                           </div>
+                          <div onClick={() => setSelectedImg('/images/studio/ana-laura-saar/4.jpg')} className="cursor-pointer">
+                            <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" src="/images/studio/ana-laura-saar/4.jpg"/>
+                          </div>
                           <div onClick={() => setSelectedImg('/images/studio/ana-laura-saar/capa.jpg')} className="cursor-pointer">
                             <img alt="Foto capa" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/ana-laura-saar/capa.jpg"/>
                           </div>
