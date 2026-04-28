@@ -95,8 +95,8 @@ export default function ChaiEDaiPage() {
                           <div onClick={() => setSelectedImg('/images/studio/chai-e-dai/4.jpg')} className="cursor-pointer">
                             <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" src="/images/studio/chai-e-dai/4.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/chai-e-dai/capa.jpg')} className="cursor-pointer">
-                            <img alt="Foto capa" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/chai-e-dai/capa.jpg"/>
+                          <div onClick={() => setSelectedImg('/images/studio/chai-e-dai/5.jpg')} className="cursor-pointer">
+                            <img alt="Foto 5" className="w-full aspect-[3/4] object-cover" src="/images/studio/chai-e-dai/5.jpg"/>
                           </div>
                         </div>
                     </div>
