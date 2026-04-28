@@ -93,6 +93,9 @@ export default function AmandaOliveiraPage() {
                             <div className="relative overflow-hidden group">
                                 <img alt="Spiral staircase" className="grayscale hover:grayscale-0 transition-all duration-700" src="/images/studio/amanda-oliveira/4.jpg"/>
                             </div>
+                            <div className="relative overflow-hidden group">
+                                <img className="w-full h-full object-contain" src="/images/studio/amanda-oliveira/5.jpg" alt="Amanda Oliveira 5" />
+                            </div>
                         </div>
                     </div>
                     {/* Content Sidebar */}
