@@ -63,7 +63,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/ana-laura-saar" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-top" src="/images/studio/ana-laura-saar/capa.jpg" alt="Ana Laura Saar" />
+                            <img className="w-full h-full object-cover object-top" src="/images/studio/ana-laura-saar/5.jpg" alt="Ana Laura Saar" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Ana Laura Saar</span>
