@@ -76,9 +76,9 @@ export default function ProjetoStudioPage() {
             `}</style>
 
             <main className="pt-16 pb-24 px-8 max-w-[1600px] mx-auto" style={{ paddingTop: '80px' }}>
-                <div className="portfolio-project-layout">
+                <div className="flex flex-row gap-16">
                     {/* Grid Layout */}
-                    <div className="portfolio-project-images">
+                    <div className="w-2/3">
                         <div className="images-grid">
                             <div className="relative overflow-hidden group">
                                 <img alt="Architectural detail" className="grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAVU5IcLwEy2U0gDo52S417SIZIkTqBpRKp-umWW21jk_P2A-CiMGM96C56TQqRq1V87ae0u-SZ8rRgG7oeLJmHfpDQHmhkf6hiDMTUxImdbm42MBoJZdr8uZBcs5FyiZ6Z-Tl5vsOdmxMaiDuysypUDYoTvOOkt4O-CH6a1JSyL9zD9hOtdCO_KhRQE2-3IwzTsB_atS76_2Yh24aObNroL_ah-dPlUh9Dv003teuBMxcZ_FNC3Xz6AdsKmTacsBWbFDp20Y7Wsc" />
@@ -95,7 +95,7 @@ export default function ProjetoStudioPage() {
                         </div>
                     </div>
                     {/* Content Sidebar */}
-                    <div className="portfolio-project-info">
+                    <div className="w-1/3">
                         <div className="info-col flex flex-col gap-[16px]">
                             <div className="space-y-1">
                                 <p className="info-col-anim font-inter text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Direção de Imagem</p>

@@ -77,9 +77,9 @@ export default function IasmimPage() {
             `}</style>
 
             <main className="pt-16 pb-24 px-8 max-w-[1600px] mx-auto" style={{ paddingTop: '80px' }}>
-                <div className="portfolio-project-layout">
+                <div className="flex flex-row gap-16">
                     {/* Grid Layout */}
-                    <div className="portfolio-project-images">
+                    <div className="w-2/3">
                         <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', width: '100%'}}>
   {[1,2,3,4,5,6,7,8,9,10,11,12,13].filter(n => n <= 3).map(n => (
     <img key={n} src={`/images/studio/iasmim/${n}.jpg`} alt={`Foto ${n}`} style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block'}} />
@@ -87,7 +87,7 @@ export default function IasmimPage() {
 </div>
                     </div>
                     {/* Content Sidebar */}
-                    <div className="portfolio-project-info">
+                    <div className="w-1/3">
                         <div className="info-col flex flex-col gap-[16px]">
                             <div className="space-y-1">
                                 <p className="info-col-anim font-inter text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Book</p>
