@@ -80,22 +80,12 @@ export default function AmandaOliveiraPage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
-                        <div className="images-grid">
-                            <div className="relative overflow-hidden group">
-                                <img alt="Architectural detail" className="grayscale hover:grayscale-0 transition-all duration-700" src="/images/studio/amanda-oliveira/1.jpg"/>
-                            </div>
-                            <div className="relative overflow-hidden group">
-                                <img alt="Portrait sculpture" className="grayscale hover:grayscale-0 transition-all duration-700" src="/images/studio/amanda-oliveira/2.jpg"/>
-                            </div>
-                            <div className="relative overflow-hidden group">
-                                <img alt="Close up texture hand" className="grayscale hover:grayscale-0 transition-all duration-700" src="/images/studio/amanda-oliveira/3.jpg"/>
-                            </div>
-                            <div className="relative overflow-hidden group">
-                                <img alt="Spiral staircase" className="grayscale hover:grayscale-0 transition-all duration-700" src="/images/studio/amanda-oliveira/4.jpg"/>
-                            </div>
-                            <div className="relative overflow-hidden group">
-                                <img className="w-full h-full object-contain" src="/images/studio/amanda-oliveira/5.jpg" alt="Amanda Oliveira 5" />
-                            </div>
+                        <div className="grid grid-cols-2 gap-3">
+                          <img alt="Foto 1" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/1.jpg"/>
+                          <img alt="Foto 2" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/2.jpg"/>
+                          <img alt="Foto 3" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/3.jpg"/>
+                          <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/4.jpg"/>
+                          <img alt="Foto 5" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/5.jpg"/>
                         </div>
                     </div>
                     {/* Content Sidebar */}
