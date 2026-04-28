@@ -400,3 +400,27 @@ html {
   grid-column: span 2;
   aspect-ratio: 16/9;
 }n
+
+.portfolio-project-layout {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 64px;
+}
+
+.portfolio-project-images {
+  width: 66% !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+}
+
+.portfolio-project-images img {
+  width: 100% !important;
+  aspect-ratio: 3/4 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.portfolio-project-info {
+  width: 33% !important;
+}
