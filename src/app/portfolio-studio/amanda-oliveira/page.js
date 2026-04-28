@@ -58,7 +58,7 @@ export default function AmandaOliveiraPage() {
                 .images-grid img {
                   width: 100%;
                   height: 100%;
-                  object-fit: cover;
+                  object-fit: contain;
                   display: block;
                 }
 
