@@ -55,7 +55,7 @@ export default function PortfolioStudioPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
 
                         <Link href="/portfolio-studio/amanda-oliveira" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '3/2'}}>
-                            <img className="w-full h-full object-cover object-top" src="/images/studio/amanda-oliveira/capa.jpg" alt="Amanda Oliveira" />
+                            <img className="w-full h-full object-cover object-center" src="/images/studio/amanda-oliveira/capa.jpg" alt="Amanda Oliveira" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Amanda Oliveira</span>
