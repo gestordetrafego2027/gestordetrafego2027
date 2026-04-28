@@ -82,10 +82,11 @@ export default function DeboraPantaglionePage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
-                        <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', width: '100%'}}>
-  {[1,2,3,4,5,6,7,8,9,10,11,12,13].filter(n => n <= 4).map(n => (
-    <img key={n} src={`/images/studio/debora-pantaglione/${n}.jpg`} alt={`Foto ${n}`} style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block'}} />
-  ))}
+                        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', width: '100%', maxWidth: '960px'}}>
+  <img src="/images/studio/debora-pantaglione/1.jpg" alt="Foto 1" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
+  <img src="/images/studio/debora-pantaglione/2.jpg" alt="Foto 2" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
+  <img src="/images/studio/debora-pantaglione/3.jpg" alt="Foto 3" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
+  <img src="/images/studio/debora-pantaglione/4.jpg" alt="Foto 4" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
 </div>
                     </div>
                     {/* Content Sidebar */}
