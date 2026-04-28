@@ -51,16 +51,14 @@ export default function AmandaOliveiraPage() {
                 
                 .images-grid {
                   display: grid;
-                  grid-template-columns: 55% 45%;
-                  grid-template-rows: 55% 45%;
-                  gap: 16px;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 8px;
                   width: 100%;
-                  aspect-ratio: 1/1;
                 }
                 .images-grid img {
                   width: 100%;
-                  height: 100%;
-                  object-fit: contain;
+                  aspect-ratio: 3/4;
+                  object-fit: cover;
                   display: block;
                 }
 
