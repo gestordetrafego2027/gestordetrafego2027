@@ -83,9 +83,11 @@ export default function AnaRockenbachPage() {
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
                         <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', width: '100%'}}>
-  {[1,2,3,4,5,6,7,8,9,10,11,12,13].filter(n => n <= 5).map(n => (
-    <img key={n} src={`/images/studio/ana-rockenbach/${n}.jpg`} alt={`Foto ${n}`} style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block'}} />
-  ))}
+  <img src="/images/studio/ana-rockenbach/1.jpg" alt="Foto 1" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
+  <img src="/images/studio/ana-rockenbach/2.jpg" alt="Foto 2" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
+  <img src="/images/studio/ana-rockenbach/3.jpg" alt="Foto 3" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
+  <img src="/images/studio/ana-rockenbach/4.jpg" alt="Foto 4" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
+  <img src="/images/studio/ana-rockenbach/5.jpg" alt="Foto 5" style={{width: '100%', gridColumn: 'span 2', aspectRatio: '16/9', objectFit: 'cover'}} />
 </div>
                     </div>
                     {/* Content Sidebar */}
