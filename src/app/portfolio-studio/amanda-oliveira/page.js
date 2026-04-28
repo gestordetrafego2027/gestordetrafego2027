@@ -85,7 +85,7 @@ export default function AmandaOliveiraPage() {
                           <img alt="Foto 2" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/2.jpg"/>
                           <img alt="Foto 3" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/3.jpg"/>
                           <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/4.jpg"/>
-                          <img alt="Foto 5" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/5.jpg"/>
+                          <img alt="Foto 5" className="w-full col-span-2 aspect-[16/9] object-cover" src="/images/studio/amanda-oliveira/5.jpg"/>
                         </div>
                     </div>
                     {/* Content Sidebar */}
