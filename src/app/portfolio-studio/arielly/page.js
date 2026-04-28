@@ -82,7 +82,7 @@ export default function AriellyPage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="portfolio-grid">
                           <div onClick={() => setSelectedImg('/images/studio/arielly/1.jpg')} className="cursor-pointer">
                             <img alt="Foto 1" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/arielly/1.jpg"/>
                           </div>
