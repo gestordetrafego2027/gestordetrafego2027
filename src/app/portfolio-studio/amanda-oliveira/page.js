@@ -81,8 +81,8 @@ export default function AmandaOliveiraPage() {
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <img alt="Foto 1" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/1.jpg"/>
-                          <img alt="Foto 2" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/2.jpg"/>
+                          <img alt="Foto 1" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/amanda-oliveira/1.jpg"/>
+                          <img alt="Foto 2" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/amanda-oliveira/2.jpg"/>
                           <img alt="Foto 3" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/3.jpg"/>
                           <img alt="Foto 5" className="w-full aspect-[3/4] object-cover" src="/images/studio/amanda-oliveira/5.jpg"/>
                         </div>
