@@ -82,26 +82,11 @@ export default function BrunaBrummerPage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
-                        <div className="portfolio-grid">
-                          <div onClick={() => setSelectedImg('/images/studio/bruna-brummer/1.jpg')} className="cursor-pointer">
-                            <img alt="Foto 1" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/bruna-brummer/1.jpg"/>
-                          </div>
-                          <div onClick={() => setSelectedImg('/images/studio/bruna-brummer/2.jpg')} className="cursor-pointer">
-                            <img alt="Foto 2" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/bruna-brummer/2.jpg"/>
-                          </div>
-                          <div onClick={() => setSelectedImg('/images/studio/bruna-brummer/3.jpg')} className="cursor-pointer">
-                            <img alt="Foto 3" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/bruna-brummer/3.jpg"/>
-                          </div>
-                          <div onClick={() => setSelectedImg('/images/studio/bruna-brummer/4.jpg')} className="cursor-pointer">
-                            <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/bruna-brummer/4.jpg"/>
-                          </div>
-                          <div onClick={() => setSelectedImg('/images/studio/bruna-brummer/5.jpg')} className="cursor-pointer col-span-2">
-                            <img alt="Foto 5" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/bruna-brummer/5.jpg"/>
-                          </div>
-                          <div onClick={() => setSelectedImg('/images/studio/bruna-brummer/capa.jpg')} className="cursor-pointer col-span-2">
-                            <img alt="Foto capa" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/bruna-brummer/capa.jpg"/>
-                          </div>
-                        </div>
+                        <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', width: '100%'}}>
+  {[1,2,3,4,5,6,7,8,9,10,11,12,13].filter(n => n <= 5).map(n => (
+    <img key={n} src={`/images/studio/bruna-brummer/${n}.jpg`} alt={`Foto ${n}`} style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block'}} />
+  ))}
+</div>
                     </div>
                     {/* Content Sidebar */}
                     <div className="lg:w-1/3">
