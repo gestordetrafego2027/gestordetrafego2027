@@ -92,9 +92,6 @@ export default function FrancineMassocoPage() {
                           <div onClick={() => setSelectedImg('/images/studio/francine-massoco/3.jpg')} className="cursor-pointer">
                             <img alt="Foto 3" className="w-full aspect-[3/4] object-cover" src="/images/studio/francine-massoco/3.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/francine-massoco/4.jpg')} className="cursor-pointer">
-                            <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" src="/images/studio/francine-massoco/4.jpg"/>
-                          </div>
                         </div>
                     </div>
                     {/* Content Sidebar */}

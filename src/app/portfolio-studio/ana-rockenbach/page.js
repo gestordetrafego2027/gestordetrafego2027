@@ -95,9 +95,6 @@ export default function AnaRockenbachPage() {
                           <div onClick={() => setSelectedImg('/images/studio/ana-rockenbach/4.jpg')} className="cursor-pointer">
                             <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" src="/images/studio/ana-rockenbach/4.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/ana-rockenbach/5.jpg')} className="cursor-pointer">
-                            <img alt="Foto 5" className="w-full aspect-[3/4] object-cover" src="/images/studio/ana-rockenbach/5.jpg"/>
-                          </div>
                         </div>
                     </div>
                     {/* Content Sidebar */}
