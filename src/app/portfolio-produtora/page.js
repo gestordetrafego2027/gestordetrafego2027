@@ -262,6 +262,110 @@ export default function PortfolioProdutoraPage() {
               </div>
             </Link>
           </div>
+
+          {/* Item 15: Alletto Still */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/alletto-still" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Alletto Still" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/beleza/alletto-still/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Alletto Still</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 16: Jequiti - Sense */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/jequiti-sense" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Jequiti - Sense" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/beleza/jequiti-sense/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Jequiti - Sense</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 17: We Pink - Zé Felipe */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/we-pink-ze-felipe" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="We Pink - Zé Felipe" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/beleza/we-pink-ze-felipe/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">We Pink - Zé Felipe</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 18: We Pink 01 */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/we-pink-01" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="We Pink 01" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/beleza/we-pink-01/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">We Pink 01</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 19: Jequiti - Galisteu */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/jequiti-galisteu" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Jequiti - Galisteu" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/beleza/jequiti-galisteu/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Jequiti - Galisteu</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 20: Natalia Beauty */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/natalia-beauty" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Natalia Beauty" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/beleza/natalia-beauty/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Natalia Beauty</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 21: Jequiti - Larissa Manoela */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/jequiti-larissa-manoela" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Jequiti - Larissa Manoela" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/beleza/jequiti-larissa-manoela/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Jequiti - Larissa Manoela</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 22: Oceane */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/oceane" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Oceane" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/beleza/oceane/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Oceane</span>
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
       </main>
 
