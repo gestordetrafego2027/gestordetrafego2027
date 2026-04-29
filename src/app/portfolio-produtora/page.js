@@ -85,7 +85,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/barbara-porto" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Barbara Porto" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/barbara-porto/capa.jpg" />
+                <img loading="lazy" alt="Barbara Porto" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/barbara-porto/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Barbara Porto</span>
@@ -98,7 +98,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/camila-scarpa" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Camila Scarpa" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/camila-scarpa/capa.jpg" />
+                <img loading="lazy" alt="Camila Scarpa" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/camila-scarpa/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Camila Scarpa</span>
@@ -111,7 +111,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/poema-paris" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Poema Paris" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/poema-paris/capa.jpg" />
+                <img loading="lazy" alt="Poema Paris" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/poema-paris/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Poema Paris</span>
@@ -124,7 +124,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/pontok" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="PontoK" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/pontok/capa.jpg" />
+                <img loading="lazy" alt="PontoK" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/pontok/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">PontoK</span>
@@ -137,7 +137,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/dumond" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Dumond" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/dumond/capa.jpg" />
+                <img loading="lazy" alt="Dumond" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/dumond/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Dumond</span>
@@ -150,7 +150,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/signus" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Signus" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus/capa.jpg" />
+                <img loading="lazy" alt="Signus" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus</span>
@@ -163,7 +163,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/signus-versolato01" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Signus Versolato 01" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus-versolato01/capa.jpg" />
+                <img loading="lazy" alt="Signus Versolato 01" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus-versolato01/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Versolato 01</span>
@@ -176,7 +176,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/signus-versolato02" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Signus Versolato 02" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-versolato02/capa.jpg" />
+                <img loading="lazy" alt="Signus Versolato 02" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-versolato02/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Versolato 02</span>
@@ -189,7 +189,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/signus-vertz" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Signus Vertz" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-vertz/capa.jpg" />
+                <img loading="lazy" alt="Signus Vertz" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-vertz/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Vertz</span>
@@ -202,7 +202,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/elyah" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Elyah" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/elyah/capa.jpg" />
+                <img loading="lazy" alt="Elyah" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/elyah/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Elyah</span>
@@ -215,7 +215,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/signus-fiamma" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Signus Fiamma" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-fiamma/capa.jpg" />
+                <img loading="lazy" alt="Signus Fiamma" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-fiamma/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Fiamma</span>
@@ -228,7 +228,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/signus-lavorato" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Signus Lavorato" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus-lavorato/capa.jpg" />
+                <img loading="lazy" alt="Signus Lavorato" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus-lavorato/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Lavorato</span>
@@ -241,7 +241,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/monica-costa-jewerly" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Monica Costa Jewerly" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/monica-costa-jewerly/capa.jpg" />
+                <img loading="lazy" alt="Monica Costa Jewerly" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/monica-costa-jewerly/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Monica Costa Jewerly</span>
@@ -254,7 +254,7 @@ export default function PortfolioProdutoraPage() {
           <div className="masonry-item">
             <Link href="/portfolio-produtora/signus-jean-pierre" className="block group">
               <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img alt="Signus Jean Pierre" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-jean-pierre/capa.jpg" />
+                <img loading="lazy" alt="Signus Jean Pierre" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-jean-pierre/capa.jpg" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
                   <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
                   <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Jean Pierre</span>
