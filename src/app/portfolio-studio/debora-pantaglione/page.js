@@ -51,14 +51,16 @@ export default function DeboraPantaglionePage() {
                 
                 .images-grid {
                   display: grid;
-                  grid-template-columns: 1fr 1fr;
-                  gap: 8px;
+                  grid-template-columns: 55% 45%;
+                  grid-template-rows: 55% 45%;
+                  gap: 16px;
                   width: 100%;
+                  aspect-ratio: 1/1;
                 }
                 .images-grid img {
                   width: 100%;
-                  aspect-ratio: 3/4;
-                  object-fit: cover;
+                  height: 100%;
+                  object-fit: contain;
                   display: block;
                 }
 
@@ -77,18 +79,29 @@ export default function DeboraPantaglionePage() {
             `}</style>
 
             <main className="pt-16 pb-24 px-8 max-w-[1600px] mx-auto" style={{ paddingTop: '80px' }}>
-                <div className="flex flex-row gap-16">
+                <div className="flex flex-col lg:flex-row gap-16">
                     {/* Grid Layout */}
-                    <div className="w-2/3">
-                        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', width: '100%', maxWidth: '960px'}}>
-  <img src="/images/studio/debora-pantaglione/1.jpg" alt="Foto 1" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
-  <img src="/images/studio/debora-pantaglione/2.jpg" alt="Foto 2" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
-  <img src="/images/studio/debora-pantaglione/3.jpg" alt="Foto 3" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
-  <img src="/images/studio/debora-pantaglione/4.jpg" alt="Foto 4" style={{width: '100%', aspectRatio: '3/4', objectFit: 'cover'}} />
-</div>
+                    <div className="lg:w-2/3">
+                        <div className="grid grid-cols-2 gap-3">
+                          <div onClick={() => setSelectedImg('/images/studio/debora-pantaglione/1.jpg')} className="cursor-pointer">
+                            <img alt="Foto 1" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/debora-pantaglione/1.jpg"/>
+                          </div>
+                          <div onClick={() => setSelectedImg('/images/studio/debora-pantaglione/2.jpg')} className="cursor-pointer">
+                            <img alt="Foto 2" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/debora-pantaglione/2.jpg"/>
+                          </div>
+                          <div onClick={() => setSelectedImg('/images/studio/debora-pantaglione/3.jpg')} className="cursor-pointer">
+                            <img alt="Foto 3" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/debora-pantaglione/3.jpg"/>
+                          </div>
+                          <div onClick={() => setSelectedImg('/images/studio/debora-pantaglione/4.jpg')} className="cursor-pointer">
+                            <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/debora-pantaglione/4.jpg"/>
+                          </div>
+                          <div onClick={() => setSelectedImg('/images/studio/debora-pantaglione/capa.jpg')} className="cursor-pointer">
+                            <img alt="Foto capa" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/debora-pantaglione/capa.jpg"/>
+                          </div>
+                        </div>
                     </div>
                     {/* Content Sidebar */}
-                    <div className="w-1/3">
+                    <div className="lg:w-1/3">
                         <div className="info-col flex flex-col gap-[16px]">
                             <div className="space-y-1">
                                 <p className="info-col-anim font-inter text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Book</p>
