@@ -366,6 +366,67 @@ export default function PortfolioProdutoraPage() {
               </div>
             </Link>
           </div>
+
+          {/* Item 23: Beatco */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/beatco" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Beatco" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/moda/beatco/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Moda</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Beatco</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          {/* Item 24: Pous */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/pous" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Pous" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/moda/pous/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Moda</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Pous</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          {/* Item 25: Toli */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/toli" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Toli" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/moda/toli/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Moda</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Toli</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          {/* Item 26: Unique Chic */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/unique-chic" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Unique Chic" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/moda/unique-chic/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Moda</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Unique Chic</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          {/* Item 27: Sense Hotel */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/sense-hotel" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img loading="lazy" alt="Sense Hotel" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/institucional/sense-hotel/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Institucional</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Sense Hotel</span>
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
       </main>
 
