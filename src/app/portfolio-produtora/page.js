@@ -35,18 +35,7 @@ export default function PortfolioProdutoraPage() {
         .image-container:hover img {
             transform: scale(1.03);
         }
-        .image-container::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255,255,255,0.35);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            pointer-events: none;
-        }
-        .image-container:hover::after {
-            opacity: 1;
-        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
@@ -92,134 +81,184 @@ export default function PortfolioProdutoraPage() {
 
       <main className="pt-12 pb-20 px-6 md:px-8 lg:px-10">
         <div className="masonry-grid">
-          {/* Item 1 */}
+          {/* Item 1: Barbara Porto */}
           <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-1" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[3/4] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJOO2ewpINrihC29lFx3mir5RzM8gfiTV5nHTbzNMf-ur_JDooZ1wH58Zo02yua46oams5kA7XulQljwHTXeUANVzALwiPjc_LAhzio9-zK02kSfi7jk8nnmt7GmX58TKJ0YtyEtsPxp9cd2VfnjNqWKHTD4Un_sjdy4_TkWbepGuT-VeWdC4P7O8d5aSYQxYj8R4xjIQqd0RRQ7eTY5haJmX3Lt75QPPZjwCGHEmRTLqdv7ITP_ejRfwLSnN-wIDW-7rtkSQ-uDo" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 2 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-1" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[4/3] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnrNU7Y0tVif3cR3hIujmG5_7viWTNhwKyyurK9Zvg7zhwYRKsCFuc3wkDCIjq6msKW_Fen6O-W9nvonCEXttkYUOqxnijv3QTyTkwOol6uZtZpUb3h5vrmA1cCGtHgCxGB_0Wy3qehv8SMdHDqbqkR5qMRojzGEHdWlXUP4veHAfCz5efzfV2UuqkZ4CSTreO9P1gGCmEUTqstu5-IYSVUTzgSjO5XD3oa-mPZBwr3m5aBTE88MPc8-BBa4uvtoqJHh0oZIQF9o0" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 3 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-1" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[3/4] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_yI8B1svY6YH1ojBIQSbwR8moSbmovEQDN5AuNiGwU5YuWmDil3FZ9OSNzYHNOxjj0a7HH_RLJ8VT9oalryLx3SOPXJ3LkZOVqvccDw2_xJffNQfAKsEBnndb5hhQoIiu8DQ0bUNQe6NX9MR7liZk0RJNqjPX-WOlQ9lgdMdiGtzeVxv9bD5wfA6yTTDPVoZdInfbdHQAwWRAB5F5bcYSi6bKvc1-TgoMidwRHtnJigOgQG7A27MwnR5v5OhoLntObQWxUO8JXEg" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 4 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-1" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[4/3] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0RRw4iBxAfO2KGq7KS7AyKPkApq5jV3nrwLjlAgYm-B5z_NfP3YcVx_Zh6gtpuPTP6ahMFH58Z4yDs0zWMirosLKyK2w1pdfY2V8DK6mVPnzLvlTTcqtywYwDO2NXsGC4lHAsL9kcawyg5lG51zOXXDJ7Kamsg-cODi4kyL6BKOUt0s4bbCcpvA9osfO7_QDEYwuNTXi5zXxxar_ldUBxgt9kqQfLIqqjERtPXc7MeYxcDGDoRPtKOBxCJWgiE8dmS4t9z8wH1ps" />
+            <Link href="/portfolio-produtora/barbara-porto" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Barbara Porto" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/barbara-porto/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Barbara Porto</span>
+                </div>
               </div>
             </Link>
           </div>
 
-          {/* Item 5 */}
+          {/* Item 2: Camila Scarpa */}
           <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-2" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[3/4] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUTbeVl7zJ47Q-uUiHx_mXsNMmN1a8wJd1nIEFo08v2i3DDJPfD-UvOMtpvHAKmWnbrpgJok0Z-V1_uf0ZahNo9kei0o8VI2X7EIGKgCEGuRDZbSZi-EmLsqVFHRimj1Gs3GwT715A6DatCZ0JEIBhqI-tdtJOPwKJLI3SYa4sMadowE_kpHKLEJKftxUkMjocDjfrND5YlUrTX1dhjmPSfQBmB9h6z8FiKk5wzrR8YCtltSbebThkHbRs8znpuCw1U9zNXvaBvyI" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 6 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-2" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[4/3] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOiBjKrm_093cociU2TgcjyHljVS5SWDtP387dv7bgHQBTeFsBG-Tu8rkQzWEDIos1jmMsSeqjQRlsmIKvOPhyOaJAfZRt3sdhzMYufrya1kPtJbXyq2cZrqeGnTg84ETTK604BD2JAgkz2w7Ff0XWix-Vw0eMfupqDjiOF0lGLM-m9iuTNSPvEh39LpRkb196CN76roMNT7WwCFsUtJIN_7BxqlOd6nQSdHBTi3g6ShsPetVzx5b_mTMpcCYUoj8-k7Gc0VpUv5k" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 7 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-2" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[4/3] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7pD-hDXY8rz1R5BsKKU7ChCTc9eD2GencAmeid-F3e6KQKSEYZHPm-YxuxyLr4XVH_Mi5TcIZxVTZ8M2d5Kt5L7LR1aCqEIDuI8oYPbZduBIYDcLPWHxtZz61xhtKUg66n5DFTusY9TenJa6RQ3XYrKvnRH-NGksFmrsfJX97SbviDKZwNCXE9QniTEG3z85YeWVUlpGG_VwXiCa9qH4Mo7I8Pvz6DFiH-ClNkDbBhExLIWeQ2HYNSg0tGcRactzzXjKst1G8vkE" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 8 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-2" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[3/4] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAYXre0Nq_AbwZRAe14kH7e8-t_eBkBW5DVEcvrBFIJuRUp_vsSO3geCcHLGZihnZjxTDs_6OE-64POhF_-ci36lVmDh8QlqjgiFVTZebwBZihG_YMV1kmF04-msX70IXvNya8L469sGkAmCvqysORjQvsolFWgXOILkHqkCxDHw5FWNOgd1KJYrY1S7nzXd8x-Jt5vyHvvtfV9JtiMcwiLiUFnHyBOLtgIbe1LJgpztvgiGuHQgpg_yiuNS7fDvt5Vgn2cZNQdQI" />
+            <Link href="/portfolio-produtora/camila-scarpa" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Camila Scarpa" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/camila-scarpa/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Camila Scarpa</span>
+                </div>
               </div>
             </Link>
           </div>
 
-          {/* Item 9 */}
+          {/* Item 3: Poema Paris */}
           <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-3" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[3/4] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZlzHlqmXhnNwDv0wU1XOWk047Ltg5b2T8HJY2rzSMKoC-abqXfvyEz7M8QaZBRiWygke5GrPkEvVgovOCAP5S6g0M36udGZie08HFyel-wAQOdBhLRIFnJ2akURYIv0Srj0sGLrRzfXhXWSJ7nvygz5i_2-4EhjVFreQfVvagTAkPa6htGxk3giU66YzcsNVH-7BOxCuwSraa5-citCXLEquqDjGaFVfIbu_kzlyVGJNG2wZ8urWfS06QDtJBoUJKQisv_pqzKg" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 10 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-3" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[4/3] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFP3piJ9TPm0Y39xgJyL--Yav8IKoPRnzyCDdbXu9RL9uCe1a6zlLPHxDSjiCKcEwa-BKmZQieP1DQ5yXX7g0x8qkQgV6RZaJIx_Eq46Yte62Pphjpn5Y_6Liwlh1tZEmmUmjoErUYDclKGkF3iKKNd-jRTZzv9REmfcPDI1T4zGS9p3Fv2CvuUvyfCTARnVjLG4X82M6n5R5CQKWRh3D6bgw4GyM9ylt4FRYhT3Xi_nmyqR4r0xGakd4-lZegjpheRoUMyHJ5OA8" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 11 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-3" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[3/4] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_1QpoVodN9bO5edX5gIx2g0hn4CnqImZpAivEk3RdV-f872F5guSDOADQ95qq4OzrB9MkOP-KCrXvTMsJdoYdf6nD3-SUTa5RPxVFTzU8UR0Ah1LAV9oofUP66ebVX_b5zi91woFPj2BoaBa5v9VZHi3tBJJPN6A3GYGE_54--0HCnurWdXMnPgBvbNx-Mr4AGB3xvPBDsqVLdnxu2NnhbDNrs7nSSQTgqtxzZocsijW7ASifCE63_nMGXT3hHAB685-pkmQuolE" />
-              </div>
-            </Link>
-          </div>
-          {/* Item 12 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-3" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[4/3] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAroWADJKmmyLJprx2J2CG25pgSZIhi5Ka6K9purLVLfnbgLvQzVKtW8DoI9q-UwtUnc_2KVQ476u4rIENls_N0fv8QC3CpFZe9g9uRgySakYg0E8tA9BMVuGYtheTQlWk27qJcG8BHX1b8F24FkioeRt7pPr9Ed1OveyMIW3xdPz66-v_xKrjhXs72l6B6x9d0c0Z99MqyckKF2bpEwerPO5jQ6Dk8kLQQPbPvMiPE4K2AhEKzhYy74rJpOkTehEnW9pUV7m5uj2s" />
+            <Link href="/portfolio-produtora/poema-paris" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Poema Paris" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/poema-paris/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Poema Paris</span>
+                </div>
               </div>
             </Link>
           </div>
 
-          {/* Item 13 */}
+          {/* Item 4: PontoK */}
           <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-4" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[4/3] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0wzS6FYtdim3Cp2dlNKseXYFxiNZ-FtDBqgUQjqLupfP6Xkjbfib8WqoKCkS7sKq02W1uPW1-DWQV6Obka4LvLn0C07tqPrmKZ61J6LHF7pIVXyKZn2xSdkv9q1WNnEP1PQlwIMPX7OJ_LGTmnCnYYruME6-E0JnDaiW39Ze_cm5IgLp5AqBN974Q4D2NK8Ht5vHliQmRv91gGO67lXOs_bO9gX6k8QfcivTCOA8tK33YKN4dVCnI93YMlJ-FSvQtQZ50JtdqemU" />
+            <Link href="/portfolio-produtora/pontok" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="PontoK" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/pontok/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">PontoK</span>
+                </div>
               </div>
             </Link>
           </div>
-          {/* Item 14 */}
+
+          {/* Item 5: Dumond */}
           <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-4" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[3/4] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YcUDXo6TU-0auXBa3Bqhm3Ol9x0E7nSL2LLFLNdMFr8Np6yJflBQK3ZU0XTaKi5BAfJCSyz6sthw58CBHDzHpV1Y5jURxh0i4nu5bDRDigWb-5dMtCmc0BtHXVKAdOcB2B5OMivL0hfU1DvB2DlW6PrYCsaS45_zyhLKWrLjwmZcEzJArS-S8BopfhHb7exy0lRDKTWoWrnl6rKey998U9xk4Enwj8TAlkWVM8-Ac6W4Aw1lfW6N1sJMexWEBLpWY0Qo_HejRSg" />
+            <Link href="/portfolio-produtora/dumond" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Dumond" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/dumond/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Dumond</span>
+                </div>
               </div>
             </Link>
           </div>
-          {/* Item 15 */}
+
+          {/* Item 6: Signus */}
           <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-4" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[4/3] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6x6rQ1zsfDgMD61iPzFi89VwN8oz2IKqDXfMOHFpBHd9sezmoJvM_xxIPROEH7SV_wQBL1TMkTP_3GR6-5C5rmNXYOFO73g90hDmdsvX0YoM3Hj8RFXnOn1bBARE75xvG0gK3LDVMBWQA1CfhIquauJQmaNdft_cw7_O0wk9eiN3T5U20PXMcve7qJaXLEWBZrDt1lCmpSBumAgP3gl22qFyh21u2HmxUt-WMyxlWSjAsJHDXqT26bQYGIP_oNcBZ573yMVsen5I" />
+            <Link href="/portfolio-produtora/signus" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Signus" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus</span>
+                </div>
               </div>
             </Link>
           </div>
-          {/* Item 16 */}
+
+          {/* Item 7: Signus Versolato 01 */}
           <div className="masonry-item">
-            <Link href="/portfolio-produtora/projeto-4" className="block">
-              <div className="image-container overflow-hidden bg-surface-container-lowest">
-                <img alt="" className="w-full aspect-[3/4] object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhyYcupWKl3LdpEdOKPzwZqtxE-AbPt17P4qDdtl7EZfFcdQYi8WZFLbCtX-ucCs8R7oxg1Us_HgVxMZrF9qSJ1wsLpLSN6UdnSVjz-4-ywTLX4nZpz28oPGvd-BY4WYSICOHErNVXkYBlhwSzC3GkFn3JPmHJQ3vIc15lE97S_6Jo6m5kZCypwWC1pzYd1diRVcs-_98fi4gW86ed2J-pa3fNoD-QoRdrxcPG0uVqP4oFxYGaiMuSNQ3ELVnAID_F3LXRB_UXHpU" />
+            <Link href="/portfolio-produtora/signus-versolato01" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Signus Versolato 01" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus-versolato01/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Versolato 01</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 8: Signus Versolato 02 */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/signus-versolato02" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Signus Versolato 02" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-versolato02/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Versolato 02</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 9: Signus Vertz */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/signus-vertz" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Signus Vertz" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-vertz/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Vertz</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 10: Elyah */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/elyah" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Elyah" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/elyah/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Elyah</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 11: Signus Fiamma */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/signus-fiamma" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Signus Fiamma" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-fiamma/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Fiamma</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 12: Signus Lavorato */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/signus-lavorato" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Signus Lavorato" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus-lavorato/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Lavorato</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 13: Monica Costa Jewerly */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/monica-costa-jewerly" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Monica Costa Jewerly" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/monica-costa-jewerly/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Monica Costa Jewerly</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Item 14: Signus Jean Pierre */}
+          <div className="masonry-item">
+            <Link href="/portfolio-produtora/signus-jean-pierre" className="block group">
+              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
+                <img alt="Signus Jean Pierre" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-jean-pierre/capa.jpg" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
+                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
+                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Jean Pierre</span>
+                </div>
               </div>
             </Link>
           </div>
