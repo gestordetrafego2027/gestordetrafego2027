@@ -2,6 +2,8 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
+sharp.cache(false);
+
 async function optimizeDir(dir) {
   if (!fs.existsSync(dir)) return;
   const files = fs.readdirSync(dir);

@@ -12,7 +12,8 @@ async function optimizeDir(dir) {
       await optimizeDir(filePath);
     } else if (file.match(/\.(jpg|jpeg|png)$/i)) {
       try {
-        const buffer = await sharp(filePath)
+        const inputBuffer = fs.readFileSync(filePath);
+        const buffer = await sharp(inputBuffer)
           .resize(800, null, { withoutEnlargement: true })
           .jpeg({ quality: 50, progressive: true })
           .toBuffer();
