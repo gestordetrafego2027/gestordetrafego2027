@@ -297,38 +297,22 @@ export default function AngeloPage() {
                     </div>
                 </section>
 
-                {/* 8. Logos clientes - carrossel com setas */}
+                {/* 8. Logos clientes - carrossel automático */}
                 <section className="bg-white border-b border-neutral-100 py-16 relative overflow-hidden">
                     <style>{`
                         .logos-page { display: none; }
                         .logos-page.active { display: flex; }
-                        .logo-nav-btn { opacity: 0.3; transition: opacity 0.3s ease; background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 8px; }
-                        .logo-nav-btn:hover { opacity: 1; }
                     `}</style>
-                    <div className="max-w-7xl mx-auto px-8 flex items-center gap-8">
-                        <button className="logo-nav-btn" id="logo-prev">
-                            <div style={{width:'40px',height:'1px',background:'#000'}}></div>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                        <div className="flex-1">
-                            <div className="logos-page active" id="logos-p1" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
-                                {[1,2,3,4].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
-                            </div>
-                            <div className="logos-page" id="logos-p2" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
-                                {[5,6,7,8].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
-                            </div>
-                            <div className="logos-page" id="logos-p3" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
-                                {[9,10,11,12,13].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
-                            </div>
+                    <div className="max-w-7xl mx-auto px-8">
+                        <div className="logos-page active" id="logos-p1" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
+                            {[1,2,3,4].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
                         </div>
-                        <button className="logo-nav-btn" id="logo-next">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div style={{width:'40px',height:'1px',background:'#000'}}></div>
-                        </button>
+                        <div className="logos-page" id="logos-p2" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
+                            {[5,6,7,8].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
+                        </div>
+                        <div className="logos-page" id="logos-p3" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
+                            {[9,10,11,12,13].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
+                        </div>
                     </div>
                     <script dangerouslySetInnerHTML={{__html:`
                         (function(){
@@ -339,8 +323,6 @@ export default function AngeloPage() {
                                 document.getElementById(pages[i]).classList.add('active');
                                 current = i;
                             }
-                            document.getElementById('logo-prev').addEventListener('click',function(){ show((current-1+pages.length)%pages.length); });
-                            document.getElementById('logo-next').addEventListener('click',function(){ show((current+1)%pages.length); });
                             setInterval(function(){ show((current+1)%pages.length); }, 3000);
                         })();
                     `}}/>
