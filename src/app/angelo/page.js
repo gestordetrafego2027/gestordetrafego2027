@@ -335,18 +335,13 @@ export default function AngeloPage() {
                             var pages = ['logos-p1','logos-p2','logos-p3'];
                             var current = 0;
                             function show(i){
-                                pages.forEach(function(id){ 
-                                    var el = document.getElementById(id);
-                                    if(el) el.classList.remove('active'); 
-                                });
-                                var target = document.getElementById(pages[i]);
-                                if(target) target.classList.add('active');
+                                pages.forEach(function(id){ document.getElementById(id).classList.remove('active'); });
+                                document.getElementById(pages[i]).classList.add('active');
                                 current = i;
                             }
-                            var prev = document.getElementById('logo-prev');
-                            var next = document.getElementById('logo-next');
-                            if(prev) prev.addEventListener('click',function(){ show((current-1+pages.length)%pages.length); });
-                            if(next) next.addEventListener('click',function(){ show((current+1)%pages.length); });
+                            document.getElementById('logo-prev').addEventListener('click',function(){ show((current-1+pages.length)%pages.length); });
+                            document.getElementById('logo-next').addEventListener('click',function(){ show((current+1)%pages.length); });
+                            setInterval(function(){ show((current+1)%pages.length); }, 3000);
                         })();
                     `}}/>
                 </section>
