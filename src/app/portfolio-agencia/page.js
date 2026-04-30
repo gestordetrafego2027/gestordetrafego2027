@@ -54,72 +54,46 @@ export default function PortfolioAgenciaPage() {
                 <section className="bg-white w-full py-[16px] px-[40px]">
                     {/* Grid Rows Construction */}
                     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
-                        {/* ROW 1 (Images 1-3 -> projeto-1) */}
-                        <Link href="/portfolio-agencia/projeto-1" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="minimalist architectural facade with sharp lines and shadows in black and white high contrast style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCztuNFdb8shwCRAv3Bsu4SLDMCrXwPCScq2UmxBq-ilHuM4g5pitixup6fwmEOljq9k-mL5gCmccZTIN6tMoXAKowDI3FfnecMoRJncD8aPO21PtLQ-n_VMm3WKjykHh6UHjl1HJ2D-zZpSw-L3NFHi8mJnADexpAXXffFhEmv86p2joH--zEyszj-rYgHWXQlvs6bJLCywkiYOuUCUOjppddkoBIFgiwlvcMt1twGd9BFYMyiTfjpLliZvBSR8oaXu2zFDxV23wYC" />
+                        <Link href="/portfolio-agencia/house-mazzutti" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/agencia/house-mazzutti/capa.jpg" alt="House Mazzutti" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">House Mazzutti</span>
                             </div>
                         </Link>
-                        <Link href="/portfolio-agencia/projeto-1" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="close-up of premium textured paper stationery with embossed logo and elegant typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaVBgQgFKATgBv7IAzqL9qM4Z0tOA45C0RlXRtRe1despK8uCFmb6ABwY_fMH4NutVCsomWLpCHenS7G0evvSm03iraBQkv92ihmyxAYExwZaNV4uhl-VtIdGueKoqVA-k1k4IUb7ScMPVYMHvSKaNKhR4WKGJu14xSbY1cRXTS5OCGhMtsXXdyJWO510D4M-DidHUk90vSyXEOCg0EHsxMkdOGiO7P8ThFHyO-MKK2ebWOr10Cta-sW_kk2vX5cHN-of4egs8cHDy" />
+                        <Link href="/portfolio-agencia/knowhol" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/agencia/knowhol/capa.jpg" alt="Knowhol" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Knowhol</span>
                             </div>
                         </Link>
-                        <Link href="/portfolio-agencia/projeto-1" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="modern interior design with concrete walls and a single designer chair in dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Y1aeRxCa2tGoLtb54iMboTpZUIQT_DGvvGANlOgw1_u7bPMiI3V9FsKiAeHPFdfPYURjyAAWg9t71txePJ1qJ0Lpo4BNxYoRPiLk1VuNiC3PvHreg9tsE1wFIK1FqltqL7f7OyX5LWQAJYYpGCHxfqxi-paF4BBi7-JXKpAE9It2vJ6OdmGdct0Uv8LRI3_XUTyhqS2fZOb1iYrvaiW4KqNrU3kvYcNtENEmWxVNo9G8zUhSxhN1HWfWOhvjG5-MbaGn9XDws9qX" />
+                        <Link href="/portfolio-agencia/mabdo" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/agencia/mabdo/capa.jpg" alt="Mabdo" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Mabdo</span>
                             </div>
                         </Link>
-
-                        {/* ROW 2 (Images 4-6 -> projeto-2) */}
-                        <Link href="/portfolio-agencia/projeto-2" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="high fashion editorial shot of a model in monochromatic avant-garde clothing in a white studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAOb3woBBAoEhHQeiAQ-xxW3hLimXSW6porlTujq1nAdts17Dv-ZkWZKPDSApNbCWqc6t5c935JpSK-3awrXuStAd43B2ZYIYekyK6_JNupytAQpKYWVA5Hz34e-rgYm_KFcAcEGEqw6b8WIX6suAf_db6WfDZ5rR_LaYDNwpR2YkD-BQA_8gH2CHI3KbSCszqAugjfpPs_sQXib63AaPqk1F_dqgroQaAFh1YM8RRRyZ3k_FMHagcvQnYGnlHGv33p8NAzVYw6d6u" />
+                        <Link href="/portfolio-agencia/on-take" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/agencia/on-take/capa.jpg" alt="On Take" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">On Take</span>
                             </div>
                         </Link>
-                        <Link href="/portfolio-agencia/projeto-2" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="top view of a minimal desk setup with a black notebook and designer pen on white marble" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACmVoRk5Gn_KW3DsDtr9XrS09UwwrCCEAbGicvAY27tenrMCK6Tgkd7ILsdxZMnzbaN-r77n5QPoKJzdBb5RnYGyxDFto1Ux2Ct0VESBaHSxCYwfSII07n2jPyg9NdK1cA18OVokoJFHNU9yNpDCbCg9akJpv70byTZgpWtwE4LBz78v4CWbSRNBfm7ibYSopMdXpOh583DhKfKGbK3BQHzKrJ7YPTtCBXuKdPpJI5oEu86xfD7Pc5VXezBgxXn5AIOVBu3_jHV59J" />
+                        <Link href="/portfolio-agencia/pous" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/agencia/pous/capa.jpg" alt="Pous" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Pous</span>
                             </div>
                         </Link>
-                        <Link href="/portfolio-agencia/projeto-2" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="abstract composition of shadows on a clean white wall creating geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT_2FMLfjs_zieDjYfygyjTNXZkZXayhW7NvUIf-CijoxSB23RvfKzilGeq2Sd2E5W8IZTKOFEGRkSOR-3MmbXOV260R7qdonIerI02IALz_UVIetf5BGLasaHz4VDyk4i0lYwxoviqSTvvZ_GS8sMZaZb4Nb888pWNU6iCyRECkI4B02pLGHTniF-Ev2roD7s9QKLQzF-nTXO65XDlp9OvJBuSnHJCEe3THSH1hxVkLWXdQfRMKfVSOZiXyG8JXTPUf--Bo4myuaw" />
+                        <Link href="/portfolio-agencia/samrat" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/agencia/samrat/capa.jpg" alt="Samrat" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
-                            </div>
-                        </Link>
-
-                        {/* ROW 3 (Images 7-9 -> projeto-3) */}
-                        <Link href="/portfolio-agencia/projeto-3" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="luxury perfume bottle on a glass surface with soft ethereal light and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvL81wIHgPu60U2O_M_riCy6TouA9EdeP4x7WdZxE9eXtp_G8kYsC1_2ghJAzVuZoDw-hkTdGWkU9IkdvmWQuWs0Va6RGxPN8D2XrE9pIX1Vznjl-hd9l0wjWU_J1ea1cXmfqPSE2LnGcmnUk36WgXlPf8q8u9O9Sd62fUeMg59KbN-kyBypj03GGwsb8LH96-bBLAazlcNRxh2w43j2VetfsXOu3EWUzuduXMjYVeyGLoH_RgDYiASoZ5KsZ1MPJRCo1eBlRS3Bdx" />
-                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
-                            </div>
-                        </Link>
-                        <Link href="/portfolio-agencia/projeto-3" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="detail of a textured architectural model made of white plaster and wood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi_UzmmY_T7ExfK1HnItZKNUYVjpMq3kKh-EgFVfDW_bwrKXQulS_R5Rn8LD-C3a9-7p19nJZaX4-4cNvw6UR2XeoNpMMyg_3RjeGXAxmWrR_tiCsNfFu_iJdZ8jIfcFKLG3lB__AEDjwER7pXsWLazFdRRi7boFbvz_Myv-LQbwu3-7becUO6JGgMX-NFaY39UPlLk42ef6JkXGifWVW93XJhQx0a3o6tnKck4fiKVbKMEpvA7qb2ues5XrvHGUfTmluMNAcrFnxn" />
-                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
-                            </div>
-                        </Link>
-                        <Link href="/portfolio-agencia/projeto-3" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full aspect-square min-h-[200px] block">
-                            <img className="w-full h-full object-cover" data-alt="minimalist landscape of sand dunes in soft morning light with clean horizons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM799IOqRKKO04q9dNmIhjibtvzN8zrSCciBxHxAeeQbniWjYP2sPDgoOS4HUBARNrefLv11vIwtYfYS_SxJCrNpx4yk_wf9IZ9c-5tTESwvloP8FWo0AnGYT16dcctnZRKJNQAipKJR4ZAvwdPC7mhOeDSg8dkTM0Xwf2wmefxuLF_Z7JU1HM9SWHE0L-gbFiAs7m9oXBqMW1Jc9O9RYvxLQjUk4Zii3lNqO2NJIPBUpXE5-4AYcPK2qf943sjYWoz2_Bah08_uZf" />
-                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">HMZT AGÊNCIA</span>
-                                <span className="font-newsreader text-[14px] italic text-[#5f5e5e]">Branding &amp; Direção</span>
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Samrat</span>
                             </div>
                         </Link>
                     </div>
