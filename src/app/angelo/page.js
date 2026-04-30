@@ -297,35 +297,31 @@ export default function AngeloPage() {
                     </div>
                 </section>
 
-                {/* 8. O que era bloco de logos */}
-                <section className="bg-white px-8 md:px-24 border-b border-neutral-100 py-[113px]">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="flex flex-wrap justify-center items-center gap-[48px]">
-                            {[
-                                "/images/angelo/logos/logo-1.png",
-                                "/images/angelo/logos/logo-2.png",
-                                "/images/angelo/logos/logo-3.png",
-                                "/images/angelo/logos/logo-4.png",
-                                "/images/angelo/logos/logo-5.png",
-                                "/images/angelo/logos/logo-6.png",
-                                "/images/angelo/logos/logo-7.png",
-                                "/images/angelo/logos/logo-8.png",
-                                "/images/angelo/logos/logo-9.png",
-                                "/images/angelo/logos/logo-10.png",
-                                "/images/angelo/logos/logo-11.png",
-                                "/images/angelo/logos/logo-12.png",
-                                "/images/angelo/logos/logo-13.png",
-                            ].map((src, i) => (
-                                <div key={i} className="logo-container cursor-default group" style={{ height: "144px" }}>
-                                    <div className="logo-layer logo-layer-1 h-full">
-                                        <img alt={`Logo ${i + 1}`} className="h-full w-auto object-contain" src={src} />
-                                    </div>
-                                    <div className="logo-layer logo-layer-2 h-full">
-                                        <img alt={`Logo ${i + 1}`} className="h-full w-auto object-contain" src={src} />
-                                    </div>
+                {/* 8. Logos clientes - carrossel infinito */}
+                <section className="bg-white border-b border-neutral-100 py-12 overflow-hidden">
+                    <style>{`
+                        @keyframes scroll-logos {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-50%); }
+                        }
+                        .logos-track {
+                            display: flex;
+                            align-items: center;
+                            width: max-content;
+                            animation: scroll-logos 30s linear infinite;
+                        }
+                        .logos-track:hover {
+                            animation-play-state: paused;
+                        }
+                    `}</style>
+                    <div className="logos-track">
+                        {[...Array(2)].map((_, repeat) =>
+                            [1,2,3,4,5,6,7,8,9,10,11,12,13].map((n) => (
+                                <div key={`${repeat}-${n}`} className="flex items-center justify-center mx-12" style={{ height: "48px" }}>
+                                    <img alt={`Logo ${n}`} className="h-full w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300" src={`/images/angelo/logos/logo-${n}.png`} />
                                 </div>
-                            ))}
-                        </div>
+                            ))
+                        )}
                     </div>
                 </section>
 
