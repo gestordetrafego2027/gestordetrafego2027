@@ -1,443 +1,248 @@
 'use client';
-
 import Link from 'next/link';
 import Header from '@/app/components/Header';
-
 export default function PortfolioProdutoraPage() {
-  return (
-    <div className="bg-surface font-body text-on-surface antialiased">
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        .masonry-grid {
-            column-count: 1;
-            column-gap: 32px;
-        }
-        @media (min-width: 768px) {
-            .masonry-grid {
-                column-count: 2;
-            }
-        }
-        @media (min-width: 1024px) {
-            .masonry-grid {
-                column-count: 4;
-            }
-        }
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 32px;
-        }
-        .image-container {
-            position: relative;
-        }
-        .image-container img {
-            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-        .image-container:hover img {
-            transform: scale(1.03);
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        .page-title-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 28px 40px;
-            border-top: 0.5px solid #e0e0e0;
-            border-bottom: 0.5px solid #e0e0e0;
-            margin-top: 73px; /* Precise height of the header for alignment */
-            background: #fff;
-        }
-
-        .page-title {
-            font-family: 'Raleway', sans-serif;
-            font-size: 11px;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: #000;
-        }
-
-        .breadcrumb {
-            font-family: 'Newsreader', serif;
-            font-size: 16px;
-            font-style: italic;
-            color: #5f5e5e;
-            padding-right: 120px;
-        }
-    `
-      }} />
-
-      <Header />
-      <style>{`
-        header { background: #fff !important; }
-        header a, header div, header span { color: #000 !important; }
-      `}</style>
-      
-      <div className="page-title-bar" style={{ paddingTop: '80px' }}>
-        <span className="page-title">PORTFÓLIO PRODUTORA</span>
-        <span className="breadcrumb">Home / Portfólio / Produtora</span>
-      </div>
-
-      <main className="pt-12 pb-20 px-6 md:px-8 lg:px-10">
-        <div className="masonry-grid">
-          {/* Item 1: Barbara Porto */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/barbara-porto" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Barbara Porto" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/barbara-porto/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Barbara Porto</span>
+    return (
+        <div className="bg-white text-on-surface selection:bg-black selection:text-white min-h-screen">
+            <style dangerouslySetInnerHTML={{ __html: `
+                .font-newsreader { font-family: 'Newsreader', serif; font-style: italic; }
+                .font-raleway { font-family: 'Raleway', sans-serif; }
+                .font-manrope { font-family: 'Manrope', sans-serif; }
+                .gallery-item {
+                    min-height: 200px;
+                    aspect-ratio: 1 / 1;
+                }
+                .gallery-item .overlay {
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                    background-color: rgba(255, 255, 255, 1) !important;
+                }
+                .gallery-item:hover .overlay {
+                    opacity: 1;
+                }
+                .gallery-item img {
+                    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+                    min-height: 200px;
+                    object-fit: cover;
+                }
+                .gallery-item:hover img {
+                    transform: scale(1.02);
+                }
+            `}} />
+            <Header />
+            <style>{`
+              header { background: #fff !important; }
+              header a, header div, header span { color: #000 !important; }
+            `}</style>
+            <main className="pt-[92px]" style={{ paddingTop: '80px' }}>
+                <section className="border-y-[0.5px] border-[#e0e0e0] px-[40px] py-[28px] bg-white flex justify-between items-center">
+                    <h1 className="font-raleway text-[11px] uppercase tracking-[0.2em] text-black">PORTFÓLIO PRODUTORA</h1>
+                    <nav className="font-newsreader text-[16px] italic text-[#5f5e5e] pr-[120px]">
+                        Home / Portfólio / Produtora
+                    </nav>
+                </section>
+                <section className="bg-white w-full py-[16px] px-[40px]">
+                    <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
+                        <Link href="/portfolio-produtora/barbara-porto" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/barbara-porto/capa.jpg" alt="Barbara Porto" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Barbara Porto</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/camila-scarpa" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/camila-scarpa/capa.jpg" alt="Camila Scarpa" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Camila Scarpa</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/poema-paris" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/poema-paris/capa.jpg" alt="Poema Paris" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Poema Paris</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/pontok" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/pontok/capa.jpg" alt="PontoK" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">PontoK</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/dumond" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/dumond/capa.jpg" alt="Dumond" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Dumond</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/signus" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus/capa.jpg" alt="Signus" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/signus-versolato01" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-versolato01/capa.jpg" alt="Signus Versolato 01" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Versolato 01</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/signus-versolato02" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-versolato02/capa.jpg" alt="Signus Versolato 02" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Versolato 02</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/signus-vertz" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-vertz/capa.jpg" alt="Signus Vertz" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Vertz</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/elyah" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/elyah/capa.jpg" alt="Elyah" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Elyah</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/signus-fiamma" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-fiamma/capa.jpg" alt="Signus Fiamma" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Fiamma</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/signus-lavorato" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-lavorato/capa.jpg" alt="Signus Lavorato" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Lavorato</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/monica-costa-jewerly" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/monica-costa-jewerly/capa.jpg" alt="Monica Costa Jewerly" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Monica Costa Jewerly</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/signus-jean-pierre" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-jean-pierre/capa.jpg" alt="Signus Jean Pierre" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Jean Pierre</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/alletto-still" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/alletto-still/capa.jpg" alt="Alletto Still" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Alletto Still</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/jequiti-sense" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/jequiti-sense/capa.jpg" alt="Jequiti - Sense" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti - Sense</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/we-pink-ze-felipe" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/we-pink-ze-felipe/capa.jpg" alt="We Pink - Zé Felipe" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">We Pink - Zé Felipe</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/we-pink-01" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/we-pink-01/capa.jpg" alt="We Pink 01" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">We Pink 01</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/jequiti-galisteu" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/jequiti-galisteu/capa.jpg" alt="Jequiti - Galisteu" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti - Galisteu</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/natalia-beauty" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/natalia-beauty/capa.jpg" alt="Natalia Beauty" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Natalia Beauty</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/jequiti-larissa-manoela" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/jequiti-larissa-manoela/capa.jpg" alt="Jequiti - Larissa Manoela" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti - Larissa Manoela</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/oceane" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/oceane/capa.jpg" alt="Oceane" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Oceane</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/beatco" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/moda/beatco/capa.jpg" alt="Beatco" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Beatco</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/pous" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/moda/pous/capa.jpg" alt="Pous" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Pous</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/toli" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/moda/toli/capa.jpg" alt="Toli" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Toli</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/unique-chic" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/moda/unique-chic/capa.jpg" alt="Unique Chic" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Unique Chic</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/sense-hotel" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <img className="w-full h-full object-cover object-center" src="/images/produtora/institucional/sense-hotel/capa.jpg" alt="Sense Hotel" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">INSTITUCIONAL</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Sense Hotel</span>
+                            </div>
+                        </Link>
+                    </div>
+                </section>
+            </main>
+            <footer className="bg-[#0a0a0a] w-full flex justify-between items-center px-[48px] py-[32px] text-white">
+                <div className="font-newsreader italic text-lg text-white">HOUSE MAZZUTTI</div>
+                <div className="flex gap-8 items-center">
+                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="#">INSTAGRAM</Link>
+                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="#">LINKEDIN</Link>
                 </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 2: Camila Scarpa */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/camila-scarpa" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Camila Scarpa" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/camila-scarpa/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Camila Scarpa</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 3: Poema Paris */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/poema-paris" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Poema Paris" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/poema-paris/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Poema Paris</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 4: PontoK */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/pontok" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="PontoK" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/pontok/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">PontoK</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 5: Dumond */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/dumond" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Dumond" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/dumond/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Dumond</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 6: Signus */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/signus" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Signus" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 7: Signus Versolato 01 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/signus-versolato01" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Signus Versolato 01" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus-versolato01/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Versolato 01</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 8: Signus Versolato 02 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/signus-versolato02" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Signus Versolato 02" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-versolato02/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Versolato 02</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 9: Signus Vertz */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/signus-vertz" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Signus Vertz" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-vertz/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Vertz</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 10: Elyah */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/elyah" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Elyah" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/elyah/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Elyah</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 11: Signus Fiamma */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/signus-fiamma" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Signus Fiamma" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-fiamma/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Fiamma</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 12: Signus Lavorato */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/signus-lavorato" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Signus Lavorato" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/signus-lavorato/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Lavorato</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 13: Monica Costa Jewerly */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/monica-costa-jewerly" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Monica Costa Jewerly" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/acessorios/monica-costa-jewerly/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Monica Costa Jewerly</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 14: Signus Jean Pierre */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/signus-jean-pierre" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Signus Jean Pierre" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/acessorios/signus-jean-pierre/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Acessórios</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Signus - Jean Pierre</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 15: Alletto Still */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/alletto-still" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Alletto Still" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/beleza/alletto-still/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Alletto Still</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 16: Jequiti - Sense */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/jequiti-sense" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Jequiti - Sense" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/beleza/jequiti-sense/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Jequiti - Sense</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 17: We Pink - Zé Felipe */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/we-pink-ze-felipe" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="We Pink - Zé Felipe" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/beleza/we-pink-ze-felipe/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">We Pink - Zé Felipe</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 18: We Pink 01 */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/we-pink-01" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="We Pink 01" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/beleza/we-pink-01/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">We Pink 01</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 19: Jequiti - Galisteu */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/jequiti-galisteu" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Jequiti - Galisteu" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/beleza/jequiti-galisteu/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Jequiti - Galisteu</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 20: Natalia Beauty */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/natalia-beauty" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Natalia Beauty" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/beleza/natalia-beauty/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Natalia Beauty</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 21: Jequiti - Larissa Manoela */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/jequiti-larissa-manoela" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Jequiti - Larissa Manoela" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/beleza/jequiti-larissa-manoela/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Jequiti - Larissa Manoela</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 22: Oceane */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/oceane" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Oceane" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/beleza/oceane/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Beleza</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Oceane</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Item 23: Beatco */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/beatco" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Beatco" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/moda/beatco/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Moda</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Beatco</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-          {/* Item 24: Pous */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/pous" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Pous" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/moda/pous/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Moda</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Pous</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-          {/* Item 25: Toli */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/toli" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Toli" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/moda/toli/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Moda</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Toli</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-          {/* Item 26: Unique Chic */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/unique-chic" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Unique Chic" className="w-full aspect-[4/3] object-cover block" src="/images/produtora/moda/unique-chic/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Moda</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Unique Chic</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-          {/* Item 27: Sense Hotel */}
-          <div className="masonry-item">
-            <Link href="/portfolio-produtora/sense-hotel" className="block group">
-              <div className="image-container overflow-hidden bg-surface-container-lowest relative">
-                <img loading="lazy" alt="Sense Hotel" className="w-full aspect-[3/4] object-cover block" src="/images/produtora/institucional/sense-hotel/capa.jpg" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 p-4 bg-white/90">
-                  <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-black mb-1">Institucional</span>
-                  <span className="font-newsreader text-lg italic text-on-surface-variant text-center leading-tight">Sense Hotel</span>
-                </div>
-              </div>
-            </Link>
-          </div>
+                <div className="font-manrope text-[10px] uppercase tracking-wider text-[#333]">Copyright © 2025 House Mazzutti</div>
+            </footer>
         </div>
-      </main>
-
-      <footer style={{ background: '#0a0a0a', padding: '32px 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ fontFamily: "'Newsreader', serif", fontSize: '16px', color: '#fff', letterSpacing: '-0.02em' }}>House Mazzutti</div>
-        <div style={{ display: 'flex', gap: '32px' }}>
-          <a href="#" style={{ fontFamily: 'Manrope, sans-serif', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#666', textDecoration: 'none' }}>Instagram</a>
-          <a href="#" style={{ fontFamily: 'Manrope, sans-serif', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#666', textDecoration: 'none' }}>LinkedIn</a>
-        </div>
-        <div style={{ fontFamily: 'Manrope, sans-serif', fontSize: '10px', color: '#333', letterSpacing: '0.1em' }}>© 2025 House Mazzutti</div>
-      </footer>
-    </div>
-  );
+    );
 }
