@@ -411,13 +411,23 @@ export default function ProdutoraPage() {
                     </div>
                 </section>
 
-                <section style={{ background: '#fff', padding: '160px 80px' }}>
+                <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <div style={{ marginBottom: '60px' }}>
-                            <p style={{ fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#aaa', marginBottom: '12px' }}>BLOG</p>
-                            <h2 style={{ fontSize: '2.8rem', fontWeight: '400', color: '#000' }}>Últimos Artigos</h2>
+                        <div style={{ marginBottom: '40px' }}>
+                            <p style={{
+                                fontSize: '12px', letterSpacing: '0.2em',
+                                textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
+                            }}>
+                                BLOG
+                            </p>
+                            <h2 style={{ fontSize: '2.2rem', fontWeight: '400', color: '#000' }}>
+                                Últimos Artigos
+                            </h2>
                         </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }}>
+                        <div style={{
+                            display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)',
+                            gap: '2px'
+                        }} className="md:grid-cols-3">
                             {[
                                 { categoria: 'Studio — Book', titulo: 'Book para Modelos: o que realmente define quem é escolhido no mercado', data: 'Abril 2026', slug: '/blog/book-para-modelos-quem-e-escolhido' },
                                 { categoria: 'Agência — Branding', titulo: 'Por que o branding é o ativo mais valioso de uma marca de luxo', data: 'Abril 2026', slug: '/blog/branding-project-arquitetura-valor' },
