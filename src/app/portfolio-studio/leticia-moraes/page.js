@@ -6,6 +6,8 @@ import Header from '@/app/components/Header';
 
 export default function LeticiaMoraesPage() {
     const [selectedImg, setSelectedImg] = useState(null)
+    const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; }
+    const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => { 
@@ -83,31 +85,31 @@ export default function LeticiaMoraesPage() {
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/1.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/1.jpg')} className="cursor-pointer">
                             <img alt="Foto 1" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/leticia-moraes/1.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/2.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/2.jpg')} className="cursor-pointer">
                             <img alt="Foto 2" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/leticia-moraes/2.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/3.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/3.jpg')} className="cursor-pointer">
                             <img alt="Foto 3" className="w-full aspect-[3/4] object-cover" src="/images/studio/leticia-moraes/3.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/4.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/4.jpg')} className="cursor-pointer">
                             <img alt="Foto 4" className="w-full aspect-[3/4] object-cover" src="/images/studio/leticia-moraes/4.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/5.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/5.jpg')} className="cursor-pointer">
                             <img alt="Foto 5" className="w-full aspect-[3/4] object-cover" src="/images/studio/leticia-moraes/5.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/6.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/6.jpg')} className="cursor-pointer">
                             <img alt="Foto 6" className="w-full aspect-[3/4] object-cover" src="/images/studio/leticia-moraes/6.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/7.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/7.jpg')} className="cursor-pointer">
                             <img alt="Foto 7" className="w-full aspect-[3/4] object-cover" src="/images/studio/leticia-moraes/7.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/8.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/8.jpg')} className="cursor-pointer">
                             <img alt="Foto 8" className="w-full aspect-[3/4] object-cover" src="/images/studio/leticia-moraes/8.jpg"/>
                           </div>
-                          <div onClick={() => setSelectedImg('/images/studio/leticia-moraes/9.jpg')} className="cursor-pointer">
+                          <div onClick={() => openImg('/images/studio/leticia-moraes/9.jpg')} className="cursor-pointer">
                             <img alt="Foto 9" className="w-full aspect-[3/4] object-cover" src="/images/studio/leticia-moraes/9.jpg"/>
                           </div>
                         </div>
@@ -175,7 +177,7 @@ export default function LeticiaMoraesPage() {
             </footer>
 
             {selectedImg && (
-              <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={() => setSelectedImg(null)}>
+              <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
                 <img src={selectedImg} className="max-h-screen max-w-screen object-contain" />
               </div>
             )}
