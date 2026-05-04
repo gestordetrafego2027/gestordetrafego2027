@@ -166,13 +166,13 @@ export default function Home() {
                                 {heroSlides[currentHeroSlide].label}
                             </span>
                             <h1
-                                className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6 italic font-light"
+                                className="hero-animate font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5 italic font-light"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].titulo}
                             </h1>
                             <p 
-                                className="hero-animate font-body text-base md:text-lg mb-10"
+                                className="hero-animate font-body text-sm md:text-base mb-8"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#ccc' }}
                             >
                                 {heroSlides[currentHeroSlide].texto}
