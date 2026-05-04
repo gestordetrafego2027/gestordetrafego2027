@@ -14,23 +14,23 @@ export default function Home() {
 
     const heroSlides = [
         {
-            label: 'STUDIO',
-            titulo: 'Direção de imagem pessoal com estratégia.',
-            texto: 'A maioria das produções começa na estética. Nós começamos na estratégia.',
+            label: 'STUDIO - HMZT',
+            titulo: 'Conteúdo Pessoal',
+            texto: 'Produção e direção de imagem pessoal em São Paulo.',
             cta: 'CONHECER O STUDIO',
             link: '/studio'
         },
         {
-            label: 'PRODUTORA',
-            titulo: 'Direção e Produção de sets e campanhas publicitárias.',
-            texto: 'Integração e execução geral de mega projetos audiovisuais para TV e mídias online.',
+            label: 'PRODUTORA - HMZT',
+            titulo: 'Produção Executiva',
+            texto: 'Gestão de Projetos Audiovisuais e Casting para Marcas Corporativas.',
             cta: 'CONHECER A PRODUTORA',
             link: '/produtora'
         },
         {
-            label: 'AGÊNCIA',
-            titulo: 'Estratégia, posicionamento e direção de marca.',
-            texto: 'A consolidação do branding, da identidade visual e o lançamento digital de marcas.',
+            label: 'AGÊNCIA - HMZT',
+            titulo: 'Gestão de Marcas',
+            texto: 'Branding, Rebranding e Lançamentos de campanha.',
             cta: 'CONHECER A AGÊNCIA',
             link: '/agencia'
         },
@@ -240,9 +240,7 @@ export default function Home() {
                     style={{ maxWidth: "95vw" }}
                 >
                     <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">
-                            BRANDING & POSICIONAMENTO ESTRATÉGICO DE MARCAS E PERFIS
-                        </span>
+                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4"></span>
                         <h2 className="font-headline text-3xl text-black">Trabalhos Selecionados</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
@@ -281,9 +279,7 @@ export default function Home() {
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center mb-12">
                         <div className="mb-20">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">
-                                ATUAMOS COM FORMATO CONSULTIVO
-                            </span>
+                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4"></span>
                             <h2 className="font-headline text-5xl text-black">
                                 Integrado. Estratégico. Intencional.
                             </h2>
@@ -365,34 +361,6 @@ export default function Home() {
                                         Filosofia House
                                     </p>
                                 </div>
-                                <div className="flex justify-end">
-                                    <div className="max-w-xl text-right">
-                                        <h3 className="font-headline text-xl md:text-2xl leading-snug mb-2">
-                                            A maioria constrói visibilidade, mas poucos constroem verdadeiros legados visuais.
-                                        </h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
-                                            Ângelo Mazzutti — Dir. Criativo e de Publicidade HMZT
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="max-w-xl text-left">
-                                    <p className="font-headline text-lg md:text-xl italic leading-snug text-white/90 mb-2">
-                                        Não é sobre como vamos produzir conteúdo. E sim de como sua marca pode fazer isso da forma mais hábil e otimizada possível.
-                                    </p>
-                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
-                                        Mateus Sacavem — Produtor HMZT
-                                    </p>
-                                </div>
-                                <div className="flex justify-end">
-                                    <div className="max-w-xl text-right">
-                                        <h3 className="font-headline text-xl md:text-2xl leading-tight mb-2">
-                                            Existe um ponto onde a execução deixa de resolver. E a falta de direção começa a aparecer. É nesse ponto que entramos, para ajudar você e sua marca a se posicionarem de forma inteligente e clara.
-                                        </h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
-                                            Institucional House Mazzutti
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -403,28 +371,28 @@ export default function Home() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÍVEL</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">SOLUÇÕES</span>
+                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Hoje</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        title: "STUDIO",
+                                        title: "HMZT | STUDIO",
                                         link: "/studio",
-                                        subtitle: '"Onde a imagem é construída com intenção"',
+                                        subtitle: 'Experiência foto, vídeo e produção pessoal',
                                         items: ["Book profissional", "Ensaio pessoal", "Cobertura externa", "Direção de imagem"]
                                     },
                                     {
-                                        title: "PRODUTORA",
+                                        title: "HMZT | PRODUTORA",
                                         link: "/produtora",
-                                        subtitle: '"Onde a estratégia ganha forma e presença"',
+                                        subtitle: 'Campanhas de Moda, Saúde e Beleza.',
                                         items: ["Editorial de moda", "Campanha publicitária", "Conteúdo institucional", "Produção executiva"]
                                     },
                                     {
-                                        title: "AGÊNCIA",
+                                        title: "HMZT | AGÊNCIA",
                                         link: "/agencia",
-                                        subtitle: '"Onde a marca é definida e estruturada"',
+                                        subtitle: 'Criação de marcas, Eventos e Influência.',
                                         items: ["Branding project", "Campanhas", "Web development", "Posicionamento"]
                                     }
                                 ].map((card, idx) => (
@@ -656,8 +624,7 @@ export default function Home() {
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-4xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-7xl text-white leading-tight italic">
-                            Se o seu marketing está pedindo um novo visual, <br />
-                            entre em contato.
+                            Se o seu marketing está pedindo um novo visual.
                         </h2>
                         <div className="flex flex-col items-center space-y-8">
                             <Link
