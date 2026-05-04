@@ -160,50 +160,55 @@ export default function ProdutoraPage() {
             <main>
                 {/* HERO */}
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
-                    <div className="absolute inset-0 z-0">
-                        {['/images/produtora/banners/banner-1.jpg','/images/produtora/banners/banner-2.jpg','/images/produtora/banners/banner-3.jpg'].map((src, i) => (
-                            <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
-                                <img src={src} className="w-full h-full object-cover object-top" alt="" />
-                                <div className="absolute inset-0 bg-black/20"></div>
+                    {(() => {
+                        const heroSlides = [
+                            { titulo: 'Produção e direção artística para publicidade.', texto: 'Produção audiovisual, campanhas e conteúdo estratégico com direção criativa e posicionamento de marca.' },
+                            { titulo: 'Campanhas que comunicam com clareza e consistência.', texto: 'Da pré-produção à entrega final, cada detalhe é pensado para gerar resultado real.' },
+                            { titulo: 'Sets, editoriais e conteúdo com direção estratégica.', texto: 'Integramos execução técnica e visão criativa para marcas que querem se posicionar de verdade.' },
+                        ];
+                        return <>
+                            <div className="absolute inset-0 z-0">
+                                {['/images/produtora/banners/banner-1.jpg','/images/produtora/banners/banner-2.jpg','/images/produtora/banners/banner-3.jpg'].map((src, i) => (
+                                    <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
+                                        <img src={src} className="w-full h-full object-cover object-top" alt="" />
+                                        <div className="absolute inset-0 bg-black/20"></div>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                    <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
-                        <div className="max-w-4xl">
-                            <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>PRODUTORA</span>
-                            <h1 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                PRODUÇÃO E DIREÇÃO ARTÍSTICA PARA PUBLICIDADE
-                            </h1>
-                            <p className="hero-animate font-body text-base md:text-lg mb-10 text-white/70" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Produção audiovisual, campanhas e conteúdo estratégico com direção criativa e posicionamento de marca.
-                            </p>
-                            <Link href="/contato">
-                                <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                    INICIAR PROJETO
+                            <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
+                                <div className="max-w-3xl">
+                                    <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>PRODUTORA</span>
+                                    <h1 className="hero-animate font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                        {heroSlides[currentBannerSlide].titulo}
+                                    </h1>
+                                    <p className="hero-animate font-body text-sm md:text-base mb-8 text-white/70" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                        {heroSlides[currentBannerSlide].texto}
+                                    </p>
+                                    <Link href="/contato">
+                                        <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                            INICIAR PROJETO
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="absolute inset-y-0 left-12 flex items-center z-20">
+                                <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity" onClick={prevBanner}>
+                                    <div className="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
+                                        <div className="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16"></div>
+                                        <svg className="-ml-1" fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                    </div>
                                 </button>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="absolute inset-y-0 left-12 flex items-center z-20">
-                        <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity" onClick={prevBanner}>
-                            <div className="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
-                                <div className="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16"></div>
-                                <svg className="-ml-1" fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
-                                    <polyline points="15 18 9 12 15 6"></polyline>
-                                </svg>
                             </div>
-                        </button>
-                    </div>
-                    <div className="absolute inset-y-0 right-12 flex items-center z-20">
-                        <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity" onClick={nextBanner}>
-                            <div className="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
-                                <svg className="-mr-1" fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                                <div className="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16"></div>
+                            <div className="absolute inset-y-0 right-12 flex items-center z-20">
+                                <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity" onClick={nextBanner}>
+                                    <div className="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
+                                        <svg className="-mr-1" fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                        <div className="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16"></div>
+                                    </div>
+                                </button>
                             </div>
-                        </button>
-                    </div>
+                        </>;
+                    })()}
                 </section>
 
                 {/* Section 2: Gallery */}
