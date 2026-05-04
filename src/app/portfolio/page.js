@@ -5,7 +5,7 @@ import Header from "@/app/components/Header";
 
 export default function Portfolio() {
   return (
-    <div className="page-portfolio selection:bg-black selection:text-white">
+    <div className="page-portfolio selection:bg-black selection:text-white" style={{ overflowY: 'auto', height: '100vh' }}>
       <h1 className="sr-only">Portfólio de Branding Estratégico e Posicionamento de Marca</h1>
       <Header variant="light" />
       <main>
