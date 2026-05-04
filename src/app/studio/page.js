@@ -7,6 +7,7 @@ import Header from '@/app/components/Header'
 export default function StudioPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentGallerySlide, setCurrentGallerySlide] = useState(0)
+    const [currentBannerSlide, setCurrentBannerSlide] = useState(0)
 
     const nextGallerySlide = () => setCurrentGallerySlide(prev => prev === 0 ? 1 : 0)
     const prevGallerySlide = () => setCurrentGallerySlide(prev => prev === 1 ? 0 : 1)
@@ -89,6 +90,13 @@ export default function StudioPage() {
             observer.disconnect()
             window.removeEventListener('scroll', handleScroll)
         }
+    }, [])
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentBannerSlide(prev => (prev + 1) % 3)
+        }, 7000)
+        return () => clearInterval(interval)
     }, [])
 
     return (
@@ -198,7 +206,7 @@ export default function StudioPage() {
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     <div className="absolute inset-0 z-0">
                         {['/images/studio/banners/banner-1.jpg','/images/studio/banners/banner-2.jpg','/images/studio/banners/banner-3.jpg'].map((src, i) => (
-                            <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentSlide === i ? 1 : 0}}>
+                            <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
                                 <img src={src} className="w-full h-full object-cover object-top" alt="" />
                                 <div className="absolute inset-0 bg-black/55"></div>
                             </div>
