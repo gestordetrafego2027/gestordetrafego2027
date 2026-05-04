@@ -8,6 +8,8 @@ export default function StudioPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentGallerySlide, setCurrentGallerySlide] = useState(0)
     const [currentBannerSlide, setCurrentBannerSlide] = useState(0)
+    const prevBanner = () => setCurrentBannerSlide(prev => (prev - 1 + 3) % 3)
+    const nextBanner = () => setCurrentBannerSlide(prev => (prev + 1) % 3)
 
     const nextGallerySlide = () => setCurrentGallerySlide(prev => prev === 0 ? 1 : 0)
     const prevGallerySlide = () => setCurrentGallerySlide(prev => prev === 1 ? 0 : 1)
@@ -229,7 +231,7 @@ export default function StudioPage() {
                         </div>
                     </div>
                     <div className="absolute inset-y-0 left-12 flex items-center z-20">
-                        <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity">
+                        <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity" onClick={prevBanner}>
                             <div className="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
                                 <div className="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16"></div>
                                 <svg className="-ml-1" fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
@@ -239,7 +241,7 @@ export default function StudioPage() {
                         </button>
                     </div>
                     <div className="absolute inset-y-0 right-12 flex items-center z-20">
-                        <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity">
+                        <button className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity" onClick={nextBanner}>
                             <div className="flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 group">
                                 <svg className="-mr-1" fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
                                     <polyline points="9 18 15 12 9 6"></polyline>
