@@ -1,10 +1,14 @@
 'use client'
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
 
 export default function KnowholPage() {
+    const [selectedImg, setSelectedImg] = useState(null)
+    const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
+    const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => { 
             entries.forEach(e => { 
@@ -76,13 +80,13 @@ export default function KnowholPage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     <div className="lg:w-2/3 flex flex-col gap-8">
                         {verticalImages.map((src, i) => (
-                            <div key={i} className="image-anim relative overflow-hidden group">
-                                <img alt="Knowhol vertical" className="w-full grayscale hover:grayscale-0 transition-all duration-700" src={src}/>
+                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(src)} style={{maxHeight:'600px'}}>
+                                <img alt="vertical" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src={src} style={{maxHeight:'600px'}}/>
                             </div>
                         ))}
                         {horizontalImages.map((src, i) => (
-                            <div key={i} className="image-anim relative overflow-hidden group">
-                                <img alt="Knowhol horizontal" className="w-full grayscale hover:grayscale-0 transition-all duration-700" src={src} style={{aspectRatio:'16/9', objectFit:'cover'}}/>
+                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(src)}>
+                                <img alt="horizontal" className="w-full grayscale hover:grayscale-0 transition-all duration-700" src={src} style={{aspectRatio:'16/9', objectFit:'cover'}}/>
                             </div>
                         ))}
                     </div>
@@ -145,6 +149,12 @@ export default function KnowholPage() {
                     <p className="text-[#808080] font-inter text-[10px] tracking-wider">© 2025 House Mazzutti</p>
                 </div>
             </footer>
-        </div>
+        
+            {selectedImg && (
+                <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
+                    <img src={selectedImg} className="max-h-screen max-w-screen object-contain" />
+                </div>
+            )}
+</div>
     );
 }
