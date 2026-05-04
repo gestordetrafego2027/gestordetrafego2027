@@ -83,12 +83,12 @@ export default function SamratPage() {
                     <div className="lg:w-2/3 flex flex-col gap-8">
                         {verticalImages.map((src, i) => (
                             <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(src)} style={{maxHeight:'600px'}}>
-                                <img alt="vertical" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src={src} style={{maxHeight:'600px'}}/>
+                                <img alt="vertical" className="w-full h-full object-cover transition-all duration-700" src={src} style={{maxHeight:'600px'}}/>
                             </div>
                         ))}
                         {horizontalImages.map((src, i) => (
                             <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(src)}>
-                                <img alt="horizontal" className="w-full grayscale hover:grayscale-0 transition-all duration-700" src={src} style={{aspectRatio:'16/9', objectFit:'cover'}}/>
+                                <img alt="horizontal" className="w-full transition-all duration-700" src={src} style={{aspectRatio:'16/9', objectFit:'cover'}}/>
                             </div>
                         ))}
                     </div>
