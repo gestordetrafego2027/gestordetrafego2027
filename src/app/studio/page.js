@@ -223,11 +223,11 @@ export default function StudioPage() {
                             </div>
                             <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                                 <div className="max-w-3xl">
-                                    <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>STUDIO</span>
+                                    <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>STUDIO</span>
                                     <h1 className="hero-animate font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].titulo}
                                     </h1>
-                                    <p className="hero-animate font-body text-sm md:text-base mb-8 text-white/70" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                    <p className="hero-animate font-body text-sm md:text-base mb-8 text-white" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].texto}
                                     </p>
                                     <Link href="/contato">

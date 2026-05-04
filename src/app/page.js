@@ -161,7 +161,7 @@ export default function Home() {
                         <div className="max-w-4xl fade-in">
                             <span
                                 className="hero-animate font-label uppercase tracking-widest text-[10px] mb-4 block"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#aaa', marginBottom: '16px' }}
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#fff', marginBottom: '16px' }}
                             >
                                 {heroSlides[currentHeroSlide].label}
                             </span>
