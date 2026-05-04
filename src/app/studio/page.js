@@ -262,9 +262,9 @@ export default function StudioPage() {
                         <h2 className="font-headline text-3xl text-black">Books. Ensaios. Coberturas.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
-                    <div className="relative w-full group overflow-hidden" style={{ height: '80vh' }}>
-                        {(() => {
-                            const allModels = [
+                    <div className="w-full">
+                        <div className="grid grid-cols-2 md:grid-cols-4 w-full">
+                            {[
                                 { href: '/portfolio-studio/amanda-oliveira', src: '/images/studio/amanda-oliveira/capa.jpg', label: 'Book', name: 'Amanda Oliveira' },
                                 { href: '/portfolio-studio/talita-dalbo', src: '/images/studio/talita-dalbo/capa.jpg', label: 'Ensaio Pessoal', name: 'Talita Dalbó' },
                                 { href: '/portfolio-studio/jamile-caroline', src: '/images/studio/jamile-caroline/capa.jpg', label: 'Book', name: 'Jamile Caroline' },
@@ -306,33 +306,16 @@ export default function StudioPage() {
                                 { href: '/portfolio-studio/simonny', src: '/images/studio/simonny/capa.jpg', label: 'Ensaio Pessoal', name: 'Simonny' },
                                 { href: '/portfolio-studio/fernanda-costas', src: '/images/studio/fernanda-costas/capa.jpg', label: 'Ensaio Pessoal', name: 'Fernanda Costas' },
                                 { href: '/portfolio-studio/mileide-mihaile', src: '/images/studio/mileide-mihaile/capa.jpg', label: 'Ensaio Pessoal', name: 'Mileide Mihaile' },
-                            ];
-                            const totalPages = Math.ceil(allModels.length / 4);
-                            const pageModels = allModels.slice(currentGallerySlide * 4, currentGallerySlide * 4 + 4);
-                            return (
-                                <div className="columns-gallery-container w-full h-full flex">
-                                    {pageModels.map((model, i) => (
-                                        <Link key={i} className="gallery-column project-item group" href={model.href} style={{ flex: '0 0 25%', minWidth: '25%' }}>
-                                            <img alt={model.name} className="column-image" src={model.src}/>
-                                            <div className="project-overlay">
-                                                <span>{model.label}</span>
-                                                <h4>{model.name}</h4>
-                                            </div>
-                                        </Link>
-                                    ))}
-                                </div>
-                            );
-                        })()}
-                        <button onClick={prevGallerySlide} className="absolute left-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12 rounded-full border-[0.5px] border-white/50 text-white bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all hover:bg-black/40">
-                            <svg fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                        <button onClick={nextGallerySlide} className="absolute right-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12 rounded-full border-[0.5px] border-white/50 text-white bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all hover:bg-black/40">
-                            <svg fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </button>
+                            ].map((model, i) => (
+                                <Link key={i} className="project-item group relative overflow-hidden" href={model.href} style={{ aspectRatio: '3/4' }}>
+                                    <img alt={model.name} className="column-image w-full h-full object-cover object-top" src={model.src}/>
+                                    <div className="project-overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                        <span className="text-white font-raleway text-[10px] uppercase tracking-[0.2em]">{model.label}</span>
+                                        <h4 className="text-white font-newsreader text-lg italic mt-1">{model.name}</h4>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </section>
                 <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
