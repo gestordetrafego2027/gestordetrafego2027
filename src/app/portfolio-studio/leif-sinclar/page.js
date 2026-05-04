@@ -6,8 +6,8 @@ import Header from '@/app/components/Header';
 
 export default function LeifSinclarPage() {
     const [selectedImg, setSelectedImg] = useState(null)
-    const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; }
-    const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; }
+    const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
+    const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => { 
