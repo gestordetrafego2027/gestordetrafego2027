@@ -1,238 +1,77 @@
 "use client";
-
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 
-/**
- * PORTFOLIO PAGE - HOUSE MAZZUTTI
- * Full-screen Slider with Scroll/Wheel/Touch interface
- */
 export default function Portfolio() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const slidesCount = 3;
-  const animatingRef = useRef(false);
-
-  const updateSlide = useCallback((nextIndex) => {
-    if (animatingRef.current) return;
-
-    let targetIndex = nextIndex;
-    if (targetIndex >= slidesCount) {
-      targetIndex = 0;
-    } else if (targetIndex < 0) {
-      targetIndex = slidesCount - 1;
-    }
-
-    animatingRef.current = true;
-    setIsAnimating(true);
-    document.body.classList.add("is-animating");
-
-    // 1. Fade out current, wait for transition
-    setTimeout(() => {
-      setCurrentIndex(targetIndex);
-
-      // 2. Mid-transition delay (overlay visible)
-      setTimeout(() => {
-        document.body.classList.remove("is-animating");
-
-        // 3. Wait for fade in completion
-        setTimeout(() => {
-          animatingRef.current = false;
-          setIsAnimating(false);
-        }, 600);
-      }, 300);
-    }, 600);
-  }, [slidesCount]);
-
-  // Handle Wheel
-  useEffect(() => {
-    const handleWheel = (e) => {
-      if (animatingRef.current) return;
-      if (Math.abs(e.deltaY) < 10) return;
-
-      if (e.deltaY > 0) {
-        updateSlide(currentIndex + 1);
-      } else {
-        updateSlide(currentIndex - 1);
-      }
-    };
-
-    window.addEventListener("wheel", handleWheel, { passive: true });
-    return () => window.removeEventListener("wheel", handleWheel);
-  }, [currentIndex, updateSlide]);
-
-  // Handle Keyboard
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (animatingRef.current) return;
-      if (e.key === "ArrowDown") {
-        updateSlide(currentIndex + 1);
-      } else if (e.key === "ArrowUp") {
-        updateSlide(currentIndex - 1);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex, updateSlide]);
-
-  // Handle Touch
-  const touchStartY = useRef(0);
-  useEffect(() => {
-    const handleTouchStart = (e) => {
-      touchStartY.current = e.touches[0].clientY;
-    };
-
-    const handleTouchMove = (e) => {
-      if (animatingRef.current) return;
-      const touchEndY = e.touches[0].clientY;
-      const delta = touchStartY.current - touchEndY;
-
-      if (delta > 70) {
-        updateSlide(currentIndex + 1);
-      } else if (delta < -70) {
-        updateSlide(currentIndex - 1);
-      }
-    };
-
-    window.addEventListener("touchstart", handleTouchStart, { passive: true });
-    window.addEventListener("touchmove", handleTouchMove, { passive: true });
-    return () => {
-      window.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, [currentIndex, updateSlide]);
-
   return (
     <div className="page-portfolio selection:bg-black selection:text-white">
       <h1 className="sr-only">Portfólio de Branding Estratégico e Posicionamento de Marca</h1>
-
       <Header variant="light" />
-
-      {/* Transition Overlay */}
-      <div id="transition-overlay">
-        <div id="transition-line"></div>
-      </div>
-
-      <main id="main-slider" className="h-full w-full">
-        {/* [SLIDE 1] */}
-        <div className={`slide ${currentIndex === 0 ? "active" : ""}`} data-index="0">
-          <div className="flex h-full flex-col md:flex-row">
-            {/* Left/Top: Image */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-neutral-100 relative overflow-hidden">
-              <img
-                alt="Portrait"
-                className="w-full h-full object-cover grayscale transition-transform duration-1000"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4KUVLJUL-uxvDKAfn2IfswuESvjVPbRKyIhOr6RAgX-gPHUSbYctz9jhHVRyhrPOvgp_F3f339FTKZ2mhKtmRsw1Or-AmM4LeyBQXQLMRP31QoOgFfQPK3xfhY4RNtunnrYPZC4V9mEPkrfWjBz0iKBMIwvWokt-XYQceqHYBtZErUvjI2khPxLKapxWYqHS0N2VjtMveW4bOeceZhgsr5k3bQ6DOR40hyL8fpJ4kuyCXaGpvOMPgit5ZRt4CcmS9Ua18PsBPgXw"
-              />
-            </div>
-            {/* Right/Bottom: Content */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex items-center justify-center p-8 md:p-24 overflow-y-auto">
-              <div className="max-w-md w-full space-y-[27px]">
-                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">STUDIO</span>
-                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT STUDIO</h2>
-                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Confira a seleção de grandes projetos nesta seção de ensaios | books | cobertura pessoal."</p>
-                <div className="fine-line"></div>
-                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Sempre conectados ao posicionamento da sua persona de forma objetiva e marcante.</p>
-                <div className="pt-[20px]">
-                  <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
-                    VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                  </Link>
-                </div>
+      <main>
+        {/* STUDIO */}
+        <section className="flex flex-col md:flex-row" style={{ minHeight: '100vh' }}>
+          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
+            <img alt="Studio" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4KUVLJUL-uxvDKAfn2IfswuESvjVPbRKyIhOr6RAgX-gPHUSbYctz9jhHVRyhrPOvgp_F3f339FTKZ2mhKtmRsw1Or-AmM4LeyBQXQLMRP31QoOgFfQPK3xfhY4RNtunnrYPZC4V9mEPkrfWjBz0iKBMIwvWokt-XYQceqHYBtZErUvjI2khPxLKapxWYqHS0N2VjtMveW4bOeceZhgsr5k3bQ6DOR40hyL8fpJ4kuyCXaGpvOMPgit5ZRt4CcmS9Ua18PsBPgXw" />
+          </div>
+          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
+            <div className="max-w-md w-full space-y-[27px]">
+              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">STUDIO</span>
+              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT STUDIO</h2>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Confira a seleção de grandes projetos nesta seção de ensaios | books | cobertura pessoal."</p>
+              <div className="fine-line"></div>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Sempre conectados ao posicionamento da sua persona de forma objetiva e marcante.</p>
+              <div className="pt-[20px]">
+                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
+                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </Link>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* [SLIDE 2] */}
-        <div className={`slide ${currentIndex === 1 ? "active" : ""}`} data-index="1">
-          <div className="flex h-full flex-col md:flex-row-reverse">
-            {/* Image */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-neutral-100 relative overflow-hidden">
-              <img
-                alt="Fashion"
-                className="w-full h-full object-cover grayscale"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxxCED8XmlkgNbuGiBWOIoL_z8W4KNtk73xn8vQ-iW8GDkkVNi7X1jqkXb6AlWm6RX3cw0DJKVuj64s5VKTwHN4-JRumUk7k1WdMY2xl4wCBNUZM97L1mfESGVn3jK3UxigcDBkEptMRWuiNt9eJwAk9--RWcaUJIgxvPkcjp6XwpOxvSNIzA9LKZ4PXxdt9mmLGG_uMCYlYndBP79YuGkiWMCuzgJDFBDxSMg4BlXyypJqLa3rJCkOY0YCgpUX25kL9KLQuyenBE"
-              />
-            </div>
-            {/* Content */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex items-center justify-center p-8 md:p-24 overflow-y-auto">
-              <div className="max-w-md w-full space-y-[27px]">
-                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">PRODUTORA</span>
-                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT PRODUTORA</h2>
-                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"A atuação da Produtora pode envolver: editorial de moda | publicidade | institucionais"</p>
-                <div className="fine-line"></div>
-                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Antes de produzir, entendemos. A partir disso, direcionamos sua produção de forma estratégica e conceitual.</p>
-                <div className="pt-[20px]">
-                  <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-produtora">
-                    VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                  </Link>
-                </div>
+        {/* PRODUTORA */}
+        <section className="flex flex-col md:flex-row-reverse border-t border-neutral-100" style={{ minHeight: '100vh' }}>
+          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
+            <img alt="Produtora" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxxCED8XmlkgNbuGiBWOIoL_z8W4KNtk73xn8vQ-iW8GDkkVNi7X1jqkXb6AlWm6RX3cw0DJKVuj64s5VKTwHN4-JRumUk7k1WdMY2xl4wCBNUZM97L1mfESGVn3jK3UxigcDBkEptMRWuiNt9eJwAk9--RWcaUJIgxvPkcjp6XwpOxvSNIzA9LKZ4PXxdt9mmLGG_uMCYlYndBP79YuGkiWMCuzgJDFBDxSMg4BlXyypJqLa3rJCkOY0YCgpUX25kL9KLQuyenBE" />
+          </div>
+          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
+            <div className="max-w-md w-full space-y-[27px]">
+              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">PRODUTORA</span>
+              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT PRODUTORA</h2>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"A atuação da Produtora pode envolver: editorial de moda | publicidade | institucionais"</p>
+              <div className="fine-line"></div>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Antes de produzir, entendemos. A partir disso, direcionamos sua produção de forma estratégica e conceitual.</p>
+              <div className="pt-[20px]">
+                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-produtora">
+                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </Link>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* [SLIDE 3] */}
-        <div className={`slide ${currentIndex === 2 ? "active" : ""}`} data-index="2">
-          <div className="flex h-full flex-col md:flex-row">
-            {/* Image */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-neutral-100 relative overflow-hidden">
-              <img
-                alt="Hands"
-                className="w-full h-full object-cover grayscale"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9JOvmd61-d55EzR904FOgUgD6XCybSttKhy0e2AuHAcJFi1SIYxiCe0tiIr2GvnpHMiog9GeIBi_w14F-CbUeWoM_knk3_BS8YPNnduZwKZZ0dafgoO95ND97D968qi9tDRQwmL5bsnew3mZb7VpUkAIxCt8wbPRvypRvjcbHp7w9MqqdgMX5Z0dU939Tx5vH0GzHOBwMC-lSn3ZA1ytDq_2yVlpnVme8CsCuDj4cBc63ZO2BrbOQq1tTnWinjn4XJSTR-BUhJKg"
-              />
-            </div>
-            {/* Content */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex items-center justify-center p-8 md:p-24 overflow-y-auto">
-              <div className="max-w-md w-full space-y-[27px]">
-                <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">AGÊNCIA</span>
-                <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT AGÊNCIA</h2>
-                <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Ajudamos diversos empresários a se posicionarem de forma integrada: branding project | Web Development | Publicidade"</p>
-                <div className="fine-line"></div>
-                <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Branding estratégico, posicionamento de marca e construção de autoridade com direção clara.</p>
-                <div className="pt-[20px]">
-                  <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-agencia">
-                    VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                  </Link>
-                </div>
+        {/* AGÊNCIA */}
+        <section className="flex flex-col md:flex-row border-t border-neutral-100" style={{ minHeight: '100vh' }}>
+          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
+            <img alt="Agência" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9JOvmd61-d55EzR904FOgUgD6XCybSttKhy0e2AuHAcJFi1SIYxiCe0tiIr2GvnpHMiog9GeIBi_w14F-CbUeWoM_knk3_BS8YPNnduZwKZZ0dafgoO95ND97D968qi9tDRQwmL5bsnew3mZb7VpUkAIxCt8wbPRvypRvjcbHp7w9MqqdgMX5Z0dU939Tx5vH0GzHOBwMC-lSn3ZA1ytDq_2yVlpnVme8CsCuDj4cBc63ZO2BrbOQq1tTnWinjn4XJSTR-BUhJKg" />
+          </div>
+          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
+            <div className="max-w-md w-full space-y-[27px]">
+              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">AGÊNCIA</span>
+              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT AGÊNCIA</h2>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Ajudamos diversos empresários a se posicionarem de forma integrada: branding project | Web Development | Publicidade"</p>
+              <div className="fine-line"></div>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Branding estratégico, posicionamento de marca e construção de autoridade com direção clara.</p>
+              <div className="pt-[20px]">
+                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-agencia">
+                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </Link>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
-
-      {/* Navigation Arrows */}
-      <div className="fixed bottom-[40px] right-[40px] z-[60] flex flex-col gap-[12px]">
-        <button
-          aria-label="Anterior"
-          className="nav-arrow"
-          disabled={currentIndex === 0 || isAnimating}
-          onClick={() => updateSlide(currentIndex - 1)}
-        >
-          <svg fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-            <path d="M18 15l-6-6-6 6" strokeLinecap="round" strokeLinejoin="round"></path>
-          </svg>
-        </button>
-        <button
-          aria-label="Próximo"
-          className="nav-arrow"
-          disabled={isAnimating}
-          onClick={() => updateSlide(currentIndex + 1)}
-        >
-          <svg fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-            <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"></path>
-          </svg>
-        </button>
-      </div>
-
-      <style jsx global>{`
-        body.is-animating {
-          pointer-events: none;
-        }
-      `}</style>
     </div>
   );
 }
