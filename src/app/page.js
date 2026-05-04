@@ -152,7 +152,7 @@ export default function Home() {
                     <div className="absolute inset-0 z-0">
                         {['/images/home/banner-1.jpg','/images/home/banner-2.jpg','/images/home/banner-3.jpg'].map((src, i) => (
                             <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentHeroSlide === i ? 1 : 0}}>
-                                <img src={src} className="w-full h-full object-cover" alt="" />
+                                <img src={src} className="w-full h-full object-cover object-top" alt="" />
                                 <div className="absolute inset-0 bg-black/55"></div>
                             </div>
                         ))}
