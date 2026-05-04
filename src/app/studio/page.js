@@ -196,7 +196,14 @@ export default function StudioPage() {
             <Header variant="dark" />
             <main>
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
-                    <div className="absolute inset-0 z-0"><div className="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d]"></div></div>
+                    <div className="absolute inset-0 z-0">
+                        {['/images/studio/banners/banner-1.jpg','/images/studio/banners/banner-2.jpg','/images/studio/banners/banner-3.jpg'].map((src, i) => (
+                            <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentSlide === i ? 1 : 0}}>
+                                <img src={src} className="w-full h-full object-cover object-top" alt="" />
+                                <div className="absolute inset-0 bg-black/55"></div>
+                            </div>
+                        ))}
+                    </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-4xl">
                             <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>STUDIO</span>
