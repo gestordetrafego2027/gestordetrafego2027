@@ -165,7 +165,7 @@ export default function AgenciaPage() {
                         {['/images/agencia/banners/banner-1.jpg','/images/agencia/banners/banner-2.jpg','/images/agencia/banners/banner-3.jpg'].map((src, i) => (
                             <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
                                 <img src={src} className="w-full h-full object-cover object-top" alt="" />
-                                <div className="absolute inset-0 bg-black/55"></div>
+                                <div className="absolute inset-0 bg-black/20"></div>
                             </div>
                         ))}
                     </div>
