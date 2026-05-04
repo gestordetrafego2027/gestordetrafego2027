@@ -11,8 +11,8 @@ export default function StudioPage() {
     const prevBanner = () => setCurrentBannerSlide(prev => (prev - 1 + 3) % 3)
     const nextBanner = () => setCurrentBannerSlide(prev => (prev + 1) % 3)
 
-    const nextGallerySlide = () => setCurrentGallerySlide(prev => prev === 0 ? 1 : 0)
-    const prevGallerySlide = () => setCurrentGallerySlide(prev => prev === 1 ? 0 : 1)
+    const nextGallerySlide = () => setCurrentGallerySlide(prev => (prev + 1) % 11)
+    const prevGallerySlide = () => setCurrentGallerySlide(prev => (prev - 1 + 11) % 11)
 
     const testimonials = [
         {
@@ -263,66 +263,66 @@ export default function StudioPage() {
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
                     <div className="relative w-full group overflow-hidden" style={{ height: '80vh' }}>
-                        <div className="columns-gallery-container w-[200%] h-full flex" style={{ transform: `translateX(-${currentGallerySlide * 50}%)`, transition: 'transform 0.5s ease', width: '200%' }}>
-                            {/* Images 1 to 4 */}
-                            <Link className="gallery-column project-item group" href="/portfolio-studio/amanda-oliveira" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
-                                <img alt="Amanda Oliveira" className="column-image" src="/images/studio/amanda-oliveira/capa.jpg"/>
-                                <div className="project-overlay">
-                                    <span>Book</span>
-                                    <h4>Amanda Oliveira</h4>
+                        {(() => {
+                            const allModels = [
+                                { href: '/portfolio-studio/amanda-oliveira', src: '/images/studio/amanda-oliveira/capa.jpg', label: 'Book', name: 'Amanda Oliveira' },
+                                { href: '/portfolio-studio/talita-dalbo', src: '/images/studio/talita-dalbo/capa.jpg', label: 'Ensaio Pessoal', name: 'Talita Dalbó' },
+                                { href: '/portfolio-studio/jamile-caroline', src: '/images/studio/jamile-caroline/capa.jpg', label: 'Book', name: 'Jamile Caroline' },
+                                { href: '/portfolio-studio/leif-sinclar', src: '/images/studio/leif-sinclar/capa.jpg', label: 'Ensaio Pessoal', name: 'Leif Sinclar' },
+                                { href: '/portfolio-studio/ana-laura-saar', src: '/images/studio/ana-laura-saar/capa.jpg', label: 'Book', name: 'Ana Laura Saar' },
+                                { href: '/portfolio-studio/chai-e-dai', src: '/images/studio/chai-e-dai/capa.jpg', label: 'Book', name: 'Chai e Dai' },
+                                { href: '/portfolio-studio/debora-pantaglione', src: '/images/studio/debora-pantaglione/capa.jpg', label: 'Book', name: 'Debora Pantaglione' },
+                                { href: '/portfolio-studio/ana-rockenbach', src: '/images/studio/ana-rockenbach/capa.jpg', label: 'Book', name: 'Ana Rockenbach' },
+                                { href: '/portfolio-studio/francine-massoco', src: '/images/studio/francine-massoco/capa.jpg', label: 'Book', name: 'Francine Massoco' },
+                                { href: '/portfolio-studio/jessica-bittelbrun', src: '/images/studio/jessica-bittelbrun/capa.jpg', label: 'Book', name: 'Jessica Bittelbrun' },
+                                { href: '/portfolio-studio/julia-moraes', src: '/images/studio/julia-moraes/capa.jpg', label: 'Book', name: 'Julia Moraes' },
+                                { href: '/portfolio-studio/anna-laura', src: '/images/studio/anna-laura/capa.jpg', label: 'Book', name: 'Anna Laura' },
+                                { href: '/portfolio-studio/gab-cruz', src: '/images/studio/gab-cruz/capa.jpg', label: 'Book', name: 'Gab Cruz' },
+                                { href: '/portfolio-studio/arielly', src: '/images/studio/arielly/capa.jpg', label: 'Book', name: 'Arielly' },
+                                { href: '/portfolio-studio/iasmim', src: '/images/studio/iasmim/capa.jpg', label: 'Book', name: 'Iasmim' },
+                                { href: '/portfolio-studio/leticia-moraes', src: '/images/studio/leticia-moraes/capa.jpg', label: 'Book', name: 'Leticia Moraes' },
+                                { href: '/portfolio-studio/maria-eduarda', src: '/images/studio/maria-eduarda/capa.jpg', label: 'Book', name: 'Maria Eduarda' },
+                                { href: '/portfolio-studio/nataly-silva', src: '/images/studio/nataly-silva/capa.jpg', label: 'Book', name: 'Nataly Silva' },
+                                { href: '/portfolio-studio/patricia-marafon', src: '/images/studio/patricia-marafon/capa.jpg', label: 'Book', name: 'Patricia Marafon' },
+                                { href: '/portfolio-studio/poliana-barreto', src: '/images/studio/poliana-barreto/capa.jpg', label: 'Book', name: 'Poliana Barreto' },
+                                { href: '/portfolio-studio/sara-henriches', src: '/images/studio/sara-henriches/capa.jpg', label: 'Book', name: 'Sara Henriches' },
+                                { href: '/portfolio-studio/vitoria-boidt', src: '/images/studio/vitoria-boidt/capa.jpg', label: 'Book', name: 'Vitória Boidt' },
+                                { href: '/portfolio-studio/bruna-brummer', src: '/images/studio/bruna-brummer/capa.jpg', label: 'Book', name: 'Bruna Brummer' },
+                                { href: '/portfolio-studio/iza-feser', src: '/images/studio/iza-feser/capa.jpg', label: 'Book', name: 'Iza Feser' },
+                                { href: '/portfolio-studio/marina-machado', src: '/images/studio/marina-machado/capa.jpg', label: 'Book', name: 'Marina Machado' },
+                                { href: '/portfolio-studio/andressa-gomiero', src: '/images/studio/andressa-gomiero/capa.jpg', label: 'Ensaio Pessoal', name: 'Andressa Gomiero' },
+                                { href: '/portfolio-studio/fernanda-treml', src: '/images/studio/fernanda-treml/capa.jpg', label: 'Ensaio Pessoal', name: 'Fernanda Treml' },
+                                { href: '/portfolio-studio/nairicia-caberlon', src: '/images/studio/nairicia-caberlon/capa.jpg', label: 'Ensaio Pessoal', name: 'Naírícia Caberlon' },
+                                { href: '/portfolio-studio/thaisi-dias', src: '/images/studio/thaisi-dias/capa.jpg', label: 'Ensaio Pessoal', name: 'Thaisi Dias' },
+                                { href: '/portfolio-studio/brenda-mattos', src: '/images/studio/brenda-mattos/capa.jpg', label: 'Ensaio Pessoal', name: 'Brenda Mattos' },
+                                { href: '/portfolio-studio/paula-assuncao', src: '/images/studio/paula-assuncao/capa.jpg', label: 'Ensaio Pessoal', name: 'Paula Assunção' },
+                                { href: '/portfolio-studio/carol-costa', src: '/images/studio/carol-costa/capa.jpg', label: 'Ensaio Pessoal', name: 'Carol Costa' },
+                                { href: '/portfolio-studio/rebeca-cabral', src: '/images/studio/rebeca-cabral/capa.jpg', label: 'Ensaio Pessoal', name: 'Rebeca Cabral' },
+                                { href: '/portfolio-studio/cynthia-andrade', src: '/images/studio/cynthia-andrade/capa.jpg', label: 'Ensaio Pessoal', name: 'Cynthia Andrade' },
+                                { href: '/portfolio-studio/maria-tereza', src: '/images/studio/maria-tereza/capa.jpg', label: 'Ensaio Pessoal', name: 'Maria Tereza' },
+                                { href: '/portfolio-studio/samara-samme', src: '/images/studio/samara-samme/capa.jpg', label: 'Ensaio Pessoal', name: 'Samara Samme' },
+                                { href: '/portfolio-studio/deise-smaniotto', src: '/images/studio/deise-smaniotto/capa.jpg', label: 'Ensaio Pessoal', name: 'Deise Smaniotto' },
+                                { href: '/portfolio-studio/marjorie-rossi', src: '/images/studio/marjorie-rossi/capa.jpg', label: 'Ensaio Pessoal', name: 'Marjorie Rossi' },
+                                { href: '/portfolio-studio/simonny', src: '/images/studio/simonny/capa.jpg', label: 'Ensaio Pessoal', name: 'Simonny' },
+                                { href: '/portfolio-studio/fernanda-costas', src: '/images/studio/fernanda-costas/capa.jpg', label: 'Ensaio Pessoal', name: 'Fernanda Costas' },
+                                { href: '/portfolio-studio/mileide-mihaile', src: '/images/studio/mileide-mihaile/capa.jpg', label: 'Ensaio Pessoal', name: 'Mileide Mihaile' },
+                            ];
+                            const totalPages = Math.ceil(allModels.length / 4);
+                            const pageModels = allModels.slice(currentGallerySlide * 4, currentGallerySlide * 4 + 4);
+                            return (
+                                <div className="columns-gallery-container w-full h-full flex">
+                                    {pageModels.map((model, i) => (
+                                        <Link key={i} className="gallery-column project-item group" href={model.href} style={{ flex: '0 0 25%', minWidth: '25%' }}>
+                                            <img alt={model.name} className="column-image" src={model.src}/>
+                                            <div className="project-overlay">
+                                                <span>{model.label}</span>
+                                                <h4>{model.name}</h4>
+                                            </div>
+                                        </Link>
+                                    ))}
                                 </div>
-                            </Link>
-                            <Link className="gallery-column project-item group" href="/portfolio-studio/talita-dalbo" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
-                                <img alt="Talita Dalbó" className="column-image" src="/images/studio/talita-dalbo/capa.jpg"/>
-                                <div className="project-overlay">
-                                    <span>Ensaio Pessoal</span>
-                                    <h4>Talita Dalbó</h4>
-                                </div>
-                            </Link>
-                            <Link className="gallery-column project-item group" href="/portfolio-studio/jamile-caroline" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
-                                <img alt="Jamile Caroline" className="column-image" src="/images/studio/jamile-caroline/capa.jpg"/>
-                                <div className="project-overlay">
-                                    <span>Book</span>
-                                    <h4>Jamile Caroline</h4>
-                                </div>
-                            </Link>
-                            <Link className="gallery-column project-item group" href="/portfolio-studio/leif-sinclar" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
-                                <img alt="Leif Sinclar" className="column-image" src="/images/studio/leif-sinclar/capa.jpg"/>
-                                <div className="project-overlay">
-                                    <span>Ensaio Pessoal</span>
-                                    <h4>Leif Sinclar</h4>
-                                </div>
-                            </Link>
-                            {/* Images 5 to 8 (Duplicated) */}
-                            <Link className="gallery-column project-item group" href="/portfolio-studio/amanda-oliveira" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
-                                <img alt="Amanda Oliveira" className="column-image" src="/images/studio/amanda-oliveira/capa.jpg"/>
-                                <div className="project-overlay">
-                                    <span>Book</span>
-                                    <h4>Amanda Oliveira</h4>
-                                </div>
-                            </Link>
-                            <Link className="gallery-column project-item group" href="/portfolio-studio/talita-dalbo" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
-                                <img alt="Talita Dalbó" className="column-image" src="/images/studio/talita-dalbo/capa.jpg"/>
-                                <div className="project-overlay">
-                                    <span>Ensaio Pessoal</span>
-                                    <h4>Talita Dalbó</h4>
-                                </div>
-                            </Link>
-                            <Link className="gallery-column project-item group" href="/portfolio-studio/jamile-caroline" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
-                                <img alt="Jamile Caroline" className="column-image" src="/images/studio/jamile-caroline/capa.jpg"/>
-                                <div className="project-overlay">
-                                    <span>Book</span>
-                                    <h4>Jamile Caroline</h4>
-                                </div>
-                            </Link>
-                            <Link className="gallery-column project-item group" href="/portfolio-studio/leif-sinclar" style={{ flex: '0 0 12.5%', minWidth: '12.5%' }}>
-                                <img alt="Leif Sinclar" className="column-image" src="/images/studio/leif-sinclar/capa.jpg"/>
-                                <div className="project-overlay">
-                                    <span>Ensaio Pessoal</span>
-                                    <h4>Leif Sinclar</h4>
-                                </div>
-                            </Link>
-                        </div>
+                            );
+                        })()}
                         <button onClick={prevGallerySlide} className="absolute left-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12 rounded-full border-[0.5px] border-white/50 text-white bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all hover:bg-black/40">
                             <svg fill="none" height="20" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="20">
                                 <polyline points="15 18 9 12 15 6"></polyline>
