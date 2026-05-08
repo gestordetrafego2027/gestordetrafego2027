@@ -1,94 +1,77 @@
-'use client'
-
-import React from 'react'
-import Link from 'next/link'
-import Header from '@/app/components/Header'
+"use client";
+import React from "react";
+import Link from "next/link";
+import Header from "@/app/components/Header";
 
 export default function Portfolio() {
-  const sections = [
-    {
-      id: 'studio',
-      label: 'STUDIO',
-      title: 'HMZT STUDIO',
-      description: 'Ensaios, books e coberturas pessoais com direção estética guiada por estratégia.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB4KUVLJUL-uxvDKAfn2IfswuESvjVPbRKyIhOr6RAgX-gPHUSbYctz9jhHVRyhrPOvgp_F3f339FTKZ2mhKtmRsw1Or-AmM4LeyBQXQLMRP31QoOgFfQPK3xfhY4RNtunnrYPZC4V9mEPkrfWjBz0iKBMIwvWokt-XYQceqHYBtZErUvjI2khPxLKapxWYqHS0N2VjtMveW4bOeceZhgsr5k3bQ6DOR40hyL8fpJ4kuyCXaGpvOMPgit5ZRt4CcmS9Ua18PsBPgXw',
-      link: '/portfolio-studio'
-    },
-    {
-      id: 'produtora',
-      label: 'PRODUTORA',
-      title: 'HMZT PRODUTORA',
-      description: 'Editoriais de moda, publicidade e vídeos institucionais sob uma direção criativa rigorosa.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCxxCED8XmlkgNbuGiBWOIoL_z8W4KNtk73xn8vQ-iW8GDkkVNi7X1jqkXb6AlWm6RX3cw0DJKVuj64s5VKTwHN4-JRumUk7k1WdMY2xl4wCBNUZM97L1mfESGVn3jK3UxigcDBkEptMRWuiNt9eJwAk9--RWcaUJIgxvPkcjp6XwpOxvSNIzA9LKZ4PXxdt9mmLGG_uMCYlYndBP79YuGkiWMCuzgJDFBDxSMg4BlXyypJqLa3rJCkOY0YCgpUX25kL9KLQuyenBE',
-      link: '/portfolio-produtora'
-    },
-    {
-      id: 'agencia',
-      label: 'AGÊNCIA',
-      title: 'HMZT AGÊNCIA',
-      description: 'Branding, desenvolvimento web e estratégias integradas para marcas de alto valor.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB9JOvmd61-d55EzR904FOgUgD6XCybSttKhy0e2AuHAcJFi1SIYxiCe0tiIr2GvnpHMiog9GeIBi_w14F-CbUeWoM_knk3_BS8YPNnduZwKZZ0dafgoO95ND97D968qi9tDRQwmL5bsnew3mZb7VpUkAIxCt8wbPRvypRvjcbHp7w9MqqdgMX5Z0dU939Tx5vH0GzHOBwMC-lSn3ZA1ytDq_2yVlpnVme8CsCuDj4cBc63ZO2BrbOQq1tTnWinjn4XJSTR-BUhJKg',
-      link: '/portfolio-agencia'
-    }
-  ]
-
   return (
-    <div className="bg-white text-black selection:bg-black selection:text-white min-h-screen">
-      <Header variant="dark" />
-      
+    <div className="page-portfolio selection:bg-black selection:text-white" style={{ overflowY: 'auto', height: '100vh' }}>
+      <h1 className="sr-only">Portfólio de Branding Estratégico e Posicionamento de Marca</h1>
+      <Header variant="light" />
       <main>
-        {/* HERO */}
-        <section className="bg-zinc-900 py-64 swiss-grid">
-          <div className="max-w-4xl">
-            <span className="label-micro text-white/40 mb-8 block">CURADORIA</span>
-            <h1 className="hero-title text-white">Selected Projects.</h1>
-            <p className="body-text text-white/40 mt-12 max-w-2xl">
-              Uma seleção de trabalhos que exemplificam nossa busca por precisão estética e impacto estratégico em cada detalhe.
-            </p>
+        {/* STUDIO */}
+        <section className="flex flex-col md:flex-row" style={{ minHeight: '100vh' }}>
+          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
+            <img alt="Studio" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4KUVLJUL-uxvDKAfn2IfswuESvjVPbRKyIhOr6RAgX-gPHUSbYctz9jhHVRyhrPOvgp_F3f339FTKZ2mhKtmRsw1Or-AmM4LeyBQXQLMRP31QoOgFfQPK3xfhY4RNtunnrYPZC4V9mEPkrfWjBz0iKBMIwvWokt-XYQceqHYBtZErUvjI2khPxLKapxWYqHS0N2VjtMveW4bOeceZhgsr5k3bQ6DOR40hyL8fpJ4kuyCXaGpvOMPgit5ZRt4CcmS9Ua18PsBPgXw" />
+          </div>
+          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
+            <div className="max-w-md w-full space-y-[27px]">
+              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">STUDIO</span>
+              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT STUDIO</h2>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Confira a seleção de grandes projetos nesta seção de ensaios | books | cobertura pessoal."</p>
+              <div className="fine-line"></div>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Sempre conectados ao posicionamento da sua persona de forma objetiva e marcante.</p>
+              <div className="pt-[20px]">
+                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
+                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* PROJECTS LIST */}
-        <div className="border-t border-zinc-100">
-          {sections.map((section, index) => (
-            <section key={section.id} className={`flex flex-col lg:flex-row border-b border-zinc-100 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
-              <div className="w-full lg:w-1/2 aspect-square lg:aspect-auto relative overflow-hidden bg-zinc-100 grayscale hover:grayscale-0 transition-all duration-1000">
-                <img src={section.image} className="w-full h-full object-cover" alt={section.title} />
-              </div>
-              <div className="w-full lg:w-1/2 p-12 md:p-24 lg:p-40 flex flex-col justify-center">
-                <span className="label-micro text-zinc-400 mb-8 block">{section.label}</span>
-                <h2 className="section-title mb-12">{section.title}</h2>
-                <p className="body-text text-zinc-500 mb-16 max-w-md">{section.description}</p>
-                <Link href={section.link} className="btn-swiss w-fit">
-                  EXPLORAR PROJETOS
+        {/* PRODUTORA */}
+        <section className="flex flex-col md:flex-row-reverse border-t border-neutral-100" style={{ minHeight: '100vh' }}>
+          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
+            <img alt="Produtora" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxxCED8XmlkgNbuGiBWOIoL_z8W4KNtk73xn8vQ-iW8GDkkVNi7X1jqkXb6AlWm6RX3cw0DJKVuj64s5VKTwHN4-JRumUk7k1WdMY2xl4wCBNUZM97L1mfESGVn3jK3UxigcDBkEptMRWuiNt9eJwAk9--RWcaUJIgxvPkcjp6XwpOxvSNIzA9LKZ4PXxdt9mmLGG_uMCYlYndBP79YuGkiWMCuzgJDFBDxSMg4BlXyypJqLa3rJCkOY0YCgpUX25kL9KLQuyenBE" />
+          </div>
+          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
+            <div className="max-w-md w-full space-y-[27px]">
+              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">PRODUTORA</span>
+              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT PRODUTORA</h2>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"A atuação da Produtora pode envolver: editorial de moda | publicidade | institucionais"</p>
+              <div className="fine-line"></div>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Antes de produzir, entendemos. A partir disso, direcionamos sua produção de forma estratégica e conceitual.</p>
+              <div className="pt-[20px]">
+                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-produtora">
+                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
                 </Link>
               </div>
-            </section>
-          ))}
-        </div>
-      </main>
+            </div>
+          </div>
+        </section>
 
-      <footer className="bg-white py-40 swiss-grid">
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-20">
-            <span className="hm-logo" style={{fontSize: '32px'}}>
-              <span className="hm-house">House</span>
-              <span className="hm-mazzutti">Mazzutti</span>
-            </span>
+        {/* AGÊNCIA */}
+        <section className="flex flex-col md:flex-row border-t border-neutral-100" style={{ minHeight: '100vh' }}>
+          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
+            <img alt="Agência" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9JOvmd61-d55EzR904FOgUgD6XCybSttKhy0e2AuHAcJFi1SIYxiCe0tiIr2GvnpHMiog9GeIBi_w14F-CbUeWoM_knk3_BS8YPNnduZwKZZ0dafgoO95ND97D968qi9tDRQwmL5bsnew3mZb7VpUkAIxCt8wbPRvypRvjcbHp7w9MqqdgMX5Z0dU939Tx5vH0GzHOBwMC-lSn3ZA1ytDq_2yVlpnVme8CsCuDj4cBc63ZO2BrbOQq1tTnWinjn4XJSTR-BUhJKg" />
           </div>
-          <nav className="flex flex-wrap justify-center gap-x-12 gap-y-8 mb-24">
-            <Link className="menu-item text-zinc-400 hover:text-black" href="/">HOME</Link>
-            <Link className="menu-item text-zinc-400 hover:text-black" href="/about">SOBRE</Link>
-            <Link className="menu-item text-zinc-400 hover:text-black" href="/studio">STUDIO</Link>
-            <Link className="menu-item text-zinc-400 hover:text-black" href="/agencia">AGÊNCIA</Link>
-            <Link className="menu-item text-zinc-400 hover:text-black" href="/portfolio">PORTFÓLIO</Link>
-            <Link className="menu-item text-zinc-400 hover:text-black" href="/contato">CONTATO</Link>
-          </nav>
-          <div className="label-micro text-zinc-300">
-            © 2025 House Mazzutti — Direção de Imagem & Estratégia
+          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
+            <div className="max-w-md w-full space-y-[27px]">
+              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">AGÊNCIA</span>
+              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT AGÊNCIA</h2>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Ajudamos diversos empresários a se posicionarem de forma integrada: branding project | Web Development | Publicidade"</p>
+              <div className="fine-line"></div>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Branding estratégico, posicionamento de marca e construção de autoridade com direção clara.</p>
+              <div className="pt-[20px]">
+                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-agencia">
+                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
-      </footer>
+        </section>
+      </main>
     </div>
-  )
+  );
 }
