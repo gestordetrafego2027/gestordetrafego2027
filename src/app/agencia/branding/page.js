@@ -420,7 +420,12 @@ export default function AgenciaBrandingPage() {
 
             {/* 10. FOOTER */}
             <footer className="bg-black text-white py-24 px-12 border-t-[0.5px] border-zinc-900 flex flex-col items-center w-full text-center space-y-8">
-                <h2 className="text-2xl font-serif text-white mb-12 uppercase tracking-tight">House Mazzutti</h2>
+                <div className="mb-12">
+                    <span className="hm-logo" style={{fontSize: '32px', color: 'white'}}>
+                        <span className="hm-house">House</span>
+                        <span className="hm-mazzutti">Mazzutti</span>
+                    </span>
+                </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 mb-12">
                     <div className="space-y-4">
                         <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">SOCIAL</p>

@@ -400,3 +400,44 @@ html {
   grid-column: span 2;
   aspect-ratio: 16/9;
 }
+
+/* ==========================================================================
+   BRANDING UPDATE: HOUSE MAZZUTTI
+   ========================================================================== */
+.hm-logo {
+    display: inline-flex;
+    align-items: baseline;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2em; /* 20% Increase */
+    line-height: 1;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+}
+
+.hm-house {
+    font-family: 'RocGrotesk', sans-serif !important;
+    font-weight: 400 !important; /* Roc Grotesk Condensed style */
+    font-stretch: condensed;
+    display: inline-block;
+    transform: scaleX(0.9);
+    transform-origin: left;
+}
+
+.hm-mazzutti {
+    font-family: 'RocGrotesk', sans-serif !important;
+    font-weight: 800 !important; /* ExtraBold */
+    font-stretch: extra-condensed; /* Compressed style */
+    display: inline-block;
+    transform: scaleX(0.75);
+    transform-origin: left;
+    margin-left: -0.05em;
+}
+
+/* Fallback for ExtraBold if font-face only has Bold */
+@supports not (font-weight: 800) {
+    .hm-mazzutti {
+        font-weight: 700 !important;
+        text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor;
+    }
+}

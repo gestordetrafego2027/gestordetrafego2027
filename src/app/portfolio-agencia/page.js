@@ -102,7 +102,12 @@ export default function PortfolioAgenciaPage() {
 
             {/* 4. FOOTER */}
             <footer className="bg-[#0a0a0a] w-full flex justify-between items-center px-[48px] py-[32px] text-white">
-                <div className="font-newsreader italic text-lg text-white">HOUSE MAZZUTTI</div>
+                <div className="text-white">
+                    <span className="hm-logo" style={{fontSize: '22px'}}>
+                        <span className="hm-house">House</span>
+                        <span className="hm-mazzutti">Mazzutti</span>
+                    </span>
+                </div>
                 <div className="flex gap-8 items-center">
                     <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="#">INSTAGRAM</Link>
                     <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="#">LINKEDIN</Link>

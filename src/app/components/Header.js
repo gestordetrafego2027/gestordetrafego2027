@@ -107,10 +107,13 @@ export default function Header({ variant = 'dark' }) {
             >
                 <Link 
                     href="/" 
-                    className="text-base font-serif tracking-tight uppercase font-headline no-underline"
+                    className="tracking-tight uppercase no-underline flex items-baseline"
                     style={{ color: currentTextColor }}
                 >
-                    House Mazzutti
+                    <span className="hm-logo">
+                        <span className="hm-house">House</span>
+                        <span className="hm-mazzutti">Mazzutti</span>
+                    </span>
                 </Link>
 
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
@@ -185,10 +188,12 @@ export default function Header({ variant = 'dark' }) {
                   <div>
                     <div style={{display:'flex', justifyContent:'space-between',
                       alignItems:'center', marginBottom:'60px'}}>
-                      <p style={{fontFamily:'Newsreader, serif', fontSize:'16px',
-                        fontStyle:'italic', color:'white', margin:0}}>
-                        HOUSE MAZZUTTI
-                      </p>
+                      <div style={{margin:0}}>
+                        <span className="hm-logo" style={{fontSize: '20px', color: 'white'}}>
+                            <span className="hm-house">House</span>
+                            <span className="hm-mazzutti">Mazzutti</span>
+                        </span>
+                      </div>
                       <div 
                         onClick={() => closeMenu()}
                         style={{cursor:'pointer', position:'relative', 

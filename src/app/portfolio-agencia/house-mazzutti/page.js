@@ -97,7 +97,12 @@ export default function HouseMazzuttiPage() {
                         <div className="info-col flex flex-col gap-[16px]">
                             <div className="space-y-1">
                                 <p className="info-col-anim font-inter text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Direção de Imagem</p>
-                                <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface">House Mazzutti</h1>
+                                <h1 className="info-col-anim leading-tight text-on-surface">
+                                    <span className="hm-logo" style={{fontSize: '52px'}}>
+                                        <span className="hm-house">House</span>
+                                        <span className="hm-mazzutti">Mazzutti</span>
+                                    </span>
+                                </h1>
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
@@ -143,7 +148,12 @@ export default function HouseMazzuttiPage() {
 
             <footer className="bg-[#0a0a0a] px-12 py-8">
                 <div className="flex flex-col items-center space-y-6">
-                    <Link className="font-newsreader text-xl font-semibold tracking-widest text-white no-underline" href="/">HOUSE MAZZUTTI</Link>
+                    <Link className="no-underline" href="/">
+                        <span className="hm-logo" style={{fontSize: '24px', color: 'white'}}>
+                            <span className="hm-house">House</span>
+                            <span className="hm-mazzutti">Mazzutti</span>
+                        </span>
+                    </Link>
                     <div className="flex space-x-8">
                         <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="#">INSTAGRAM</Link>
                         <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="#">LINKEDIN</Link>

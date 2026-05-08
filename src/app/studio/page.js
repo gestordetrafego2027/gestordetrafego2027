@@ -704,7 +704,12 @@ export default function StudioPage() {
             </main>
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-3xl font-serif text-neutral-50 mb-12">House Mazzutti</div>
+                    <div className="text-neutral-50 mb-12">
+                        <span className="hm-logo" style={{fontSize: '32px'}}>
+                            <span className="hm-house">House</span>
+                            <span className="hm-mazzutti">Mazzutti</span>
+                        </span>
+                    </div>
                     <div className="flex space-x-8 mb-12">
                         <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
                         <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
