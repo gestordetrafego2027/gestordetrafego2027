@@ -246,16 +246,17 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                         {[
-                            { title: "Projeto Essência", sub: "Branding", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBe4mdbRqXBNKzzngv3g_VBLp6GYZlgzzZZODsLL8bHFzPo4h2MQ_wh08IE0TeoTAnYp7r8cqXbKU7Xa5wklKFRY-ZWrYIpRSmFUuQapR_3VovlHbwzL2DnDZwXwFKOowF6p1RYMEOqh1_GwWe1FY9MUqL_MHVQ04dnmk4YyX2I1Nbz3zL-t4bcyXEQ_COqtJmLZiwYf076YUYpoITRuaCFPCaMTBWkm6LYq7RU4l8f9gyRN9hk8omSajhnHc8pNlB8BAi1ZerKdL0" },
-                            { title: "Movimento Urbano", sub: "Direção", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDmEdY5S8J-r2-yA6KBnPbY8KJ_kzSWmaDtw4KI3V4XfuFw9crzbRkv8ODbEuL4WNOjSHEaBI3bT-J6Fg0SnQ7-F55Z7jP7UT2ZzHsyDIVGu2G67mWa2Qxorjl-Upf9isBLdGue5dKoH7891HWpO6iT5EbeCFrJCwFVIQo8-XVRq_ZaV_sJsyb9zfKO_Dm-QjDzX38uBl3zJodj4KP7GattGIKHVJ8Hkn24EzNVoNBWMnUB3avAJoDg_S2DzRoUhd5-bugSQgDzSB0" },
-                            { title: "Alfaiataria Moderna", sub: "Posicionamento", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuADvGTrzOI5PEUbaeC7AW7usgMalF3qizDJJ0KUpcNG6m9gEpidT-mTLmb1F3zpPaKsm5aOEastKBq1gcgasPBFL2aQQT1TCsitpTNJuy9KBP4cgyFtyvk2nUo1WqXii9tLH0TPR_h0HV84zRlZFfEnEAJ344iW4H6sfL7IC47U5veqjHNq4WUq6MqzNrcQ8otKdLxpwV9j4bBHQPkyEGa7anAANlMNVkXbnsoFAoDyBX7opOcB3BSImGRftoLeyoU4cmneRk6ZgTk" },
-                            { title: "Horizonte", sub: "Produção", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDKnc6oH_hYvu13IeEb61FyxFkY3Edhlt2km8Jry0SlDIZ7KlpeE-AVwYRezdk2O_XEVH34_DobRA7QJY4YofFZUSMXG3BeTc5IdaApkxKb3Z1Zd14giFedWaYlTg7jx83cIP-fHnIAPoHKE93UEOWCj_iGqRTd0q2BO_l4h_oMK2TIBNGbh5QW43fUo-FhcFxpTF9A5vIi9kKaAk-ZapE8zkT6Uk3Fe-VRw3DSK5F3AiqnbXBwPhBzkQ-MTLhF1bCsplLY712XU5c" },
-                            { title: "Prestigio", sub: "Branding", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDkA7crS5fwR9M1uHLxWGre8utOIQhLns1favg4_bqxW4l-Rhz-kocfZxJb59JIHoZo0AuTsli_xQD1X_z3OtXWtQY9FQl5HVclTTuNUMQKMWYswMESC7LVKN8Gt7F_wJV_yWoTwt54-Ob2IAfKZnaLu1muOYHzXGofG-8DJfHBXFuGu6w16J51hk_p07tLwwhj9yuhYxTb-0bc1SSn0oSkyr0OHqu7L7my2rY0YBwqS364_RTWjKGw1-ModtNWEmtX0VrKG9bErhw" },
-                            { title: "Espaço", sub: "Curadoria", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDFIHY560gS2ik_2GrZpF30j-g-u298R2IvVTv99wXYupz5jW7ePfhi3hHeOSQJ2w4D9995OdagrtsKYEq0WGyCiUbF4XqHAZy8VekCTL3M9cJodpb-uNjUXVWrV7ILlVTT2zmqMUAfKFTDlPXy7VUL9uEwNMf_12u39Nub3mRFN41ZWd3eCg9gWp2qZXBlD5S3HKhbGnZX9ITFbVDfNSTbkEuWv7VCiQZHtzcmfE_8zY8HzN17A0gHtn7s99IzT0-_ft0gKKjVhO8" },
+                            { title: "Amanda Oliveira", sub: "Book", src: "/images/studio/amanda-oliveira/capa.jpg", link: "/portfolio-studio/amanda-oliveira" },
+                            { title: "Patricia Marafon", sub: "Book", src: "/images/studio/patricia-marafon/capa.jpg", link: "/portfolio-studio/patricia-marafon" },
+                            { title: "Signus - Versolato 02", sub: "Acessórios", src: "/images/produtora/acessorios/signus-versolato02/capa.jpg", link: "/portfolio-produtora/signus-versolato02" },
+                            { title: "Elyah", sub: "Acessórios", src: "/images/produtora/acessorios/elyah/capa.jpg", link: "/portfolio-produtora/elyah" },
+                            { title: "Knowhol", sub: "Direção de Imagem", src: "/images/agencia/knowhol/capa.jpg", link: "/portfolio-agencia/knowhol" },
+                            { title: "Samrat", sub: "Direção de Imagem", src: "/images/agencia/samrat/capa.jpg", link: "/portfolio-agencia/samrat" },
                         ].map((work, i) => (
-                            <div 
+                            <Link 
                                 key={i} 
-                                className="scroll-reveal relative group bg-white aspect-[4/3] overflow-hidden"
+                                href={work.link}
+                                className="scroll-reveal relative group bg-white aspect-[4/3] overflow-hidden block"
                                 data-delay={i * 100}
                                 style={{ opacity: 0, transform: 'translateY(40px)', transition: 'opacity 0.7s ease, transform 0.7s ease' }}
                             >
@@ -270,7 +271,7 @@ export default function Home() {
                                         {work.sub}
                                     </p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </section>
