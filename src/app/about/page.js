@@ -35,22 +35,21 @@ export default function About() {
     };
 
     return (
-        <div className="page-about bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary">
+        <div className="bg-white text-black selection:bg-black selection:text-white">
             {/* SEO Hidden H1 */}
             <h1 className="sr-only">House Mazzutti | Branding Estratégico e Posicionamento de Marca</h1>
 
             {/* HEADER */}
             <Header variant="dark" />
             <main>
-                {/* [1] HERO SECTION */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#c8c8c8]">
-                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
-                        <span className="font-label text-xs text-black">STRATEGIC HOUSE</span>
-                        <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">Vamos além da publicidade.</h2>
-                        <p className="text-lg md:text-xl font-headline italic text-[#555555] max-w-md">Estruturamos o seu projeto para comunicar com precisão.</p>
+                <section className="min-h-screen flex items-center bg-zinc-100 swiss-grid py-40">
+                    <div className="max-w-5xl">
+                        <span className="label-micro text-zinc-400 mb-8 block">Strategic House</span>
+                        <h1 className="hero-title mb-12">Vamos além da publicidade.</h1>
+                        <p className="section-title text-zinc-500 mb-20 !max-w-2xl">Estruturamos o seu projeto para comunicar com precisão.</p>
                         
                         {/* Progress Bars */}
-                        <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
+                        <div className="space-y-12 w-full md:w-1/2">
                             {[
                                 { label: "ESTRATÉGIA", value: "92%" },
                                 { label: "POSICIONAMENTO", value: "88%" },
@@ -58,15 +57,15 @@ export default function About() {
                                 { label: "PRODUÇÃO", value: "85%" },
                             ].map((item, index) => (
                                 <div key={index} className="space-y-4">
-                                    <div className="flex justify-between font-label text-[12px] text-black">
+                                    <div className="flex justify-between label-micro text-black">
                                         <span>{item.label}</span>
                                     </div>
-                                    <div className="h-[8px] bg-[#d5d5d5] w-full relative">
+                                    <div className="h-[1px] bg-zinc-200 w-full relative">
                                         <div 
                                             className="h-full bg-black animate-progress relative" 
                                             style={{ width: item.value, "--target-width": item.value }}
                                         >
-                                            <span className="percentage-tag">{item.value}</span>
+                                            <span className="absolute right-0 bottom-4 label-micro text-black">{item.value}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -75,58 +74,29 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [2] DEPOIMENTOS SECTION */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[480px] max-h-[480px]">
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
-                    </div>
-                    
-                    {/* Navigation */}
-                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
-                            <div className="custom-nav-line mr-2"></div>
-                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextSlide}>
-                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div className="custom-nav-line ml-2"></div>
-                        </button>
-                    </div>
-
-                    {/* Slides */}
-                    <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                <section className="bg-black py-40 swiss-grid relative overflow-hidden flex items-center justify-center">
+                    <div className="relative z-10 w-full max-w-4xl text-center">
+                        <div className="mb-16">
+                            <span className="label-micro text-white/40 block mb-4">Depoimentos</span>
+                            <h2 className="section-title text-white">Vozes do Mercado</h2>
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1" style={{height: '200px', display: 'flex', alignItems: 'center'}}>
+                            <div className="relative w-full overflow-hidden" style={{ minHeight: '220px' }}>
                                 {testimonials.map((t, i) => (
-                                    <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
-                                        <h3 className="font-headline text-lg text-white leading-snug italic max-w-3xl mx-auto">
+                                    <div key={i} className={`testimonial-slide ${currentSlide === i ? "active" : ""}`}>
+                                        <h3 className="subsection-title text-white !leading-relaxed max-w-3xl mx-auto">
                                             "{t.text}"
                                         </h3>
-                                        {t.author && (
-                                            <div className="pt-3">
-                                                <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
-                                            </div>
-                                        )}
                                     </div>
                                 ))}
                             </div>
                             {/* Indicators */}
-                            <div className="flex space-x-3 pt-4">
+                            <div className="flex space-x-6 pt-12">
                                 {testimonials.map((_, i) => (
                                     <button 
                                         key={i} 
-                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"}`} 
+                                        className={`w-12 h-[0.5px] transition-all duration-700 ${currentSlide === i ? "bg-white w-20" : "bg-white/20"}`} 
                                         onClick={() => goToSlide(i)}
                                     ></button>
                                 ))}
@@ -135,146 +105,103 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [3] ORIGEM EDITORIAL */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-8">
-                            <span className="font-label text-xs text-neutral-400">ORIGEM</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">A House Mazzutti nasceu de uma convicção simples</h2>
-                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
+                <section className="min-h-screen flex flex-col md:flex-row swiss-grid py-40 gap-24 items-center">
+                    <div className="w-full md:w-1/2">
+                        <div className="max-w-lg">
+                            <span className="label-micro text-zinc-400 mb-8 block">Origem</span>
+                            <h2 className="section-title mb-12">A House Mazzutti nasceu de uma convicção simples.</h2>
+                            <div className="space-y-8 body-text text-zinc-500">
                                 <p>Em um mercado saturado por excesso de informação, percebemos que o problema não era a falta de produção — mas a ausência de direção. Foi a partir disso que estruturamos um modelo capaz de integrar pensamento, construção e execução em um único fluxo.</p>
                                 <p>Cada marca que construímos é tratada como uma obra de curadoria, onde cada detalhe — do tom de voz à textura visual — é um ativo estratégico.</p>
                                 <p>No mercado saturado de ruído, a comunicação muitas vezes silenciosa e precisa é o que separa os líderes dos amadores.</p>
                             </div>
-                            <div className="pt-8 italic font-headline text-3xl opacity-80">Angelo Mazzutti</div>
+                            <div className="pt-16 subsection-title">Angelo Mazzutti</div>
                         </div>
                     </div>
-                    {/* Vertical Divider */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
                     
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
-                        <img 
-                            alt="Portrait profile in B&W" 
-                            className="absolute inset-0 w-full h-full object-cover grayscale" 
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                            <h2 className="font-headline text-6xl md:text-8xl text-white/85 font-bold uppercase tracking-widest text-center select-none">SOBRE NÓS</h2>
+                    <div className="w-full md:w-1/2">
+                        <div className="relative aspect-[3/4] overflow-hidden">
+                            <img 
+                                alt="Portrait profile in B&W" 
+                                className="w-full h-full object-cover grayscale" 
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
+                            />
                         </div>
                     </div>
                 </section>
 
-                {/* [4] COMO FUNCIONAMOS SECTION */}
-                <section className="bg-white px-[40px]">
-                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">COMO FUNCIONAMOS</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Nossa estrutura é organizada em quatro frentes complementares:</h2>
-                            </div>
-                            
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                {[
-                                    {
-                                        title: "AGÊNCIA",
-                                        items: ["Branding Project", "Web Development", "Campanha Integrada 360"]
-                                    },
-                                    {
-                                        title: "STUDIO",
-                                        items: ["Book Model", "Ensaio Profissional", "Cobertura Pessoal"]
-                                    },
-                                    {
-                                        title: "PRODUTORA",
-                                        items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"]
-                                    },
-                                    {
-                                        title: "COMUNIDADE",
-                                        items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e Vagas"]
-                                    }
-                                ].map((card, idx) => (
-                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
-                                        <div>
-                                            <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
-                                            {card.subtitle && <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>}
-                                            <ul className="space-y-4 mb-12">
-                                                {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                                        <span className="material-symbols-outlined text-lg">check</span>
-                                                        <span>{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <button className="w-full border border-black py-4 font-label uppercase text-[10px] tracking-widest hover:bg-black hover:text-white transition-all group-hover:border-white group-hover:text-white">
-                                            SAIBA MAIS
-                                        </button>
-                                    </div>
-                                ))}
-                            </div>
+                <section className="bg-white py-40 swiss-grid">
+                    <div className="max-w-[1440px]">
+                        <div className="mb-24">
+                            <span className="label-micro text-zinc-400 mb-4 block">Frentes</span>
+                            <h2 className="section-title">Como Funcionamos</h2>
                         </div>
-                    </div>
-                </section>
-                {/* [5] DIFERENCIAL SECTION */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/5">
-                            <h2 className="font-headline text-6xl md:text-8xl text-black/10 font-bold uppercase tracking-widest text-center select-none">HOUSE</h2>
-                        </div>
-                    </div>
-                    {/* Vertical Divider */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
-                    
-                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-8">
-                            <span className="font-label text-xs text-neutral-400">DIFERENCIAL</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">O que diferencia a House não é o que fazemos.</h2>
-                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
-                                <p>É como pensamos. Unimos:</p>
-                                <ul className="space-y-2">
-                                    <li>— sensibilidade estética</li>
-                                    <li>— inteligência estratégica</li>
-                                    <li>— experiência de mercado</li>
-                                    <li>— execução precisa</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* [6] METODOLOGIA */}
-                <section className="bg-black text-white py-40 overflow-hidden relative">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="ghost-text text-[20vw] font-headline uppercase select-none">MÉTODO</span>
-                    </div>
-                    <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-4xl md:text-5xl font-headline text-center mb-32 max-w-2xl mx-auto leading-tight">Nada começa na execução. Tudo começa no entendimento.</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
                             {[
-                                { num: "01 / IMERSÃO", desc: "Análise profunda do DNA e objetivos do negócio." },
-                                { num: "02 / DIAGNÓSTICO", desc: "Identificação de lacunas e oportunidades de mercado." },
-                                { num: "03 / CONCEITO", desc: "A espinha dorsal criativa que guiará a marca." },
-                                { num: "04 / EXECUÇÃO", desc: "Traduzindo a estratégia em ativos visuais e verbais." },
-                                { num: "05 / MONITORAMENTO", desc: "Garantia de consistência e evolução contínua." }
+                                {
+                                    title: "AGÊNCIA",
+                                    items: ["Branding Project", "Web Development", "Campanha Integrada 360"]
+                                },
+                                {
+                                    title: "STUDIO",
+                                    items: ["Book Model", "Ensaio Profissional", "Cobertura Pessoal"]
+                                },
+                                {
+                                    title: "PRODUTORA",
+                                    items: ["Campanha de Moda", "Campanha de Beleza", "Conteúdo Institucional"]
+                                }
+                            ].map((card, idx) => (
+                                <div key={idx} className="p-16 border-[0.5px] border-zinc-100 flex flex-col justify-between h-full bg-white transition-all duration-700 ease-in-out hover:bg-black group">
+                                    <div>
+                                        <h3 className="subsection-title mb-12 group-hover:text-white uppercase">{card.title}</h3>
+                                        <ul className="space-y-6 mb-16">
+                                            {card.items.map((item, i) => (
+                                                <li key={i} className="label-micro text-zinc-500 group-hover:text-white/60 flex items-center gap-3">
+                                                    <span className="w-1.5 h-[0.5px] bg-zinc-300 group-hover:bg-white/30"></span>
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <button className="btn-swiss w-full text-center group-hover:!border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-black">
+                                        SAIBA MAIS
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+                {/* [5] METODOLOGIA */}
+                <section className="bg-black text-white py-64 swiss-grid">
+                    <div className="max-w-7xl">
+                        <h2 className="section-title text-center mb-40 max-w-4xl mx-auto">Nada começa na execução. Tudo começa no entendimento.</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
+                            {[
+                                { num: "01", title: "IMERSÃO", desc: "Análise profunda do DNA e objetivos do negócio." },
+                                { num: "02", title: "DIAGNÓSTICO", desc: "Identificação de lacunas e oportunidades de mercado." },
+                                { num: "03", title: "CONCEITO", desc: "A espinha dorsal criativa que guiará a marca." },
+                                { num: "04", title: "EXECUÇÃO", desc: "Traduzindo a estratégia em ativos visuais e verbais." },
+                                { num: "05", title: "MONITORAMENTO", desc: "Garantia de consistência e evolução contínua." }
                             ].map((item, i) => (
-                                <div key={i} className="space-y-6">
-                                    <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
-                                    <div className="h-px bg-neutral-800 w-full"></div>
-                                    <p className="text-xs text-neutral-400 leading-relaxed font-body">{item.desc}</p>
+                                <div key={i} className="space-y-8">
+                                    <span className="label-micro text-white/30 block">{item.num} / {item.title}</span>
+                                    <div className="h-[0.5px] bg-white/10 w-full"></div>
+                                    <p className="label-micro text-white/50 !leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
 
-                {/* [7] CTA */}
-                <section className="bg-black py-40 px-12 text-center relative overflow-hidden" id="contato">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
-                        <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-tight italic">
-                            Se sua marca precisa de direção, não de volume — <span className="not-italic">estamos prontos.</span>
+                {/* [6] CTA */}
+                <section className="bg-white py-64 swiss-grid text-center" id="contato">
+                    <div className="max-w-5xl mx-auto space-y-24">
+                        <h2 className="hero-title">
+                            Se sua marca precisa de direção, estamo prontos.
                         </h2>
-                        <div className="flex flex-col items-center space-y-8">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
+                        <div className="flex flex-col items-center">
+                            <Link className="btn-swiss" href="/contato">
                                 INICIAR CONVERSA
                             </Link>
                         </div>
@@ -282,29 +209,25 @@ export default function About() {
                 </section>
             </main>
 
-            {/* FOOTER */}
-            <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+            <footer className="bg-white py-40 swiss-grid border-t border-zinc-100">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-neutral-50 mb-12">
+                    <div className="mb-20">
                         <span className="hm-logo" style={{fontSize: '32px'}}>
                             <span className="hm-house">House</span>
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
                     </div>
-                    <div className="flex space-x-8 mb-12">
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
-                    </div>
-                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/blog">BLOG</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
+                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-8 mb-24">
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/">HOME</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/about">SOBRE</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/studio">STUDIO</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/produtora">PRODUTORA</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/agencia">AGÊNCIA</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/portfolio">PORTFÓLIO</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/contato">CONTATO</Link>
                     </nav>
-                    <div className="font-label text-[9px] text-neutral-700">
-                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                    <div className="label-micro text-zinc-300">
+                        © 2025 House Mazzutti — Direção de Imagem & Estratégia
                     </div>
                 </div>
             </footer>

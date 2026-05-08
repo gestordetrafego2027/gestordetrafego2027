@@ -137,9 +137,9 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary">
+        <div className="bg-white text-black selection:bg-black selection:text-white">
             {/* NOISE OVERLAY */}
-            <div className="noise-overlay fixed inset-0 z-[100] pointer-events-none opacity-5"></div>
+            <div className="noise-overlay"></div>
 
             {/* HEADER */}
             <Header variant="dark" />
@@ -157,29 +157,29 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
-                    <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
-                        <div className="max-w-4xl fade-in">
+                    <div className="relative z-10 h-full flex flex-col justify-center swiss-grid">
+                        <div className="max-w-4xl">
                             <span
-                                className="hero-animate font-label uppercase tracking-widest text-[10px] mb-4 block"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#fff', marginBottom: '16px' }}
+                                className="hero-animate label-micro mb-6 block text-white/60"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].label}
                             </span>
                             <h1
-                                className="hero-animate font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5 italic font-light"
+                                className="hero-animate hero-title text-white mb-8"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].titulo}
                             </h1>
                             <p 
-                                className="hero-animate font-body text-sm md:text-base mb-8"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#ccc' }}
+                                className="hero-animate body-text mb-12 text-white/60"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].texto}
                             </p>
                             <Link
                                 href={heroSlides[currentHeroSlide].link}
-                                className="hero-animate inline-block group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300"
+                                className="hero-animate btn-swiss inline-block !border-white text-white hover:bg-white hover:text-black"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].cta}
@@ -236,13 +236,11 @@ export default function Home() {
 
                 {/* SELECTED WORKS */}
                 <section
-                    className="bg-white py-12 mx-auto"
-                    style={{ maxWidth: "95vw" }}
+                    className="bg-white py-40 swiss-grid"
                 >
-                    <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4"></span>
-                        <h2 className="font-headline text-3xl text-black">Trabalhos Selecionados</h2>
-                        <div className="line-divider mt-6 text-black"></div>
+                    <div className="mb-24 text-left">
+                        <span className="label-micro text-zinc-400 block mb-4">Portfólio</span>
+                        <h2 className="section-title text-black">Trabalhos Selecionados</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                         {[
@@ -265,8 +263,8 @@ export default function Home() {
                                     src={work.src}
                                 />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                    <p className="font-headline text-sm text-black italic">{work.title}</p>
-                                    <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">
+                                    <p className="subsection-title text-black">{work.title}</p>
+                                    <p className="label-micro text-zinc-500 mt-2">
                                         {work.sub}
                                     </p>
                                 </div>
@@ -276,15 +274,15 @@ export default function Home() {
                 </section>
 
                 {/* SERVICES SECTION */}
-                <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                    <div className="max-w-[1260px] mx-auto text-center mb-12">
-                        <div className="mb-20">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4"></span>
-                            <h2 className="font-headline text-5xl text-black">
+                <section className="bg-white py-40 swiss-grid border-t-[0.5px] border-zinc-100">
+                    <div className="max-w-[1260px] mb-24">
+                        <div className="mb-12">
+                            <span className="label-micro text-zinc-400 block mb-4">Serviços</span>
+                            <h2 className="section-title text-black">
                                 Integrado. Estratégico. Intencional.
                             </h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-24">
                             {[
                                 {
                                     icon: "brush",
@@ -302,12 +300,12 @@ export default function Home() {
                                     desc: "Execução técnica de alto padrão. Imagens que comunicam prestígio e desejo sem a necessidade de legendas.",
                                 },
                             ].map((service, i) => (
-                                <div key={i} className="flex flex-col items-center space-y-4">
-                                    <span className="material-symbols-outlined text-4xl font-extralight">
+                                <div key={i} className="flex flex-col space-y-6">
+                                    <span className="material-symbols-outlined text-4xl !font-thin">
                                         {service.icon}
                                     </span>
-                                    <h3 className="font-headline text-2xl">{service.title}</h3>
-                                    <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
+                                    <h3 className="subsection-title">{service.title}</h3>
+                                    <p className="body-text text-zinc-500">
                                         {service.desc}
                                     </p>
                                 </div>
@@ -317,33 +315,21 @@ export default function Home() {
                 </section>
 
                 {/* PHILOSOPHY SECTION */}
-                <section style={{
-                    position: 'relative',
-                    overflow: 'hidden',
-                    height: 'auto', // Changed to auto to accommodate content, user requested template but auto is safer for layout
-                    minHeight: '600px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    padding: '80px 48px'
-                }}>
+                <section className="relative overflow-hidden min-h-[70vh] flex items-center swiss-grid py-40">
                     <div 
-                        className="parallax-bg"
+                        className="parallax-bg absolute inset-0 -z-10"
                         style={{
-                            position: 'absolute',
-                            top: '-30%',
-                            left: 0,
-                            right: 0,
-                            bottom: '-30%',
                             backgroundImage: 'url(https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=1920&q=80)',
                             backgroundSize: 'cover',
-                            backgroundPosition: 'center'
+                            backgroundPosition: 'center',
+                            opacity: 0.4,
+                            filter: 'grayscale(100%)'
                         }} 
                     />
                     
-                    <div className="noise-overlay absolute inset-0 bg-black/40"></div>
-                    <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32 text-white">
-                        <div className="w-full lg:w-1/4 flex-shrink-0">
-                            <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
+                    <div className="relative z-10 w-full flex flex-col lg:flex-row items-center gap-24 text-black">
+                        <div className="w-full lg:w-1/3 flex-shrink-0">
+                            <div className="relative w-full aspect-[3/4] overflow-hidden">
                                 <img
                                     alt="B&W editorial photography"
                                     className="w-full h-full object-cover grayscale"
@@ -351,70 +337,66 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-                        <div className="flex-grow w-full py-4">
-                            <div className="grid grid-cols-1 gap-y-8">
-                                <div className="max-w-xl text-left">
-                                    <h2 className="font-headline text-xl md:text-2xl italic leading-snug mb-2">
-                                        Marcas fortes não disputam atenção. Elas ocupam espaço.
-                                    </h2>
-                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
-                                        Filosofia House
-                                    </p>
-                                </div>
+                        <div className="flex-grow">
+                            <div className="max-w-2xl">
+                                <h2 className="section-title mb-8">
+                                    Marcas fortes não disputam atenção. Elas ocupam espaço.
+                                </h2>
+                                <p className="label-micro text-zinc-500">
+                                    Filosofia House
+                                </p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* STRUCTURE SELECTION */}
-                <section className="bg-white px-[40px]">
-                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">SOLUÇÕES</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Hoje</h2>
-                            </div>
-                            
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {[
-                                    {
-                                        title: "HMZT | STUDIO",
-                                        link: "/studio",
-                                        subtitle: 'Experiência foto, vídeo e produção pessoal',
-                                        items: ["Book profissional", "Ensaio pessoal", "Cobertura externa", "Direção de imagem"]
-                                    },
-                                    {
-                                        title: "HMZT | PRODUTORA",
-                                        link: "/produtora",
-                                        subtitle: 'Campanhas de Moda, Saúde e Beleza.',
-                                        items: ["Editorial de moda", "Campanha publicitária", "Conteúdo institucional", "Produção executiva"]
-                                    },
-                                    {
-                                        title: "HMZT | AGÊNCIA",
-                                        link: "/agencia",
-                                        subtitle: 'Criação de marcas, Eventos e Influência.',
-                                        items: ["Branding project", "Campanhas", "Web development", "Posicionamento"]
-                                    }
-                                ].map((card, idx) => (
-                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined" style={{ transition: 'transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                                        <div>
-                                            <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
-                                            <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>
-                                            <ul className="space-y-4 mb-12">
-                                                {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                                        <span className="material-symbols-outlined text-lg">check</span>
-                                                        <span>{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <Link href={card.link} className="w-full border border-black py-4 font-label uppercase text-[10px] tracking-widest hover:bg-black hover:text-white transition-all group-hover:border-white group-hover:text-white text-center block">
-                                            SAIBA MAIS
-                                        </Link>
+                <section className="bg-white py-40 swiss-grid">
+                    <div className="max-w-[1440px]">
+                        <div className="mb-24">
+                            <span className="label-micro text-zinc-400 mb-4 block">Soluções</span>
+                            <h2 className="section-title">Estruturas de Negócio</h2>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+                            {[
+                                {
+                                    title: "STUDIO",
+                                    link: "/studio",
+                                    subtitle: 'Direção de Imagem Pessoal',
+                                    items: ["Book Profissional", "Ensaio Pessoal", "Cobertura Externa", "Produção de Moda"]
+                                },
+                                {
+                                    title: "PRODUTORA",
+                                    link: "/produtora",
+                                    subtitle: 'Campanhas e Publicidade',
+                                    items: ["Editorial de Moda", "Casting Estratégico", "Conteúdo Institucional", "Produção Executiva"]
+                                },
+                                {
+                                    title: "AGÊNCIA",
+                                    link: "/agencia",
+                                    subtitle: 'Branding e Estratégia',
+                                    items: ["Branding Project", "Posicionamento Digital", "Web Development", "Gestão de Presença"]
+                                }
+                            ].map((card, idx) => (
+                                <div key={idx} className="p-16 border-[0.5px] border-zinc-100 flex flex-col justify-between h-full bg-white transition-all duration-700 ease-in-out hover:bg-black group">
+                                    <div>
+                                        <h3 className="subsection-title mb-2 group-hover:text-white">{card.title}</h3>
+                                        <p className="body-text text-zinc-400 mb-12 group-hover:text-white/40">{card.subtitle}</p>
+                                        <ul className="space-y-4 mb-16">
+                                            {card.items.map((item, i) => (
+                                                <li key={i} className="label-micro text-zinc-500 group-hover:text-white/60 flex items-center gap-3">
+                                                    <span className="w-1.5 h-[0.5px] bg-zinc-300 group-hover:bg-white/30"></span>
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
-                                ))}
-                            </div>
+                                    <Link href={card.link} className="btn-swiss w-full text-center group-hover:!border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-black">
+                                        Explorar
+                                    </Link>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -422,87 +404,28 @@ export default function Home() {
 
                 {/* TESTIMONIALS SECTION */}
                 <section 
-                    className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center py-20"
-                    style={{ minHeight: '500px' }}
-                    onMouseEnter={() => {}} // dummy to allow hover states
+                    className="bg-black py-40 swiss-grid relative overflow-hidden flex items-center justify-center"
+                    style={{ minHeight: '600px' }}
                 >
-                    <div
-                        className="parallax-testimonial"
-                        style={{
-                            position: 'absolute', top: '50%', left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            fontSize: '10vw', fontFamily: 'var(--font-headline)',
-                            fontStyle: 'italic', color: 'rgba(255,255,255,0.12)', 
-                            whiteSpace: 'nowrap', pointerEvents: 'none',
-                            userSelect: 'none', zIndex: 0
-                        }}
-                    >
-                        Depoimentos
-                    </div>
-
-                    {/* Navigation Arrows */}
-                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
-                        <button
-                            className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300"
-                            onClick={prevSlide}
-                        >
-                            <div className="custom-nav-line mr-2"></div>
-                            <svg
-                                className="transform -translate-x-2"
-                                fill="none"
-                                height="24"
-                                stroke="white"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1"
-                                viewBox="0 0 24 24"
-                                width="24"
-                            >
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
-                        <button
-                            className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300"
-                            onClick={nextSlide}
-                        >
-                            <svg
-                                className="transform translate-x-2"
-                                fill="none"
-                                height="24"
-                                stroke="white"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1"
-                                viewBox="0 0 24 24"
-                                width="24"
-                            >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div className="custom-nav-line ml-2"></div>
-                        </button>
-                    </div>
-
-                    <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">
-                                O QUE DIZEM
+                    <div className="relative z-10 w-full max-w-4xl text-center">
+                        <div className="mb-16">
+                            <span className="label-micro text-white/40 block mb-4">
+                                Testemunhos
                             </span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                            <h2 className="section-title text-white">Vozes do Mercado</h2>
                         </div>
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1" style={{ minHeight: '200px' }}>
+                            <div className="relative w-full overflow-hidden" style={{ minHeight: '220px' }}>
                                 {testimonials.map((testimonial, i) => (
                                     <div
                                         key={i}
                                         className={`testimonial-slide ${currentSlide === i ? "active" : ""}`}
                                     >
-                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
+                                        <h3 className="subsection-title text-white !leading-relaxed max-w-3xl mx-auto">
                                             "{testimonial.text}"
                                         </h3>
-                                        <div className="pt-3">
-                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">
+                                        <div className="pt-8">
+                                            <p className="label-micro text-white/40">
                                                 {testimonial.author}
                                             </p>
                                         </div>
@@ -510,11 +433,11 @@ export default function Home() {
                                 ))}
                             </div>
                             {/* Pagination Indicators */}
-                            <div className="flex space-x-3 pt-4">
+                            <div className="flex space-x-6 pt-12">
                                 {testimonials.map((_, i) => (
                                     <button
                                         key={i}
-                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"
+                                        className={`w-12 h-[0.5px] transition-all duration-700 ${currentSlide === i ? "bg-white w-20" : "bg-white/20"
                                             }`}
                                         onClick={() => goToSlide(i)}
                                     ></button>
@@ -525,88 +448,45 @@ export default function Home() {
                 </section>
 
                 {/* BLOG SECTION */}
-                <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
-                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <div style={{ marginBottom: '40px' }}>
-                            <p style={{
-                                fontSize: '12px', letterSpacing: '0.2em',
-                                textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
-                            }}>
-                                BLOG
-                            </p>
-                            <h2 style={{ fontSize: '2.2rem', fontWeight: '400', color: '#000' }}>
-                                Últimos Artigos
-                            </h2>
+                <section className="bg-white py-40 swiss-grid">
+                    <div className="max-w-[1400px]">
+                        <div className="mb-24">
+                            <p className="label-micro text-zinc-400 mb-4">Editorial</p>
+                            <h2 className="section-title">Últimos Artigos</h2>
                         </div>
-                        <div style={{
-                            display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)',
-                            gap: '2px'
-                        }} className="md:grid-cols-3">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-[0.5px] border-zinc-100">
                             {[
                                 {
                                     categoria: 'Studio — Book',
-                                    titulo: 'Book para Modelos: o que realmente define quem é escolhido no mercado',
-                                    data: 'Abril 2026',
+                                    titulo: 'O que define o sucesso no mercado de moda atual',
+                                    data: 'Maio 2026',
                                     slug: '/blog/book-para-modelos-quem-e-escolhido'
                                 },
                                 {
                                     categoria: 'Agência — Branding',
-                                    titulo: 'Por que o branding é o ativo mais valioso de uma marca de luxo',
-                                    data: 'Abril 2026',
+                                    titulo: 'O branding como ativo de valor no luxo contemporâneo',
+                                    data: 'Maio 2026',
                                     slug: '/blog/branding-project-arquitetura-valor'
                                 },
                                 {
-                                    categoria: 'IA — Futuro',
-                                    titulo: 'O papel da Inteligência Artificial na direção criativa de 2026',
-                                    data: 'Abril 2026',
+                                    categoria: 'Direção — Criativa',
+                                    titulo: 'Narrativas visuais e o futuro da direção de imagem',
+                                    data: 'Maio 2026',
                                     slug: '/blog/editorial-moda-narrativa-visual'
                                 }
                             ].map((post, idx) => (
-                                <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div 
-                                      style={{
-                                        padding: '64px 48px',
-                                        border: '0.5px solid #e0e0e0',
-                                        background: '#fff',
-                                        height: '100%',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'space-between',
-                                        transition: 'background 0.3s, color 0.3s, transform 0.4s ease',
-                                        cursor: 'pointer',
-                                        color: '#000',
-                                        transform: 'translateY(0)'
-                                      }}
-                                      onMouseEnter={e => {
-                                        e.currentTarget.style.background = '#000';
-                                        e.currentTarget.style.color = '#fff';
-                                        e.currentTarget.style.transform = 'translateY(-6px)';
-                                      }}
-                                      onMouseLeave={e => {
-                                        e.currentTarget.style.background = '#fff';
-                                        e.currentTarget.style.color = '#000';
-                                        e.currentTarget.style.transform = 'translateY(0)';
-                                      }}
-                                    >
-                                        <div>
-                                            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>
-                                                {post.categoria}
-                                            </p>
-                                            <h3 style={{ fontSize: '1.6rem', fontWeight: '400', lineHeight: '1.4', color: 'inherit', marginBottom: '40px' }}>
-                                                {post.titulo}
-                                            </h3>
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <span style={{ fontSize: '11px', color: '#aaa' }}>{post.data}</span>
-                                            <span style={{
-                                              fontSize: '28px',
-                                              display: 'inline-block',
-                                              transition: 'transform 0.4s ease'
-                                            }}
-                                            onMouseEnter={e => e.currentTarget.style.transform = 'translateX(10px)'}
-                                            onMouseLeave={e => e.currentTarget.style.transform = 'translateX(0)'}
-                                            >→</span>
-                                        </div>
+                                <Link key={idx} href={post.slug} className="group border-[0.5px] border-zinc-100 p-16 flex flex-col justify-between aspect-square hover:bg-black transition-all duration-700">
+                                    <div>
+                                        <p className="label-micro text-zinc-400 mb-8 group-hover:text-white/40">
+                                            {post.categoria}
+                                        </p>
+                                        <h3 className="subsection-title group-hover:text-white">
+                                            {post.titulo}
+                                        </h3>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <span className="label-micro text-zinc-300 group-hover:text-white/20">{post.data}</span>
+                                        <span className="text-2xl group-hover:text-white transition-transform duration-500 group-hover:translate-x-2">→</span>
                                     </div>
                                 </Link>
                             ))}
@@ -616,23 +496,22 @@ export default function Home() {
 
                 {/* CTA CONTACT SECTION */}
                 <section
-                    className="bg-black py-64 px-12 text-center relative overflow-hidden"
+                    className="bg-black py-64 swiss-grid text-center relative overflow-hidden"
                     id="contato"
                 >
-                    <div className="noise-overlay absolute inset-0"></div>
-                    <div className="relative z-10 max-w-4xl mx-auto space-y-16">
-                        <h2 className="font-headline text-4xl md:text-7xl text-white leading-tight italic">
-                            Se o seu marketing está pedindo um novo visual.
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-24">
+                        <h2 className="hero-title text-white !max-w-none">
+                            Onde a visão encontra a execução.
                         </h2>
-                        <div className="flex flex-col items-center space-y-8">
+                        <div className="flex flex-col items-center space-y-12">
                             <Link
-                                className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300"
+                                className="btn-swiss !border-white text-white hover:bg-white hover:text-black"
                                 href="/contato"
                             >
-                                ENTRE EM CONTATO
+                                INICIAR PROJETO
                             </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">
-                                Menos tentativa. Mais direção.
+                            <p className="label-micro text-white/30">
+                                Direção Criativa & Estratégia Premium
                             </p>
                         </div>
                     </div>
@@ -640,28 +519,25 @@ export default function Home() {
             </main>
 
             {/* FOOTER */}
-            <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+            <footer className="bg-white py-40 swiss-grid border-t border-zinc-100">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-neutral-50 mb-12">
+                    <div className="mb-20">
                         <span className="hm-logo" style={{fontSize: '32px'}}>
                             <span className="hm-house">House</span>
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
                     </div>
-                    <div className="flex space-x-8 mb-12">
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
-                    </div>
-                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/blog">BLOG</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
+                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-8 mb-24">
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/">HOME</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/about">SOBRE</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/studio">STUDIO</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/produtora">PRODUTORA</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/agencia">AGÊNCIA</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/portfolio">PORTFÓLIO</Link>
+                        <Link className="menu-item text-zinc-400 hover:text-black transition-colors" href="/contato">CONTATO</Link>
                     </nav>
-                    <div className="font-label text-[9px] text-neutral-700">
-                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                    <div className="label-micro text-zinc-300">
+                        © 2025 House Mazzutti — Direção de Imagem & Estratégia
                     </div>
                 </div>
             </footer>

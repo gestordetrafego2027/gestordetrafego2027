@@ -91,7 +91,7 @@ export default function Header({ variant = 'dark' }) {
     return (
         <>
             <header 
-                className="flex justify-between items-center px-12"
+                className="flex justify-between items-center swiss-grid"
                 style={{ 
                     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
                     transition: 'transform 0.4s ease',
@@ -101,8 +101,8 @@ export default function Header({ variant = 'dark' }) {
                     top: 0,
                     width: '100%',
                     zIndex: 100,
-                    paddingTop: '28px',
-                    paddingBottom: '28px'
+                    paddingTop: '32px',
+                    paddingBottom: '32px'
                 }}
             >
                 <Link 
@@ -116,17 +116,16 @@ export default function Header({ variant = 'dark' }) {
                     </span>
                 </Link>
 
-                <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
+                <nav className="hidden xl:flex items-center space-x-8 ml-auto mr-12">
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
+                    <Link className="menu-item hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
                 </nav>
 
                 <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
@@ -209,7 +208,7 @@ export default function Header({ variant = 'dark' }) {
                     </div>
 
                     <nav style={{display:'flex', flexDirection:'column', 
-                      gap:'16px', marginBottom:'40px'}}>
+                      gap:'12px', marginBottom:'60px'}}>
                       {[
                         {label:'HOME', href:'/'},
                         {label:'SOBRE', href:'/about'},
@@ -217,24 +216,20 @@ export default function Header({ variant = 'dark' }) {
                         {label:'PRODUTORA', href:'/produtora'},
                         {label:'AGÊNCIA', href:'/agencia'},
                         {label:'ANGELO', href:'/angelo'},
-                        {label:'COMUNIDADE', href:'/comunidade'},
                         {label:'PORTFÓLIO', href:'/portfolio'},
                         {label:'BLOG', href:'/blog'},
                         {label:'CONTATO', href:'/contato'},
                       ].map(item => (
                         <Link key={item.label} href={item.href}
                           onClick={() => closeMenu()}
+                          className="menu-item"
                           style={{
-                            fontFamily:'RocGrotesk, sans-serif',
-                            fontSize:'10px',
-                            letterSpacing:'0.2em',
-                            textTransform:'uppercase',
-                            color:'#aaa',
+                            color:'#666',
                             textDecoration:'none',
                             transition:'color 0.3s'
                           }}
                           onMouseEnter={e => e.currentTarget.style.color='white'}
-                          onMouseLeave={e => e.currentTarget.style.color='#aaa'}
+                          onMouseLeave={e => e.currentTarget.style.color='#666'}
                         >{item.label}</Link>
                       ))}
                     </nav>

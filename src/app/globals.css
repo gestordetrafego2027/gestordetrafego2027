@@ -29,415 +29,167 @@
 }
 
 
-html {
-  scrollbar-gutter: stable;
-  font-size: 15px;
+
+/* ==========================================================================
+   SWISS CONTEMPORARY DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+    --swiss-padding: clamp(24px, 6vw, 120px);
+    --color-background: #ffffff;
+    --color-on-background: #000000;
 }
 
-/* Removido duplicata pois já está definido em utilities */
-
-
-
-
 @theme {
-    /* Mapeamento das variáveis das fontes configuradas no layout */
-    --font-headline: var(--font-headline), serif;
-    --font-body: var(--font-body), sans-serif;
-    --font-label: var(--font-body), sans-serif;
-
-    /* Novas fontes da página Sobre */
-    --font-playfair: var(--font-playfair), serif;
-    --font-montserrat: var(--font-montserrat), sans-serif;
-    --font-worksans: var(--font-worksans), sans-serif;
-    --font-notoserif: var(--font-notoserif), serif;
-
-    /* Sincronização com tailwind.config.mjs para v4 */
+    --font-headline: 'RocGrotesk', sans-serif;
+    --font-body: 'RocGrotesk', sans-serif;
+    --font-label: 'RocGrotesk', sans-serif;
     --color-primary: #000000;
-    --color-on-background: #1a1c1c;
-    --color-background: #f9f9f9;
-    --color-secondary: #5f5e5e;
-
-    /* Estilos Luxuosos */
-    --radius-default: 0px;
-    --radius-lg: 0px;
-    --radius-xl: 0px;
-    --radius-full: 9999px;
+    --color-secondary: #666666;
 }
 
 @layer base {
+    * {
+        font-family: 'RocGrotesk', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
         background-color: var(--color-background);
         color: var(--color-on-background);
-        font-family: var(--font-body);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.45;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: clamp(72px, 9vw, 138px);
+        line-height: 88%;
+        letter-spacing: -0.055em;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: clamp(42px, 4vw, 68px);
+        line-height: 94%;
+        letter-spacing: -0.04em;
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: clamp(24px, 2vw, 34px);
+        line-height: 105%;
+        letter-spacing: -0.02em;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 145%;
+        letter-spacing: -0.01em;
+        max-width: 64ch;
     }
 }
 
 @layer utilities {
+    .swiss-grid {
+        padding-inline: var(--swiss-padding);
+    }
+
+    .hero-title {
+        font-weight: 400;
+        font-size: clamp(72px, 9vw, 138px);
+        line-height: 88%;
+        letter-spacing: -0.055em;
+        max-width: 10ch;
+    }
+
+    .section-title {
+        font-weight: 500;
+        font-size: clamp(42px, 4vw, 68px);
+        line-height: 94%;
+        letter-spacing: -0.04em;
+    }
+
+    .subsection-title {
+        font-weight: 500;
+        font-size: clamp(24px, 2vw, 34px);
+        line-height: 105%;
+        letter-spacing: -0.02em;
+    }
+
+    .body-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 145%;
+        letter-spacing: -0.01em;
+        max-width: 64ch;
+    }
+
+    .menu-item {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        line-height: 100%;
+    }
+
+    .label-micro {
+        font-weight: 500;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    .btn-swiss {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        padding: 1.25rem 2.5rem;
+        border: 0.5px solid #000;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        text-transform: uppercase;
+    }
+
+    .btn-swiss:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    /* hm-logo re-structured for Swiss aesthetic */
+    .hm-logo {
+        display: inline-flex;
+        align-items: baseline;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+        font-weight: 400;
+    }
+
+    .hm-house {
+        font-weight: 400;
+        margin-right: 0.15em;
+    }
+
+    .hm-mazzutti {
+        font-weight: 500;
+    }
+
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-        font-size: 20px;
-    }
-
-    .hero-slider-container {
-        perspective: 1000px;
-    }
-
-    .fade-in {
-        animation: fadeIn 1.2s ease-out forwards;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .nav-line {
-        width: 40px;
-        height: 1px;
-        background-color: white;
-        transition: width 0.3s ease, opacity 0.3s ease;
-    }
-
-    .nav-btn:hover .nav-line {
-        width: 60px;
-    }
-
-    .text-justify-none { text-align-last: left; }
-    
-    .masonry-item:nth-child(even) { margin-top: 4rem; }
-    
-    .letter-spacing-huge { letter-spacing: 0.3em; }
-    
-    .line-divider { 
-        height: 0.5px; 
-        width: 100px; 
-        background-color: currentColor; 
-        opacity: 0.3; 
     }
 
     .noise-overlay {
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        opacity: 0.02;
+        opacity: 0.015;
         pointer-events: none;
-    }
-
-    /* Testimonial Nav */
-    .custom-nav-line {
-        width: 40px;
-        height: 1px;
-        background-color: white;
-        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .custom-nav-btn:hover .custom-nav-line {
-        width: 70px;
-    }
-
-    .testimonial-slide {
-        display: none;
-        animation: slideFade 0.6s ease-in-out forwards;
-    }
-    .testimonial-slide.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 220px;
-        overflow: hidden;
-    }
-
-    @keyframes slideFade {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* PROGRESS BAR ANIMATION (ABOUT PAGE) */
-    @keyframes progress-load {
-        from { width: 0; }
-        to { width: var(--target-width); }
-    }
-    
-    .animate-progress {
-        animation: progress-load 1.5s ease-out forwards;
-    }
-
-    .percentage-tag {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #000000;
-        color: #ffffff;
-        padding: 2px 6px;
-        font-size: 10px;
-        font-family: var(--font-worksans), sans-serif;
-        white-space: nowrap;
-    }
-
-    /* GHOST TEXT EFFECTS */
-    .ghost-text { 
-        -webkit-text-stroke: 1px rgba(255,255,255,0.1); 
-        color: transparent; 
-        pointer-events: none; 
-    }
-
-    .line-growth { 
-        transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); 
-    }
-
-    /* LOGO LAYER HOVER (ABOUT PAGE) */
-    .logo-container {
-        position: relative;
-        overflow: hidden;
-        height: 144px;
-        display: flex;
-        align-items: center;
-    }
-
-    .logo-layer {
-        transition: transform 0.4s ease, opacity 0.4s ease;
-        white-space: nowrap;
-        height: 144px;
-        display: flex;
-        align-items: center;
-    }
-
-    .logo-layer-1 {
-        transform: translateY(0);
-        opacity: 0.4;
-    }
-
-    .logo-layer-2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    .logo-container:hover .logo-layer-1 {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    .logo-container:hover .logo-layer-2 {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    .hover-transition-refined {
-        transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
-    }
-
-    * { font-family: 'RocGrotesk', sans-serif; }
-    .font-headline { font-family: 'RocGrotesk', sans-serif; font-weight: 700; }
-    .font-body { font-family: 'RocGrotesk', sans-serif; font-weight: 400; }
-    .font-label { font-family: 'RocGrotesk', sans-serif; font-weight: 500; }
-    .font-raleway { font-family: 'RocGrotesk', sans-serif; font-weight: 300; }
-    .font-serif { font-family: 'RocGrotesk', sans-serif; font-weight: 700; }
-}
-
-/* THEME SCOPING FOR ABOUT PAGE */
-.page-about {
-    --font-headline: var(--font-playfair), serif;
-    --font-body: var(--font-montserrat), sans-serif;
-    --font-label: var(--font-worksans), sans-serif;
-    
-    /* Color overrides for About */
-    --color-on-tertiary-container: #ee4546;
-    --color-on-tertiary-fixed-variant: #930015;
-    --color-on-tertiary-fixed: #410004;
-    --color-tertiary-container: #410004;
-    --color-custom-grey: #1a1a1a;
-    --color-custom-light: #f5f5f5;
-}
-
-/* THEME SCOPING FOR PORTFOLIO PAGE */
-.page-portfolio {
-    --font-headline: var(--font-notoserif), serif;
-    --font-body: var(--font-inter), sans-serif;
-    --font-label: var(--font-inter), sans-serif;
-
-    background-color: #ffffff;
-    overflow: hidden;
-    height: 100vh;
-}
-
-.slide {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 10;
-}
-
-.slide.active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 20;
-}
-
-#transition-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    z-index: 30;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-#transition-line {
-    width: 0;
-    height: 1px;
-    background-color: #000000;
-    transition: width 0.3s ease;
-}
-
-.is-animating #transition-overlay {
-    opacity: 1;
-}
-
-.is-animating #transition-line {
-    width: 200px;
-}
-
-.fine-line {
-    height: 1px;
-    background-color: #000000;
-    width: 40px;
-    opacity: 0.2;
-}
-
-.nav-arrow {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    opacity: 0.3;
-    transition: opacity 0.3s ease;
-    color: #000000;
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-arrow:hover:not(:disabled) {
-    opacity: 1;
-}
-
-.nav-arrow:disabled {
-    opacity: 0.1;
-    cursor: not-allowed;
-}
-
-.project-overlay { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(255,255,255,1) !important; 
-    color: #000 !important;
-    transform: translateY(-100%);
-    transition: transform 0.4s ease-in, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center;
-    padding: 2rem;
-    z-index: 10;
-}
-.gallery-column:hover .project-overlay { 
-    transform: translateY(0);
-    transition: transform 0.4s ease-out;
-}
-.project-overlay h4 { 
-    color: #000000 !important; 
-    font-family: 'RocGrotesk', sans-serif !important; 
-    font-weight: 700; 
-    font-size: 18px; 
-    margin: 0; 
-    letter-spacing: -0.02em;
-}
-.project-overlay span { 
-    color: #000000 !important; 
-    font-family: 'RocGrotesk', sans-serif !important; 
-    font-weight: 300; 
-    font-size: 10px; 
-    text-transform: uppercase; 
-    letter-spacing: 0.2em; 
-}
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  width: 100%;
-}
-
-.portfolio-grid img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  display: block;
-}
-
-.portfolio-grid .col-span-2 {
-  grid-column: span 2;
-  aspect-ratio: 16/9;
-}
-
-/* ==========================================================================
-   BRANDING UPDATE: HOUSE MAZZUTTI
-   ========================================================================== */
-.hm-logo {
-    display: inline-flex;
-    align-items: baseline;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1.2em; /* 20% Increase */
-    line-height: 1;
-    letter-spacing: -0.01em;
-    white-space: nowrap;
-}
-
-.hm-house {
-    font-family: 'RocGrotesk', sans-serif !important;
-    font-weight: 400 !important; /* Roc Grotesk Condensed style */
-    font-stretch: condensed;
-    display: inline-block;
-    transform: scaleX(0.9);
-    transform-origin: left;
-}
-
-.hm-mazzutti {
-    font-family: 'RocGrotesk', sans-serif !important;
-    font-weight: 800 !important; /* ExtraBold */
-    font-stretch: extra-condensed; /* Compressed style */
-    display: inline-block;
-    transform: scaleX(0.75);
-    transform-origin: left;
-    margin-left: -0.05em;
-}
-
-/* Fallback for ExtraBold if font-face only has Bold */
-@supports not (font-weight: 800) {
-    .hm-mazzutti {
-        font-weight: 700 !important;
-        text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
     }
 }
+
