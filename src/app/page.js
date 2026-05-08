@@ -335,11 +335,18 @@ export default function Home() {
                             left: 0,
                             right: 0,
                             bottom: '-30%',
-                            backgroundImage: 'url(/images/home/philosophy-bg.png)',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center'
                         }} 
-                    />
+                    >
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-cover"
+                        >
+                            <source src="/videos/housemazutti-video-sao-paulo-agfencia-foto-video-angelo.MOV" type="video/quicktime" />
+                        </video>
+                    </div>
                     
                     <div className="noise-overlay absolute inset-0 bg-black/40"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32 text-white">
