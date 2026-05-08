@@ -350,25 +350,7 @@ export default function Home() {
                     
                     <div className="noise-overlay absolute inset-0 bg-black/40"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32 text-white">
-                        <div className="w-full lg:w-1/4 flex-shrink-0">
-                            <div className="relative w-full aspect-[3/4] flex items-center justify-center">
-                                {/* ÍCONE DA HOUSE - SVG PARA MANTENÇÃO DE QUALIDADE E TRANSPARÊNCIA 85% */}
-                                <svg 
-                                    viewBox="0 0 100 100" 
-                                    className="w-full h-full object-contain" 
-                                    style={{ opacity: 0.85 }}
-                                >
-                                    <path 
-                                        d="M10 15 L45 15 L20 85 L10 85 Z" 
-                                        fill="white" 
-                                    />
-                                    <path 
-                                        d="M38 45 L85 45 L85 85 L32 85 Z" 
-                                        fill="white" 
-                                    />
-                                </svg>
-                            </div>
-                        </div>
+
                         <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-8">
                                 <div className="max-w-xl text-left">
