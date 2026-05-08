@@ -344,7 +344,7 @@ export default function Home() {
                             playsInline
                             className="w-full h-full object-cover"
                         >
-                            <source src="/videos/housemazutti-video-sao-paulo-agfencia-foto-video-angelo.MOV" type="video/quicktime" />
+                            <source src="/videos/housemazutti-video-sao-paulo-agfencia-foto-video-angelo.mp4" type="video/mp4" />
                         </video>
                     </div>
                     
