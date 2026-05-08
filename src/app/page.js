@@ -351,12 +351,22 @@ export default function Home() {
                     <div className="noise-overlay absolute inset-0 bg-black/40"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32 text-white">
                         <div className="w-full lg:w-1/4 flex-shrink-0">
-                            <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img
-                                    alt="B&W editorial photography"
-                                    className="w-full h-full object-cover grayscale"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg"
-                                />
+                            <div className="relative w-full aspect-[3/4] flex items-center justify-center">
+                                {/* ÍCONE DA HOUSE - SVG PARA MANTENÇÃO DE QUALIDADE E TRANSPARÊNCIA 85% */}
+                                <svg 
+                                    viewBox="0 0 100 100" 
+                                    className="w-full h-full object-contain" 
+                                    style={{ opacity: 0.85 }}
+                                >
+                                    <path 
+                                        d="M10 15 L45 15 L20 85 L10 85 Z" 
+                                        fill="white" 
+                                    />
+                                    <path 
+                                        d="M38 45 L85 45 L85 85 L32 85 Z" 
+                                        fill="white" 
+                                    />
+                                </svg>
                             </div>
                         </div>
                         <div className="flex-grow w-full py-4">
