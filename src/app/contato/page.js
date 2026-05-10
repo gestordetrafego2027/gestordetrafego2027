@@ -69,7 +69,7 @@ export default function ContatoPage() {
                     CONTATO
                 </h1>
                 <p className="font-headline text-black italic text-2xl font-light mb-8">
-                    Sua visão. Nossa estratégia.
+                    Da visão à materialização.
                 </p>
                 <div className="h-[1px] bg-[#e0e0e0] w-16 mt-2"></div>
             </section>
@@ -83,8 +83,8 @@ export default function ContatoPage() {
                 </div>
                 {/* Col 2: Info */}
                 <div className="w-full md:w-[40%] bg-white p-12 md:p-24 flex flex-col justify-center pt-12 md:pt-0 pb-0 px-0">
-                    <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-400 mb-2">LOCALIZAÇÃO</p>
-                    <h2 className="font-['Newsreader'] text-4xl text-neutral-900 mb-6 font-medium">Strategic House SP</h2>
+                    <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-400 mb-2">SEDE</p>
+                    <h2 className="font-['Newsreader'] text-4xl text-neutral-900 mb-6 font-medium">São Paulo / Global</h2>
                     <div className="h-[0.5px] bg-neutral-200 w-full mb-8"></div>
                     <div className="space-y-8 mb-12">
                         <div>
@@ -106,7 +106,7 @@ export default function ContatoPage() {
                         </div>
                     </div>
                     <a className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center" href="https://wa.me/5511952347533" target="_blank" rel="noopener noreferrer">
-                        AGENDAR DIAGNÓSTICO
+                        AGENDAR IMERSÃO
                     </a>
                 </div>
             </section>
@@ -115,9 +115,9 @@ export default function ContatoPage() {
             <section className="bg-[#0f0f0f] py-[60px] px-8 md:px-16 flex justify-center border-t-[0.5px] border-white/5">
                 <div className="max-w-[700px] w-full">
                     <div className="text-center mb-16">
-                        <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-500 mb-3">STRATEGIC HOUSE</p>
-                        <h3 className="font-['Newsreader'] text-white text-4xl md:text-5xl uppercase tracking-tight mb-4">CONTATE-NOS</h3>
-                        <p className="font-['Newsreader'] italic text-white/70 text-lg">Ouvimos. Arquitetamos. Transformamos.</p>
+                        <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-500 mb-3">VAMOS CONVERSAR</p>
+                        <h3 className="font-['Newsreader'] text-white text-4xl md:text-5xl uppercase tracking-tight mb-4">BRIEFING INICIAL</h3>
+                        <p className="font-['Newsreader'] italic text-white/70 text-lg">Cada projeto começa com uma conversa. Cada conversa, com uma decisão de mercado.</p>
                     </div>
                     <form className="space-y-12">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -139,7 +139,7 @@ export default function ContatoPage() {
                                 ENVIAR MENSAGEM
                             </button>
                             <div className="text-center">
-                                <p className="font-['Raleway'] uppercase tracking-[0.3em] text-[9px] text-white/40">Estratégia. Essência. Legado.</p>
+                                <p className="font-['Raleway'] uppercase tracking-[0.3em] text-[9px] text-white/40">Sigilo absoluto · Atendimento sob curadoria</p>
                             </div>
                         </div>
                     </form>

@@ -57,10 +57,10 @@ export default {
         "tertiary": "#e2e2e2"
       },
       fontFamily: {
-        "headline": ["var(--font-newsreader)", "serif"],
-        "body": ["var(--font-inter)", "sans-serif"],
-        "label": ["var(--font-inter)", "sans-serif"],
-        "raleway": ["var(--font-raleway)", "sans-serif"]
+        "headline": ["RocGrotesk", "serif"],
+        "body": ["RocGrotesk", "sans-serif"],
+        "label": ["RocGrotesk", "sans-serif"],
+        "raleway": ["RocGrotesk", "sans-serif"]
       },
       borderRadius: {
         "DEFAULT": "0px",

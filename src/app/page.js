@@ -15,23 +15,30 @@ export default function Home() {
 
     const heroSlides = [
         {
-            label: 'STUDIO - HMZT',
-            titulo: 'Conteúdo Pessoal',
-            texto: 'Produção e direção de imagem pessoal em São Paulo.',
+            label: 'HOUSE MAZZUTTI — HUB CRIATIVO & ESTRATÉGICO',
+            titulo: 'Da visão à materialização.',
+            texto: 'Branding, direção criativa e produção audiovisual sob uma única estrutura. Da concepção ao acabamento final.',
+            cta: 'CONHECER A HOUSE',
+            link: '/about'
+        },
+        {
+            label: 'STUDIO — RETRATO & MARCA PESSOAL',
+            titulo: 'Imagem como ativo de mercado.',
+            texto: 'Direção de pessoas. Books, ensaios e retratos com tratamento editorial premium para quem é a própria marca.',
             cta: 'CONHECER O STUDIO',
             link: '/studio'
         },
         {
-            label: 'PRODUTORA - HMZT',
-            titulo: 'Produção Executiva',
-            texto: 'Gestão de Projetos Audiovisuais e Casting para Marcas Corporativas.',
+            label: 'PRODUTORA — FASHION & COMMERCIAL DIRECTION',
+            titulo: 'Campanhas com padrão internacional.',
+            texto: 'Direção de campanha, fashion films e brand content para marcas de moda, lifestyle e beleza.',
             cta: 'CONHECER A PRODUTORA',
             link: '/produtora'
         },
         {
-            label: 'AGÊNCIA - HMZT',
-            titulo: 'Gestão de Marcas',
-            texto: 'Branding, Rebranding e Lançamentos de campanha.',
+            label: 'AGÊNCIA — BRANDING, DESIGN & DIGITAL',
+            titulo: 'Marca, identidade e plataforma.',
+            texto: 'Identidade visual, sites premium e sistemas digitais de alta conversão. Construção e reposicionamento.',
             cta: 'CONHECER A AGÊNCIA',
             link: '/agencia'
         },
@@ -112,15 +119,15 @@ export default function Home() {
 
     const testimonials = [
         {
-            text: "A House Mazzutti trouxe uma clareza que eu não conseguia encontrar sozinho. Eles não apenas criaram uma marca, eles criaram um novo patamar para o meu negócio.",
+            text: "Não entregaram um pacote de imagens. Entregaram um patamar de mercado. Cada decisão criativa estava sustentada por uma decisão de negócio.",
             author: "JULIANO R. — FOUNDER & CEO",
         },
         {
-            text: "O posicionamento estratégico mudou completamente a percepção do mercado sobre nossos serviços. A estética é apenas a ponta do iceberg.",
+            text: "O Angelo não dirige uma foto, dirige uma percepção. A diferença entre contratar uma produção e contratar uma curadoria ficou óbvia no primeiro briefing.",
             author: "MARINA S. — DIRETORA DE ARTE",
         },
         {
-            text: "Trabalhar com o Lucas e sua equipe foi o melhor investmento do ano. Eles entendem de negócio tanto quanto entendem de design.",
+            text: "Em quinze anos contratando agências, foi a primeira vez que estratégia, direção e execução estavam na mesma mente. Sem ruído entre etapas.",
             author: "RICARDO M. — INVESTIDOR",
         },
     ];
@@ -242,7 +249,7 @@ export default function Home() {
                 >
                     <div className="mb-12 text-center flex flex-col items-center">
                         <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4"></span>
-                        <h2 className="font-headline text-3xl text-black">Trabalhos Selecionados</h2>
+                        <h2 className="font-headline text-3xl text-black">Portfólio em curadoria</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -281,9 +288,9 @@ export default function Home() {
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center mb-12">
                         <div className="mb-20">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4"></span>
+                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">UMA HOUSE / QUATRO UNIDADES</span>
                             <h2 className="font-headline text-5xl text-black">
-                                Integrado. Intencional.
+                                Estratégia + Execução. Na mesma mente.
                             </h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -291,17 +298,17 @@ export default function Home() {
                                 {
                                     icon: "brush",
                                     title: "Branding",
-                                    desc: "Construção de fundamentos de marca. DNA, tom de voz e narrativa que transformam negócios em autoridades de mercado.",
+                                    desc: "Posicionamento, narrativa e identidade. Construímos marcas que ocupam espaço — não disputam atenção.",
                                 },
                                 {
                                     icon: "visibility",
-                                    title: "Direção",
-                                    desc: "A curadoria estética que traduz a estratégia em impacto visual. Onde a arte e o negócio se encontram.",
+                                    title: "Direção Criativa",
+                                    desc: "Conceito, moodboard e direção de cena sob uma única visão. A mesma mente que define a estratégia conduz o pixel final.",
                                 },
                                 {
                                     icon: "photo_camera",
-                                    title: "Produção",
-                                    desc: "Execução técnica de alto padrão. Imagens que comunicam prestígio e desejo sem a necessidade de legendas.",
+                                    title: "Produção & Pós",
+                                    desc: "Captação em alta resolução com padrão de campanha global. Cada frame revisado pixel a pixel antes de sair.",
                                 },
                             ].map((service, i) => (
                                 <div key={i} className="flex flex-col items-center space-y-4">
@@ -356,10 +363,10 @@ export default function Home() {
                             <div className="grid grid-cols-1 gap-y-8">
                                 <div className="max-w-xl text-left">
                                     <h2 className="font-headline text-xl md:text-2xl italic leading-snug mb-2">
-                                        Marcas fortes não disputam atenção. Elas ocupam espaço.
+                                        Você não contrata uma captação. Contrata a curadoria completa da sua marca.
                                     </h2>
                                     <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
-                                        Filosofia House
+                                        Filosofia HMZT
                                     </p>
                                 </div>
                             </div>
@@ -372,8 +379,8 @@ export default function Home() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">SOLUÇÕES</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Hoje</h2>
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">AS UNIDADES</span>
+                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Quatro braços. Uma só mente criativa.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -381,20 +388,20 @@ export default function Home() {
                                     {
                                         title: "HMZT | STUDIO",
                                         link: "/studio",
-                                        subtitle: 'Experiência foto, vídeo e produção pessoal',
-                                        items: ["Book profissional", "Ensaio pessoal", "Cobertura externa", "Direção de imagem"]
+                                        subtitle: 'Retrato, marca pessoal & books — direção de pessoas.',
+                                        items: ["Book editorial", "Ensaio de marca pessoal", "Retrato corporativo premium", "Direção de imagem"]
                                     },
                                     {
                                         title: "HMZT | PRODUTORA",
                                         link: "/produtora",
-                                        subtitle: 'Campanhas de Moda, Saúde e Beleza.',
-                                        items: ["Editorial de moda", "Campanha publicitária", "Conteúdo institucional", "Produção executiva"]
+                                        subtitle: 'Fashion & commercial direction — campanhas e filmes.',
+                                        items: ["Direção de campanha", "Fashion film", "Brand content", "Filme publicitário"]
                                     },
                                     {
                                         title: "HMZT | AGÊNCIA",
                                         link: "/agencia",
-                                        subtitle: 'Criação de marcas, Eventos e Influência.',
-                                        items: ["Branding project", "Campanhas", "Web development", "Posicionamento"]
+                                        subtitle: 'Branding, identidade visual, design digital e UI/UX.',
+                                        items: ["Identidade visual & naming", "Sites premium & e-commerce", "UI/UX & design system", "Reposicionamento de marca"]
                                     }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined" style={{ transition: 'transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
@@ -625,7 +632,7 @@ export default function Home() {
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-4xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-7xl text-white leading-tight italic">
-                            Se o seu marketing está pedindo um novo visual.
+                            Antes de qualquer imagem, existe uma decisão de mercado.
                         </h2>
                         <div className="flex flex-col items-center space-y-8">
                             <Link
@@ -635,7 +642,7 @@ export default function Home() {
                                 ENTRE EM CONTATO
                             </Link>
                             <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">
-                                Menos tentativa. Mais direção.
+                                São Paulo / Global · Atendimento sob curadoria
                             </p>
                         </div>
                     </div>

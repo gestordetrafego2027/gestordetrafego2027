@@ -107,7 +107,7 @@ export default function Header({ variant = 'dark' }) {
             >
                 <Link 
                     href="/" 
-                    className="tracking-tight uppercase no-underline flex items-baseline"
+                    className="uppercase no-underline flex items-baseline"
                     style={{ color: currentTextColor }}
                 >
                     <span className="hm-logo">
@@ -242,14 +242,14 @@ export default function Header({ variant = 'dark' }) {
                     <div style={{marginBottom:'48px'}}>
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
-                        color:'#555', marginBottom:'16px'}}>LOCALIZAÇÃO</p>
+                        color:'#555', marginBottom:'16px'}}>SEDE</p>
                       <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
                         fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
-                        São Paulo, Brasil
+                        São Paulo / Global
                       </p>
                       <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
                         fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
-                        23.5505° S, 46.6333° W
+                        Atendimento sob curadoria
                       </p>
                     </div>
             
@@ -259,7 +259,7 @@ export default function Header({ variant = 'dark' }) {
                     <div>
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
-                        color:'#555', marginBottom:'16px'}}>FOLLOW US</p>
+                        color:'#555', marginBottom:'16px'}}>FOLLOW</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
                         <a href="#" style={{fontFamily:'Newsreader, serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',

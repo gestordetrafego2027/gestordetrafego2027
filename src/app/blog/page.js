@@ -266,16 +266,16 @@ export default function BlogPage() {
                 }
             `}} />
 
-            <h1 hidden>Blog de Branding Estratégico e Posicionamento de Marca</h1>
+            <h1 hidden>Editorial House Mazzutti — Branding, Direção Criativa e Marca Pessoal</h1>
             
             <Header variant="light" />
 
             {/* Hero Section */}
             <section className="bg-white text-black px-8 flex items-center justify-center text-center border-t border-b border-[#e0e0e0]" style={{ borderTopWidth: '0.5px', borderBottomWidth: '0.5px', padding: '100px 0 40px 0', marginTop: '72px' }}>
                 <div className="max-w-4xl mx-auto">
-                    <span className="label-text mb-4 block">House Mazzutti — Blog</span>
-                    <h2 className="hero-title text-4xl md:text-[2.5rem] mb-4 leading-tight">"Nem tudo precisa ser dito. Mas o que é dito precisa ter direção."</h2>
-                    <p className="label-text text-sm max-w-lg mx-auto leading-relaxed">Conteúdos sobre branding estratégico, posicionamento de marca e construção de autoridade.</p>
+                    <span className="label-text mb-4 block">House Mazzutti — Editorial</span>
+                    <h2 className="hero-title text-4xl md:text-[2.5rem] mb-4 leading-tight">"Antes de qualquer imagem, existe uma decisão de mercado."</h2>
+                    <p className="label-text text-sm max-w-lg mx-auto leading-relaxed">Notas e ensaios sobre branding, direção criativa, marca pessoal e construção de valor.</p>
                 </div>
             </section>
 

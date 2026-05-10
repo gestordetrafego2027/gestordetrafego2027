@@ -13,15 +13,15 @@ export default function AgenciaPage() {
 
     const testimonials = [
         {
-            text: "A Agência trouxe uma estratégia que não conseguíamos executar sozinhos. Eles não apenas criaram conteúdo, mas mudaram nossa percepção de marca.",
+            text: "Reposicionaram nossa marca em três meses. Não vendiam um pacote — vendiam uma decisão de mercado traduzida em identidade.",
             author: "JULIANA T. — DIRETORA EXECUTIVA"
         },
         {
-            text: "O que parecia complexo ficou simples através da direção deles. O resultado final superou todas as expectativas de posicionamento.",
-            author: "RAFAEL S. — GERENTE DE MARKETING"
+            text: "Estratégia, identidade e plataforma digital nasceram da mesma cabeça. Nada se perdeu entre etapas — porque não havia etapas separadas.",
+            author: "RAFAEL S. — HEAD OF MARKETING"
         },
         {
-            text: "Trabalhar com a Agência foi investir em posicionamento real. A execução impecável é apenas o reflexo de uma estratégia muito bem feita.",
+            text: "Saímos com uma marca que sustenta preço. O ROI não está no design — está no patamar de mercado que ele autoriza.",
             author: "CARLA M. — CEO"
         }
     ]
@@ -100,7 +100,7 @@ export default function AgenciaPage() {
 
     return (
         <div className="bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary">
-            <title>Agência | Branding Estratégico e Posicionamento de Marca</title>
+            <title>Agência HMZT — Branding, Design & Digital | House Mazzutti</title>
             <style dangerouslySetInnerHTML={{
                 __html: `
                 .material-symbols-outlined {
@@ -164,9 +164,9 @@ export default function AgenciaPage() {
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     {(() => {
                         const heroSlides = [
-                            { titulo: 'Estratégia, posicionamento e direção de marca.', texto: 'A consolidação do branding, da identidade visual até o plano de campanha integrada.' },
-                            { titulo: 'Marcas que ocupam espaço não disputam atenção.', texto: 'Construímos posicionamento com clareza, consistência e intenção estratégica.' },
-                            { titulo: 'Da criação à reputação, com sistema e direção.', texto: 'Cada decisão de marca é sustentada por uma leitura precisa do contexto e do mercado.' },
+                            { titulo: 'Branding, design & digital. Sob uma só direção.', texto: 'Identidade visual, sites premium e sistemas digitais de alta conversão. Da estratégia à interface — sem ruído entre etapas.' },
+                            { titulo: 'Marcas fortes não disputam atenção. Ocupam espaço.', texto: 'Construímos posicionamento com clareza estratégica, consistência editorial e intenção estética.' },
+                            { titulo: 'Da concepção à reputação. Com sistema autoral.', texto: 'Cada decisão de marca nasce de uma leitura precisa do contexto, do mercado e do desejo do público.' },
                         ];
                         return <>
                             <div className="absolute inset-0 z-0">
@@ -216,8 +216,8 @@ export default function AgenciaPage() {
                 {/* Section 2: Gallery */}
                 <section className="bg-white pt-24 pb-0 w-full mx-auto">
                     <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PORTFOLIO AGÊNCIA</span>
-                        <h2 className="font-headline text-3xl text-black">Branding. Publicidade. RP e Eventos.</h2>
+                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PORTFÓLIO AGÊNCIA</span>
+                        <h2 className="font-headline text-3xl text-black">Identidade. Plataforma. Reputação.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
                     <div className="columns-gallery-container" style={{ height: '80vh' }}>
@@ -261,30 +261,30 @@ export default function AgenciaPage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            DA CRIAÇÃO A <span className="not-italic">REPUTAÇÃO</span>
+                            DA CONCEPÇÃO À <span className="not-italic">REPUTAÇÃO.</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
                             <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Antes de qualquer ação, estruturamos:</p>
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Antes de qualquer execução, estruturamos:</p>
                                 <ul className="text-white space-y-2 font-light">
                                     <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>posicionamento de marca</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>estratégia de comunicação</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>narrativa institucional</span></li>
                                 </ul>
                             </div>
                             <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">&nbsp;</p>
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">E sustentamos com:</p>
                                 <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>narrativa e linguagem</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>direção de imagem</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>identidade visual & design system</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>plataforma digital de alta conversão</span></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-8">
                             <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px]" href="/contato">
-                                Entender como funciona a estratégia
+                                ENTENDER O MÉTODO HMZT
                             </Link>
                             <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500 max-w-2xl leading-relaxed">
-                                A partir disso, tudo passa a ter lógica. O resultado não é apenas estratégia. É clareza aplicada. A Agência não executa isoladamente, ela direciona todo o sistema.
+                                Cada decisão criativa nasce de uma decisão de mercado. Nada é decoração. A Agência não executa em silos — direciona o sistema inteiro.
                             </p>
                         </div>
                     </div>
@@ -294,8 +294,8 @@ export default function AgenciaPage() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">PARA EMPRESÁRIOS E AUTÔNOMOS</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Qual dessas soluções pode ajudar sua marca a se posicionar melhor hoje?</h2>
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">UNIDADES DA AGÊNCIA</span>
+                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Três frentes. Uma única direção de marca.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -303,20 +303,20 @@ export default function AgenciaPage() {
                                     {
                                         title: "BRANDING PROJECT",
                                         link: "/agencia/branding",
-                                        subtitle: '"Onde a marca é definida e estruturada"',
-                                        items: ["Branding estratégico", "Identidade visual", "Brand book", "Aplicações"]
+                                        subtitle: 'Construção e reposicionamento estratégico de marca.',
+                                        items: ["Naming & narrativa", "Identidade visual", "Brand book completo", "Sistema de aplicações"]
                                     },
                                     {
-                                        title: "CAMPANHAS",
+                                        title: "CAMPANHA INTEGRADA",
                                         link: "/agencia/campanhas",
-                                        subtitle: '"Onde o impacto é construído com sistema"',
-                                        items: ["Campanhas publicitárias", "Narrativa integrada", "Produção", "Multicanal"]
+                                        subtitle: 'Conceito, direção e execução sob uma única autoria.',
+                                        items: ["Conceito de campanha", "Roteiro & moodboard", "Produção integrada", "Veiculação multicanal"]
                                     },
                                     {
-                                        title: "WEB DEVELOPMENT",
+                                        title: "DIGITAL & UI/UX",
                                         link: "/agencia/desenvolvimento",
-                                        subtitle: '"Onde sua marca ganha presença digital"',
-                                        items: ["Sites profissionais", "E-commerce", "SEO", "Performance"]
+                                        subtitle: 'Sites premium e plataformas de alta conversão.',
+                                        items: ["Site institucional & e-commerce", "UI/UX design system", "Performance & SEO técnico", "Manutenção evolutiva"]
                                     }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
@@ -345,8 +345,8 @@ export default function AgenciaPage() {
                 <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1400px] mx-auto">
                         <div className="text-center mb-12">
-                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">Conheça os gestores de projetos na House Mazzutti</h2>
+                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">LIDERANÇA</span>
+                            <h2 className="font-headline text-3xl md:text-4xl text-black">As mentes que conduzem cada decisão.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
                             {/* Membro 1 */}
@@ -576,7 +576,7 @@ export default function AgenciaPage() {
                                 </div>
                                 <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
                                     <p className="font-headline text-xl italic leading-snug text-zinc-800">
-                                        Aqui, cada detalhe responde a uma lógica. Nada é escolha estética isolada. Tudo é construção de posicionamento.
+                                        Cada decisão criativa nasce de uma decisão de mercado. Nada é decoração — tudo é construção de posicionamento.
                                     </p>
                                 </div>
                             </div>
@@ -591,12 +591,13 @@ export default function AgenciaPage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            SE VOCÊ SE CONECTA COM O QUE NÓS CONSTRUÍMOS.
+                            Sua marca merece ocupar espaço — não disputar atenção.
                         </h2>
                         <div className="flex flex-col items-center space-y-8">
                             <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px]" href="/contato">
-                                ENTRE EM CONTATO AGORA
+                                INICIAR CONVERSA
                             </Link>
+                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">São Paulo / Global · Atendimento sob curadoria</p>
                         </div>
                     </div>
                 </section>

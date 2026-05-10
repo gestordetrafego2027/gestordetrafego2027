@@ -14,11 +14,11 @@ export default function About() {
 
     const testimonials = [
         {
-            text: "Da identidade visual à reputação de mercado, desenvolvemos projetos que orientam e sustentam o seu posicionamento com clareza, sofisticação e consistência.",
+            text: "Traduzimos a essência de marcas e personalidades em narrativas visuais de alto impacto. Da identidade ao posicionamento de mercado, cada decisão é estratégica.",
             author: "",
         },
         {
-            text: "Unimos estratégia, direção criativa e produção audiovisual para transformar marcas e pessoas em presenças sólidas e relevantes no cenário digital e global.",
+            text: "Branding, direção criativa, design e produção audiovisual sob uma única estrutura. O cliente fala com uma única mente — e cada handoff entre etapas deixa de existir.",
             author: "",
         },
     ];
@@ -38,7 +38,7 @@ export default function About() {
     return (
         <div className="page-about bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary">
             {/* SEO Hidden H1 */}
-            <h1 className="sr-only">House Mazzutti | Branding Estratégico e Posicionamento de Marca</h1>
+            <h1 className="sr-only">House Mazzutti — Hub Criativo & Estratégico | Da Visão à Materialização</h1>
 
             {/* HEADER */}
             <Header variant="dark" />
@@ -58,14 +58,14 @@ export default function About() {
                     <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-8">
                             <span className="font-label text-xs text-neutral-400">DIFERENCIAL</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">O que diferencia a House não é o que fazemos.</h2>
+                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">Estratégia + execução. Na mesma mente.</h2>
                             <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
-                                <p>É como pensamos. Unimos:</p>
+                                <p>O raro equilíbrio entre o pensamento de mercado e o domínio de cena. Sob uma única direção:</p>
                                 <ul className="space-y-2">
-                                    <li>— sensibilidade estética</li>
-                                    <li>— inteligência estratégica</li>
-                                    <li>— experiência de mercado</li>
-                                    <li>— execução precisa</li>
+                                    <li>— sensibilidade estética atemporal</li>
+                                    <li>— rigor estratégico de marca</li>
+                                    <li>— 15 anos de domínio em set</li>
+                                    <li>— acabamento de campanha global</li>
                                 </ul>
                             </div>
                         </div>
@@ -75,9 +75,9 @@ export default function About() {
                 {/* [1] HERO SECTION */}
                 <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#f9f9f9]">
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
-                        <span className="font-label text-xs text-black">STRATEGIC HOUSE</span>
-                        <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">Vamos além da publicidade.</h2>
-                        <p className="text-lg md:text-xl font-headline italic text-[#555555] max-w-md">Estruturamos o seu projeto para comunicar com precisão.</p>
+                        <span className="font-label text-xs text-black">HUB CRIATIVO & ESTRATÉGICO</span>
+                        <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">Materializamos o intangível.</h2>
+                        <p className="text-lg md:text-xl font-headline italic text-[#555555] max-w-md">Damos forma, cor e voz à visão de líderes e ícones — com a mesma seriedade com que um arquiteto traduz um sonho em estrutura.</p>
 
                         {/* Progress Bars */}
                         <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
@@ -120,11 +120,11 @@ export default function About() {
                     <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-8">
                             <span className="font-label text-xs text-neutral-400">ORIGEM</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight text-white">A House Mazzutti nasceu de uma convicção simples</h2>
+                            <h2 className="text-4xl md:text-5xl font-headline leading-tight text-white">O mercado fragmentou o processo criativo. Existimos para reconectar.</h2>
                             <div className="space-y-6 text-neutral-300 leading-relaxed font-body">
-                                <p>Em um mercado saturado por excesso de informação, percebemos que o problema não era a falta de produção — mas a ausência de direção. Foi a partir disso que estruturamos um modelo capaz de integrar pensamento, construção e execução em um único fluxo.</p>
-                                <p>Cada marca que construímos é tratada como uma obra de curadoria, onde cada detalhe — do tom de voz à textura visual — é um ativo estratégico.</p>
-                                <p>No mercado saturado de ruído, a comunicação muitas vezes silenciosa e precisa é o que separa os líderes dos amadores.</p>
+                                <p>Uma agência cuida do branding. Outra da campanha. Uma produtora do filme, um estúdio das fotos. No meio do caminho, a essência da marca se perde — cada elo dilui a visão original.</p>
+                                <p>A House Mazzutti é o fio condutor. A mesma direção criativa que define o conceito é a que conduz a câmera no set e supervisiona o pixel final. Sem ruído. Sem perda de tradução. Sem terceiros.</p>
+                                <p>Cada projeto carrega a essência da marca com precisão cirúrgica — do briefing inicial ao post no Instagram, do pitch deck ao filme publicitário.</p>
                             </div>
                             <div className="pt-8 italic font-headline text-3xl text-white opacity-80">Angelo Mazzutti</div>
                         </div>
@@ -137,14 +137,14 @@ export default function About() {
                         <span className="ghost-text text-[20vw] font-headline uppercase select-none">MÉTODO</span>
                     </div>
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-4xl md:text-5xl font-headline text-center mb-32 max-w-2xl mx-auto leading-tight">Nada começa na execução. Tudo começa no entendimento.</h2>
+                        <h2 className="text-4xl md:text-5xl font-headline text-center mb-32 max-w-2xl mx-auto leading-tight">Antes de qualquer imagem, existe uma decisão de mercado.</h2>
                         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                             {[
-                                { num: "01 / IMERSÃO", desc: "Análise profunda do DNA e objetivos do negócio." },
-                                { num: "02 / DIAGNÓSTICO", desc: "Identificação de lacunas e oportunidades de mercado." },
-                                { num: "03 / CONCEITO", desc: "A espinha dorsal criativa que guiará a marca." },
-                                { num: "04 / EXECUÇÃO", desc: "Traduzindo a estratégia em ativos visuais e verbais." },
-                                { num: "05 / MONITORAMENTO", desc: "Garantia de consistência e evolução contínua." }
+                                { num: "01 / IMERSÃO", desc: "Mergulho no DNA, no contexto competitivo e nos objetivos do negócio." },
+                                { num: "02 / DIAGNÓSTICO", desc: "Leitura precisa de lacunas, ruídos e oportunidades de posicionamento." },
+                                { num: "03 / CONCEITO", desc: "Direção criativa e moodboard estratégico que guiam toda a entrega." },
+                                { num: "04 / EXECUÇÃO", desc: "Captação e produção sob supervisão direta do diretor — sem retrabalho." },
+                                { num: "05 / FINE ART", desc: "Edição artesanal e acabamento de campanha global, pixel a pixel." }
                             ].map((item, i) => (
                                 <div key={i} className="space-y-6">
                                     <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
@@ -161,27 +161,27 @@ export default function About() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">COMO FUNCIONAMOS</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Nossa estrutura é organizada em quatro frentes complementares:</h2>
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">O ECOSSISTEMA</span>
+                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Uma House. Quatro unidades. Uma só visão.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {[
                                     {
                                         title: "AGÊNCIA",
-                                        items: ["Branding Project", "Web Development", "Campanha Integrada 360"]
+                                        items: ["Branding & identidade visual", "Sites premium & UI/UX", "Campanha integrada 360"]
                                     },
                                     {
                                         title: "STUDIO",
-                                        items: ["Book Model", "Ensaio Profissional", "Cobertura Pessoal"]
+                                        items: ["Books editoriais", "Ensaios de marca pessoal", "Retrato corporativo premium"]
                                     },
                                     {
                                         title: "PRODUTORA",
-                                        items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"]
+                                        items: ["Direção de campanha", "Fashion films", "Brand content"]
                                     },
                                     {
                                         title: "COMUNIDADE",
-                                        items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e Vagas"]
+                                        items: ["Área do cliente", "Central do aluno", "Rede de parceiros", "Casting e vagas"]
                                     }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
@@ -274,7 +274,7 @@ export default function About() {
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-tight italic">
-                            Se sua marca precisa de direção, não de volume — <span className="not-italic">estamos prontos.</span>
+                            Se sua marca precisa de direção, não de volume — <span className="not-italic">vamos conversar.</span>
                         </h2>
                         <div className="flex flex-col items-center space-y-8">
                             <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">

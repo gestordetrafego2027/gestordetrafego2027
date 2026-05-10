@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "House Mazzutti | Branding Estratégico e Posicionamento de Marca",
-  description: "House Mazzutti é uma estrutura de construção de marca focada em branding estratégico, posicionamento de autoridade e direção criativa de alto padrão.",
+  title: "House Mazzutti — Hub Criativo & Estratégico | Da Visão à Materialização",
+  description: "Hub criativo e estratégico que traduz a essência de marcas e personalidades em narrativas visuais de alto impacto. Branding, direção criativa e produção audiovisual sob uma única estrutura — São Paulo / Global.",
 };
 
 export default function RootLayout({ children }) {
