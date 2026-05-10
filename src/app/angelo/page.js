@@ -87,7 +87,7 @@ export default function AngeloPage() {
                             - Angelo Mazzutti
                         </p>
                     </div>
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden min-h-[500px] md:min-h-0">
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="HMZT — House Mazzutti branding"
                             className="absolute inset-0 w-full h-full object-cover"
@@ -138,7 +138,7 @@ export default function AngeloPage() {
                         </div>
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="Angelo Mazzutti — Diretor Criativo"
                             className="absolute inset-0 w-full h-full object-cover"

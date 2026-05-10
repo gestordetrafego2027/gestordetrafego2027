@@ -44,7 +44,7 @@ export default function About() {
             <main>
                 {/* [5] DIFERENCIAL SECTION */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="Livros de marketing e administração"
                             className="absolute inset-0 w-full h-full object-cover"
@@ -106,7 +106,7 @@ export default function About() {
 
                 {/* [3] ORIGEM EDITORIAL */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="House Mazzutti — Agência, Produtora e Direção Criativa"
                             className="absolute inset-0 w-full h-full object-cover"
