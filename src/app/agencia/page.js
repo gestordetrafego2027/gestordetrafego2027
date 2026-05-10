@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
+import ClientLogos from '@/app/components/ClientLogos'
 
 export default function AgenciaPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -582,6 +583,8 @@ export default function AgenciaPage() {
                         </div>
                     </div>
                 </section>
+                <ClientLogos />
+
                 {/* FINAL CTA SECTION */}
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato-final" style={{minHeight: 'auto', paddingTop: '80px', paddingBottom: '80px'}}>
                     <div className="noise-overlay absolute inset-0"></div>

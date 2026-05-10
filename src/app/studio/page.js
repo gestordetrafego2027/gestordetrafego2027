@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
+import ClientLogos from '@/app/components/ClientLogos'
 
 export default function StudioPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -675,6 +676,8 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
+                <ClientLogos />
+
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510312305653-8ed496efbe75?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
+import ClientLogos from "@/app/components/ClientLogos";
 
 /**
  * ABOUT PAGE - HOUSE MAZZUTTI
@@ -265,6 +266,8 @@ export default function About() {
                         </div>
                     </div>
                 </section>
+
+                <ClientLogos />
 
                 {/* [7] CTA */}
                 <section className="bg-black py-40 px-12 text-center relative overflow-hidden" id="contato">

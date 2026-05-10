@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
+import ClientLogos from '@/app/components/ClientLogos'
 
 export default function ProdutoraPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -456,6 +457,8 @@ export default function ProdutoraPage() {
                         </div>
                     </div>
                 </section>
+
+                <ClientLogos />
 
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">

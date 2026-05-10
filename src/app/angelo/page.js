@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
+import ClientLogos from "@/app/components/ClientLogos";
 
 export default function AngeloPage() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -301,72 +302,7 @@ export default function AngeloPage() {
                     </div>
                 </section>
 
-                {/* 8. Logos clientes - slides infinitos, 4 por movimento */}
-                <section className="bg-white border-b border-neutral-100 py-16 relative overflow-hidden">
-                    <style>{`
-                        .logos-slider-track {
-                            display: flex;
-                            align-items: center;
-                            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-                        }
-                        .logos-slider-item {
-                            flex: 0 0 25%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 100px;
-                            padding: 0 24px;
-                        }
-                        .logos-slider-item img {
-                            max-height: 70px;
-                            width: auto;
-                            object-fit: contain;
-                            opacity: 0.5;
-                            transition: opacity 0.3s;
-                        }
-                        .logos-slider-item img:hover { opacity: 1; }
-                    `}</style>
-                    <div className="max-w-7xl mx-auto px-8 overflow-hidden">
-                        <div className="logos-slider-track" id="logos-track">
-                            {(() => {
-                                const logos = [
-                                    'wepink', 'oceane', 'elyah', 'jequiti',
-                                    'natalia-beauty', 'signus', 'bonne-soiree', 'poema-paris',
-                                    'dumond', 'unique-chic', 'beatco', 'saue',
-                                    'camilla-scarpa'
-                                ];
-                                const looped = [...logos, ...logos];
-                                return looped.map((name, i) => (
-                                    <div key={`${name}-${i}`} className="logos-slider-item">
-                                        <img src={`/images/angelo/logos/${name}.png`} alt={name} />
-                                    </div>
-                                ));
-                            })()}
-                        </div>
-                    </div>
-                    <script dangerouslySetInnerHTML={{__html:`
-                        (function(){
-                            var track = document.getElementById('logos-track');
-                            if (!track) return;
-                            var totalLogos = 13;
-                            var step = 4;
-                            var current = 0;
-                            function advance(){
-                                current += step;
-                                track.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-                                track.style.transform = 'translateX(-' + (current * 25) + '%)';
-                                if (current >= totalLogos) {
-                                    setTimeout(function(){
-                                        track.style.transition = 'none';
-                                        current = current - totalLogos;
-                                        track.style.transform = 'translateX(-' + (current * 25) + '%)';
-                                    }, 850);
-                                }
-                            }
-                            setInterval(advance, 3500);
-                        })();
-                    `}}/>
-                </section>
+                <ClientLogos />
 
                 {/* 9. Bloco CTA final */}
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato-final" style={{minHeight: 'auto', paddingTop: '80px', paddingBottom: '80px'}}>

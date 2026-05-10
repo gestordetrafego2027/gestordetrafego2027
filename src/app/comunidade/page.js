@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
+import ClientLogos from "@/app/components/ClientLogos";
 
 export default function ComunidadePage() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -423,6 +424,8 @@ export default function ComunidadePage() {
                         </div>
                     </div>
                 </section>
+
+                <ClientLogos />
 
                 {/* CTA FINAL */}
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">

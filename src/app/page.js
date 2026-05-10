@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
+import ClientLogos from "@/app/components/ClientLogos";
 
 /**
  * HOME PAGE - HOUSE MAZZUTTI
@@ -613,6 +614,8 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+
+                <ClientLogos />
 
                 {/* CTA CONTACT SECTION */}
                 <section
