@@ -75,61 +75,28 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [2] DEPOIMENTOS SECTION */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[480px] max-h-[480px]">
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
-                    </div>
-                    
-                    {/* Navigation */}
-                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
-                            <div className="custom-nav-line mr-2"></div>
-                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextSlide}>
-                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div className="custom-nav-line ml-2"></div>
-                        </button>
-                    </div>
-
-                    {/* Slides */}
-                    <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                {/* [5] DIFERENCIAL SECTION */}
+                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/5">
+                            <h2 className="font-headline text-6xl md:text-8xl text-black/10 font-bold uppercase tracking-widest text-center select-none">HOUSE</h2>
                         </div>
+                    </div>
+                    {/* Vertical Divider */}
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
 
-                        <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1" style={{height: '200px', display: 'flex', alignItems: 'center'}}>
-                                {testimonials.map((t, i) => (
-                                    <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
-                                        <h3 className="font-headline text-lg text-white leading-snug italic max-w-3xl mx-auto">
-                                            "{t.text}"
-                                        </h3>
-                                        {t.author && (
-                                            <div className="pt-3">
-                                                <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                            {/* Indicators */}
-                            <div className="flex space-x-3 pt-4">
-                                {testimonials.map((_, i) => (
-                                    <button 
-                                        key={i} 
-                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"}`} 
-                                        onClick={() => goToSlide(i)}
-                                    ></button>
-                                ))}
+                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                        <div className="max-w-lg space-y-8">
+                            <span className="font-label text-xs text-neutral-400">DIFERENCIAL</span>
+                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">O que diferencia a House não é o que fazemos.</h2>
+                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
+                                <p>É como pensamos. Unimos:</p>
+                                <ul className="space-y-2">
+                                    <li>— sensibilidade estética</li>
+                                    <li>— inteligência estratégica</li>
+                                    <li>— experiência de mercado</li>
+                                    <li>— execução precisa</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -137,6 +104,19 @@ export default function About() {
 
                 {/* [3] ORIGEM EDITORIAL */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
+                        <img
+                            alt="Portrait profile in B&W"
+                            className="absolute inset-0 w-full h-full object-cover grayscale"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+                            <h2 className="font-headline text-6xl md:text-8xl text-white/85 font-bold uppercase tracking-widest text-center select-none">SOBRE NÓS</h2>
+                        </div>
+                    </div>
+                    {/* Vertical Divider */}
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
+
                     <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-8">
                             <span className="font-label text-xs text-neutral-400">ORIGEM</span>
@@ -147,19 +127,6 @@ export default function About() {
                                 <p>No mercado saturado de ruído, a comunicação muitas vezes silenciosa e precisa é o que separa os líderes dos amadores.</p>
                             </div>
                             <div className="pt-8 italic font-headline text-3xl opacity-80">Angelo Mazzutti</div>
-                        </div>
-                    </div>
-                    {/* Vertical Divider */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
-                    
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
-                        <img 
-                            alt="Portrait profile in B&W" 
-                            className="absolute inset-0 w-full h-full object-cover grayscale" 
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                            <h2 className="font-headline text-6xl md:text-8xl text-white/85 font-bold uppercase tracking-widest text-center select-none">SOBRE NÓS</h2>
                         </div>
                     </div>
                 </section>
@@ -214,33 +181,6 @@ export default function About() {
                         </div>
                     </div>
                 </section>
-                {/* [5] DIFERENCIAL SECTION */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/5">
-                            <h2 className="font-headline text-6xl md:text-8xl text-black/10 font-bold uppercase tracking-widest text-center select-none">HOUSE</h2>
-                        </div>
-                    </div>
-                    {/* Vertical Divider */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
-                    
-                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-8">
-                            <span className="font-label text-xs text-neutral-400">DIFERENCIAL</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">O que diferencia a House não é o que fazemos.</h2>
-                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
-                                <p>É como pensamos. Unimos:</p>
-                                <ul className="space-y-2">
-                                    <li>— sensibilidade estética</li>
-                                    <li>— inteligência estratégica</li>
-                                    <li>— experiência de mercado</li>
-                                    <li>— execução precisa</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* [6] METODOLOGIA */}
                 <section className="bg-black text-white py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -262,6 +202,66 @@ export default function About() {
                                     <p className="text-xs text-neutral-400 leading-relaxed font-body">{item.desc}</p>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* [2] DEPOIMENTOS SECTION */}
+                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[480px] max-h-[480px]">
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
+                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
+                    </div>
+
+                    {/* Navigation */}
+                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
+                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
+                            <div className="custom-nav-line mr-2"></div>
+                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
+                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextSlide}>
+                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                            <div className="custom-nav-line ml-2"></div>
+                        </button>
+                    </div>
+
+                    {/* Slides */}
+                    <div className="relative z-10 max-w-4xl mx-auto text-center">
+                        <div className="mb-4">
+                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
+                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <div className="relative w-full overflow-hidden mb-1" style={{height: '200px', display: 'flex', alignItems: 'center'}}>
+                                {testimonials.map((t, i) => (
+                                    <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
+                                        <h3 className="font-headline text-lg text-white leading-snug italic max-w-3xl mx-auto">
+                                            "{t.text}"
+                                        </h3>
+                                        {t.author && (
+                                            <div className="pt-3">
+                                                <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                            {/* Indicators */}
+                            <div className="flex space-x-3 pt-4">
+                                {testimonials.map((_, i) => (
+                                    <button
+                                        key={i}
+                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"}`}
+                                        onClick={() => goToSlide(i)}
+                                    ></button>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
