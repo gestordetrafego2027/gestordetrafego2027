@@ -72,7 +72,7 @@ export default function About() {
                 </section>
 
                 {/* [1] HERO SECTION */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#c8c8c8]">
+                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#f9f9f9]">
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
                         <span className="font-label text-xs text-black">STRATEGIC HOUSE</span>
                         <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">Vamos além da publicidade.</h2>
