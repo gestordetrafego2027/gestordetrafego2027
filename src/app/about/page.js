@@ -42,45 +42,14 @@ export default function About() {
             {/* HEADER */}
             <Header variant="dark" />
             <main>
-                {/* [1] HERO SECTION */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#c8c8c8]">
-                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
-                        <span className="font-label text-xs text-black">STRATEGIC HOUSE</span>
-                        <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">Vamos além da publicidade.</h2>
-                        <p className="text-lg md:text-xl font-headline italic text-[#555555] max-w-md">Estruturamos o seu projeto para comunicar com precisão.</p>
-                        
-                        {/* Progress Bars */}
-                        <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
-                            {[
-                                { label: "ESTRATÉGIA", value: "92%" },
-                                { label: "POSICIONAMENTO", value: "88%" },
-                                { label: "DIREÇÃO CRIATIVA", value: "95%" },
-                                { label: "PRODUÇÃO", value: "85%" },
-                            ].map((item, index) => (
-                                <div key={index} className="space-y-4">
-                                    <div className="flex justify-between font-label text-[12px] text-black">
-                                        <span>{item.label}</span>
-                                    </div>
-                                    <div className="h-[8px] bg-[#d5d5d5] w-full relative">
-                                        <div 
-                                            className="h-full bg-black animate-progress relative" 
-                                            style={{ width: item.value, "--target-width": item.value }}
-                                        >
-                                            <span className="percentage-tag">{item.value}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
                 {/* [5] DIFERENCIAL SECTION */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
                     <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/5">
-                            <h2 className="font-headline text-6xl md:text-8xl text-black/10 font-bold uppercase tracking-widest text-center select-none">HOUSE</h2>
-                        </div>
+                        <img
+                            alt="Livros de marketing e administração"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            src="/images/about/diferencial.jpg"
+                        />
                     </div>
                     {/* Vertical Divider */}
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
@@ -102,17 +71,47 @@ export default function About() {
                     </div>
                 </section>
 
+                {/* [1] HERO SECTION */}
+                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#c8c8c8]">
+                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
+                        <span className="font-label text-xs text-black">STRATEGIC HOUSE</span>
+                        <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">Vamos além da publicidade.</h2>
+                        <p className="text-lg md:text-xl font-headline italic text-[#555555] max-w-md">Estruturamos o seu projeto para comunicar com precisão.</p>
+
+                        {/* Progress Bars */}
+                        <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
+                            {[
+                                { label: "ESTRATÉGIA", value: "92%" },
+                                { label: "POSICIONAMENTO", value: "88%" },
+                                { label: "DIREÇÃO CRIATIVA", value: "95%" },
+                                { label: "PRODUÇÃO", value: "85%" },
+                            ].map((item, index) => (
+                                <div key={index} className="space-y-4">
+                                    <div className="flex justify-between font-label text-[12px] text-black">
+                                        <span>{item.label}</span>
+                                    </div>
+                                    <div className="h-[8px] bg-[#d5d5d5] w-full relative">
+                                        <div
+                                            className="h-full bg-black animate-progress relative"
+                                            style={{ width: item.value, "--target-width": item.value }}
+                                        >
+                                            <span className="percentage-tag">{item.value}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* [3] ORIGEM EDITORIAL */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
                     <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
                         <img
-                            alt="Portrait profile in B&W"
-                            className="absolute inset-0 w-full h-full object-cover grayscale"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
+                            alt="House Mazzutti — Agência, Produtora e Direção Criativa"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            src="/images/about/origem.png"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                            <h2 className="font-headline text-6xl md:text-8xl text-white/85 font-bold uppercase tracking-widest text-center select-none">SOBRE NÓS</h2>
-                        </div>
                     </div>
                     {/* Vertical Divider */}
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
@@ -127,6 +126,31 @@ export default function About() {
                                 <p>No mercado saturado de ruído, a comunicação muitas vezes silenciosa e precisa é o que separa os líderes dos amadores.</p>
                             </div>
                             <div className="pt-8 italic font-headline text-3xl opacity-80">Angelo Mazzutti</div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* [6] METODOLOGIA */}
+                <section className="bg-black text-white py-40 overflow-hidden relative">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="ghost-text text-[20vw] font-headline uppercase select-none">MÉTODO</span>
+                    </div>
+                    <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
+                        <h2 className="text-4xl md:text-5xl font-headline text-center mb-32 max-w-2xl mx-auto leading-tight">Nada começa na execução. Tudo começa no entendimento.</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+                            {[
+                                { num: "01 / IMERSÃO", desc: "Análise profunda do DNA e objetivos do negócio." },
+                                { num: "02 / DIAGNÓSTICO", desc: "Identificação de lacunas e oportunidades de mercado." },
+                                { num: "03 / CONCEITO", desc: "A espinha dorsal criativa que guiará a marca." },
+                                { num: "04 / EXECUÇÃO", desc: "Traduzindo a estratégia em ativos visuais e verbais." },
+                                { num: "05 / MONITORAMENTO", desc: "Garantia de consistência e evolução contínua." }
+                            ].map((item, i) => (
+                                <div key={i} className="space-y-6">
+                                    <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
+                                    <div className="h-px bg-neutral-800 w-full"></div>
+                                    <p className="text-xs text-neutral-400 leading-relaxed font-body">{item.desc}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -178,30 +202,6 @@ export default function About() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                    </div>
-                </section>
-                {/* [6] METODOLOGIA */}
-                <section className="bg-black text-white py-40 overflow-hidden relative">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="ghost-text text-[20vw] font-headline uppercase select-none">MÉTODO</span>
-                    </div>
-                    <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-4xl md:text-5xl font-headline text-center mb-32 max-w-2xl mx-auto leading-tight">Nada começa na execução. Tudo começa no entendimento.</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-                            {[
-                                { num: "01 / IMERSÃO", desc: "Análise profunda do DNA e objetivos do negócio." },
-                                { num: "02 / DIAGNÓSTICO", desc: "Identificação de lacunas e oportunidades de mercado." },
-                                { num: "03 / CONCEITO", desc: "A espinha dorsal criativa que guiará a marca." },
-                                { num: "04 / EXECUÇÃO", desc: "Traduzindo a estratégia em ativos visuais e verbais." },
-                                { num: "05 / MONITORAMENTO", desc: "Garantia de consistência e evolução contínua." }
-                            ].map((item, i) => (
-                                <div key={i} className="space-y-6">
-                                    <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
-                                    <div className="h-px bg-neutral-800 w-full"></div>
-                                    <p className="text-xs text-neutral-400 leading-relaxed font-body">{item.desc}</p>
-                                </div>
-                            ))}
                         </div>
                     </div>
                 </section>
