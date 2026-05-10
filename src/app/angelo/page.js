@@ -74,18 +74,25 @@ export default function AngeloPage() {
 
             <main>
                 {/* 1. Bloco 1 (hero - manter) */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center" style={{ backgroundColor: "#ffffff", borderBottom: '0.5px solid #e0e0e0' }}>
-                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
+                <section className="min-h-[calc(100vh+20px)] flex flex-col md:flex-row items-stretch" style={{ backgroundColor: "#ffffff", borderBottom: '0.5px solid #e0e0e0' }}>
+                    <div className="w-full md:w-1/2 flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
                         <span className="font-label text-xs text-black">ANGELO MAZZUTTI</span>
-                        <h2 className="text-4xl md:text-6xl font-headline leading-tight text-black max-w-4xl">
+                        <h2 className="text-4xl md:text-6xl font-headline leading-tight text-black">
                             Nenhuma marca se constrói apenas com estética. Se constrói com leitura e consistência.
                         </h2>
-                        <p className="text-lg md:text-xl italic text-black max-w-2xl leading-relaxed font-body">
+                        <p className="text-lg md:text-xl italic text-black leading-relaxed font-body">
                             Estrategista nato e diretor criativo à frente da House Mazzutti, Angelo possui formação em publicidade e mais de 15 anos de experiência em audiovisual. Seu olhar estratégico, aliado a uma criatividade apurada, garante que suas produções visuais sejam sustentadas por uma base analítica sólida e direcionamento estratégico consistente. Um profissional cujas campanhas se destacam pela precisão, eficiência e múltiplas sensibilidades criativas, com um portfólio que reúne marcas nacionais e internacionais.
                         </p>
                         <p className="text-lg font-raleway italic text-black">
                             - Angelo Mazzutti
                         </p>
+                    </div>
+                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden min-h-[500px] md:min-h-0">
+                        <img
+                            alt="HMZT — House Mazzutti branding"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            src="/images/angelo/hmzt-logo.png"
+                        />
                     </div>
                 </section>
 
@@ -133,13 +140,10 @@ export default function AngeloPage() {
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
                     <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-0">
                         <img
-                            alt="Portrait profile in B&W"
-                            className="absolute inset-0 w-full h-full object-cover grayscale"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZ7RPLEdUZ-hWLjke8oCVUX55YvTrl6zkaoBFqWY4TGbl2ydWUCpp2uWwWLAYpkV1Xq_4Mi-j3c5TUIIXNdDv3VM0sZifN8wwb08edewoo8RcV-C3YDaTC23HJrElQadL7VHuPzUFO-NDNEU5kU8U7psekoAoRRVygstSfAjuNYucXTFyEN17PVOWTtn4wqLQIKRglvMzSqrgXMnIShQSHKdhCc4LNpKtPJVA_9X66yl2XNhGh1Qh1pclEv-BQUbhBPg0swc44OM"
+                            alt="Angelo Mazzutti — Diretor Criativo"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            src="/images/angelo/angelo-portrait.png"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                            <h2 className="text-6xl md:text-8xl text-white/[0.85] font-bold uppercase tracking-widest text-center select-none font-headline">SOBRE NÓS</h2>
-                        </div>
                     </div>
                 </section>
 
@@ -297,33 +301,69 @@ export default function AngeloPage() {
                     </div>
                 </section>
 
-                {/* 8. Logos clientes - carrossel automático */}
+                {/* 8. Logos clientes - slides infinitos, 4 por movimento */}
                 <section className="bg-white border-b border-neutral-100 py-16 relative overflow-hidden">
                     <style>{`
-                        .logos-page { display: none; }
-                        .logos-page.active { display: flex; }
+                        .logos-slider-track {
+                            display: flex;
+                            align-items: center;
+                            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+                        .logos-slider-item {
+                            flex: 0 0 25%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100px;
+                            padding: 0 24px;
+                        }
+                        .logos-slider-item img {
+                            max-height: 70px;
+                            width: auto;
+                            object-fit: contain;
+                            opacity: 0.5;
+                            transition: opacity 0.3s;
+                        }
+                        .logos-slider-item img:hover { opacity: 1; }
                     `}</style>
-                    <div className="max-w-7xl mx-auto px-8">
-                        <div className="logos-page active" id="logos-p1" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
-                            {[1,2,3,4].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
-                        </div>
-                        <div className="logos-page" id="logos-p2" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
-                            {[5,6,7,8].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
-                        </div>
-                        <div className="logos-page" id="logos-p3" style={{justifyContent:'space-around',alignItems:'center',height:'100px'}}>
-                            {[9,10,11,12,13].map(n => <img key={n} src={`/images/angelo/logos/logo-${n}.png`} alt={`Logo ${n}`} style={{height:'70px',width:'auto',objectFit:'contain',opacity:0.5,transition:'opacity 0.3s'}} onMouseOver={e=>e.target.style.opacity=1} onMouseOut={e=>e.target.style.opacity=0.5} />)}
+                    <div className="max-w-7xl mx-auto px-8 overflow-hidden">
+                        <div className="logos-slider-track" id="logos-track">
+                            {(() => {
+                                const logos = [
+                                    'wepink', 'oceane', 'elyah', 'jequiti',
+                                    'natalia-beauty', 'signus', 'bonne-soiree', 'poema-paris',
+                                    'dumond', 'unique-chic', 'beatco', 'saue',
+                                    'camilla-scarpa'
+                                ];
+                                const looped = [...logos, ...logos];
+                                return looped.map((name, i) => (
+                                    <div key={`${name}-${i}`} className="logos-slider-item">
+                                        <img src={`/images/angelo/logos/${name}.png`} alt={name} />
+                                    </div>
+                                ));
+                            })()}
                         </div>
                     </div>
                     <script dangerouslySetInnerHTML={{__html:`
                         (function(){
-                            var pages = ['logos-p1','logos-p2','logos-p3'];
+                            var track = document.getElementById('logos-track');
+                            if (!track) return;
+                            var totalLogos = 13;
+                            var step = 4;
                             var current = 0;
-                            function show(i){
-                                pages.forEach(function(id){ document.getElementById(id).classList.remove('active'); });
-                                document.getElementById(pages[i]).classList.add('active');
-                                current = i;
+                            function advance(){
+                                current += step;
+                                track.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                                track.style.transform = 'translateX(-' + (current * 25) + '%)';
+                                if (current >= totalLogos) {
+                                    setTimeout(function(){
+                                        track.style.transition = 'none';
+                                        current = current - totalLogos;
+                                        track.style.transform = 'translateX(-' + (current * 25) + '%)';
+                                    }, 850);
+                                }
                             }
-                            setInterval(function(){ show((current+1)%pages.length); }, 3000);
+                            setInterval(advance, 3500);
                         })();
                     `}}/>
                 </section>
