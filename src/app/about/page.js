@@ -116,16 +116,16 @@ export default function About() {
                     {/* Vertical Divider */}
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
 
-                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                    <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-8">
                             <span className="font-label text-xs text-neutral-400">ORIGEM</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">A House Mazzutti nasceu de uma convicção simples</h2>
-                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
+                            <h2 className="text-4xl md:text-5xl font-headline leading-tight text-white">A House Mazzutti nasceu de uma convicção simples</h2>
+                            <div className="space-y-6 text-neutral-300 leading-relaxed font-body">
                                 <p>Em um mercado saturado por excesso de informação, percebemos que o problema não era a falta de produção — mas a ausência de direção. Foi a partir disso que estruturamos um modelo capaz de integrar pensamento, construção e execução em um único fluxo.</p>
                                 <p>Cada marca que construímos é tratada como uma obra de curadoria, onde cada detalhe — do tom de voz à textura visual — é um ativo estratégico.</p>
                                 <p>No mercado saturado de ruído, a comunicação muitas vezes silenciosa e precisa é o que separa os líderes dos amadores.</p>
                             </div>
-                            <div className="pt-8 italic font-headline text-3xl opacity-80">Angelo Mazzutti</div>
+                            <div className="pt-8 italic font-headline text-3xl text-white opacity-80">Angelo Mazzutti</div>
                         </div>
                     </div>
                 </section>
