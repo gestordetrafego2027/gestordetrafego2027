@@ -45,7 +45,7 @@ export default function About() {
             <main>
                 {/* [5] DIFERENCIAL SECTION */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="Livros de marketing e administração"
                             className="absolute inset-0 w-full h-full object-cover"
@@ -55,7 +55,7 @@ export default function About() {
                     {/* Vertical Divider */}
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
 
-                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                    <div className="w-full md:w-1/2 bg-[#f5f5f5] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
                             <span className="text-caption text-neutral-600">Diferencial</span>
                             <h2 className="text-h2 text-black">O que diferencia a House não é o que fazemos.</h2>
@@ -73,7 +73,7 @@ export default function About() {
                 </section>
 
                 {/* [1] HERO SECTION */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#f9f9f9]">
+                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#fafafa]">
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
                         <span className="text-caption text-black/70">Strategic House</span>
                         <h2 className="text-h1 text-black">Vamos além da publicidade.</h2>
@@ -91,7 +91,7 @@ export default function About() {
                                     <div className="flex justify-between text-caption text-black">
                                         <span>{item.label}</span>
                                     </div>
-                                    <div className="h-[8px] bg-[#d5d5d5] w-full relative">
+                                    <div className="h-[8px] bg-[#ececec] w-full relative">
                                         <div
                                             className="h-full bg-black animate-progress relative"
                                             style={{ width: item.value, "--target-width": item.value }}
@@ -107,7 +107,7 @@ export default function About() {
 
                 {/* [3] ORIGEM EDITORIAL */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="House Mazzutti — Agência, Produtora e Direção Criativa"
                             className="absolute inset-0 w-full h-full object-cover"

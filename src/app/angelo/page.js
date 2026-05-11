@@ -32,12 +32,12 @@ export default function AngeloPage() {
     };
 
     return (
-        <div className="antialiased font-body" style={{ fontWeight: 300, backgroundColor: "#f9f9f9", color: "#1a1c1c" }}>
+        <div className="antialiased font-body" style={{ fontWeight: 300, backgroundColor: "#fafafa", color: "#1a1c1c" }}>
             <title>Angelo Mazzutti — Diretor Criativo | House Mazzutti</title>
 
             <style dangerouslySetInnerHTML={{
                 __html: `
-                body { font-weight: 300; background-color: #f9f9f9; color: #1a1c1c; }
+                body { font-weight: 300; background-color: #fafafa; color: #1a1c1c; }
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 24; }
                 .ghost-text { -webkit-text-stroke: 1px rgba(255,255,255,0.1); color: transparent; pointer-events: none; }
                 .line-growth { transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); }
@@ -88,7 +88,7 @@ export default function AngeloPage() {
                             — Angelo Mazzutti
                         </p>
                     </div>
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden min-h-[500px] md:min-h-[80vh]">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="HMZT — House Mazzutti branding"
                             className="absolute inset-0 w-full h-full object-cover"
@@ -125,7 +125,7 @@ export default function AngeloPage() {
 
                 {/* 3. O que era bloco 4 (TRAJETÓRIA - Ao longo dos anos...) */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                    <div className="w-full md:w-1/2 bg-[#f5f5f5] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
                             <span className="text-caption text-neutral-600">Trajetória</span>
                             <h2 className="text-h2 text-black">
@@ -139,7 +139,7 @@ export default function AngeloPage() {
                         </div>
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
-                    <div className="w-full md:w-1/2 bg-[#e8e8e8] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="Angelo Mazzutti — Diretor Criativo"
                             className="absolute inset-0 w-full h-full object-cover"
@@ -202,7 +202,7 @@ export default function AngeloPage() {
                 </section>
 
                 {/* 6. O que era bloco 8 (Se você busca direção...) */}
-                <section className="bg-[#eeeeee] py-32 px-12 md:px-24">
+                <section className="bg-[#f5f5f5] py-32 px-12 md:px-24">
                     <div className="max-w-4xl mx-auto text-center space-y-16">
                         <h2 className="text-h1 text-black">
                             Se você busca direção — não apenas execução — estamos alinhados.

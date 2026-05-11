@@ -58,7 +58,7 @@ html {
     /* Sincronização com tailwind.config.mjs para v4 */
     --color-primary: #000000;
     --color-on-background: #1a1c1c;
-    --color-background: #f9f9f9;
+    --color-background: #fafafa;
     --color-secondary: #5f5e5e;
 
     /* Raios — luxo minimalista, sem arredondamento exceto pill */
