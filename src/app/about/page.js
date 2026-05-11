@@ -56,10 +56,10 @@ export default function About() {
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
 
                     <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-8">
-                            <span className="font-label text-xs text-neutral-400">DIFERENCIAL</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">O que diferencia a House não é o que fazemos.</h2>
-                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
+                        <div className="max-w-lg space-y-10">
+                            <span className="text-caption text-neutral-600">Diferencial</span>
+                            <h2 className="text-h2 text-black">O que diferencia a House não é o que fazemos.</h2>
+                            <div className="space-y-5 text-body text-neutral-700">
                                 <p>É como pensamos. Unimos:</p>
                                 <ul className="space-y-2">
                                     <li>— sensibilidade estética</li>
@@ -74,21 +74,21 @@ export default function About() {
 
                 {/* [1] HERO SECTION */}
                 <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#f9f9f9]">
-                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
-                        <span className="font-label text-xs text-black">STRATEGIC HOUSE</span>
-                        <h2 className="text-5xl md:text-7xl font-headline leading-tight text-black">Vamos além da publicidade.</h2>
-                        <p className="text-lg md:text-xl font-headline italic text-[#555555] max-w-md">Estruturamos o seu projeto para comunicar com precisão.</p>
+                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
+                        <span className="text-caption text-black/70">Strategic House</span>
+                        <h2 className="text-h1 text-black">Vamos além da publicidade.</h2>
+                        <p className="text-h4 text-[#555555] measure-editorial">Estruturamos o seu projeto para comunicar com precisão.</p>
 
                         {/* Progress Bars */}
                         <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
                             {[
-                                { label: "ESTRATÉGIA", value: "92%" },
-                                { label: "POSICIONAMENTO", value: "88%" },
-                                { label: "DIREÇÃO CRIATIVA", value: "95%" },
-                                { label: "PRODUÇÃO", value: "85%" },
+                                { label: "Estratégia", value: "92%" },
+                                { label: "Posicionamento", value: "88%" },
+                                { label: "Direção criativa", value: "95%" },
+                                { label: "Produção", value: "85%" },
                             ].map((item, index) => (
                                 <div key={index} className="space-y-4">
-                                    <div className="flex justify-between font-label text-[12px] text-black">
+                                    <div className="flex justify-between text-caption text-black">
                                         <span>{item.label}</span>
                                     </div>
                                     <div className="h-[8px] bg-[#d5d5d5] w-full relative">
@@ -118,15 +118,15 @@ export default function About() {
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
 
                     <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-8">
-                            <span className="font-label text-xs text-neutral-400">ORIGEM</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight text-white">A House Mazzutti nasceu de uma convicção simples.</h2>
-                            <div className="space-y-6 text-neutral-300 leading-relaxed font-body">
+                        <div className="max-w-lg space-y-10">
+                            <span className="text-caption text-neutral-400">Origem</span>
+                            <h2 className="text-h2 text-white">A House Mazzutti nasceu de uma convicção simples.</h2>
+                            <div className="space-y-5 text-body text-neutral-300">
                                 <p>Onde há excesso de informação, falta direção. Foi a partir disso que estruturamos um modelo que integra pensamento, construção e execução num único fluxo.</p>
                                 <p>Cada marca é tratada como obra de curadoria. Cada detalhe — do tom de voz à textura visual — carrega uma intenção.</p>
                                 <p>No meio do ruído, a comunicação silenciosa e precisa é o que separa os líderes do resto.</p>
                             </div>
-                            <div className="pt-8 italic font-headline text-3xl text-white opacity-80">Angelo Mazzutti</div>
+                            <div className="pt-6 text-h3 text-white/80">Angelo Mazzutti</div>
                         </div>
                     </div>
                 </section>
@@ -134,22 +134,22 @@ export default function About() {
                 {/* [6] METODOLOGIA */}
                 <section className="bg-black text-white py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="ghost-text text-[20vw] font-headline uppercase select-none">MÉTODO</span>
+                        <span className="ghost-text text-[20vw] font-headline tracking-[-0.05em] font-bold select-none">Método</span>
                     </div>
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-4xl md:text-5xl font-headline text-center mb-32 max-w-2xl mx-auto leading-tight">Nada começa na execução. Tudo começa no entendimento.</h2>
+                        <h2 className="text-h2 text-white text-center mb-32 max-w-3xl mx-auto">Nada começa na execução. Tudo começa no entendimento.</h2>
                         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                             {[
-                                { num: "01 / IMERSÃO", desc: "Mergulho no DNA e nos objetivos do projeto." },
-                                { num: "02 / LEITURA", desc: "Identificação de lacunas e oportunidades." },
-                                { num: "03 / CONCEITO", desc: "Direção criativa que guia toda a entrega." },
-                                { num: "04 / EXECUÇÃO", desc: "Produção sob supervisão direta do diretor." },
-                                { num: "05 / FINE ART", desc: "Edição artesanal com acabamento editorial." }
+                                { num: "01 / Imersão", desc: "Mergulho no DNA e nos objetivos do projeto." },
+                                { num: "02 / Leitura", desc: "Identificação de lacunas e oportunidades." },
+                                { num: "03 / Conceito", desc: "Direção criativa que guia toda a entrega." },
+                                { num: "04 / Execução", desc: "Produção sob supervisão direta do diretor." },
+                                { num: "05 / Fine Art", desc: "Edição artesanal com acabamento editorial." }
                             ].map((item, i) => (
                                 <div key={i} className="space-y-6">
-                                    <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
+                                    <span className="text-caption text-neutral-300 block">{item.num}</span>
                                     <div className="h-px bg-neutral-800 w-full"></div>
-                                    <p className="text-xs text-neutral-400 leading-relaxed font-body">{item.desc}</p>
+                                    <p className="text-body text-neutral-400">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -161,8 +161,8 @@ export default function About() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">COMO FUNCIONAMOS</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Quatro frentes. Uma só conversa.</h2>
+                                <span className="text-caption text-zinc-400 mb-6 block">Como funcionamos</span>
+                                <h2 className="text-h2 text-white">Quatro frentes. Uma só conversa.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -186,19 +186,19 @@ export default function About() {
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
                                         <div>
-                                            <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
-                                            {card.subtitle && <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>}
+                                            <h3 className="text-h3 mb-6 group-hover:text-white uppercase">{card.title}</h3>
+                                            {card.subtitle && <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>}
                                             <ul className="space-y-4 mb-12">
                                                 {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
                                                         <span className="material-symbols-outlined text-lg">check</span>
                                                         <span>{item}</span>
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
-                                        <button className="w-full border border-black py-4 font-label uppercase text-[10px] tracking-widest hover:bg-black hover:text-white transition-all group-hover:border-white group-hover:text-white">
-                                            SAIBA MAIS
+                                        <button className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white">
+                                            Saiba mais
                                         </button>
                                     </div>
                                 ))}
@@ -210,7 +210,7 @@ export default function About() {
                 {/* [2] DEPOIMENTOS SECTION */}
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[480px] max-h-[480px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
+                        <span className="font-body font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40">Depoimentos</span>
                     </div>
 
                     {/* Navigation */}
@@ -233,21 +233,21 @@ export default function About() {
 
                     {/* Slides */}
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                        <div className="mb-12">
+                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
+                            <h2 className="text-h2 text-white">Depoimentos</h2>
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1" style={{height: '200px', display: 'flex', alignItems: 'center'}}>
+                            <div className="relative w-full overflow-hidden mb-1" style={{height: '220px', display: 'flex', alignItems: 'center'}}>
                                 {testimonials.map((t, i) => (
                                     <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
-                                        <h3 className="font-headline text-lg text-white leading-snug italic max-w-3xl mx-auto">
-                                            "{t.text}"
+                                        <h3 className="text-h3 text-white max-w-3xl mx-auto">
+                                            “{t.text}”
                                         </h3>
                                         {t.author && (
-                                            <div className="pt-3">
-                                                <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
+                                            <div className="pt-6">
+                                                <p className="text-caption text-white/80">{t.author}</p>
                                             </div>
                                         )}
                                     </div>
@@ -272,13 +272,13 @@ export default function About() {
                 {/* [7] CTA */}
                 <section className="bg-black py-40 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
-                        <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-tight italic">
-                            Se sua marca precisa de direção, não de volume — <span className="not-italic">estamos prontos.</span>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-20">
+                        <h2 className="text-h1 text-white">
+                            Se sua marca precisa de direção, não de volume — estamos prontos.
                         </h2>
-                        <div className="flex flex-col items-center space-y-8">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                INICIAR CONVERSA
+                        <div className="flex flex-col items-center space-y-10">
+                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="/contato">
+                                Iniciar uma conversa
                             </Link>
                         </div>
                     </div>
@@ -294,20 +294,20 @@ export default function About() {
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
                     </div>
-                    <div className="flex space-x-8 mb-12">
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
+                    <div className="flex space-x-10 mb-16">
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">Instagram</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">LinkedIn</a>
                     </div>
-                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/blog">BLOG</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
+                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/about">Sobre</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/studio">Studio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/portfolio">Portfólio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/blog">Blog</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="font-label text-[9px] text-neutral-700">
-                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                    <div className="text-caption text-neutral-700">
+                        © 2026 House Mazzutti. Todos os direitos reservados.
                     </div>
                 </div>
             </footer>

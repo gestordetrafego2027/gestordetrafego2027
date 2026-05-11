@@ -146,14 +146,17 @@ export default function ComunidadePage() {
                         <div className="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d]"></div>
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
-                        <div className="max-w-4xl">
-                            <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>HOUSE MAZZUTTI — COMUNIDADE</span>
-                            <h1 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                        <div className="max-w-5xl">
+                            <span className="hero-animate text-caption text-white/70 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>Comunidade — HMZT</span>
+                            <h1 className="hero-animate text-h1 text-white mb-12" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 Uma rede que conecta cuidado, conhecimento e construção de marca.
                             </h1>
-                            <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                ENTRAR NA COMUNIDADE
-                            </button>
+                            <p className="hero-animate text-body text-white/75 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                Clientes, afiliados, parceiros e talentos compartilham o mesmo padrão da casa — e encontram o seu ponto de entrada aqui.
+                            </p>
+                            <a href="#frentes" className="hero-animate inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                Conhecer as frentes
+                            </a>
                         </div>
                     </div>
                     <div className="absolute inset-y-0 left-12 flex items-center z-20">
@@ -180,45 +183,98 @@ export default function ComunidadePage() {
 
                 {/* GRID SECTION */}
                 <section className="bg-white py-12 mx-auto" style={{ maxWidth: "95vw" }}>
-                    <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">COMUNIDADE</span>
-                        <h2 className="font-headline text-3xl text-black">University. Parceiros. Clientes. Colaboradores.</h2>
-                        <div className="line-divider mt-6 text-black"></div>
+                    <div className="mb-20 text-center flex flex-col items-center">
+                        <span className="text-caption text-zinc-500 block mb-6">Comunidade</span>
+                        <h2 className="text-h2 text-black">Quatro frentes. Um mesmo padrão.</h2>
+                        <div className="line-divider mt-8 text-black"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                         {gridImages.map((img, i) => (
                             <div key={i} className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay={i * 100} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
                                 <img alt={img.alt} className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src={img.src} />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                    <p className="font-headline text-sm text-black italic">{img.label}</p>
-                                    <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">{img.sublabel}</p>
+                                    <p className="text-h4 text-black">{img.label}</p>
+                                    <p className="text-caption text-zinc-500 mt-2">{img.sublabel}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                {/* ATUAMOS COM */}
-                <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                    <div className="max-w-[1260px] mx-auto text-center mb-12">
-                        <div className="mb-20">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">ATUAMOS COM</span>
-                            <h2 className="font-headline text-5xl text-black">Conhecimento. Conexão. Continuidade.</h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                            {[
-                                { icon: "brush", title: "University", desc: "Cursos, mentorias e eventos sobre marca e direção criativa." },
-                                { icon: "visibility", title: "Parceiros", desc: "Profissionais e marcas que partilham o mesmo nível de exigência." },
-                                { icon: "photo_camera", title: "Colaboradores", desc: "Talentos que entendem que construção exige pensamento." },
-                            ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center space-y-4" style={{ transition: 'transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                                    <span className="material-symbols-outlined text-4xl font-extralight" data-icon={item.icon}>{item.icon}</span>
-                                    <h3 className="font-headline text-2xl">{item.title}</h3>
-                                    <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
+                {/* AS QUATRO FRENTES — pontos de entrada da comunidade */}
+                <section id="frentes" className="bg-white border-t-[0.5px] border-zinc-100">
+                    <div className="max-w-[1440px] mx-auto px-12 pt-32 pb-20 text-center">
+                        <span className="text-caption text-zinc-500 block mb-6">Pontos de entrada</span>
+                        <h2 className="text-h2 text-black measure-editorial mx-auto">
+                            Cada perfil tem o seu lugar — e a sua porta.
+                        </h2>
                     </div>
+
+                    {(() => {
+                        const frentes = [
+                            {
+                                num: "01",
+                                label: "Para quem já caminha com a House",
+                                title: "Área do Cliente.",
+                                desc: "Acesso reservado a contratos ativos. Materiais, briefings, aprovações e arquivos de projeto sob uma só conversa — privado, organizado, premium.",
+                                cta: "Acessar área do cliente",
+                                href: "/comunidade/clientes",
+                            },
+                            {
+                                num: "02",
+                                label: "Para quem indica e movimenta",
+                                title: "Afiliados.",
+                                desc: "Indicação editorial com retorno. Para profissionais e amigos da casa que apresentam a House a quem busca direção — com transparência, padrão e cuidado em cada repasse.",
+                                cta: "Tornar-se afiliado",
+                                href: "/comunidade/afiliados",
+                            },
+                            {
+                                num: "03",
+                                label: "Para marcas e profissionais alinhados",
+                                title: "Parceiros.",
+                                desc: "Co-criação entre marcas, agências e profissionais que partilham o mesmo nível de exigência. Projetos integrados, eventos, colaborações editoriais e estratégicas.",
+                                cta: "Propor uma parceria",
+                                href: "/comunidade/parceiros",
+                            },
+                            {
+                                num: "04",
+                                label: "Para talentos que queiram somar",
+                                title: "Vagas & Oportunidades.",
+                                desc: "Posições abertas, freelas selecionados e castings editoriais. Espaço para quem entende que construção exige pensamento — não apenas execução.",
+                                cta: "Ver oportunidades",
+                                href: "/comunidade/vagas",
+                            },
+                        ];
+                        return (
+                            <div className="border-t-[0.5px] border-zinc-200">
+                                {frentes.map((f, i) => (
+                                    <div
+                                        key={i}
+                                        className={`border-b-[0.5px] border-zinc-200 ${i % 2 === 1 ? 'bg-zinc-50/50' : 'bg-white'}`}
+                                    >
+                                        <div className="max-w-[1440px] mx-auto px-12 py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+                                            <div className="md:col-span-3">
+                                                <span className="text-caption text-zinc-500 block">{f.num} / Frente</span>
+                                                <p className="text-caption text-zinc-400 mt-3">{f.label}</p>
+                                            </div>
+                                            <div className="md:col-span-6">
+                                                <h3 className="text-h2 text-black mb-8">{f.title}</h3>
+                                                <p className="text-body text-zinc-700 measure-editorial">{f.desc}</p>
+                                            </div>
+                                            <div className="md:col-span-3 md:flex md:justify-end">
+                                                <Link
+                                                    href={f.href}
+                                                    className="inline-block px-10 py-4 border-[0.5px] border-black text-black text-button hover:bg-black hover:text-white transition-all duration-500 text-center"
+                                                >
+                                                    {f.cta}
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        );
+                    })()}
                 </section>
 
                 {/* FILOSOFIA */}
@@ -233,18 +289,17 @@ export default function ComunidadePage() {
                         <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-8">
                                 <div className="max-w-xl text-left">
-                                    <h2 className="font-headline text-xl md:text-2xl italic leading-snug mb-2">
-                                        "Conexões que ampliam o que construímos."
+                                    <h2 className="text-h2 text-black mb-6">
+                                        Conexões que ampliam o que construímos.
                                     </h2>
-                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Filosofia House</p>
+                                    <p className="text-caption text-zinc-500">Filosofia House</p>
                                 </div>
                                 <div className="flex justify-end">
                                     <div className="max-w-xl text-right">
-                                        <h3 className="font-headline text-xl md:text-2xl leading-snug mb-2">
-                                            Não buscamos volume. <br />
-                                            <span className="italic">Buscamos alinhamento.</span>
+                                        <h3 className="text-h2 text-black mb-6">
+                                            Não buscamos volume.<br />Buscamos alinhamento.
                                         </h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Diferenciação</p>
+                                        <p className="text-caption text-zinc-500">Diferenciação</p>
                                     </div>
                                 </div>
                             </div>
@@ -252,38 +307,9 @@ export default function ComunidadePage() {
                     </div>
                 </section>
 
-                {/* ECOSSISTEMA - TEAM */}
-                <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                    <div className="max-w-[1400px] mx-auto">
-                        <div className="text-center mb-12">
-                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">ECOSSISTEMA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">Cada grupo tem um papel claro.</h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
-                            {teamMembers.map((member, i) => (
-                                <div key={i} className="space-y-8 flex flex-col items-center text-center mb-12">
-                                    <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                        <img className="w-full h-full object-cover grayscale" src={member.src} alt={member.name} />
-                                        <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                                <SocialIcons />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="space-y-2">
-                                        <p className="font-headline text-2xl font-medium">{member.name}</p>
-                                        <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">{member.role}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* TESTIMONIALS */}
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
+                        <span className="font-body font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40">Depoimentos</span>
                     </div>
                     <div className="absolute left-16 inset-y-0 flex items-center z-20">
                         <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
@@ -302,19 +328,19 @@ export default function ComunidadePage() {
                         </button>
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                        <div className="mb-12">
+                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
+                            <h2 className="text-h2 text-white">Depoimentos</h2>
                         </div>
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1">
                                 {testimonials.map((t, i) => (
                                     <div key={i} className={`testimonial-slide ${currentSlide === i ? "block" : "hidden"}`}>
-                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
-                                            "{t.text}"
+                                        <h3 className="text-h3 text-white max-w-3xl mx-auto">
+                                            “{t.text}”
                                         </h3>
-                                        <div className="pt-3">
-                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{t.author}</p>
+                                        <div className="pt-6">
+                                            <p className="text-caption text-white/80">{t.author}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -337,16 +363,9 @@ export default function ComunidadePage() {
                 <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
-                        <div style={{ marginBottom: '40px' }}>
-                            <p style={{
-                                fontSize: '12px', letterSpacing: '0.2em',
-                                textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
-                            }}>
-                                BLOG
-                            </p>
-                            <h2 style={{ fontSize: '2.2rem', fontWeight: '400', color: '#000' }}>
-                                Últimos Artigos
-                            </h2>
+                        <div style={{ marginBottom: '64px' }}>
+                            <p className="text-caption" style={{ color: '#888', marginBottom: '16px' }}>Editorial</p>
+                            <h2 className="text-h2" style={{ color: '#000' }}>Últimos artigos</h2>
                         </div>
 
                         <div style={{
@@ -400,15 +419,11 @@ export default function ComunidadePage() {
                                       }}
                                     >
                                         <div>
-                                            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>
-                                                {post.categoria}
-                                            </p>
-                                            <h3 style={{ fontSize: '1.6rem', fontWeight: '400', lineHeight: '1.4', color: 'inherit', marginBottom: '40px' }}>
-                                                {post.titulo}
-                                            </h3>
+                                            <p className="text-caption" style={{ color: '#888', marginBottom: '24px' }}>{post.categoria}</p>
+                                            <h3 className="text-h3" style={{ color: 'inherit', marginBottom: '40px' }}>{post.titulo}</h3>
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <span style={{ fontSize: '11px', color: '#aaa' }}>{post.data}</span>
+                                            <span className="text-caption" style={{ color: '#aaa' }}>{post.data}</span>
                                             <span style={{
                                               fontSize: '28px',
                                               display: 'inline-block',
@@ -431,15 +446,15 @@ export default function ComunidadePage() {
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-4xl mx-auto space-y-16">
-                        <h2 className="font-headline text-4xl md:text-7xl text-white leading-tight italic">
-                            Se você se conecta com o que a House constrói — <span className="not-italic">esse é o seu ponto de entrada.</span>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-20">
+                        <h2 className="text-h1 text-white">
+                            Se você se conecta com o que a House constrói — esse é o seu ponto de entrada.
                         </h2>
-                        <div className="flex flex-col items-center space-y-8">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                ENTRAR NA COMUNIDADE
-                            </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos tentativa. Mais direção.</p>
+                        <div className="flex flex-col items-center space-y-10">
+                            <a className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="#frentes">
+                                Escolher a sua porta
+                            </a>
+                            <p className="text-caption text-zinc-500">Menos tentativa. Mais direção.</p>
                         </div>
                     </div>
                 </section>
@@ -448,20 +463,25 @@ export default function ComunidadePage() {
             {/* FOOTER */}
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-3xl font-serif text-neutral-50 mb-12">House Mazzutti</div>
-                    <div className="flex space-x-8 mb-12">
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
+                    <div className="mb-16">
+                        <span className="hm-logo" style={{fontSize: '32px', color: '#fafafa'}}>
+                            <span className="hm-house">House</span>
+                            <span className="hm-mazzutti">Mazzutti</span>
+                        </span>
                     </div>
-                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
+                    <div className="flex space-x-10 mb-16">
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">Instagram</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">LinkedIn</a>
+                    </div>
+                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/studio">Studio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/portfolio">Portfólio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/about">Sobre</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="font-label text-[9px] text-neutral-700">
-                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                    <div className="text-caption text-neutral-700">
+                        © 2026 House Mazzutti. Todos os direitos reservados.
                     </div>
                 </div>
             </footer>

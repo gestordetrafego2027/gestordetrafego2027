@@ -16,23 +16,23 @@ export default function Home() {
     const heroSlides = [
         {
             label: 'STUDIO — HMZT',
-            titulo: 'Conteúdo Pessoal',
-            texto: 'Foto, vídeo e produção de imagem pessoal em São Paulo.',
-            cta: 'CONHECER O STUDIO',
+            titulo: 'Sua imagem, com intenção.',
+            texto: 'Foto, vídeo e direção de imagem pessoal em São Paulo.',
+            cta: 'Entrar no Studio',
             link: '/studio'
         },
         {
             label: 'PRODUTORA — HMZT',
-            titulo: 'Produção Executiva',
-            texto: 'Campanhas de moda, beleza e conteúdo institucional.',
-            cta: 'CONHECER A PRODUTORA',
+            titulo: 'Direção que executa.',
+            texto: 'Campanhas de moda, beleza e narrativas institucionais.',
+            cta: 'Entrar na Produtora',
             link: '/produtora'
         },
         {
             label: 'AGÊNCIA — HMZT',
-            titulo: 'Gestão de Marcas',
-            texto: 'Branding, rebranding e lançamentos.',
-            cta: 'CONHECER A AGÊNCIA',
+            titulo: 'Marcas que ocupam espaço.',
+            texto: 'Branding, rebranding e lançamentos com método autoral.',
+            cta: 'Entrar na Agência',
             link: '/agencia'
         },
     ];
@@ -161,26 +161,26 @@ export default function Home() {
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-4xl fade-in">
                             <span
-                                className="hero-animate font-label uppercase tracking-widest text-[10px] mb-4 block"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#fff', marginBottom: '16px' }}
+                                className="hero-animate text-caption text-white/70 mb-6 block"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].label}
                             </span>
                             <h1
-                                className="hero-animate font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5 italic font-light"
+                                className="hero-animate text-h1 text-white mb-8"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].titulo}
                             </h1>
-                            <p 
-                                className="hero-animate font-body text-sm md:text-base mb-8"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease', color: '#ccc' }}
+                            <p
+                                className="hero-animate text-body text-white/75 mb-12 measure-editorial"
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].texto}
                             </p>
                             <Link
                                 href={heroSlides[currentHeroSlide].link}
-                                className="hero-animate inline-block group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300"
+                                className="hero-animate inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].cta}
@@ -240,10 +240,10 @@ export default function Home() {
                     className="bg-white py-12 mx-auto"
                     style={{ maxWidth: "95vw" }}
                 >
-                    <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4"></span>
-                        <h2 className="font-headline text-3xl text-black">Trabalhos Selecionados</h2>
-                        <div className="line-divider mt-6 text-black"></div>
+                    <div className="mb-20 text-center flex flex-col items-center">
+                        <span className="text-caption text-zinc-500 block mb-6">Obras</span>
+                        <h2 className="text-h2 text-black">Trabalhos selecionados</h2>
+                        <div className="line-divider mt-8 text-black"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                         {[
@@ -267,8 +267,8 @@ export default function Home() {
                                     src={work.src}
                                 />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                    <p className="font-headline text-sm text-black italic">{work.title}</p>
-                                    <p className="font-label uppercase tracking-widest text-[7px] text-zinc-500 mt-1">
+                                    <p className="text-h4 text-black">{work.title}</p>
+                                    <p className="text-caption text-zinc-500 mt-2">
                                         {work.sub}
                                     </p>
                                 </div>
@@ -280,9 +280,9 @@ export default function Home() {
                 {/* SERVICES SECTION */}
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center mb-12">
-                        <div className="mb-20">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4"></span>
-                            <h2 className="font-headline text-5xl text-black">
+                        <div className="mb-24">
+                            <span className="text-caption text-zinc-500 block mb-6">Método</span>
+                            <h2 className="text-h2 text-black">
                                 Integrado. Intencional.
                             </h2>
                         </div>
@@ -304,12 +304,12 @@ export default function Home() {
                                     desc: "Execução de alto padrão. Imagens que falam por si — sem precisar de legenda.",
                                 },
                             ].map((service, i) => (
-                                <div key={i} className="flex flex-col items-center space-y-4">
+                                <div key={i} className="flex flex-col items-center space-y-6">
                                     <span className="material-symbols-outlined text-4xl font-extralight">
                                         {service.icon}
                                     </span>
-                                    <h3 className="font-headline text-2xl">{service.title}</h3>
-                                    <p className="text-secondary leading-relaxed font-light text-sm max-w-xs">
+                                    <h3 className="text-h3 text-black">{service.title}</h3>
+                                    <p className="text-body text-secondary measure-tight">
                                         {service.desc}
                                     </p>
                                 </div>
@@ -355,10 +355,10 @@ export default function Home() {
                         <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-8">
                                 <div className="max-w-xl text-left">
-                                    <h2 className="font-headline text-xl md:text-2xl italic leading-snug mb-2">
+                                    <h2 className="text-h2 text-white mb-6">
                                         Marcas fortes não disputam atenção. Elas ocupam espaço.
                                     </h2>
-                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-white/60">
+                                    <p className="text-caption text-white/60">
                                         Filosofia House
                                     </p>
                                 </div>
@@ -372,8 +372,8 @@ export default function Home() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">SOLUÇÕES</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Hoje</h2>
+                                <span className="text-caption text-zinc-400 mb-6 block">Soluções</span>
+                                <h2 className="text-h2 text-white">A casa, em três frentes.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -399,19 +399,19 @@ export default function Home() {
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined" style={{ transition: 'transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
                                         <div>
-                                            <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
-                                            <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>
+                                            <h3 className="text-h3 mb-6 group-hover:text-white uppercase">{card.title}</h3>
+                                            <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>
                                             <ul className="space-y-4 mb-12">
                                                 {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
                                                         <span className="material-symbols-outlined text-lg">check</span>
                                                         <span>{item}</span>
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
-                                        <Link href={card.link} className="w-full border border-black py-4 font-label uppercase text-[10px] tracking-widest hover:bg-black hover:text-white transition-all group-hover:border-white group-hover:text-white text-center block">
-                                            SAIBA MAIS
+                                        <Link href={card.link} className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white text-center block">
+                                            Saiba mais
                                         </Link>
                                     </div>
                                 ))}
@@ -433,7 +433,8 @@ export default function Home() {
                             position: 'absolute', top: '50%', left: '50%',
                             transform: 'translate(-50%, -50%)',
                             fontSize: '10vw', fontFamily: 'var(--font-headline)',
-                            fontStyle: 'italic', color: 'rgba(255,255,255,0.12)', 
+                            fontWeight: 700, letterSpacing: '-0.05em',
+                            color: 'rgba(255,255,255,0.08)',
                             whiteSpace: 'nowrap', pointerEvents: 'none',
                             userSelect: 'none', zIndex: 0
                         }}
@@ -486,24 +487,24 @@ export default function Home() {
                     </div>
 
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">
-                                O QUE DIZEM
+                        <div className="mb-12">
+                            <span className="text-caption text-zinc-500 block mb-4">
+                                O que dizem
                             </span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                            <h2 className="text-h2 text-white">Depoimentos</h2>
                         </div>
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1" style={{ minHeight: '200px' }}>
+                            <div className="relative w-full overflow-hidden mb-1" style={{ minHeight: '220px' }}>
                                 {testimonials.map((testimonial, i) => (
                                     <div
                                         key={i}
                                         className={`testimonial-slide ${currentSlide === i ? "active" : ""}`}
                                     >
-                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
-                                            "{testimonial.text}"
+                                        <h3 className="text-h3 text-white max-w-3xl mx-auto">
+                                            “{testimonial.text}”
                                         </h3>
-                                        <div className="pt-3">
-                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">
+                                        <div className="pt-6">
+                                            <p className="text-caption text-white/80">
                                                 {testimonial.author}
                                             </p>
                                         </div>
@@ -528,15 +529,12 @@ export default function Home() {
                 {/* BLOG SECTION */}
                 <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <div style={{ marginBottom: '40px' }}>
-                            <p style={{
-                                fontSize: '12px', letterSpacing: '0.2em',
-                                textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
-                            }}>
-                                BLOG
+                        <div style={{ marginBottom: '64px' }}>
+                            <p className="text-caption" style={{ color: '#888', marginBottom: '16px' }}>
+                                Editorial
                             </p>
-                            <h2 style={{ fontSize: '2.2rem', fontWeight: '400', color: '#000' }}>
-                                Últimos Artigos
+                            <h2 className="text-h2" style={{ color: '#000' }}>
+                                Últimos artigos
                             </h2>
                         </div>
                         <div style={{
@@ -590,15 +588,15 @@ export default function Home() {
                                       }}
                                     >
                                         <div>
-                                            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>
+                                            <p className="text-caption" style={{ color: '#888', marginBottom: '24px' }}>
                                                 {post.categoria}
                                             </p>
-                                            <h3 style={{ fontSize: '1.6rem', fontWeight: '400', lineHeight: '1.4', color: 'inherit', marginBottom: '40px' }}>
+                                            <h3 className="text-h3" style={{ color: 'inherit', marginBottom: '40px' }}>
                                                 {post.titulo}
                                             </h3>
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <span style={{ fontSize: '11px', color: '#aaa' }}>{post.data}</span>
+                                            <span className="text-caption" style={{ color: '#aaa' }}>{post.data}</span>
                                             <span style={{
                                               fontSize: '28px',
                                               display: 'inline-block',
@@ -623,18 +621,18 @@ export default function Home() {
                     id="contato"
                 >
                     <div className="noise-overlay absolute inset-0"></div>
-                    <div className="relative z-10 max-w-4xl mx-auto space-y-16">
-                        <h2 className="font-headline text-4xl md:text-7xl text-white leading-tight italic">
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-20">
+                        <h2 className="text-h1 text-white">
                             Se a sua marca pede um novo olhar.
                         </h2>
-                        <div className="flex flex-col items-center space-y-8">
+                        <div className="flex flex-col items-center space-y-10">
                             <Link
-                                className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300"
+                                className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500"
                                 href="/contato"
                             >
-                                ENTRE EM CONTATO
+                                Iniciar uma conversa
                             </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">
+                            <p className="text-caption text-zinc-500">
                                 Menos tentativa. Mais direção.
                             </p>
                         </div>
@@ -651,20 +649,20 @@ export default function Home() {
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
                     </div>
-                    <div className="flex space-x-8 mb-12">
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
+                    <div className="flex space-x-10 mb-16">
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">Instagram</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">LinkedIn</a>
                     </div>
-                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/blog">BLOG</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
+                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/about">Sobre</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/studio">Studio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/portfolio">Portfólio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/blog">Blog</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="font-label text-[9px] text-neutral-700">
-                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                    <div className="text-caption text-neutral-700">
+                        © 2026 House Mazzutti. Todos os direitos reservados.
                     </div>
                 </div>
             </footer>

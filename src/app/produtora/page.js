@@ -178,16 +178,16 @@ export default function ProdutoraPage() {
                             </div>
                             <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                                 <div className="max-w-3xl">
-                                    <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>PRODUTORA</span>
-                                    <h1 className="hero-animate font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                    <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>Produtora — HMZT</span>
+                                    <h1 className="hero-animate text-h1 text-white mb-8" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].titulo}
                                     </h1>
-                                    <p className="hero-animate font-body text-sm md:text-base mb-8 text-white" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                    <p className="hero-animate text-body text-white/80 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].texto}
                                     </p>
                                     <Link href="/contato">
-                                        <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                            INICIAR PROJETO
+                                        <button className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                            Iniciar projeto
                                         </button>
                                     </Link>
                                 </div>
@@ -214,10 +214,10 @@ export default function ProdutoraPage() {
 
                 {/* Section 2: Gallery */}
                 <section className="bg-white pt-24 pb-0 w-full mx-auto">
-                    <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PORTFOLIO PRODUTORA</span>
-                        <h2 className="font-headline text-3xl text-black">Publicidade. Content MKT. Set Design.</h2>
-                        <div className="line-divider mt-6 text-black"></div>
+                    <div className="mb-20 text-center flex flex-col items-center">
+                        <span className="text-caption text-zinc-500 block mb-6">Portfólio Produtora</span>
+                        <h2 className="text-h2 text-black">Publicidade. Content MKT. Set Design.</h2>
+                        <div className="line-divider mt-8 text-black"></div>
                     </div>
                     <div className="columns-gallery-container" style={{ height: '80vh' }}>
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/elyah">
@@ -250,8 +250,8 @@ export default function ProdutoraPage() {
                         </Link>
                     </div>
                     <div className="flex justify-center mt-12">
-                        <Link className="group relative px-10 py-3 border-[0.5px] border-black/30 text-black font-label text-[10px] tracking-[0.2em] uppercase hover:bg-black hover:text-white transition-all duration-300" href="/portfolio-produtora">
-                            Ver Mais
+                        <Link className="group relative px-12 py-4 border-[0.5px] border-black/30 text-black text-button hover:bg-black hover:text-white transition-all duration-500" href="/portfolio-produtora">
+                            Ver todo o portfólio
                         </Link>
                     </div>
                 </section>
@@ -266,26 +266,26 @@ export default function ProdutoraPage() {
                         </div>
                         <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-16">
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                                     <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Estratégia.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Clareza</p>
+                                        <h3 className="text-h3 text-black mb-3">Estratégia.</h3>
+                                        <p className="text-caption text-zinc-500">Clareza</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Narrativa.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Coerência</p>
+                                        <h3 className="text-h3 text-black mb-3">Narrativa.</h3>
+                                        <p className="text-caption text-zinc-500">Coerência</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Execução.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Precisão</p>
+                                        <h3 className="text-h3 text-black mb-3">Execução.</h3>
+                                        <p className="text-caption text-zinc-500">Precisão</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="font-headline text-3xl italic mb-2">Resultado.</h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Consolidação</p>
+                                        <h3 className="text-h3 text-black mb-3">Resultado.</h3>
+                                        <p className="text-caption text-zinc-500">Consolidação</p>
                                     </div>
                                 </div>
-                                <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
-                                    <p className="font-headline text-xl italic leading-snug text-zinc-800">
+                                <div className="max-w-3xl text-left border-t border-zinc-200 pt-10">
+                                    <p className="text-h4 text-zinc-800">
                                         Antes de produzir, estruturamos. Na HMZT Produtora, atuamos na gestão completa de produção audiovisual, campanhas publicitárias, conteúdo estratégico e direção criativa para marcas e equipes de marketing que desafiam o convencional.
                                     </p>
                                 </div>
@@ -298,8 +298,8 @@ export default function ProdutoraPage() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">OTIMIZE OS RESULTADOS DA SUA MARCA</span>
-                                <h2 className="font-headline text-2xl md:text-3xl tracking-tight">Produção executiva e casting artístico para publicidade e marketing de conteúdo.</h2>
+                                <span className="text-caption text-zinc-400 mb-6 block">Otimize os resultados da sua marca</span>
+                                <h2 className="text-h2 text-white">Produção executiva e casting artístico para publicidade e marketing de conteúdo.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -325,19 +325,19 @@ export default function ProdutoraPage() {
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
                                         <div>
-                                            <h3 className="font-headline text-2xl mb-4 group-hover:text-white uppercase">{card.title}</h3>
-                                            <p className="font-body font-light text-sm text-on-surface-variant mb-10 group-hover:text-white/70 italic">{card.subtitle}</p>
+                                            <h3 className="text-h3 mb-6 group-hover:text-white uppercase">{card.title}</h3>
+                                            <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>
                                             <ul className="space-y-4 mb-12">
                                                 {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
+                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
                                                         <span className="material-symbols-outlined text-lg">check</span>
                                                         <span>{item}</span>
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
-                                        <Link href={card.link} className="w-full border border-black py-4 font-label uppercase text-[10px] tracking-widest hover:bg-black hover:text-white transition-all group-hover:border-white group-hover:text-white text-center block">
-                                            SAIBA MAIS
+                                        <Link href={card.link} className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white text-center block">
+                                            Saiba mais
                                         </Link>
                                     </div>
                                 ))}
@@ -350,85 +350,40 @@ export default function ProdutoraPage() {
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
-                        <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            Não é sobre aparecer mais. <span className="not-italic">É sobre aparecer melhor.</span>
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-20">
+                        <h2 className="text-h1 text-white">
+                            Não é sobre aparecer mais. É sobre aparecer melhor.
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
-                            <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Deixa de:</p>
-                                <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Execução sem resultado</span></li>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-16">
+                            <div className="space-y-6">
+                                <p className="text-caption text-zinc-500">Deixa de</p>
+                                <ul className="text-body text-white space-y-3">
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Execução sem resultado</span></li>
                                 </ul>
                             </div>
-                            <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Passa a:</p>
-                                <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Conteúdo com direção</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Imagem que consolida</span></li>
+                            <div className="space-y-6">
+                                <p className="text-caption text-zinc-500">Passa a</p>
+                                <ul className="text-body text-white space-y-3">
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Conteúdo com direção</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Imagem que consolida</span></li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center space-y-8">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                INICIAR CONVERSA AGORA
+                        <div className="flex flex-col items-center space-y-10">
+                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="/contato">
+                                Iniciar uma conversa
                             </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos volume. Mais direção.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                    <div className="max-w-[1400px] mx-auto">
-                        <div className="text-center mb-12">
-                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">Direção, execução e imagem sob a mesma autoria.</h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Angelo Mazzutti portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Ângelo Mazzutti</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Diretor Criativo</p>
-                                </div>
-                            </div>
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Mateus Sacavem portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Mateus Sacavem</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produtor Executivo</p>
-                                </div>
-                            </div>
-                            <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                                <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                    <img alt="Henry Almeida portrait" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="font-headline text-2xl font-medium">Henry Almeida</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Gestor de IA</p>
-                                </div>
-                            </div>
+                            <p className="text-caption text-zinc-500">Menos volume. Mais direção.</p>
                         </div>
                     </div>
                 </section>
 
                 <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <div style={{ marginBottom: '40px' }}>
-                            <p style={{
-                                fontSize: '12px', letterSpacing: '0.2em',
-                                textTransform: 'uppercase', color: '#aaa', marginBottom: '12px'
-                            }}>
-                                BLOG
-                            </p>
-                            <h2 style={{ fontSize: '2.2rem', fontWeight: '400', color: '#000' }}>
-                                Últimos Artigos
-                            </h2>
+                        <div style={{ marginBottom: '64px' }}>
+                            <p className="text-caption" style={{ color: '#888', marginBottom: '16px' }}>Editorial</p>
+                            <h2 className="text-h2" style={{ color: '#000' }}>Últimos artigos</h2>
                         </div>
                         <div style={{
                             display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)',
@@ -444,11 +399,11 @@ export default function ProdutoraPage() {
                                         onMouseEnter={e => { e.currentTarget.style.background = '#000'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.transform = 'translateY(-6px)'; }}
                                         onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#000'; e.currentTarget.style.transform = 'translateY(0)'; }}>
                                         <div>
-                                            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '20px' }}>{post.categoria}</p>
-                                            <h3 style={{ fontSize: '1.6rem', fontWeight: '400', lineHeight: '1.4', color: 'inherit', marginBottom: '40px' }}>{post.titulo}</h3>
+                                            <p className="text-caption" style={{ color: '#888', marginBottom: '24px' }}>{post.categoria}</p>
+                                            <h3 className="text-h3" style={{ color: 'inherit', marginBottom: '40px' }}>{post.titulo}</h3>
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <span style={{ fontSize: '11px', color: '#aaa' }}>{post.data}</span>
+                                            <span className="text-caption" style={{ color: '#aaa' }}>{post.data}</span>
                                             <span style={{ fontSize: '28px', display: 'inline-block', transition: 'transform 0.4s ease' }}>→</span>
                                         </div>
                                     </div>
@@ -462,7 +417,7 @@ export default function ProdutoraPage() {
 
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50">DEPOIMENTOS</span>
+                        <span className="font-body font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40">Depoimentos</span>
                     </div>
                     <div className="absolute left-16 inset-y-0 flex items-center z-20">
                         <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
@@ -481,19 +436,19 @@ export default function ProdutoraPage() {
                         </button>
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="font-raleway uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">O QUE DIZEM</span>
-                            <h2 className="font-headline text-3xl text-white italic tracking-wide">Depoimentos</h2>
+                        <div className="mb-12">
+                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
+                            <h2 className="text-h2 text-white">Depoimentos</h2>
                         </div>
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1">
                                 {testimonials.map((testimonial, i) => (
                                     <div key={i} className={`testimonial-slide ${currentSlide === i ? 'active' : ''}`}>
-                                        <h3 className="font-headline text-2xl md:text-[2.15rem] text-white leading-snug italic max-w-3xl mx-auto">
-                                            "{testimonial.text}"
+                                        <h3 className="text-h3 text-white max-w-3xl mx-auto">
+                                            “{testimonial.text}”
                                         </h3>
-                                        <div className="pt-3">
-                                            <p className="font-raleway uppercase tracking-[0.35em] text-[10px] text-white/80 font-light">{testimonial.author}</p>
+                                        <div className="pt-6">
+                                            <p className="text-caption text-white/80">{testimonial.author}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -515,20 +470,20 @@ export default function ProdutoraPage() {
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
                     </div>
-                    <div className="flex space-x-8 mb-12">
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
+                    <div className="flex space-x-10 mb-16">
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">Instagram</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">LinkedIn</a>
                     </div>
-                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/blog">BLOG</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
+                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/about">Sobre</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/studio">Studio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/portfolio">Portfólio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/blog">Blog</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="font-label text-[9px] text-neutral-700">
-                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                    <div className="text-caption text-neutral-700">
+                        © 2026 House Mazzutti. Todos os direitos reservados.
                     </div>
                 </div>
             </footer>

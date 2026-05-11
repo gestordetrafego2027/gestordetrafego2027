@@ -5,6 +5,7 @@
   src: url('/fonts/fonnts.com-Roc_Grotesk_Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   src: url('/fonts/fonnts.com-Roc_Grotesk_Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -19,6 +21,7 @@
   src: url('/fonts/fonnts.com-Roc_Grotesk_Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -26,6 +29,7 @@
   src: url('/fonts/fonnts.com-Roc_Grotesk_Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 
@@ -40,16 +44,16 @@ html {
 
 
 @theme {
-    /* Mapeamento das variáveis das fontes configuradas */
-    --font-headline: 'RocGrotesk', serif;
+    /* Sistema tipográfico — RockGrotesk única (manual editorial) */
+    --font-headline: 'RocGrotesk', sans-serif;
     --font-body: 'RocGrotesk', sans-serif;
     --font-label: 'RocGrotesk', sans-serif;
 
-    /* Novas fontes da página Sobre (Fallback para sistema se não importadas) */
-    --font-playfair: 'Playfair Display', serif;
-    --font-montserrat: 'Montserrat', sans-serif;
-    --font-worksans: 'Work Sans', sans-serif;
-    --font-notoserif: 'Noto Serif', serif;
+    /* Aliases legados — apontam para RocGrotesk para compatibilidade visual */
+    --font-playfair: 'RocGrotesk', sans-serif;
+    --font-montserrat: 'RocGrotesk', sans-serif;
+    --font-worksans: 'RocGrotesk', sans-serif;
+    --font-notoserif: 'RocGrotesk', sans-serif;
 
     /* Sincronização com tailwind.config.mjs para v4 */
     --color-primary: #000000;
@@ -57,7 +61,7 @@ html {
     --color-background: #f9f9f9;
     --color-secondary: #5f5e5e;
 
-    /* Estilos Luxuosos */
+    /* Raios — luxo minimalista, sem arredondamento exceto pill */
     --radius-default: 0px;
     --radius-lg: 0px;
     --radius-xl: 0px;
@@ -231,35 +235,105 @@ html {
         transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
     }
 
-    * { font-family: 'RocGrotesk', sans-serif; }
     .font-headline { font-family: 'RocGrotesk', sans-serif; font-weight: 700; }
     .font-body { font-family: 'RocGrotesk', sans-serif; font-weight: 400; }
     .font-label { font-family: 'RocGrotesk', sans-serif; font-weight: 500; }
     .font-raleway { font-family: 'RocGrotesk', sans-serif; font-weight: 300; }
     .font-serif { font-family: 'RocGrotesk', sans-serif; font-weight: 700; }
+
+    /* ==========================================================================
+       ESCALA TIPOGRÁFICA EDITORIAL — MANUAL HOUSE MAZZUTTI
+       Pesos disponíveis: 300 (Light) · 400 (Regular) · 500 (Medium) · 700 (Bold)
+       ExtraLight mapeado para Light (300) por restrição de arquivo.
+       ========================================================================== */
+
+    /* H1 — HERO / STATEMENT — monumental, editorial, dominante */
+    .text-h1 {
+        font-family: 'RocGrotesk', sans-serif;
+        font-weight: 700;
+        font-size: clamp(2.625rem, 6vw + 0.5rem, 6.875rem); /* 42px → 110px */
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+    }
+
+    /* H2 — SEÇÕES PRINCIPAIS — clean, fashion, premium */
+    .text-h2 {
+        font-family: 'RocGrotesk', sans-serif;
+        font-weight: 400;
+        font-size: clamp(1.75rem, 3vw + 0.5rem, 4rem); /* 28px → 64px */
+        line-height: 1.04;
+        letter-spacing: -0.03em;
+    }
+
+    /* H3 — SUBSEÇÕES — leve, elegante, refinada */
+    .text-h3 {
+        font-family: 'RocGrotesk', sans-serif;
+        font-weight: 300;
+        font-size: clamp(1.375rem, 1.5vw + 0.75rem, 2.5rem); /* 22px → 40px */
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+    }
+
+    /* H4 — APOIO EDITORIAL — minimalista, respirada (ExtraLight → Light) */
+    .text-h4 {
+        font-family: 'RocGrotesk', sans-serif;
+        font-weight: 300;
+        font-size: clamp(1.125rem, 0.6vw + 1rem, 1.75rem); /* 18px → 28px */
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+    }
+
+    /* BODY — leitura editorial confortável */
+    .text-body {
+        font-family: 'RocGrotesk', sans-serif;
+        font-weight: 300;
+        font-size: clamp(0.9375rem, 0.2vw + 0.875rem, 1.125rem); /* 15px → 18px */
+        line-height: 1.75;
+        letter-spacing: 0;
+    }
+
+    /* CAPTION — labels, categorias, microtextos */
+    .text-caption {
+        font-family: 'RocGrotesk', sans-serif;
+        font-weight: 400;
+        font-size: 0.75rem; /* 12px */
+        line-height: 1.4;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+    }
+
+    /* BUTTON — refinado, premium, espaçado */
+    .text-button {
+        font-family: 'RocGrotesk', sans-serif;
+        font-weight: 400;
+        font-size: 0.8125rem; /* 13px */
+        line-height: 1;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    /* MENU / HEADER — leve, silencioso, sofisticado */
+    .text-menu {
+        font-family: 'RocGrotesk', sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem; /* 14px */
+        line-height: 1;
+        letter-spacing: 0.08em;
+    }
+
+    /* Largura editorial confortável para blocos de leitura */
+    .measure-editorial { max-width: 60ch; }
+    .measure-tight { max-width: 48ch; }
 }
 
-/* THEME SCOPING FOR ABOUT PAGE */
+/* THEME SCOPING FOR ABOUT PAGE — tipografia unificada com RocGrotesk */
 .page-about {
-    --font-headline: var(--font-playfair), serif;
-    --font-body: var(--font-montserrat), sans-serif;
-    --font-label: var(--font-worksans), sans-serif;
-    
-    /* Color overrides for About */
-    --color-on-tertiary-container: #ee4546;
-    --color-on-tertiary-fixed-variant: #930015;
-    --color-on-tertiary-fixed: #410004;
-    --color-tertiary-container: #410004;
     --color-custom-grey: #1a1a1a;
     --color-custom-light: #f5f5f5;
 }
 
-/* THEME SCOPING FOR PORTFOLIO PAGE */
+/* THEME SCOPING FOR PORTFOLIO PAGE — tipografia unificada com RocGrotesk */
 .page-portfolio {
-    --font-headline: var(--font-notoserif), serif;
-    --font-body: var(--font-inter), sans-serif;
-    --font-label: var(--font-inter), sans-serif;
-
     background-color: #ffffff;
     overflow: hidden;
     height: 100vh;
@@ -419,11 +493,9 @@ html {
 .hm-house {
     font-family: 'RocGrotesk', sans-serif !important;
     font-weight: 400 !important; /* Regular */
-    font-stretch: condensed;
 }
 
 .hm-mazzutti {
     font-family: 'RocGrotesk', sans-serif !important;
     font-weight: 700 !important; /* Bold */
-    font-stretch: condensed;
 }

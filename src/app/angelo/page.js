@@ -76,15 +76,15 @@ export default function AngeloPage() {
             <main>
                 {/* 1. Bloco 1 (hero - manter) */}
                 <section className="min-h-[calc(100vh+20px)] flex flex-col md:flex-row items-stretch" style={{ backgroundColor: "#ffffff", borderBottom: '0.5px solid #e0e0e0' }}>
-                    <div className="w-full md:w-1/2 flex flex-col justify-center px-12 py-32 space-y-8 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
-                        <span className="font-label text-xs text-black">ANGELO MAZZUTTI</span>
-                        <h2 className="text-4xl md:text-6xl font-headline leading-tight text-black">
+                    <div className="w-full md:w-1/2 flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
+                        <span className="text-caption text-black/70">Angelo Mazzutti</span>
+                        <h2 className="text-h1 text-black">
                             Nenhuma marca se constrói só com estética. Constrói-se com leitura e consistência.
                         </h2>
-                        <p className="text-lg md:text-xl italic text-black leading-relaxed font-body">
+                        <p className="text-body text-black/80 measure-editorial">
                             Diretor criativo à frente da House Mazzutti. Formado em publicidade e com 15 anos no audiovisual. Direção criativa para Larissa Manoela, família Abravanel e marcas premium de moda, beleza e lifestyle. Une o olhar de quem pensa marca ao domínio de quem dirige cena.
                         </p>
-                        <p className="text-lg font-raleway italic text-black">
+                        <p className="text-caption text-black">
                             — Angelo Mazzutti
                         </p>
                     </div>
@@ -100,23 +100,23 @@ export default function AngeloPage() {
                 {/* 2. O que era bloco 6 (Nada começa na execução) */}
                 <section className="bg-black text-white py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-[20vw] uppercase select-none ghost-text font-headline">MÉTODO</span>
+                        <span className="text-[20vw] select-none ghost-text font-headline tracking-[-0.05em] font-bold">Método</span>
                     </div>
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-4xl md:text-5xl text-center mb-32 max-w-2xl mx-auto leading-tight font-headline">
+                        <h2 className="text-h2 text-center mb-32 max-w-3xl mx-auto text-white">
                             Nada começa na execução. Tudo começa no entendimento.
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             {[
-                                { num: "01 / CONTEXTO", bold: "Contexto.", desc: "Sem leitura do momento e do público, qualquer estética vira ruído. Presença começa em escuta." },
-                                { num: "02 / DIREÇÃO", bold: "Direção.", desc: "Não executando. Direcionando. Defino o que a marca é, o que precisa comunicar e como deve ser percebida." },
-                                { num: "03 / CONSISTÊNCIA", bold: "Consistência.", desc: "Não busco impacto imediato. Busco continuidade. Não busco volume. Busco valor." },
+                                { num: "01 / Contexto", bold: "Contexto.", desc: "Sem leitura do momento e do público, qualquer estética vira ruído. Presença começa em escuta." },
+                                { num: "02 / Direção", bold: "Direção.", desc: "Não executando. Direcionando. Defino o que a marca é, o que precisa comunicar e como deve ser percebida." },
+                                { num: "03 / Consistência", bold: "Consistência.", desc: "Não busco impacto imediato. Busco continuidade. Não busco volume. Busco valor." },
                             ].map((item, i) => (
                                 <div key={i} className="space-y-6">
-                                    <span className="font-label text-xs text-neutral-100 block">{item.num}</span>
+                                    <span className="text-caption text-neutral-300 block">{item.num}</span>
                                     <div className="h-px bg-neutral-800 w-full"></div>
-                                    <p className="text-xs text-neutral-400 leading-relaxed uppercase tracking-widest font-bold mb-2 font-label">{item.bold}</p>
-                                    <p className="text-xs text-neutral-400 leading-relaxed font-body">{item.desc}</p>
+                                    <h3 className="text-h3 text-white">{item.bold}</h3>
+                                    <p className="text-body text-neutral-400">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -126,16 +126,16 @@ export default function AngeloPage() {
                 {/* 3. O que era bloco 4 (TRAJETÓRIA - Ao longo dos anos...) */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
                     <div className="w-full md:w-1/2 bg-[#d4c4c4] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-8">
-                            <span className="font-label text-xs text-neutral-400">TRAJETÓRIA</span>
-                            <h2 className="text-4xl md:text-5xl font-headline leading-tight">
-                                Ao longo dos anos, desenvolvi uma forma de leitura que conecta negócio, comportamento, imagem e presença.
+                        <div className="max-w-lg space-y-10">
+                            <span className="text-caption text-neutral-600">Trajetória</span>
+                            <h2 className="text-h2 text-black">
+                                Ao longo dos anos, desenvolvi uma leitura que conecta negócio, comportamento, imagem e presença.
                             </h2>
-                            <div className="space-y-6 text-neutral-600 leading-relaxed font-body">
-                                <p>Não como áreas separadas. Mas como sistema. A maioria das marcas hoje não precisa de mais produção. Precisa parar e se estruturar.</p>
+                            <div className="space-y-5 text-body text-neutral-700">
+                                <p>Não como áreas separadas — mas como sistema. A maioria das marcas hoje não precisa de mais produção. Precisa parar e se estruturar.</p>
                                 <p>Porque sem clareza: a comunicação força, a imagem confunde, a presença não sustenta.</p>
                             </div>
-                            <div className="pt-8 italic text-3xl opacity-80 font-headline">Angelo Mazzutti</div>
+                            <div className="pt-6 text-h3 text-black/80">Angelo Mazzutti</div>
                         </div>
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
@@ -152,10 +152,10 @@ export default function AngeloPage() {
                 <section className="bg-white py-32 px-12 md:px-24">
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
                         <div className="md:w-1/3">
-                            <span className="font-label text-xs text-neutral-500 mb-4 block">SERVIÇOS</span>
-                            <h2 className="text-4xl tracking-tight font-headline">Visão integrada e de longo prazo.</h2>
+                            <span className="text-caption text-neutral-500 mb-6 block">Serviços</span>
+                            <h2 className="text-h2 text-black">Visão integrada e de longo prazo.</h2>
                         </div>
-                        <div className="md:w-2/3 space-y-12">
+                        <div className="md:w-2/3 space-y-10">
                             {[
                                 { title: "Campanha de Lançamento", desc: "Conceito e execução integrados para impactar com clareza.", num: "01" },
                                 { title: "Branding Project", desc: "Construção de identidade e presença de marca.", num: "02" },
@@ -164,10 +164,10 @@ export default function AngeloPage() {
                             ].map((item, i) => (
                                 <div key={i} className="group border-b border-neutral-200 pb-8 flex justify-between items-end hover:border-black transition-colors cursor-default">
                                     <div>
-                                        <h4 className="text-2xl mb-2 font-headline">{item.title}</h4>
-                                        <p className="text-neutral-500 font-light font-body">{item.desc}</p>
+                                        <h4 className="text-h3 text-black mb-2">{item.title}</h4>
+                                        <p className="text-body text-neutral-500">{item.desc}</p>
                                     </div>
-                                    <span className="font-label text-[10px] text-neutral-400">{item.num}</span>
+                                    <span className="text-caption text-neutral-400">{item.num}</span>
                                 </div>
                             ))}
                         </div>
@@ -177,24 +177,24 @@ export default function AngeloPage() {
                 {/* 5. O que era bloco 3 (ESTRUTURA - A House Mazzutti atua em três frentes) */}
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[600px] py-[131px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50" style={{ color: "transparent", WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}>ESTRUTURA</span>
+                        <span className="font-bold text-[18vw] tracking-[-0.05em] leading-none translate-y-[40%] opacity-50" style={{ color: "transparent", WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}>Estrutura</span>
                     </div>
                     <div className="relative z-10 max-w-6xl mx-auto w-full">
-                        <div className="text-center mb-16">
-                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1">ESTRUTURA</span>
-                            <h2 className="text-4xl text-white italic tracking-wide font-headline">
+                        <div className="text-center mb-20">
+                            <span className="text-caption text-zinc-500 block mb-6">Estrutura</span>
+                            <h2 className="text-h2 text-white">
                                 A House Mazzutti atua em três frentes complementares.
                             </h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
                                 { title: "Agência", desc: "Direção e criação para lançamentos e branding." },
                                 { title: "Studio", desc: "Construção e direção de imagem pessoal e profissional." },
                                 { title: "Produtora", desc: "Execução visual de alta qualidade para todos os formatos." },
                             ].map((card, i) => (
-                                <div key={i} className="text-center p-8 border border-white/10 bg-white/5 backdrop-blur-sm">
-                                    <h3 className="text-3xl text-white mb-4 font-headline">{card.title}</h3>
-                                    <p className="text-white/70 font-light font-body">{card.desc}</p>
+                                <div key={i} className="text-center p-12 border border-white/10 bg-white/5 backdrop-blur-sm">
+                                    <h3 className="text-h3 text-white mb-6">{card.title}</h3>
+                                    <p className="text-body text-white/70">{card.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -203,39 +203,39 @@ export default function AngeloPage() {
 
                 {/* 6. O que era bloco 8 (Se você busca direção...) */}
                 <section className="bg-[#eeeeee] py-32 px-12 md:px-24">
-                    <div className="max-w-4xl mx-auto text-center space-y-12">
-                        <h2 className="text-4xl md:text-5xl italic font-headline">
+                    <div className="max-w-4xl mx-auto text-center space-y-16">
+                        <h2 className="text-h1 text-black">
                             Se você busca direção — não apenas execução — estamos alinhados.
                         </h2>
                         <div className="grid md:grid-cols-2 gap-12 text-left pt-8">
                             <div className="space-y-6">
-                                <h4 className="font-label text-xs tracking-widest text-neutral-400">VOCÊ DEIXA DE:</h4>
-                                <ul className="space-y-4 font-light text-neutral-600 font-body">
+                                <h4 className="text-caption text-neutral-500">Você deixa de</h4>
+                                <ul className="space-y-4 text-body text-neutral-700">
                                     {["Parecer mais do mesmo", "Atrair desalinhado", "Depender de esforço constante"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
-                                            <span className="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                                            <span className="w-3 h-[1px] bg-neutral-400"></span>
                                             {item}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                             <div className="space-y-6">
-                                <h4 className="font-label text-xs tracking-widest text-neutral-400">PASSA A:</h4>
-                                <ul className="space-y-4 font-light text-neutral-600 font-body">
+                                <h4 className="text-caption text-neutral-500">Passa a</h4>
+                                <ul className="space-y-4 text-body text-neutral-700">
                                     {["Ter clareza", "Construir percepção", "Sustentar valor"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
-                                            <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
+                                            <span className="w-3 h-[1px] bg-black"></span>
                                             {item}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         </div>
-                        <div className="pt-12 flex flex-col items-center space-y-6">
-                            <Link href="/contato" className="px-12 py-5 bg-black text-white font-label text-xs tracking-[0.3em] uppercase hover:bg-neutral-800 transition-colors">
-                                QUERO RECONSTRUIR MINHA MARCA
+                        <div className="pt-8 flex flex-col items-center space-y-8">
+                            <Link href="/contato" className="px-16 py-6 bg-black text-white text-button hover:bg-neutral-800 transition-all duration-500">
+                                Reconstruir minha marca
                             </Link>
-                            <p className="italic text-neutral-500 font-raleway">
+                            <p className="text-caption text-neutral-500">
                                 Não é sobre aparecer mais. É sobre não precisar insistir.
                             </p>
                         </div>
@@ -245,7 +245,7 @@ export default function AngeloPage() {
                 {/* 7. Seção de depoimentos */}
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[480px] max-h-[480px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-black text-[18vw] uppercase tracking-[0.1em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-50 font-headline">DEPOIMENTOS</span>
+                        <span className="font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40 font-headline">Depoimentos</span>
                     </div>
                     
                     {/* Navigation */}
@@ -268,21 +268,21 @@ export default function AngeloPage() {
 
                     {/* Slides */}
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-4">
-                            <span className="uppercase tracking-[0.4em] text-[10px] text-zinc-500 block mb-1 font-label">O QUE DIZEM</span>
-                            <h2 className="text-3xl text-white italic tracking-wide font-headline">Depoimentos</h2>
+                        <div className="mb-12">
+                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
+                            <h2 className="text-h2 text-white">Depoimentos</h2>
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1" style={{height: '200px', display: 'flex', alignItems: 'center'}}>
+                            <div className="relative w-full overflow-hidden mb-1" style={{height: '220px', display: 'flex', alignItems: 'center'}}>
                                 {testimonials.map((t, i) => (
                                     <div key={i} className={`testimonial-slide flex flex-col justify-center ${currentSlide === i ? "active" : ""}`}>
-                                        <h3 className="text-lg text-white leading-snug italic max-w-3xl mx-auto font-body">
-                                            "{t.text}"
+                                        <h3 className="text-h3 text-white max-w-3xl mx-auto">
+                                            “{t.text}”
                                         </h3>
                                         {t.author && (
-                                            <div className="pt-3">
-                                                <p className="uppercase tracking-[0.35em] text-[10px] text-white/80 font-light font-label">{t.author}</p>
+                                            <div className="pt-6">
+                                                <p className="text-caption text-white/80">{t.author}</p>
                                             </div>
                                         )}
                                     </div>
@@ -308,13 +308,13 @@ export default function AngeloPage() {
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato-final" style={{minHeight: 'auto', paddingTop: '80px', paddingBottom: '80px'}}>
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-16">
-                        <h2 className="text-4xl md:text-6xl text-white leading-tight italic font-headline">
+                    <div className="relative z-10 max-w-5xl mx-auto space-y-20">
+                        <h2 className="text-h1 text-white">
                             Da ideia à imagem. Sob a mesma direção.
                         </h2>
-                        <div className="flex flex-col items-center space-y-8">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px]" href="/contato">
-                                ENTRE EM CONTATO AGORA
+                        <div className="flex flex-col items-center space-y-10">
+                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="/contato">
+                                Iniciar uma conversa
                             </Link>
                         </div>
                     </div>
@@ -324,20 +324,25 @@ export default function AngeloPage() {
             {/* FOOTER */}
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-3xl text-neutral-50 mb-12 font-headline">House Mazzutti</div>
-                    <div className="flex space-x-8 mb-12">
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
+                    <div className="mb-16">
+                        <span className="hm-logo" style={{fontSize: '32px', color: '#fafafa'}}>
+                            <span className="hm-house">House</span>
+                            <span className="hm-mazzutti">Mazzutti</span>
+                        </span>
                     </div>
-                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/studio">STUDIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/portfolio">PORTFÓLIO</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/about">SOBRE</Link>
-                        <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
+                    <div className="flex space-x-10 mb-16">
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">Instagram</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">LinkedIn</a>
+                    </div>
+                    <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/studio">Studio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/portfolio">Portfólio</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/about">Sobre</Link>
+                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="font-label text-[9px] text-neutral-700">
-                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                    <div className="text-caption text-neutral-700">
+                        © 2026 House Mazzutti. Todos os direitos reservados.
                     </div>
                 </div>
             </footer>
