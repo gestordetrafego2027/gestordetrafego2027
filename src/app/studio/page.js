@@ -17,16 +17,16 @@ export default function StudioPage() {
 
     const testimonials = [
         {
-            text: "Cheguei pedindo um book. Saí com uma direção de marca pessoal. A imagem deixou de aparecer e começou a sustentar o meu posicionamento.",
-            author: "TALITA D. — TALENTO & MARCA PESSOAL"
+            text: "Cheguei querendo um book. Saí com uma nova forma de me apresentar. A imagem deixou de só aparecer — passou a sustentar quem eu sou.",
+            author: "TALITA D."
         },
         {
-            text: "O Studio entende que a foto é a ponta de uma decisão estratégica. Cada frame foi pensado para reforçar quem eu sou no mercado.",
-            author: "PATRICIA M. — EXECUTIVA"
+            text: "Cada frame foi pensado. Cada gesto, direcionado. Vi minha presença ganhar peso pela primeira vez.",
+            author: "PATRICIA M."
         },
         {
-            text: "Sigilo absoluto, direção firme em set e acabamento de revista. Saí com material editorial — não com um pacote de fotos.",
-            author: "ANA R. — CLIENTE PRIVADA"
+            text: "Discrição total, direção firme em set e acabamento de revista. Saí com material editorial — não com um pacote de fotos.",
+            author: "ANA R."
         }
     ]
 
@@ -209,9 +209,9 @@ export default function StudioPage() {
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     {(() => {
                         const heroSlides = [
-                            { titulo: 'Retrato e marca pessoal. Direção de pessoas.', texto: 'Books, ensaios e retratos com tratamento editorial premium para quem é a própria marca.' },
-                            { titulo: 'Sua imagem é um ativo de mercado.', texto: 'Cada produção nasce de uma decisão estratégica — e termina em material de campanha global.' },
-                            { titulo: 'Editorial. Autoral. Sob curadoria.', texto: 'Direção criativa em set, sigilo absoluto e acabamento revisado pixel a pixel antes da entrega.' },
+                            { titulo: 'Direção de imagem com arte e narrativa.', texto: 'Aqui potencializamos sua imagem e registramos os momentos mais marcantes da sua trajetória.' },
+                            { titulo: 'Imagem construída com intenção.', texto: 'Cada produção começa com uma escuta — e termina em imagens que sustentam sua presença.' },
+                            { titulo: 'Books, ensaios e coberturas.', texto: 'Do conceito à entrega, cada detalhe pensado para comunicar com clareza e elegância.' },
                         ];
                         return <>
                             <div className="absolute inset-0 z-0">
@@ -260,7 +260,7 @@ export default function StudioPage() {
                 <section className="bg-white pt-24 pb-0 w-full mx-auto">
                     <div className="mb-12 text-center flex flex-col items-center">
                         <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PORTFOLIO</span>
-                        <h2 className="font-headline text-3xl text-black">Retrato. Marca pessoal. Editorial.</h2>
+                        <h2 className="font-headline text-3xl text-black">Books. Ensaios. Coberturas.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
                     <div className="relative w-full group overflow-hidden" style={{ height: '80vh' }}>
@@ -375,10 +375,10 @@ export default function StudioPage() {
                                 </div>
                                 <div className="max-w-3xl text-left border-t border-zinc-200 pt-8">
                                     <p className="font-headline text-xl italic leading-relaxed text-zinc-800">
-                                        Antes de qualquer imagem, existe uma decisão de mercado:<br />
-                                        — Que percepção precisa ser construída<br />
-                                        — Que posicionamento deve ser reforçado<br />
-                                        — Que linguagem visual sustenta isso.
+                                        Antes de qualquer produção, definimos:<br />
+                                        — qual percepção precisa ser construída<br />
+                                        — qual presença deve ser reforçada<br />
+                                        — qual linguagem visual sustenta isso.
                                     </p>
                                 </div>
                             </div>
@@ -388,41 +388,41 @@ export default function StudioPage() {
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center">
                         <div className="mb-20">
-                            <h2 className="font-headline text-5xl text-black mb-4">A maioria começa na captação.</h2>
-                            <p className="font-label uppercase tracking-[0.3em] text-[12px] text-zinc-400 block">Começamos na estratégia.</p>
+                            <h2 className="font-headline text-5xl text-black mb-4">A maioria começa na produção.</h2>
+                            <p className="font-label uppercase tracking-[0.3em] text-[12px] text-zinc-400 block">Nós começamos no entendimento.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="architecture">architecture</span>
-                                <h3 className="font-headline text-2xl uppercase tracking-wider">FASE /01 — STRATEGY</h3>
+                                <h3 className="font-headline text-2xl uppercase tracking-wider">PRÉ-PRODUÇÃO</h3>
                                 <div className="text-secondary leading-relaxed font-light text-base max-w-xs space-y-2">
-                                    <p>— Briefing estratégico de perfil</p>
-                                    <p>— Leitura de marca pessoal</p>
-                                    <p>— Conceito e moodboard de direção</p>
-                                    <p>— Treatment de imagem</p>
-                                    <p>— Roteiro de cena e poses</p>
+                                    <p>— Reunião de briefing</p>
+                                    <p>— Análise de perfil</p>
+                                    <p>— Conceito e staff</p>
+                                    <p>— Mood board</p>
+                                    <p>— Manual de poses</p>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="design_services">design_services</span>
-                                <h3 className="font-headline text-2xl uppercase tracking-wider">FASE /02 — DIREÇÃO DE CENA</h3>
+                                <h3 className="font-headline text-2xl uppercase tracking-wider">EXECUÇÃO</h3>
                                 <div className="text-secondary leading-relaxed font-light text-base max-w-xs space-y-2">
-                                    <p>— Captação em alta resolução</p>
-                                    <p>— Iluminação cinematográfica</p>
-                                    <p>— Locação e cenografia autoral</p>
-                                    <p>— Direção criativa em set</p>
-                                    <p>— Equipe core curada por projeto</p>
+                                    <p>— Call sheet e preparação</p>
+                                    <p>— Roteiros visuais e trilhas</p>
+                                    <p>— Locações e cenografia</p>
+                                    <p>— Direção de cena e poses</p>
+                                    <p>— Equipe multi artística</p>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-6">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="brush">brush</span>
-                                <h3 className="font-headline text-2xl uppercase tracking-wider">FASE /03 — FINE ART EDITING</h3>
+                                <h3 className="font-headline text-2xl uppercase tracking-wider">PÓS-PRODUÇÃO</h3>
                                 <div className="text-secondary leading-relaxed font-light text-base max-w-xs space-y-2">
-                                    <p>— Tratamento artesanal de imagem</p>
-                                    <p>— Acabamento de campanha global</p>
-                                    <p>— Revisão pixel a pixel</p>
-                                    <p>— Entrega em nuvem privada</p>
-                                    <p>— Sigilo e curadoria de uso</p>
+                                    <p>— Aprovação e escolha</p>
+                                    <p>— Edições finais</p>
+                                    <p>— Ajustes de fechamento</p>
+                                    <p>— Arquivos em nuvem privada</p>
+                                    <p>— Personalização e sigilo</p>
                                 </div>
                             </div>
                         </div>
@@ -431,8 +431,8 @@ export default function StudioPage() {
                 <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1400px] mx-auto">
                         <div className="text-center mb-12">
-                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">LIDERANÇA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia, criação e operação sob a mesma autoria.</h2>
+                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM PROJETA</span>
+                            <h2 className="font-headline text-3xl md:text-4xl text-black">A equipe por trás da forma.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
                             <div className="space-y-8 flex flex-col items-center text-center mb-12">
@@ -447,7 +447,7 @@ export default function StudioPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <p className="font-headline text-2xl font-medium">Ângelo Mazzutti</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Head of Creative & Brand Strategy</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Diretor Criativo</p>
                                 </div>
                             </div>
                             <div className="space-y-8 flex flex-col items-center text-center mb-12">
@@ -462,7 +462,7 @@ export default function StudioPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <p className="font-headline text-2xl font-medium">Mateus Sacavem</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Head of Production & Operations</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produtor Executivo</p>
                                 </div>
                             </div>
                             <div className="space-y-8 flex flex-col items-center text-center mb-12">
@@ -629,29 +629,29 @@ export default function StudioPage() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">FORMATOS</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Três entregas. Uma só direção autoral.</h2>
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">ESCOLHA SEU NÍVEL</span>
+                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Escolha o nível ideal para o seu momento.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        title: "BOOK EDITORIAL",
+                                        title: "BOOK",
                                         link: "/studio/book",
-                                        subtitle: 'Para talentos e profissionais que se vendem pela imagem.',
-                                        items: ["Book editorial completo", "Direção de imagem autoral", "Treatment de marca pessoal", "Entrega de campanha"]
+                                        subtitle: 'Onde a imagem é construída com intenção.',
+                                        items: ["Book profissional", "Direção de imagem", "Ensaio editorial", "Entrega high-end"]
                                     },
                                     {
-                                        title: "ENSAIO PESSOAL",
+                                        title: "ENSAIO",
                                         link: "/studio/ensaio",
-                                        subtitle: 'Para quem é a própria marca — autoridade traduzida em retrato.',
-                                        items: ["Ensaio autoral", "Direção de presença", "Posicionamento visual", "Acabamento fine art"]
+                                        subtitle: 'Onde a presença ganha forma e elegância.',
+                                        items: ["Ensaio pessoal", "Direção de imagem", "Linguagem visual", "Entrega premium"]
                                     },
                                     {
-                                        title: "COBERTURA PRIVADA",
+                                        title: "COBERTURA",
                                         link: "/studio/cobertura",
-                                        subtitle: 'Documento visual de momentos que sustentam reputação.',
-                                        items: ["Acompanhamento dedicado", "Captação editorial", "Curadoria de uso", "Sigilo absoluto"]
+                                        subtitle: 'Onde sua agenda vira narrativa visual.',
+                                        items: ["Acompanhamento real", "Captação dedicada", "Direção de presença", "Entrega premium"]
                                     }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
@@ -683,29 +683,29 @@ export default function StudioPage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510312305653-8ed496efbe75?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            Sua imagem deixa de apenas aparecer — <span className="not-italic">e passa a sustentar o que você representa no mercado.</span>
+                            Sua imagem deixa de apenas aparecer — <span className="not-italic">e passa a ser vista e lembrada com clareza.</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
                             <div className="space-y-4">
                                 <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Deixa de:</p>
                                 <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Imagem genérica e sem direção</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Captação sem decisão estratégica</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Imagem genérica</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
                                 </ul>
                             </div>
                             <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Passa a ter:</p>
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Passa a:</p>
                                 <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Marca pessoal consistente</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Imagem como ativo de mercado</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Consistência visual</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Mais valor percebido</span></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-8">
                             <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                INICIAR CONVERSA
+                                INICIAR CONVERSA AGORA
                             </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Atendimento sob curadoria · Sigilo absoluto</p>
+                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos tentativa. Mais direção.</p>
                         </div>
                     </div>
                 </section>

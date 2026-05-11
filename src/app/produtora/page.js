@@ -13,16 +13,16 @@ export default function ProdutoraPage() {
 
     const testimonials = [
         {
-            text: "Filme de campanha com padrão internacional, conduzido pela mesma direção que assinou o conceito. O briefing virou material editorial sem nenhum ruído de tradução.",
-            author: "JULIANA T. — DIRETORA DE MARCA"
+            text: "Filme com padrão internacional, conduzido pela mesma direção que assinou o conceito. O briefing virou material editorial sem ruído.",
+            author: "JULIANA T."
         },
         {
-            text: "Lookbook, fashion film e brand content nasceram da mesma cabeça. O resultado é uma narrativa coerente — não três entregáveis desconectados.",
-            author: "RAFAEL S. — HEAD DE MODA"
+            text: "Lookbook, filme e conteúdo nasceram da mesma cabeça. Uma narrativa coerente — não três entregas desconectadas.",
+            author: "RAFAEL S."
         },
         {
-            text: "O diretor estava em set em cada decisão crítica. Saímos com filme que sustenta uma temporada inteira de comunicação.",
-            author: "CARLA M. — CEO"
+            text: "O diretor estava em set em cada decisão. Saímos com filme que sustenta uma temporada inteira.",
+            author: "CARLA M."
         }
     ]
 
@@ -163,9 +163,9 @@ export default function ProdutoraPage() {
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     {(() => {
                         const heroSlides = [
-                            { titulo: 'Fashion & commercial direction.', texto: 'Campanhas, fashion films e brand content com padrão internacional. Da concepção ao master final.' },
-                            { titulo: 'Diretor criativo presente em set.', texto: 'Decisões em tempo real, sem retrabalho. Cada frame nasce sob supervisão direta — não é repassado entre equipes.' },
-                            { titulo: 'Acabamento de campanha global.', texto: 'Tratamento artesanal, edição dinâmica e revisão pixel a pixel antes da entrega. Padrão de revista internacional.' },
+                            { titulo: 'Produção e direção para publicidade.', texto: 'Produção audiovisual, campanhas e conteúdo com direção criativa cuidadosa.' },
+                            { titulo: 'Campanhas que comunicam com clareza.', texto: 'Da pré-produção à entrega final, cada detalhe pensado para gerar resultado real.' },
+                            { titulo: 'Sets, editoriais e conteúdo com direção.', texto: 'Unimos execução técnica e visão criativa para marcas que querem aparecer com verdade.' },
                         ];
                         return <>
                             <div className="absolute inset-0 z-0">
@@ -215,8 +215,8 @@ export default function ProdutoraPage() {
                 {/* Section 2: Gallery */}
                 <section className="bg-white pt-24 pb-0 w-full mx-auto">
                     <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PORTFÓLIO PRODUTORA</span>
-                        <h2 className="font-headline text-3xl text-black">Campanha. Fashion film. Brand content.</h2>
+                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">PORTFOLIO PRODUTORA</span>
+                        <h2 className="font-headline text-3xl text-black">Publicidade. Content MKT. Set Design.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
                     <div className="columns-gallery-container" style={{ height: '80vh' }}>
@@ -298,29 +298,29 @@ export default function ProdutoraPage() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">FORMATOS DA PRODUTORA</span>
-                                <h2 className="font-headline text-4xl md:text-5xl tracking-tight">Três formatos. Uma só direção autoral.</h2>
+                                <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block">OTIMIZE OS RESULTADOS DA SUA MARCA</span>
+                                <h2 className="font-headline text-2xl md:text-3xl tracking-tight">Produção executiva e casting artístico para publicidade e marketing de conteúdo.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        title: "FASHION FILM",
+                                        title: "EDITORIAL DE MODA",
                                         link: "/produtora/moda",
-                                        subtitle: 'Direção autoral para coleções, lookbooks e narrativas de moda.',
-                                        items: ["Direção de campanha", "Lookbook editorial", "Fashion film", "Captação editorial"]
+                                        subtitle: 'Onde a direção ganha forma e presença.',
+                                        items: ["Lookbook", "Campanha conceito", "Projeto audiovisual"]
                                     },
                                     {
-                                        title: "FILME PUBLICITÁRIO",
+                                        title: "CAMPANHA PUBLICITÁRIA",
                                         link: "/produtora/publicidade",
-                                        subtitle: 'Campanhas com padrão internacional — do roteiro ao master.',
-                                        items: ["Direção criativa em set", "Produção executiva completa", "Casting artístico", "Pós & finalização"]
+                                        subtitle: 'Onde execução e cuidado se conectam.',
+                                        items: ["Direção criativa", "Produção executiva", "Casting artístico"]
                                     },
                                     {
-                                        title: "BRAND CONTENT",
+                                        title: "CONTEÚDO",
                                         link: "/produtora/institucional",
-                                        subtitle: 'Conteúdo institucional e narrativo para canais digitais.',
-                                        items: ["Filme institucional", "Storytelling de marca", "Conteúdo serializado", "Cobertura editorial"]
+                                        subtitle: 'Onde a empresa ganha presença e clareza.',
+                                        items: ["Eventos", "Educacionais", "Storytelling"]
                                     }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
@@ -352,29 +352,29 @@ export default function ProdutoraPage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-6xl text-white leading-tight italic">
-                            Não é sobre produzir mais. <span className="not-italic">É sobre produzir com direção.</span>
+                            Não é sobre aparecer mais. <span className="not-italic">É sobre aparecer melhor.</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-12">
                             <div className="space-y-4">
                                 <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Deixa de:</p>
                                 <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Produção sem decisão estratégica</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Handoffs que diluem a visão</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white/40"></span> <span>Execução sem resultado</span></li>
                                 </ul>
                             </div>
                             <div className="space-y-4">
-                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Passa a ter:</p>
+                                <p className="font-label uppercase tracking-widest text-[10px] text-zinc-500">Passa a:</p>
                                 <ul className="text-white space-y-2 font-light">
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Filme com padrão internacional</span></li>
-                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Direção autoral do briefing ao master</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Conteúdo com direção</span></li>
+                                    <li className="flex items-center space-x-2"><span className="w-1 h-[1px] bg-white"></span> <span>Imagem que consolida</span></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-8">
                             <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                INICIAR CONVERSA
+                                INICIAR CONVERSA AGORA
                             </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">São Paulo / Global · Atendimento sob curadoria</p>
+                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos volume. Mais direção.</p>
                         </div>
                     </div>
                 </section>
@@ -382,8 +382,8 @@ export default function ProdutoraPage() {
                 <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1400px] mx-auto">
                         <div className="text-center mb-12">
-                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">LIDERANÇA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">A mesma autoria do briefing ao master.</h2>
+                            <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
+                            <h2 className="font-headline text-3xl md:text-4xl text-black">Direção, execução e imagem sob a mesma autoria.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
                             <div className="space-y-8 flex flex-col items-center text-center mb-12">
@@ -392,7 +392,7 @@ export default function ProdutoraPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <p className="font-headline text-2xl font-medium">Ângelo Mazzutti</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Head of Creative & Brand Strategy</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Diretor Criativo</p>
                                 </div>
                             </div>
                             <div className="space-y-8 flex flex-col items-center text-center mb-12">
@@ -401,7 +401,7 @@ export default function ProdutoraPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <p className="font-headline text-2xl font-medium">Mateus Sacavem</p>
-                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Head of Production & Operations</p>
+                                    <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produtor Executivo</p>
                                 </div>
                             </div>
                             <div className="space-y-8 flex flex-col items-center text-center mb-12">

@@ -6,7 +6,7 @@ import Header from "@/app/components/Header";
 export default function Portfolio() {
   return (
     <div className="page-portfolio selection:bg-black selection:text-white" style={{ overflowY: 'auto', height: '100vh' }}>
-      <h1 className="sr-only">Portfólio House Mazzutti — Hub Criativo & Estratégico</h1>
+      <h1 className="sr-only">Portfólio House Mazzutti — Direção criativa, branding e produção</h1>
       <Header variant="light" />
       <main>
         {/* STUDIO */}
@@ -18,9 +18,9 @@ export default function Portfolio() {
             <div className="max-w-md w-full space-y-[27px]">
               <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">STUDIO</span>
               <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT STUDIO</h2>
-              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Direção de pessoas: books, ensaios e retratos com tratamento editorial premium."</p>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Books, ensaios e coberturas com direção criativa."</p>
               <div className="fine-line"></div>
-              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Para celebridades, executivos e profissionais cuja imagem é o próprio ativo de mercado.</p>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Sempre conectados à sua presença de forma objetiva e marcante.</p>
               <div className="pt-[20px]">
                 <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
                   VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
@@ -39,9 +39,9 @@ export default function Portfolio() {
             <div className="max-w-md w-full space-y-[27px]">
               <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">PRODUTORA</span>
               <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT PRODUTORA</h2>
-              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Fashion films, campanhas publicitárias e brand content sob direção autoral."</p>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Editorial de moda, publicidade e conteúdo institucional."</p>
               <div className="fine-line"></div>
-              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Captação em alta resolução com diretor criativo presente em set. Acabamento de campanha global.</p>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Antes de produzir, entendemos. A partir daí, direcionamos com cuidado e clareza.</p>
               <div className="pt-[20px]">
                 <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-produtora">
                   VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
@@ -60,9 +60,9 @@ export default function Portfolio() {
             <div className="max-w-md w-full space-y-[27px]">
               <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">AGÊNCIA</span>
               <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT AGÊNCIA</h2>
-              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Branding, identidade visual, sites premium e plataformas digitais de alta conversão."</p>
+              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Branding project, web development e publicidade integrada."</p>
               <div className="fine-line"></div>
-              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Construção e reposicionamento de marca para empresas que precisam ocupar espaço — não disputar atenção.</p>
+              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Construção e direção de marca, com clareza e elegância.</p>
               <div className="pt-[20px]">
                 <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-agencia">
                   VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>

@@ -10,16 +10,16 @@ export default function ComunidadePage() {
 
     const testimonials = [
         {
-            text: "Entrar para a comunidade da House foi acessar uma rede onde cada conversa é estratégica. Não há ruído — há direção compartilhada.",
-            author: "MEMBRO HMZT — FUNDADORA",
+            text: "Entrar para a comunidade da House foi acessar uma rede onde cada conversa tem direção. Sem ruído, com cuidado.",
+            author: "MEMBRO HMZT",
         },
         {
-            text: "Os colaboradores que orbitam a House operam no mesmo padrão da casa. É raro encontrar essa coerência em qualquer rede criativa.",
-            author: "MEMBRO HMZT — DIRETOR DE ARTE",
+            text: "Quem orbita a House opera no mesmo padrão da casa. É raro encontrar essa coerência em qualquer rede criativa.",
+            author: "MEMBRO HMZT",
         },
         {
-            text: "O ecossistema da House conecta gente que decide. Cliente, parceiro, talento — todos partilham o mesmo nível de exigência.",
-            author: "MEMBRO HMZT — INVESTIDOR",
+            text: "Cliente, parceiro, talento — todos partilham o mesmo nível de cuidado e exigência.",
+            author: "MEMBRO HMZT",
         },
     ];
 
@@ -81,9 +81,9 @@ export default function ComunidadePage() {
     }, [])
 
     const teamMembers = [
-        { name: "Angelo Mazzutti", role: "Head of Creative & Brand Strategy", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" },
-        { name: "Mateus Sacavem", role: "Head of Production & Operations", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" },
-        { name: "Henry Almeida", role: "AI & Creative Tech", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" },
+        { name: "Angelo Mazzutti", role: "Diretor Criativo", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" },
+        { name: "Mateus Sacavem", role: "Produtor Executivo", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" },
+        { name: "Henry Almeida", role: "Gestor de IA", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" },
     ];
 
     const gridImages = [
@@ -149,10 +149,10 @@ export default function ComunidadePage() {
                         <div className="max-w-4xl">
                             <span className="hero-animate font-label uppercase tracking-[0.3em] text-[10px] text-white/60 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>HOUSE MAZZUTTI — COMUNIDADE</span>
                             <h1 className="hero-animate font-headline text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-12 italic font-light" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Uma rede curada. Clientes, talentos e parceiros que partilham o mesmo nível de exigência.
+                                Uma rede que conecta cuidado, conhecimento e construção de marca.
                             </h1>
                             <button className="hero-animate group relative px-10 py-3 border-[0.5px] border-white/30 text-white font-label text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                ENTRAR PARA A REDE
+                                ENTRAR NA COMUNIDADE
                             </button>
                         </div>
                     </div>
@@ -181,8 +181,8 @@ export default function ComunidadePage() {
                 {/* GRID SECTION */}
                 <section className="bg-white py-12 mx-auto" style={{ maxWidth: "95vw" }}>
                     <div className="mb-12 text-center flex flex-col items-center">
-                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">A REDE HMZT</span>
-                        <h2 className="font-headline text-3xl text-black">Clientes. Parceiros. Talentos. Colaboradores.</h2>
+                        <span className="font-label uppercase tracking-[0.3em] text-[10px] text-zinc-400 block mb-4">COMUNIDADE</span>
+                        <h2 className="font-headline text-3xl text-black">University. Parceiros. Clientes. Colaboradores.</h2>
                         <div className="line-divider mt-6 text-black"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -202,14 +202,14 @@ export default function ComunidadePage() {
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center mb-12">
                         <div className="mb-20">
-                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">PARA QUEM</span>
-                            <h2 className="font-headline text-5xl text-black">Conhecimento. Conexão. Curadoria.</h2>
+                            <span className="font-label uppercase tracking-[0.3em] text-[10px] text-black block mb-4">ATUAMOS COM</span>
+                            <h2 className="font-headline text-5xl text-black">Conhecimento. Conexão. Continuidade.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             {[
-                                { icon: "brush", title: "University", desc: "Mentorias, imersões e formações em branding, direção criativa e posicionamento de mercado." },
-                                { icon: "visibility", title: "Parceiros", desc: "Marcas e profissionais que compartilham o mesmo padrão editorial e o mesmo rigor estratégico." },
-                                { icon: "photo_camera", title: "Talentos", desc: "Casting curado para projetos da House — atores, modelos, fotógrafos, especialistas técnicos." },
+                                { icon: "brush", title: "University", desc: "Cursos, mentorias e eventos sobre marca e direção criativa." },
+                                { icon: "visibility", title: "Parceiros", desc: "Profissionais e marcas que partilham o mesmo nível de exigência." },
+                                { icon: "photo_camera", title: "Colaboradores", desc: "Talentos que entendem que construção exige pensamento." },
                             ].map((item, i) => (
                                 <div key={i} className="flex flex-col items-center space-y-4" style={{ transition: 'transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
                                     <span className="material-symbols-outlined text-4xl font-extralight" data-icon={item.icon}>{item.icon}</span>
@@ -234,9 +234,9 @@ export default function ComunidadePage() {
                             <div className="grid grid-cols-1 gap-y-8">
                                 <div className="max-w-xl text-left">
                                     <h2 className="font-headline text-xl md:text-2xl italic leading-snug mb-2">
-                                        Conexões que ampliam o padrão da casa.
+                                        "Conexões que ampliam o que construímos."
                                     </h2>
-                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Filosofia HMZT</p>
+                                    <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Filosofia House</p>
                                 </div>
                                 <div className="flex justify-end">
                                     <div className="max-w-xl text-right">
@@ -244,7 +244,7 @@ export default function ComunidadePage() {
                                             Não buscamos volume. <br />
                                             <span className="italic">Buscamos alinhamento.</span>
                                         </h3>
-                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Curadoria</p>
+                                        <p className="font-raleway font-light uppercase tracking-[0.2em] text-[9px] text-zinc-500">Diferenciação</p>
                                     </div>
                                 </div>
                             </div>
@@ -257,7 +257,7 @@ export default function ComunidadePage() {
                     <div className="max-w-[1400px] mx-auto">
                         <div className="text-center mb-12">
                             <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">ECOSSISTEMA</span>
-                            <h2 className="font-headline text-3xl md:text-4xl text-black">Quatro braços. Uma só mente criativa.</h2>
+                            <h2 className="font-headline text-3xl md:text-4xl text-black">Cada grupo tem um papel claro.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
                             {teamMembers.map((member, i) => (
@@ -433,13 +433,13 @@ export default function ComunidadePage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-4xl mx-auto space-y-16">
                         <h2 className="font-headline text-4xl md:text-7xl text-white leading-tight italic">
-                            Se o seu padrão se conecta ao da House — <span className="not-italic">este é o seu ponto de entrada.</span>
+                            Se você se conecta com o que a House constrói — <span className="not-italic">esse é o seu ponto de entrada.</span>
                         </h2>
                         <div className="flex flex-col items-center space-y-8">
                             <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white font-label uppercase tracking-[0.3em] text-[12px] hover:bg-white hover:text-black transition-all duration-300" href="/contato">
-                                CANDIDATAR-SE À REDE
+                                ENTRAR NA COMUNIDADE
                             </Link>
-                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Acesso por curadoria · Sigilo absoluto</p>
+                            <p className="font-label uppercase tracking-widest text-[9px] text-zinc-500">Menos tentativa. Mais direção.</p>
                         </div>
                     </div>
                 </section>

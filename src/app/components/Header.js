@@ -242,14 +242,14 @@ export default function Header({ variant = 'dark' }) {
                     <div style={{marginBottom:'48px'}}>
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
-                        color:'#555', marginBottom:'16px'}}>SEDE</p>
+                        color:'#555', marginBottom:'16px'}}>LOCALIZAÇÃO</p>
                       <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
                         fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
-                        São Paulo / Global
+                        São Paulo, Brasil
                       </p>
                       <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
                         fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
-                        Atendimento sob curadoria
+                        23.5505° S, 46.6333° W
                       </p>
                     </div>
             
@@ -259,7 +259,7 @@ export default function Header({ variant = 'dark' }) {
                     <div>
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
-                        color:'#555', marginBottom:'16px'}}>FOLLOW</p>
+                        color:'#555', marginBottom:'16px'}}>FOLLOW US</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
                         <a href="#" style={{fontFamily:'Newsreader, serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',

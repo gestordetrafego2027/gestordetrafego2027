@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "House Mazzutti — Hub Criativo & Estratégico | Da Visão à Materialização",
-  description: "Hub criativo e estratégico que traduz a essência de marcas e personalidades em narrativas visuais de alto impacto. Branding, direção criativa e produção audiovisual sob uma única estrutura — São Paulo / Global.",
+  title: "House Mazzutti | Direção Criativa, Branding e Produção",
+  description: "House Mazzutti é uma casa criativa que traduz marcas e pessoas em imagens com clareza, sofisticação e consistência. Branding, direção criativa e produção sob uma só conversa — São Paulo.",
 };
 
 export default function RootLayout({ children }) {
