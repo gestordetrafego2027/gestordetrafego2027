@@ -110,7 +110,7 @@ export default function Header({ variant = 'dark' }) {
                     className="uppercase no-underline flex items-baseline"
                     style={{ color: currentTextColor }}
                 >
-                    <span className="hm-logo">
+                    <span className="hm-logo" style={{fontSize: '28px'}}>
                         <span className="hm-house">House</span>
                         <span className="hm-mazzutti">Mazzutti</span>
                     </span>
@@ -189,7 +189,7 @@ export default function Header({ variant = 'dark' }) {
                     <div style={{display:'flex', justifyContent:'space-between',
                       alignItems:'center', marginBottom:'60px'}}>
                       <div style={{margin:0}}>
-                        <span className="hm-logo" style={{fontSize: '20px', color: 'white'}}>
+                        <span className="hm-logo" style={{fontSize: '24px', color: 'white'}}>
                             <span className="hm-house">House</span>
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>

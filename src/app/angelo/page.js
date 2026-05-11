@@ -325,7 +325,7 @@ export default function AngeloPage() {
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
                     <div className="mb-16">
-                        <span className="hm-logo" style={{fontSize: '32px', color: '#fafafa'}}>
+                        <span className="hm-logo" style={{fontSize: '40px', color: '#fafafa'}}>
                             <span className="hm-house">House</span>
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
