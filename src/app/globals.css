@@ -32,6 +32,30 @@
   font-display: swap;
 }
 
+/* ==========================================================================
+   ROC GROTESK CONDENSED — uso EXCLUSIVO do logotype HOUSE MAZZUTTI
+   Para ativar, subir os arquivos correspondentes em /public/fonts/.
+   Enquanto os arquivos não estão presentes, fallback gracioso para
+   RocGrotesk (definida acima).
+   ========================================================================== */
+@font-face {
+  font-family: 'RocGroteskCondensed';
+  src: url('/fonts/Roc_Grotesk_Condensed_Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RocGroteskCondensed';
+  src: url('/fonts/Roc_Grotesk_Condensed_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: condensed;
+  font-display: swap;
+}
+
 
 html {
   scrollbar-gutter: stable;
@@ -476,7 +500,10 @@ html {
 }
 
 /* ==========================================================================
-   BRANDING UPDATE: HOUSE MAZZUTTI
+   BRANDING UPDATE: HOUSE MAZZUTTI — LOGOTYPE EXCLUSIVO
+   Regra tipográfica que se aplica APENAS ao logotype oficial.
+   Não usar em body, headings, menus, botões, navegação ou qualquer
+   componente da UI — o restante do site segue o sistema global.
    ========================================================================== */
 .hm-logo {
     display: inline-flex;
@@ -484,18 +511,24 @@ html {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.2em;
-    line-height: 1.22; /* Leading 73.2 based on 60px base */
-    letter-spacing: 0.17em; /* VA 17 */
+    line-height: 1.22;
+    letter-spacing: 0; /* Tracking 0em — kerning natural, sem espaçamento decorativo */
     white-space: nowrap;
-    gap: 0.4em; /* Specific ratio for alignment */
+    gap: 0.3em; /* Espaço mínimo entre HOUSE e MAZZUTTI */
 }
 
+/* HOUSE — Roc Grotesk Variable Condensed · Regular/Light */
 .hm-house {
-    font-family: 'RocGrotesk', sans-serif !important;
-    font-weight: 400 !important; /* Regular */
+    font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
+    font-weight: 400 !important;
+    font-stretch: condensed;
+    letter-spacing: 0;
 }
 
+/* MAZZUTTI — Roc Grotesk Variable Condensed · Bold */
 .hm-mazzutti {
-    font-family: 'RocGrotesk', sans-serif !important;
-    font-weight: 700 !important; /* Bold */
+    font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
+    font-weight: 700 !important;
+    font-stretch: condensed;
+    letter-spacing: 0;
 }
