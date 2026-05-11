@@ -2,6 +2,14 @@
 
 @font-face {
   font-family: 'RocGrotesk';
+  src: url('/fonts/fonnts.com-Roc_Grotesk_ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RocGrotesk';
   src: url('/fonts/fonnts.com-Roc_Grotesk_Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
@@ -34,13 +42,10 @@
 
 /* ==========================================================================
    ROC GROTESK CONDENSED — uso EXCLUSIVO do logotype HOUSE MAZZUTTI
-   Para ativar, subir os arquivos correspondentes em /public/fonts/.
-   Enquanto os arquivos não estão presentes, fallback gracioso para
-   RocGrotesk (definida acima).
    ========================================================================== */
 @font-face {
   font-family: 'RocGroteskCondensed';
-  src: url('/fonts/Roc_Grotesk_Condensed_Regular.otf') format('opentype');
+  src: url('/fonts/fonnts.com-Roc_Grotesk_Condensed.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-stretch: condensed;
@@ -49,7 +54,7 @@
 
 @font-face {
   font-family: 'RocGroteskCondensed';
-  src: url('/fonts/Roc_Grotesk_Condensed_Bold.otf') format('opentype');
+  src: url('/fonts/fonnts.com-Roc_Grotesk_Condensed_Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-stretch: condensed;
@@ -298,10 +303,10 @@ html {
         letter-spacing: -0.02em;
     }
 
-    /* H4 — APOIO EDITORIAL — minimalista, respirada (ExtraLight → Light) */
+    /* H4 — APOIO EDITORIAL — minimalista, respirada (ExtraLight) */
     .text-h4 {
         font-family: 'RocGrotesk', sans-serif;
-        font-weight: 300;
+        font-weight: 200;
         font-size: clamp(1.125rem, 0.6vw + 1rem, 1.75rem); /* 18px → 28px */
         line-height: 1.25;
         letter-spacing: -0.01em;
