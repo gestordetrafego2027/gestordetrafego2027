@@ -289,7 +289,9 @@ export default async function LeadDetailPage({
                 {quotes.map((q) => (
                   <li key={q.id} className="flex justify-between border-l-2 border-blue-300 pl-3">
                     <div>
-                      <div className="font-medium">{q.title}</div>
+                      <Link href={`/crm/quotes/${q.id}`} className="font-medium hover:underline">
+                        {q.title}
+                      </Link>
                       <div className="text-xs text-neutral-500 capitalize">
                         {q.status}
                         {q.valid_until && ` · válida até ${new Date(q.valid_until).toLocaleDateString('pt-BR')}`}
