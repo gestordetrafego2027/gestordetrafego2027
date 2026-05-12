@@ -35,6 +35,7 @@ export default async function LeadDetailPage({
     { data: notes },
     { data: interests },
     { data: opps },
+    { data: quotes },
   ] = await Promise.all([
     supabase
       .from('leads')
@@ -60,6 +61,11 @@ export default async function LeadDetailPage({
       .from('opportunities')
       .select('id, title, stage, amount_brl, created_at')
       .eq('lead_id', id),
+    supabase
+      .from('quotes')
+      .select('id, title, status, total_brl, valid_until, sent_at, accepted_at, created_at')
+      .eq('lead_id', id)
+      .order('created_at', { ascending: false }),
   ])
 
   if (leadErr || !lead) notFound()
@@ -111,6 +117,13 @@ export default async function LeadDetailPage({
                 Atualizar
               </button>
             </form>
+
+            <Link
+              href={`/crm/leads/${lead.id}/quote/new`}
+              className="rounded bg-blue-600 text-white text-xs px-3 py-1 hover:bg-blue-700"
+            >
+              + Nova proposta
+            </Link>
 
             {lead.status !== 'ganho' && (
               <form action={promoteLeadAction} className="flex gap-1 items-center text-xs">
@@ -266,6 +279,32 @@ export default async function LeadDetailPage({
               )}
             </ul>
           </div>
+
+          {!!quotes?.length && (
+            <div className="rounded-lg border border-neutral-200 bg-white p-5">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
+                Propostas
+              </h2>
+              <ul className="space-y-2 text-sm">
+                {quotes.map((q) => (
+                  <li key={q.id} className="flex justify-between border-l-2 border-blue-300 pl-3">
+                    <div>
+                      <div className="font-medium">{q.title}</div>
+                      <div className="text-xs text-neutral-500 capitalize">
+                        {q.status}
+                        {q.valid_until && ` · válida até ${new Date(q.valid_until).toLocaleDateString('pt-BR')}`}
+                      </div>
+                    </div>
+                    <div className="text-sm tabular-nums">
+                      {(Number(q.total_brl) || 0).toLocaleString('pt-BR', {
+                        style: 'currency', currency: 'BRL',
+                      })}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {!!opps?.length && (
             <div className="rounded-lg border border-neutral-200 bg-white p-5">
