@@ -4,11 +4,14 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
+import FormDrawer from '../components/FormDrawer'
+import FormStudio from '../components/forms/FormStudio'
 
 export default function StudioPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentGallerySlide, setCurrentGallerySlide] = useState(0)
     const [currentBannerSlide, setCurrentBannerSlide] = useState(0)
+    const [isStudioFormOpen, setIsStudioFormOpen] = useState(false)
     const prevBanner = () => setCurrentBannerSlide(prev => (prev - 1 + 3) % 3)
     const nextBanner = () => setCurrentBannerSlide(prev => (prev + 1) % 3)
 
@@ -231,11 +234,9 @@ export default function StudioPage() {
                                     <p className="hero-animate text-body text-white/80 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].texto}
                                     </p>
-                                    <Link href="/contato">
-                                        <button className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                            Iniciar projeto
-                                        </button>
-                                    </Link>
+                                    <button type="button" onClick={() => setIsStudioFormOpen(true)} className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                        Iniciar projeto
+                                    </button>
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 left-12 flex items-center z-20">
@@ -670,6 +671,18 @@ export default function StudioPage() {
                     </div>
                 </div>
             </footer>
+            <FormDrawer
+                isOpen={isStudioFormOpen}
+                onClose={() => setIsStudioFormOpen(false)}
+                title="Iniciar projeto"
+                subtitle="Conte-nos sobre seu ensaio. Respondemos em até 1 dia útil."
+            >
+                <FormStudio
+                    onClose={() => setIsStudioFormOpen(false)}
+                    serviceType="book"
+                    sourceUrl="/studio"
+                />
+            </FormDrawer>
         </div>
     )
 }
