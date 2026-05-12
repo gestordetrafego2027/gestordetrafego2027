@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import PortfolioCTA from '@/app/components/PortfolioCTA';
 
 export default function SignusPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -96,6 +97,8 @@ export default function SignusPage() {
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="#"><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Próximo Projeto</span><span className="material-symbols-outlined text-sm">east</span></Link>
                 </div>
             </div>
+            <PortfolioCTA businessUnit="produtora" projectSlug="signus" />
+
             <footer className="bg-[#0a0a0a] px-12 py-8">
                 <div className="flex flex-col items-center space-y-6">
                     <Link className="font-newsreader text-xl font-semibold tracking-widest text-white no-underline" href="/">HOUSE MAZZUTTI</Link>

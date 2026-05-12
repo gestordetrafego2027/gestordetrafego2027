@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import PortfolioCTA from '@/app/components/PortfolioCTA';
 
 export default function ProjetoStudioPage() {
     useEffect(() => {
@@ -131,6 +132,8 @@ export default function ProjetoStudioPage() {
                     </div>
                 </div>
             </main>
+
+            <PortfolioCTA businessUnit="studio" />
 
             {/* Navigation Links before footer */}
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">

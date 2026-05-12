@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import PortfolioCTA from '@/app/components/PortfolioCTA';
 
 export default function AnnaLauraPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -141,6 +142,8 @@ export default function AnnaLauraPage() {
                 </div>
             </main>
             
+            <PortfolioCTA businessUnit="studio" projectSlug="anna-laura" />
+
             {/* Navigation Links before footer */}
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">
                 <div className="flex justify-between items-center border-t border-outline-variant/15 pt-12">

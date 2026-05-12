@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import PortfolioCTA from '@/app/components/PortfolioCTA';
 
 export default function PousPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -138,6 +139,8 @@ export default function PousPage() {
                     </Link>
                 </div>
             </div>
+
+            <PortfolioCTA businessUnit="agencia" projectSlug="pous" />
 
             <footer className="bg-[#0a0a0a] px-12 py-8">
                 <div className="flex flex-col items-center space-y-6">
