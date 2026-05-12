@@ -13,7 +13,7 @@ function parseJson(value: string, fallback: unknown): unknown {
   try { return JSON.parse(value) } catch { return fallback }
 }
 
-export async function createRuleAction(formData: FormData) {
+export async function createRuleAction(formData: FormData): Promise<void> {
   const name = String(formData.get('name') ?? '').trim()
   const description = String(formData.get('description') ?? '').trim() || null
   const trigger_type = String(formData.get('trigger_type') ?? 'lead_created') as Trigger
@@ -21,7 +21,7 @@ export async function createRuleAction(formData: FormData) {
   const actionsRaw = String(formData.get('actions') ?? '[]')
   const active = formData.get('active') === 'on'
 
-  if (!name) return { ok: false, error: 'name_required' }
+  if (!name) return
 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -39,14 +39,14 @@ export async function createRuleAction(formData: FormData) {
     .select('id')
     .single()
 
-  if (error || !data) return { ok: false, error: error?.message ?? 'erro' }
+  if (error || !data) { console.error('[createRuleAction]', error?.message); return }
   revalidatePath('/crm/automations')
   redirect(`/crm/automations/${data.id}`)
 }
 
-export async function updateRuleAction(formData: FormData) {
+export async function updateRuleAction(formData: FormData): Promise<void> {
   const id = String(formData.get('id') ?? '')
-  if (!id) return { ok: false, error: 'id_missing' }
+  if (!id) return
 
   const name = String(formData.get('name') ?? '').trim()
   const description = String(formData.get('description') ?? '').trim() || null
@@ -67,30 +67,28 @@ export async function updateRuleAction(formData: FormData) {
       active,
     })
     .eq('id', id)
-  if (error) return { ok: false, error: error.message }
+  if (error) { console.error('[updateRuleAction]', error.message); return }
   revalidatePath('/crm/automations')
   revalidatePath(`/crm/automations/${id}`)
-  return { ok: true }
 }
 
-export async function toggleRuleAction(formData: FormData) {
+export async function toggleRuleAction(formData: FormData): Promise<void> {
   const id = String(formData.get('id') ?? '')
   const active = String(formData.get('active') ?? 'false') === 'true'
-  if (!id) return { ok: false, error: 'id_missing' }
+  if (!id) return
   const supabase = await createClient()
   const { error } = await supabase
     .from('automation_rules').update({ active: !active }).eq('id', id)
-  if (error) return { ok: false, error: error.message }
+  if (error) { console.error('[toggleRuleAction]', error.message); return }
   revalidatePath('/crm/automations')
-  return { ok: true }
 }
 
-export async function deleteRuleAction(formData: FormData) {
+export async function deleteRuleAction(formData: FormData): Promise<void> {
   const id = String(formData.get('id') ?? '')
-  if (!id) return { ok: false, error: 'id_missing' }
+  if (!id) return
   const supabase = await createClient()
   const { error } = await supabase.from('automation_rules').delete().eq('id', id)
-  if (error) return { ok: false, error: error.message }
+  if (error) { console.error('[deleteRuleAction]', error.message); return }
   revalidatePath('/crm/automations')
   redirect('/crm/automations')
 }

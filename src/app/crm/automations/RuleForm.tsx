@@ -52,7 +52,7 @@ export default function RuleForm({
   initial,
   submitLabel = 'Salvar',
 }: {
-  action: (formData: FormData) => Promise<{ ok: boolean; error?: string } | void>
+  action: (formData: FormData) => void | Promise<void>
   initial?: {
     id?: string
     name?: string

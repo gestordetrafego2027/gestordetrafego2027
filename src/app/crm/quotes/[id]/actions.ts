@@ -4,61 +4,55 @@ import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 
-export async function sendQuoteAction(formData: FormData) {
+export async function sendQuoteAction(formData: FormData): Promise<void> {
   const quoteId = String(formData.get('quote_id') ?? '')
-  if (!quoteId) return { ok: false, error: 'quote_id_missing' }
+  if (!quoteId) return
 
   const supabase = await createClient()
   const { error } = await supabase
     .from('quotes')
     .update({ status: 'enviado', sent_at: new Date().toISOString() })
     .eq('id', quoteId)
-  if (error) return { ok: false, error: error.message }
+  if (error) { console.error('[sendQuoteAction]', error.message); return }
 
   revalidatePath(`/crm/quotes/${quoteId}`)
-  return { ok: true }
 }
 
-export async function acceptQuoteAction(formData: FormData) {
+export async function acceptQuoteAction(formData: FormData): Promise<void> {
   const quoteId = String(formData.get('quote_id') ?? '')
-  if (!quoteId) return { ok: false, error: 'quote_id_missing' }
+  if (!quoteId) return
 
   const supabase = await createClient()
-  // Trigger DB tg_quote_accepted_automation dispara as actions configuradas
-  // (update_opportunity stage=ganho + create_activity).
   const { error } = await supabase
     .from('quotes')
     .update({ status: 'aceito' })
     .eq('id', quoteId)
-  if (error) return { ok: false, error: error.message }
+  if (error) { console.error('[acceptQuoteAction]', error.message); return }
 
   revalidatePath(`/crm/quotes/${quoteId}`)
   revalidatePath('/crm/leads')
   revalidatePath('/crm')
-  return { ok: true }
 }
 
-export async function rejectQuoteAction(formData: FormData) {
+export async function rejectQuoteAction(formData: FormData): Promise<void> {
   const quoteId = String(formData.get('quote_id') ?? '')
-  if (!quoteId) return { ok: false, error: 'quote_id_missing' }
+  if (!quoteId) return
 
   const supabase = await createClient()
   const { error } = await supabase
     .from('quotes').update({ status: 'recusado' }).eq('id', quoteId)
-  if (error) return { ok: false, error: error.message }
+  if (error) { console.error('[rejectQuoteAction]', error.message); return }
   revalidatePath(`/crm/quotes/${quoteId}`)
-  return { ok: true }
 }
 
-export async function generateInvoiceFromQuoteAction(formData: FormData) {
+export async function generateInvoiceFromQuoteAction(formData: FormData): Promise<void> {
   const quoteId = String(formData.get('quote_id') ?? '')
   const dueDate = String(formData.get('due_date') ?? '') || null
-  if (!quoteId) return { ok: false, error: 'quote_id_missing' }
+  if (!quoteId) return
 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
-  // Carrega quote + items + lead → cliente
   const { data: quote, error: qerr } = await supabase
     .from('quotes')
     .select(`
@@ -67,9 +61,8 @@ export async function generateInvoiceFromQuoteAction(formData: FormData) {
     `)
     .eq('id', quoteId)
     .single()
-  if (qerr || !quote) return { ok: false, error: qerr?.message ?? 'quote_not_found' }
+  if (qerr || !quote) { console.error('[generateInvoice]', qerr?.message); return }
 
-  // Procura ou cria client a partir do lead
   const { data: existingClient } = await supabase
     .from('clients').select('id').eq('lead_id', quote.lead_id).maybeSingle()
 
@@ -80,13 +73,12 @@ export async function generateInvoiceFromQuoteAction(formData: FormData) {
         p_lead_id: quote.lead_id,
         p_amount_brl: Number(quote.total_brl ?? 0),
       })
-    if (prom) return { ok: false, error: prom.message }
+    if (prom) { console.error('[generateInvoice]', prom.message); return }
     clientId = newClient as string
   }
 
-  if (!clientId) return { ok: false, error: 'client_id_missing' }
+  if (!clientId) return
 
-  // Cria invoice + items
   const { data: invoice, error: ierr } = await supabase
     .from('invoices')
     .insert({
@@ -101,7 +93,7 @@ export async function generateInvoiceFromQuoteAction(formData: FormData) {
     })
     .select('id')
     .single()
-  if (ierr || !invoice) return { ok: false, error: ierr?.message ?? 'invoice_failed' }
+  if (ierr || !invoice) { console.error('[generateInvoice]', ierr?.message); return }
 
   const items = (quote.quote_items ?? []).map((qi: {
     label: string; description: string | null; quantity: number;

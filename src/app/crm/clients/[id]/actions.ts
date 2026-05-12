@@ -7,7 +7,7 @@ type PaymentMethod =
   | 'pix' | 'boleto' | 'cartao_credito' | 'cartao_debito'
   | 'transferencia' | 'dinheiro' | 'outro'
 
-export async function recordPaymentAction(formData: FormData) {
+export async function recordPaymentAction(formData: FormData): Promise<void> {
   const clientId = String(formData.get('client_id') ?? '')
   const invoiceId = String(formData.get('invoice_id') ?? '')
   const amount = Number(formData.get('amount_brl') ?? 0)
@@ -16,7 +16,7 @@ export async function recordPaymentAction(formData: FormData) {
   const paidAt = String(formData.get('paid_at') ?? '') || new Date().toISOString()
 
   if (!clientId || !invoiceId || !amount || amount <= 0) {
-    return { ok: false, error: 'campos_invalidos' }
+    return
   }
 
   const supabase = await createClient()
@@ -30,7 +30,7 @@ export async function recordPaymentAction(formData: FormData) {
     reference,
     paid_at: paidAt,
   })
-  if (payErr) return { ok: false, error: payErr.message }
+  if (payErr) { console.error('[recordPaymentAction]', payErr.message); return }
 
   // 2) atualiza fatura: paid_brl acumulado + status (paga/parcial)
   const { data: inv } = await supabase
@@ -61,5 +61,4 @@ export async function recordPaymentAction(formData: FormData) {
   revalidatePath(`/crm/clients/${clientId}`)
   revalidatePath('/crm/clients')
   revalidatePath('/crm')
-  return { ok: true }
 }

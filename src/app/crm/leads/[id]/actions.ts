@@ -3,34 +3,38 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 
-export async function addNoteAction(formData: FormData) {
+export async function addNoteAction(formData: FormData): Promise<void> {
   const leadId = String(formData.get('lead_id') ?? '')
   const body = String(formData.get('body') ?? '').trim()
-  if (!leadId || !body) return { ok: false, error: 'campos_invalidos' }
+  if (!leadId || !body) return
 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   const { error } = await supabase
     .from('notes')
     .insert({ lead_id: leadId, body, author_id: user?.id ?? null })
-  if (error) return { ok: false, error: error.message }
+  if (error) {
+    console.error('[addNoteAction]', error.message)
+    return
+  }
   revalidatePath(`/crm/leads/${leadId}`)
-  return { ok: true }
 }
 
-export async function updateLeadStatusAction(formData: FormData) {
+export async function updateLeadStatusAction(formData: FormData): Promise<void> {
   const leadId = String(formData.get('lead_id') ?? '')
   const status = String(formData.get('status') ?? '')
-  if (!leadId || !status) return { ok: false, error: 'campos_invalidos' }
+  if (!leadId || !status) return
 
   const supabase = await createClient()
   const { error } = await supabase
     .from('leads')
     .update({ status: status as never })
     .eq('id', leadId)
-  if (error) return { ok: false, error: error.message }
+  if (error) {
+    console.error('[updateLeadStatusAction]', error.message)
+    return
+  }
 
-  // Log na timeline
   await supabase.from('activities').insert({
     lead_id: leadId,
     type: 'status_change',
@@ -40,15 +44,14 @@ export async function updateLeadStatusAction(formData: FormData) {
   revalidatePath(`/crm/leads/${leadId}`)
   revalidatePath('/crm/leads')
   revalidatePath('/crm')
-  return { ok: true }
 }
 
-export async function logActivityAction(formData: FormData) {
+export async function logActivityAction(formData: FormData): Promise<void> {
   const leadId = String(formData.get('lead_id') ?? '')
   const type = String(formData.get('type') ?? 'note')
   const title = String(formData.get('title') ?? '').trim()
   const bodyText = String(formData.get('body') ?? '').trim() || null
-  if (!leadId || !title) return { ok: false, error: 'campos_invalidos' }
+  if (!leadId || !title) return
 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -59,7 +62,9 @@ export async function logActivityAction(formData: FormData) {
     body: bodyText,
     author_id: user?.id ?? null,
   })
-  if (error) return { ok: false, error: error.message }
+  if (error) {
+    console.error('[logActivityAction]', error.message)
+    return
+  }
   revalidatePath(`/crm/leads/${leadId}`)
-  return { ok: true }
 }
