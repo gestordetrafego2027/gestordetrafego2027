@@ -1,76 +1,223 @@
-"use client";
-import React from "react";
-import Link from "next/link";
-import Header from "@/app/components/Header";
+'use client';
 
-export default function Portfolio() {
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Header from '@/app/components/Header';
+
+const toTitleCase = (slug) =>
+  slug
+    .split('-')
+    .map((w) => {
+      if (/^\d/.test(w)) return w.toUpperCase();
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    })
+    .join(' ');
+
+const studioBook = [
+  'amanda-oliveira', 'ana-laura-saar', 'chai-e-dai', 'debora-pantaglione',
+  'ana-rockenbach', 'francine-massoco', 'anna-laura', 'gab-cruz', 'arielly',
+  'iasmim', 'jamile-caroline', 'jessica-bittelbrun', 'julia-moraes',
+  'leticia-moraes', 'maria-eduarda', 'bruna-brummer', 'iza-feser',
+  'marina-machado', 'nataly-silva', 'patricia-marafon', 'poliana-barreto',
+  'sara-henriches', 'vitoria-boidt'
+].map((slug) => ({
+  slug,
+  name: toTitleCase(slug),
+  cover: `/images/studio/${slug}/capa.jpg`
+}));
+
+const studioEnsaio = [
+  'andressa-gomiero', 'fernanda-treml', 'nairicia-caberlon', 'thaisi-dias',
+  'brenda-mattos', 'gustavo-vioto', 'paula-assuncao', 'carol-costa',
+  'leif-sinclar', 'rebeca-cabral', 'cynthia-andrade', 'maria-tereza',
+  'samara-samme', 'deise-smaniotto', 'marjorie-rossi', 'simonny',
+  'fernanda-costas', 'mileide-mihaile', 'talita-dalbo'
+].map((slug) => ({
+  slug,
+  name: toTitleCase(slug),
+  cover: `/images/studio/${slug}/capa.jpg`
+}));
+
+const produtoraAcessorios = [
+  'barbara-porto', 'camila-scarpa', 'poema-paris', 'pontok', 'dumond',
+  'signus', 'signus-versolato01', 'signus-versolato02', 'signus-vertz',
+  'elyah', 'signus-fiamma', 'signus-lavorato', 'monica-costa-jewerly',
+  'signus-jean-pierre'
+].map((slug) => ({
+  slug,
+  name: toTitleCase(slug),
+  cover: `/images/produtora/acessorios/${slug}/capa.jpg`
+}));
+
+const produtoraBeleza = [
+  'alletto-still', 'jequiti-sense', 'we-pink-ze-felipe', 'we-pink-01',
+  'jequiti-galisteu', 'natalia-beauty', 'jequiti-larissa-manoela', 'oceane'
+].map((slug) => ({
+  slug,
+  name: toTitleCase(slug),
+  cover: `/images/produtora/beleza/${slug}/capa.jpg`
+}));
+
+const categories = [
+  {
+    slug: 'book',
+    unit: 'STUDIO',
+    title: 'Book',
+    description: 'Books fotográficos para construção de presença e portfólio profissional.',
+    cover: studioBook[0].cover,
+    basePath: '/portfolio-studio',
+    projects: studioBook
+  },
+  {
+    slug: 'acessorios',
+    unit: 'PRODUTORA',
+    title: 'Acessórios',
+    description: 'Produção de imagem para marcas de acessórios — direção criativa do briefing à entrega.',
+    cover: produtoraAcessorios[0].cover,
+    basePath: '/portfolio-produtora',
+    projects: produtoraAcessorios
+  },
+  {
+    slug: 'ensaio-pessoal',
+    unit: 'STUDIO',
+    title: 'Ensaio Pessoal',
+    description: 'Ensaios autorais que traduzem identidade em imagem.',
+    cover: studioEnsaio[0].cover,
+    basePath: '/portfolio-studio',
+    projects: studioEnsaio
+  },
+  {
+    slug: 'beleza',
+    unit: 'PRODUTORA',
+    title: 'Beleza',
+    description: 'Campanhas e ensaios para o segmento de beleza e cosméticos.',
+    cover: produtoraBeleza[0].cover,
+    basePath: '/portfolio-produtora',
+    projects: produtoraBeleza
+  }
+];
+
+const FILTERS = ['TODOS', 'STUDIO', 'AGÊNCIA', 'PRODUTORA'];
+
+export default function PortfolioPage() {
+  const [activeFilter, setActiveFilter] = useState('TODOS');
+
+  const filteredCategories =
+    activeFilter === 'TODOS'
+      ? categories
+      : categories.filter((c) => c.unit === activeFilter);
+
   return (
-    <div className="page-portfolio selection:bg-black selection:text-white" style={{ overflowY: 'auto', height: '100vh' }}>
-      <h1 className="sr-only">Portfólio House Mazzutti — Direção criativa, branding e produção</h1>
+    <div className="bg-white text-black min-h-screen">
+      <h1 className="sr-only">Portfólio House Mazzutti — Books, ensaios, campanhas e direção criativa</h1>
+
       <Header variant="light" />
-      <main>
-        {/* STUDIO */}
-        <section className="flex flex-col md:flex-row" style={{ minHeight: '100vh' }}>
-          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
-            <img alt="Studio" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4KUVLJUL-uxvDKAfn2IfswuESvjVPbRKyIhOr6RAgX-gPHUSbYctz9jhHVRyhrPOvgp_F3f339FTKZ2mhKtmRsw1Or-AmM4LeyBQXQLMRP31QoOgFfQPK3xfhY4RNtunnrYPZC4V9mEPkrfWjBz0iKBMIwvWokt-XYQceqHYBtZErUvjI2khPxLKapxWYqHS0N2VjtMveW4bOeceZhgsr5k3bQ6DOR40hyL8fpJ4kuyCXaGpvOMPgit5ZRt4CcmS9Ua18PsBPgXw" />
-          </div>
-          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
-            <div className="max-w-md w-full space-y-[27px]">
-              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">STUDIO</span>
-              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT STUDIO</h2>
-              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Books, ensaios e coberturas com direção criativa."</p>
-              <div className="fine-line"></div>
-              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Sempre conectados à sua presença de forma objetiva e marcante.</p>
-              <div className="pt-[20px]">
-                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-studio">
-                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* PRODUTORA */}
-        <section className="flex flex-col md:flex-row-reverse border-t border-neutral-100" style={{ minHeight: '100vh' }}>
-          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
-            <img alt="Produtora" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxxCED8XmlkgNbuGiBWOIoL_z8W4KNtk73xn8vQ-iW8GDkkVNi7X1jqkXb6AlWm6RX3cw0DJKVuj64s5VKTwHN4-JRumUk7k1WdMY2xl4wCBNUZM97L1mfESGVn3jK3UxigcDBkEptMRWuiNt9eJwAk9--RWcaUJIgxvPkcjp6XwpOxvSNIzA9LKZ4PXxdt9mmLGG_uMCYlYndBP79YuGkiWMCuzgJDFBDxSMg4BlXyypJqLa3rJCkOY0YCgpUX25kL9KLQuyenBE" />
-          </div>
-          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
-            <div className="max-w-md w-full space-y-[27px]">
-              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">PRODUTORA</span>
-              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT PRODUTORA</h2>
-              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Editorial de moda, publicidade e conteúdo institucional."</p>
-              <div className="fine-line"></div>
-              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Antes de produzir, entendemos. A partir daí, direcionamos com cuidado e clareza.</p>
-              <div className="pt-[20px]">
-                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-produtora">
-                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* HEADER EDITORIAL */}
+      <section
+        className="border-y border-neutral-200 text-center px-6 py-20 md:py-32"
+        style={{ marginTop: '72px', borderTopWidth: '0.5px', borderBottomWidth: '0.5px' }}
+      >
+        <div className="max-w-4xl mx-auto">
+          <span className="font-label uppercase tracking-wider text-sm text-black mb-6 block">
+            HOUSE MAZZUTTI — PORTFÓLIO
+          </span>
+          <h2 className="font-headline font-bold uppercase text-4xl md:text-6xl leading-tight mb-6">
+            Cada imagem nasce de uma decisão. Cada projeto, de uma intenção.
+          </h2>
+          <p className="font-body italic text-base text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+            Registros visuais de books, ensaios, campanhas e direções criativas assinadas pela House Mazzutti.
+          </p>
+        </div>
+      </section>
 
-        {/* AGÊNCIA */}
-        <section className="flex flex-col md:flex-row border-t border-neutral-100" style={{ minHeight: '100vh' }}>
-          <div className="w-full md:w-1/2 bg-neutral-100 relative overflow-hidden" style={{ minHeight: '50vh' }}>
-            <img alt="Agência" className="w-full h-full object-cover grayscale" style={{ position: 'absolute', inset: 0 }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9JOvmd61-d55EzR904FOgUgD6XCybSttKhy0e2AuHAcJFi1SIYxiCe0tiIr2GvnpHMiog9GeIBi_w14F-CbUeWoM_knk3_BS8YPNnduZwKZZ0dafgoO95ND97D968qi9tDRQwmL5bsnew3mZb7VpUkAIxCt8wbPRvypRvjcbHp7w9MqqdgMX5Z0dU939Tx5vH0GzHOBwMC-lSn3ZA1ytDq_2yVlpnVme8CsCuDj4cBc63ZO2BrbOQq1tTnWinjn4XJSTR-BUhJKg" />
-          </div>
-          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-24">
-            <div className="max-w-md w-full space-y-[27px]">
-              <span className="block text-[9px] uppercase tracking-[0.3em] font-light text-neutral-400">AGÊNCIA</span>
-              <h2 className="text-[2rem] md:text-[2.75rem] font-body font-light tracking-widest text-black leading-tight">HMZT AGÊNCIA</h2>
-              <p className="font-headline italic text-[1.1rem] md:text-[1.32rem] text-neutral-500 leading-relaxed">"Branding project, web development e publicidade integrada."</p>
-              <div className="fine-line"></div>
-              <p className="text-[0.77rem] md:text-[0.88rem] text-neutral-600 tracking-wide font-light">Construção e direção de marca, com clareza e elegância.</p>
-              <div className="pt-[20px]">
-                <Link className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase hover:opacity-50 transition-opacity" href="/portfolio-agencia">
-                  VER TODOS <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                </Link>
+      {/* MENU DE FILTROS */}
+      <div className="flex flex-wrap justify-center items-center gap-12 py-12 px-6">
+        {FILTERS.map((f) => {
+          const isActive = activeFilter === f;
+          return (
+            <button
+              key={f}
+              onClick={() => setActiveFilter(f)}
+              className={`font-label uppercase tracking-wider text-sm cursor-pointer transition-colors duration-300 pb-1 ${
+                isActive
+                  ? 'text-black border-b-2 border-black'
+                  : 'text-neutral-400 border-b-2 border-transparent hover:text-neutral-600'
+              }`}
+            >
+              {f}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* TIMELINE */}
+      <main className="max-w-7xl mx-auto px-6 pb-24">
+        {filteredCategories.length === 0 && (
+          <p className="font-body italic text-neutral-500 text-center py-32">
+            Em breve. Novos projetos da Agência estarão disponíveis.
+          </p>
+        )}
+
+        {filteredCategories.map((category, idx) => {
+          const isLast = idx === filteredCategories.length - 1;
+          return (
+            <section
+              key={category.slug}
+              className={`${isLast ? '' : 'border-b border-neutral-200 pb-24 mb-24'}`}
+            >
+              {/* Cover */}
+              <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16 / 9' }}>
+                <Image
+                  src={category.cover}
+                  alt={category.title}
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                  className="object-cover"
+                  priority={idx === 0}
+                />
               </div>
-            </div>
-          </div>
-        </section>
+
+              {/* Title block */}
+              <div className="mt-8">
+                <span className="font-label uppercase tracking-wider text-xs text-neutral-500 block">
+                  {category.unit}
+                </span>
+                <h3 className="font-headline font-bold text-3xl md:text-5xl mt-2 leading-tight">
+                  {category.title}
+                </h3>
+                <p className="font-body text-base text-neutral-600 mt-4 max-w-2xl leading-relaxed">
+                  {category.description}
+                </p>
+              </div>
+
+              {/* Sub-grid of projects */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                {category.projects.map((project) => (
+                  <Link
+                    key={project.slug}
+                    href={`${category.basePath}/${project.slug}`}
+                    className="group block transition-opacity duration-300 hover:opacity-80"
+                  >
+                    <div className="relative w-full overflow-hidden bg-neutral-100" style={{ aspectRatio: '1 / 1' }}>
+                      <Image
+                        src={project.cover}
+                        alt={project.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      />
+                    </div>
+                    <span className="font-label uppercase tracking-wider text-xs mt-3 block text-black">
+                      {project.name}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })}
       </main>
     </div>
   );

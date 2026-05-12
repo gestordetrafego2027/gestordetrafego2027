@@ -18,6 +18,15 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
             <Link href="/crm/leads" className="text-neutral-600 hover:text-neutral-900">
               Leads
             </Link>
+            <Link href="/crm/clients" className="text-neutral-600 hover:text-neutral-900">
+              Clientes
+            </Link>
+            <Link href="/crm/opportunities" className="text-neutral-600 hover:text-neutral-900">
+              Oportunidades
+            </Link>
+            <Link href="/crm/campaigns" className="text-neutral-600 hover:text-neutral-900">
+              Campanhas
+            </Link>
           </nav>
           <div className="flex items-center gap-3 text-sm">
             <span className="text-neutral-500">{user?.email}</span>
