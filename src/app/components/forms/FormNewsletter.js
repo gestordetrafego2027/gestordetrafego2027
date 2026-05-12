@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { createClient } from '@/lib/supabase/browser'
+import { submitLead } from '@/lib/submitLead'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -36,8 +37,7 @@ export default function FormNewsletter({ sourceUrl = '/', variant = 'light' }) {
     setStatus('submitting')
 
     try {
-      const supabase = createClient()
-      const { error: insertError } = await supabase.from('leads').insert({
+      await submitLead({
         name: name || email.split('@')[0],
         email,
         phone: '',
@@ -50,13 +50,6 @@ export default function FormNewsletter({ sourceUrl = '/', variant = 'light' }) {
         },
         utm: getUtmFromUrl(),
       })
-
-      if (insertError) {
-        console.error('[FormNewsletter] Supabase insert error:', insertError)
-        setError('Não foi possível inscrever. Tente novamente.')
-        setStatus('idle')
-        return
-      }
 
       setStatus('success')
       setEmail('')

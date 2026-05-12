@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/browser'
+import { submitLead } from '@/lib/submitLead'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -47,8 +48,7 @@ export default function FormProdutora({
     setIsSubmitting(true)
 
     try {
-      const supabase = createClient()
-      const { error: insertError } = await supabase.from('leads').insert({
+      await submitLead({
         name: form.name,
         email: form.email,
         phone: form.phone,
@@ -68,13 +68,6 @@ export default function FormProdutora({
         },
         utm: getUtmFromUrl(),
       })
-
-      if (insertError) {
-        console.error('[FormProdutora] Supabase insert error:', insertError)
-        setError('Não foi possível enviar. Tente novamente em instantes.')
-        setIsSubmitting(false)
-        return
-      }
 
       router.push('/obrigado?from=produtora')
     } catch (err) {
