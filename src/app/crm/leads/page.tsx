@@ -31,12 +31,20 @@ export default async function LeadsPage() {
           <h1 className="text-2xl font-semibold tracking-tight">Leads</h1>
           <p className="text-sm text-neutral-500">Últimos 50 leads cadastrados.</p>
         </div>
-        <Link
-          href="/crm/leads/new"
-          className="rounded bg-neutral-900 text-white text-sm px-4 py-2 hover:bg-neutral-700"
-        >
-          + Novo lead
-        </Link>
+        <div className="flex gap-2">
+          <a
+            href="/crm/leads/export"
+            className="rounded border border-neutral-300 text-sm px-4 py-2 hover:bg-neutral-100"
+          >
+            ↓ CSV
+          </a>
+          <Link
+            href="/crm/leads/new"
+            className="rounded bg-neutral-900 text-white text-sm px-4 py-2 hover:bg-neutral-700"
+          >
+            + Novo lead
+          </Link>
+        </div>
       </header>
 
       {error && (

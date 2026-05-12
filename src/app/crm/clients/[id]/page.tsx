@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import { recordPaymentAction } from './actions'
+
+const METHODS = [
+  'pix', 'boleto', 'cartao_credito', 'cartao_debito',
+  'transferencia', 'dinheiro', 'outro',
+] as const
 
 export const dynamic = 'force-dynamic'
 
@@ -174,6 +180,59 @@ export default async function ClientDetailPage({
           <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
             Pagamentos recentes
           </h2>
+
+          {!!(invoices ?? []).filter((i) => i.status !== 'paga' && i.status !== 'cancelada').length && (
+            <form action={recordPaymentAction} className="space-y-2 mb-4 border-b border-neutral-100 pb-4">
+              <input type="hidden" name="client_id" value={client.id} />
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <label>
+                  Fatura
+                  <select
+                    name="invoice_id"
+                    required
+                    className="mt-1 w-full rounded border border-neutral-200 px-2 py-1"
+                  >
+                    {(invoices ?? [])
+                      .filter((i) => i.status !== 'paga' && i.status !== 'cancelada')
+                      .map((i) => (
+                        <option key={i.id} value={i.id}>
+                          {i.number ?? `#${i.id.slice(0, 6)}`} · {brl(Number(i.total_brl) - Number(i.paid_brl))} pendente
+                        </option>
+                      ))}
+                  </select>
+                </label>
+                <label>
+                  Valor (R$)
+                  <input
+                    type="number" name="amount_brl" step="0.01" min="0.01" required
+                    className="mt-1 w-full rounded border border-neutral-200 px-2 py-1 tabular-nums"
+                  />
+                </label>
+                <label>
+                  Método
+                  <select name="method" className="mt-1 w-full rounded border border-neutral-200 px-2 py-1">
+                    {METHODS.map((m) => (
+                      <option key={m} value={m}>{m.replace('_', ' ')}</option>
+                    ))}
+                  </select>
+                </label>
+                <label>
+                  Referência (Pix/NSU/…)
+                  <input
+                    type="text" name="reference"
+                    className="mt-1 w-full rounded border border-neutral-200 px-2 py-1"
+                  />
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="rounded bg-emerald-600 text-white text-xs px-3 py-1 hover:bg-emerald-700"
+              >
+                + Registrar pagamento
+              </button>
+            </form>
+          )}
+
           <ul className="space-y-2 text-sm">
             {(payments ?? []).map((p) => (
               <li key={p.id} className="flex justify-between border-l-2 border-emerald-300 pl-3">

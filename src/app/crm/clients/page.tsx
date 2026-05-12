@@ -24,9 +24,17 @@ export default async function ClientsPage() {
 
   return (
     <div className="space-y-6">
-      <header>
-        <h1 className="text-2xl font-semibold tracking-tight">Clientes</h1>
-        <p className="text-sm text-neutral-500">Leads promovidos a cliente. Ordenado por entrada.</p>
+      <header className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">Clientes</h1>
+          <p className="text-sm text-neutral-500">Leads promovidos a cliente. Ordenado por entrada.</p>
+        </div>
+        <a
+          href="/crm/clients/export"
+          className="rounded border border-neutral-300 text-sm px-4 py-2 hover:bg-neutral-100"
+        >
+          ↓ CSV
+        </a>
       </header>
 
       {error && (
