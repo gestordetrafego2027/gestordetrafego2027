@@ -4,8 +4,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
+import FormDrawer from "@/app/components/FormDrawer";
+import FormAngelo from "@/app/components/forms/FormAngelo";
 
 export default function AngeloPage() {
+    const [formCta, setFormCta] = useState(null);
+    const openForm = (ctaLocation) => setFormCta({ ctaLocation });
+    const closeForm = () => setFormCta(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const testimonials = [
@@ -232,9 +237,9 @@ export default function AngeloPage() {
                             </div>
                         </div>
                         <div className="pt-8 flex flex-col items-center space-y-8">
-                            <Link href="/contato" className="px-16 py-6 bg-black text-white text-button hover:bg-neutral-800 transition-all duration-500">
+                            <button type="button" onClick={() => openForm('reconstruir')} className="px-16 py-6 bg-black text-white text-button hover:bg-neutral-800 transition-all duration-500">
                                 Reconstruir minha marca
-                            </Link>
+                            </button>
                             <p className="text-caption text-neutral-500">
                                 Não é sobre aparecer mais. É sobre não precisar insistir.
                             </p>
@@ -313,9 +318,9 @@ export default function AngeloPage() {
                             Da ideia à imagem. Sob a mesma direção.
                         </h2>
                         <div className="flex flex-col items-center space-y-10">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="/contato">
+                            <button type="button" onClick={() => openForm('final')} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 Iniciar uma conversa
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -346,6 +351,18 @@ export default function AngeloPage() {
                     </div>
                 </div>
             </footer>
+            <FormDrawer
+                isOpen={!!formCta}
+                onClose={closeForm}
+                title="Conversa com Angelo"
+                subtitle="Mentoria, palestra, consultoria ou parceria. Respondemos em até 1 dia útil."
+            >
+                <FormAngelo
+                    onClose={closeForm}
+                    sourceUrl="/angelo"
+                    ctaLocation={formCta?.ctaLocation ?? null}
+                />
+            </FormDrawer>
         </div>
     );
 }
