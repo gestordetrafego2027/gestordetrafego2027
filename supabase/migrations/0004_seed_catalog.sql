@@ -126,13 +126,13 @@ on conflict do nothing;
 
 -- Add-ons globais (entrega rápida, periculosidade, etc.)
 insert into public.service_addons (service_id, slug, name, description, price_brl, position) values
-  (null, 'entrega-rapida-6h',  'Entrega rápida (até 6h)',  'Entrega das fotos editadas em até 6 horas após o shooting.', null, 10),
-  (null, 'entrega-rapida-24h', 'Entrega rápida (até 24h)', 'Entrega das fotos editadas em até 24 horas após o shooting.', null, 20),
-  (null, 'publicacao-blog',    'Publicação no Blog House', 'Inclusão do material no blog House Mazzutti.',                null, 30),
-  (null, 'publicacao-externa', 'Publicação externa',       'Direitos de publicação em mídia externa.',                    null, 40),
-  (null, 'alimentacao',        'Alimentação',              'Alimentação da equipe.',                                     null, 50),
-  (null, 'risco-periculosidade','Risco / Periculosidade',  'Adicional para locações com risco operacional.',              null, 60),
-  (null, 'equipamento-extra',  'Equipamento extra',        'Equipamento técnico além do padrão.',                         null, 70)
+  (null, 'entrega-rapida-6h',  'Entrega rápida (até 6h)',  'Entrega das fotos editadas em até 6 horas após o shooting.', null::numeric, 10),
+  (null, 'entrega-rapida-24h', 'Entrega rápida (até 24h)', 'Entrega das fotos editadas em até 24 horas após o shooting.', null::numeric, 20),
+  (null, 'publicacao-blog',    'Publicação no Blog House', 'Inclusão do material no blog House Mazzutti.',                null::numeric, 30),
+  (null, 'publicacao-externa', 'Publicação externa',       'Direitos de publicação em mídia externa.',                    null::numeric, 40),
+  (null, 'alimentacao',        'Alimentação',              'Alimentação da equipe.',                                     null::numeric, 50),
+  (null, 'risco-periculosidade','Risco / Periculosidade',  'Adicional para locações com risco operacional.',              null::numeric, 60),
+  (null, 'equipamento-extra',  'Equipamento extra',        'Equipamento técnico além do padrão.',                         null::numeric, 70)
 on conflict do nothing;
 
 ------------------------------------------------------------
@@ -233,9 +233,9 @@ on conflict do nothing;
 insert into public.service_packages (service_id, slug, name, price_brl, includes, position)
 select s.id, p.slug, p.name, p.price_brl, p.includes::jsonb, p.position
 from public.services s, (values
-  ('essential',     'Essential',     null, '["Site institucional / landing","Performance e responsividade","SEO técnico inicial","Integração WhatsApp e Instagram","Formulário de contato"]', 10),
-  ('profissional',  'Profissional',  null, '["Site multi-página com blog","Galerias visuais","Áreas com CTA de conversão","Formulários inteligentes","Integrações de agenda/CRM","Treinamento básico"]', 20),
-  ('premium',       'Premium',       null, '["Plataforma personalizada (WooCommerce ou stack custom)","Design exclusivo","E-commerce / catálogo / agenda","SEO avançado","Integrações ilimitadas (ERPs, marketplaces)","Manutenção mensal opcional"]', 30)
+  ('essential',     'Essential',     null::numeric, '["Site institucional / landing","Performance e responsividade","SEO técnico inicial","Integração WhatsApp e Instagram","Formulário de contato"]', 10),
+  ('profissional',  'Profissional',  null::numeric, '["Site multi-página com blog","Galerias visuais","Áreas com CTA de conversão","Formulários inteligentes","Integrações de agenda/CRM","Treinamento básico"]', 20),
+  ('premium',       'Premium',       null::numeric, '["Plataforma personalizada (WooCommerce ou stack custom)","Design exclusivo","E-commerce / catálogo / agenda","SEO avançado","Integrações ilimitadas (ERPs, marketplaces)","Manutenção mensal opcional"]', 30)
 ) as p(slug, name, price_brl, includes, position)
 where s.slug = 'desenvolvimento-web'
 on conflict (service_id, slug) do nothing;
