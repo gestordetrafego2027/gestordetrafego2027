@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
@@ -49,7 +50,11 @@ export default async function ClientsPage() {
           <tbody>
             {(clients ?? []).map((c) => (
               <tr key={c.id} className="border-t border-neutral-100">
-                <td className="px-4 py-2 font-medium">{c.display_name}</td>
+                <td className="px-4 py-2 font-medium">
+                  <Link href={`/crm/clients/${c.id}`} className="hover:underline">
+                    {c.display_name}
+                  </Link>
+                </td>
                 <td className="px-4 py-2 text-neutral-600">{c.email ?? '—'}</td>
                 <td className="px-4 py-2 capitalize">{c.unit}</td>
                 <td className="px-4 py-2">
