@@ -45,12 +45,12 @@ export async function createQuoteAction(formData: FormData) {
   }
 
   const items: Item[] = []
-  ;(packages ?? []).forEach((p, i) => {
+  ;(packages ?? []).forEach((p: { id: string; name: string; price_brl: number | null; services: { name: string } | { name: string }[] | null }, i: number) => {
+    const svc = Array.isArray(p.services) ? p.services[0] : p.services
     items.push({
       kind: 'package',
       reference_id: p.id,
-      // @ts-expect-error supabase relation
-      label: `${p.services?.name ?? 'Serviço'} — ${p.name}`,
+      label: `${svc?.name ?? 'Serviço'} — ${p.name}`,
       description: null,
       unit_price_brl: Number(p.price_brl ?? 0),
       quantity: 1,
