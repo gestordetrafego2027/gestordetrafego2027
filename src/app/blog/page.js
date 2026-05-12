@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import { articles as articleData } from './[slug]/articles';
 
 export default function BlogPage() {
     const [activeCategory, setActiveCategory] = useState('todos');
@@ -308,13 +309,29 @@ export default function BlogPage() {
             <main style={{ position: 'relative' }}>
                 {articles.map((article, index) => {
                     const isVisible = activeCategory === 'todos' || activeCategory === article.categoria;
-                    
+                    const slug = article.link.split('/').pop();
+                    const cover = articleData[slug]?.cover;
+
                     return (
-                        <article 
-                            key={index} 
+                        <article
+                            key={index}
                             className={`group article-card border-gray-200 transition-all duration-300 ease-in-out ${isVisible ? 'opacity-100 max-h-[2000px] visible pb-20 mb-20 border-b relative' : 'opacity-0 max-h-0 invisible p-0 m-0 border-none absolute overflow-hidden pointer-events-none'}`}
                         >
-                            <div className="image-placeholder mb-10 overflow-hidden"></div>
+                            <Link href={article.link} className="block mb-10 overflow-hidden">
+                                {cover ? (
+                                    <img
+                                        src={cover.src}
+                                        alt={cover.alt}
+                                        title={cover.alt}
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="w-full h-auto object-cover"
+                                        style={{ aspectRatio: '4 / 3' }}
+                                    />
+                                ) : (
+                                    <div className="image-placeholder"></div>
+                                )}
+                            </Link>
                             <div className="text-center max-w-5xl mx-auto" style={{ transition: 'opacity 0.3s ease-in-out', opacity: isVisible ? 1 : 0 }}>
                                 <span className="category-label text-[#5E5E5E] mb-4 block">{article.subcategoria}</span>
                                 <h2 className="article-title mb-6 hover:text-gray-500 transition-colors leading-snug">
