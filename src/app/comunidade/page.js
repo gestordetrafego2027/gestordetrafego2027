@@ -241,7 +241,7 @@ export default function ComunidadePage() {
                                 label: "Para talentos que queiram somar",
                                 title: "Vagas & Oportunidades.",
                                 desc: "Posições abertas, freelas selecionados e castings editoriais. Espaço para quem entende que construção exige pensamento — não apenas execução.",
-                                cta: "Ver oportunidades",
+                                cta: "Quero ser representado",
                                 href: "/comunidade/vagas",
                             },
                         ];
