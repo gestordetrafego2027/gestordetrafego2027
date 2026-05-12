@@ -526,9 +526,9 @@ export default function AgenciaPage() {
                             Sua marca merece ocupar espaço — não disputar atenção.
                         </h2>
                         <div className="flex flex-col items-center space-y-10">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="/contato">
+                            <button type="button" onClick={() => openForm('final')} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 Iniciar uma conversa
-                            </Link>
+                            </button>
                             <p className="text-caption text-zinc-500">Menos tentativa. Mais direção.</p>
                         </div>
                     </div>
