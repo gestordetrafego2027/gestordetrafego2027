@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
+import FormDrawer from "@/app/components/FormDrawer";
+import FormGeral from "@/app/components/forms/FormGeral";
 
 /**
  * HOME PAGE - HOUSE MAZZUTTI
@@ -12,6 +14,7 @@ import ClientLogos from "@/app/components/ClientLogos";
 export default function Home() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
+    const [isHomeFormOpen, setIsHomeFormOpen] = useState(false);
 
     const heroSlides = [
         {
@@ -626,12 +629,13 @@ export default function Home() {
                             Se a sua marca pede um novo olhar.
                         </h2>
                         <div className="flex flex-col items-center space-y-10">
-                            <Link
+                            <button
+                                type="button"
+                                onClick={() => setIsHomeFormOpen(true)}
                                 className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500"
-                                href="/contato"
                             >
                                 Iniciar uma conversa
-                            </Link>
+                            </button>
                             <p className="text-caption text-zinc-500">
                                 Menos tentativa. Mais direção.
                             </p>
@@ -666,6 +670,18 @@ export default function Home() {
                     </div>
                 </div>
             </footer>
+            <FormDrawer
+                isOpen={isHomeFormOpen}
+                onClose={() => setIsHomeFormOpen(false)}
+                title="Iniciar uma conversa"
+                subtitle="Conte-nos sobre o que você precisa. Respondemos em até 1 dia útil."
+            >
+                <FormGeral
+                    onClose={() => setIsHomeFormOpen(false)}
+                    sourceUrl="/"
+                    ctaLocation="home_final"
+                />
+            </FormDrawer>
         </div>
     );
 }
