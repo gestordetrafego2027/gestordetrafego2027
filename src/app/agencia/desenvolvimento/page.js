@@ -5,8 +5,14 @@ import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import FormDrawer from '@/app/components/FormDrawer';
+import FormAgenciaB2B from '@/app/components/forms/FormAgenciaB2B';
 
 export default function AgenciaDesenvolvimentoPage() {
+    const [formCta, setFormCta] = useState(null);
+    const openForm = (ctaLocation) => setFormCta({ ctaLocation });
+    const closeForm = () => setFormCta(null);
+
     useEffect(() => {
         AOS.init({ duration: 800, once: true, easing: 'ease-out' })
     }, []);
@@ -51,7 +57,7 @@ export default function AgenciaDesenvolvimentoPage() {
                             <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">Seu site não é um projeto. É o ativo mais importante da sua marca online.</h1>
                             <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Websites, plataformas e experiências digitais que posicionam, conectam e convertem.</p>
                             <div data-aos="fade-up" data-aos-delay="400">
-                                <button className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
+                                <button type="button" onClick={() => openForm('hero')} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
                                     QUERO CONSTRUIR MEU SITE
                                 </button>
                             </div>
@@ -411,7 +417,7 @@ export default function AgenciaDesenvolvimentoPage() {
             <section className="bg-white px-[40px]">
                 <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                     <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug" data-aos="fade-up" data-aos-delay="100">Sua presença digital começa aqui.</h2>
-                    <button className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
                         QUERO CONSTRUIR MEU SITE COM A HOUSE
                     </button>
                 </div>
@@ -445,6 +451,19 @@ export default function AgenciaDesenvolvimentoPage() {
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>
+            <FormDrawer
+                isOpen={!!formCta}
+                onClose={closeForm}
+                title="Construir site"
+                subtitle="Conte-nos sobre seu projeto digital. Respondemos em até 1 dia útil."
+            >
+                <FormAgenciaB2B
+                    onClose={closeForm}
+                    sourceUrl="/agencia/desenvolvimento"
+                    serviceOfInterest="desenvolvimento"
+                    ctaLocation={formCta?.ctaLocation ?? null}
+                />
+            </FormDrawer>
         </div>
     );
 }

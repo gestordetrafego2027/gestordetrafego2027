@@ -5,8 +5,14 @@ import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import FormDrawer from '@/app/components/FormDrawer';
+import FormAgenciaB2B from '@/app/components/forms/FormAgenciaB2B';
 
 export default function AgenciaCampanhasPage() {
+    const [formCta, setFormCta] = useState(null);
+    const openForm = (ctaLocation) => setFormCta({ ctaLocation });
+    const closeForm = () => setFormCta(null);
+
     useEffect(() => {
         AOS.init({ duration: 800, once: true, easing: 'ease-out' })
     }, []);
@@ -52,7 +58,7 @@ export default function AgenciaCampanhasPage() {
                             <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">Campanhas não começam no conteúdo. Começam na forma como o impacto é construído.</h1>
                             <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Campanhas publicitárias com estratégia, narrativa integrada e produção de conteúdo para posicionamento e conversão.</p>
                             <div data-aos="fade-up" data-aos-delay="400">
-                                <button className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
+                                <button type="button" onClick={() => openForm('hero')} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
                                     ESTRUTURAR CAMPAIGN
                                 </button>
                             </div>
@@ -412,7 +418,7 @@ export default function AgenciaCampanhasPage() {
             <section className="bg-white px-[40px]">
                 <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                     <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug" data-aos="fade-up" data-aos-delay="100">Sua campanha começa aqui.</h2>
-                    <button className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
                         ESTRUTURAR CAMPAIGN
                     </button>
                 </div>
@@ -446,6 +452,19 @@ export default function AgenciaCampanhasPage() {
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>
+            <FormDrawer
+                isOpen={!!formCta}
+                onClose={closeForm}
+                title="Estruturar campanha"
+                subtitle="Conte-nos sobre sua campanha. Respondemos em até 1 dia útil."
+            >
+                <FormAgenciaB2B
+                    onClose={closeForm}
+                    sourceUrl="/agencia/campanhas"
+                    serviceOfInterest="campanhas"
+                    ctaLocation={formCta?.ctaLocation ?? null}
+                />
+            </FormDrawer>
         </div>
     );
 }
