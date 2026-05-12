@@ -59,14 +59,6 @@ const produtoraBeleza = [
   cover: `/images/produtora/beleza/${slug}/capa.jpg`
 }));
 
-const agenciaProjetos = [
-  'house-mazzutti', 'knowhol', 'mabdo', 'on-take', 'pous', 'samrat'
-].map((slug) => ({
-  slug,
-  name: toTitleCase(slug),
-  cover: `/images/agencia/${slug}/capa.jpg`
-}));
-
 const categories = [
   {
     slug: 'book',
@@ -103,15 +95,6 @@ const categories = [
     cover: produtoraBeleza[0].cover,
     basePath: '/portfolio-produtora',
     projects: produtoraBeleza
-  },
-  {
-    slug: 'agencia-projetos',
-    unit: 'AGÊNCIA',
-    title: 'Branding & Direção',
-    description: 'Projetos de branding, identidade e direção criativa assinados pela Agência.',
-    cover: agenciaProjetos[0].cover,
-    basePath: '/portfolio-agencia',
-    projects: agenciaProjetos
   }
 ];
 
