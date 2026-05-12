@@ -24,17 +24,25 @@ const SERVICE_LABEL = {
   outro: 'Outro',
 }
 
-export default function FormStudio({ onClose, serviceType = 'book', sourceUrl = '/studio' }) {
+export default function FormStudio({
+  onClose,
+  serviceType = 'book',
+  sourceUrl = '/studio',
+  packageSelected = null,
+  ctaLocation = null,
+}) {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
   const [form, setForm] = useState({
     name: '',
-    email: '',
+    birthDate: '',
     phone: '',
-    city: '',
+    email: '',
+    instagram: '',
     serviceType: SERVICE_LABEL[serviceType] ? serviceType : 'book',
     desiredDate: '',
+    referral: '',
     message: '',
   })
 
@@ -53,7 +61,6 @@ export default function FormStudio({ onClose, serviceType = 'book', sourceUrl = 
         name: form.name,
         email: form.email,
         phone: form.phone,
-        city: form.city || null,
         segment: 'commercial',
         lead_type: 'cliente_studio',
         status: 'novo',
@@ -61,8 +68,13 @@ export default function FormStudio({ onClose, serviceType = 'book', sourceUrl = 
         details: {
           business_unit: 'studio',
           service_type: form.serviceType,
+          birth_date: form.birthDate || null,
+          instagram: form.instagram || null,
           desired_date: form.desiredDate || null,
+          referral: form.referral || null,
           message: form.message || null,
+          package_selected: packageSelected,
+          cta_location: ctaLocation,
         },
         utm: getUtmFromUrl(),
       })
@@ -104,17 +116,17 @@ export default function FormStudio({ onClose, serviceType = 'book', sourceUrl = 
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="fs-email" className={labelClass}>
-          Email <span className="text-red-600">*</span>
+        <label htmlFor="fs-birth" className={labelClass}>
+          Data de nascimento <span className="text-red-600">*</span>
         </label>
         <input
-          id="fs-email"
-          type="email"
+          id="fs-birth"
+          type="date"
           required
-          value={form.email}
-          onChange={handleChange('email')}
+          value={form.birthDate}
+          onChange={handleChange('birthDate')}
           className={inputClass}
-          autoComplete="email"
+          autoComplete="bday"
         />
       </div>
 
@@ -135,16 +147,31 @@ export default function FormStudio({ onClose, serviceType = 'book', sourceUrl = 
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="fs-city" className={labelClass}>
-          Cidade
+        <label htmlFor="fs-email" className={labelClass}>
+          Email <span className="text-red-600">*</span>
         </label>
         <input
-          id="fs-city"
-          type="text"
-          value={form.city}
-          onChange={handleChange('city')}
+          id="fs-email"
+          type="email"
+          required
+          value={form.email}
+          onChange={handleChange('email')}
           className={inputClass}
-          autoComplete="address-level2"
+          autoComplete="email"
+        />
+      </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="fs-instagram" className={labelClass}>
+          Instagram
+        </label>
+        <input
+          id="fs-instagram"
+          type="text"
+          value={form.instagram}
+          onChange={handleChange('instagram')}
+          placeholder="@seuusuario"
+          className={inputClass}
         />
       </div>
 
@@ -177,6 +204,25 @@ export default function FormStudio({ onClose, serviceType = 'book', sourceUrl = 
           onChange={handleChange('desiredDate')}
           className={inputClass}
         />
+      </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="fs-referral" className={labelClass}>
+          Onde nos encontrou <span className="text-red-600">*</span>
+        </label>
+        <select
+          id="fs-referral"
+          required
+          value={form.referral}
+          onChange={handleChange('referral')}
+          className={inputClass}
+        >
+          <option value="" disabled>Selecione</option>
+          <option value="instagram">Instagram</option>
+          <option value="google">Google</option>
+          <option value="indicacao">Indicação</option>
+          <option value="outro">Outro</option>
+        </select>
       </div>
 
       <div className="flex flex-col">
