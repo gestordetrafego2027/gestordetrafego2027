@@ -9,10 +9,10 @@ export async function promoteLeadAction(formData: FormData): Promise<void> {
   if (!leadId) return
 
   const supabase = await createClient()
-  const { error } = await supabase.rpc('promote_lead_to_client', {
+  const { error } = await supabase.rpc('promote_lead_to_client' as never, {
     p_lead_id: leadId,
     p_amount_brl: amount,
-  })
+  } as never)
 
   if (error) {
     console.error('[promoteLeadAction]', error.message)

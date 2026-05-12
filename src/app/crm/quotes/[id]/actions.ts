@@ -69,10 +69,10 @@ export async function generateInvoiceFromQuoteAction(formData: FormData): Promis
   let clientId = existingClient?.id
   if (!clientId) {
     const { data: newClient, error: prom } = await supabase
-      .rpc('promote_lead_to_client', {
+      .rpc('promote_lead_to_client' as never, {
         p_lead_id: quote.lead_id,
         p_amount_brl: Number(quote.total_brl ?? 0),
-      })
+      } as never)
     if (prom) { console.error('[generateInvoice]', prom.message); return }
     clientId = newClient as string
   }
