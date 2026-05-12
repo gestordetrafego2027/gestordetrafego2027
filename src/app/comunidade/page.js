@@ -143,7 +143,12 @@ export default function ComunidadePage() {
                 {/* [1] HERO */}
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     <div className="absolute inset-0 z-0">
-                        <div className="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d]"></div>
+                        <img
+                            src="/images/comunidade/hero.png"
+                            alt="Produção House Mazzutti — equipe em set"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/30"></div>
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-5xl">
