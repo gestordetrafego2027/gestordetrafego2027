@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
+import { promoteLeadAction } from './actions'
 
 export const dynamic = 'force-dynamic'
 
@@ -53,12 +54,13 @@ export default async function LeadsPage() {
               <th className="text-left px-4 py-2 font-medium">Tipo</th>
               <th className="text-left px-4 py-2 font-medium">Status</th>
               <th className="text-left px-4 py-2 font-medium">Criado</th>
+              <th className="text-right px-4 py-2 font-medium">Ações</th>
             </tr>
           </thead>
           <tbody>
             {!leads?.length && (
               <tr>
-                <td colSpan={5} className="px-4 py-8 text-center text-neutral-500">
+                <td colSpan={6} className="px-4 py-8 text-center text-neutral-500">
                   Nenhum lead ainda. Crie o primeiro.
                 </td>
               </tr>
@@ -78,6 +80,27 @@ export default async function LeadsPage() {
                 </td>
                 <td className="px-4 py-3 text-neutral-500 text-xs">
                   {new Date(l.created_at).toLocaleString('pt-BR')}
+                </td>
+                <td className="px-4 py-3 text-right">
+                  {l.status !== 'ganho' && (
+                    <form action={promoteLeadAction} className="inline-flex items-center gap-1">
+                      <input type="hidden" name="lead_id" value={l.id} />
+                      <input
+                        type="number"
+                        name="amount_brl"
+                        placeholder="R$"
+                        step="100"
+                        min="0"
+                        className="w-20 rounded border border-neutral-200 px-1.5 py-0.5 text-xs"
+                      />
+                      <button
+                        type="submit"
+                        className="rounded bg-emerald-600 text-white text-xs px-2 py-0.5 hover:bg-emerald-700"
+                      >
+                        → Cliente
+                      </button>
+                    </form>
+                  )}
                 </td>
               </tr>
             ))}
