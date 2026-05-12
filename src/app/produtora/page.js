@@ -4,8 +4,13 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
+import FormDrawer from '@/app/components/FormDrawer'
+import FormProdutora from '@/app/components/forms/FormProdutora'
 
 export default function ProdutoraPage() {
+    const [formCta, setFormCta] = useState(null)
+    const openForm = (ctaLocation) => setFormCta({ ctaLocation })
+    const closeForm = () => setFormCta(null)
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentBannerSlide, setCurrentBannerSlide] = useState(0)
     const prevBanner = () => setCurrentBannerSlide(prev => (prev - 1 + 3) % 3)
@@ -185,11 +190,9 @@ export default function ProdutoraPage() {
                                     <p className="hero-animate text-body text-white/80 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].texto}
                                     </p>
-                                    <Link href="/contato">
-                                        <button className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                            Iniciar projeto
-                                        </button>
-                                    </Link>
+                                    <button type="button" onClick={() => openForm('hero')} className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                        Iniciar projeto
+                                    </button>
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 left-12 flex items-center z-20">
@@ -371,9 +374,9 @@ export default function ProdutoraPage() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-10">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="/contato">
+                            <button type="button" onClick={() => openForm('final')} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 Iniciar uma conversa
-                            </Link>
+                            </button>
                             <p className="text-caption text-zinc-500">Menos volume. Mais direção.</p>
                         </div>
                     </div>
@@ -487,6 +490,18 @@ export default function ProdutoraPage() {
                     </div>
                 </div>
             </footer>
+            <FormDrawer
+                isOpen={!!formCta}
+                onClose={closeForm}
+                title="Iniciar projeto"
+                subtitle="Conte-nos sobre seu projeto. Respondemos em até 1 dia útil."
+            >
+                <FormProdutora
+                    onClose={closeForm}
+                    sourceUrl="/produtora"
+                    ctaLocation={formCta?.ctaLocation ?? null}
+                />
+            </FormDrawer>
             <style dangerouslySetInnerHTML={{ __html: `
                 .columns-gallery-container {
                     height: 80vh;
