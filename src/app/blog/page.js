@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import NewsletterStrip from '@/app/components/NewsletterStrip';
 import { articles as articleData } from './[slug]/articles';
 
 export default function BlogPage() {
@@ -362,6 +363,8 @@ export default function BlogPage() {
                     </div>
                 </div>
             </main>
+
+            <NewsletterStrip sourceUrl="/blog" variant="dark" />
 
             {/* Footer */}
             <footer className="bg-[#0a0a0a] text-white py-24 px-8 text-center">

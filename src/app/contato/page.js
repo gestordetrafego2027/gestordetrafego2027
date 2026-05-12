@@ -3,6 +3,8 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
+import FormContatoGeral from "@/app/components/forms/FormContatoGeral";
+import NewsletterStrip from "@/app/components/NewsletterStrip";
 
 export default function ContatoPage() {
     useEffect(() => {
@@ -119,32 +121,11 @@ export default function ContatoPage() {
                         <h3 className="font-['Newsreader'] text-white text-4xl md:text-5xl uppercase tracking-tight mb-4">CONTATE-NOS</h3>
                         <p className="font-['Newsreader'] italic text-white/70 text-lg">Ouvimos. Direcionamos. Transformamos.</p>
                     </div>
-                    <form className="space-y-12">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                            <div className="relative">
-                                <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="name" placeholder="NOME" type="text" />
-                            </div>
-                            <div className="relative">
-                                <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="email" placeholder="EMAIL" type="email" />
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <input className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all" id="subject" placeholder="ASSUNTO" type="text" />
-                        </div>
-                        <div className="relative">
-                            <textarea className="w-full bg-transparent border-b border-white/30 border-t-0 border-l-0 border-r-0 px-0 py-3 text-white placeholder-white/40 font-['Inter'] focus:ring-0 focus:border-white transition-all resize-none" id="message" placeholder="SUA MENSAGEM" rows="4"></textarea>
-                        </div>
-                        <div className="flex flex-col items-center gap-12 pt-8">
-                            <button className="w-full md:w-auto min-w-[280px] border-[0.5px] border-white px-10 py-5 font-['Raleway'] uppercase tracking-[0.2em] text-[12px] text-white hover:bg-white hover:text-black transition-all duration-300" onClick={() => window.location.href = 'mailto:contato@housemazzutti.com'} type="button">
-                                ENVIAR MENSAGEM
-                            </button>
-                            <div className="text-center">
-                                <p className="font-['Raleway'] uppercase tracking-[0.3em] text-[9px] text-white/40">Discrição. Cuidado. Direção.</p>
-                            </div>
-                        </div>
-                    </form>
+                    <FormContatoGeral sourceUrl="/contato" />
                 </div>
             </section>
+
+            <NewsletterStrip sourceUrl="/contato" variant="dark" />
 
             {/* 5. FOOTER (Shared) */}
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
