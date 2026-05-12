@@ -123,12 +123,9 @@ export default function PortfolioPage() {
           <span className="font-label uppercase tracking-wider text-sm text-black mb-6 block">
             HOUSE MAZZUTTI — PORTFÓLIO
           </span>
-          <h2 className="font-headline font-bold uppercase text-4xl md:text-6xl leading-tight mb-6">
-            Cada imagem nasce de uma decisão. Cada projeto, de uma intenção.
-          </h2>
-          <p className="font-body italic text-base text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="font-headline font-bold uppercase text-4xl md:text-6xl leading-tight">
             Registros visuais de books, ensaios, campanhas e direções criativas assinadas pela House Mazzutti.
-          </p>
+          </h2>
         </div>
       </section>
 
