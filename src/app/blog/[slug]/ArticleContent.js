@@ -29,6 +29,12 @@ function ArticleImage({ data, className = '', sizes = '' }) {
 
 export default function ArticleContent({ slug }) {
     const article = articles[slug] || articles['book-para-modelos-quem-e-escolhido'];
+    const slugList = Object.keys(articles);
+    const currentIdx = slugList.indexOf(slug);
+    const prevSlug = currentIdx > 0 ? slugList[currentIdx - 1] : null;
+    const nextSlug = currentIdx >= 0 && currentIdx < slugList.length - 1 ? slugList[currentIdx + 1] : null;
+    const prevArticle = prevSlug ? articles[prevSlug] : null;
+    const nextArticle = nextSlug ? articles[nextSlug] : null;
 
     return (
         <div className="bg-white text-zinc-800 m-0 p-0 antialiased font-sans">
@@ -187,7 +193,7 @@ export default function ArticleContent({ slug }) {
 
                     {/* Author Section */}
                     <div className="flex items-center gap-8 p-8 hairline-t border-b-[0.5px] border-zinc-100 mb-20">
-                        <img alt="Angelo Mazzutti" className="w-20 h-20 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK7FElomFMu_PQnqn3Dtn1hw9i1HelZztYId9nJ0jl9oD3BS2Nc5qNeujWoaoGb40EWAGHvRkSLB8UBbwj_6tbwMc04ThR9KgPtPRLlgSoiqjHmOIyKN10fcDU0hbNoQxS2msj9ycmpExTz0Jxm2HVW3xIQIcfJcSvJav81BVRXK9XW-NIZ6GZIBReRxnC7MnLHlWYBV6nd-rnDjnAGXEujcxSIdc59YjR27mdvOWDesDah9yDYzzpkqaBPaBOdEJYn8phdOzVibs9"/>
+                        <img alt="Angelo Mazzutti" className="w-20 h-20 rounded-full object-cover grayscale" src="/images/angelo/angelo-portrait.png"/>
                         <div>
                             <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400 mb-1">AUTOR</div>
                             <div className="text-[18px] font-headline italic text-zinc-900 mb-2">Angelo Mazzutti</div>
@@ -200,7 +206,7 @@ export default function ArticleContent({ slug }) {
                 <aside className="hidden lg:flex flex-col w-80 sticky" style={{ position: 'sticky', top: '100px', alignSelf: 'flex-start' }}>
                     {/* About Sidebar */}
                     <div className="mb-12 pb-10 hairline-b">
-                        <img alt="Angelo Mazzutti" className="w-[100px] h-[100px] rounded-full object-cover grayscale mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdQRMa_7XqDCP1ZKTnhPTPm-3OOSyYV-qNgqf0TlX10XGbSFTUqm3jyFW-NIa6jerfgmLhIYr7MBJRV2OUHGx-U_xS6lJW11xEieP7lRAqpNfLkIn5JHOFg8zW69qCY0jq9B8tBMEa0h6DrqfmrEZIVy-AzaWvOjgXIbJ6Ja1m4X8kjJmKX1rbJrI0AAMC2NlANqSU-8Ss4nV0AsqteZvU2jc5nKfRFp_pG6QtFgqR5QzWFWjvtH5eCOCKHCV3J394LOZJqCrOX_CQ"/>
+                        <img alt="Angelo Mazzutti" className="w-[100px] h-[100px] rounded-full object-cover grayscale mb-6" src="/images/angelo/angelo-portrait.png"/>
                         <h4 className="text-[20px] font-headline italic text-zinc-900 mb-4">House Mazzutti</h4>
                         <p className="text-[14px] text-zinc-500 font-body leading-relaxed">Hub criativo & estratégico. Branding, direção criativa e produção audiovisual sob uma única estrutura — da concepção ao acabamento final.</p>
                         <Link href="/about" className="mt-6 inline-block text-[12px] font-label font-bold uppercase tracking-[0.2em] text-zinc-900 border-b-[0.5px] border-zinc-900 pb-1">CONHECER A HOUSE</Link>
