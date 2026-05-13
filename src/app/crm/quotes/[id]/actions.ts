@@ -95,10 +95,11 @@ export async function generateInvoiceFromQuoteAction(formData: FormData): Promis
     .single()
   if (ierr || !invoice) { console.error('[generateInvoice]', ierr?.message); return }
 
-  const items = (quote.quote_items ?? []).map((qi: {
+  const rawItems = (quote.quote_items ?? []) as Array<{
     label: string; description: string | null; quantity: number;
     unit_price_brl: number; position: number;
-  }) => ({
+  }>
+  const items = (Array.isArray(rawItems) ? rawItems : []).map((qi) => ({
     invoice_id: invoice.id,
     label: qi.label,
     description: qi.description,
