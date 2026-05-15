@@ -35,6 +35,14 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
             </Link>
           </nav>
           <div className="flex items-center gap-3 text-sm">
+            <form action="/crm/search" method="get" className="hidden md:block">
+              <input
+                type="search"
+                name="q"
+                placeholder="Buscar leads, clientes, propostas…"
+                className="rounded border border-neutral-200 px-3 py-1 text-xs w-64 focus:outline-none focus:border-neutral-400"
+              />
+            </form>
             <span className="text-neutral-500">{user?.email}</span>
             <form action="/logout" method="post">
               <button
