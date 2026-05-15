@@ -164,6 +164,14 @@ export default async function QuoteDetailPage({
           Ações
         </h2>
         <div className="flex flex-wrap gap-2 items-end">
+          <a
+            href={`/crm/quotes/${quote.id}/print`}
+            target="_blank"
+            rel="noopener"
+            className="rounded border border-neutral-300 text-sm px-3 py-2 hover:bg-neutral-100"
+          >
+            🖨️ Imprimir / Salvar PDF
+          </a>
           {quote.status === 'rascunho' && (
             <form action={sendQuoteAction}>
               <input type="hidden" name="quote_id" value={quote.id} />
