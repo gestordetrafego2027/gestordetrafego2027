@@ -30,7 +30,7 @@ export default async function ClientsPage() {
           <p className="text-sm text-neutral-500">Leads promovidos a cliente. Ordenado por entrada.</p>
         </div>
         <a
-          href="/crm/clients/export"
+          href="/crm/api/export?entity=clients"
           className="rounded border border-neutral-300 text-sm px-4 py-2 hover:bg-neutral-100"
         >
           ↓ CSV

@@ -47,6 +47,12 @@ export default async function QuotesPage({
           <h1 className="text-2xl font-semibold tracking-tight">Propostas</h1>
           <p className="text-sm text-neutral-500">Últimas 100, filtrável por status.</p>
         </div>
+        <a
+          href="/crm/api/export?entity=quotes"
+          className="rounded border border-neutral-300 text-sm px-4 py-2 hover:bg-neutral-100"
+        >
+          ↓ CSV
+        </a>
         <nav className="flex gap-1 text-xs">
           {STATUS_OPTIONS.map((s) => {
             const active = (filter ?? 'todos') === s

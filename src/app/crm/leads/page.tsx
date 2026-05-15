@@ -33,7 +33,7 @@ export default async function LeadsPage() {
         </div>
         <div className="flex gap-2">
           <a
-            href="/crm/leads/export"
+            href="/crm/api/export?entity=leads"
             className="rounded border border-neutral-300 text-sm px-4 py-2 hover:bg-neutral-100"
           >
             ↓ CSV

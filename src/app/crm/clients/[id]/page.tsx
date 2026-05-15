@@ -177,9 +177,17 @@ export default async function ClientDetailPage({
         </div>
 
         <div className="rounded-lg border border-neutral-200 bg-white p-5">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
-            Pagamentos recentes
-          </h2>
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+              Pagamentos recentes
+            </h2>
+            <a
+              href="/crm/api/export?entity=payments"
+              className="text-xs rounded border border-neutral-300 px-2 py-0.5 hover:bg-neutral-100"
+            >
+              ↓ CSV
+            </a>
+          </div>
 
           {!!(invoices ?? []).filter((i) => i.status !== 'paga' && i.status !== 'cancelada').length && (
             <form action={recordPaymentAction} className="space-y-2 mb-4 border-b border-neutral-100 pb-4">
