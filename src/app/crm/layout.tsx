@@ -7,19 +7,52 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
+  // Atividades nas últimas 24h (badge no nav)
+  const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()
+  const { count: newActivities } = await supabase
+    .from('activities')
+    .select('*', { count: 'exact', head: true })
+    .gte('created_at', since)
+  const { count: openLeads } = await supabase
+    .from('leads')
+    .select('*', { count: 'exact', head: true })
+    .in('status', ['novo', 'em_contato'])
+  const { count: overdueInvoices } = await supabase
+    .from('invoices')
+    .select('*', { count: 'exact', head: true })
+    .eq('status', 'vencida')
+
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       <header className="border-b border-neutral-200 bg-white">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
           <nav className="flex items-center gap-6 text-sm">
-            <Link href="/crm" className="font-semibold tracking-tight">
+            <Link href="/crm" className="font-semibold tracking-tight relative">
               HM CRM
+              {!!newActivities && (
+                <span
+                  className="absolute -top-1 -right-3 inline-flex items-center justify-center rounded-full bg-emerald-500 text-white text-[10px] w-4 h-4 leading-none tabular-nums"
+                  title={`${newActivities} atividades nas últimas 24h`}
+                >
+                  {newActivities > 9 ? '9+' : newActivities}
+                </span>
+              )}
             </Link>
-            <Link href="/crm/leads" className="text-neutral-600 hover:text-neutral-900">
+            <Link href="/crm/leads" className="text-neutral-600 hover:text-neutral-900 relative">
               Leads
+              {!!openLeads && (
+                <span className="ml-1 inline-flex items-center justify-center rounded-full bg-amber-500 text-white text-[10px] px-1.5 py-0.5 leading-none tabular-nums">
+                  {openLeads}
+                </span>
+              )}
             </Link>
-            <Link href="/crm/clients" className="text-neutral-600 hover:text-neutral-900">
+            <Link href="/crm/clients" className="text-neutral-600 hover:text-neutral-900 relative">
               Clientes
+              {!!overdueInvoices && (
+                <span className="ml-1 inline-flex items-center justify-center rounded-full bg-rose-500 text-white text-[10px] px-1.5 py-0.5 leading-none tabular-nums" title="faturas vencidas">
+                  {overdueInvoices}
+                </span>
+              )}
             </Link>
             <Link href="/crm/opportunities" className="text-neutral-600 hover:text-neutral-900">
               Oportunidades
