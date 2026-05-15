@@ -5,6 +5,7 @@ import {
   sendQuoteAction, acceptQuoteAction, rejectQuoteAction,
   generateInvoiceFromQuoteAction,
 } from './actions'
+import CopyLinkButton from './CopyLinkButton'
 
 export const dynamic = 'force-dynamic'
 
@@ -31,7 +32,7 @@ export default async function QuoteDetailPage({
     .from('quotes')
     .select(`
       id, title, status, notes, subtotal_brl, discount_brl, total_brl,
-      valid_until, sent_at, accepted_at, created_at, lead_id,
+      valid_until, sent_at, accepted_at, created_at, lead_id, public_token,
       leads (id, name, email, phone),
       quote_items (id, kind, label, description, quantity, unit_price_brl, total_brl, position)
     `)
@@ -172,6 +173,11 @@ export default async function QuoteDetailPage({
           >
             🖨️ Imprimir / Salvar PDF
           </a>
+          {quote.public_token && (
+            <CopyLinkButton
+              url={`${process.env.NEXT_PUBLIC_SITE_URL ?? ''}/p/${encodeURIComponent(quote.public_token)}`}
+            />
+          )}
           {quote.status === 'rascunho' && (
             <form action={sendQuoteAction}>
               <input type="hidden" name="quote_id" value={quote.id} />
