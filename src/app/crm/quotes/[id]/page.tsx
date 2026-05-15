@@ -42,13 +42,9 @@ export default async function QuoteDetailPage({
 
   // @ts-expect-error supabase relation
   const lead = quote.leads as { id: string; name: string; email: string | null; phone: string | null } | null
-  const rawItems = (quote.quote_items ?? []) as Array<{
-    id: string; label: string; kind: string; quantity: number;
-    unit_price_brl: number; total_brl: number | null; position: number;
-  }>
-  const items = (Array.isArray(rawItems) ? rawItems : [])
+  const items = (quote.quote_items ?? [])
     .slice()
-    .sort((a, b) => a.position - b.position)
+    .sort((a: { position: number }, b: { position: number }) => a.position - b.position)
 
   const { data: invoice } = await supabase
     .from('invoices').select('id, status, total_brl').eq('quote_id', id).maybeSingle()
@@ -118,7 +114,10 @@ export default async function QuoteDetailPage({
             </tr>
           </thead>
           <tbody>
-            {items.map((it) => (
+            {items.map((it: {
+              id: string; label: string; kind: string; quantity: number;
+              unit_price_brl: number; total_brl: number | null;
+            }) => (
               <tr key={it.id} className="border-t border-neutral-100">
                 <td className="py-1 font-medium">{it.label}</td>
                 <td className="py-1 text-xs text-neutral-500 capitalize">{it.kind}</td>

@@ -35,7 +35,7 @@ export default async function QuotesPage({
     .limit(100)
 
   if (filter && filter !== 'todos' && STATUS_OPTIONS.includes(filter as never)) {
-    q = q.eq('status', filter as never)
+    q = q.eq('status', filter)
   }
 
   const { data: quotes, error } = await q

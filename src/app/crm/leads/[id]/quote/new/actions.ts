@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 
-export async function createQuoteAction(formData: FormData): Promise<void> {
+export async function createQuoteAction(formData: FormData) {
   const leadId = String(formData.get('lead_id') ?? '')
   const title = String(formData.get('title') ?? '').trim() || 'Proposta'
   const validUntil = String(formData.get('valid_until') ?? '') || null
@@ -13,13 +13,14 @@ export async function createQuoteAction(formData: FormData): Promise<void> {
   const packageIds = formData.getAll('package_id').map(String).filter(Boolean)
   const addonIds = formData.getAll('addon_id').map(String).filter(Boolean)
 
-  if (!leadId) return
-  if (!packageIds.length && !addonIds.length) return
+  if (!leadId) return { ok: false, error: 'lead_id_missing' }
+  if (!packageIds.length && !addonIds.length) {
+    return { ok: false, error: 'selecione_ao_menos_um_item' }
+  }
 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
-  // Busca os preços e nomes do catálogo
   const [{ data: packages }, { data: addons }] = await Promise.all([
     packageIds.length
       ? supabase
@@ -55,7 +56,7 @@ export async function createQuoteAction(formData: FormData): Promise<void> {
       position: i,
     })
   })
-  ;(addons ?? []).forEach((a, i) => {
+  ;(addons ?? []).forEach((a: { id: string; name: string; price_brl: number | null }, i: number) => {
     items.push({
       kind: 'addon',
       reference_id: a.id,
@@ -86,12 +87,12 @@ export async function createQuoteAction(formData: FormData): Promise<void> {
     .select('id')
     .single()
 
-  if (quoteErr || !quote) { console.error('[createQuoteAction]', quoteErr?.message); return }
+  if (quoteErr || !quote) return { ok: false, error: quoteErr?.message ?? 'erro' }
 
   const { error: itemsErr } = await supabase
     .from('quote_items')
     .insert(items.map((it) => ({ ...it, quote_id: quote.id })))
-  if (itemsErr) { console.error('[createQuoteAction]', itemsErr.message); return }
+  if (itemsErr) return { ok: false, error: itemsErr.message }
 
   await supabase.from('activities').insert({
     lead_id: leadId,

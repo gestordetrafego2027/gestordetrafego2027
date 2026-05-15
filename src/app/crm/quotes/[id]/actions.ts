@@ -69,10 +69,10 @@ export async function generateInvoiceFromQuoteAction(formData: FormData): Promis
   let clientId = existingClient?.id
   if (!clientId) {
     const { data: newClient, error: prom } = await supabase
-      .rpc('promote_lead_to_client' as never, {
+      .rpc('promote_lead_to_client', {
         p_lead_id: quote.lead_id,
         p_amount_brl: Number(quote.total_brl ?? 0),
-      } as never)
+      })
     if (prom) { console.error('[generateInvoice]', prom.message); return }
     clientId = newClient as string
   }
@@ -95,11 +95,10 @@ export async function generateInvoiceFromQuoteAction(formData: FormData): Promis
     .single()
   if (ierr || !invoice) { console.error('[generateInvoice]', ierr?.message); return }
 
-  const rawItems = (quote.quote_items ?? []) as Array<{
+  const items = (quote.quote_items ?? []).map((qi: {
     label: string; description: string | null; quantity: number;
     unit_price_brl: number; position: number;
-  }>
-  const items = (Array.isArray(rawItems) ? rawItems : []).map((qi) => ({
+  }) => ({
     invoice_id: invoice.id,
     label: qi.label,
     description: qi.description,

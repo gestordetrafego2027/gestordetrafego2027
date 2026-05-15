@@ -18,7 +18,7 @@ export async function moveOpportunityAction(oppId: string, newStage: Stage) {
   else update.closed_at = null
   if (probability !== undefined) update.probability = probability
 
-  const { error } = await supabase.from('opportunities').update(update as never).eq('id', oppId)
+  const { error } = await supabase.from('opportunities').update(update).eq('id', oppId)
   if (error) return { ok: false, error: error.message }
 
   // Activity na timeline do lead vinculado (se houver)
