@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { signInWithPassword } from './actions'
 
 export const metadata = { title: 'Login | House Mazzutti CRM' }
@@ -36,7 +37,15 @@ export default async function LoginPage({
         </label>
 
         <label className="block space-y-1">
-          <span className="text-sm font-medium">Senha</span>
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium">Senha</span>
+            <Link
+              href="/login/recuperar"
+              className="text-xs text-neutral-500 hover:text-neutral-900 hover:underline"
+            >
+              Esqueci minha senha
+            </Link>
+          </div>
           <input
             name="password"
             type="password"
@@ -47,9 +56,20 @@ export default async function LoginPage({
         </label>
 
         {error && (
-          <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-2">
-            {error}
-          </p>
+          <div className="text-sm text-red-700 border border-red-200 bg-red-50 rounded p-3 space-y-1">
+            <div className="font-medium">
+              {error.toLowerCase().includes('invalid') || error.toLowerCase().includes('credentials')
+                ? 'Email ou senha incorretos.'
+                : error}
+            </div>
+            <div className="text-xs text-red-600">
+              Não lembra a senha?{' '}
+              <Link href="/login/recuperar" className="underline font-medium">
+                Recuperar agora
+              </Link>
+              .
+            </div>
+          </div>
         )}
 
         <button
