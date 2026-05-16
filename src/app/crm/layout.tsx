@@ -66,6 +66,9 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
             <Link href="/crm/automations" className="text-neutral-600 hover:text-neutral-900">
               Automações
             </Link>
+            <Link href="/crm/ajuda" className="text-neutral-600 hover:text-neutral-900">
+              Ajuda
+            </Link>
             <Link href="/crm/tags" className="text-neutral-600 hover:text-neutral-900">
               Tags
             </Link>
