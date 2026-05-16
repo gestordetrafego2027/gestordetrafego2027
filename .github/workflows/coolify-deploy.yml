@@ -1,0 +1,57 @@
+name: Coolify deploy
+
+# Dispara redeploy no Coolify a cada push pra main.
+# Para funcionar voce precisa adicionar 1 secret no GitHub:
+#   Settings -> Secrets and variables -> Actions -> New repository secret
+#   Nome:  COOLIFY_DEPLOY_WEBHOOK
+#   Valor: URL completa do webhook do projeto no Coolify
+#          (Coolify -> seu projeto -> Webhook Endpoint / Deploy Trigger)
+#
+# Tambem suporta disparo manual em Actions -> Coolify deploy -> Run workflow.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'supabase/migrations/**'   # migrations rodam no workflow proprio
+      - '.github/workflows/supabase-migrate.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: coolify-deploy
+  cancel-in-progress: false
+
+jobs:
+  trigger:
+    name: Trigger Coolify redeploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate webhook secret
+        run: |
+          if [ -z "${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}" ]; then
+            echo "::error::Secret COOLIFY_DEPLOY_WEBHOOK nao configurado."
+            echo "Adicione em Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: POST to Coolify webhook
+        run: |
+          HTTP_STATUS=$(curl -sS -o /tmp/body -w "%{http_code}" -X POST \
+            -H 'Content-Type: application/json' \
+            -d '{"ref":"${{ github.ref }}","sha":"${{ github.sha }}","actor":"${{ github.actor }}"}' \
+            "${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}")
+          echo "HTTP $HTTP_STATUS"
+          cat /tmp/body
+          if [ "$HTTP_STATUS" -ge 400 ]; then
+            echo "::error::Coolify retornou erro $HTTP_STATUS"
+            exit 1
+          fi
+
+      - name: Summary
+        run: |
+          echo "## Coolify deploy disparado" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- commit: \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- ator: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- mensagem: ${{ github.event.head_commit.message }}" >> $GITHUB_STEP_SUMMARY
