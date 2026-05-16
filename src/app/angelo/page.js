@@ -82,12 +82,12 @@ export default function AngeloPage() {
                 {/* 1. Bloco 1 (hero - manter) */}
                 <section className="min-h-[calc(100vh+20px)] flex flex-col md:flex-row items-stretch" style={{ backgroundColor: "#ffffff", borderBottom: '0.5px solid #e0e0e0' }}>
                     <div className="w-full md:w-1/2 flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
-                        <span className="text-caption text-black/70">Angelo Mazzutti</span>
+                        <span className="text-caption text-black/70">Head of Creative &amp; Brand Strategy</span>
                         <h2 className="text-h1 text-black">
-                            Nenhuma marca se constrói só com estética. Constrói-se com leitura e consistência.
+                            A arquitetura da sua marca, com sensibilidade e precisão.
                         </h2>
                         <p className="text-body text-black/80 measure-editorial">
-                            Diretor criativo à frente da House Mazzutti. Formado em publicidade e com 15 anos no audiovisual. Direção criativa para Larissa Manoela, família Abravanel e marcas premium de moda, beleza e lifestyle. Une o olhar de quem pensa marca ao domínio de quem dirige cena.
+                            Angelo une visão estética e inteligência de mercado para marcas e pessoas que buscam ir além do óbvio. Traduz a essência de cada projeto em narrativas que ressoam — não apenas aparecem. Transforma visibilidade em desejo, e desejo em valor duradouro.
                         </p>
                         <p className="text-caption text-black">
                             — Angelo Mazzutti
@@ -105,17 +105,17 @@ export default function AngeloPage() {
                 {/* 2. O que era bloco 6 (Nada começa na execução) */}
                 <section className="bg-black text-white py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-[20vw] select-none ghost-text font-headline tracking-[-0.05em] font-bold">Método</span>
+                        <span className="text-[20vw] select-none ghost-text font-headline tracking-[-0.05em] font-bold">Diferenciais</span>
                     </div>
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
                         <h2 className="text-h2 text-center mb-32 max-w-3xl mx-auto text-white">
-                            Nada começa na execução. Tudo começa no entendimento.
+                            Por que marcas escolhem a House.
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             {[
-                                { num: "01 / Contexto", bold: "Contexto.", desc: "Sem leitura do momento e do público, qualquer estética vira ruído. Presença começa em escuta." },
-                                { num: "02 / Direção", bold: "Direção.", desc: "Não executando. Direcionando. Defino o que a marca é, o que precisa comunicar e como deve ser percebida." },
-                                { num: "03 / Consistência", bold: "Consistência.", desc: "Não busco impacto imediato. Busco continuidade. Não busco volume. Busco valor." },
+                                { num: "01 / Visão estratégica", bold: "Visão estratégica.", desc: "Cada projeto pensado para resultados duradouros — não para o ciclo curto da atenção." },
+                                { num: "02 / Curadoria exclusiva", bold: "Curadoria exclusiva.", desc: "A expertise de Angelo em cada detalhe. Direção autoral, sem terceirização de decisão." },
+                                { num: "03 / Inovação constante", bold: "Inovação constante.", desc: "Tecnologia e tendência a serviço da marca. IA, ferramentas avançadas e leitura de mercado." },
                             ].map((item, i) => (
                                 <div key={i} className="space-y-6">
                                     <span className="text-caption text-neutral-300 block">{item.num}</span>
@@ -132,13 +132,13 @@ export default function AngeloPage() {
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
                     <div className="w-full md:w-1/2 bg-[#f5f5f5] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-600">Trajetória</span>
+                            <span className="text-caption text-neutral-600">Quem é</span>
                             <h2 className="text-h2 text-black">
-                                Ao longo dos anos, desenvolvi uma leitura que conecta negócio, comportamento, imagem e presença.
+                                O estrategista por trás da House.
                             </h2>
                             <div className="space-y-5 text-body text-neutral-700">
-                                <p>Não como áreas separadas — mas como sistema. A maioria das marcas hoje não precisa de mais produção. Precisa parar e se estruturar.</p>
-                                <p>Porque sem clareza: a comunicação força, a imagem confunde, a presença não sustenta.</p>
+                                <p>Angelo une visão estética e inteligência de mercado para marcas e pessoas que buscam ir além do óbvio.</p>
+                                <p>Traduz a essência de cada projeto em narrativas que ressoam — não apenas aparecem. Transforma visibilidade em desejo, e desejo em valor duradouro.</p>
                             </div>
                             <div className="pt-6 text-h3 text-black/80">Angelo Mazzutti</div>
                         </div>
@@ -158,14 +158,14 @@ export default function AngeloPage() {
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
                         <div className="md:w-1/3">
                             <span className="text-caption text-neutral-500 mb-6 block">Serviços</span>
-                            <h2 className="text-h2 text-black">Visão integrada e de longo prazo.</h2>
+                            <h2 className="text-h2 text-black">Quatro frentes. Uma direção.</h2>
                         </div>
                         <div className="md:w-2/3 space-y-10">
                             {[
-                                { title: "Campanha de Lançamento", desc: "Conceito e execução integrados para impactar com clareza.", num: "01" },
-                                { title: "Branding Project", desc: "Construção de identidade e presença de marca.", num: "02" },
-                                { title: "Web Development", desc: "Sites e plataformas que engajam.", num: "03" },
-                                { title: "Produção Visual", desc: "Conteúdo de alta qualidade para todas as mídias.", num: "04" },
+                                { title: "Campaign de Lançamento", desc: "Estratégias integradas para impacto memorável.", num: "01" },
+                                { title: "Branding Project", desc: "Identidade e posicionamento de marca.", num: "02" },
+                                { title: "Web Development", desc: "Plataformas que convertem e engajam.", num: "03" },
+                                { title: "Produção Visual & Audiovisual", desc: "Conteúdo de alto padrão para todas as mídias.", num: "04" },
                             ].map((item, i) => (
                                 <div key={i} className="group border-b border-neutral-200 pb-8 flex justify-between items-end hover:border-black transition-colors cursor-default">
                                     <div>
@@ -188,14 +188,14 @@ export default function AngeloPage() {
                         <div className="text-center mb-20">
                             <span className="text-caption text-zinc-500 block mb-6">Estrutura</span>
                             <h2 className="text-h2 text-white">
-                                A House Mazzutti atua em três frentes complementares.
+                                Três frentes. Uma visão.
                             </h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
-                                { title: "Agência", desc: "Direção e criação para lançamentos e branding." },
-                                { title: "Studio", desc: "Construção e direção de imagem pessoal e profissional." },
-                                { title: "Produtora", desc: "Execução visual de alta qualidade para todos os formatos." },
+                                { title: "Agência", desc: "Estratégia & direção criativa." },
+                                { title: "Studio", desc: "Imagem pessoal & profissional." },
+                                { title: "Produtora", desc: "Execução visual de alto padrão." },
                             ].map((card, i) => (
                                 <div key={i} className="text-center p-12 border border-white/10 bg-white/5 backdrop-blur-sm">
                                     <h3 className="text-h3 text-white mb-6">{card.title}</h3>
@@ -210,13 +210,13 @@ export default function AngeloPage() {
                 <section className="bg-[#f5f5f5] py-32 px-12 md:px-24">
                     <div className="max-w-4xl mx-auto text-center space-y-16">
                         <h2 className="text-h1 text-black">
-                            Se você busca direção — não apenas execução — estamos alinhados.
+                            De visibilidade a valor duradouro.
                         </h2>
                         <div className="grid md:grid-cols-2 gap-12 text-left pt-8">
                             <div className="space-y-6">
                                 <h4 className="text-caption text-neutral-500">Você deixa de</h4>
                                 <ul className="space-y-4 text-body text-neutral-700">
-                                    {["Parecer mais do mesmo", "Atrair desalinhado", "Depender de esforço constante"].map((item, i) => (
+                                    {["Aparecer sem ressoar", "Disputar atenção no óbvio", "Depender de produção constante"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
                                             <span className="w-3 h-[1px] bg-neutral-400"></span>
                                             {item}
@@ -227,7 +227,7 @@ export default function AngeloPage() {
                             <div className="space-y-6">
                                 <h4 className="text-caption text-neutral-500">Passa a</h4>
                                 <ul className="space-y-4 text-body text-neutral-700">
-                                    {["Ter clareza", "Construir percepção", "Sustentar valor"].map((item, i) => (
+                                    {["Construir desejo", "Posicionar com precisão", "Sustentar valor no tempo"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
                                             <span className="w-3 h-[1px] bg-black"></span>
                                             {item}
@@ -238,10 +238,10 @@ export default function AngeloPage() {
                         </div>
                         <div className="pt-8 flex flex-col items-center space-y-8">
                             <button type="button" onClick={() => openForm('reconstruir')} className="px-16 py-6 bg-black text-white text-button hover:bg-neutral-800 transition-all duration-500">
-                                Reconstruir minha marca
+                                Elevar minha marca
                             </button>
                             <p className="text-caption text-neutral-500">
-                                Não é sobre aparecer mais. É sobre não precisar insistir.
+                                Visibilidade vira desejo. Desejo vira valor.
                             </p>
                         </div>
                     </div>
@@ -315,7 +315,7 @@ export default function AngeloPage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
                         <h2 className="text-h1 text-white">
-                            Da ideia à imagem. Sob a mesma direção.
+                            Pronto para elevar sua marca?
                         </h2>
                         <div className="flex flex-col items-center space-y-10">
                             <button type="button" onClick={() => openForm('final')} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
@@ -355,7 +355,7 @@ export default function AngeloPage() {
                 isOpen={!!formCta}
                 onClose={closeForm}
                 title="Conversa com Angelo"
-                subtitle="Mentoria, palestra, consultoria ou parceria. Respondemos em até 1 dia útil."
+                subtitle="Branding, campanha de lançamento, direção criativa ou parceria. Respondemos em até 1 dia útil."
             >
                 <FormAngelo
                     onClose={closeForm}
