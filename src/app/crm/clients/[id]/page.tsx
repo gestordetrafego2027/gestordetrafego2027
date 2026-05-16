@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { recordPaymentAction } from './actions'
 import Attachments from '../../components/Attachments'
+import WhatsAppButton from '../../components/WhatsAppButton'
+import { waTemplates } from '@/lib/whatsapp'
 
 const METHODS = [
   'pix', 'boleto', 'cartao_credito', 'cartao_debito',
@@ -101,6 +103,13 @@ export default async function ClientDetailPage({
               {client.phone && <span>📞 {client.phone}</span>}
               {client.document && <span>🪪 {client.document}</span>}
               {client.city && <span>📍 {client.city}{client.state ? `/${client.state}` : ''}</span>}
+              {client.phone && (
+                <WhatsAppButton
+                  phone={client.phone}
+                  message={waTemplates.followUp(client.display_name)}
+                  size="xs"
+                />
+              )}
             </div>
             <div className="mt-2 flex flex-wrap gap-2 text-xs">
               <span className="rounded bg-neutral-100 px-2 py-0.5 capitalize">{client.unit}</span>

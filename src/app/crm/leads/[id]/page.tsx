@@ -4,6 +4,8 @@ import { createClient } from '@/lib/supabase/server'
 import { promoteLeadAction } from '../actions'
 import { addNoteAction, updateLeadStatusAction, logActivityAction } from './actions'
 import Attachments from '../../components/Attachments'
+import WhatsAppButton from '../../components/WhatsAppButton'
+import { waTemplates } from '@/lib/whatsapp'
 
 export const dynamic = 'force-dynamic'
 
@@ -96,6 +98,14 @@ export default async function LeadDetailPage({
               {lead.email && <span>✉️ {lead.email}</span>}
               {lead.phone && <span>📞 {lead.phone}</span>}
               {lead.city && <span>📍 {lead.city}</span>}
+              {lead.phone && (
+                <WhatsAppButton
+                  phone={lead.phone}
+                  message={waTemplates.greetLead(lead.name)}
+                  size="xs"
+                  label="💬 WhatsApp"
+                />
+              )}
             </div>
             <div className="mt-2 flex flex-wrap gap-2 text-xs">
               <span className="rounded bg-neutral-100 px-2 py-0.5">{lead.segment}</span>

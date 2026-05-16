@@ -72,6 +72,16 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
             <Link href="/crm/manual" className="text-neutral-600 hover:text-neutral-900">
               Manual
             </Link>
+            {((user?.app_metadata as { role?: string } | undefined)?.role === 'admin') && (
+              <>
+                <Link href="/crm/admin/users" className="text-violet-700 hover:text-violet-900 font-medium">
+                  Usuários
+                </Link>
+                <Link href="/crm/admin/auditoria" className="text-violet-700 hover:text-violet-900 font-medium">
+                  Auditoria
+                </Link>
+              </>
+            )}
             <Link href="/crm/tags" className="text-neutral-600 hover:text-neutral-900">
               Tags
             </Link>

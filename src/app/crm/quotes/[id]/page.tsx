@@ -6,6 +6,8 @@ import {
   generateInvoiceFromQuoteAction,
 } from './actions'
 import CopyLinkButton from './CopyLinkButton'
+import WhatsAppButton from '../../components/WhatsAppButton'
+import { waTemplates } from '@/lib/whatsapp'
 
 export const dynamic = 'force-dynamic'
 
@@ -175,6 +177,17 @@ export default async function QuoteDetailPage({
           {quote.public_token && (
             <CopyLinkButton
               url={`${process.env.NEXT_PUBLIC_SITE_URL ?? ''}/p/${encodeURIComponent(quote.public_token)}`}
+            />
+          )}
+          {quote.public_token && lead?.phone && (
+            <WhatsAppButton
+              phone={lead.phone}
+              message={waTemplates.proposalSent(
+                lead.name,
+                `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://housemazzutti.com'}/p/${encodeURIComponent(quote.public_token)}`,
+              )}
+              label="💬 Enviar por WhatsApp"
+              size="md"
             />
           )}
           {quote.status === 'rascunho' && (
