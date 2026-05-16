@@ -23,5 +23,5 @@ export async function requestPasswordReset(formData: FormData): Promise<void> {
   if (error) {
     redirect(`/login/recuperar?error=${encodeURIComponent(error.message)}`)
   }
-  redirect(`/login/recuperar?ok=1&email=${encodeURIComponent(email)}`)
+  redirect(`/login/sucesso?kind=recover&email=${encodeURIComponent(email)}`)
 }

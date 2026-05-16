@@ -78,6 +78,13 @@ export default async function LoginPage({
         >
           Entrar
         </button>
+
+        <div className="text-center text-sm pt-3 border-t border-neutral-100">
+          Não tem conta?{' '}
+          <Link href="/login/cadastro" className="text-neutral-900 font-medium hover:underline">
+            Criar agora
+          </Link>
+        </div>
       </form>
     </main>
   )
