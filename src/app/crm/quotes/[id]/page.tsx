@@ -41,8 +41,7 @@ export default async function QuoteDetailPage({
 
   if (error || !quote) notFound()
 
-  // @ts-expect-error supabase relation
-  const lead = quote.leads as { id: string; name: string; email: string | null; phone: string | null } | null
+  const lead = quote.leads as unknown as { id: string; name: string; email: string | null; phone: string | null } | null
   const items = (quote.quote_items ?? [])
     .slice()
     .sort((a: { position: number }, b: { position: number }) => a.position - b.position)

@@ -206,8 +206,13 @@ export default function ArticleContent({ slug }) {
                 <aside className="hidden lg:flex flex-col w-80 sticky" style={{ position: 'sticky', top: '100px', alignSelf: 'flex-start' }}>
                     {/* About Sidebar */}
                     <div className="mb-12 pb-10 hairline-b">
-                        <img alt="Angelo Mazzutti" className="w-[100px] h-[100px] rounded-full object-cover grayscale mb-6" src="/images/angelo/angelo-portrait.png"/>
-                        <h4 className="text-[20px] font-headline italic text-zinc-900 mb-4">House Mazzutti</h4>
+                        <img alt="House Mazzutti" className="w-[100px] h-[100px] rounded-full object-cover bg-black mb-6" src="/images/angelo/hmzt-logo.png"/>
+                        <h4 className="text-zinc-900 mb-4">
+                            <span className="hm-logo" style={{ fontSize: '20px' }}>
+                                <span className="hm-house">House</span>
+                                <span className="hm-mazzutti">Mazzutti</span>
+                            </span>
+                        </h4>
                         <p className="text-[14px] text-zinc-500 font-body leading-relaxed">Hub criativo & estratégico. Branding, direção criativa e produção audiovisual sob uma única estrutura — da concepção ao acabamento final.</p>
                         <Link href="/about" className="mt-6 inline-block text-[12px] font-label font-bold uppercase tracking-[0.2em] text-zinc-900 border-b-[0.5px] border-zinc-900 pb-1">CONHECER A HOUSE</Link>
                     </div>

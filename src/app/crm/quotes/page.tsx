@@ -35,7 +35,7 @@ export default async function QuotesPage({
     .limit(100)
 
   if (filter && filter !== 'todos' && STATUS_OPTIONS.includes(filter as never)) {
-    q = q.eq('status', filter)
+    q = q.eq('status', filter as 'rascunho' | 'enviado' | 'aceito' | 'recusado' | 'expirado')
   }
 
   const { data: quotes, error } = await q
@@ -93,8 +93,7 @@ export default async function QuotesPage({
           </thead>
           <tbody>
             {(quotes ?? []).map((q) => {
-              // @ts-expect-error supabase relation
-              const lead = q.leads as { id: string; name: string } | null
+              const lead = q.leads as unknown as { id: string; name: string } | null
               return (
                 <tr key={q.id} className="border-t border-neutral-100">
                   <td className="px-4 py-2">

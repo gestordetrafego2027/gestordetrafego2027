@@ -251,7 +251,7 @@ export default function AjudaPage() {
             {section.items.map((item) => {
               const isTemplate = item.href.includes('[')
               const isExternal = item.href.startsWith('/p/') || item.href.startsWith('/crm/api/')
-              const Tag: 'a' | typeof Link = isTemplate ? 'span' : isExternal ? 'a' : Link
+              const Tag: 'a' | 'span' | typeof Link = isTemplate ? 'span' : isExternal ? 'a' : Link
               return (
                 <div
                   key={item.href}
