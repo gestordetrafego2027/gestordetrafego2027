@@ -127,6 +127,7 @@ export default function Header({ variant = 'dark' }) {
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/login')} href="/login">ÁREA DO CLIENTE</Link>
                 </nav>
 
                 <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
@@ -221,6 +222,7 @@ export default function Header({ variant = 'dark' }) {
                         {label:'PORTFÓLIO', href:'/portfolio'},
                         {label:'BLOG', href:'/blog'},
                         {label:'CONTATO', href:'/contato'},
+                        {label:'ÁREA DO CLIENTE', href:'/login', highlight: true},
                       ].map(item => (
                         <Link key={item.label} href={item.href}
                           onClick={() => closeMenu()}
@@ -229,12 +231,16 @@ export default function Header({ variant = 'dark' }) {
                             fontSize:'10px',
                             letterSpacing:'0.2em',
                             textTransform:'uppercase',
-                            color:'#aaa',
+                            color: item.highlight ? 'white' : '#aaa',
                             textDecoration:'none',
-                            transition:'color 0.3s'
+                            transition:'color 0.3s',
+                            marginTop: item.highlight ? '8px' : undefined,
+                            paddingTop: item.highlight ? '16px' : undefined,
+                            borderTop: item.highlight ? '1px solid #333' : undefined,
+                            fontWeight: item.highlight ? 500 : undefined,
                           }}
                           onMouseEnter={e => e.currentTarget.style.color='white'}
-                          onMouseLeave={e => e.currentTarget.style.color='#aaa'}
+                          onMouseLeave={e => e.currentTarget.style.color = item.highlight ? 'white' : '#aaa'}
                         >{item.label}</Link>
                       ))}
                     </nav>
