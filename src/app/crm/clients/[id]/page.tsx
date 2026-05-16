@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { recordPaymentAction } from './actions'
+import Attachments from '../../components/Attachments'
 
 const METHODS = [
   'pix', 'boleto', 'cartao_credito', 'cartao_debito',
@@ -43,6 +44,7 @@ export default async function ClientDetailPage({
     { data: invoices },
     { data: payments },
     { data: lead },
+    { data: attachments },
   ] = await Promise.all([
     supabase.from('clients').select('*').eq('id', id).single(),
     supabase
@@ -65,6 +67,11 @@ export default async function ClientDetailPage({
       if (!r.data?.lead_id) return { data: null }
       return supabase.from('leads').select('id, name, email').eq('id', r.data.lead_id).single()
     }),
+    supabase
+      .from('attachments')
+      .select('id, storage_path, file_name, mime_type, size_bytes, kind, created_at, description')
+      .eq('client_id', id)
+      .order('created_at', { ascending: false }),
   ])
 
   if (clientErr || !client) notFound()
@@ -261,6 +268,25 @@ export default async function ClientDetailPage({
             )}
           </ul>
         </div>
+      </section>
+
+      <section className="rounded-lg border border-neutral-200 bg-white p-5">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
+          Anexos
+        </h2>
+        <Attachments
+          clientId={client.id}
+          initial={(attachments ?? []).map((a) => ({
+            id: a.id,
+            storage_path: a.storage_path,
+            file_name: a.file_name,
+            mime_type: a.mime_type,
+            size_bytes: a.size_bytes,
+            kind: a.kind,
+            created_at: a.created_at,
+            description: a.description,
+          }))}
+        />
       </section>
 
       <section className="rounded-lg border border-neutral-200 bg-white p-5">

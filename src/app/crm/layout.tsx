@@ -66,8 +66,30 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
             <Link href="/crm/automations" className="text-neutral-600 hover:text-neutral-900">
               Automações
             </Link>
+            <Link href="/crm/tags" className="text-neutral-600 hover:text-neutral-900">
+              Tags
+            </Link>
           </nav>
           <div className="flex items-center gap-3 text-sm">
+            {(() => {
+              const md = (user?.app_metadata ?? {}) as { role?: string; unit?: string }
+              const role = md.role
+              const unit = md.unit
+              return (
+                <>
+                  {role === 'admin' && (
+                    <span className="rounded bg-violet-100 text-violet-700 text-[10px] px-2 py-0.5 uppercase tracking-wide">
+                      admin
+                    </span>
+                  )}
+                  {unit && role !== 'admin' && (
+                    <span className="rounded bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 uppercase tracking-wide" title="Você vê apenas dados da sua unidade">
+                      {unit}
+                    </span>
+                  )}
+                </>
+              )
+            })()}
             <form action="/crm/search" method="get" className="hidden md:block">
               <input
                 type="search"

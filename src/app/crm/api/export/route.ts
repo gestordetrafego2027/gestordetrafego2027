@@ -3,12 +3,15 @@
 
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import type { Database } from '@/types/database'
 
 export const dynamic = 'force-dynamic'
 
+type TableName = keyof Database['public']['Tables']
+
 const ENTITY_QUERIES: Record<
   string,
-  { table: string; columns: string; order?: { col: string; asc?: boolean } }
+  { table: TableName; columns: string; order?: { col: string; asc?: boolean } }
 > = {
   leads: {
     table: 'leads',
@@ -73,7 +76,7 @@ export async function GET(req: Request) {
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
 
   const cols = cfg.columns.split(',').map((c) => c.trim())
-  const csv = toCsv((data ?? []) as Record<string, unknown>[], cols)
+  const csv = toCsv((data ?? []) as unknown as Record<string, unknown>[], cols)
   const filename = `${entity}-${new Date().toISOString().slice(0, 10)}.csv`
 
   return new NextResponse(csv, {

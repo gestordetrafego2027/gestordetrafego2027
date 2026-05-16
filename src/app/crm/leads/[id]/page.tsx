@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { promoteLeadAction } from '../actions'
 import { addNoteAction, updateLeadStatusAction, logActivityAction } from './actions'
+import Attachments from '../../components/Attachments'
 
 export const dynamic = 'force-dynamic'
 
@@ -36,6 +37,7 @@ export default async function LeadDetailPage({
     { data: interests },
     { data: opps },
     { data: quotes },
+    { data: attachments },
   ] = await Promise.all([
     supabase
       .from('leads')
@@ -66,7 +68,15 @@ export default async function LeadDetailPage({
       .select('id, title, status, total_brl, valid_until, sent_at, accepted_at, created_at')
       .eq('lead_id', id)
       .order('created_at', { ascending: false }),
+    supabase
+      .from('attachments')
+      .select('id, storage_path, file_name, mime_type, size_bytes, kind, created_at, description')
+      .eq('lead_id', id)
+      .order('created_at', { ascending: false }),
   ])
+
+  // 6º elemento do array desestruturado é o resultado de attachments
+  // (declarado abaixo do quotes acima por ordem de Promise.all)
 
   if (leadErr || !lead) notFound()
 
@@ -118,12 +128,20 @@ export default async function LeadDetailPage({
               </button>
             </form>
 
-            <Link
-              href={`/crm/leads/${lead.id}/quote/new`}
-              className="rounded bg-blue-600 text-white text-xs px-3 py-1 hover:bg-blue-700"
-            >
-              + Nova proposta
-            </Link>
+            <div className="flex gap-2">
+              <Link
+                href={`/crm/leads/${lead.id}/edit`}
+                className="rounded border border-neutral-300 text-xs px-3 py-1 hover:bg-neutral-50"
+              >
+                ✎ Editar
+              </Link>
+              <Link
+                href={`/crm/leads/${lead.id}/quote/new`}
+                className="rounded bg-blue-600 text-white text-xs px-3 py-1 hover:bg-blue-700"
+              >
+                + Nova proposta
+              </Link>
+            </div>
 
             {lead.status !== 'ganho' && (
               <form action={promoteLeadAction} className="flex gap-1 items-center text-xs">
@@ -246,14 +264,33 @@ export default async function LeadDetailPage({
 
           <div className="rounded-lg border border-neutral-200 bg-white p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
+              Anexos
+            </h2>
+            <Attachments
+              leadId={lead.id}
+              initial={(attachments ?? []).map((a) => ({
+                id: a.id,
+                storage_path: a.storage_path,
+                file_name: a.file_name,
+                mime_type: a.mime_type,
+                size_bytes: a.size_bytes,
+                kind: a.kind,
+                created_at: a.created_at,
+                description: a.description,
+              }))}
+            />
+          </div>
+
+          <div className="rounded-lg border border-neutral-200 bg-white p-5">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
               Serviços de interesse
             </h2>
             <ul className="space-y-2 text-sm">
               {(interests ?? []).map((si) => {
-                // @ts-expect-error supabase relation
-                const serviceName = si.services?.name ?? '—'
-                // @ts-expect-error supabase relation
-                const pkgName = si.service_packages?.name
+                const svc = Array.isArray(si.services) ? si.services[0] : si.services
+                const pkg = Array.isArray(si.service_packages) ? si.service_packages[0] : si.service_packages
+                const serviceName = svc?.name ?? '—'
+                const pkgName = pkg?.name
                 const answers = si.answers as Record<string, unknown> | null
                 return (
                   <li key={si.id} className="border border-neutral-100 rounded p-2">

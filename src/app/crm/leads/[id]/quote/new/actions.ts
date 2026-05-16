@@ -13,9 +13,9 @@ export async function createQuoteAction(formData: FormData) {
   const packageIds = formData.getAll('package_id').map(String).filter(Boolean)
   const addonIds = formData.getAll('addon_id').map(String).filter(Boolean)
 
-  if (!leadId) return { ok: false, error: 'lead_id_missing' }
+  if (!leadId) redirect('/crm/leads?error=' + encodeURIComponent('lead_id_missing'))
   if (!packageIds.length && !addonIds.length) {
-    return { ok: false, error: 'selecione_ao_menos_um_item' }
+    redirect(`/crm/leads/${leadId}/quote/new?error=` + encodeURIComponent('Selecione ao menos um item.'))
   }
 
   const supabase = await createClient()
@@ -87,12 +87,16 @@ export async function createQuoteAction(formData: FormData) {
     .select('id')
     .single()
 
-  if (quoteErr || !quote) return { ok: false, error: quoteErr?.message ?? 'erro' }
+  if (quoteErr || !quote) {
+    redirect(`/crm/leads/${leadId}/quote/new?error=` + encodeURIComponent(quoteErr?.message ?? 'erro'))
+  }
 
   const { error: itemsErr } = await supabase
     .from('quote_items')
     .insert(items.map((it) => ({ ...it, quote_id: quote.id })))
-  if (itemsErr) return { ok: false, error: itemsErr.message }
+  if (itemsErr) {
+    redirect(`/crm/leads/${leadId}/quote/new?error=` + encodeURIComponent(itemsErr.message))
+  }
 
   await supabase.from('activities').insert({
     lead_id: leadId,
