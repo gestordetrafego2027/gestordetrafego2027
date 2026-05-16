@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import type { TablesUpdate } from '@/types/database'
 
 type Stage =
   | 'descoberta' | 'qualificacao' | 'proposta'
@@ -13,7 +14,7 @@ export async function moveOpportunityAction(oppId: string, newStage: Stage) {
   const closed = newStage === 'ganho' || newStage === 'perdido'
   const probability = newStage === 'ganho' ? 100 : newStage === 'perdido' ? 0 : undefined
 
-  const update: Record<string, unknown> = { stage: newStage }
+  const update: TablesUpdate<'opportunities'> = { stage: newStage }
   if (closed) update.closed_at = new Date().toISOString()
   else update.closed_at = null
   if (probability !== undefined) update.probability = probability
