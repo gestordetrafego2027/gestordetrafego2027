@@ -47,7 +47,7 @@ export async function inviteUserAction(formData: FormData): Promise<void> {
 
   // Seta role/unit em app_metadata (afeta RLS)
   const { data: list } = await sb.auth.admin.listUsers({ perPage: 1000 })
-  const created = list?.users.find((u) => u.email === email)
+  const created = list?.users.find((u: { id: string; email?: string }) => u.email === email)
   if (created) {
     await sb.auth.admin.updateUserById(created.id, {
       app_metadata: { role, ...(unit ? { unit } : {}) },

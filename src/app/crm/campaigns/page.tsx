@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
@@ -58,7 +59,9 @@ export default async function CampaignsPage() {
               return (
                 <tr key={c.id} className="border-t border-neutral-100">
                   <td className="px-4 py-2">
-                    <div className="font-medium">{c.name}</div>
+                    <Link href={`/crm/campaigns/${c.id}`} className="font-medium hover:underline">
+                      {c.name}
+                    </Link>
                     <div className="text-xs text-neutral-500">{c.slug}</div>
                   </td>
                   <td className="px-4 py-2 capitalize">{c.channel.replace('_', ' ')}</td>

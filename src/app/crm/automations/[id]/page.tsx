@@ -6,25 +6,50 @@ import { updateRuleAction, deleteRuleAction } from '../actions'
 
 export const dynamic = 'force-dynamic'
 
+type SearchParams = Promise<{ status?: string; period?: string }>
+
 export default async function AutomationEditPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ id: string }>
+  searchParams: SearchParams
 }) {
   const { id } = await params
+  const { status: statusFilter, period } = await searchParams
   const supabase = await createClient()
+
+  // Período: '7' (7d) | '30' (30d) | 'all'
+  const periodDays = period === '7' ? 7 : period === 'all' ? null : 30
+  const since = periodDays
+    ? new Date(Date.now() - periodDays * 24 * 60 * 60 * 1000).toISOString()
+    : null
+
+  let runsQ = supabase
+    .from('automation_runs')
+    .select('id, status, ran_at, lead_id, client_id, error, payload')
+    .eq('rule_id', id)
+    .order('ran_at', { ascending: false })
+    .limit(200)
+
+  if (statusFilter && statusFilter !== 'all') {
+    runsQ = runsQ.eq('status', statusFilter)
+  }
+  if (since) runsQ = runsQ.gte('ran_at', since)
 
   const [{ data: rule, error }, { data: runs }] = await Promise.all([
     supabase.from('automation_rules').select('*').eq('id', id).single(),
-    supabase
-      .from('automation_runs')
-      .select('id, status, ran_at, lead_id, client_id, error, payload')
-      .eq('rule_id', id)
-      .order('ran_at', { ascending: false })
-      .limit(30),
+    runsQ,
   ])
 
   if (error || !rule) notFound()
+
+  // KPIs do filtro corrente
+  const successCount = (runs ?? []).filter((r) => r.status === 'success').length
+  const errorCount = (runs ?? []).filter((r) => r.status === 'error').length
+  const errorRate = (runs?.length ?? 0) > 0 ? (errorCount / runs!.length) * 100 : 0
+
+  const periodLabel = period === '7' ? '7 dias' : period === 'all' ? 'todos' : '30 dias'
 
   return (
     <div className="space-y-6">
@@ -68,10 +93,75 @@ export default async function AutomationEditPage({
         />
       </section>
 
-      <section className="rounded-lg border border-neutral-200 bg-white p-5">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
-          Histórico de execuções (últimas 30)
-        </h2>
+      <section className="rounded-lg border border-neutral-200 bg-white p-5 space-y-4">
+        <div className="flex items-center justify-between flex-wrap gap-2">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+            Execuções ({periodLabel})
+          </h2>
+          <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="rounded border border-neutral-200 bg-white px-3 py-1">
+              <span className="text-neutral-500">Total:</span>{' '}
+              <span className="font-semibold tabular-nums">{runs?.length ?? 0}</span>
+            </div>
+            <div className="rounded border border-emerald-200 bg-emerald-50 px-3 py-1">
+              <span className="text-emerald-700">Sucesso:</span>{' '}
+              <span className="font-semibold tabular-nums">{successCount}</span>
+            </div>
+            <div className="rounded border border-rose-200 bg-rose-50 px-3 py-1">
+              <span className="text-rose-700">Erro:</span>{' '}
+              <span className="font-semibold tabular-nums">
+                {errorCount} ({errorRate.toFixed(1)}%)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Filtros */}
+        <div className="flex flex-wrap gap-1 text-xs">
+          <span className="text-neutral-500 mr-2 self-center">Status:</span>
+          {[
+            { v: undefined, label: 'todos' },
+            { v: 'success',   label: 'sucesso' },
+            { v: 'error',     label: 'erro' },
+            { v: 'skipped',   label: 'skip' },
+          ].map((opt) => {
+            const active = (opt.v === undefined && !statusFilter) || statusFilter === opt.v
+            const qs = new URLSearchParams()
+            if (opt.v) qs.set('status', opt.v)
+            if (period) qs.set('period', period)
+            return (
+              <Link
+                key={opt.label}
+                href={`/crm/automations/${rule.id}${qs.toString() ? '?' + qs.toString() : ''}`}
+                className={`rounded px-2 py-1 ${active ? 'bg-neutral-900 text-white' : 'border border-neutral-200 hover:bg-neutral-100'}`}
+              >
+                {opt.label}
+              </Link>
+            )
+          })}
+
+          <span className="text-neutral-500 ml-4 mr-2 self-center">Período:</span>
+          {[
+            { v: '7',   label: '7d' },
+            { v: '30',  label: '30d' },
+            { v: 'all', label: 'todos' },
+          ].map((opt) => {
+            const active = (opt.v === '30' && !period) || period === opt.v
+            const qs = new URLSearchParams()
+            if (statusFilter) qs.set('status', statusFilter)
+            if (opt.v !== '30') qs.set('period', opt.v)
+            return (
+              <Link
+                key={opt.v}
+                href={`/crm/automations/${rule.id}${qs.toString() ? '?' + qs.toString() : ''}`}
+                className={`rounded px-2 py-1 ${active ? 'bg-neutral-900 text-white' : 'border border-neutral-200 hover:bg-neutral-100'}`}
+              >
+                {opt.label}
+              </Link>
+            )
+          })}
+        </div>
+
         <ul className="space-y-1 text-xs">
           {(runs ?? []).map((r) => (
             <li key={r.id} className="flex justify-between border-b border-neutral-100 py-1">
@@ -111,7 +201,7 @@ export default async function AutomationEditPage({
             </li>
           ))}
           {!runs?.length && (
-            <li className="text-neutral-400 italic">Nenhuma execução ainda.</li>
+            <li className="text-neutral-400 italic">Nenhuma execução {statusFilter ? `com status "${statusFilter}"` : ''} {periodLabel === 'todos' ? '' : `nos últimos ${periodLabel}`}.</li>
           )}
         </ul>
       </section>

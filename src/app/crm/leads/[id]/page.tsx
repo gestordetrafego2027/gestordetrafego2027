@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { promoteLeadAction } from '../actions'
-import { addNoteAction, updateLeadStatusAction, logActivityAction } from './actions'
+import { addNoteAction, updateLeadStatusAction, logActivityAction, attachTagAction, detachTagAction } from './actions'
+import { deleteInterestAction } from './interests/actions'
 import Attachments from '../../components/Attachments'
 import WhatsAppButton from '../../components/WhatsAppButton'
 import { waTemplates } from '@/lib/whatsapp'
@@ -40,6 +41,8 @@ export default async function LeadDetailPage({
     { data: opps },
     { data: quotes },
     { data: attachments },
+    { data: leadTags },
+    { data: allTags },
   ] = await Promise.all([
     supabase
       .from('leads')
@@ -75,7 +78,22 @@ export default async function LeadDetailPage({
       .select('id, storage_path, file_name, mime_type, size_bytes, kind, created_at, description')
       .eq('lead_id', id)
       .order('created_at', { ascending: false }),
+    supabase
+      .from('lead_tags')
+      .select('tag_id, tags(id, name, slug, color)')
+      .eq('lead_id', id),
+    supabase
+      .from('tags')
+      .select('id, name, slug, color')
+      .order('name', { ascending: true }),
   ])
+
+  const tagsOnLead = (leadTags ?? []).map((lt) => {
+    const t = Array.isArray(lt.tags) ? lt.tags[0] : lt.tags
+    return t ? { id: t.id, name: t.name, slug: t.slug, color: t.color } : null
+  }).filter((t): t is { id: string; name: string; slug: string; color: string | null } => !!t)
+  const tagIdsOnLead = new Set(tagsOnLead.map((t) => t.id))
+  const availableTags = (allTags ?? []).filter((t) => !tagIdsOnLead.has(t.id))
 
   // 6º elemento do array desestruturado é o resultado de attachments
   // (declarado abaixo do quotes acima por ordem de Promise.all)
@@ -118,6 +136,15 @@ export default async function LeadDetailPage({
                   origem: {lead.source}
                 </span>
               )}
+              {tagsOnLead.map((t) => (
+                <span
+                  key={t.id}
+                  className="rounded px-2 py-0.5"
+                  style={{ backgroundColor: t.color ?? '#e5e7eb', color: '#111' }}
+                >
+                  #{t.name}
+                </span>
+              ))}
             </div>
           </div>
 
@@ -235,8 +262,70 @@ export default async function LeadDetailPage({
           </div>
         </div>
 
-        {/* Sidebar: Notes + Interests + Opps */}
+        {/* Sidebar: Tags + Notes + Interests + Opps */}
         <aside className="space-y-4">
+          <div className="rounded-lg border border-neutral-200 bg-white p-5">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
+              Tags
+            </h2>
+            {tagsOnLead.length === 0 && (
+              <p className="text-xs text-neutral-400 italic mb-2">Sem tags.</p>
+            )}
+            <div className="flex flex-wrap gap-2 mb-3">
+              {tagsOnLead.map((t) => (
+                <form
+                  key={t.id}
+                  action={detachTagAction}
+                  className="inline-flex items-center"
+                >
+                  <input type="hidden" name="lead_id" value={lead.id} />
+                  <input type="hidden" name="tag_id" value={t.id} />
+                  <span
+                    className="inline-flex items-center gap-1 rounded pl-2 pr-1 py-0.5 text-xs"
+                    style={{ backgroundColor: t.color ?? '#e5e7eb', color: '#111' }}
+                  >
+                    {t.name}
+                    <button
+                      type="submit"
+                      title="Remover"
+                      className="rounded-full hover:bg-black/10 w-4 h-4 leading-none flex items-center justify-center"
+                    >
+                      ×
+                    </button>
+                  </span>
+                </form>
+              ))}
+            </div>
+            {availableTags.length > 0 ? (
+              <form action={attachTagAction} className="flex gap-1">
+                <input type="hidden" name="lead_id" value={lead.id} />
+                <select
+                  name="tag_id"
+                  defaultValue=""
+                  className="flex-1 rounded border border-neutral-200 px-2 py-1 text-xs bg-white"
+                  required
+                >
+                  <option value="" disabled>+ adicionar tag…</option>
+                  {availableTags.map((t) => (
+                    <option key={t.id} value={t.id}>{t.name}</option>
+                  ))}
+                </select>
+                <button
+                  type="submit"
+                  className="rounded bg-neutral-900 text-white text-xs px-2 py-1 hover:bg-neutral-700"
+                >
+                  +
+                </button>
+              </form>
+            ) : (
+              <p className="text-xs text-neutral-400">
+                {(allTags?.length ?? 0) === 0 ? (
+                  <>Nenhuma tag cadastrada. <Link href="/crm/tags" className="underline">Criar uma →</Link></>
+                ) : 'Todas as tags já estão aplicadas.'}
+              </p>
+            )}
+          </div>
+
           <div className="rounded-lg border border-neutral-200 bg-white p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
               Observações
@@ -292,9 +381,17 @@ export default async function LeadDetailPage({
           </div>
 
           <div className="rounded-lg border border-neutral-200 bg-white p-5">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
-              Serviços de interesse
-            </h2>
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+                Serviços de interesse
+              </h2>
+              <Link
+                href={`/crm/leads/${lead.id}/interests/new`}
+                className="text-xs text-neutral-600 hover:underline"
+              >
+                + adicionar
+              </Link>
+            </div>
             <ul className="space-y-2 text-sm">
               {(interests ?? []).map((si) => {
                 const svc = Array.isArray(si.services) ? si.services[0] : si.services
@@ -304,10 +401,25 @@ export default async function LeadDetailPage({
                 const answers = si.answers as Record<string, unknown> | null
                 return (
                   <li key={si.id} className="border border-neutral-100 rounded p-2">
-                    <div className="font-medium">{serviceName}</div>
-                    {pkgName && (
-                      <div className="text-xs text-neutral-500">Pacote: {pkgName}</div>
-                    )}
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex-1">
+                        <div className="font-medium">{serviceName}</div>
+                        {pkgName && (
+                          <div className="text-xs text-neutral-500">Pacote: {pkgName}</div>
+                        )}
+                      </div>
+                      <form action={deleteInterestAction}>
+                        <input type="hidden" name="interest_id" value={si.id} />
+                        <input type="hidden" name="lead_id" value={lead.id} />
+                        <button
+                          type="submit"
+                          className="text-[10px] text-rose-600 hover:underline"
+                          title="Remover interesse"
+                        >
+                          ×
+                        </button>
+                      </form>
+                    </div>
                     {answers && Object.keys(answers).length > 0 && (
                       <details className="mt-1">
                         <summary className="text-xs text-neutral-500 cursor-pointer">

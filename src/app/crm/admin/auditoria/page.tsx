@@ -35,7 +35,9 @@ export default async function AuditoriaPage({
     redirect('/crm?error=' + encodeURIComponent('Apenas admin acessa a auditoria.'))
   }
 
-  let q = supabase
+  // audit_log existe em schema não-público; ignorar tipagem aqui
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let q: any = (supabase as any)
     .from('audit_log')
     .select('id, ts, actor_email, entity, entity_id, action, diff')
     .order('ts', { ascending: false })
@@ -44,7 +46,7 @@ export default async function AuditoriaPage({
   if (entity) q = q.eq('entity', entity)
   if (actor) q = q.eq('actor_email', actor)
 
-  const { data: rows, error } = await q
+  const { data: rows, error } = await q as { data: { id: string; ts: string; actor_email: string | null; entity: string; entity_id: string | null; action: string; diff: unknown }[] | null; error: { message: string } | null }
 
   const entities = ['leads', 'clients', 'opportunities', 'quotes', 'invoices', 'payments']
 

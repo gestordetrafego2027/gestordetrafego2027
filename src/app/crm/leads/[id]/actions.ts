@@ -46,6 +46,42 @@ export async function updateLeadStatusAction(formData: FormData): Promise<void> 
   revalidatePath('/crm')
 }
 
+export async function attachTagAction(formData: FormData): Promise<void> {
+  const leadId = String(formData.get('lead_id') ?? '')
+  const tagId = String(formData.get('tag_id') ?? '')
+  if (!leadId || !tagId) return
+
+  const supabase = await createClient()
+  const { error } = await supabase
+    .from('lead_tags')
+    .insert({ lead_id: leadId, tag_id: tagId })
+  if (error && !error.message.includes('duplicate')) {
+    console.error('[attachTagAction]', error.message)
+    return
+  }
+  revalidatePath(`/crm/leads/${leadId}`)
+  revalidatePath('/crm/leads')
+}
+
+export async function detachTagAction(formData: FormData): Promise<void> {
+  const leadId = String(formData.get('lead_id') ?? '')
+  const tagId = String(formData.get('tag_id') ?? '')
+  if (!leadId || !tagId) return
+
+  const supabase = await createClient()
+  const { error } = await supabase
+    .from('lead_tags')
+    .delete()
+    .eq('lead_id', leadId)
+    .eq('tag_id', tagId)
+  if (error) {
+    console.error('[detachTagAction]', error.message)
+    return
+  }
+  revalidatePath(`/crm/leads/${leadId}`)
+  revalidatePath('/crm/leads')
+}
+
 export async function logActivityAction(formData: FormData): Promise<void> {
   const leadId = String(formData.get('lead_id') ?? '')
   const type = String(formData.get('type') ?? 'note')
