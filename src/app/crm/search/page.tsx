@@ -54,8 +54,9 @@ export default async function SearchPage({
 }) {
   const { q: rawQ = '', type } = await searchParams
   const term = rawQ.trim()
+  const VALID_ENTITIES = ['leads','clients','opportunities','quotes','invoices','campaigns','catalog'] as const
   const entity: EntityKey =
-    (['leads','clients','opportunities','quotes','invoices','campaigns','catalog'] as const).includes(type as EntityKey)
+    type && (VALID_ENTITIES as readonly string[]).includes(type)
       ? (type as EntityKey)
       : 'all'
 
