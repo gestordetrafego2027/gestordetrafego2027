@@ -39,17 +39,35 @@ export async function createAcademyProductAction(formData: FormData): Promise<vo
     if (attempt > 10) break
   }
 
+  // Pega um autor default (Angelo). Form do CRM ainda não suporta múltiplos autores.
+  const { data: defaultAuthor } = await supabase
+    .from('academy_authors')
+    .select('id')
+    .eq('active', true)
+    .order('featured', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+  if (!defaultAuthor) {
+    redirect('/crm/academy/products/new?error=' + encodeURIComponent('Nenhum autor cadastrado. Cadastre um autor primeiro.'))
+  }
+
+  const insertRow = {
+    title,
+    slug,
+    type,
+    business_unit: businessUnit,
+    status: 'draft',
+    level: 'todos',
+    price_cents: priceCents,
+    currency: 'BRL',
+    author_id: defaultAuthor!.id,
+    cover_url: '/academy/placeholder-cover.svg',
+  }
+
   const { data: created, error } = await supabase
     .from('academy_products')
-    .insert({
-      title, slug,
-      type: type as never,
-      business_unit: businessUnit as never,
-      status: 'draft' as never,
-      level: 'all' as never,
-      price_cents: priceCents,
-      currency: 'BRL',
-    })
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .insert(insertRow as any)
     .select('id')
     .single()
 
@@ -67,7 +85,7 @@ export async function updateAcademyProductAction(formData: FormData): Promise<vo
     subtitle: String(formData.get('subtitle') ?? '').trim() || null,
     short_description: String(formData.get('short_description') ?? '').trim() || null,
     status: String(formData.get('status') ?? 'draft'),
-    level: String(formData.get('level') ?? 'all'),
+    level: String(formData.get('level') ?? 'todos'),
     business_unit: String(formData.get('business_unit') ?? 'studio'),
     type: String(formData.get('type') ?? 'course'),
     price_cents: Math.round(Number(formData.get('price_brl') ?? 0) * 100),
@@ -88,7 +106,8 @@ export async function updateAcademyProductAction(formData: FormData): Promise<vo
     patch.published_at = new Date().toISOString()
   }
 
-  const { error } = await supabase.from('academy_products').update(patch as never).eq('id', id)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { error } = await supabase.from('academy_products').update(patch as any).eq('id', id)
   if (error) redirect(`/crm/academy/products/${id}?error=` + encodeURIComponent(error.message))
   revalidatePath(`/crm/academy/products/${id}`)
   revalidatePath('/crm/academy/products')
@@ -107,7 +126,8 @@ export async function createModuleAction(formData: FormData): Promise<void> {
 
   await supabase.from('academy_modules').insert({
     product_id: productId, title, order_index: nextIdx,
-  } as never)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any)
   revalidatePath(`/crm/academy/products/${productId}`)
 }
 
@@ -131,7 +151,8 @@ export async function createLessonAction(formData: FormData): Promise<void> {
     video_url: videoUrl,
     order_index: nextIdx,
     type: 'video',
-  } as never)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any)
   revalidatePath(`/crm/academy/products/${productId}`)
 }
 
