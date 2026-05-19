@@ -27,6 +27,8 @@ next-env.d.ts
 supabase/.branches
 supabase/.temp
 supabase/.env
+# Edge Functions rodam em Deno runtime, nao entram no build do Next
+supabase/functions
 
 # --- Editor / OS ---
 .vscode

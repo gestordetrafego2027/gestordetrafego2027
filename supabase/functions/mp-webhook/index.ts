@@ -1,4 +1,7 @@
+// @ts-nocheck
+// deno-lint-ignore-file
 // Edge Function: mp-webhook
+// Roda em Deno runtime (não Node). TS check do Next.js ignora este arquivo.
 // Recebe notificações do Mercado Pago, registra em academy_mp_webhooks,
 // busca detalhes do payment via MP API e atualiza academy_payments +
 // academy_orders. A trigger DB tg_academy_orders_grant_enrollment cria
