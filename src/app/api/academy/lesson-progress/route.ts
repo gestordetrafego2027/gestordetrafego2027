@@ -1,0 +1,23 @@
+import { NextResponse } from 'next/server'
+import { pingLessonProgressAction } from '@/app/academy/curso/[slug]/aula/[lessonId]/actions'
+
+export const dynamic = 'force-dynamic'
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json().catch(() => null) as
+      | { lesson_id?: string; product_id?: string; position?: number }
+      | null
+    if (!body?.lesson_id || !body?.product_id) {
+      return NextResponse.json({ ok: false, error: 'missing_params' }, { status: 400 })
+    }
+    await pingLessonProgressAction(
+      String(body.lesson_id),
+      String(body.product_id),
+      Number(body.position ?? 0),
+    )
+    return NextResponse.json({ ok: true })
+  } catch (err) {
+    return NextResponse.json({ ok: false, error: String(err) }, { status: 500 })
+  }
+}
