@@ -83,6 +83,9 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
             </Link>
             {((user?.app_metadata as { role?: string } | undefined)?.role === 'admin') && (
               <>
+                <Link href="/crm/academy" className="text-violet-700 hover:text-violet-900 font-medium">
+                  Academy
+                </Link>
                 <Link href="/crm/admin/users" className="text-violet-700 hover:text-violet-900 font-medium">
                   Usuários
                 </Link>
