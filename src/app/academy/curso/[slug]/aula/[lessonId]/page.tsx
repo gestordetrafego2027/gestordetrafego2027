@@ -58,7 +58,7 @@ export default async function LessonPlayerPage({
     await Promise.all([
       supabase
         .from('academy_modules')
-        .select('id, order_index, title, subtitle')
+        .select('id, order_index, title, summary')
         .eq('product_id', product.id)
         .order('order_index'),
       supabase
