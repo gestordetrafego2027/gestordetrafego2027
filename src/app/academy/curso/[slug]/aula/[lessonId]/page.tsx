@@ -68,9 +68,9 @@ export default async function LessonPlayerPage({
         .order('order_index'),
       supabase
         .from('academy_lesson_resources')
-        .select('id, label, kind, url, position')
+        .select('id, label, kind, url, order_index')
         .eq('lesson_id', lesson.id)
-        .order('position'),
+        .order('order_index'),
       user
         ? supabase
             .from('academy_lesson_progress')
