@@ -3,6 +3,7 @@
 // Faz POST anônimo (verify_jwt=false na função) e retorna { ok, lead_id }.
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 /**
  * @param {Object} payload
@@ -19,12 +20,15 @@ const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
  * @param {string} [payload.campaign_slug]
  */
 export async function submitLead(payload) {
-  if (!SUPABASE_URL) {
-    throw new Error('NEXT_PUBLIC_SUPABASE_URL não configurado.')
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+    throw new Error('Supabase URL ou Anon Key não configurados.')
   }
   const res = await fetch(`${SUPABASE_URL}/functions/v1/submit_lead`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers: { 
+      'content-type': 'application/json',
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+    },
     body: JSON.stringify(payload),
   })
   const data = await res.json().catch(() => ({}))
