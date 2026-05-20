@@ -220,9 +220,18 @@ export type Database = {
       }
       academy_certificates: {
         Row: {
+          city: string | null
           code: string
+          coordinator_name: string | null
+          coordinator_title: string | null
+          course_title_en_snapshot: string | null
+          course_title_pt_snapshot: string | null
           created_at: string
+          end_date: string | null
           enrollment_id: string
+          founder_name: string | null
+          founder_title: string | null
+          hours: number | null
           id: string
           issued_at: string
           metadata: Json
@@ -230,13 +239,25 @@ export type Database = {
           product_id: string
           revoked_at: string | null
           revoked_reason: string | null
+          start_date: string | null
+          student_name_snapshot: string | null
           updated_at: string
           user_id: string
+          verify_url: string | null
         }
         Insert: {
+          city?: string | null
           code: string
+          coordinator_name?: string | null
+          coordinator_title?: string | null
+          course_title_en_snapshot?: string | null
+          course_title_pt_snapshot?: string | null
           created_at?: string
+          end_date?: string | null
           enrollment_id: string
+          founder_name?: string | null
+          founder_title?: string | null
+          hours?: number | null
           id?: string
           issued_at?: string
           metadata?: Json
@@ -244,13 +265,25 @@ export type Database = {
           product_id: string
           revoked_at?: string | null
           revoked_reason?: string | null
+          start_date?: string | null
+          student_name_snapshot?: string | null
           updated_at?: string
           user_id: string
+          verify_url?: string | null
         }
         Update: {
+          city?: string | null
           code?: string
+          coordinator_name?: string | null
+          coordinator_title?: string | null
+          course_title_en_snapshot?: string | null
+          course_title_pt_snapshot?: string | null
           created_at?: string
+          end_date?: string | null
           enrollment_id?: string
+          founder_name?: string | null
+          founder_title?: string | null
+          hours?: number | null
           id?: string
           issued_at?: string
           metadata?: Json
@@ -258,8 +291,11 @@ export type Database = {
           product_id?: string
           revoked_at?: string | null
           revoked_reason?: string | null
+          start_date?: string | null
+          student_name_snapshot?: string | null
           updated_at?: string
           user_id?: string
+          verify_url?: string | null
         }
         Relationships: [
           {
@@ -3621,6 +3657,34 @@ export type Database = {
         }
         Relationships: []
       }
+      v_academy_certificate_public: {
+        Row: {
+          cert_code: string | null
+          city: string | null
+          coordinator_name: string | null
+          coordinator_title: string | null
+          course_accent: string | null
+          course_accent_soft: string | null
+          course_chapter: string | null
+          course_index: string | null
+          course_slug: string | null
+          course_title: string | null
+          course_title_en: string | null
+          course_title_pt: string | null
+          discipline: string | null
+          end_date: string | null
+          founder_name: string | null
+          founder_title: string | null
+          hours: number | null
+          id: string | null
+          is_revoked: boolean | null
+          issued_at: string | null
+          seal_kind: string | null
+          start_date: string | null
+          student_name: string | null
+        }
+        Relationships: []
+      }
       v_academy_course_progress: {
         Row: {
           completed_at: string | null
@@ -3775,6 +3839,7 @@ export type Database = {
         }
         Returns: undefined
       }
+      fn_expire_enrollments: { Args: never; Returns: number }
       fn_generate_slug: { Args: { p_input: string }; Returns: string }
       fn_grant_enrollment_from_order: {
         Args: { p_order_id: string }
@@ -4296,4 +4361,3 @@ export const Constants = {
     },
   },
 } as const
-
