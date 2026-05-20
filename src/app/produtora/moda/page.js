@@ -43,7 +43,14 @@ export default function ProdutoraModaPage() {
 
             {/* 2. HERO SECTION */}
             <section className="relative h-screen w-full bg-white overflow-hidden px-[40px] pt-[25px] pb-[10px]">
-                <div className="relative w-full h-full bg-[#111111] flex items-center justify-end min-h-[calc(100vh-75px)] pb-[20px]">
+                <div className="relative w-full h-full bg-[#111111] flex items-center justify-end min-h-[calc(100vh-75px)] pb-[20px] overflow-hidden">
+                    {/* Background image */}
+                    <img
+                        src="/images/produtora/moda/hero.png"
+                        alt="Shooting de moda — direção criativa House Mazzutti"
+                        className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/60"></div>
                     <div className="relative z-20 w-full px-[60px] flex justify-end pr-[120px]">
                         <div className="w-full max-w-[600px] flex flex-col items-center text-center ml-[-10px]">
                             {/* Geometric Icon */}
