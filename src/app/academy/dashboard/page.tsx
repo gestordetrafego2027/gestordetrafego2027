@@ -66,7 +66,7 @@ export default async function StudentDashboardPage() {
   // Certificados
   const { data: certificates } = await supabase
     .from('academy_certificates')
-    .select('id, code, pdf_url, issued_at, verify_url, course_title_pt_snapshot, hours, product_id')
+    .select('id, code, pdf_url, issued_at, course_title_pt_snapshot, hours, product_id')
     .eq('user_id', user.id)
     .is('revoked_at', null)
     .order('issued_at', { ascending: false })
@@ -248,9 +248,6 @@ export default async function StudentDashboardPage() {
                       <div className="flex gap-2 text-xs">
                         {c.pdf_url && (
                           <a href={c.pdf_url} target="_blank" rel="noopener" className="text-blue-600 hover:underline">PDF</a>
-                        )}
-                        {c.verify_url && (
-                          <a href={c.verify_url} target="_blank" rel="noopener" className="text-blue-600 hover:underline">verificar</a>
                         )}
                       </div>
                     </li>
