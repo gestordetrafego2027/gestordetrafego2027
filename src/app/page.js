@@ -376,7 +376,7 @@ export default function Home() {
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
                                 <span className="text-caption text-zinc-400 mb-6 block">Soluções</span>
-                                <h2 className="text-h2 text-white">A casa, em três frentes.</h2>
+                                <h2 className="text-h2 text-white">Uma casa. Três frentes.</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -384,19 +384,19 @@ export default function Home() {
                                     {
                                         title: "HMZT | STUDIO",
                                         link: "/studio",
-                                        subtitle: 'Foto, vídeo e produção pessoal.',
+                                        subtitle: 'Foto, vídeo e direção de imagem pessoal.',
                                         items: ["Book profissional", "Ensaio pessoal", "Cobertura externa", "Direção de imagem"]
                                     },
                                     {
                                         title: "HMZT | PRODUTORA",
                                         link: "/produtora",
-                                        subtitle: 'Campanhas de moda, saúde e beleza.',
+                                        subtitle: 'Campanhas de moda, beleza e narrativas institucionais.',
                                         items: ["Editorial de moda", "Campanha publicitária", "Conteúdo institucional", "Produção executiva"]
                                     },
                                     {
                                         title: "HMZT | AGÊNCIA",
                                         link: "/agencia",
-                                        subtitle: 'Criação de marcas, eventos e influência.',
+                                        subtitle: 'Branding, campanhas e presença digital.',
                                         items: ["Branding project", "Campanhas", "Web development", "Direção de marca"]
                                     }
                                 ].map((card, idx) => (

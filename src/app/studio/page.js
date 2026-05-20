@@ -212,7 +212,7 @@ export default function StudioPage() {
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     {(() => {
                         const heroSlides = [
-                            { titulo: 'Direção de imagem com arte e narrativa.', texto: 'Aqui potencializamos sua imagem e registramos os momentos mais marcantes da sua trajetória.' },
+                            { titulo: 'Direção de imagem com arte e narrativa.', texto: 'Construímos sua imagem com intenção. Registramos os momentos que importam — com cuidado editorial.' },
                             { titulo: 'Imagem construída com intenção.', texto: 'Cada produção começa com uma escuta — e termina em imagens que sustentam sua presença.' },
                             { titulo: 'Books, ensaios e coberturas.', texto: 'Do conceito à entrega, cada detalhe pensado para comunicar com clareza e elegância.' },
                         ];
@@ -413,7 +413,7 @@ export default function StudioPage() {
                                     <p>— Roteiros visuais e trilhas</p>
                                     <p>— Locações e cenografia</p>
                                     <p>— Direção de cena e poses</p>
-                                    <p>— Equipe multi artística</p>
+                                    <p>— Equipe multiartística</p>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-8">
@@ -623,14 +623,14 @@ export default function StudioPage() {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-16">
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Deixa de</p>
+                                <p className="text-caption text-zinc-500">Deixe de</p>
                                 <ul className="text-body text-white space-y-3">
                                     <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Imagem genérica</span></li>
                                     <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
                                 </ul>
                             </div>
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Passa a</p>
+                                <p className="text-caption text-zinc-500">Passe a</p>
                                 <ul className="text-body text-white space-y-3">
                                     <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Consistência visual</span></li>
                                     <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Mais valor percebido</span></li>

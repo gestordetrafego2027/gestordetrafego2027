@@ -169,8 +169,8 @@ export default function ProdutoraPage() {
                     {(() => {
                         const heroSlides = [
                             { titulo: 'Produção e direção para publicidade.', texto: 'Produção audiovisual, campanhas e conteúdo com direção criativa cuidadosa.' },
-                            { titulo: 'Campanhas que comunicam com clareza.', texto: 'Da pré-produção à entrega final, cada detalhe pensado para gerar resultado real.' },
-                            { titulo: 'Sets, editoriais e conteúdo com direção.', texto: 'Unimos execução técnica e visão criativa para marcas que querem aparecer com verdade.' },
+                            { titulo: 'Campanhas que comunicam com clareza.', texto: 'Da pré-produção à entrega final — cada decisão pensada para sustentar resultado.' },
+                            { titulo: 'Sets, editoriais e conteúdo com direção.', texto: 'Execução técnica e visão criativa na mesma mente. Para marcas que querem aparecer com intenção.' },
                         ];
                         return <>
                             <div className="absolute inset-0 z-0">
@@ -359,14 +359,14 @@ export default function ProdutoraPage() {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-16">
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Deixa de</p>
+                                <p className="text-caption text-zinc-500">Deixe de</p>
                                 <ul className="text-body text-white space-y-3">
                                     <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
                                     <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Execução sem resultado</span></li>
                                 </ul>
                             </div>
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Passa a</p>
+                                <p className="text-caption text-zinc-500">Passe a</p>
                                 <ul className="text-body text-white space-y-3">
                                     <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Conteúdo com direção</span></li>
                                     <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Imagem que consolida</span></li>
