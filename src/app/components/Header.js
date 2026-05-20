@@ -124,6 +124,7 @@ export default function Header({ variant = 'dark' }) {
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/academy')} href="/academy">ACADEMY</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
@@ -219,6 +220,7 @@ export default function Header({ variant = 'dark' }) {
                         {label:'AGÊNCIA', href:'/agencia'},
                         {label:'ANGELO', href:'/angelo'},
                         {label:'COMUNIDADE', href:'/comunidade'},
+                        {label:'ACADEMY', href:'/academy'},
                         {label:'PORTFÓLIO', href:'/portfolio'},
                         {label:'BLOG', href:'/blog'},
                         {label:'CONTATO', href:'/contato'},

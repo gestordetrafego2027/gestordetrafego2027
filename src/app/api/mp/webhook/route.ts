@@ -66,35 +66,34 @@ export async function POST(req: Request) {
 
       if (orderId) {
         // Atualiza order
-        await sb
-          .from('academy_orders')
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        await (sb.from('academy_orders') as any)
           .update({
-            status: newStatus as any,
+            status: newStatus,
             mp_payment_id: payment.id?.toString(),
             payment_method: mapMpPaymentMethod(payment?.payment_method_id),
           })
           .eq('id', orderId)
 
         // Cria/atualiza row em academy_payments
-        await sb
-          .from('academy_payments')
-          .upsert(
-            {
-              order_id: orderId,
-              method: mapMpPaymentMethod(payment?.payment_method_id) || 'credit_card',
-              status: payment?.status || 'pending',
-              amount_cents: Math.round((payment?.transaction_amount || 0) * 100),
-              currency: payment?.currency_id || 'BRL',
-              mp_payment_id: payment.id?.toString(),
-              mp_status: payment?.status,
-              mp_status_detail: payment?.status_detail,
-              mp_payment_type: payment?.payment_type_id,
-              installments: payment?.installments || null,
-              gateway_response: payment,
-              paid_at: payment?.date_approved || null,
-            },
-            { onConflict: 'mp_payment_id' }
-          )
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        await (sb.from('academy_payments') as any).upsert(
+          {
+            order_id: orderId,
+            method: mapMpPaymentMethod(payment?.payment_method_id) || 'credit_card',
+            status: payment?.status || 'pending',
+            amount_cents: Math.round((payment?.transaction_amount || 0) * 100),
+            currency: payment?.currency_id || 'BRL',
+            mp_payment_id: payment.id?.toString(),
+            mp_status: payment?.status,
+            mp_status_detail: payment?.status_detail,
+            mp_payment_type: payment?.payment_type_id,
+            installments: payment?.installments || null,
+            gateway_response: payment,
+            paid_at: payment?.date_approved || null,
+          },
+          { onConflict: 'mp_payment_id' }
+        )
       }
 
       // Marca webhook como done

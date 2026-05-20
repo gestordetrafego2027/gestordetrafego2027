@@ -55,7 +55,6 @@ export default async function CheckoutPage({ searchParams }) {
       total_cents: product.price_cents,
       currency: product.currency,
       billing_email: user.email,
-      mp_external_reference: null,
     })
     .select('id, order_number')
     .single()
