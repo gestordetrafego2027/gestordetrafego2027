@@ -98,12 +98,12 @@ export default function OnTakePage() {
                     <div className="lg:w-1/3">
                         <div className="info-col flex flex-col gap-[16px]">
                             <div className="space-y-1">
-                                <p className="info-col-anim font-inter text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Direção de Imagem</p>
+                                <p className="info-col-anim font-inter text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Branding e Identidade Visual</p>
                                 <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface">On Take</h1>
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Cada projeto é uma resposta. A uma pergunta que vem antes."
+                                "Cada take revela uma decisão. Cada marca, uma postura."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
@@ -116,13 +116,13 @@ export default function OnTakePage() {
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2025</p>
+                                    <p className="font-inter text-sm font-medium">2026</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia da Agência</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">
-                                    A maioria das marcas erra no ponto mais importante: começa executando sem definir. Sem clareza, não existe consistência. É aqui que a Agência atua.
+                                    On Take nasceu da produção audiovisual e precisava de uma marca que carregasse esse repertório sem mimetizá-lo. Branding, identidade visual e direção de marca construídos para sustentar a autoria do estúdio em qualquer ponto de contato.
                                 </p>
                             </div>
                         </div>
@@ -152,7 +152,7 @@ export default function OnTakePage() {
                         <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="#">INSTAGRAM</Link>
                         <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="#">LINKEDIN</Link>
                     </div>
-                    <p className="text-[#808080] font-inter text-[10px] tracking-wider">© 2025 House Mazzutti</p>
+                    <p className="text-[#808080] font-inter text-[10px] tracking-wider">© 2026 House Mazzutti</p>
                 </div>
             </footer>
         
