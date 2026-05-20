@@ -132,11 +132,11 @@ export default function About() {
                 </section>
 
                 {/* [3] ORIGEM EDITORIAL */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
+                <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
                         <img
                             alt="House Mazzutti — Agência, Produtora e Direção Criativa"
-                            className="absolute inset-0 w-full h-full object-cover"
+                            className="absolute inset-0 w-full h-full object-cover object-top"
                             src="/images/about/angelo-mazzutti.jpg"
                         />
                     </div>
