@@ -59,7 +59,7 @@ export default function AgenciaCampanhasPage() {
                             <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Campanhas publicitárias com estratégia, narrativa integrada e produção de conteúdo para posicionamento e conversão.</p>
                             <div data-aos="fade-up" data-aos-delay="400">
                                 <button type="button" onClick={() => openForm('hero')} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
-                                    ESTRUTURAR CAMPAIGN
+                                    ESTRUTURAR CAMPANHA
                                 </button>
                             </div>
                         </div>
@@ -72,7 +72,7 @@ export default function AgenciaCampanhasPage() {
                 <div className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
                         <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">CAMPAIGNS</span>
-                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">A Campaign da House não é uma ação. É um ecossistema.</h2>
+                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">A campanha da House não é uma ação. É um ecossistema.</h2>
                         <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Cada peça tem função. Cada canal tem estratégia.</p>
                         
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
@@ -280,7 +280,7 @@ export default function AgenciaCampanhasPage() {
                     <div className="max-w-[1440px] mx-auto">
                         <div className="text-center mb-24">
                             <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block" data-aos="fade-up">TABELA DE INVESTIMENTO</span>
-                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Soluções para o seu negócio.</h2>
+                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Três frentes. Um mesmo padrão.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <div className="p-12 border border-zinc-100 flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="100">
@@ -314,7 +314,7 @@ export default function AgenciaCampanhasPage() {
                                     </div>
                                     <ul className="space-y-4 mb-12">
                                         <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Campaign completa
+                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Campanha completa
                                         </li>
                                         <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
                                             <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Multicanal
@@ -448,7 +448,7 @@ export default function AgenciaCampanhasPage() {
                     <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
                 </nav>
                 <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t-[0.5px] border-zinc-900">
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2025 House Mazzutti</p>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2026 House Mazzutti</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>

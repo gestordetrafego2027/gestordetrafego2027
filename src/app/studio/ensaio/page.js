@@ -457,7 +457,7 @@ export default function StudioEnsaioPage() {
                     <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
                 </nav>
                 <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t-[0.5px] border-zinc-900">
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2025 House Mazzutti</p>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2026 House Mazzutti</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>

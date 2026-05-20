@@ -279,7 +279,7 @@ export default function AgenciaDesenvolvimentoPage() {
                     <div className="max-w-[1440px] mx-auto">
                         <div className="text-center mb-24">
                             <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block" data-aos="fade-up">TABELA DE INVESTIMENTO</span>
-                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Soluções para o seu negócio.</h2>
+                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Três frentes. Um mesmo padrão.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <div className="p-12 border border-zinc-100 flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="100">
@@ -447,7 +447,7 @@ export default function AgenciaDesenvolvimentoPage() {
                     <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
                 </nav>
                 <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t-[0.5px] border-zinc-900">
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2025 House Mazzutti</p>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2026 House Mazzutti</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>
