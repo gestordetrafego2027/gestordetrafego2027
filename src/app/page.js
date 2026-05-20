@@ -250,30 +250,37 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                         {[
-                            { title: "Amanda Oliveira", sub: "Book", src: "/images/studio/amanda-oliveira/capa.jpg", link: "/portfolio-studio/amanda-oliveira" },
-                            { title: "Patricia Marafon", sub: "Book", src: "/images/studio/patricia-marafon/capa.jpg", link: "/portfolio-studio/patricia-marafon" },
-                            { title: "Signus - Versolato 02", sub: "Acessórios", src: "/images/produtora/acessorios/signus-versolato02/capa.jpg", link: "/portfolio-produtora/signus-versolato02" },
-                            { title: "Elyah", sub: "Acessórios", src: "/images/produtora/acessorios/elyah/capa.jpg", link: "/portfolio-produtora/elyah" },
-                            { title: "Knowhol", sub: "Direção de Imagem", src: "/images/agencia/knowhol/capa.jpg", link: "/portfolio-agencia/knowhol" },
-                            { title: "Samrat", sub: "Direção de Imagem", src: "/images/agencia/samrat/capa.jpg", link: "/portfolio-agencia/samrat" },
+                            { title: "Amanda Oliveira", sub: "Book", src: "/images/studio/amanda-oliveira/capa.jpg", hover: "/images/studio/amanda-oliveira/2.jpg", link: "/portfolio-studio/amanda-oliveira" },
+                            { title: "Patricia Marafon", sub: "Book", src: "/images/studio/patricia-marafon/capa.jpg", hover: "/images/studio/patricia-marafon/2.jpg", link: "/portfolio-studio/patricia-marafon" },
+                            { title: "Signus - Versolato 02", sub: "Acessórios", src: "/images/produtora/acessorios/signus-versolato02/capa.jpg", hover: "/images/produtora/acessorios/signus-versolato02/2.jpg", link: "/portfolio-produtora/signus-versolato02" },
+                            { title: "Elyah", sub: "Acessórios", src: "/images/produtora/acessorios/elyah/capa.jpg", hover: "/images/produtora/acessorios/elyah/2.jpg", link: "/portfolio-produtora/elyah" },
+                            { title: "Knowhol", sub: "Direção de Imagem", src: "/images/agencia/knowhol/capa.jpg", hover: "/images/agencia/knowhol/2.jpg", link: "/portfolio-agencia/knowhol" },
+                            { title: "Samrat", sub: "Direção de Imagem", src: "/images/agencia/samrat/capa.jpg", hover: "/images/agencia/samrat/2.jpg", link: "/portfolio-agencia/samrat" },
                         ].map((work, i) => (
-                            <Link 
-                                key={i} 
+                            <Link
+                                key={i}
                                 href={work.link}
                                 className="scroll-reveal relative group bg-white aspect-[4/3] overflow-hidden block"
                                 data-delay={i * 100}
                                 style={{ opacity: 0, transform: 'translateY(40px)', transition: 'opacity 0.7s ease, transform 0.7s ease' }}
                             >
+                                {/* default — capa em preto e branco */}
                                 <img
                                     alt={work.title}
-                                    className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0"
+                                    className="absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-700 ease-in-out group-hover:opacity-0"
                                     src={work.src}
                                 />
-                                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
-                                    <p className="text-h4 text-black">{work.title}</p>
-                                    <p className="text-caption text-zinc-500 mt-2">
-                                        {work.sub}
-                                    </p>
+                                {/* hover — segunda imagem do mesmo case, em cor */}
+                                <img
+                                    alt=""
+                                    aria-hidden="true"
+                                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+                                    src={work.hover}
+                                />
+                                {/* legenda sobreposta no hover */}
+                                <div className="absolute inset-x-0 bottom-0 p-6 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/70 to-transparent">
+                                    <p className="text-h4 text-white">{work.title}</p>
+                                    <p className="text-caption text-white/75 mt-1">{work.sub}</p>
                                 </div>
                             </Link>
                         ))}
