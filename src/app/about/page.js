@@ -157,32 +157,6 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* [3.5] PRODUÇÃO EXECUTIVA — MATEUS SACAVEM */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
-                        <img
-                            alt="Mateus Sacavem — Produtor Executivo da House Mazzutti"
-                            className="absolute inset-0 w-full h-full object-cover"
-                            src="/images/about/mateus-sacavem.jpg"
-                        />
-                    </div>
-                    {/* Vertical Divider */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#1a1a1a] z-10"></div>
-
-                    <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-400">Produção Executiva</span>
-                            <h2 className="text-h2 text-white">Cada projeto exige um cérebro logístico à frente.</h2>
-                            <div className="space-y-5 text-body text-neutral-300">
-                                <p>Mateus Sacavem comanda a operação executiva da House — orçamentos, cronogramas, clientes e fornecedores diretos passam pela sua escuta antes de entrarem em movimento.</p>
-                                <p>É ele quem garante que a ambição criativa encontre estrutura real: equipe certa, prazos honestos, custo coerente. A direção pensa a imagem; ele torna a imagem possível.</p>
-                                <p>É a costura silenciosa entre cliente, equipe e set — onde a maioria dos projetos quebra, é onde o nosso ganha precisão.</p>
-                            </div>
-                            <div className="pt-6 text-h3 text-white/80">Mateus Sacavem</div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* [6] METODOLOGIA */}
                 <section className="bg-black text-white py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -204,6 +178,32 @@ export default function About() {
                                     <p className="text-body text-neutral-400">{item.desc}</p>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* [6.5] PRODUÇÃO EXECUTIVA — MATEUS SACAVEM */}
+                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
+                        <img
+                            alt="Mateus Sacavem — Produtor Executivo da House Mazzutti"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            src="/images/about/mateus-sacavem.jpg"
+                        />
+                    </div>
+                    {/* Vertical Divider */}
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#1a1a1a] z-10"></div>
+
+                    <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                        <div className="max-w-lg space-y-10">
+                            <span className="text-caption text-neutral-400">Produção Executiva</span>
+                            <h2 className="text-h2 text-white">Cada projeto exige um cérebro logístico à frente.</h2>
+                            <div className="space-y-5 text-body text-neutral-300">
+                                <p>Mateus Sacavem comanda a operação executiva da House — orçamentos, cronogramas, clientes e fornecedores diretos passam pela sua escuta antes de entrarem em movimento.</p>
+                                <p>É ele quem garante que a ambição criativa encontre estrutura real: equipe certa, prazos honestos, custo coerente. A direção pensa a imagem; ele torna a imagem possível.</p>
+                                <p>É a costura silenciosa entre cliente, equipe e set — onde a maioria dos projetos quebra, é onde o nosso ganha precisão.</p>
+                            </div>
+                            <div className="pt-6 text-h3 text-white/80">Mateus Sacavem</div>
                         </div>
                     </div>
                 </section>
