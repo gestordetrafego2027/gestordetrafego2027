@@ -43,13 +43,39 @@ export default function About() {
             {/* HEADER */}
             <Header variant="dark" />
             <main>
+                {/* [0] HERO SECTION */}
+                <section
+                    className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0"
+                    style={{ height: "105vh" }}
+                >
+                    <div className="absolute inset-0 z-0">
+                        <img src="/images/about/banner--04-imagem-3nsaio-house-mazzutti.png" className="w-full h-full object-cover object-top" alt="" />
+                        <div className="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
+                        <div className="max-w-4xl">
+                            <span className="text-caption text-white/70 mb-6 block">SOBRE — HMZT</span>
+                            <h2 className="text-h1 text-white mb-8">Uma só casa. Da visão à materialização.</h2>
+                            <p className="text-body text-white/75 mb-12 measure-editorial">
+                                Estratégia, direção criativa e produção sob um único comando — sem ruído entre etapas.
+                            </p>
+                            <Link
+                                href="#contato"
+                                className="inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500"
+                            >
+                                Iniciar uma conversa
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
                 {/* [5] DIFERENCIAL SECTION */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
-                            alt="Livros de marketing e administração"
+                            alt="Claquete de set — Ana Castela + Baú"
                             className="absolute inset-0 w-full h-full object-cover"
-                            src="/images/about/diferencial.jpg"
+                            src="/images/about/diferencial-claquete.jpeg"
                         />
                     </div>
                     {/* Vertical Divider */}
@@ -111,7 +137,7 @@ export default function About() {
                         <img
                             alt="House Mazzutti — Agência, Produtora e Direção Criativa"
                             className="absolute inset-0 w-full h-full object-cover"
-                            src="/images/about/origem.png"
+                            src="/images/about/origem-parede.jpeg"
                         />
                     </div>
                     {/* Vertical Divider */}
@@ -127,6 +153,32 @@ export default function About() {
                                 <p>No meio do ruído, a comunicação silenciosa e precisa é o que separa os líderes do resto.</p>
                             </div>
                             <div className="pt-6 text-h3 text-white/80">Angelo Mazzutti</div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* [3.5] PRODUÇÃO EXECUTIVA — MATEUS SACAVEM */}
+                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
+                        <img
+                            alt="Mateus Sacavem — Produtor Executivo da House Mazzutti"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            src="/images/about/mateus-sacavem.jpg"
+                        />
+                    </div>
+                    {/* Vertical Divider */}
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#1a1a1a] z-10"></div>
+
+                    <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                        <div className="max-w-lg space-y-10">
+                            <span className="text-caption text-neutral-400">Produção Executiva</span>
+                            <h2 className="text-h2 text-white">Cada projeto exige um cérebro logístico à frente.</h2>
+                            <div className="space-y-5 text-body text-neutral-300">
+                                <p>Mateus Sacavem comanda a operação executiva da House — orçamentos, cronogramas, clientes e fornecedores diretos passam pela sua escuta antes de entrarem em movimento.</p>
+                                <p>É ele quem garante que a ambição criativa encontre estrutura real: equipe certa, prazos honestos, custo coerente. A direção pensa a imagem; ele torna a imagem possível.</p>
+                                <p>É a costura silenciosa entre cliente, equipe e set — onde a maioria dos projetos quebra, é onde o nosso ganha precisão.</p>
+                            </div>
+                            <div className="pt-6 text-h3 text-white/80">Mateus Sacavem</div>
                         </div>
                     </div>
                 </section>
