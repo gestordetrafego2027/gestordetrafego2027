@@ -122,13 +122,13 @@ export default function AllettoStillPage() {
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2025</p>
+                                    <p className="font-inter text-sm font-medium">2026</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Filosofia do Studio</h3>
+                                <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">
-                                    Direção de imagem com foco em identidade visual e posicionamento pessoal.
+                                    Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
                                 </p>
                             </div>
                         </div>
@@ -160,7 +160,7 @@ export default function AllettoStillPage() {
                         <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="#">INSTAGRAM</Link>
                         <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="#">LINKEDIN</Link>
                     </div>
-                    <p className="text-[#808080] font-inter text-[10px] tracking-wider">© 2025 House Mazzutti</p>
+                    <p className="text-[#808080] font-inter text-[10px] tracking-wider">© 2026 House Mazzutti</p>
                 </div>
             </footer>
 
