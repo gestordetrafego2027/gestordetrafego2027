@@ -145,14 +145,17 @@ export default function About() {
 
                     <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-400">Origem</span>
-                            <h2 className="text-h2 text-white">A House Mazzutti nasceu de uma convicção simples.</h2>
+                            <span className="text-caption text-neutral-400">Direção Criativa /01</span>
+                            <h2 className="text-h2 text-white">Estratégia e execução. Na mesma mente.</h2>
                             <div className="space-y-5 text-body text-neutral-300">
-                                <p>Onde há excesso de informação, falta direção. Foi a partir disso que estruturamos um modelo que integra pensamento, construção e execução num único fluxo.</p>
-                                <p>Cada marca é tratada como obra de curadoria. Cada detalhe — do tom de voz à textura visual — carrega uma intenção.</p>
-                                <p>No meio do ruído, a comunicação silenciosa e precisa é o que separa os líderes do resto.</p>
+                                <p>Mente formada na publicidade e forjada nos sets das maiores celebridades do Brasil — da Larissa Manoela à família Abravanel. Quinze anos de audiovisual e fotografia traduzidos em direção criativa autoral, com presença em cada decisão crítica do projeto.</p>
+                                <p>Cada peça que sai da House passa pela sua supervisão direta: do briefing estratégico ao acabamento final. É o que garante que a essência da marca chegue intacta — sem ruído entre o conceito e o pixel.</p>
+                                <p className="italic text-neutral-400">"Toda imagem que entrego carrega uma decisão de mercado. Estética sem propósito é apenas decoração."</p>
                             </div>
-                            <div className="pt-6 text-h3 text-white/80">Angelo Mazzutti</div>
+                            <div className="pt-6">
+                                <div className="text-h3 text-white/90">Angelo Mazzutti</div>
+                                <div className="text-caption text-neutral-500 mt-2">Head of Creative & Brand Strategy</div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -196,14 +199,17 @@ export default function About() {
 
                     <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-400">Produção Executiva</span>
-                            <h2 className="text-h2 text-white">Cada projeto exige um cérebro logístico à frente.</h2>
+                            <span className="text-caption text-neutral-400">Produção Executiva /02</span>
+                            <h2 className="text-h2 text-white">Sem operação, a ideia não materializa.</h2>
                             <div className="space-y-5 text-body text-neutral-300">
-                                <p>Mateus Sacavem comanda a operação executiva da House — orçamentos, cronogramas, clientes e fornecedores diretos passam pela sua escuta antes de entrarem em movimento.</p>
-                                <p>É ele quem garante que a ambição criativa encontre estrutura real: equipe certa, prazos honestos, custo coerente. A direção pensa a imagem; ele torna a imagem possível.</p>
-                                <p>É a costura silenciosa entre cliente, equipe e set — onde a maioria dos projetos quebra, é onde o nosso ganha precisão.</p>
+                                <p>Mateus Sacavem comanda a operação executiva da House — coordenação técnica, cronogramas, produção e integração de equipes especializadas. É a engrenagem que sustenta cada projeto, da pré-produção ao master final.</p>
+                                <p>Domínio em operações de alta complexidade: campanhas de moda, fashion films, ensaios premium e produções com celebridades. Onde a ambição criativa encontra estrutura real — equipe certa, prazos honestos, set sob controle.</p>
+                                <p className="italic text-neutral-400">"Excelência criativa exige excelência operacional."</p>
                             </div>
-                            <div className="pt-6 text-h3 text-white/80">Mateus Sacavem</div>
+                            <div className="pt-6">
+                                <div className="text-h3 text-white/90">Mateus Sacavem</div>
+                                <div className="text-caption text-neutral-500 mt-2">Head of Production & Operations</div>
+                            </div>
                         </div>
                     </div>
                 </section>
