@@ -214,7 +214,7 @@ export default function PortfolioPage() {
                     href={`${category.basePath}/${project.slug}`}
                     className="group block transition-opacity duration-300 hover:opacity-80"
                   >
-                    <div className="relative w-full overflow-hidden bg-neutral-100" style={{ aspectRatio: '1 / 1' }}>
+                    <div className="relative w-full overflow-hidden bg-neutral-100" style={{ aspectRatio: '4 / 5' }}>
                       <Image
                         src={project.cover}
                         alt={project.name}
