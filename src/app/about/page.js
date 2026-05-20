@@ -70,7 +70,7 @@ export default function About() {
                 </section>
 
                 {/* [5] DIFERENCIAL SECTION */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
+                <section className="min-h-[80vh] flex flex-col md:flex-row-reverse relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
                             alt="Claquete de set — Ana Castela + Baú"
