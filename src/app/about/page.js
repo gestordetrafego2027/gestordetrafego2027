@@ -73,9 +73,9 @@ export default function About() {
                 <section className="min-h-[80vh] flex flex-col md:flex-row-reverse relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <img
-                            alt="Claquete de set — Ana Castela + Baú"
+                            alt="Direção de arte autoral — House Mazzutti"
                             className="absolute inset-0 w-full h-full object-cover"
-                            src="/images/about/diferencial-claquete.jpeg"
+                            src="/images/about/diferencial-mao.jpg"
                         />
                     </div>
                     {/* Vertical Divider */}
