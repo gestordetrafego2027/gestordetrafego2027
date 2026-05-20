@@ -55,7 +55,7 @@ export default function About() {
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-4xl">
                             <span className="text-caption text-white/70 mb-6 block">SOBRE — HMZT</span>
-                            <h2 className="text-h1 text-white mb-8 uppercase" style={{ fontFamily: "'RocGroteskCondensed', 'RocGrotesk', sans-serif", fontWeight: 700, fontStretch: 'condensed', letterSpacing: 0 }}>Uma só casa. Da visão à materialização.</h2>
+                            <h2 className="text-h1 text-white mb-8 hmzt-hero-title">Uma só casa. Da visão à materialização.</h2>
                             <p className="text-body text-white/75 mb-12 measure-editorial">
                                 Estratégia, direção criativa e produção sob um único comando — sem ruído entre etapas.
                             </p>

@@ -55,7 +55,7 @@ export default function StudioCoberturaPage() {
                                 </svg>
                             </div>
                             <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">COBERTURA EXTERNA</span>
-                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">Viver São Paulo exige presença. Nós produzimos a sua.</h1>
+                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">Viver São Paulo exige presença. Nós produzimos a sua.</h1>
                             <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Acompanhamento premium, direção de imagem e conteúdo em tempo real para transformar sua agenda em uma experiência visual de alto valor.</p>
                             <div data-aos="fade-up" data-aos-delay="400">
                                 <button type="button" onClick={() => openForm('hero')} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">

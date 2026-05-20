@@ -170,7 +170,7 @@ export default function Home() {
                                 {heroSlides[currentHeroSlide].label}
                             </span>
                             <h1
-                                className="hero-animate text-h1 text-white mb-8"
+                                className="hero-animate text-h1 text-white mb-8 hmzt-hero-title"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].titulo}

@@ -537,3 +537,17 @@ html {
     font-stretch: condensed;
     letter-spacing: 0;
 }
+
+/* ==========================================================================
+   HMZT HERO TITLE — tipografia oficial dos banners de hero
+   Mesma face/peso/forma do "MAZZUTTI" do logo (Roc Grotesk Condensed Bold,
+   uppercase, kerning natural). Aplicar SEMPRE no H1/H2 principal do hero
+   full-bleed de qualquer página.
+   ========================================================================== */
+.hmzt-hero-title {
+    font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
+    font-weight: 700 !important;
+    font-stretch: condensed;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}

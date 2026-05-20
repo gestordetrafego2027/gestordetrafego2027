@@ -153,7 +153,7 @@ export default function ComunidadePage() {
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-5xl">
                             <span className="hero-animate text-caption text-white/70 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>Comunidade — HMZT</span>
-                            <h1 className="hero-animate text-h1 text-white mb-12" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                            <h1 className="hero-animate text-h1 text-white mb-12 hmzt-hero-title" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 Uma rede que conecta cuidado, conhecimento e construção de marca.
                             </h1>
                             <p className="hero-animate text-body text-white/75 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>

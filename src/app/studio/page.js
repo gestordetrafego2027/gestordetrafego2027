@@ -228,7 +228,7 @@ export default function StudioPage() {
                             <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                                 <div className="max-w-3xl">
                                     <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>Studio — HMZT</span>
-                                    <h1 className="hero-animate text-h1 text-white mb-8" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                    <h1 className="hero-animate text-h1 text-white mb-8 hmzt-hero-title" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].titulo}
                                     </h1>
                                     <p className="hero-animate text-body text-white/80 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>
