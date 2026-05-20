@@ -137,7 +137,7 @@ export default function About() {
                         <img
                             alt="House Mazzutti — Agência, Produtora e Direção Criativa"
                             className="absolute inset-0 w-full h-full object-cover"
-                            src="/images/about/origem-parede.jpeg"
+                            src="/images/about/angelo-mazzutti.jpg"
                         />
                     </div>
                     {/* Vertical Divider */}
