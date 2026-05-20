@@ -162,8 +162,8 @@ export default function About() {
 
                 {/* [6] METODOLOGIA */}
                 <section className="bg-white text-black py-40 overflow-hidden relative">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-[20vw] font-headline tracking-[-0.05em] font-bold select-none pointer-events-none" style={{ WebkitTextStroke: '1px rgba(0,0,0,0.1)', color: 'transparent' }}>Método</span>
+                    <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
+                        <span className="text-[20vw] font-headline tracking-[-0.05em] font-bold select-none leading-[0.85] translate-y-[15%]" style={{ WebkitTextStroke: '1px rgba(0,0,0,0.1)', color: 'transparent' }}>Método</span>
                     </div>
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
                         <h2 className="text-h2 text-black text-center mb-32 max-w-3xl mx-auto">Nada começa na execução. Tudo começa no entendimento.</h2>
