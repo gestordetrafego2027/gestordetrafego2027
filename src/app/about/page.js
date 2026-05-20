@@ -158,12 +158,12 @@ export default function About() {
                 </section>
 
                 {/* [6] METODOLOGIA */}
-                <section className="bg-black text-white py-40 overflow-hidden relative">
+                <section className="bg-white text-black py-40 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="ghost-text text-[20vw] font-headline tracking-[-0.05em] font-bold select-none">Método</span>
+                        <span className="text-[20vw] font-headline tracking-[-0.05em] font-bold select-none pointer-events-none" style={{ WebkitTextStroke: '1px rgba(0,0,0,0.1)', color: 'transparent' }}>Método</span>
                     </div>
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-h2 text-white text-center mb-32 max-w-3xl mx-auto">Nada começa na execução. Tudo começa no entendimento.</h2>
+                        <h2 className="text-h2 text-black text-center mb-32 max-w-3xl mx-auto">Nada começa na execução. Tudo começa no entendimento.</h2>
                         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                             {[
                                 { num: "01 / Imersão", desc: "Mergulho no DNA e nos objetivos do projeto." },
@@ -173,9 +173,9 @@ export default function About() {
                                 { num: "05 / Fine Art", desc: "Edição artesanal com acabamento editorial." }
                             ].map((item, i) => (
                                 <div key={i} className="space-y-6">
-                                    <span className="text-caption text-neutral-300 block">{item.num}</span>
-                                    <div className="h-px bg-neutral-800 w-full"></div>
-                                    <p className="text-body text-neutral-400">{item.desc}</p>
+                                    <span className="text-caption text-neutral-700 block">{item.num}</span>
+                                    <div className="h-px bg-neutral-300 w-full"></div>
+                                    <p className="text-body text-neutral-600">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
