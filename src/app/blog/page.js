@@ -85,7 +85,7 @@ export default function BlogPage() {
         {
             categoria: "agencia",
             subcategoria: "Agência — Campanhas",
-            titulo: "Campaign de Lançamento: a arquitetura invisível por trás das marcas que dominam atenção",
+            titulo: "Campanha de Lançamento: a arquitetura invisível por trás das marcas que dominam atenção",
             excerpt: "Existe uma diferença silenciosa entre marcas que lançam e marcas que crescem. As primeiras comunicam. As segundas constroem presença.",
             link: "/blog/campanha-lancamento-arquitetura-invisivel",
             data: "Fevereiro 2026"
@@ -385,7 +385,7 @@ export default function BlogPage() {
                         <Link className="label-text text-xs text-gray-400" href="/contato">Contato</Link>
                     </nav>
                     <div className="text-gray-600">
-                        <p className="label-text text-[10px]">© 2025 House Mazzutti. Todos os direitos reservados.</p>
+                        <p className="label-text text-[10px]">© 2026 House Mazzutti. Todos os direitos reservados.</p>
                     </div>
                 </div>
             </footer>

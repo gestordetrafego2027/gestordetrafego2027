@@ -162,7 +162,7 @@ export default function AngeloPage() {
                         </div>
                         <div className="md:w-2/3 space-y-10">
                             {[
-                                { title: "Campaign de Lançamento", desc: "Estratégias integradas para impacto memorável.", num: "01" },
+                                { title: "Campanha de Lançamento", desc: "Estratégia integrada para impacto memorável.", num: "01" },
                                 { title: "Branding Project", desc: "Identidade e posicionamento de marca.", num: "02" },
                                 { title: "Web Development", desc: "Plataformas que convertem e engajam.", num: "03" },
                                 { title: "Produção Visual & Audiovisual", desc: "Conteúdo de alto padrão para todas as mídias.", num: "04" },
@@ -225,7 +225,7 @@ export default function AngeloPage() {
                                 </ul>
                             </div>
                             <div className="space-y-6">
-                                <h4 className="text-caption text-neutral-500">Passa a</h4>
+                                <h4 className="text-caption text-neutral-500">Você passa a</h4>
                                 <ul className="space-y-4 text-body text-neutral-700">
                                     {["Construir desejo", "Posicionar com precisão", "Sustentar valor no tempo"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">

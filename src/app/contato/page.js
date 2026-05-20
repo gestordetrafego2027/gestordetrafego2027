@@ -149,7 +149,7 @@ export default function ContatoPage() {
                         <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
                     </nav>
                     <div className="font-label text-[9px] text-neutral-700">
-                        © 2025 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                        © 2026 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
                     </div>
                 </div>
             </footer>
