@@ -183,11 +183,11 @@ export default function About() {
                 </section>
 
                 {/* [6.5] PRODUÇÃO EXECUTIVA — MATEUS SACAVEM */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row relative">
-                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
+                <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
                         <img
                             alt="Mateus Sacavem — Produtor Executivo da House Mazzutti"
-                            className="absolute inset-0 w-full h-full object-cover"
+                            className="absolute inset-0 w-full h-full object-cover object-top"
                             src="/images/about/mateus-sacavem.jpg"
                         />
                     </div>
