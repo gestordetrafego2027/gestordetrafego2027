@@ -452,7 +452,7 @@ export default function ComunidadePage() {
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
-                        <h2 className="text-h1 text-white">
+                        <h2 className="text-h1 text-white hmzt-hero-title">
                             Se você se conecta com o que a House constrói — esse é o seu ponto de entrada.
                         </h2>
                         <div className="flex flex-col items-center space-y-10">

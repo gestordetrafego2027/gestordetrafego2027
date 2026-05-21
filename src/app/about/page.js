@@ -331,7 +331,7 @@ export default function About() {
                 <section className="bg-black py-40 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
-                        <h2 className="text-h1 text-white">
+                        <h2 className="text-h1 text-white hmzt-hero-title">
                             Não somos uma agência. Somos a casa onde sua marca encontra direção.
                         </h2>
                         <div className="flex flex-col items-center space-y-10">

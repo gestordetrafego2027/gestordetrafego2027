@@ -354,7 +354,7 @@ export default function ProdutoraPage() {
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
-                        <h2 className="text-h1 text-white">
+                        <h2 className="text-h1 text-white hmzt-hero-title">
                             Não é sobre aparecer mais. É sobre aparecer melhor.
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-16">

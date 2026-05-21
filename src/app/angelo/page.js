@@ -314,7 +314,7 @@ export default function AngeloPage() {
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
-                        <h2 className="text-h1 text-white">
+                        <h2 className="text-h1 text-white hmzt-hero-title">
                             Pronto para elevar sua marca?
                         </h2>
                         <div className="flex flex-col items-center space-y-10">

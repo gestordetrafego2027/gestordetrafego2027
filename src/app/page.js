@@ -632,7 +632,7 @@ export default function Home() {
                 >
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
-                        <h2 className="text-h1 text-white">
+                        <h2 className="text-h1 text-white hmzt-hero-title">
                             Se a sua marca pede um novo olhar.
                         </h2>
                         <div className="flex flex-col items-center space-y-10">
