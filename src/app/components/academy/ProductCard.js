@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { formatPriceBRL } from '@/lib/academy/queries'
 
 const TYPE_LABEL = {
@@ -21,11 +22,14 @@ export default function ProductCard({ product }) {
       className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
     >
       {product.cover_url ? (
-        <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-100">
-          <img
+        <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-100 relative">
+          <Image
             src={product.cover_url}
             alt={product.title}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            quality={80}
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
         </div>

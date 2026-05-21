@@ -5,13 +5,16 @@
 const PAPER = '#F3EFE6'
 const INK = '#0E0D0B'
 const PAPER_2 = '#E8E2D4'
+import Image from 'next/image'
 
 function HMZTLogo({ size = 32, color = INK }) {
   const isBlack = /^#0?[eE]?0?[dD]?0?[bB]?$|^#000000$|^#000$/.test(color)
   return (
-    <img
+    <Image
       src="/academy/logo.png"
       alt="House Mazzutti"
+      width={size * 4}
+      height={size}
       style={{
         height: size,
         width: 'auto',

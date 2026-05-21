@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-
+import Image from 'next/image'
 export default function ClientLogos() {
     useEffect(() => {
         const track = document.getElementById('logos-track')
@@ -50,9 +50,6 @@ export default function ClientLogos() {
                     padding: 0 24px;
                 }
                 .logos-slider-item img {
-                    max-height: 70px;
-                    width: auto;
-                    object-fit: contain;
                     opacity: 0.5;
                     transition: opacity 0.3s;
                 }
@@ -61,8 +58,8 @@ export default function ClientLogos() {
             <div className="max-w-7xl mx-auto px-8 overflow-hidden">
                 <div className="logos-slider-track" id="logos-track">
                     {looped.map((name, i) => (
-                        <div key={`${name}-${i}`} className="logos-slider-item">
-                            <img src={`/images/angelo/logos/${name}.png`} alt={name} />
+                        <div key={`${name}-${i}`} className="logos-slider-item relative">
+                            <Image src={`/images/angelo/logos/${name}.png`} alt={name} width={140} height={70} className="object-contain" style={{maxHeight: '70px', width: 'auto'}} />
                         </div>
                     ))}
                 </div>
