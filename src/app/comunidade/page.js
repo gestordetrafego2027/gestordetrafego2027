@@ -4,9 +4,14 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
+import FormDrawer from "@/app/components/FormDrawer";
+import FormModelo from "@/app/components/forms/FormModelo";
 
 export default function ComunidadePage() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [talentsForm, setTalentsForm] = useState(null); // { ctaLocation }
+    const openTalentsForm = (ctaLocation) => setTalentsForm({ ctaLocation });
+    const closeTalentsForm = () => setTalentsForm(null);
 
     const testimonials = [
         {
@@ -221,9 +226,9 @@ export default function ComunidadePage() {
                                 num: "01",
                                 label: "Para quem já caminha com a House",
                                 title: "Área do Cliente.",
-                                desc: "Acesso reservado a contratos ativos. Materiais, briefings, aprovações e arquivos de projeto sob uma só conversa — privado, organizado, premium.",
+                                desc: "Onde projetos viram processo. Briefings, aprovações, arquivos e conversas reunidos em um só lugar — privado, organizado, com a sua marca tratada como obra.",
                                 cta: "Acessar área do cliente",
-                                href: "/comunidade/clientes",
+                                action: { type: "link", href: "/login" },
                             },
                             {
                                 num: "02",
@@ -231,7 +236,7 @@ export default function ComunidadePage() {
                                 title: "Afiliados.",
                                 desc: "Indicação editorial com retorno. Para profissionais e amigos da casa que apresentam a House a quem busca direção — com transparência, padrão e cuidado em cada repasse.",
                                 cta: "Tornar-se afiliado",
-                                href: "/comunidade/afiliados",
+                                action: { type: "link", href: "/comunidade/afiliados" },
                             },
                             {
                                 num: "03",
@@ -239,7 +244,7 @@ export default function ComunidadePage() {
                                 title: "Parceiros.",
                                 desc: "Co-criação entre marcas, agências e profissionais que partilham o mesmo nível de exigência. Projetos integrados, eventos, colaborações editoriais e estratégicas.",
                                 cta: "Propor uma parceria",
-                                href: "/comunidade/parceiros",
+                                action: { type: "talents-form", location: "comunidade_parceiros" },
                             },
                             {
                                 num: "04",
@@ -247,7 +252,7 @@ export default function ComunidadePage() {
                                 title: "Vagas & Oportunidades.",
                                 desc: "Posições abertas, freelas selecionados e castings editoriais. Espaço para quem entende que construção exige pensamento — não apenas execução.",
                                 cta: "Quero ser representado",
-                                href: "/comunidade/vagas",
+                                action: { type: "talents-form", location: "comunidade_vagas" },
                             },
                         ];
                         return (
@@ -263,16 +268,26 @@ export default function ComunidadePage() {
                                                 <p className="text-caption text-zinc-400 mt-3">{f.label}</p>
                                             </div>
                                             <div className="md:col-span-6">
-                                                <h3 className="text-h2 text-black mb-8">{f.title}</h3>
+                                                <h3 className="text-h2 text-black mb-8 hmzt-hero-title">{f.title}</h3>
                                                 <p className="text-body text-zinc-700 measure-editorial">{f.desc}</p>
                                             </div>
                                             <div className="md:col-span-3 md:flex md:justify-end">
-                                                <Link
-                                                    href={f.href}
-                                                    className="inline-block px-10 py-4 border-[0.5px] border-black text-black text-button hover:bg-black hover:text-white transition-all duration-500 text-center"
-                                                >
-                                                    {f.cta}
-                                                </Link>
+                                                {f.action.type === "link" ? (
+                                                    <Link
+                                                        href={f.action.href}
+                                                        className="inline-block px-10 py-4 border-[0.5px] border-black text-black text-button hover:bg-black hover:text-white transition-all duration-500 text-center"
+                                                    >
+                                                        {f.cta}
+                                                    </Link>
+                                                ) : (
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => openTalentsForm(f.action.location)}
+                                                        className="inline-block px-10 py-4 border-[0.5px] border-black text-black text-button hover:bg-black hover:text-white transition-all duration-500 text-center"
+                                                    >
+                                                        {f.cta}
+                                                    </button>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -490,6 +505,21 @@ export default function ComunidadePage() {
                     </div>
                 </div>
             </footer>
+
+            <FormDrawer
+                isOpen={!!talentsForm}
+                onClose={closeTalentsForm}
+                title="Faça parte da nossa rede"
+                subtitle="Talentos, parceiros e amigos da casa — preencha abaixo para entrar no nosso painel."
+            >
+                {talentsForm ? (
+                    <FormModelo
+                        onClose={closeTalentsForm}
+                        sourceUrl="/comunidade"
+                        ctaLocation={talentsForm.ctaLocation}
+                    />
+                ) : null}
+            </FormDrawer>
         </div>
     );
 }
