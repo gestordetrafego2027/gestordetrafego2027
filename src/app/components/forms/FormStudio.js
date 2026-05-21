@@ -82,7 +82,7 @@ export default function FormStudio({
       router.push('/obrigado?from=studio')
     } catch (err) {
       console.error('[FormStudio] Unexpected error:', err)
-      setError('Não foi possível enviar. Tente novamente em instantes.')
+      setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }
   }

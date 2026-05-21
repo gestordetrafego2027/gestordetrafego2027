@@ -68,7 +68,7 @@ export default function FormAngelo({ onClose, sourceUrl = '/angelo', ctaLocation
       router.push('/obrigado?from=angelo')
     } catch (err) {
       console.error('[FormAngelo] Unexpected error:', err)
-      setError('Não foi possível enviar. Tente novamente em instantes.')
+      setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }
   }

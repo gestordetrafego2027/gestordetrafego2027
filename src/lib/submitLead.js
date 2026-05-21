@@ -21,19 +21,29 @@ const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
  */
 export async function submitLead(payload) {
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-    throw new Error('Supabase URL ou Anon Key não configurados.')
+    const msg = 'Supabase URL ou Anon Key não configurados.'
+    console.error('[submitLead]', msg)
+    throw new Error(msg)
   }
-  const res = await fetch(`${SUPABASE_URL}/functions/v1/submit_lead`, {
-    method: 'POST',
-    headers: { 
-      'content-type': 'application/json',
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-    },
-    body: JSON.stringify(payload),
-  })
+  let res
+  try {
+    res = await fetch(`${SUPABASE_URL}/functions/v1/submit_lead`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+      },
+      body: JSON.stringify(payload),
+    })
+  } catch (networkErr) {
+    console.error('[submitLead] network error:', networkErr)
+    throw new Error('Sem conexão com o servidor. Verifique sua internet e tente novamente.')
+  }
   const data = await res.json().catch(() => ({}))
   if (!res.ok) {
-    throw new Error(data?.error || `submit_lead falhou (HTTP ${res.status})`)
+    const detail = data?.error || `HTTP ${res.status}`
+    console.error('[submitLead] falhou:', { status: res.status, detail, payload })
+    throw new Error(`Falha ao enviar (${detail}). Se persistir, fale com contato@housemazzutti.com.`)
   }
   return data
 }

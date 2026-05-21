@@ -61,7 +61,7 @@ export default function FormContatoGeral({ sourceUrl = '/contato' }) {
       router.push('/obrigado?from=contato')
     } catch (err) {
       console.error('[FormContatoGeral] Unexpected error:', err)
-      setError('Não foi possível enviar. Tente novamente em instantes.')
+      setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }
   }

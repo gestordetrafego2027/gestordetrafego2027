@@ -72,7 +72,7 @@ export default function FormProdutora({
       router.push('/obrigado?from=produtora')
     } catch (err) {
       console.error('[FormProdutora] Unexpected error:', err)
-      setError('Não foi possível enviar. Tente novamente em instantes.')
+      setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }
   }

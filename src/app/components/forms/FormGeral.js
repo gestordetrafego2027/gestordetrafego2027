@@ -103,7 +103,7 @@ export default function FormGeral({ onClose, sourceUrl = '/', ctaLocation = null
       router.push(`/obrigado?from=${form.unit}`)
     } catch (err) {
       console.error('[FormGeral] Unexpected error:', err)
-      setError('Não foi possível enviar. Tente novamente em instantes.')
+      setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }
   }

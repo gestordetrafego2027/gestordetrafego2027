@@ -77,7 +77,7 @@ export default function FormModelo({ onClose, sourceUrl = '/comunidade/vagas', c
       router.push('/obrigado?from=representacao')
     } catch (err) {
       console.error('[FormModelo] Unexpected error:', err)
-      setError('Não foi possível enviar. Tente novamente em instantes.')
+      setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }
   }

@@ -75,7 +75,7 @@ export default function FormAgenciaB2B({
       router.push('/obrigado?from=agencia')
     } catch (err) {
       console.error('[FormAgenciaB2B] Unexpected error:', err)
-      setError('Não foi possível enviar. Tente novamente em instantes.')
+      setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }
   }
