@@ -36,26 +36,22 @@ export default function ProdutoraPublicidadePage() {
 
 
             {/* 2. HERO SECTION */}
-            <section className="relative h-screen w-full bg-white overflow-hidden px-[40px] pt-[25px] pb-[10px]">
-                <div className="relative w-full h-full bg-[#111111] flex items-center justify-end min-h-[calc(100vh-75px)] pb-[20px]">
-                    <div className="relative z-20 w-full px-[60px] flex justify-end pr-[120px]">
-                        <div className="w-full max-w-[600px] flex flex-col items-center text-center ml-[-10px]">
-                            {/* Geometric Icon */}
-                            <div className="mb-8">
-                                <svg className="w-[42px] h-[42px] text-white/80" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2L3 12L12 22L21 12L12 2Z" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M12 2L12 22" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M3 12L21 12" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </div>
-                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">PUBLICIDADE & CONTEÚDO</span>
-                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">Vídeos que vendem. Imagens que engajam.</h1>
-                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Produção de conteúdo dinâmico e filmes publicitários de alta performance para marcas que buscam autoridade e resultados reais no ambiente digital.</p>
-                            <div data-aos="fade-up" data-aos-delay="400">
-                                <button className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
-                                    INICIAR CAMPANHA
-                                </button>
-                            </div>
+            <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
+                <div className="absolute inset-0 z-0 bg-[#111111]">
+                    {/* Caso precise de uma imagem no futuro, basta adicionar a tag <img> aqui */}
+                    <div className="absolute inset-0 bg-black/30"></div>
+                </div>
+                <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
+                    <div className="max-w-3xl">
+                        <span className="text-caption text-white/70 mb-6 block" data-aos="fade-up" data-aos-delay="100">PUBLICIDADE & CONTEÚDO</span>
+                        <h1 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">Vídeos que vendem. Imagens que engajam.</h1>
+                        <p className="text-body text-white/80 mb-12 measure-editorial" data-aos="fade-up" data-aos-delay="300">
+                            Produção de conteúdo dinâmico e filmes publicitários de alta performance para marcas que buscam autoridade e resultados reais no ambiente digital.
+                        </p>
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <button type="button" className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
+                                Iniciar campanha
+                            </button>
                         </div>
                     </div>
                 </div>
