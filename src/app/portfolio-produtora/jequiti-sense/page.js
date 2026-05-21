@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 
@@ -87,10 +88,10 @@ export default function JequitiSensePage() {
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
                           <div onClick={() => openImg('/images/produtora/beleza/jequiti-sense/1.jpg')} className="cursor-pointer">
-                            <img alt="Foto 1" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/produtora/beleza/jequiti-sense/1.jpg"/>
+                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/produtora/beleza/jequiti-sense/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/produtora/beleza/jequiti-sense/2.jpg')} className="cursor-pointer">
-                            <img alt="Foto 2" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/produtora/beleza/jequiti-sense/2.jpg"/>
+                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/produtora/beleza/jequiti-sense/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
@@ -160,7 +161,7 @@ export default function JequitiSensePage() {
 
             {selectedImg && (
               <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                <img src={selectedImg} className="max-h-screen max-w-screen object-contain" />
+                <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
               </div>
             )}
         </div>

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 
@@ -65,7 +66,7 @@ export default function MonicaCostajewerlyPage() {
                         <div className="grid grid-cols-2 gap-3">
                           {images.map((src, i) => (
                             <div key={i} onClick={() => openImg(src)} className="cursor-pointer">
-                              <img alt={`Foto ${i+1}`} className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src={src}/>
+                              <Image alt={`Foto ${i+1}`} style={{objectPosition: 'top'}} src={src} width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                             </div>
                           ))}
                         </div>
@@ -111,7 +112,7 @@ export default function MonicaCostajewerlyPage() {
             </footer>
             {selectedImg && (
               <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                <img src={selectedImg} className="max-h-screen max-w-screen object-contain" />
+                <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
               </div>
             )}
         </div>

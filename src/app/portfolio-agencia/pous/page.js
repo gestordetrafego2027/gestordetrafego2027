@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 
@@ -82,12 +83,12 @@ export default function PousPage() {
                     <div className="lg:w-2/3 flex flex-col gap-8">
                         {verticalImages.map((src, i) => (
                             <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(src)} style={{maxHeight:'600px'}}>
-                                <img alt="vertical" className="w-full h-full object-cover transition-all duration-700" src={src} style={{maxHeight:'600px'}}/>
+                                <Image alt="vertical" src={src} style={{maxHeight:'600px'}} fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover transition-all duration-700" />
                             </div>
                         ))}
                         {horizontalImages.map((src, i) => (
                             <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(src)}>
-                                <img alt="horizontal" className="w-full transition-all duration-700" src={src} style={{aspectRatio:'16/9', objectFit:'cover'}}/>
+                                <Image alt="horizontal" src={src} style={{aspectRatio:'16/9', objectFit:'cover'}} fill sizes="100vw" quality={80} loading="lazy" className="w-full transition-all duration-700" />
                             </div>
                         ))}
                     </div>
@@ -155,7 +156,7 @@ export default function PousPage() {
         
             {selectedImg && (
                 <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                    <img src={selectedImg} className="max-h-screen max-w-screen object-contain" />
+                    <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
                 </div>
             )}
 </div>

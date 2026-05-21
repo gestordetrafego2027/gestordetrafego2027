@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from "next/image";
 import Header from '@/app/components/Header';
 export default function PortfolioProdutoraPage() {
     return (
@@ -44,189 +45,189 @@ export default function PortfolioProdutoraPage() {
                 <section className="bg-white w-full py-[16px] px-[40px]">
                     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
                         <Link href="/portfolio-produtora/barbara-porto" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/barbara-porto/capa.jpg" alt="Barbara Porto" />
+                            <Image src="/images/produtora/acessorios/barbara-porto/capa.jpg" alt="Barbara Porto" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Barbara Porto</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/camila-scarpa" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/camila-scarpa/capa.jpg" alt="Camila Scarpa" />
+                            <Image src="/images/produtora/acessorios/camila-scarpa/capa.jpg" alt="Camila Scarpa" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Camila Scarpa</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/poema-paris" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/poema-paris/capa.jpg" alt="Poema Paris" />
+                            <Image src="/images/produtora/acessorios/poema-paris/capa.jpg" alt="Poema Paris" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Poema Paris</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/pontok" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/pontok/capa.jpg" alt="PontoK" />
+                            <Image src="/images/produtora/acessorios/pontok/capa.jpg" alt="PontoK" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">PontoK</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/dumond" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/dumond/capa.jpg" alt="Dumond" />
+                            <Image src="/images/produtora/acessorios/dumond/capa.jpg" alt="Dumond" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Dumond</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/signus" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus/capa.jpg" alt="Signus" />
+                            <Image src="/images/produtora/acessorios/signus/capa.jpg" alt="Signus" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/signus-versolato01" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-versolato01/capa.jpg" alt="Signus Versolato 01" />
+                            <Image src="/images/produtora/acessorios/signus-versolato01/capa.jpg" alt="Signus Versolato 01" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Versolato 01</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/signus-versolato02" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-versolato02/capa.jpg" alt="Signus Versolato 02" />
+                            <Image src="/images/produtora/acessorios/signus-versolato02/capa.jpg" alt="Signus Versolato 02" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Versolato 02</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/signus-vertz" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-vertz/capa.jpg" alt="Signus Vertz" />
+                            <Image src="/images/produtora/acessorios/signus-vertz/capa.jpg" alt="Signus Vertz" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Vertz</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/elyah" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/elyah/capa.jpg" alt="Elyah" />
+                            <Image src="/images/produtora/acessorios/elyah/capa.jpg" alt="Elyah" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Elyah</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/signus-fiamma" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-fiamma/capa.jpg" alt="Signus Fiamma" />
+                            <Image src="/images/produtora/acessorios/signus-fiamma/capa.jpg" alt="Signus Fiamma" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Fiamma</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/signus-lavorato" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-lavorato/capa.jpg" alt="Signus Lavorato" />
+                            <Image src="/images/produtora/acessorios/signus-lavorato/capa.jpg" alt="Signus Lavorato" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Lavorato</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/monica-costa-jewerly" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/monica-costa-jewerly/capa.jpg" alt="Monica Costa Jewerly" />
+                            <Image src="/images/produtora/acessorios/monica-costa-jewerly/capa.jpg" alt="Monica Costa Jewerly" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Monica Costa Jewerly</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/signus-jean-pierre" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/acessorios/signus-jean-pierre/capa.jpg" alt="Signus Jean Pierre" />
+                            <Image src="/images/produtora/acessorios/signus-jean-pierre/capa.jpg" alt="Signus Jean Pierre" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Signus - Jean Pierre</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/alletto-still" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/alletto-still/capa.jpg" alt="Alletto Still" />
+                            <Image src="/images/produtora/beleza/alletto-still/capa.jpg" alt="Alletto Still" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Alletto Still</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/jequiti-sense" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/jequiti-sense/capa.jpg" alt="Jequiti - Sense" />
+                            <Image src="/images/produtora/beleza/jequiti-sense/capa.jpg" alt="Jequiti - Sense" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti - Sense</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/we-pink-ze-felipe" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/we-pink-ze-felipe/capa.jpg" alt="We Pink - Zé Felipe" />
+                            <Image src="/images/produtora/beleza/we-pink-ze-felipe/capa.jpg" alt="We Pink - Zé Felipe" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">We Pink - Zé Felipe</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/we-pink-01" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/we-pink-01/capa.jpg" alt="We Pink 01" />
+                            <Image src="/images/produtora/beleza/we-pink-01/capa.jpg" alt="We Pink 01" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">We Pink 01</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/jequiti-galisteu" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/jequiti-galisteu/capa.jpg" alt="Jequiti - Galisteu" />
+                            <Image src="/images/produtora/beleza/jequiti-galisteu/capa.jpg" alt="Jequiti - Galisteu" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti - Galisteu</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/natalia-beauty" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/natalia-beauty/capa.jpg" alt="Natalia Beauty" />
+                            <Image src="/images/produtora/beleza/natalia-beauty/capa.jpg" alt="Natalia Beauty" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Natalia Beauty</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/jequiti-larissa-manoela" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/jequiti-larissa-manoela/capa.jpg" alt="Jequiti - Larissa Manoela" />
+                            <Image src="/images/produtora/beleza/jequiti-larissa-manoela/capa.jpg" alt="Jequiti - Larissa Manoela" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti - Larissa Manoela</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/oceane" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/beleza/oceane/capa.jpg" alt="Oceane" />
+                            <Image src="/images/produtora/beleza/oceane/capa.jpg" alt="Oceane" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Oceane</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/beatco" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/moda/beatco/capa.jpg" alt="Beatco" />
+                            <Image src="/images/produtora/moda/beatco/capa.jpg" alt="Beatco" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Beatco</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/pous" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/moda/pous/capa.jpg" alt="Pous" />
+                            <Image src="/images/produtora/moda/pous/capa.jpg" alt="Pous" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Pous</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/toli" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/moda/toli/capa.jpg" alt="Toli" />
+                            <Image src="/images/produtora/moda/toli/capa.jpg" alt="Toli" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Toli</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/unique-chic" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/moda/unique-chic/capa.jpg" alt="Unique Chic" />
+                            <Image src="/images/produtora/moda/unique-chic/capa.jpg" alt="Unique Chic" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Unique Chic</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-produtora/sense-hotel" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <img className="w-full h-full object-cover object-center" src="/images/produtora/institucional/sense-hotel/capa.jpg" alt="Sense Hotel" />
+                            <Image src="/images/produtora/institucional/sense-hotel/capa.jpg" alt="Sense Hotel" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">INSTITUCIONAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Sense Hotel</span>

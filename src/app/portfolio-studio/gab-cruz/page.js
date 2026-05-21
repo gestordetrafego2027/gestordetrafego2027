@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 
@@ -66,19 +67,19 @@ export default function GabCruzPage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <div onClick={() => openImg('/images/studio/gab-cruz/1.jpg')} className="cursor-pointer"><img alt="Foto 1" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/gab-cruz/1.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/2.jpg')} className="cursor-pointer"><img alt="Foto 2" className="w-full aspect-[3/4] object-cover" style={{objectPosition: 'top'}} src="/images/studio/gab-cruz/2.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/3.jpg')} className="cursor-pointer"><img alt="Foto 3" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/3.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/4.jpg')} className="cursor-pointer"><img alt="Foto 4" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/4.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/5.jpg')} className="cursor-pointer"><img alt="Foto 5" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/5.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/6.jpg')} className="cursor-pointer"><img alt="Foto 6" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/6.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/7.jpg')} className="cursor-pointer"><img alt="Foto 7" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/7.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/8.jpg')} className="cursor-pointer"><img alt="Foto 8" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/8.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/9.jpg')} className="cursor-pointer"><img alt="Foto 9" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/9.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/10.jpg')} className="cursor-pointer"><img alt="Foto 10" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/10.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/11.jpg')} className="cursor-pointer"><img alt="Foto 11" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/11.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/12.jpg')} className="cursor-pointer"><img alt="Foto 12" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/12.jpg"/></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/13.jpg')} className="cursor-pointer"><img alt="Foto 13" className="w-full aspect-[3/4] object-cover" src="/images/studio/gab-cruz/13.jpg"/></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/1.jpg')} className="cursor-pointer"><Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/studio/gab-cruz/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/2.jpg')} className="cursor-pointer"><Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/studio/gab-cruz/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/3.jpg')} className="cursor-pointer"><Image alt="Foto 3" src="/images/studio/gab-cruz/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/4.jpg')} className="cursor-pointer"><Image alt="Foto 4" src="/images/studio/gab-cruz/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/5.jpg')} className="cursor-pointer"><Image alt="Foto 5" src="/images/studio/gab-cruz/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/6.jpg')} className="cursor-pointer"><Image alt="Foto 6" src="/images/studio/gab-cruz/6.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/7.jpg')} className="cursor-pointer"><Image alt="Foto 7" src="/images/studio/gab-cruz/7.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/8.jpg')} className="cursor-pointer"><Image alt="Foto 8" src="/images/studio/gab-cruz/8.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/9.jpg')} className="cursor-pointer"><Image alt="Foto 9" src="/images/studio/gab-cruz/9.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/10.jpg')} className="cursor-pointer"><Image alt="Foto 10" src="/images/studio/gab-cruz/10.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/11.jpg')} className="cursor-pointer"><Image alt="Foto 11" src="/images/studio/gab-cruz/11.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/12.jpg')} className="cursor-pointer"><Image alt="Foto 12" src="/images/studio/gab-cruz/12.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg('/images/studio/gab-cruz/13.jpg')} className="cursor-pointer"><Image alt="Foto 13" src="/images/studio/gab-cruz/13.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
                         </div>
                     </div>
                     <div className="lg:w-1/3">
@@ -140,7 +141,7 @@ export default function GabCruzPage() {
 
             {selectedImg && (
               <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                <img src={selectedImg} className="max-h-screen max-w-screen object-contain" />
+                <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
               </div>
             )}
         </div>
