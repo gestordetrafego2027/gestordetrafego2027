@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 
@@ -49,7 +50,7 @@ export default function About() {
                     style={{ height: "105vh" }}
                 >
                     <div className="absolute inset-0 z-0">
-                        <img src="/images/about/banner--04-imagem-3nsaio-house-mazzutti.png" className="w-full h-full object-cover object-top" alt="" />
+                        <Image src="/images/about/banner--04-imagem-3nsaio-house-mazzutti.png" alt="" fill sizes="100vw" quality={85} priority className="object-cover object-top" />
                         <div className="absolute inset-0 bg-black/20"></div>
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
@@ -72,10 +73,14 @@ export default function About() {
                 {/* [5] DIFERENCIAL SECTION */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row-reverse relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
-                        <img
+                        <Image
                             alt="Direção de arte autoral — House Mazzutti"
-                            className="absolute inset-0 w-full h-full object-cover"
                             src="/images/about/diferencial-mao.jpg"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={82}
+                            loading="lazy"
+                            className="object-cover"
                         />
                     </div>
                     {/* Vertical Divider */}
@@ -134,10 +139,14 @@ export default function About() {
                 {/* [3] ORIGEM EDITORIAL */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
-                        <img
+                        <Image
                             alt="House Mazzutti — Agência, Produtora e Direção Criativa"
-                            className="absolute inset-0 w-full h-full object-cover object-top"
                             src="/images/about/angelo-mazzutti.jpg"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={82}
+                            loading="lazy"
+                            className="object-cover object-top"
                         />
                     </div>
                     {/* Vertical Divider */}
@@ -188,10 +197,14 @@ export default function About() {
                 {/* [6.5] PRODUÇÃO EXECUTIVA — MATEUS SACAVEM */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
-                        <img
+                        <Image
                             alt="Mateus Sacavem — Produtor Executivo da House Mazzutti"
-                            className="absolute inset-0 w-full h-full object-cover object-top"
                             src="/images/about/mateus-sacavem.jpg"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={82}
+                            loading="lazy"
+                            className="object-cover object-top"
                         />
                     </div>
                     {/* Vertical Divider */}

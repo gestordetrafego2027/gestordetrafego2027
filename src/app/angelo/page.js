@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 import FormDrawer from "@/app/components/FormDrawer";
@@ -94,10 +95,14 @@ export default function AngeloPage() {
                         </p>
                     </div>
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh]">
-                        <img
+                        <Image
                             alt="HMZT — House Mazzutti branding"
-                            className="absolute inset-0 w-full h-full object-cover"
                             src="/images/angelo/hmzt-logo.png"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={85}
+                            priority
+                            className="object-cover"
                         />
                     </div>
                 </section>
@@ -145,10 +150,14 @@ export default function AngeloPage() {
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
-                        <img
+                        <Image
                             alt="Angelo Mazzutti — Diretor Criativo"
-                            className="absolute inset-0 w-full h-full object-cover"
                             src="/images/angelo/angelo-portrait.png"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={82}
+                            loading="lazy"
+                            className="object-cover"
                         />
                     </div>
                 </section>
