@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
 import FormDrawer from '../components/FormDrawer'
@@ -220,7 +221,7 @@ export default function StudioPage() {
                             <div className="absolute inset-0 z-0">
                                 {['/images/studio/banners/banner-1.jpg','/images/studio/banners/banner-2.jpg','/images/studio/banners/banner-3.jpg'].map((src, i) => (
                                     <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
-                                        <img src={src} className="w-full h-full object-cover object-top" alt="" />
+                                        <Image src={src} alt="" fill sizes="100vw" quality={85} priority={i === 0} className="object-cover object-top" />
                                         <div className="absolute inset-0 bg-black/20"></div>
                                     </div>
                                 ))}
@@ -319,7 +320,7 @@ export default function StudioPage() {
                                 <div key={currentGallerySlide} className="gallery-fade columns-gallery-container w-full h-full flex">
                                     {pageModels.map((model, i) => (
                                         <Link key={i} className="gallery-column project-item group" href={model.href} style={{ flex: '0 0 25%', minWidth: '25%' }}>
-                                            <img alt={model.name} className="column-image" src={model.src}/>
+                                            <Image alt={model.name} src={model.src} fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                                             <div className="project-overlay">
                                                 <span>{model.label}</span>
                                                 <h4>{model.name}</h4>
@@ -351,7 +352,7 @@ export default function StudioPage() {
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
                         <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img alt="B&W architectural detail" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" />
+                                <Image alt="B&W architectural detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" fill sizes="(max-width: 1024px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover grayscale" />
                             </div>
                         </div>
                         <div className="flex-grow w-full py-4">

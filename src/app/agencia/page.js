@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
 import FormDrawer from '@/app/components/FormDrawer'
@@ -177,7 +178,7 @@ export default function AgenciaPage() {
                             <div className="absolute inset-0 z-0">
                                 {['/images/agencia/banners/banner-1.jpg','/images/agencia/banners/banner-2.jpg','/images/agencia/banners/banner-3.jpg'].map((src, i) => (
                                     <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
-                                        <img src={src} className="w-full h-full object-cover object-top" alt="" />
+                                        <Image src={src} alt="" fill sizes="100vw" quality={85} priority={i === 0} className="object-cover object-top" />
                                         <div className="absolute inset-0 bg-black/20"></div>
                                     </div>
                                 ))}
@@ -225,28 +226,28 @@ export default function AgenciaPage() {
                     </div>
                     <div className="columns-gallery-container" style={{ height: '80vh' }}>
                         <Link className="gallery-column project-item group" href="/portfolio-agencia/samrat">
-                            <img alt="Samrat" className="column-image" src="/images/agencia/samrat/1.jpg"/>
+                            <Image alt="Samrat" src="/images/agencia/samrat/1.jpg" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
                                 <span>Branding</span>
                                 <h4>Samrat</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-agencia/on-take">
-                            <img alt="On Take" className="column-image" src="/images/agencia/on-take/1.jpg"/>
+                            <Image alt="On Take" src="/images/agencia/on-take/1.jpg" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
                                 <span>Publicidade</span>
                                 <h4>On Take</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-agencia/mabdo">
-                            <img alt="Mabdo" className="column-image" src="/images/agencia/mabdo/1.jpg"/>
+                            <Image alt="Mabdo" src="/images/agencia/mabdo/1.jpg" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
                                 <span>RP e Eventos</span>
                                 <h4>Mabdo</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-agencia/knowhol">
-                            <img alt="Knowhol" className="column-image" src="/images/agencia/knowhol/1.jpg"/>
+                            <Image alt="Knowhol" src="/images/agencia/knowhol/1.jpg" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
                                 <span>Estratégia</span>
                                 <h4>Knowhol</h4>
@@ -483,7 +484,7 @@ export default function AgenciaPage() {
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
                         <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img alt="B&W production set" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" />
+                                <Image alt="B&W production set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xLyiPsyfV2aUDjj4bLVN-3PR3HTgwb2sBZ2lNLOnRCx5P32jkgh8ax5ZPBG1rbNGZv4_Z-SbpotTgPOzOyPI4yxtxOO9cQDxh4T1a5XqIyeGGIWyVItbLrFI9bHo0SMNos-LC-NwPVMpqExEbiVz8H_jbGSpE2m8WK3FlOJZC4OmovBhNVqgta-wv3V9oN9cGfrZ_LWx1Cn9gD0JTHjmCxn-uVL5ipKqjmTIRT1N5FlL1eCVuUq4PGege9Tjt5mdnWfhkxSsidA" fill sizes="(max-width: 1024px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover grayscale" />
                             </div>
                         </div>
                         <div className="flex-grow w-full py-4">
