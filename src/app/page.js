@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 import FormDrawer from "@/app/components/FormDrawer";
@@ -156,7 +157,7 @@ export default function Home() {
                     <div className="absolute inset-0 z-0">
                         {['/images/home/banner-1.png','/images/home/banner-2.jpg','/images/home/banner-3.jpg'].map((src, i) => (
                             <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentHeroSlide === i ? 1 : 0}}>
-                                <img src={src} className="w-full h-full object-cover object-top" alt="" />
+                                <Image src={src} alt="" fill sizes="100vw" quality={85} priority={i === 0} className="object-cover object-top" />
                                 <div className="absolute inset-0 bg-black/20"></div>
                             </div>
                         ))}
@@ -265,17 +266,25 @@ export default function Home() {
                                 style={{ opacity: 0, transform: 'translateY(40px)', transition: 'opacity 0.7s ease, transform 0.7s ease' }}
                             >
                                 {/* default — capa em preto e branco */}
-                                <img
+                                <Image
                                     alt={work.title}
-                                    className="absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-700 ease-in-out group-hover:opacity-0"
                                     src={work.src}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    quality={80}
+                                    loading="lazy"
+                                    className="object-cover grayscale transition-opacity duration-700 ease-in-out group-hover:opacity-0"
                                 />
                                 {/* hover — segunda imagem do mesmo case, em cor */}
-                                <img
+                                <Image
                                     alt=""
                                     aria-hidden="true"
-                                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
                                     src={work.hover}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    quality={80}
+                                    loading="lazy"
+                                    className="object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
                                 />
                                 {/* legenda sobreposta no hover */}
                                 <div className="absolute inset-x-0 bottom-0 p-6 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/70 to-transparent">
@@ -353,6 +362,8 @@ export default function Home() {
                             loop
                             muted
                             playsInline
+                            preload="metadata"
+                            poster="/videos/housemazutti-video-sao-paulo-agfencia-foto-video-angelo-poster.jpg"
                             className="w-full h-full object-cover"
                         >
                             <source src="/videos/housemazutti-video-sao-paulo-agfencia-foto-video-angelo.mp4" type="video/mp4" />
