@@ -157,7 +157,20 @@ export default function Home() {
                     <div className="absolute inset-0 z-0">
                         {['/images/home/banner-1.png','/images/home/banner-2.jpg','/images/home/banner-3.jpg'].map((src, i) => (
                             <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentHeroSlide === i ? 1 : 0}}>
-                                <Image src={src} alt="" fill sizes="100vw" quality={85} priority={i === 0} className="object-cover object-top" />
+                                {i === 0 ? (
+                                    <video
+                                        src="/videos/house-mazzutti-fashion-film-hero.mp4"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        preload="auto"
+                                        poster={src}
+                                        className="absolute inset-0 w-full h-full object-cover object-top"
+                                    />
+                                ) : (
+                                    <Image src={src} alt="" fill sizes="100vw" quality={85} priority={false} className="object-cover object-top" />
+                                )}
                                 <div className="absolute inset-0 bg-black/20"></div>
                             </div>
                         ))}
