@@ -23,6 +23,21 @@ const nextConfig = {
 
   // 3. SEO e Consistência
   trailingSlash: true,
+
+  // 4. Cache Headers para Arquivos Estáticos (Performance)
+  async headers() {
+    return [
+      {
+        source: '/:all*(svg|jpg|jpeg|png|gif|ico|webp|avif|mp4|webm|woff|woff2|ttf|otf)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
