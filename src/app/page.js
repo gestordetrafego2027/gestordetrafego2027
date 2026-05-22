@@ -617,30 +617,6 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* PHILOSOPHY SECTION - FINAL */}
-                <section className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-[25/9] flex items-center justify-center overflow-hidden bg-black">
-                    <div className="absolute inset-0 z-0">
-                        <Image 
-                            src="/images/home/philosophy-bg.png" 
-                            alt="Filosofia House" 
-                            fill 
-                            sizes="100vw"
-                            quality={90}
-                            className="object-cover" 
-                        />
-                        <div className="absolute inset-0 bg-black/10"></div>
-                    </div>
-                    <div className="relative z-10 text-center max-w-4xl px-8 flex flex-col items-center justify-center h-full pt-10">
-                        <h2 className="text-h2 text-white mb-8" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
-                            Marcas fortes não<br className="hidden sm:block" />
-                            disputam atenção.<br className="hidden sm:block" />
-                            Elas ocupam espaço.
-                        </h2>
-                        <p className="text-caption text-white/60 uppercase tracking-[0.2em] mt-4" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
-                            FILOSOFIA HOUSE
-                        </p>
-                    </div>
-                </section>
             </main>
 
             {/* FOOTER */}
