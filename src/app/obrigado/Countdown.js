@@ -25,12 +25,12 @@ export default function Countdown({ seconds = 5 }) {
 
   return (
     <div className="flex flex-col items-center gap-8 mt-12">
-      <p className="font-body text-sm text-gray-400">
+      <p className="font-body text-sm text-zinc-500">
         Você será redirecionado em {remaining} {remaining === 1 ? 'segundo' : 'segundos'}...
       </p>
       <Link
         href="/"
-        className="border border-white px-8 py-3 font-label uppercase tracking-wider text-sm text-white hover:bg-white hover:text-black transition-colors"
+        className="border border-black px-8 py-3 font-label uppercase tracking-wider text-sm text-black hover:bg-black hover:text-white transition-colors"
       >
         Voltar para o início
       </Link>

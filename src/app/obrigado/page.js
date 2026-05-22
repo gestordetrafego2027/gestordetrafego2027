@@ -18,10 +18,10 @@ export default async function ObrigadoPage({ searchParams }) {
   const subheading = SUBHEADINGS[from] || 'Em breve nossa equipe entrará em contato.'
 
   return (
-    <main className="min-h-screen bg-background text-white flex items-center justify-center px-6">
+    <main className="min-h-screen bg-background flex items-center justify-center px-6">
       <div className="flex flex-col items-center text-center max-w-2xl">
-        <h1 className="font-headline text-5xl md:text-7xl text-white">Obrigado!</h1>
-        <p className="font-body text-lg md:text-xl text-gray-300 mt-4 max-w-xl">{subheading}</p>
+        <h1 className="font-headline text-5xl md:text-7xl text-black">Obrigado!</h1>
+        <p className="font-body text-lg md:text-xl text-zinc-600 mt-4 max-w-xl">{subheading}</p>
         <Countdown seconds={5} />
       </div>
     </main>
