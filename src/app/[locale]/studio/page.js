@@ -5,8 +5,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
-import FormDrawer from '../components/FormDrawer'
-import FormStudio from '../components/forms/FormStudio'
+import FormDrawer from '@/app/components/FormDrawer'
+import FormStudio from '@/app/components/forms/FormStudio'
 
 export default function StudioPage() {
     const [currentSlide, setCurrentSlide] = useState(0)

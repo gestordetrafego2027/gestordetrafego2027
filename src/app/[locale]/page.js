@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 import FormDrawer from "@/app/components/FormDrawer";
@@ -13,30 +14,31 @@ import FormGeral from "@/app/components/forms/FormGeral";
  * Transformação completa de HTML/Stitch para React/Next.js
  */
 export default function Home() {
+    const t = useTranslations();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
     const [isHomeFormOpen, setIsHomeFormOpen] = useState(false);
 
     const heroSlides = [
         {
-            label: 'STUDIO — HMZT',
-            titulo: 'Sua imagem, com intenção.',
-            texto: 'Foto, vídeo e direção de imagem pessoal em São Paulo.',
-            cta: 'Entrar no Studio',
+            label: t('hero.slide1.label'),
+            titulo: t('hero.slide1.titulo'),
+            texto: t('hero.slide1.texto'),
+            cta: t('hero.slide1.cta'),
             link: '/studio'
         },
         {
-            label: 'PRODUTORA — HMZT',
-            titulo: 'Direção que executa.',
-            texto: 'Campanhas de moda, beleza e narrativas institucionais.',
-            cta: 'Entrar na Produtora',
+            label: t('hero.slide2.label'),
+            titulo: t('hero.slide2.titulo'),
+            texto: t('hero.slide2.texto'),
+            cta: t('hero.slide2.cta'),
             link: '/produtora'
         },
         {
-            label: 'AGÊNCIA — HMZT',
-            titulo: 'Marcas que ocupam espaço.',
-            texto: 'Branding, rebranding e lançamentos com método autoral.',
-            cta: 'Entrar na Agência',
+            label: t('hero.slide3.label'),
+            titulo: t('hero.slide3.titulo'),
+            texto: t('hero.slide3.texto'),
+            cta: t('hero.slide3.cta'),
             link: '/agencia'
         },
     ];
@@ -600,7 +602,7 @@ export default function Home() {
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
                         <h2 className="text-h1 text-white hmzt-hero-title">
-                            Se a sua marca pede um novo olhar.
+                            {t('cta.cta_headline')}
                         </h2>
                         <div className="flex flex-col items-center space-y-10">
                             <button
@@ -608,10 +610,10 @@ export default function Home() {
                                 onClick={() => setIsHomeFormOpen(true)}
                                 className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500"
                             >
-                                Iniciar uma conversa
+                                {t('cta.start_project')}
                             </button>
                             <p className="text-caption text-zinc-500">
-                                Menos tentativa. Mais direção.
+                                {t('cta.cta_tagline')}
                             </p>
                         </div>
                     </div>

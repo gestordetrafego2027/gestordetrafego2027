@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "HOME",
+    "sobre": "ABOUT",
+    "studio": "STUDIO",
+    "produtora": "PRODUCTION",
+    "agencia": "AGENCY",
+    "angelo": "ANGELO",
+    "comunidade": "COMMUNITY",
+    "academy": "ACADEMY",
+    "portfolio": "PORTFOLIO",
+    "blog": "BLOG",
+    "contato": "CONTACT",
+    "cliente": "CLIENT AREA"
+  },
+  "hero": {
+    "slide1": {
+      "label": "STUDIO — HMZT",
+      "titulo": "Your image, with intention.",
+      "texto": "Photo, video and personal image direction in São Paulo.",
+      "cta": "Enter the Studio"
+    },
+    "slide2": {
+      "label": "PRODUCTION — HMZT",
+      "titulo": "Direction that delivers.",
+      "texto": "Fashion, beauty campaigns and institutional narratives.",
+      "cta": "Enter Production"
+    },
+    "slide3": {
+      "label": "AGENCY — HMZT",
+      "titulo": "Brands that claim space.",
+      "texto": "Branding, rebranding and launches with an authorial method.",
+      "cta": "Enter the Agency"
+    }
+  },
+  "cta": {
+    "start_project": "Start a conversation",
+    "see_portfolio": "View portfolio",
+    "learn_more": "Learn more",
+    "cta_tagline": "Less guessing. More direction.",
+    "cta_headline": "If your brand needs a fresh perspective."
+  },
+  "home": {
+    "works_label": "Works",
+    "works_title": "Selected works",
+    "services_title": "Integrated. Intentional.",
+    "solutions_label": "Solutions",
+    "solutions_title": "One house. Three fronts.",
+    "testimonials_label": "What they say",
+    "testimonials_title": "Testimonials",
+    "blog_label": "Editorial",
+    "blog_title": "Latest articles",
+    "studio_card_title": "HMZT | STUDIO",
+    "studio_card_subtitle": "Photo, video and personal image direction.",
+    "studio_card_items": ["Professional book", "Personal shoot", "On-location coverage", "Image direction"],
+    "produtora_card_title": "HMZT | PRODUCTION",
+    "produtora_card_subtitle": "Fashion, beauty campaigns and institutional narratives.",
+    "produtora_card_items": ["Fashion editorial", "Advertising campaign", "Institutional content", "Executive production"],
+    "agencia_card_title": "HMZT | AGENCY",
+    "agencia_card_subtitle": "Branding, campaigns and digital presence.",
+    "agencia_card_items": ["Branding project", "Campaigns", "Web development", "Brand direction"]
+  },
+  "footer": {
+    "copyright": "© 2026 House Mazzutti. All rights reserved.",
+    "home": "Home",
+    "sobre": "About",
+    "studio": "Studio",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contato": "Contact"
+  },
+  "forms": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send",
+    "name_placeholder": "Your full name",
+    "email_placeholder": "your@email.com",
+    "phone_placeholder": "+1 (555) 000-0000",
+    "message_placeholder": "Tell us about your project..."
+  },
+  "sobre": {
+    "title": "About House Mazzutti",
+    "subtitle": "A creative house founded in São Paulo, dedicated to translating brands and people into images with clarity, sophistication and consistency."
+  },
+  "contato": {
+    "title": "Contact",
+    "subtitle": "Start a conversation. We respond within 1 business day.",
+    "drawer_title": "Start a conversation",
+    "drawer_subtitle": "Tell us about what you need. We respond within 1 business day."
+  }
+}
