@@ -48,7 +48,7 @@ begin
     (actor_id, actor_email, entity, entity_id, action, before, after, diff)
   values
     (v_actor, v_email, TG_TABLE_NAME,
-     coalesce((coalesce(NEW, OLD)::jsonb->>'id')::uuid, null),
+     coalesce(v_after->>'id', v_before->>'id')::uuid,
      lower(TG_OP), v_before, v_after, v_diff);
   return coalesce(NEW, OLD);
 end;
