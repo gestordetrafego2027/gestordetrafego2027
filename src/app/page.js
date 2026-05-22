@@ -279,7 +279,7 @@ export default function Home() {
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                     quality={80}
                                     loading="lazy"
-                                    className="object-cover grayscale transition-opacity duration-700 ease-in-out group-hover:opacity-0"
+                                    className="object-cover transition-opacity duration-700 ease-in-out group-hover:opacity-0"
                                 />
                                 {/* hover — segunda imagem do mesmo case, em cor */}
                                 <Image
