@@ -245,6 +245,46 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* SERVICES SECTION */}
+                <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
+                    <div className="max-w-[1260px] mx-auto text-center mb-12">
+                        <div className="mb-24">
+                            <h2 className="text-h2 text-black">
+                                Integrado. Intencional.
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+                            {[
+                                {
+                                    icon: "brush",
+                                    title: "Branding",
+                                    desc: "DNA, narrativa e identidade. Marcas que ocupam espaço — não disputam atenção.",
+                                },
+                                {
+                                    icon: "visibility",
+                                    title: "Direção",
+                                    desc: "Curadoria estética. Onde a sensibilidade encontra a intenção.",
+                                },
+                                {
+                                    icon: "photo_camera",
+                                    title: "Produção",
+                                    desc: "Execução de alto padrão. Imagens que falam por si — sem precisar de legenda.",
+                                },
+                            ].map((service, i) => (
+                                <div key={i} className="flex flex-col items-center space-y-6">
+                                    <span className="material-symbols-outlined text-4xl font-extralight">
+                                        {service.icon}
+                                    </span>
+                                    <h3 className="text-h3 text-black">{service.title}</h3>
+                                    <p className="text-body text-secondary measure-tight">
+                                        {service.desc}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* SELECTED WORKS */}
                 <section
                     className="bg-white py-12 mx-auto"
@@ -299,46 +339,6 @@ export default function Home() {
                                 </div>
                             </Link>
                         ))}
-                    </div>
-                </section>
-
-                {/* SERVICES SECTION */}
-                <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                    <div className="max-w-[1260px] mx-auto text-center mb-12">
-                        <div className="mb-24">
-                            <h2 className="text-h2 text-black">
-                                Integrado. Intencional.
-                            </h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                            {[
-                                {
-                                    icon: "brush",
-                                    title: "Branding",
-                                    desc: "DNA, narrativa e identidade. Marcas que ocupam espaço — não disputam atenção.",
-                                },
-                                {
-                                    icon: "visibility",
-                                    title: "Direção",
-                                    desc: "Curadoria estética. Onde a sensibilidade encontra a intenção.",
-                                },
-                                {
-                                    icon: "photo_camera",
-                                    title: "Produção",
-                                    desc: "Execução de alto padrão. Imagens que falam por si — sem precisar de legenda.",
-                                },
-                            ].map((service, i) => (
-                                <div key={i} className="flex flex-col items-center space-y-6">
-                                    <span className="material-symbols-outlined text-4xl font-extralight">
-                                        {service.icon}
-                                    </span>
-                                    <h3 className="text-h3 text-black">{service.title}</h3>
-                                    <p className="text-body text-secondary measure-tight">
-                                        {service.desc}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </section>
 
