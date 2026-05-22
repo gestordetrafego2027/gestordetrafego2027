@@ -306,7 +306,6 @@ export default function Home() {
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center mb-12">
                         <div className="mb-24">
-                            <span className="text-caption text-zinc-500 block mb-6">Método</span>
                             <h2 className="text-h2 text-black">
                                 Integrado. Intencional.
                             </h2>
