@@ -6,8 +6,10 @@ import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 import FormDrawer from "@/app/components/FormDrawer";
 import FormModelo from "@/app/components/forms/FormModelo";
+import {useTranslations} from 'next-intl';
 
 export default function ComunidadePage() {
+    const t = useTranslations('comunidade_page');
     const [currentSlide, setCurrentSlide] = useState(0);
     const [talentsForm, setTalentsForm] = useState(null); // { ctaLocation }
     const openTalentsForm = (ctaLocation) => setTalentsForm({ ctaLocation });
@@ -157,15 +159,15 @@ export default function ComunidadePage() {
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-5xl">
-                            <span className="hero-animate text-caption text-white/70 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>Comunidade — HMZT</span>
+                            <span className="hero-animate text-caption text-white/70 mb-8 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>{t('hero_label')}</span>
                             <h1 className="hero-animate text-h1 text-white mb-12 hmzt-hero-title" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Uma rede que conecta cuidado, conhecimento e construção de marca.
+                                {t('hero_titulo')}
                             </h1>
                             <p className="hero-animate text-body text-white/75 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Clientes, afiliados, parceiros e talentos compartilham o mesmo padrão da casa — e encontram o seu ponto de entrada aqui.
+                                {t('hero_texto')}
                             </p>
                             <a href="#frentes" className="hero-animate inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Conhecer as frentes
+                                {t('hero_cta')}
                             </a>
                         </div>
                     </div>
@@ -194,8 +196,8 @@ export default function ComunidadePage() {
                 {/* GRID SECTION */}
                 <section className="bg-white py-12 mx-auto" style={{ maxWidth: "95vw" }}>
                     <div className="mb-20 text-center flex flex-col items-center">
-                        <span className="text-caption text-zinc-500 block mb-6">Comunidade</span>
-                        <h2 className="text-h2 text-black">Quatro frentes. Um mesmo padrão.</h2>
+                        <span className="text-caption text-zinc-500 block mb-6">{t('grid_label')}</span>
+                        <h2 className="text-h2 text-black">{t('grid_titulo')}</h2>
                         <div className="line-divider mt-8 text-black"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -214,9 +216,9 @@ export default function ComunidadePage() {
                 {/* AS QUATRO FRENTES — pontos de entrada da comunidade */}
                 <section id="frentes" className="bg-white border-t-[0.5px] border-zinc-100">
                     <div className="max-w-[1440px] mx-auto px-12 pt-32 pb-20 text-center">
-                        <span className="text-caption text-zinc-500 block mb-6">Pontos de entrada</span>
+                        <span className="text-caption text-zinc-500 block mb-6">{t('frentes_label')}</span>
                         <h2 className="text-h2 text-black measure-editorial mx-auto">
-                            Cada perfil tem o seu lugar — e a sua porta.
+                            {t('frentes_titulo')}
                         </h2>
                     </div>
 

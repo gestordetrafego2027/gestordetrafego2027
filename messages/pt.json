@@ -73,7 +73,17 @@
       "Campanhas",
       "Web development",
       "Direção de marca"
-    ]
+    ],
+    "boutique_label": "Boutique 360 — Unidades House",
+    "boutique_titulo": "Quatro frentes. Uma só conversa.",
+    "boutique_agencia_title": "AGÊNCIA",
+    "boutique_agencia_subtitle": "Estratégias de marketing para o seu negócio.",
+    "boutique_studio_title": "STUDIO",
+    "boutique_studio_subtitle": "Direção de imagem e conteúdo pessoal.",
+    "boutique_produtora_title": "PRODUTORA",
+    "boutique_produtora_subtitle": "Produção Executiva Para Campanhas.",
+    "boutique_comunidade_title": "COMUNIDADE",
+    "boutique_comunidade_subtitle": "Ambiente de relacionamento e conexões."
   },
   "footer": {
     "copyright": "© 2026 House Mazzutti. Todos os direitos reservados.",

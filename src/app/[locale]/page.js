@@ -632,15 +632,15 @@ export default function Home() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">Boutique 360 — Unidades House</span>
-                                <h2 className="text-h2 text-white">Quatro frentes. Uma só conversa.</h2>
+                                <span className="text-caption text-zinc-400 mb-6 block">{t('home.boutique_label')}</span>
+                                <h2 className="text-h2 text-white">{t('home.boutique_titulo')}</h2>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {[
-                                    { title: "AGÊNCIA", subtitle: "Estratégias de marketing para o seu negócio.", items: ["Branding project", "Web development", "Campanha integrada 360"] },
-                                    { title: "STUDIO", subtitle: "Direção de imagem e conteúdo pessoal.", items: ["Book model", "Ensaio profissional", "Cobertura pessoal"] },
-                                    { title: "PRODUTORA", subtitle: "Produção Executiva Para Campanhas.", items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"] },
-                                    { title: "COMUNIDADE", subtitle: "Ambiente de relacionamento e conexões.", items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e vagas"] }
+                                    { title: t('home.boutique_agencia_title'), subtitle: t('home.boutique_agencia_subtitle'), items: ["Branding project", "Web development", "Campanha integrada 360"] },
+                                    { title: t('home.boutique_studio_title'), subtitle: t('home.boutique_studio_subtitle'), items: ["Book model", "Ensaio profissional", "Cobertura pessoal"] },
+                                    { title: t('home.boutique_produtora_title'), subtitle: t('home.boutique_produtora_subtitle'), items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"] },
+                                    { title: t('home.boutique_comunidade_title'), subtitle: t('home.boutique_comunidade_subtitle'), items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e vagas"] }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
                                         <div>

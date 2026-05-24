@@ -73,7 +73,17 @@
       "Campaigns",
       "Web development",
       "Brand direction"
-    ]
+    ],
+    "boutique_label": "Boutique 360 — House Units",
+    "boutique_titulo": "Four fronts. One conversation.",
+    "boutique_agencia_title": "AGENCY",
+    "boutique_agencia_subtitle": "Marketing strategies for your business.",
+    "boutique_studio_title": "STUDIO",
+    "boutique_studio_subtitle": "Image direction and personal content.",
+    "boutique_produtora_title": "PRODUCTION",
+    "boutique_produtora_subtitle": "Executive Production for Campaigns.",
+    "boutique_comunidade_title": "COMMUNITY",
+    "boutique_comunidade_subtitle": "Relationship environment and connections."
   },
   "footer": {
     "copyright": "© 2026 House Mazzutti. All rights reserved.",

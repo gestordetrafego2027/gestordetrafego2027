@@ -214,11 +214,7 @@ export default function StudioPage() {
             <main>
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     {(() => {
-                        const heroSlides = [
-                            { titulo: 'Direção de imagem com arte e narrativa.', texto: 'Construímos sua imagem com intenção. Registramos os momentos que importam — com cuidado editorial.' },
-                            { titulo: 'Imagem construída com intenção.', texto: 'Cada produção começa com uma escuta — e termina em imagens que sustentam sua presença.' },
-                            { titulo: 'Books, ensaios e coberturas.', texto: 'Do conceito à entrega, cada detalhe pensado para comunicar com clareza e elegância.' },
-                        ];
+                        const heroSlides = t.raw('hero_slides');
                         return <>
                             <div className="absolute inset-0 z-0">
                                 {['/images/studio/banners/banner-1.jpg','/images/studio/banners/banner-2.jpg','/images/studio/banners/banner-3.jpg'].map((src, i) => (
@@ -230,7 +226,7 @@ export default function StudioPage() {
                             </div>
                             <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                                 <div className="max-w-3xl">
-                                    <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>Studio — HMZT</span>
+                                    <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>{t('hero_label')}</span>
                                     <h1 className="hero-animate text-h1 text-white mb-8 hmzt-hero-title" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].titulo}
                                     </h1>
@@ -238,7 +234,7 @@ export default function StudioPage() {
                                         {heroSlides[currentBannerSlide].texto}
                                     </p>
                                     <button type="button" onClick={() => setIsStudioFormOpen(true)} className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                        Iniciar projeto
+                                        {t('hero_cta')}
                                     </button>
                                 </div>
                             </div>

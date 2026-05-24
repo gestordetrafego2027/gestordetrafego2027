@@ -5,8 +5,10 @@ import Link from "next/link";
 import Header from "@/app/components/Header";
 import FormContatoGeral from "@/app/components/forms/FormContatoGeral";
 import NewsletterStrip from "@/app/components/NewsletterStrip";
+import {useTranslations} from 'next-intl';
 
 export default function ContatoPage() {
+    const t = useTranslations('contato_page');
     useEffect(() => {
         const handleScroll = function () {
             const nav = document.getElementById('main-nav');
@@ -68,10 +70,10 @@ export default function ContatoPage() {
                     </span>
                 </span>
                 <h1 className="font-headline text-5xl md:text-6xl text-black mb-6">
-                    CONTATO
+                    {t('title')}
                 </h1>
                 <p className="font-headline text-black italic text-2xl font-light mb-8">
-                    Sua visão. Nossa direção.
+                    {t('tagline')}
                 </p>
                 <div className="h-[1px] bg-[#e0e0e0] w-16 mt-2"></div>
             </section>
@@ -85,8 +87,8 @@ export default function ContatoPage() {
                 </div>
                 {/* Col 2: Info */}
                 <div className="w-full md:w-[40%] bg-white p-12 md:p-24 flex flex-col justify-center pt-12 md:pt-0 pb-0 px-0">
-                    <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-400 mb-2">LOCALIZAÇÃO</p>
-                    <h2 className="font-['Newsreader'] text-4xl text-neutral-900 mb-6 font-medium">Strategic House SP</h2>
+                    <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-400 mb-2">{t('location_label')}</p>
+                    <h2 className="font-['Newsreader'] text-4xl text-neutral-900 mb-6 font-medium">{t('location_title')}</h2>
                     <div className="h-[0.5px] bg-neutral-200 w-full mb-8"></div>
                     <div className="space-y-8 mb-12">
                         <div>
@@ -108,7 +110,7 @@ export default function ContatoPage() {
                         </div>
                     </div>
                     <a className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center" href="https://wa.me/5511952347533" target="_blank" rel="noopener noreferrer">
-                        AGENDAR DIAGNÓSTICO
+                        {t('schedule_cta')}
                     </a>
                 </div>
             </section>
@@ -117,9 +119,9 @@ export default function ContatoPage() {
             <section className="bg-[#0f0f0f] py-[60px] px-8 md:px-16 flex justify-center border-t-[0.5px] border-white/5">
                 <div className="max-w-[700px] w-full">
                     <div className="text-center mb-16">
-                        <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-500 mb-3">STRATEGIC HOUSE</p>
-                        <h3 className="font-['Newsreader'] text-white text-4xl md:text-5xl uppercase tracking-tight mb-4">CONTATE-NOS</h3>
-                        <p className="font-['Newsreader'] italic text-white/70 text-lg">Ouvimos. Direcionamos. Transformamos.</p>
+                        <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-500 mb-3">{t('form_label')}</p>
+                        <h3 className="font-['Newsreader'] text-white text-4xl md:text-5xl uppercase tracking-tight mb-4">{t('form_title')}</h3>
+                        <p className="font-['Newsreader'] italic text-white/70 text-lg">{t('form_tagline')}</p>
                     </div>
                     <FormContatoGeral sourceUrl="/contato" />
                 </div>
