@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { createClient } from '@/lib/supabase/browser'
-import { submitLead } from '@/lib/submitLead'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -37,25 +35,27 @@ export default function FormNewsletter({ sourceUrl = '/', variant = 'light' }) {
     setStatus('submitting')
 
     try {
-      await submitLead({
-        name: name || email.split('@')[0],
-        email,
-        phone: '',
-        segment: 'commercial',
-        lead_type: 'parceiro',
-        status: 'novo',
-        source: sourceUrl,
-        details: {
-          track: 'newsletter',
-        },
-        utm: getUtmFromUrl(),
+      const res = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          email: email.trim().toLowerCase(),
+          name: name.trim() || null,
+          source: sourceUrl,
+          utm: getUtmFromUrl(),
+        }),
       })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data?.error || 'Erro ao inscrever.')
+      }
 
       setStatus('success')
       setEmail('')
       setName('')
     } catch (err) {
-      console.error('[FormNewsletter] Unexpected error:', err)
+      console.error('[FormNewsletter]', err)
       setError('Não foi possível inscrever. Tente novamente.')
       setStatus('idle')
     }

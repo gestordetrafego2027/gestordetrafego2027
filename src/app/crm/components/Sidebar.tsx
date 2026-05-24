@@ -34,6 +34,7 @@ const NAV_GROUPS: { group: string; items: NavItem[] }[] = [
     group: 'Marketing',
     items: [
       { href: '/crm/campaigns', icon: '◉', label: 'Campanhas' },
+      { href: '/crm/newsletter', icon: '✉', label: 'Newsletter' },
       { href: '/crm/automations', icon: '⟳', label: 'Automações' },
       { href: '/crm/reports', icon: '▨', label: 'Relatórios' },
     ],
