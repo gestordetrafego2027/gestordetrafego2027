@@ -537,29 +537,6 @@ export default function ComunidadePage() {
                     </div>
                 </section>
 
-                {/* [SOBRE-1] STRATEGIC HOUSE */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#fafafa]">
-                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
-                        <span className="text-caption text-black/70">{tAbout('strategic_label')}</span>
-                        <h2 className="text-h1 text-black">{tAbout('strategic_titulo')}</h2>
-                        <p className="text-h4 text-[#555555] measure-editorial">{tAbout('strategic_subtitulo')}</p>
-                        <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
-                            {tAbout.raw('strategic_items').map((item, index) => (
-                                <div key={index} className="space-y-4">
-                                    <div className="flex justify-between text-caption text-black">
-                                        <span>{item.label}</span>
-                                    </div>
-                                    <div className="h-[8px] bg-[#ececec] w-full relative">
-                                        <div className="h-full bg-black animate-progress relative" style={{ width: item.value, "--target-width": item.value }}>
-                                            <span className="percentage-tag">{item.value}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
                 {/* [SOBRE-3] ORIGEM EDITORIAL */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
