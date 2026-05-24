@@ -392,88 +392,6 @@ export default function ComunidadePage() {
                     </div>
                 </section>
 
-                {/* POSICIONAMENTO & AUTORIDADE */}
-                {/* BLOG SECTION */}
-                <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
-                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-
-                        <div style={{ marginBottom: '64px' }}>
-                            <p className="text-caption" style={{ color: '#888', marginBottom: '16px' }}>Editorial</p>
-                            <h2 className="text-h2" style={{ color: '#000' }}>Últimos artigos</h2>
-                        </div>
-
-                        <div style={{
-                            display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)',
-                            gap: '2px'
-                        }} className="md:grid-cols-3">
-                            {[
-                                {
-                                    categoria: 'Studio — Book',
-                                    titulo: 'Book para Modelos: o que realmente define quem é escolhido no mercado',
-                                    data: 'Abril 2026',
-                                    slug: '/blog/book-para-modelos-quem-e-escolhido'
-                                },
-                                {
-                                    categoria: 'Agência — Branding',
-                                    titulo: 'Por que o branding é o ativo mais valioso de uma marca de luxo',
-                                    data: 'Abril 2026',
-                                    slug: '/blog/branding-project-arquitetura-valor'
-                                },
-                                {
-                                    categoria: 'IA — Futuro',
-                                    titulo: 'O papel da Inteligência Artificial na direção criativa de 2026',
-                                    data: 'Abril 2026',
-                                    slug: '/blog/editorial-moda-narrativa-visual'
-                                }
-                            ].map((post, idx) => (
-                                <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div 
-                                      style={{
-                                        padding: '64px 48px',
-                                        border: '0.5px solid #e0e0e0',
-                                        background: '#fff',
-                                        height: '100%',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'space-between',
-                                        transition: 'background 0.3s, color 0.3s, transform 0.4s ease',
-                                        cursor: 'pointer',
-                                        color: '#000',
-                                        transform: 'translateY(0)'
-                                      }}
-                                      onMouseEnter={e => {
-                                        e.currentTarget.style.background = '#000';
-                                        e.currentTarget.style.color = '#fff';
-                                        e.currentTarget.style.transform = 'translateY(-6px)';
-                                      }}
-                                      onMouseLeave={e => {
-                                        e.currentTarget.style.background = '#fff';
-                                        e.currentTarget.style.color = '#000';
-                                        e.currentTarget.style.transform = 'translateY(0)';
-                                      }}
-                                    >
-                                        <div>
-                                            <p className="text-caption" style={{ color: '#888', marginBottom: '24px' }}>{post.categoria}</p>
-                                            <h3 className="text-h3" style={{ color: 'inherit', marginBottom: '40px' }}>{post.titulo}</h3>
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <span className="text-caption" style={{ color: '#aaa' }}>{post.data}</span>
-                                            <span style={{
-                                              fontSize: '28px',
-                                              display: 'inline-block',
-                                              transition: 'transform 0.4s ease'
-                                            }}
-                                            onMouseEnter={e => e.currentTarget.style.transform = 'translateX(10px)'}
-                                            onMouseLeave={e => e.currentTarget.style.transform = 'translateX(0)'}
-                                            >→</span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
                 <ClientLogos />
 
                 {/* CTA FINAL */}
@@ -609,6 +527,87 @@ export default function ComunidadePage() {
                 </section>
 
                 <ClientLogos />
+
+                {/* BLOG SECTION — Últimos artigos (penúltima) */}
+                <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
+                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+
+                        <div style={{ marginBottom: '64px' }}>
+                            <p className="text-caption" style={{ color: '#888', marginBottom: '16px' }}>Editorial</p>
+                            <h2 className="text-h2" style={{ color: '#000' }}>Últimos artigos</h2>
+                        </div>
+
+                        <div style={{
+                            display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)',
+                            gap: '2px'
+                        }} className="md:grid-cols-3">
+                            {[
+                                {
+                                    categoria: 'Studio — Book',
+                                    titulo: 'Book para Modelos: o que realmente define quem é escolhido no mercado',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/book-para-modelos-quem-e-escolhido'
+                                },
+                                {
+                                    categoria: 'Agência — Branding',
+                                    titulo: 'Por que o branding é o ativo mais valioso de uma marca de luxo',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/branding-project-arquitetura-valor'
+                                },
+                                {
+                                    categoria: 'IA — Futuro',
+                                    titulo: 'O papel da Inteligência Artificial na direção criativa de 2026',
+                                    data: 'Abril 2026',
+                                    slug: '/blog/editorial-moda-narrativa-visual'
+                                }
+                            ].map((post, idx) => (
+                                <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <div
+                                      style={{
+                                        padding: '64px 48px',
+                                        border: '0.5px solid #e0e0e0',
+                                        background: '#fff',
+                                        height: '100%',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'space-between',
+                                        transition: 'background 0.3s, color 0.3s, transform 0.4s ease',
+                                        cursor: 'pointer',
+                                        color: '#000',
+                                        transform: 'translateY(0)'
+                                      }}
+                                      onMouseEnter={e => {
+                                        e.currentTarget.style.background = '#000';
+                                        e.currentTarget.style.color = '#fff';
+                                        e.currentTarget.style.transform = 'translateY(-6px)';
+                                      }}
+                                      onMouseLeave={e => {
+                                        e.currentTarget.style.background = '#fff';
+                                        e.currentTarget.style.color = '#000';
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                      }}
+                                    >
+                                        <div>
+                                            <p className="text-caption" style={{ color: '#888', marginBottom: '24px' }}>{post.categoria}</p>
+                                            <h3 className="text-h3" style={{ color: 'inherit', marginBottom: '40px' }}>{post.titulo}</h3>
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                            <span className="text-caption" style={{ color: '#aaa' }}>{post.data}</span>
+                                            <span style={{
+                                              fontSize: '28px',
+                                              display: 'inline-block',
+                                              transition: 'transform 0.4s ease'
+                                            }}
+                                            onMouseEnter={e => e.currentTarget.style.transform = 'translateX(10px)'}
+                                            onMouseLeave={e => e.currentTarget.style.transform = 'translateX(0)'}
+                                            >→</span>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
                 {/* [SOBRE-7] CTA */}
                 <section className="bg-black py-40 px-12 text-center relative overflow-hidden" id="about-contato">
