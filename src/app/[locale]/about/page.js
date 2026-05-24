@@ -232,26 +232,30 @@ export default function About() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">Como funcionamos</span>
+                                <span className="text-caption text-zinc-400 mb-6 block">Boutique 360 — Unidades House</span>
                                 <h2 className="text-h2 text-white">Quatro frentes. Uma só conversa.</h2>
                             </div>
-                            
+
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {[
                                     {
                                         title: "AGÊNCIA",
+                                        subtitle: "Estratégias de marketing para o seu negócio.",
                                         items: ["Branding project", "Web development", "Campanha integrada 360"]
                                     },
                                     {
                                         title: "STUDIO",
+                                        subtitle: "Direção de imagem e conteúdo pessoal.",
                                         items: ["Book model", "Ensaio profissional", "Cobertura pessoal"]
                                     },
                                     {
                                         title: "PRODUTORA",
+                                        subtitle: "Produção Executiva Para Campanhas.",
                                         items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"]
                                     },
                                     {
                                         title: "COMUNIDADE",
+                                        subtitle: "Ambiente de relacionamento e conexões.",
                                         items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e vagas"]
                                     }
                                 ].map((card, idx) => (
