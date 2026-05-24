@@ -5,13 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
+import {useTranslations} from 'next-intl';
 
 /**
  * ABOUT PAGE - HOUSE MAZZUTTI
- * Conversão idêntica do Stitch para React/Next.js
  */
 export default function About() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const t = useTranslations('about');
+    const tCta = useTranslations('cta');
 
     const testimonials = [
         {
@@ -55,16 +57,16 @@ export default function About() {
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-4xl">
-                            <span className="text-caption text-white/70 mb-6 block">SOBRE — HMZT</span>
-                            <h2 className="text-h1 text-white mb-8 hmzt-hero-title">Uma só casa. Da visão à materialização.</h2>
+                            <span className="text-caption text-white/70 mb-6 block">{t('hero_label')}</span>
+                            <h2 className="text-h1 text-white mb-8 hmzt-hero-title">{t('hero_titulo')}</h2>
                             <p className="text-body text-white/75 mb-12 measure-editorial">
-                                Estratégia, direção criativa e produção sob um único comando — sem ruído entre etapas.
+                                {t('hero_texto')}
                             </p>
                             <Link
                                 href="#contato"
                                 className="inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500"
                             >
-                                Iniciar uma conversa
+                                {t('hero_cta')}
                             </Link>
                         </div>
                     </div>
@@ -88,15 +90,14 @@ export default function About() {
 
                     <div className="w-full md:w-1/2 bg-[#f5f5f5] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-600">Diferencial</span>
-                            <h2 className="text-h2 text-black">O que diferencia a House não é o que fazemos.</h2>
+                            <span className="text-caption text-neutral-600">{t('diferencial_label')}</span>
+                            <h2 className="text-h2 text-black">{t('diferencial_titulo')}</h2>
                             <div className="space-y-5 text-body text-neutral-700">
-                                <p>É como pensamos. Unimos:</p>
+                                <p>{t('diferencial_intro')}</p>
                                 <ul className="space-y-2">
-                                    <li>— sensibilidade estética</li>
-                                    <li>— inteligência criativa</li>
-                                    <li>— experiência de set</li>
-                                    <li>— execução precisa</li>
+                                    {t.raw('diferencial_items').map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -106,18 +107,13 @@ export default function About() {
                 {/* [1] HERO SECTION */}
                 <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#fafafa]">
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
-                        <span className="text-caption text-black/70">Strategic House</span>
-                        <h2 className="text-h1 text-black">Vamos além da publicidade.</h2>
-                        <p className="text-h4 text-[#555555] measure-editorial">Estruturamos o seu projeto para comunicar com precisão.</p>
+                        <span className="text-caption text-black/70">{t('strategic_label')}</span>
+                        <h2 className="text-h1 text-black">{t('strategic_titulo')}</h2>
+                        <p className="text-h4 text-[#555555] measure-editorial">{t('strategic_subtitulo')}</p>
 
                         {/* Progress Bars */}
                         <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
-                            {[
-                                { label: "Estratégia", value: "92%" },
-                                { label: "Posicionamento", value: "88%" },
-                                { label: "Direção criativa", value: "95%" },
-                                { label: "Produção", value: "85%" },
-                            ].map((item, index) => (
+                            {t.raw('strategic_items').map((item, index) => (
                                 <div key={index} className="space-y-4">
                                     <div className="flex justify-between text-caption text-black">
                                         <span>{item.label}</span>
@@ -154,16 +150,16 @@ export default function About() {
 
                     <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-400">Direção Criativa /01</span>
-                            <h2 className="text-h2 text-white">Estratégia e execução. Na mesma mente.</h2>
+                            <span className="text-caption text-neutral-400">{t('origem_label')}</span>
+                            <h2 className="text-h2 text-white">{t('origem_titulo')}</h2>
                             <div className="space-y-5 text-body text-neutral-300">
-                                <p>Mente formada na publicidade e forjada nos sets das maiores celebridades do Brasil — da Larissa Manoela à família Abravanel. Quinze anos de audiovisual e fotografia traduzidos em direção criativa autoral, com presença em cada decisão crítica do projeto.</p>
-                                <p>Cada peça que sai da House passa pela sua supervisão direta: do briefing estratégico ao acabamento final. É o que garante que a essência da marca chegue intacta — sem ruído entre o conceito e o pixel.</p>
-                                <p className="italic text-neutral-400">"Toda imagem que entrego carrega uma decisão de mercado. Estética sem propósito é apenas decoração."</p>
+                                <p>{t('origem_p1')}</p>
+                                <p>{t('origem_p2')}</p>
+                                <p className="italic text-neutral-400">{t('origem_quote')}</p>
                             </div>
                             <div className="pt-6">
                                 <div className="text-h3 text-white/90">Angelo Mazzutti</div>
-                                <div className="text-caption text-neutral-500 mt-2">Head of Creative & Brand Strategy</div>
+                                <div className="text-caption text-neutral-500 mt-2">{t('origem_role')}</div>
                             </div>
                         </div>
                     </div>
@@ -232,33 +228,12 @@ export default function About() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">Boutique 360 — Unidades House</span>
-                                <h2 className="text-h2 text-white">Quatro frentes. Uma só conversa.</h2>
+                                <span className="text-caption text-zinc-400 mb-6 block">{t('unidades_label')}</span>
+                                <h2 className="text-h2 text-white">{t('unidades_titulo')}</h2>
                             </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                {[
-                                    {
-                                        title: "AGÊNCIA",
-                                        subtitle: "Estratégias de marketing para o seu negócio.",
-                                        items: ["Branding project", "Web development", "Campanha integrada 360"]
-                                    },
-                                    {
-                                        title: "STUDIO",
-                                        subtitle: "Direção de imagem e conteúdo pessoal.",
-                                        items: ["Book model", "Ensaio profissional", "Cobertura pessoal"]
-                                    },
-                                    {
-                                        title: "PRODUTORA",
-                                        subtitle: "Produção Executiva Para Campanhas.",
-                                        items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"]
-                                    },
-                                    {
-                                        title: "COMUNIDADE",
-                                        subtitle: "Ambiente de relacionamento e conexões.",
-                                        items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e vagas"]
-                                    }
-                                ].map((card, idx) => (
+                                {t.raw('unidades').map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
                                         <div>
                                             <h3 className="text-h3 mb-6 group-hover:text-white uppercase">{card.title}</h3>
@@ -273,7 +248,7 @@ export default function About() {
                                             </ul>
                                         </div>
                                         <button className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white">
-                                            Saiba mais
+                                            {tCta('learn_more')}
                                         </button>
                                     </div>
                                 ))}

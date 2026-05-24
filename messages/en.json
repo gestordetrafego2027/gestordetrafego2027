@@ -52,13 +52,28 @@
     "blog_title": "Latest articles",
     "studio_card_title": "HMZT | STUDIO",
     "studio_card_subtitle": "Photo, video and personal image direction.",
-    "studio_card_items": ["Professional book", "Personal shoot", "On-location coverage", "Image direction"],
+    "studio_card_items": [
+      "Professional book",
+      "Personal shoot",
+      "On-location coverage",
+      "Image direction"
+    ],
     "produtora_card_title": "HMZT | PRODUCTION",
     "produtora_card_subtitle": "Fashion, beauty campaigns and institutional narratives.",
-    "produtora_card_items": ["Fashion editorial", "Advertising campaign", "Institutional content", "Executive production"],
+    "produtora_card_items": [
+      "Fashion editorial",
+      "Advertising campaign",
+      "Institutional content",
+      "Executive production"
+    ],
     "agencia_card_title": "HMZT | AGENCY",
     "agencia_card_subtitle": "Branding, campaigns and digital presence.",
-    "agencia_card_items": ["Branding project", "Campaigns", "Web development", "Brand direction"]
+    "agencia_card_items": [
+      "Branding project",
+      "Campaigns",
+      "Web development",
+      "Brand direction"
+    ]
   },
   "footer": {
     "copyright": "© 2026 House Mazzutti. All rights reserved.",
@@ -89,5 +104,246 @@
     "subtitle": "Start a conversation. We respond within 1 business day.",
     "drawer_title": "Start a conversation",
     "drawer_subtitle": "Tell us about what you need. We respond within 1 business day."
+  },
+  "about": {
+    "hero_label": "ABOUT — HMZT",
+    "hero_titulo": "One house. From vision to materialization.",
+    "hero_texto": "Strategy, creative direction and production under a single command — no noise between stages.",
+    "hero_cta": "Start a conversation",
+    "diferencial_label": "Differential",
+    "diferencial_titulo": "What sets the House apart isn't what we do.",
+    "diferencial_intro": "It's how we think. We unite:",
+    "diferencial_items": [
+      "— aesthetic sensitivity",
+      "— creative intelligence",
+      "— on-set experience",
+      "— precise execution"
+    ],
+    "strategic_label": "Strategic House",
+    "strategic_titulo": "We go beyond advertising.",
+    "strategic_subtitulo": "We structure your project to communicate with precision.",
+    "strategic_items": [
+      {
+        "label": "Strategy",
+        "value": "92%"
+      },
+      {
+        "label": "Positioning",
+        "value": "88%"
+      },
+      {
+        "label": "Creative direction",
+        "value": "95%"
+      },
+      {
+        "label": "Production",
+        "value": "85%"
+      }
+    ],
+    "origem_label": "Creative Direction /01",
+    "origem_titulo": "Strategy and execution. In the same mind.",
+    "origem_p1": "A mind shaped by advertising and forged on the sets of Brazil's biggest celebrities — from Larissa Manoela to the Abravanel family. Fifteen years of film and photography translated into authorial creative direction, with presence at every critical decision.",
+    "origem_p2": "Every piece that leaves the House passes through direct supervision: from strategic briefing to final finish. That's what ensures the brand's essence arrives intact — without noise between concept and pixel.",
+    "origem_quote": "\"Every image I deliver carries a market decision. Aesthetics without purpose is mere decoration.\"",
+    "origem_role": "Head of Creative & Brand Strategy",
+    "metodo_titulo": "Nothing begins with execution. Everything begins with understanding.",
+    "metodo_bg": "Method",
+    "metodo_items": [
+      {
+        "num": "01 / Immersion",
+        "desc": "Diving into the DNA and goals of the project."
+      },
+      {
+        "num": "02 / Reading",
+        "desc": "Identifying gaps and opportunities."
+      },
+      {
+        "num": "03 / Concept",
+        "desc": "Creative direction that guides every delivery."
+      },
+      {
+        "num": "04 / Execution",
+        "desc": "Production under direct supervision of the director."
+      },
+      {
+        "num": "05 / Fine Art",
+        "desc": "Handcrafted editing with editorial finish."
+      }
+    ],
+    "producao_label": "Executive Production /02",
+    "producao_titulo": "Without operations, ideas don't materialize.",
+    "producao_p1": "Mateus Sacavem leads the House's executive operations — technical coordination, schedules, production and integration of specialized teams. He's the gear that sustains every project, from pre-production to final master.",
+    "producao_p2": "Mastery in high-complexity operations: fashion campaigns, fashion films, premium shoots and celebrity productions. Where creative ambition meets real structure — the right team, honest deadlines, the set under control.",
+    "producao_quote": "\"Creative excellence demands operational excellence.\"",
+    "producao_role": "Head of Production & Operations",
+    "boutique_label": "Boutique 360 — House Units",
+    "boutique_titulo": "Four fronts. One conversation.",
+    "boutique_cards": [
+      {
+        "title": "AGENCY",
+        "subtitle": "Marketing strategies for your business.",
+        "items": [
+          "Branding project",
+          "Web development",
+          "Integrated 360 campaign"
+        ]
+      },
+      {
+        "title": "STUDIO",
+        "subtitle": "Image direction and personal content.",
+        "items": [
+          "Model book",
+          "Professional shoot",
+          "Personal coverage"
+        ]
+      },
+      {
+        "title": "PRODUCTION",
+        "subtitle": "Executive production for campaigns.",
+        "items": [
+          "Fashion campaign",
+          "Beauty campaign",
+          "Institutional content"
+        ]
+      },
+      {
+        "title": "COMMUNITY",
+        "subtitle": "An environment of relationships and connections.",
+        "items": [
+          "Client area",
+          "Student hub",
+          "Our partners",
+          "Casting and jobs"
+        ]
+      }
+    ],
+    "boutique_cta": "Learn more",
+    "depoimentos_label": "What they say",
+    "depoimentos_titulo": "Testimonials",
+    "depoimentos_items": [
+      "We translate the essence of brands and personalities into images with clarity, sophistication and consistency.",
+      "Direction, creation and production under a single house. One conversation from start to finish — no noise between stages."
+    ],
+    "cta_titulo": "Image is consequence. Positioning is direction.",
+    "cta_btn": "Start a conversation",
+    "unidades_label": "Boutique 360 — House Units",
+    "unidades_titulo": "Four fronts. One conversation.",
+    "unidades": [
+      {
+        "title": "AGENCY",
+        "subtitle": "Marketing strategies for your business.",
+        "items": [
+          "Branding project",
+          "Web development",
+          "360 integrated campaign"
+        ]
+      },
+      {
+        "title": "STUDIO",
+        "subtitle": "Image direction and personal content.",
+        "items": [
+          "Model book",
+          "Professional shoot",
+          "Personal coverage"
+        ]
+      },
+      {
+        "title": "PRODUCTION",
+        "subtitle": "Executive Production for Campaigns.",
+        "items": [
+          "Fashion campaign",
+          "Beauty campaign",
+          "Institutional content"
+        ]
+      },
+      {
+        "title": "COMMUNITY",
+        "subtitle": "Networking and connection environment.",
+        "items": [
+          "Client area",
+          "Student hub",
+          "Our partners",
+          "Casting & jobs"
+        ]
+      }
+    ]
+  },
+  "studio": {
+    "hero_label": "Studio — HMZT",
+    "hero_slides": [
+      {
+        "titulo": "Image direction with art and narrative.",
+        "texto": "We build your image with intention. We capture the moments that matter — with editorial care."
+      },
+      {
+        "titulo": "Image built with intention.",
+        "texto": "Every production starts with listening — and ends in images that sustain your presence."
+      },
+      {
+        "titulo": "Books, shoots and coverage.",
+        "texto": "From concept to delivery, every detail designed to communicate with clarity and elegance."
+      }
+    ],
+    "hero_cta": "Start a project",
+    "learn_more": "Learn more",
+    "form_title": "Start a project"
+  },
+  "produtora_page": {
+    "hero_label": "Production — HMZT",
+    "hero_slides": [
+      {
+        "titulo": "Production and direction for advertising.",
+        "texto": "Audiovisual production, campaigns and content with careful creative direction."
+      },
+      {
+        "titulo": "Campaigns that communicate with clarity.",
+        "texto": "From pre-production to final delivery — every decision designed to sustain results."
+      },
+      {
+        "titulo": "Sets, editorials and content with direction.",
+        "texto": "Technical execution and creative vision in one mind. For brands that want to appear with intention."
+      }
+    ],
+    "hero_cta": "Start a project",
+    "portfolio_label": "Production Portfolio",
+    "portfolio_titulo": "Advertising. Content MKT. Set Design.",
+    "see_all_portfolio": "See the full portfolio",
+    "structure_label": "Optimize your brand's results",
+    "structure_titulo": "Executive production and artistic casting for advertising and content marketing.",
+    "learn_more": "Learn more",
+    "cta_titulo": "It's not about showing up more. It's about showing up better.",
+    "cta_btn": "Start a conversation",
+    "form_title": "Start a project"
+  },
+  "comunidade_page": {
+    "hero_label": "Community — HMZT",
+    "hero_titulo": "A network that connects care, knowledge and brand-building.",
+    "hero_texto": "Clients, affiliates, partners and talents share the same standard of the house — and find their entry point here.",
+    "hero_cta": "Explore the fronts",
+    "grid_label": "Community",
+    "grid_titulo": "Four fronts. One standard.",
+    "frentes_label": "Entry points",
+    "frentes_titulo": "Each profile has its place — and its door."
+  },
+  "contato_page": {
+    "title": "CONTACT",
+    "tagline": "Your vision. Our direction.",
+    "location_label": "LOCATION",
+    "location_title": "Strategic House SP",
+    "schedule_cta": "BOOK A DIAGNOSTIC",
+    "form_label": "STRATEGIC HOUSE",
+    "form_title": "CONTACT US",
+    "form_tagline": "We listen. We direct. We transform."
+  },
+  "obrigado": {
+    "title": "Thank you!",
+    "default_sub": "Our team will be in touch shortly.",
+    "studio_sub": "Our Studio team will be in touch shortly.",
+    "produtora_sub": "Our Production team will be in touch shortly.",
+    "agencia_sub": "Our Agency team will be in touch shortly.",
+    "redirect_text": "You will be redirected in {count} {unit}...",
+    "second": "second",
+    "seconds": "seconds",
+    "back_home": "Back to home"
   }
 }
