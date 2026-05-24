@@ -7,8 +7,10 @@ import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
 import FormDrawer from '@/app/components/FormDrawer'
 import FormStudio from '@/app/components/forms/FormStudio'
+import {useTranslations} from 'next-intl'
 
 export default function StudioPage() {
+    const t = useTranslations('studio')
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentGallerySlide, setCurrentGallerySlide] = useState(0)
     const [currentBannerSlide, setCurrentBannerSlide] = useState(0)
