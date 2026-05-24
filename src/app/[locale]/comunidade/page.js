@@ -537,29 +537,6 @@ export default function ComunidadePage() {
                     </div>
                 </section>
 
-                {/* [SOBRE-3] ORIGEM EDITORIAL */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
-                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
-                        <Image alt="House Mazzutti — Agência, Produtora e Direção Criativa" src="/images/about/angelo-mazzutti.jpg" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover object-top" />
-                    </div>
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
-                    <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-400">{tAbout('origem_label')}</span>
-                            <h2 className="text-h2 text-white">{tAbout('origem_titulo')}</h2>
-                            <div className="space-y-5 text-body text-neutral-300">
-                                <p>{tAbout('origem_p1')}</p>
-                                <p>{tAbout('origem_p2')}</p>
-                                <p className="italic text-neutral-400">{tAbout('origem_quote')}</p>
-                            </div>
-                            <div className="pt-6">
-                                <div className="text-h3 text-white/90">Angelo Mazzutti</div>
-                                <div className="text-caption text-neutral-500 mt-2">{tAbout('origem_role')}</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* [SOBRE-6] METODOLOGIA */}
                 <section className="bg-white text-black py-40 overflow-hidden relative">
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
@@ -603,39 +580,6 @@ export default function ComunidadePage() {
                             <div className="pt-6">
                                 <div className="text-h3 text-white/90">Mateus Sacavem</div>
                                 <div className="text-caption text-neutral-500 mt-2">Head of Production & Operations</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* [SOBRE-4] COMO FUNCIONAMOS */}
-                <section className="bg-white px-[40px]">
-                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">{tAbout('unidades_label')}</span>
-                                <h2 className="text-h2 text-white">{tAbout('unidades_titulo')}</h2>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                {tAbout.raw('unidades').map((card, idx) => (
-                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
-                                        <div>
-                                            <h3 className="text-h3 mb-6 group-hover:text-white uppercase">{card.title}</h3>
-                                            {card.subtitle && <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>}
-                                            <ul className="space-y-4 mb-12">
-                                                {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
-                                                        <span className="material-symbols-outlined text-lg">check</span>
-                                                        <span>{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <button className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white">
-                                            {tCta('learn_more')}
-                                        </button>
-                                    </div>
-                                ))}
                             </div>
                         </div>
                     </div>
