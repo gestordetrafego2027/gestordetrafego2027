@@ -5,8 +5,9 @@ export function generateStaticParams() {
     return Object.keys(articles).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }) {
-    const article = articles[params.slug];
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const article = articles[slug];
     if (!article) {
         return {
             title: 'Editorial House Mazzutti',
@@ -31,6 +32,7 @@ export function generateMetadata({ params }) {
     };
 }
 
-export default function BlogSlugPage({ params }) {
-    return <ArticleContent slug={params.slug} />;
+export default async function BlogSlugPage({ params }) {
+    const { slug } = await params;
+    return <ArticleContent slug={slug} />;
 }
