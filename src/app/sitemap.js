@@ -5,7 +5,7 @@ const BASE = 'https://housemazzutti.com'
 export default async function sitemap() {
   const now = new Date()
   const staticRoutes = [
-    '', 'about', 'studio', 'produtora', 'agencia', 'angelo',
+    '', 'studio', 'produtora', 'agencia', 'angelo',
     'comunidade', 'academy', 'portfolio', 'blog', 'contato',
   ].map((p) => ({
     url: `${BASE}/${p}`,

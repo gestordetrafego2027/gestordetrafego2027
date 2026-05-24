@@ -214,7 +214,7 @@ export default function ArticleContent({ slug }) {
                             </span>
                         </h4>
                         <p className="text-[14px] text-zinc-500 font-body leading-relaxed">Hub criativo & estratégico. Branding, direção criativa e produção audiovisual sob uma única estrutura — da concepção ao acabamento final.</p>
-                        <Link href="/about" className="mt-6 inline-block text-[12px] font-label font-bold uppercase tracking-[0.2em] text-zinc-900 border-b-[0.5px] border-zinc-900 pb-1">CONHECER A HOUSE</Link>
+                        <Link href="/comunidade" className="mt-6 inline-block text-[12px] font-label font-bold uppercase tracking-[0.2em] text-zinc-900 border-b-[0.5px] border-zinc-900 pb-1">CONHECER A HOUSE</Link>
                     </div>
 
                     {/* Recent Posts */}

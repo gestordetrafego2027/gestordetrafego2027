@@ -378,7 +378,6 @@ export default function BlogPage() {
                     </nav>
                     <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-16">
                         <Link className="label-text text-xs text-gray-400" href="/">Home</Link>
-                        <Link className="label-text text-xs text-gray-400" href="/about">Sobre</Link>
                         <Link className="label-text text-xs text-gray-400" href="/studio">Studio</Link>
                         <Link className="label-text text-xs text-gray-400" href="/portfolio">Portfólio</Link>
                         <Link className="label-text text-xs text-gray-400" href="/blog">Blog</Link>

@@ -119,7 +119,6 @@ export default function Header({ variant = 'dark' }) {
 
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/academy')} href="/academy">ACADEMY</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
@@ -212,7 +211,6 @@ export default function Header({ variant = 'dark' }) {
                       gap:'16px', marginBottom:'40px'}}>
                       {[
                         {label:'HOME', href:'/'},
-                        {label:'SOBRE', href:'/about'},
                         {label:'COMUNIDADE', href:'/comunidade'},
                         {label:'ACADEMY', href:'/academy'},
                         {label:'PORTFÓLIO', href:'/portfolio'},
