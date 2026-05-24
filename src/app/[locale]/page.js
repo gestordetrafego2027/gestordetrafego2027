@@ -346,60 +346,6 @@ export default function Home() {
 
 
 
-                {/* STRUCTURE SELECTION */}
-                <section className="bg-white px-[40px]">
-                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">Soluções</span>
-                                <h2 className="text-h2 text-white">Uma casa. Três frentes.</h2>
-                            </div>
-                            
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {[
-                                    {
-                                        title: "HMZT | STUDIO",
-                                        link: "/studio",
-                                        subtitle: 'Foto, vídeo e direção de imagem pessoal.',
-                                        items: ["Book profissional", "Ensaio pessoal", "Cobertura externa", "Direção de imagem"]
-                                    },
-                                    {
-                                        title: "HMZT | PRODUTORA",
-                                        link: "/produtora",
-                                        subtitle: 'Campanhas de moda, beleza e narrativas institucionais.',
-                                        items: ["Editorial de moda", "Campanha publicitária", "Conteúdo institucional", "Produção executiva"]
-                                    },
-                                    {
-                                        title: "HMZT | AGÊNCIA",
-                                        link: "/agencia",
-                                        subtitle: 'Branding, campanhas e presença digital.',
-                                        items: ["Branding project", "Campanhas", "Web development", "Direção de marca"]
-                                    }
-                                ].map((card, idx) => (
-                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined" style={{ transition: 'transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                                        <div>
-                                            <h3 className="text-h3 mb-6 group-hover:text-white uppercase">{card.title}</h3>
-                                            <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>
-                                            <ul className="space-y-4 mb-12">
-                                                {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
-                                                        <span className="material-symbols-outlined text-lg">check</span>
-                                                        <span>{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <Link href={card.link} className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white text-center block">
-                                            Saiba mais
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
                 {/* TESTIMONIALS SECTION */}
                 <section 
                     className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center py-20"
