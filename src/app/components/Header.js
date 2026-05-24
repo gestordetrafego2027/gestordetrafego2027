@@ -120,10 +120,6 @@ export default function Header({ variant = 'dark' }) {
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/about')} href="/about">SOBRE</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/angelo')} href="/angelo">ANGELO</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/academy')} href="/academy">ACADEMY</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
@@ -212,15 +208,11 @@ export default function Header({ variant = 'dark' }) {
                       </div>
                     </div>
 
-                    <nav style={{display:'flex', flexDirection:'column', 
+                    <nav style={{display:'flex', flexDirection:'column',
                       gap:'16px', marginBottom:'40px'}}>
                       {[
                         {label:'HOME', href:'/'},
                         {label:'SOBRE', href:'/about'},
-                        {label:'STUDIO', href:'/studio'},
-                        {label:'PRODUTORA', href:'/produtora'},
-                        {label:'AGÊNCIA', href:'/agencia'},
-                        {label:'ANGELO', href:'/angelo'},
                         {label:'COMUNIDADE', href:'/comunidade'},
                         {label:'ACADEMY', href:'/academy'},
                         {label:'PORTFÓLIO', href:'/portfolio'},
@@ -248,6 +240,36 @@ export default function Header({ variant = 'dark' }) {
                         >{item.label}</Link>
                       ))}
                     </nav>
+
+                    {/* Unidades — grupo secundário */}
+                    <div style={{marginBottom:'40px'}}>
+                      <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'9px',
+                        letterSpacing:'0.2em', textTransform:'uppercase',
+                        color:'#444', marginBottom:'16px'}}>UNIDADES</p>
+                      <div style={{display:'flex', flexDirection:'column', gap:'14px'}}>
+                        {[
+                          {label:'STUDIO', href:'/studio'},
+                          {label:'PRODUTORA', href:'/produtora'},
+                          {label:'AGÊNCIA', href:'/agencia'},
+                          {label:'ANGELO', href:'/angelo'},
+                        ].map(item => (
+                          <Link key={item.label} href={item.href}
+                            onClick={() => closeMenu()}
+                            style={{
+                              fontFamily:'RocGrotesk, sans-serif',
+                              fontSize:'10px',
+                              letterSpacing:'0.2em',
+                              textTransform:'uppercase',
+                              color:'#666',
+                              textDecoration:'none',
+                              transition:'color 0.3s',
+                            }}
+                            onMouseEnter={e => e.currentTarget.style.color='white'}
+                            onMouseLeave={e => e.currentTarget.style.color='#666'}
+                          >{item.label}</Link>
+                        ))}
+                      </div>
+                    </div>
             
                     <div style={{marginBottom:'48px'}}>
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
