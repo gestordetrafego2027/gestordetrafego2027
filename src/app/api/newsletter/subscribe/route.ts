@@ -1,13 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!,
-  { auth: { persistSession: false } }
-)
+// Route dinâmica: client Supabase só é criado em request time,
+// nunca em build time (evita "supabaseKey is required" durante build).
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
 
 export async function POST(req: NextRequest) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+  if (!url || !key) {
+    return NextResponse.json({ error: 'Configuração do servidor ausente.' }, { status: 500 })
+  }
+
+  const supabase = createClient(url, key, { auth: { persistSession: false } })
+
   const { email, name, source, utm } = await req.json()
 
   if (!email) {
