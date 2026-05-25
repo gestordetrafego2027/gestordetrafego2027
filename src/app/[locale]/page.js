@@ -247,6 +247,34 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* ── SOBRE / STRATEGIC HOUSE ─────────────────────────────── */}
+                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#fafafa]">
+                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
+                        <span className="text-caption text-black/70">Strategic House</span>
+                        <h2 className="text-h1 text-black">Vamos além da publicidade.</h2>
+                        <p className="text-h4 text-[#555555] measure-editorial">Estruturamos o seu projeto para comunicar com precisão.</p>
+                        <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
+                            {[
+                                { label: "Estratégia", value: "92%" },
+                                { label: "Posicionamento", value: "88%" },
+                                { label: "Direção criativa", value: "95%" },
+                                { label: "Produção", value: "85%" },
+                            ].map((item, index) => (
+                                <div key={index} className="space-y-4">
+                                    <div className="flex justify-between text-caption text-black">
+                                        <span>{item.label}</span>
+                                    </div>
+                                    <div className="h-[8px] bg-[#ececec] w-full relative">
+                                        <div className="h-full bg-black animate-progress relative" style={{ width: item.value, "--target-width": item.value }}>
+                                            <span className="percentage-tag">{item.value}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* SELECTED WORKS */}
                 <section
                     className="bg-white py-12 mx-auto"
@@ -325,34 +353,6 @@ export default function Home() {
                                     <li>— execução precisa</li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ── SOBRE / STRATEGIC HOUSE ─────────────────────────────── */}
-                <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#fafafa]">
-                    <div className="w-full flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
-                        <span className="text-caption text-black/70">Strategic House</span>
-                        <h2 className="text-h1 text-black">Vamos além da publicidade.</h2>
-                        <p className="text-h4 text-[#555555] measure-editorial">Estruturamos o seu projeto para comunicar com precisão.</p>
-                        <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
-                            {[
-                                { label: "Estratégia", value: "92%" },
-                                { label: "Posicionamento", value: "88%" },
-                                { label: "Direção criativa", value: "95%" },
-                                { label: "Produção", value: "85%" },
-                            ].map((item, index) => (
-                                <div key={index} className="space-y-4">
-                                    <div className="flex justify-between text-caption text-black">
-                                        <span>{item.label}</span>
-                                    </div>
-                                    <div className="h-[8px] bg-[#ececec] w-full relative">
-                                        <div className="h-full bg-black animate-progress relative" style={{ width: item.value, "--target-width": item.value }}>
-                                            <span className="percentage-tag">{item.value}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
                         </div>
                     </div>
                 </section>
