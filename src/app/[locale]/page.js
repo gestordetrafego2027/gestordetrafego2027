@@ -153,11 +153,11 @@ export default function Home() {
             <main>
                 {/* HERO SECTION */}
                 <section
-                    className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0"
+                    className="relative w-full overflow-hidden bg-black m-0 p-0 border-0"
                     style={{ height: "105vh" }}
                 >
-                    <div className="absolute inset-0 z-0">
-                        {/* vídeo único de fundo — permanece em loop durante todos os slides */}
+                    <div className="absolute inset-0 z-0 bg-black">
+                        {/* vídeo único de fundo — sem imagem poster, sem slides de imagem */}
                         <video
                             src="/videos/house-mazzutti-fashion-film-hero.mp4"
                             autoPlay
@@ -165,7 +165,6 @@ export default function Home() {
                             loop
                             playsInline
                             preload="auto"
-                            poster="/images/home/banner-1.png"
                             className="absolute inset-0 w-full h-full object-cover object-top"
                         />
                         <div className="absolute inset-0 bg-black/20"></div>
