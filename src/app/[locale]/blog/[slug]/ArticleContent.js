@@ -268,8 +268,8 @@ export default function ArticleContent({ slug }) {
                 <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="text-xl font-headline italic text-white">HOUSE MAZZUTTI</div>
                     <div className="flex gap-12">
-                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-400 hover:text-white transition-colors" href="#">INSTAGRAM</a>
-                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-400 hover:text-white transition-colors" href="#">LINKEDIN</a>
+                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-400 hover:text-white transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</a>
+                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-400 hover:text-white transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</a>
                     </div>
                     <div className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-500">
                         © 2026 HOUSE MAZZUTTI · São Paulo / Global

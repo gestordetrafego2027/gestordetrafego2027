@@ -139,11 +139,11 @@ export default function CynthiaAndradePage() {
             {/* Navigation Links before footer */}
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">
                 <div className="flex justify-between items-center border-t border-outline-variant/15 pt-12">
-                    <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors" href="#">
+                    <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors" href="/portfolio-studio">
                         <span className="material-symbols-outlined text-sm">west</span>
                         <span className="font-inter text-[9px] uppercase tracking-[0.2em]">Projeto Anterior</span>
                     </Link>
-                    <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="#">
+                    <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="/portfolio-studio">
                         <span className="font-inter text-[9px] uppercase tracking-[0.2em]">Próximo Projeto</span>
                         <span className="material-symbols-outlined text-sm">east</span>
                     </Link>
@@ -155,8 +155,8 @@ export default function CynthiaAndradePage() {
                 <div className="flex flex-col items-center space-y-6">
                     <Link className="font-newsreader text-xl font-semibold tracking-widest text-white no-underline" href="/">HOUSE MAZZUTTI</Link>
                     <div className="flex space-x-8">
-                        <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="#">INSTAGRAM</Link>
-                        <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="#">LINKEDIN</Link>
+                        <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</Link>
+                        <Link className="text-white font-inter text-[10px] uppercase tracking-[0.2em] hover:opacity-70 transition-opacity" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</Link>
                     </div>
                     <p className="text-[#808080] font-inter text-[10px] tracking-wider">© 2026 House Mazzutti</p>
                 </div>
