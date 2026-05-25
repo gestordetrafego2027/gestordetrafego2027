@@ -89,16 +89,19 @@ export default function DeiseSmaniottoPage() {
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
                           <div onClick={() => openImg('/images/studio/deise-smaniotto/1.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/studio/deise-smaniotto/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Deise Smaniotto - Ensaio Pessoal House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/deise-smaniotto/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/deise-smaniotto/2.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/studio/deise-smaniotto/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Deise Smaniotto - Ensaio Pessoal House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/deise-smaniotto/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/deise-smaniotto/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/studio/deise-smaniotto/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Deise Smaniotto - Ensaio Pessoal House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/deise-smaniotto/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/deise-smaniotto/4.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 4" src="/images/studio/deise-smaniotto/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Deise Smaniotto - Ensaio Pessoal House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/deise-smaniotto/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          </div>
+                          <div onClick={() => openImg('/images/studio/deise-smaniotto/5.jpg')} className="cursor-pointer">
+                            <Image alt="Deise Smaniotto - Ensaio Pessoal House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/deise-smaniotto/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
