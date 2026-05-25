@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function DeiseSmaniottoPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -137,6 +138,8 @@ export default function DeiseSmaniottoPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="deise-smaniotto" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="deise-smaniotto" />
 
             {/* Navigation Links before footer */}

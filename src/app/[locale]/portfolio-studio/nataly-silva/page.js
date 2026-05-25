@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function NatalySilvaPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -88,31 +89,22 @@ export default function NatalySilvaPage() {
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
                           <div onClick={() => openImg('/images/studio/nataly-silva/1.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/studio/nataly-silva/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Nataly Silva - Book Studio House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/nataly-silva/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/nataly-silva/2.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/studio/nataly-silva/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Nataly Silva - Book Studio House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/nataly-silva/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/nataly-silva/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/studio/nataly-silva/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Nataly Silva - Book Studio House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/nataly-silva/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/nataly-silva/4.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 4" src="/images/studio/nataly-silva/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Nataly Silva - Book Studio House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/nataly-silva/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/nataly-silva/5.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 5" src="/images/studio/nataly-silva/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Nataly Silva - Book Studio House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/nataly-silva/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/nataly-silva/6.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 6" src="/images/studio/nataly-silva/6.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
-                          </div>
-                          <div onClick={() => openImg('/images/studio/nataly-silva/7.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 7" src="/images/studio/nataly-silva/7.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
-                          </div>
-                          <div onClick={() => openImg('/images/studio/nataly-silva/8.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 8" src="/images/studio/nataly-silva/8.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
-                          </div>
-                          <div onClick={() => openImg('/images/studio/nataly-silva/9.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 9" src="/images/studio/nataly-silva/9.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Nataly Silva - Book Studio House Mazzutti - Foto 6" style={{objectPosition: 'top'}} src="/images/studio/nataly-silva/6.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
@@ -152,6 +144,8 @@ export default function NatalySilvaPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="nataly-silva" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="nataly-silva" />
 
             {/* Navigation Links before footer */}

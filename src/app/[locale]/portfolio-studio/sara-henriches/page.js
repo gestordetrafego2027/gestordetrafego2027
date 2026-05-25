@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function SaraHenrichesPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -88,25 +89,28 @@ export default function SaraHenrichesPage() {
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
                           <div onClick={() => openImg('/images/studio/sara-henriches/1.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/sara-henriches/2.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/sara-henriches/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/studio/sara-henriches/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/sara-henriches/4.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 4" src="/images/studio/sara-henriches/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/sara-henriches/5.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 5" src="/images/studio/sara-henriches/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/sara-henriches/6.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 6" src="/images/studio/sara-henriches/6.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 6" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/6.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/sara-henriches/7.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 7" src="/images/studio/sara-henriches/7.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 7" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/7.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          </div>
+                          <div onClick={() => openImg('/images/studio/sara-henriches/8.jpg')} className="cursor-pointer">
+                            <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 8" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/8.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
@@ -146,6 +150,8 @@ export default function SaraHenrichesPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="sara-henriches" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="sara-henriches" />
 
             {/* Navigation Links before footer */}

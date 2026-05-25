@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function GabCruzPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -125,6 +126,8 @@ export default function GabCruzPage() {
                     </Link>
                 </div>
             </div>
+
+            <PortfolioVideo unit="studio" slug="gab-cruz" />
 
             <PortfolioCTA businessUnit="studio" projectSlug="gab-cruz" />
 

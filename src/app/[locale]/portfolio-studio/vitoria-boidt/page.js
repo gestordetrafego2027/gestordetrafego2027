@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function VitoriaBoidtPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -88,19 +89,22 @@ export default function VitoriaBoidtPage() {
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
                           <div onClick={() => openImg('/images/studio/vitoria-boidt/1.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/studio/vitoria-boidt/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Vitoria Boidt - Book Studio House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/vitoria-boidt/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/vitoria-boidt/2.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/studio/vitoria-boidt/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Vitoria Boidt - Book Studio House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/vitoria-boidt/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/vitoria-boidt/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/studio/vitoria-boidt/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Vitoria Boidt - Book Studio House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/vitoria-boidt/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/vitoria-boidt/4.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 4" src="/images/studio/vitoria-boidt/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Vitoria Boidt - Book Studio House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/vitoria-boidt/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/vitoria-boidt/5.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 5" src="/images/studio/vitoria-boidt/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Vitoria Boidt - Book Studio House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/vitoria-boidt/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          </div>
+                          <div onClick={() => openImg('/images/studio/vitoria-boidt/6.jpg')} className="cursor-pointer">
+                            <Image alt="Vitoria Boidt - Book Studio House Mazzutti - Foto 6" style={{objectPosition: 'top'}} src="/images/studio/vitoria-boidt/6.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
@@ -140,6 +144,8 @@ export default function VitoriaBoidtPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="vitoria-boidt" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="vitoria-boidt" />
 
             {/* Navigation Links before footer */}

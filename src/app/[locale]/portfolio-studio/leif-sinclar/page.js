@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function LeifSinclarPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -140,6 +141,8 @@ export default function LeifSinclarPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="leif-sinclar" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="leif-sinclar" />
 
             {/* Navigation Links before footer */}

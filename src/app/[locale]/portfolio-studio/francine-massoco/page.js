@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function FrancineMassocoPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -88,13 +89,19 @@ export default function FrancineMassocoPage() {
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
                           <div onClick={() => openImg('/images/studio/francine-massoco/1.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/studio/francine-massoco/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Francine Massoco - Book Studio House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/francine-massoco/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/francine-massoco/2.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/studio/francine-massoco/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Francine Massoco - Book Studio House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/francine-massoco/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/studio/francine-massoco/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/studio/francine-massoco/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Francine Massoco - Book Studio House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/francine-massoco/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          </div>
+                          <div onClick={() => openImg('/images/studio/francine-massoco/4.jpg')} className="cursor-pointer">
+                            <Image alt="Francine Massoco - Book Studio House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/francine-massoco/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          </div>
+                          <div onClick={() => openImg('/images/studio/francine-massoco/5.jpg')} className="cursor-pointer">
+                            <Image alt="Francine Massoco - Book Studio House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/francine-massoco/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
@@ -134,6 +141,8 @@ export default function FrancineMassocoPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="francine-massoco" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="francine-massoco" />
 
             {/* Navigation Links before footer */}

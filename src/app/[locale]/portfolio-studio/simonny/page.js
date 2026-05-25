@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function SimonnyPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -137,6 +138,8 @@ export default function SimonnyPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="simonny" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="simonny" />
 
             {/* Navigation Links before footer */}

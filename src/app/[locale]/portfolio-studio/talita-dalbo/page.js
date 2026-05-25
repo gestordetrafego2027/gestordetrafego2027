@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function TalitaDalbPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -140,6 +141,8 @@ export default function TalitaDalbPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="talita-dalbo" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="talita-dalbo" />
 
             {/* Navigation Links before footer */}

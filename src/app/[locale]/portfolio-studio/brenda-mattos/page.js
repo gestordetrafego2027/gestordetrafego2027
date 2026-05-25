@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function BrendaMattosPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -143,6 +144,8 @@ export default function BrendaMattosPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="brenda-mattos" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="brenda-mattos" />
 
             {/* Navigation Links before footer */}

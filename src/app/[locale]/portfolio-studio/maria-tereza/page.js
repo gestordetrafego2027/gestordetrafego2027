@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function MariaTerezaPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -137,6 +138,8 @@ export default function MariaTerezaPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="maria-tereza" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="maria-tereza" />
 
             {/* Navigation Links before footer */}

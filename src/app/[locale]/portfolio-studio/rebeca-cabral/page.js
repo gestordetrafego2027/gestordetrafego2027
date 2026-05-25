@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function RebecaCabralPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -140,6 +141,8 @@ export default function RebecaCabralPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="studio" slug="rebeca-cabral" />
+
             <PortfolioCTA businessUnit="studio" projectSlug="rebeca-cabral" />
 
             {/* Navigation Links before footer */}

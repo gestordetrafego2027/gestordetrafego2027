@@ -239,6 +239,22 @@ export default function PortfolioStudioPage() {
                             </div>
                         </Link>
 
+                        <Link href="/portfolio-studio/francielle-reis" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/studio/francielle-reis/capa.jpg" alt="Francielle Reis" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Francielle Reis</span>
+                            </div>
+                        </Link>
+
+                        <Link href="/portfolio-studio/emanuelly-terres" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/studio/emanuelly-terres/capa.jpg" alt="Emanuelly Terres" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Emanuelly Terres</span>
+                            </div>
+                        </Link>
+
                         <Link href="/portfolio-studio/andressa-gomiero" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
                             <Image src="/images/studio/andressa-gomiero/capa.jpg" alt="Andressa Gomiero" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
