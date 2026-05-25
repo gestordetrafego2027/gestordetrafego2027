@@ -116,14 +116,14 @@ export default function ComunidadePage() {
 
     const SocialIcons = () => (
         <>
-            <a className="text-white hover:text-zinc-300 transition-colors" href="#">
+            <a className="text-white hover:text-zinc-300 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener" aria-label="Instagram House Mazzutti">
                 <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
                     <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                 </svg>
             </a>
-            <a className="text-white hover:text-zinc-300 transition-colors" href="#">
+            <a className="text-white hover:text-zinc-300 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener" aria-label="LinkedIn House Mazzutti">
                 <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect height="12" width="4" x="2" y="9"></rect>
@@ -635,8 +635,8 @@ export default function ComunidadePage() {
                         </span>
                     </div>
                     <div className="flex space-x-10 mb-16">
-                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">Instagram</a>
-                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">LinkedIn</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>

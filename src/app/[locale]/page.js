@@ -583,10 +583,10 @@ export default function Home() {
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {[
-                                    { title: t('home.boutique_agencia_title'), subtitle: t('home.boutique_agencia_subtitle'), items: ["Branding project", "Web development", "Campanha integrada 360"] },
-                                    { title: t('home.boutique_studio_title'), subtitle: t('home.boutique_studio_subtitle'), items: ["Book model", "Ensaio profissional", "Cobertura pessoal"] },
-                                    { title: t('home.boutique_produtora_title'), subtitle: t('home.boutique_produtora_subtitle'), items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"] },
-                                    { title: t('home.boutique_comunidade_title'), subtitle: t('home.boutique_comunidade_subtitle'), items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e vagas"] }
+                                    { title: t('home.boutique_agencia_title'), subtitle: t('home.boutique_agencia_subtitle'), items: ["Branding project", "Web development", "Campanha integrada 360"], href: "/agencia" },
+                                    { title: t('home.boutique_studio_title'), subtitle: t('home.boutique_studio_subtitle'), items: ["Book model", "Ensaio profissional", "Cobertura pessoal"], href: "/studio" },
+                                    { title: t('home.boutique_produtora_title'), subtitle: t('home.boutique_produtora_subtitle'), items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"], href: "/produtora" },
+                                    { title: t('home.boutique_comunidade_title'), subtitle: t('home.boutique_comunidade_subtitle'), items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e vagas"], href: "/comunidade" }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
                                         <div>
@@ -601,7 +601,7 @@ export default function Home() {
                                                 ))}
                                             </ul>
                                         </div>
-                                        <button className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white">Saiba mais</button>
+                                        <Link href={card.href} className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white text-center block">Saiba mais</Link>
                                     </div>
                                 ))}
                             </div>
@@ -685,8 +685,8 @@ export default function Home() {
                         </span>
                     </div>
                     <div className="flex space-x-10 mb-16">
-                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">Instagram</a>
-                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="#">LinkedIn</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
+                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>

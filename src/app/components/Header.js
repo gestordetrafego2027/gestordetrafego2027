@@ -291,13 +291,13 @@ export default function Header({ variant = 'dark' }) {
                         letterSpacing:'0.2em', textTransform:'uppercase',
                         color:'#555', marginBottom:'16px'}}>FOLLOW US</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
-                        <a href="#" style={{fontFamily:'Newsreader, serif',
+                        <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener" style={{fontFamily:'Newsreader, serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',
                           textDecoration:'none', transition:'color 0.3s'}}
                           onMouseEnter={e => e.currentTarget.style.color='white'}
                           onMouseLeave={e => e.currentTarget.style.color='#aaa'}
                         >Instagram</a>
-                        <a href="#" style={{fontFamily:'Newsreader, serif',
+                        <a href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener" style={{fontFamily:'Newsreader, serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',
                           textDecoration:'none', transition:'color 0.3s'}}
                           onMouseEnter={e => e.currentTarget.style.color='white'}

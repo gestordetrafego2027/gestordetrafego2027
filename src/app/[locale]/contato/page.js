@@ -139,8 +139,8 @@ export default function ContatoPage() {
                         </span>
                     </div>
                     <div className="flex space-x-8 mb-12">
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">INSTAGRAM</a>
-                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="#">LINKEDIN</a>
+                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</a>
+                        <a className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-16">
                         <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/">HOME</Link>

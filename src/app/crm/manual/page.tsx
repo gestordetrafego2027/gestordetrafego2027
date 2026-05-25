@@ -2,16 +2,19 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Manual do CRM | House Mazzutti',
-  description: 'Manual completo de operação do CRM da House Mazzutti.',
+  description: 'Manual completo de operação do CRM da House Mazzutti — versão 2.0.',
 }
 
-/* ----------------------------------------------------------------------
- * Helpers de markup didático
- * -------------------------------------------------------------------- */
+/* ------------------------------------------------------------------
+ * Design system do manual
+ * ----------------------------------------------------------------- */
 
 function H2({ id, n, title }: { id: string; n: string; title: string }) {
   return (
-    <h2 id={id} className="scroll-mt-24 text-xl font-semibold tracking-tight border-b border-neutral-200 pb-2 mt-8">
+    <h2
+      id={id}
+      className="scroll-mt-8 text-xl font-semibold tracking-tight border-b border-neutral-200 pb-2 mt-10 mb-4"
+    >
       <span className="text-neutral-400 font-mono text-sm mr-2">{n}.</span>
       {title}
     </h2>
@@ -20,7 +23,7 @@ function H2({ id, n, title }: { id: string; n: string; title: string }) {
 
 function H3({ id, n, title }: { id: string; n: string; title: string }) {
   return (
-    <h3 id={id} className="scroll-mt-24 text-base font-semibold tracking-tight mt-6 mb-2">
+    <h3 id={id} className="scroll-mt-8 text-base font-semibold tracking-tight mt-6 mb-2">
       <span className="text-neutral-400 font-mono text-xs mr-2">{n}</span>
       {title}
     </h3>
@@ -29,7 +32,7 @@ function H3({ id, n, title }: { id: string; n: string; title: string }) {
 
 function Step({ n, children }: { n: number; children: React.ReactNode }) {
   return (
-    <li className="flex gap-3">
+    <li className="flex gap-3 text-sm">
       <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-neutral-900 text-white text-xs font-medium shrink-0 mt-0.5">
         {n}
       </span>
@@ -48,30 +51,23 @@ function Box({
   children: React.ReactNode
 }) {
   const styles: Record<string, string> = {
-    info: 'border-blue-200 bg-blue-50 text-blue-900',
-    warn: 'border-amber-200 bg-amber-50 text-amber-900',
-    tip: 'border-emerald-200 bg-emerald-50 text-emerald-900',
-    do: 'border-emerald-200 bg-emerald-50 text-emerald-900',
-    dont: 'border-rose-200 bg-rose-50 text-rose-900',
+    info:  'border-blue-200 bg-blue-50 text-blue-900',
+    warn:  'border-amber-200 bg-amber-50 text-amber-900',
+    tip:   'border-emerald-200 bg-emerald-50 text-emerald-900',
+    do:    'border-emerald-200 bg-emerald-50 text-emerald-900',
+    dont:  'border-rose-200 bg-rose-50 text-rose-900',
   }
   const icons: Record<string, string> = {
     info: 'ℹ️', warn: '⚠️', tip: '💡', do: '✅', dont: '🚫',
   }
+  const defaultTitle: Record<string, string> = {
+    info: 'Nota', warn: 'Atenção', tip: 'Dica', do: 'Faça', dont: 'Não faça',
+  }
   return (
     <div className={`rounded-lg border px-4 py-3 my-3 text-sm ${styles[tone]}`}>
-      <div className="font-medium mb-1">
-        {icons[tone]} {title ?? (tone === 'warn' ? 'Atenção' : tone === 'tip' ? 'Dica' : tone === 'do' ? 'Faça' : tone === 'dont' ? 'Não faça' : 'Nota')}
-      </div>
+      <div className="font-medium mb-1">{icons[tone]} {title ?? defaultTitle[tone]}</div>
       <div>{children}</div>
     </div>
-  )
-}
-
-function K({ children }: { children: React.ReactNode }) {
-  return (
-    <kbd className="inline-block rounded border border-neutral-300 bg-neutral-100 px-1.5 py-0.5 text-[11px] font-mono leading-none">
-      {children}
-    </kbd>
   )
 }
 
@@ -83,55 +79,73 @@ function Path({ children }: { children: React.ReactNode }) {
   )
 }
 
-/* ----------------------------------------------------------------------
- * Sumário (uma lista, com link âncora pra cada seção)
- * -------------------------------------------------------------------- */
+function Badge({ color, children }: { color: string; children: React.ReactNode }) {
+  const map: Record<string, string> = {
+    violet: 'bg-violet-100 text-violet-700',
+    blue:   'bg-blue-100 text-blue-700',
+    amber:  'bg-amber-100 text-amber-700',
+    rose:   'bg-rose-100 text-rose-700',
+    emerald:'bg-emerald-100 text-emerald-700',
+    neutral:'bg-neutral-100 text-neutral-700',
+  }
+  return (
+    <span className={`rounded px-2 py-0.5 text-[10px] uppercase tracking-wide font-medium mr-2 ${map[color] ?? map.neutral}`}>
+      {children}
+    </span>
+  )
+}
+
+/* ------------------------------------------------------------------
+ * Sumário
+ * ----------------------------------------------------------------- */
 
 const TOC = [
-  { id: 'intro', n: '1', label: 'Bem-vindo ao CRM HM' },
-  { id: 'login', n: '2', label: 'Login, perfis e permissões' },
-  { id: 'tour', n: '3', label: 'Tour pela interface' },
-  { id: 'licao-1', n: '4', label: 'Lição 1 — Receber e abrir um lead' },
-  { id: 'licao-2', n: '5', label: 'Lição 2 — Trabalhar um lead (status, atividades, notas)' },
-  { id: 'licao-3', n: '6', label: 'Lição 3 — Criar uma proposta' },
-  { id: 'licao-4', n: '7', label: 'Lição 4 — Enviar proposta pelo link público' },
-  { id: 'licao-5', n: '8', label: 'Lição 5 — Aceite, fatura e onboarding' },
-  { id: 'licao-6', n: '9', label: 'Lição 6 — Registrar pagamento e fechar o ciclo' },
-  { id: 'licao-7', n: '10', label: 'Lição 7 — Pipeline visual (Kanban)' },
-  { id: 'licao-8', n: '11', label: 'Lição 8 — Anexos (contratos, briefings, logos)' },
-  { id: 'licao-9', n: '12', label: 'Lição 9 — Automações' },
-  { id: 'licao-10', n: '13', label: 'Lição 10 — Tags e organização' },
-  { id: 'relatorios', n: '14', label: 'Relatórios e métricas' },
-  { id: 'exports', n: '15', label: 'Exportações CSV' },
-  { id: 'busca', n: '16', label: 'Busca global' },
-  { id: 'sinais', n: '17', label: 'Sinais visuais do nav' },
-  { id: 'glossario', n: '18', label: 'Glossário' },
-  { id: 'boas-praticas', n: '19', label: 'Boas práticas' },
-  { id: 'faq', n: '20', label: 'FAQ e solução de problemas' },
-  { id: 'cheatsheet', n: '21', label: 'Cheatsheet — atalhos de URL' },
+  { id: 'intro',       n: '1',  label: 'O que é o CRM HM' },
+  { id: 'login',       n: '2',  label: 'Login, perfis e permissões' },
+  { id: 'sidebar',     n: '3',  label: 'Barra lateral — navegação' },
+  { id: 'leads',       n: '4',  label: 'Leads — receber e trabalhar' },
+  { id: 'proposta',    n: '5',  label: 'Proposta comercial' },
+  { id: 'fatura',      n: '6',  label: 'Fatura e pagamento' },
+  { id: 'clientes',    n: '7',  label: 'Clientes e LTV' },
+  { id: 'kanban',      n: '8',  label: 'Kanban de oportunidades' },
+  { id: 'newsletter',  n: '9',  label: 'Newsletter — inscritos e disparos' },
+  { id: 'academy',     n: '10', label: 'Academy — pedidos e certificados' },
+  { id: 'campanhas',   n: '11', label: 'Campanhas e ROAS' },
+  { id: 'automations', n: '12', label: 'Automações' },
+  { id: 'anexos',      n: '13', label: 'Anexos' },
+  { id: 'tags',        n: '14', label: 'Tags' },
+  { id: 'relatorios',  n: '15', label: 'Relatórios e métricas' },
+  { id: 'exports',     n: '16', label: 'Exportações CSV' },
+  { id: 'busca',       n: '17', label: 'Busca global' },
+  { id: 'boas-praticas', n: '18', label: 'Boas práticas' },
+  { id: 'faq',         n: '19', label: 'FAQ e solução de problemas' },
+  { id: 'glossario',   n: '20', label: 'Glossário' },
+  { id: 'cheatsheet',  n: '21', label: 'Cheatsheet — atalhos de URL' },
 ]
 
-/* ----------------------------------------------------------------------
+/* ------------------------------------------------------------------
  * Page
- * -------------------------------------------------------------------- */
+ * ----------------------------------------------------------------- */
 
 export default function ManualPage() {
   return (
-    <div className="space-y-6 max-w-4xl">
-      <header>
-        <h1 className="text-3xl font-bold tracking-tight">Manual do CRM House Mazzutti</h1>
+    <div className="max-w-4xl space-y-2">
+
+      {/* Cabeçalho */}
+      <header className="mb-6">
+        <h1 className="text-3xl font-bold tracking-tight">Manual do CRM — House Mazzutti</h1>
         <p className="text-sm text-neutral-500 mt-1">
-          Versão 1.0 · Treinamento da equipe comercial, marketing e financeiro.
-          Leia na ordem para a primeira vez; use o sumário para consulta rápida depois.
+          Versão 2.0 · Atualizado em maio/2026 · Cobre todos os módulos: Leads, Propostas, Faturas,
+          Clientes, Newsletter, Academy, Campanhas e Automações.
         </p>
       </header>
 
       {/* Sumário */}
-      <nav className="rounded-lg border border-neutral-200 bg-white p-5">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-3">
+      <nav className="rounded-xl border border-neutral-200 bg-white p-5 mb-4">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-3">
           Sumário
         </h2>
-        <ol className="grid grid-cols-1 md:grid-cols-2 gap-y-1 gap-x-4 text-sm">
+        <ol className="grid grid-cols-1 md:grid-cols-2 gap-y-1 gap-x-6 text-sm">
           {TOC.map((t) => (
             <li key={t.id}>
               <a href={`#${t.id}`} className="text-blue-600 hover:underline">
@@ -143,754 +157,698 @@ export default function ManualPage() {
         </ol>
       </nav>
 
-      {/* =================================================================
-          1. INTRO
-      ================================================================== */}
-      <H2 id="intro" n="1" title="Bem-vindo ao CRM HM" />
-      <p>
+      {/* ==============================================================
+          1. O QUE É O CRM
+      ============================================================== */}
+      <H2 id="intro" n="1" title="O que é o CRM HM" />
+      <p className="text-sm leading-relaxed">
         O <strong>CRM da House Mazzutti</strong> é o sistema único que registra <em>tudo</em> que
-        acontece com clientes do grupo (Studio, Agência, Produtora e Comunidade): desde o momento
-        em que alguém preenche um formulário no site, até a última fatura paga.
+        envolve clientes do grupo — Studio, Agência, Produtora e Comunidade. Do primeiro formulário
+        preenchido no site até a última fatura paga, cada interação fica registrada e rastreável.
       </p>
-      <p className="mt-2">
+      <p className="text-sm leading-relaxed mt-2">
         Ele substitui planilhas, grupos de WhatsApp dispersos e anotações soltas. Toda equipe
-        trabalha do mesmo lugar e o histórico do cliente fica salvo para sempre.
+        trabalha do mesmo lugar e o histórico do cliente fica preservado para sempre.
       </p>
-      <Box tone="tip" title="Princípio número 1">
-        <strong>Se aconteceu, registre no CRM.</strong> Ligação, mensagem, reunião, observação
-        importante. Em 6 meses ninguém lembra de cor; o CRM lembra.
-      </Box>
 
       <H3 id="o-que-vc-faz" n="1.1" title="O que você consegue fazer aqui" />
-      <ul className="list-disc list-inside space-y-1 text-sm">
+      <ul className="list-disc list-inside text-sm space-y-1 ml-2">
         <li>Ver todos os leads recebidos pelos formulários do site, em tempo real.</li>
         <li>Atualizar status, anotar observações e registrar cada interação.</li>
         <li>Criar propostas comerciais com catálogo de serviços pré-cadastrado.</li>
-        <li>Mandar a proposta pro cliente por um <strong>link público</strong> — ele aceita sozinho.</li>
-        <li>Gerar fatura, registrar pagamento, ver o LTV de cada cliente.</li>
-        <li>Acompanhar pipeline em um Kanban arrastável.</li>
-        <li>Anexar arquivos (contratos, briefings, logos) em cada lead/cliente.</li>
-        <li>Configurar automações sem código (regras de “quando X, faça Y”).</li>
-        <li>Exportar tudo em CSV para Excel/contabilidade.</li>
+        <li>Enviar propostas por <strong>link público</strong> — o cliente aceita com 1 clique.</li>
+        <li>Gerar fatura, registrar pagamento e acompanhar LTV de cada cliente.</li>
+        <li>Acompanhar pipeline em Kanban arrastável.</li>
+        <li>Gerenciar inscritos da newsletter e disparar e-mails de novos artigos.</li>
+        <li>Visualizar pedidos e certificados do Academy.</li>
+        <li>Configurar automações sem código (regras "quando X, faça Y").</li>
+        <li>Exportar tudo em CSV para Excel ou contabilidade.</li>
       </ul>
 
-      {/* =================================================================
+      <Box tone="tip" title="Princípio número 1">
+        <strong>Se aconteceu, registre no CRM.</strong> Ligação, mensagem, reunião, observação
+        importante. Em 6 meses ninguém lembra de cor — o CRM lembra.
+      </Box>
+
+      {/* ==============================================================
           2. LOGIN
-      ================================================================== */}
+      ============================================================== */}
       <H2 id="login" n="2" title="Login, perfis e permissões" />
-      <p>
-        Acesse <Path>/login</Path> com o email cadastrado. Se for a primeira vez ou esqueceu a
-        senha, peça pro admin (Angelo) reenviar o convite. Depois do login você cai em <Path>/crm</Path>.
+      <p className="text-sm leading-relaxed">
+        Acesse <Path>/login</Path> com o e-mail cadastrado. Se for a primeira vez ou esqueceu a
+        senha, peça ao admin (Angelo) reenviar o convite. Após o login você é redirecionado para{' '}
+        <Path>/crm</Path> (Dashboard).
       </p>
 
       <H3 id="perfis" n="2.1" title="Tipos de perfil" />
-      <ul className="space-y-2 text-sm">
+      <ul className="space-y-3 text-sm">
         <li>
-          <span className="rounded bg-violet-100 text-violet-700 text-[10px] px-2 py-0.5 uppercase mr-2">admin</span>
-          Vê todos os dados de todas as unidades. Pode editar automações, tags, promover usuários.
-          Hoje: Angelo Mazzutti.
+          <Badge color="violet">admin</Badge>
+          Vê todos os dados de todas as unidades. Pode gerenciar automações, tags, usuários e
+          módulos de admin. Hoje: <strong>Angelo Mazzutti</strong>.
         </li>
         <li>
-          <span className="rounded bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 uppercase mr-2">unit: studio</span>
-          Gestor de uma unidade específica. Vê só leads/clientes/propostas/faturas da sua unidade.
-          Exemplo: gestor do Studio vê apenas leads marcados como <em>business_unit = studio</em>.
+          <Badge color="blue">staff</Badge>
+          Acesso amplo ao CRM sem as funções administrativas restritas ao admin.
+          Exemplo: <strong>Mateus Sacavem</strong>.
         </li>
         <li>
-          <span className="rounded bg-neutral-100 text-neutral-700 text-[10px] px-2 py-0.5 uppercase mr-2">staff</span>
-          Usuário comum (atendente, comercial). Vê os dados que o admin liberou.
+          <Badge color="neutral">unit: studio</Badge>
+          Gestor de uma unidade. Vê apenas leads/clientes/propostas/faturas da sua unidade
+          (filtrado por <Path>business_unit</Path>).
         </li>
       </ul>
       <Box tone="info">
-        Seu perfil aparece como badge no canto superior direito do nav. Se não tem badge nenhum,
-        peça ao admin para revisar suas permissões.
+        Seu perfil aparece como badge no rodapé da barra lateral. Se não há badge, peça ao admin
+        para revisar suas permissões.
       </Box>
 
-      {/* =================================================================
-          3. TOUR
-      ================================================================== */}
-      <H2 id="tour" n="3" title="Tour pela interface" />
-      <p>
-        Toda página do CRM compartilha o mesmo cabeçalho. Da esquerda pra direita:
+      {/* ==============================================================
+          3. SIDEBAR — NAVEGAÇÃO
+      ============================================================== */}
+      <H2 id="sidebar" n="3" title="Barra lateral — navegação" />
+      <p className="text-sm leading-relaxed">
+        O CRM usa uma <strong>barra lateral retrátil</strong> no lado esquerdo da tela. Ela pode ser
+        expandida (w-56) ou colapsada para ícones (w-14) clicando no botão <strong>‹</strong>/
+        <strong>›</strong> no topo da barra.
       </p>
-      <ul className="list-disc list-inside text-sm space-y-1">
-        <li><strong>HM CRM</strong> — logo, volta pro Dashboard.</li>
-        <li><strong>Leads, Clientes, Oportunidades, Propostas, Campanhas, Automações, Ajuda, Manual</strong> — atalhos pras seções.</li>
-        <li><strong>Campo de busca</strong> (md+) — busca global cross-tabela.</li>
-        <li><strong>Badge de perfil</strong> — admin (violeta) ou unit (azul).</li>
-        <li><strong>Email do usuário</strong> + botão <strong>Sair</strong>.</li>
+
+      <H3 id="grupos-nav" n="3.1" title="Grupos de navegação" />
+      <div className="text-sm space-y-3">
+        <div className="rounded-lg border border-neutral-100 bg-white p-4">
+          <p className="font-semibold text-neutral-700 mb-2 text-xs uppercase tracking-widest">Principal</p>
+          <ul className="space-y-1">
+            <li><strong>◈ Dashboard</strong> — KPIs, gráficos, atividade recente.</li>
+            <li><strong>⟡ Leads</strong> — lista completa com badge âmbar (leads em aberto).</li>
+            <li><strong>◎ Clientes</strong> — base de clientes com badge vermelho (faturas vencidas).</li>
+            <li><strong>◇ Oportunidades</strong> — Kanban de negociações.</li>
+          </ul>
+        </div>
+        <div className="rounded-lg border border-neutral-100 bg-white p-4">
+          <p className="font-semibold text-neutral-700 mb-2 text-xs uppercase tracking-widest">Financeiro</p>
+          <ul className="space-y-1">
+            <li><strong>▤ Propostas</strong> — todas as propostas criadas.</li>
+            <li><strong>▦ Faturas</strong> — emitidas, pagas, vencidas.</li>
+          </ul>
+        </div>
+        <div className="rounded-lg border border-neutral-100 bg-white p-4">
+          <p className="font-semibold text-neutral-700 mb-2 text-xs uppercase tracking-widest">Marketing</p>
+          <ul className="space-y-1">
+            <li><strong>◉ Campanhas</strong> — atribuição UTM e ROAS.</li>
+            <li><strong>✉ Newsletter</strong> — inscritos, histórico de disparos, envio por artigo.</li>
+            <li><strong>⟳ Automações</strong> — regras e histórico de execuções.</li>
+            <li><strong>▨ Relatórios</strong> — métricas detalhadas.</li>
+          </ul>
+        </div>
+        <div className="rounded-lg border border-neutral-100 bg-white p-4">
+          <p className="font-semibold text-neutral-700 mb-2 text-xs uppercase tracking-widest">Configuração</p>
+          <ul className="space-y-1">
+            <li><strong>▣ Catálogo</strong> — serviços e pacotes pré-cadastrados.</li>
+            <li><strong>◈ Tags</strong> — rótulos personalizados.</li>
+            <li><strong>▥ Manual</strong> — este documento.</li>
+            <li><strong>◌ Ajuda</strong> — guia rápido de links.</li>
+          </ul>
+        </div>
+        <div className="rounded-lg border border-neutral-100 bg-white p-4">
+          <p className="font-semibold text-neutral-700 mb-2 text-xs uppercase tracking-widest">Admin <Badge color="violet">admin only</Badge></p>
+          <ul className="space-y-1">
+            <li><strong>◑ Academy</strong> — pedidos, certificados, produtos.</li>
+            <li><strong>◐ Usuários</strong> — gerenciar perfis e permissões.</li>
+            <li><strong>◒ Auditoria</strong> — log de ações críticas do sistema.</li>
+          </ul>
+        </div>
+      </div>
+
+      <H3 id="sinais-sidebar" n="3.2" title="Sinais visuais (badges)" />
+      <ul className="text-sm space-y-1.5">
+        <li>
+          <span className="inline-block w-3 h-3 rounded-full bg-amber-400 align-middle mr-2" />
+          <strong>Âmbar em Leads</strong> — leads em status <em>novo</em> ou <em>em_contato</em>. Precisa qualificar.
+        </li>
+        <li>
+          <span className="inline-block w-3 h-3 rounded-full bg-rose-500 align-middle mr-2" />
+          <strong>Vermelho em Clientes</strong> — faturas vencidas sem pagamento. Precisa cobrar.
+        </li>
       </ul>
-      <Box tone="tip">
-        Veja os <a href="#sinais" className="underline">sinais visuais do nav</a> (bolinhas
-        coloridas indicando alertas).
-      </Box>
 
-      {/* =================================================================
-          LIÇÃO 1 — RECEBER E ABRIR UM LEAD
-      ================================================================== */}
-      <H2 id="licao-1" n="4" title="Lição 1 — Receber e abrir um lead" />
-      <p>
-        Toda vez que alguém preenche um dos formulários do site
-        (housemazzutti.com/studio, /agencia, /produtora, /comunidade), um lead é criado
-        automaticamente. Você verá em <Link href="/crm/leads" className="text-blue-600 underline">/crm/leads</Link>.
+      <H3 id="rodape-sidebar" n="3.3" title="Rodapé da sidebar" />
+      <p className="text-sm">
+        No final da barra lateral: avatar com inicial do e-mail, e-mail do usuário logado, badge de
+        perfil (admin/staff/unit), link <Path>← Site</Path> (abre housemazzutti.com) e botão{' '}
+        <strong>Sair</strong>.
       </p>
 
-      <H3 id="abrir-lead" n="4.1" title="Como abrir e ler um lead" />
-      <ol className="space-y-3 text-sm">
+      {/* ==============================================================
+          4. LEADS
+      ============================================================== */}
+      <H2 id="leads" n="4" title="Leads — receber e trabalhar" />
+
+      <H3 id="receber-lead" n="4.1" title="Como chegam os leads" />
+      <p className="text-sm">
+        Toda vez que alguém preenche um formulário em{' '}
+        <Path>housemazzutti.com</Path> (formulários das páginas Studio, Agência, Produtora,
+        Comunidade ou qualquer formulário de contato), um lead é criado automaticamente via Edge
+        Function <Path>submit_lead</Path>. Acesse em{' '}
+        <Link href="/crm/leads" className="text-blue-600 underline">/crm/leads</Link>.
+      </p>
+
+      <H3 id="abrir-lead" n="4.2" title="Abrir e ler um lead" />
+      <ol className="space-y-3 mt-2">
         <Step n={1}>
           Vá em <Link href="/crm/leads" className="text-blue-600 underline">/crm/leads</Link>.
-          A lista mostra os 50 mais recentes, com nome, email, status (badge âmbar) e fonte.
+          Lista mostra os 50 mais recentes com nome, e-mail, status (badge âmbar = novo) e fonte.
         </Step>
-        <Step n={2}>
-          Clique no nome do lead. Você vai pro detalhe — a página mais importante do CRM.
-        </Step>
+        <Step n={2}>Clique no nome do lead para abrir o detalhe.</Step>
         <Step n={3}>
-          Leia o <strong>cabeçalho</strong>: nome, email, telefone, cidade, status, segment
-          (commercial/talents), lead_type, fonte (de onde veio).
+          Leia o <strong>cabeçalho</strong>: nome, e-mail, telefone, cidade, status, segment
+          (commercial / talents), lead_type e fonte de origem.
         </Step>
         <Step n={4}>
-          Na sidebar direita você vê <strong>Observações</strong>, <strong>Serviços de interesse</strong>{' '}
-          (com as respostas do formulário em JSON colapsável), <strong>Anexos</strong>,{' '}
-          <strong>Propostas</strong> e <strong>Oportunidades</strong> vinculadas.
+          Sidebar direita: <strong>Observações</strong>, <strong>Serviços de interesse</strong>
+          (respostas do formulário em JSON), <strong>Anexos</strong>, <strong>Propostas</strong>
+          e <strong>Oportunidades</strong> vinculadas.
         </Step>
         <Step n={5}>
-          O bloco principal é a <strong>Timeline</strong> — histórico cronológico de todas as
-          interações (ligações, emails, WhatsApp, mudanças de status, propostas enviadas).
+          Bloco principal: <strong>Timeline</strong> — histórico de todas as interações em ordem
+          cronológica (ligações, mensagens, mudanças de status, propostas enviadas).
         </Step>
       </ol>
 
-      <Box tone="do">
-        Sempre comece o dia abrindo <Path>/crm/leads</Path> e clicando nos leads com status <em>novo</em>
-        (badge âmbar no nav indica quantos existem).
-      </Box>
-
-      <H3 id="cadastrar-manual" n="4.2" title="Cadastrar lead manualmente" />
-      <p>
-        Quando o contato chegou por WhatsApp, indicação ou DM no Instagram (fora do formulário):
-      </p>
-      <ol className="space-y-3 text-sm">
-        <Step n={1}>
-          Vá em <Link href="/crm/leads/new" className="text-blue-600 underline">/crm/leads/new</Link>.
-        </Step>
-        <Step n={2}>
-          Preencha pelo menos: nome, segment (commercial/talents), lead_type (cliente_studio,
-          cliente_agencia, parceiro, etc.) e source (origem — &quot;whatsapp&quot;, &quot;indicação X&quot;).
-        </Step>
-        <Step n={3}>
-          Salvar. O lead já aparece no topo da lista com status <em>novo</em>.
-        </Step>
-      </ol>
-
-      {/* =================================================================
-          LIÇÃO 2 — TRABALHAR UM LEAD
-      ================================================================== */}
-      <H2 id="licao-2" n="5" title="Lição 2 — Trabalhar um lead" />
-      <p>Dentro do detalhe do lead, três ações você vai fazer o tempo todo:</p>
-
-      <H3 id="status" n="5.1" title="Mudar o status (qualificação)" />
-      <p>O status sinaliza onde o lead está no funil:</p>
-      <ul className="grid grid-cols-2 gap-1 text-sm">
-        <li>• <code className="text-xs bg-neutral-100 px-1 rounded">novo</code> — acabou de chegar</li>
-        <li>• <code className="text-xs bg-neutral-100 px-1 rounded">em_contato</code> — já conversou</li>
-        <li>• <code className="text-xs bg-neutral-100 px-1 rounded">qualificado</code> — tem fit + budget</li>
-        <li>• <code className="text-xs bg-neutral-100 px-1 rounded">proposta_enviada</code> — recebeu proposta</li>
-        <li>• <code className="text-xs bg-neutral-100 px-1 rounded">negociacao</code> — discutindo termos</li>
-        <li>• <code className="text-xs bg-neutral-100 px-1 rounded">ganho</code> — comprou 🎉</li>
-        <li>• <code className="text-xs bg-neutral-100 px-1 rounded">perdido</code> — não vai fechar</li>
-        <li>• <code className="text-xs bg-neutral-100 px-1 rounded">arquivado</code> — sumiu, abandonar</li>
-      </ul>
+      <H3 id="status-lead" n="4.3" title="Status do lead (funil)" />
+      <div className="grid grid-cols-2 gap-1 text-sm mt-2">
+        {[
+          ['novo', 'Acabou de chegar'],
+          ['em_contato', 'Já conversou'],
+          ['qualificado', 'Tem fit + budget'],
+          ['proposta_enviada', 'Recebeu proposta'],
+          ['negociacao', 'Discutindo termos'],
+          ['ganho', 'Comprou 🎉'],
+          ['perdido', 'Não vai fechar'],
+          ['arquivado', 'Sumiu / abandonar'],
+        ].map(([s, d]) => (
+          <div key={s} className="border border-neutral-100 rounded p-2">
+            <code className="text-[11px] bg-neutral-100 px-1 rounded">{s}</code>
+            <span className="text-neutral-500 text-xs ml-2">{d}</span>
+          </div>
+        ))}
+      </div>
       <p className="text-sm mt-2">
-        No cabeçalho do detalhe há um <strong>dropdown</strong> de status + botão{' '}
-        <strong>Atualizar</strong>. Toda mudança vira uma entrada na timeline automaticamente.
+        Troque o status pelo dropdown no cabeçalho do detalhe + botão <strong>Atualizar</strong>.
+        Toda mudança gera entrada automática na timeline.
       </p>
 
-      <H3 id="atividades" n="5.2" title="Registrar uma atividade" />
-      <p>
-        Logo abaixo da timeline há um formulário rápido: escolha o tipo (📞 call, ✉️ email,
-        💬 whatsapp, 🤝 meeting, ✅ task, 📝 note), digite um título curto e detalhes opcionais.
+      <H3 id="atividades" n="4.4" title="Registrar atividade" />
+      <p className="text-sm">
+        Abaixo da timeline há um formulário rápido: escolha o tipo (📞 call, ✉️ email, 💬 whatsapp,
+        🤝 meeting, ✅ task, 📝 note), título curto e detalhes opcionais.
       </p>
-      <Box tone="do" title="Bom registro de atividade">
-        <p className="font-mono text-xs">
-          📞 call · &quot;Liguei, falei com Maria, vai pedir orçamento na próxima semana&quot;
-        </p>
+      <Box tone="do" title="Bom registro">
+        <span className="font-mono text-xs">📞 call · "Liguei, Maria vai pedir orçamento na próxima semana"</span>
       </Box>
       <Box tone="dont" title="Registro ruim">
-        <p className="font-mono text-xs">📞 call · &quot;liguei&quot;</p>
+        <span className="font-mono text-xs">📞 call · "liguei"</span>
       </Box>
 
-      <H3 id="notas" n="5.3" title="Adicionar uma observação (nota interna)" />
-      <p>
-        Notas ficam na sidebar e servem pra observações que não são uma “interação” em si:
-        contexto sobre o cliente, alerta interno, lembrete pra próxima conversa.
+      <H3 id="lead-manual" n="4.5" title="Cadastrar lead manualmente" />
+      <p className="text-sm">
+        Para contatos vindos por WhatsApp, DM ou indicação, vá em{' '}
+        <Link href="/crm/leads/new" className="text-blue-600 underline">/crm/leads/new</Link>{' '}
+        e preencha: nome, segment, lead_type e source (origem — "whatsapp", "indicação X").
       </p>
-      <Box tone="tip">
-        Pense em atividade como “o que aconteceu” e nota como “o que eu preciso lembrar”.
-      </Box>
 
-      <H3 id="promover" n="5.4" title="Promover lead a cliente (manual)" />
-      <p>
-        No cabeçalho aparece o botão <strong>→ Promover a Cliente</strong> com campo de valor.
-        Use quando o cliente já fechou mas você ainda não emitiu fatura. Cria registro em{' '}
-        <Path>clients</Path> + oportunidade ganha + atividade.
+      <H3 id="promover" n="4.6" title="Promover lead a cliente" />
+      <p className="text-sm">
+        No cabeçalho do lead aparece o botão <strong>→ Promover a Cliente</strong>. Use quando o
+        cliente fechou mas você ainda não gerou fatura via proposta. Se usar o fluxo proposta →
+        aceite → fatura, a promoção é automática.
       </p>
-      <Box tone="info">
-        Se você for direto pro caminho “proposta aceita → gerar fatura”, a promoção é automática.
-        Não precisa fazer manual.
-      </Box>
 
-      {/* =================================================================
-          LIÇÃO 3 — CRIAR PROPOSTA
-      ================================================================== */}
-      <H2 id="licao-3" n="6" title="Lição 3 — Criar uma proposta" />
-      <p>Dentro do detalhe do lead, clique <strong>+ Nova proposta</strong> (botão azul no cabeçalho).</p>
+      {/* ==============================================================
+          5. PROPOSTA
+      ============================================================== */}
+      <H2 id="proposta" n="5" title="Proposta comercial" />
 
-      <ol className="space-y-3 text-sm">
-        <Step n={1}>
-          <strong>Título</strong> — já vem preenchido como “Proposta — Nome do Cliente”. Edite se quiser.
-        </Step>
-        <Step n={2}>
-          <strong>Válida até</strong> — data limite pro cliente aceitar. Use 30 dias como padrão.
-        </Step>
-        <Step n={3}>
-          <strong>Desconto (R$)</strong> — em reais, não percentual. Deixe 0 se não houver.
-        </Step>
-        <Step n={4}>
-          <strong>Pacotes do catálogo</strong> — marque os checkboxes dos pacotes/serviços que o cliente quer.
-          Os pacotes vêm pré-cadastrados em <Path>service_packages</Path>.
-        </Step>
-        <Step n={5}>
-          <strong>Add-ons globais</strong> — extras vendidos em qualquer unidade (ex: produção de figurino).
-        </Step>
-        <Step n={6}>
-          <strong>Observações internas</strong> — só você vê. Notas sobre escopo, condições.
-        </Step>
-        <Step n={7}>
-          Clique <strong>Criar proposta</strong>. Você é redirecionado de volta ao detalhe do lead,
-          com a nova proposta listada na sidebar e uma atividade <em>quote_sent</em> na timeline.
-        </Step>
+      <H3 id="criar-proposta" n="5.1" title="Criar proposta" />
+      <p className="text-sm">
+        Dentro do detalhe do lead, clique <strong>+ Nova proposta</strong>.
+      </p>
+      <ol className="space-y-2 mt-2">
+        <Step n={1}><strong>Título</strong> — já vem como "Proposta — Nome do Cliente". Edite se precisar.</Step>
+        <Step n={2}><strong>Válida até</strong> — data limite de aceite. Padrão: 30 dias.</Step>
+        <Step n={3}><strong>Desconto (R$)</strong> — em reais. Zero se não houver.</Step>
+        <Step n={4}><strong>Pacotes do catálogo</strong> — marque os itens desejados pelo cliente.</Step>
+        <Step n={5}><strong>Add-ons globais</strong> — extras aplicáveis a qualquer unidade.</Step>
+        <Step n={6}><strong>Observações internas</strong> — só equipe vê. Escopo, condições especiais.</Step>
+        <Step n={7}>Clique <strong>Criar proposta</strong>. Voltará ao lead com a proposta listada e atividade <em>quote_sent</em> na timeline.</Step>
       </ol>
+      <Box tone="warn">Selecione ao menos um pacote ou add-on — o sistema rejeita propostas vazias.</Box>
 
-      <Box tone="warn">
-        Se você esquecer de marcar nenhum item, o sistema rejeita e mostra erro. Selecione ao
-        menos um pacote ou addon.
-      </Box>
-
-      {/* =================================================================
-          LIÇÃO 4 — ENVIAR PROPOSTA
-      ================================================================== */}
-      <H2 id="licao-4" n="7" title="Lição 4 — Enviar proposta pelo link público" />
-      <p>
-        Abra a proposta criada (clique no título dela na sidebar do lead, ou vá em{' '}
-        <Link href="/crm/quotes" className="text-blue-600 underline">/crm/quotes</Link>).
-      </p>
-
-      <H3 id="acoes-proposta" n="7.1" title="Botões de ação" />
-      <ul className="space-y-2 text-sm">
-        <li>
-          🖨️ <strong>Imprimir / Salvar PDF</strong> — abre versão A4 limpa em nova aba. Cmd+P
-          → “Salvar como PDF”. Anexe em email se preferir.
-        </li>
-        <li>
-          🔗 <strong>Copiar link público</strong> — copia URL{' '}
-          <Path>https://housemazzutti.com/p/&lt;token&gt;</Path> pra área de transferência.
-          Cole no WhatsApp do cliente.
-        </li>
-        <li>
-          <strong>Marcar como enviada</strong> — muda status para <em>enviado</em> e registra o
-          horário. Use após enviar o link.
-        </li>
-        <li>
-          ✓ <strong>Marcar como aceita</strong> — força aceite (caso o cliente confirmou por
-          telefone e não vai clicar no link).
-        </li>
-        <li>
-          ✗ <strong>Recusada</strong> — fecha a proposta sem virar fatura.
-        </li>
-        <li>
-          <strong>Gerar fatura</strong> — só aparece após aceite. Veja Lição 5.
-        </li>
+      <H3 id="enviar-proposta" n="5.2" title="Enviar a proposta" />
+      <ul className="text-sm space-y-2">
+        <li>🔗 <strong>Copiar link público</strong> — URL <Path>https://housemazzutti.com/p/&lt;token&gt;</Path>. Cole no WhatsApp.</li>
+        <li>🖨️ <strong>Imprimir / Salvar PDF</strong> — abre versão A4 limpa. Cmd+P → "Salvar como PDF".</li>
+        <li><strong>Marcar como enviada</strong> — registra horário do envio.</li>
+        <li>✓ <strong>Marcar como aceita</strong> — força aceite manual (quando cliente confirmou por telefone).</li>
+        <li>✗ <strong>Recusada</strong> — fecha sem virar fatura.</li>
       </ul>
 
-      <H3 id="lado-cliente" n="7.2" title="O que o cliente vê" />
-      <p>
-        Quando ele abre o link <Path>/p/&lt;token&gt;</Path>:
+      <H3 id="lado-cliente" n="5.3" title="O que o cliente vê no link público" />
+      <p className="text-sm">
+        Ao abrir <Path>/p/&lt;token&gt;</Path>: nome e e-mail como "Para", itens com preços,
+        subtotal, desconto, <strong>total em destaque</strong> e botão <strong>✓ Aceitar e iniciar</strong>.
       </p>
-      <ul className="list-disc list-inside text-sm space-y-1">
-        <li>Cabeçalho com logo House Mazzutti.</li>
-        <li>Nome dele + email/telefone como “Para”.</li>
-        <li>Título da proposta + tabela de itens com preços.</li>
-        <li>Subtotal, desconto, <strong>total destacado em negrito grande</strong>.</li>
-        <li>Observações (se você preencheu).</li>
-        <li>Botão verde gigante <strong>✓ Aceitar e iniciar</strong>.</li>
-      </ul>
       <Box tone="tip">
-        Quando o cliente clica em Aceitar, o sistema:
-        <ol className="list-decimal list-inside mt-1">
-          <li>Marca proposta como <em>aceito</em>.</li>
-          <li>Cria/atualiza oportunidade como <em>ganho</em>.</li>
-          <li>Registra atividade “Proposta aceita — iniciar onboarding” no lead.</li>
-          <li>Você vê tudo isso no nav (badge verde de atividade 24h).</li>
-        </ol>
+        Quando o cliente clica em Aceitar: proposta marcada como <em>aceito</em>, oportunidade
+        marcada como <em>ganho</em>, atividade registrada na timeline e badge de atividade atualizado.
       </Box>
 
-      {/* =================================================================
-          LIÇÃO 5 — ACEITE → FATURA
-      ================================================================== */}
-      <H2 id="licao-5" n="8" title="Lição 5 — Aceite, fatura e onboarding" />
+      {/* ==============================================================
+          6. FATURA E PAGAMENTO
+      ============================================================== */}
+      <H2 id="fatura" n="6" title="Fatura e pagamento" />
 
-      <ol className="space-y-3 text-sm">
-        <Step n={1}>
-          Após o cliente aceitar (ou você marcar como aceita manualmente), volte ao{' '}
-          <Path>/crm/quotes/[id]</Path>.
-        </Step>
-        <Step n={2}>
-          Aparece um campo <strong>Vencimento</strong> e botão <strong>Gerar fatura</strong>.
-          Escolha a data (ex: 30 dias depois) e clique.
-        </Step>
+      <H3 id="gerar-fatura" n="6.1" title="Gerar fatura após aceite" />
+      <ol className="space-y-2 mt-2">
+        <Step n={1}>Com proposta no status <em>aceito</em>, abra-a em <Path>/crm/quotes/[id]</Path>.</Step>
+        <Step n={2}>Preencha o campo <strong>Vencimento</strong> e clique <strong>Gerar fatura</strong>.</Step>
         <Step n={3}>
-          O sistema faz <strong>3 coisas automaticamente</strong>:
-          <ul className="list-disc list-inside ml-4 mt-1">
-            <li>Promove o lead a <strong>cliente</strong> (se ainda não era).</li>
-            <li>Cria a <strong>fatura</strong> copiando os itens da proposta.</li>
-            <li>Registra atividade “Fatura emitida” na timeline do lead.</li>
-          </ul>
+          O sistema automaticamente: promove lead a cliente, cria a fatura com os itens da proposta
+          e registra atividade "Fatura emitida" na timeline.
         </Step>
-        <Step n={4}>
-          Você é redirecionado direto pro <Path>/crm/clients/[id]</Path> — onde a fatura aparece
-          com status <em>emitida</em> e LTV ainda em 0 (vai virar &gt; 0 quando pagar).
-        </Step>
+        <Step n={4}>Você é redirecionado para <Path>/crm/clients/[id]</Path> — fatura com status <em>emitida</em>.</Step>
       </ol>
 
-      {/* =================================================================
-          LIÇÃO 6 — PAGAMENTO
-      ================================================================== */}
-      <H2 id="licao-6" n="9" title="Lição 6 — Registrar pagamento e fechar o ciclo" />
-
-      <ol className="space-y-3 text-sm">
-        <Step n={1}>
-          Cliente pagou (PIX, boleto, cartão). Vá em <Path>/crm/clients/[id]</Path>.
-        </Step>
-        <Step n={2}>
-          Na seção <strong>Pagamentos recentes</strong>, há um form: escolha a fatura
-          (mostra valor pendente), método, valor, referência (ex: ID do PIX), data.
-        </Step>
+      <H3 id="registrar-pagamento" n="6.2" title="Registrar pagamento" />
+      <ol className="space-y-2 mt-2">
+        <Step n={1}>Vá em <Path>/crm/clients/[id]</Path>.</Step>
+        <Step n={2}>Na seção <strong>Pagamentos recentes</strong>: escolha a fatura, método (PIX/boleto/cartão/TED), valor, referência e data.</Step>
         <Step n={3}>
-          Clique <strong>Registrar pagamento</strong>. O sistema:
-          <ul className="list-disc list-inside ml-4 mt-1">
-            <li>Cria registro em <Path>payments</Path>.</li>
-            <li>Atualiza <Path>paid_brl</Path> da fatura.</li>
-            <li>Se total ≥ valor da fatura, marca como <em>paga</em>. Se parcial, marca <em>parcial</em>.</li>
-            <li>Soma ao <strong>LTV</strong> do cliente e atualiza <em>last_purchase_at</em>.</li>
-          </ul>
+          Clique <strong>Registrar pagamento</strong>. O sistema: atualiza <Path>paid_brl</Path> da
+          fatura, marca como <em>paga</em> (ou <em>parcial</em> se incompleto) e soma ao LTV do
+          cliente.
         </Step>
       </ol>
+      <Box tone="warn">Registre o valor exato recebido. Ajuste a fatura antes se houver desconto adicional.</Box>
 
-      <Box tone="warn">
-        Sempre registre o pagamento exato. Se houve desconto adicional, ajuste o valor antes de
-        gerar a fatura — não registre menor pra “bater”.
-      </Box>
-
-      <H3 id="overdue" n="9.1" title="Faturas vencidas" />
-      <p>
-        Toda noite às 3h o sistema marca como <em>vencida</em> as faturas com{' '}
-        <Path>due_date &lt; hoje</Path> que ainda não foram pagas. Elas aparecem como badge
-        vermelho em <strong>Clientes</strong> no nav.
+      <H3 id="vencidas" n="6.3" title="Faturas vencidas" />
+      <p className="text-sm">
+        Toda noite às 3h o sistema marca como <em>vencida</em> qualquer fatura com{' '}
+        <Path>due_date &lt; hoje</Path> que ainda não foi paga. Badge vermelho em
+        <strong> Clientes</strong> na sidebar indica quantas existem.
       </p>
 
-      {/* =================================================================
-          LIÇÃO 7 — KANBAN
-      ================================================================== */}
-      <H2 id="licao-7" n="10" title="Lição 7 — Pipeline visual (Kanban)" />
-      <p>
-        Em <Link href="/crm/opportunities" className="text-blue-600 underline">/crm/opportunities</Link>{' '}
-        há um quadro Kanban com 6 colunas:
+      {/* ==============================================================
+          7. CLIENTES
+      ============================================================== */}
+      <H2 id="clientes" n="7" title="Clientes e LTV" />
+      <p className="text-sm">
+        Um cliente é qualquer lead que já teve fatura emitida (ou foi promovido manualmente). Em{' '}
+        <Link href="/crm/clients" className="text-blue-600 underline">/crm/clients</Link> você vê
+        a lista com LTV e última compra.
       </p>
-      <ol className="list-decimal list-inside text-sm space-y-0.5 ml-2">
-        <li>Descoberta</li>
-        <li>Qualificação</li>
-        <li>Proposta</li>
-        <li>Negociação</li>
-        <li>Ganho 🎉</li>
-        <li>Perdido</li>
-      </ol>
       <p className="text-sm mt-2">
-        Cada card mostra título, unit e valor. <strong>Arraste o card entre colunas</strong> para
-        mudar o estágio. Quando jogar em “Ganho”, a oportunidade fecha automaticamente com
-        <em> closed_at</em> = agora e <em>probability</em> = 100%.
+        No detalhe (<Path>/crm/clients/[id]</Path>) há 4 KPIs no topo:
+        <strong> LTV</strong>, <strong>Total faturado</strong>, <strong>Recebido</strong> e{' '}
+        <strong>Em aberto</strong>. Abaixo: histórico de faturas, pagamentos, propostas, oportunidades
+        e anexos.
+      </p>
+
+      {/* ==============================================================
+          8. KANBAN
+      ============================================================== */}
+      <H2 id="kanban" n="8" title="Kanban de oportunidades" />
+      <p className="text-sm">
+        Em <Link href="/crm/opportunities" className="text-blue-600 underline">/crm/opportunities</Link>:{' '}
+        quadro com 6 colunas — Descoberta, Qualificação, Proposta, Negociação, Ganho 🎉, Perdido.
+        Arraste os cards entre colunas para mudar o estágio. Jogar em "Ganho" fecha a oportunidade
+        automaticamente com <Path>closed_at</Path> = agora e probabilidade 100%.
       </p>
       <Box tone="tip">
-        No topo da página há indicador de <strong>Em aberto</strong> e <strong>Ponderado</strong>
-        (soma valor × probabilidade) — o último é o forecast realista do mês.
+        Indicador no topo: <strong>Em aberto</strong> (soma total) e <strong>Ponderado</strong>
+        (valor × probabilidade) — o forecast realista do mês.
       </Box>
 
-      {/* =================================================================
-          LIÇÃO 8 — ANEXOS
-      ================================================================== */}
-      <H2 id="licao-8" n="11" title="Lição 8 — Anexos" />
-      <p>
-        Tanto no detalhe do lead quanto do cliente há o bloco <strong>Anexos</strong>:
+      {/* ==============================================================
+          9. NEWSLETTER
+      ============================================================== */}
+      <H2 id="newsletter" n="9" title="Newsletter — inscritos e disparos" />
+      <p className="text-sm">
+        Gerencie os inscritos da <strong>Carta House Mazzutti</strong> e dispare e-mails de novos
+        artigos em <Link href="/crm/newsletter" className="text-blue-600 underline">/crm/newsletter</Link>.
       </p>
-      <ol className="space-y-3 text-sm">
+
+      <H3 id="como-chegam-inscritos" n="9.1" title="Como chegam os inscritos" />
+      <p className="text-sm">
+        Qualquer visitante que preenche o formulário "Carta House Mazzutti" no blog
+        (<Path>/pt/blog</Path>) é salvo na tabela <Path>newsletter_subscribers</Path> com e-mail,
+        nome (opcional), origem e UTMs. Cada inscrito recebe um token único de descadastro.
+      </p>
+
+      <H3 id="disparar-newsletter" n="9.2" title="Disparar e-mail de novo artigo" />
+      <ol className="space-y-2 mt-2">
         <Step n={1}>
-          Clique em <strong>Escolher arquivo</strong>, selecione (PDF, imagem, doc até 10MB).
+          Acesse <Link href="/crm/newsletter" className="text-blue-600 underline">/crm/newsletter</Link>.
         </Step>
         <Step n={2}>
-          Escolha o tipo: <em>Contrato, Briefing, Logo, Referência, NF/Fatura, Outro</em>.
+          No painel <strong>Disparar nova carta</strong>: selecione o artigo no dropdown.
         </Step>
         <Step n={3}>
-          Descrição opcional. Clique <strong>+ Adicionar anexo</strong>.
+          Escreva um <strong>trecho de abertura</strong> no campo de texto — aparece no corpo do
+          e-mail antes do CTA "Ler artigo completo". Use o primeiro parágrafo do artigo ou uma
+          chamada exclusiva para inscritos.
         </Step>
         <Step n={4}>
-          O arquivo é guardado no bucket privado <Path>crm-assets</Path> do Supabase. Para
-          baixar depois, clique no nome — gera link assinado válido por 5 minutos.
+          Clique <strong>Enviar para X inscritos</strong>. O sistema dispara via Resend em lotes
+          de 50, salva o registro em <Path>newsletter_sends</Path> e mostra quantos e-mails foram
+          entregues.
         </Step>
       </ol>
+      <Box tone="info">
+        O e-mail sai com remetente <Path>carta@housemazzutti.com</Path>, template com identidade
+        visual da House Mazzutti e link de descadastro individual no rodapé.
+      </Box>
       <Box tone="warn">
-        Nenhum anexo é público. Só staff logado pode ver. Cliente externo nunca tem acesso direto
-        ao arquivo.
+        Dispare apenas quando o artigo já estiver publicado e acessível no site. O link no e-mail
+        aponta para <Path>housemazzutti.com/pt/blog/[slug]</Path>.
       </Box>
 
-      {/* =================================================================
-          LIÇÃO 9 — AUTOMAÇÕES
-      ================================================================== */}
-      <H2 id="licao-9" n="12" title="Lição 9 — Automações" />
-      <p>
-        Automações são <em>regras</em> que rodam sozinhas. Em{' '}
-        <Link href="/crm/automations" className="text-blue-600 underline">/crm/automations</Link>{' '}
-        você vê todas as regras ativas e o histórico das últimas 20 execuções.
+      <H3 id="gerenciar-inscritos" n="9.3" title="Gerenciar inscritos" />
+      <p className="text-sm">
+        A tabela de inscritos mostra e-mail, nome, origem, data de inscrição e status
+        (Ativo / Inativo). Clique no status de um inscrito para alternar manualmente. Use o campo
+        de busca e os filtros Todos / Ativos / Inativos para navegar.
+      </p>
+      <Box tone="tip">
+        Inscritos que clicam em "Cancelar inscrição" no e-mail são marcados automaticamente como
+        inativos — nunca removidos. Histórico sempre preservado.
+      </Box>
+
+      {/* ==============================================================
+          10. ACADEMY
+      ============================================================== */}
+      <H2 id="academy" n="10" title="Academy — pedidos e certificados" />
+      <p className="text-sm">
+        Módulo restrito a <Badge color="violet">admin</Badge>. Acesse em{' '}
+        <Link href="/crm/academy" className="text-blue-600 underline">/crm/academy</Link>.
       </p>
 
-      <H3 id="exemplos-auto" n="12.1" title="Exemplos pré-configurados" />
-      <ul className="text-sm space-y-1.5">
-        <li>• <strong>Boas-vindas</strong> — quando lead é criado, registra atividade “Lead recebido (auto)”.</li>
-        <li>• <strong>Onboarding</strong> — quando proposta é aceita, marca opp como ganho + cria atividade.</li>
-        <li>• <strong>Cobrança</strong> — quando fatura vence, marca como vencida (cron diário).</li>
-        <li>• <strong>Reengajamento</strong> — leads sem atividade há 14 dias ganham task de follow-up.</li>
+      <H3 id="pedidos-academy" n="10.1" title="Pedidos (orders)" />
+      <p className="text-sm">
+        Lista todos os pedidos de cursos com: número do pedido, comprador, produto, valor, status
+        de pagamento (Mercado Pago) e data. Filtrável por status e com busca por e-mail.
+      </p>
+
+      <H3 id="certificados-academy" n="10.2" title="Certificados" />
+      <p className="text-sm">
+        Alunos que concluem um curso recebem certificado gerado automaticamente, acessível em{' '}
+        <Path>/academy/certificado/[code]</Path>. O CRM exibe o código, aluno, curso, data de
+        emissão e link de verificação.
+      </p>
+
+      <H3 id="produtos-academy" n="10.3" title="Produtos / Cursos" />
+      <p className="text-sm">
+        Gerencie o catálogo de cursos em <Path>/crm/academy/products</Path>: criar produto, definir
+        preço, slug e módulos. Alterações refletem imediatamente na vitrine do Academy.
+      </p>
+
+      {/* ==============================================================
+          11. CAMPANHAS E ROAS
+      ============================================================== */}
+      <H2 id="campanhas" n="11" title="Campanhas e ROAS" />
+      <p className="text-sm">
+        Em <Link href="/crm/campaigns" className="text-blue-600 underline">/crm/campaigns</Link>:
+        leads atribuídos por UTM, gasto declarado, receita atribuída e ROAS
+        (receita ÷ gasto). Use para decidir onde alocar mais investimento de mídia.
+      </p>
+      <Box tone="tip">
+        ROAS &lt; 1 = prejuízo. ROAS 3+ = boa campanha. ROAS 5+ = excelente, escale o budget.
+      </Box>
+
+      {/* ==============================================================
+          12. AUTOMAÇÕES
+      ============================================================== */}
+      <H2 id="automations" n="12" title="Automações" />
+      <p className="text-sm">
+        Regras que rodam automaticamente. Em{' '}
+        <Link href="/crm/automations" className="text-blue-600 underline">/crm/automations</Link>:
+        todas as regras ativas e histórico das últimas 20 execuções.
+      </p>
+
+      <H3 id="regras-padrao" n="12.1" title="Regras pré-configuradas" />
+      <ul className="text-sm space-y-1 ml-2">
+        <li>• <strong>Boas-vindas</strong> — lead criado → atividade "Lead recebido (auto)".</li>
+        <li>• <strong>Onboarding</strong> — proposta aceita → opp marcada como ganho + atividade.</li>
+        <li>• <strong>Cobrança</strong> — fatura vence → marcada como vencida (cron diário).</li>
+        <li>• <strong>Reengajamento</strong> — lead sem atividade há 14 dias → task de follow-up.</li>
       </ul>
 
-      <H3 id="criar-auto" n="12.2" title="Criar uma regra nova" />
-      <ol className="space-y-3 text-sm">
-        <Step n={1}>
-          Clique <strong>+ Nova regra</strong>.
-        </Step>
-        <Step n={2}>
-          <strong>Nome</strong> — descritivo, ex: “Avisar comercial em lead VIP”.
-        </Step>
-        <Step n={3}>
-          <strong>Gatilho</strong> — escolha uma das 7 opções (lead criado, status mudou, proposta aceita,
-          fatura vencida, lead inativo, cron customizado).
-        </Step>
-        <Step n={4}>
-          <strong>Condições (JSON)</strong> — filtro. Ex:{' '}
-          <Path>{`{"status_in": ["qualificado"]}`}</Path>. O hint embaixo do campo mostra exemplo
-          contextual por gatilho.
-        </Step>
-        <Step n={5}>
-          <strong>Ações (JSON)</strong> — o que fazer. Botões de template ajudam (create_activity,
-          send_email, update_opportunity_ganho, follow_up).
-        </Step>
-        <Step n={6}>
-          Marque <strong>Ativa</strong> e salve. A regra começa a rodar nos próximos eventos.
-        </Step>
+      <H3 id="criar-regra" n="12.2" title="Criar nova regra" />
+      <ol className="space-y-2 mt-2">
+        <Step n={1}>Clique <strong>+ Nova regra</strong>.</Step>
+        <Step n={2}>Dê um <strong>nome</strong> descritivo.</Step>
+        <Step n={3}><strong>Gatilho</strong> — 7 opções: lead criado, status mudou, proposta aceita, fatura vencida, lead inativo, cron customizado.</Step>
+        <Step n={4}><strong>Condições (JSON)</strong> — filtro. Ex: <Path>{`{"status_in":["qualificado"]}`}</Path>.</Step>
+        <Step n={5}><strong>Ações (JSON)</strong> — use os templates de botão: create_activity, send_email, update_opportunity_ganho, follow_up.</Step>
+        <Step n={6}>Marque <strong>Ativa</strong> e salve.</Step>
       </ol>
+      <Box tone="warn">Automações são território de admin. JSON errado pode parar regras críticas. Em dúvida, consulte Angelo.</Box>
 
-      <Box tone="warn">
-        Mexer em automações é coisa de admin. Errar JSON pode parar uma regra crítica (como
-        marcação de fatura vencida). Em dúvida, peça pro Angelo.
-      </Box>
-
-      {/* =================================================================
-          LIÇÃO 10 — TAGS
-      ================================================================== */}
-      <H2 id="licao-10" n="13" title="Lição 10 — Tags e organização" />
-      <p>
-        Em <Link href="/crm/tags" className="text-blue-600 underline">/crm/tags</Link> você cria
-        rótulos pra categorizar leads/clients além do status oficial. Exemplos:
+      {/* ==============================================================
+          13. ANEXOS
+      ============================================================== */}
+      <H2 id="anexos" n="13" title="Anexos" />
+      <p className="text-sm">
+        No detalhe do lead e do cliente há o bloco <strong>Anexos</strong>:
       </p>
-      <ul className="list-disc list-inside text-sm">
-        <li><strong>VIP</strong> — clientes prioritários</li>
+      <ol className="space-y-2 mt-2">
+        <Step n={1}>Clique <strong>Escolher arquivo</strong> (PDF, imagem, doc — até 10 MB).</Step>
+        <Step n={2}>Tipo: Contrato, Briefing, Logo, Referência, NF/Fatura, Outro.</Step>
+        <Step n={3}>Descrição opcional. Clique <strong>+ Adicionar anexo</strong>.</Step>
+        <Step n={4}>Arquivo no bucket privado <Path>crm-assets</Path>. Para baixar: clique no nome → link assinado por 5 minutos.</Step>
+      </ol>
+      <Box tone="warn">Nenhum anexo é público. Apenas staff logado tem acesso.</Box>
+
+      {/* ==============================================================
+          14. TAGS
+      ============================================================== */}
+      <H2 id="tags" n="14" title="Tags" />
+      <p className="text-sm">
+        Em <Link href="/crm/tags" className="text-blue-600 underline">/crm/tags</Link>: crie rótulos
+        para categorizar leads e clientes além do status oficial. Exemplos:
+      </p>
+      <ul className="list-disc list-inside text-sm ml-2">
+        <li><strong>VIP</strong> — cliente prioritário</li>
         <li><strong>frio</strong> — não responde há muito tempo</li>
-        <li><strong>indicação</strong> — chegou por recomendação</li>
+        <li><strong>indicação</strong> — veio por recomendação</li>
         <li><strong>parceiro-comercial</strong> — agência que envia volume</li>
       </ul>
 
-      {/* =================================================================
-          RELATÓRIOS
-      ================================================================== */}
-      <H2 id="relatorios" n="14" title="Relatórios e métricas" />
-      <p>O <Link href="/crm" className="text-blue-600 underline">Dashboard</Link> (página inicial) tem 4 áreas:</p>
+      {/* ==============================================================
+          15. RELATÓRIOS
+      ============================================================== */}
+      <H2 id="relatorios" n="15" title="Relatórios e métricas" />
 
-      <H3 id="kpis" n="14.1" title="6 KPIs no topo" />
-      <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-        <li className="border border-neutral-200 rounded p-2"><strong>Leads totais</strong></li>
-        <li className="border border-neutral-200 rounded p-2"><strong>Commercial</strong> (B2B)</li>
-        <li className="border border-neutral-200 rounded p-2"><strong>Talents</strong> (modelos)</li>
-        <li className="border border-neutral-200 rounded p-2"><strong>Clientes</strong></li>
-        <li className="border border-neutral-200 rounded p-2"><strong>Oportunidades abertas</strong></li>
-        <li className="border border-neutral-200 rounded p-2"><strong>Pipeline ponderado</strong> (em R$)</li>
+      <H3 id="dashboard-kpis" n="15.1" title="Dashboard — 6 KPIs" />
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm mt-2">
+        {['Leads totais', 'Commercial (B2B)', 'Talents (modelos)', 'Clientes', 'Oportunidades abertas', 'Pipeline ponderado (R$)'].map(k => (
+          <div key={k} className="border border-neutral-200 rounded p-2 font-medium">{k}</div>
+        ))}
+      </div>
+
+      <H3 id="graficos" n="15.2" title="3 gráficos no dashboard" />
+      <ul className="text-sm space-y-1.5 mt-2">
+        <li><strong>Leads por status (barras)</strong> — onde estão acumulando no funil.</li>
+        <li><strong>Funil de oportunidades</strong> — quantidade + valor por estágio.</li>
+        <li><strong>Receita mensal (linha, 6 meses)</strong> — soma de pagamentos por mês.</li>
       </ul>
 
-      <H3 id="graficos" n="14.2" title="3 gráficos" />
-      <ul className="text-sm space-y-2">
-        <li>
-          <strong>Leads por status (barras)</strong> — visualiza onde estão acumulando.
-          Muitos em <em>novo</em>? Time precisa qualificar. Muitos em <em>negociação</em>? Hora de fechar.
-        </li>
-        <li>
-          <strong>Funil de oportunidades</strong> — barras horizontais por estágio. Mostra
-          quantidade + valor total em cada um.
-        </li>
-        <li>
-          <strong>Receita mensal (linha, 6 meses)</strong> — soma de pagamentos por mês.
-          Tendência crescente é o objetivo.
-        </li>
+      <H3 id="ltv-cliente" n="15.3" title="LTV por cliente" />
+      <p className="text-sm">
+        Em <Path>/crm/clients/[id]</Path>: 4 KPIs — LTV, total faturado, total recebido, em aberto.
+        Mostra a saúde financeira da relação com o cliente.
+      </p>
+
+      {/* ==============================================================
+          16. EXPORTS
+      ============================================================== */}
+      <H2 id="exports" n="16" title="Exportações CSV" />
+      <p className="text-sm">Cada lista tem botão <strong>↓ CSV</strong>. Atalhos diretos:</p>
+      <ul className="space-y-1 text-sm mt-2">
+        {[
+          ['leads', 'Leads'],
+          ['clients', 'Clientes'],
+          ['payments', 'Pagamentos'],
+          ['quotes', 'Propostas'],
+          ['invoices', 'Faturas'],
+        ].map(([entity, label]) => (
+          <li key={entity}>
+            •{' '}
+            <a href={`/crm/api/export?entity=${entity}`} className="text-blue-600 underline">
+              Exportar {label}
+            </a>
+          </li>
+        ))}
       </ul>
+      <Box tone="tip">Limite de 10.000 linhas por exportação. Para contabilidade, exporte Pagamentos no fim do mês.</Box>
 
-      <H3 id="campanhas" n="14.3" title="ROAS por campanha" />
-      <p>
-        Em <Link href="/crm/campaigns" className="text-blue-600 underline">/crm/campaigns</Link>:
-        leads atribuídos por UTM, gasto, receita atribuída e ROAS (return on ad spend). Use para
-        decidir onde colocar mais grana.
-      </p>
-      <Box tone="tip">
-        ROAS &lt; 1 = campanha está dando prejuízo. ROAS 3+ = boa. ROAS 5+ = excelente, escale.
-      </Box>
-
-      <H3 id="cliente-ltv" n="14.4" title="LTV por cliente" />
-      <p>
-        No detalhe de cada cliente (<Path>/crm/clients/[id]</Path>):
-        4 KPIs no topo — LTV, total faturado, total recebido, em aberto. Mostra a saúde
-        financeira da relação.
+      {/* ==============================================================
+          17. BUSCA
+      ============================================================== */}
+      <H2 id="busca" n="17" title="Busca global" />
+      <p className="text-sm">
+        Campo de busca em <Link href="/crm/search" className="text-blue-600 underline">/crm/search</Link>.
+        Busca simultânea em: <strong>Leads</strong> (nome, e-mail, telefone),{' '}
+        <strong>Clientes</strong> (nome, razão social, e-mail, documento) e{' '}
+        <strong>Propostas</strong> (título). Resultados agrupados com link direto para o detalhe.
+        Limite de 20 por categoria.
       </p>
 
-      {/* =================================================================
-          EXPORTS
-      ================================================================== */}
-      <H2 id="exports" n="15" title="Exportações CSV" />
-      <p>
-        Cada lista tem botão <strong>↓ CSV</strong>. Também há atalhos diretos:
-      </p>
-      <ul className="space-y-1 text-sm">
-        <li>• <a href="/crm/api/export?entity=leads" className="text-blue-600 underline">Exportar Leads</a></li>
-        <li>• <a href="/crm/api/export?entity=clients" className="text-blue-600 underline">Exportar Clientes</a></li>
-        <li>• <a href="/crm/api/export?entity=payments" className="text-blue-600 underline">Exportar Pagamentos</a></li>
-        <li>• <a href="/crm/api/export?entity=quotes" className="text-blue-600 underline">Exportar Propostas</a></li>
-        <li>• <a href="/crm/api/export?entity=invoices" className="text-blue-600 underline">Exportar Faturas</a></li>
-      </ul>
-      <Box tone="tip">
-        Limite de 10.000 linhas por export. Pra contabilidade, exporte pagamentos no fim do mês.
-      </Box>
-
-      {/* =================================================================
-          BUSCA
-      ================================================================== */}
-      <H2 id="busca" n="16" title="Busca global" />
-      <p>
-        Campo no topo do nav (telas médias+). Busca em:
-      </p>
-      <ul className="list-disc list-inside text-sm">
-        <li><strong>Leads</strong> por nome, email, telefone</li>
-        <li><strong>Clientes</strong> por nome, razão social, email, telefone, documento</li>
-        <li><strong>Propostas</strong> por título</li>
-      </ul>
-      <p className="text-sm mt-2">
-        Resultados agrupados, com link direto pro detalhe. Limite 20 por categoria.
-      </p>
-
-      {/* =================================================================
-          SINAIS DO NAV
-      ================================================================== */}
-      <H2 id="sinais" n="17" title="Sinais visuais do nav" />
-      <ul className="text-sm space-y-1.5">
-        <li>
-          <span className="inline-block w-3 h-3 rounded-full bg-emerald-500 align-middle mr-2"></span>
-          <strong>Verde no logo HM CRM</strong> — quantidade de atividades nas últimas 24h.
-        </li>
-        <li>
-          <span className="inline-block w-3 h-3 rounded-full bg-amber-500 align-middle mr-2"></span>
-          <strong>Âmbar em Leads</strong> — leads em status <em>novo</em> ou <em>em_contato</em>.
-          Precisa qualificar.
-        </li>
-        <li>
-          <span className="inline-block w-3 h-3 rounded-full bg-rose-500 align-middle mr-2"></span>
-          <strong>Vermelho em Clientes</strong> — faturas vencidas. Cobrar.
-        </li>
-        <li>
-          <span className="inline-block rounded bg-violet-100 text-violet-700 text-[10px] px-1.5 py-0.5 uppercase align-middle mr-2">admin</span>
-          Você é admin (vê tudo).
-        </li>
-        <li>
-          <span className="inline-block rounded bg-blue-100 text-blue-700 text-[10px] px-1.5 py-0.5 uppercase align-middle mr-2">studio</span>
-          Você vê só sua unidade.
-        </li>
-      </ul>
-
-      {/* =================================================================
-          GLOSSÁRIO
-      ================================================================== */}
-      <H2 id="glossario" n="18" title="Glossário" />
-      <dl className="text-sm space-y-3">
-        <div>
-          <dt className="font-semibold">Lead</dt>
-          <dd className="text-neutral-700">
-            Contato em qualquer estágio do funil. Nasce no formulário ou no cadastro manual.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Cliente</dt>
-          <dd className="text-neutral-700">
-            Lead que já comprou (pelo menos uma fatura emitida ou promoção manual).
-            Tem LTV, faturas, pagamentos.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Oportunidade</dt>
-          <dd className="text-neutral-700">
-            Negociação específica, com valor e estágio. Um cliente pode ter várias.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Proposta (quote)</dt>
-          <dd className="text-neutral-700">
-            Documento comercial com itens e preços. Status: rascunho → enviado → aceito/recusado.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Fatura (invoice)</dt>
-          <dd className="text-neutral-700">
-            Cobrança a receber. Nasce de uma proposta aceita. Status: emitida → parcial → paga,
-            ou vencida.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Pagamento (payment)</dt>
-          <dd className="text-neutral-700">
-            Recebimento associado a uma fatura. PIX, boleto, cartão, transferência.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">LTV (Lifetime Value)</dt>
-          <dd className="text-neutral-700">
-            Soma de tudo que o cliente já pagou ao longo do tempo. Métrica-chave da relação.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">ROAS (Return on Ad Spend)</dt>
-          <dd className="text-neutral-700">
-            Receita atribuída ÷ gasto em mídia. 1.0 = empate; acima = lucro; abaixo = prejuízo.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Unit (unidade)</dt>
-          <dd className="text-neutral-700">
-            Studio, Agência, Produtora ou Comunidade. Filtra visibilidade de gestores.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Pipeline ponderado</dt>
-          <dd className="text-neutral-700">
-            Soma de (valor × probabilidade %) de todas as oportunidades abertas. Forecast realista.
-          </dd>
-        </div>
-      </dl>
-
-      {/* =================================================================
-          BOAS PRÁTICAS
-      ================================================================== */}
-      <H2 id="boas-praticas" n="19" title="Boas práticas" />
+      {/* ==============================================================
+          18. BOAS PRÁTICAS
+      ============================================================== */}
+      <H2 id="boas-praticas" n="18" title="Boas práticas" />
       <Box tone="do" title="Faça">
         <ul className="list-disc list-inside space-y-1">
           <li>Registre toda interação imediatamente após ela acontecer.</li>
-          <li>Use status como verdade — atualize quando o lead progredir.</li>
-          <li>Anexe contratos e briefings logo no início do projeto.</li>
-          <li>Mande proposta sempre pelo link público — vira aceite + automação.</li>
-          <li>Use observações pra contexto, atividades pra eventos.</li>
-          <li>No fim do dia, deixe a lista de leads <em>novos</em> em zero.</li>
+          <li>Mantenha o status como verdade — atualize conforme o lead progride.</li>
+          <li>Anexe contratos e briefings no início de cada projeto.</li>
+          <li>Envie sempre a proposta pelo link público — permite aceite com 1 clique.</li>
+          <li>Use observações para contexto permanente, atividades para eventos pontuais.</li>
+          <li>Ao final do dia, zere a fila de leads com status <em>novo</em>.</li>
+          <li>Dispare newsletter apenas quando o artigo já estiver publicado.</li>
+          <li>Antes de criar lead novo, busque para evitar duplicatas.</li>
         </ul>
       </Box>
       <Box tone="dont" title="Não faça">
         <ul className="list-disc list-inside space-y-1">
-          <li>Não duplique cadastros — busque antes de criar lead novo.</li>
-          <li>Não use status pra coisa que não progrediu (pra isso tem nota).</li>
-          <li>Não envie PDF antigo no WhatsApp — sempre use o link público (cliente pode aceitar com 1 clique).</li>
-          <li>Não registre pagamento maior pra cobrir desconto — ajuste a fatura antes.</li>
+          <li>Não duplique cadastros — busque antes de criar.</li>
+          <li>Não registre pagamento maior para "cobrir" desconto — ajuste a fatura antes.</li>
+          <li>Não envie PDF antigo por WhatsApp — use sempre o link público.</li>
           <li>Não delete leads — use status <em>arquivado</em> ou <em>perdido</em>.</li>
+          <li>Não mexa em automações sem entender o JSON — chame o admin.</li>
+          <li>Não dispare a newsletter para artigos ainda não publicados.</li>
         </ul>
       </Box>
 
-      {/* =================================================================
-          FAQ
-      ================================================================== */}
-      <H2 id="faq" n="20" title="FAQ e solução de problemas" />
+      {/* ==============================================================
+          19. FAQ
+      ============================================================== */}
+      <H2 id="faq" n="19" title="FAQ e solução de problemas" />
       <div className="space-y-4 text-sm">
-        <div>
-          <p className="font-semibold">O cliente preencheu o form mas não aparece em Leads.</p>
-          <p>Atualize a página (F5). Se passou de 1 minuto, abra o console (F12) e veja se há erro
-          de rede. Pode ser bloqueio de RLS — chame o admin.</p>
-        </div>
-        <div>
-          <p className="font-semibold">Botão “Gerar fatura” não aparece.</p>
-          <p>Só aparece quando a proposta está com status <em>aceito</em>. Verifique se você
-          clicou em “Marcar como aceita” ou se o cliente clicou no botão público.</p>
-        </div>
-        <div>
-          <p className="font-semibold">Link público copiou só /p/&lt;token&gt; sem domínio.</p>
-          <p>A env var <Path>NEXT_PUBLIC_SITE_URL</Path> não está configurada no servidor de
-          produção. Avise o admin pra setar como <Path>https://housemazzutti.com</Path>.</p>
-        </div>
-        <div>
-          <p className="font-semibold">Quero refazer uma proposta — posso?</p>
-          <p>Sim. Crie outra com <strong>+ Nova proposta</strong>. A anterior pode ser marcada
-          como recusada ou ignorada. Não há limite de propostas por lead.</p>
-        </div>
-        <div>
-          <p className="font-semibold">Errei o pagamento. Como corrijo?</p>
-          <p>Hoje não há tela de edição. Avise o admin que ajusta direto no banco. Ou registre
-          outro pagamento negativo (com valor negativo) pra estornar — gambiarra, evite.</p>
-        </div>
-        <div>
-          <p className="font-semibold">Quem pode ver o quê?</p>
-          <p>Admin vê tudo. Quem tem unit setada vê só dados dessa unit. Veja seu badge no nav.</p>
-        </div>
-        <div>
-          <p className="font-semibold">O cliente disse que aceitou mas não aparece como aceito.</p>
-          <p>Pergunte se ele clicou no link. Se sim, peça print. Se ele não vai clicar mesmo, você
-          pode usar “✓ Marcar como aceita” no detalhe da proposta — dispara as mesmas automações.</p>
-        </div>
+        {[
+          {
+            q: 'Lead preencheu o form mas não aparece em /crm/leads.',
+            a: 'Atualize a página (F5). Se após 1 minuto ainda não aparecer, pode ser bloqueio de RLS — o usuário não tem o role correto. Chame o admin.',
+          },
+          {
+            q: 'Botão "Gerar fatura" não aparece na proposta.',
+            a: 'Só aparece quando a proposta tem status aceito. Confirme se clicou em "Marcar como aceita" ou se o cliente clicou no link público.',
+          },
+          {
+            q: 'Link público copiou só /p/<token> sem domínio.',
+            a: 'A variável NEXT_PUBLIC_SITE_URL não está configurada no servidor. Avise o admin para definir como https://housemazzutti.com.',
+          },
+          {
+            q: 'Como refazer uma proposta?',
+            a: 'Crie outra com "+ Nova proposta". Marque a anterior como recusada. Não há limite de propostas por lead.',
+          },
+          {
+            q: 'Errei o valor do pagamento. Como corrijo?',
+            a: 'Hoje não há tela de edição. Avise o admin — ajuste direto no banco. Evite registros negativos para estorno.',
+          },
+          {
+            q: 'O e-mail da newsletter não chegou para alguns inscritos.',
+            a: 'Verifique o histórico em /crm/newsletter — o campo total_sent mostra quantos foram entregues. Erros de domínio exigem verificação do DNS do Resend.',
+          },
+          {
+            q: 'Como adicionar um novo artigo ao dropdown de disparo de newsletter?',
+            a: 'Edite o array ARTICLES no arquivo /src/app/crm/newsletter/page.tsx adicionando o objeto { slug, title } correspondente.',
+          },
+          {
+            q: 'O cliente disse que aceitou a proposta mas não aparece como aceito.',
+            a: 'Use "✓ Marcar como aceita" no detalhe da proposta — dispara as mesmas automações do aceite pelo link.',
+          },
+        ].map(({ q, a }) => (
+          <div key={q} className="border-b border-neutral-100 pb-3">
+            <p className="font-semibold text-neutral-800">{q}</p>
+            <p className="text-neutral-600 mt-1">{a}</p>
+          </div>
+        ))}
       </div>
 
-      {/* =================================================================
-          CHEATSHEET
-      ================================================================== */}
+      {/* ==============================================================
+          20. GLOSSÁRIO
+      ============================================================== */}
+      <H2 id="glossario" n="20" title="Glossário" />
+      <dl className="text-sm space-y-3">
+        {[
+          ['Lead', 'Contato em qualquer estágio do funil. Nasce no formulário ou no cadastro manual.'],
+          ['Cliente', 'Lead que já comprou (fatura emitida ou promoção manual). Tem LTV, faturas, pagamentos.'],
+          ['Oportunidade', 'Negociação específica com valor e estágio. Um cliente pode ter várias.'],
+          ['Proposta (quote)', 'Documento comercial com itens e preços. Status: rascunho → enviado → aceito/recusado.'],
+          ['Fatura (invoice)', 'Cobrança a receber. Status: emitida → parcial → paga, ou vencida.'],
+          ['Pagamento (payment)', 'Recebimento vinculado a uma fatura. PIX, boleto, cartão, TED.'],
+          ['LTV (Lifetime Value)', 'Soma total pago pelo cliente ao longo do tempo. Métrica-chave da relação.'],
+          ['ROAS', 'Receita atribuída ÷ gasto em mídia. 1.0 = empate; acima = lucro; abaixo = prejuízo.'],
+          ['Unit (unidade)', 'Studio, Agência, Produtora ou Comunidade. Filtra visibilidade de gestores.'],
+          ['Pipeline ponderado', 'Soma de (valor × probabilidade %) de oportunidades abertas. Forecast realista.'],
+          ['Inscrito (newsletter)', 'Visitante que se cadastrou na Carta House Mazzutti pelo blog.'],
+          ['Disparo', 'Envio em massa do e-mail de um artigo para todos os inscritos ativos.'],
+        ].map(([term, def]) => (
+          <div key={term as string}>
+            <dt className="font-semibold text-neutral-800">{term}</dt>
+            <dd className="text-neutral-600 mt-0.5">{def}</dd>
+          </div>
+        ))}
+      </dl>
+
+      {/* ==============================================================
+          21. CHEATSHEET
+      ============================================================== */}
       <H2 id="cheatsheet" n="21" title="Cheatsheet — atalhos de URL" />
-      <p className="text-sm mb-3">Cole no navegador pra ir direto:</p>
-      <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-xs font-mono space-y-0.5">
-        <div>/crm                          → Dashboard</div>
-        <div>/crm/leads                    → Lista de leads</div>
-        <div>/crm/leads/new                → Cadastrar lead manual</div>
-        <div>/crm/leads/&lt;id&gt;               → Detalhe do lead</div>
-        <div>/crm/leads/&lt;id&gt;/edit          → Editar lead</div>
-        <div>/crm/leads/&lt;id&gt;/quote/new     → Nova proposta</div>
-        <div>/crm/quotes                   → Lista de propostas</div>
-        <div>/crm/quotes/&lt;id&gt;              → Detalhe / ações</div>
-        <div>/crm/quotes/&lt;id&gt;/print        → PDF da proposta</div>
-        <div>/p/&lt;token&gt;                   → Link público p/ cliente</div>
-        <div>/crm/clients                  → Lista de clientes</div>
-        <div>/crm/clients/&lt;id&gt;             → Detalhe + KPIs + pagamentos</div>
-        <div>/crm/opportunities            → Kanban</div>
-        <div>/crm/campaigns                → ROAS</div>
-        <div>/crm/automations              → Regras + execuções</div>
-        <div>/crm/automations/new          → Nova regra</div>
-        <div>/crm/automations/&lt;id&gt;         → Editar regra</div>
-        <div>/crm/tags                     → Tags</div>
-        <div>/crm/search?q=...             → Busca global</div>
-        <div>/crm/api/export?entity=...    → CSV (leads|clients|quotes|invoices|payments)</div>
-        <div>/crm/ajuda                    → Guia rápido (links + descrições curtas)</div>
-        <div>/crm/manual                   → Este manual</div>
+      <p className="text-sm mb-3">Cole no navegador para navegar direto:</p>
+      <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-xs font-mono space-y-0.5 overflow-x-auto">
+        {[
+          ['/crm',                           'Dashboard — KPIs e gráficos'],
+          ['/crm/leads',                     'Lista de leads'],
+          ['/crm/leads/new',                 'Cadastrar lead manual'],
+          ['/crm/leads/<id>',                'Detalhe do lead'],
+          ['/crm/leads/<id>/edit',           'Editar lead'],
+          ['/crm/leads/<id>/quote/new',      'Nova proposta para o lead'],
+          ['/crm/leads/kanban',              'Kanban de leads por status'],
+          ['/crm/quotes',                    'Lista de propostas'],
+          ['/crm/quotes/<id>',               'Detalhe e ações da proposta'],
+          ['/crm/quotes/<id>/print',         'PDF da proposta (imprimir)'],
+          ['/p/<token>',                     'Link público para o cliente aceitar'],
+          ['/crm/clients',                   'Lista de clientes'],
+          ['/crm/clients/<id>',              'Detalhe + KPIs + pagamentos'],
+          ['/crm/invoices',                  'Faturas emitidas'],
+          ['/crm/opportunities',             'Kanban de oportunidades'],
+          ['/crm/campaigns',                 'Campanhas e ROAS'],
+          ['/crm/newsletter',                'Newsletter — inscritos e disparos'],
+          ['/crm/automations',               'Regras de automação'],
+          ['/crm/automations/new',           'Nova regra'],
+          ['/crm/catalog',                   'Catálogo de serviços'],
+          ['/crm/tags',                      'Tags'],
+          ['/crm/search?q=...',              'Busca global'],
+          ['/crm/api/export?entity=...',     'CSV: leads | clients | quotes | invoices | payments'],
+          ['/crm/academy',                   'Academy — pedidos (admin only)'],
+          ['/crm/academy/products',          'Catálogo de cursos (admin only)'],
+          ['/crm/admin/users',               'Gerenciar usuários (admin only)'],
+          ['/crm/admin/auditoria',           'Log de auditoria (admin only)'],
+          ['/crm/ajuda',                     'Guia rápido de links'],
+          ['/crm/manual',                    'Este manual'],
+        ].map(([url, desc]) => (
+          <div key={url} className="flex gap-4">
+            <span className="text-neutral-700 w-72 shrink-0">{url}</span>
+            <span className="text-neutral-400">{desc}</span>
+          </div>
+        ))}
       </div>
 
-      <footer className="border-t border-neutral-200 pt-6 mt-10 text-xs text-neutral-500">
-        Manual versão 1.0 · Atualizado em 2026-05-13 · House Mazzutti.
-        Dúvidas técnicas ou sugestões: angelo@mztgrupo.com.
+      <footer className="border-t border-neutral-200 pt-6 mt-10 text-xs text-neutral-400">
+        Manual versão 2.0 · Atualizado em maio/2026 · House Mazzutti.{' '}
+        Dúvidas técnicas: <a href="mailto:angelo@mztgrupo.com" className="underline">angelo@mztgrupo.com</a>
       </footer>
     </div>
   )
