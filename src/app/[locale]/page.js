@@ -346,111 +346,6 @@ export default function Home() {
 
 
 
-                {/* TESTIMONIALS SECTION */}
-                <section 
-                    className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center py-20"
-                    style={{ minHeight: '500px' }}
-                    onMouseEnter={() => {}} // dummy to allow hover states
-                >
-                    <div
-                        className="parallax-testimonial"
-                        style={{
-                            position: 'absolute', top: '50%', left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            fontSize: '10vw', fontFamily: 'var(--font-headline)',
-                            fontWeight: 700, letterSpacing: '-0.05em',
-                            color: 'rgba(255,255,255,0.08)',
-                            whiteSpace: 'nowrap', pointerEvents: 'none',
-                            userSelect: 'none', zIndex: 0
-                        }}
-                    >
-                        Depoimentos
-                    </div>
-
-                    {/* Navigation Arrows */}
-                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
-                        <button
-                            className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300"
-                            onClick={prevSlide}
-                        >
-                            <div className="custom-nav-line mr-2"></div>
-                            <svg
-                                className="transform -translate-x-2"
-                                fill="none"
-                                height="24"
-                                stroke="white"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1"
-                                viewBox="0 0 24 24"
-                                width="24"
-                            >
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
-                        <button
-                            className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300"
-                            onClick={nextSlide}
-                        >
-                            <svg
-                                className="transform translate-x-2"
-                                fill="none"
-                                height="24"
-                                stroke="white"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1"
-                                viewBox="0 0 24 24"
-                                width="24"
-                            >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div className="custom-nav-line ml-2"></div>
-                        </button>
-                    </div>
-
-                    <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-12">
-                            <span className="text-caption text-zinc-500 block mb-4">
-                                O que dizem
-                            </span>
-                            <h2 className="text-h2 text-white">Depoimentos</h2>
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1" style={{ minHeight: '220px' }}>
-                                {testimonials.map((testimonial, i) => (
-                                    <div
-                                        key={i}
-                                        className={`testimonial-slide ${currentSlide === i ? "active" : ""}`}
-                                    >
-                                        <h3 className="text-h3 text-white max-w-3xl mx-auto">
-                                            “{testimonial.text}”
-                                        </h3>
-                                        <div className="pt-6">
-                                            <p className="text-caption text-white/80">
-                                                {testimonial.author}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            {/* Pagination Indicators */}
-                            <div className="flex space-x-3 pt-4">
-                                {testimonials.map((_, i) => (
-                                    <button
-                                        key={i}
-                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"
-                                            }`}
-                                        onClick={() => goToSlide(i)}
-                                    ></button>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* ── SOBRE / DIFERENCIAL ────────────────────────────────── */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row-reverse relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
@@ -610,6 +505,82 @@ export default function Home() {
                 </section>
 
                 <ClientLogos />
+
+                {/* TESTIMONIALS SECTION */}
+                <section
+                    className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center py-20"
+                    style={{ minHeight: '500px' }}
+                    onMouseEnter={() => {}}
+                >
+                    <div
+                        className="parallax-testimonial"
+                        style={{
+                            position: 'absolute', top: '50%', left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            fontSize: '10vw', fontFamily: 'var(--font-headline)',
+                            fontWeight: 700, letterSpacing: '-0.05em',
+                            color: 'rgba(255,255,255,0.08)',
+                            whiteSpace: 'nowrap', pointerEvents: 'none',
+                            userSelect: 'none', zIndex: 0
+                        }}
+                    >
+                        Depoimentos
+                    </div>
+
+                    {/* Navigation Arrows */}
+                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
+                        <button
+                            className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300"
+                            onClick={prevSlide}
+                        >
+                            <div className="custom-nav-line mr-2"></div>
+                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
+                        <button
+                            className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300"
+                            onClick={nextSlide}
+                        >
+                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                            <div className="custom-nav-line ml-2"></div>
+                        </button>
+                    </div>
+
+                    <div className="relative z-10 max-w-4xl mx-auto text-center">
+                        <div className="mb-12">
+                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
+                            <h2 className="text-h2 text-white">Depoimentos</h2>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <div className="relative w-full overflow-hidden mb-1" style={{ minHeight: '220px' }}>
+                                {testimonials.map((testimonial, i) => (
+                                    <div key={i} className={`testimonial-slide ${currentSlide === i ? "active" : ""}`}>
+                                        <h3 className="text-h3 text-white max-w-3xl mx-auto">
+                                            “{testimonial.text}”
+                                        </h3>
+                                        <div className="pt-6">
+                                            <p className="text-caption text-white/80">{testimonial.author}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex space-x-3 pt-4">
+                                {testimonials.map((_, i) => (
+                                    <button
+                                        key={i}
+                                        className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${currentSlide === i ? "opacity-100" : "opacity-30"}`}
+                                        onClick={() => goToSlide(i)}
+                                    ></button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* BLOG SECTION */}
                 <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
