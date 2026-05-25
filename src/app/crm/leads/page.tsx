@@ -203,8 +203,8 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
         </p>
       )}
 
-      <div className="rounded-lg border border-neutral-200 bg-white overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="rounded-lg border border-neutral-200 bg-white overflow-x-auto">
+        <table className="w-full text-sm min-w-[900px]">
           <thead className="bg-neutral-50 text-neutral-500 text-xs uppercase tracking-wide">
             <tr>
               <th className="text-left px-4 py-2 font-medium">Nome</th>
@@ -274,7 +274,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
                   <td className="px-4 py-3 text-neutral-500 text-xs">
                     {new Date(l.created_at).toLocaleString('pt-BR')}
                   </td>
-                  <td className="px-4 py-3 text-right">
+                  <td className="px-4 py-3 text-right whitespace-nowrap">
                     {l.status !== 'ganho' && (
                       <form action={promoteLeadAction} className="inline-flex items-center gap-1">
                         <input type="hidden" name="lead_id" value={l.id} />
@@ -284,11 +284,13 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
                           placeholder="R$"
                           step="100"
                           min="0"
-                          className="w-20 rounded border border-neutral-200 px-1.5 py-0.5 text-xs"
+                          aria-label="Valor em R$"
+                          className="w-16 rounded border border-neutral-200 px-1.5 py-0.5 text-xs"
                         />
                         <button
                           type="submit"
-                          className="rounded bg-emerald-600 text-white text-xs px-2 py-0.5 hover:bg-emerald-700"
+                          title="Promover a cliente"
+                          className="rounded bg-emerald-600 text-white text-xs px-2 py-0.5 hover:bg-emerald-700 shrink-0"
                         >
                           → Cliente
                         </button>
