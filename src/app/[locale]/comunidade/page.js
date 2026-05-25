@@ -488,6 +488,24 @@ export default function ComunidadePage() {
 
                 <ClientLogos />
 
+                {/* [SOBRE-0] HERO — antes do Editorial */}
+                <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
+                    <div className="absolute inset-0 z-0">
+                        <Image src="/images/about/banner--04-imagem-3nsaio-house-mazzutti.png" alt="" fill sizes="100vw" quality={85} className="object-cover object-top" />
+                        <div className="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
+                        <div className="max-w-4xl">
+                            <span className="text-caption text-white/70 mb-6 block">{tAbout('hero_label')}</span>
+                            <h2 className="text-h1 text-white mb-8 hmzt-hero-title">{tAbout('hero_titulo')}</h2>
+                            <p className="text-body text-white/75 mb-12 measure-editorial">{tAbout('hero_texto')}</p>
+                            <Link href="/contato" className="inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
+                                {tAbout('hero_cta')}
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
                 {/* BLOG SECTION — Últimos artigos (penúltima) */}
                 <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
@@ -584,23 +602,6 @@ export default function ComunidadePage() {
                     </div>
                 </section>
 
-                {/* [SOBRE-0] HERO — última seção da página */}
-                <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
-                    <div className="absolute inset-0 z-0">
-                        <Image src="/images/about/banner--04-imagem-3nsaio-house-mazzutti.png" alt="" fill sizes="100vw" quality={85} className="object-cover object-top" />
-                        <div className="absolute inset-0 bg-black/20"></div>
-                    </div>
-                    <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
-                        <div className="max-w-4xl">
-                            <span className="text-caption text-white/70 mb-6 block">{tAbout('hero_label')}</span>
-                            <h2 className="text-h1 text-white mb-8 hmzt-hero-title">{tAbout('hero_titulo')}</h2>
-                            <p className="text-body text-white/75 mb-12 measure-editorial">{tAbout('hero_texto')}</p>
-                            <Link href="/contato" className="inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
-                                {tAbout('hero_cta')}
-                            </Link>
-                        </div>
-                    </div>
-                </section>
             </main>
 
             {/* FOOTER */}
