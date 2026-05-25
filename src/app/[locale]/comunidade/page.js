@@ -433,28 +433,6 @@ export default function ComunidadePage() {
                     </div>
                 </section>
 
-                {/* [SOBRE-5] DIFERENCIAL */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row-reverse relative">
-                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
-                        <Image alt="Direção de arte autoral — House Mazzutti" src="/images/about/diferencial-mao.jpg" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover" />
-                    </div>
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
-                    <div className="w-full md:w-1/2 bg-[#f5f5f5] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-600">{tAbout('diferencial_label')}</span>
-                            <h2 className="text-h2 text-black">{tAbout('diferencial_titulo')}</h2>
-                            <div className="space-y-5 text-body text-neutral-700">
-                                <p>{tAbout('diferencial_intro')}</p>
-                                <ul className="space-y-2">
-                                    {tAbout.raw('diferencial_items').map((item, i) => (
-                                        <li key={i}>{item}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* [SOBRE-6.5] PRODUÇÃO EXECUTIVA — MATEUS SACAVEM */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
