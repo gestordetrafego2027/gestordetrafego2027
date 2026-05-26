@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase/server'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { AddToCartButton } from '@/components/ecommerce/product/AddToCartButton'
 
 export const revalidate = 60
 
@@ -183,21 +184,23 @@ export default async function ProdutoPage({ params }: Props) {
               )}
 
               {/* CTA */}
-              {isQuoteOnly || !mainPrice ? (
-                <Link
-                  href="/contato"
-                  className="w-full block bg-neutral-900 text-white font-semibold py-3.5 rounded-xl text-center hover:bg-neutral-700 transition-colors"
-                >
-                  Solicitar orçamento
-                </Link>
-              ) : (
-                <button
-                  disabled
-                  className="w-full bg-neutral-900 text-white font-semibold py-3.5 rounded-xl opacity-50 cursor-not-allowed"
-                  title="Checkout disponível em breve"
-                >
-                  Comprar agora — em breve
-                </button>
+              {mainPrice && (
+                <AddToCartButton
+                  isQuoteOnly={isQuoteOnly}
+                  item={{
+                    id: mainPrice.id,
+                    stripePriceId: mainPrice.stripe_price_id,
+                    stripeProductId: product.id,
+                    slug: product.slug,
+                    name: product.name,
+                    description: product.description ?? null,
+                    image: mainImage,
+                    unitAmount: mainPrice.unit_amount,
+                    currency: mainPrice.currency ?? 'brl',
+                    productType: product.product_type as 'digital' | 'service' | 'physical' | 'bundle',
+                    quoteOnly: isQuoteOnly,
+                  }}
+                />
               )}
 
               <p className="text-xs text-neutral-400 text-center">

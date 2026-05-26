@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LangSwitcher from './LangSwitcher';
+import { CartButton } from '@/components/ecommerce/CartButton';
 
 /**
  * GLOBAL HEADER COMPONENT
@@ -129,6 +130,7 @@ export default function Header({ variant = 'dark' }) {
 
                 <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
                     <LangSwitcher textColor={currentTextColor} />
+                    <CartButton color={currentTextColor === '#000000' ? 'black' : 'white'} />
                     <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
                         <span className="material-symbols-outlined" data-icon="search">search</span>
                     </button>
