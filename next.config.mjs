@@ -12,7 +12,7 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
 
-  // 2. Otimização de Imagens Externas
+  // 2. Otimização de Imagens
   images: {
     remotePatterns: [
       {
@@ -22,10 +22,19 @@ const nextConfig = {
         pathname: '/aida-public/**',
       },
     ],
+    // Serve WebP / AVIF automaticamente para todos os navegadores modernos
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Breakpoints de largura usados no srcset (px)
+    deviceSizes: [640, 828, 1080, 1280, 1920],
+    // Tamanhos para imagens com width/height fixos
+    imageSizes: [64, 128, 256, 384, 512],
+    // Qualidade padrão do otimizador (0-100). 80 = excelente nitidez com ~40% menos peso
+    quality: 80,
+    // Cache de 30 dias para imagens otimizadas
     minimumCacheTTL: 2592000,
+    // Desabilita varredura de domínios desnecessários
+    dangerouslyAllowSVG: false,
+    contentDispositionType: 'attachment',
   },
 
   // 3. SEO e Consistência
