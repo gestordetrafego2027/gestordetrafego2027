@@ -20,7 +20,7 @@ const studioBook = [
   'iasmim', 'jamile-caroline', 'jessica-bittelbrun', 'julia-moraes',
   'leticia-moraes', 'maria-eduarda', 'bruna-brummer', 'iza-feser',
   'marina-machado', 'nataly-silva', 'patricia-marafon', 'poliana-barreto',
-  'sara-henriches', 'vitoria-boidt'
+  'sara-henriches', 'vitoria-boidt', 'francielle-reis', 'emanuelly-terres'
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
@@ -57,6 +57,22 @@ const produtoraBeleza = [
   slug,
   name: toTitleCase(slug),
   cover: `/images/produtora/beleza/${slug}/capa.jpg`
+}));
+
+const produtoraModa = [
+  'beatco', 'pous', 'toli', 'unique-chic'
+].map((slug) => ({
+  slug,
+  name: toTitleCase(slug),
+  cover: `/images/produtora/moda/${slug}/capa.jpg`
+}));
+
+const produtoraInstitucional = [
+  'sense-hotel'
+].map((slug) => ({
+  slug,
+  name: toTitleCase(slug),
+  cover: `/images/produtora/institucional/${slug}/capa.jpg`
 }));
 
 const agenciaProjetos = [
@@ -103,6 +119,24 @@ const categories = [
     cover: produtoraBeleza[0].cover,
     basePath: '/portfolio-produtora',
     projects: produtoraBeleza
+  },
+  {
+    slug: 'moda',
+    unit: 'PRODUTORA',
+    title: 'Moda',
+    description: 'Lookbooks e campanhas de moda — direção criativa e produção executiva.',
+    cover: produtoraModa[0].cover,
+    basePath: '/portfolio-produtora',
+    projects: produtoraModa
+  },
+  {
+    slug: 'institucional',
+    unit: 'PRODUTORA',
+    title: 'Institucional',
+    description: 'Imagem institucional para marcas e empresas — fotografia e direção de set.',
+    cover: produtoraInstitucional[0].cover,
+    basePath: '/portfolio-produtora',
+    projects: produtoraInstitucional
   },
   {
     slug: 'agencia-projetos',
