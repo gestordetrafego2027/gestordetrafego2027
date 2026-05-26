@@ -1,37 +1,21 @@
 import createMiddleware from 'next-intl/middleware'
 import { routing } from './i18n/routing'
-import { type NextRequest, NextResponse } from 'next/server'
+import { type NextRequest } from 'next/server'
 import { updateSession } from '@/lib/supabase/middleware'
-import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 
 const intlMiddleware = createMiddleware(routing)
 
 // Rotas fora do i18n (sem prefixo de locale)
 const NON_I18N = ['/crm', '/login', '/logout', '/api', '/academy', '/auth', '/sitemap.xml', '/robots.txt']
 
-// Rotas de API da loja com rate limit geral (cobertura extra além dos handlers)
-const STORE_API_PATHS = ['/api/store/']
-
+/**
+ * Rate limiting NÃO pode rodar no middleware Edge Runtime (Node.js APIs).
+ * Está implementado diretamente nos route handlers via @upstash/ratelimit:
+ *   - POST /api/store/checkout     → 5 req/min por IP
+ *   - GET  /api/store/validate-coupon → 10 req/min por IP
+ */
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
-
-  // Rate limit geral nas APIs da loja (fail-open se Upstash não configurado)
-  if (STORE_API_PATHS.some((p) => pathname.startsWith(p))) {
-    const ip = getClientIp(request)
-    const rl = await checkRateLimit('api_general', ip)
-    if (!rl.allowed) {
-      return new NextResponse(
-        JSON.stringify({ error: 'Muitas requisições. Tente novamente em instantes.' }),
-        {
-          status: 429,
-          headers: {
-            'Content-Type': 'application/json',
-            'Retry-After': String(rl.retryAfter ?? 60),
-          },
-        },
-      )
-    }
-  }
 
   // Rotas sem i18n: só Supabase auth
   if (NON_I18N.some((prefix) => pathname.startsWith(prefix))) {
