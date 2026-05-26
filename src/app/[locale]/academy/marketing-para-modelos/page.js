@@ -423,8 +423,10 @@ const CSS = `
 .mpm-root .footer-grid .col span.dim { color: rgba(239,233,218,0.4); display: block; padding: 5px 0; }
 
 .mpm-root .mega-mark { border-top: 1px solid rgba(239,233,218,0.14); border-bottom: 1px solid rgba(239,233,218,0.14); padding: 64px 0 56px; margin-bottom: 32px; overflow: hidden; }
-.mpm-root .mega-mark .mark-inner { font-family: var(--sans); font-weight: 700; text-transform: uppercase; color: var(--paper); font-size: clamp(80px, 16vw, 260px); line-height: 0.82; letter-spacing: -0.035em; text-align: center; white-space: nowrap; }
+.mpm-root .mega-mark .mark-inner { color: var(--paper); font-size: clamp(80px, 16vw, 260px); line-height: 0.82; text-align: center; white-space: nowrap; }
 .mpm-root .mega-mark .mark-inner .l { display: block; }
+.mpm-root .mega-mark .mark-inner .hm-house { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 400 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.02em; color: var(--paper); }
+.mpm-root .mega-mark .mark-inner .hm-mazzutti { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 700 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.02em; color: var(--paper); }
 .mpm-root .mega-mark .mark-inner em { font-family: var(--display); font-style: italic; font-weight: 400; color: var(--lime); letter-spacing: -0.04em; text-transform: none; }
 .mpm-root .mega-mark .mark-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 36px; padding: 0 4px; font-family: var(--sans); font-size: 10px; letter-spacing: 0.34em; color: rgba(239,233,218,0.45); }
 .mpm-root .mega-mark .mark-foot .dot { width: 6px; height: 6px; background: var(--mondrian-red); border-radius: 50%; display: inline-block; margin: 0 10px; }
@@ -931,7 +933,9 @@ export default function MarketingParaModelosPage() {
       <footer className="mpm-footer">
         <div className="mega-mark">
           <div className="mark-inner">
-            <span className="l">House Mazzutti<em>.</em></span>
+            <span className="l">
+              <span className="hm-house">House&nbsp;</span><span className="hm-mazzutti">Mazzutti</span><em>.</em>
+            </span>
           </div>
           <div className="wrap mark-foot">
             <span>Académia</span>
