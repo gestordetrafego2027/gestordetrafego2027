@@ -63,7 +63,9 @@ export default async function ProdutoPage({ params }: Props) {
 
   if (!product) notFound()
 
-  const mainPrice = (product.store_prices as any[])?.find((p) => p.active) ?? null
+  const allPrices = (product.store_prices as any[]) ?? []
+  const mainPrice = allPrices.find((p: any) => p.active) ?? null
+  const isQuoteOnly = mainPrice?.metadata?.quote_only === 'true'
   const mainImage = product.images?.[0] ?? null
   const galleryImages = product.images ?? []
 
@@ -180,22 +182,22 @@ export default async function ProdutoPage({ params }: Props) {
                 </ul>
               )}
 
-              {/* CTA — Sprint 2 vai conectar ao carrinho */}
-              {mainPrice ? (
+              {/* CTA */}
+              {isQuoteOnly || !mainPrice ? (
+                <Link
+                  href="/contato"
+                  className="w-full block bg-neutral-900 text-white font-semibold py-3.5 rounded-xl text-center hover:bg-neutral-700 transition-colors"
+                >
+                  Solicitar orçamento
+                </Link>
+              ) : (
                 <button
                   disabled
                   className="w-full bg-neutral-900 text-white font-semibold py-3.5 rounded-xl opacity-50 cursor-not-allowed"
                   title="Checkout disponível em breve"
                 >
-                  Comprar agora
+                  Comprar agora — em breve
                 </button>
-              ) : (
-                <Link
-                  href="/contato"
-                  className="w-full bg-neutral-900 text-white font-semibold py-3.5 rounded-xl text-center hover:bg-neutral-700 transition-colors"
-                >
-                  Solicitar orçamento
-                </Link>
               )}
 
               <p className="text-xs text-neutral-400 text-center">
