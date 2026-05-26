@@ -1,5 +1,8 @@
 import { createClient } from '@/lib/supabase/server'
+import { redirect } from 'next/navigation'
 import Link from 'next/link'
+
+export const dynamic = 'force-dynamic'
 
 function formatPrice(cents: number) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
@@ -8,18 +11,19 @@ function formatPrice(cents: number) {
 export default async function MinhaContaPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
+  if (!user) redirect('/login')
 
   const { data: profile } = await supabase
     .from('profiles')
     .select('full_name, display_name, email, avatar_url')
-    .eq('id', user!.id)
+    .eq('id', user.id)
     .maybeSingle()
 
   // Últimos 3 pedidos
   const { data: recentOrders } = await supabase
     .from('store_orders')
     .select('id, order_number, status, total_cents, currency, created_at')
-    .eq('user_id', user!.id)
+    .eq('user_id', user.id)
     .order('created_at', { ascending: false })
     .limit(3)
 
@@ -48,7 +52,7 @@ export default async function MinhaContaPage() {
       <div className="bg-white rounded-2xl border border-neutral-100 p-6">
         <p className="text-sm text-neutral-400 mb-1">Olá,</p>
         <h2 className="text-xl font-semibold text-neutral-900">{displayName}</h2>
-        <p className="text-sm text-neutral-400 mt-0.5">{profile?.email ?? user!.email}</p>
+        <p className="text-sm text-neutral-400 mt-0.5">{profile?.email ?? user.email}</p>
       </div>
 
       {/* Pedidos recentes */}

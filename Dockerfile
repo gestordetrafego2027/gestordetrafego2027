@@ -14,6 +14,7 @@ COPY . .
 
 # Desabilita telemetria do Next.js durante o build
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_OPTIONS=--max-old-space-size=3072
 
 RUN npm run build
 
