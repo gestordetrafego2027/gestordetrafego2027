@@ -46,17 +46,17 @@ export default function OnTakePage() {
     }, []);
 
     const verticalImages = [
-        "/images/agencia/on-take/2.jpg",
-        "/images/agencia/on-take/3.jpg",
-        "/images/agencia/on-take/4.jpg",
-        "/images/agencia/on-take/5.jpg",
-        "/images/agencia/on-take/6.jpg",
-        "/images/agencia/on-take/7.jpg",
-        "/images/agencia/on-take/8.jpg"
+        "/images/agencia/on-take/2.webp",
+        "/images/agencia/on-take/3.webp",
+        "/images/agencia/on-take/4.webp",
+        "/images/agencia/on-take/5.webp",
+        "/images/agencia/on-take/6.webp",
+        "/images/agencia/on-take/7.webp",
+        "/images/agencia/on-take/8.webp"
     ];
 
     const horizontalImages = [
-        "/images/agencia/on-take/1.jpg"
+        "/images/agencia/on-take/1.webp"
     ];
 
     return (

@@ -45,7 +45,7 @@ export default function SenseHotelPage() {
         };
     }, []);
 
-    const images = Array.from({length: 3}, (_, i) => `/images/produtora/institucional/sense-hotel/${i+1}.jpg`);
+    const images = Array.from({length: 3}, (_, i) => `/images/produtora/institucional/sense-hotel/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

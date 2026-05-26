@@ -45,7 +45,7 @@ export default function BeatcoPage() {
         };
     }, []);
 
-    const images = Array.from({length: 8}, (_, i) => `/images/produtora/moda/beatco/${i+1}.jpg`);
+    const images = Array.from({length: 8}, (_, i) => `/images/produtora/moda/beatco/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

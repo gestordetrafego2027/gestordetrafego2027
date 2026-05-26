@@ -194,7 +194,7 @@ export default function ArticleContent({ slug }) {
 
                     {/* Author Section */}
                     <div className="flex items-center gap-8 p-8 hairline-t border-b-[0.5px] border-zinc-100 mb-20">
-                        <NextImage alt="Angelo Mazzutti" className="w-20 h-20 rounded-full object-cover grayscale" src="/images/angelo/angelo-portrait.png" width={80} height={80} />
+                        <NextImage alt="Angelo Mazzutti" className="w-20 h-20 rounded-full object-cover grayscale" src="/images/angelo/angelo-portrait.webp" width={80} height={80} />
                         <div>
                             <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400 mb-1">AUTOR</div>
                             <div className="text-[18px] font-headline italic text-zinc-900 mb-2">Angelo Mazzutti</div>
@@ -207,7 +207,7 @@ export default function ArticleContent({ slug }) {
                 <aside className="hidden lg:flex flex-col w-80 sticky" style={{ position: 'sticky', top: '100px', alignSelf: 'flex-start' }}>
                     {/* About Sidebar */}
                     <div className="mb-12 pb-10 hairline-b">
-                        <NextImage alt="House Mazzutti" className="w-[100px] h-[100px] rounded-full object-cover bg-black mb-6" src="/images/angelo/hmzt-logo.png" width={100} height={100} />
+                        <NextImage alt="House Mazzutti" className="w-[100px] h-[100px] rounded-full object-cover bg-black mb-6" src="/images/angelo/hmzt-logo.webp" width={100} height={100} />
                         <h4 className="text-zinc-900 mb-4">
                             <span className="hm-logo" style={{ fontSize: '20px' }}>
                                 <span className="hm-house">House</span>

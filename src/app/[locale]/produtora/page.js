@@ -175,7 +175,7 @@ export default function ProdutoraPage() {
                         ];
                         return <>
                             <div className="absolute inset-0 z-0">
-                                {['/images/produtora/banners/banner-1.jpg','/images/produtora/banners/banner-2.jpg','/images/produtora/banners/banner-3.jpg'].map((src, i) => (
+                                {['/images/produtora/banners/banner-1.webp','/images/produtora/banners/banner-2.webp','/images/produtora/banners/banner-3.webp'].map((src, i) => (
                                     <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
                                         <Image src={src} alt="" fill sizes="100vw" quality={85} priority={i === 0} className="object-cover object-top" />
                                         <div className="absolute inset-0 bg-black/20"></div>
@@ -225,28 +225,28 @@ export default function ProdutoraPage() {
                     </div>
                     <div className="columns-gallery-container" style={{ height: '80vh' }}>
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/elyah">
-                            <Image alt="Elyah" src="/images/produtora/acessorios/elyah/1.jpg" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
+                            <Image alt="Elyah" src="/images/produtora/acessorios/elyah/1.webp" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
                                 <span>Publicidade</span>
                                 <h4>Elyah</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/oceane">
-                            <Image alt="Oceane" src="/images/produtora/beleza/oceane/1.jpg" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
+                            <Image alt="Oceane" src="/images/produtora/beleza/oceane/1.webp" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
                                 <span>Content MKT</span>
                                 <h4>Oceane</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/alletto-still">
-                            <Image alt="Alletto Still" src="/images/produtora/beleza/alletto-still/1.jpg" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
+                            <Image alt="Alletto Still" src="/images/produtora/beleza/alletto-still/1.webp" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
                                 <span>Set Design</span>
                                 <h4>Alletto Still</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/signus-versolato02">
-                            <Image alt="Signus - Versolato 02" src="/images/produtora/acessorios/signus-versolato02/1.jpg" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
+                            <Image alt="Signus - Versolato 02" src="/images/produtora/acessorios/signus-versolato02/1.webp" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
                                 <span>Direção Criativa</span>
                                 <h4>Signus - Versolato 02</h4>

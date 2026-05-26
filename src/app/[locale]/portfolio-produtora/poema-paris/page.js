@@ -45,7 +45,7 @@ export default function PoemasParisPage() {
         };
     }, []);
 
-    const images = Array.from({length: 10}, (_, i) => `/images/produtora/acessorios/poema-paris/${i+1}.jpg`);
+    const images = Array.from({length: 10}, (_, i) => `/images/produtora/acessorios/poema-paris/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

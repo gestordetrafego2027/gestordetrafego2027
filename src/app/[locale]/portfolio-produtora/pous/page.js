@@ -45,7 +45,7 @@ export default function PousPage() {
         };
     }, []);
 
-    const images = Array.from({length: 12}, (_, i) => `/images/produtora/moda/pous/${i+1}.jpg`);
+    const images = Array.from({length: 12}, (_, i) => `/images/produtora/moda/pous/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

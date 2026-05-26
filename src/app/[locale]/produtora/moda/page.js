@@ -45,7 +45,7 @@ export default function ProdutoraModaPage() {
             <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/produtora/moda/hero.png"
+                        src="/images/produtora/moda/hero.webp"
                         alt="Shooting de moda — direção criativa House Mazzutti"
                         className="w-full h-full object-cover object-center"
                     />
@@ -424,46 +424,4 @@ export default function ProdutoraModaPage() {
             <section className="bg-white px-[40px]">
                 <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                     <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">Sua marca no próximo nível visual.</h2>
-                    <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
-                        ESTRUTURAR EDITORIAL DA MINHA MARCA
-                    </button>
-                </div>
-            </section>
-
-            {/* 10. FOOTER */}
-            <footer className="bg-black text-white py-24 px-12 border-t-[0.5px] border-zinc-900 flex flex-col items-center w-full text-center space-y-8">
-                <h2 className="text-2xl font-serif text-white mb-12 uppercase tracking-tight">House Mazzutti</h2>
-                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 mb-12">
-                    <div className="space-y-4">
-                        <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">SOCIAL</p>
-                        <div className="flex space-x-8 justify-center">
-                            <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://instagram.com/housemazzutti">INSTAGRAM</Link>
-                            <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://linkedin.com/company/housemazzutti">LINKEDIN</Link>
-                        </div>
-                    </div>
-                </div>
-                <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 pb-12">
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">CONTATO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
-                </nav>
-                <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t-[0.5px] border-zinc-900">
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2026 House Mazzutti</p>
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
-                </div>
-            </footer>
-            <FormDrawer
-                isOpen={!!formCta}
-                onClose={closeForm}
-                title="Iniciar projeto editorial"
-                subtitle="Conte-nos sobre seu projeto. Respondemos em até 1 dia útil."
-            >
-                <FormProdutora
-                    onClose={closeForm}
-                    sourceUrl="/produtora/moda"
-                    ctaLocation={formCta?.ctaLocation ?? null}
-                />
-            </FormDrawer>
-        </div>
-    );
-}
+          

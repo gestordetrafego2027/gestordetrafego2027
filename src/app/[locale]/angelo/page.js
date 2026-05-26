@@ -97,7 +97,7 @@ export default function AngeloPage() {
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh]">
                         <Image
                             alt="HMZT — House Mazzutti branding"
-                            src="/images/angelo/hmzt-logo.png"
+                            src="/images/angelo/hmzt-logo.webp"
                             fill
                             sizes="(max-width: 768px) 100vw, 50vw"
                             quality={85}
@@ -152,7 +152,7 @@ export default function AngeloPage() {
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
                         <Image
                             alt="Angelo Mazzutti — Diretor Criativo"
-                            src="/images/angelo/angelo-portrait.png"
+                            src="/images/angelo/angelo-portrait.webp"
                             fill
                             sizes="(max-width: 768px) 100vw, 50vw"
                             quality={82}

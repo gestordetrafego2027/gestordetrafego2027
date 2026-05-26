@@ -286,12 +286,12 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                         {[
-                            { title: "Amanda Oliveira", sub: "Book", src: "/images/studio/amanda-oliveira/capa.jpg", hover: "/images/studio/amanda-oliveira/2.jpg", link: "/portfolio-studio/amanda-oliveira" },
-                            { title: "Patricia Marafon", sub: "Book", src: "/images/studio/patricia-marafon/capa.jpg", hover: "/images/studio/patricia-marafon/2.jpg", link: "/portfolio-studio/patricia-marafon" },
-                            { title: "Signus - Versolato 02", sub: "Acessórios", src: "/images/produtora/acessorios/signus-versolato02/capa.jpg", hover: "/images/produtora/acessorios/signus-versolato02/2.jpg", link: "/portfolio-produtora/signus-versolato02" },
-                            { title: "Elyah", sub: "Acessórios", src: "/images/produtora/acessorios/elyah/capa.jpg", hover: "/images/produtora/acessorios/elyah/2.jpg", link: "/portfolio-produtora/elyah" },
-                            { title: "Knowhol", sub: "Direção de Imagem", src: "/images/agencia/knowhol/capa.jpg", hover: "/images/agencia/knowhol/2.jpg", link: "/portfolio-agencia/knowhol" },
-                            { title: "Samrat", sub: "Direção de Imagem", src: "/images/agencia/samrat/capa.jpg", hover: "/images/agencia/samrat/2.jpg", link: "/portfolio-agencia/samrat" },
+                            { title: "Amanda Oliveira", sub: "Book", src: "/images/studio/amanda-oliveira/capa.webp", hover: "/images/studio/amanda-oliveira/2.webp", link: "/portfolio-studio/amanda-oliveira" },
+                            { title: "Patricia Marafon", sub: "Book", src: "/images/studio/patricia-marafon/capa.webp", hover: "/images/studio/patricia-marafon/2.webp", link: "/portfolio-studio/patricia-marafon" },
+                            { title: "Signus - Versolato 02", sub: "Acessórios", src: "/images/produtora/acessorios/signus-versolato02/capa.webp", hover: "/images/produtora/acessorios/signus-versolato02/2.webp", link: "/portfolio-produtora/signus-versolato02" },
+                            { title: "Elyah", sub: "Acessórios", src: "/images/produtora/acessorios/elyah/capa.webp", hover: "/images/produtora/acessorios/elyah/2.webp", link: "/portfolio-produtora/elyah" },
+                            { title: "Knowhol", sub: "Direção de Imagem", src: "/images/agencia/knowhol/capa.webp", hover: "/images/agencia/knowhol/2.webp", link: "/portfolio-agencia/knowhol" },
+                            { title: "Samrat", sub: "Direção de Imagem", src: "/images/agencia/samrat/capa.webp", hover: "/images/agencia/samrat/2.webp", link: "/portfolio-agencia/samrat" },
                         ].map((work, i) => (
                             <Link
                                 key={i}
@@ -336,7 +336,7 @@ export default function Home() {
                 {/* ── SOBRE / DIFERENCIAL ────────────────────────────────── */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row-reverse relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
-                        <Image src="/images/about/diferencial-mao.jpg" alt="Direção de arte autoral — House Mazzutti" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover" />
+                        <Image src="/images/about/diferencial-mao.webp" alt="Direção de arte autoral — House Mazzutti" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover" />
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
                     <div className="w-full md:w-1/2 bg-[#f5f5f5] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
@@ -359,7 +359,7 @@ export default function Home() {
                 {/* ── SOBRE / ANGELO MAZZUTTI ─────────────────────────────── */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
-                        <Image alt="House Mazzutti — Agência, Produtora e Direção Criativa" src="/images/about/angelo-mazzutti.jpg" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover object-top" />
+                        <Image alt="House Mazzutti — Agência, Produtora e Direção Criativa" src="/images/about/angelo-mazzutti.webp" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover object-top" />
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
                     <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">

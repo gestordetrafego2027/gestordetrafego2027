@@ -24,7 +24,7 @@ const studioBook = [
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
-  cover: `/images/studio/${slug}/capa.jpg`
+  cover: `/images/studio/${slug}/capa.webp`
 }));
 
 const studioEnsaio = [
@@ -36,7 +36,7 @@ const studioEnsaio = [
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
-  cover: `/images/studio/${slug}/capa.jpg`
+  cover: `/images/studio/${slug}/capa.webp`
 }));
 
 const produtoraAcessorios = [
@@ -47,7 +47,7 @@ const produtoraAcessorios = [
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
-  cover: `/images/produtora/acessorios/${slug}/capa.jpg`
+  cover: `/images/produtora/acessorios/${slug}/capa.webp`
 }));
 
 const produtoraBeleza = [
@@ -56,7 +56,7 @@ const produtoraBeleza = [
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
-  cover: `/images/produtora/beleza/${slug}/capa.jpg`
+  cover: `/images/produtora/beleza/${slug}/capa.webp`
 }));
 
 const produtoraModa = [
@@ -64,7 +64,7 @@ const produtoraModa = [
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
-  cover: `/images/produtora/moda/${slug}/capa.jpg`
+  cover: `/images/produtora/moda/${slug}/capa.webp`
 }));
 
 const produtoraInstitucional = [
@@ -72,7 +72,7 @@ const produtoraInstitucional = [
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
-  cover: `/images/produtora/institucional/${slug}/capa.jpg`
+  cover: `/images/produtora/institucional/${slug}/capa.webp`
 }));
 
 const agenciaProjetos = [
@@ -80,7 +80,7 @@ const agenciaProjetos = [
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
-  cover: `/images/agencia/${slug}/capa.jpg`
+  cover: `/images/agencia/${slug}/capa.webp`
 }));
 
 const categories = [

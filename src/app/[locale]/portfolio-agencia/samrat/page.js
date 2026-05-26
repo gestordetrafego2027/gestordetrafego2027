@@ -46,16 +46,16 @@ export default function SamratPage() {
     }, []);
 
     const verticalImages = [
-        "/images/agencia/samrat/2.jpg",
-        "/images/agencia/samrat/3.jpg",
-        "/images/agencia/samrat/4.jpg",
-        "/images/agencia/samrat/5.jpg",
-        "/images/agencia/samrat/6.jpg",
-        "/images/agencia/samrat/7.jpg"
+        "/images/agencia/samrat/2.webp",
+        "/images/agencia/samrat/3.webp",
+        "/images/agencia/samrat/4.webp",
+        "/images/agencia/samrat/5.webp",
+        "/images/agencia/samrat/6.webp",
+        "/images/agencia/samrat/7.webp"
     ];
 
     const horizontalImages = [
-        "/images/agencia/samrat/1.jpg"
+        "/images/agencia/samrat/1.webp"
     ];
 
     return (

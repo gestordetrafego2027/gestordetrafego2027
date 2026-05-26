@@ -45,7 +45,7 @@ export default function SignusJeanPierrePage() {
         };
     }, []);
 
-    const images = Array.from({length: 5}, (_, i) => `/images/produtora/acessorios/signus-jean-pierre/${i+1}.jpg`);
+    const images = Array.from({length: 5}, (_, i) => `/images/produtora/acessorios/signus-jean-pierre/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

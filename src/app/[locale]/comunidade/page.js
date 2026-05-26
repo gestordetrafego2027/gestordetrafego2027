@@ -106,12 +106,12 @@ export default function ComunidadePage() {
     ];
 
     const gridImages = [
-        { src: "/images/comunidade/grid-1.png", alt: "Bastidor — House Mazzutti em set", label: "Bastidor", sublabel: "Direção" },
-        { src: "/images/comunidade/grid-2.png", alt: "Set de produção — House Mazzutti", label: "Set", sublabel: "Produção" },
-        { src: "/images/comunidade/grid-3.png", alt: "Estúdio em captação — House Mazzutti", label: "Estúdio", sublabel: "Captação" },
-        { src: "/images/comunidade/grid-4.png", alt: "Equipe em operação — House Mazzutti", label: "Equipe", sublabel: "Operação" },
-        { src: "/images/comunidade/grid-5.png", alt: "Cena com iluminação cênica — House Mazzutti", label: "Cena", sublabel: "Iluminação" },
-        { src: "/images/comunidade/grid-6.png", alt: "Direção e execução em set — House Mazzutti", label: "Direção", sublabel: "Execução" },
+        { src: "/images/comunidade/grid-1.webp", alt: "Bastidor — House Mazzutti em set", label: "Bastidor", sublabel: "Direção" },
+        { src: "/images/comunidade/grid-2.webp", alt: "Set de produção — House Mazzutti", label: "Set", sublabel: "Produção" },
+        { src: "/images/comunidade/grid-3.webp", alt: "Estúdio em captação — House Mazzutti", label: "Estúdio", sublabel: "Captação" },
+        { src: "/images/comunidade/grid-4.webp", alt: "Equipe em operação — House Mazzutti", label: "Equipe", sublabel: "Operação" },
+        { src: "/images/comunidade/grid-5.webp", alt: "Cena com iluminação cênica — House Mazzutti", label: "Cena", sublabel: "Iluminação" },
+        { src: "/images/comunidade/grid-6.webp", alt: "Direção e execução em set — House Mazzutti", label: "Direção", sublabel: "Execução" },
     ];
 
     const SocialIcons = () => (
@@ -163,7 +163,7 @@ export default function ComunidadePage() {
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     <div className="absolute inset-0 z-0">
                         <img
-                            src="/images/comunidade/hero.png"
+                            src="/images/comunidade/hero.webp"
                             alt="Produção House Mazzutti — equipe em set"
                             className="w-full h-full object-cover"
                         />
@@ -418,7 +418,7 @@ export default function ComunidadePage() {
                 {/* [SOBRE-6.5] PRODUÇÃO EXECUTIVA — MATEUS SACAVEM */}
                 <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
                     <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
-                        <Image alt="Mateus Sacavem — Produtor Executivo da House Mazzutti" src="/images/about/mateus-sacavem.jpg" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover object-top" />
+                        <Image alt="Mateus Sacavem — Produtor Executivo da House Mazzutti" src="/images/about/mateus-sacavem.webp" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover object-top" />
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#1a1a1a] z-10"></div>
                     <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
@@ -491,7 +491,7 @@ export default function ComunidadePage() {
                 {/* [SOBRE-0] HERO — antes do Editorial */}
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     <div className="absolute inset-0 z-0">
-                        <Image src="/images/about/banner--04-imagem-3nsaio-house-mazzutti.png" alt="" fill sizes="100vw" quality={85} className="object-cover object-top" />
+                        <Image src="/images/about/banner--04-imagem-3nsaio-house-mazzutti.webp" alt="" fill sizes="100vw" quality={85} className="object-cover object-top" />
                         <div className="absolute inset-0 bg-black/20"></div>
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">

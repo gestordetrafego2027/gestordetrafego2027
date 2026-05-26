@@ -88,26 +88,26 @@ export default function BrendaMattosPage() {
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <div onClick={() => openImg('/images/studio/brenda-mattos/1.jpg')} className="cursor-pointer">
-                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/brenda-mattos/1.webp')} className="cursor-pointer">
+                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/1.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/brenda-mattos/2.jpg')} className="cursor-pointer">
-                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/brenda-mattos/2.webp')} className="cursor-pointer">
+                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/2.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/brenda-mattos/3.jpg')} className="cursor-pointer">
-                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/brenda-mattos/3.webp')} className="cursor-pointer">
+                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/3.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/brenda-mattos/4.jpg')} className="cursor-pointer">
-                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/brenda-mattos/4.webp')} className="cursor-pointer">
+                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/4.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/brenda-mattos/5.jpg')} className="cursor-pointer">
-                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/brenda-mattos/5.webp')} className="cursor-pointer">
+                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/5.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/brenda-mattos/6.jpg')} className="cursor-pointer">
-                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 6" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/6.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/brenda-mattos/6.webp')} className="cursor-pointer">
+                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 6" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/6.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/brenda-mattos/7.jpg')} className="cursor-pointer">
-                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 7" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/7.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/brenda-mattos/7.webp')} className="cursor-pointer">
+                            <Image alt="Brenda Mattos - Ensaio Pessoal House Mazzutti - Foto 7" style={{objectPosition: 'top'}} src="/images/studio/brenda-mattos/7.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>

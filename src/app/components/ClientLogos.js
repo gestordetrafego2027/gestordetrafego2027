@@ -59,7 +59,7 @@ export default function ClientLogos() {
                 <div className="logos-slider-track" id="logos-track">
                     {looped.map((name, i) => (
                         <div key={`${name}-${i}`} className="logos-slider-item relative">
-                            <Image src={`/images/angelo/logos/${name}.png`} alt={name} width={140} height={70} className="object-contain" style={{maxHeight: '70px', width: 'auto'}} />
+                            <Image src={`/images/angelo/logos/${name}.webp`} alt={name} width={140} height={70} className="object-contain" style={{maxHeight: '70px', width: 'auto'}} />
                         </div>
                     ))}
                 </div>

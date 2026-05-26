@@ -45,7 +45,7 @@ export default function MonicaCostajewerlyPage() {
         };
     }, []);
 
-    const images = Array.from({length: 10}, (_, i) => `/images/produtora/acessorios/monica-costa-jewerly/${i+1}.jpg`);
+    const images = Array.from({length: 10}, (_, i) => `/images/produtora/acessorios/monica-costa-jewerly/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

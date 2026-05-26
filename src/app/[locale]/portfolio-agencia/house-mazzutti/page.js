@@ -46,16 +46,16 @@ export default function HouseMazzuttiPage() {
     }, []);
 
     const verticalImages = [
-        "/images/agencia/house-mazzutti/3.jpg",
-        "/images/agencia/house-mazzutti/4.jpg",
-        "/images/agencia/house-mazzutti/5.jpg",
-        "/images/agencia/house-mazzutti/6.jpg",
-        "/images/agencia/house-mazzutti/7.jpg"
+        "/images/agencia/house-mazzutti/3.webp",
+        "/images/agencia/house-mazzutti/4.webp",
+        "/images/agencia/house-mazzutti/5.webp",
+        "/images/agencia/house-mazzutti/6.webp",
+        "/images/agencia/house-mazzutti/7.webp"
     ];
 
     const horizontalImages = [
-        "/images/agencia/house-mazzutti/2.jpg",
-        "/images/agencia/house-mazzutti/3.jpg"
+        "/images/agencia/house-mazzutti/2.webp",
+        "/images/agencia/house-mazzutti/3.webp"
     ];
 
     return (

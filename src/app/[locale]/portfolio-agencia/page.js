@@ -56,42 +56,42 @@ export default function PortfolioAgenciaPage() {
                     {/* Grid Rows Construction */}
                     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
                         <Link href="/portfolio-agencia/house-mazzutti" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/agencia/house-mazzutti/capa.jpg" alt="House Mazzutti" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <Image src="/images/agencia/house-mazzutti/capa.webp" alt="House Mazzutti" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">House Mazzutti</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-agencia/knowhol" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/agencia/knowhol/capa.jpg" alt="Knowhol" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <Image src="/images/agencia/knowhol/capa.webp" alt="Knowhol" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Knowhol</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-agencia/mabdo" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/agencia/mabdo/capa.jpg" alt="Mabdo" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <Image src="/images/agencia/mabdo/capa.webp" alt="Mabdo" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Mabdo</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-agencia/on-take" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/agencia/on-take/capa.jpg" alt="On Take" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <Image src="/images/agencia/on-take/capa.webp" alt="On Take" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">On Take</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-agencia/pous" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/agencia/pous/capa.jpg" alt="Pous" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <Image src="/images/agencia/pous/capa.webp" alt="Pous" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Pous</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-agencia/samrat" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/agencia/samrat/capa.jpg" alt="Samrat" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <Image src="/images/agencia/samrat/capa.webp" alt="Samrat" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Samrat</span>

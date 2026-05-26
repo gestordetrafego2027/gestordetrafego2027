@@ -88,26 +88,26 @@ export default function WePink01Page() {
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/1.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-01/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/1.webp')} className="cursor-pointer">
+                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-01/1.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/2.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-01/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/2.webp')} className="cursor-pointer">
+                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-01/2.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/produtora/beleza/we-pink-01/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/3.webp')} className="cursor-pointer">
+                            <Image alt="Foto 3" src="/images/produtora/beleza/we-pink-01/3.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/4.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 4" src="/images/produtora/beleza/we-pink-01/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/4.webp')} className="cursor-pointer">
+                            <Image alt="Foto 4" src="/images/produtora/beleza/we-pink-01/4.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/5.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 5" src="/images/produtora/beleza/we-pink-01/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/5.webp')} className="cursor-pointer">
+                            <Image alt="Foto 5" src="/images/produtora/beleza/we-pink-01/5.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/6.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 6" src="/images/produtora/beleza/we-pink-01/6.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/6.webp')} className="cursor-pointer">
+                            <Image alt="Foto 6" src="/images/produtora/beleza/we-pink-01/6.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/7.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 7" src="/images/produtora/beleza/we-pink-01/7.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-01/7.webp')} className="cursor-pointer">
+                            <Image alt="Foto 7" src="/images/produtora/beleza/we-pink-01/7.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>

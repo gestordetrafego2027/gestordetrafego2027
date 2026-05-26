@@ -8,10 +8,10 @@ import React from 'react';
 const SITE_URL = 'https://housemazzutti.com';
 const PAGE_PATH = '/academy/marketing-para-modelos';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const COVER = '/images/academy/marketing-para-modelos/cover.png';
-const MOCKUP_FRONT = '/images/academy/marketing-para-modelos/mockup-front.png';
-const MOCKUP_HANDS = '/images/academy/marketing-para-modelos/mockup-hands.png';
-const MOCKUP_CHAIR = '/images/academy/marketing-para-modelos/mockup-chair.png';
+const COVER = '/images/academy/marketing-para-modelos/cover.webp';
+const MOCKUP_FRONT = '/images/academy/marketing-para-modelos/mockup-front.webp';
+const MOCKUP_HANDS = '/images/academy/marketing-para-modelos/mockup-hands.webp';
+const MOCKUP_CHAIR = '/images/academy/marketing-para-modelos/mockup-chair.webp';
 const COVER_ABSOLUTE = `${SITE_URL}${COVER}`;
 const CHECKOUT_URL = '/checkout/marketing-para-modelos';
 

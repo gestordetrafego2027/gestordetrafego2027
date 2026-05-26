@@ -46,15 +46,15 @@ export default function MabdoPage() {
     }, []);
 
     const verticalImages = [
-        "/images/agencia/mabdo/3.jpg",
-        "/images/agencia/mabdo/4.jpg",
-        "/images/agencia/mabdo/5.jpg",
-        "/images/agencia/mabdo/6.jpg"
+        "/images/agencia/mabdo/3.webp",
+        "/images/agencia/mabdo/4.webp",
+        "/images/agencia/mabdo/5.webp",
+        "/images/agencia/mabdo/6.webp"
     ];
 
     const horizontalImages = [
-        "/images/agencia/mabdo/1.jpg",
-        "/images/agencia/mabdo/2.jpg"
+        "/images/agencia/mabdo/1.webp",
+        "/images/agencia/mabdo/2.webp"
     ];
 
     return (

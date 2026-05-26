@@ -88,17 +88,17 @@ export default function WePinkZeFelipePage() {
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-ze-felipe/1.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-ze-felipe/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-ze-felipe/1.webp')} className="cursor-pointer">
+                            <Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-ze-felipe/1.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-ze-felipe/2.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-ze-felipe/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-ze-felipe/2.webp')} className="cursor-pointer">
+                            <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-ze-felipe/2.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-ze-felipe/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-ze-felipe/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-ze-felipe/3.webp')} className="cursor-pointer">
+                            <Image alt="Foto 3" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-ze-felipe/3.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-ze-felipe/4.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 4" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-ze-felipe/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/produtora/beleza/we-pink-ze-felipe/4.webp')} className="cursor-pointer">
+                            <Image alt="Foto 4" style={{objectPosition: 'top'}} src="/images/produtora/beleza/we-pink-ze-felipe/4.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>

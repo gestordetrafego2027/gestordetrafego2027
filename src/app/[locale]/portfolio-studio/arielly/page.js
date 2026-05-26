@@ -88,20 +88,20 @@ export default function AriellyPage() {
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <div onClick={() => openImg('/images/studio/arielly/1.jpg')} className="cursor-pointer">
-                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/arielly/1.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/arielly/1.webp')} className="cursor-pointer">
+                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/arielly/1.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/arielly/2.jpg')} className="cursor-pointer">
-                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/arielly/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/arielly/2.webp')} className="cursor-pointer">
+                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/arielly/2.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/arielly/3.jpg')} className="cursor-pointer">
-                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/arielly/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/arielly/3.webp')} className="cursor-pointer">
+                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/arielly/3.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/arielly/4.jpg')} className="cursor-pointer">
-                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/arielly/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/arielly/4.webp')} className="cursor-pointer">
+                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/arielly/4.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/arielly/5.jpg')} className="cursor-pointer">
-                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/arielly/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          <div onClick={() => openImg('/images/studio/arielly/5.webp')} className="cursor-pointer">
+                            <Image alt="Arielly - Book Studio House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/arielly/5.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>

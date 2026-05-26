@@ -46,14 +46,14 @@ export default function KnowholPage() {
     }, []);
 
     const verticalImages = [
-        "/images/agencia/knowhol/2.jpg",
-        "/images/agencia/knowhol/3.jpg",
-        "/images/agencia/knowhol/4.jpg",
-        "/images/agencia/knowhol/5.jpg"
+        "/images/agencia/knowhol/2.webp",
+        "/images/agencia/knowhol/3.webp",
+        "/images/agencia/knowhol/4.webp",
+        "/images/agencia/knowhol/5.webp"
     ];
 
     const horizontalImages = [
-        "/images/agencia/knowhol/1.jpg"
+        "/images/agencia/knowhol/1.webp"
     ];
 
     return (

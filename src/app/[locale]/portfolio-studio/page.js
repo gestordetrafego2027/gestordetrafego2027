@@ -56,7 +56,7 @@ export default function PortfolioStudioPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-[20px]">
 
                         <Link href="/portfolio-studio/amanda-oliveira" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/amanda-oliveira/capa.jpg" alt="Amanda Oliveira" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <Image src="/images/studio/amanda-oliveira/capa.webp" alt="Amanda Oliveira" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Amanda Oliveira</span>
@@ -64,7 +64,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/ana-laura-saar" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/ana-laura-saar/5.jpg" alt="Ana Laura Saar" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/ana-laura-saar/5.webp" alt="Ana Laura Saar" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Ana Laura Saar</span>
@@ -72,7 +72,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/chai-e-dai" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/chai-e-dai/capa.jpg" alt="Chai e Dai" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/chai-e-dai/capa.webp" alt="Chai e Dai" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Chai e Dai</span>
@@ -80,7 +80,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/debora-pantaglione" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/debora-pantaglione/capa.jpg" alt="Debora Pantaglione" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/debora-pantaglione/capa.webp" alt="Debora Pantaglione" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Debora Pantaglione</span>
@@ -88,7 +88,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/ana-rockenbach" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/ana-rockenbach/capa.jpg" alt="Ana Rockenbach" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/ana-rockenbach/capa.webp" alt="Ana Rockenbach" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Ana Rockenbach</span>
@@ -96,7 +96,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/francine-massoco" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/francine-massoco/capa.jpg" alt="Francine Massoco" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/francine-massoco/capa.webp" alt="Francine Massoco" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Francine Massoco</span>
@@ -104,7 +104,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/anna-laura" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/anna-laura/capa.jpg" alt="Anna Laura" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/anna-laura/capa.webp" alt="Anna Laura" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Anna Laura</span>
@@ -112,7 +112,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/gab-cruz" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/gab-cruz/capa.jpg" alt="Gab Cruz" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/gab-cruz/capa.webp" alt="Gab Cruz" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Gab Cruz</span>
@@ -120,7 +120,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/arielly" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/arielly/capa.jpg" alt="Arielly" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/arielly/capa.webp" alt="Arielly" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Arielly</span>
@@ -128,7 +128,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/iasmim" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/iasmim/capa.jpg" alt="Iasmim" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/iasmim/capa.webp" alt="Iasmim" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Iasmim</span>
@@ -136,7 +136,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/jamile-caroline" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/jamile-caroline/capa.jpg" alt="Jamile Caroline" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/jamile-caroline/capa.webp" alt="Jamile Caroline" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jamile Caroline</span>
@@ -144,7 +144,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/jessica-bittelbrun" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/jessica-bittelbrun/capa.jpg" alt="Jessica Bittelbrun" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/jessica-bittelbrun/capa.webp" alt="Jessica Bittelbrun" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jessica Bittelbrun</span>
@@ -152,7 +152,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/julia-moraes" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/julia-moraes/capa.jpg" alt="Julia Moraes" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/julia-moraes/capa.webp" alt="Julia Moraes" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Julia Moraes</span>
@@ -160,7 +160,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/leticia-moraes" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/leticia-moraes/capa.jpg" alt="Leticia Moraes" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/leticia-moraes/capa.webp" alt="Leticia Moraes" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Leticia Moraes</span>
@@ -168,7 +168,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/maria-eduarda" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/maria-eduarda/capa.jpg" alt="Maria Eduarda" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/maria-eduarda/capa.webp" alt="Maria Eduarda" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Maria Eduarda</span>
@@ -176,7 +176,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/bruna-brummer" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/bruna-brummer/capa.jpg" alt="Bruna Brummer" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/bruna-brummer/capa.webp" alt="Bruna Brummer" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Bruna Brummer</span>
@@ -184,7 +184,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/iza-feser" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/iza-feser/capa.jpg" alt="Iza Feser" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/iza-feser/capa.webp" alt="Iza Feser" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Iza Feser</span>
@@ -192,7 +192,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/marina-machado" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/marina-machado/capa.jpg" alt="Marina Machado" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/marina-machado/capa.webp" alt="Marina Machado" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Marina Machado</span>
@@ -200,7 +200,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/nataly-silva" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/nataly-silva/capa.jpg" alt="Nataly Silva" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/nataly-silva/capa.webp" alt="Nataly Silva" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Nataly Silva</span>
@@ -208,7 +208,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/patricia-marafon" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/patricia-marafon/capa.jpg" alt="Patricia Marafon" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/patricia-marafon/capa.webp" alt="Patricia Marafon" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Patricia Marafon</span>
@@ -216,7 +216,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/poliana-barreto" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/poliana-barreto/capa.jpg" alt="Poliana Barreto" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/poliana-barreto/capa.webp" alt="Poliana Barreto" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Poliana Barreto</span>
@@ -224,7 +224,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/sara-henriches" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/sara-henriches/capa.jpg" alt="Sara Henriches" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/sara-henriches/capa.webp" alt="Sara Henriches" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Sara Henriches</span>
@@ -232,7 +232,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/vitoria-boidt" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/vitoria-boidt/capa.jpg" alt="Vitória Boidt" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/vitoria-boidt/capa.webp" alt="Vitória Boidt" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Vitória Boidt</span>
@@ -240,7 +240,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/francielle-reis" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/francielle-reis/capa.jpg" alt="Francielle Reis" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/francielle-reis/capa.webp" alt="Francielle Reis" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Francielle Reis</span>
@@ -248,7 +248,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/emanuelly-terres" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/emanuelly-terres/capa.jpg" alt="Emanuelly Terres" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/emanuelly-terres/capa.webp" alt="Emanuelly Terres" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BOOK</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Emanuelly Terres</span>
@@ -256,7 +256,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/andressa-gomiero" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/andressa-gomiero/capa.jpg" alt="Andressa Gomiero" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/andressa-gomiero/capa.webp" alt="Andressa Gomiero" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Andressa Gomiero</span>
@@ -264,7 +264,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/fernanda-treml" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/fernanda-treml/capa.jpg" alt="Fernanda Treml" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/fernanda-treml/capa.webp" alt="Fernanda Treml" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Fernanda Treml</span>
@@ -272,7 +272,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/nairicia-caberlon" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/nairicia-caberlon/capa.jpg" alt="Naírícia Caberlon" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/nairicia-caberlon/capa.webp" alt="Naírícia Caberlon" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Naírícia Caberlon</span>
@@ -280,7 +280,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/thaisi-dias" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/thaisi-dias/capa.jpg" alt="Thaisi Dias" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/thaisi-dias/capa.webp" alt="Thaisi Dias" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Thaisi Dias</span>
@@ -288,7 +288,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/brenda-mattos" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/brenda-mattos/capa.jpg" alt="Brenda Mattos" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/brenda-mattos/capa.webp" alt="Brenda Mattos" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Brenda Mattos</span>
@@ -296,7 +296,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/gustavo-vioto" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/gustavo-vioto/capa.jpg" alt="Gustavo Vioto" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/gustavo-vioto/capa.webp" alt="Gustavo Vioto" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Gustavo Vioto</span>
@@ -304,7 +304,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/paula-assuncao" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/paula-assuncao/capa.jpg" alt="Paula Assunção" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/paula-assuncao/capa.webp" alt="Paula Assunção" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Paula Assunção</span>
@@ -312,7 +312,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/carol-costa" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/carol-costa/capa.jpg" alt="Carol Costa" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/carol-costa/capa.webp" alt="Carol Costa" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Carol Costa</span>
@@ -320,7 +320,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/leif-sinclar" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/leif-sinclar/capa.jpg" alt="Leif Sinclar" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/leif-sinclar/capa.webp" alt="Leif Sinclar" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Leif Sinclar</span>
@@ -328,7 +328,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/rebeca-cabral" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/rebeca-cabral/capa.jpg" alt="Rebeca Cabral" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/rebeca-cabral/capa.webp" alt="Rebeca Cabral" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Rebeca Cabral</span>
@@ -336,7 +336,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/cynthia-andrade" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/cynthia-andrade/capa.jpg" alt="Cynthia Andrade" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/cynthia-andrade/capa.webp" alt="Cynthia Andrade" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Cynthia Andrade</span>
@@ -344,7 +344,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/maria-tereza" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/maria-tereza/capa.jpg" alt="Maria Tereza" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/maria-tereza/capa.webp" alt="Maria Tereza" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Maria Tereza</span>
@@ -352,7 +352,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/samara-samme" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/samara-samme/capa.jpg" alt="Samara Samme" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/samara-samme/capa.webp" alt="Samara Samme" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Samara Samme</span>
@@ -360,7 +360,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/deise-smaniotto" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/deise-smaniotto/capa.jpg" alt="Deise Smaniotto" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/deise-smaniotto/capa.webp" alt="Deise Smaniotto" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Deise Smaniotto</span>
@@ -368,7 +368,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/marjorie-rossi" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/marjorie-rossi/capa.jpg" alt="Marjorie Rossi" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/marjorie-rossi/capa.webp" alt="Marjorie Rossi" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Marjorie Rossi</span>
@@ -376,7 +376,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/simonny" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/simonny/capa.jpg" alt="Simonny" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/simonny/capa.webp" alt="Simonny" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Simonny</span>
@@ -384,7 +384,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/fernanda-costas" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/fernanda-costas/capa.jpg" alt="Fernanda Costas" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/fernanda-costas/capa.webp" alt="Fernanda Costas" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Fernanda Costas</span>
@@ -392,7 +392,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/mileide-mihaile" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/mileide-mihaile/capa.jpg" alt="Mileide Mihaile" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/mileide-mihaile/capa.webp" alt="Mileide Mihaile" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Mileide Mihaile</span>
@@ -400,7 +400,7 @@ export default function PortfolioStudioPage() {
                         </Link>
 
                         <Link href="/portfolio-studio/talita-dalbo" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/talita-dalbo/capa.jpg" alt="Talita Dalbó" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
+                            <Image src="/images/studio/talita-dalbo/capa.webp" alt="Talita Dalbó" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                                 <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Talita Dalbó</span>

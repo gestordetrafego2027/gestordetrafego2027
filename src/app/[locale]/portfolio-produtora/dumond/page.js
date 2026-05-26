@@ -45,7 +45,7 @@ export default function DumondPage() {
         };
     }, []);
 
-    const images = Array.from({length: 4}, (_, i) => `/images/produtora/acessorios/dumond/${i+1}.jpg`);
+    const images = Array.from({length: 4}, (_, i) => `/images/produtora/acessorios/dumond/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

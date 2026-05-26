@@ -45,7 +45,7 @@ export default function SignusVersolato02Page() {
         };
     }, []);
 
-    const images = Array.from({length: 6}, (_, i) => `/images/produtora/acessorios/signus-versolato02/${i+1}.jpg`);
+    const images = Array.from({length: 6}, (_, i) => `/images/produtora/acessorios/signus-versolato02/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

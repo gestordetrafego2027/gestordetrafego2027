@@ -46,14 +46,14 @@ export default function PousPage() {
     }, []);
 
     const verticalImages = [
-        "/images/agencia/pous/2.jpg",
-        "/images/agencia/pous/3.jpg",
-        "/images/agencia/pous/4.jpg",
-        "/images/agencia/pous/5.jpg"
+        "/images/agencia/pous/2.webp",
+        "/images/agencia/pous/3.webp",
+        "/images/agencia/pous/4.webp",
+        "/images/agencia/pous/5.webp"
     ];
 
     const horizontalImages = [
-        "/images/agencia/pous/1.jpg"
+        "/images/agencia/pous/1.webp"
     ];
 
     return (

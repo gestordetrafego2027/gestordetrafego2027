@@ -45,7 +45,7 @@ export default function UniqueChicPage() {
         };
     }, []);
 
-    const images = Array.from({length: 13}, (_, i) => `/images/produtora/moda/unique-chic/${i+1}.jpg`);
+    const images = Array.from({length: 13}, (_, i) => `/images/produtora/moda/unique-chic/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

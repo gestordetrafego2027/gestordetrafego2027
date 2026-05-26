@@ -19,18 +19,18 @@ export const articles = {
     keywords: 'book para modelos, book editorial, book fotográfico profissional, agência de modelos São Paulo, marca pessoal, direção de imagem, casting, House Mazzutti, hub criativo',
     data: 'Abril 2026',
     cover: {
-      src: '/images/blog/book-para-modelos/book-editorial-modelos-direcao-imagem-house-mazzutti.jpg',
+      src: '/images/blog/book-para-modelos/book-editorial-modelos-direcao-imagem-house-mazzutti.webp',
       alt: 'Book editorial para modelo profissional sob direção criativa House Mazzutti em São Paulo',
       caption: 'Direção de imagem editorial — Studio HMZT'
     },
     interior: [
       {
-        src: '/images/blog/book-para-modelos/book-fotografico-profissional-mood-editorial-house-mazzutti.jpg',
+        src: '/images/blog/book-para-modelos/book-fotografico-profissional-mood-editorial-house-mazzutti.webp',
         alt: 'Retrato editorial em preto e branco com direção de luz cinematográfica para book de modelo',
         caption: 'Treatment editorial · luz cinematográfica'
       },
       {
-        src: '/images/blog/book-para-modelos/portfolio-modelo-agencia-sao-paulo-house-mazzutti.jpg',
+        src: '/images/blog/book-para-modelos/portfolio-modelo-agencia-sao-paulo-house-mazzutti.webp',
         alt: 'Pose editorial com direção autoral para portfólio profissional de modelo agência São Paulo',
         caption: 'Direção de pose · linguagem editorial'
       }
@@ -71,18 +71,18 @@ export const articles = {
     keywords: 'book de modelo, book editorial premium, marca pessoal, ativo de mercado, agência de modelos, casting São Paulo, direção criativa, House Mazzutti Studio',
     data: 'Abril 2026',
     cover: {
-      src: '/images/blog/book-modelo-ativo/book-modelo-imagem-ativo-mercado-house-mazzutti.jpg',
+      src: '/images/blog/book-modelo-ativo/book-modelo-imagem-ativo-mercado-house-mazzutti.webp',
       alt: 'Book de modelo editorial premium em São Paulo com direção criativa House Mazzutti',
       caption: 'Imagem como ativo de mercado — Studio HMZT'
     },
     interior: [
       {
-        src: '/images/blog/book-modelo-ativo/book-comercial-editorial-marca-pessoal-house-mazzutti.jpg',
+        src: '/images/blog/book-modelo-ativo/book-comercial-editorial-marca-pessoal-house-mazzutti.webp',
         alt: 'Retrato de modelo profissional para portfólio comercial e editorial premium',
         caption: 'Comercial · presença funcional'
       },
       {
-        src: '/images/blog/book-modelo-ativo/portfolio-modelo-casting-premium-sao-paulo-house-mazzutti.jpg',
+        src: '/images/blog/book-modelo-ativo/portfolio-modelo-casting-premium-sao-paulo-house-mazzutti.webp',
         alt: 'Foto editorial em preto e branco com mood cinematográfico para book de agência',
         caption: 'Editorial · mood autoral'
       }
@@ -123,18 +123,18 @@ export const articles = {
     keywords: 'ensaio pessoal, ensaio fotográfico premium, marca pessoal, retrato corporativo, autoridade visual, branding pessoal, posicionamento de imagem, executivos, médicos, advogados',
     data: 'Março 2026',
     cover: {
-      src: '/images/blog/ensaio-autoridade/ensaio-pessoal-premium-autoridade-executiva-house-mazzutti.jpg',
+      src: '/images/blog/ensaio-autoridade/ensaio-pessoal-premium-autoridade-executiva-house-mazzutti.webp',
       alt: 'Ensaio pessoal premium para executiva — retrato corporativo com direção de marca pessoal',
       caption: 'Retrato editorial corporativo · Studio HMZT'
     },
     interior: [
       {
-        src: '/images/blog/ensaio-autoridade/retrato-corporativo-direcao-imagem-house-mazzutti.jpg',
+        src: '/images/blog/ensaio-autoridade/retrato-corporativo-direcao-imagem-house-mazzutti.webp',
         alt: 'Retrato de autoridade profissional em preto e branco com luz editorial',
         caption: 'Hierarquia visual · gesto autoral'
       },
       {
-        src: '/images/blog/ensaio-autoridade/ensaio-fotografico-marca-pessoal-house-mazzutti.jpg',
+        src: '/images/blog/ensaio-autoridade/ensaio-fotografico-marca-pessoal-house-mazzutti.webp',
         alt: 'Ensaio pessoal premium com direção de presença para profissionais de alto padrão',
         caption: 'Direção de presença · acabamento fine art'
       }
@@ -175,18 +175,18 @@ export const articles = {
     keywords: 'ensaio pessoal premium, marca pessoal, direção de imagem, branding pessoal, retrato editorial, posicionamento, executivas, fundadoras, House Mazzutti Studio',
     data: 'Março 2026',
     cover: {
-      src: '/images/blog/ensaio-lidera-percepcao/ensaio-pessoal-reposicionamento-marca-pessoal-house-mazzutti.jpg',
+      src: '/images/blog/ensaio-lidera-percepcao/ensaio-pessoal-reposicionamento-marca-pessoal-house-mazzutti.webp',
       alt: 'Ensaio pessoal editorial para fundadora com direção criativa House Mazzutti',
       caption: 'Reposicionamento visual · Studio HMZT'
     },
     interior: [
       {
-        src: '/images/blog/ensaio-lidera-percepcao/ensaio-editorial-fundadora-direcao-autoral-house-mazzutti.jpg',
+        src: '/images/blog/ensaio-lidera-percepcao/ensaio-editorial-fundadora-direcao-autoral-house-mazzutti.webp',
         alt: 'Retrato editorial autoral com presença sustentada e direção de mood',
         caption: 'Presença sustentada · direção de mood'
       },
       {
-        src: '/images/blog/ensaio-lidera-percepcao/retrato-premium-fine-art-house-mazzutti.jpg',
+        src: '/images/blog/ensaio-lidera-percepcao/retrato-premium-fine-art-house-mazzutti.webp',
         alt: 'Foto editorial premium para executiva com tratamento fine art em preto e branco',
         caption: 'Tratamento fine art · linguagem premium'
       }
@@ -227,18 +227,18 @@ export const articles = {
     keywords: 'cobertura externa São Paulo, cobertura editorial, marca pessoal, presença de alto valor, executivas, fundadoras, influenciadoras, direção de imagem, House Mazzutti',
     data: 'Fevereiro 2026',
     cover: {
-      src: '/images/blog/cobertura-presenca-sp/cobertura-externa-tempo-real-sao-paulo-house-mazzutti.jpg',
+      src: '/images/blog/cobertura-presenca-sp/cobertura-externa-tempo-real-sao-paulo-house-mazzutti.webp',
       alt: 'Cobertura externa editorial em São Paulo para executiva — presença de alto valor House Mazzutti',
       caption: 'Cobertura premium em São Paulo · Studio HMZT'
     },
     interior: [
       {
-        src: '/images/blog/cobertura-presenca-sp/direcao-presenca-evento-corporativo-sao-paulo-house-mazzutti.jpg',
+        src: '/images/blog/cobertura-presenca-sp/direcao-presenca-evento-corporativo-sao-paulo-house-mazzutti.webp',
         alt: 'Direção de presença em evento corporativo em São Paulo com cobertura editorial',
         caption: 'Direção de presença · agenda executiva'
       },
       {
-        src: '/images/blog/cobertura-presenca-sp/captacao-editorial-marca-pessoal-house-mazzutti.jpg',
+        src: '/images/blog/cobertura-presenca-sp/captacao-editorial-marca-pessoal-house-mazzutti.webp',
         alt: 'Captação editorial em tempo real para construção de marca pessoal de fundadora',
         caption: 'Captação editorial · narrativa visual'
       }
@@ -279,18 +279,18 @@ export const articles = {
     keywords: 'cobertura externa São Paulo, narrativa visual, fotografia editorial, marca pessoal, experiência de marca, conteúdo premium, House Mazzutti Studio',
     data: 'Fevereiro 2026',
     cover: {
-      src: '/images/blog/cobertura-narrativa-visual/cobertura-narrativa-visual-sao-paulo-house-mazzutti.jpg',
+      src: '/images/blog/cobertura-narrativa-visual/cobertura-narrativa-visual-sao-paulo-house-mazzutti.webp',
       alt: 'São Paulo como cenário editorial — cobertura visual com direção criativa House Mazzutti',
       caption: 'A cidade como cenário · Studio HMZT'
     },
     interior: [
       {
-        src: '/images/blog/cobertura-narrativa-visual/cidade-sao-paulo-cenario-editorial-house-mazzutti.jpg',
+        src: '/images/blog/cobertura-narrativa-visual/cidade-sao-paulo-cenario-editorial-house-mazzutti.webp',
         alt: 'Captação editorial nas ruas de São Paulo para narrativa visual de marca pessoal',
         caption: 'Cidade como linguagem · ritmo editorial'
       },
       {
-        src: '/images/blog/cobertura-narrativa-visual/experiencia-marca-pessoal-conteudo-premium-house-mazzutti.jpg',
+        src: '/images/blog/cobertura-narrativa-visual/experiencia-marca-pessoal-conteudo-premium-house-mazzutti.webp',
         alt: 'Cobertura premium de experiência em São Paulo com tratamento de campanha global',
         caption: 'Experiência convertida em ativo'
       }
@@ -331,18 +331,18 @@ export const articles = {
     keywords: 'branding project, branding estratégico, arquitetura de marca, posicionamento, identidade visual, brand book, agência de branding São Paulo, House Mazzutti',
     data: 'Abril 2026',
     cover: {
-      src: '/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.jpg',
+      src: '/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp',
       alt: 'Branding project estratégico como arquitetura de valor — agência House Mazzutti São Paulo',
       caption: 'Arquitetura de marca · Agência HMZT'
     },
     interior: [
       {
-        src: '/images/blog/branding-arquitetura-valor/identidade-visual-sistema-marca-house-mazzutti.jpg',
+        src: '/images/blog/branding-arquitetura-valor/identidade-visual-sistema-marca-house-mazzutti.webp',
         alt: 'Identidade visual e sistema gráfico de marca premium com direção criativa House Mazzutti',
         caption: 'Sistema visual · identidade institucional'
       },
       {
-        src: '/images/blog/branding-arquitetura-valor/brand-book-aplicacoes-marca-premium-house-mazzutti.jpg',
+        src: '/images/blog/branding-arquitetura-valor/brand-book-aplicacoes-marca-premium-house-mazzutti.webp',
         alt: 'Brand book estratégico e aplicações de identidade de marca para empresa premium',
         caption: 'Brand book · governança visual'
       }
@@ -383,18 +383,18 @@ export const articles = {
     keywords: 'branding e vendas, conversão, branding estratégico, marketing performance, branding project, agência de branding, redução de CAC, House Mazzutti',
     data: 'Março 2026',
     cover: {
-      src: '/images/blog/branding-motor-vendas/branding-motor-vendas-conversao-house-mazzutti.jpg',
+      src: '/images/blog/branding-motor-vendas/branding-motor-vendas-conversao-house-mazzutti.webp',
       alt: 'Branding como motor de vendas — agência House Mazzutti em São Paulo',
       caption: 'Branding como motor de receita · Agência HMZT'
     },
     interior: [
       {
-        src: '/images/blog/branding-motor-vendas/branding-estrategico-reducao-cac-house-mazzutti.jpg',
+        src: '/images/blog/branding-motor-vendas/branding-estrategico-reducao-cac-house-mazzutti.webp',
         alt: 'Branding project que reduz CAC e aumenta conversão para empresa premium',
         caption: 'Branding e performance · redução de atrito'
       },
       {
-        src: '/images/blog/branding-motor-vendas/identidade-marca-valor-percebido-house-mazzutti.jpg',
+        src: '/images/blog/branding-motor-vendas/identidade-marca-valor-percebido-house-mazzutti.webp',
         alt: 'Identidade de marca consistente que sustenta valor percebido e justifica preço premium',
         caption: 'Valor percebido · margem sustentada'
       }
@@ -435,18 +435,18 @@ export const articles = {
     keywords: 'quanto custa branding, investimento em branding, preço de branding, branding project, branding premium, ROI de marca, agência de branding, House Mazzutti',
     data: 'Março 2026',
     cover: {
-      src: '/images/blog/investir-em-branding/quanto-investir-branding-guia-estrategico-house-mazzutti.jpg',
+      src: '/images/blog/investir-em-branding/quanto-investir-branding-guia-estrategico-house-mazzutti.webp',
       alt: 'Investimento em branding estratégico — guia de preço para empresas premium House Mazzutti',
       caption: 'Branding como infraestrutura · Agência HMZT'
     },
     interior: [
       {
-        src: '/images/blog/investir-em-branding/branding-project-completo-empresa-premium-house-mazzutti.jpg',
+        src: '/images/blog/investir-em-branding/branding-project-completo-empresa-premium-house-mazzutti.webp',
         alt: 'Branding project completo com manuais de marca para empresa estratégica',
         caption: 'Branding completo · entrega estruturada'
       },
       {
-        src: '/images/blog/investir-em-branding/investimento-marca-roi-branding-house-mazzutti.jpg',
+        src: '/images/blog/investir-em-branding/investimento-marca-roi-branding-house-mazzutti.webp',
         alt: 'Identidade visual premium aplicada em diferentes pontos de contato de marca',
         caption: 'Aplicações premium · consistência editorial'
       }
@@ -489,18 +489,18 @@ export const articles = {
     keywords: 'campanha de lançamento, lançamento de marca, campanha publicitária, narrativa de marca, agência de campanha, arquitetura de campanha, House Mazzutti',
     data: 'Fevereiro 2026',
     cover: {
-      src: '/images/blog/campanha-lancamento/campanha-lancamento-marca-arquitetura-house-mazzutti.jpg',
+      src: '/images/blog/campanha-lancamento/campanha-lancamento-marca-arquitetura-house-mazzutti.webp',
       alt: 'Campanha de lançamento estratégica com arquitetura editorial — House Mazzutti agência',
       caption: 'Arquitetura de campanha · Agência HMZT'
     },
     interior: [
       {
-        src: '/images/blog/campanha-lancamento/campanha-publicitaria-direcao-criativa-house-mazzutti.jpg',
+        src: '/images/blog/campanha-lancamento/campanha-publicitaria-direcao-criativa-house-mazzutti.webp',
         alt: 'Campanha publicitária integrada com direção criativa autoral em São Paulo',
         caption: 'Campanha integrada · narrativa central'
       },
       {
-        src: '/images/blog/campanha-lancamento/lancamento-marca-narrativa-editorial-house-mazzutti.jpg',
+        src: '/images/blog/campanha-lancamento/lancamento-marca-narrativa-editorial-house-mazzutti.webp',
         alt: 'Lançamento de marca com sequência editorial de peças sob direção House Mazzutti',
         caption: 'Sequência editorial · ritmo de campanha'
       }
@@ -541,18 +541,18 @@ export const articles = {
     keywords: 'campanha publicitária, falha de campanha, marketing de conteúdo, ROI campanha, direção criativa, estrutura de campanha, House Mazzutti, agência São Paulo',
     data: 'Janeiro 2026',
     cover: {
-      src: '/images/blog/por-que-campanhas-falham/por-que-campanhas-falham-direcao-criativa-house-mazzutti.jpg',
+      src: '/images/blog/por-que-campanhas-falham/por-que-campanhas-falham-direcao-criativa-house-mazzutti.webp',
       alt: 'Por que campanhas publicitárias falham — análise estratégica House Mazzutti agência',
       caption: 'Diagnóstico de campanha · Agência HMZT'
     },
     interior: [
       {
-        src: '/images/blog/por-que-campanhas-falham/estrutura-campanha-coerencia-editorial-house-mazzutti.jpg',
+        src: '/images/blog/por-que-campanhas-falham/estrutura-campanha-coerencia-editorial-house-mazzutti.webp',
         alt: 'Estrutura de campanha publicitária consistente com direção criativa unificada',
         caption: 'Coerência editorial · direção autoral'
       },
       {
-        src: '/images/blog/por-que-campanhas-falham/governanca-criativa-campanha-premium-house-mazzutti.jpg',
+        src: '/images/blog/por-que-campanhas-falham/governanca-criativa-campanha-premium-house-mazzutti.webp',
         alt: 'Governança criativa em campanhas premium para marcas estratégicas',
         caption: 'Governança criativa · execução integrada'
       }
@@ -593,18 +593,18 @@ export const articles = {
     keywords: 'editorial de moda, fashion film, lookbook, campanha de moda, direção de arte, produtora audiovisual, fashion direction, House Mazzutti Produtora',
     data: 'Abril 2026',
     cover: {
-      src: '/images/blog/editorial-moda-narrativa/editorial-moda-narrativa-visual-fashion-direction-house-mazzutti.jpg',
+      src: '/images/blog/editorial-moda-narrativa/editorial-moda-narrativa-visual-fashion-direction-house-mazzutti.webp',
       alt: 'Editorial de moda como narrativa visual — fashion direction House Mazzutti Produtora',
       caption: 'Fashion direction · Produtora HMZT'
     },
     interior: [
       {
-        src: '/images/blog/editorial-moda-narrativa/lookbook-editorial-direcao-arte-house-mazzutti.jpg',
+        src: '/images/blog/editorial-moda-narrativa/lookbook-editorial-direcao-arte-house-mazzutti.webp',
         alt: 'Lookbook editorial premium para marca de moda com direção autoral em São Paulo',
         caption: 'Lookbook editorial · direção autoral'
       },
       {
-        src: '/images/blog/editorial-moda-narrativa/fashion-film-marca-moda-house-mazzutti.jpg',
+        src: '/images/blog/editorial-moda-narrativa/fashion-film-marca-moda-house-mazzutti.webp',
         alt: 'Campanha de moda com fashion film e direção de arte House Mazzutti Produtora',
         caption: 'Direção de arte · território de marca'
       }
@@ -645,18 +645,18 @@ export const articles = {
     keywords: 'editorial de moda, performance, conversão moda, fashion film, e-commerce premium, direção criativa, imagem que vende, House Mazzutti',
     data: 'Março 2026',
     cover: {
-      src: '/images/blog/editorial-performance/editorial-moda-performance-conversao-house-mazzutti.jpg',
+      src: '/images/blog/editorial-performance/editorial-moda-performance-conversao-house-mazzutti.webp',
       alt: 'Editorial de moda orientado à performance — direção que vende House Mazzutti',
       caption: 'Editorial que converte · Produtora HMZT'
     },
     interior: [
       {
-        src: '/images/blog/editorial-performance/campanha-moda-leitura-comercial-house-mazzutti.jpg',
+        src: '/images/blog/editorial-performance/campanha-moda-leitura-comercial-house-mazzutti.webp',
         alt: 'Campanha de moda premium com leitura comercial e linguagem editorial em São Paulo',
         caption: 'Comercial premium · leitura clara'
       },
       {
-        src: '/images/blog/editorial-performance/imagem-ecommerce-premium-conversao-house-mazzutti.jpg',
+        src: '/images/blog/editorial-performance/imagem-ecommerce-premium-conversao-house-mazzutti.webp',
         alt: 'Imagem de e-commerce premium com hierarquia visual e direção autoral',
         caption: 'Hierarquia visual · conversão guiada'
       }
@@ -697,18 +697,18 @@ export const articles = {
     keywords: 'produção executiva, gestão de campanha, ROI campanha, produtora audiovisual, fashion film, brand content, House Mazzutti Produtora',
     data: 'Fevereiro 2026',
     cover: {
-      src: '/images/blog/ideia-vs-resultado/producao-executiva-gestao-campanha-house-mazzutti.jpg',
+      src: '/images/blog/ideia-vs-resultado/producao-executiva-gestao-campanha-house-mazzutti.webp',
       alt: 'Produção executiva premium — por que boas ideias precisam de estrutura House Mazzutti',
       caption: 'Produção executiva · Produtora HMZT'
     },
     interior: [
       {
-        src: '/images/blog/ideia-vs-resultado/set-campanha-coordenacao-house-mazzutti.jpg',
+        src: '/images/blog/ideia-vs-resultado/set-campanha-coordenacao-house-mazzutti.webp',
         alt: 'Set de campanha com gestão executiva e direção criativa unificada House Mazzutti',
         caption: 'Set integrado · gestão executiva'
       },
       {
-        src: '/images/blog/ideia-vs-resultado/governanca-criativa-roi-campanha-house-mazzutti.jpg',
+        src: '/images/blog/ideia-vs-resultado/governanca-criativa-roi-campanha-house-mazzutti.webp',
         alt: 'Cronograma e governança criativa em campanha de moda premium em São Paulo',
         caption: 'Governança criativa · entrega protegida'
       }
@@ -749,18 +749,18 @@ export const articles = {
     keywords: 'produção executiva, governança criativa, gestão de campanha, fashion film, filme publicitário, brand content, produtora audiovisual São Paulo, House Mazzutti',
     data: 'Fevereiro 2026',
     cover: {
-      src: '/images/blog/producao-executiva-sistema/producao-executiva-sistema-governanca-house-mazzutti.jpg',
+      src: '/images/blog/producao-executiva-sistema/producao-executiva-sistema-governanca-house-mazzutti.webp',
       alt: 'Produção executiva como sistema invisível — governança criativa House Mazzutti',
       caption: 'Sistema de governança · Produtora HMZT'
     },
     interior: [
       {
-        src: '/images/blog/producao-executiva-sistema/coordenacao-set-campanha-publicitaria-house-mazzutti.jpg',
+        src: '/images/blog/producao-executiva-sistema/coordenacao-set-campanha-publicitaria-house-mazzutti.webp',
         alt: 'Coordenação de set em campanha publicitária com produção executiva premium',
         caption: 'Coordenação de set · fluxo integrado'
       },
       {
-        src: '/images/blog/producao-executiva-sistema/direcao-criativa-producao-executiva-house-mazzutti.jpg',
+        src: '/images/blog/producao-executiva-sistema/direcao-criativa-producao-executiva-house-mazzutti.webp',
         alt: 'Direção criativa e produção executiva operando como mesma autoria em campanha',
         caption: 'Mesma autoria · do conceito à entrega'
       }
@@ -801,18 +801,18 @@ export const articles = {
     keywords: 'campanha publicitária, alto investimento, ROI campanha, produção executiva, fashion film premium, direção criativa, produtora audiovisual, House Mazzutti',
     data: 'Janeiro 2026',
     cover: {
-      src: '/images/blog/campanhas-caras-falham/campanhas-caras-falham-roi-campanha-house-mazzutti.jpg',
+      src: '/images/blog/campanhas-caras-falham/campanhas-caras-falham-roi-campanha-house-mazzutti.webp',
       alt: 'Por que campanhas com alto investimento falham — análise House Mazzutti Produtora',
       caption: 'Diagnóstico de campanha premium · Produtora HMZT'
     },
     interior: [
       {
-        src: '/images/blog/campanhas-caras-falham/campanha-publicitaria-premium-governanca-house-mazzutti.jpg',
+        src: '/images/blog/campanhas-caras-falham/campanha-publicitaria-premium-governanca-house-mazzutti.webp',
         alt: 'Campanha publicitária premium com governança executiva e direção autoral',
         caption: 'Governança · proteção do conceito'
       },
       {
-        src: '/images/blog/campanhas-caras-falham/previsibilidade-producao-executiva-house-mazzutti.jpg',
+        src: '/images/blog/campanhas-caras-falham/previsibilidade-producao-executiva-house-mazzutti.webp',
         alt: 'Estrutura de produção executiva que transforma incerteza em previsibilidade',
         caption: 'Previsibilidade · ROI protegido'
       }
