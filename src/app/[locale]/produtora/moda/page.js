@@ -424,4 +424,20 @@ export default function ProdutoraModaPage() {
             <section className="bg-white px-[40px]">
                 <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                     <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">Sua marca no próximo nível visual.</h2>
-          
+                    <p className="font-body text-white/60 text-lg mb-12 max-w-xl" data-aos="fade-up" data-aos-delay="200">Produção audiovisual e editorial para marcas de moda que querem crescer com identidade.</p>
+                    <button
+                        onClick={() => openForm('final-cta')}
+                        className="bg-white text-black font-label uppercase tracking-[0.2em] text-sm px-10 py-4 hover:bg-neutral-100 transition-colors"
+                        data-aos="fade-up" data-aos-delay="300"
+                    >
+                        Falar com a Produtora →
+                    </button>
+                </div>
+            </section>
+
+            <FormDrawer open={!!formCta} onClose={closeForm}>
+                <FormProdutora ctaLocation={formCta?.ctaLocation} onClose={closeForm} />
+            </FormDrawer>
+        </main>
+    );
+}
