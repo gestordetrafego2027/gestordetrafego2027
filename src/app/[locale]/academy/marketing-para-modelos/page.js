@@ -427,6 +427,9 @@ const CSS = `
 .mpm-root .mega-mark .mark-inner .l { display: block; }
 .mpm-root .mega-mark .mark-inner .hm-house { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 400 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.02em; color: var(--paper); }
 .mpm-root .mega-mark .mark-inner .hm-mazzutti { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 700 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.02em; color: var(--paper); }
+.mpm-root .masthead-right .hm-logo { display: inline-flex; align-items: baseline; gap: 0.18em; line-height: 1; }
+.mpm-root .masthead-right .hm-house { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 400 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.01em; color: var(--ink); }
+.mpm-root .masthead-right .hm-mazzutti { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 700 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.01em; color: var(--ink); }
 .mpm-root .mega-mark .mark-inner em { font-family: var(--display); font-style: italic; font-weight: 400; color: var(--lime); letter-spacing: -0.04em; text-transform: none; }
 .mpm-root .mega-mark .mark-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 36px; padding: 0 4px; font-family: var(--sans); font-size: 10px; letter-spacing: 0.34em; color: rgba(239,233,218,0.45); }
 .mpm-root .mega-mark .mark-foot .dot { width: 6px; height: 6px; background: var(--mondrian-red); border-radius: 50%; display: inline-block; margin: 0 10px; }
