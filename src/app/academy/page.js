@@ -1,208 +1,657 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
-import ProductCard from '@/app/components/academy/ProductCard'
-import { listPublishedProducts } from '@/lib/academy/queries'
+import { articles as _articlesMap } from '@/app/[locale]/blog/[slug]/articles'
 
 export const metadata = {
   title: 'Academy — House Mazzutti',
   description:
-    'Cursos, ebooks, mentorias, lives e comunidade da House Mazzutti. Conteúdo prático sobre Studio, Produtora e Agência.',
+    'Cursos, workshops, ebooks e comunidade da House Mazzutti. Conteúdo prático sobre direção criativa, moda e comunicação.',
   openGraph: {
     title: 'House Mazzutti Academy',
-    description: 'Aprenda Studio, Produtora e Agência com quem opera no Brasil real.',
+    description: 'Aprenda direção criativa, comunicação e moda com quem opera no Brasil real.',
   },
 }
 
-const SECTIONS = [
-  { type: 'course', title: 'Cursos', subtitle: 'Treinamentos completos em vídeo' },
-  { type: 'ebook', title: 'Ebooks', subtitle: 'Manuais práticos para download' },
-  { type: 'mentorship', title: 'Mentorias', subtitle: 'Acompanhamento direto' },
-  { type: 'live_event', title: 'Lives', subtitle: 'Encontros ao vivo' },
-  { type: 'bundle', title: 'Combos', subtitle: 'Pacotes com desconto' },
+/* ─── produtos estáticos ──────────────────────────────────────── */
+const PRODUCTS = [
+  {
+    id: 'direcao-criativa',
+    type: 'workshop',
+    typeLabel: 'Workshop · Gravado',
+    title: 'Direção Criativa e Produção Executiva',
+    subtitle: 'Do briefing ao resultado — como pensar, dirigir e executar projetos visuais com consistência de marca.',
+    features: ['Videoaulas gravadas', 'Materiais de acompanhamento', 'Acesso vitalício'],
+    price: 24900,
+    href: '/academy/workshop/direcao-criativa-producao-executiva',
+    cover: '/images/academy/direcao-criativa/cover.webp',
+    accent: '#1a1a1a',
+  },
+  {
+    id: 'comunicacao-360',
+    type: 'course',
+    typeLabel: 'Curso Online · Gravado',
+    title: 'Comunicação 360 para Influenciadores',
+    subtitle: 'Estratégia, posicionamento e presença digital para quem constrói uma carreira baseada em imagem e autoridade.',
+    features: ['Videoaulas gravadas', 'Materiais de acompanhamento', 'Acesso vitalício'],
+    price: 14500,
+    href: '/academy/course/comunicacao-360-influenciadores',
+    cover: '/images/academy/comunicacao-360/cover.webp',
+    accent: '#1a1a1a',
+  },
 ]
 
-export default async function AcademyHomePage() {
-  const all = await listPublishedProducts({ limit: 200 })
-  const byType = SECTIONS.map((s) => ({
-    ...s,
-    items: all.filter((p) => p.type === s.type),
-  })).filter((s) => s.items.length > 0)
+/* ─── galeria workshop ─────────────────────────────────────────── */
+const GALLERY = [
+  { src: '/images/studio/banners/banner-1.webp', alt: 'Workshop Fotografia — bastidores' },
+  { src: '/images/studio/banners/banner-2.webp', alt: 'Workshop Fotografia — produção' },
+  { src: '/images/home/banner-1.webp', alt: 'Workshop Fotografia — making of' },
+  { src: '/images/home/banner-2.webp', alt: 'Workshop Fotografia — equipe' },
+  { src: '/images/home/banner-3.webp', alt: 'Workshop Fotografia — ambiente' },
+  { src: '/images/home/philosophy-bg.webp', alt: 'Workshop Fotografia — resultado' },
+]
 
+/* ─── blog (últimos 4) ─────────────────────────────────────────── */
+const BLOG_POSTS = _articlesMap
+  ? Object.entries(_articlesMap)
+      .slice(0, 4)
+      .map(([slug, a]) => ({
+        link: `/blog/${slug}`,
+        titulo: a.titulo,
+        excerpt: a.excerpt ?? a.intro ?? '',
+        subcategoria: a.subcategoria ?? a.categoria,
+        data: a.data,
+      }))
+  : []
+
+function fmt(cents) {
+  return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PAGE
+══════════════════════════════════════════════════════════════════ */
+export default function AcademyHomePage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-neutral-50 pb-24 pt-24">
-        {/* HERO */}
-        <section className="bg-neutral-900 px-6 py-20 text-white">
-          <div className="mx-auto max-w-6xl">
-            <p className="text-sm uppercase tracking-widest text-neutral-400">
+
+      <main
+        style={{ background: '#0a0a0a', color: '#f5f0eb' }}
+        className="min-h-screen"
+      >
+        {/* ── HERO ─────────────────────────────────────────────── */}
+        <section className="relative flex min-h-screen items-end overflow-hidden pt-24">
+          {/* imagem de fundo */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/home/banner-2.webp"
+              alt="House Mazzutti Academy"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+              style={{ filter: 'brightness(0.35)' }}
+            />
+          </div>
+
+          {/* overlay gradiente */}
+          <div
+            className="absolute inset-0 z-10"
+            style={{ background: 'linear-gradient(to top, #0a0a0a 30%, transparent 70%)' }}
+          />
+
+          {/* conteúdo */}
+          <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pb-20 md:px-12">
+            {/* régua dourada */}
+            <div style={{ width: 48, height: 1, background: '#C8A96E', marginBottom: 32 }} />
+
+            <p
+              className="mb-4 text-xs uppercase tracking-[0.32em]"
+              style={{ color: '#C8A96E', fontFamily: 'RocGrotesk, sans-serif' }}
+            >
               House Mazzutti Academy
             </p>
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight md:text-6xl">
-              Aprenda como Studio, Produtora e Agência se sustentam no Brasil real.
+
+            <h1
+              className="max-w-4xl text-5xl leading-[0.92] tracking-tight md:text-8xl"
+              style={{
+                fontFamily: '"Cormorant Garamond", Georgia, serif',
+                fontStyle: 'italic',
+                fontWeight: 400,
+                color: '#f5f0eb',
+              }}
+            >
+              Aprenda como<br />
+              <em style={{ color: '#C8A96E' }}>Studio, Produtora</em><br />
+              e Agência operam.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-neutral-300">
-              Cursos, ebooks, mentorias e uma comunidade que opera no mesmo padrão da casa.
+
+            <p
+              className="mt-8 max-w-xl text-base leading-relaxed md:text-lg"
+              style={{ color: '#a09890', fontFamily: 'RocGrotesk, sans-serif', fontWeight: 300 }}
+            >
+              Cursos gravados, workshops e materiais de quem executa no Brasil real.
+              Direção criativa, comunicação e posicionamento de marca.
             </p>
+
+            <div className="mt-12 flex flex-wrap gap-6">
+              <a
+                href="#produtos"
+                style={{
+                  fontFamily: 'RocGrotesk, sans-serif',
+                  fontSize: 11,
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase',
+                  color: '#0a0a0a',
+                  background: '#C8A96E',
+                  padding: '14px 28px',
+                  display: 'inline-block',
+                  textDecoration: 'none',
+                }}
+              >
+                Ver produtos
+              </a>
+              <a
+                href="#livro"
+                style={{
+                  fontFamily: 'RocGrotesk, sans-serif',
+                  fontSize: 11,
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase',
+                  color: '#f5f0eb',
+                  border: '1px solid #3a3a3a',
+                  padding: '14px 28px',
+                  display: 'inline-block',
+                  textDecoration: 'none',
+                }}
+              >
+                Marketing para Modelos
+              </a>
+            </div>
           </div>
         </section>
 
-        {/* FEATURED · VOL. 01 */}
-        <section className="mx-auto max-w-6xl px-6 pt-16">
-          <FeaturedBookCard />
+        {/* ── LIVRO FEATURED ───────────────────────────────────── */}
+        <section id="livro" className="mx-auto max-w-7xl px-6 py-24 md:px-12">
+          {/* label de seção */}
+          <div className="mb-12 flex items-center gap-4">
+            <div style={{ width: 32, height: 1, background: '#C8A96E' }} />
+            <span
+              style={{
+                fontFamily: 'RocGrotesk, sans-serif',
+                fontSize: 10,
+                letterSpacing: '0.32em',
+                textTransform: 'uppercase',
+                color: '#C8A96E',
+              }}
+            >
+              Destaque
+            </span>
+          </div>
+
+          <Link
+            href="/academy/marketing-para-modelos"
+            className="group block"
+            style={{ textDecoration: 'none' }}
+          >
+            <div
+              className="grid grid-cols-1 md:grid-cols-[1fr_auto] overflow-hidden"
+              style={{ border: '1px solid #2a2a2a', background: '#111111' }}
+            >
+              {/* texto */}
+              <div className="flex flex-col justify-between gap-10 p-8 md:p-14">
+                <div>
+                  <p
+                    className="mb-6 text-[10px] uppercase tracking-[0.32em]"
+                    style={{ color: '#C8A96E', fontFamily: 'RocGrotesk, sans-serif' }}
+                  >
+                    Ebook · Lançamento · Vol. 01 · 2026
+                  </p>
+                  <h2
+                    className="text-5xl leading-[0.9] tracking-tight md:text-7xl"
+                    style={{
+                      fontFamily: '"Cormorant Garamond", Georgia, serif',
+                      fontStyle: 'italic',
+                      fontWeight: 400,
+                      color: '#f5f0eb',
+                    }}
+                  >
+                    Marketing<br />
+                    para Modelos.
+                  </h2>
+                  <p
+                    className="mt-6 max-w-lg text-base leading-relaxed"
+                    style={{
+                      fontFamily: '"Cormorant Garamond", Georgia, serif',
+                      fontStyle: 'italic',
+                      color: '#a09890',
+                    }}
+                  >
+                    Da passarela física ao império digital. O guia honesto de quem quer ser modelo
+                    no Brasil de hoje — por Angelo Mazzutti.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-end justify-between gap-8" style={{ borderTop: '1px solid #2a2a2a', paddingTop: 24 }}>
+                  <div className="flex gap-10">
+                    <BookCell k="Páginas" v="281" />
+                    <BookCell k="Capítulos" v="12" />
+                    <BookCell k="Formato" v="Ebook" />
+                  </div>
+                  <div className="flex items-baseline gap-3">
+                    <span
+                      style={{
+                        fontFamily: 'RocGrotesk, sans-serif',
+                        fontSize: 11,
+                        letterSpacing: '0.2em',
+                        textDecoration: 'line-through',
+                        color: '#555',
+                      }}
+                    >
+                      R$ 70
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: '"Cormorant Garamond", Georgia, serif',
+                        fontStyle: 'italic',
+                        fontSize: 44,
+                        color: '#f5f0eb',
+                        lineHeight: 1,
+                      }}
+                    >
+                      R$ 49
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'RocGrotesk, sans-serif',
+                        fontSize: 10,
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        color: '#C8A96E',
+                        border: '1px solid #C8A96E',
+                        padding: '3px 8px',
+                      }}
+                    >
+                      −30%
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    fontFamily: 'RocGrotesk, sans-serif',
+                    fontSize: 11,
+                    letterSpacing: '0.2em',
+                    textTransform: 'uppercase',
+                    color: '#f5f0eb',
+                    borderBottom: '1px solid #C8A96E',
+                    paddingBottom: 4,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 12,
+                    width: 'fit-content',
+                  }}
+                >
+                  Ver a página do livro <span>→</span>
+                </div>
+              </div>
+
+              {/* capa */}
+              <div
+                className="flex items-center justify-center p-10 md:p-16"
+                style={{ background: '#0f0f0f', minWidth: 280 }}
+              >
+                <div
+                  className="relative transition-transform duration-700 group-hover:-translate-y-2"
+                  style={{
+                    width: 220,
+                    aspectRatio: '2/3',
+                    transform: 'rotate(-1.5deg)',
+                    filter: 'drop-shadow(0 32px 48px rgba(0,0,0,0.6))',
+                  }}
+                >
+                  <Image
+                    src="/images/academy/marketing-para-modelos/cover.png"
+                    alt="Capa Marketing para Modelos Vol. 01"
+                    fill
+                    sizes="220px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </Link>
         </section>
 
-        {/* CATÁLOGO */}
-        <section className="mx-auto max-w-6xl px-6 py-16">
-          {all.length === 0 ? (
-            <EmptyState />
-          ) : (
-            <div className="space-y-16">
-              {byType.map((section) => (
-                <CatalogSection key={section.type} section={section} />
-              ))}
+        {/* ── PRODUTOS ─────────────────────────────────────────── */}
+        <section id="produtos" className="mx-auto max-w-7xl px-6 pb-24 md:px-12">
+          <div className="mb-12 flex items-center gap-4">
+            <div style={{ width: 32, height: 1, background: '#C8A96E' }} />
+            <span
+              style={{
+                fontFamily: 'RocGrotesk, sans-serif',
+                fontSize: 10,
+                letterSpacing: '0.32em',
+                textTransform: 'uppercase',
+                color: '#C8A96E',
+              }}
+            >
+              Produtos
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 gap-px md:grid-cols-2" style={{ background: '#2a2a2a' }}>
+            {PRODUCTS.map((p) => (
+              <ProductCard key={p.id} product={p} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── GALERIA WORKSHOP ─────────────────────────────────── */}
+        <section className="mx-auto max-w-7xl px-6 pb-24 md:px-12">
+          <div className="mb-12 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div style={{ width: 32, height: 1, background: '#C8A96E' }} />
+              <span
+                style={{
+                  fontFamily: 'RocGrotesk, sans-serif',
+                  fontSize: 10,
+                  letterSpacing: '0.32em',
+                  textTransform: 'uppercase',
+                  color: '#C8A96E',
+                }}
+              >
+                Último Evento
+              </span>
             </div>
-          )}
+            <h2
+              style={{
+                fontFamily: '"Cormorant Garamond", Georgia, serif',
+                fontStyle: 'italic',
+                fontSize: 28,
+                color: '#f5f0eb',
+                fontWeight: 400,
+              }}
+            >
+              Workshop Fotografia
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 gap-px md:grid-cols-3" style={{ background: '#2a2a2a' }}>
+            {GALLERY.map((img, i) => (
+              <div
+                key={i}
+                className="relative overflow-hidden"
+                style={{ aspectRatio: '4/5', background: '#111' }}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                  style={{ filter: 'brightness(0.85)' }}
+                />
+              </div>
+            ))}
+          </div>
+
+          <p
+            className="mt-6 text-center text-sm"
+            style={{
+              fontFamily: '"Cormorant Garamond", Georgia, serif',
+              fontStyle: 'italic',
+              color: '#a09890',
+            }}
+          >
+            Registro fotográfico do último workshop presencial da House Mazzutti.
+          </p>
+        </section>
+
+        {/* ── BLOG ─────────────────────────────────────────────── */}
+        <section
+          className="mx-auto max-w-7xl px-6 pb-32 md:px-12"
+          style={{ borderTop: '1px solid #2a2a2a', paddingTop: 80 }}
+        >
+          <div className="mb-12 flex items-end justify-between">
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div style={{ width: 32, height: 1, background: '#C8A96E' }} />
+                <span
+                  style={{
+                    fontFamily: 'RocGrotesk, sans-serif',
+                    fontSize: 10,
+                    letterSpacing: '0.32em',
+                    textTransform: 'uppercase',
+                    color: '#C8A96E',
+                  }}
+                >
+                  Editorial
+                </span>
+              </div>
+              <h2
+                style={{
+                  fontFamily: '"Cormorant Garamond", Georgia, serif',
+                  fontStyle: 'italic',
+                  fontSize: 40,
+                  color: '#f5f0eb',
+                  fontWeight: 400,
+                  lineHeight: 1,
+                }}
+              >
+                Do Blog
+              </h2>
+            </div>
+            <Link
+              href="/blog"
+              style={{
+                fontFamily: 'RocGrotesk, sans-serif',
+                fontSize: 11,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: '#a09890',
+                textDecoration: 'none',
+                borderBottom: '1px solid #3a3a3a',
+                paddingBottom: 2,
+              }}
+            >
+              Ver todos →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-4" style={{ background: '#2a2a2a' }}>
+            {BLOG_POSTS.map((post, i) => (
+              <BlogCard key={i} post={post} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── CTA FINAL ────────────────────────────────────────── */}
+        <section
+          style={{ background: '#111111', borderTop: '1px solid #2a2a2a' }}
+          className="px-6 py-24 text-center md:px-12"
+        >
+          <div style={{ width: 1, height: 64, background: '#2a2a2a', margin: '0 auto 40px' }} />
+          <p
+            className="mb-4 text-xs uppercase tracking-[0.32em]"
+            style={{ color: '#C8A96E', fontFamily: 'RocGrotesk, sans-serif' }}
+          >
+            House Mazzutti Academy
+          </p>
+          <h2
+            className="mx-auto max-w-2xl text-4xl leading-tight md:text-6xl"
+            style={{
+              fontFamily: '"Cormorant Garamond", Georgia, serif',
+              fontStyle: 'italic',
+              fontWeight: 400,
+              color: '#f5f0eb',
+            }}
+          >
+            Conhecimento que transforma como você opera.
+          </h2>
+          <p
+            className="mx-auto mt-6 max-w-xl text-base"
+            style={{ color: '#a09890', fontFamily: 'RocGrotesk, sans-serif', fontWeight: 300 }}
+          >
+            Cursos práticos, workshop gravados e ebooks por Angelo Mazzutti.
+          </p>
+          <a
+            href="#produtos"
+            style={{
+              fontFamily: 'RocGrotesk, sans-serif',
+              fontSize: 11,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: '#0a0a0a',
+              background: '#C8A96E',
+              padding: '14px 32px',
+              display: 'inline-block',
+              textDecoration: 'none',
+              marginTop: 40,
+            }}
+          >
+            Explorar produtos
+          </a>
         </section>
       </main>
     </>
   )
 }
 
-function CatalogSection({ section }) {
-  return (
-    <div>
-      <div className="mb-6 flex items-end justify-between">
-        <div>
-          <h2 className="text-2xl font-semibold text-neutral-900">{section.title}</h2>
-          {section.subtitle && (
-            <p className="text-sm text-neutral-600">{section.subtitle}</p>
-          )}
-        </div>
-        <span className="text-sm text-neutral-500">{section.items.length} itens</span>
-      </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {section.items.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
-    </div>
-  )
-}
+/* ══════════════════════════════════════════════════════════════════
+   COMPONENTES
+══════════════════════════════════════════════════════════════════ */
 
-function FeaturedBookCard() {
+function ProductCard({ product }) {
   return (
     <Link
-      href="/academy/marketing-para-modelos"
-      className="group relative block overflow-hidden border border-neutral-900 bg-[#a4e80a] transition-transform hover:-translate-y-1"
-      style={{ boxShadow: '12px 12px 0 #14140e' }}
+      href={product.href}
+      className="group block"
+      style={{ background: '#111111', textDecoration: 'none' }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr]">
-        {/* texto */}
-        <div className="flex flex-col justify-between gap-8 p-8 md:p-12">
-          <div>
-            <div className="flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.32em] text-[#14140e]">
-              <span className="inline-block h-2 w-2 rounded-full bg-[#c92a2a]" />
-              Lançamento · Vol. 01 · 2026
-            </div>
-            <h3
-              className="mt-6 text-5xl leading-[0.92] tracking-tight text-[#14140e] md:text-7xl"
-              style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontStyle: 'italic' }}
-            >
-              <span style={{ color: '#c92a2a' }}>M</span>arketing
-              <br />
-              <span style={{ color: '#f0b400' }}>p</span>ara
-              <br />
-              <span style={{ color: '#1e3a8a' }}>M</span>odelos.
-            </h3>
-            <p
-              className="mt-6 max-w-md text-lg leading-snug text-[#14140e]/85"
-              style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontStyle: 'italic' }}
-            >
-              Da passarela física ao império digital. O guia honesto de quem quer ser modelo
-              no Brasil de hoje — por Angelo Mazzutti.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-end justify-between gap-6 border-t border-[#14140e]/40 pt-6">
-            <div className="grid grid-cols-3 gap-6 text-[#14140e]">
-              <Cell k="Páginas" v="281" />
-              <Cell k="Capítulos" v="12" />
-              <Cell k="Formato" v="Ebook" />
-            </div>
-            <div className="flex items-baseline gap-3">
-              <span className="text-xs uppercase tracking-[0.28em] text-[#14140e]/60 line-through">
-                R$ 197
-              </span>
-              <span
-                className="text-4xl text-[#14140e]"
-                style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontStyle: 'italic' }}
-              >
-                R$ 117
-              </span>
-            </div>
-          </div>
-
-          <div
-            className="inline-flex w-fit items-center gap-3 bg-[#14140e] px-6 py-4 text-xs font-medium uppercase tracking-[0.28em] text-[#efe9da] transition-colors group-hover:bg-[#c92a2a]"
-            style={{ fontFamily: 'RocGrotesk, sans-serif' }}
-          >
-            Ver a página do livro
-            <span className="text-base">→</span>
-          </div>
-        </div>
-
-        {/* capa */}
-        <div className="relative flex items-center justify-center bg-[#a4e80a] p-8 md:p-12">
-          <div
-            className="relative aspect-[2/3] w-full max-w-[280px] transition-transform duration-700 group-hover:-rotate-[1deg] group-hover:-translate-y-1.5"
-            style={{
-              transform: 'rotate(-2.2deg)',
-              filter:
-                'drop-shadow(0 24px 40px rgba(0,0,0,0.28)) drop-shadow(0 6px 12px rgba(0,0,0,0.18))',
-            }}
-          >
-            <Image
-              src="/images/academy/marketing-para-modelos/cover.png"
-              alt="Capa do livro Marketing para Modelos · Vol. 01"
-              fill
-              sizes="(max-width: 768px) 70vw, 280px"
-              className="object-cover"
-            />
-            <span
-              className="absolute -right-4 -top-4 rotate-[7deg] border border-[#efe9da] bg-[#14140e] px-3 py-2 text-[9px] uppercase tracking-[0.28em] text-[#efe9da]"
-              style={{ fontFamily: 'RocGrotesk, sans-serif' }}
-            >
-              Vol. 01 · 2026
-            </span>
-          </div>
+      {/* capa */}
+      <div className="relative overflow-hidden" style={{ aspectRatio: '16/9', background: '#0f0f0f' }}>
+        <Image
+          src={product.cover}
+          alt={product.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          style={{ filter: 'brightness(0.6)' }}
+          onError={() => {}}
+        />
+        {/* badge tipo */}
+        <div
+          className="absolute top-5 left-5"
+          style={{
+            fontFamily: 'RocGrotesk, sans-serif',
+            fontSize: 9,
+            letterSpacing: '0.28em',
+            textTransform: 'uppercase',
+            color: '#C8A96E',
+            border: '1px solid #C8A96E',
+            padding: '4px 10px',
+            background: 'rgba(10,10,10,0.7)',
+          }}
+        >
+          {product.typeLabel}
         </div>
       </div>
 
-      {/* régua Mondrian */}
-      <div className="flex h-1.5 w-full">
-        <span className="flex-1 bg-[#c92a2a]" />
-        <span className="flex-1 bg-[#f0b400]" />
-        <span className="flex-[2] bg-[#1e3a8a]" />
-        <span className="flex-1 bg-[#14140e]" />
+      {/* conteúdo */}
+      <div className="flex flex-col gap-5 p-8">
+        <div>
+          <h3
+            className="text-2xl leading-tight"
+            style={{
+              fontFamily: '"Cormorant Garamond", Georgia, serif',
+              fontStyle: 'italic',
+              fontWeight: 400,
+              color: '#f5f0eb',
+            }}
+          >
+            {product.title}
+          </h3>
+          <p
+            className="mt-3 text-sm leading-relaxed"
+            style={{ color: '#a09890', fontFamily: 'RocGrotesk, sans-serif', fontWeight: 300 }}
+          >
+            {product.subtitle}
+          </p>
+        </div>
+
+        {/* features */}
+        <ul className="flex flex-col gap-1.5">
+          {product.features.map((f, i) => (
+            <li
+              key={i}
+              className="flex items-center gap-2 text-xs"
+              style={{ color: '#555', fontFamily: 'RocGrotesk, sans-serif' }}
+            >
+              <span style={{ color: '#C8A96E' }}>—</span> {f}
+            </li>
+          ))}
+        </ul>
+
+        {/* preço + cta */}
+        <div
+          className="flex items-end justify-between pt-5"
+          style={{ borderTop: '1px solid #2a2a2a' }}
+        >
+          <span
+            style={{
+              fontFamily: '"Cormorant Garamond", Georgia, serif',
+              fontStyle: 'italic',
+              fontSize: 36,
+              color: '#f5f0eb',
+              lineHeight: 1,
+            }}
+          >
+            {fmt(product.price)}
+          </span>
+          <span
+            className="transition-colors group-hover:text-[#C8A96E]"
+            style={{
+              fontFamily: 'RocGrotesk, sans-serif',
+              fontSize: 11,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: '#a09890',
+              borderBottom: '1px solid #3a3a3a',
+              paddingBottom: 2,
+            }}
+          >
+            Acessar →
+          </span>
+        </div>
       </div>
     </Link>
   )
 }
 
-function Cell({ k, v }) {
+function BookCell({ k, v }) {
   return (
     <div>
       <div
-        className="text-[9px] uppercase tracking-[0.32em] text-[#14140e]/60"
-        style={{ fontFamily: 'RocGrotesk, sans-serif' }}
+        style={{
+          fontFamily: 'RocGrotesk, sans-serif',
+          fontSize: 9,
+          letterSpacing: '0.32em',
+          textTransform: 'uppercase',
+          color: '#555',
+        }}
       >
         {k}
       </div>
       <div
-        className="mt-1 text-xl text-[#14140e]"
-        style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontStyle: 'italic' }}
+        style={{
+          fontFamily: '"Cormorant Garamond", Georgia, serif',
+          fontStyle: 'italic',
+          fontSize: 22,
+          color: '#f5f0eb',
+          marginTop: 4,
+        }}
       >
         {v}
       </div>
@@ -210,14 +659,42 @@ function Cell({ k, v }) {
   )
 }
 
-function EmptyState() {
+function BlogCard({ post }) {
   return (
-    <div className="rounded-3xl border border-dashed border-neutral-300 bg-white p-16 text-center">
-      <h2 className="text-2xl font-semibold text-neutral-900">Em breve.</h2>
-      <p className="mx-auto mt-3 max-w-xl text-neutral-600">
-        Os primeiros ebooks, cursos e mentorias da House Mazzutti Academy ficam disponíveis aqui em breve.
-        Cadastre-se para receber o lançamento.
+    <Link
+      href={post.link}
+      className="group block p-6"
+      style={{ background: '#111111', textDecoration: 'none' }}
+    >
+      <p
+        className="mb-4 text-[9px] uppercase tracking-[0.28em]"
+        style={{ color: '#C8A96E', fontFamily: 'RocGrotesk, sans-serif' }}
+      >
+        {post.subcategoria || post.categoria}
       </p>
-    </div>
+      <h3
+        className="line-clamp-3 text-base leading-snug"
+        style={{
+          fontFamily: '"Cormorant Garamond", Georgia, serif',
+          fontStyle: 'italic',
+          fontWeight: 400,
+          color: '#f5f0eb',
+        }}
+      >
+        {post.titulo}
+      </h3>
+      <p
+        className="mt-3 line-clamp-3 text-xs leading-relaxed"
+        style={{ color: '#555', fontFamily: 'RocGrotesk, sans-serif', fontWeight: 300 }}
+      >
+        {post.excerpt}
+      </p>
+      <p
+        className="mt-5 text-[10px] uppercase tracking-[0.2em] transition-colors group-hover:text-[#C8A96E]"
+        style={{ color: '#3a3a3a', fontFamily: 'RocGrotesk, sans-serif' }}
+      >
+        Ler →
+      </p>
+    </Link>
   )
 }
