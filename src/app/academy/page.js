@@ -25,7 +25,7 @@ const BOOKS = [
     priceFull: 'R$ 70',
     price: 'R$ 49',
     discount: '−30%',
-    href: '/academy/marketing-para-modelos',
+    href: '/pt/academy/marketing-para-modelos',
     cover: '/images/academy/marketing-para-modelos/cover.png',
     status: 'Disponível',
   },
