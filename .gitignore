@@ -21,3 +21,4 @@ yarn-error.log*
 
 # Backup local de imagens (pré-conversão WebP) — não versionar.
 public/images-backup/
+tests/e2e/.auth/

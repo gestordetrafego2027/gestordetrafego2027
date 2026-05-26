@@ -13,12 +13,14 @@
     "test:unit:watch": "vitest",
     "test:unit:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
     "optimize-images": "node scripts/optimize-images.cjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "audit:ci": "npm audit --audit-level=high",
-    "sync:catalog": "node -r tsx/esm scripts/sync-stripe-catalog.ts"
+    "sync:catalog": "npx tsx scripts/sync-stripe-catalog.ts",
+    "go-live": "npx tsx scripts/go-live.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
