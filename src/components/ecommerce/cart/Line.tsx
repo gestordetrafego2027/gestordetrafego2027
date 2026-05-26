@@ -2,16 +2,16 @@
 import Image from 'next/image'
 import { useCartStore } from '@/lib/cart/store'
 import type { CartItem } from '@/lib/schemas/cart'
-import { formatBRL } from '@/lib/format/price'
 
-// Tipos com quantidade fixa (sem controles +/-): produtos digitais e serviços.
-// O catálogo da House Mazzutti hoje é majoritariamente digital — controles de
-// quantidade só fazem sentido para itens físicos/bundles.
-const FIXED_QUANTITY_TYPES = new Set<CartItem['productType']>(['digital', 'service'])
+function formatPrice(cents: number, currency = 'brl') {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: currency.toUpperCase(),
+  }).format(cents / 100)
+}
 
 export function CartLine({ item }: { item: CartItem }) {
   const { updateQuantity, removeItem } = useCartStore()
-  const hasQuantityControls = !FIXED_QUANTITY_TYPES.has(item.productType)
 
   return (
     <div className="flex gap-3 py-4 border-b border-neutral-100 last:border-0">
@@ -38,8 +38,8 @@ export function CartLine({ item }: { item: CartItem }) {
         <p className="text-xs text-neutral-400 mt-0.5 capitalize">{item.productType === 'digital' ? 'Digital' : item.productType === 'service' ? 'Serviço' : 'Físico'}</p>
 
         <div className="flex items-center justify-between mt-2">
-          {/* Quantidade — controles +/- apenas para físico/bundle */}
-          {hasQuantityControls ? (
+          {/* Quantidade */}
+          {item.productType !== 'service' ? (
             <div className="flex items-center gap-1 border border-neutral-200 rounded-lg overflow-hidden">
               <button
                 onClick={() => updateQuantity(item.id, item.quantity - 1)}
@@ -54,15 +54,13 @@ export function CartLine({ item }: { item: CartItem }) {
               >+</button>
             </div>
           ) : (
-            <span className="text-xs text-neutral-400">
-              {item.productType === 'service' ? '1 serviço' : '1 unidade'}
-            </span>
+            <span className="text-xs text-neutral-400">1 serviço</span>
           )}
 
           {/* Preço + remover */}
           <div className="flex items-center gap-3">
             <span className="text-sm font-semibold text-neutral-900">
-              {formatBRL(item.unitAmount * item.quantity, item.currency)}
+              {formatPrice(item.unitAmount * item.quantity, item.currency)}
             </span>
             <button
               onClick={() => removeItem(item.id)}

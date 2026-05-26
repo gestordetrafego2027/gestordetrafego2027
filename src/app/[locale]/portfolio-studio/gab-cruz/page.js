@@ -7,11 +7,12 @@ import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
 import YouTubeShort from '@/app/components/YouTubeShort';
+import Lightbox from '@/app/components/Lightbox'
 
 export default function GabCruzPage() {
-    const [selectedImg, setSelectedImg] = useState(null)
-    const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
-    const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
+    const [lightboxIdx, setLightboxIdx] = useState(null)
+    const openImg = (idx) => { setLightboxIdx(idx); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
+    const closeImg = () => { setLightboxIdx(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => { 
@@ -46,6 +47,22 @@ export default function GabCruzPage() {
         };
     }, []);
 
+    const images = [
+      '/images/studio/gab-cruz/1.webp',
+      '/images/studio/gab-cruz/2.webp',
+      '/images/studio/gab-cruz/3.webp',
+      '/images/studio/gab-cruz/4.webp',
+      '/images/studio/gab-cruz/5.webp',
+      '/images/studio/gab-cruz/6.webp',
+      '/images/studio/gab-cruz/7.webp',
+      '/images/studio/gab-cruz/8.webp',
+      '/images/studio/gab-cruz/9.webp',
+      '/images/studio/gab-cruz/10.webp',
+      '/images/studio/gab-cruz/11.webp',
+      '/images/studio/gab-cruz/12.webp',
+      '/images/studio/gab-cruz/13.webp',
+    ]
+
     return (
         <div className="bg-surface text-on-surface antialiased">
             <style dangerouslySetInnerHTML={{__html: `
@@ -69,19 +86,19 @@ export default function GabCruzPage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <div onClick={() => openImg('/images/studio/gab-cruz/1.webp')} className="cursor-pointer"><Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/studio/gab-cruz/1.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/2.webp')} className="cursor-pointer"><Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/studio/gab-cruz/2.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/3.webp')} className="cursor-pointer"><Image alt="Foto 3" src="/images/studio/gab-cruz/3.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/4.webp')} className="cursor-pointer"><Image alt="Foto 4" src="/images/studio/gab-cruz/4.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/5.webp')} className="cursor-pointer"><Image alt="Foto 5" src="/images/studio/gab-cruz/5.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/6.webp')} className="cursor-pointer"><Image alt="Foto 6" src="/images/studio/gab-cruz/6.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/7.webp')} className="cursor-pointer"><Image alt="Foto 7" src="/images/studio/gab-cruz/7.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/8.webp')} className="cursor-pointer"><Image alt="Foto 8" src="/images/studio/gab-cruz/8.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/9.webp')} className="cursor-pointer"><Image alt="Foto 9" src="/images/studio/gab-cruz/9.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/10.webp')} className="cursor-pointer"><Image alt="Foto 10" src="/images/studio/gab-cruz/10.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/11.webp')} className="cursor-pointer"><Image alt="Foto 11" src="/images/studio/gab-cruz/11.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/12.webp')} className="cursor-pointer"><Image alt="Foto 12" src="/images/studio/gab-cruz/12.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
-                          <div onClick={() => openImg('/images/studio/gab-cruz/13.webp')} className="cursor-pointer"><Image alt="Foto 13" src="/images/studio/gab-cruz/13.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(0)} className="cursor-pointer"><Image alt="Foto 1" style={{objectPosition: 'top'}} src="/images/studio/gab-cruz/1.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(1)} className="cursor-pointer"><Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/studio/gab-cruz/2.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(2)} className="cursor-pointer"><Image alt="Foto 3" src="/images/studio/gab-cruz/3.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(3)} className="cursor-pointer"><Image alt="Foto 4" src="/images/studio/gab-cruz/4.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(4)} className="cursor-pointer"><Image alt="Foto 5" src="/images/studio/gab-cruz/5.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(5)} className="cursor-pointer"><Image alt="Foto 6" src="/images/studio/gab-cruz/6.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(6)} className="cursor-pointer"><Image alt="Foto 7" src="/images/studio/gab-cruz/7.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(7)} className="cursor-pointer"><Image alt="Foto 8" src="/images/studio/gab-cruz/8.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(8)} className="cursor-pointer"><Image alt="Foto 9" src="/images/studio/gab-cruz/9.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(9)} className="cursor-pointer"><Image alt="Foto 10" src="/images/studio/gab-cruz/10.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(10)} className="cursor-pointer"><Image alt="Foto 11" src="/images/studio/gab-cruz/11.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(11)} className="cursor-pointer"><Image alt="Foto 12" src="/images/studio/gab-cruz/12.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
+                          <div onClick={() => openImg(12)} className="cursor-pointer"><Image alt="Foto 13" src="/images/studio/gab-cruz/13.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" /></div>
                         </div>
                     </div>
                     <div className="lg:w-1/3">
@@ -145,11 +162,7 @@ export default function GabCruzPage() {
                 </div>
             </footer>
 
-            {selectedImg && (
-              <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
-              </div>
-            )}
+                        <Lightbox images={images} idx={lightboxIdx} onClose={closeImg} onNav={setLightboxIdx} />
         </div>
     );
 }

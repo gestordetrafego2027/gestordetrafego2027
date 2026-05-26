@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { AddToCartButton } from '@/components/ecommerce/product/AddToCartButton'
-import { formatBRL } from '@/lib/format/price'
 
 export const revalidate = 60
 
@@ -31,6 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: p.og_image_url ? [p.og_image_url] : p.images?.[0] ? [p.images[0]] : [],
     },
   }
+}
+
+function formatPrice(cents: number, currency = 'brl') {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: currency.toUpperCase(),
+  }).format(cents / 100)
 }
 
 export default async function ProdutoPage({ params }: Props) {
@@ -149,7 +155,7 @@ export default async function ProdutoPage({ params }: Props) {
               {mainPrice && (
                 <div>
                   <p className="text-3xl font-bold text-neutral-900">
-                    {formatBRL(mainPrice.unit_amount, mainPrice.currency)}
+                    {formatPrice(mainPrice.unit_amount, mainPrice.currency)}
                     {mainPrice.price_type === 'recurring' && (
                       <span className="text-base font-normal text-neutral-400 ml-1">
                         /{mainPrice.recurring_interval === 'month' ? 'mês' : 'ano'}

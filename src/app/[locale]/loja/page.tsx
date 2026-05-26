@@ -1,12 +1,11 @@
 import { notFound } from 'next/navigation'
 import { featureFlags } from '@/lib/feature-flags'
 import { createClient } from '@/lib/supabase/server'
+import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
-import { ProductCard, type ProductCardProduct } from '@/components/ecommerce/product/ProductCard'
 
 export const revalidate = 60
-
-type Product = ProductCardProduct
 
 export const metadata: Metadata = {
   title: 'Loja — House Mazzutti',
@@ -15,6 +14,102 @@ export const metadata: Metadata = {
     title: 'Loja — House Mazzutti',
     description: 'Serviços, cursos e produtos digitais da House Mazzutti.',
   },
+}
+
+type Price = {
+  unit_amount: number
+  currency: string
+  price_type: string
+  metadata: { quote_only?: string }
+}
+
+type Category = { slug: string; name: string }
+
+type Product = {
+  id: string
+  slug: string
+  name: string
+  description: string | null
+  product_type: string
+  images: string[]
+  featured: boolean
+  store_prices: Price[]
+  store_product_categories: { store_categories: Category }[]
+}
+
+function formatPrice(cents: number, currency = 'brl') {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: currency.toUpperCase(),
+  }).format(cents / 100)
+}
+
+function isQuoteOnly(prices: Price[]) {
+  return prices?.[0]?.metadata?.quote_only === 'true'
+}
+
+function ProductCard({ product }: { product: Product }) {
+  const price = product.store_prices?.[0]
+  const image = product.images?.[0] ?? null
+  const quoteOnly = isQuoteOnly(product.store_prices)
+  const category = product.store_product_categories?.[0]?.store_categories
+
+  return (
+    <Link
+      href={`/loja/${product.slug}`}
+      className="group block rounded-xl border border-neutral-200 bg-white overflow-hidden hover:border-neutral-400 transition-all duration-200 hover:shadow-md"
+    >
+      <div className="relative aspect-[4/3] bg-neutral-100 overflow-hidden">
+        {image ? (
+          <Image
+            src={image}
+            alt={product.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-neutral-50">
+            <span className="text-4xl">
+              {product.product_type === 'service' ? '✦' :
+               product.product_type === 'digital' ? '◈' : '◻'}
+            </span>
+          </div>
+        )}
+        {product.featured && (
+          <span className="absolute top-2 left-2 bg-black text-white text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wide">
+            Destaque
+          </span>
+        )}
+      </div>
+
+      <div className="p-4">
+        {category && (
+          <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium">
+            {category.name}
+          </span>
+        )}
+        <h3 className="font-semibold text-neutral-900 leading-snug mt-0.5 mb-1 line-clamp-2">
+          {product.name}
+        </h3>
+        {product.description && (
+          <p className="text-xs text-neutral-500 line-clamp-2 mb-3">{product.description}</p>
+        )}
+        {quoteOnly ? (
+          <span className="inline-block text-xs font-medium text-neutral-600 border border-neutral-300 rounded-full px-3 py-0.5">
+            Solicitar orçamento
+          </span>
+        ) : price ? (
+          <p className="text-base font-bold text-neutral-900">
+            {formatPrice(price.unit_amount, price.currency)}
+            {price.price_type === 'recurring' && (
+              <span className="text-xs font-normal text-neutral-400 ml-1">/mês</span>
+            )}
+          </p>
+        ) : null}
+      </div>
+    </Link>
+  )
 }
 
 const CATEGORY_ORDER = ['agencia', 'studio', 'produtora', 'academy']

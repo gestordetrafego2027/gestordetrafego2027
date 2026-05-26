@@ -6,11 +6,12 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import Lightbox from '@/app/components/Lightbox';
 
 export default function MabdoPage() {
-    const [selectedImg, setSelectedImg] = useState(null)
-    const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
-    const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
+    const [lightboxIdx, setLightboxIdx] = useState(null)
+    const openImg = (idx) => { setLightboxIdx(idx); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
+    const closeImg = () => { setLightboxIdx(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => { 
@@ -57,6 +58,8 @@ export default function MabdoPage() {
         "/images/agencia/mabdo/2.webp"
     ];
 
+    const images = [...verticalImages, ...horizontalImages];
+
     return (
         <div className="bg-surface text-on-surface antialiased">
             <style dangerouslySetInnerHTML={{__html: `
@@ -84,12 +87,12 @@ export default function MabdoPage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     <div className="lg:w-2/3 flex flex-col gap-8">
                         {verticalImages.map((src, i) => (
-                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(src)} style={{maxHeight:'600px'}}>
+                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(i)} style={{maxHeight:'600px'}}>
                                 <Image alt="vertical" src={src} style={{maxHeight:'600px'}} fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover transition-all duration-700" />
                             </div>
                         ))}
                         {horizontalImages.map((src, i) => (
-                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(src)}>
+                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(4 + i)}>
                                 <Image alt="horizontal" src={src} style={{aspectRatio:'16/9', objectFit:'cover'}} fill sizes="100vw" quality={80} loading="lazy" className="w-full transition-all duration-700" />
                             </div>
                         ))}
@@ -158,11 +161,7 @@ export default function MabdoPage() {
                 </div>
             </footer>
         
-            {selectedImg && (
-                <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                    <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
-                </div>
-            )}
+            <Lightbox images={images} idx={lightboxIdx} onClose={closeImg} onNav={setLightboxIdx} />
 </div>
     );
 }

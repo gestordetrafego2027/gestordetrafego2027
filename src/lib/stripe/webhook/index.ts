@@ -2,8 +2,6 @@ import type Stripe from 'stripe'
 import { getStripe } from '../server'
 import { logger } from '@/lib/logger'
 import { handleCheckoutCompleted } from './handlers/checkout-completed'
-import { sendEmail } from '@/lib/email/resend'
-import { paymentFailedEmail } from '@/lib/email/templates/payment-failed'
 
 /**
  * Verifica a assinatura do webhook Stripe e retorna o evento tipado.
@@ -33,14 +31,8 @@ export async function dispatchWebhookEvent(event: Stripe.Event): Promise<void> {
       break
     }
     case 'payment_intent.payment_failed': {
-      const pi = event.data.object as Stripe.PaymentIntent
-      log.warn({ pi: pi.id }, 'pagamento falhou')
-      const email = pi.receipt_email ?? (pi.metadata as any)?.buyer_email
-      const name = (pi.metadata as any)?.buyer_name ?? 'Cliente'
-      if (email) {
-        const { subject, html } = paymentFailedEmail({ buyerName: name, buyerEmail: email })
-        await sendEmail({ to: email, subject, html, tags: [{ name: 'type', value: 'payment_failed' }] })
-      }
+      log.warn({ pi: (event.data.object as Stripe.PaymentIntent).id }, 'pagamento falhou')
+      // Sprint 5: enviar email de falha via Resend
       break
     }
     case 'customer.subscription.updated':

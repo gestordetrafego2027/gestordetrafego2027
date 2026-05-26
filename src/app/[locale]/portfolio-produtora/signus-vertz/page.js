@@ -6,11 +6,12 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import Lightbox from '@/app/components/Lightbox';
 
 export default function SignusVertzPage() {
-    const [selectedImg, setSelectedImg] = useState(null)
-    const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
-    const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
+    const [lightboxIdx, setLightboxIdx] = useState(null)
+    const openImg = (idx) => { setLightboxIdx(idx); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
+    const closeImg = () => { setLightboxIdx(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => { 
@@ -66,7 +67,7 @@ export default function SignusVertzPage() {
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
                           {images.map((src, i) => (
-                            <div key={i} onClick={() => openImg(src)} className="cursor-pointer">
+                            <div key={i} onClick={() => openImg(i)} className="cursor-pointer">
                               <Image alt={`Foto ${i+1}`} style={{objectPosition: 'top'}} src={src} width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                             </div>
                           ))}
@@ -113,11 +114,7 @@ export default function SignusVertzPage() {
                     <p className="text-[#808080] font-inter text-[10px] tracking-wider">© 2026 House Mazzutti</p>
                 </div>
             </footer>
-            {selectedImg && (
-              <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
-              </div>
-            )}
+            <Lightbox images={images} idx={lightboxIdx} onClose={closeImg} onNav={setLightboxIdx} />
         </div>
     );
 }

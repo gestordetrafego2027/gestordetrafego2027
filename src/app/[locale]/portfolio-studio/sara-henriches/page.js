@@ -7,11 +7,12 @@ import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
 import YouTubeShort from '@/app/components/YouTubeShort';
+import Lightbox from '@/app/components/Lightbox'
 
 export default function SaraHenrichesPage() {
-    const [selectedImg, setSelectedImg] = useState(null)
-    const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
-    const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
+    const [lightboxIdx, setLightboxIdx] = useState(null)
+    const openImg = (idx) => { setLightboxIdx(idx); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
+    const closeImg = () => { setLightboxIdx(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => { 
@@ -45,6 +46,17 @@ export default function SaraHenrichesPage() {
             if (animationFrameId) cancelAnimationFrame(animationFrameId);
         };
     }, []);
+
+    const images = [
+      '/images/studio/sara-henriches/1.webp',
+      '/images/studio/sara-henriches/2.webp',
+      '/images/studio/sara-henriches/3.webp',
+      '/images/studio/sara-henriches/4.webp',
+      '/images/studio/sara-henriches/5.webp',
+      '/images/studio/sara-henriches/6.webp',
+      '/images/studio/sara-henriches/7.webp',
+      '/images/studio/sara-henriches/8.webp',
+    ]
 
     return (
         <div className="bg-surface text-on-surface antialiased">
@@ -89,28 +101,28 @@ export default function SaraHenrichesPage() {
                     {/* Grid Layout */}
                     <div className="lg:w-2/3">
                         <div className="grid grid-cols-2 gap-3">
-                          <div onClick={() => openImg('/images/studio/sara-henriches/1.webp')} className="cursor-pointer">
+                          <div onClick={() => openImg(0)} className="cursor-pointer">
                             <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 1" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/1.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/sara-henriches/2.webp')} className="cursor-pointer">
+                          <div onClick={() => openImg(1)} className="cursor-pointer">
                             <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 2" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/2.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/sara-henriches/3.webp')} className="cursor-pointer">
+                          <div onClick={() => openImg(2)} className="cursor-pointer">
                             <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 3" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/3.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/sara-henriches/4.webp')} className="cursor-pointer">
+                          <div onClick={() => openImg(3)} className="cursor-pointer">
                             <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 4" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/4.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/sara-henriches/5.webp')} className="cursor-pointer">
+                          <div onClick={() => openImg(4)} className="cursor-pointer">
                             <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/5.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/sara-henriches/6.webp')} className="cursor-pointer">
+                          <div onClick={() => openImg(5)} className="cursor-pointer">
                             <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 6" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/6.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/sara-henriches/7.webp')} className="cursor-pointer">
+                          <div onClick={() => openImg(6)} className="cursor-pointer">
                             <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 7" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/7.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
-                          <div onClick={() => openImg('/images/studio/sara-henriches/8.webp')} className="cursor-pointer">
+                          <div onClick={() => openImg(7)} className="cursor-pointer">
                             <Image alt="Sara Henriches - Book Studio House Mazzutti - Foto 8" style={{objectPosition: 'top'}} src="/images/studio/sara-henriches/8.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
@@ -183,11 +195,7 @@ export default function SaraHenrichesPage() {
                 </div>
             </footer>
 
-            {selectedImg && (
-              <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
-              </div>
-            )}
+                        <Lightbox images={images} idx={lightboxIdx} onClose={closeImg} onNav={setLightboxIdx} />
         </div>
     );
 }
