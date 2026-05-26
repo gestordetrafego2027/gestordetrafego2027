@@ -1,0 +1,29 @@
+import { createClient } from '@/lib/supabase/server'
+import { ProfileForm } from './ProfileForm'
+
+export default async function DadosPage() {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('full_name, display_name, phone, city, state, email')
+    .eq('id', user!.id)
+    .maybeSingle()
+
+  return (
+    <div className="bg-white rounded-2xl border border-neutral-100 p-6">
+      <h2 className="text-lg font-semibold text-neutral-900 mb-6">Dados pessoais</h2>
+      <ProfileForm
+        defaultValues={{
+          full_name: profile?.full_name ?? '',
+          display_name: profile?.display_name ?? null,
+          phone: profile?.phone ?? null,
+          city: profile?.city ?? null,
+          state: profile?.state ?? null,
+          email: profile?.email ?? user!.email ?? '',
+        }}
+      />
+    </div>
+  )
+}

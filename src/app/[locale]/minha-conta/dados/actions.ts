@@ -1,0 +1,64 @@
+'use server'
+
+import { revalidatePath } from 'next/cache'
+import { z } from 'zod'
+import { createClient } from '@/lib/supabase/server'
+import { logger } from '@/lib/logger'
+
+const ProfileSchema = z.object({
+  full_name: z.string().min(2, 'Nome deve ter ao menos 2 caracteres.').max(120),
+  display_name: z.string().max(60).optional(),
+  phone: z.string().max(20).optional(),
+  city: z.string().max(80).optional(),
+  state: z.string().max(2).optional(),
+})
+
+export type UpdateProfileState = {
+  success?: boolean
+  error?: string
+  fieldErrors?: Partial<Record<keyof z.infer<typeof ProfileSchema>, string>>
+}
+
+export async function updateProfile(
+  _prev: UpdateProfileState,
+  formData: FormData,
+): Promise<UpdateProfileState> {
+  const log = logger.child({ action: 'updateProfile' })
+
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return { error: 'Sessão expirada. Faça login novamente.' }
+
+  const raw = {
+    full_name: String(formData.get('full_name') ?? '').trim(),
+    display_name: String(formData.get('display_name') ?? '').trim() || undefined,
+    phone: String(formData.get('phone') ?? '').trim() || undefined,
+    city: String(formData.get('city') ?? '').trim() || undefined,
+    state: String(formData.get('state') ?? '').trim().toUpperCase() || undefined,
+  }
+
+  const parsed = ProfileSchema.safeParse(raw)
+  if (!parsed.success) {
+    const fieldErrors: UpdateProfileState['fieldErrors'] = {}
+    for (const issue of parsed.error.issues) {
+      const key = issue.path[0] as keyof typeof fieldErrors
+      fieldErrors[key] = issue.message
+    }
+    return { fieldErrors }
+  }
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ ...parsed.data, updated_at: new Date().toISOString() })
+    .eq('id', user.id)
+
+  if (error) {
+    log.error({ err: error }, 'falha ao atualizar perfil')
+    return { error: 'Não foi possível salvar. Tente novamente.' }
+  }
+
+  log.info({ user_id: user.id }, 'perfil atualizado')
+  revalidatePath('/minha-conta/dados')
+  revalidatePath('/minha-conta')
+  return { success: true }
+}
