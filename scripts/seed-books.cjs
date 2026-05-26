@@ -117,7 +117,7 @@ async function findOrCreateProduct(book) {
     description: book.description,
     images: book.images,
     metadata: book.metadata,
-    features: book.features.map((name) => ({ name })),
+    marketing_features: book.features.map((name) => ({ name })),
   })
   console.log(`   ✅ Produto criado: ${product.id}`)
   return product

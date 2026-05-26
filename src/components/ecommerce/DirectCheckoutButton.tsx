@@ -11,14 +11,14 @@
  *     className="..."
  *   />
  */
-import { useState } from 'react'
+import { type CSSProperties, useState } from 'react'
 
 interface Props {
   stripePriceId: string
   label?: string
   loadingLabel?: string
   className?: string
-  style?: React.CSSProperties
+  style?: CSSProperties
 }
 
 export function DirectCheckoutButton({
