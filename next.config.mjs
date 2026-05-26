@@ -28,8 +28,6 @@ const nextConfig = {
     deviceSizes: [640, 828, 1080, 1280, 1920],
     // Tamanhos para imagens com width/height fixos
     imageSizes: [64, 128, 256, 384, 512],
-    // Qualidade padrão do otimizador (0-100). 80 = excelente nitidez com ~40% menos peso
-    quality: 80,
     // Cache de 30 dias para imagens otimizadas
     minimumCacheTTL: 2592000,
     // Desabilita varredura de domínios desnecessários
