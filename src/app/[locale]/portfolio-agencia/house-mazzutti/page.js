@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function HouseMazzuttiPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -147,6 +148,8 @@ export default function HouseMazzuttiPage() {
                     </Link>
                 </div>
             </div>
+
+            <PortfolioVideo unit="agencia" slug="house-mazzutti" />
 
             <PortfolioCTA businessUnit="agencia" projectSlug="house-mazzutti" />
 

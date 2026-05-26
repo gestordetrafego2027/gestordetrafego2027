@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function OnTakePage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -143,6 +144,8 @@ export default function OnTakePage() {
                     </Link>
                 </div>
             </div>
+
+            <PortfolioVideo unit="agencia" slug="on-take" />
 
             <PortfolioCTA businessUnit="agencia" projectSlug="on-take" />
 
