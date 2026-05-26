@@ -1,29 +1,70 @@
 'use client'
 import { useState } from 'react'
 import { useCartStore } from '@/lib/cart/store'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 function formatPrice(cents: number) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
 }
 
 export function CartSummary({ onClose }: { onClose?: () => void }) {
-  const { subtotal, total, couponCode, couponDiscount, setCoupon, removeCoupon, items } = useCartStore()
+  const { subtotal, total, couponCode, couponDiscount, setCoupon, removeCoupon, items, clearCart } = useCartStore()
   const [couponInput, setCouponInput] = useState('')
   const [couponLoading, setCouponLoading] = useState(false)
   const [couponError, setCouponError] = useState('')
+  const [checkoutLoading, setCheckoutLoading] = useState(false)
+  const [checkoutError, setCheckoutError] = useState('')
+  const router = useRouter()
 
   const hasItems = items.length > 0
+
+  async function handleCheckout() {
+    if (!hasItems) return
+    setCheckoutLoading(true)
+    setCheckoutError('')
+    try {
+      const res = await fetch('/api/store/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          items: items.map((i) => ({ stripePriceId: i.stripePriceId, quantity: i.quantity })),
+          couponCode: couponCode ?? undefined,
+          locale: 'pt',
+        }),
+      })
+      const data = await res.json()
+      if (!res.ok || !data.url) {
+        setCheckoutError(data.error ?? 'Erro ao iniciar checkout.')
+        return
+      }
+      onClose?.()
+      clearCart()
+      router.push(data.url)
+    } catch {
+      setCheckoutError('Erro de conexão. Tente novamente.')
+    } finally {
+      setCheckoutLoading(false)
+    }
+  }
 
   async function handleApplyCoupon() {
     if (!couponInput.trim()) return
     setCouponLoading(true)
     setCouponError('')
     try {
-      // Sprint 3: chamar /api/store/validate-coupon
-      // Por ora: simula erro de cupom não encontrado
-      await new Promise((r) => setTimeout(r, 500))
-      setCouponError('Cupom inválido ou expirado. (Checkout disponível no Sprint 3)')
+      const res = await fetch(
+        `/api/store/validate-coupon?code=${encodeURIComponent(couponInput.trim())}`,
+      )
+      const data = await res.json()
+      if (!data.valid) {
+        setCouponError(data.error ?? 'Cupom inválido ou expirado.')
+        return
+      }
+      const discount = data.amountOff ?? Math.round((subtotal() * (data.percentOff ?? 0)) / 100)
+      setCoupon(couponInput.trim(), discount)
+      setCouponInput('')
+    } catch {
+      setCouponError('Não foi possível validar o cupom. Tente novamente.')
     } finally {
       setCouponLoading(false)
     }
@@ -85,14 +126,17 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
       </div>
 
       {/* CTA */}
+      {checkoutError && (
+        <p className="text-xs text-red-500 text-center -mb-1">{checkoutError}</p>
+      )}
       {hasItems ? (
-        <Link
-          href="/checkout"
-          onClick={onClose}
-          className="block w-full bg-neutral-900 text-white text-center font-semibold py-3.5 rounded-xl hover:bg-neutral-700 transition-colors"
+        <button
+          onClick={handleCheckout}
+          disabled={checkoutLoading}
+          className="block w-full bg-neutral-900 text-white text-center font-semibold py-3.5 rounded-xl hover:bg-neutral-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          Finalizar compra
-        </Link>
+          {checkoutLoading ? 'Redirecionando...' : 'Finalizar compra'}
+        </button>
       ) : (
         <button disabled className="block w-full bg-neutral-200 text-neutral-400 text-center font-semibold py-3.5 rounded-xl cursor-not-allowed">
           Carrinho vazio

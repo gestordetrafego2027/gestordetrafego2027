@@ -1,6 +1,7 @@
 import type Stripe from 'stripe'
 import { getStripe } from '../server'
 import { logger } from '@/lib/logger'
+import { handleCheckoutCompleted } from './handlers/checkout-completed'
 
 /**
  * Verifica a assinatura do webhook Stripe e retorna o evento tipado.
@@ -24,16 +25,19 @@ export async function dispatchWebhookEvent(event: Stripe.Event): Promise<void> {
   log.info('webhook recebido')
 
   switch (event.type) {
-    case 'checkout.session.completed':
-      // Sprint 3: import handleCheckoutCompleted
-      log.info('checkout.session.completed — handler pendente Sprint 3')
+    case 'checkout.session.completed': {
+      const session = event.data.object as Stripe.Checkout.Session
+      await handleCheckoutCompleted(session)
       break
-    case 'payment_intent.payment_failed':
-      log.info('payment_intent.payment_failed — handler pendente Sprint 3')
+    }
+    case 'payment_intent.payment_failed': {
+      log.warn({ pi: (event.data.object as Stripe.PaymentIntent).id }, 'pagamento falhou')
+      // Sprint 5: enviar email de falha via Resend
       break
+    }
     case 'customer.subscription.updated':
     case 'customer.subscription.deleted':
-      log.info('subscription event — handler pendente Sprint 5')
+      log.info('subscription event — handler Sprint 5')
       break
     default:
       log.info('evento ignorado')
