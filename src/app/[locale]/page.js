@@ -356,6 +356,29 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* ── SOBRE / ANGELO MAZZUTTI ─────────────────────────────── */}
+                <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
+                        <Image alt="House Mazzutti — Agência, Produtora e Direção Criativa" src="/images/about/angelo-mazzutti.jpg" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover object-top" />
+                    </div>
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
+                    <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
+                        <div className="max-w-lg space-y-10">
+                            <span className="text-caption text-neutral-400">Direção Criativa /01</span>
+                            <h2 className="text-h2 text-white">Estratégia e execução. Na mesma mente.</h2>
+                            <div className="space-y-5 text-body text-neutral-300">
+                                <p>Mente formada na publicidade e forjada nos sets das maiores celebridades do Brasil — da Larissa Manoela à família Abravanel. Quinze anos de audiovisual e fotografia traduzidos em direção criativa autoral, com presença em cada decisão crítica do projeto.</p>
+                                <p>Cada peça que sai da House passa pela sua supervisão direta: do briefing estratégico ao acabamento final. É o que garante que a essência da marca chegue intacta — sem ruído entre o conceito e o pixel.</p>
+                                <p className="italic text-neutral-400">"Toda imagem que entrego carrega uma decisão de mercado. Estética sem propósito é apenas decoração."</p>
+                            </div>
+                            <div className="pt-6">
+                                <div className="text-h3 text-white/90">Angelo Mazzutti</div>
+                                <div className="text-caption text-neutral-500 mt-2">Head of Creative & Brand Strategy</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* ── SOBRE / METODOLOGIA ─────────────────────────────────── */}
                 <section className="bg-white text-black py-40 overflow-hidden relative">
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
