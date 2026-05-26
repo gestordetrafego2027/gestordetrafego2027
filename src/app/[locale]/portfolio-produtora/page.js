@@ -226,6 +226,20 @@ export default function PortfolioProdutoraPage() {
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Unique Chic</span>
                             </div>
                         </Link>
+                        <Link href="/portfolio-produtora/beatco-2" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/moda/beatco-2/capa.webp" alt="Beat Co 2" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Beat Co 2</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/idrissi" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/moda/idrissi/capa.webp" alt="Idrissi" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">MODA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Idrissi</span>
+                            </div>
+                        </Link>
                         <Link href="/portfolio-produtora/sense-hotel" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
                             <Image src="/images/produtora/institucional/sense-hotel/capa.webp" alt="Sense Hotel" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
