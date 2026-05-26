@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function OceanePage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -94,13 +95,7 @@ export default function OceanePage() {
                             <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/produtora/beleza/oceane/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/produtora/beleza/oceane/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/produtora/beleza/oceane/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
-                          </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/oceane/4.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 4" src="/images/produtora/beleza/oceane/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
-                          </div>
-                          <div onClick={() => openImg('/images/produtora/beleza/oceane/5.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 5" src="/images/produtora/beleza/oceane/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Foto 3" style={{objectPosition: 'top'}} src="/images/produtora/beleza/oceane/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
@@ -140,6 +135,8 @@ export default function OceanePage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="produtora" slug="oceane" />
+
             <PortfolioCTA businessUnit="produtora" projectSlug="oceane" />
 
             {/* Navigation Links before footer */}

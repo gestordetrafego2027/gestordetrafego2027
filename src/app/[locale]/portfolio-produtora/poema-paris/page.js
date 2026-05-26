@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function PoemasParisPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -44,7 +45,7 @@ export default function PoemasParisPage() {
         };
     }, []);
 
-    const images = Array.from({length: 8}, (_, i) => `/images/produtora/acessorios/poema-paris/${i+1}.jpg`);
+    const images = Array.from({length: 10}, (_, i) => `/images/produtora/acessorios/poema-paris/${i+1}.jpg`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">
@@ -98,6 +99,8 @@ export default function PoemasParisPage() {
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="/portfolio-produtora"><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Próximo Projeto</span><span className="material-symbols-outlined text-sm">east</span></Link>
                 </div>
             </div>
+            <PortfolioVideo unit="produtora" slug="poema-paris" />
+
             <PortfolioCTA businessUnit="produtora" projectSlug="poema-paris" />
 
             <footer className="bg-[#0a0a0a] px-12 py-8">

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function SignusFiammaPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -44,7 +45,7 @@ export default function SignusFiammaPage() {
         };
     }, []);
 
-    const images = Array.from({length: 4}, (_, i) => `/images/produtora/acessorios/signus-fiamma/${i+1}.jpg`);
+    const images = Array.from({length: 5}, (_, i) => `/images/produtora/acessorios/signus-fiamma/${i+1}.jpg`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">
@@ -98,6 +99,8 @@ export default function SignusFiammaPage() {
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="/portfolio-produtora"><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Próximo Projeto</span><span className="material-symbols-outlined text-sm">east</span></Link>
                 </div>
             </div>
+            <PortfolioVideo unit="produtora" slug="signus-fiamma" />
+
             <PortfolioCTA businessUnit="produtora" projectSlug="signus-fiamma" />
 
             <footer className="bg-[#0a0a0a] px-12 py-8">

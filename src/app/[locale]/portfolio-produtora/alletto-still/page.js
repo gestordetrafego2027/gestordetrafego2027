@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function AllettoStillPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -94,10 +95,13 @@ export default function AllettoStillPage() {
                             <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/produtora/beleza/alletto-still/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/produtora/beleza/alletto-still/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/produtora/beleza/alletto-still/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Foto 3" style={{objectPosition: 'top'}} src="/images/produtora/beleza/alletto-still/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/produtora/beleza/alletto-still/4.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 4" src="/images/produtora/beleza/alletto-still/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Foto 4" style={{objectPosition: 'top'}} src="/images/produtora/beleza/alletto-still/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          </div>
+                          <div onClick={() => openImg('/images/produtora/beleza/alletto-still/5.jpg')} className="cursor-pointer">
+                            <Image alt="Foto 5" style={{objectPosition: 'top'}} src="/images/produtora/beleza/alletto-still/5.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
@@ -137,6 +141,8 @@ export default function AllettoStillPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="produtora" slug="alletto-still" />
+
             <PortfolioCTA businessUnit="produtora" projectSlug="alletto-still" />
 
             {/* Navigation Links before footer */}

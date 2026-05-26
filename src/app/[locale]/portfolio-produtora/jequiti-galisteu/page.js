@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function JequitiGalisteuPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -94,7 +95,10 @@ export default function JequitiGalisteuPage() {
                             <Image alt="Foto 2" style={{objectPosition: 'top'}} src="/images/produtora/beleza/jequiti-galisteu/2.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                           <div onClick={() => openImg('/images/produtora/beleza/jequiti-galisteu/3.jpg')} className="cursor-pointer">
-                            <Image alt="Foto 3" src="/images/produtora/beleza/jequiti-galisteu/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                            <Image alt="Foto 3" style={{objectPosition: 'top'}} src="/images/produtora/beleza/jequiti-galisteu/3.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                          </div>
+                          <div onClick={() => openImg('/images/produtora/beleza/jequiti-galisteu/4.jpg')} className="cursor-pointer">
+                            <Image alt="Foto 4" style={{objectPosition: 'top'}} src="/images/produtora/beleza/jequiti-galisteu/4.jpg" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
@@ -134,6 +138,8 @@ export default function JequitiGalisteuPage() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="produtora" slug="jequiti-galisteu" />
+
             <PortfolioCTA businessUnit="produtora" projectSlug="jequiti-galisteu" />
 
             {/* Navigation Links before footer */}

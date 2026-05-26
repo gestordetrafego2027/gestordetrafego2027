@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
+import PortfolioVideo from '@/app/components/PortfolioVideo';
 
 export default function WePink01Page() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -146,6 +147,8 @@ export default function WePink01Page() {
                 </div>
             </main>
             
+            <PortfolioVideo unit="produtora" slug="we-pink-01" />
+
             <PortfolioCTA businessUnit="produtora" projectSlug="we-pink-01" />
 
             {/* Navigation Links before footer */}
