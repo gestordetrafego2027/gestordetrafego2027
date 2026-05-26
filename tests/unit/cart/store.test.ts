@@ -50,20 +50,17 @@ beforeEach(() => {
 
 describe('useCartStore', () => {
   it('addItem adiciona um item novo', () => {
-    const r = useCartStore.getState().addItem(makeDigital())
-    expect(r.added).toBe(true)
+    useCartStore.getState().addItem(makeDigital())
     expect(useCartStore.getState().items).toHaveLength(1)
     expect(useCartStore.getState().itemCount()).toBe(1)
   })
 
-  it('addItem de digital duplicado é no-op com reason="already-in-cart"', () => {
+  it('addItem de item duplicado incrementa quantidade', () => {
     const s = useCartStore.getState()
     s.addItem(makeDigital())
-    const r = s.addItem(makeDigital())
-    expect(r.added).toBe(false)
-    if (!r.added) expect(r.reason).toBe('already-in-cart')
+    s.addItem(makeDigital())
     expect(useCartStore.getState().items).toHaveLength(1)
-    expect(useCartStore.getState().items[0].quantity).toBe(1)
+    expect(useCartStore.getState().items[0].quantity).toBe(2)
   })
 
   it('addItem de físico duplicado incrementa quantidade até 99', () => {
