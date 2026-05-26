@@ -40,9 +40,18 @@ const NAV_GROUPS: { group: string; items: NavItem[] }[] = [
     ],
   },
   {
+    group: 'Loja',
+    items: [
+      { href: '/crm/store', icon: '◫', label: 'Visão geral', adminOnly: true },
+      { href: '/crm/store/pedidos', icon: '▤', label: 'Pedidos', badgeColor: 'amber', adminOnly: true },
+      { href: '/crm/store/catalogo', icon: '▣', label: 'Catálogo', adminOnly: true },
+      { href: '/crm/store/cupons', icon: '◈', label: 'Cupons', adminOnly: true },
+    ],
+  },
+  {
     group: 'Configuração',
     items: [
-      { href: '/crm/catalog', icon: '▣', label: 'Catálogo' },
+      { href: '/crm/catalog', icon: '▣', label: 'Catálogo CRM' },
       { href: '/crm/tags', icon: '◈', label: 'Tags' },
       { href: '/crm/manual', icon: '▥', label: 'Manual' },
       { href: '/crm/ajuda', icon: '◌', label: 'Ajuda' },
@@ -62,6 +71,7 @@ type Props = {
   openLeads?: number | null
   overdueInvoices?: number | null
   newActivities?: number | null
+  pendingOrders?: number | null
   isAdmin?: boolean
   userEmail?: string
   userRole?: string
@@ -72,6 +82,7 @@ export default function Sidebar({
   openLeads,
   overdueInvoices,
   newActivities,
+  pendingOrders,
   isAdmin,
   userEmail,
   userRole,
@@ -83,6 +94,7 @@ export default function Sidebar({
   function getBadge(item: NavItem) {
     if (item.href === '/crm/leads') return openLeads
     if (item.href === '/crm/clients') return overdueInvoices
+    if (item.href === '/crm/store/pedidos') return pendingOrders
     return null
   }
 

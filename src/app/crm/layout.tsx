@@ -12,10 +12,12 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
     { count: newActivities },
     { count: openLeads },
     { count: overdueInvoices },
+    { count: pendingOrders },
   ] = await Promise.all([
     supabase.from('activities').select('*', { count: 'exact', head: true }).gte('created_at', since),
     supabase.from('leads').select('*', { count: 'exact', head: true }).in('status', ['novo', 'em_contato']),
     supabase.from('invoices').select('*', { count: 'exact', head: true }).eq('status', 'vencida'),
+    supabase.from('store_orders').select('*', { count: 'exact', head: true }).in('status', ['pending', 'processing']),
   ])
 
   const md = (user?.app_metadata ?? {}) as { role?: string; unit?: string }
@@ -26,6 +28,7 @@ export default async function CrmLayout({ children }: { children: React.ReactNod
         openLeads={openLeads}
         overdueInvoices={overdueInvoices}
         newActivities={newActivities}
+        pendingOrders={pendingOrders}
         isAdmin={md.role === 'admin'}
         userEmail={user?.email}
         userRole={md.role}

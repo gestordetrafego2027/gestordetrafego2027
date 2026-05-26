@@ -2,10 +2,7 @@
 import { useState } from 'react'
 import { useCartStore } from '@/lib/cart/store'
 import { useRouter } from 'next/navigation'
-
-function formatPrice(cents: number) {
-  return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
-}
+import { formatBRL as formatPrice } from '@/lib/format/price'
 
 export function CartSummary({ onClose }: { onClose?: () => void }) {
   const { subtotal, total, couponCode, couponDiscount, setCoupon, removeCoupon, items, clearCart } = useCartStore()

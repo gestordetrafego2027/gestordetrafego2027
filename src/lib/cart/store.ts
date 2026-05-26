@@ -3,6 +3,10 @@ import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 import type { CartItem } from '@/lib/schemas/cart'
 
+export type AddItemResult =
+  | { added: true }
+  | { added: false; reason: 'already-in-cart' }
+
 // ── Tipos ────────────────────────────────────────────────────
 interface CartState {
   items: CartItem[]
@@ -11,7 +15,7 @@ interface CartState {
   drawerOpen: boolean
 
   // Actions
-  addItem: (item: CartItem) => void
+  addItem: (item: CartItem) => AddItemResult
   removeItem: (priceId: string) => void
   updateQuantity: (priceId: string, quantity: number) => void
   clearCart: () => void
@@ -37,23 +41,36 @@ export const useCartStore = create<CartState>()(
       drawerOpen: false,
 
       addItem: (item) => {
-        set((state) => {
-          const existing = state.items.find((i) => i.id === item.id)
-          if (existing) {
-            return {
-              items: state.items.map((i) =>
-                i.id === item.id
-                  ? { ...i, quantity: Math.min(i.quantity + item.quantity, 99) }
-                  : i,
-              ),
-            }
-          }
-          return { items: [...state.items, item] }
-        })
-        // Abre o drawer ao adicionar
-        set({ drawerOpen: true })
-        // Broadcast para outras abas
+        const state = get()
+        const existing = state.items.find((i) => i.id === item.id)
+
+        // Digital/serviço: quantidade fixa em 1. Se já existe, no-op (sem incrementar).
+        // Físico/bundle: incrementa quantidade até o limite de 99.
+        const isFixedQty = item.productType === 'digital' || item.productType === 'service'
+
+        if (existing && isFixedQty) {
+          // Indica ao caller (UI/toast) que foi no-op.
+          set({ drawerOpen: true })
+          return { added: false as const, reason: 'already-in-cart' as const }
+        }
+
+        if (existing) {
+          set({
+            items: state.items.map((i) =>
+              i.id === item.id
+                ? { ...i, quantity: Math.min(i.quantity + item.quantity, 99) }
+                : i,
+            ),
+            drawerOpen: true,
+          })
+        } else {
+          set({
+            items: [...state.items, isFixedQty ? { ...item, quantity: 1 } : item],
+            drawerOpen: true,
+          })
+        }
         broadcastCartUpdate()
+        return { added: true as const }
       },
 
       removeItem: (priceId) => {

@@ -3,6 +3,7 @@ import { useCartStore } from '@/lib/cart/store'
 import type { CartItem } from '@/lib/schemas/cart'
 import { useState } from 'react'
 import Link from 'next/link'
+import { toast } from 'sonner'
 
 interface Props {
   item: Omit<CartItem, 'quantity'>
@@ -25,7 +26,13 @@ export function AddToCartButton({ item, isQuoteOnly = false }: Props) {
   }
 
   function handleAdd() {
-    addItem({ ...item, quantity: 1 })
+    const result = addItem({ ...item, quantity: 1 })
+    if (!result.added) {
+      // Já estava no carrinho (digital/serviço — quantidade fixa).
+      toast.info('Este item já está no seu carrinho.')
+      return
+    }
+    toast.success(`${item.name} adicionado ao carrinho`)
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
   }
