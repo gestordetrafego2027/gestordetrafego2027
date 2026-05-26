@@ -212,7 +212,7 @@ const CSS = `
 .mpm-root .masthead-brand .hm-wordmark { font-size: 30px; letter-spacing: -0.025em; }
 .mpm-root .masthead-center { display: flex; align-items: center; gap: 18px; justify-self: center; color: var(--ink); }
 .mpm-root .masthead-center .hm-divider { width: 1px; height: 14px; background: var(--ink); opacity: 0.4; }
-.mpm-root .masthead-right { justify-self: end; color: var(--ink-mute); }
+.mpm-root .masthead-right { justify-self: end; color: var(--ink); }
 .mpm-root .hm-tag.muted { color: var(--ink-mute); }
 
 .mpm-root .nav { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--rule-soft); backdrop-filter: blur(8px); }
@@ -570,7 +570,13 @@ export default function MarketingParaModelosPage() {
             <span className="hm-tag">Volume 01 · MMXXVI</span>
           </div>
           <div className="masthead-right">
-            <span className="hm-tag muted">São Paulo · BR</span>
+            <a href="https://housemazzutti.com" target="_blank" rel="noopener noreferrer"
+               style={{textDecoration:'none', color:'inherit'}}>
+              <span className="hm-logo" style={{fontSize:'22px'}}>
+                <span className="hm-house">House</span>
+                <span className="hm-mazzutti">Mazzutti</span>
+              </span>
+            </a>
           </div>
         </div>
       </header>
