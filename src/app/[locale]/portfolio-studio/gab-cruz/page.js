@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function GabCruzPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -128,6 +129,8 @@ export default function GabCruzPage() {
             </div>
 
             <PortfolioVideo unit="studio" slug="gab-cruz" />
+
+            <YouTubeShort urls={["https://youtube.com/shorts/Q2RJh8mhPO4?feature=share","https://youtube.com/shorts/tKJ80a1yEVM?feature=share"]} />
 
             <PortfolioCTA businessUnit="studio" projectSlug="gab-cruz" />
 

@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function IasmimPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -142,6 +143,8 @@ export default function IasmimPage() {
             </main>
             
             <PortfolioVideo unit="studio" slug="iasmim" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/-e7gTdGQ0aM?feature=share" />
 
             <PortfolioCTA businessUnit="studio" projectSlug="iasmim" />
 

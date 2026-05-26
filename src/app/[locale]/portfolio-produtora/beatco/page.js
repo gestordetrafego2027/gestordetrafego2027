@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function BeatcoPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -100,6 +101,8 @@ export default function BeatcoPage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="beatco" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/u41gN8xO_2M?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="beatco" />
 

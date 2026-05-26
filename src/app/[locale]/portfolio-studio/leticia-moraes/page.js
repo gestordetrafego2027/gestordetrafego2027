@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function LeticiaMoraesPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -145,6 +146,8 @@ export default function LeticiaMoraesPage() {
             </main>
             
             <PortfolioVideo unit="studio" slug="leticia-moraes" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/z9HFipnP4WI?feature=share" />
 
             <PortfolioCTA businessUnit="studio" projectSlug="leticia-moraes" />
 

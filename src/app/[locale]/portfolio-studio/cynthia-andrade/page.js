@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function CynthiaAndradePage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -136,6 +137,8 @@ export default function CynthiaAndradePage() {
             </main>
             
             <PortfolioVideo unit="studio" slug="cynthia-andrade" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/pstk6mZQwEU?feature=share" />
 
             <PortfolioCTA businessUnit="studio" projectSlug="cynthia-andrade" />
 

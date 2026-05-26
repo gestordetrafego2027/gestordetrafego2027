@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function JamileCarolinePage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -145,6 +146,8 @@ export default function JamileCarolinePage() {
             </main>
             
             <PortfolioVideo unit="studio" slug="jamile-caroline" />
+
+            <YouTubeShort urls={["https://youtube.com/shorts/LEi_egcF1d4?feature=share","https://youtube.com/shorts/QNraZvoGQ80?feature=share"]} />
 
             <PortfolioCTA businessUnit="studio" projectSlug="jamile-caroline" />
 

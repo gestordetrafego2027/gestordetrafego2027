@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function AnaRockenbachPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -142,6 +143,8 @@ export default function AnaRockenbachPage() {
             </main>
             
             <PortfolioVideo unit="studio" slug="ana-rockenbach" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/kM66725FhV8?feature=share" />
 
             <PortfolioCTA businessUnit="studio" projectSlug="ana-rockenbach" />
 

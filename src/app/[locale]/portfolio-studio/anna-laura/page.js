@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function AnnaLauraPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -145,6 +146,8 @@ export default function AnnaLauraPage() {
             </main>
             
             <PortfolioVideo unit="studio" slug="anna-laura" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/65L4gclgNCk?feature=share" />
 
             <PortfolioCTA businessUnit="studio" projectSlug="anna-laura" />
 

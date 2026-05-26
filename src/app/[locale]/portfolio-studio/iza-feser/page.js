@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function IzaFeserPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -142,6 +143,8 @@ export default function IzaFeserPage() {
             </main>
             
             <PortfolioVideo unit="studio" slug="iza-feser" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/1VVzJ2iqUe4?feature=share" />
 
             <PortfolioCTA businessUnit="studio" projectSlug="iza-feser" />
 
