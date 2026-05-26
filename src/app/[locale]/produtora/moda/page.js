@@ -438,6 +438,6 @@ export default function ProdutoraModaPage() {
             <FormDrawer open={!!formCta} onClose={closeForm}>
                 <FormProdutora ctaLocation={formCta?.ctaLocation} onClose={closeForm} />
             </FormDrawer>
-        </main>
+        </div>
     );
 }
