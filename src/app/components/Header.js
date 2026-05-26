@@ -213,6 +213,7 @@ export default function Header({ variant = 'dark' }) {
                         {label:'HOME', href:'/'},
                         {label:'COMUNIDADE', href:'/comunidade'},
                         {label:'ACADEMY', href:'/academy'},
+                        {label:'↳ MARKETING PARA MODELOS · VOL. 01', href:'/academy/marketing-para-modelos', sub: true},
                         {label:'PORTFÓLIO', href:'/portfolio'},
                         {label:'BLOG', href:'/blog'},
                         {label:'CONTATO', href:'/contato'},
@@ -222,19 +223,20 @@ export default function Header({ variant = 'dark' }) {
                           onClick={() => closeMenu()}
                           style={{
                             fontFamily:'RocGrotesk, sans-serif',
-                            fontSize:'10px',
+                            fontSize: item.sub ? '9px' : '10px',
                             letterSpacing:'0.2em',
                             textTransform:'uppercase',
-                            color: item.highlight ? 'white' : '#aaa',
+                            color: item.highlight ? 'white' : (item.sub ? '#a4e80a' : '#aaa'),
                             textDecoration:'none',
                             transition:'color 0.3s',
-                            marginTop: item.highlight ? '8px' : undefined,
+                            marginTop: item.highlight ? '8px' : (item.sub ? '-4px' : undefined),
                             paddingTop: item.highlight ? '16px' : undefined,
+                            paddingLeft: item.sub ? '12px' : undefined,
                             borderTop: item.highlight ? '1px solid #333' : undefined,
                             fontWeight: item.highlight ? 500 : undefined,
                           }}
-                          onMouseEnter={e => e.currentTarget.style.color='white'}
-                          onMouseLeave={e => e.currentTarget.style.color = item.highlight ? 'white' : '#aaa'}
+                          onMouseEnter={e => e.currentTarget.style.color = item.sub ? 'white' : 'white'}
+                          onMouseLeave={e => e.currentTarget.style.color = item.highlight ? 'white' : (item.sub ? '#a4e80a' : '#aaa')}
                         >{item.label}</Link>
                       ))}
                     </nav>
