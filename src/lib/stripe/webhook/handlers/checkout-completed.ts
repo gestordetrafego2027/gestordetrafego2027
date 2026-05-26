@@ -2,8 +2,8 @@ import type Stripe from 'stripe'
 import { createServiceClient } from '@/lib/supabase/service'
 import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
-import { orderConfirmedEmail } from '@/lib/email/templates/order-confirmed'
-import { issueNfse } from '@/lib/fiscal/nfeio'
+import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
+import { resolveDigitalProduct, absoluteDownloadUrl } from '@/lib/digital-products'
 
 /**
  * Processa checkout.session.completed com idempotência total.
@@ -132,36 +132,52 @@ export async function handleCheckoutCompleted(
       .eq('id', session.client_reference_id)
   }
 
-  // E-mail de confirmação (fire & forget)
-  const buyerEmail = session.customer_details?.email ?? session.customer_email ?? ''
-  const buyerName = session.customer_details?.name ?? 'Cliente'
-  if (buyerEmail) {
-    const emailItems = (lineItems ?? []).map((li) => ({
-      name: li.description ?? 'Produto',
-      quantity: li.quantity ?? 1,
-      unitAmount: (li.price as Stripe.Price)?.unit_amount ?? 0,
-    }))
-    const { data: fullOrder } = await supabase
-      .from('store_orders').select('order_number').eq('id', order.id).maybeSingle()
-    const { subject, html } = orderConfirmedEmail({
-      buyerName,
-      orderNumber: fullOrder?.order_number ?? order.id,
-      items: emailItems,
-      totalCents,
-      currency: (session.currency ?? 'brl').toUpperCase(),
-    })
-    await sendEmail({ to: buyerEmail, subject, html, tags: [{ name: 'type', value: 'order_confirmed' }] })
-  }
+  // ── Entrega digital (email com link de download) ────────────────
+  try {
+    const buyerEmail = session.customer_details?.email ?? session.customer_email
+    const buyerName = session.customer_details?.name ?? null
 
-  // NFS-e via NFE.io (assíncrono — não bloqueia o webhook)
-  issueNfse({
-    orderId: order.id,
-    buyerEmail,
-    buyerName,
-    totalCents,
-    currency: session.currency ?? 'brl',
-    description: `Pedido ${order.id} — House Mazzutti`,
-  }).catch((err) => log.error({ err, order_id: order.id }, 'nfse: falha ao emitir'))
+    if (buyerEmail && lineItems?.length) {
+      // Resolve cada produto digital a partir do metadata.slug do produto Stripe
+      const deliveries: Array<{ name: string; url: string; expiresIn: string }> = []
+      for (const li of lineItems) {
+        const stripeProduct = (li.price as Stripe.Price)?.product as Stripe.Product | undefined
+        const slug = stripeProduct?.metadata?.slug
+        const product = resolveDigitalProduct(slug)
+        if (product) {
+          deliveries.push({
+            name: product.name,
+            url: absoluteDownloadUrl(product.downloadUrl),
+            expiresIn: product.expiresIn ?? '7 dias',
+          })
+        }
+      }
+
+      // Envia um email por produto digital (simples; bundles podem ser combinados depois)
+      for (const d of deliveries) {
+        const html = digitalDeliveryHTML({
+          customerName: buyerName ?? undefined,
+          productName: d.name,
+          downloadUrl: d.url,
+          orderId: order.id,
+          expiresIn: d.expiresIn,
+        })
+        const r = await sendEmail({
+          to: buyerEmail,
+          subject: `Seu exemplar está pronto · ${d.name}`,
+          html,
+          replyTo: 'academy@housemazzutti.com',
+        })
+        if (!r.ok) {
+          log.error({ err: r.error, order_id: order.id }, 'falha ao enviar email de entrega')
+        } else {
+          log.info({ email_id: r.id, order_id: order.id }, 'email de entrega enviado')
+        }
+      }
+    }
+  } catch (err) {
+    log.error({ err }, 'erro no envio de email de entrega — pedido permanece OK')
+  }
 
   log.info({ order_id: order.id, total: totalCents }, 'checkout.session.completed processado')
 }

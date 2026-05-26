@@ -1,50 +1,63 @@
+/**
+ * Cliente Resend singleton para envio de emails transacionais.
+ *
+ * Lê RESEND_API_KEY do ambiente. Se não estiver configurado,
+ * exporta um stub que loga em vez de enviar (útil em dev).
+ */
 import { Resend } from 'resend'
 import { logger } from '@/lib/logger'
 
-let _resend: Resend | null = null
+const log = logger.child({ module: 'email/resend' })
 
-export function getResend(): Resend {
-  if (!_resend) {
-    const key = process.env.RESEND_API_KEY
-    if (!key) throw new Error('RESEND_API_KEY não configurado.')
-    _resend = new Resend(key)
-  }
-  return _resend
+const RESEND_API_KEY = process.env.RESEND_API_KEY
+const EMAIL_FROM = process.env.EMAIL_FROM ?? 'House Mazzutti <contato@mztgrupo.com>'
+
+let resend: Resend | null = null
+if (RESEND_API_KEY) {
+  resend = new Resend(RESEND_API_KEY)
+} else {
+  log.warn('RESEND_API_KEY não configurada — emails serão apenas logados')
 }
 
-export const FROM_ADDRESS =
-  process.env.EMAIL_FROM ?? 'House Mazzutti <contato@mztgrupo.com>'
-
-/**
- * Envia e-mail via Resend com logging e tratamento de erro.
- * Nunca lança — loga o erro e retorna false.
- */
-export async function sendEmail(opts: {
+export interface SendEmailParams {
   to: string | string[]
   subject: string
   html: string
   replyTo?: string
-  tags?: { name: string; value: string }[]
-}): Promise<boolean> {
-  const log = logger.child({ to: opts.to, subject: opts.subject })
+}
+
+export async function sendEmail({
+  to,
+  subject,
+  html,
+  replyTo,
+}: SendEmailParams): Promise<{ ok: boolean; id?: string; error?: string }> {
+  if (!resend) {
+    log.info({ to, subject }, '[STUB] email logado (RESEND_API_KEY ausente)')
+    return { ok: true, id: 'stub' }
+  }
+
   try {
-    const resend = getResend()
-    const { error } = await resend.emails.send({
-      from: FROM_ADDRESS,
-      to: opts.to,
-      subject: opts.subject,
-      html: opts.html,
-      reply_to: opts.replyTo,
-      tags: opts.tags,
+    const { data, error } = await resend.emails.send({
+      from: EMAIL_FROM,
+      to,
+      subject,
+      html,
+      replyTo,
     })
+
     if (error) {
-      log.error({ err: error }, 'resend: erro ao enviar e-mail')
-      return false
+      log.error({ error, to, subject }, 'erro ao enviar email')
+      return { ok: false, error: error.message }
     }
-    log.info('e-mail enviado')
-    return true
+
+    log.info({ id: data?.id, to, subject }, 'email enviado')
+    return { ok: true, id: data?.id }
   } catch (err) {
-    log.error({ err }, 'resend: exceção ao enviar e-mail')
-    return false
+    const msg = err instanceof Error ? err.message : 'unknown'
+    log.error({ err: msg, to, subject }, 'exceção ao enviar email')
+    return { ok: false, error: msg }
   }
 }
+
+export { EMAIL_FROM }

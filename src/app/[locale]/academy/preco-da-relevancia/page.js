@@ -9,7 +9,7 @@ import Link from 'next/link'
 const SITE_URL = 'https://housemazzutti.com'
 const COVER = '/images/academy/preco-da-relevancia/cover.png'
 const COVER_ABSOLUTE = `${SITE_URL}${COVER}`
-const CHECKOUT_URL = '#comprar'
+const CHECKOUT_URL = '/checkout/preco-da-relevancia'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
