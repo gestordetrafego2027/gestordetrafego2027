@@ -4,6 +4,8 @@ import { getStripe } from '@/lib/stripe/server'
 import { featureFlags } from '@/lib/feature-flags'
 import { createClient } from '@/lib/supabase/server'
 import { logger } from '@/lib/logger'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
+import { verifyRecaptcha } from '@/lib/recaptcha'
 
 const CheckoutBodySchema = z.object({
   items: z
@@ -17,6 +19,7 @@ const CheckoutBodySchema = z.object({
     .max(20),
   couponCode: z.string().optional(),
   locale: z.enum(['pt', 'en']).default('pt'),
+  recaptchaToken: z.string().optional(),
 })
 
 export async function POST(req: NextRequest) {
@@ -24,6 +27,16 @@ export async function POST(req: NextRequest) {
 
   if (!featureFlags.isStoreEnabled()) {
     return NextResponse.json({ error: 'Loja não disponível.' }, { status: 503 })
+  }
+
+  // Rate limit — 5 checkouts/min por IP
+  const ip = getClientIp(req)
+  const rl = await checkRateLimit('checkout', ip)
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: 'Muitas tentativas. Aguarde alguns segundos.' },
+      { status: 429, headers: { 'Retry-After': String(rl.retryAfter ?? 60) } },
+    )
   }
 
   // Parse + validação
@@ -34,6 +47,13 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     log.warn({ err }, 'payload inválido')
     return NextResponse.json({ error: 'Payload inválido.' }, { status: 400 })
+  }
+
+  // reCAPTCHA v3 (fail-open se não configurado)
+  const captchaResult = await verifyRecaptcha(body.recaptchaToken, 'checkout')
+  if (!captchaResult.ok) {
+    log.warn({ reason: captchaResult.reason, ip }, 'recaptcha falhou no checkout')
+    return NextResponse.json({ error: 'Verificação de segurança falhou. Recarregue a página.' }, { status: 403 })
   }
 
   const stripe = getStripe()

@@ -2,10 +2,14 @@
 import { useCartStore } from '@/lib/cart/store'
 import { CartDrawer } from './cart/Drawer'
 import { useEffect, useState } from 'react'
+import { featureFlags } from '@/lib/feature-flags'
 
 /**
  * Botão do carrinho com badge de quantidade.
  * Renderiza o Drawer global. Adicionar no Header.
+ *
+ * Se NEXT_PUBLIC_FEATURE_STORE_ENABLED não estiver setado, o botão e o drawer
+ * não são renderizados (kill-switch para esconder o e-commerce sem deploy).
  */
 export function CartButton({ color = 'black' }: { color?: 'black' | 'white' }) {
   const { openDrawer, itemCount } = useCartStore()
@@ -14,6 +18,9 @@ export function CartButton({ color = 'black' }: { color?: 'black' | 'white' }) {
   // Evita hydration mismatch — carrinho só existe no client
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
+
+  // Feature-flag client-side. Se a loja está OFF, não renderiza nada.
+  if (!featureFlags.isStoreEnabledClient()) return null
 
   return (
     <>
