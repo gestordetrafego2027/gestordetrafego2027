@@ -18,30 +18,38 @@ const BOOKS = [
   {
     id: 'vol-01',
     vol: 'Vol. 01',
+    year: '2026',
     title: 'Marketing para Modelos',
-    subtitle: 'Da passarela física ao império digital. O guia honesto de quem quer ser modelo no Brasil de hoje.',
+    subtitle: 'Da passarela física ao império digital. O guia honesto de quem quer ser modelo no Brasil de hoje — por Angelo Mazzutti.',
     pages: '281',
     chapters: '12',
+    format: 'Ebook',
     priceFull: 'R$ 70',
     price: 'R$ 49',
     discount: '−30%',
     href: '/pt/academy/marketing-para-modelos',
     cover: '/images/academy/marketing-para-modelos/cover.png',
+    coverBg: '#a4e80a',
     status: 'Disponível',
+    available: true,
   },
   {
     id: 'vol-02',
     vol: 'Vol. 02',
-    title: 'Posicionamento de Marca Pessoal',
-    subtitle: 'Como construir autoridade, presença e relevância em mercados de alto valor — além da aparência.',
-    pages: '—',
-    chapters: '—',
-    priceFull: null,
-    price: 'Em breve',
-    discount: null,
-    href: null,
-    cover: null,
-    status: 'Lançamento 2026',
+    year: '2026',
+    title: 'O Preço da Relevância',
+    subtitle: 'O que o algoritmo cobra de quem quer ser visto. Tese sobre atenção, plataforma e o custo real de existir digitalmente.',
+    pages: '220',
+    chapters: '14',
+    format: 'Ebook',
+    priceFull: 'R$ 227',
+    price: 'R$ 137',
+    discount: '−40%',
+    href: '/pt/academy/preco-da-relevancia',
+    cover: '/images/academy/preco-da-relevancia/cover.png',
+    coverBg: '#6e1313',
+    status: 'Lançamento',
+    available: true,
   },
 ]
 
@@ -160,13 +168,13 @@ export default function AcademyHomePage() {
           <div className="px-12 md:px-24 py-24">
             <div className="mb-16 flex items-end justify-between">
               <div>
-                <span className="text-caption text-black/50 mb-4 block">Publicações</span>
+                <span className="text-caption text-black/50 mb-4 block">Publicações · Série Editorial</span>
                 <h2 className="text-h2 text-black">Livros</h2>
               </div>
               <span className="text-caption text-black/40">{BOOKS.length} volumes</span>
             </div>
 
-            <div className="grid grid-cols-1 gap-px md:grid-cols-2 bg-black/10">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {BOOKS.map((book) => (
                 <BookCard key={book.id} book={book} />
               ))}
@@ -284,98 +292,95 @@ export default function AcademyHomePage() {
 ══════════════════════════════════════════════════════════════════ */
 
 function BookCard({ book }) {
-  const isAvailable = book.href !== null
-
   const inner = (
-    <div className="group bg-white flex flex-col md:flex-row h-full transition-colors hover:bg-[#f5f5f5]">
-      {/* capa */}
+    <div className="group flex flex-col bg-white overflow-hidden border border-black/8 transition-transform duration-300 hover:-translate-y-1" style={{ boxShadow: '0 2px 0 #e0e0e0' }}>
+
+      {/* ── capa ── */}
       <div
-        className="relative flex items-center justify-center bg-[#f0f0f0] shrink-0"
-        style={{ minHeight: 280, width: '100%', maxWidth: 200 }}
+        className="relative flex items-end justify-center overflow-hidden"
+        style={{ background: book.coverBg ?? '#1a1a1a', minHeight: 420, paddingBottom: 0 }}
       >
-        {book.cover ? (
-          <div
-            className="relative transition-transform duration-500 group-hover:-translate-y-1"
+        {/* gradiente base */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.35) 100%)' }}
+        />
+
+        {/* capa flutuante */}
+        <div
+          className="relative z-10 transition-transform duration-700 group-hover:-translate-y-2"
+          style={{
+            width: 200,
+            aspectRatio: '2/3',
+            marginBottom: -1,
+            filter: 'drop-shadow(0 32px 48px rgba(0,0,0,0.45)) drop-shadow(0 8px 16px rgba(0,0,0,0.3))',
+            transform: 'rotate(-1.5deg)',
+          }}
+        >
+          <Image
+            src={book.cover}
+            alt={`Capa ${book.title}`}
+            fill
+            sizes="200px"
+            className="object-cover"
+          />
+        </div>
+
+        {/* badge vol/status */}
+        <div className="absolute top-5 left-5 flex items-center gap-2 z-20">
+          <span className="text-caption text-white/60 bg-black/40 px-3 py-1 backdrop-blur-sm">
+            {book.vol} · {book.year}
+          </span>
+          <span
+            className="text-caption px-3 py-1"
             style={{
-              width: 120,
-              aspectRatio: '2/3',
-              margin: '40px 0',
-              filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.18))',
+              background: book.available ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.08)',
+              color: book.available ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.4)',
+              backdropFilter: 'blur(4px)',
             }}
           >
-            <Image
-              src={book.cover}
-              alt={`Capa ${book.title}`}
-              fill
-              sizes="120px"
-              className="object-cover"
-            />
-          </div>
-        ) : (
-          <div
-            className="flex items-center justify-center border border-dashed border-black/20"
-            style={{ width: 120, aspectRatio: '2/3', margin: '40px 0' }}
-          >
-            <span className="text-caption text-black/30 text-center px-2">Em breve</span>
-          </div>
-        )}
+            {book.status}
+          </span>
+        </div>
       </div>
 
-      {/* conteúdo */}
-      <div className="flex flex-col justify-between p-8 md:p-10 flex-1">
-        <div>
-          <div className="flex items-center justify-between mb-6">
-            <span className="text-caption text-black/40">{book.vol}</span>
-            <span
-              className="text-caption px-3 py-1 border"
-              style={{
-                borderColor: isAvailable ? '#000' : '#ccc',
-                color: isAvailable ? '#000' : '#aaa',
-              }}
-            >
-              {book.status}
-            </span>
-          </div>
-          <h3 className="text-h3 text-black mb-4">{book.title}</h3>
-          <p className="text-body text-black/60 measure-editorial">{book.subtitle}</p>
+      {/* ── informações ── */}
+      <div className="flex flex-col gap-0 p-8 md:p-10">
+
+        {/* título + subtítulo */}
+        <h3 className="text-h3 text-black mb-3">{book.title}</h3>
+        <p className="text-body text-black/55 measure-editorial mb-8">{book.subtitle}</p>
+
+        {/* metadados */}
+        <div className="grid grid-cols-3 gap-4 pb-7 mb-7" style={{ borderBottom: '1px solid #e8e8e8' }}>
+          <BookMeta k="Páginas" v={book.pages} />
+          <BookMeta k="Capítulos" v={book.chapters} />
+          <BookMeta k="Formato" v={book.format} />
         </div>
 
-        <div style={{ borderTop: '1px solid #e8e8e8', paddingTop: 24, marginTop: 24 }}>
-          <div className="flex items-end justify-between">
-            <div className="flex gap-8">
-              <BookMeta k="Páginas" v={book.pages} />
-              <BookMeta k="Capítulos" v={book.chapters} />
-            </div>
-            <div className="flex items-baseline gap-3">
-              {book.priceFull && (
-                <span className="text-caption text-black/30 line-through">{book.priceFull}</span>
-              )}
-              <span className={`text-h3 ${isAvailable ? 'text-black' : 'text-black/40'}`}>
-                {book.price}
-              </span>
-              {book.discount && (
-                <span
-                  className="text-caption px-2 py-0.5 bg-black text-white"
-                >
-                  {book.discount}
-                </span>
-              )}
-            </div>
+        {/* preço + CTA */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-baseline gap-3">
+            {book.priceFull && (
+              <span className="text-caption text-black/30 line-through">{book.priceFull}</span>
+            )}
+            <span className="text-h3 text-black">{book.price}</span>
+            {book.discount && (
+              <span className="text-caption bg-black text-white px-2 py-0.5">{book.discount}</span>
+            )}
           </div>
-
-          {isAvailable && (
-            <div className="mt-6">
-              <span className="text-button text-black border-b border-black/30 pb-0.5 group-hover:border-black transition-colors">
-                Ver o livro →
-              </span>
-            </div>
+          {book.available && (
+            <span className="text-button text-black border-b border-black/25 pb-0.5 group-hover:border-black transition-colors">
+              Ver o livro →
+            </span>
           )}
         </div>
+
       </div>
     </div>
   )
 
-  if (!isAvailable) return <div>{inner}</div>
+  if (!book.available || !book.href) return <div>{inner}</div>
   return <Link href={book.href} style={{ textDecoration: 'none', display: 'block' }}>{inner}</Link>
 }
 
