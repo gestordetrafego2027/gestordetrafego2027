@@ -26,10 +26,8 @@ export default defineConfig({
     setupFiles: ['./tests/setup.ts'],
     include: ['tests/unit/**/*.{test,spec}.{ts,tsx}'],
     pool: 'vmForks',
-    poolOptions: {
-      vmForks: {
-        execArgv: ['--max-old-space-size=512'],
-      },
+    vmForks: {
+      execArgv: ['--max-old-space-size=512'],
     },
     coverage: {
       reporter: ['text', 'json', 'html'],

@@ -1,9 +1,10 @@
 import { describe, it, expect } from 'vitest'
 import { formatBRL } from '@/lib/format/price'
 
-// Helper: tira NBSP/espaços "narrow" do Intl para comparar de forma estável
-// entre versões do Node/ICU (que ora usam U+00A0, ora U+202F).
-const norm = (s: string) => s.replace(/ | /g, ' ')
+// Helper: normaliza qualquer espaço Unicode (\p{Zs} cobre NBSP U+00A0,
+// narrow NBSP U+202F, thin space U+2009, etc.) para espaço simples.
+// Isso torna os testes estáveis entre versões diferentes do Node/ICU.
+const norm = (s: string) => s.replace(/\p{Zs}/gu, ' ').trim()
 
 describe('formatBRL', () => {
   it('formata zero', () => {
