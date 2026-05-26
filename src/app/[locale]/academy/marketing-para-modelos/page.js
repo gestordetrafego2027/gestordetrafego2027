@@ -4,6 +4,8 @@
  * Design hi-fi reproduzido a partir do handoff editorial.
  */
 import React from 'react';
+import Tracking from '@/components/analytics/Tracking';
+import { MpmViewContent, BuyLink } from '@/components/analytics/MpmTracking';
 
 const SITE_URL = 'https://housemazzutti.com';
 const PAGE_PATH = '/academy/marketing-para-modelos';
@@ -13,7 +15,9 @@ const MOCKUP_FRONT = '/images/academy/marketing-para-modelos/mockup-front.webp';
 const MOCKUP_HANDS = '/images/academy/marketing-para-modelos/mockup-hands.webp';
 const MOCKUP_CHAIR = '/images/academy/marketing-para-modelos/mockup-chair.webp';
 const COVER_ABSOLUTE = `${SITE_URL}${COVER}`;
-const CHECKOUT_URL = '/checkout/marketing-para-modelos';
+const OG_IMAGE = '/images/academy/marketing-para-modelos/og-image.webp';
+const OG_IMAGE_ABSOLUTE = `${SITE_URL}${OG_IMAGE}`;
+const CHECKOUT_URL = '/pt/checkout/marketing-para-modelos';
 
 const TITLE = 'Marketing para Modelos · Ebook · House Mazzutti Academy Vol. 01';
 const DESCRIPTION =
@@ -45,10 +49,16 @@ export const metadata = {
     description: DESCRIPTION,
     images: [
       {
+        url: OG_IMAGE_ABSOLUTE,
+        width: 1200,
+        height: 630,
+        alt: 'Marketing para Modelos · House Mazzutti Academy Vol. 01',
+      },
+      {
         url: COVER_ABSOLUTE,
         width: 1700,
         height: 2500,
-        alt: 'Capa do livro Marketing para Modelos — House Mazzutti Academy Vol. 01',
+        alt: 'Capa do livro Marketing para Modelos',
       },
     ],
   },
@@ -56,7 +66,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: [COVER_ABSOLUTE],
+    images: [OG_IMAGE_ABSOLUTE],
     creator: '@housemazzutti',
   },
   robots: {
@@ -427,9 +437,6 @@ const CSS = `
 .mpm-root .mega-mark .mark-inner .l { display: block; }
 .mpm-root .mega-mark .mark-inner .hm-house { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 400 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.02em; color: var(--paper); }
 .mpm-root .mega-mark .mark-inner .hm-mazzutti { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 700 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.02em; color: var(--paper); }
-.mpm-root .masthead-right .hm-logo { display: inline-flex; align-items: baseline; gap: 0.18em; line-height: 1; }
-.mpm-root .masthead-right .hm-house { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 400 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.01em; color: var(--ink); }
-.mpm-root .masthead-right .hm-mazzutti { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important; font-weight: 700 !important; font-stretch: condensed; text-transform: uppercase; letter-spacing: -0.01em; color: var(--ink); }
 .mpm-root .mega-mark .mark-inner em { font-family: var(--display); font-style: italic; font-weight: 400; color: var(--lime); letter-spacing: -0.04em; text-transform: none; }
 .mpm-root .mega-mark .mark-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 36px; padding: 0 4px; font-family: var(--sans); font-size: 10px; letter-spacing: 0.34em; color: rgba(239,233,218,0.45); }
 .mpm-root .mega-mark .mark-foot .dot { width: 6px; height: 6px; background: var(--mondrian-red); border-radius: 50%; display: inline-block; margin: 0 10px; }
@@ -538,6 +545,8 @@ export default function MarketingParaModelosPage() {
 
   return (
     <div className="mpm-root">
+      <Tracking />
+      <MpmViewContent />
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <script
         type="application/ld+json"
@@ -875,7 +884,7 @@ export default function MarketingParaModelosPage() {
               <div className="price"><span className="cur">R$</span>117</div>
               <div className="pix-line"><em>ou 12× de R$ 12,30 no cartão · pix com 5% off</em></div>
               <div className="price-cta">
-                <a href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></a>
+                <BuyLink href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></BuyLink>
               </div>
               <div className="micro">
                 <span>Pagamento seguro</span>
