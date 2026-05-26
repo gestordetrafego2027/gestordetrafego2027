@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { createServiceClient } from '@/lib/supabase/service'
 import { logger } from '@/lib/logger'
+import { sendEmail } from '@/lib/email/resend'
+import { dataExportEmail } from '@/lib/email/templates/data-export'
 
 /**
  * Atualiza consentimento de marketing (opt-in/out).
@@ -34,13 +36,41 @@ export async function requestDataExport(): Promise<{ ok: boolean; message: strin
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return { ok: false, message: 'Sessão expirada.' }
 
-  // Log da solicitação (compliance)
   logger.info({ user_id: user.id }, 'LGPD: solicitação de exportação de dados')
 
-  // Sprint 5: gerar arquivo + enviar por Resend
+  // Coleta dados do perfil
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('full_name, display_name, email, phone, city, state, created_at, marketing_consent, terms_accepted_at')
+    .eq('id', user.id)
+    .maybeSingle()
+
+  // Coleta pedidos (sem dados de pagamento sensíveis)
+  const { data: orders } = await supabase
+    .from('store_orders')
+    .select('order_number, status, total_cents, currency, created_at')
+    .eq('user_id', user.id)
+    .order('created_at', { ascending: false })
+
+  const exportData = {
+    exported_at: new Date().toISOString(),
+    lgpd_article: 'Art. 18, I e V — Lei 13.709/2018',
+    profile: profile ?? {},
+    orders: orders ?? [],
+  }
+
+  const exportJson = JSON.stringify(exportData, null, 2)
+  const email = profile?.email ?? user.email ?? ''
+  const name = profile?.display_name ?? profile?.full_name ?? 'Cliente'
+
+  if (email) {
+    const { subject, html } = dataExportEmail({ buyerName: name, exportJson })
+    await sendEmail({ to: email, subject, html, tags: [{ name: 'type', value: 'lgpd_export' }] })
+  }
+
   return {
     ok: true,
-    message: 'Sua solicitação foi registrada. Você receberá seus dados por e-mail em até 15 dias úteis, conforme LGPD.',
+    message: 'Seus dados foram enviados para seu e-mail cadastrado.',
   }
 }
 

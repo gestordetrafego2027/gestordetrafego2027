@@ -1,6 +1,9 @@
 import type Stripe from 'stripe'
 import { createServiceClient } from '@/lib/supabase/service'
 import { logger } from '@/lib/logger'
+import { sendEmail } from '@/lib/email/resend'
+import { orderConfirmedEmail } from '@/lib/email/templates/order-confirmed'
+import { issueNfse } from '@/lib/fiscal/nfeio'
 
 /**
  * Processa checkout.session.completed com idempotência total.
@@ -128,6 +131,37 @@ export async function handleCheckoutCompleted(
       .update({ stripe_customer_id: customerId })
       .eq('id', session.client_reference_id)
   }
+
+  // E-mail de confirmação (fire & forget)
+  const buyerEmail = session.customer_details?.email ?? session.customer_email ?? ''
+  const buyerName = session.customer_details?.name ?? 'Cliente'
+  if (buyerEmail) {
+    const emailItems = (lineItems ?? []).map((li) => ({
+      name: li.description ?? 'Produto',
+      quantity: li.quantity ?? 1,
+      unitAmount: (li.price as Stripe.Price)?.unit_amount ?? 0,
+    }))
+    const { data: fullOrder } = await supabase
+      .from('store_orders').select('order_number').eq('id', order.id).maybeSingle()
+    const { subject, html } = orderConfirmedEmail({
+      buyerName,
+      orderNumber: fullOrder?.order_number ?? order.id,
+      items: emailItems,
+      totalCents,
+      currency: (session.currency ?? 'brl').toUpperCase(),
+    })
+    await sendEmail({ to: buyerEmail, subject, html, tags: [{ name: 'type', value: 'order_confirmed' }] })
+  }
+
+  // NFS-e via NFE.io (assíncrono — não bloqueia o webhook)
+  issueNfse({
+    orderId: order.id,
+    buyerEmail,
+    buyerName,
+    totalCents,
+    currency: session.currency ?? 'brl',
+    description: `Pedido ${order.id} — House Mazzutti`,
+  }).catch((err) => log.error({ err, order_id: order.id }, 'nfse: falha ao emitir'))
 
   log.info({ order_id: order.id, total: totalCents }, 'checkout.session.completed processado')
 }
