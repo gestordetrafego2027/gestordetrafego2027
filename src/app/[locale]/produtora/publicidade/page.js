@@ -5,8 +5,17 @@ import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
+import FormDrawer from '@/app/components/FormDrawer';
+import FormProdutora from '@/app/components/forms/FormProdutora';
+import LandingGallery from '@/app/components/LandingGallery';
+import LandingTeam from '@/app/components/LandingTeam';
+import LandingPricing from '@/app/components/LandingPricing';
 
 export default function ProdutoraPublicidadePage() {
+    const [formCta, setFormCta] = useState(null);
+    const openForm = (ctaLocation, packageSelected = null) => setFormCta({ ctaLocation, packageSelected });
+    const closeForm = () => setFormCta(null);
+
     useEffect(() => {
         AOS.init({ duration: 800, once: true, easing: 'ease-out' })
     }, []);
@@ -14,42 +23,38 @@ export default function ProdutoraPublicidadePage() {
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
             <title>House Mazzutti — PRODUTORA | Campanha Publicitária</title>
-            <meta name="description" content="Produção executiva para campanhas publicitárias com gestão completa, direção criativa, produção audiovisual e coordenação de equipes." />
-            
+            <meta name="description" content="Produção executiva para campanhas publicitárias: direção criativa, audiovisual, casting e gestão completa de set." />
+
             <style dangerouslySetInnerHTML={{ __html: `
-                .material-symbols-outlined {
-                    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-                }
+                .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
                 .no-scrollbar::-webkit-scrollbar { display: none; }
                 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-                
-                .page-frame {
-                    padding-left: 40px;
-                    padding-right: 40px;
-                }
+                .page-frame { padding-left: 40px; padding-right: 40px; }
             `}} />
 
             <h1 className="sr-only">Produção Executiva para Campanhas Publicitárias</h1>
-            
-            {/* 1. HEADER */}
+
             <Header variant="dark" />
 
-
-            {/* 2. HERO SECTION */}
+            {/* HERO */}
             <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
-                <div className="absolute inset-0 z-0 bg-[#111111]">
-                    {/* Caso precise de uma imagem no futuro, basta adicionar a tag <img> aqui */}
-                    <div className="absolute inset-0 bg-black/30"></div>
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/images/produtora/beleza/we-pink-ze-felipe/capa.webp"
+                        alt="Campanha publicitária — produção House Mazzutti"
+                        className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-black/55"></div>
                 </div>
                 <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                     <div className="max-w-3xl">
-                        <span className="text-caption text-white/70 mb-6 block" data-aos="fade-up" data-aos-delay="100">PUBLICIDADE & CONTEÚDO</span>
+                        <span className="text-caption text-white/70 mb-6 block" data-aos="fade-up" data-aos-delay="100">PUBLICIDADE & CONTEÚDO · PROPOSTA SOB MEDIDA</span>
                         <h1 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">Vídeos que vendem. Imagens que engajam.</h1>
                         <p className="text-body text-white/80 mb-12 measure-editorial" data-aos="fade-up" data-aos-delay="300">
                             Produção de conteúdo dinâmico e filmes publicitários de alta performance para marcas que buscam autoridade e resultados reais no ambiente digital.
                         </p>
                         <div data-aos="fade-up" data-aos-delay="400">
-                            <button type="button" className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
+                            <button type="button" onClick={() => openForm('hero')} className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 Iniciar campanha
                             </button>
                         </div>
@@ -57,205 +62,43 @@ export default function ProdutoraPublicidadePage() {
                 </div>
             </section>
 
-            {/* 3. SERVICES */}
+            {/* SERVICES */}
             <section className="bg-white py-0 px-[40px] pt-[25px]">
                 <div className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
                         <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">SERVIÇOS PUBLICITÁRIOS</span>
-                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Performance e Estética. Sem compromisso.</h2>
+                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Performance e estética. Sem compromisso.</h2>
                         <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Soluções audiovisuais focadas em conversão e branding.</p>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="videocam">videocam</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Filmes Publicitários</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Produção de vídeos para TV e Digital com alta qualidade cinematográfica.</p>
-                            </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="movie_edit">movie_edit</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Edição Dinâmica</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Pós-produção ágil e moderna, alinhada às tendências atuais.</p>
-                            </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="smartphone">smartphone</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Social First</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Conteúdo otimizado para redes sociais, Reels e TikTok com olhar premium.</p>
-                            </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="groups">groups</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Casting & Influência</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Seleção e gestão de talentos para cada projeto.</p>
-                            </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="settings">settings</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Estrutura & Operação</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Logística, fornecedores e cronograma sob controle total.</p>
-                            </div>
-                            <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="600">
-                                <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon="diamond">diamond</span>
-                                <h3 className="font-headline mb-4 tracking-tight !text-lg">Entrega Consistente</h3>
-                                <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">Qualidade garantida do briefing ao resultado final.</p>
-                            </div>
+                            {[
+                                { icon: 'videocam', title: 'Filmes Publicitários', desc: 'Produção de vídeos para TV e Digital com qualidade cinematográfica.' },
+                                { icon: 'movie_edit', title: 'Edição Dinâmica', desc: 'Pós-produção ágil e moderna, alinhada às tendências atuais.' },
+                                { icon: 'smartphone', title: 'Social First', desc: 'Conteúdo otimizado para redes sociais, Reels e TikTok com olhar premium.' },
+                                { icon: 'groups', title: 'Casting & Influência', desc: 'Seleção e gestão de talentos para cada projeto.' },
+                                { icon: 'settings', title: 'Estrutura & Operação', desc: 'Logística, fornecedores e cronograma sob controle total.' },
+                                { icon: 'diamond', title: 'Entrega Consistente', desc: 'Qualidade garantida do briefing ao resultado final.' },
+                            ].map((s, i) => (
+                                <div key={s.icon} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
+                                    <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon={s.icon}>{s.icon}</span>
+                                    <h3 className="font-headline mb-4 tracking-tight !text-lg">{s.title}</h3>
+                                    <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">{s.desc}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ASYMMETRICAL GALLERY */}
-            <section className="bg-white px-[40px] py-0">
-                <div className="grid grid-cols-1 gap-0 -mt-[30px] max-h-[1200px] overflow-hidden" style={{ maxHeight: 'calc(100% - 80px)' }}>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-                        <div className="relative aspect-square group overflow-hidden bg-black">
-                            <img alt="Studio B&W 1" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHE-jdbFcfmgWLndXT3HgFYpU_BQZkJU9VKpODSd6zwx-comSTwpD21JwyVF0y7eTk1OX4OMY-HI9a5ZwPfC7cuujymVf4WmAVwNUkoN4kD2ZDqA8PkgIwRWZVzrpB6aLLcMhlqVUAdjWfD1WetjRiuvq-nJX7Pr8LlYVjK_lpWHn9r15N5FObTud86hUeTna_1HFUkKdQ7TI9y2v7PuedkEdhyixd2Xs9F4kUuQ4iuPdeZigs5chjosAhkVJ2SvKMz_Zi2KMUi8sC" />
-                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
-                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">PRODUTORA</span>
-                                    <span className="text-white font-headline text-lg italic">Campanha</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative aspect-square group overflow-hidden bg-black">
-                            <img alt="Studio B&W 2" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyf4rGsunZdy5myR8J3NHtT2i6311OP1QSziyW6VEopX6KrDZQ8FzjqFROezSqTEdCeL1UEz68SKbmo4y6_8tIZn-Qd87T4BMCNw94eX716fioUxmsKQaYOgzUKBjMPO6KehiogAReAKUzI5wI6T-aopdya5SaU19XdbNZfGeBffxLoL_T2t4Nme5zHypUv21rXGrpMrMPAMGxOdZGYEGLoNOTAeyO5BK8ix-6FibtgMqUKrgiDJhW_KoRwXIdQdp4DEFNvKNIhiIZ" />
-                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
-                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">PRODUTORA</span>
-                                    <span className="text-white font-headline text-lg italic">Campanha</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative aspect-square group overflow-hidden bg-black">
-                            <img alt="Studio B&W 3" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEZTYqz5dlAC5B-gYUBRyg7hFwwSUQxX4AhhEq69XgzRVhLVa55T1rs5dC9LzBxfwdgrUBRDlfI4H7KXyQ223-LSMCzJLwsV7AfdzhkvflvC1Wuk7QyH24pBWpdLClyEyseI2qb1pAw0PREGv4f0etcdzdEOosUPk994Z8YVPsNBUhQJfXgKiWSe27ahWlFx2ukHPXTUm4yWxY6PA244YlWtNW-P6LvzAJt9sSMAbTJRLgsaSG-f0KRVI5Pjeo2A3RIUeNRF2ohmkv" />
-                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
-                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">PRODUTORA</span>
-                                    <span className="text-white font-headline text-lg italic">Campanha</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative aspect-square group overflow-hidden bg-black">
-                            <img alt="Studio B&W 4" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx5xaGklZZwAT2ann9AZ1LNezx6ylP80r5BeqYVN2DuOXwFWMSvPjPVnAyF2YnIf7ndsfC7aM9uzmKQLZ6omqt9C0XxODN9af8Ig4trBfWsSNbMvO39_iRLTCrsJCF3akrQjp9zkc_aR7dQhSyDBrfWhVhAoGibJGHhtLQ6dd0KCNXuvL3Cpt4KrENts3BgwN8N_JpyNoOfnea9sKE3QBwZErF5EKmeZLILDk0vNeA7hrVSvud6cwrKN1R3h5kDKEc1pzLAwwuP_CJ" />
-                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
-                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">PRODUTORA</span>
-                                    <span className="text-white font-headline text-lg italic">Campanha</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-0">
-                        <div className="relative aspect-[3/4] md:aspect-auto group overflow-hidden bg-black">
-                            <img alt="Portrait B&W" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQVxyV6brR8f-reCUvqMUfYoUpns0yLX5IOaBNCmpxPYJxRK4jHLpK8Djryg-HaiABUJHsug1Dhld-K3jlFuEM8Es3QRdwrF9fhoy28iSnQzn0yp3h2pNnIUTz6_t9mqIjJdhrYSPVX17a-BLyPKHbT0m-uHq40UfrR1usx7WQyikmVfoL-xFuoUvwWg_IrXdez2r1vm1IE-ZmfuFbV3hPeDYI5XzecdC0YS5_91ZhBxoCdeVAhGzFAhpOn_vw8dNyhUbxElnA6tz" />
-                            <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
-                                    <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">PRODUTORA</span>
-                                    <span className="text-white font-headline text-lg italic">Campanha</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-1 gap-0">
-                            <div className="grid grid-cols-2 gap-0">
-                                <div className="relative aspect-square group overflow-hidden bg-black">
-                                    <img alt="Sub B&W 1" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxaVk2Lchxwx56P9gnReb9J3KQfAe-yt_OXYaJemGNsFCKEfiClTYJy3PXawG5YWL4U6T7e9I7buVFs2raeHtlCKXtYd8c3-xlY4dB1tkCEDjUB3pO6ntf16P770QPGzhkCPFcIBGihgVzFpdqF_RNX3ELR5tk1BUODEDC2yoa1SY4zP31V0bxyMrcZYhoaZ8zrxgvVkVYex0ZRN-ktAmmBv2oUxMmjCR817r-BC6wbCvdgkvMCI9EXYlVthe6Cpi9_Cd0AD0r6SW" />
-                                    <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                        <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
-                                            <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">PRODUTORA</span>
-                                            <span className="text-white font-headline text-lg italic">Campanha</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="relative aspect-square group overflow-hidden bg-black">
-                                    <img alt="Sub B&W 2" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN6o3rmcRIMUFrnGk9BlikGyErgn1cxd0Nan59VXcJ-szXJGppxE4EvhxMBa4vq6Qeq446LiyCI31jmxXBK48_9BE9G3AdHqd52xUwiyvuqg9BruQOCTc2kqyYpD_HuYkpkzyNLcH4f9BmWI8Lk67HWGORaVp11csp_1HvIBjvPqbZsJgWZcT5ffzkTSoKpUdTdPjskvcaX6s9-BeGvtovz0_ICHUpPtZb0ToIUGUfEnUIhvLFHeorJAzz7jzTiPDuDQZ60cRGb1rN" />
-                                    <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                        <div className="bg-black/60 w-[86%] aspect-square flex flex-col items-center justify-center">
-                                            <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">PRODUTORA</span>
-                                            <span className="text-white font-headline text-lg italic">Campanha</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="relative aspect-[2/1] group overflow-hidden bg-black">
-                                <img alt="Wide B&W" className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIhMgtzfgqMlxkjJPTMUaoTvc1QiTqtDKjpdVBPhUdE1rEtsE0EKuZFJabikqvbDXQDHZ50-xRjSCI7ZF-rYKILQ5fALMKJYcFUtINFckDslUqbimINZmY_HXI3xSthcS5iWJeW4j7nm6re0yJo-IBKJN9u7BDAmzHxfsMDYf2T0MU-h2n9roi5tGZ4X-XwGz5yPg_Aua6Sb96roCpJjDSs3Gf2M3zx2sGEbSDbK33o1rMJ8H6_DkQapsR4o4vIS3mE4DjUsRtP5LZ" />
-                                <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                    <div className="bg-black/60 h-[86%] aspect-square flex flex-col items-center justify-center">
-                                        <span className="text-white font-label text-[10px] tracking-[0.3em] mb-1">PRODUTORA</span>
-                                        <span className="text-white font-headline text-lg italic">Campanha</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <LandingGallery service="publicidade" />
+            <LandingTeam />
 
-            {/* 4. TEAM SECTION */}
-            <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
-                <div className="max-w-[1400px] mx-auto">
-                    <div className="text-center mb-12">
-                        <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">QUEM ESTRUTURA</span>
-                        <h2 className="font-headline text-3xl md:text-4xl text-black">Estratégia define. Imagem posiciona. Execução sustenta.</h2>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-[1386px]">
-                        {/* Team Member 1: Lucas Mazzutti */}
-                        <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                            <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                <img className="w-full h-full object-cover grayscale" alt="professional male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0ESFf2VKUU01w1wDMvk9GSzceC_56tjvoVLme8E1KeN98y_Zc3Czxb47l9-giIZLy7mSRrqHj9zj4TNrDYF6-qHHrlZuYs5OK6L-MpUmwXBgRDC4HMoVG8uxvsjqwE64sm9SsADinIThjiDc6trCJ-GmADEkDjQ0xr990PJiKiBjDqIYnnO-J5hBFPuV90jlKCFIBhboqE9gA8O9y-e8JChB007vHeibnqmOp4yCmQIb11a7NCtW4pVkEGk5sdSQduOjAStefyk" />
-                                <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                        <Link className="text-white hover:text-zinc-300 transition-colors" href="/angelo">
-                                            <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                <p className="font-headline text-2xl font-medium">Lucas Mazzutti</p>
-                                <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Direção Criativa</p>
-                            </div>
-                        </div>
-                        {/* Team Member 2: Elena Silva */}
-                        <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                            <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                <img className="w-full h-full object-cover grayscale" alt="professional female portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZY7vY0_xHh4W3MKSd3jlEIhiiS5gF9XM3hbMqdr3jwFr16elkblrJVykxmXHcbVQeSdE7P4M_onqrLajroloIvYyXsYw_0dkx6h0ZB_8-X1qnqw4DSmV8kmBfkcAOXNZeI0dmCOHcnkHUelR4XxcDwB4AvZY1mvpxgCC2uMnR-KZ6SBTSb2TJ9SVM4WCCr2S10Gy74ML33Hkky5gHCBsKXvXWS5RGCOi9p4IhVIH2fWSwjIYsSOGaHsZpmM2Y5DpYCs4eCRR17g" />
-                                <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                        <Link className="text-white hover:text-zinc-300 transition-colors" href="/comunidade">
-                                            <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                <p className="font-headline text-2xl font-medium">Elena Silva</p>
-                                <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Estratégia de Marca</p>
-                            </div>
-                        </div>
-                        {/* Team Member 3: Arthur Porto */}
-                        <div className="space-y-8 flex flex-col items-center text-center mb-12">
-                            <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative group cursor-pointer">
-                                <img className="w-full h-full object-cover grayscale" alt="professional male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6TINUvFDwA7LqkkHXDdt1XoEvOHZPH3W5C2QvV6FRZfba0ajm5Uz7SjeIBB2cvjuqSy1_kYZlLfz-iW_L4qigAleWRqobN3LB08IXDDRI5N-GPiiRLh0Q3f-1by3ux6jIwMvx-36JFc9OdYIW0AifoBbPdrqq0aQY6QlBeQ_0tjxfuTSZLNTq9-cWum4QH8VCNJldD682F3o4XhHqfQ4p-LB97VETj8FHvw2375aLuDGGogL3XhITfCpJK56DcJ_QXEXNFpfMM8" />
-                                <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-center justify-center space-x-4">
-                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-[0.4s] ease-in-out flex items-end justify-center pb-12 space-x-[30px]">
-                                        <Link className="text-white hover:text-zinc-300 transition-colors" href="/produtora">
-                                            <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                <p className="font-headline text-2xl font-medium">Arthur Porto</p>
-                                <p className="font-label uppercase tracking-widest text-[11px] font-light text-zinc-500">Produção</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 6. QUOTE + VIDEO */}
+            {/* QUOTE */}
             <section className="bg-white px-[40px]">
                 <div className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-black">
-                    <img alt="Video Reel Preview" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIJolNlGXyY6byy38IAMCp6BioG4-zGYonIr-fh2jt-Y79LUqlS_WvgEtQLPhhAOGZWeE9-f_mPpcQ1KuB4pnKbBdakfikiA2PdPOYAS80Gx4AX7fPR143Zv3nLE15NF-x74AnVXceqSgBG3XQmLyiemq1iDlFy14deCLCGNNq7qeFS_RSLFZlJCfrjp9-G_CSo-dHRLppX2k25LR5lhAIiyz2AzaSidbjCIyT3x2mEFnLZVaQOh_KvW8OZNYjR0Wc7Oqyy96GiaTy" />
+                    <img alt="Produção de campanha — House Mazzutti" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale blur-sm" src="/images/produtora/beleza/jequiti-larissa-manoela/capa.webp" />
                     <div className="relative z-10 text-center px-8">
-                        <button className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
+                        <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>
                         </button>
                         <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">"Campanhas grandes não podem depender de tentativa. Elas exigem comando."</h2>
@@ -264,90 +107,9 @@ export default function ProdutoraPublicidadePage() {
                 </div>
             </section>
 
-            {/* 7. PRICING */}
-            <section className="bg-white px-[40px]">
-                <div className="bg-surface-container-lowest py-32 px-12 md:px-24">
-                    <div className="max-w-[1440px] mx-auto">
-                        <div className="text-center mb-24">
-                            <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-4 block" data-aos="fade-up">TABELA DE INVESTIMENTO</span>
-                            <h2 className="font-headline text-4xl md:text-5xl tracking-tight" data-aos="fade-up" data-aos-delay="100">Invista em resultados reais.</h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="100">
-                                <div>
-                                    <h3 className="font-headline text-2xl mb-8">ESSENCIAL</h3>
-                                    <div className="mb-12">
-                                        <span className="text-4xl font-headline italic">Sob consulta</span>
-                                    </div>
-                                    <ul className="space-y-4 mb-12">
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Direção criativa
-                                        </li>
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Produção audiovisual
-                                        </li>
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Gestão de equipe
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR</button>
-                            </div>
-                            <div className="p-12 border border-zinc-100 flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                                <div className="absolute top-6 right-6">
-                                    <span className="font-label text-[8px] tracking-widest bg-black text-white px-2 py-1 group-hover:bg-white group-hover:text-black">MOST POPULAR</span>
-                                </div>
-                                <div>
-                                    <h3 className="font-headline text-2xl mb-8">ESTRATÉGICO</h3>
-                                    <div className="mb-12">
-                                        <span className="text-4xl font-headline italic">Sob consulta</span>
-                                    </div>
-                                    <ul className="space-y-4 mb-12">
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Direção completa
-                                        </li>
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Audiovisual + moda
-                                        </li>
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Casting
-                                        </li>
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Operação de set
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SELECIONAR AGORA</button>
-                            </div>
-                            <div className="p-12 border border-surface-container-high flex flex-col justify-between h-full bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-[1.02] group" data-aos="fade-up" data-aos-delay="300">
-                                <div>
-                                    <h3 className="font-headline text-2xl mb-8">CAMPANHA COMPLETA</h3>
-                                    <div className="mb-12">
-                                        <span className="text-4xl font-headline italic">Sob consulta</span>
-                                    </div>
-                                    <ul className="space-y-4 mb-12">
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Governança total
-                                        </li>
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Todos os núcleos
-                                        </li>
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Multicanal
-                                        </li>
-                                        <li className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80">
-                                            <span className="material-symbols-outlined text-lg" data-icon="check">check</span> Entrega premium
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white">SOLICITAR ORÇAMENTO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <LandingPricing service="publicidade" openForm={openForm} />
 
-            {/* 8. COMPARATIVE */}
+            {/* COMPARATIVE */}
             <section className="bg-white px-[40px]">
                 <div className="bg-black text-white py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
@@ -356,53 +118,37 @@ export default function ProdutoraPublicidadePage() {
                             <div data-aos="fade-right">
                                 <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">COM PRODUÇÃO EXECUTIVA</h3>
                                 <ul className="space-y-10">
-                                    <li className="flex items-start gap-6">
-                                        <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
-                                        <div>
-                                            <p className="font-headline text-lg mb-2">Governança Total</p>
-                                            <p className="text-white/50 text-sm">Integra todas as áreas e protege estratégia, prazo e percepção.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-6">
-                                        <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
-                                        <div>
-                                            <p className="font-headline text-lg mb-2">Execução com Controle</p>
-                                            <p className="text-white/50 text-sm">Menos risco, mais previsibilidade e muito mais impacto.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-6">
-                                        <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
-                                        <div>
-                                            <p className="font-headline text-lg mb-2">Consistência Garantida</p>
-                                            <p className="text-white/50 text-sm">Coerência entre conceito e entrega em cada detalhe.</p>
-                                        </div>
-                                    </li>
+                                    {[
+                                        { t: 'Governança total', d: 'Integra todas as áreas e protege estratégia, prazo e percepção.' },
+                                        { t: 'Execução com controle', d: 'Menos risco, mais previsibilidade e muito mais impacto.' },
+                                        { t: 'Consistência garantida', d: 'Coerência entre conceito e entrega em cada detalhe.' },
+                                    ].map((i) => (
+                                        <li key={i.t} className="flex items-start gap-6">
+                                            <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
+                                            <div>
+                                                <p className="font-headline text-lg mb-2">{i.t}</p>
+                                                <p className="text-white/50 text-sm">{i.d}</p>
+                                            </div>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                             <div data-aos="fade-left">
                                 <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">SEM PRODUÇÃO EXECUTIVA</h3>
                                 <ul className="space-y-10">
-                                    <li className="flex items-start gap-6 opacity-40">
-                                        <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
-                                        <div>
-                                            <p className="font-headline text-lg mb-2">Execução Fragmentada</p>
-                                            <p className="text-white/50 text-sm">Equipes desalinhadas e decisões que geram retrabalho.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-6 opacity-40">
-                                        <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
-                                        <div>
-                                            <p className="font-headline text-lg mb-2">Perda de Qualidade</p>
-                                            <p className="text-white/50 text-sm">O que era estratégia vira esforço. O que era impacto vira ruído.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-6 opacity-40">
-                                        <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
-                                        <div>
-                                            <p className="font-headline text-lg mb-2">Risco Constante</p>
-                                            <p className="text-white/50 text-sm">Atrasos, desalinhamento e perda de controle na entrega.</p>
-                                        </div>
-                                    </li>
+                                    {[
+                                        { t: 'Execução fragmentada', d: 'Equipes desalinhadas e decisões que geram retrabalho.' },
+                                        { t: 'Perda de qualidade', d: 'O que era estratégia vira esforço. O que era impacto vira ruído.' },
+                                        { t: 'Risco constante', d: 'Atrasos, desalinhamento e perda de controle na entrega.' },
+                                    ].map((i) => (
+                                        <li key={i.t} className="flex items-start gap-6 opacity-40">
+                                            <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
+                                            <div>
+                                                <p className="font-headline text-lg mb-2">{i.t}</p>
+                                                <p className="text-white/50 text-sm">{i.d}</p>
+                                            </div>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -410,19 +156,24 @@ export default function ProdutoraPublicidadePage() {
                 </div>
             </section>
 
-            {/* 9. FINAL CTA */}
+            {/* FINAL CTA */}
             <section className="bg-white px-[40px]">
                 <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                     <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">Sua campanha começa agora.</h2>
-                    <button className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
                         INICIAR PROJETO
                     </button>
                 </div>
             </section>
 
-            {/* 10. FOOTER */}
+            {/* FOOTER */}
             <footer className="bg-black text-white py-24 px-12 border-t-[0.5px] border-zinc-900 flex flex-col items-center w-full text-center space-y-8">
-                <h2 className="text-2xl font-serif text-white mb-12 uppercase tracking-tight">House Mazzutti</h2>
+                <div className="mb-12">
+                    <span className="hm-logo" style={{fontSize: '32px', color: 'white'}}>
+                        <span className="hm-house">House</span>
+                        <span className="hm-mazzutti">Mazzutti</span>
+                    </span>
+                </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 mb-12">
                     <div className="space-y-4">
                         <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">SOCIAL</p>
@@ -442,6 +193,19 @@ export default function ProdutoraPublicidadePage() {
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>
+
+            <FormDrawer
+                isOpen={!!formCta}
+                onClose={closeForm}
+                title="Iniciar projeto"
+                subtitle="Conte-nos sobre sua campanha publicitária. Respondemos em até 1 dia útil."
+            >
+                <FormProdutora
+                    onClose={closeForm}
+                    sourceUrl="/produtora/publicidade"
+                    ctaLocation={formCta?.ctaLocation ?? null}
+                />
+            </FormDrawer>
         </div>
     );
 }
