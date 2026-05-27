@@ -148,6 +148,15 @@ export default function BarbaraPortoPage() {
                                     Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Marca de acessório vive ou morre pela imagem — e a Bárbara Porto procurou a House Mazzutti para sustentar a próxima fase de posicionamento. Angelo Mazzutti dirigiu a campanha a partir de uma leitura editorial dos produtos: peças tratadas como objetos de desejo, não como inventário. Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty, fashion film e estilo em uma só linha narrativa. A modelagem do set sustentou uma campanha com circulação dupla — comercial e editorial — capaz de abrir espaço em mídia, ponto de venda e canal próprio com a mesma assinatura.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -149,6 +149,15 @@ export default function MarinaMachadoPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Marina Machado tem um tipo de presença que pede leitura editorial — e a House Mazzutti construiu o book exatamente nessa chave. Angelo Mazzutti dirigiu a sessão a partir de uma narrativa de calma e contenção; Mateus Sacavem garantiu produção executiva precisa, sem ruído na entrega. Beauty discreto, luz desenhada, foco em estrutura facial. O book de Marina não tenta vender — apresenta. E essa diferença, no mercado de seleção, separa um portfólio comum de uma ferramenta de carreira. Um material que sustenta editoriais densos e direções de campanha com a mesma autoridade.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

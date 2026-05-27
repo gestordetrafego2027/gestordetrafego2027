@@ -135,6 +135,15 @@ export default function AllettoStillPage() {
                                     Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Marca de skincare precisa de campanha que traduza a promessa do produto em imagem — pele tratada, leitura sensorial, presença adulta. Para a Alletto Skinlab, a House Mazzutti operou em modelagem enxuta: Angelo Mazzutti assumiu pessoalmente direção criativa e fotografia, em um set conduzido pela produção executiva de Mateus Sacavem. A campanha foi dirigida em torno de uma narrativa visual mínima — sem ruído, sem excesso — para que cada quadro entregue o que importa na categoria: textura, luz, autoridade. O resultado é um banco de imagens editorial capaz de sustentar lançamento, mídia, ponto de venda e canal próprio com mesma assinatura — uma marca de skincare instalada como referência.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa e Fotografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

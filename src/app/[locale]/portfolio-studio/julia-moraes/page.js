@@ -150,6 +150,15 @@ export default function JuliaMoraesPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Cada book é uma decisão sobre o que vai entrar na carreira da modelo — e o que vai ficar de fora. Para Júlia Moraes, a House Mazzutti tratou a sessão como recorte editorial: apenas o que sustenta a próxima fase. A direção criativa de Angelo Mazzutti partiu da força de presença de Júlia em planos fechados; Mateus Sacavem coordenou a produção executiva para que beauty e fashion film entregassem o mesmo eixo de leitura. O material entrega não só imagens — entrega autoridade visual. Júlia sai com um book que comunica intenção antes mesmo da apresentação.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Higino`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

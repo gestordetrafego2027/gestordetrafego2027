@@ -137,6 +137,15 @@ export default function MariaEduardaPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Tem modelo cuja presença não cabe num quadro só — pede direção. Maria Eduarda Borges chegou ao studio assim. A House Mazzutti construiu o book com a intenção de fixar essa amplitude em uma sequência editorial coerente. Angelo Mazzutti dirigiu a sessão a partir de gestos curtos, sem coreografia visível; Mateus Sacavem coordenou a produção executiva mantendo o ritmo de set ágil, sem perda de acabamento. Mesmo sem fashion film desta vez, o conjunto fotográfico entrega o que importa: uma modelo que apresenta repertório em silêncio. Um book que se sustenta sozinho diante de uma direção de elenco.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -145,6 +145,15 @@ export default function DeiseSmaniottoPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Trabalhar com profissionais do próprio setor de imagem exige outra camada de cuidado — a expectativa é técnica. Para Deise Smaniotto, a House Mazzutti construiu o ensaio pessoal em torno de presença adulta e leitura editorial firme. Angelo Mazzutti dirigiu a sessão a partir da postura natural de Deise em set; Mateus Sacavem coordenou a produção executiva mantendo beauty, luz e vídeo afinados em uma só linha. O ensaio entrega à Deise um banco de imagens editorial que circula em redes próprias, apresentação profissional e materiais institucionais com mesma assinatura. Uma imagem que sustenta autoridade sem teatralidade.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eduardo Evangelista`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -153,6 +153,15 @@ export default function BrendaMattosPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Brenda Mattos entrou no studio em fase de preparação para concurso de miss — e a House Mazzutti respondeu com ensaio que sustenta a próxima etapa da trajetória. Angelo Mazzutti dirigiu a sessão a partir da leitura de presença que Brenda entrega em set. Mateus Sacavem coordenou a produção executiva alinhando beauty, vídeo e estilo em uma só linha narrativa. O ensaio editorial entrega à Brenda um banco de imagens que circula em comissões, redes próprias e divulgação institucional. Mais do que registro: um material que reposiciona a candidata em outro patamar de leitura.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

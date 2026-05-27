@@ -91,6 +91,15 @@ export default function BeatcoPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de moda com foco em silhueta, materialidade e narrativa visual. Captação supervisionada, ritmo editorial.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Moda fitness vive de leitura visual — o produto precisa parecer extensão do corpo, não uniforme. Para a Beatco, a House Mazzutti dirigiu campanha que traduz performance em editorial. Angelo Mazzutti construiu o eixo visual a partir do movimento e da textura; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e set em uma só linha narrativa. A modelo Talita Dalbó sustenta a presença editorial adulta. A campanha entrega à Beatco um banco de imagens denso, com circulação em mídia, e-commerce e ponto de venda com mesma assinatura — uma marca de fitness apresentada com autoridade editorial.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

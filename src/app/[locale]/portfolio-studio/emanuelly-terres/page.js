@@ -141,6 +141,15 @@ export default function EmanuellyTerresPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Emanuelly Terres tem a presença certa para campanha — e o book da House Mazzutti foi dirigido para tornar isso impossível de ignorar. Angelo Mazzutti construiu uma sequência de quadros que alterna leitura comercial e editorial, sustentando um eixo único de assinatura. Mateus Sacavem conduziu a produção executiva em torno de uma linha de beauty discreta e luz desenhada. O book de Emanuelly entrega versatilidade sem confusão narrativa — cada bloco responde a um nicho de mercado, e o conjunto sustenta uma apresentação de modelo pronta para encarar casting de campanha nacional.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

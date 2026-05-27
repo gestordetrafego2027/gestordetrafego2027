@@ -149,6 +149,15 @@ export default function VitoriaBoidtPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Renovar material é trabalhar percepção. Para Vitória Brodt, a House Mazzutti construiu um book que devolve à modelo um conjunto de imagens com leitura editorial firme. Angelo Mazzutti dirigiu a sessão em torno da força facial e da presença contida de Vitória; Mateus Sacavem conduziu a produção executiva mantendo ritmo, beauty e luz em uma só linha. Sem fashion film desta vez — e o conjunto fotográfico sustenta sozinho. Vitória sai com material que apresenta a próxima fase da carreira com autoridade, pronto para circular em casting comercial e editorial.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Hailton Hesse`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

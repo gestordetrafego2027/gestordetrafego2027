@@ -150,6 +150,15 @@ export default function AnnaLauraPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Cada renovação de material é uma decisão estratégica — não estética. Para Anna Laura Alves, a House Mazzutti tratou o book como reposicionamento: novas referências visuais, novo tratamento de luz, nova narrativa de carreira. A direção criativa de Angelo Mazzutti partiu de uma leitura da fase atual da modelo, e a produção executiva de Mateus Sacavem entregou um set sem ruído. O fashion film fecha o conjunto com movimento e atitude. Anna saiu com material que conversa com agências, marcas e direção de elenco — e que sustenta, em uma única apresentação, tudo que ela é capaz de entregar.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eduardo Evangelista`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

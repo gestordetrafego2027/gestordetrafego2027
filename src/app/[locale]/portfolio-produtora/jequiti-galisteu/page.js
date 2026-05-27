@@ -136,6 +136,15 @@ export default function JequitiGalisteuPage() {
                                     Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A parceria entre Adriane Galisteu e Jequiti ultrapassa uma década — uma das mais longevas da perfumaria nacional. Para a nova campanha, a House Mazzutti operou em torno de uma leitura editorial adulta da apresentadora. Angelo Mazzutti construiu o eixo de direção criativa privilegiando presença e elegância; Mateus Sacavem conduziu a produção executiva alinhando elenco, set e ritmo de captação; a fotografia ficou a cargo de Monteiro. A campanha entrega à Jequiti banco de imagens denso, capaz de circular em catálogo, comissão, mídia e ponto de venda com a mesma assinatura — sustentando a continuidade de uma das parcerias mais sólidas do mercado brasileiro de fragrância.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção Executiva: Mateus Sacavem · Direção: House Mazzutti · Fotografia: Monteiro · Talento: Adriane Galisteu`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

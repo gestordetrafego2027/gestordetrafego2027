@@ -149,6 +149,15 @@ export default function TalitaDalbPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Aniversário é marco — mas pode ser narrativa. Para Talita Dalbó, a House Mazzutti tratou o birthday shooting como ensaio editorial de transição: marca a data, sustenta a fase. Angelo Mazzutti dirigiu a sessão em torno de uma narrativa visual cinematográfica — luz desenhada, beauty contemporâneo, presença adulta. Mateus Sacavem coordenou a produção executiva mantendo set, vídeo e estilo afinados em uma só linha. O ensaio entrega à Talita um banco de imagens editorial que se torna parte da memória — e da apresentação pública — desse marco pessoal. Mais do que celebração: assinatura visual da próxima década.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan Cruz`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

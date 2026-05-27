@@ -185,6 +185,15 @@ export default function SimonnyPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Trabalhar com uma figura pública consolidada é trabalhar memória coletiva — sem deixar que ela engesse o presente. Para Simony, a House Mazzutti dirigiu um ensaio pessoal que devolve à artista uma leitura editorial contemporânea da própria imagem. Angelo Mazzutti partiu da presença carismática que Simony entrega em set, sem caricatura, sem nostalgia. Mateus Sacavem coordenou produção executiva, beauty e vídeo com o cuidado que esse tipo de material exige. O ensaio entrega à Simony um banco de imagens editorial atual — pronto para sustentar apresentação pessoal, profissional e institucional com a mesma assinatura.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

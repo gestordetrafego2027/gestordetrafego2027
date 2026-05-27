@@ -91,6 +91,15 @@ export default function IdrissiPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Produção executiva integral para Idrissi — direção de imagem, set design e ritmo de captação alinhados ao universo da marca. Tratamento editorial, padrão de campanha.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Marca de moda em construção pede campanha que instale percepção — não apenas apresente produto. Para a Idrissi, a House Mazzutti dirigiu uma sessão editorial densa, capaz de servir como instalação de assinatura visual. Angelo Mazzutti construiu o eixo visual em torno da combinação entre coleção, modelo e ambiente; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty, fashion film e estilo em uma só linha narrativa. A campanha entrega à Idrissi banco de imagens com circulação em mídia editorial, canal próprio e ponto de venda — uma coleção apresentada como universo de marca, não apenas como inventário comercial.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos · Modelo: Fernanda Diolive`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

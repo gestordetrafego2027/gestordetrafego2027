@@ -145,6 +145,15 @@ export default function FernandaTremlPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Médica em fase de consolidação profissional precisa de imagem que sustente autoridade sem rigidez. Fernanda Treml procurou a House Mazzutti exatamente para isso. Angelo Mazzutti dirigiu o ensaio em torno de uma narrativa que combina presença feminina e autoridade técnica — sem cair em estereótipo de qualquer lado. Mateus Sacavem coordenou a produção executiva mantendo o set fluido, beauty alinhado, luz desenhada para projetar leitura adulta. O ensaio entrega à Fernanda um banco de imagens que cobre apresentação institucional, redes próprias e materiais profissionais — uma imagem que sustenta a próxima década de carreira.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

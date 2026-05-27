@@ -149,6 +149,15 @@ export default function RebecaCabralPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Mulher de negócios precisa de imagem que sustente autoridade sem rigidez. Para Rebeca Cabral, a House Mazzutti construiu o ensaio Business como ferramenta estratégica — não como retrato corporativo. Angelo Mazzutti dirigiu a sessão a partir de uma leitura editorial da presença executiva contemporânea. Mateus Sacavem coordenou a produção executiva alinhando beauty discreto, luz desenhada e vídeo institucional. O resultado é um banco de imagens que circula em LinkedIn, site, palestra e apresentação de negócios com mesma assinatura — uma imagem adulta, contemporânea, pronta para sustentar a próxima fase de posicionamento profissional.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

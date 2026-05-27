@@ -141,6 +141,15 @@ export default function AmandaOliveiraPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Renovar um book não é refazer fotos — é reposicionar uma carreira. Para Amanda Oliveira, a House Mazzutti construiu um material que devolve à modelo o que o mercado precisa enxergar antes de marcá-la: presença, leitura corporal e versatilidade editorial. A direção criativa de Angelo Mazzutti desenhou cada quadro como um teste de mercado, e a produção executiva de Mateus Sacavem entregou o set pronto para sustentar a sequência. O resultado é um book que abre porta de cliente, não apenas álbum de imagens — uma ferramenta de trabalho que coloca Amanda em outra prateleira de seleção.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa e Fotografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

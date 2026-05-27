@@ -149,6 +149,15 @@ export default function GustavoViotoPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Jornalista precisa de imagem que sustente autoridade pública sem teatralidade. Gustavo Viotto procurou a House Mazzutti com esse pedido — e Angelo Mazzutti assumiu pessoalmente a direção criativa e a fotografia. Mateus Sacavem conduziu a produção executiva e capturou o vídeo, fechando um set enxuto e de alta precisão. O ensaio entrega ao Gustavo um banco de imagens editorial e institucional, capaz de circular em coluna, vídeo de abertura e apresentação corporativa com a mesma assinatura. Uma imagem adulta, sustentada — pronta para acompanhar a próxima fase da carreira jornalística.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa e Fotografia: Angelo Mazzutti · Produção Executiva e Vídeo: Mateus Sacavem`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

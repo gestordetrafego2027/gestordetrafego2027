@@ -90,6 +90,15 @@ export default function SenseHotelPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de imagem institucional. Atmosfera, lugar e narrativa de marca em padrão de campanha.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Resort de alto padrão vende experiência — campanha institucional precisa traduzir isso em narrativa visual. Para o Five Senses Resort, a House Mazzutti dirigiu uma campanha institucional em que o lugar aparece como atmosfera, não como inventário. Angelo Mazzutti construiu o eixo visual em torno da relação entre cenário, presença e luz natural; Mateus Sacavem assumiu a direção e produção executiva assegurando ritmo de set em locação. A campanha entrega ao Five Senses Resort um banco de imagens institucional denso, capaz de sustentar comunicação digital, materiais corporativos e mídia editorial — uma marca de hospitalidade apresentada com autoridade.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa e Produção Executiva: Angelo Mazzutti · Fotografia: Ita Mazzutti · Vídeo: Vitor Terra · Beauty: Everson Rocha · Modelo: Nakamura`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

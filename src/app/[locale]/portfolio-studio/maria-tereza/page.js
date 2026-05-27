@@ -145,6 +145,15 @@ export default function MariaTerezaPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Ensaio pessoal feito com cuidado editorial vira parte da história — não apenas registro dela. Para Maria Tereza Abdo, a House Mazzutti dirigiu uma sessão que privilegia a presença e o silêncio acima da pose. Angelo Mazzutti construiu o eixo visual em torno da leitura facial de Maria Tereza; Mateus Sacavem conduziu a produção executiva com o ritmo necessário para um trabalho íntimo, sem ruído de set. Beauty contido, luz desenhada. O resultado é um banco de imagens editorial que sustenta apresentação pessoal e profissional com a mesma assinatura — material para guardar e para circular.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

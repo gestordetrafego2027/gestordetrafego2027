@@ -90,6 +90,15 @@ export default function PoemasParisPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Sapato é objeto sensorial — campanha de calçado precisa traduzir isso em imagem. Para a Poema, a House Mazzutti dirigiu uma campanha editorial em que o produto carrega a narrativa sem precisar de explicação. Angelo Mazzutti construiu o eixo visual em torno do movimento e da textura; Mateus Sacavem coordenou a produção executiva alinhando elenco, set, beauty e estilo em uma só linha de leitura. O resultado é uma campanha que sustenta circulação em mídia editorial, ponto de venda e canal próprio com a mesma assinatura — uma imagem que reposiciona a Poema em outro patamar de marca.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Thyago Barriviera · Vídeo: Rebeca Cabral · Beauty: Débora · Modelo: Rafaela Andrade · Stylist: Deise Smaniotto`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

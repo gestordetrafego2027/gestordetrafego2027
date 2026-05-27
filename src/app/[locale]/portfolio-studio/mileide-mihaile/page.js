@@ -153,6 +153,15 @@ export default function MileideMihailePage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Empresária e figura pública com base de milhões precisa de imagem que sustente leitura editorial atual — não apenas presença de rede. Mileide Mihaile procurou a House Mazzutti em fase de reposicionamento. Angelo Mazzutti dirigiu o ensaio a partir da combinação que Mileide entrega em set: feminilidade firme, autoridade serena. Mateus Sacavem coordenou a produção executiva alinhando beauty, vídeo e estilo a esse eixo. O ensaio entrega à Mileide um banco de imagens editorial denso, capaz de sustentar campanhas próprias, apresentação institucional e mídia com mesma assinatura — uma imagem que conversa com a fase atual da carreira dela.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

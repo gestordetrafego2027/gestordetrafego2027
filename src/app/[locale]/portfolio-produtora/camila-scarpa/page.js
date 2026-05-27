@@ -139,6 +139,15 @@ export default function CamilaScarpaPage() {
                                     Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Marca de acessório que entra em outra fase pede campanha com leitura editorial firme. Camila Scarpa procurou a House Mazzutti com essa demanda. Angelo Mazzutti dirigiu a campanha em torno de uma narrativa adulta dos produtos — peças apresentadas em contexto, não em vitrine. Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty, stylist e ambiente em uma só linha. O resultado é uma campanha capaz de circular em mídia editorial, canal próprio e ponto de venda com mesma assinatura. Uma imagem de marca que reposiciona a percepção sobre a Camila Scarpa.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Beauty: Hailton Hasse · Modelo: Rayssa Moseli · Stylist: Rapha Mendonça`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

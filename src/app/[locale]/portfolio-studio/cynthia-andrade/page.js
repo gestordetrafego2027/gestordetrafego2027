@@ -138,6 +138,15 @@ export default function CynthiaAndradePage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`O ensaio Business de Cynthia Andrade foi tratado pela House Mazzutti como reposicionamento de imagem executiva — não retrato institucional. Angelo Mazzutti dirigiu a sessão em torno de uma leitura adulta e contemporânea da presença feminina nos negócios: força, postura, sem teatralidade. Mateus Sacavem coordenou a produção executiva alinhando beauty, vídeo e set em uma só linha. O ensaio entrega à Cynthia um banco de imagens editorial e institucional, capaz de sustentar LinkedIn, site profissional, palestra e materiais corporativos com mesma assinatura — uma imagem que conversa de igual para igual com o tipo de cliente que ela quer atrair.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -145,6 +145,15 @@ export default function BrunaBrummerPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Modelo experiente pede outro tipo de book — menos demonstração, mais assinatura. Para Bruna Brumer, a House Mazzutti dirigiu uma sessão que reorganiza a leitura do mercado sobre ela: presença adulta, sem rigidez; força sem dureza. Angelo Mazzutti construiu o eixo visual em torno de gestos sutis; Mateus Sacavem coordenou produção executiva, beauty e vídeo com o cuidado necessário para que cada bloco entregasse um nicho diferente. O fashion film fecha com camada cinematográfica. Bruna sai com material que abre conversa em outro patamar — editorial, campanha, narrativa.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eduardo Evangelista`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

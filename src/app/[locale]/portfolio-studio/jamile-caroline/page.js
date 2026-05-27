@@ -150,6 +150,15 @@ export default function JamileCarolinePage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`O bom book não vende a modelo — instala uma percepção. Para Jamile Caroline Siewerdt, a House Mazzutti desenhou um conjunto de imagens que reposiciona Jamile no radar de seleção: presença firme, leitura de mercado clara, fashion film com ritmo próprio. A direção criativa de Angelo Mazzutti partiu da observação da modelo em set, e a produção executiva de Mateus Sacavem alinhou beauty, vídeo e estilo em uma só linha narrativa. O resultado é um material que serve tanto para teste de campanha quanto para apresentação editorial — uma ferramenta de carreira, não um portfólio decorativo.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

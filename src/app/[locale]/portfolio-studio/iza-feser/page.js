@@ -146,6 +146,15 @@ export default function IzaFeserPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A renovação do material de Isabela Fezer começou pela leitura do que faltava: uma assinatura editorial mais firme. A House Mazzutti respondeu com um book que sustenta essa nova posição. Angelo Mazzutti dirigiu a sessão em torno do olhar — ponto forte de Isabela — e Mateus Sacavem alinhou produção executiva, beauty e vídeo para que essa força não se diluísse. O fashion film amplia o repertório com camada de movimento. Isabela sai com book que circula em casting editorial e comercial com mesma autoridade — um material que faz o trabalho de apresentação antes da apresentação acontecer.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

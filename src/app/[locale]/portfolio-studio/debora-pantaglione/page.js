@@ -157,6 +157,15 @@ export default function DeboraPantaglionePage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Renovar material é menos sobre repetir e mais sobre amadurecer. Débora Pantaglione voltou ao studio em um novo momento de carreira, e a House Mazzutti respondeu com um book que respeita essa transição — sem inflar, sem suavizar. A direção criativa de Angelo Mazzutti partiu da estrutura óssea e da força de olhar de Débora; a produção executiva de Mateus Sacavem garantiu fluxo de set, beauty e estilo conversando em uma só linha. O resultado é um book editorial que sustenta a próxima fase profissional dela — leitura imediata para quem seleciona elenco, autoridade para quem assina contrato.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

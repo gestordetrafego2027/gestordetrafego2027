@@ -141,6 +141,15 @@ export default function FernandaCostasPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`O ensaio pessoal de Fernanda Costas foi conduzido pela House Mazzutti em torno de uma narrativa editorial sustentada — presença adulta, sem rigidez. Angelo Mazzutti dirigiu a sessão a partir da leitura facial e da postura de Fernanda; Mateus Sacavem coordenou a produção executiva mantendo beauty, luz e vídeo alinhados em uma só linha. O resultado é um banco de imagens editorial que circula em apresentação profissional, materiais pessoais e redes próprias com a mesma assinatura. Um ensaio que faz o trabalho de reposicionar a percepção sobre Fernanda — e que sustenta a próxima fase de imagem dela com autoridade.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

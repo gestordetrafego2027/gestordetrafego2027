@@ -145,6 +145,15 @@ export default function SamaraSammePage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Samara Same chegou à House Mazzutti em fase de construção de carreira. O book respondeu a isso com material que projeta — não documenta. Angelo Mazzutti dirigiu a sessão em torno da naturalidade que Samara entrega em set; Mateus Sacavem coordenou produção executiva, beauty e vídeo em torno do mesmo eixo de leitura. O fashion film fecha o conjunto com camada de movimento. O resultado é um book editorial e comercial, capaz de circular em casting de marca, agência e direção de elenco com a mesma assinatura — uma ferramenta de carreira, não uma coleção de imagens.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

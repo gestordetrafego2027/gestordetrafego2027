@@ -133,6 +133,15 @@ export default function JequitiSensePage() {
                                     Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A Jequiti, marca do Grupo Silvio Santos, é uma das maiores plataformas de cosméticos do Brasil — e a campanha Sensi precisava sustentar essa escala com leitura editorial firme. A House Mazzutti operou em coordenação direta com a marca: Angelo Mazzutti construiu o eixo de direção criativa, Mateus Sacavem conduziu a produção executiva, fotografia de Brunico e beauty de Eliseu Almeida. A narrativa partiu da presença feminina contemporânea, com Barbara e Samara Same sustentando o eixo visual. A entrega serve à circulação nacional da marca: catálogo, ponto de venda, comissão e mídia — uma campanha à altura da escala em que a Jequiti opera.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção Executiva: Mateus Sacavem · Direção: House Mazzutti · Fotografia: Brunico · Beauty: Eliseu Almeida · Modelos: Barbara, Samara Same`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

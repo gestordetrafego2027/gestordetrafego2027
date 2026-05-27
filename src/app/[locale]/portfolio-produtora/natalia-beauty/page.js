@@ -142,6 +142,15 @@ export default function NataliaBeautyPage() {
                                     Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Beauty contemporâneo pede campanha que devolva à marca a autoridade da própria assinatura. Para a Natália Beauty, a House Mazzutti dirigiu uma sessão editorial em torno da leitura adulta do produto. Angelo Mazzutti construiu o eixo visual em torno da relação entre presença, textura e luz; Mateus Sacavem coordenou a produção executiva alinhando elenco, set e fashion film em uma só linha. A campanha entrega à Natália Beauty banco de imagens capaz de sustentar mídia, ponto de venda e canal próprio com a mesma assinatura — uma marca de beauty apresentada como categoria autoral, não apenas como portfólio de produto.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Talento: Natália Beauty`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
