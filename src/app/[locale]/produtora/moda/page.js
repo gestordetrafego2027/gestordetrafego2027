@@ -94,8 +94,7 @@ export default function ProdutoraModaPage() {
             <LandingTeam />
 
             {/* QUOTE */}
-            <section className="bg-white px-[40px]">
-                <div className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-black">
+            <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
                     <img alt="Fashion film — House Mazzutti" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale blur-sm" src="/images/produtora/moda/hero.webp" />
                     <div className="relative z-10 text-center px-8">
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
@@ -104,19 +103,17 @@ export default function ProdutoraModaPage() {
                         <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">"Não é sobre produzir melhor. É sobre ser percebido de forma diferente."</h2>
                         <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">Editorial bem construído é infraestrutura de comunicação.</p>
                     </div>
-                </div>
             </section>
 
             <LandingPricing service="moda" openForm={openForm} />
 
             {/* COMPARATIVE */}
-            <section className="bg-white px-[40px]">
-                <div className="bg-black text-white py-32 px-12 md:px-24">
+            <section className="bg-zinc-50 py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
-                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight" data-aos="fade-up">Moda que comunica.</h2>
+                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">Moda que comunica.</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
                             <div data-aos="fade-right">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">COM EDITORIAL</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">COM EDITORIAL</h3>
                                 <ul className="space-y-10">
                                     {[
                                         { t: 'Linguagem visual consistente', d: 'Campanhas mais fortes e presença de marca reconhecível.' },
@@ -124,17 +121,17 @@ export default function ProdutoraModaPage() {
                                         { t: 'Infraestrutura de comunicação', d: 'Um projeto gera ativos para todos os canais.' },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6">
-                                            <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
+                                            <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="check_circle">check_circle</span>
                                             <div>
-                                                <p className="font-headline text-lg mb-2">{i.t}</p>
-                                                <p className="text-white/50 text-sm">{i.d}</p>
+                                                <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
+                                                <p className="text-zinc-500 text-sm">{i.d}</p>
                                             </div>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                             <div data-aos="fade-left">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">SEM DIREÇÃO</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">SEM DIREÇÃO</h3>
                                 <ul className="space-y-10">
                                     {[
                                         { t: 'Imagens desconectadas', d: 'Baixa diferenciação e dificuldade de posicionamento.' },
@@ -142,10 +139,10 @@ export default function ProdutoraModaPage() {
                                         { t: 'Retrabalho constante', d: 'Produção sem estratégia que não sustenta crescimento.' },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6 opacity-40">
-                                            <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
+                                            <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="cancel">cancel</span>
                                             <div>
-                                                <p className="font-headline text-lg mb-2">{i.t}</p>
-                                                <p className="text-white/50 text-sm">{i.d}</p>
+                                                <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
+                                                <p className="text-zinc-500 text-sm">{i.d}</p>
                                             </div>
                                         </li>
                                     ))}
@@ -153,12 +150,10 @@ export default function ProdutoraModaPage() {
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
 
             {/* FINAL CTA */}
-            <section className="bg-white px-[40px]">
-                <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+            <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                     <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">Sua marca no próximo nível visual.</h2>
                     <p className="font-body text-white/60 text-lg mb-12 max-w-xl" data-aos="fade-up" data-aos-delay="200">Produção audiovisual e editorial para marcas de moda que querem crescer com identidade.</p>
                     <button
@@ -169,7 +164,6 @@ export default function ProdutoraModaPage() {
                     >
                         Falar com a Produtora →
                     </button>
-                </div>
             </section>
 
             {/* FOOTER */}

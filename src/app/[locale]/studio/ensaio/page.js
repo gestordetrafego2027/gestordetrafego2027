@@ -92,8 +92,7 @@ export default function StudioEnsaioPage() {
             <LandingTeam />
 
             {/* QUOTE */}
-            <section className="bg-white px-[40px]">
-                <div className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-black">
+            <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
                     <img alt="Ensaio editorial — House Mazzutti" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale blur-sm" src="/images/studio/marjorie-rossi/capa.webp" />
                     <div className="relative z-10 text-center px-8">
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
@@ -102,19 +101,17 @@ export default function StudioEnsaioPage() {
                         <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">"Sua imagem já comunica algo — mesmo quando não existe intenção."</h2>
                         <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">A diferença está em decidir o que ela deve comunicar.</p>
                     </div>
-                </div>
             </section>
 
             <LandingPricing service="ensaio" openForm={openForm} />
 
             {/* COMPARATIVE */}
-            <section className="bg-white px-[40px]">
-                <div className="bg-black text-white py-32 px-12 md:px-24">
+            <section className="bg-zinc-50 py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
-                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight" data-aos="fade-up">A diferença está na direção.</h2>
+                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">A diferença está na direção.</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
                             <div data-aos="fade-right">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">COM DIREÇÃO (HOUSE)</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">COM DIREÇÃO (HOUSE)</h3>
                                 <ul className="space-y-10">
                                     {[
                                         { t: 'Narrativa visual coesa', d: 'Cada cena é parte de uma história — não fotos avulsas.' },
@@ -122,17 +119,17 @@ export default function StudioEnsaioPage() {
                                         { t: 'Qualidade editorial', d: 'Tratamento de imagem que respeita a textura da pele.' },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6">
-                                            <span className="material-symbols-outlined text-white pt-1" data-icon="check_circle">check_circle</span>
+                                            <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="check_circle">check_circle</span>
                                             <div>
-                                                <p className="font-headline text-lg mb-2">{i.t}</p>
-                                                <p className="text-white/50 text-sm">{i.d}</p>
+                                                <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
+                                                <p className="text-zinc-500 text-sm">{i.d}</p>
                                             </div>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                             <div data-aos="fade-left">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-12">SEM DIREÇÃO</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">SEM DIREÇÃO</h3>
                                 <ul className="space-y-10">
                                     {[
                                         { t: 'Fotos sem unidade', d: 'Material disperso que não posiciona.' },
@@ -140,10 +137,10 @@ export default function StudioEnsaioPage() {
                                         { t: 'Pós-produção excessiva', d: 'Filtros que "plastificam" e perdem a naturalidade.' },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6 opacity-40">
-                                            <span className="material-symbols-outlined text-white pt-1" data-icon="cancel">cancel</span>
+                                            <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="cancel">cancel</span>
                                             <div>
-                                                <p className="font-headline text-lg mb-2">{i.t}</p>
-                                                <p className="text-white/50 text-sm">{i.d}</p>
+                                                <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
+                                                <p className="text-zinc-500 text-sm">{i.d}</p>
                                             </div>
                                         </li>
                                     ))}
@@ -151,17 +148,14 @@ export default function StudioEnsaioPage() {
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
 
             {/* FINAL CTA */}
-            <section className="bg-white px-[40px]">
-                <div className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+            <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                     <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">Sua nova imagem começa agora.</h2>
                     <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
                         INICIAR DIAGNÓSTICO DO MEU ENSAIO
                     </button>
-                </div>
             </section>
 
             {/* FOOTER */}
