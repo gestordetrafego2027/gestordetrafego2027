@@ -1,7 +1,8 @@
-import { describe, it, expect, beforeEach } from 'vitest'
+import { describe, it, expect, beforeEach, vi } from 'vitest'
 
 describe('featureFlags', () => {
   beforeEach(() => {
+    vi.resetModules()
     delete process.env.FEATURE_STORE_ENABLED
     delete process.env.FEATURE_SUBSCRIPTIONS_ENABLED
     delete process.env.FEATURE_ACADEMY_STRIPE_ENABLED
@@ -14,8 +15,8 @@ describe('featureFlags', () => {
 
   it('isStoreEnabled returns true when env is "true"', async () => {
     process.env.FEATURE_STORE_ENABLED = 'true'
-    const mod = await import('@/lib/feature-flags?v=true')
-    expect(mod.featureFlags.isStoreEnabled()).toBe(true)
+    const { featureFlags } = await import('@/lib/feature-flags')
+    expect(featureFlags.isStoreEnabled()).toBe(true)
   })
 
   it('isSubscriptionsEnabled returns false by default', async () => {

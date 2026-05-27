@@ -26,9 +26,8 @@ export default defineConfig({
     setupFiles: ['./tests/setup.ts'],
     include: ['tests/unit/**/*.{test,spec}.{ts,tsx}'],
     pool: 'vmForks',
-    vmForks: {
-      execArgv: ['--max-old-space-size=512'],
-    },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    vmForks: { execArgv: ['--max-old-space-size=512'] } as any,
     coverage: {
       reporter: ['text', 'json', 'html'],
       exclude: ['node_modules', 'tests', '.next', 'src/app/**/*.js'],
