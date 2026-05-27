@@ -4,6 +4,7 @@
  * Design hi-fi reproduzido a partir do handoff editorial.
  */
 import React from 'react';
+import Link from 'next/link';
 import Tracking from '@/components/analytics/Tracking';
 import { MpmViewContent, BuyLink } from '@/components/analytics/MpmTracking';
 
@@ -972,9 +973,9 @@ export default function MarketingParaModelosPage() {
             </div>
             <div className="col">
               <h4>House Mazzutti</h4>
-              <a href="/agencia">Agência</a>
-              <a href="/produtora">Produtora</a>
-              <a href="/studio">Studio</a>
+              <Link href="/agencia">Agência</Link>
+              <Link href="/produtora">Produtora</Link>
+              <Link href="/studio">Studio</Link>
               <a href="#">Academy</a>
             </div>
             <div className="col">
