@@ -25,9 +25,9 @@ export default defineConfig({
     globals: true,
     setupFiles: ['./tests/setup.ts'],
     include: ['tests/unit/**/*.{test,spec}.{ts,tsx}'],
-    pool: 'vmForks',
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    vmForks: { execArgv: ['--max-old-space-size=512'] } as any,
+    pool: 'vmForks' as 'forks',
+    // @ts-ignore vmForks is valid in vitest but missing from older type definitions
+    vmForks: { execArgv: ['--max-old-space-size=512'] },
     coverage: {
       reporter: ['text', 'json', 'html'],
       exclude: ['node_modules', 'tests', '.next', 'src/app/**/*.js'],
