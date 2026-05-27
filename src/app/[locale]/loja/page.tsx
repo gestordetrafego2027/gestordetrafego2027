@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { notFound } from 'next/navigation'
 import { featureFlags } from '@/lib/feature-flags'
 import { createClient } from '@/lib/supabase/server'

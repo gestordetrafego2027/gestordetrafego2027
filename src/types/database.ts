@@ -3617,6 +3617,243 @@ export type Database = {
           },
         ]
       }
+      store_categories: {
+        Row: {
+          id: string
+          slug: string
+          name: string
+          description: string | null
+          parent_id: string | null
+          cover_url: string | null
+          active: boolean
+          position: number
+          metadata: Json
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          slug: string
+          name: string
+          description?: string | null
+          parent_id?: string | null
+          cover_url?: string | null
+          active?: boolean
+          position?: number
+          metadata?: Json
+          created_at?: string
+          updated_at?: string
+        }
+        Update: Partial<Database['public']['Tables']['store_categories']['Insert']>
+        Relationships: []
+      }
+      store_products: {
+        Row: {
+          id: string
+          stripe_product_id: string
+          slug: string
+          name: string
+          description: string | null
+          product_type: 'physical' | 'digital' | 'service' | 'bundle'
+          active: boolean
+          images: Json
+          features: Json
+          metadata: Json
+          seo_title: string | null
+          seo_description: string | null
+          og_image_url: string | null
+          featured: boolean
+          featured_order: number | null
+          search_tsv: unknown | null
+          stripe_synced_at: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          stripe_product_id: string
+          slug: string
+          name: string
+          description?: string | null
+          product_type?: 'physical' | 'digital' | 'service' | 'bundle'
+          active?: boolean
+          images?: Json
+          features?: Json
+          metadata?: Json
+          seo_title?: string | null
+          seo_description?: string | null
+          og_image_url?: string | null
+          featured?: boolean
+          featured_order?: number | null
+          stripe_synced_at?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: Partial<Database['public']['Tables']['store_products']['Insert']>
+        Relationships: []
+      }
+      store_prices: {
+        Row: {
+          id: string
+          stripe_price_id: string
+          product_id: string
+          active: boolean
+          currency: string
+          unit_amount: number
+          unit_amount_decimal: string | null
+          price_type: 'one_time' | 'recurring'
+          recurring_interval: 'day' | 'week' | 'month' | 'year' | null
+          recurring_interval_count: number | null
+          trial_period_days: number | null
+          nickname: string | null
+          metadata: Json
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          stripe_price_id: string
+          product_id: string
+          active?: boolean
+          currency?: string
+          unit_amount: number
+          unit_amount_decimal?: string | null
+          price_type?: 'one_time' | 'recurring'
+          recurring_interval?: 'day' | 'week' | 'month' | 'year' | null
+          recurring_interval_count?: number | null
+          trial_period_days?: number | null
+          nickname?: string | null
+          metadata?: Json
+          created_at?: string
+          updated_at?: string
+        }
+        Update: Partial<Database['public']['Tables']['store_prices']['Insert']>
+        Relationships: [
+          {
+            foreignKeyName: "store_prices_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "store_products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      store_orders: {
+        Row: {
+          id: string
+          stripe_checkout_session_id: string | null
+          stripe_payment_intent_id: string | null
+          user_id: string | null
+          status: 'pending' | 'processing' | 'paid' | 'failed' | 'refunded' | 'partially_refunded' | 'cancelled' | 'chargeback'
+          currency: string
+          subtotal: number
+          discount_amount: number
+          total: number
+          coupon_id: string | null
+          customer_email: string | null
+          customer_name: string | null
+          shipping_address: Json | null
+          metadata: Json
+          idempotency_key: string
+          paid_at: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          stripe_checkout_session_id?: string | null
+          stripe_payment_intent_id?: string | null
+          user_id?: string | null
+          status?: 'pending' | 'processing' | 'paid' | 'failed' | 'refunded' | 'partially_refunded' | 'cancelled' | 'chargeback'
+          currency?: string
+          subtotal: number
+          discount_amount?: number
+          total: number
+          coupon_id?: string | null
+          customer_email?: string | null
+          customer_name?: string | null
+          shipping_address?: Json | null
+          metadata?: Json
+          idempotency_key: string
+          paid_at?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: Partial<Database['public']['Tables']['store_orders']['Insert']>
+        Relationships: []
+      }
+      store_order_items: {
+        Row: {
+          id: string
+          order_id: string
+          price_id: string
+          product_id: string
+          quantity: number
+          unit_amount: number
+          total_amount: number
+          product_snapshot: Json
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          order_id: string
+          price_id: string
+          product_id: string
+          quantity?: number
+          unit_amount: number
+          total_amount: number
+          product_snapshot?: Json
+          created_at?: string
+        }
+        Update: Partial<Database['public']['Tables']['store_order_items']['Insert']>
+        Relationships: [
+          {
+            foreignKeyName: "store_order_items_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "store_orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      store_coupons: {
+        Row: {
+          id: string
+          stripe_coupon_id: string | null
+          stripe_promo_code_id: string | null
+          code: string
+          active: boolean
+          percent_off: number | null
+          amount_off: number | null
+          currency: string | null
+          max_redemptions: number | null
+          times_redeemed: number
+          valid_from: string | null
+          valid_until: string | null
+          metadata: Json
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          stripe_coupon_id?: string | null
+          stripe_promo_code_id?: string | null
+          code: string
+          active?: boolean
+          percent_off?: number | null
+          amount_off?: number | null
+          currency?: string | null
+          max_redemptions?: number | null
+          times_redeemed?: number
+          valid_from?: string | null
+          valid_until?: string | null
+          metadata?: Json
+          created_at?: string
+          updated_at?: string
+        }
+        Update: Partial<Database['public']['Tables']['store_coupons']['Insert']>
+        Relationships: []
+      }
     }
     Views: {
       mv_academy_catalog: {
@@ -3939,6 +4176,10 @@ export type Database = {
       unaccent: { Args: { "": string }; Returns: string }
     }
     Enums: {
+      store_product_type: "physical" | "digital" | "service" | "bundle"
+      store_price_type: "one_time" | "recurring"
+      store_recurring_interval: "day" | "week" | "month" | "year"
+      store_order_status: "pending" | "processing" | "paid" | "failed" | "refunded" | "partially_refunded" | "cancelled" | "chargeback"
       academy_coupon_type: "percentage" | "fixed_amount"
       academy_enrollment_status: "active" | "expired" | "revoked" | "suspended"
       academy_live_status:
