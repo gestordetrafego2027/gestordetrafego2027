@@ -36,7 +36,6 @@ export default async function AuditoriaPage({
   }
 
   // audit_log existe em schema não-público; ignorar tipagem aqui
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let q: any = (supabase as any)
     .from('audit_log')
     .select('id, ts, actor_email, entity, entity_id, action, diff')

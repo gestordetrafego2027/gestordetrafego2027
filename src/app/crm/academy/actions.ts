@@ -66,7 +66,6 @@ export async function createAcademyProductAction(formData: FormData): Promise<vo
 
   const { data: created, error } = await supabase
     .from('academy_products')
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .insert(insertRow as any)
     .select('id')
     .single()
@@ -106,7 +105,6 @@ export async function updateAcademyProductAction(formData: FormData): Promise<vo
     patch.published_at = new Date().toISOString()
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { error } = await supabase.from('academy_products').update(patch as any).eq('id', id)
   if (error) redirect(`/crm/academy/products/${id}?error=` + encodeURIComponent(error.message))
   revalidatePath(`/crm/academy/products/${id}`)
@@ -126,7 +124,6 @@ export async function createModuleAction(formData: FormData): Promise<void> {
 
   await supabase.from('academy_modules').insert({
     product_id: productId, title, order_index: nextIdx,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any)
   revalidatePath(`/crm/academy/products/${productId}`)
 }
@@ -151,7 +148,6 @@ export async function createLessonAction(formData: FormData): Promise<void> {
     video_url: videoUrl,
     order_index: nextIdx,
     type: 'video',
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any)
   revalidatePath(`/crm/academy/products/${productId}`)
 }

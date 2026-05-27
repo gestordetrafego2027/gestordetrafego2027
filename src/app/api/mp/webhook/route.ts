@@ -66,7 +66,6 @@ export async function POST(req: Request) {
 
       if (orderId) {
         // Atualiza order
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         await (sb.from('academy_orders') as any)
           .update({
             status: newStatus,
@@ -76,7 +75,6 @@ export async function POST(req: Request) {
           .eq('id', orderId)
 
         // Cria/atualiza row em academy_payments
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         await (sb.from('academy_payments') as any).upsert(
           {
             order_id: orderId,

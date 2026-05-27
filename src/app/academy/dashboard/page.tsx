@@ -24,7 +24,6 @@ export default async function StudentDashboardPage() {
     .eq('status', 'active')
     .order('granted_at', { ascending: false })
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const enrolls = (enrollments ?? []) as any[]
   const productIds = enrolls.map((e) => e.product?.id).filter(Boolean)
 
