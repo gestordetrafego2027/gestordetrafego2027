@@ -25,7 +25,7 @@ if (!STRIPE_SECRET_KEY || !SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
   process.exit(1)
 }
 
-const stripe = new Stripe(STRIPE_SECRET_KEY, { apiVersion: '2025-04-30.basil' })
+const stripe = new Stripe(STRIPE_SECRET_KEY, { apiVersion: '2026-04-22.dahlia' })
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 
 // ── catálogo ──────────────────────────────────────────────────
@@ -96,7 +96,7 @@ async function findOrCreateProduct(book: (typeof BOOKS)[0]) {
     description: book.description,
     images: book.images,
     metadata: book.metadata,
-    features: book.features.map((name) => ({ name })),
+    marketing_features: book.features.map((name) => ({ name })),
   })
   console.log(`   ✅ Produto criado: ${product.id} (${book.name})`)
   return product

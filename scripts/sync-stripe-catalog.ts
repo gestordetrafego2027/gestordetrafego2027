@@ -26,7 +26,7 @@ function stripeProductType(metadata: Record<string, string>): string {
 
 // ── Init ─────────────────────────────────────────────────────
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-04-30.basil',
+  apiVersion: '2026-04-22.dahlia',
 })
 
 const supabase = createClient(
@@ -53,7 +53,7 @@ async function syncProducts() {
       product_type: stripeProductType(p.metadata as Record<string, string>),
       active: p.active,
       images: p.images ?? [],
-      features: p.features?.map((f) => f.name) ?? [],
+      features: p.marketing_features?.map((f) => f.name) ?? [],
       metadata: p.metadata ?? {},
       seo_title: (p.metadata?.seo_title as string) ?? null,
       seo_description: (p.metadata?.seo_description as string) ?? null,
