@@ -52,11 +52,12 @@ export default function YouTubeShort({ urls, title = 'Fashion Film' }) {
               style={{ width: 'min(340px, 100%)', aspectRatio: '9 / 16' }}
             >
               <iframe
-                src={`https://www.youtube.com/embed/${id}?rel=0&modestbranding=1`}
+                src={`https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1`}
                 title="YouTube Short"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 allowFullScreen
                 loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>
