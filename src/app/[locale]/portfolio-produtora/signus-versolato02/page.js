@@ -90,6 +90,15 @@ export default function SignusVersolato02Page() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A continuidade de uma marca pede consistência de assinatura — sem repetir. Para a nova coleção 2026 da Signus Eyewear, a House Mazzutti dirigiu uma campanha que dialoga com a anterior e abre o próximo capítulo. Angelo Mazzutti construiu uma narrativa visual mais adulta, com Gianne Albertoni sustentando uma leitura editorial cosmopolita. Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty, fashion film e estilo em uma só linha. A campanha entrega à Signus material com circulação em mídia editorial, canal de óticas e ponto de venda — sustentando a marca como referência de design brasileiro em armação.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Neto Lins · Vídeo: Thyago Barriviera · Beauty: Andre Mattos · Modelo: Gianne Albertoni`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

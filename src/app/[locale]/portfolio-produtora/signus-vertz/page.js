@@ -90,6 +90,15 @@ export default function SignusVertzPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A Vertz é uma das marcas do portfólio da Signus Indústria Óptica — e pede campanha que sustente um eixo próprio dentro do conjunto. A House Mazzutti dirigiu a sessão em torno de uma leitura editorial mais jovem e direta. Angelo Mazzutti construiu o eixo visual a partir da força da modelo em planos fechados; Mateus Sacavem coordenou a produção executiva alinhando fashion film, beauty e set em uma só linha narrativa. O resultado é uma campanha que apresenta a Vertz com personalidade distinta, capaz de circular em mídia editorial, canal de óticas e ponto de venda sem se diluir no portfólio do grupo.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Neto Lins · Vídeo: Thyago Barriviera · Beauty: Rodrigo Frois · Modelo: Ivia · Stylist: Deise Smaniotto`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

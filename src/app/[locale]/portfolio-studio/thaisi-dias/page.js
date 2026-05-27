@@ -145,6 +145,15 @@ export default function ThaisiDiasPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Concurso de miss é decidido muito antes do palco — começa na construção da imagem. Para Thaisi Dias, a House Mazzutti tratou o ensaio como ferramenta estratégica de concurso. Angelo Mazzutti dirigiu a sessão a partir de referências editoriais de Miss internacional, traduzindo essas referências para a presença de Thaisi. Mateus Sacavem conduziu a produção executiva com a precisão que esse tipo de material exige — beauty afinado, luz desenhada, vídeo de apresentação. O ensaio entrega o banco de imagens que sustenta inscrição, divulgação e presença institucional. Uma imagem que projeta autoridade muito antes do julgamento.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

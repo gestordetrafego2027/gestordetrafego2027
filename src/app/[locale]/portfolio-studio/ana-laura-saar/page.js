@@ -149,6 +149,15 @@ export default function AnaLauraSaarPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Cada modelo carrega uma assinatura — e a função do book é torná-la legível em segundos. Ana Laura Saar chegou ao studio com trajetória em construção e saiu com um material que comunica direção. A House Mazzutti tratou a sessão como leitura editorial: poses pensadas em cima de referência de mercado, beauty conduzido para não competir com o rosto, vídeo curto que sintetiza o eixo de imagem. A condução de Angelo Mazzutti e a produção executiva de Mateus Sacavem entregaram um book que faz Ana ser vista — e lembrada — pelo lado certo.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

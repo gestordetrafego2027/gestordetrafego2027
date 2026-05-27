@@ -90,6 +90,15 @@ export default function ToliPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de moda com foco em silhueta, materialidade e narrativa visual. Captação supervisionada, ritmo editorial.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Coleção nova pede campanha que apresente o universo da marca — não apenas as peças. Para a Toli, a House Mazzutti dirigiu uma sessão editorial em que a coleção aparece com leitura própria. Angelo Mazzutti construiu o eixo visual em torno do diálogo entre estilo, modelagem e presença da modelo; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty, stylist e set em uma só linha. A campanha entrega à Toli banco de imagens denso, capaz de sustentar mídia editorial, ponto de venda, e-commerce e canal próprio com mesma assinatura — uma coleção apresentada com autoridade visual.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos · Modelo: Jaquelini Bertan · Stylist: Juciléia`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

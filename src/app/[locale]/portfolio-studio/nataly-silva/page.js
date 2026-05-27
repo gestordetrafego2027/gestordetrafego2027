@@ -149,6 +149,15 @@ export default function NatalySilvaPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Renovar book é tomar posição. Nataly Silva chegou ao studio em fase de virada, e a House Mazzutti dirigiu a sessão para sustentar essa nova etapa. Angelo Mazzutti construiu o eixo visual a partir da força de presença de Nataly em plano americano; Mateus Sacavem conduziu a produção executiva com o cuidado de manter beauty e luz alinhados a essa proposta. O book entrega o que o mercado precisa enxergar — leitura editorial sólida, versatilidade comercial — sem nenhuma camada de excesso. Nataly sai com material que reorganiza a percepção da carreira dela em uma única apresentação.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

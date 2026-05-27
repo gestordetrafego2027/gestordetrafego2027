@@ -153,6 +153,15 @@ export default function LeifSinclarPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Ensaio masculino editorial pede direção firme — sem cair em pose de catálogo, sem perder presença. Leif Sinclar procurou a House Mazzutti em fase de construção de imagem própria. Angelo Mazzutti dirigiu a sessão em torno de uma narrativa adulta e contemporânea: postura, olhar, silêncio, sem performar masculinidade. Mateus Sacavem coordenou a produção executiva alinhando beauty, vídeo e luz nesse mesmo eixo. O ensaio entrega ao Leif um banco de imagens editorial, capaz de circular em redes próprias, apresentação institucional e composição de portfólio profissional. Uma imagem sustentada, sem necessidade de explicação.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Higino`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -90,6 +90,15 @@ export default function PontokPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Marca de acessório que quer escala precisa de campanha com leitura editorial firme — sem perder apelo comercial. Para a PontoK, a House Mazzutti construiu uma campanha que conversa nas duas frentes. Angelo Mazzutti dirigiu a sessão em torno de uma narrativa visual contemporânea, com o produto tratado como objeto de desejo. Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e set em uma só linha de assinatura. O resultado é uma campanha capaz de sustentar circulação em mídia, ponto de venda e canal próprio com mesma autoridade — uma imagem que reposiciona a percepção sobre a marca.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Thyago Barriviera · Beauty: Andre Mattos · Modelo: Emanuelly Terres`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

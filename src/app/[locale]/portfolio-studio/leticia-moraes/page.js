@@ -150,6 +150,15 @@ export default function LeticiaMoraesPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Letícia Moraes procurou a House Mazzutti em fase de virada — e o book responde a isso. Angelo Mazzutti dirigiu a sessão com foco em uma leitura visual mais madura, capaz de circular em casting editorial e comercial sem precisar de tradução. Mateus Sacavem conduziu a produção executiva com a precisão que essa transição exige: beauty contido, luz desenhada, vídeo que respira. O fashion film amarra o conjunto com narrativa. Letícia sai com material que sustenta sua próxima janela de mercado — não um book de manutenção, mas uma ferramenta de reposicionamento.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -149,6 +149,15 @@ export default function CarolCostaPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Ensaio pessoal com pets pede outra geometria de direção — vínculo afetivo virando narrativa visual. Para Caroline Costa, a House Mazzutti construiu uma sessão que dá a mesma dignidade editorial à dona e aos cães. Angelo Mazzutti dirigiu o ensaio em torno de uma narrativa íntima, sem composição artificial. Mateus Sacavem conduziu a produção executiva ajustando luz, set e ritmo para garantir presença espontânea. O resultado é um ensaio editorial que reposiciona a relação afetiva como assinatura visual — não foto fofa, mas retrato de família contemporâneo, denso e bem direcionado.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Rodrigo Frois`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

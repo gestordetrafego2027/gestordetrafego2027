@@ -149,6 +149,15 @@ export default function MarjorieRossiPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`O ensaio pessoal de Marjorie Rossi foi conduzido pela House Mazzutti como leitura editorial — não retrato decorativo. Angelo Mazzutti dirigiu a sessão em torno da força de presença de Marjorie em planos fechados; Mateus Sacavem coordenou a produção executiva alinhando beauty, luz e set em uma só linha. O resultado é um banco de imagens denso, capaz de sustentar apresentação pessoal e profissional com a mesma assinatura. Mais do que registro: um material que reposiciona a percepção sobre Marjorie em uma única apresentação — adulto, contemporâneo, editorial.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

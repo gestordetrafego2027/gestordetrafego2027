@@ -127,6 +127,15 @@ export default function GabCruzPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do Studio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Retrato como direção: presença, intenção e tratamento editorial.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Gabriele Cruz é o tipo de modelo que ganha a câmera no primeiro frame — e a House Mazzutti dirigiu o book para amplificar exatamente isso. Angelo Mazzutti construiu uma sequência de quadros que alterna proximidade e distância, presença e silêncio. Mateus Sacavem conduziu a produção executiva com o ritmo necessário para que beauty, vídeo e direção criativa entregassem uma só assinatura. O resultado é um book denso, com mais de uma camada de leitura, capaz de circular entre cliente comercial, cliente editorial e direção de campanha sem perder coerência.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

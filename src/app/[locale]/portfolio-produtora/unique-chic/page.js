@@ -90,6 +90,15 @@ export default function UniqueChicPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de moda com foco em silhueta, materialidade e narrativa visual. Captação supervisionada, ritmo editorial.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Marca de moda que entra em fase de reposicionamento pede campanha com leitura editorial sustentada. Para a Unique Chic, a House Mazzutti dirigiu uma sessão em que a coleção apresenta uma narrativa própria, sem apoio em catálogo. Angelo Mazzutti construiu o eixo visual em torno da combinação entre estilo da peça e presença da modelo; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e set em uma só linha. A campanha entrega à Unique Chic banco de imagens denso, com circulação em mídia editorial, e-commerce e ponto de venda — uma coleção apresentada com autoridade, não apenas como item de inventário.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

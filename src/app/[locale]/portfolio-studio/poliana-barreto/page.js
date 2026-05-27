@@ -145,6 +145,15 @@ export default function PolianaBarretoPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A renovação de book de Pollyana Barreto partiu de uma decisão clara: chegar mais firme em casting editorial. A House Mazzutti respondeu com sessão dirigida em torno de presença sustentada. Angelo Mazzutti construiu a sequência de quadros a partir do que Pollyana entrega sem performar; Mateus Sacavem manteve a produção executiva em ritmo de set profissional, beauty contido, vídeo com respiração. O fashion film fecha com camada de movimento. O resultado é um material que circula entre cliente direto, agência e direção de elenco — e abre conversas que um book genérico não abriria.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

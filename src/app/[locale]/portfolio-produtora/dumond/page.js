@@ -90,6 +90,15 @@ export default function DumondPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A Dumond opera no mercado desde 1992 e exporta para mais de 50 países — uma marca de calçado feminino que pede campanha à altura. A House Mazzutti dirigiu a sessão em torno de uma leitura editorial adulta dos produtos. Angelo Mazzutti construiu o eixo visual a partir da combinação entre textura, luz e movimento; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e set em uma só linha narrativa. A campanha entrega à Dumond banco de imagens capaz de sustentar mídia editorial, ponto de venda e canal próprio com a mesma assinatura — uma marca de calçado posicionada com autoridade visual.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Beauty: Allysson Chinalia`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

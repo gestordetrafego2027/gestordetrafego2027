@@ -153,6 +153,15 @@ export default function NarciaCaberlonPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Há momentos da vida que pedem mais do que registro — pedem direção. O ensaio Hall of Fame de Nairícia Caberlon foi conduzido pela House Mazzutti com esse cuidado. Angelo Mazzutti dirigiu a sessão como narrativa visual: cada quadro respondendo a uma camada da trajetória dela. Mateus Sacavem coordenou produção executiva, beauty e vídeo para que nada competisse com a protagonista. O resultado é um ensaio editorial denso, que sustenta a celebração de uma fase de vida — sem caricatura, sem teatralidade. Nairícia sai com material que se torna parte da própria história, não apenas memória dela.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

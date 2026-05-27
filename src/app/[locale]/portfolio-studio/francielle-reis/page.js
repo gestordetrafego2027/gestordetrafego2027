@@ -146,6 +146,15 @@ export default function FrancielleReisPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Para Francielle Reis, a House Mazzutti tratou o book como abertura de mercado. Angelo Mazzutti dirigiu e fotografou a sessão pessoalmente — uma decisão que reflete o tipo de leitura que o material exigia: presença firme, sem performar. Mateus Sacavem conduziu a produção executiva mantendo set, beauty e vídeo afinados em um só ritmo. O fashion film fecha a apresentação com camada cinematográfica. Francielle sai com book editorial que abre conversa em outro nível — não como material introdutório, mas como apresentação de uma modelo pronta para circular em casting de marca e direção de elenco.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa e Fotografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Vídeo: Lucas Brando · Beauty: Felipe Azevedo`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

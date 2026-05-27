@@ -149,6 +149,15 @@ export default function ChaiEDaiPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Trabalhar duas modelos no mesmo book exige outra geometria de direção — presença individual sem perder a sintonia da dupla. Para Chai e Dai, a House Mazzutti desenhou um set capaz de sustentar dois eixos visuais em paralelo: cada uma com sua leitura, ambas com a mesma assinatura editorial. Angelo Mazzutti dirigiu a sessão a partir do contraste, Mateus Sacavem coordenou o ritmo de produção para que nenhum quadro dependesse de improviso. O resultado é um book que apresenta as duas como conjunto e como individualidade — um material que abre conversas com clientes que pensam em campanha e em editorial.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

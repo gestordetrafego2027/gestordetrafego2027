@@ -91,6 +91,15 @@ export default function SplashBoutiquePage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Produção editorial para Splash Boutique — direção de imagem e captação de vídeo com padrão de campanha. Cada frame traduz o universo da marca com consistência visual.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Boutique pede outra camada de assinatura na campanha — o cliente compra curadoria, não apenas produto. Para a Splash Boutique, a House Mazzutti dirigiu uma sessão editorial em que a coleção aparece como recorte autoral. Angelo Mazzutti construiu o eixo visual em torno da relação entre estilo, ambiente e presença; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e set em uma só linha narrativa. A campanha entrega à Splash Boutique banco de imagens denso, capaz de sustentar mídia editorial, redes próprias e ponto de venda — uma curadoria apresentada com autoridade visual.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: House Mazzutti`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

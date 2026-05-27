@@ -136,6 +136,15 @@ export default function WePinkZeFelipePage() {
                                     Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A We Pink, fundada por Virginia Fonseca em 2021, ultrapassou R$ 1,3 bilhão em faturamento e opera mais de 250 pontos físicos. Campanha de marca dessa escala pede direção que sustente a presença do casal sem perder o foco no produto. A House Mazzutti dirigiu a sessão como narrativa de marca contemporânea: Virginia e Zé Felipe em leitura editorial, produto tratado como autoridade. Angelo Mazzutti construiu o eixo visual; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e set em uma só linha. A campanha entrega à We Pink banco de imagens capaz de sustentar live commerce, mídia, redes próprias e ponto de venda na escala em que a marca opera.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Ita Mazzutti · Produção Executiva: Angelo Mazzutti · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nikolas Beauty · Talentos: Virginia Fonseca, Zé Felipe`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -154,6 +154,15 @@ export default function JessicaBittelbrunPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Renovar o book é uma decisão de mercado — e Jéssica Bittelbrunn chegou no momento certo. A House Mazzutti construiu uma sessão capaz de revelar três versões dela em um único material: a presença comercial direta, a sofisticação editorial e a leveza de fashion film. Angelo Mazzutti dirigiu a sessão a partir da naturalidade que Jéssica entrega em set; Mateus Sacavem coordenou a produção executiva com a precisão que um material multifacetado exige. O book devolve à modelo um conjunto de imagens que abre portas em mais de uma direção — e fecha apresentação com autoridade.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

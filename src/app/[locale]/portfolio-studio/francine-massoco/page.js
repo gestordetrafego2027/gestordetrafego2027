@@ -145,6 +145,15 @@ export default function FrancineMassocoPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Existe um tipo de book que abre porta — e outro que prende a atenção. A House Mazzutti se ocupa do segundo. Francine Massocco chegou pedindo material novo; saiu com um conjunto de imagens que reorganiza a leitura do mercado sobre ela. Angelo Mazzutti dirigiu a sessão a partir de uma proposta de presença mais editorial e menos óbvia; Mateus Sacavem coordenou a produção para que cada bloco tivesse acabamento de campanha. Sem fashion film desta vez — e nem precisou. O book carrega a tensão visual que se espera de uma modelo que vai entrar em outro nível de seleção.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Thyago Barriviera · Beauty: Rodrigo Frois`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

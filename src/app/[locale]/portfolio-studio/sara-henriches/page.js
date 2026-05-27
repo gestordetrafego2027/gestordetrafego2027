@@ -158,6 +158,15 @@ export default function SaraHenrichesPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Sarah Henriches tem presença que se desdobra em vários nichos — e o book precisava sustentar essa amplitude. A House Mazzutti dirigiu a sessão para entregar editorial, comercial e fashion film na mesma assinatura. Angelo Mazzutti partiu da observação da modelo em set; Mateus Sacavem conduziu a produção executiva alinhando beauty, luz e vídeo em um único eixo. O resultado é um material que apresenta Sarah em camadas — não em poses. Cada bloco do book responde a uma janela de mercado, e o fashion film amarra a apresentação com narrativa visual.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

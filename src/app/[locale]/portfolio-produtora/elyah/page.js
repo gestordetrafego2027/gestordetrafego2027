@@ -90,6 +90,15 @@ export default function ElyahPage() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Marca de acessório que entra em outra fase precisa de campanha com leitura editorial sustentada — não apenas catálogo de produto. Para a Elyah, a House Mazzutti dirigiu uma sessão em que a peça aparece como assinatura, não como item de inventário. Angelo Mazzutti construiu o eixo visual em torno de uma narrativa adulta e contemporânea; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty, fashion film e estilo em uma só linha. A campanha entrega à Elyah um banco de imagens denso, capaz de sustentar mídia editorial, canal próprio e ponto de venda com mesma assinatura.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

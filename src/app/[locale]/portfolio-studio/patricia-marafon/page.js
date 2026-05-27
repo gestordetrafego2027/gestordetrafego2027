@@ -153,6 +153,15 @@ export default function PatriciaMarafonPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Patricia Marafon procurou a House Mazzutti em busca de um material que respondesse à fase atual da carreira. A direção criativa de Angelo Mazzutti traduziu isso em um book de leitura adulta — sem cair em demonstração, sem economizar presença. Mateus Sacavem coordenou produção executiva, beauty e vídeo em torno do mesmo eixo. O fashion film fecha a sequência com camada cinematográfica. Patricia sai com book denso, capaz de sustentar editorial, comercial e direção de elenco com a mesma autoridade. Um material que faz o trabalho antes do briefing começar.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

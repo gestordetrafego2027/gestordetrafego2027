@@ -146,6 +146,15 @@ export default function AnaRockenbachPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`O book de uma modelo precisa entregar o que palavras não conseguem — temperatura, alcance, intenção. Para Aniele Rockenbach, a House Mazzutti construiu um material que abandona o retrato decorativo e assume a função de currículo visual. Sob direção criativa de Angelo Mazzutti, cada bloco da sessão respondeu a um nicho de mercado: editorial, comercial, fashion film. A produção executiva de Mateus Sacavem manteve o cronograma do set e a curadoria de equipe afinada. Aniele saiu com um book que se apresenta sozinho — e abre conversa antes mesmo do primeiro briefing.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

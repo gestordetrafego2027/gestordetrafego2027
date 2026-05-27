@@ -90,6 +90,15 @@ export default function SignusVersolato01Page() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de still e fashion para acessórios. Foco em forma, textura e desejo — cada peça lida como objeto e como narrativa.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A Versolato chegou ao mercado como nova marca do grupo Signus com proposta clara — design autoral, sofisticação contemporânea, leitura editorial de fashion brasileira. A House Mazzutti dirigiu a campanha de lançamento à altura desse posicionamento. Angelo Mazzutti construiu uma narrativa visual em que cada armação é apresentada como peça de assinatura; Mateus Sacavem coordenou a produção executiva com a precisão necessária para um lançamento de marca. A presença de Gianne Albertoni, top model brasileira com mais de 30 anos de carreira internacional, sustenta a leitura adulta e cosmopolita da Versolato. Campanha de inauguração — e de instalação de percepção.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Thyago Barriviera · Vídeo: Caio Marcandali · Beauty: Andre Mattos · Modelo: Gianne Albertoni · Stylist: Deise Smaniotto`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

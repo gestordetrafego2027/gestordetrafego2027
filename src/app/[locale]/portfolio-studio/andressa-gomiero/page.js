@@ -141,6 +141,15 @@ export default function AndressaGomieroPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Um ensaio pessoal não documenta um momento — instala uma percepção. Para Andressa Gomiero, a House Mazzutti tratou o trabalho como construção de imagem própria: o ensaio entrega à cliente o registro adulto de uma fase em transformação. Angelo Mazzutti dirigiu a sessão a partir da leitura do que Andressa queria sustentar para frente — e do que precisava deixar para trás. Mateus Sacavem coordenou produção executiva, beauty e vídeo com a precisão necessária para um trabalho íntimo. O resultado é um material editorial que serve tanto à esfera pessoal quanto à apresentação pública — uma assinatura visual da próxima etapa.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

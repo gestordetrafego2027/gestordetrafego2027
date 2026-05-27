@@ -90,6 +90,15 @@ export default function BeatCo2Page() {
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
                                 <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Segunda temporada da Beat Co sob direção da House Mazzutti — silhueta, materialidade e set design pensados como continuidade do universo da marca. Captação supervisionada, ritmo editorial.</p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`A continuidade de uma marca pede campanhas que dialoguem com a anterior sem repetir. Para a segunda campanha Beatco com a House Mazzutti, a direção partiu de uma leitura mais sensorial da coleção — movimento, textura, presença. Angelo Mazzutti construiu o eixo visual em torno de quadros que alternam intensidade e calma; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e set em uma só linha narrativa. A campanha entrega à Beatco banco de imagens denso, capaz de sustentar mídia editorial, e-commerce, redes próprias e ponto de venda — uma marca de moda fitness apresentada com a mesma autoridade visual em mais um capítulo de relação.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

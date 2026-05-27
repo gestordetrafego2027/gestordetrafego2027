@@ -146,6 +146,15 @@ export default function IasmimPage() {
                                     Retrato como direção: presença, intenção e tratamento editorial.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Existem rostos que pedem tempo — e existem rostos que pedem direção. Iasmin Passos pertence ao segundo grupo. A House Mazzutti construiu seu book a partir da intenção de tornar visível o que escapa em uma foto comum: a forma como Iasmin sustenta presença sem precisar performar. Angelo Mazzutti dirigiu a sessão em blocos de mercado distintos; Mateus Sacavem garantiu produção executiva impecável para que cada bloco tivesse acabamento próprio. O fashion film amplia o repertório. O book opera como apresentação completa: editorial, comercial, narrativo — pronto para circular em casting de alto nível.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

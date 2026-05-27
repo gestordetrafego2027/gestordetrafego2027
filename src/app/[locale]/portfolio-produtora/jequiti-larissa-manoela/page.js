@@ -139,6 +139,15 @@ export default function JequitiLarissaManoelaPage() {
                                     Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
                                 </p>
                             </div>
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Larissa Manoela construiu uma das fragrâncias mais bem-sucedidas da Jequiti, com várias coleções lançadas ao longo dos anos — uma parceria que se sustenta pela consistência de imagem. Para a nova campanha, a House Mazzutti operou em torno de uma leitura adulta da artista. Angelo Mazzutti construiu o eixo de direção criativa em torno de presença e narrativa; Mateus Sacavem conduziu a produção executiva alinhando elenco, set e ritmo de captação; fotografia de Brunico e vídeo de Monteiro fecharam a entrega. A campanha entrega à Jequiti banco de imagens capaz de circular em catálogo, comissão, mídia e ponto de venda — sustentando a continuidade de uma das marcas mais fortes da perfumaria brasileira.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção Executiva: Mateus Sacavem · Direção: House Mazzutti · Fotografia: Brunico · Vídeo: Monteiro · Talento: Larissa Manoela`}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
