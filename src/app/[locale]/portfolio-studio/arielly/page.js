@@ -124,20 +124,19 @@ export default function AriellyPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Algumas presenças crescem no plano fechado."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2023</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -149,7 +148,7 @@ export default function AriellyPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Tem material que documenta — e tem material que projeta. Ariely Farah procurou a House Mazzutti para o segundo. A direção criativa de Angelo Mazzutti partiu do que Ariely tem de mais raro: uma leitura calma, sustentada, que cresce no plano fechado. Mateus Sacavem coordenou a produção executiva com a equipe de beauty e vídeo costurada em torno desse ponto de força. O fashion film fecha o book com uma camada cinematográfica que devolve à modelo a oportunidade de ser dirigida — e não apenas fotografada. Um book de leitura adulta, para o próximo estágio de carreira.`}
+                                    {`Book editorial em leitura adulta — partindo da força de presença sustentada e calma. Fashion film com camada cinematográfica fechando o conjunto, devolvendo a oportunidade de ser dirigida, não apenas fotografada.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}

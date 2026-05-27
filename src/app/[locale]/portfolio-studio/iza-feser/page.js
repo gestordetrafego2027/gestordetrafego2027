@@ -124,20 +124,19 @@ export default function IzaFeserPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "O olhar é onde a leitura começa."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2023</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -149,7 +148,7 @@ export default function IzaFeserPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`A renovação do material de Isabela Fezer começou pela leitura do que faltava: uma assinatura editorial mais firme. A House Mazzutti respondeu com um book que sustenta essa nova posição. Angelo Mazzutti dirigiu a sessão em torno do olhar — ponto forte de Isabela — e Mateus Sacavem alinhou produção executiva, beauty e vídeo para que essa força não se diluísse. O fashion film amplia o repertório com camada de movimento. Isabela sai com book que circula em casting editorial e comercial com mesma autoridade — um material que faz o trabalho de apresentação antes da apresentação acontecer.`}
+                                    {`Renovação dirigida em torno do olhar — ponto forte de leitura. Beauty e vídeo alinhados para que essa força não se diluísse. Fashion film amplia repertório com camada de movimento, material com mesma autoridade em casting editorial e comercial.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}

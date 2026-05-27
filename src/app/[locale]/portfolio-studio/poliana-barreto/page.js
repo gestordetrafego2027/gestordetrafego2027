@@ -123,20 +123,19 @@ export default function PolianaBarretoPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Casting editorial não pede performance — pede consistência."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2025</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -148,7 +147,7 @@ export default function PolianaBarretoPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`A renovação de book de Pollyana Barreto partiu de uma decisão clara: chegar mais firme em casting editorial. A House Mazzutti respondeu com sessão dirigida em torno de presença sustentada. Angelo Mazzutti construiu a sequência de quadros a partir do que Pollyana entrega sem performar; Mateus Sacavem manteve a produção executiva em ritmo de set profissional, beauty contido, vídeo com respiração. O fashion film fecha com camada de movimento. O resultado é um material que circula entre cliente direto, agência e direção de elenco — e abre conversas que um book genérico não abriria.`}
+                                    {`Sessão dirigida em torno de presença sustentada — beauty contido, vídeo com respiração, ritmo de set profissional. Fashion film com camada de movimento. Material que abre conversas que um book genérico não abriria.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}

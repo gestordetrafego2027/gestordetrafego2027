@@ -123,15 +123,14 @@ export default function FrancineMassocoPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Abrir porta é uma coisa. Prender atenção é outra."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
@@ -148,7 +147,7 @@ export default function FrancineMassocoPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Existe um tipo de book que abre porta — e outro que prende a atenção. A House Mazzutti se ocupa do segundo. Francine Massocco chegou pedindo material novo; saiu com um conjunto de imagens que reorganiza a leitura do mercado sobre ela. Angelo Mazzutti dirigiu a sessão a partir de uma proposta de presença mais editorial e menos óbvia; Mateus Sacavem coordenou a produção para que cada bloco tivesse acabamento de campanha. Sem fashion film desta vez — e nem precisou. O book carrega a tensão visual que se espera de uma modelo que vai entrar em outro nível de seleção.`}
+                                    {`Book editorial dirigido em proposta de presença menos óbvia, com acabamento de campanha em cada bloco. Sem fashion film — o conjunto fotográfico sustenta sozinho a tensão visual de quem entra em outro nível de seleção.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Thyago Barriviera · Beauty: Rodrigo Frois`}

@@ -80,11 +80,13 @@ export default function PoemasParisPage() {
                                 <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface hmzt-hero-title">Poema Paris</h1>
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
-                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Nada foi feito para parecer. Foi feito para sustentar."</p>
+                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Sapato é objeto sensorial — campanha precisa traduzir isso."</p>
                             <div className="space-y-[16px] pt-4">
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">Acessórios</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2026</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">PRODUTORA / EDITORIAL DE MODA</p></div>
+                                <div className="info-col-anim flex flex-col">
+                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
+                                </div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2025</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
@@ -93,7 +95,7 @@ export default function PoemasParisPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Sapato é objeto sensorial — campanha de calçado precisa traduzir isso em imagem. Para a Poema, a House Mazzutti dirigiu uma campanha editorial em que o produto carrega a narrativa sem precisar de explicação. Angelo Mazzutti construiu o eixo visual em torno do movimento e da textura; Mateus Sacavem coordenou a produção executiva alinhando elenco, set, beauty e estilo em uma só linha de leitura. O resultado é uma campanha que sustenta circulação em mídia editorial, ponto de venda e canal próprio com a mesma assinatura — uma imagem que reposiciona a Poema em outro patamar de marca.`}
+                                    {`Campanha editorial em que o produto carrega a narrativa sem precisar de explicação — movimento e textura como eixo visual. Elenco, set, beauty e estilo em uma só linha de leitura, circulação em mídia editorial, ponto de venda e canal próprio.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Thyago Barriviera · Vídeo: Rebeca Cabral · Beauty: Débora · Modelo: Rafaela Andrade · Stylist: Deise Smaniotto`}

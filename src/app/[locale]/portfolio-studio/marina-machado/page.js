@@ -127,20 +127,19 @@ export default function MarinaMachadoPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Apresentar não é vender. É instalar leitura."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2024</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -152,7 +151,7 @@ export default function MarinaMachadoPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Marina Machado tem um tipo de presença que pede leitura editorial — e a House Mazzutti construiu o book exatamente nessa chave. Angelo Mazzutti dirigiu a sessão a partir de uma narrativa de calma e contenção; Mateus Sacavem garantiu produção executiva precisa, sem ruído na entrega. Beauty discreto, luz desenhada, foco em estrutura facial. O book de Marina não tenta vender — apresenta. E essa diferença, no mercado de seleção, separa um portfólio comum de uma ferramenta de carreira. Um material que sustenta editoriais densos e direções de campanha com a mesma autoridade.`}
+                                    {`Sessão com narrativa de calma e contenção — beauty discreto, luz desenhada, foco em estrutura facial. Material que sustenta editoriais densos e direções de campanha com mesma autoridade, sem decoração.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}

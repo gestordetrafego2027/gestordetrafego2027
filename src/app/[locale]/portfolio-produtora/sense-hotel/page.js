@@ -80,11 +80,13 @@ export default function SenseHotelPage() {
                                 <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface hmzt-hero-title">Sense Hotel</h1>
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
-                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Nada foi feito para parecer. Foi feito para sustentar."</p>
+                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Hospitalidade de alto padrão se vende como atmosfera — não como inventário."</p>
                             <div className="space-y-[16px] pt-4">
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">Institucional</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2026</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">PRODUTORA / INSTITUCIONAL</p></div>
+                                <div className="info-col-anim flex flex-col">
+                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
+                                </div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2021</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
@@ -93,7 +95,7 @@ export default function SenseHotelPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Resort de alto padrão vende experiência — campanha institucional precisa traduzir isso em narrativa visual. Para o Five Senses Resort, a House Mazzutti dirigiu uma campanha institucional em que o lugar aparece como atmosfera, não como inventário. Angelo Mazzutti construiu o eixo visual em torno da relação entre cenário, presença e luz natural; Mateus Sacavem assumiu a direção e produção executiva assegurando ritmo de set em locação. A campanha entrega ao Five Senses Resort um banco de imagens institucional denso, capaz de sustentar comunicação digital, materiais corporativos e mídia editorial — uma marca de hospitalidade apresentada com autoridade.`}
+                                    {`Campanha institucional em que o lugar aparece como atmosfera — relação entre cenário, presença e luz natural como eixo visual. Set em locação com ritmo profissional. Banco institucional denso para comunicação digital, materiais corporativos e mídia editorial.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa e Produção Executiva: Angelo Mazzutti · Fotografia: Ita Mazzutti · Vídeo: Vitor Terra · Beauty: Everson Rocha · Modelo: Nakamura`}

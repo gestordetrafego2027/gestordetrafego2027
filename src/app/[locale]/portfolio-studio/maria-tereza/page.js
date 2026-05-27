@@ -123,20 +123,19 @@ export default function MariaTerezaPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Ensaio com cuidado editorial vira parte da história — não dela."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Ensaio Pessoal</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / ENSAIO</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2022</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -148,7 +147,7 @@ export default function MariaTerezaPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Ensaio pessoal feito com cuidado editorial vira parte da história — não apenas registro dela. Para Maria Tereza Abdo, a House Mazzutti dirigiu uma sessão que privilegia a presença e o silêncio acima da pose. Angelo Mazzutti construiu o eixo visual em torno da leitura facial de Maria Tereza; Mateus Sacavem conduziu a produção executiva com o ritmo necessário para um trabalho íntimo, sem ruído de set. Beauty contido, luz desenhada. O resultado é um banco de imagens editorial que sustenta apresentação pessoal e profissional com a mesma assinatura — material para guardar e para circular.`}
+                                    {`Sessão que privilegia presença e silêncio acima da pose — eixo visual em torno da leitura facial, ritmo intimista sem ruído de set. Beauty contido, luz desenhada. Banco que sustenta apresentação pessoal e profissional sob a mesma assinatura.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}

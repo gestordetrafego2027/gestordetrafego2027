@@ -80,11 +80,13 @@ export default function MonicaCostajewerlyPage() {
                                 <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface hmzt-hero-title">Monica Costa Jewerly</h1>
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
-                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Nada foi feito para parecer. Foi feito para sustentar."</p>
+                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Peça pequena pede leitura densa."</p>
                             <div className="space-y-[16px] pt-4">
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">Acessórios</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2026</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">PRODUTORA / EDITORIAL DE MODA</p></div>
+                                <div className="info-col-anim flex flex-col">
+                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
+                                </div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2024</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
@@ -93,7 +95,7 @@ export default function MonicaCostajewerlyPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Joalheria pede outra camada de cuidado em campanha — a peça é pequena, a leitura precisa ser densa. Para a Mônica Costa Jewelry, a House Mazzutti dirigiu uma campanha em que cada joia é tratada como objeto autoral. Angelo Mazzutti construiu o eixo visual em torno do contraste entre pele, luz e metal; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e fashion film em uma só linha. A modelo Gabriele Cruz sustenta a presença editorial. A campanha entrega à Mônica Costa Jewelry banco de imagens denso, com circulação em mídia editorial, canal próprio e ponto de venda com mesma assinatura — uma joalheria apresentada com autoridade.`}
+                                    {`Campanha em que cada joia é tratada como objeto autoral — contraste entre pele, luz e metal. Elenco, beauty e fashion film em uma só linha. Banco denso para mídia editorial, canal próprio e ponto de venda — joalheria apresentada com autoridade.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos · Modelo: Gabriele Cruz`}

@@ -128,20 +128,19 @@ export default function JuliaMoraesPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Cada book é uma decisão sobre o que vai entrar — e o que fica de fora."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2024</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -153,7 +152,7 @@ export default function JuliaMoraesPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Cada book é uma decisão sobre o que vai entrar na carreira da modelo — e o que vai ficar de fora. Para Júlia Moraes, a House Mazzutti tratou a sessão como recorte editorial: apenas o que sustenta a próxima fase. A direção criativa de Angelo Mazzutti partiu da força de presença de Júlia em planos fechados; Mateus Sacavem coordenou a produção executiva para que beauty e fashion film entregassem o mesmo eixo de leitura. O material entrega não só imagens — entrega autoridade visual. Júlia sai com um book que comunica intenção antes mesmo da apresentação.`}
+                                    {`Recorte editorial em torno da força de presença em planos fechados. Beauty e fashion film no mesmo eixo de leitura. Material que comunica intenção antes mesmo da apresentação.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Higino`}
