@@ -22,7 +22,8 @@ const STRIPE_PRICE_ID = process.env.STRIPE_PRICE_MARKETING_PARA_MODELOS ?? ''
 const brl = (cents: number | null | undefined) =>
   ((cents ?? 0) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-export default async function CheckoutPage() {
+export default async function CheckoutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const supabase = await createClient()
   const { data: product } = await supabase
     .from('academy_products')
@@ -170,7 +171,7 @@ export default async function CheckoutPage() {
         </p>
 
         <Link
-          href="/academy/marketing-para-modelos"
+          href={`/${locale}/academy/marketing-para-modelos`}
           style={{
             display: 'inline-block',
             marginTop: 24,
