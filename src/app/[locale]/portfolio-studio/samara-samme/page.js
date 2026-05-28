@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox'
 
 export default function SamaraSammePage() {
@@ -159,6 +160,8 @@ export default function SamaraSammePage() {
             </main>
             
             <PortfolioVideo unit="studio" slug="samara-samme" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/EOTJo8M_avY?feature=share" />
 
             <PortfolioCTA businessUnit="studio" projectSlug="samara-samme" />
 

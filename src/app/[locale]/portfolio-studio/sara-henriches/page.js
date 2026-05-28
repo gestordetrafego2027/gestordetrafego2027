@@ -173,7 +173,7 @@ export default function SaraHenrichesPage() {
             
             <PortfolioVideo unit="studio" slug="sara-henriches" />
 
-            <YouTubeShort urls="https://youtube.com/shorts/2i9Zp9LAGec?feature=share" />
+            <YouTubeShort urls={["https://youtube.com/shorts/2i9Zp9LAGec?feature=share","https://youtube.com/shorts/AmfGK-XrA2I?feature=share"]} />
 
             <PortfolioCTA businessUnit="studio" projectSlug="sara-henriches" />
 
