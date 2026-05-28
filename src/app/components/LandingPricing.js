@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { pricingByService } from '@/lib/landingsContent';
 
 /**
@@ -9,6 +10,7 @@ import { pricingByService } from '@/lib/landingsContent';
  * @param {(ctaLocation: string, packageSelected: string) => void} openForm - handler do FormDrawer
  */
 export default function LandingPricing({ service, openForm }) {
+  const router = useRouter();
   const config = pricingByService[service];
   if (!config) return null;
 
@@ -73,9 +75,13 @@ export default function LandingPricing({ service, openForm }) {
 
                 <button
                   type="button"
-                  onClick={() =>
-                    openForm(`package_${tier.id}`, `${tier.name} - ${tier.price}`)
-                  }
+                  onClick={() => {
+                    if (tier.slug) {
+                      router.push(`/checkout/studio/${tier.slug}`);
+                    } else {
+                      openForm(`package_${tier.id}`, `${tier.name} - ${tier.price}`);
+                    }
+                  }}
                   className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white"
                 >
                   {tier.ctaLabel}

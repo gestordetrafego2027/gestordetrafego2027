@@ -20,6 +20,7 @@
     "audit:ci": "npm audit --audit-level=high",
     "sync:catalog": "node -r tsx/esm scripts/sync-stripe-catalog.ts",
     "seed:books": "node scripts/seed-books.cjs",
+    "seed:studio": "node -r tsx/esm scripts/seed-studio-services.ts",
     "go-live": "npx tsx scripts/go-live.ts"
   },
   "dependencies": {
