@@ -19,6 +19,25 @@ const supabase = createClient(
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://housemazzutti.com'
 
 const PRODUCTS = [
+  // ── ACADEMY — EBOOKS ──────────────────────────────────────
+  {
+    slug: 'marketing-para-modelos',
+    name: 'Marketing para Modelos — Vol. 01',
+    description: 'Ebook · 281 páginas · Estratégias de marketing para modelos e influenciadores',
+    priceCents: 2790,
+    coverImage: `https://housemazzutti.com/images/academy/marketing-para-modelos/capa.webp`,
+    service: 'academy',
+    tier: 'ebook',
+  },
+  {
+    slug: 'o-preco-da-relevancia',
+    name: 'O Preço da Relevância',
+    description: 'Ebook · Posicionamento e valor de mercado para criativos',
+    priceCents: 13700,
+    coverImage: `https://housemazzutti.com/images/academy/preco-da-relevancia/capa.webp`,
+    service: 'academy',
+    tier: 'ebook',
+  },
   // ── BOOK ──────────────────────────────────────────────────
   {
     slug: 'book-essencial',
