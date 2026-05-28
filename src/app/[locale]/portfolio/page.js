@@ -62,7 +62,7 @@ const produtoraBeleza = [
 
 const produtoraModa = [
   'beatco', 'pous', 'toli', 'unique-chic',
-  'eivi', 'idrissi'
+  'bonne-sorrie', 'idrissi'
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),

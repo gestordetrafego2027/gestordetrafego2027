@@ -401,39 +401,33 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* ── SOBRE / QUATRO FRENTES ──────────────────────────────── */}
-                <section className="bg-white px-[40px]">
-                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">{t('home.boutique_label')}</span>
-                                <h2 className="text-h2 text-white">{t('home.boutique_titulo')}</h2>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                {[
-                                    { title: t('home.boutique_agencia_title'), subtitle: t('home.boutique_agencia_subtitle'), items: ["Branding project", "Web development", "Campanha integrada 360"], href: "/agencia" },
-                                    { title: t('home.boutique_studio_title'), subtitle: t('home.boutique_studio_subtitle'), items: ["Book model", "Ensaio profissional", "Cobertura pessoal"], href: "/studio" },
-                                    { title: t('home.boutique_produtora_title'), subtitle: t('home.boutique_produtora_subtitle'), items: ["Campanha de moda", "Campanha de beleza", "Conteúdo institucional"], href: "/produtora" },
-                                    { title: t('home.boutique_comunidade_title'), subtitle: t('home.boutique_comunidade_subtitle'), items: ["Área do cliente", "Central do aluno", "Nossos parceiros", "Casting e vagas"], href: "/comunidade" }
-                                ].map((card, idx) => (
-                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined">
-                                        <div>
-                                            <h3 className="text-h3 mb-6 group-hover:text-white uppercase">{card.title}</h3>
-                                            <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>
-                                            <ul className="space-y-4 mb-12">
-                                                {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
-                                                        <span className="material-symbols-outlined text-lg">check</span>
-                                                        <span>{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <Link href={card.href} className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white text-center block">Saiba mais</Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                {/* ── FRENTES — BANNERS DAS PÁGINAS ───────────────────────── */}
+                <section className="bg-white">
+                    <div className="flex flex-col md:flex-row h-auto md:h-[85vh]">
+                        {[
+                            { label: 'AGÊNCIA', sub: 'Branding · Web · Comunicação', img: '/images/agencia/banners/banner-1.webp', href: '/agencia' },
+                            { label: 'STUDIO', sub: 'Book · Ensaio · Cobertura', img: '/images/studio/banners/banner-1.webp', href: '/studio' },
+                            { label: 'PRODUTORA', sub: 'Moda · Beleza · Institucional', img: '/images/produtora/banners/banner-1.webp', href: '/produtora' },
+                        ].map((item) => (
+                            <Link
+                                key={item.label}
+                                href={item.href}
+                                className="relative flex-1 overflow-hidden group"
+                                style={{ minHeight: '380px' }}
+                            >
+                                <img
+                                    src={item.img}
+                                    alt={item.label}
+                                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/55 transition-colors duration-500" />
+                                <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-12">
+                                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 mb-3 block">{item.sub}</span>
+                                    <h3 className="font-headline text-3xl md:text-4xl text-white tracking-tight mb-6">{item.label}</h3>
+                                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white border-b border-white/40 pb-1 w-fit group-hover:border-white transition-colors duration-300">SAIBA MAIS →</span>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </section>
 
