@@ -115,15 +115,14 @@ export default function MariaEduardaPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Repertório se apresenta no silêncio — não na pose."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
@@ -140,7 +139,7 @@ export default function MariaEduardaPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Tem modelo cuja presença não cabe num quadro só — pede direção. Maria Eduarda Borges chegou ao studio assim. A House Mazzutti construiu o book com a intenção de fixar essa amplitude em uma sequência editorial coerente. Angelo Mazzutti dirigiu a sessão a partir de gestos curtos, sem coreografia visível; Mateus Sacavem coordenou a produção executiva mantendo o ritmo de set ágil, sem perda de acabamento. Mesmo sem fashion film desta vez, o conjunto fotográfico entrega o que importa: uma modelo que apresenta repertório em silêncio. Um book que se sustenta sozinho diante de uma direção de elenco.`}
+                                    {`Book editorial construído a partir de gestos curtos, sem coreografia visível. Ritmo de set ágil sem perda de acabamento. Conjunto fotográfico que sustenta sozinho a apresentação diante de direção de elenco.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando`}

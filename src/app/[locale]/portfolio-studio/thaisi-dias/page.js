@@ -123,20 +123,19 @@ export default function ThaisiDiasPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Concurso de miss é decidido muito antes do palco."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Ensaio Pessoal</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / ENSAIO</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2024</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -148,7 +147,7 @@ export default function ThaisiDiasPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Concurso de miss é decidido muito antes do palco — começa na construção da imagem. Para Thaisi Dias, a House Mazzutti tratou o ensaio como ferramenta estratégica de concurso. Angelo Mazzutti dirigiu a sessão a partir de referências editoriais de Miss internacional, traduzindo essas referências para a presença de Thaisi. Mateus Sacavem conduziu a produção executiva com a precisão que esse tipo de material exige — beauty afinado, luz desenhada, vídeo de apresentação. O ensaio entrega o banco de imagens que sustenta inscrição, divulgação e presença institucional. Uma imagem que projeta autoridade muito antes do julgamento.`}
+                                    {`Ensaio estratégico de preparação para concurso — partindo de referências editoriais de Miss internacional traduzidas para a presença da candidata. Beauty afinado, luz desenhada, vídeo de apresentação. Banco que sustenta inscrição, divulgação e presença institucional.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}

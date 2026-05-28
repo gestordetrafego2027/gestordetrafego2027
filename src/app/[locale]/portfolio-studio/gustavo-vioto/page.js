@@ -127,15 +127,14 @@ export default function GustavoViotoPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Autoridade pública não precisa de teatralidade."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Ensaio Pessoal</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / ENSAIO</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
@@ -152,7 +151,7 @@ export default function GustavoViotoPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Jornalista precisa de imagem que sustente autoridade pública sem teatralidade. Gustavo Viotto procurou a House Mazzutti com esse pedido — e Angelo Mazzutti assumiu pessoalmente a direção criativa e a fotografia. Mateus Sacavem conduziu a produção executiva e capturou o vídeo, fechando um set enxuto e de alta precisão. O ensaio entrega ao Gustavo um banco de imagens editorial e institucional, capaz de circular em coluna, vídeo de abertura e apresentação corporativa com a mesma assinatura. Uma imagem adulta, sustentada — pronta para acompanhar a próxima fase da carreira jornalística.`}
+                                    {`Ensaio editorial e institucional para jornalista — set enxuto e de alta precisão. Banco capaz de circular em coluna, vídeo de abertura e apresentação corporativa com mesma assinatura. Imagem adulta, sustentada, pronta para acompanhar a próxima fase.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa e Fotografia: Angelo Mazzutti · Produção Executiva e Vídeo: Mateus Sacavem`}

@@ -123,20 +123,19 @@ export default function SamaraSammePage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Construção de carreira não começa pelo álbum — começa pelo recorte."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Ensaio Pessoal</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2023</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -148,7 +147,7 @@ export default function SamaraSammePage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Samara Same chegou à House Mazzutti em fase de construção de carreira. O book respondeu a isso com material que projeta — não documenta. Angelo Mazzutti dirigiu a sessão em torno da naturalidade que Samara entrega em set; Mateus Sacavem coordenou produção executiva, beauty e vídeo em torno do mesmo eixo de leitura. O fashion film fecha o conjunto com camada de movimento. O resultado é um book editorial e comercial, capaz de circular em casting de marca, agência e direção de elenco com a mesma assinatura — uma ferramenta de carreira, não uma coleção de imagens.`}
+                                    {`Book que projeta em vez de documentar — naturalidade entregue em set, beauty e vídeo no mesmo eixo. Fashion film com camada de movimento. Material que circula em casting de marca, agência e direção de elenco sob a mesma assinatura.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}

@@ -127,20 +127,19 @@ export default function NatalySilvaPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Renovar book é tomar posição — qual a sua?"
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2025</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -152,7 +151,7 @@ export default function NatalySilvaPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Renovar book é tomar posição. Nataly Silva chegou ao studio em fase de virada, e a House Mazzutti dirigiu a sessão para sustentar essa nova etapa. Angelo Mazzutti construiu o eixo visual a partir da força de presença de Nataly em plano americano; Mateus Sacavem conduziu a produção executiva com o cuidado de manter beauty e luz alinhados a essa proposta. O book entrega o que o mercado precisa enxergar — leitura editorial sólida, versatilidade comercial — sem nenhuma camada de excesso. Nataly sai com material que reorganiza a percepção da carreira dela em uma única apresentação.`}
+                                    {`Sessão em força de presença em plano americano, beauty e luz alinhados a essa proposta. Leitura editorial sólida e versatilidade comercial sem nenhuma camada de excesso — material que reorganiza percepção em uma única apresentação.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}

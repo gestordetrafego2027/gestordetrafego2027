@@ -120,20 +120,19 @@ export default function NataliaBeautyPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Beauty contemporâneo pede autoridade de assinatura."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Beleza</p>
+                                    <p className="font-inter text-sm font-medium">PRODUTORA / PRODUÇÃO EXECUTIVA</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2021</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -145,7 +144,7 @@ export default function NataliaBeautyPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Beauty contemporâneo pede campanha que devolva à marca a autoridade da própria assinatura. Para a Natália Beauty, a House Mazzutti dirigiu uma sessão editorial em torno da leitura adulta do produto. Angelo Mazzutti construiu o eixo visual em torno da relação entre presença, textura e luz; Mateus Sacavem coordenou a produção executiva alinhando elenco, set e fashion film em uma só linha. A campanha entrega à Natália Beauty banco de imagens capaz de sustentar mídia, ponto de venda e canal próprio com a mesma assinatura — uma marca de beauty apresentada como categoria autoral, não apenas como portfólio de produto.`}
+                                    {`Sessão editorial em torno da leitura adulta do produto — relação entre presença, textura e luz como eixo visual. Elenco, set e fashion film em uma só linha. Material para mídia, ponto de venda e canal próprio sob a mesma assinatura.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Talento: Natália Beauty`}

@@ -136,20 +136,19 @@ export default function SaraHenrichesPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Versatilidade só existe quando cada bloco mantém a assinatura."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2023</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -161,7 +160,7 @@ export default function SaraHenrichesPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Sarah Henriches tem presença que se desdobra em vários nichos — e o book precisava sustentar essa amplitude. A House Mazzutti dirigiu a sessão para entregar editorial, comercial e fashion film na mesma assinatura. Angelo Mazzutti partiu da observação da modelo em set; Mateus Sacavem conduziu a produção executiva alinhando beauty, luz e vídeo em um único eixo. O resultado é um material que apresenta Sarah em camadas — não em poses. Cada bloco do book responde a uma janela de mercado, e o fashion film amarra a apresentação com narrativa visual.`}
+                                    {`Book em três entregas — editorial, comercial e fashion film — sob a mesma assinatura. Beauty, luz e vídeo em um único eixo. Apresentação em camadas, não em poses — cada bloco respondendo a uma janela de mercado.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}

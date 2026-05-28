@@ -117,20 +117,19 @@ export default function JequitiLarissaManoelaPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Continuidade de marca não se constrói no lançamento — se sustenta na consistência."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Beleza</p>
+                                    <p className="font-inter text-sm font-medium">PRODUTORA / PRODUÇÃO EXECUTIVA</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2024</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -142,7 +141,7 @@ export default function JequitiLarissaManoelaPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Larissa Manoela construiu uma das fragrâncias mais bem-sucedidas da Jequiti, com várias coleções lançadas ao longo dos anos — uma parceria que se sustenta pela consistência de imagem. Para a nova campanha, a House Mazzutti operou em torno de uma leitura adulta da artista. Angelo Mazzutti construiu o eixo de direção criativa em torno de presença e narrativa; Mateus Sacavem conduziu a produção executiva alinhando elenco, set e ritmo de captação; fotografia de Brunico e vídeo de Monteiro fecharam a entrega. A campanha entrega à Jequiti banco de imagens capaz de circular em catálogo, comissão, mídia e ponto de venda — sustentando a continuidade de uma das marcas mais fortes da perfumaria brasileira.`}
+                                    {`Campanha de fragrância em mais um capítulo da parceria com a artista — leitura editorial adulta, set construído em torno de presença e narrativa. Material capaz de sustentar lançamento nacional, catálogo, comissão, mídia e ponto de venda com a mesma assinatura visual da marca.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Produção Executiva: Mateus Sacavem · Direção: House Mazzutti · Fotografia: Brunico · Vídeo: Monteiro · Talento: Larissa Manoela`}

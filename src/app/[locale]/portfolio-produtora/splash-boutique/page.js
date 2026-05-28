@@ -82,10 +82,12 @@ export default function SplashBoutiquePage() {
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Cada peça tem uma narrativa. A câmera só a revela."</p>
                             <div className="space-y-[16px] pt-4">
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">Moda</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">PRODUTORA / EDITORIAL DE MODA</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Marca</p><p className="font-inter text-sm font-medium">Splash Boutique</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2026</p></div>
+                                <div className="info-col-anim flex flex-col">
+                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
+                                </div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2024</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
@@ -94,7 +96,7 @@ export default function SplashBoutiquePage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Boutique pede outra camada de assinatura na campanha — o cliente compra curadoria, não apenas produto. Para a Splash Boutique, a House Mazzutti dirigiu uma sessão editorial em que a coleção aparece como recorte autoral. Angelo Mazzutti construiu o eixo visual em torno da relação entre estilo, ambiente e presença; Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty e set em uma só linha narrativa. A campanha entrega à Splash Boutique banco de imagens denso, capaz de sustentar mídia editorial, redes próprias e ponto de venda — uma curadoria apresentada com autoridade visual.`}
+                                    {`Sessão editorial em que a coleção aparece como recorte autoral — relação entre estilo, ambiente e presença como eixo. Elenco, beauty e set em uma só linha narrativa. Banco denso para mídia editorial, redes próprias e ponto de venda.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: House Mazzutti`}

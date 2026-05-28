@@ -119,20 +119,19 @@ export default function AmandaOliveiraPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Toda imagem ensina a olhar — a sua, o que ela ensina?"
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Studio</p>
+                                    <p className="font-inter text-sm font-medium">STUDIO / BOOK</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2025</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -144,7 +143,7 @@ export default function AmandaOliveiraPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Renovar um book não é refazer fotos — é reposicionar uma carreira. Para Amanda Oliveira, a House Mazzutti construiu um material que devolve à modelo o que o mercado precisa enxergar antes de marcá-la: presença, leitura corporal e versatilidade editorial. A direção criativa de Angelo Mazzutti desenhou cada quadro como um teste de mercado, e a produção executiva de Mateus Sacavem entregou o set pronto para sustentar a sequência. O resultado é um book que abre porta de cliente, não apenas álbum de imagens — uma ferramenta de trabalho que coloca Amanda em outra prateleira de seleção.`}
+                                    {`Book editorial completo com três blocos de leitura — comercial direta, sofisticação editorial e fashion film. Cada quadro construído a partir de referências reais de casting, beauty contido e tratamento de luz desenhado para revelar estrutura facial e presença, não para decorar.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa e Fotografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos`}

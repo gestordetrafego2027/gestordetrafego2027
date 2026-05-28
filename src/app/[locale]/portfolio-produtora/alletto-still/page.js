@@ -113,20 +113,19 @@ export default function AllettoStillPage() {
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">
-                                "Nada foi feito para parecer. Foi feito para sustentar."
+                                "Skincare se vende pela textura — e a textura precisa de luz."
                             </p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">Beleza</p>
+                                    <p className="font-inter text-sm font-medium">PRODUTORA / PRODUÇÃO EXECUTIVA</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
                                     <p className="font-inter text-sm font-medium">House Mazzutti</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
-                                    <p className="font-inter text-sm font-medium">2026</p>
+                                    <p className="font-inter text-sm font-medium">2025</p>
                                 </div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -138,7 +137,7 @@ export default function AllettoStillPage() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Marca de skincare precisa de campanha que traduza a promessa do produto em imagem — pele tratada, leitura sensorial, presença adulta. Para a Alletto Skinlab, a House Mazzutti operou em modelagem enxuta: Angelo Mazzutti assumiu pessoalmente direção criativa e fotografia, em um set conduzido pela produção executiva de Mateus Sacavem. A campanha foi dirigida em torno de uma narrativa visual mínima — sem ruído, sem excesso — para que cada quadro entregue o que importa na categoria: textura, luz, autoridade. O resultado é um banco de imagens editorial capaz de sustentar lançamento, mídia, ponto de venda e canal próprio com mesma assinatura — uma marca de skincare instalada como referência.`}
+                                    {`Campanha em narrativa visual mínima — sem ruído, sem excesso — para que cada quadro entregue o que importa na categoria: textura, luz, autoridade. Banco editorial para lançamento, mídia, ponto de venda e canal próprio sob a mesma assinatura.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa e Fotografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem`}

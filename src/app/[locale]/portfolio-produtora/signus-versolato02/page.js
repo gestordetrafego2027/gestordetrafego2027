@@ -80,10 +80,12 @@ export default function SignusVersolato02Page() {
                                 <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface hmzt-hero-title">Signus - Versolato 02</h1>
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
-                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Nada foi feito para parecer. Foi feito para sustentar."</p>
+                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Continuidade exige consistência — não repetição."</p>
                             <div className="space-y-[16px] pt-4">
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">Acessórios</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">PRODUTORA / EDITORIAL DE MODA</p></div>
+                                <div className="info-col-anim flex flex-col">
+                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
+                                </div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2026</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -93,7 +95,7 @@ export default function SignusVersolato02Page() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`A continuidade de uma marca pede consistência de assinatura — sem repetir. Para a nova coleção 2026 da Signus Eyewear, a House Mazzutti dirigiu uma campanha que dialoga com a anterior e abre o próximo capítulo. Angelo Mazzutti construiu uma narrativa visual mais adulta, com Gianne Albertoni sustentando uma leitura editorial cosmopolita. Mateus Sacavem coordenou a produção executiva alinhando elenco, beauty, fashion film e estilo em uma só linha. A campanha entrega à Signus material com circulação em mídia editorial, canal de óticas e ponto de venda — sustentando a marca como referência de design brasileiro em armação.`}
+                                    {`Coleção 2026 da Versolato em campanha que dialoga com a anterior e abre o próximo capítulo — narrativa visual mais adulta, leitura editorial cosmopolita. Material para mídia editorial, canal de óticas e ponto de venda, sustentando a marca como referência de design brasileiro.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Neto Lins · Vídeo: Thyago Barriviera · Beauty: Andre Mattos · Modelo: Gianne Albertoni`}

@@ -80,11 +80,13 @@ export default function SignusVersolato01Page() {
                                 <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface hmzt-hero-title">Signus - Versolato 01</h1>
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
-                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Nada foi feito para parecer. Foi feito para sustentar."</p>
+                            <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Lançamento de marca instala percepção — não vende item."</p>
                             <div className="space-y-[16px] pt-4">
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">Acessórios</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2026</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">PRODUTORA / EDITORIAL DE MODA</p></div>
+                                <div className="info-col-anim flex flex-col">
+                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
+                                </div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2025</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
@@ -93,7 +95,7 @@ export default function SignusVersolato01Page() {
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`A Versolato chegou ao mercado como nova marca do grupo Signus com proposta clara — design autoral, sofisticação contemporânea, leitura editorial de fashion brasileira. A House Mazzutti dirigiu a campanha de lançamento à altura desse posicionamento. Angelo Mazzutti construiu uma narrativa visual em que cada armação é apresentada como peça de assinatura; Mateus Sacavem coordenou a produção executiva com a precisão necessária para um lançamento de marca. A presença de Gianne Albertoni, top model brasileira com mais de 30 anos de carreira internacional, sustenta a leitura adulta e cosmopolita da Versolato. Campanha de inauguração — e de instalação de percepção.`}
+                                    {`Campanha de lançamento da Versolato em que cada armação é apresentada como peça de assinatura — design autoral, sofisticação contemporânea, leitura editorial brasileira. Presença de top model internacional sustentando a leitura adulta e cosmopolita.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
                                     {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Thyago Barriviera · Vídeo: Caio Marcandali · Beauty: Andre Mattos · Modelo: Gianne Albertoni · Stylist: Deise Smaniotto`}
