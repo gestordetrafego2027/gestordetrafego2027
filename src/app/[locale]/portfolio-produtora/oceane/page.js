@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function OceanePage() {
@@ -147,6 +148,8 @@ export default function OceanePage() {
             </main>
             
             <PortfolioVideo unit="produtora" slug="oceane" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/KA1IPu-UyGM?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="oceane" />
 

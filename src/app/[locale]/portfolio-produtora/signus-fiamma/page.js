@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function SignusFiammaPage() {
@@ -112,6 +113,8 @@ export default function SignusFiammaPage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="signus-fiamma" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/sEj18Wssidk?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="signus-fiamma" />
 

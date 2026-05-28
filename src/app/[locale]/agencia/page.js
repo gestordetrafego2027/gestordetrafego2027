@@ -254,7 +254,7 @@ export default function AgenciaPage() {
                                     sizes="(max-width: 1024px) 100vw, 25vw"
                                     quality={80}
                                     loading="lazy"
-                                    className="object-cover grayscale"
+                                    className="object-cover"
                                 />
                             </div>
                         </div>

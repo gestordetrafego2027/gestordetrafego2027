@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function IdrissiPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -100,6 +101,8 @@ export default function IdrissiPage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="idrissi" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/WmoHymvnxWw?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="idrissi" />
 
