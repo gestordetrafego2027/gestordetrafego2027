@@ -27,7 +27,7 @@ export default function ClientLogos() {
 
     const logos = [
         'wepink', 'oceane', 'elyah', 'jequiti',
-        'natalia-beauty', 'signus', 'bonne-soiree', 'poema-paris',
+        'natalia-beauty', 'signus', 'poema-paris',
         'dumond', 'unique-chic', 'beatco', 'saue',
         'camilla-scarpa'
     ]
