@@ -137,9 +137,9 @@ export default function AcademyHomePage() {
                 House Mazzutti Academy
               </span>
               <h1 className="text-h1 text-white mb-8 hmzt-hero-title">
-                Aprenda a criar<br />
-                com autenticidade<br />
-                e direção.
+                Aprenda.<br />
+                Crie com autenticidade.<br />
+                Dirija com propósito.
               </h1>
               <p className="text-body text-white/70 mb-12 measure-editorial">
                 Conhecimento da indústria criativa real — de quem está no set, no estúdio e na agência todos os dias.
