@@ -7,7 +7,7 @@ import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
 
-export default function IdrissiPage() {
+export default function BonneSorriePage() {
     const [selectedImg, setSelectedImg] = useState(null)
     const openImg = (src) => { setSelectedImg(src); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
     const closeImg = () => { setSelectedImg(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
@@ -45,7 +45,7 @@ export default function IdrissiPage() {
         };
     }, []);
 
-    const images = Array.from({length: 8}, (_, i) => `/images/produtora/moda/idrissi/${i+1}.webp`);
+    const images = Array.from({length: 12}, (_, i) => `/images/produtora/moda/bonne-sorrie/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">
@@ -67,7 +67,7 @@ export default function IdrissiPage() {
                         <div className="grid grid-cols-2 gap-3">
                           {images.map((src, i) => (
                             <div key={i} onClick={() => openImg(src)} className="cursor-pointer">
-                              <Image alt={`Idrissi - Moda House Mazzutti - Foto ${i+1}`} style={{objectPosition: 'top'}} src={src} width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
+                              <Image alt={`Bonne Sorrie - Moda House Mazzutti - Foto ${i+1}`} style={{objectPosition: 'top'}} src={src} width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                             </div>
                           ))}
                         </div>
@@ -76,7 +76,7 @@ export default function IdrissiPage() {
                         <div className="info-col flex flex-col gap-[16px]">
                             <div className="space-y-1">
                                 <p className="info-col-anim font-inter text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Moda</p>
-                                <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface hmzt-hero-title">Idrissi</h1>
+                                <h1 className="info-col-anim font-newsreader text-6xl font-light -tracking-[0.02em] leading-tight text-on-surface hmzt-hero-title">Bonne Sorrie</h1>
                             </div>
                             <div className="h-px w-12 bg-outline-variant/30"></div>
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Nada foi feito para parecer. Foi feito para sustentar."</p>
@@ -99,9 +99,9 @@ export default function IdrissiPage() {
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="/portfolio-produtora"><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Próximo Projeto</span><span className="material-symbols-outlined text-sm">east</span></Link>
                 </div>
             </div>
-            <PortfolioVideo unit="produtora" slug="idrissi" />
+            <PortfolioVideo unit="produtora" slug="bonne-sorrie" />
 
-            <PortfolioCTA businessUnit="produtora" projectSlug="idrissi" />
+            <PortfolioCTA businessUnit="produtora" projectSlug="bonne-sorrie" />
 
             <footer className="bg-[#0a0a0a] px-12 py-8">
                 <div className="flex flex-col items-center space-y-6">

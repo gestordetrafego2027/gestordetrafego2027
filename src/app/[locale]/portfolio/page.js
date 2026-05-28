@@ -43,7 +43,7 @@ const produtoraAcessorios = [
   'barbara-porto', 'camila-scarpa', 'poema-paris', 'pontok', 'dumond',
   'signus', 'signus-versolato01', 'signus-versolato02', 'signus-vertz',
   'elyah', 'signus-fiamma', 'signus-lavorato', 'monica-costa-jewerly',
-  'signus-jean-pierre'
+  'signus-jean-pierre', 'bia', 'festiva'
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
@@ -52,7 +52,8 @@ const produtoraAcessorios = [
 
 const produtoraBeleza = [
   'alletto-still', 'jequiti-sense', 'we-pink-ze-felipe', 'we-pink-01',
-  'jequiti-galisteu', 'natalia-beauty', 'jequiti-larissa-manoela', 'oceane'
+  'jequiti-galisteu', 'natalia-beauty', 'jequiti-larissa-manoela', 'oceane',
+  'simony-marca', 'superbia', 'jequiti-ana-castela'
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
@@ -60,7 +61,8 @@ const produtoraBeleza = [
 }));
 
 const produtoraModa = [
-  'beatco', 'pous', 'toli', 'unique-chic'
+  'beatco', 'pous', 'toli', 'unique-chic',
+  'bonne-sorrie', 'eivi', 'idrissi'
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
@@ -68,7 +70,7 @@ const produtoraModa = [
 }));
 
 const produtoraInstitucional = [
-  'sense-hotel'
+  'sense-hotel', 'tf'
 ].map((slug) => ({
   slug,
   name: toTitleCase(slug),
