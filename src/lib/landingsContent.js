@@ -111,7 +111,7 @@ export const pricingByService = {
       {
         id: 'essencial',
         name: 'ESSENCIAL',
-        price: 'R$ 1.7k',
+        price: 'R$ 2.7k',
         priceLabel: 'A PARTIR DE · ENTREGA EM 7 DIAS',
         ctaLabel: 'SELECIONAR',
         items: [
@@ -138,7 +138,7 @@ export const pricingByService = {
       {
         id: 'premium',
         name: 'PREMIUM',
-        price: 'R$ 6.5k',
+        price: 'R$ 6.1k',
         priceLabel: 'PRODUÇÃO FULL-DAY',
         ctaLabel: 'SOLICITAR ORÇAMENTO',
         items: [

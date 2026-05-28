@@ -49,7 +49,7 @@ export default function StudioBookPage() {
                                     <path d="M3 12L21 12" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">BOOK PROFISSIONAL · A PARTIR DE R$ 1.700</span>
+                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">BOOK PROFISSIONAL · A PARTIR DE R$ 2.700</span>
                             <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">Se o seu material não posiciona — ele te limita.</h1>
                             <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Book com direção estratégica de imagem para modelos, influenciadores e talentos que precisam de portfólio aprovado por agências e mercado.</p>
                             <div data-aos="fade-up" data-aos-delay="400">
