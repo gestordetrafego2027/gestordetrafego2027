@@ -38,9 +38,9 @@ export default function StudioCoberturaPage() {
 
             {/* HERO */}
             <section className="relative h-screen w-full bg-[#111111] overflow-hidden">
-                <div className="relative w-full h-full bg-[#111111] flex items-center justify-end min-h-[calc(100vh-75px)] pb-[20px]">
-                    <div className="relative z-20 w-full px-[60px] flex justify-end pr-[120px]">
-                        <div className="w-full max-w-[600px] flex flex-col items-center text-center ml-[-10px]">
+                <div className="relative w-full h-full bg-[#111111] flex items-center justify-center min-h-[calc(100vh-75px)] pb-[20px]">
+                    <div className="relative z-20 w-full px-[60px] flex justify-center">
+                        <div className="w-full max-w-[600px] flex flex-col items-center text-center">
                             <div className="mb-8">
                                 <svg className="w-[42px] h-[42px] text-white/80" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 22s-8-7-8-13a8 8 0 0 1 16 0c0 6-8 13-8 13z" strokeLinecap="round" strokeLinejoin="round" />
