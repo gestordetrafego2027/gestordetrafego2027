@@ -58,7 +58,7 @@ export default function LandingTeam() {
             >
               <div className="bg-zinc-100 overflow-hidden w-full aspect-square relative cursor-pointer">
                 <Image
-                  className="object-cover grayscale transition-transform duration-700 group-hover:scale-[1.02]"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                   alt={m.alt}
                   src={m.image}
                   fill

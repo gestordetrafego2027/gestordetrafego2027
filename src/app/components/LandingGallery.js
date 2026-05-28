@@ -61,7 +61,7 @@ function Tile({ item, tag, aspect, isWide = false }) {
     <div className={`relative ${aspect} group overflow-hidden bg-black`}>
       <img
         alt={item.alt}
-        className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         src={item.src}
         loading="lazy"
       />
