@@ -138,12 +138,6 @@ export default function DeiseSmaniottoPage() {
                                     <p className="font-inter text-sm font-medium">2024</p>
                                 </div>
                             </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Filosofia do Studio</h3>
-                                <p className="font-inter text-xs text-on-surface-variant leading-relaxed">
-                                    Retrato como direção: presença, intenção e tratamento editorial.
-                                </p>
-                            </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">

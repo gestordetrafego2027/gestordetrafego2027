@@ -123,12 +123,6 @@ export default function ProjetoStudioPage() {
                                     <p className="font-inter text-sm font-medium">2025</p>
                                 </div>
                             </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Filosofia do Studio</h3>
-                                <p className="font-inter text-xs text-on-surface-variant leading-relaxed">
-                                    Exploramos a verdade dos materiais e a pureza da forma. No Studio House Mazzutti, cada imagem é uma curadoria de intenções, onde o silêncio visual fala mais alto que o ruído digital.
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
