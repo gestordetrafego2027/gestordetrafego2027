@@ -91,7 +91,7 @@ export default function StudioCoberturaPage() {
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                    <img alt="Cobertura externa — House Mazzutti" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale blur-sm" src="/images/studio/mileide-mihaile/capa.webp" />
+                    <img alt="Cobertura externa — House Mazzutti" className="absolute inset-0 w-full h-full object-cover opacity-80" src="/images/studio/mileide-mihaile/capa.webp" />
                     <div className="relative z-10 text-center px-8">
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>
