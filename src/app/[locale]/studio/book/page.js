@@ -37,7 +37,7 @@ export default function StudioBookPage() {
             <Header variant="dark" />
 
             {/* 2. HERO */}
-            <section className="relative h-screen w-full bg-white overflow-hidden px-[40px] pt-[25px] pb-[10px]">
+            <section className="relative h-screen w-full bg-[#111111] overflow-hidden">
                 <div className="relative w-full h-full bg-[#111111] flex items-center justify-end min-h-[calc(100vh-75px)] pb-[20px]">
                     <div className="relative z-20 w-full px-[60px] flex justify-end pr-[120px]">
                         <div className="w-full max-w-[600px] flex flex-col items-center text-center ml-[-10px]">
@@ -62,8 +62,7 @@ export default function StudioBookPage() {
             </section>
 
             {/* 3. SERVICES */}
-            <section className="bg-white py-0 px-[40px] pt-[25px]">
-                <div className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
+            <section className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
                         <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">BOOK PROFISSIONAL</span>
                         <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Direção antes. Execução depois.</h2>
@@ -86,7 +85,6 @@ export default function StudioBookPage() {
                             ))}
                         </div>
                     </div>
-                </div>
             </section>
 
             {/* 4. GALERIA — curadoria real do portfólio */}

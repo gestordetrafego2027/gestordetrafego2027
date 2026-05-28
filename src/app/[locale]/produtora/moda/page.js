@@ -63,8 +63,7 @@ export default function ProdutoraModaPage() {
             </section>
 
             {/* SERVICES */}
-            <section className="bg-white py-0 px-[40px] pt-[25px]">
-                <div className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
+            <section className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
                         <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">SERVIÇOS DE MODA</span>
                         <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Excelência técnica. Olhar editorial.</h2>
@@ -87,7 +86,6 @@ export default function ProdutoraModaPage() {
                             ))}
                         </div>
                     </div>
-                </div>
             </section>
 
             <LandingGallery service="moda" />
