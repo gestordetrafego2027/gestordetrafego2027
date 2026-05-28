@@ -37,10 +37,11 @@ export default function StudioBookPage() {
             <Header variant="dark" />
 
             {/* 2. HERO */}
-            <section className="relative h-screen w-full bg-[#111111] overflow-hidden">
-                <div className="relative w-full h-full bg-[#111111] flex items-center justify-center min-h-[calc(100vh-75px)] pb-[20px]">
-                    <div className="relative z-20 w-full px-[60px] flex justify-center">
-                        <div className="w-full max-w-[600px] flex flex-col items-center text-center">
+            <section className="relative h-screen w-full overflow-hidden">
+                <img src="/images/studio/marina-machado/capa.webp" alt="Book profissional — House Mazzutti" className="absolute inset-0 w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-black/55" />
+                <div className="relative z-10 w-full h-full flex items-center justify-center">
+                    <div className="w-full max-w-[600px] flex flex-col items-center text-center px-6">
                             <div className="mb-8">
                                 <svg className="w-[42px] h-[42px] text-white/80" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 2L3 12L12 22L21 12L12 2Z" strokeLinecap="round" strokeLinejoin="round" />

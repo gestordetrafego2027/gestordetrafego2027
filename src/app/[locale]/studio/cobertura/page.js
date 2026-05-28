@@ -37,10 +37,11 @@ export default function StudioCoberturaPage() {
             <Header variant="dark" />
 
             {/* HERO */}
-            <section className="relative h-screen w-full bg-[#111111] overflow-hidden">
-                <div className="relative w-full h-full bg-[#111111] flex items-center justify-center min-h-[calc(100vh-75px)] pb-[20px]">
-                    <div className="relative z-20 w-full px-[60px] flex justify-center">
-                        <div className="w-full max-w-[600px] flex flex-col items-center text-center">
+            <section className="relative h-screen w-full overflow-hidden">
+                <img src="/images/studio/mileide-mihaile/capa.webp" alt="Cobertura externa — House Mazzutti" className="absolute inset-0 w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-black/55" />
+                <div className="relative z-10 w-full h-full flex items-center justify-center">
+                    <div className="w-full max-w-[600px] flex flex-col items-center text-center px-6">
                             <div className="mb-8">
                                 <svg className="w-[42px] h-[42px] text-white/80" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 22s-8-7-8-13a8 8 0 0 1 16 0c0 6-8 13-8 13z" strokeLinecap="round" strokeLinejoin="round" />
