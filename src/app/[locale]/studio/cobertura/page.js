@@ -58,7 +58,6 @@ export default function StudioCoberturaPage() {
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
 
             {/* SERVICES */}

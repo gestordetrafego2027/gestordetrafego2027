@@ -59,7 +59,6 @@ export default function StudioBookPage() {
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
 
             {/* 3. SERVICES */}

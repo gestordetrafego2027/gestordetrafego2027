@@ -58,7 +58,6 @@ export default function StudioEnsaioPage() {
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
 
             {/* SERVICES */}
