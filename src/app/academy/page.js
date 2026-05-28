@@ -137,13 +137,13 @@ export default function AcademyHomePage() {
                 House Mazzutti Academy
               </span>
               <h1 className="text-h1 text-white mb-8 hmzt-hero-title">
-                Aprenda como Studio,<br />
-                Produtora e Agência<br />
-                operam.
+                O conhecimento que<br />
+                ninguém te conta<br />
+                no mercado criativo.
               </h1>
               <p className="text-body text-white/70 mb-12 measure-editorial">
-                Cursos gravados, workshops e materiais de quem executa no Brasil real.
-                Direção criativa, comunicação e posicionamento de marca.
+                Livros, cursos e materiais de quem dirige Studio, Produtora e Agência no Brasil real.
+                Sem teoria genérica — só o que funciona na prática.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
