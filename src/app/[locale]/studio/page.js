@@ -216,14 +216,6 @@ export default function StudioPage() {
                     {(() => {
                         const heroSlides = t.raw('hero_slides');
                         return <>
-                            <div className="absolute inset-0 z-0">
-                                {['/images/studio/banners/banner-1.webp','/images/studio/banners/banner-2.webp','/images/studio/banners/banner-3.webp'].map((src, i) => (
-                                    <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
-                                        <Image src={src} alt="" fill sizes="100vw" quality={85} priority={i === 0} className="object-cover object-top" />
-                                        <div className="absolute inset-0 bg-black/20"></div>
-                                    </div>
-                                ))}
-                            </div>
                             <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                                 <div className="max-w-3xl">
                                     <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>{t('hero_label')}</span>
