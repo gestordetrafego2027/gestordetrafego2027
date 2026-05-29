@@ -573,10 +573,10 @@ export default function MarketingParaModelosPage() {
       {/* MASTHEAD */}
       <header className="masthead">
         <div className="masthead-inner">
-          <a href="#" className="masthead-brand" aria-label="House Mazzutti">
-            <span className="hm-wordmark">
-              <span className="row">House</span>
-              <span className="row">Mazzutti<em>.</em></span>
+          <a href="https://housemazzutti.com" className="masthead-brand" aria-label="House Mazzutti" style={{textDecoration:'none', color:'inherit'}}>
+            <span className="hm-logo" style={{fontSize:'22px'}}>
+              <span className="hm-house">House</span>
+              <span className="hm-mazzutti">Mazzutti</span>
             </span>
           </a>
           <div className="masthead-center">
@@ -584,15 +584,7 @@ export default function MarketingParaModelosPage() {
             <span className="hm-divider"></span>
             <span className="hm-tag">Volume 01 · MMXXVI</span>
           </div>
-          <div className="masthead-right">
-            <a href="https://housemazzutti.com" target="_blank" rel="noopener noreferrer"
-               style={{textDecoration:'none', color:'inherit'}}>
-              <span className="hm-logo" style={{fontSize:'22px'}}>
-                <span className="hm-house">House</span>
-                <span className="hm-mazzutti">Mazzutti</span>
-              </span>
-            </a>
-          </div>
+          <div className="masthead-right"></div>
         </div>
       </header>
 

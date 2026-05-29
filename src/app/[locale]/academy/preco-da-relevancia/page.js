@@ -436,10 +436,10 @@ export default function PrecoDaRelevanciaPage() {
       {/* ── MASTHEAD ───────────────────────────────────────────── */}
       <header className="masthead">
         <div className="masthead-inner">
-          <Link href="https://housemazzutti.com" className="masthead-brand" aria-label="House Mazzutti">
-            <span className="hm-wordmark">
-              <span className="row">HOUSE</span>
-              <span className="row">MAZZUTTI<em>.</em></span>
+          <Link href="https://housemazzutti.com" className="masthead-brand" aria-label="House Mazzutti" style={{textDecoration:'none', color:'inherit'}}>
+            <span className="hm-logo" style={{fontSize:'22px'}}>
+              <span className="hm-house">House</span>
+              <span className="hm-mazzutti">Mazzutti</span>
             </span>
           </Link>
           <div className="masthead-center">
@@ -447,9 +447,7 @@ export default function PrecoDaRelevanciaPage() {
             <span className="hm-divider" />
             <span className="hm-tag">Volume 02 · MMXXVI</span>
           </div>
-          <div className="masthead-right">
-            <span className="hm-tag" style={{ color: 'var(--ink-mute)' }}>São Paulo · BR</span>
-          </div>
+          <div className="masthead-right"></div>
         </div>
       </header>
 
