@@ -216,6 +216,19 @@ export default function StudioPage() {
                     {(() => {
                         const heroSlides = t.raw('hero_slides');
                         return <>
+                            <div className="absolute inset-0 z-0">
+                                <Image
+                                    src="/images/studio/francielle-reis/2.webp"
+                                    alt=""
+                                    fill
+                                    sizes="100vw"
+                                    quality={90}
+                                    priority
+                                    className="object-cover"
+                                    style={{ objectPosition: 'center 30%' }}
+                                />
+                                <div className="absolute inset-0 bg-black/40" />
+                            </div>
                             <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                                 <div className="max-w-3xl">
                                     <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>{t('hero_label')}</span>
