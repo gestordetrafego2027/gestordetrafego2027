@@ -296,7 +296,7 @@ export default function Home() {
                             <Link
                                 key={i}
                                 href={work.link}
-                                className="scroll-reveal relative group bg-white aspect-[4/3] overflow-hidden block"
+                                className="scroll-reveal relative group bg-white aspect-[3/4] overflow-hidden block"
                                 data-delay={i * 100}
                                 style={{ opacity: 0, transform: 'translateY(40px)', transition: 'opacity 0.7s ease, transform 0.7s ease' }}
                             >
