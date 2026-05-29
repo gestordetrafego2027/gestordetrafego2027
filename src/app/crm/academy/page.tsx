@@ -34,7 +34,7 @@ export default async function AcademyAdminHome() {
     supabase.from('academy_orders').select('total_cents').eq('status', 'paid').gte('paid_at', since30),
     supabase.from('academy_products').select('id, slug, title, type, sales_count, price_cents').order('sales_count', { ascending: false }).limit(5),
     supabase.from('academy_orders')
-      .select('id, order_number, total_cents, status, billing_name, billing_email, created_at, paid_at')
+      .select('id, number, total_cents, status, buyer_full_name, buyer_email, created_at, paid_at')
       .order('created_at', { ascending: false }).limit(10),
   ])
 
@@ -115,8 +115,8 @@ export default async function AcademyAdminHome() {
             {(recentOrders ?? []).map((o) => (
               <li key={o.id} className="flex justify-between border-b border-neutral-100 py-1">
                 <span>
-                  <span className="font-mono">{o.order_number}</span>
-                  <span className="ml-2 text-neutral-600">{o.billing_name ?? o.billing_email ?? '—'}</span>
+                  <span className="font-mono">{o.number}</span>
+                  <span className="ml-2 text-neutral-600">{o.buyer_full_name ?? o.buyer_email ?? '—'}</span>
                 </span>
                 <span className="flex items-center gap-2">
                   <span className={`rounded px-2 py-0.5 text-[10px] ${
