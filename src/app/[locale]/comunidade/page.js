@@ -506,6 +506,32 @@ export default function ComunidadePage() {
                     </div>
                 </section>
 
+                {/* ── FRENTES — BANNERS ───────────────────────────────── */}
+                <section className="bg-white">
+                    <div className="flex flex-col md:flex-row h-auto md:h-[85vh]">
+                        {[
+                            { label: 'AGÊNCIA', sub: 'Branding · Web · Comunicação', img: '/images/agencia/banners/banner-1.webp', href: '/agencia' },
+                            { label: 'STUDIO', sub: 'Book · Ensaio · Cobertura', img: '/images/studio/banners/banner-1.webp', href: '/studio' },
+                            { label: 'PRODUTORA', sub: 'Moda · Beleza · Institucional', img: '/images/produtora/banners/banner-1.webp', href: '/produtora' },
+                        ].map((item) => (
+                            <Link
+                                key={item.label}
+                                href={item.href}
+                                className="relative flex-1 overflow-hidden group"
+                                style={{ minHeight: '380px' }}
+                            >
+                                <img src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/55 transition-colors duration-500" />
+                                <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-12">
+                                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 mb-3 block">{item.sub}</span>
+                                    <h3 className="font-headline text-3xl md:text-4xl text-white tracking-tight mb-6">{item.label}</h3>
+                                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white border-b border-white/40 pb-1 w-fit group-hover:border-white transition-colors duration-300">SAIBA MAIS →</span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+
                 {/* BLOG SECTION — Últimos artigos (penúltima) */}
                 <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
