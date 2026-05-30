@@ -10,28 +10,18 @@ export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'Loja — House Mazzutti',
-  description: 'Serviços, cursos e produtos digitais da House Mazzutti — Agência, Studio, Produtora e Academy.',
+  description: 'Serviços, cursos e produtos digitais da House Mazzutti.',
   openGraph: {
     title: 'Loja — House Mazzutti',
     description: 'Serviços, cursos e produtos digitais da House Mazzutti.',
   },
 }
 
-type Price = {
-  unit_amount: number
-  currency: string
-  price_type: string
-  metadata: { quote_only?: string }
-}
+type Price = { unit_amount: number; currency: string; price_type: string; metadata: { quote_only?: string } }
 type Category = { slug: string; name: string }
 type Product = {
-  id: string
-  slug: string
-  name: string
-  description: string | null
-  product_type: string
-  images: string[]
-  featured: boolean
+  id: string; slug: string; name: string; description: string | null
+  product_type: string; images: string[]; featured: boolean
   store_prices: Price[]
   store_product_categories: { store_categories: Category }[]
 }
@@ -39,81 +29,63 @@ type Product = {
 function formatPrice(cents: number, currency = 'brl') {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: currency.toUpperCase() }).format(cents / 100)
 }
-function isQuoteOnly(prices: Price[]) {
-  return prices?.[0]?.metadata?.quote_only === 'true'
-}
+function isQuoteOnly(prices: Price[]) { return prices?.[0]?.metadata?.quote_only === 'true' }
 
-function ProductCard({ product, index }: { product: Product; index: number }) {
+function ProductCard({ product }: { product: Product }) {
   const price = product.store_prices?.[0]
   const image = product.images?.[0] ?? null
   const quoteOnly = isQuoteOnly(product.store_prices)
 
   return (
-    <Link
-      href={`/loja/${product.slug}`}
-      className="group block relative overflow-hidden"
-      style={{ animationDelay: `${index * 80}ms` }}
-    >
+    <Link href={`/loja/${product.slug}`} className="group block">
       {/* Image */}
-      <div className="relative aspect-[3/4] overflow-hidden bg-zinc-900">
+      <div className="relative aspect-[3/4] overflow-hidden bg-[#f0ede8] mb-4">
         {image ? (
           <Image
-            src={image}
-            alt={product.name}
-            fill
+            src={image} alt={product.name} fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-zinc-800">
-            <span className="text-zinc-600 text-5xl font-thin">✦</span>
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-[#c8bfb0] text-4xl">✦</span>
           </div>
         )}
-
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-
-        {/* Featured badge */}
         {product.featured && (
           <div className="absolute top-4 left-4">
-            <span className="font-label uppercase tracking-[0.25em] text-[9px] text-white bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1">
+            <span className="font-label uppercase tracking-[0.25em] text-[8px] text-white bg-black px-3 py-1.5">
               DESTAQUE
             </span>
           </div>
         )}
+      </div>
 
-        {/* Price on image */}
-        <div className="absolute bottom-0 left-0 right-0 p-5">
-          <h3 className="font-headline text-white text-lg leading-tight mb-2 tracking-tight">
+      {/* Info */}
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-headline text-[15px] text-[#111] tracking-tight leading-snug mb-0.5 group-hover:text-black">
             {product.name}
           </h3>
-          <div className="flex items-center justify-between">
-            {quoteOnly ? (
-              <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">
-                Sob consulta
-              </span>
-            ) : price ? (
-              <span className="font-headline text-white text-base">
-                {formatPrice(price.unit_amount, price.currency)}
-              </span>
-            ) : null}
-            <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/50 group-hover:text-white transition-colors duration-300">
-              VER →
+        </div>
+        <div className="shrink-0 text-right">
+          {quoteOnly ? (
+            <span className="font-label uppercase tracking-[0.15em] text-[8px] text-[#888]">Consulta</span>
+          ) : price ? (
+            <span className="font-headline text-[15px] text-[#111]">
+              {formatPrice(price.unit_amount, price.currency)}
             </span>
-          </div>
+          ) : null}
         </div>
       </div>
+      <span className="font-label uppercase tracking-[0.2em] text-[8px] text-[#aaa] group-hover:text-black transition-colors duration-300 mt-1 block">
+        VER PRODUTO →
+      </span>
     </Link>
   )
 }
 
 const CATEGORY_ORDER = ['academy', 'studio', 'agencia', 'produtora']
-const CATEGORY_LABELS: Record<string, string> = {
-  agencia: 'Agência',
-  studio: 'Studio',
-  produtora: 'Produtora',
-  academy: 'Academy',
-}
+const CATEGORY_LABELS: Record<string, string> = { agencia: 'Agência', studio: 'Studio', produtora: 'Produtora', academy: 'Academy' }
 const CATEGORY_SUBS: Record<string, string> = {
   agencia: 'Branding · Web · Comunicação',
   studio: 'Book · Ensaio · Cobertura',
@@ -127,51 +99,60 @@ export default async function LojaPage() {
   const supabase = await createClient()
   const { data: products, error } = await supabase
     .from('store_products')
-    .select(`
-      id, slug, name, description, product_type, images, featured,
+    .select(`id, slug, name, description, product_type, images, featured,
       store_prices (unit_amount, currency, price_type, metadata),
-      store_product_categories (store_categories (slug, name))
-    `)
+      store_product_categories (store_categories (slug, name))`)
     .eq('active', true)
     .order('featured', { ascending: false })
     .order('name', { ascending: true })
 
   const items = (products ?? []) as Product[]
-
   const grouped: Record<string, Product[]> = {}
   for (const p of items) {
     const catSlug = p.store_product_categories?.[0]?.store_categories?.slug ?? 'outros'
     if (!grouped[catSlug]) grouped[catSlug] = []
     grouped[catSlug].push(p)
   }
-
   const categories = CATEGORY_ORDER.filter((c) => grouped[c]?.length > 0)
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen bg-[#faf9f7] flex flex-col">
 
-      {/* ── HERO ──────────────────────────────────────────────── */}
-      <section className="relative border-b border-white/5 px-8 md:px-16 pt-20 pb-16">
-        <div className="max-w-[1400px] mx-auto">
-          <p className="font-label uppercase tracking-[0.35em] text-[9px] text-white/30 mb-6">
-            House Mazzutti · Loja
+      {/* ── TOPO ──────────────────────────────────────────────────── */}
+      <header style={{ background: '#111', color: '#fff' }}>
+        {/* Brand bar */}
+        <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)', padding: '20px 64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Link href="/" className="hm-logo" style={{ fontSize: '20px', color: 'white', textDecoration: 'none' }}>
+            <span className="hm-house">House</span>
+            <span className="hm-mazzutti">Mazzutti</span>
+          </Link>
+          <span className="font-label uppercase tracking-[0.3em] text-[8px]" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            CHECKOUT SEGURO · STRIPE
+          </span>
+        </div>
+
+        {/* Hero text */}
+        <div style={{ padding: '64px 64px 56px', maxWidth: '1400px' }}>
+          <p className="font-label uppercase tracking-[0.35em] text-[8px] mb-5" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            Loja — House Mazzutti
           </p>
-          <h1 className="font-headline text-[clamp(56px,8vw,120px)] text-white leading-[0.88] tracking-tight mb-8">
-            PRODUTOS &<br />
-            <span className="text-white/20">SERVIÇOS</span>
+          <h1 className="font-headline tracking-tight" style={{ fontSize: 'clamp(48px,7vw,96px)', lineHeight: '0.9', color: '#fff', marginBottom: '20px' }}>
+            Produtos<br />
+            <span style={{ color: 'rgba(255,255,255,0.18)' }}>&amp; Serviços</span>
           </h1>
-          <p className="font-body text-white/40 text-sm max-w-sm leading-relaxed">
-            Serviços, cursos e produtos digitais para marcas, profissionais de imagem e criadores.
+          <p className="font-body text-sm" style={{ color: 'rgba(255,255,255,0.38)', maxWidth: '360px', lineHeight: 1.6 }}>
+            Educação, serviços criativos e produtos digitais para marcas e profissionais de imagem.
           </p>
 
-          {/* Category nav */}
+          {/* Category anchors */}
           {categories.length > 0 && (
-            <div className="flex flex-wrap gap-0 mt-10 border-t border-white/5 pt-8">
+            <div style={{ display: 'flex', gap: '0', marginTop: '40px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
               {categories.map((cat, i) => (
-                <a
-                  key={cat}
-                  href={`#${cat}`}
-                  className="font-label uppercase tracking-[0.25em] text-[9px] text-white/30 hover:text-white transition-colors duration-300 pr-8 mr-8 border-r border-white/10 last:border-r-0 last:mr-0"
+                <a key={cat} href={`#${cat}`}
+                  className="font-label uppercase tracking-[0.25em] text-[8px] transition-colors duration-300"
+                  style={{ color: 'rgba(255,255,255,0.28)', paddingRight: '32px', marginRight: '32px', borderRight: i < categories.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}
+                  onMouseOver={(e: any) => e.target.style.color = '#fff'}
+                  onMouseOut={(e: any) => e.target.style.color = 'rgba(255,255,255,0.28)'}
                 >
                   {CATEGORY_LABELS[cat] ?? cat}
                 </a>
@@ -179,67 +160,73 @@ export default async function LojaPage() {
             </div>
           )}
         </div>
-      </section>
+      </header>
 
-      {/* ── PRODUTOS ──────────────────────────────────────────── */}
-      <div className="max-w-[1400px] mx-auto px-8 md:px-16 py-16 space-y-24">
+      {/* ── PRODUTOS ──────────────────────────────────────────────── */}
+      <main className="flex-1" style={{ maxWidth: '1400px', width: '100%', margin: '0 auto', padding: '72px 64px' }}>
 
-        {error && (
-          <p className="font-label text-[11px] text-red-400 uppercase tracking-[0.2em]">
-            Erro ao carregar produtos.
-          </p>
-        )}
+        {error && <p className="font-label text-[11px] text-red-500 uppercase tracking-[0.2em] mb-8">Erro ao carregar produtos.</p>}
 
         {categories.length === 0 && !error && (
-          <div className="text-center py-32">
-            <p className="font-headline text-4xl text-white/10">Em breve.</p>
+          <div style={{ textAlign: 'center', padding: '120px 0' }}>
+            <p className="font-headline text-3xl" style={{ color: '#ddd' }}>Em breve.</p>
           </div>
         )}
 
-        {categories.map((cat) => (
-          <section key={cat} id={cat}>
-            {/* Section header */}
-            <div className="flex items-end justify-between mb-10 pb-6 border-b border-white/5">
-              <div>
-                <p className="font-label uppercase tracking-[0.3em] text-[9px] text-white/20 mb-2">
-                  {CATEGORY_SUBS[cat] ?? ''}
-                </p>
-                <h2 className="font-headline text-4xl md:text-5xl text-white tracking-tight leading-none">
-                  {CATEGORY_LABELS[cat] ?? cat}
-                </h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '80px' }}>
+          {categories.map((cat) => (
+            <section key={cat} id={cat}>
+              {/* Section header */}
+              <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '32px', paddingBottom: '20px', borderBottom: '1px solid #e8e3db' }}>
+                <div>
+                  <p className="font-label uppercase tracking-[0.28em] text-[8px] mb-2" style={{ color: '#bbb' }}>
+                    {CATEGORY_SUBS[cat] ?? ''}
+                  </p>
+                  <h2 className="font-headline tracking-tight" style={{ fontSize: 'clamp(28px,3.5vw,44px)', color: '#111', lineHeight: 1 }}>
+                    {CATEGORY_LABELS[cat] ?? cat}
+                  </h2>
+                </div>
+                <span className="font-label uppercase tracking-[0.2em] text-[8px]" style={{ color: '#ccc' }}>
+                  {grouped[cat].length} {grouped[cat].length === 1 ? 'item' : 'itens'}
+                </span>
               </div>
-              <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/20">
-                {grouped[cat].length} {grouped[cat].length === 1 ? 'item' : 'itens'}
-              </span>
-            </div>
 
-            {/* Grid */}
-            <div className={`grid gap-px ${
-              grouped[cat].length === 1
-                ? 'grid-cols-1 max-w-sm'
-                : grouped[cat].length === 2
-                ? 'grid-cols-1 sm:grid-cols-2 max-w-2xl'
-                : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
-            }`}>
-              {grouped[cat].map((p, i) => (
-                <ProductCard key={p.id} product={p} index={i} />
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
-
-      {/* ── FOOTER STRIP ──────────────────────────────────────── */}
-      <div className="border-t border-white/5 px-8 md:px-16 py-8 mt-8">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-          <span className="font-label uppercase tracking-[0.3em] text-[9px] text-white/15">
-            House Mazzutti © {new Date().getFullYear()}
-          </span>
-          <Link href="/" className="font-label uppercase tracking-[0.25em] text-[9px] text-white/20 hover:text-white transition-colors duration-300">
-            ← Voltar ao site
-          </Link>
+              {/* Grid */}
+              <div style={{
+                display: 'grid',
+                gap: '40px 32px',
+                gridTemplateColumns: grouped[cat].length === 1 ? '280px' : grouped[cat].length === 2 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+              }}
+                className="md:grid-cols-3"
+              >
+                {grouped[cat].map((p) => <ProductCard key={p.id} product={p} />)}
+              </div>
+            </section>
+          ))}
         </div>
-      </div>
-    </main>
+      </main>
+
+      {/* ── RODAPÉ ────────────────────────────────────────────────── */}
+      <footer style={{ background: '#111', color: '#fff', marginTop: 'auto' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '48px 64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+          <Link href="/" className="hm-logo" style={{ fontSize: '18px', color: 'white', textDecoration: 'none' }}>
+            <span className="hm-house">House</span>
+            <span className="hm-mazzutti">Mazzutti</span>
+          </Link>
+          <div style={{ display: 'flex', gap: '32px' }}>
+            {[['Studio', '/studio'], ['Agência', '/agencia'], ['Produtora', '/produtora'], ['Academy', '/academy']].map(([l, h]) => (
+              <Link key={l} href={h} className="font-label uppercase tracking-[0.2em] text-[8px] transition-colors duration-300" style={{ color: 'rgba(255,255,255,0.25)' }}>
+                {l}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '20px 64px' }}>
+          <span className="font-label uppercase tracking-[0.25em] text-[8px]" style={{ color: 'rgba(255,255,255,0.12)' }}>
+            © {new Date().getFullYear()} House Mazzutti · Pagamentos processados por Stripe
+          </span>
+        </div>
+      </footer>
+    </div>
   )
 }
