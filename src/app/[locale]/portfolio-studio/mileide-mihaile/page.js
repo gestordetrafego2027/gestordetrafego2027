@@ -152,7 +152,7 @@ export default function MileideMihailePage() {
                                     {`Ensaio editorial de reposicionamento, construído em torno da combinação entre feminilidade firme e autoridade serena. Beauty discreto, luz desenhada, narrativa visual adulta. Banco de imagens pensado para sustentar campanhas próprias, mídia institucional e materiais de marca em uma só assinatura.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                    {`Produção Executiva: Angelo Mazzutti, Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
                                 </p>
                             </div>
                         </div>

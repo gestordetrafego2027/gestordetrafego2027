@@ -140,7 +140,7 @@ export default function FernandaCostasPage() {
                                     {`Ensaio em narrativa editorial sustentada — leitura facial e postura como eixo, beauty, luz e vídeo alinhados em uma só linha. Banco que circula em apresentação profissional, materiais pessoais e redes próprias sob a mesma assinatura.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
+                                    {`Produção Executiva: Angelo Mazzutti, Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Eliseu Almeida`}
                                 </p>
                             </div>
                         </div>

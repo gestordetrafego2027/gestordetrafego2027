@@ -99,7 +99,7 @@ export default function ToliPage() {
                                     {`Sessão editorial em diálogo entre estilo, modelagem e presença. Elenco, beauty, stylist e set em uma só linha. Banco denso para mídia editorial, ponto de venda, e-commerce e canal próprio — coleção com autoridade visual.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos · Modelo: Jaquelini Bertan · Stylist: Juciléia`}
+                                    {`Produção de Arte e Cenografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos · Modelo: Jaquelini Bertan · Stylist: Juciléia`}
                                 </p>
                             </div>
                         </div>

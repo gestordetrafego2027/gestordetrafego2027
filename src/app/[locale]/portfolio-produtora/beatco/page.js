@@ -99,7 +99,7 @@ export default function BeatcoPage() {
                                     {`Campanha que traduz performance em editorial — movimento e textura como eixo visual. Elenco, beauty e set em uma só linha narrativa. Banco denso para mídia, e-commerce e ponto de venda com mesma assinatura.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
+                                    {`Produção de Arte e Cenografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
                                 </p>
                             </div>
                         </div>
