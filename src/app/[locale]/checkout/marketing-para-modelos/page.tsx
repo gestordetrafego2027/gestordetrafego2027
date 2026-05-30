@@ -32,14 +32,14 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
     .maybeSingle()
 
   const title = product?.title ?? 'Marketing para Modelos'
-  const finalCents = product?.price_cents ?? 11700
+  const finalCents = product?.price_cents ?? 4900
   const originalCents = product?.original_price_cents ?? null
   const hasDiscount = originalCents !== null && originalCents > finalCents
   const discountPct = hasDiscount
     ? Math.round(((originalCents! - finalCents) / originalCents!) * 100)
     : 0
 
-  const pageCount = product?.page_count ?? 281
+  const pageCount = product?.page_count ?? 94
   const moduleCount = product?.module_count ?? 12
   const subtitleLine =
     product?.subtitle ??
