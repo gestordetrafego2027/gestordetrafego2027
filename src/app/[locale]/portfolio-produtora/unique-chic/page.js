@@ -98,7 +98,7 @@ export default function UniqueChicPage() {
                                     {`Campanha em que a coleção apresenta narrativa própria — combinação entre estilo da peça e presença da modelo como eixo. Elenco, beauty e set em uma só linha. Banco denso para mídia editorial, e-commerce e ponto de venda.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
+                                    {`Produção de Arte e Cenografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
                                 </p>
                             </div>
                         </div>
