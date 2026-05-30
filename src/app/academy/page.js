@@ -43,7 +43,7 @@ const BOOKS = [
     chapters: '10',
     format: 'Ebook',
     priceFull: null,
-    price: 'R$ 54',
+    price: 'R$ 46',
     discount: null,
     href: '/pt/academy/preco-da-relevancia',
     cover: '/images/academy/preco-da-relevancia/cover.png',
