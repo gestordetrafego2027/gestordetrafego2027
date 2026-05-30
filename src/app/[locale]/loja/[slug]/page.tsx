@@ -18,18 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data: p } = await supabase
     .from('store_products')
     .select('name, seo_title, seo_description, og_image_url, images')
-    .eq('slug', slug)
-    .eq('active', true)
-    .maybeSingle()
-
+    .eq('slug', slug).eq('active', true).maybeSingle()
   if (!p) return { title: 'Produto não encontrado' }
-
   return {
     title: p.seo_title ?? `${p.name} — House Mazzutti`,
     description: p.seo_description,
-    openGraph: {
-      images: p.og_image_url ? [p.og_image_url] : p.images?.[0] ? [p.images[0]] : [],
-    },
+    openGraph: { images: p.og_image_url ? [p.og_image_url] : p.images?.[0] ? [p.images[0]] : [] },
   }
 }
 
@@ -39,26 +33,17 @@ function formatPrice(cents: number, currency = 'brl') {
 
 export default async function ProdutoPage({ params }: Props) {
   if (!featureFlags.isStoreEnabled()) notFound()
-
   const { slug, locale } = await params
   const supabase = await createClient()
 
   const { data: product } = await supabase
     .from('store_products')
-    .select(`
-      id, slug, name, description, product_type, images, features,
+    .select(`id, slug, name, description, product_type, images, features,
       metadata, seo_title, seo_description, og_image_url, featured,
-      store_prices (
-        id, stripe_price_id, unit_amount, currency, price_type,
-        recurring_interval, recurring_interval_count, nickname, active
-      ),
-      store_product_categories (
-        store_categories ( id, slug, name )
-      )
-    `)
-    .eq('slug', slug)
-    .eq('active', true)
-    .maybeSingle()
+      store_prices (id, stripe_price_id, unit_amount, currency, price_type,
+        recurring_interval, recurring_interval_count, nickname, active),
+      store_product_categories (store_categories (id, slug, name))`)
+    .eq('slug', slug).eq('active', true).maybeSingle()
 
   if (!product) notFound()
 
@@ -70,14 +55,10 @@ export default async function ProdutoPage({ params }: Props) {
   const category = (product.store_product_categories as any[])?.[0]?.store_categories
 
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.name,
-    description: product.description,
-    image: product.images,
+    '@context': 'https://schema.org', '@type': 'Product',
+    name: product.name, description: product.description, image: product.images,
     offers: mainPrice ? {
-      '@type': 'Offer',
-      priceCurrency: mainPrice.currency?.toUpperCase() ?? 'BRL',
+      '@type': 'Offer', priceCurrency: mainPrice.currency?.toUpperCase() ?? 'BRL',
       price: (mainPrice.unit_amount / 100).toFixed(2),
       availability: 'https://schema.org/InStock',
       seller: { '@type': 'Organization', name: 'House Mazzutti' },
@@ -88,57 +69,66 @@ export default async function ProdutoPage({ params }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <main className="min-h-screen bg-[#0a0a0a] text-white">
+      <div className="min-h-screen bg-[#faf9f7] flex flex-col">
 
-        {/* ── TOP NAV ─────────────────────────────────────────── */}
-        <nav className="border-b border-white/5 px-8 md:px-16 py-5 flex items-center justify-between">
-          <Link href={`/${locale}/loja`} className="font-label uppercase tracking-[0.25em] text-[9px] text-white/30 hover:text-white transition-colors duration-300">
-            ← Loja
-          </Link>
-          <Link href="/" className="hm-logo" style={{ fontSize: '18px', color: 'white' }}>
-            <span className="hm-house">House</span>
-            <span className="hm-mazzutti">Mazzutti</span>
-          </Link>
-          <span className="font-label uppercase tracking-[0.25em] text-[9px] text-white/15 hidden md:block">
-            {category?.name ?? product.product_type}
-          </span>
-        </nav>
+        {/* ── TOPO ────────────────────────────────────────────────── */}
+        <header style={{ background: '#111', color: '#fff' }}>
+          <div style={{ padding: '20px 64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+            <Link href="/" className="hm-logo" style={{ fontSize: '20px', color: 'white', textDecoration: 'none' }}>
+              <span className="hm-house">House</span>
+              <span className="hm-mazzutti">Mazzutti</span>
+            </Link>
+            <nav style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
+              <Link href={`/${locale}/loja`} className="font-label uppercase tracking-[0.25em] text-[8px] transition-colors duration-300" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                ← Loja
+              </Link>
+              <span className="font-label uppercase tracking-[0.25em] text-[8px]" style={{ color: 'rgba(255,255,255,0.15)' }}>
+                {category?.name ?? ''}
+              </span>
+            </nav>
+          </div>
+        </header>
 
-        {/* ── PRODUCT LAYOUT ──────────────────────────────────── */}
-        <div className="max-w-[1400px] mx-auto px-8 md:px-16 py-12 md:py-20">
-          <div className="grid md:grid-cols-2 gap-0 md:gap-20 items-start">
+        {/* ── PRODUTO ─────────────────────────────────────────────── */}
+        <main className="flex-1" style={{ maxWidth: '1400px', width: '100%', margin: '0 auto', padding: '64px 64px' }}>
 
-            {/* ── IMAGE COLUMN ───────────────────────────────── */}
+          {/* Breadcrumb */}
+          <div style={{ marginBottom: '48px', display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <Link href={`/${locale}/loja`} className="font-label uppercase tracking-[0.2em] text-[8px] transition-colors" style={{ color: '#bbb' }}>
+              Loja
+            </Link>
+            <span className="font-label text-[8px]" style={{ color: '#ddd' }}>/</span>
+            <span className="font-label uppercase tracking-[0.2em] text-[8px]" style={{ color: '#666' }}>
+              {category?.name ?? ''}
+            </span>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }}>
+
+            {/* ── IMAGEM ─────────────────────────────────────────── */}
             <div>
-              <div className="relative aspect-[3/4] overflow-hidden bg-zinc-900">
+              <div style={{ position: 'relative', aspectRatio: '3/4', overflow: 'hidden', background: '#ede9e2' }}>
                 {mainImage ? (
-                  <Image
-                    src={mainImage}
-                    alt={product.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                    priority
-                  />
+                  <Image src={mainImage} alt={product.name} fill
+                    sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" priority />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center bg-zinc-900">
-                    <span className="text-zinc-700 text-6xl">✦</span>
+                  <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <span style={{ color: '#c8bfb0', fontSize: '48px' }}>✦</span>
                   </div>
                 )}
                 {product.featured && (
-                  <div className="absolute top-5 left-5">
-                    <span className="font-label uppercase tracking-[0.25em] text-[9px] text-white bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1">
+                  <div style={{ position: 'absolute', top: '20px', left: '20px' }}>
+                    <span className="font-label uppercase tracking-[0.25em] text-[8px] text-white" style={{ background: '#111', padding: '6px 12px' }}>
                       DESTAQUE
                     </span>
                   </div>
                 )}
               </div>
 
-              {/* Thumbnails */}
               {galleryImages.length > 1 && (
-                <div className="grid grid-cols-4 gap-px mt-px">
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '4px', marginTop: '4px' }}>
                   {galleryImages.slice(1, 5).map((img, i) => (
-                    <div key={i} className="relative aspect-square overflow-hidden bg-zinc-900">
+                    <div key={i} style={{ position: 'relative', aspectRatio: '1', overflow: 'hidden', background: '#ede9e2' }}>
                       <Image src={img} alt={`${product.name} ${i + 2}`} fill className="object-cover opacity-70 hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   ))}
@@ -146,31 +136,30 @@ export default async function ProdutoPage({ params }: Props) {
               )}
             </div>
 
-            {/* ── INFO COLUMN ────────────────────────────────── */}
-            <div className="md:pt-4 flex flex-col gap-8 mt-8 md:mt-0">
+            {/* ── INFO ───────────────────────────────────────────── */}
+            <div style={{ paddingTop: '8px', display: 'flex', flexDirection: 'column', gap: '0' }}>
 
-              {/* Category + type */}
-              <div>
-                <p className="font-label uppercase tracking-[0.3em] text-[9px] text-white/25 mb-3">
-                  {category?.name ?? ''} · {
-                    product.product_type === 'digital' ? 'Produto Digital'
-                    : product.product_type === 'service' ? 'Serviço'
-                    : product.product_type === 'bundle' ? 'Bundle'
-                    : 'Produto'
-                  }
-                </p>
-                <h1 className="font-headline text-[clamp(28px,4vw,52px)] text-white leading-[0.95] tracking-tight">
-                  {product.name}
-                </h1>
-              </div>
+              {/* Categoria */}
+              <p className="font-label uppercase tracking-[0.3em] text-[8px] mb-4" style={{ color: '#aaa' }}>
+                {category?.name ?? ''} · {
+                  product.product_type === 'digital' ? 'Produto Digital'
+                  : product.product_type === 'service' ? 'Serviço'
+                  : product.product_type === 'bundle' ? 'Bundle' : 'Produto'
+                }
+              </p>
 
-              {/* Price */}
+              {/* Nome */}
+              <h1 className="font-headline tracking-tight" style={{ fontSize: 'clamp(26px,3.5vw,44px)', color: '#111', lineHeight: '1', marginBottom: '32px' }}>
+                {product.name}
+              </h1>
+
+              {/* Preço */}
               {mainPrice && !isQuoteOnly && (
-                <div className="border-t border-white/5 pt-6">
-                  <p className="font-headline text-[clamp(36px,4vw,56px)] text-white leading-none tracking-tight">
+                <div style={{ paddingTop: '28px', paddingBottom: '28px', borderTop: '1px solid #e8e3db', borderBottom: '1px solid #e8e3db', marginBottom: '28px' }}>
+                  <p className="font-headline tracking-tight" style={{ fontSize: 'clamp(36px,4vw,52px)', color: '#111', lineHeight: '1' }}>
                     {formatPrice(mainPrice.unit_amount, mainPrice.currency)}
                     {mainPrice.price_type === 'recurring' && (
-                      <span className="font-label text-sm font-normal text-white/30 ml-2 tracking-[0.1em]">
+                      <span className="font-label text-sm ml-2 tracking-[0.1em]" style={{ color: '#aaa', fontWeight: 'normal', fontSize: '11px' }}>
                         /{mainPrice.recurring_interval === 'month' ? 'MÊS' : 'ANO'}
                       </span>
                     )}
@@ -178,28 +167,27 @@ export default async function ProdutoPage({ params }: Props) {
                 </div>
               )}
 
-              {/* Description */}
+              {/* Descrição */}
               {product.description && (
-                <p className="font-body text-white/50 text-sm leading-relaxed border-t border-white/5 pt-6">
+                <p className="font-body text-sm leading-relaxed mb-8" style={{ color: '#666' }}>
                   {product.description}
                 </p>
               )}
 
               {/* Features */}
               {Array.isArray(product.features) && product.features.length > 0 && (
-                <ul className="space-y-3 border-t border-white/5 pt-6">
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '32px', paddingBottom: '32px', borderBottom: '1px solid #e8e3db' }}>
                   {(product.features as string[]).map((f, i) => (
-                    <li key={i} className="flex items-start gap-4 font-label text-[11px] text-white/50 uppercase tracking-[0.15em]">
-                      <span className="text-white/20 mt-px">—</span>
-                      {f}
+                    <li key={i} className="font-label uppercase tracking-[0.12em] text-[10px]" style={{ color: '#777', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                      <span style={{ color: '#ccc' }}>—</span> {f}
                     </li>
                   ))}
                 </ul>
               )}
 
               {/* CTA */}
-              <div className="border-t border-white/5 pt-6">
-                {mainPrice && (
+              {mainPrice && (
+                <div>
                   <AddToCartButton
                     isQuoteOnly={isQuoteOnly}
                     item={{
@@ -216,16 +204,37 @@ export default async function ProdutoPage({ params }: Props) {
                       quoteOnly: isQuoteOnly,
                     }}
                   />
-                )}
-                <p className="font-label text-[9px] uppercase tracking-[0.2em] text-white/15 text-center mt-4">
-                  Pagamento seguro via Stripe · Cartão · Pix · Boleto
-                </p>
-              </div>
-
+                  <p className="font-label text-[8px] uppercase tracking-[0.2em] text-center mt-4" style={{ color: '#ccc' }}>
+                    Pagamento seguro via Stripe · Cartão · Pix · Boleto
+                  </p>
+                </div>
+              )}
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+
+        {/* ── RODAPÉ ──────────────────────────────────────────────── */}
+        <footer style={{ background: '#111', color: '#fff', marginTop: '80px' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '48px 64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+            <Link href="/" className="hm-logo" style={{ fontSize: '18px', color: 'white', textDecoration: 'none' }}>
+              <span className="hm-house">House</span>
+              <span className="hm-mazzutti">Mazzutti</span>
+            </Link>
+            <div style={{ display: 'flex', gap: '32px' }}>
+              {[['Studio', '/studio'], ['Agência', '/agencia'], ['Produtora', '/produtora'], ['Academy', '/academy']].map(([l, h]) => (
+                <Link key={l} href={h} className="font-label uppercase tracking-[0.2em] text-[8px]" style={{ color: 'rgba(255,255,255,0.25)' }}>
+                  {l}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '20px 64px' }}>
+            <span className="font-label uppercase tracking-[0.25em] text-[8px]" style={{ color: 'rgba(255,255,255,0.12)' }}>
+              © {new Date().getFullYear()} House Mazzutti · Pagamentos processados por Stripe
+            </span>
+          </div>
+        </footer>
+      </div>
     </>
   )
 }
