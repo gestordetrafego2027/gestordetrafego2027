@@ -23,9 +23,7 @@ type Price = {
   price_type: string
   metadata: { quote_only?: string }
 }
-
 type Category = { slug: string; name: string }
-
 type Product = {
   id: string
   slug: string
@@ -39,101 +37,100 @@ type Product = {
 }
 
 function formatPrice(cents: number, currency = 'brl') {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: currency.toUpperCase(),
-  }).format(cents / 100)
+  return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: currency.toUpperCase() }).format(cents / 100)
 }
-
 function isQuoteOnly(prices: Price[]) {
   return prices?.[0]?.metadata?.quote_only === 'true'
 }
 
-function ProductCard({ product }: { product: Product }) {
+function ProductCard({ product, index }: { product: Product; index: number }) {
   const price = product.store_prices?.[0]
   const image = product.images?.[0] ?? null
   const quoteOnly = isQuoteOnly(product.store_prices)
-  const category = product.store_product_categories?.[0]?.store_categories
 
   return (
     <Link
       href={`/loja/${product.slug}`}
-      className="group block rounded-xl border border-neutral-200 bg-white overflow-hidden hover:border-neutral-400 transition-all duration-200 hover:shadow-md"
+      className="group block relative overflow-hidden"
+      style={{ animationDelay: `${index * 80}ms` }}
     >
-      <div className="relative aspect-[4/3] bg-neutral-100 overflow-hidden">
+      {/* Image */}
+      <div className="relative aspect-[3/4] overflow-hidden bg-zinc-900">
         {image ? (
           <Image
             src={image}
             alt={product.name}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-neutral-50">
-            <span className="text-4xl">
-              {product.product_type === 'service' ? '✦' :
-               product.product_type === 'digital' ? '◈' : '◻'}
+          <div className="w-full h-full flex items-center justify-center bg-zinc-800">
+            <span className="text-zinc-600 text-5xl font-thin">✦</span>
+          </div>
+        )}
+
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+
+        {/* Featured badge */}
+        {product.featured && (
+          <div className="absolute top-4 left-4">
+            <span className="font-label uppercase tracking-[0.25em] text-[9px] text-white bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1">
+              DESTAQUE
             </span>
           </div>
         )}
-        {product.featured && (
-          <span className="absolute top-2 left-2 bg-black text-white text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wide">
-            Destaque
-          </span>
-        )}
-      </div>
 
-      <div className="p-4">
-        {category && (
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium">
-            {category.name}
-          </span>
-        )}
-        <h3 className="font-semibold text-neutral-900 leading-snug mt-0.5 mb-1 line-clamp-2">
-          {product.name}
-        </h3>
-        {product.description && (
-          <p className="text-xs text-neutral-500 line-clamp-2 mb-3">{product.description}</p>
-        )}
-        {quoteOnly ? (
-          <span className="inline-block text-xs font-medium text-neutral-600 border border-neutral-300 rounded-full px-3 py-0.5">
-            Solicitar orçamento
-          </span>
-        ) : price ? (
-          <p className="text-base font-bold text-neutral-900">
-            {formatPrice(price.unit_amount, price.currency)}
-            {price.price_type === 'recurring' && (
-              <span className="text-xs font-normal text-neutral-400 ml-1">/mês</span>
-            )}
-          </p>
-        ) : null}
+        {/* Price on image */}
+        <div className="absolute bottom-0 left-0 right-0 p-5">
+          <h3 className="font-headline text-white text-lg leading-tight mb-2 tracking-tight">
+            {product.name}
+          </h3>
+          <div className="flex items-center justify-between">
+            {quoteOnly ? (
+              <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">
+                Sob consulta
+              </span>
+            ) : price ? (
+              <span className="font-headline text-white text-base">
+                {formatPrice(price.unit_amount, price.currency)}
+              </span>
+            ) : null}
+            <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/50 group-hover:text-white transition-colors duration-300">
+              VER →
+            </span>
+          </div>
+        </div>
       </div>
     </Link>
   )
 }
 
-const CATEGORY_ORDER = ['agencia', 'studio', 'produtora', 'academy']
+const CATEGORY_ORDER = ['academy', 'studio', 'agencia', 'produtora']
 const CATEGORY_LABELS: Record<string, string> = {
   agencia: 'Agência',
   studio: 'Studio',
   produtora: 'Produtora',
   academy: 'Academy',
 }
+const CATEGORY_SUBS: Record<string, string> = {
+  agencia: 'Branding · Web · Comunicação',
+  studio: 'Book · Ensaio · Cobertura',
+  produtora: 'Moda · Beleza · Institucional',
+  academy: 'Ebooks · Cursos · Conteúdo',
+}
 
 export default async function LojaPage() {
   if (!featureFlags.isStoreEnabled()) notFound()
 
   const supabase = await createClient()
-
   const { data: products, error } = await supabase
     .from('store_products')
     .select(`
       id, slug, name, description, product_type, images, featured,
       store_prices (unit_amount, currency, price_type, metadata),
-      store_product_categories (
-        store_categories (slug, name)
-      )
+      store_product_categories (store_categories (slug, name))
     `)
     .eq('active', true)
     .order('featured', { ascending: false })
@@ -141,7 +138,6 @@ export default async function LojaPage() {
 
   const items = (products ?? []) as Product[]
 
-  // Agrupar por categoria
   const grouped: Record<string, Product[]> = {}
   for (const p of items) {
     const catSlug = p.store_product_categories?.[0]?.store_categories?.slug ?? 'outros'
@@ -152,26 +148,30 @@ export default async function LojaPage() {
   const categories = CATEGORY_ORDER.filter((c) => grouped[c]?.length > 0)
 
   return (
-    <main className="min-h-screen bg-neutral-50">
-      {/* Hero */}
-      <section className="bg-white border-b border-neutral-100 py-14 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-xs uppercase tracking-widest text-neutral-400 mb-2">House Mazzutti</p>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900 mb-3">
-            Loja
+    <main className="min-h-screen bg-[#0a0a0a] text-white">
+
+      {/* ── HERO ──────────────────────────────────────────────── */}
+      <section className="relative border-b border-white/5 px-8 md:px-16 pt-20 pb-16">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="font-label uppercase tracking-[0.35em] text-[9px] text-white/30 mb-6">
+            House Mazzutti · Loja
+          </p>
+          <h1 className="font-headline text-[clamp(56px,8vw,120px)] text-white leading-[0.88] tracking-tight mb-8">
+            PRODUTOS &<br />
+            <span className="text-white/20">SERVIÇOS</span>
           </h1>
-          <p className="text-neutral-500 max-w-xl">
+          <p className="font-body text-white/40 text-sm max-w-sm leading-relaxed">
             Serviços, cursos e produtos digitais para marcas, profissionais de imagem e criadores.
           </p>
 
-          {/* Nav de categorias */}
+          {/* Category nav */}
           {categories.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-6">
-              {categories.map((cat) => (
+            <div className="flex flex-wrap gap-0 mt-10 border-t border-white/5 pt-8">
+              {categories.map((cat, i) => (
                 <a
                   key={cat}
                   href={`#${cat}`}
-                  className="px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-sm text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-colors"
+                  className="font-label uppercase tracking-[0.25em] text-[9px] text-white/30 hover:text-white transition-colors duration-300 pr-8 mr-8 border-r border-white/10 last:border-r-0 last:mr-0"
                 >
                   {CATEGORY_LABELS[cat] ?? cat}
                 </a>
@@ -181,36 +181,64 @@ export default async function LojaPage() {
         </div>
       </section>
 
-      {/* Produtos por categoria */}
-      <div className="max-w-5xl mx-auto px-6 py-12 space-y-16">
+      {/* ── PRODUTOS ──────────────────────────────────────────── */}
+      <div className="max-w-[1400px] mx-auto px-8 md:px-16 py-16 space-y-24">
+
         {error && (
-          <p className="text-sm text-red-600">Erro ao carregar produtos. Tente novamente.</p>
+          <p className="font-label text-[11px] text-red-400 uppercase tracking-[0.2em]">
+            Erro ao carregar produtos.
+          </p>
         )}
 
         {categories.length === 0 && !error && (
-          <div className="text-center py-20 text-neutral-400">
-            <p className="text-lg font-medium">Em breve.</p>
-            <p className="text-sm mt-1">Os produtos estão sendo preparados.</p>
+          <div className="text-center py-32">
+            <p className="font-headline text-4xl text-white/10">Em breve.</p>
           </div>
         )}
 
         {categories.map((cat) => (
           <section key={cat} id={cat}>
-            <div className="flex items-baseline gap-3 mb-6">
-              <h2 className="text-xl font-bold text-neutral-900">
-                {CATEGORY_LABELS[cat] ?? cat}
-              </h2>
-              <span className="text-sm text-neutral-400">
+            {/* Section header */}
+            <div className="flex items-end justify-between mb-10 pb-6 border-b border-white/5">
+              <div>
+                <p className="font-label uppercase tracking-[0.3em] text-[9px] text-white/20 mb-2">
+                  {CATEGORY_SUBS[cat] ?? ''}
+                </p>
+                <h2 className="font-headline text-4xl md:text-5xl text-white tracking-tight leading-none">
+                  {CATEGORY_LABELS[cat] ?? cat}
+                </h2>
+              </div>
+              <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/20">
                 {grouped[cat].length} {grouped[cat].length === 1 ? 'item' : 'itens'}
               </span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {grouped[cat].map((p) => (
-                <ProductCard key={p.id} product={p} />
+
+            {/* Grid */}
+            <div className={`grid gap-px ${
+              grouped[cat].length === 1
+                ? 'grid-cols-1 max-w-sm'
+                : grouped[cat].length === 2
+                ? 'grid-cols-1 sm:grid-cols-2 max-w-2xl'
+                : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+            }`}>
+              {grouped[cat].map((p, i) => (
+                <ProductCard key={p.id} product={p} index={i} />
               ))}
             </div>
           </section>
         ))}
+      </div>
+
+      {/* ── FOOTER STRIP ──────────────────────────────────────── */}
+      <div className="border-t border-white/5 px-8 md:px-16 py-8 mt-8">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between">
+          <span className="font-label uppercase tracking-[0.3em] text-[9px] text-white/15">
+            House Mazzutti © {new Date().getFullYear()}
+          </span>
+          <Link href="/" className="font-label uppercase tracking-[0.25em] text-[9px] text-white/20 hover:text-white transition-colors duration-300">
+            ← Voltar ao site
+          </Link>
+        </div>
       </div>
     </main>
   )
