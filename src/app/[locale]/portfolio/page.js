@@ -109,7 +109,7 @@ const categories = [
     unit: 'STUDIO',
     title: 'Ensaio Pessoal',
     description: 'Ensaios autorais que traduzem identidade em imagem.',
-    cover: studioEnsaio[0].cover,
+    cover: '/images/studio/carol-costa/capa-hub.webp',
     basePath: '/portfolio-studio',
     projects: studioEnsaio
   },
