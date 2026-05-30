@@ -10,168 +10,149 @@ export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'Loja — House Mazzutti',
-  description: 'Serviços, cursos e produtos digitais da House Mazzutti — Agência, Studio, Produtora e Academy.',
+  description: 'Serviços, cursos e produtos digitais da House Mazzutti.',
   openGraph: {
     title: 'Loja — House Mazzutti',
     description: 'Serviços, cursos e produtos digitais da House Mazzutti.',
   },
 }
 
-type Price = {
-  unit_amount: number
-  currency: string
-  price_type: string
-  metadata: { quote_only?: string }
-}
-
+type Price = { unit_amount: number; currency: string; price_type: string; metadata: { quote_only?: string } }
 type Category = { slug: string; name: string }
-
 type Product = {
-  id: string
-  slug: string
-  name: string
-  description: string | null
-  product_type: string
-  images: string[]
-  featured: boolean
+  id: string; slug: string; name: string; description: string | null
+  product_type: string; images: string[]; featured: boolean
   store_prices: Price[]
   store_product_categories: { store_categories: Category }[]
 }
 
 function formatPrice(cents: number, currency = 'brl') {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: currency.toUpperCase(),
-  }).format(cents / 100)
+  return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: currency.toUpperCase() }).format(cents / 100)
 }
-
-function isQuoteOnly(prices: Price[]) {
-  return prices?.[0]?.metadata?.quote_only === 'true'
-}
+function isQuoteOnly(prices: Price[]) { return prices?.[0]?.metadata?.quote_only === 'true' }
 
 function ProductCard({ product }: { product: Product }) {
   const price = product.store_prices?.[0]
   const image = product.images?.[0] ?? null
   const quoteOnly = isQuoteOnly(product.store_prices)
-  const category = product.store_product_categories?.[0]?.store_categories
 
   return (
-    <Link
-      href={`/loja/${product.slug}`}
-      className="group block rounded-xl border border-neutral-200 bg-white overflow-hidden hover:border-neutral-400 transition-all duration-200 hover:shadow-md"
-    >
-      <div className="relative aspect-[4/3] bg-neutral-100 overflow-hidden">
+    <Link href={`/loja/${product.slug}`} className="group block">
+      {/* Image */}
+      <div className="relative aspect-[3/4] overflow-hidden bg-[#f0ede8] mb-4">
         {image ? (
           <Image
-            src={image}
-            alt={product.name}
-            fill
+            src={image} alt={product.name} fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-neutral-50">
-            <span className="text-4xl">
-              {product.product_type === 'service' ? '✦' :
-               product.product_type === 'digital' ? '◈' : '◻'}
-            </span>
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-[#c8bfb0] text-4xl">✦</span>
           </div>
         )}
         {product.featured && (
-          <span className="absolute top-2 left-2 bg-black text-white text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wide">
-            Destaque
-          </span>
+          <div className="absolute top-4 left-4">
+            <span className="font-label uppercase tracking-[0.25em] text-[8px] text-white bg-black px-3 py-1.5">
+              DESTAQUE
+            </span>
+          </div>
         )}
       </div>
 
-      <div className="p-4">
-        {category && (
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium">
-            {category.name}
-          </span>
-        )}
-        <h3 className="font-semibold text-neutral-900 leading-snug mt-0.5 mb-1 line-clamp-2">
-          {product.name}
-        </h3>
-        {product.description && (
-          <p className="text-xs text-neutral-500 line-clamp-2 mb-3">{product.description}</p>
-        )}
-        {quoteOnly ? (
-          <span className="inline-block text-xs font-medium text-neutral-600 border border-neutral-300 rounded-full px-3 py-0.5">
-            Solicitar orçamento
-          </span>
-        ) : price ? (
-          <p className="text-base font-bold text-neutral-900">
-            {formatPrice(price.unit_amount, price.currency)}
-            {price.price_type === 'recurring' && (
-              <span className="text-xs font-normal text-neutral-400 ml-1">/mês</span>
-            )}
-          </p>
-        ) : null}
+      {/* Info */}
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-headline text-[15px] text-[#111] tracking-tight leading-snug mb-0.5 group-hover:text-black">
+            {product.name}
+          </h3>
+        </div>
+        <div className="shrink-0 text-right">
+          {quoteOnly ? (
+            <span className="font-label uppercase tracking-[0.15em] text-[8px] text-[#888]">Consulta</span>
+          ) : price ? (
+            <span className="font-headline text-[15px] text-[#111]">
+              {formatPrice(price.unit_amount, price.currency)}
+            </span>
+          ) : null}
+        </div>
       </div>
+      <span className="font-label uppercase tracking-[0.2em] text-[8px] text-[#aaa] group-hover:text-black transition-colors duration-300 mt-1 block">
+        VER PRODUTO →
+      </span>
     </Link>
   )
 }
 
-const CATEGORY_ORDER = ['agencia', 'studio', 'produtora', 'academy']
-const CATEGORY_LABELS: Record<string, string> = {
-  agencia: 'Agência',
-  studio: 'Studio',
-  produtora: 'Produtora',
-  academy: 'Academy',
+const CATEGORY_ORDER = ['academy', 'studio', 'agencia', 'produtora']
+const CATEGORY_LABELS: Record<string, string> = { agencia: 'Agência', studio: 'Studio', produtora: 'Produtora', academy: 'Academy' }
+const CATEGORY_SUBS: Record<string, string> = {
+  agencia: 'Branding · Web · Comunicação',
+  studio: 'Book · Ensaio · Cobertura',
+  produtora: 'Moda · Beleza · Institucional',
+  academy: 'Ebooks · Cursos · Conteúdo',
 }
 
 export default async function LojaPage() {
   if (!featureFlags.isStoreEnabled()) notFound()
 
   const supabase = await createClient()
-
   const { data: products, error } = await supabase
     .from('store_products')
-    .select(`
-      id, slug, name, description, product_type, images, featured,
+    .select(`id, slug, name, description, product_type, images, featured,
       store_prices (unit_amount, currency, price_type, metadata),
-      store_product_categories (
-        store_categories (slug, name)
-      )
-    `)
+      store_product_categories (store_categories (slug, name))`)
     .eq('active', true)
     .order('featured', { ascending: false })
     .order('name', { ascending: true })
 
   const items = (products ?? []) as Product[]
-
-  // Agrupar por categoria
   const grouped: Record<string, Product[]> = {}
   for (const p of items) {
     const catSlug = p.store_product_categories?.[0]?.store_categories?.slug ?? 'outros'
     if (!grouped[catSlug]) grouped[catSlug] = []
     grouped[catSlug].push(p)
   }
-
   const categories = CATEGORY_ORDER.filter((c) => grouped[c]?.length > 0)
 
   return (
-    <main className="min-h-screen bg-neutral-50">
-      {/* Hero */}
-      <section className="bg-white border-b border-neutral-100 py-14 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-xs uppercase tracking-widest text-neutral-400 mb-2">House Mazzutti</p>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900 mb-3">
-            Loja
+    <div className="min-h-screen bg-[#faf9f7] flex flex-col">
+
+      {/* ── TOPO ──────────────────────────────────────────────────── */}
+      <header style={{ background: '#111', color: '#fff' }}>
+        {/* Brand bar */}
+        <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)', padding: '20px 64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Link href="/" className="hm-logo" style={{ fontSize: '20px', color: 'white', textDecoration: 'none' }}>
+            <span className="hm-house">House</span>
+            <span className="hm-mazzutti">Mazzutti</span>
+          </Link>
+          <span className="font-label uppercase tracking-[0.3em] text-[8px]" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            CHECKOUT SEGURO · STRIPE
+          </span>
+        </div>
+
+        {/* Hero text */}
+        <div style={{ padding: '64px 64px 56px', maxWidth: '1400px' }}>
+          <p className="font-label uppercase tracking-[0.35em] text-[8px] mb-5" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            Loja — House Mazzutti
+          </p>
+          <h1 className="font-headline tracking-tight" style={{ fontSize: 'clamp(48px,7vw,96px)', lineHeight: '0.9', color: '#fff', marginBottom: '20px' }}>
+            Produtos<br />
+            <span style={{ color: 'rgba(255,255,255,0.18)' }}>&amp; Serviços</span>
           </h1>
-          <p className="text-neutral-500 max-w-xl">
-            Serviços, cursos e produtos digitais para marcas, profissionais de imagem e criadores.
+          <p className="font-body text-sm" style={{ color: 'rgba(255,255,255,0.38)', maxWidth: '360px', lineHeight: 1.6 }}>
+            Educação, serviços criativos e produtos digitais para marcas e profissionais de imagem.
           </p>
 
-          {/* Nav de categorias */}
+          {/* Category anchors */}
           {categories.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-6">
-              {categories.map((cat) => (
-                <a
-                  key={cat}
-                  href={`#${cat}`}
-                  className="px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-sm text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-colors"
+            <div style={{ display: 'flex', gap: '0', marginTop: '40px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+              {categories.map((cat, i) => (
+                <a key={cat} href={`#${cat}`}
+                  className="font-label uppercase tracking-[0.25em] text-[8px] transition-colors duration-300"
+                  style={{ color: 'rgba(255,255,255,0.28)', paddingRight: '32px', marginRight: '32px', borderRight: i < categories.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}
+                  onMouseOver={(e: any) => e.target.style.color = '#fff'}
+                  onMouseOut={(e: any) => e.target.style.color = 'rgba(255,255,255,0.28)'}
                 >
                   {CATEGORY_LABELS[cat] ?? cat}
                 </a>
@@ -179,39 +160,73 @@ export default async function LojaPage() {
             </div>
           )}
         </div>
-      </section>
+      </header>
 
-      {/* Produtos por categoria */}
-      <div className="max-w-5xl mx-auto px-6 py-12 space-y-16">
-        {error && (
-          <p className="text-sm text-red-600">Erro ao carregar produtos. Tente novamente.</p>
-        )}
+      {/* ── PRODUTOS ──────────────────────────────────────────────── */}
+      <main className="flex-1" style={{ maxWidth: '1400px', width: '100%', margin: '0 auto', padding: '72px 64px' }}>
+
+        {error && <p className="font-label text-[11px] text-red-500 uppercase tracking-[0.2em] mb-8">Erro ao carregar produtos.</p>}
 
         {categories.length === 0 && !error && (
-          <div className="text-center py-20 text-neutral-400">
-            <p className="text-lg font-medium">Em breve.</p>
-            <p className="text-sm mt-1">Os produtos estão sendo preparados.</p>
+          <div style={{ textAlign: 'center', padding: '120px 0' }}>
+            <p className="font-headline text-3xl" style={{ color: '#ddd' }}>Em breve.</p>
           </div>
         )}
 
-        {categories.map((cat) => (
-          <section key={cat} id={cat}>
-            <div className="flex items-baseline gap-3 mb-6">
-              <h2 className="text-xl font-bold text-neutral-900">
-                {CATEGORY_LABELS[cat] ?? cat}
-              </h2>
-              <span className="text-sm text-neutral-400">
-                {grouped[cat].length} {grouped[cat].length === 1 ? 'item' : 'itens'}
-              </span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {grouped[cat].map((p) => (
-                <ProductCard key={p.id} product={p} />
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
-    </main>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '80px' }}>
+          {categories.map((cat) => (
+            <section key={cat} id={cat}>
+              {/* Section header */}
+              <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '32px', paddingBottom: '20px', borderBottom: '1px solid #e8e3db' }}>
+                <div>
+                  <p className="font-label uppercase tracking-[0.28em] text-[8px] mb-2" style={{ color: '#bbb' }}>
+                    {CATEGORY_SUBS[cat] ?? ''}
+                  </p>
+                  <h2 className="font-headline tracking-tight" style={{ fontSize: 'clamp(28px,3.5vw,44px)', color: '#111', lineHeight: 1 }}>
+                    {CATEGORY_LABELS[cat] ?? cat}
+                  </h2>
+                </div>
+                <span className="font-label uppercase tracking-[0.2em] text-[8px]" style={{ color: '#ccc' }}>
+                  {grouped[cat].length} {grouped[cat].length === 1 ? 'item' : 'itens'}
+                </span>
+              </div>
+
+              {/* Grid */}
+              <div style={{
+                display: 'grid',
+                gap: '40px 32px',
+                gridTemplateColumns: grouped[cat].length === 1 ? '280px' : grouped[cat].length === 2 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+              }}
+                className="md:grid-cols-3"
+              >
+                {grouped[cat].map((p) => <ProductCard key={p.id} product={p} />)}
+              </div>
+            </section>
+          ))}
+        </div>
+      </main>
+
+      {/* ── RODAPÉ ────────────────────────────────────────────────── */}
+      <footer style={{ background: '#111', color: '#fff', marginTop: 'auto' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '48px 64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+          <Link href="/" className="hm-logo" style={{ fontSize: '18px', color: 'white', textDecoration: 'none' }}>
+            <span className="hm-house">House</span>
+            <span className="hm-mazzutti">Mazzutti</span>
+          </Link>
+          <div style={{ display: 'flex', gap: '32px' }}>
+            {[['Studio', '/studio'], ['Agência', '/agencia'], ['Produtora', '/produtora'], ['Academy', '/academy']].map(([l, h]) => (
+              <Link key={l} href={h} className="font-label uppercase tracking-[0.2em] text-[8px] transition-colors duration-300" style={{ color: 'rgba(255,255,255,0.25)' }}>
+                {l}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '20px 64px' }}>
+          <span className="font-label uppercase tracking-[0.25em] text-[8px]" style={{ color: 'rgba(255,255,255,0.12)' }}>
+            © {new Date().getFullYear()} House Mazzutti · Pagamentos processados por Stripe
+          </span>
+        </div>
+      </footer>
+    </div>
   )
 }

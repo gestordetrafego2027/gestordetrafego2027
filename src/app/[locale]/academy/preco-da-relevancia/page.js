@@ -490,7 +490,7 @@ export default function PrecoDaRelevanciaPage() {
               <div className="cell"><span className="k">Autor</span><span className="v">Ângelo Mazzutti</span></div>
               <div className="cell"><span className="k">Formato</span><span className="v">Ebook · PDF</span></div>
               <div className="cell"><span className="k">Capítulos</span><span className="v">10 + 10 perguntas</span></div>
-              <div className="cell"><span className="k">Páginas</span><span className="v">281</span></div>
+              <div className="cell"><span className="k">Ano</span><span className="v">2026</span></div>
             </div>
           </div>
 

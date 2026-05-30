@@ -127,7 +127,7 @@ const categories = [
     unit: 'PRODUTORA',
     title: 'Moda',
     description: 'Lookbooks e campanhas de moda — direção criativa e produção executiva.',
-    cover: produtoraModa[0].cover,
+    cover: '/images/produtora/moda/unique-chic/11.webp',
     basePath: '/portfolio-produtora',
     projects: produtoraModa
   },
