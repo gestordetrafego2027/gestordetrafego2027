@@ -52,7 +52,6 @@ export default function GustavoViotoPage() {
       '/images/studio/gustavo-vioto/3.webp',
       '/images/studio/gustavo-vioto/4.webp',
       '/images/studio/gustavo-vioto/5.webp',
-      '/images/studio/gustavo-vioto/6.webp',
     ]
 
     return (
@@ -112,9 +111,6 @@ export default function GustavoViotoPage() {
                           </div>
                           <div onClick={() => openImg(4)} className="cursor-pointer">
                             <Image alt="Gustavo Vioto - Ensaio Pessoal House Mazzutti - Foto 5" style={{objectPosition: 'top'}} src="/images/studio/gustavo-vioto/5.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
-                          </div>
-                          <div onClick={() => openImg(5)} className="cursor-pointer">
-                            <Image alt="Gustavo Vioto - Ensaio Pessoal House Mazzutti - Foto 6" style={{objectPosition: 'top'}} src="/images/studio/gustavo-vioto/6.webp" width={800} height={1200} sizes="(max-width: 768px) 100vw, 50vw" quality={85} loading="lazy" className="w-full aspect-[3/4] object-cover" />
                           </div>
                         </div>
                     </div>
