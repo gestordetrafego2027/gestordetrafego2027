@@ -1,11 +1,12 @@
 name: Coolify deploy
 
 # Dispara redeploy no Coolify a cada push pra main.
-# Para funcionar voce precisa adicionar 1 secret no GitHub:
+# Para funcionar voce precisa adicionar 2 secrets no GitHub:
 #   Settings -> Secrets and variables -> Actions -> New repository secret
 #   Nome:  COOLIFY_DEPLOY_WEBHOOK
-#   Valor: URL completa do webhook do projeto no Coolify
-#          (Coolify -> seu projeto -> Webhook Endpoint / Deploy Trigger)
+#   Valor: URL do webhook (ex: http://31.97.17.85:8000/api/v1/deploy?uuid=XXX&force=false)
+#   Nome:  COOLIFY_API_TOKEN
+#   Valor: API Token do Coolify com permissao deploy (Keys & Tokens -> API Tokens)
 #
 # Tambem suporta disparo manual em Actions -> Coolify deploy -> Run workflow.
 
@@ -34,12 +35,17 @@ jobs:
             echo "Adicione em Settings > Secrets and variables > Actions."
             exit 1
           fi
+          if [ -z "${{ secrets.COOLIFY_API_TOKEN }}" ]; then
+            echo "::error::Secret COOLIFY_API_TOKEN nao configurado."
+            echo "Crie em Coolify > Keys & Tokens > API Tokens (permissao deploy)."
+            exit 1
+          fi
 
       - name: POST to Coolify webhook
         run: |
-          HTTP_STATUS=$(curl -sS -o /tmp/body -w "%{http_code}" -X POST \
+          HTTP_STATUS=$(curl -sS -o /tmp/body -w "%{http_code}" -X GET \
+            -H 'Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}' \
             -H 'Content-Type: application/json' \
-            -d '{"ref":"${{ github.ref }}","sha":"${{ github.sha }}","actor":"${{ github.actor }}"}' \
             "${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}")
           echo "HTTP $HTTP_STATUS"
           cat /tmp/body
