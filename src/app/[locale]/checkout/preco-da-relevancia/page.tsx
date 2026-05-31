@@ -30,7 +30,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
     .eq('slug', SLUG)
     .maybeSingle()
 
-  const finalCents = product?.price_cents ?? 4600
+  const finalCents = product?.price_cents ?? 5400
   const originalCents = product?.original_price_cents ?? null
   const hasDiscount = originalCents !== null && originalCents > finalCents
   const discountPct = hasDiscount
