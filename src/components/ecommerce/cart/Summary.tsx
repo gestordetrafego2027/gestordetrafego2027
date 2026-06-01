@@ -7,6 +7,10 @@ function formatPrice(cents: number) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
 }
 
+type PaymentMethodChoice = 'card' | 'pix' | 'boleto'
+
+const ASAAS_PUBLIC_FLAG = process.env.NEXT_PUBLIC_FEATURE_ASAAS_ENABLED === 'true'
+
 export function CartSummary({ onClose }: { onClose?: () => void }) {
   const { subtotal, total, couponCode, couponDiscount, setCoupon, removeCoupon, items, clearCart } = useCartStore()
   const [couponInput, setCouponInput] = useState('')
@@ -14,15 +18,71 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
   const [couponError, setCouponError] = useState('')
   const [checkoutLoading, setCheckoutLoading] = useState(false)
   const [checkoutError, setCheckoutError] = useState('')
+  const [method, setMethod] = useState<PaymentMethodChoice>('card')
+  const [buyerEmail, setBuyerEmail] = useState('')
+  const [buyerName, setBuyerName] = useState('')
+  const [buyerCpf, setBuyerCpf] = useState('')
   const router = useRouter()
 
   const hasItems = items.length > 0
+  const asaasEnabled = ASAAS_PUBLIC_FLAG
+
+  async function handleAsaasCheckout(chosen: 'pix' | 'boleto') {
+    if (!buyerEmail) {
+      setCheckoutError('Informe seu email para gerar a cobrança.')
+      return
+    }
+    const orderRes = await fetch('/api/store/create-pending-order', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        items: items.map((i) => ({ stripePriceId: i.stripePriceId, quantity: i.quantity })),
+        buyerEmail,
+        buyerName: buyerName || undefined,
+        buyerCpf: buyerCpf || undefined,
+        couponCode: couponCode ?? undefined,
+      }),
+    })
+    const orderData = await orderRes.json()
+    if (!orderRes.ok || !orderData.orderId) {
+      setCheckoutError(orderData.error ?? 'Erro ao criar pedido.')
+      return
+    }
+    const orderId = orderData.orderId as string
+
+    const chargeRes = await fetch(
+      chosen === 'pix'
+        ? '/api/payments/asaas/create-pix'
+        : '/api/payments/asaas/create-boleto',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orderId }),
+      },
+    )
+    const chargeData = await chargeRes.json()
+    if (!chargeRes.ok) {
+      setCheckoutError(chargeData.error ?? 'Erro ao gerar cobrança.')
+      return
+    }
+    onClose?.()
+    clearCart()
+    router.push(
+      chosen === 'pix'
+        ? `/pt/checkout/pix-pendente/${orderId}`
+        : `/pt/checkout/boleto/${orderId}`,
+    )
+  }
 
   async function handleCheckout() {
     if (!hasItems) return
     setCheckoutLoading(true)
     setCheckoutError('')
     try {
+      if (method === 'pix' || method === 'boleto') {
+        await handleAsaasCheckout(method)
+        return
+      }
       const res = await fetch('/api/store/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -124,6 +184,56 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
           <span>{formatPrice(total())}</span>
         </div>
       </div>
+
+      {/* Método de pagamento */}
+      {asaasEnabled && hasItems && (
+        <div className="border-t border-neutral-100 pt-4 space-y-3">
+          <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide">Forma de pagamento</p>
+          <div className="grid grid-cols-3 gap-2">
+            {(['card', 'pix', 'boleto'] as const).map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => setMethod(m)}
+                className={`py-2 text-xs font-semibold rounded-lg border transition-colors ${
+                  method === m
+                    ? 'bg-neutral-900 text-white border-neutral-900'
+                    : 'bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400'
+                }`}
+                aria-pressed={method === m}
+              >
+                {m === 'card' ? 'Cartão' : m === 'pix' ? 'Pix' : 'Boleto'}
+              </button>
+            ))}
+          </div>
+          {(method === 'pix' || method === 'boleto') && (
+            <div className="space-y-2">
+              <input
+                type="email"
+                placeholder="Email *"
+                value={buyerEmail}
+                onChange={(e) => setBuyerEmail(e.target.value)}
+                className="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-neutral-900"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Nome completo"
+                value={buyerName}
+                onChange={(e) => setBuyerName(e.target.value)}
+                className="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-neutral-900"
+              />
+              <input
+                type="text"
+                placeholder="CPF/CNPJ (recomendado)"
+                value={buyerCpf}
+                onChange={(e) => setBuyerCpf(e.target.value)}
+                className="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-neutral-900"
+              />
+            </div>
+          )}
+        </div>
+      )}
 
       {/* CTA */}
       {checkoutError && (

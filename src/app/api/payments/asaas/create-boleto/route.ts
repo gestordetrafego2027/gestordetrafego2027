@@ -68,6 +68,16 @@ export async function POST(req: NextRequest) {
         payment_provider: 'asaas',
         asaas_payment_id: payment.id,
         asaas_customer_id: customer.id,
+        metadata: {
+          source: 'asaas_checkout',
+          asaas: {
+            method: 'boleto',
+            bankSlipUrl: payment.bankSlipUrl,
+            identificationField: payment.identificationField,
+            barCode: payment.barCode,
+            dueDate: payment.dueDate,
+          },
+        },
       })
       .eq('id', order.id)
 

@@ -64,6 +64,15 @@ export async function POST(req: NextRequest) {
         payment_provider: 'asaas',
         asaas_payment_id: payment.id,
         asaas_customer_id: customer.id,
+        metadata: {
+          source: 'asaas_checkout',
+          asaas: {
+            method: 'pix',
+            encodedImage: qrCode.encodedImage,
+            payload: qrCode.payload,
+            expirationDate: qrCode.expirationDate,
+          },
+        },
       })
       .eq('id', order.id)
 
