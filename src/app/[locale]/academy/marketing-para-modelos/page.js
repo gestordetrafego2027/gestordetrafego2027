@@ -22,7 +22,7 @@ const CHECKOUT_URL = '/pt/checkout/marketing-para-modelos';
 
 const TITLE = 'Marketing para Modelos · Ebook · House Mazzutti Academy Vol. 01';
 const DESCRIPTION =
-  'Da passarela física ao império digital. O guia honesto de quem quer ser modelo no Brasil de hoje — por Angelo Mazzutti. Ebook · 281 páginas · 12 capítulos.';
+  'Da passarela física ao império digital. O guia honesto de quem quer ser modelo no Brasil de hoje — por Angelo Mazzutti. Ebook · 94 páginas · 12 capítulos.';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -79,7 +79,7 @@ export const metadata = {
     'book:author': 'Angelo Mazzutti',
     'book:isbn': '',
     'book:release_date': '2026',
-    'product:price:amount': '117.00',
+    'product:price:amount': '49.00',
     'product:price:currency': 'BRL',
     'product:availability': 'preorder',
   },
@@ -92,7 +92,7 @@ const PRODUCT_SCHEMA = {
   alternateName: 'House Mazzutti Academy · Volume 01',
   bookFormat: 'https://schema.org/EBook',
   inLanguage: 'pt-BR',
-  numberOfPages: 281,
+  numberOfPages: 94,
   author: {
     '@type': 'Person',
     name: 'Angelo Mazzutti',
@@ -108,7 +108,7 @@ const PRODUCT_SCHEMA = {
   url: PAGE_URL,
   offers: {
     '@type': 'Offer',
-    price: '117.00',
+    price: '49.00',
     priceCurrency: 'BRL',
     availability: 'https://schema.org/PreOrder',
     url: PAGE_URL + '#comprar',
@@ -537,7 +537,7 @@ const TICKER_ITEMS = [
   'House Mazzutti Academy',
   'Volume 01 — Marketing para Modelos',
   'Da passarela física ao império digital',
-  '12 capítulos · 12 checklists · 281 páginas',
+  '12 capítulos · 12 checklists · 94 páginas',
   'Edição 2026 · São Paulo',
 ];
 
@@ -621,7 +621,7 @@ export default function MarketingParaModelosPage() {
               <div className="cell"><span className="k">Autor</span><span className="v">Angelo Mazzutti</span></div>
               <div className="cell"><span className="k">Formato</span><span className="v">Ebook · PDF</span></div>
               <div className="cell"><span className="k">Capítulos</span><span className="v">12 + 12 checklists</span></div>
-              <div className="cell"><span className="k">Páginas</span><span className="v">281</span></div>
+              <div className="cell"><span className="k">Páginas</span><span className="v">94</span></div>
             </div>
           </div>
           <div className="hero-right">
@@ -699,7 +699,7 @@ export default function MarketingParaModelosPage() {
           </div>
           <div className="toc-foot">
             <span>+ <strong>Conclusão</strong> · Carta final do Angelo · p. 271</span>
-            <span><strong>281</strong> páginas no total</span>
+            <span><strong>94</strong> páginas no total</span>
           </div>
         </div>
       </section>
@@ -863,7 +863,7 @@ export default function MarketingParaModelosPage() {
               </div>
               <div className="product-meta">
                 <div className="row"><span>Formato</span><span className="v">Ebook · PDF (alta)</span></div>
-                <div className="row"><span>Páginas</span><span className="v">281</span></div>
+                <div className="row"><span>Páginas</span><span className="v">94</span></div>
                 <div className="row"><span>Capítulos</span><span className="v">12 + 12 checklists</span></div>
                 <div className="row"><span>Entrega</span><span className="v">Imediata após o pix</span></div>
                 <div className="row"><span>Atualizações</span><span className="v">Vitalícias na v.1</span></div>
@@ -871,11 +871,11 @@ export default function MarketingParaModelosPage() {
             </div>
             <div className="price-right">
               <div className="num-line">
-                <span className="strike">de R$ 197</span>
-                <span className="pill">−42% lançamento</span>
+                
+                <span className="pill">Edição de lançamento</span>
               </div>
-              <div className="price"><span className="cur">R$</span>117</div>
-              <div className="pix-line"><em>ou 12× de R$ 12,30 no cartão · pix com 5% off</em></div>
+              <div className="price"><span className="cur">R$</span>49</div>
+              <div className="pix-line"><em>à vista · cartão, pix ou boleto</em></div>
               <div className="price-cta">
                 <BuyLink href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></BuyLink>
               </div>

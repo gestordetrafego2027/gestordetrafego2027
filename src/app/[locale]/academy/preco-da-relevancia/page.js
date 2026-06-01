@@ -426,7 +426,7 @@ export default function PrecoDaRelevanciaPage() {
               <span>House Mazzutti Academy</span><span className="star">★</span>
               <span>Volume 02 — O Preço da Relevância</span><span className="star">★</span>
               <span>Um manifesto sobre o colapso da identidade na era da atenção digital</span><span className="star">★</span>
-              <span>10 capítulos · 10 perguntas · 281 páginas</span><span className="star">★</span>
+              <span>10 capítulos · 10 perguntas</span><span className="star">★</span>
               <span>Edição 2026 · São Paulo</span><span className="star">★</span>
             </React.Fragment>
           ))}
@@ -587,7 +587,7 @@ export default function PrecoDaRelevanciaPage() {
 
           <div className="toc-foot">
             <span>+ <strong>Colofão</strong> · House Mazzutti Edições &nbsp;·&nbsp; p. 281</span>
-            <span><strong>281</strong> páginas no total</span>
+            <span><strong>10</strong> capítulos · <strong>10</strong> perguntas</span>
           </div>
         </div>
       </section>
@@ -710,11 +710,11 @@ export default function PrecoDaRelevanciaPage() {
             </div>
             <div className="price-right">
               <div className="num-line">
-                <span className="strike">de R$ 227</span>
-                <span className="pill">−42% lançamento</span>
+                
+                <span className="pill">Edição de lançamento</span>
               </div>
-              <div className="price"><span className="cur">R$</span>137</div>
-              <div className="pix-line"><em>ou 12× de R$ 14,40 no cartão · pix com 5% off</em></div>
+              <div className="price"><span className="cur">R$</span>46</div>
+              <div className="pix-line"><em>à vista · cartão, pix ou boleto</em></div>
               <div>
                 <a href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></a>
               </div>
