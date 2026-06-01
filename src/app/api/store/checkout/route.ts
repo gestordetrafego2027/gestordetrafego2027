@@ -111,7 +111,8 @@ export async function POST(req: NextRequest) {
       client_reference_id: user?.id ?? undefined,
       locale: locale === 'en' ? 'en' : 'pt-BR',
       currency: 'brl',
-      payment_method_types: ['card', 'boleto'],
+      // Sprint 9: Pix/Boleto migrados para Asaas; Stripe responde apenas por cartão.
+      payment_method_types: ['card'],
       payment_intent_data: {
         description: 'House Mazzutti — Loja',
         metadata: { user_id: user?.id ?? 'guest', source: 'store_checkout' },
