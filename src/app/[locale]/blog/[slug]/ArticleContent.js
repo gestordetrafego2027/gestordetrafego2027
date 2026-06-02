@@ -106,7 +106,7 @@ export default function ArticleContent({ slug }) {
                         <h1 className="text-2xl md:text-4xl font-headline italic leading-tight text-zinc-900 mb-6">
                             {article.titulo}
                         </h1>
-                        <p className="text-[14px] uppercase tracking-[0.18em] text-zinc-500 font-label">por Angelo Mazzutti · Head of Creative & Brand Strategy</p>
+                        <p className="text-[14px] uppercase tracking-[0.18em] text-zinc-500 font-label">por Angelo Mazzutti · Diretor Criativo</p>
                     </header>
 
                     {/* Intro Lead */}
@@ -230,7 +230,7 @@ export default function ArticleContent({ slug }) {
                         <div>
                             <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400 mb-1">AUTOR</div>
                             <div className="text-[18px] font-headline italic text-zinc-900 mb-2">Angelo Mazzutti</div>
-                            <p className="text-[14px] text-zinc-500 font-body leading-[1.7] max-w-md">Head of Creative & Brand Strategy da House Mazzutti. 15 anos no audiovisual, com direção criativa para marcas premium e personalidades — de Larissa Manoela à família Abravanel.</p>
+                            <p className="text-[14px] text-zinc-500 font-body leading-[1.7] max-w-md">Diretor Criativo da House Mazzutti. 15+ anos no audiovisual, com direção criativa para marcas premium e personalidades.</p>
                         </div>
                     </div>
                 </article>

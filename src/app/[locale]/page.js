@@ -370,13 +370,13 @@ export default function Home() {
                             <span className="text-caption text-neutral-400">Direção Criativa /01</span>
                             <h2 className="text-h2 text-white">Estratégia e execução. Na mesma mente.</h2>
                             <div className="space-y-5 text-body text-neutral-300">
-                                <p>Mente formada na publicidade e forjada nos sets das maiores celebridades do Brasil — da Larissa Manoela à família Abravanel. Quinze anos de audiovisual e fotografia traduzidos em direção criativa autoral, com presença em cada decisão crítica do projeto.</p>
+                                <p>Mente formada na publicidade e forjada nos sets de grandes marcas e personalidades do Brasil. 15+ anos de audiovisual e fotografia traduzidos em direção criativa autoral, com presença em cada decisão crítica do projeto.</p>
                                 <p>Cada peça que sai da House passa pela sua supervisão direta: do briefing estratégico ao acabamento final. É o que garante que a essência da marca chegue intacta — sem ruído entre o conceito e o pixel.</p>
                                 <p className="italic text-neutral-400">"Toda imagem que entrego carrega uma decisão de mercado. Estética sem propósito é apenas decoração."</p>
                             </div>
                             <div className="pt-6">
                                 <div className="text-h3 text-white/90">Angelo Mazzutti</div>
-                                <div className="text-caption text-neutral-500 mt-2">Head of Creative & Brand Strategy</div>
+                                <div className="text-caption text-neutral-500 mt-2">Diretor Criativo</div>
                             </div>
                         </div>
                     </div>

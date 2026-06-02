@@ -16,7 +16,7 @@ export default function AngeloPage() {
 
     const testimonials = [
         {
-            text: "Formado na publicidade e forjado nos sets das maiores celebridades do Brasil — de Larissa Manoela à família Abravanel.",
+            text: "Formado na publicidade e forjado nos sets de grandes marcas e personalidades do Brasil.",
             author: "",
         },
         {
@@ -83,7 +83,7 @@ export default function AngeloPage() {
                 {/* 1. Bloco 1 (hero - manter) */}
                 <section className="min-h-[calc(100vh+20px)] flex flex-col md:flex-row items-stretch" style={{ backgroundColor: "#ffffff", borderBottom: '0.5px solid #e0e0e0' }}>
                     <div className="w-full md:w-1/2 flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]" style={{ backgroundColor: "#ffffff" }}>
-                        <span className="text-caption text-black/70">Head of Creative &amp; Brand Strategy</span>
+                        <span className="text-caption text-black/70">Diretor Criativo</span>
                         <h2 className="text-h1 text-black hmzt-hero-title">
                             A arquitetura da sua marca, com sensibilidade e precisão.
                         </h2>

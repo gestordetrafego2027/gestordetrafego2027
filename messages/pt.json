@@ -43,7 +43,7 @@
   "home": {
     "works_label": "Obras",
     "works_title": "Trabalhos selecionados",
-    "services_title": "Integrado. Intencional.",
+    "services_title": "Tudo na mesma casa, pensado junto.",
     "solutions_label": "Soluções",
     "solutions_title": "Uma casa. Três frentes.",
     "testimonials_label": "O que dizem",
@@ -69,12 +69,12 @@
     "agencia_card_title": "HMZT | AGÊNCIA",
     "agencia_card_subtitle": "Branding, campanhas e presença digital.",
     "agencia_card_items": [
-      "Branding project",
+      "Projeto de marca",
       "Campanhas",
-      "Web development",
+      "Desenvolvimento de site",
       "Direção de marca"
     ],
-    "boutique_label": "Boutique 360 — Unidades House",
+    "boutique_label": "As unidades da casa",
     "boutique_titulo": "Quatro frentes. Uma só conversa.",
     "boutique_agencia_title": "AGÊNCIA",
     "boutique_agencia_subtitle": "Estratégias de marketing para o seu negócio.",
@@ -107,7 +107,7 @@
   },
   "sobre": {
     "title": "Sobre a House Mazzutti",
-    "subtitle": "Uma casa criativa fundada em São Paulo, dedicada a traduzir marcas e pessoas em imagens com clareza, sofisticação e consistência."
+    "subtitle": "Uma casa criativa de São Paulo. Transformamos marca e pessoa em imagem — com direção, do conceito à entrega."
   },
   "contato": {
     "title": "Contato",
@@ -117,8 +117,8 @@
   },
   "about": {
     "hero_label": "SOBRE — HMZT",
-    "hero_titulo": "Uma só casa. Da visão à materialização.",
-    "hero_texto": "Estratégia, direção criativa e produção sob um único comando — sem ruído entre etapas.",
+    "hero_titulo": "Uma só casa — da ideia à entrega.",
+    "hero_texto": "Estratégia, direção e produção na mesma casa — sem ruído entre uma etapa e a outra.",
     "hero_cta": "Iniciar uma conversa",
     "diferencial_label": "Diferencial",
     "diferencial_titulo": "O que diferencia a House não é o que fazemos.",
@@ -129,7 +129,7 @@
       "— experiência de set",
       "— execução precisa"
     ],
-    "strategic_label": "Strategic House",
+    "strategic_label": "Casa Estratégica",
     "strategic_titulo": "Vamos além da publicidade.",
     "strategic_subtitulo": "Estruturamos o seu projeto para comunicar com precisão.",
     "strategic_items": [
@@ -185,24 +185,24 @@
     "producao_p1": "Mateus Sacavem comanda a operação executiva da House — coordenação técnica, cronogramas, produção e integração de equipes especializadas. É a engrenagem que sustenta cada projeto, da pré-produção ao master final.",
     "producao_p2": "Domínio em operações de alta complexidade: campanhas de moda, fashion films, ensaios premium e produções com celebridades. Onde a ambição criativa encontra estrutura real — equipe certa, prazos honestos, set sob controle.",
     "producao_quote": "\"Excelência criativa exige excelência operacional.\"",
-    "producao_role": "Head of Production & Operations",
-    "boutique_label": "Boutique 360 — Unidades House",
+    "producao_role": "Direção de Produção e Operações",
+    "boutique_label": "As unidades da casa",
     "boutique_titulo": "Quatro frentes. Uma só conversa.",
     "boutique_cards": [
       {
         "title": "AGÊNCIA",
         "subtitle": "Estratégias de marketing para o seu negócio.",
         "items": [
-          "Branding project",
-          "Web development",
-          "Campanha integrada 360"
+          "Projeto de marca",
+          "Desenvolvimento de site",
+          "Campanha integrada"
         ]
       },
       {
         "title": "STUDIO",
         "subtitle": "Direção de imagem e conteúdo pessoal.",
         "items": [
-          "Book model",
+          "Book de modelo",
           "Ensaio profissional",
           "Cobertura pessoal"
         ]
@@ -231,28 +231,28 @@
     "depoimentos_label": "O que dizem",
     "depoimentos_titulo": "Depoimentos",
     "depoimentos_items": [
-      "Traduzimos a essência de marcas e personalidades em imagens com clareza, sofisticação e consistência.",
+      "Traduzimos marca e pessoa em imagem, com a mesma direção do início ao fim.",
       "Direção, criação e produção sob uma única casa. Uma só conversa, do começo ao fim — sem ruído entre etapas."
     ],
     "cta_titulo": "Imagem é consequência. Posicionamento é direção.",
     "cta_btn": "Iniciar uma conversa",
-    "unidades_label": "Boutique 360 — Unidades House",
+    "unidades_label": "As unidades da casa",
     "unidades_titulo": "Quatro frentes. Uma só conversa.",
     "unidades": [
       {
         "title": "AGÊNCIA",
         "subtitle": "Estratégias de marketing para o seu negócio.",
         "items": [
-          "Branding project",
-          "Web development",
-          "Campanha integrada 360"
+          "Projeto de marca",
+          "Desenvolvimento de site",
+          "Campanha integrada"
         ]
       },
       {
         "title": "STUDIO",
         "subtitle": "Direção de imagem e conteúdo pessoal.",
         "items": [
-          "Book model",
+          "Book de modelo",
           "Ensaio profissional",
           "Cobertura pessoal"
         ]
@@ -316,7 +316,7 @@
     ],
     "hero_cta": "Iniciar projeto",
     "portfolio_label": "Portfólio Produtora",
-    "portfolio_titulo": "Publicidade. Content MKT. Set Design.",
+    "portfolio_titulo": "Publicidade. Conteúdo de marca. Direção de arte.",
     "see_all_portfolio": "Ver todo o portfólio",
     "structure_label": "Otimize os resultados da sua marca",
     "structure_titulo": "Produção executiva e casting artístico para publicidade e marketing de conteúdo.",
@@ -337,13 +337,13 @@
   },
   "contato_page": {
     "title": "CONTATO",
-    "tagline": "Sua visão. Nossa direção.",
+    "tagline": "Você chega com a visão. A casa entra com a direção.",
     "location_label": "LOCALIZAÇÃO",
     "location_title": "Strategic House SP",
-    "schedule_cta": "AGENDAR DIAGNÓSTICO",
-    "form_label": "STRATEGIC HOUSE",
-    "form_title": "CONTATE-NOS",
-    "form_tagline": "Ouvimos. Direcionamos. Transformamos."
+    "schedule_cta": "Agendar uma conversa",
+    "form_label": "CASA ESTRATÉGICA",
+    "form_title": "Vamos conversar",
+    "form_tagline": "Primeiro a gente escuta. Depois direciona."
   },
   "obrigado": {
     "title": "Obrigado!",
