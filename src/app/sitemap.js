@@ -48,6 +48,7 @@ export default async function sitemap() {
     {p: '/academy/preco-da-relevancia', priority: 0.7},
     {p: '/academy/marketing-para-modelos', priority: 0.7},
     // Institucional / comercial
+    {p: '/sobre', priority: 0.8},
     {p: '/angelo', priority: 0.7},
     {p: '/comunidade', priority: 0.6},
     {p: '/comunidade/vagas', priority: 0.5},

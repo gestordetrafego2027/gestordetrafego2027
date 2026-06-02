@@ -49,8 +49,8 @@ export default async function ObrigadoPage({ searchParams }) {
 
           <p className="text-xs text-neutral-400 mt-4">
             Dúvidas? Fale conosco em{' '}
-            <a href="mailto:contato@mztgrupo.com" className="underline hover:text-neutral-700">
-              contato@mztgrupo.com
+            <a href="mailto:contato@housemazzutti.com" className="underline hover:text-neutral-700">
+              contato@housemazzutti.com
             </a>
           </p>
         </div>

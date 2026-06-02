@@ -62,7 +62,7 @@ export function orderConfirmedEmail(props: OrderConfirmedProps): { subject: stri
       Você receberá a NFS-e por e-mail em breve. Para dúvidas, responda este e-mail.
     </p>
 
-    ${button('Ver meu pedido', 'https://housemazzutti.com.br/minha-conta/pedidos')}
+    ${button('Ver meu pedido', 'https://housemazzutti.com/minha-conta/pedidos')}
   `
 
   return {

@@ -24,7 +24,7 @@ const serverSchema = z.object({
 
   // E-mail
   RESEND_API_KEY: z.string().optional(),
-  EMAIL_FROM: z.string().optional().default('House Mazzutti <contato@mztgrupo.com>'),
+  EMAIL_FROM: z.string().optional().default('House Mazzutti <contato@housemazzutti.com>'),
 
   // Antifraude
   RECAPTCHA_SITE_KEY: z.string().optional(),

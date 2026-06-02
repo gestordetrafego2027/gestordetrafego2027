@@ -20,7 +20,7 @@ export function baseLayout(content: string, preview?: string): string {
         <!-- Logo -->
         <tr>
           <td align="center" style="padding-bottom:32px">
-            <a href="https://housemazzutti.com.br" style="text-decoration:none">
+            <a href="https://housemazzutti.com" style="text-decoration:none">
               <span style="font-size:18px;font-weight:700;letter-spacing:0.15em;color:#111;text-transform:uppercase">
                 HOUSE MAZZUTTI
               </span>
@@ -40,9 +40,9 @@ export function baseLayout(content: string, preview?: string): string {
           <td align="center" style="padding-top:24px">
             <p style="margin:0;font-size:12px;color:#9ca3af;line-height:1.6">
               House Mazzutti Produções Ltda &middot; CNPJ 64.448.222/0001-54<br/>
-              <a href="https://housemazzutti.com.br/minha-conta/lgpd" style="color:#9ca3af">Gerenciar preferências</a>
+              <a href="https://housemazzutti.com/minha-conta/lgpd" style="color:#9ca3af">Gerenciar preferências</a>
               &nbsp;&middot;&nbsp;
-              <a href="mailto:contato@mztgrupo.com" style="color:#9ca3af">contato@mztgrupo.com</a>
+              <a href="mailto:contato@housemazzutti.com" style="color:#9ca3af">contato@housemazzutti.com</a>
             </p>
           </td>
         </tr>

@@ -848,7 +848,7 @@ export default function ManualPage() {
 
       <footer className="border-t border-neutral-200 pt-6 mt-10 text-xs text-neutral-400">
         Manual versão 2.0 · Atualizado em maio/2026 · House Mazzutti.{' '}
-        Dúvidas técnicas: <a href="mailto:angelo@mztgrupo.com" className="underline">angelo@mztgrupo.com</a>
+        Dúvidas técnicas: <a href="mailto:angelo@housemazzutti.com" className="underline">angelo@housemazzutti.com</a>
       </footer>
     </div>
   )

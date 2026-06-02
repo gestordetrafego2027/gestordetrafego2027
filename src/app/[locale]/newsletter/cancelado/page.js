@@ -3,6 +3,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Inscrição cancelada — House Mazzutti',
   description: 'Você foi removido da lista de e-mails da House Mazzutti.',
+  robots: { index: false, follow: false },
 }
 
 export default function NewsletterCancelado() {
