@@ -1,4 +1,6 @@
 import {pageMetadata} from '@/lib/seo/metadata'
+import {studioServiceSchema, studioFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {brand} from '@/config/site'
 
 export async function generateMetadata({params}) {
   const {locale} = await params
@@ -12,5 +14,26 @@ export async function generateMetadata({params}) {
 }
 
 export default function StudioLayout({children}) {
-  return children
+  const crumbs = breadcrumbSchema([
+    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
+    {name: 'Studio', url: `${brand.url}/pt/studio/`},
+  ])
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(studioServiceSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(studioFaqSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}}
+      />
+      {children}
+    </>
+  )
 }

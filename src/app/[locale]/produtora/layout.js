@@ -1,4 +1,6 @@
 import {pageMetadata} from '@/lib/seo/metadata'
+import {produtoraServiceSchema, produtoraFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {brand} from '@/config/site'
 
 export async function generateMetadata({params}) {
   const {locale} = await params
@@ -12,5 +14,26 @@ export async function generateMetadata({params}) {
 }
 
 export default function ProdutoraLayout({children}) {
-  return children
+  const crumbs = breadcrumbSchema([
+    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
+    {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
+  ])
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(produtoraServiceSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(produtoraFaqSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}}
+      />
+      {children}
+    </>
+  )
 }
