@@ -160,11 +160,14 @@ export default function Home() {
                         {/* vídeo único de fundo — sem imagem poster, sem slides de imagem */}
                         <video
                             src="/videos/house-mazzutti-fashion-film-hero.mp4"
+                            poster="/images/hero-poster.webp"
                             autoPlay
                             muted
                             loop
                             playsInline
-                            preload="auto"
+                            preload="none"
+                            width={1920}
+                            height={1080}
                             className="absolute inset-0 w-full h-full object-cover object-top"
                         />
                         <div className="absolute inset-0 bg-black/20"></div>
