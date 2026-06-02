@@ -468,6 +468,43 @@ export default function AgenciaPage() {
                 </section>
             </main>
 
+            {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
+            <section className="bg-white py-24 px-8 border-t border-zinc-100">
+                <div className="max-w-3xl mx-auto">
+                    <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-400 mb-6">Perguntas frequentes</p>
+                    <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">O que você precisa saber antes de começar</h2>
+                    <div className="space-y-0">
+                        {[
+                            {
+                                q: 'Quanto tempo leva um projeto de branding na House Mazzutti?',
+                                a: 'Um branding project completo leva entre 6 e 12 semanas, dependendo da complexidade da marca. O processo passa por Imersão, Leitura de Mercado, Conceito, Execução e Fine Art antes da entrega final.'
+                            },
+                            {
+                                q: 'Qual a diferença entre branding e identidade visual?',
+                                a: 'Identidade visual é o sistema gráfico (logo, cores, tipografia). Branding é a arquitetura de valor da marca — posicionamento, voz, estratégia e como tudo isso se traduz visualmente. Na House Mazzutti, fazemos branding completo, da estratégia à execução.'
+                            },
+                            {
+                                q: 'A House Mazzutti atende marcas fora de São Paulo?',
+                                a: 'Sim. Atendemos marcas de todo o Brasil remotamente. Para projetos que exigem presença em set, operamos principalmente em São Paulo, mas realizamos produções em outras cidades mediante agendamento.'
+                            },
+                            {
+                                q: 'Como funciona o investimento em um branding project?',
+                                a: 'Cada projeto é orçado individualmente após uma conversa de briefing. O investimento varia de acordo com o escopo — marca nova, reposicionamento ou sistema completo. Entre em contato pelo formulário para receber uma proposta.'
+                            }
+                        ].map(({q, a}, i) => (
+                            <details key={i} className="group border-t border-zinc-100 py-6 cursor-pointer">
+                                <summary className="flex justify-between items-center list-none font-headline italic text-lg text-zinc-900 gap-4">
+                                    {q}
+                                    <span className="text-zinc-400 group-open:rotate-45 transition-transform duration-200 flex-shrink-0 text-2xl leading-none">+</span>
+                                </summary>
+                                <p className="mt-4 text-[15px] text-zinc-500 font-body leading-[1.8]">{a}</p>
+                            </details>
+                        ))}
+                        <div className="border-t border-zinc-100" />
+                    </div>
+                </div>
+            </section>
+
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
                     <div className="text-neutral-50 mb-12">
@@ -489,7 +526,7 @@ export default function AgenciaPage() {
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/blog">Blog</Link>
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="text-caption text-neutral-700">© 2026 House Mazzutti. Todos os direitos reservados.</div>
+                    <div className="flex flex-col items-center gap-3"><div className="text-caption text-neutral-700">© 2026 House Mazzutti. Todos os direitos reservados.</div><div className="flex gap-6"><a href="/politicas/privacidade" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Privacidade</a><a href="/politicas/termos-de-uso" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Termos</a><a href="/politicas/cookies" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Cookies</a><a href="/politicas/cancelamento-e-reembolso" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Cancelamento</a></div></div>
                 </div>
             </footer>
 

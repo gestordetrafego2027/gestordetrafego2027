@@ -5,6 +5,7 @@ import Link from 'next/link';
 import NextImage from 'next/image';
 import Header from '@/app/components/Header';
 import { articles } from './articles';
+import { getRelatedLinks, postTitles } from '@/lib/seo/clusters';
 
 // Image with automatic fallback (uses portfolio image if dedicated blog image is missing)
 function ArticleImage({ data, className = '', sizes = '' }) {
@@ -175,6 +176,37 @@ export default function ArticleContent({ slug }) {
                             INICIAR CONVERSA
                         </Link>
                     </div>
+
+                    {/* Leia também — internal linking por cluster */}
+                    {(() => {
+                        const related = getRelatedLinks(slug)
+                        if (!related) return null
+                        return (
+                            <div className="my-16 pt-10 hairline-t">
+                                <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-500 mb-8">Leia também</p>
+                                <div className="space-y-4 mb-10">
+                                    {related.siblings.map((item) => (
+                                        <Link
+                                            key={item.slug}
+                                            href={`/blog/${item.slug}`}
+                                            className="flex items-center gap-3 group text-zinc-800 hover:text-zinc-900 transition-colors"
+                                        >
+                                            <span className="text-zinc-300 text-sm">→</span>
+                                            <span className="text-[14px] font-body leading-snug border-b border-transparent group-hover:border-zinc-900 transition-colors">
+                                                {item.title}
+                                            </span>
+                                        </Link>
+                                    ))}
+                                </div>
+                                <Link
+                                    href={related.pillar.url}
+                                    className="inline-block text-[11px] font-label font-bold uppercase tracking-[0.2em] text-zinc-500 hover:text-zinc-900 transition-colors"
+                                >
+                                    {related.pillar.label} →
+                                </Link>
+                            </div>
+                        )
+                    })()}
 
                     {/* Article Footer */}
                     <footer className="pt-8 hairline-t flex justify-between items-center mb-16">

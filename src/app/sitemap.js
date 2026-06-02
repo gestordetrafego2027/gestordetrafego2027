@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import {createClient} from '@/lib/supabase/server'
 import {articles as blogArticles} from '@/app/[locale]/blog/[slug]/articles'
+import {policySlugs} from '@/lib/policies/content'
 
 const BASE = 'https://housemazzutti.com'
 const L = '/pt'
@@ -82,6 +83,14 @@ export default async function sitemap() {
     })),
   )
 
+  const policyPages = [
+    {url: `${BASE}${L}/politicas/`, priority: 0.3},
+    ...policySlugs.map((slug) => ({
+      url: `${BASE}${L}/politicas/${slug}/`,
+      priority: 0.3,
+    })),
+  ].map((p) => ({...p, lastModified: now, changeFrequency: 'yearly'}))
+
   let academyProducts = []
   try {
     const supabase = await createClient()
@@ -99,5 +108,5 @@ export default async function sitemap() {
     // Build sem credenciais — ignora.
   }
 
-  return [...staticPages, ...blogPosts, ...portfolioPages, ...academyProducts]
+  return [...staticPages, ...blogPosts, ...portfolioPages, ...policyPages, ...academyProducts]
 }
