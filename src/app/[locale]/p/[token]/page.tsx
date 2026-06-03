@@ -50,7 +50,7 @@ export default async function PublicQuotePage({
           <div>
             <div className="text-2xl font-bold tracking-tight">House Mazzutti</div>
             <div className="text-xs text-neutral-500 mt-0.5">
-              housemazzutti.com · contato@mztgrupo.com
+              housemazzutti.com · contato@housemazzutti.com
             </div>
           </div>
           <div className="text-right">

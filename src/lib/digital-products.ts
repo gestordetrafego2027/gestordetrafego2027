@@ -48,6 +48,6 @@ export function resolveDigitalProduct(slug: string | null | undefined): DigitalP
  */
 export function absoluteDownloadUrl(url: string): string {
   if (url.startsWith('http')) return url
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://housemazzutti.com.br'
+  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://housemazzutti.com'
   return `${base}${url.startsWith('/') ? '' : '/'}${url}`
 }

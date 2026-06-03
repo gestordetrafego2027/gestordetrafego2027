@@ -12,4 +12,5 @@ export const featureFlags = {
   isStoreEnabled: () => flag('FEATURE_STORE_ENABLED'),
   isSubscriptionsEnabled: () => flag('FEATURE_SUBSCRIPTIONS_ENABLED'),
   isAcademyStripeEnabled: () => flag('FEATURE_ACADEMY_STRIPE_ENABLED'),
+  isAsaasEnabled: () => flag('FEATURE_ASAAS_ENABLED'),
 } as const

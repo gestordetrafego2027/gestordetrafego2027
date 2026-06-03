@@ -466,6 +466,44 @@ export default function ProdutoraPage() {
                     </div>
                 </section>
             </main>
+
+            {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
+            <section className="bg-white py-24 px-8 border-t border-zinc-100">
+                <div className="max-w-3xl mx-auto">
+                    <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-400 mb-6">Perguntas frequentes</p>
+                    <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">O que você precisa saber antes de começar</h2>
+                    <div className="space-y-0">
+                        {[
+                            {
+                                q: 'O que uma produtora executiva faz numa campanha?',
+                                a: 'A produtora executiva é responsável por tudo que acontece antes, durante e depois do set: orçamento, cronograma, contratação de equipe técnica, casting, locações, set design, direção de arte e entrega final. Na House Mazzutti, esse processo é integrado à direção criativa desde o conceito.'
+                            },
+                            {
+                                q: 'Vocês cuidam de casting e set design?',
+                                a: 'Sim. A Produtora HMZT cobre casting (seleção de modelos e talentos), set design (criação e execução do ambiente de set) e toda a coordenação de produção. Tudo sob uma única direção criativa.'
+                            },
+                            {
+                                q: 'A Produtora atende marcas de moda e beleza?',
+                                a: 'Sim — moda e beleza são os segmentos principais da Produtora HMZT. Temos experiência em campanhas de marcas de cosméticos, moda feminina, joias e acessórios, além de campanhas institucionais.'
+                            },
+                            {
+                                q: 'Como começar uma campanha com a House Mazzutti?',
+                                a: 'O primeiro passo é uma conversa de briefing — objetivo da campanha, produto, público e referências. A partir daí, desenvolvemos o conceito criativo e apresentamos a proposta de produção. Use o formulário de contato ou o WhatsApp para iniciar.'
+                            }
+                        ].map(({q, a}, i) => (
+                            <details key={i} className="group border-t border-zinc-100 py-6 cursor-pointer">
+                                <summary className="flex justify-between items-center list-none font-headline italic text-lg text-zinc-900 gap-4">
+                                    {q}
+                                    <span className="text-zinc-400 group-open:rotate-45 transition-transform duration-200 flex-shrink-0 text-2xl leading-none">+</span>
+                                </summary>
+                                <p className="mt-4 text-[15px] text-zinc-500 font-body leading-[1.8]">{a}</p>
+                            </details>
+                        ))}
+                        <div className="border-t border-zinc-100" />
+                    </div>
+                </div>
+            </section>
+
             <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
                 <div className="flex flex-col items-center text-center">
                     <div className="text-neutral-50 mb-12">

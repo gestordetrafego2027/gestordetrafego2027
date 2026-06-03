@@ -51,7 +51,7 @@ export default async function QuotePrintPage({
           <div>
             <div className="text-3xl font-bold tracking-tight">House Mazzutti</div>
             <div className="text-xs text-neutral-500 mt-1">
-              housemazzutti.com · contato@mztgrupo.com
+              housemazzutti.com · contato@housemazzutti.com
             </div>
           </div>
           <div className="text-right">

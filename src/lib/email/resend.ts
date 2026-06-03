@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 
 const apiKey = process.env.RESEND_API_KEY
-const FROM = process.env.RESEND_FROM || 'House Mazzutti <noreply@housemazzutti.com.br>'
+const FROM = process.env.RESEND_FROM || 'House Mazzutti <noreply@housemazzutti.com>'
 
 let _client: Resend | null = null
 function getClient(): Resend | null {

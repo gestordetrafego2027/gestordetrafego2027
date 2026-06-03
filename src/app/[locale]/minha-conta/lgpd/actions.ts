@@ -113,7 +113,7 @@ export async function requestAccountDeletion(): Promise<{ ok: boolean; message: 
     log.info('LGPD: conta anonimizada com sucesso')
   } catch (err) {
     log.error({ err }, 'LGPD: falha ao anonimizar conta')
-    return { ok: false, message: 'Não foi possível processar. Entre em contato: contato@mztgrupo.com' }
+    return { ok: false, message: 'Não foi possível processar. Entre em contato: contato@housemazzutti.com' }
   }
 
   redirect('/login?lgpd=deleted')

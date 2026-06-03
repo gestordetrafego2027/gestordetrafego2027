@@ -13,10 +13,10 @@ export function paymentFailedEmail(props: { buyerName: string; buyerEmail: strin
       Isso pode acontecer por dados incorretos, limite do cartão ou recusa do emissor.
       Tente novamente com outro método de pagamento.
     </p>
-    ${button('Tentar novamente', 'https://housemazzutti.com.br/loja')}
+    ${button('Tentar novamente', 'https://housemazzutti.com/loja')}
     <p style="font-size:12px;color:#9ca3af;margin-top:20px">
       Se precisar de ajuda, responda este e-mail ou fale conosco em
-      <a href="mailto:contato@mztgrupo.com" style="color:#9ca3af">contato@mztgrupo.com</a>.
+      <a href="mailto:contato@housemazzutti.com" style="color:#9ca3af">contato@housemazzutti.com</a>.
     </p>
   `
   return {

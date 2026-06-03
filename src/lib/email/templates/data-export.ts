@@ -14,7 +14,7 @@ export function dataExportEmail(props: {
     <p style="font-size:12px;color:#9ca3af;margin-top:20px;line-height:1.6">
       Controlador: House Mazzutti Produções Ltda — CNPJ 64.448.222/0001-54.<br/>
       Para exercer outros direitos LGPD, acesse
-      <a href="https://housemazzutti.com.br/minha-conta/lgpd" style="color:#9ca3af">sua área de privacidade</a>.
+      <a href="https://housemazzutti.com/minha-conta/lgpd" style="color:#9ca3af">sua área de privacidade</a>.
     </p>
   `
   return {

@@ -1,8 +1,11 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "House Mazzutti | Direção Criativa, Branding e Produção",
-  description: "House Mazzutti é uma casa criativa que traduz marcas e pessoas em imagens com clareza, sofisticação e consistência. Branding, direção criativa e produção sob uma só conversa — São Paulo.",
+  metadataBase: new URL('https://housemazzutti.com'),
+  title: {
+    default: 'House Mazzutti — Direção Criativa e Branding em São Paulo',
+    template: '%s',
+  },
 };
 
 export default function RootLayout({ children }) {

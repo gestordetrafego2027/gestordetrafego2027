@@ -11,21 +11,12 @@ import {useTranslations} from 'next-intl';
 
 export default function ComunidadePage() {
     const t = useTranslations('comunidade_page');
-    const tAbout = useTranslations('about');
     const tCta = useTranslations('cta');
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [aboutSlide, setAboutSlide] = useState(0);
     const [talentsForm, setTalentsForm] = useState(null); // { ctaLocation }
     const openTalentsForm = (ctaLocation) => setTalentsForm({ ctaLocation });
     const closeTalentsForm = () => setTalentsForm(null);
 
-    const aboutTestimonials = [
-        { text: "Traduzimos a essência de marcas e personalidades em imagens com clareza, sofisticação e consistência.", author: "" },
-        { text: "Direção, criação e produção sob uma única casa. Uma só conversa, do começo ao fim — sem ruído entre etapas.", author: "" },
-    ];
-    const nextAboutSlide = () => setAboutSlide((p) => (p + 1) % aboutTestimonials.length);
-    const prevAboutSlide = () => setAboutSlide((p) => (p - 1 + aboutTestimonials.length) % aboutTestimonials.length);
-    const goToAboutSlide = (i) => setAboutSlide(i);
 
     const testimonials = [
         {
@@ -411,100 +402,7 @@ export default function ComunidadePage() {
                     </div>
                 </section>
 
-                {/* ============================================================
-                    SEÇÕES IMPORTADAS DA PÁGINA SOBRE (HMZT)
-                    ============================================================ */}
-
-                {/* [SOBRE-6.5] PRODUÇÃO EXECUTIVA — MATEUS SACAVEM */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row md:items-stretch relative">
-                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:min-h-[80vh] md:self-stretch">
-                        <Image alt="Mateus Sacavem — Produtor Executivo da House Mazzutti" src="/images/about/mateus-sacavem.webp" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover object-top" />
-                    </div>
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#1a1a1a] z-10"></div>
-                    <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
-                        <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-400">Produção Executiva /02</span>
-                            <h2 className="text-h2 text-white">Sem operação, a ideia não materializa.</h2>
-                            <div className="space-y-5 text-body text-neutral-300">
-                                <p>Mateus Sacavem comanda a operação executiva da House — coordenação técnica, cronogramas, produção e integração de equipes especializadas. É a engrenagem que sustenta cada projeto, da pré-produção ao master final.</p>
-                                <p>Domínio em operações de alta complexidade: campanhas de moda, fashion films, ensaios premium e produções com celebridades. Onde a ambição criativa encontra estrutura real — equipe certa, prazos honestos, set sob controle.</p>
-                                <p className="italic text-neutral-400">"Excelência criativa exige excelência operacional."</p>
-                            </div>
-                            <div className="pt-6">
-                                <div className="text-h3 text-white/90">Mateus Sacavem</div>
-                                <div className="text-caption text-neutral-500 mt-2">Head of Production & Operations</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* [SOBRE-2] DEPOIMENTOS */}
-                <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center h-[480px] max-h-[480px]">
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40">Depoimentos</span>
-                    </div>
-                    <div className="absolute left-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevAboutSlide}>
-                            <div className="custom-nav-line mr-2"></div>
-                            <svg className="transform -translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="absolute right-16 inset-y-0 flex items-center z-20">
-                        <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={nextAboutSlide}>
-                            <svg className="transform translate-x-2" fill="none" height="24" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" viewBox="0 0 24 24" width="24">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <div className="custom-nav-line ml-2"></div>
-                        </button>
-                    </div>
-                    <div className="relative z-10 max-w-4xl mx-auto text-center">
-                        <div className="mb-12">
-                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
-                            <h2 className="text-h2 text-white">Depoimentos</h2>
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <div className="relative w-full overflow-hidden mb-1" style={{height: '220px', display: 'flex', alignItems: 'center'}}>
-                                {aboutTestimonials.map((tm, i) => (
-                                    <div key={i} className={`testimonial-slide flex flex-col justify-center ${aboutSlide === i ? "active" : ""}`}>
-                                        <h3 className="text-h3 text-white max-w-3xl mx-auto">“{tm.text}”</h3>
-                                        {tm.author && (
-                                            <div className="pt-6">
-                                                <p className="text-caption text-white/80">{tm.author}</p>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="flex space-x-3 pt-4">
-                                {aboutTestimonials.map((_, i) => (
-                                    <button key={i} className={`indicator w-8 h-[1px] bg-white transition-opacity duration-300 ${aboutSlide === i ? "opacity-100" : "opacity-30"}`} onClick={() => goToAboutSlide(i)}></button>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 <ClientLogos />
-
-                {/* [SOBRE-0] HERO — antes do Editorial */}
-                <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
-                    <div className="absolute inset-0 z-0">
-                        <Image src="/images/about/banner--04-imagem-3nsaio-house-mazzutti.webp" alt="" fill sizes="100vw" quality={85} className="object-cover object-top" />
-                        <div className="absolute inset-0 bg-black/20"></div>
-                    </div>
-                    <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
-                        <div className="max-w-4xl">
-                            <span className="text-caption text-white/70 mb-6 block">{tAbout('hero_label')}</span>
-                            <h2 className="text-h1 text-white mb-8 hmzt-hero-title">{tAbout('hero_titulo')}</h2>
-                            <p className="text-body text-white/75 mb-12 measure-editorial">{tAbout('hero_texto')}</p>
-                            <Link href="/contato" className="inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
-                                {tAbout('hero_cta')}
-                            </Link>
-                        </div>
-                    </div>
-                </section>
 
                 {/* ── FRENTES — BANNERS ───────────────────────────────── */}
                 <section className="bg-white">
@@ -609,21 +507,6 @@ export default function ComunidadePage() {
                                     </div>
                                 </Link>
                             ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* [SOBRE-7] CTA */}
-                <section className="bg-black py-40 px-12 text-center relative overflow-hidden" id="about-contato">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
-                    <div className="relative z-10 max-w-5xl mx-auto space-y-20">
-                        <h2 className="text-h1 text-white hmzt-hero-title">
-                            Se você se identifica, vamos transformar seu posicionamento.
-                        </h2>
-                        <div className="flex flex-col items-center space-y-10">
-                            <Link className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="/contato">
-                                Iniciar uma conversa
-                            </Link>
                         </div>
                     </div>
                 </section>

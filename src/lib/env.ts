@@ -24,7 +24,7 @@ const serverSchema = z.object({
 
   // E-mail
   RESEND_API_KEY: z.string().optional(),
-  EMAIL_FROM: z.string().optional().default('House Mazzutti <contato@mztgrupo.com>'),
+  EMAIL_FROM: z.string().optional().default('House Mazzutti <contato@housemazzutti.com>'),
 
   // Antifraude
   RECAPTCHA_SITE_KEY: z.string().optional(),
@@ -48,6 +48,12 @@ const serverSchema = z.object({
   FEATURE_STORE_ENABLED: z.string().optional().default('false'),
   FEATURE_SUBSCRIPTIONS_ENABLED: z.string().optional().default('false'),
   FEATURE_ACADEMY_STRIPE_ENABLED: z.string().optional().default('false'),
+  FEATURE_ASAAS_ENABLED: z.string().optional().default('false'),
+
+  // Asaas (Sprint 9)
+  ASAAS_API_KEY: z.string().optional(),
+  ASAAS_ENV: z.enum(['sandbox', 'production']).optional().default('sandbox'),
+  ASAAS_WEBHOOK_TOKEN: z.string().optional(),
 })
 
 function parseEnv() {

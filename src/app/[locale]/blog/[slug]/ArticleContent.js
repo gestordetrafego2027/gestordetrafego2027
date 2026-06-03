@@ -5,6 +5,7 @@ import Link from 'next/link';
 import NextImage from 'next/image';
 import Header from '@/app/components/Header';
 import { articles } from './articles';
+import { getRelatedLinks, postTitles } from '@/lib/seo/clusters';
 
 // Image with automatic fallback (uses portfolio image if dedicated blog image is missing)
 function ArticleImage({ data, className = '', sizes = '' }) {
@@ -105,7 +106,7 @@ export default function ArticleContent({ slug }) {
                         <h1 className="text-2xl md:text-4xl font-headline italic leading-tight text-zinc-900 mb-6">
                             {article.titulo}
                         </h1>
-                        <p className="text-[14px] uppercase tracking-[0.18em] text-zinc-500 font-label">por Angelo Mazzutti · Head of Creative & Brand Strategy</p>
+                        <p className="text-[14px] uppercase tracking-[0.18em] text-zinc-500 font-label">por Angelo Mazzutti · Diretor Criativo</p>
                     </header>
 
                     {/* Intro Lead */}
@@ -176,6 +177,37 @@ export default function ArticleContent({ slug }) {
                         </Link>
                     </div>
 
+                    {/* Leia também — internal linking por cluster */}
+                    {(() => {
+                        const related = getRelatedLinks(slug)
+                        if (!related) return null
+                        return (
+                            <div className="my-16 pt-10 hairline-t">
+                                <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-500 mb-8">Leia também</p>
+                                <div className="space-y-4 mb-10">
+                                    {related.siblings.map((item) => (
+                                        <Link
+                                            key={item.slug}
+                                            href={`/blog/${item.slug}`}
+                                            className="flex items-center gap-3 group text-zinc-800 hover:text-zinc-900 transition-colors"
+                                        >
+                                            <span className="text-zinc-300 text-sm">→</span>
+                                            <span className="text-[14px] font-body leading-snug border-b border-transparent group-hover:border-zinc-900 transition-colors">
+                                                {item.title}
+                                            </span>
+                                        </Link>
+                                    ))}
+                                </div>
+                                <Link
+                                    href={related.pillar.url}
+                                    className="inline-block text-[11px] font-label font-bold uppercase tracking-[0.2em] text-zinc-500 hover:text-zinc-900 transition-colors"
+                                >
+                                    {related.pillar.label} →
+                                </Link>
+                            </div>
+                        )
+                    })()}
+
                     {/* Article Footer */}
                     <footer className="pt-8 hairline-t flex justify-between items-center mb-16">
                         <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400">{article.data}</div>
@@ -198,7 +230,7 @@ export default function ArticleContent({ slug }) {
                         <div>
                             <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400 mb-1">AUTOR</div>
                             <div className="text-[18px] font-headline italic text-zinc-900 mb-2">Angelo Mazzutti</div>
-                            <p className="text-[14px] text-zinc-500 font-body leading-[1.7] max-w-md">Head of Creative & Brand Strategy da House Mazzutti. 15 anos no audiovisual, com direção criativa para marcas premium e personalidades — de Larissa Manoela à família Abravanel.</p>
+                            <p className="text-[14px] text-zinc-500 font-body leading-[1.7] max-w-md">Diretor Criativo da House Mazzutti. 15+ anos no audiovisual, com direção criativa para marcas premium e personalidades.</p>
                         </div>
                     </div>
                 </article>

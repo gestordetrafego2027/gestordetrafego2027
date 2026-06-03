@@ -3,6 +3,11 @@ import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 
+// Área logada — fora do índice de busca.
+export const metadata = {
+  robots: { index: false, follow: false },
+}
+
 const NAV = [
   { href: '/minha-conta', label: 'Visão geral', exact: true },
   { href: '/minha-conta/pedidos', label: 'Meus pedidos' },
