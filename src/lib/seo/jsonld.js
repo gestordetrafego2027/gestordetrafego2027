@@ -1,6 +1,7 @@
 // Schema.org global da House Mazzutti (Organization + LocalBusiness + Person).
 // Fonte única: @/config/site. NÃO hardcodar NAP/telefone/redes aqui.
-// Coordenadas `geo` ficam pendentes até o Google Business Profile.
+// GBP: House Mazzutti Agência & Produtora · 5.0 ⭐ (32 avaliações) · Serviço de fotografia
+// Plus Code: 99MF+VP Bosque da Saúde, São Paulo - SP
 
 import {brand, contact, nap, social, leadership, timeline, cnpj} from '@/config/site'
 
@@ -14,7 +15,7 @@ export const globalJsonLd = {
       '@type': 'Organization',
       '@id': `${brand.url}/#organization`,
       name: brand.name,
-      alternateName: [...brand.alternateNames],
+      alternateName: ['HouseMazzutti', 'HMZT', 'House Mazzutti Agência & Produtora'],
       url: `${brand.url}/pt/`,
       logo: brand.logo,
       description: brand.tagline,
@@ -35,7 +36,9 @@ export const globalJsonLd = {
     {
       '@type': 'ProfessionalService',
       '@id': `${brand.url}/#localbusiness`,
-      name: brand.name,
+      name: 'House Mazzutti Agência & Produtora',
+      // Nome exato do GBP — deve bater com o perfil do Google Business.
+      alternateName: brand.name,
       image: brand.logo,
       url: `${brand.url}/pt/`,
       telephone: contact.phone,
@@ -51,12 +54,19 @@ export const globalJsonLd = {
       },
       geo: {
         '@type': 'GeoCoordinates',
-        // Coordenadas via OpenStreetMap — confirmar com o pin exato do GBP.
-        // No Google Maps: clique no pin do negócio → URL mostra @lat,lon.
-        latitude: '-23.6181267',
-        longitude: '-46.6325313',
+        // Coordenadas OSM — bater com o pin exato do GBP via Maps URL @lat,lon
+        latitude: '-23.6165731',
+        longitude: '-46.6288975',
       },
-      hasMap: 'https://maps.google.com/?q=House+Mazzutti+Rua+General+Chagas+Santos+1058+Bosque+da+Saude+Sao+Paulo',
+      hasMap: 'https://maps.app.goo.gl/housemazzutti',
+      // AggregateRating do GBP em 2026-06-03 · atualizar trimestralmente.
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5.0',
+        reviewCount: '32',
+        bestRating: '5',
+        worstRating: '1',
+      },
       areaServed: {'@type': 'City', name: nap.city},
       openingHoursSpecification: [
         {
