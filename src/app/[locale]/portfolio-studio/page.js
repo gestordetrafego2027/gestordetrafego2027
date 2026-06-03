@@ -391,14 +391,6 @@ export default function PortfolioStudioPage() {
                             </div>
                         </Link>
 
-                        <Link href="/portfolio-studio/mileide-mihaile" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/studio/mileide-mihaile/capa.webp" alt="Mileide Mihaile" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
-                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ENSAIO PESSOAL</span>
-                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Mileide Mihaile</span>
-                            </div>
-                        </Link>
-
                         <Link href="/portfolio-studio/talita-dalbo" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
                             <Image src="/images/studio/talita-dalbo/capa.webp" alt="Talita Dalbó" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-top" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
