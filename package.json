@@ -66,6 +66,7 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^4.3.0",
     "tsx": "^4.22.3",
-    "vitest": "^4.1.7"
+    "vitest": "^4.1.7",
+    "pino-pretty": "^13.0.0"
   }
 }
