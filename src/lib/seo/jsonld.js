@@ -49,6 +49,14 @@ export const globalJsonLd = {
         postalCode: nap.postalCode,
         addressCountry: nap.country,
       },
+      geo: {
+        '@type': 'GeoCoordinates',
+        // Coordenadas via OpenStreetMap — confirmar com o pin exato do GBP.
+        // No Google Maps: clique no pin do negócio → URL mostra @lat,lon.
+        latitude: '-23.6181267',
+        longitude: '-46.6325313',
+      },
+      hasMap: 'https://maps.google.com/?q=House+Mazzutti+Rua+General+Chagas+Santos+1058+Bosque+da+Saude+Sao+Paulo',
       areaServed: {'@type': 'City', name: nap.city},
       openingHoursSpecification: [
         {
