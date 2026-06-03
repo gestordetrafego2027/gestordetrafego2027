@@ -7,6 +7,16 @@ import {policySlugs} from '@/lib/policies/content'
 const BASE = 'https://housemazzutti.com'
 const L = '/pt'
 
+// Páginas delistadas (gate 0.7) — fora do sitemap até permissão de uso de imagem.
+const DELISTED_PORTFOLIO = new Set([
+  'jequiti-larissa-manoela',
+  'jequiti-galisteu',
+  'jequiti-ana-castela',
+  'we-pink-ze-felipe',
+  'simony-marca',
+  'mileide-mihaile',
+])
+
 function listPortfolioSlugs(unit) {
   const dir = path.join(
     process.cwd(),
@@ -18,7 +28,12 @@ function listPortfolioSlugs(unit) {
   try {
     return fs
       .readdirSync(dir, {withFileTypes: true})
-      .filter((d) => d.isDirectory() && d.name !== '[slug]')
+      .filter(
+        (d) =>
+          d.isDirectory() &&
+          d.name !== '[slug]' &&
+          !DELISTED_PORTFOLIO.has(d.name),
+      )
       .map((d) => d.name)
   } catch {
     return []
