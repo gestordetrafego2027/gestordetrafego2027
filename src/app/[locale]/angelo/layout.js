@@ -1,4 +1,27 @@
 import {pageMetadata} from '@/lib/seo/metadata'
+import {breadcrumbSchema} from '@/lib/seo/schemas'
+import {brand, leadership, social} from '@/config/site'
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${brand.url}/pt/angelo/#angelo`,
+  name: leadership.angelo.name,
+  jobTitle: 'Diretor Criativo',
+  description: leadership.angelo.bio,
+  worksFor: {'@id': `${brand.url}/#organization`},
+  url: `${brand.url}/pt/angelo/`,
+  image: `${brand.url}/images/angelo/angelo-mazzutti.webp`,
+  knowsAbout: [
+    'Branding',
+    'Direção Criativa',
+    'Fotografia',
+    'Produção Audiovisual',
+    'Direção de Arte',
+    'Identidade Visual',
+  ],
+  sameAs: [social.instagram.url, social.linkedin.url],
+}
 
 export async function generateMetadata({params}) {
   const {locale} = await params
@@ -12,5 +35,21 @@ export async function generateMetadata({params}) {
 }
 
 export default function AngeloLayout({children}) {
-  return children
+  const crumbs = breadcrumbSchema([
+    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
+    {name: 'Angelo Mazzutti', url: `${brand.url}/pt/angelo/`},
+  ])
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(personSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}}
+      />
+      {children}
+    </>
+  )
 }

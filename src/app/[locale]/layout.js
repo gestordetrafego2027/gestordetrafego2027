@@ -22,6 +22,17 @@ export async function generateMetadata({params}) {
       description:
         'Casa criativa de São Paulo: branding, direção criativa e produção de imagem sob uma só direção. Sua imagem, com intenção.',
     }),
+    // OG image padrão global — substituída por imagens específicas em cada rota
+    openGraph: {
+      images: [
+        {
+          url: `${SITE_URL}/images/og-default.webp`,
+          width: 1200,
+          height: 630,
+          alt: 'House Mazzutti — Casa Criativa em São Paulo',
+        },
+      ],
+    },
   };
 }
 
