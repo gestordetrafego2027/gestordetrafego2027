@@ -5,7 +5,7 @@
  */
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { DirectCheckoutButton } from '@/components/ecommerce/DirectCheckoutButton'
+import { PaymentMethodSelector } from '@/components/ecommerce/PaymentMethodSelector'
 import { createClient } from '@/lib/supabase/server'
 
 export const metadata: Metadata = {
@@ -141,24 +141,11 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
         </div>
 
         {STRIPE_PRICE_ID ? (
-          <DirectCheckoutButton
+          <PaymentMethodSelector
             stripePriceId={STRIPE_PRICE_ID}
-            label="Garantir meu exemplar →"
-            loadingLabel="Abrindo checkout seguro…"
-            style={{
-              display: 'inline-block',
-              background: '#14140e',
-              color: '#efe9da',
-              fontFamily: '"Rock Grotesque", system-ui, sans-serif',
-              fontWeight: 500,
-              fontSize: 12,
-              letterSpacing: '0.28em',
-              textTransform: 'uppercase',
-              padding: '18px 28px',
-              border: 'none',
-              cursor: 'pointer',
-              textDecoration: 'none',
-            }}
+            productSlug={SLUG}
+            locale={locale}
+            priceCents={finalCents}
           />
         ) : (
           <p style={{ color: '#c92a2a', fontSize: 14 }}>
