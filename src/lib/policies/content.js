@@ -2,7 +2,7 @@
 // Base: LGPD (Lei 13.709/2018) + Marco Civil da Internet + boas práticas ANPD.
 // Revisar com advogado antes de qualquer alteração nos campos marcados [REVISAR].
 
-import {brand, contact, nap, napOneLine} from '@/config/site'
+import {brand, contact, nap, napOneLine, cnpj} from '@/config/site'
 
 const updated = '02 de junho de 2026'
 
@@ -16,7 +16,7 @@ export const policies = {
     sections: [
       {
         heading: '1. Quem somos',
-        body: `A House Mazzutti (CNPJ [REVISAR]) é uma casa criativa de direção criativa, branding e produção de imagem, com sede em ${napOneLine}. Este documento descreve como tratamos seus dados pessoais quando você utiliza nosso site (${brand.url}), serviços ou produtos.`
+        body: `A House Mazzutti (CNPJ ${cnpj}) é uma casa criativa de direção criativa, branding e produção de imagem, com sede em ${napOneLine}. Este documento descreve como tratamos seus dados pessoais quando você utiliza nosso site (${brand.url}), serviços ou produtos.`
       },
       {
         heading: '2. Dados que coletamos',

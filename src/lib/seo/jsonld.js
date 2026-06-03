@@ -2,7 +2,7 @@
 // Fonte única: @/config/site. NÃO hardcodar NAP/telefone/redes aqui.
 // Coordenadas `geo` ficam pendentes até o Google Business Profile.
 
-import {brand, contact, nap, social, leadership, timeline} from '@/config/site'
+import {brand, contact, nap, social, leadership, timeline, cnpj} from '@/config/site'
 
 const sameAs = Object.values(social).map((c) => c.url)
 const streetAddress = `${nap.street} - ${nap.neighborhood}`
@@ -19,6 +19,7 @@ export const globalJsonLd = {
       logo: brand.logo,
       description: brand.tagline,
       foundingDate: String(timeline.foundedYear),
+      taxID: cnpj,
       founder: {'@id': `${brand.url}/pt/angelo/#angelo`},
       areaServed: {'@type': 'City', name: nap.city},
       contactPoint: {

@@ -107,6 +107,9 @@ export const contact: Contact = {
   whatsapp: '+55 11 95234-7533',
 } as const
 
+/** CNPJ oficial — fonte única. Usar em schemas, políticas e documentos fiscais. */
+export const cnpj = '64.448.222/0001-54' as const
+
 // ---------------------------------------------------------------------------
 // 0.4 — NAP (único e público)
 // ---------------------------------------------------------------------------
