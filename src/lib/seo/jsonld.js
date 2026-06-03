@@ -54,11 +54,11 @@ export const globalJsonLd = {
       },
       geo: {
         '@type': 'GeoCoordinates',
-        // Coordenadas OSM — bater com o pin exato do GBP via Maps URL @lat,lon
-        latitude: '-23.6165731',
-        longitude: '-46.6288975',
+        // Coordenadas exatas do pin do GBP (extraídas da URL do Google Maps).
+        latitude: '-23.6152908',
+        longitude: '-46.6256534',
       },
-      hasMap: 'https://maps.app.goo.gl/housemazzutti',
+      hasMap: 'https://www.google.com/maps/place/House+Mazzutti+Ag%C3%AAncia+%26+Produtora/@-23.6152859,-46.6282283,17z',
       // AggregateRating do GBP em 2026-06-03 · atualizar trimestralmente.
       aggregateRating: {
         '@type': 'AggregateRating',
