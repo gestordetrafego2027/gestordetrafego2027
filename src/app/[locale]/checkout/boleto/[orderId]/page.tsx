@@ -13,13 +13,17 @@ export default async function BoletoPage({ params }: Props) {
   const supabase = createServiceClient()
   const { data: order } = await supabase
     .from('store_orders')
-    .select('id, order_number, total_cents, status, asaas_payment_id, metadata, buyer_email')
+    .select('id, order_number, total_cents, status, metadata, buyer_email')
     .eq('id', orderId)
     .maybeSingle()
 
-  if (!order || !order.asaas_payment_id) notFound()
+  const meta = (order?.metadata ?? {}) as {
+    asaas_payment_id?: string
+    asaas?: Record<string, string>
+  }
+  if (!order || !meta.asaas_payment_id) notFound()
 
-  const asaasMeta = (order.metadata as { asaas?: Record<string, string> } | null)?.asaas
+  const asaasMeta = meta.asaas
   const bankSlipUrl = asaasMeta?.bankSlipUrl
   const identificationField = asaasMeta?.identificationField
   const dueDate = asaasMeta?.dueDate
@@ -32,7 +36,7 @@ export default async function BoletoPage({ params }: Props) {
       orderId={order.id}
       orderNumber={order.order_number}
       totalCents={order.total_cents}
-      paymentId={order.asaas_payment_id}
+      paymentId={meta.asaas_payment_id}
       bankSlipUrl={bankSlipUrl}
       identificationField={identificationField}
       dueDate={dueDate ?? null}

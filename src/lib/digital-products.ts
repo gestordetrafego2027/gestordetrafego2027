@@ -16,6 +16,10 @@ export interface DigitalProduct {
   downloadUrl: string
   /** Texto de validade (apenas display no email). */
   expiresIn?: string
+  /** Rótulo do volume para o cabeçalho do email (ex.: "Vol. 02"). */
+  volumeLabel?: string
+  /** Linha de "o que esperar" no email (ex.: "107 páginas em 10 capítulos"). */
+  detail?: string
 }
 
 export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
@@ -26,6 +30,8 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
       process.env.DOWNLOAD_URL_MARKETING_PARA_MODELOS ??
       '/downloads/marketing-para-modelos-hmzt-vol-01.pdf',
     expiresIn: '7 dias',
+    volumeLabel: 'Vol. 01',
+    detail: '94 páginas de leitura editorial — da passarela física ao império digital.',
   },
   'preco-da-relevancia': {
     slug: 'preco-da-relevancia',
@@ -34,6 +40,8 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
       process.env.DOWNLOAD_URL_PRECO_DA_RELEVANCIA ??
       '/downloads/preco-da-relevancia-hmzt-vol-02.pdf',
     expiresIn: '7 dias',
+    volumeLabel: 'Vol. 02',
+    detail: '107 páginas em 10 capítulos. Leitura sugerida em ordem — cada parte se apoia na anterior.',
   },
 }
 
