@@ -25,7 +25,7 @@ async function findOrder(ctx: HandlerCtx) {
   const { data } = await supabase
     .from('store_orders')
     .select('id, status, buyer_email, total_cents, order_number')
-    .eq('asaas_payment_id', payment.id)
+    .eq('metadata->>asaas_payment_id', payment.id)
     .maybeSingle()
   return data
 }

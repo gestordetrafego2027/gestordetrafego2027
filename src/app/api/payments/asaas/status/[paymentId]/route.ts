@@ -22,7 +22,7 @@ export async function GET(_req: NextRequest, ctx: Ctx) {
   const { data, error } = await supabase
     .from('store_orders')
     .select('id, status, paid_at, order_number')
-    .eq('asaas_payment_id', paymentId)
+    .eq('metadata->>asaas_payment_id', paymentId)
     .maybeSingle()
 
   if (error || !data) {
