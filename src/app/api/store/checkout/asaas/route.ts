@@ -40,24 +40,37 @@ export async function POST(req: NextRequest) {
   // Sessão do usuário (guest permitido)
   const { data: { user } } = await supabase.auth.getUser()
 
-  // Buscar preço no Supabase
-  const { data: price, error: priceErr } = await supabase
+  // Buscar preço — tenta store_prices primeiro, depois academy_products como fallback
+  let totalCents = 0
+  let productName = body.productSlug
+
+  const { data: price } = await supabase
     .from('store_prices')
-    .select('id, unit_amount, active, store_products(name, product_type)')
+    .select('id, unit_amount, active, store_products(name)')
     .eq('stripe_price_id', body.stripePriceId)
     .eq('active', true)
     .maybeSingle()
 
-  if (priceErr || !price) {
-    log.warn({ stripePriceId: body.stripePriceId }, 'preço não encontrado')
-    return NextResponse.json({ error: 'Produto não encontrado.' }, { status: 404 })
+  if (price) {
+    totalCents = price.unit_amount ?? 0
+    const prod = price.store_products
+    productName = (Array.isArray(prod) ? prod[0]?.name : (prod as { name?: string } | null)?.name) ?? body.productSlug
+  } else {
+    // Fallback: buscar em academy_products pelo slug
+    const { data: academyProduct } = await supabase
+      .from('academy_products')
+      .select('title, price_cents')
+      .eq('slug', body.productSlug)
+      .maybeSingle()
+
+    if (!academyProduct) {
+      log.warn({ stripePriceId: body.stripePriceId, slug: body.productSlug }, 'produto não encontrado')
+      return NextResponse.json({ error: 'Produto não encontrado.' }, { status: 404 })
+    }
+
+    totalCents = academyProduct.price_cents ?? 0
+    productName = academyProduct.title ?? body.productSlug
   }
-
-  const productName = Array.isArray(price.store_products)
-    ? price.store_products[0]?.name
-    : (price.store_products as { name?: string } | null)?.name ?? body.productSlug
-
-  const totalCents = price.unit_amount ?? 0
 
   // Gerar order_number único
   const orderNumber = `HM-${Date.now().toString(36).toUpperCase()}`
