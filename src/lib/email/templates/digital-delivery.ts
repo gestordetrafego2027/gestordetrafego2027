@@ -12,6 +12,8 @@ export interface DigitalDeliveryParams {
   orderId: string
   expiresIn?: string // ex.: "7 dias"
   supportEmail?: string
+  volumeLabel?: string // ex.: "Vol. 02" — cabeçalho
+  detail?: string // ex.: "107 páginas em 10 capítulos." — bloco "o que esperar"
 }
 
 export function digitalDeliveryHTML({
@@ -21,6 +23,8 @@ export function digitalDeliveryHTML({
   orderId,
   expiresIn = '7 dias',
   supportEmail = 'academy@housemazzutti.com',
+  volumeLabel,
+  detail = 'Recomendamos abrir num tablet ou computador para aproveitar a diagramação completa.',
 }: DigitalDeliveryParams): string {
   const greeting = customerName ? `Olá, ${customerName}.` : 'Olá.'
 
@@ -39,7 +43,7 @@ export function digitalDeliveryHTML({
         <!-- Top band lima -->
         <tr><td style="background:#a4e80a;padding:18px 32px;">
           <div style="font-family:Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#14140e;font-weight:500;">
-            House Mazzutti Academy · Vol. 01 · 2026
+            House Mazzutti Academy${volumeLabel ? ` · ${volumeLabel}` : ''} · 2026
           </div>
         </td></tr>
 
@@ -84,7 +88,7 @@ export function digitalDeliveryHTML({
             O que esperar
           </h2>
           <p style="font-family:Georgia,serif;font-size:16px;line-height:1.6;color:#2a2a22;margin:0 0 12px;">
-            <strong style="color:#14140e;">281 páginas</strong> em 12 capítulos. Leitura sugerida em ordem — cada parte se apoia na anterior.
+            ${detail}
           </p>
           <p style="font-family:Georgia,serif;font-size:16px;line-height:1.6;color:#2a2a22;margin:0;">
             Recomendamos abrir num tablet ou computador para aproveitar a diagramação completa.

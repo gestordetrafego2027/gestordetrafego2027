@@ -5,6 +5,8 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
+import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
+import { resolveDigitalProduct, createDownloadUrl } from '@/lib/digital-products'
 
 const log = logger.child({ module: 'asaas/webhook' })
 
@@ -24,7 +26,7 @@ async function findOrder(ctx: HandlerCtx) {
   if (!payment.id) return null
   const { data } = await supabase
     .from('store_orders')
-    .select('id, status, buyer_email, total_cents, order_number')
+    .select('id, status, buyer_email, buyer_name, total_cents, order_number, metadata')
     .eq('metadata->>asaas_payment_id', payment.id)
     .maybeSingle()
   return data
@@ -49,16 +51,46 @@ export async function handlePaymentConfirmed(ctx: HandlerCtx): Promise<void> {
     .update({ status: 'paid', paid_at: new Date().toISOString() })
     .eq('id', order.id)
 
-  // Email de confirmação (best-effort)
+  // Entrega digital (best-effort): resolve o produto a partir do slug guardado
+  // no metadata do pedido e envia o email com o link de download do PDF.
+  // Sem slug resolvível, cai no email de confirmação simples.
   if (order.buyer_email) {
+    const slug = (order.metadata as Record<string, unknown> | null)?.product_slug as
+      | string
+      | undefined
+    const product = resolveDigitalProduct(slug)
     try {
-      await sendEmail({
-        to: order.buyer_email,
-        subject: `Pagamento confirmado — pedido ${order.order_number}`,
-        html: `<p>Recebemos seu pagamento do pedido <strong>${order.order_number}</strong>. Obrigado!</p>`,
-      })
+      if (product) {
+        const html = digitalDeliveryHTML({
+          customerName: order.buyer_name ?? undefined,
+          productName: product.name,
+          downloadUrl: await createDownloadUrl(product, ctx.supabase),
+          orderId: order.id,
+          expiresIn: product.expiresIn ?? '7 dias',
+          volumeLabel: product.volumeLabel,
+          detail: product.detail,
+        })
+        const r = await sendEmail({
+          to: order.buyer_email,
+          subject: `Seu exemplar está pronto · ${product.name}`,
+          html,
+          replyTo: 'academy@housemazzutti.com',
+        })
+        if (!r.ok) {
+          log.error({ err: r.error, order_id: order.id }, 'falha ao enviar email de entrega')
+        } else {
+          log.info({ order_id: order.id, slug }, 'email de entrega enviado')
+        }
+      } else {
+        log.warn({ order_id: order.id, slug }, 'produto digital não resolvido — enviando confirmação simples')
+        await sendEmail({
+          to: order.buyer_email,
+          subject: `Pagamento confirmado — pedido ${order.order_number}`,
+          html: `<p>Recebemos seu pagamento do pedido <strong>${order.order_number}</strong>. Obrigado!</p>`,
+        })
+      }
     } catch (err) {
-      log.error({ err: String(err) }, 'falha ao enviar email de confirmação')
+      log.error({ err: String(err) }, 'falha ao enviar email pós-confirmação')
     }
   }
 }

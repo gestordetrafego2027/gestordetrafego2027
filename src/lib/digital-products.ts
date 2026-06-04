@@ -1,39 +1,61 @@
 /**
- * Catálogo de produtos digitais com URL de download.
+ * Catálogo de produtos digitais.
  *
- * O webhook checkout-completed olha o `metadata.slug` do produto Stripe
- * e cruza com este map pra resolver o download. Quando o Supabase Storage
- * estiver disponível, trocar `downloadUrl` por uma função que gera signed URL.
+ * Os webhooks (Stripe checkout-completed e Asaas payment-confirmed) cruzam o
+ * slug do produto com este map e chamam `createDownloadUrl()` para gerar uma
+ * signed URL temporária do bucket privado `digital-products` no Supabase Storage.
  *
- * IMPORTANTE: enquanto o download for via `/downloads/` estático no `public/`,
- * mantenha os nomes de arquivo NÃO-ÓBVIOS (UUID, hash) pra não vazar.
+ * Os PDFs NÃO ficam mais em `public/` — o bucket é privado e o link expira em
+ * SIGNED_URL_TTL_SECONDS. O campo `downloadUrl` é apenas fallback legado.
  */
+
+import type { SupabaseClient } from '@supabase/supabase-js'
+
+/** Bucket privado no Supabase Storage onde os PDFs ficam (não-público). */
+export const DIGITAL_PRODUCTS_BUCKET = 'digital-products'
+
+/** Validade da signed URL de download — casa com o texto "7 dias" do email. */
+export const SIGNED_URL_TTL_SECONDS = 60 * 60 * 24 * 7
 
 export interface DigitalProduct {
   slug: string
   name: string
-  /** URL absoluta ou relativa pro arquivo. */
+  /** Caminho do PDF dentro do bucket privado (fonte primária de entrega). */
+  storagePath?: string
+  /** Bucket do Storage; default DIGITAL_PRODUCTS_BUCKET. */
+  storageBucket?: string
+  /** URL pública legada — usada só como fallback se a signed URL falhar. */
   downloadUrl: string
   /** Texto de validade (apenas display no email). */
   expiresIn?: string
+  /** Rótulo do volume para o cabeçalho do email (ex.: "Vol. 02"). */
+  volumeLabel?: string
+  /** Linha de "o que esperar" no email (ex.: "107 páginas em 10 capítulos"). */
+  detail?: string
 }
 
 export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
   'marketing-para-modelos': {
     slug: 'marketing-para-modelos',
     name: 'Marketing para Modelos · Vol. 01',
+    storagePath: 'marketing-para-modelos/vol-01.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_MARKETING_PARA_MODELOS ??
       '/downloads/marketing-para-modelos-hmzt-vol-01.pdf',
     expiresIn: '7 dias',
+    volumeLabel: 'Vol. 01',
+    detail: '94 páginas de leitura editorial — da passarela física ao império digital.',
   },
   'preco-da-relevancia': {
     slug: 'preco-da-relevancia',
     name: 'O Preço da Relevância · Vol. 02',
+    storagePath: 'preco-da-relevancia/vol-02.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_PRECO_DA_RELEVANCIA ??
       '/downloads/preco-da-relevancia-hmzt-vol-02.pdf',
     expiresIn: '7 dias',
+    volumeLabel: 'Vol. 02',
+    detail: '107 páginas em 10 capítulos. Leitura sugerida em ordem — cada parte se apoia na anterior.',
   },
 }
 
@@ -50,4 +72,28 @@ export function absoluteDownloadUrl(url: string): string {
   if (url.startsWith('http')) return url
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://housemazzutti.com'
   return `${base}${url.startsWith('/') ? '' : '/'}${url}`
+}
+
+/**
+ * Resolve a URL de download que vai no email de entrega.
+ *
+ * Fonte primária: signed URL temporária do bucket privado (Storage) — o arquivo
+ * não é público nem adivinhável, e o link expira em SIGNED_URL_TTL_SECONDS.
+ * Fallback: URL pública legada (só se não houver storagePath ou a assinatura falhar).
+ *
+ * Recebe um SupabaseClient já criado (service client nos webhooks) para não
+ * acoplar este módulo à criação de cliente.
+ */
+export async function createDownloadUrl(
+  product: DigitalProduct,
+  supabase: SupabaseClient,
+): Promise<string> {
+  if (product.storagePath) {
+    const bucket = product.storageBucket ?? DIGITAL_PRODUCTS_BUCKET
+    const { data, error } = await supabase.storage
+      .from(bucket)
+      .createSignedUrl(product.storagePath, SIGNED_URL_TTL_SECONDS)
+    if (!error && data?.signedUrl) return data.signedUrl
+  }
+  return absoluteDownloadUrl(product.downloadUrl)
 }

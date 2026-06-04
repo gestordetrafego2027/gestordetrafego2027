@@ -3,7 +3,7 @@ import { createServiceClient } from '@/lib/supabase/service'
 import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
 import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
-import { resolveDigitalProduct, absoluteDownloadUrl } from '@/lib/digital-products'
+import { resolveDigitalProduct, createDownloadUrl } from '@/lib/digital-products'
 
 /**
  * Processa checkout.session.completed com idempotência total.
@@ -139,7 +139,13 @@ export async function handleCheckoutCompleted(
 
     if (buyerEmail && lineItems?.length) {
       // Resolve cada produto digital a partir do metadata.slug do produto Stripe
-      const deliveries: Array<{ name: string; url: string; expiresIn: string }> = []
+      const deliveries: Array<{
+        name: string
+        url: string
+        expiresIn: string
+        volumeLabel?: string
+        detail?: string
+      }> = []
       for (const li of lineItems) {
         const stripeProduct = (li.price as Stripe.Price)?.product as Stripe.Product | undefined
         const slug = stripeProduct?.metadata?.slug
@@ -147,8 +153,10 @@ export async function handleCheckoutCompleted(
         if (product) {
           deliveries.push({
             name: product.name,
-            url: absoluteDownloadUrl(product.downloadUrl),
+            url: await createDownloadUrl(product, supabase),
             expiresIn: product.expiresIn ?? '7 dias',
+            volumeLabel: product.volumeLabel,
+            detail: product.detail,
           })
         }
       }
@@ -161,6 +169,8 @@ export async function handleCheckoutCompleted(
           downloadUrl: d.url,
           orderId: order.id,
           expiresIn: d.expiresIn,
+          volumeLabel: d.volumeLabel,
+          detail: d.detail,
         })
         const r = await sendEmail({
           to: buyerEmail,

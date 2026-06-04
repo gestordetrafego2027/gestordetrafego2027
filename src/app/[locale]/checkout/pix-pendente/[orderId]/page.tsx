@@ -13,13 +13,17 @@ export default async function PixPendentePage({ params }: Props) {
   const supabase = createServiceClient()
   const { data: order } = await supabase
     .from('store_orders')
-    .select('id, order_number, total_cents, status, asaas_payment_id, metadata')
+    .select('id, order_number, total_cents, status, metadata')
     .eq('id', orderId)
     .maybeSingle()
 
-  if (!order || !order.asaas_payment_id) notFound()
+  const meta = (order?.metadata ?? {}) as {
+    asaas_payment_id?: string
+    asaas?: Record<string, string>
+  }
+  if (!order || !meta.asaas_payment_id) notFound()
 
-  const asaasMeta = (order.metadata as { asaas?: Record<string, string> } | null)?.asaas
+  const asaasMeta = meta.asaas
   const encodedImage = asaasMeta?.encodedImage
   const payload = asaasMeta?.payload
   const expirationDate = asaasMeta?.expirationDate
@@ -31,7 +35,7 @@ export default async function PixPendentePage({ params }: Props) {
       locale={locale}
       orderId={order.id}
       orderNumber={order.order_number}
-      paymentId={order.asaas_payment_id}
+      paymentId={meta.asaas_payment_id}
       totalCents={order.total_cents}
       encodedImage={encodedImage}
       payload={payload}
