@@ -3,7 +3,7 @@ import { createServiceClient } from '@/lib/supabase/service'
 import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
 import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
-import { resolveDigitalProduct, absoluteDownloadUrl } from '@/lib/digital-products'
+import { resolveDigitalProduct, createDownloadUrl } from '@/lib/digital-products'
 
 /**
  * Processa checkout.session.completed com idempotência total.
@@ -153,7 +153,7 @@ export async function handleCheckoutCompleted(
         if (product) {
           deliveries.push({
             name: product.name,
-            url: absoluteDownloadUrl(product.downloadUrl),
+            url: await createDownloadUrl(product, supabase),
             expiresIn: product.expiresIn ?? '7 dias',
             volumeLabel: product.volumeLabel,
             detail: product.detail,

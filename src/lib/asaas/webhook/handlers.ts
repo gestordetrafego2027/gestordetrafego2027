@@ -6,7 +6,7 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
 import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
-import { resolveDigitalProduct, absoluteDownloadUrl } from '@/lib/digital-products'
+import { resolveDigitalProduct, createDownloadUrl } from '@/lib/digital-products'
 
 const log = logger.child({ module: 'asaas/webhook' })
 
@@ -64,7 +64,7 @@ export async function handlePaymentConfirmed(ctx: HandlerCtx): Promise<void> {
         const html = digitalDeliveryHTML({
           customerName: order.buyer_name ?? undefined,
           productName: product.name,
-          downloadUrl: absoluteDownloadUrl(product.downloadUrl),
+          downloadUrl: await createDownloadUrl(product, ctx.supabase),
           orderId: order.id,
           expiresIn: product.expiresIn ?? '7 dias',
           volumeLabel: product.volumeLabel,
