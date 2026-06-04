@@ -57,7 +57,7 @@ export default async function VerifyPage({ params }) {
               hours={cert.hours || 0}
               startDate={cert.start_date}
               endDate={cert.end_date}
-              city={cert.city || 'São Paulo · Mooca'}
+              city={cert.city || 'São Paulo · Bosque da Saúde'}
               founderName={cert.founder_name}
               founderTitle={cert.founder_title}
               coordinatorName={cert.coordinator_name}

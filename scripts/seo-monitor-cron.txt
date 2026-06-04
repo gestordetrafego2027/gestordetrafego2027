@@ -1,0 +1,4 @@
+# Ativar cron semanal (toda segunda às 9h):
+# crontab -e
+# Adicionar linha:
+# 0 9 * * 1 cd ~/Desktop/gestordetrafego2027 && node scripts/seo-monitor.mjs >> logs/seo-monitor.log 2>&1

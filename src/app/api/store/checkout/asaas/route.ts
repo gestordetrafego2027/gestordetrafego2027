@@ -86,10 +86,10 @@ export async function POST(req: NextRequest) {
       subtotal_cents: totalCents,
       total_cents: totalCents,
       status: 'pending',
-      payment_provider: 'asaas',
       idempotency_key: `asaas:${body.stripePriceId}:${user?.id ?? 'guest'}:${Date.now()}`,
       metadata: {
         source: 'asaas_checkout',
+        provider: 'asaas',
         method: body.method,
         product_slug: body.productSlug,
         product_name: productName,

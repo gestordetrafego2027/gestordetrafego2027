@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
   const supabase = createServiceClient()
   const { data: order, error: orderErr } = await supabase
     .from('store_orders')
-    .select('id, order_number, total_cents, buyer_email, buyer_name, buyer_cpf, user_id, asaas_payment_id, status')
+    .select('id, order_number, total_cents, buyer_email, buyer_name, buyer_cpf, user_id, status, metadata')
     .eq('id', body.orderId)
     .maybeSingle()
 
@@ -41,7 +41,8 @@ export async function POST(req: NextRequest) {
   if (order.status !== 'pending') {
     return NextResponse.json({ error: 'pedido não está pendente' }, { status: 409 })
   }
-  if (order.asaas_payment_id) {
+  const existingMeta = (order.metadata ?? {}) as Record<string, unknown>
+  if (existingMeta.asaas_payment_id) {
     return NextResponse.json({ error: 'cobrança já gerada' }, { status: 409 })
   }
 
@@ -65,11 +66,11 @@ export async function POST(req: NextRequest) {
     await supabase
       .from('store_orders')
       .update({
-        payment_provider: 'asaas',
-        asaas_payment_id: payment.id,
-        asaas_customer_id: customer.id,
         metadata: {
-          source: 'asaas_checkout',
+          ...existingMeta,
+          provider: 'asaas',
+          asaas_payment_id: payment.id,
+          asaas_customer_id: customer.id,
           asaas: {
             method: 'boleto',
             bankSlipUrl: payment.bankSlipUrl,
