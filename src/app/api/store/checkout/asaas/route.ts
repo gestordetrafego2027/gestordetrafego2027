@@ -181,7 +181,14 @@ export async function POST(req: NextRequest) {
         .eq('id', order.id)
     }
   } catch (err) {
-    log.error({ err: String(err), orderId: order.id }, 'falha ao gerar cobrança Asaas')
+    const detail =
+      err && typeof err === 'object' && 'body' in err
+        ? (err as { body: unknown }).body
+        : undefined
+    log.error(
+      { err: String(err), asaasDetail: JSON.stringify(detail), orderId: order.id },
+      'falha ao gerar cobrança Asaas',
+    )
     return NextResponse.json({ error: 'Falha ao gerar cobrança. Tente novamente.' }, { status: 502 })
   }
 
