@@ -132,16 +132,31 @@ export default function AgenciaPage() {
                 .custom-nav-btn:hover .custom-nav-line { width: 70px; }
                 .nav-line { width: 40px; height: 1px; background-color: white; transition: width 0.3s ease; }
                 .nav-btn:hover .nav-line { width: 60px; }
-                .columns-gallery-container { height: 80vh; display: flex; width: 100%; overflow: hidden; }
-                .gallery-column { flex: 1; height: 100%; position: relative; overflow: hidden; border-right: 1px solid rgba(0,0,0,0.05); }
-                .gallery-column:last-child { border-right: none; }
+                .columns-gallery-container {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: 16px;
+                    width: 100%;
+                    max-width: 1600px;
+                    margin: 0 auto;
+                    padding: 0 24px;
+                }
+                @media (min-width: 768px) { .columns-gallery-container { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+                .gallery-column {
+                    position: relative;
+                    overflow: hidden;
+                    aspect-ratio: 3 / 4;
+                    background: #f3f3f4;
+                }
+                .gallery-column img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+                .gallery-column:hover img { transform: scale(1.04); }
                 .project-overlay {
                     position: absolute; inset: 0; background: rgba(0,0,0,0.45);
                     display: flex; flex-direction: column; justify-content: flex-end;
-                    padding: 32px; opacity: 0; transition: opacity 0.4s ease;
+                    padding: 28px; opacity: 0; transition: opacity 0.4s ease;
                 }
                 .gallery-column:hover .project-overlay { opacity: 1; }
-                .project-overlay span { color: rgba(255,255,255,0.6); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; }
+                .project-overlay span { color: rgba(255,255,255,0.7); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; }
                 .project-overlay h4 { color: #fff; font-size: 20px; font-weight: 500; }
             `}} />
 
@@ -211,20 +226,22 @@ export default function AgenciaPage() {
                     </div>
                     <div className="columns-gallery-container">
                         {[
-                            { href: '/portfolio-agencia/knowhol', src: '/images/agencia/knowhol/1.webp', fallback: '/images/home/banner-1.webp', label: 'Branding Project', title: 'Knowhol' },
-                            { href: '/portfolio-agencia/mabdo', src: '/images/agencia/mabdo/1.webp', fallback: '/images/home/banner-2.webp', label: 'Web Development', title: 'Mabdo' },
-                            { href: '/portfolio-agencia/on-take', src: '/images/agencia/on-take/1.webp', fallback: '/images/home/banner-3.webp', label: 'Comunicação', title: 'On Take' },
-                            { href: '/portfolio-agencia/pous', src: '/images/agencia/pous/1.webp', fallback: '/images/home/banner-4.webp', label: 'Branding & Digital', title: 'Pous' },
+                            { href: '/portfolio-agencia/house-mazzutti', src: '/images/agencia/house-mazzutti/capa.webp', fallback: '/images/home/banner-1.webp', label: 'Branding & Identidade', title: 'House Mazzutti' },
+                            { href: '/portfolio-agencia/knowhol', src: '/images/agencia/knowhol/capa.webp', fallback: '/images/home/banner-2.webp', label: 'Branding Project', title: 'Knowhol' },
+                            { href: '/portfolio-agencia/mabdo', src: '/images/agencia/mabdo/capa.webp', fallback: '/images/home/banner-3.webp', label: 'Web Development', title: 'Mabdo' },
+                            { href: '/portfolio-agencia/on-take', src: '/images/agencia/on-take/capa.webp', fallback: '/images/home/banner-4.webp', label: 'Comunicação', title: 'On Take' },
+                            { href: '/portfolio-agencia/pous', src: '/images/agencia/pous/capa.webp', fallback: '/images/home/banner-1.webp', label: 'Branding & Digital', title: 'Pous' },
+                            { href: '/portfolio-agencia/samrat', src: '/images/agencia/samrat/capa.webp', fallback: '/images/home/banner-2.webp', label: 'Branding & Digital', title: 'Samrat' },
                         ].map((item, i) => (
                             <Link key={i} className="gallery-column group" href={item.href}>
                                 <Image
                                     alt={item.title}
                                     src={item.src}
                                     fill
-                                    sizes="(max-width: 768px) 100vw, 25vw"
-                                    quality={80}
-                                    loading={i === 0 ? 'eager' : 'lazy'}
-                                    className="object-cover"
+                                    sizes="(max-width: 768px) 50vw, 33vw"
+                                    quality={90}
+                                    loading={i < 3 ? 'eager' : 'lazy'}
+                                    className="object-cover object-center"
                                     onError={e => { e.currentTarget.src = item.fallback }}
                                 />
                                 <div className="project-overlay">
