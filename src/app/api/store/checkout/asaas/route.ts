@@ -140,7 +140,6 @@ export async function POST(req: NextRequest) {
         valueCents: totalCents,
         externalReference: order.id,
         description: `${productName} — House Mazzutti`,
-        idempotencyKey: `order:${order.id}:pix`,
       })
       await serviceSupabase
         .from('store_orders')
@@ -163,7 +162,6 @@ export async function POST(req: NextRequest) {
         valueCents: totalCents,
         externalReference: order.id,
         description: `${productName} — House Mazzutti`,
-        idempotencyKey: `order:${order.id}:boleto`,
       })
       await serviceSupabase
         .from('store_orders')
