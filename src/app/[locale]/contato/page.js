@@ -83,7 +83,7 @@ export default function ContatoPage() {
             <section className="flex flex-col md:flex-row w-full bg-white py-[60px] px-[40px]">
                 {/* Col 1: Map */}
                 <div className="w-full md:w-[60%] h-[400px] md:h-auto bg-surface-container-lowest opacity-90 max-w-[760px] mx-auto !h-[430px]">
-                    <iframe frameBorder="0" height="430" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=pt&amp;q=Rua%20General%20Chagas%20Santos,%201058%20Vila%20Sa%C3%BAde%20S%C3%A3o%20Paulo&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style={{ filter: "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)" }} width="100%">
+                    <iframe frameBorder="0" height="430" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=pt&amp;q=Rua%20General%20Chagas%20Santos,%201058%20Bosque%20da%20Sa%C3%BAde%20S%C3%A3o%20Paulo&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style={{ filter: "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)" }} width="100%">
                     </iframe>
                 </div>
                 {/* Col 2: Info */}
