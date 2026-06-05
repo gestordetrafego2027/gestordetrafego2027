@@ -149,10 +149,8 @@ export default async function LojaPage() {
             <div style={{ display: 'flex', gap: '0', marginTop: '40px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
               {categories.map((cat, i) => (
                 <a key={cat} href={`#${cat}`}
-                  className="font-label uppercase tracking-[0.25em] text-[8px] transition-colors duration-300"
-                  style={{ color: 'rgba(255,255,255,0.28)', paddingRight: '32px', marginRight: '32px', borderRight: i < categories.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}
-                  onMouseOver={(e: any) => e.target.style.color = '#fff'}
-                  onMouseOut={(e: any) => e.target.style.color = 'rgba(255,255,255,0.28)'}
+                  className="font-label uppercase tracking-[0.25em] text-[8px] text-white/30 hover:text-white transition-colors duration-300"
+                  style={{ paddingRight: '32px', marginRight: '32px', borderRight: i < categories.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}
                 >
                   {CATEGORY_LABELS[cat] ?? cat}
                 </a>
