@@ -87,7 +87,14 @@ export default function StudioCoberturaPage() {
             </section>
 
             <LandingGallery service="cobertura" />
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Suporte Completo', desc: 'Beauty artist, stylist e looks sob demanda.', image: '/images/produtora/beleza/natalia-beauty/capa.webp', alt: 'Beauty artist e suporte de produção — House Mazzutti' },
+                    { title: 'Captação em Tempo Real', desc: 'Foto e vídeo com direção durante toda a experiência.', image: '/images/produtora/moda/pous/capa.webp', alt: 'Captação estratégica em locação — House Mazzutti' },
+                    { title: 'Entrega em 48h', desc: 'Conteúdo tratado e entregue rápido para casos específicos.', image: '/images/produtora/institucional/tf/capa.webp', alt: 'Entrega premium ágil de conteúdo — House Mazzutti' },
+                ]}
+            />
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
-import { articles as _articlesMap } from '@/app/[locale]/blog/[slug]/articles'
+import BlogSection from '@/app/components/BlogSection'
 
 export const metadata = {
   title: 'Academy — House Mazzutti',
@@ -86,19 +86,6 @@ const GALLERY = [
   { src: '/images/home/banner-3.webp', alt: 'Workshop Fotografia — ambiente' },
   { src: '/images/home/philosophy-bg.webp', alt: 'Workshop Fotografia — resultado' },
 ]
-
-/* ─── blog ────────────────────────────────────────────────────── */
-const BLOG_POSTS = _articlesMap
-  ? Object.entries(_articlesMap)
-      .slice(0, 4)
-      .map(([slug, a]) => ({
-        link: `/blog/${slug}`,
-        titulo: a.titulo,
-        excerpt: a.excerpt ?? a.intro ?? '',
-        categoria: a.subcategoria ?? a.categoria,
-        data: a.data,
-      }))
-  : []
 
 /* ══════════════════════════════════════════════════════════════════
    PAGE
@@ -236,28 +223,7 @@ export default function AcademyHomePage() {
         </section>
 
         {/* ── BLOG ─────────────────────────────────────────────── */}
-        <section className="bg-[#fafafa]" style={{ borderTop: '1px solid #e8e8e8' }}>
-          <div className="px-12 md:px-24 py-24">
-            <div className="mb-16 flex items-end justify-between">
-              <div>
-                <span className="text-caption text-black/50 mb-4 block">Editorial</span>
-                <h2 className="text-h2 text-black">Do Blog</h2>
-              </div>
-              <Link
-                href="/blog"
-                className="text-button text-black/50 hover:text-black transition-colors border-b border-black/20 hover:border-black pb-0.5"
-              >
-                Ver todos →
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-4 bg-black/10">
-              {BLOG_POSTS.map((post, i) => (
-                <BlogCard key={i} post={post} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <BlogSection />
 
         {/* ── CTA FINAL ────────────────────────────────────────── */}
         <section className="bg-black">
@@ -452,19 +418,3 @@ function ProductCard({ product }) {
   )
 }
 
-function BlogCard({ post }) {
-  return (
-    <Link
-      href={post.link}
-      className="group block bg-white p-8 hover:bg-[#f5f5f5] transition-colors"
-      style={{ textDecoration: 'none' }}
-    >
-      <span className="text-caption text-black/40 mb-4 block">{post.categoria}</span>
-      <h3 className="text-h4 text-black mb-3 line-clamp-3">{post.titulo}</h3>
-      <p className="text-body text-black/50 line-clamp-3 text-sm mb-6">{post.excerpt}</p>
-      <span className="text-button text-black/30 group-hover:text-black transition-colors border-b border-black/10 group-hover:border-black pb-0.5">
-        Ler →
-      </span>
-    </Link>
-  )
-}

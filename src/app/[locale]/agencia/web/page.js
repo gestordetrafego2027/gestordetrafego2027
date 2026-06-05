@@ -91,7 +91,14 @@ export default function AgenciaWebPage() {
                 </div>
             </section>
 
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Alta Conversão', desc: 'Design que guia até a ação.', image: '/images/agencia/diferenciais/alta-conversao.webp', alt: 'Design de alta conversão — House Mazzutti' },
+                    { title: 'Performance Técnica', desc: 'Rápido, seguro e otimizado para SEO.', image: '/images/agencia/diferenciais/performance-tecnica.webp', alt: 'Performance técnica e SEO — House Mazzutti' },
+                    { title: 'Responsivo', desc: 'Impecável em qualquer tela.', image: '/images/agencia/diferenciais/responsivo.webp', alt: 'Experiência responsiva multi-dispositivo — House Mazzutti' },
+                ]}
+            />
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden">

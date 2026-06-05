@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
 import FormDrawer from '@/app/components/FormDrawer'
+import BlogSection from '@/app/components/BlogSection'
 
 export const dynamic = 'force-dynamic'
 
@@ -409,38 +410,14 @@ export default function AgenciaPage() {
                 </section>
 
                 {/* ── ARTIGOS ── */}
-                <section style={{ background: '#fff', padding: '80px 24px' }} className="overflow-hidden">
-                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <div style={{ marginBottom: '64px' }}>
-                            <p className="text-caption" style={{ color: '#888', marginBottom: '16px' }}>Editorial</p>
-                            <h2 className="text-h2" style={{ color: '#000' }}>Últimos artigos</h2>
-                        </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '2px' }} className="md:grid-cols-3">
-                            {[
-                                { categoria: 'Agência — Branding', titulo: 'Branding Project como Arquitetura de Valor: quando uma marca deixa de ser estética — e passa a ser estratégia de crescimento', data: 'Abril 2026', slug: '/blog/branding-project-arquitetura-valor' },
-                                { categoria: 'Agência — Campanhas', titulo: 'Campaign de Lançamento: a arquitetura invisível por trás das marcas que dominam atenção, constroem valor e convertem com consistência', data: 'Abril 2026', slug: '/blog/campanha-lancamento-arquitetura-invisivel' },
-                                { categoria: 'Agência — Branding', titulo: 'Quanto investir em branding: o guia estratégico para construir uma marca que realmente cresce', data: 'Abril 2026', slug: '/blog/quanto-investir-em-branding' },
-                            ].map((post, idx) => (
-                                <Link key={idx} href={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div
-                                        style={{ padding: '64px 48px', border: '0.5px solid #e0e0e0', background: '#fff', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', transition: 'background 0.3s, color 0.3s, transform 0.4s ease', cursor: 'pointer', color: '#000', transform: 'translateY(0)' }}
-                                        onMouseEnter={e => { e.currentTarget.style.background = '#000'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.transform = 'translateY(-6px)'; }}
-                                        onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#000'; e.currentTarget.style.transform = 'translateY(0)'; }}
-                                    >
-                                        <div>
-                                            <p className="text-caption" style={{ color: '#888', marginBottom: '24px' }}>{post.categoria}</p>
-                                            <h3 className="text-h3" style={{ color: 'inherit', marginBottom: '40px' }}>{post.titulo}</h3>
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <span className="text-caption" style={{ color: '#aaa' }}>{post.data}</span>
-                                            <span style={{ fontSize: '28px', display: 'inline-block', transition: 'transform 0.4s ease' }}>→</span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                <BlogSection
+                    slugs={[
+                        'branding-project-arquitetura-valor',
+                        'campanha-lancamento-arquitetura-invisivel',
+                        'quanto-investir-em-branding',
+                        'por-que-campanhas-falham',
+                    ]}
+                />
 
                 <ClientLogos />
 

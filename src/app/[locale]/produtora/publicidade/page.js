@@ -89,7 +89,14 @@ export default function ProdutoraPublicidadePage() {
             </section>
 
             <LandingGallery service="publicidade" />
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Filmes que Vendem', desc: 'Performance e estética sem abrir mão de nenhuma.', image: '/images/produtora/moda/beatco/capa.webp', alt: 'Filmes publicitários de alta performance — House Mazzutti' },
+                    { title: 'Casting & Influência', desc: 'Seleção e gestão de talentos para cada projeto.', image: '/images/studio/vitoria-boidt/capa.webp', alt: 'Casting e gestão de talentos — House Mazzutti' },
+                    { title: 'Operação sob Controle', desc: 'Logística, fornecedores e cronograma sob comando.', image: '/images/produtora/moda/unique-chic/capa.webp', alt: 'Operação e logística de produção — House Mazzutti' },
+                ]}
+            />
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">

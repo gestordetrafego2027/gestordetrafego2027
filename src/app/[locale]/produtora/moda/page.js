@@ -89,7 +89,14 @@ export default function ProdutoraModaPage() {
             </section>
 
             <LandingGallery service="moda" />
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Contratos & Direitos', desc: 'Profissionais, contratos e direitos de imagem sob controle.', image: '/images/produtora/moda/idrissi/capa.webp', alt: 'Gestão de contratos e direitos de imagem — House Mazzutti' },
+                    { title: 'Menos Custo, Mais Eficiência', desc: 'Processos otimizados que poupam tempo e orçamento.', image: '/images/produtora/moda/toli/capa.webp', alt: 'Processos otimizados de produção — House Mazzutti' },
+                    { title: 'Tudo na Mesma Casa', desc: 'Direção criativa e produção executiva sob o mesmo teto.', image: '/images/produtora/moda/eivi/capa.webp', alt: 'Direção criativa e produção executiva na mesma casa — House Mazzutti' },
+                ]}
+            />
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">

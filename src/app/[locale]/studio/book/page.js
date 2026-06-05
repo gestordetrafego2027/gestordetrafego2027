@@ -91,7 +91,14 @@ export default function StudioBookPage() {
             <LandingGallery service="book" />
 
             {/* 5. EQUIPE */}
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Leitura de Perfil', desc: 'Definimos seu mercado antes do primeiro clique.', image: '/images/studio/fernanda-treml/capa.webp', alt: 'Leitura de perfil e direção de book — House Mazzutti Studio' },
+                    { title: 'Moodboard', desc: 'Referência visual alinhada ao seu objetivo.', image: '/images/studio/maria-eduarda/capa.webp', alt: 'Moodboard estratégico de book — House Mazzutti Studio' },
+                    { title: 'Curadoria High-End', desc: 'Só as imagens que realmente posicionam.', image: '/images/studio/marina-machado/capa.webp', alt: 'Curadoria e entrega high-end — House Mazzutti Studio' },
+                ]}
+            />
 
             {/* 6. QUOTE + VIDEO */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">

@@ -87,7 +87,14 @@ export default function StudioEnsaioPage() {
             </section>
 
             <LandingGallery service="ensaio" />
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Direção de Imagem', desc: 'Do conceito à pose, nada por acaso.', image: '/images/studio/marjorie-rossi/capa.webp', alt: 'Direção de imagem em ensaio — House Mazzutti Studio' },
+                    { title: 'Styling & Moda', desc: 'Looks que reforçam a mensagem desejada.', image: '/images/produtora/acessorios/bia/capa.webp', alt: 'Styling e curadoria de looks — House Mazzutti' },
+                    { title: 'Set Próprio', desc: 'Estúdio com infraestrutura de nível internacional.', image: '/images/studio/simonny/capa.webp', alt: 'Set de luxo próprio — House Mazzutti Studio' },
+                ]}
+            />
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">

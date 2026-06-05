@@ -89,7 +89,14 @@ export default function ProdutoraInstitucionalPage() {
             </section>
 
             <LandingGallery service="institucional" />
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Narrativa de Peso', desc: 'Vídeos que mostram a empresa e seus valores.', image: '/images/produtora/institucional/tf/capa.webp', alt: 'Narrativa corporativa em vídeo — House Mazzutti' },
+                    { title: 'Prova Social', desc: 'Cases estruturados que geram autoridade.', image: '/images/produtora/institucional/sense-hotel/capa.webp', alt: 'Cases de sucesso e prova social — House Mazzutti' },
+                    { title: 'Banco de Imagem', desc: 'Conteúdo pronto para quando você precisar.', image: '/images/produtora/institucional/tf/5.webp', alt: 'Banco de imagem corporativo — House Mazzutti' },
+                ]}
+            />
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">

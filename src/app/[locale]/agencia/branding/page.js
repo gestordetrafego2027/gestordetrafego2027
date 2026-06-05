@@ -91,7 +91,14 @@ export default function AgenciaBrandingPage() {
                 </div>
             </section>
 
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Identidade Coesa', desc: 'Logo, paleta e tipografia que funcionam em tudo.', image: '/images/agencia/diferenciais/identidade-coesa.webp', alt: 'Identidade visual coesa — House Mazzutti' },
+                    { title: 'Posicionamento', desc: 'Naming, arquitetura e tom de voz que diferenciam.', image: '/images/agencia/diferenciais/posicionamento.webp', alt: 'Posicionamento estratégico de marca — House Mazzutti' },
+                    { title: 'Brand Book', desc: 'Todas as regras num manual só.', image: '/images/agencia/diferenciais/brand-book.webp', alt: 'Brand book completo — House Mazzutti' },
+                ]}
+            />
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden">

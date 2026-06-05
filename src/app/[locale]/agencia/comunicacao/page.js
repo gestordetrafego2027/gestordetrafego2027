@@ -90,7 +90,14 @@ export default function AgenciaComunicacaoPage() {
                 </div>
             </section>
 
-            <LandingTeam />
+            <LandingTeam
+                heading="O que faz a diferença na House."
+                items={[
+                    { title: 'Comunicação 360°', desc: 'Todos os canais com a mesma intenção.', image: '/images/agencia/diferenciais/comunicacao-360.webp', alt: 'Comunicação integrada multicanal — House Mazzutti' },
+                    { title: 'Resultado Mensurável', desc: 'Mídia e conteúdo orientados a ROI.', image: '/images/agencia/diferenciais/resultado-mensuravel.webp', alt: 'Performance e resultado mensurável — House Mazzutti' },
+                    { title: 'Produção In-House', desc: 'Foto e vídeo premium feitos na casa.', image: '/images/agencia/diferenciais/producao-inhouse.webp', alt: 'Produção visual in-house — House Mazzutti' },
+                ]}
+            />
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden">

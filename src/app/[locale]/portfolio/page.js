@@ -78,12 +78,12 @@ const produtoraInstitucional = [
 }));
 
 const agenciaProjetos = [
-  'house-mazzutti', 'knowhol', 'mabdo', 'on-take', 'pous', 'samrat'
-].map((slug) => ({
-  slug,
-  name: toTitleCase(slug),
-  cover: `/images/agencia/${slug}/capa.webp`
-}));
+  'house-mazzutti', 'knowhol', 'mabdo', 'on-take', 'pous', 'samrat',
+  { slug: 'alletto', name: 'Alletto', cover: '/images/agencia/alletto/capa.jpg' }
+].map((item) => typeof item === 'string'
+  ? { slug: item, name: toTitleCase(item), cover: `/images/agencia/${item}/capa.webp` }
+  : item
+);
 
 const categories = [
   {
