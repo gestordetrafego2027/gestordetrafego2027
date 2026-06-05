@@ -20,7 +20,23 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<AsaasC
   })
 
   const existing = Array.isArray(found?.data) && found.data.length > 0 ? found.data[0] : null
-  if (existing) return AsaasCustomerSchema.parse(existing)
+  if (existing) {
+    const parsed = AsaasCustomerSchema.parse(existing)
+    // Cliente antigo pode ter sido criado sem CPF — atualiza se recebemos um agora.
+    if (input.cpfCnpj && !parsed.cpfCnpj) {
+      const updated = await asaasFetch<unknown>({
+        method: 'POST',
+        path: `/customers/${parsed.id}`,
+        body: {
+          name: input.name,
+          email: input.email,
+          cpfCnpj: input.cpfCnpj,
+        },
+      })
+      return AsaasCustomerSchema.parse(updated)
+    }
+    return parsed
+  }
 
   const created = await asaasFetch<unknown>({
     method: 'POST',
