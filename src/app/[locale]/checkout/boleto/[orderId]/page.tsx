@@ -28,7 +28,7 @@ export default async function BoletoPage({ params }: Props) {
   const identificationField = asaasMeta?.identificationField
   const dueDate = asaasMeta?.dueDate
 
-  if (!bankSlipUrl || !identificationField) notFound()
+  if (!bankSlipUrl) notFound()
 
   return (
     <BoletoClient
@@ -38,7 +38,7 @@ export default async function BoletoPage({ params }: Props) {
       totalCents={order.total_cents}
       paymentId={meta.asaas_payment_id}
       bankSlipUrl={bankSlipUrl}
-      identificationField={identificationField}
+      identificationField={identificationField ?? ''}
       dueDate={dueDate ?? null}
       buyerEmail={order.buyer_email}
     />
