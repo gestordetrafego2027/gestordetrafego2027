@@ -16,6 +16,7 @@ import { CartButton } from '@/components/ecommerce/CartButton';
 export default function Header({ variant = 'dark' }) {
     const pathname = usePathname();
     const [sideMenuOpen, setSideMenuOpen] = useState(false);
+    const [solucoesOpen, setSolucoesOpen] = useState(false);
     const [closing, setClosing] = useState(false);
     const [visible, setVisible] = useState(true);
     const [scrolled, setScrolled] = useState(false);
@@ -120,9 +121,52 @@ export default function Header({ variant = 'dark' }) {
 
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/agencia')} href="/agencia">AGÊNCIA</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/produtora')} href="/produtora">PRODUTORA</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/studio')} href="/studio">STUDIO</Link>
+                    <div
+                        className="relative"
+                        onMouseEnter={() => setSolucoesOpen(true)}
+                        onMouseLeave={() => setSolucoesOpen(false)}
+                    >
+                        <button
+                            type="button"
+                            className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300 flex items-center gap-1"
+                            style={{
+                                color: currentTextColor,
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                borderTop: ['/agencia', '/produtora', '/studio'].some((p) => pathname.startsWith(p)) ? `0.5px solid ${currentTextColor}` : 'none',
+                                paddingTop: ['/agencia', '/produtora', '/studio'].some((p) => pathname.startsWith(p)) ? '4px' : '0',
+                            }}
+                            aria-haspopup="true"
+                            aria-expanded={solucoesOpen}
+                        >
+                            SOLUÇÕES
+                            <span style={{ fontSize: '8px', transform: solucoesOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}>▾</span>
+                        </button>
+                        {solucoesOpen && (
+                            <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: '22px', zIndex: 120 }}>
+                                <div style={{ background: '#ffffff', border: '0.5px solid #e0e0e0', minWidth: '236px', padding: '8px 0', boxShadow: '0 12px 32px rgba(0,0,0,0.10)' }}>
+                                    {[
+                                        { label: 'AGÊNCIA', href: '/agencia', desc: 'Branding · Web · Comunicação' },
+                                        { label: 'PRODUTORA', href: '/produtora', desc: 'Moda · Beleza · Institucional' },
+                                        { label: 'STUDIO', href: '/studio', desc: 'Book · Ensaio · Cobertura' },
+                                    ].map((item) => (
+                                        <Link
+                                            key={item.label}
+                                            href={item.href}
+                                            onClick={() => setSolucoesOpen(false)}
+                                            style={{ display: 'block', padding: '12px 20px', textDecoration: 'none', transition: 'background 0.2s' }}
+                                            onMouseEnter={(e) => (e.currentTarget.style.background = '#f4f4f4')}
+                                            onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
+                                        >
+                                            <span style={{ display: 'block', fontFamily: 'var(--font-body), sans-serif', fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#000', marginBottom: '3px' }}>{item.label}</span>
+                                            <span style={{ display: 'block', fontFamily: 'var(--font-body), sans-serif', fontSize: '9px', letterSpacing: '0.08em', color: '#888' }}>{item.desc}</span>
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </div>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/academy')} href="/academy">ACADEMY</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
@@ -250,12 +294,12 @@ export default function Header({ variant = 'dark' }) {
                     <div style={{marginBottom:'40px'}}>
                       <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
-                        color:'#444', marginBottom:'16px'}}>UNIDADES</p>
+                        color:'#444', marginBottom:'16px'}}>SOLUÇÕES</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'14px'}}>
                         {[
-                          {label:'STUDIO', href:'/studio'},
-                          {label:'PRODUTORA', href:'/produtora'},
                           {label:'AGÊNCIA', href:'/agencia'},
+                          {label:'PRODUTORA', href:'/produtora'},
+                          {label:'STUDIO', href:'/studio'},
                           {label:'ANGELO', href:'/angelo'},
                         ].map(item => (
                           <Link key={item.label} href={item.href}
