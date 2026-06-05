@@ -28,17 +28,24 @@ jobs:
     name: Trigger Coolify redeploy
     runs-on: ubuntu-latest
     steps:
-      - name: Validate webhook secret
+      - name: Validate secrets
         run: |
           if [ -z "${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}" ]; then
-            echo "::error::Secret COOLIFY_DEPLOY_WEBHOOK nao configurado."
+            echo "::error::Secret COOLIFY_DEPLOY_WEBHOOK nao configurado (URL ex: http://HOST:8000/api/v1/deploy?uuid=XXX&force=false)."
+            echo "Adicione em Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          if [ -z "${{ secrets.COOLIFY_API_TOKEN }}" ]; then
+            echo "::error::Secret COOLIFY_API_TOKEN nao configurado (Coolify > Keys & Tokens > API Tokens)."
             echo "Adicione em Settings > Secrets and variables > Actions."
             exit 1
           fi
 
-      - name: POST to Coolify webhook
+      - name: Trigger Coolify deploy (API)
         run: |
           HTTP_STATUS=$(curl -sS -o /tmp/body -w "%{http_code}" -X GET \
+            -H "Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}" \
+            -H "Accept: application/json" \
             "${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}")
           echo "HTTP $HTTP_STATUS"
           cat /tmp/body
