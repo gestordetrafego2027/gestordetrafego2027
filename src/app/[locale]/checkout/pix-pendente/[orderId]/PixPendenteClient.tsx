@@ -69,9 +69,25 @@ export function PixPendenteClient(props: Props) {
   }
 
   const remainingMs = expirationTs ? Math.max(0, expirationTs - now) : null
-  const remainingLabel = remainingMs !== null
-    ? `${Math.floor(remainingMs / 60000)}:${String(Math.floor((remainingMs % 60000) / 1000)).padStart(2, '0')}`
-    : null
+  // Se faltar mais de 24h, mostra a data limite; senão, contagem regressiva HH:MM:SS.
+  const remainingLabel = (() => {
+    if (remainingMs === null || expirationTs === null) return null
+    const ONE_DAY = 24 * 60 * 60 * 1000
+    if (remainingMs > ONE_DAY) {
+      return new Date(expirationTs).toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+      })
+    }
+    const totalSec = Math.floor(remainingMs / 1000)
+    const h = Math.floor(totalSec / 3600)
+    const m = Math.floor((totalSec % 3600) / 60)
+    const s = totalSec % 60
+    const pad = (n: number) => String(n).padStart(2, '0')
+    return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${pad(m)}:${pad(s)}`
+  })()
+  const isDate = remainingMs !== null && remainingMs > 24 * 60 * 60 * 1000
 
   return (
     <main className="min-h-screen bg-white pt-24 pb-16">
@@ -91,7 +107,9 @@ export function PixPendenteClient(props: Props) {
               className="w-64 h-64 border border-neutral-200 rounded-2xl bg-white"
             />
             {remainingLabel && (
-              <p className="text-sm text-neutral-500">Expira em <strong>{remainingLabel}</strong></p>
+              <p className="text-sm text-neutral-500">
+                {isDate ? 'Válido até' : 'Expira em'} <strong>{remainingLabel}</strong>
+              </p>
             )}
           </div>
 

@@ -6,6 +6,7 @@ import Header from "@/app/components/Header";
 import FormContatoGeral from "@/app/components/forms/FormContatoGeral";
 import NewsletterStrip from "@/app/components/NewsletterStrip";
 import {useTranslations} from 'next-intl';
+import {nap, contact} from '@/config/site';
 
 export default function ContatoPage() {
     const t = useTranslations('contato_page');
@@ -93,15 +94,15 @@ export default function ContatoPage() {
                     <div className="space-y-8 mb-12">
                         <div>
                             <p className="font-['Inter'] font-light text-neutral-600 text-lg leading-relaxed">
-                                Rua General Chagas Santos, 1058<br />
-                                Vila Saúde, São Paulo — SP<br />
+                                {nap.street}<br />
+                                {nap.neighborhood}, {nap.city} — {nap.region}<br />
                                 Brasil
                             </p>
                         </div>
                         <div className="space-y-4">
-                            <a className="flex items-center gap-3 group" href="https://wa.me/5511952347533">
+                            <a className="flex items-center gap-3 group" href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}>
                                 <span className="material-symbols-outlined text-neutral-400 group-hover:text-black transition-colors">chat_bubble</span>
-                                <span className="font-['Inter'] text-neutral-700">(11) 95234-7533</span>
+                                <span className="font-['Inter'] text-neutral-700">{contact.phone}</span>
                             </a>
                             <a className="flex items-center gap-3 group" href="mailto:contato@housemazzutti.com">
                                 <span className="material-symbols-outlined text-neutral-400 group-hover:text-black transition-colors">mail</span>
