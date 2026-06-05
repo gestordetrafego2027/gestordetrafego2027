@@ -21,6 +21,9 @@ const Body = z.object({
   productSlug: z.string().min(1),
   method: z.enum(['pix', 'boleto']),
   locale: z.enum(['pt', 'en']).default('pt'),
+  email: z.string().email(),
+  name: z.string().min(1),
+  cpf: z.string().regex(/^\d{11}$/, 'CPF deve ter 11 dígitos'),
 })
 
 export async function POST(req: NextRequest) {
@@ -84,8 +87,9 @@ export async function POST(req: NextRequest) {
     .insert({
       order_number: orderNumber,
       user_id: user?.id ?? null,
-      buyer_email: user?.email ?? 'guest@housemazzutti.com',
-      buyer_name: user?.user_metadata?.full_name ?? null,
+      buyer_email: body.email,
+      buyer_name: body.name,
+      buyer_cpf: body.cpf,
       subtotal_cents: totalCents,
       total_cents: totalCents,
       status: 'pending',
@@ -113,8 +117,9 @@ export async function POST(req: NextRequest) {
   // Gerar a cobrança Asaas (Pix ou Boleto) imediatamente
   try {
     const customer = await upsertCustomer({
-      name: user?.user_metadata?.full_name ?? user?.email ?? 'Cliente House Mazzutti',
-      email: user?.email ?? 'guest@housemazzutti.com',
+      name: body.name,
+      email: body.email,
+      cpfCnpj: body.cpf,
       externalReference: user?.id ?? `guest:${order.id}`,
     })
 
