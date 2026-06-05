@@ -2,6 +2,7 @@
 /**
  * PaymentMethodSelector
  * Exibe as 3 opções de pagamento: Cartão (Stripe), Pix (Asaas), Boleto (Asaas).
+ * Para Pix/Boleto coleta e-mail (entrega digital) + CPF (exigência Asaas produção).
  * Fluxo:
  *   Cartão  → POST /api/store/checkout       → redirect Stripe Checkout
  *   Pix     → POST /api/store/checkout/asaas → redirect /checkout/pix-pendente/[orderId]
@@ -27,25 +28,61 @@ const METHODS: { id: Method; label: string; desc: string; icon: string }[] = [
   { id: 'boleto', label: 'Boleto bancário',    desc: 'Vence em 3 dias úteis',               icon: '📄' },
 ]
 
+function onlyDigits(s: string) {
+  return s.replace(/\D/g, '')
+}
+
+function formatCpf(s: string) {
+  const d = onlyDigits(s).slice(0, 11)
+  return d
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d{1,2})$/, '$1-$2')
+}
+
+function isValidEmail(s: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)
+}
+
 export function PaymentMethodSelector({ stripePriceId, productSlug, locale, priceCents }: Props) {
   const [selected, setSelected] = useState<Method>('card')
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [cpf, setCpf] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
+  const needsDetails = selected === 'pix' || selected === 'boleto'
+
+  const inputStyle: React.CSSProperties = {
+    width: '100%',
+    padding: '12px 14px',
+    border: '1px solid #ddd6c8',
+    borderRadius: 4,
+    fontSize: 15,
+    fontFamily: 'Georgia, serif',
+    background: '#fff',
+    color: '#14140e',
+    marginBottom: 10,
+    boxSizing: 'border-box',
+  }
+
   async function handlePay() {
-    setLoading(true)
     setError(null)
 
+    if (needsDetails) {
+      if (!name.trim()) return setError('Informe seu nome completo.')
+      if (!isValidEmail(email)) return setError('Informe um e-mail válido para receber o livro.')
+      if (onlyDigits(cpf).length !== 11) return setError('Informe um CPF válido (11 dígitos).')
+    }
+
+    setLoading(true)
     try {
       if (selected === 'card') {
-        // Fluxo existente → Stripe Checkout
         const res = await fetch('/api/store/checkout', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            items: [{ stripePriceId, quantity: 1 }],
-            locale,
-          }),
+          body: JSON.stringify({ items: [{ stripePriceId, quantity: 1 }], locale }),
         })
         const data = await res.json()
         if (!res.ok || !data.url) throw new Error(data.error ?? 'Erro ao abrir checkout.')
@@ -53,7 +90,6 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
         return
       }
 
-      // Fluxo Asaas → criar order → redirecionar para pix/boleto
       const res = await fetch('/api/store/checkout/asaas', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -62,6 +98,9 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
           productSlug,
           method: selected,
           locale,
+          email: email.trim(),
+          name: name.trim(),
+          cpf: onlyDigits(cpf),
         }),
       })
       const data = await res.json()
@@ -80,8 +119,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
 
   return (
     <div style={{ width: '100%', maxWidth: 400, margin: '0 auto' }}>
-      {/* Seletor de método */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 18 }}>
         {METHODS.map((m) => (
           <button
             key={m.id}
@@ -112,25 +150,44 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
               >
                 {m.label}
               </span>
-              <span
-                style={{
-                  display: 'block',
-                  fontSize: 12,
-                  opacity: 0.7,
-                  marginTop: 2,
-                }}
-              >
+              <span style={{ display: 'block', fontSize: 12, opacity: 0.7, marginTop: 2 }}>
                 {m.desc}
               </span>
             </span>
-            {selected === m.id && (
-              <span style={{ marginLeft: 'auto', fontSize: 16 }}>✓</span>
-            )}
+            {selected === m.id && <span style={{ marginLeft: 'auto', fontSize: 16 }}>✓</span>}
           </button>
         ))}
       </div>
 
-      {/* Botão de pagamento */}
+      {needsDetails && (
+        <div style={{ marginBottom: 16 }}>
+          <input
+            style={inputStyle}
+            type="text"
+            placeholder="Nome completo"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            autoComplete="name"
+          />
+          <input
+            style={inputStyle}
+            type="email"
+            placeholder="Seu e-mail (para receber o livro)"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
+          />
+          <input
+            style={{ ...inputStyle, marginBottom: 0 }}
+            type="text"
+            inputMode="numeric"
+            placeholder="CPF"
+            value={cpf}
+            onChange={(e) => setCpf(formatCpf(e.target.value))}
+          />
+        </div>
+      )}
+
       <button
         onClick={handlePay}
         disabled={loading}
@@ -157,9 +214,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
       </button>
 
       {error && (
-        <p style={{ color: '#c92a2a', fontSize: 13, marginTop: 12, textAlign: 'center' }}>
-          {error}
-        </p>
+        <p style={{ color: '#c92a2a', fontSize: 13, marginTop: 12, textAlign: 'center' }}>{error}</p>
       )}
 
       <p style={{ fontSize: 11, color: '#888', marginTop: 14, textAlign: 'center' }}>
