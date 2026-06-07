@@ -714,7 +714,7 @@ export default function PrecoDaRelevanciaPage() {
                 
                 <span className="pill">Edição de lançamento</span>
               </div>
-              <div className="price"><span className="cur">R$</span>54</div>
+              <div className="price"><span className="cur">R$</span>46</div>
               <div className="pix-line"><em>à vista · cartão, pix ou boleto</em></div>
               <div>
                 <a href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></a>

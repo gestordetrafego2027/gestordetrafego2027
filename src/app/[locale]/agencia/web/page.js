@@ -3,7 +3,7 @@ import { initAosNative } from '@/lib/aosNative';
 
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import LandingTeam from '@/app/components/LandingTeam';

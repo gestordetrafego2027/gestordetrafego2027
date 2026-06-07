@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'

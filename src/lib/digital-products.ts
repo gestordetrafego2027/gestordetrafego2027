@@ -52,7 +52,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
   'preco-da-relevancia': {
     slug: 'preco-da-relevancia',
     name: 'O Preço da Relevância · Vol. 02',
-    stripePriceId: 'price_1TfhyILcrEu1967n07dxw5z7', // R$ 54,00 · prod_Uc0jsoMdxr4oaj
+    stripePriceId: 'price_1TfpoYLcrEu1967nFjwWSZzJ', // R$ 46,00 · prod_Uc0jsoMdxr4oaj
     storagePath: 'preco-da-relevancia/vol-02.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_PRECO_DA_RELEVANCIA ??
