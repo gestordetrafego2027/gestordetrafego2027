@@ -32,7 +32,7 @@ export default function JequitiLarissaManoelaPage() {
             targetY = Math.max(0, window.scrollY * 0.5);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         
         let animationFrameId;
         function animate() {

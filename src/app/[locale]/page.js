@@ -109,7 +109,7 @@ export default function Home() {
                 testimonialBg.style.transform = `translate(-50%, calc(-50% + ${offset2}px))`;
             }
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
         return () => {
             clearTimeout(timer);
@@ -167,7 +167,7 @@ export default function Home() {
                             muted
                             loop
                             playsInline
-                            preload="none"
+                            preload="metadata"
                             width={1920}
                             height={1080}
                             className="absolute inset-0 w-full h-full object-cover object-top"

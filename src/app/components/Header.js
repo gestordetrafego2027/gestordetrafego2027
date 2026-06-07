@@ -43,7 +43,7 @@ export default function Header({ variant = 'dark' }) {
             }
             lastScroll.current = current;
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [pathname]);
 

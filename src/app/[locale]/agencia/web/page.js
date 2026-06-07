@@ -1,8 +1,7 @@
 'use client';
+import { initAosNative } from '@/lib/aosNative';
 
-import AOS from 'aos';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
-import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
@@ -15,7 +14,7 @@ export default function AgenciaWebPage() {
     const [formOpen, setFormOpen] = useState(false);
 
     useEffect(() => {
-        AOS.init({ duration: 800, once: true, easing: 'ease-out' });
+        const cleanup = initAosNative(); return cleanup;
     }, []);
 
     return (
