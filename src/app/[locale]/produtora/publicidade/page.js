@@ -10,8 +10,10 @@ import FormProdutora from '@/app/components/forms/FormProdutora';
 import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
+import {useTranslations} from 'next-intl';
 
 export default function ProdutoraPublicidadePage() {
+    const t = useTranslations('produtora_publicidade');
     const [formCta, setFormCta] = useState(null);
     const openForm = (ctaLocation, packageSelected = null) => setFormCta({ ctaLocation, packageSelected });
     const closeForm = () => setFormCta(null);
@@ -22,8 +24,8 @@ export default function ProdutoraPublicidadePage() {
 
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
-            <title>House Mazzutti — PRODUTORA | Campanha Publicitária</title>
-            <meta name="description" content="Produção executiva para campanhas publicitárias: direção criativa, audiovisual, casting e gestão completa de set." />
+            <title>{t('page_title')}</title>
+            <meta name="description" content={t('page_description')} />
 
             <style dangerouslySetInnerHTML={{ __html: `
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
@@ -32,7 +34,7 @@ export default function ProdutoraPublicidadePage() {
                 .page-frame { padding-left: 40px; padding-right: 40px; }
             `}} />
 
-            <h1 className="sr-only">Produção Executiva para Campanhas Publicitárias</h1>
+            <h1 className="sr-only">{t('hero_sr_title')}</h1>
 
             <Header variant="dark" />
 
@@ -48,14 +50,14 @@ export default function ProdutoraPublicidadePage() {
                 </div>
                 <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                     <div className="max-w-3xl">
-                        <span className="text-caption text-white/70 mb-6 block" data-aos="fade-up" data-aos-delay="100">PUBLICIDADE & CONTEÚDO · PROPOSTA SOB MEDIDA</span>
-                        <h1 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">Vídeos que vendem. Imagens que engajam.</h1>
+                        <span className="text-caption text-white/70 mb-6 block" data-aos="fade-up" data-aos-delay="100">{t('hero_label')}</span>
+                        <h1 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
                         <p className="text-body text-white/80 mb-12 measure-editorial" data-aos="fade-up" data-aos-delay="300">
-                            Produção de conteúdo dinâmico e filmes publicitários de alta performance para marcas que buscam autoridade e resultados reais no ambiente digital.
+                            {t('hero_texto')}
                         </p>
                         <div data-aos="fade-up" data-aos-delay="400">
                             <button type="button" onClick={() => openForm('hero')} className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
-                                Iniciar campanha
+                                {t('hero_cta')}
                             </button>
                         </div>
                     </div>
@@ -65,18 +67,18 @@ export default function ProdutoraPublicidadePage() {
             {/* SERVICES */}
             <section className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
-                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">SERVIÇOS PUBLICITÁRIOS</span>
-                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Performance e estética. Sem compromisso.</h2>
-                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Soluções audiovisuais focadas em conversão e branding.</p>
+                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">{t('servicos_label')}</span>
+                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">{t('servicos_titulo')}</h2>
+                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">{t('servicos_subtitulo')}</p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
                             {[
-                                { icon: 'videocam', title: 'Filmes Publicitários', desc: 'Produção de vídeos para TV e Digital com qualidade cinematográfica.' },
-                                { icon: 'movie_edit', title: 'Edição Dinâmica', desc: 'Pós-produção ágil e moderna, alinhada às tendências atuais.' },
-                                { icon: 'smartphone', title: 'Social First', desc: 'Conteúdo otimizado para redes sociais, Reels e TikTok com olhar premium.' },
-                                { icon: 'groups', title: 'Casting & Influência', desc: 'Seleção e gestão de talentos para cada projeto.' },
-                                { icon: 'settings', title: 'Estrutura & Operação', desc: 'Logística, fornecedores e cronograma sob controle total.' },
-                                { icon: 'diamond', title: 'Entrega Consistente', desc: 'Qualidade garantida do briefing ao resultado final.' },
+                                { icon: 'videocam', title: t('servico_1_title'), desc: t('servico_1_desc') },
+                                { icon: 'movie_edit', title: t('servico_2_title'), desc: t('servico_2_desc') },
+                                { icon: 'smartphone', title: t('servico_3_title'), desc: t('servico_3_desc') },
+                                { icon: 'groups', title: t('servico_4_title'), desc: t('servico_4_desc') },
+                                { icon: 'settings', title: t('servico_5_title'), desc: t('servico_5_desc') },
+                                { icon: 'diamond', title: t('servico_6_title'), desc: t('servico_6_desc') },
                             ].map((s, i) => (
                                 <div key={s.icon} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
                                     <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon={s.icon}>{s.icon}</span>
@@ -90,11 +92,11 @@ export default function ProdutoraPublicidadePage() {
 
             <LandingGallery service="publicidade" />
             <LandingTeam
-                heading="O que faz a diferença na House."
+                heading={t('team_heading')}
                 items={[
-                    { title: 'Filmes que Vendem', desc: 'Performance e estética sem abrir mão de nenhuma.', image: '/images/produtora/moda/beatco/capa.webp', alt: 'Filmes publicitários de alta performance — House Mazzutti' },
-                    { title: 'Casting & Influência', desc: 'Seleção e gestão de talentos para cada projeto.', image: '/images/studio/vitoria-boidt/capa.webp', alt: 'Casting e gestão de talentos — House Mazzutti' },
-                    { title: 'Operação sob Controle', desc: 'Logística, fornecedores e cronograma sob comando.', image: '/images/produtora/moda/unique-chic/capa.webp', alt: 'Operação e logística de produção — House Mazzutti' },
+                    { title: t('team_item_1_title'), desc: t('team_item_1_desc'), image: '/images/produtora/moda/beatco/capa.webp', alt: 'Filmes publicitários de alta performance — House Mazzutti' },
+                    { title: t('team_item_2_title'), desc: t('team_item_2_desc'), image: '/images/studio/vitoria-boidt/capa.webp', alt: 'Casting e gestão de talentos — House Mazzutti' },
+                    { title: t('team_item_3_title'), desc: t('team_item_3_desc'), image: '/images/produtora/moda/unique-chic/capa.webp', alt: 'Operação e logística de produção — House Mazzutti' },
                 ]}
             />
 
@@ -105,8 +107,8 @@ export default function ProdutoraPublicidadePage() {
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>
                         </button>
-                        <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">"Campanhas grandes não podem depender de tentativa. Elas exigem comando."</h2>
-                        <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">Cada núcleo existe por um motivo. Cada decisão sustenta o resultado.</p>
+                        <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">{t('quote_text')}</h2>
+                        <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">{t('quote_sub')}</p>
                     </div>
             </section>
 
@@ -115,15 +117,15 @@ export default function ProdutoraPublicidadePage() {
             {/* COMPARATIVE */}
             <section className="bg-zinc-50 py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
-                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">Conteúdo que converte.</h2>
+                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">{t('comparativo_titulo')}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
                             <div data-aos="fade-right">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">COM PRODUÇÃO EXECUTIVA</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparativo_com_label')}</h3>
                                 <ul className="space-y-10">
                                     {[
-                                        { t: 'Governança total', d: 'Integra todas as áreas e protege estratégia, prazo e percepção.' },
-                                        { t: 'Execução com controle', d: 'Menos risco, mais previsibilidade e muito mais impacto.' },
-                                        { t: 'Consistência garantida', d: 'Coerência entre conceito e entrega em cada detalhe.' },
+                                        { t: t('com_1_title'), d: t('com_1_desc') },
+                                        { t: t('com_2_title'), d: t('com_2_desc') },
+                                        { t: t('com_3_title'), d: t('com_3_desc') },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6">
                                             <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="check_circle">check_circle</span>
@@ -136,12 +138,12 @@ export default function ProdutoraPublicidadePage() {
                                 </ul>
                             </div>
                             <div data-aos="fade-left">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">SEM PRODUÇÃO EXECUTIVA</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparativo_sem_label')}</h3>
                                 <ul className="space-y-10">
                                     {[
-                                        { t: 'Execução fragmentada', d: 'Equipes desalinhadas e decisões que geram retrabalho.' },
-                                        { t: 'Perda de qualidade', d: 'O que era estratégia vira esforço. O que era impacto vira ruído.' },
-                                        { t: 'Risco constante', d: 'Atrasos, desalinhamento e perda de controle na entrega.' },
+                                        { t: t('sem_1_title'), d: t('sem_1_desc') },
+                                        { t: t('sem_2_title'), d: t('sem_2_desc') },
+                                        { t: t('sem_3_title'), d: t('sem_3_desc') },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6 opacity-40">
                                             <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="cancel">cancel</span>
@@ -159,9 +161,9 @@ export default function ProdutoraPublicidadePage() {
 
             {/* FINAL CTA */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
-                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">Sua campanha começa agora.</h2>
+                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">{t('cta_final_titulo')}</h2>
                     <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
-                        INICIAR PROJETO
+                        {t('cta_final_btn')}
                     </button>
             </section>
 
@@ -175,7 +177,7 @@ export default function ProdutoraPublicidadePage() {
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 mb-12">
                     <div className="space-y-4">
-                        <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">SOCIAL</p>
+                        <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">{t('footer_social')}</p>
                         <div className="flex space-x-8 justify-center">
                             <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://instagram.com/housemazzutti">INSTAGRAM</Link>
                             <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://linkedin.com/company/housemazzutti">LINKEDIN</Link>
@@ -183,12 +185,12 @@ export default function ProdutoraPublicidadePage() {
                     </div>
                 </div>
                 <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 pb-12">
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">CONTATO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">{t('footer_contato')}</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">{t('footer_portfolio')}</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">{t('footer_blog')}</Link>
                 </nav>
                 <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t-[0.5px] border-zinc-900">
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2026 House Mazzutti</p>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">{t('footer_copyright')}</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>
@@ -196,8 +198,8 @@ export default function ProdutoraPublicidadePage() {
             <FormDrawer
                 isOpen={!!formCta}
                 onClose={closeForm}
-                title="Iniciar projeto"
-                subtitle="Conte-nos sobre sua campanha publicitária. Respondemos em até 1 dia útil."
+                title={t('form_title')}
+                subtitle={t('form_subtitle')}
             >
                 <FormProdutora
                     onClose={closeForm}

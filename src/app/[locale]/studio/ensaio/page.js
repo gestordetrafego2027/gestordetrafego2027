@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import FormStudio from '@/app/components/forms/FormStudio';
@@ -12,6 +13,7 @@ import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
 
 export default function StudioEnsaioPage() {
+    const t = useTranslations('studio_ensaio');
     const [formCta, setFormCta] = useState(null);
     const openForm = (ctaLocation, packageSelected = null) => setFormCta({ ctaLocation, packageSelected });
     const closeForm = () => setFormCta(null);
@@ -22,8 +24,8 @@ export default function StudioEnsaioPage() {
 
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
-            <title>House Mazzutti — STUDIO | Ensaio Pessoal</title>
-            <meta name="description" content="Ensaio fotográfico autoral com direção de cena, moda e narrativa visual. House Mazzutti — São Paulo. A partir de R$ 3.700." />
+            <title>{t('page_title')}</title>
+            <meta name="description" content={t('page_description')} />
 
             <style dangerouslySetInnerHTML={{ __html: `
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
@@ -32,7 +34,7 @@ export default function StudioEnsaioPage() {
                 .page-frame { padding-left: 40px; padding-right: 40px; }
             `}} />
 
-            <h1 className="sr-only">Ensaio Pessoal com Direção de Imagem | House Mazzutti</h1>
+            <h1 className="sr-only">{t('sr_titulo')}</h1>
 
             <Header variant="dark" />
 
@@ -48,12 +50,12 @@ export default function StudioEnsaioPage() {
                                     <path d="M12 2L12 22M2 12L22 12" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">DIREÇÃO DE ENSAIO · A PARTIR DE R$ 3.700</span>
-                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">A imagem que você projeta define como o mundo te percebe.</h1>
-                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Ensaios autorais com direção de cena, moda e narrativa visual para quem busca autenticidade, autoridade e impacto.</p>
+                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">{t('hero_label')}</span>
+                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
+                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">{t('hero_subtitulo')}</p>
                             <div data-aos="fade-up" data-aos-delay="400">
                                 <button type="button" onClick={() => openForm('hero')} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
-                                    INICIAR MEU ENSAIO
+                                    {t('hero_cta')}
                                 </button>
                             </div>
                         </div>
@@ -63,23 +65,23 @@ export default function StudioEnsaioPage() {
             {/* SERVICES */}
             <section className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
-                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">ENSAIO STUDIO</span>
-                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Não é sobre tirar fotos. É sobre criar ícones.</h2>
-                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Uma experiência pensada do conceito à curadoria.</p>
+                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">{t('servicos_label')}</span>
+                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">{t('servicos_titulo')}</h2>
+                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">{t('servicos_subtitulo')}</p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
                             {[
-                                { icon: 'lightbulb', title: 'Conceito Criativo', desc: 'Desenvolvimento da narrativa visual baseada na sua essência.' },
-                                { icon: 'checkroom', title: 'Styling & Moda', desc: 'Curadoria de looks que reforçam a mensagem desejada.' },
-                                { icon: 'movie_edit', title: 'Direção no Set', desc: 'Direção completa de poses, expressão e presença.' },
-                                { icon: 'photo_camera', title: 'Set de Luxo', desc: 'Estúdio próprio com infraestrutura de nível internacional.' },
-                                { icon: 'content_cut', title: 'Curadoria', desc: 'Seleção final das imagens que realmente posicionam.' },
-                                { icon: 'auto_awesome', title: 'Efeito House', desc: 'A assinatura visual Mazzutti que te diferencia no mercado.' },
+                                { icon: 'lightbulb', titleKey: 'servico_1_title', descKey: 'servico_1_desc' },
+                                { icon: 'checkroom', titleKey: 'servico_2_title', descKey: 'servico_2_desc' },
+                                { icon: 'movie_edit', titleKey: 'servico_3_title', descKey: 'servico_3_desc' },
+                                { icon: 'photo_camera', titleKey: 'servico_4_title', descKey: 'servico_4_desc' },
+                                { icon: 'content_cut', titleKey: 'servico_5_title', descKey: 'servico_5_desc' },
+                                { icon: 'auto_awesome', titleKey: 'servico_6_title', descKey: 'servico_6_desc' },
                             ].map((s, i) => (
                                 <div key={s.icon} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
                                     <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon={s.icon}>{s.icon}</span>
-                                    <h3 className="font-headline mb-4 tracking-tight !text-lg">{s.title}</h3>
-                                    <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">{s.desc}</p>
+                                    <h3 className="font-headline mb-4 tracking-tight !text-lg">{t(s.titleKey)}</h3>
+                                    <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">{t(s.descKey)}</p>
                                 </div>
                             ))}
                         </div>
@@ -88,11 +90,11 @@ export default function StudioEnsaioPage() {
 
             <LandingGallery service="ensaio" />
             <LandingTeam
-                heading="O que faz a diferença na House."
+                heading={t('team_heading')}
                 items={[
-                    { title: 'Direção de Imagem', desc: 'Do conceito à pose, nada por acaso.', image: '/images/studio/marjorie-rossi/capa.webp', alt: 'Direção de imagem em ensaio — House Mazzutti Studio' },
-                    { title: 'Styling & Moda', desc: 'Looks que reforçam a mensagem desejada.', image: '/images/produtora/acessorios/bia/capa.webp', alt: 'Styling e curadoria de looks — House Mazzutti' },
-                    { title: 'Set Próprio', desc: 'Estúdio com infraestrutura de nível internacional.', image: '/images/studio/simonny/capa.webp', alt: 'Set de luxo próprio — House Mazzutti Studio' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/studio/marjorie-rossi/capa.webp', alt: 'Direção de imagem em ensaio — House Mazzutti Studio' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/acessorios/bia/capa.webp', alt: 'Styling e curadoria de looks — House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/studio/simonny/capa.webp', alt: 'Set de luxo próprio — House Mazzutti Studio' },
                 ]}
             />
 
@@ -103,8 +105,8 @@ export default function StudioEnsaioPage() {
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>
                         </button>
-                        <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">"Sua imagem já comunica algo — mesmo quando não existe intenção."</h2>
-                        <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">A diferença está em decidir o que ela deve comunicar.</p>
+                        <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">{t('quote_texto')}</h2>
+                        <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">{t('quote_sub')}</p>
                     </div>
             </section>
 
@@ -113,15 +115,15 @@ export default function StudioEnsaioPage() {
             {/* COMPARATIVE */}
             <section className="bg-zinc-50 py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
-                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">A diferença está na direção.</h2>
+                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">{t('comparativo_titulo')}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
                             <div data-aos="fade-right">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">COM DIREÇÃO (HOUSE)</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparativo_com_label')}</h3>
                                 <ul className="space-y-10">
                                     {[
-                                        { t: 'Narrativa visual coesa', d: 'Cada cena é parte de uma história — não fotos avulsas.' },
-                                        { t: 'Segurança no set', d: 'Você nunca fica perdido. Orientamos cada respiração.' },
-                                        { t: 'Qualidade editorial', d: 'Tratamento de imagem que respeita a textura da pele.' },
+                                        { t: t('comparativo_com_1_t'), d: t('comparativo_com_1_d') },
+                                        { t: t('comparativo_com_2_t'), d: t('comparativo_com_2_d') },
+                                        { t: t('comparativo_com_3_t'), d: t('comparativo_com_3_d') },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6">
                                             <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="check_circle">check_circle</span>
@@ -134,12 +136,12 @@ export default function StudioEnsaioPage() {
                                 </ul>
                             </div>
                             <div data-aos="fade-left">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">SEM DIREÇÃO</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparativo_sem_label')}</h3>
                                 <ul className="space-y-10">
                                     {[
-                                        { t: 'Fotos sem unidade', d: 'Material disperso que não posiciona.' },
-                                        { t: 'Insegurança e pose vazia', d: 'A falta de orientação transparece no olhar.' },
-                                        { t: 'Pós-produção excessiva', d: 'Filtros que "plastificam" e perdem a naturalidade.' },
+                                        { t: t('comparativo_sem_1_t'), d: t('comparativo_sem_1_d') },
+                                        { t: t('comparativo_sem_2_t'), d: t('comparativo_sem_2_d') },
+                                        { t: t('comparativo_sem_3_t'), d: t('comparativo_sem_3_d') },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6 opacity-40">
                                             <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="cancel">cancel</span>
@@ -157,9 +159,9 @@ export default function StudioEnsaioPage() {
 
             {/* FINAL CTA */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
-                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">Sua nova imagem começa agora.</h2>
+                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">{t('cta_final_titulo')}</h2>
                     <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
-                        INICIAR DIAGNÓSTICO DO MEU ENSAIO
+                        {t('cta_final_btn')}
                     </button>
             </section>
 
@@ -173,7 +175,7 @@ export default function StudioEnsaioPage() {
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 mb-12">
                     <div className="space-y-4">
-                        <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">SOCIAL</p>
+                        <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">{t('footer_social')}</p>
                         <div className="flex space-x-8 justify-center">
                             <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://instagram.com/housemazzutti">INSTAGRAM</Link>
                             <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://linkedin.com/company/housemazzutti">LINKEDIN</Link>
@@ -181,12 +183,12 @@ export default function StudioEnsaioPage() {
                     </div>
                 </div>
                 <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 pb-12">
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">CONTATO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">{t('footer_contato')}</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">{t('footer_portfolio')}</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">{t('footer_blog')}</Link>
                 </nav>
                 <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t-[0.5px] border-zinc-900">
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2026 House Mazzutti</p>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">{t('footer_copyright')}</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>
@@ -194,8 +196,8 @@ export default function StudioEnsaioPage() {
             <FormDrawer
                 isOpen={!!formCta}
                 onClose={closeForm}
-                title="Iniciar projeto"
-                subtitle="Conte-nos sobre seu ensaio. Respondemos em até 1 dia útil."
+                title={t('form_drawer_title')}
+                subtitle={t('form_drawer_subtitle')}
             >
                 <FormStudio
                     onClose={closeForm}

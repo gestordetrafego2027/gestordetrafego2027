@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import FormStudio from '@/app/components/forms/FormStudio';
@@ -12,6 +13,7 @@ import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
 
 export default function StudioCoberturaPage() {
+    const t = useTranslations('studio_cobertura');
     const [formCta, setFormCta] = useState(null);
     const openForm = (ctaLocation, packageSelected = null) => setFormCta({ ctaLocation, packageSelected });
     const closeForm = () => setFormCta(null);
@@ -19,6 +21,13 @@ export default function StudioCoberturaPage() {
     useEffect(() => {
         AOS.init({ duration: 800, once: true, easing: 'ease-out' })
     }, []);
+
+    const servicos = t.raw('servicos');
+    const teamItems = t.raw('team_items');
+    const comparativeComItems = t.raw('comparative_com_items');
+    const comparativeSemItems = t.raw('comparative_sem_items');
+
+    const servicoIcons = ['location_on', 'photo_camera', 'style', 'movie_edit', 'auto_stories', 'diamond'];
 
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
@@ -48,12 +57,12 @@ export default function StudioCoberturaPage() {
                                     <circle cx="12" cy="9" r="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">COBERTURA EXTERNA · PROPOSTA SOB MEDIDA</span>
-                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">Viver São Paulo exige presença. Nós produzimos a sua.</h1>
-                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Acompanhamento premium, direção de imagem e conteúdo em tempo real para transformar sua agenda em narrativa visual de alto valor.</p>
+                            <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">{t('hero_label')}</span>
+                            <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
+                            <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">{t('hero_subtexto')}</p>
                             <div data-aos="fade-up" data-aos-delay="400">
                                 <button type="button" onClick={() => openForm('hero')} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
-                                    QUERO SER ACOMPANHADA
+                                    {t('hero_cta_btn')}
                                 </button>
                             </div>
                         </div>
@@ -63,21 +72,14 @@ export default function StudioCoberturaPage() {
             {/* SERVICES */}
             <section className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                     <div className="max-w-[1440px] mx-auto px-6 text-center">
-                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">COBERTURA EXTERNA</span>
-                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Não é cobertura. É produção de presença.</h2>
-                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Cada momento da sua agenda, conduzido com intenção.</p>
+                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">{t('services_label')}</span>
+                        <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">{t('services_titulo')}</h2>
+                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">{t('services_subtexto')}</p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
-                            {[
-                                { icon: 'location_on', title: 'Acompanhamento Real', desc: 'Do hotel ao evento — presença ao longo de toda a jornada.' },
-                                { icon: 'photo_camera', title: 'Captação Estratégica', desc: 'Foto e vídeo com direção de imagem em tempo real.' },
-                                { icon: 'style', title: 'Suporte de Produção', desc: 'Beauty artist, stylist e produção de looks sob demanda.' },
-                                { icon: 'movie_edit', title: 'Conteúdo & Narrativa', desc: 'Reels, stories, teaser e bastidores com leitura estética.' },
-                                { icon: 'auto_stories', title: 'São Paulo como Cenário', desc: 'Hotéis, eventos, restaurantes e locações selecionadas.' },
-                                { icon: 'diamond', title: 'Entrega Premium', desc: 'Curadoria de presença e construção de narrativa visual.' },
-                            ].map((s, i) => (
-                                <div key={s.icon} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
-                                    <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon={s.icon}>{s.icon}</span>
+                            {servicos.map((s, i) => (
+                                <div key={s.title} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
+                                    <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80" data-icon={servicoIcons[i]}>{servicoIcons[i]}</span>
                                     <h3 className="font-headline mb-4 tracking-tight !text-lg">{s.title}</h3>
                                     <p className="text-on-surface-variant leading-relaxed font-light max-w-xs !text-[13px]">{s.desc}</p>
                                 </div>
@@ -88,11 +90,11 @@ export default function StudioCoberturaPage() {
 
             <LandingGallery service="cobertura" />
             <LandingTeam
-                heading="O que faz a diferença na House."
+                heading={t('team_heading')}
                 items={[
-                    { title: 'Suporte Completo', desc: 'Beauty artist, stylist e looks sob demanda.', image: '/images/produtora/beleza/natalia-beauty/capa.webp', alt: 'Beauty artist e suporte de produção — House Mazzutti' },
-                    { title: 'Captação em Tempo Real', desc: 'Foto e vídeo com direção durante toda a experiência.', image: '/images/produtora/moda/pous/capa.webp', alt: 'Captação estratégica em locação — House Mazzutti' },
-                    { title: 'Entrega em 48h', desc: 'Conteúdo tratado e entregue rápido para casos específicos.', image: '/images/produtora/institucional/tf/capa.webp', alt: 'Entrega premium ágil de conteúdo — House Mazzutti' },
+                    { title: teamItems[0].title, desc: teamItems[0].desc, image: '/images/produtora/beleza/natalia-beauty/capa.webp', alt: 'Beauty artist e suporte de produção — House Mazzutti' },
+                    { title: teamItems[1].title, desc: teamItems[1].desc, image: '/images/produtora/moda/pous/capa.webp', alt: 'Captação estratégica em locação — House Mazzutti' },
+                    { title: teamItems[2].title, desc: teamItems[2].desc, image: '/images/produtora/institucional/tf/capa.webp', alt: 'Entrega premium ágil de conteúdo — House Mazzutti' },
                 ]}
             />
 
@@ -103,8 +105,8 @@ export default function StudioCoberturaPage() {
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>
                         </button>
-                        <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">"Presença de alto nível não acontece por acaso. Ela é construída."</h2>
-                        <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">E quando é bem construída, transforma qualquer agenda em narrativa.</p>
+                        <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">{t('quote_texto')}</h2>
+                        <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">{t('quote_subtexto')}</p>
                     </div>
             </section>
 
@@ -113,16 +115,12 @@ export default function StudioCoberturaPage() {
             {/* COMPARATIVE */}
             <section className="bg-zinc-50 py-32 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
-                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">A sua agenda produzida.</h2>
+                        <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">{t('comparative_titulo')}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
                             <div data-aos="fade-right">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">COM ESTRUTURA</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparative_com_label')}</h3>
                                 <ul className="space-y-10">
-                                    {[
-                                        { t: 'Presença construída', d: 'Cada momento é acompanhado com direção e intenção.' },
-                                        { t: 'Conteúdo com valor', d: 'Sua agenda vira material visual estratégico.' },
-                                        { t: 'Experiência elevada', d: 'Você vive. A House transforma em imagem.' },
-                                    ].map((i) => (
+                                    {comparativeComItems.map((i) => (
                                         <li key={i.t} className="flex items-start gap-6">
                                             <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="check_circle">check_circle</span>
                                             <div>
@@ -134,13 +132,9 @@ export default function StudioCoberturaPage() {
                                 </ul>
                             </div>
                             <div data-aos="fade-left">
-                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">SEM ESTRUTURA</h3>
+                                <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparative_sem_label')}</h3>
                                 <ul className="space-y-10">
-                                    {[
-                                        { t: 'Registros aleatórios', d: 'Momentos importantes perdidos sem qualidade.' },
-                                        { t: 'Conteúdo improvisado', d: 'Presença que não reflete o nível da experiência.' },
-                                        { t: 'Oportunidades perdidas', d: 'Sua imagem não acompanha o que você construiu.' },
-                                    ].map((i) => (
+                                    {comparativeSemItems.map((i) => (
                                         <li key={i.t} className="flex items-start gap-6 opacity-40">
                                             <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="cancel">cancel</span>
                                             <div>
@@ -157,9 +151,9 @@ export default function StudioCoberturaPage() {
 
             {/* FINAL CTA */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
-                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">Não deixe São Paulo passar em branco.</h2>
+                    <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">{t('cta_final_titulo')}</h2>
                     <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
-                        QUERO VIVER ESSA EXPERIÊNCIA
+                        {t('cta_final_btn')}
                     </button>
             </section>
 
@@ -173,7 +167,7 @@ export default function StudioCoberturaPage() {
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 mb-12">
                     <div className="space-y-4">
-                        <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">SOCIAL</p>
+                        <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-500">{t('footer_social_label')}</p>
                         <div className="flex space-x-8 justify-center">
                             <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://instagram.com/housemazzutti">INSTAGRAM</Link>
                             <Link className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 hover:text-white transition-colors" href="https://linkedin.com/company/housemazzutti">LINKEDIN</Link>
@@ -181,12 +175,12 @@ export default function StudioCoberturaPage() {
                     </div>
                 </div>
                 <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 pb-12">
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">CONTATO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">{t('footer_nav_contato')}</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">{t('footer_nav_portfolio')}</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">{t('footer_nav_blog')}</Link>
                 </nav>
                 <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t-[0.5px] border-zinc-900">
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2026 House Mazzutti</p>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">{t('footer_copyright')}</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>
@@ -194,8 +188,8 @@ export default function StudioCoberturaPage() {
             <FormDrawer
                 isOpen={!!formCta}
                 onClose={closeForm}
-                title="Iniciar projeto"
-                subtitle="Conte-nos sobre sua cobertura. Respondemos em até 1 dia útil."
+                title={t('form_drawer_title')}
+                subtitle={t('form_drawer_subtitle')}
             >
                 <FormStudio
                     onClose={closeForm}

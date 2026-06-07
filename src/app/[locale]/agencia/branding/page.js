@@ -4,11 +4,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import LandingTeam from '@/app/components/LandingTeam';
 
 export default function AgenciaBrandingPage() {
+    const t = useTranslations('agencia_branding');
     const [formOpen, setFormOpen] = useState(false);
 
     useEffect(() => {
@@ -38,12 +40,12 @@ export default function AgenciaBrandingPage() {
                                 <path d="M2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </div>
-                        <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">BRANDING PROJECT · PROPOSTA SOB MEDIDA</span>
-                        <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">Onde identidade vira ativo estratégico.</h1>
-                        <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">Naming, identidade visual e posicionamento de marca para negócios que querem ser reconhecidos, lembrados e desejados.</p>
+                        <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">{t('hero_label')}</span>
+                        <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
+                        <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">{t('hero_subtitulo')}</p>
                         <div data-aos="fade-up" data-aos-delay="400">
                             <button type="button" onClick={() => setFormOpen(true)} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
-                                INICIAR MEU BRANDING
+                                {t('hero_cta_btn')}
                             </button>
                         </div>
                     </div>
@@ -53,18 +55,18 @@ export default function AgenciaBrandingPage() {
             {/* SERVICES */}
             <section className="bg-[#f5f5f5] pt-[4rem] md:pt-[5rem] pb-[10rem] md:pb-[12rem]">
                 <div className="max-w-[1440px] mx-auto px-6 text-center">
-                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">BRANDING PROJECT</span>
-                    <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">Marca não é logo. É percepção construída.</h2>
-                    <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">Do conceito à aplicação — uma identidade que funciona em qualquer canal.</p>
+                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black mb-4 block" data-aos="fade-up">{t('services_label')}</span>
+                    <h2 className="font-headline text-black mb-4 tracking-tight text-base md:text-[1.375rem] lg:text-[2.85rem] leading-tight" data-aos="fade-up" data-aos-delay="100">{t('services_titulo')}</h2>
+                    <p className="text-on-surface-variant font-body font-light text-base md:text-lg max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">{t('services_desc')}</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-20">
                         {[
-                            { icon: 'edit_note', title: 'Naming', desc: 'Criação do nome com fonética, disponibilidade e posicionamento estratégico.' },
-                            { icon: 'palette', title: 'Identidade Visual', desc: 'Logo, paleta, tipografia e sistema visual coeso e aplicável.' },
-                            { icon: 'record_voice_over', title: 'Tom de Voz', desc: 'Voz e linguagem da marca alinhados ao público e mercado.' },
-                            { icon: 'hub', title: 'Arquitetura de Marca', desc: 'Hierarquia clara entre produtos, linhas e sub-marcas.' },
-                            { icon: 'description', title: 'Brand Book', desc: 'Manual de uso com todas as regras e aplicações da marca.' },
-                            { icon: 'auto_awesome', title: 'Efeito House', desc: 'O olhar estratégico e criativo que diferencia marcas no mercado.' },
+                            { icon: 'edit_note', title: t('servico_1_titulo'), desc: t('servico_1_desc') },
+                            { icon: 'palette', title: t('servico_2_titulo'), desc: t('servico_2_desc') },
+                            { icon: 'record_voice_over', title: t('servico_3_titulo'), desc: t('servico_3_desc') },
+                            { icon: 'hub', title: t('servico_4_titulo'), desc: t('servico_4_desc') },
+                            { icon: 'description', title: t('servico_5_titulo'), desc: t('servico_5_desc') },
+                            { icon: 'auto_awesome', title: t('servico_6_titulo'), desc: t('servico_6_desc') },
                         ].map((s, i) => (
                             <div key={s.icon} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
                                 <span className="material-symbols-outlined text-4xl mb-6 text-on-surface/80">{s.icon}</span>
@@ -79,8 +81,8 @@ export default function AgenciaBrandingPage() {
             {/* GALLERY */}
             <section className="bg-white py-24 px-6 md:px-12">
                 <div className="max-w-[1440px] mx-auto">
-                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black/50 mb-4 block" data-aos="fade-up">PORTFÓLIO · BRANDING</span>
-                    <h2 className="font-headline text-black text-3xl md:text-4xl mb-16 tracking-tight" data-aos="fade-up" data-aos-delay="100">Marcas que construímos.</h2>
+                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black/50 mb-4 block" data-aos="fade-up">{t('gallery_label')}</span>
+                    <h2 className="font-headline text-black text-3xl md:text-4xl mb-16 tracking-tight" data-aos="fade-up" data-aos-delay="100">{t('gallery_titulo')}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                         {['knowhol/1','knowhol/2','knowhol/3','knowhol/4','mabdo/1','mabdo/2','mabdo/3','mabdo/4'].map((img, i) => (
                             <div key={img} className="aspect-square overflow-hidden" data-aos="fade-up" data-aos-delay={i * 50}>
@@ -92,11 +94,11 @@ export default function AgenciaBrandingPage() {
             </section>
 
             <LandingTeam
-                heading="O que faz a diferença na House."
+                heading={t('diferenciais_heading')}
                 items={[
-                    { title: 'Identidade Coesa', desc: 'Logo, paleta e tipografia que funcionam em tudo.', image: '/images/agencia/diferenciais/identidade-coesa.webp', alt: 'Identidade visual coesa — House Mazzutti' },
-                    { title: 'Posicionamento', desc: 'Naming, arquitetura e tom de voz que diferenciam.', image: '/images/agencia/diferenciais/posicionamento.webp', alt: 'Posicionamento estratégico de marca — House Mazzutti' },
-                    { title: 'Brand Book', desc: 'Todas as regras num manual só.', image: '/images/agencia/diferenciais/brand-book.webp', alt: 'Brand book completo — House Mazzutti' },
+                    { title: t('diferencial_1_titulo'), desc: t('diferencial_1_desc'), image: '/images/agencia/diferenciais/identidade-coesa.webp', alt: 'Identidade visual coesa — House Mazzutti' },
+                    { title: t('diferencial_2_titulo'), desc: t('diferencial_2_desc'), image: '/images/agencia/diferenciais/posicionamento.webp', alt: 'Posicionamento estratégico de marca — House Mazzutti' },
+                    { title: t('diferencial_3_titulo'), desc: t('diferencial_3_desc'), image: '/images/agencia/diferenciais/brand-book.webp', alt: 'Brand book completo — House Mazzutti' },
                 ]}
             />
 
@@ -105,23 +107,23 @@ export default function AgenciaBrandingPage() {
                 <img src="/images/agencia/mabdo/capa.webp" alt="Branding — House Mazzutti" className="absolute inset-0 w-full h-full object-cover object-center" />
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 text-center px-8">
-                    <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">"Uma marca forte não precisa gritar. Ela simplesmente é reconhecida."</h2>
-                    <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">É isso que construímos — presença que dispensa apresentação.</p>
+                    <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">{t('quote_texto')}</h2>
+                    <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60">{t('quote_subtitulo')}</p>
                 </div>
             </section>
 
             {/* COMPARATIVE */}
             <section className="bg-zinc-50 py-32 px-12 md:px-24">
                 <div className="max-w-[1440px] mx-auto">
-                    <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">A diferença está na estratégia.</h2>
+                    <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">{t('comparativo_titulo')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
                         <div data-aos="fade-right">
-                            <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">COM BRANDING (HOUSE)</h3>
+                            <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparativo_com_label')}</h3>
                             <ul className="space-y-10">
                                 {[
-                                    { t: 'Identidade coesa', d: 'Cada ponto de contato reforça a mesma percepção.' },
-                                    { t: 'Posicionamento claro', d: 'O mercado entende exatamente o que você oferece.' },
-                                    { t: 'Marca como ativo', d: 'Valor que se acumula a cada interação com o público.' },
+                                    { t: t('com_1_titulo'), d: t('com_1_desc') },
+                                    { t: t('com_2_titulo'), d: t('com_2_desc') },
+                                    { t: t('com_3_titulo'), d: t('com_3_desc') },
                                 ].map((i) => (
                                     <li key={i.t} className="flex items-start gap-6">
                                         <span className="material-symbols-outlined text-zinc-700 pt-1">check_circle</span>
@@ -134,12 +136,12 @@ export default function AgenciaBrandingPage() {
                             </ul>
                         </div>
                         <div data-aos="fade-left">
-                            <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">SEM BRANDING</h3>
+                            <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparativo_sem_label')}</h3>
                             <ul className="space-y-10">
                                 {[
-                                    { t: 'Identidade genérica', d: 'Igual a todos — sem diferencial visual ou conceitual.' },
-                                    { t: 'Mensagem confusa', d: 'O público não entende o que você faz ou para quem.' },
-                                    { t: 'Competindo por preço', d: 'Sem marca forte, o único argumento vira o mais barato.' },
+                                    { t: t('sem_1_titulo'), d: t('sem_1_desc') },
+                                    { t: t('sem_2_titulo'), d: t('sem_2_desc') },
+                                    { t: t('sem_3_titulo'), d: t('sem_3_desc') },
                                 ].map((i) => (
                                     <li key={i.t} className="flex items-start gap-6 opacity-40">
                                         <span className="material-symbols-outlined text-zinc-700 pt-1">cancel</span>
@@ -157,9 +159,9 @@ export default function AgenciaBrandingPage() {
 
             {/* FINAL CTA */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
-                <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up">Sua marca começa com uma decisão.</h2>
+                <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up">{t('cta_final_titulo')}</h2>
                 <button type="button" onClick={() => setFormOpen(true)} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="100">
-                    INICIAR MEU BRANDING PROJECT
+                    {t('cta_final_btn')}
                 </button>
             </section>
 
@@ -172,23 +174,23 @@ export default function AgenciaBrandingPage() {
                     </span>
                 </div>
                 <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 pb-8">
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">CONTATO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">BLOG</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/contato">{t('footer_contato')}</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/portfolio">{t('footer_portfolio')}</Link>
+                    <Link className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 hover:text-white transition-colors duration-200" href="/blog">{t('footer_blog')}</Link>
                 </nav>
                 <div className="w-full flex flex-col md:flex-row justify-between items-center pt-8 border-t-[0.5px] border-zinc-900">
-                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">© 2026 House Mazzutti</p>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">{t('footer_copyright')}</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
             </footer>
 
-            <FormDrawer isOpen={formOpen} onClose={() => setFormOpen(false)} title="Branding Project" subtitle="Conte-nos sobre sua marca. Respondemos em até 1 dia útil.">
+            <FormDrawer isOpen={formOpen} onClose={() => setFormOpen(false)} title={t('form_titulo')} subtitle={t('form_subtitulo')}>
                 <div className="flex flex-col gap-6 pt-4">
                     <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Branding%20Project." target="_blank" rel="noopener noreferrer" className="w-full py-4 bg-black text-white font-label uppercase tracking-[0.2em] text-[10px] text-center hover:bg-zinc-800 transition-colors">
-                        CONTINUAR VIA WHATSAPP
+                        {t('form_whatsapp_btn')}
                     </a>
                     <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener noreferrer" className="w-full py-4 border border-black text-black font-label uppercase tracking-[0.2em] text-[10px] text-center hover:bg-black hover:text-white transition-colors">
-                        CONTINUAR VIA INSTAGRAM
+                        {t('form_instagram_btn')}
                     </a>
                 </div>
             </FormDrawer>
