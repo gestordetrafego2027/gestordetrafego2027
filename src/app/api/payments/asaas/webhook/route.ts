@@ -49,14 +49,16 @@ export async function POST(req: NextRequest) {
   }
   const event = parsed.data
   // Asaas pode mandar id como undefined no sandbox; usa fallback determinístico
-  const eventId =
+  // Prefixo asaas: evita colisão com event_ids de outros providers na tabela compartilhada
+  const eventId = `asaas:${
     event.id ?? `${event.event}-${event.payment?.id ?? 'unknown'}-${event.dateCreated ?? ''}`
+  }`
 
   const supabase = createServiceClient()
 
-  // Dedupe
+  // Dedupe (tabela compartilhada store_webhook_events)
   const { error: insertErr } = await supabase
-    .from('asaas_webhook_events')
+    .from('store_webhook_events')
     .insert({ event_id: eventId, event_type: event.event, payload: raw })
 
   if (insertErr) {
