@@ -321,7 +321,64 @@
     "learn_more": "Saiba mais",
     "cta_titulo": "Não é sobre aparecer mais. É sobre aparecer melhor.",
     "cta_btn": "Iniciar uma conversa",
-    "form_title": "Iniciar projeto"
+    "form_title": "Iniciar projeto",
+    "grid_label": "Portfólio Produtora",
+    "grid_titulo": "Publicidade. Content MKT. Set Design.",
+    "grid_subtitulo": "Publicidade. Conteúdo de marca. Direção de arte.",
+    "concepts_label": "Estrutura",
+    "concept_1_title": "Estratégia.",
+    "concept_1_desc": "Clareza",
+    "concept_2_title": "Narrativa.",
+    "concept_2_desc": "Coerência",
+    "concept_3_title": "Execução.",
+    "concept_3_desc": "Precisão",
+    "concept_4_title": "Resultado.",
+    "concept_4_desc": "Consolidação",
+    "concepts_text": "Antes de produzir, estruturamos. Na HMZT Produtora, atuamos na gestão completa de produção audiovisual, campanhas publicitárias, conteúdo estratégico e direção criativa para marcas e equipes de marketing que desafiam o convencional.",
+    "servicos_label": "Otimize os resultados da sua marca",
+    "servicos_titulo": "Produção executiva e casting artístico para publicidade e marketing de conteúdo.",
+    "servico_1_title": "EDITORIAL DE MODA",
+    "servico_1_subtitle": "Onde a direção ganha forma e presença.",
+    "servico_1_item_1": "Lookbook",
+    "servico_1_item_2": "Campanha conceito",
+    "servico_1_item_3": "Projeto audiovisual",
+    "servico_2_title": "CAMPANHA PUBLICITÁRIA",
+    "servico_2_subtitle": "Onde execução e cuidado se conectam.",
+    "servico_2_item_1": "Direção criativa",
+    "servico_2_item_2": "Produção executiva",
+    "servico_2_item_3": "Casting artístico",
+    "servico_3_title": "CONTEÚDO",
+    "servico_3_subtitle": "Onde a empresa ganha presença e clareza.",
+    "servico_3_item_1": "Eventos",
+    "servico_3_item_2": "Educacionais",
+    "servico_3_item_3": "Storytelling",
+    "cta_leave_label": "Deixe de",
+    "cta_leave_1": "Produção sem direção",
+    "cta_leave_2": "Execução sem resultado",
+    "cta_gain_label": "Passe a",
+    "cta_gain_1": "Conteúdo com direção",
+    "cta_gain_2": "Imagem que consolida",
+    "cta_tagline": "Menos volume. Mais direção.",
+    "testimonials_label": "O que dizem",
+    "testimonials_titulo": "Depoimentos",
+    "testimonial_1_text": "Filme com padrão internacional, conduzido pela mesma direção que assinou o conceito. O briefing virou material editorial sem ruído.",
+    "testimonial_1_author": "JULIANA T.",
+    "testimonial_2_text": "Lookbook, filme e conteúdo nasceram da mesma cabeça. Uma narrativa coerente — não três entregas desconectadas.",
+    "testimonial_2_author": "RAFAEL S.",
+    "testimonial_3_text": "O diretor estava em set em cada decisão. Saímos com filme que sustenta uma temporada inteira.",
+    "testimonial_3_author": "CARLA M.",
+    "faq_label": "Perguntas frequentes",
+    "faq_titulo": "O que você precisa saber antes de começar",
+    "faq_1_q": "O que uma produtora executiva faz numa campanha?",
+    "faq_1_a": "A produtora executiva é responsável por tudo que acontece antes, durante e depois do set: orçamento, cronograma, contratação de equipe técnica, casting, locações, set design, direção de arte e entrega final. Na House Mazzutti, esse processo é integrado à direção criativa desde o conceito.",
+    "faq_2_q": "Vocês cuidam de casting e set design?",
+    "faq_2_a": "Sim. A Produtora HMZT cobre casting (seleção de modelos e talentos), set design (criação e execução do ambiente de set) e toda a coordenação de produção. Tudo sob uma única direção criativa.",
+    "faq_3_q": "A Produtora atende marcas de moda e beleza?",
+    "faq_3_a": "Sim — moda e beleza são os segmentos principais da Produtora HMZT. Temos experiência em campanhas de marcas de cosméticos, moda feminina, joias e acessórios, além de campanhas institucionais.",
+    "faq_4_q": "Como começar uma campanha com a House Mazzutti?",
+    "faq_4_a": "O primeiro passo é uma conversa de briefing — objetivo da campanha, produto, público e referências. A partir daí, desenvolvemos o conceito criativo e apresentamos a proposta de produção. Use o formulário de contato ou o WhatsApp para iniciar.",
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados.",
+    "form_subtitle": "Conte-nos sobre seu projeto. Respondemos em até 1 dia útil."
   },
   "comunidade_page": {
     "hero_label": "Comunidade — HMZT",
@@ -371,5 +428,241 @@
     "footer_portfolio": "Portfólio",
     "footer_blog": "Blog",
     "footer_contato": "Contato"
+  },
+  "portfolio": {
+    "seoTitle": "Portfólio House Mazzutti — Books, ensaios, campanhas e direção criativa",
+    "headerLabel": "HOUSE MAZZUTTI — PORTFÓLIO",
+    "headline": "Registros visuais de books, ensaios, campanhas e direções criativas assinadas pela House Mazzutti.",
+    "filterAll": "TODOS",
+    "filterStudio": "STUDIO",
+    "filterAgencia": "AGÊNCIA",
+    "filterProdutora": "PRODUTORA",
+    "emptyState": "Em breve. Novos projetos da Agência estarão disponíveis.",
+    "cat_book_title": "Book",
+    "cat_book_desc": "Books fotográficos para construção de presença e portfólio profissional.",
+    "cat_ensaio_title": "Ensaio Pessoal",
+    "cat_ensaio_desc": "Ensaios autorais que traduzem identidade em imagem.",
+    "cat_acessorios_title": "Acessórios",
+    "cat_acessorios_desc": "Produção de imagem para marcas de acessórios — direção criativa do briefing à entrega.",
+    "cat_beleza_title": "Beleza",
+    "cat_beleza_desc": "Campanhas e ensaios para o segmento de beleza e cosméticos.",
+    "cat_moda_title": "Moda",
+    "cat_moda_desc": "Lookbooks e campanhas de moda — direção criativa e produção executiva.",
+    "cat_institucional_title": "Institucional",
+    "cat_institucional_desc": "Imagem institucional para marcas e empresas — fotografia e direção de set.",
+    "cat_agencia_title": "Branding & Direção",
+    "cat_agencia_desc": "Projetos de branding, identidade e direção criativa assinados pela Agência."
+  },
+  "angelo_page": {
+    "page_title": "Angelo Mazzutti — Diretor Criativo | House Mazzutti",
+    "hero_label": "Diretor Criativo",
+    "hero_title": "A arquitetura da sua marca, com sensibilidade e precisão.",
+    "hero_body": "Angelo une visão estética e inteligência de mercado para marcas e pessoas que buscam ir além do óbvio. Traduz a essência de cada projeto em narrativas que ressoam — não apenas aparecem. Transforma visibilidade em desejo, e desejo em valor duradouro.",
+    "diferenciais_ghost": "Diferenciais",
+    "diferenciais_title": "Por que marcas escolhem a House.",
+    "dif_1_num": "01 / Visão estratégica",
+    "dif_1_bold": "Visão estratégica.",
+    "dif_1_desc": "Cada projeto pensado para resultados duradouros — não para o ciclo curto da atenção.",
+    "dif_2_num": "02 / Curadoria exclusiva",
+    "dif_2_bold": "Curadoria exclusiva.",
+    "dif_2_desc": "A expertise de Angelo em cada detalhe. Direção autoral, sem terceirização de decisão.",
+    "dif_3_num": "03 / Inovação constante",
+    "dif_3_bold": "Inovação constante.",
+    "dif_3_desc": "Tecnologia e tendência a serviço da marca. IA, ferramentas avançadas e leitura de mercado.",
+    "quem_label": "Quem é",
+    "quem_title": "O estrategista por trás da House.",
+    "quem_p1": "Angelo une visão estética e inteligência de mercado para marcas e pessoas que buscam ir além do óbvio.",
+    "quem_p2": "Traduz a essência de cada projeto em narrativas que ressoam — não apenas aparecem. Transforma visibilidade em desejo, e desejo em valor duradouro.",
+    "servicos_label": "Serviços",
+    "servicos_title": "Quatro frentes. Uma direção.",
+    "srv_1_title": "Campanha de Lançamento",
+    "srv_1_desc": "Estratégia integrada para impacto memorável.",
+    "srv_2_title": "Branding Project",
+    "srv_2_desc": "Identidade e posicionamento de marca.",
+    "srv_3_title": "Web Development",
+    "srv_3_desc": "Plataformas que convertem e engajam.",
+    "srv_4_title": "Produção Visual & Audiovisual",
+    "srv_4_desc": "Conteúdo de alto padrão para todas as mídias.",
+    "estrutura_ghost": "Estrutura",
+    "estrutura_label": "Estrutura",
+    "estrutura_title": "Três frentes. Uma visão.",
+    "est_1_title": "Agência",
+    "est_1_desc": "Estratégia & direção criativa.",
+    "est_2_title": "Studio",
+    "est_2_desc": "Imagem pessoal & profissional.",
+    "est_3_title": "Produtora",
+    "est_3_desc": "Execução visual de alto padrão.",
+    "valor_title": "De visibilidade a valor duradouro.",
+    "valor_deixa_label": "Você deixa de",
+    "valor_deixa_1": "Aparecer sem ressoar",
+    "valor_deixa_2": "Disputar atenção no óbvio",
+    "valor_deixa_3": "Depender de produção constante",
+    "valor_passa_label": "Você passa a",
+    "valor_passa_1": "Construir desejo",
+    "valor_passa_2": "Posicionar com precisão",
+    "valor_passa_3": "Sustentar valor no tempo",
+    "valor_cta": "Elevar minha marca",
+    "valor_tagline": "Visibilidade vira desejo. Desejo vira valor.",
+    "dep_label": "O que dizem",
+    "dep_title": "Depoimentos",
+    "dep_ghost": "Depoimentos",
+    "dep_slide_1": "Formado na publicidade e forjado nos sets de grandes marcas e personalidades do Brasil.",
+    "dep_slide_2": "Une o pensamento de um diretor de marca ao domínio técnico de um diretor de cena. Não apenas idealiza — sabe como realizar.",
+    "cta_final_title": "Pronto para elevar sua marca?",
+    "cta_final_btn": "Iniciar uma conversa",
+    "form_drawer_title": "Conversa com Angelo",
+    "form_drawer_subtitle": "Branding, campanha de lançamento, direção criativa ou parceria. Respondemos em até 1 dia útil."
+  },
+  "agencia": {
+    "hero_label": "Agência — HMZT",
+    "hero_slides": [
+      {
+        "titulo": "Marca com intenção. Presença com estratégia.",
+        "texto": "Branding, comunicação e desenvolvimento digital para marcas que querem ser reconhecidas — não só vistas."
+      },
+      {
+        "titulo": "Branding que sustenta crescimento.",
+        "texto": "Da identidade visual à arquitetura de marca — construímos sistemas que operam por você."
+      },
+      {
+        "titulo": "Web development orientado à conversão.",
+        "texto": "Sites, landing pages e plataformas que carregam a marca com precisão e transformam visita em decisão."
+      }
+    ],
+    "hero_cta": "Iniciar projeto",
+    "portfolio_label": "Portfólio Agência",
+    "portfolio_titulo": "Branding. Comunicação. Digital.",
+    "see_all_portfolio": "Ver todo o portfólio",
+    "pilares": [
+      {
+        "titulo": "Estratégia.",
+        "subtitulo": "Clareza antes de execução"
+      },
+      {
+        "titulo": "Identidade.",
+        "subtitulo": "Marca como sistema"
+      },
+      {
+        "titulo": "Comunicação.",
+        "subtitulo": "Mensagem com intenção"
+      },
+      {
+        "titulo": "Conversão.",
+        "subtitulo": "Digital que funciona"
+      }
+    ],
+    "manifesto": "Antes de aparecer, posicione. Na HMZT Agência, construímos marcas que comunicam com clareza — do branding estratégico ao desenvolvimento digital e à comunicação integrada para empresas que não querem ser mais uma opção no mercado.",
+    "servicos_label": "O que fazemos",
+    "servicos_titulo": "Branding, comunicação e desenvolvimento digital integrados sob a mesma direção.",
+    "servicos": [
+      {
+        "titulo": "BRANDING PROJECT",
+        "subtitulo": "Onde identidade vira ativo estratégico.",
+        "itens": [
+          "Naming & Identidade Visual",
+          "Arquitetura de Marca",
+          "Tom de Voz & Posicionamento"
+        ]
+      },
+      {
+        "titulo": "COMUNICAÇÃO & PUBLICIDADE",
+        "subtitulo": "Onde mensagem vira resultado.",
+        "itens": [
+          "Campanhas integradas",
+          "Gestão de conteúdo",
+          "Social media & performance"
+        ]
+      },
+      {
+        "titulo": "WEB DEVELOPMENT",
+        "subtitulo": "Onde presença digital vira sistema.",
+        "itens": [
+          "Sites institucionais",
+          "Landing pages",
+          "E-commerce & plataformas"
+        ]
+      }
+    ],
+    "saiba_mais": "Saiba mais",
+    "diferenciais_label": "Por que a HMZT Agência",
+    "diferenciais_titulo": "Não trabalhamos com marca como decoração.",
+    "diferenciais_texto": "Branding aqui é arquitetura. Cada decisão — do naming ao hexadecimal, do copy ao código — sustenta o posicionamento. Web development não é entrega técnica: é o final do processo criativo, onde a marca se instala no digital com consistência e converte.",
+    "iniciar_projeto": "Iniciar projeto",
+    "diferenciais": [
+      {
+        "num": "01",
+        "titulo": "Direção criativa unificada",
+        "desc": "O mesmo diretor que assina o branding orienta a comunicação e aprova o desenvolvimento digital. Sem ruído entre equipes."
+      },
+      {
+        "num": "02",
+        "titulo": "Marca antes de mídia",
+        "desc": "Não vendemos anúncios sem posicionamento. Primeiro construímos o que vai ser comunicado — depois amplificamos."
+      },
+      {
+        "num": "03",
+        "titulo": "Web orientado à marca",
+        "desc": "Sites que carregam a identidade com fidelidade. Nada de templates genéricos: cada projeto nasce do briefing de marca."
+      },
+      {
+        "num": "04",
+        "titulo": "Entrega integrada",
+        "desc": "Branding, comunicação e digital no mesmo contrato, na mesma mesa, com o mesmo cuidado."
+      }
+    ],
+    "cta_titulo": "Não é sobre ter uma marca bonita. É sobre ter uma marca que trabalha.",
+    "cta_deixe_label": "Deixe de",
+    "cta_deixe": [
+      "Marca sem estratégia",
+      "Site sem identidade",
+      "Comunicação sem posicionamento"
+    ],
+    "cta_passe_label": "Passe a",
+    "cta_passe": [
+      "Branding que converte",
+      "Digital que representa",
+      "Mensagem com intenção"
+    ],
+    "cta_btn": "Iniciar uma conversa",
+    "cta_tagline": "Menos ruído. Mais resultado.",
+    "depoimentos_label": "O que dizem",
+    "depoimentos_titulo": "Depoimentos",
+    "depoimentos": [
+      {
+        "text": "Antes de ter site, tinha estratégia. A House Mazzutti entendeu que presença digital sem posicionamento é só ruído. Entregaram marca, site e comunicação alinhados.",
+        "author": "BEATRIZ C. — Fundadora"
+      },
+      {
+        "text": "O branding não foi só estética. Foi um sistema. Do naming à paleta, cada decisão tinha razão de ser. Hoje a marca fala por si.",
+        "author": "RODRIGO M. — CEO"
+      },
+      {
+        "text": "Desenvolvimento e identidade no mesmo time. Sem tradução perdida entre designers e devs. O resultado foi exatamente o que imaginamos — só melhor.",
+        "author": "ANA P. — Diretora de Marketing"
+      }
+    ],
+    "faq_label": "Perguntas frequentes",
+    "faq_titulo": "O que você precisa saber antes de começar",
+    "faq": [
+      {
+        "q": "Quanto tempo leva um projeto de branding na House Mazzutti?",
+        "a": "Um branding project completo leva entre 6 e 12 semanas, dependendo da complexidade da marca. O processo passa por Imersão, Leitura de Mercado, Conceito, Execução e Fine Art antes da entrega final."
+      },
+      {
+        "q": "Qual a diferença entre branding e identidade visual?",
+        "a": "Identidade visual é o sistema gráfico (logo, cores, tipografia). Branding é a arquitetura de valor da marca — posicionamento, voz, estratégia e como tudo isso se traduz visualmente. Na House Mazzutti, fazemos branding completo, da estratégia à execução."
+      },
+      {
+        "q": "A House Mazzutti atende marcas fora de São Paulo?",
+        "a": "Sim. Atendemos marcas de todo o Brasil remotamente. Para projetos que exigem presença em set, operamos principalmente em São Paulo, mas realizamos produções em outras cidades mediante agendamento."
+      },
+      {
+        "q": "Como funciona o investimento em um branding project?",
+        "a": "Cada projeto é orçado individualmente após uma conversa de briefing. O investimento varia de acordo com o escopo — marca nova, reposicionamento ou sistema completo. Entre em contato pelo formulário para receber uma proposta."
+      }
+    ],
+    "form_title": "Iniciar projeto",
+    "form_subtitle": "Conte-nos sobre seu projeto. Respondemos em até 1 dia útil.",
+    "form_contact_text": "Entre em contato pelo Instagram ou WhatsApp para iniciar seu projeto:"
   }
 }

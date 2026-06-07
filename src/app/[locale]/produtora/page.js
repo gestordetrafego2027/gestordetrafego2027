@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/app/components/Header'
@@ -10,6 +11,7 @@ import FormProdutora from '@/app/components/forms/FormProdutora'
 import BlogSection from '@/app/components/BlogSection'
 
 export default function ProdutoraPage() {
+    const t = useTranslations('produtora_page')
     const [formCta, setFormCta] = useState(null)
     const openForm = (ctaLocation) => setFormCta({ ctaLocation })
     const closeForm = () => setFormCta(null)
@@ -20,16 +22,16 @@ export default function ProdutoraPage() {
 
     const testimonials = [
         {
-            text: "Filme com padrão internacional, conduzido pela mesma direção que assinou o conceito. O briefing virou material editorial sem ruído.",
-            author: "JULIANA T."
+            text: t('testimonial_1_text'),
+            author: t('testimonial_1_author')
         },
         {
-            text: "Lookbook, filme e conteúdo nasceram da mesma cabeça. Uma narrativa coerente — não três entregas desconectadas.",
-            author: "RAFAEL S."
+            text: t('testimonial_2_text'),
+            author: t('testimonial_2_author')
         },
         {
-            text: "O diretor estava em set em cada decisão. Saímos com filme que sustenta uma temporada inteira.",
-            author: "CARLA M."
+            text: t('testimonial_3_text'),
+            author: t('testimonial_3_author')
         }
     ]
 
@@ -169,11 +171,7 @@ export default function ProdutoraPage() {
                 {/* HERO */}
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     {(() => {
-                        const heroSlides = [
-                            { titulo: 'Produção e direção para publicidade.', texto: 'Produção audiovisual, campanhas e conteúdo com direção criativa cuidadosa.' },
-                            { titulo: 'Campanhas que comunicam com clareza.', texto: 'Da pré-produção à entrega final — cada decisão pensada para sustentar resultado.' },
-                            { titulo: 'Sets, editoriais e conteúdo com direção.', texto: 'Execução técnica e visão criativa na mesma mente. Para marcas que querem aparecer com intenção.' },
-                        ];
+                        const heroSlides = t.raw('hero_slides');
                         return <>
                             <div className="absolute inset-0 z-0">
                                 {['/images/produtora/banners/banner-1.webp','/images/produtora/banners/banner-2.webp','/images/produtora/banners/banner-3.webp'].map((src, i) => (
@@ -185,7 +183,7 @@ export default function ProdutoraPage() {
                             </div>
                             <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                                 <div className="max-w-3xl">
-                                    <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>Produtora — HMZT</span>
+                                    <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>{t('hero_label')}</span>
                                     <h1 className="hero-animate text-h1 text-white mb-8 hmzt-hero-title" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].titulo}
                                     </h1>
@@ -193,7 +191,7 @@ export default function ProdutoraPage() {
                                         {heroSlides[currentBannerSlide].texto}
                                     </p>
                                     <button type="button" onClick={() => openForm('hero')} className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                        Iniciar projeto
+                                        {t('hero_cta')}
                                     </button>
                                 </div>
                             </div>
@@ -220,8 +218,8 @@ export default function ProdutoraPage() {
                 {/* Section 2: Gallery */}
                 <section className="bg-white pt-24 pb-0 w-full mx-auto">
                     <div className="mb-20 text-center flex flex-col items-center">
-                        <span className="text-caption text-zinc-500 block mb-6">Portfólio Produtora</span>
-                        <h2 className="text-h2 text-black">Publicidade. Content MKT. Set Design.</h2>
+                        <span className="text-caption text-zinc-500 block mb-6">{t('portfolio_label')}</span>
+                        <h2 className="text-h2 text-black">{t('portfolio_titulo')}</h2>
                         <div className="line-divider mt-8 text-black"></div>
                     </div>
                     <div className="columns-gallery-container" style={{ height: '80vh' }}>
@@ -256,7 +254,7 @@ export default function ProdutoraPage() {
                     </div>
                     <div className="flex justify-center mt-12">
                         <Link className="group relative px-12 py-4 border-[0.5px] border-black/30 text-black text-button hover:bg-black hover:text-white transition-all duration-500" href="/portfolio-produtora">
-                            Ver todo o portfólio
+                            {t('see_all_portfolio')}
                         </Link>
                     </div>
                 </section>
@@ -273,25 +271,25 @@ export default function ProdutoraPage() {
                             <div className="grid grid-cols-1 gap-y-16">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                                     <div className="text-left">
-                                        <h3 className="text-h3 text-black mb-3">Estratégia.</h3>
-                                        <p className="text-caption text-zinc-500">Clareza</p>
+                                        <h3 className="text-h3 text-black mb-3">{t('concept_1_title')}</h3>
+                                        <p className="text-caption text-zinc-500">{t('concept_1_desc')}</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="text-h3 text-black mb-3">Narrativa.</h3>
-                                        <p className="text-caption text-zinc-500">Coerência</p>
+                                        <h3 className="text-h3 text-black mb-3">{t('concept_2_title')}</h3>
+                                        <p className="text-caption text-zinc-500">{t('concept_2_desc')}</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="text-h3 text-black mb-3">Execução.</h3>
-                                        <p className="text-caption text-zinc-500">Precisão</p>
+                                        <h3 className="text-h3 text-black mb-3">{t('concept_3_title')}</h3>
+                                        <p className="text-caption text-zinc-500">{t('concept_3_desc')}</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="text-h3 text-black mb-3">Resultado.</h3>
-                                        <p className="text-caption text-zinc-500">Consolidação</p>
+                                        <h3 className="text-h3 text-black mb-3">{t('concept_4_title')}</h3>
+                                        <p className="text-caption text-zinc-500">{t('concept_4_desc')}</p>
                                     </div>
                                 </div>
                                 <div className="max-w-3xl text-left border-t border-zinc-200 pt-10">
                                     <p className="text-h4 text-zinc-800">
-                                        Antes de produzir, estruturamos. Na HMZT Produtora, atuamos na gestão completa de produção audiovisual, campanhas publicitárias, conteúdo estratégico e direção criativa para marcas e equipes de marketing que desafiam o convencional.
+                                        {t('concepts_text')}
                                     </p>
                                 </div>
                             </div>
@@ -303,29 +301,29 @@ export default function ProdutoraPage() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">Otimize os resultados da sua marca</span>
-                                <h2 className="text-h2 text-white">Produção executiva e casting artístico para publicidade e marketing de conteúdo.</h2>
+                                <span className="text-caption text-zinc-400 mb-6 block">{t('servicos_label')}</span>
+                                <h2 className="text-h2 text-white">{t('servicos_titulo')}</h2>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        title: "EDITORIAL DE MODA",
+                                        title: t('servico_1_title'),
                                         link: "/produtora/moda",
-                                        subtitle: 'Onde a direção ganha forma e presença.',
-                                        items: ["Lookbook", "Campanha conceito", "Projeto audiovisual"]
+                                        subtitle: t('servico_1_subtitle'),
+                                        items: [t('servico_1_item_1'), t('servico_1_item_2'), t('servico_1_item_3')]
                                     },
                                     {
-                                        title: "CAMPANHA PUBLICITÁRIA",
+                                        title: t('servico_2_title'),
                                         link: "/produtora/publicidade",
-                                        subtitle: 'Onde execução e cuidado se conectam.',
-                                        items: ["Direção criativa", "Produção executiva", "Casting artístico"]
+                                        subtitle: t('servico_2_subtitle'),
+                                        items: [t('servico_2_item_1'), t('servico_2_item_2'), t('servico_2_item_3')]
                                     },
                                     {
-                                        title: "CONTEÚDO",
+                                        title: t('servico_3_title'),
                                         link: "/produtora/institucional",
-                                        subtitle: 'Onde a empresa ganha presença e clareza.',
-                                        items: ["Eventos", "Educacionais", "Storytelling"]
+                                        subtitle: t('servico_3_subtitle'),
+                                        items: [t('servico_3_item_1'), t('servico_3_item_2'), t('servico_3_item_3')]
                                     }
                                 ].map((card, idx) => (
                                     <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
@@ -342,7 +340,7 @@ export default function ProdutoraPage() {
                                             </ul>
                                         </div>
                                         <Link href={card.link} className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white text-center block">
-                                            Saiba mais
+                                            {t('learn_more')}
                                         </Link>
                                     </div>
                                 ))}
@@ -357,29 +355,29 @@ export default function ProdutoraPage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
                         <h2 className="text-h1 text-white hmzt-hero-title">
-                            Não é sobre aparecer mais. É sobre aparecer melhor.
+                            {t('cta_titulo')}
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-16">
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Deixe de</p>
+                                <p className="text-caption text-zinc-500">{t('cta_leave_label')}</p>
                                 <ul className="text-body text-white space-y-3">
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Execução sem resultado</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>{t('cta_leave_1')}</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>{t('cta_leave_2')}</span></li>
                                 </ul>
                             </div>
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Passe a</p>
+                                <p className="text-caption text-zinc-500">{t('cta_gain_label')}</p>
                                 <ul className="text-body text-white space-y-3">
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Conteúdo com direção</span></li>
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Imagem que consolida</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>{t('cta_gain_1')}</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>{t('cta_gain_2')}</span></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-10">
                             <button type="button" onClick={() => openForm('final')} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
-                                Iniciar uma conversa
+                                {t('cta_btn')}
                             </button>
-                            <p className="text-caption text-zinc-500">Menos volume. Mais direção.</p>
+                            <p className="text-caption text-zinc-500">{t('cta_tagline')}</p>
                         </div>
                     </div>
                 </section>
@@ -417,8 +415,8 @@ export default function ProdutoraPage() {
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
                         <div className="mb-12">
-                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
-                            <h2 className="text-h2 text-white">Depoimentos</h2>
+                            <span className="text-caption text-zinc-500 block mb-4">{t('testimonials_label')}</span>
+                            <h2 className="text-h2 text-white">{t('testimonials_titulo')}</h2>
                         </div>
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1">
@@ -446,26 +444,14 @@ export default function ProdutoraPage() {
             {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
             <section className="bg-white py-24 px-8 border-t border-zinc-100">
                 <div className="max-w-3xl mx-auto">
-                    <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-400 mb-6">Perguntas frequentes</p>
-                    <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">O que você precisa saber antes de começar</h2>
+                    <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-400 mb-6">{t('faq_label')}</p>
+                    <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">{t('faq_titulo')}</h2>
                     <div className="space-y-0">
                         {[
-                            {
-                                q: 'O que uma produtora executiva faz numa campanha?',
-                                a: 'A produtora executiva é responsável por tudo que acontece antes, durante e depois do set: orçamento, cronograma, contratação de equipe técnica, casting, locações, set design, direção de arte e entrega final. Na House Mazzutti, esse processo é integrado à direção criativa desde o conceito.'
-                            },
-                            {
-                                q: 'Vocês cuidam de casting e set design?',
-                                a: 'Sim. A Produtora HMZT cobre casting (seleção de modelos e talentos), set design (criação e execução do ambiente de set) e toda a coordenação de produção. Tudo sob uma única direção criativa.'
-                            },
-                            {
-                                q: 'A Produtora atende marcas de moda e beleza?',
-                                a: 'Sim — moda e beleza são os segmentos principais da Produtora HMZT. Temos experiência em campanhas de marcas de cosméticos, moda feminina, joias e acessórios, além de campanhas institucionais.'
-                            },
-                            {
-                                q: 'Como começar uma campanha com a House Mazzutti?',
-                                a: 'O primeiro passo é uma conversa de briefing — objetivo da campanha, produto, público e referências. A partir daí, desenvolvemos o conceito criativo e apresentamos a proposta de produção. Use o formulário de contato ou o WhatsApp para iniciar.'
-                            }
+                            { q: t('faq_1_q'), a: t('faq_1_a') },
+                            { q: t('faq_2_q'), a: t('faq_2_a') },
+                            { q: t('faq_3_q'), a: t('faq_3_a') },
+                            { q: t('faq_4_q'), a: t('faq_4_a') },
                         ].map(({q, a}, i) => (
                             <details key={i} className="group border-t border-zinc-100 py-6 cursor-pointer">
                                 <summary className="flex justify-between items-center list-none font-headline italic text-lg text-zinc-900 gap-4">
@@ -500,15 +486,15 @@ export default function ProdutoraPage() {
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
                     <div className="text-caption text-neutral-700">
-                        © 2026 House Mazzutti. Todos os direitos reservados.
+                        {t('footer_copyright')}
                     </div>
                 </div>
             </footer>
             <FormDrawer
                 isOpen={!!formCta}
                 onClose={closeForm}
-                title="Iniciar projeto"
-                subtitle="Conte-nos sobre seu projeto. Respondemos em até 1 dia útil."
+                title={t('form_title')}
+                subtitle={t('form_subtitle')}
             >
                 <FormProdutora
                     onClose={closeForm}

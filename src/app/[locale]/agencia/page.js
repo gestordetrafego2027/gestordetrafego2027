@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
 import FormDrawer from '@/app/components/FormDrawer'
@@ -11,6 +12,7 @@ import BlogSection from '@/app/components/BlogSection'
 export const dynamic = 'force-dynamic'
 
 export default function AgenciaPage() {
+    const t = useTranslations('agencia')
     const [formOpen, setFormOpen] = useState(false)
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentBannerSlide, setCurrentBannerSlide] = useState(0)
@@ -18,20 +20,7 @@ export default function AgenciaPage() {
     const openForm = () => setFormOpen(true)
     const closeForm = () => setFormOpen(false)
 
-    const testimonials = [
-        {
-            text: "Antes de ter site, tinha estratégia. A House Mazzutti entendeu que presença digital sem posicionamento é só ruído. Entregaram marca, site e comunicação alinhados.",
-            author: "BEATRIZ C. — Fundadora"
-        },
-        {
-            text: "O branding não foi só estética. Foi um sistema. Do naming à paleta, cada decisão tinha razão de ser. Hoje a marca fala por si.",
-            author: "RODRIGO M. — CEO"
-        },
-        {
-            text: "Desenvolvimento e identidade no mesmo time. Sem tradução perdida entre designers e devs. O resultado foi exatamente o que imaginamos — só melhor.",
-            author: "ANA P. — Diretora de Marketing"
-        }
-    ]
+    const testimonials = t.raw('depoimentos')
 
     const nextSlide = () => setCurrentSlide(prev => (prev + 1) % testimonials.length)
     const prevSlide = () => setCurrentSlide(prev => (prev - 1 + testimonials.length) % testimonials.length)
@@ -40,11 +29,7 @@ export default function AgenciaPage() {
     const nextBanner = () => setCurrentBannerSlide(prev => (prev + 1) % 3)
     const prevBanner = () => setCurrentBannerSlide(prev => (prev - 1 + 3) % 3)
 
-    const heroSlides = [
-        { titulo: 'Marca com intenção. Presença com estratégia.', texto: 'Branding, comunicação e desenvolvimento digital para marcas que querem ser reconhecidas — não só vistas.' },
-        { titulo: 'Branding que sustenta crescimento.', texto: 'Da identidade visual à arquitetura de marca — construímos sistemas que operam por você.' },
-        { titulo: 'Web development orientado à conversão.', texto: 'Sites, landing pages e plataformas que carregam a marca com precisão e transformam visita em decisão.' },
-    ]
+    const heroSlides = t.raw('hero_slides')
 
     useEffect(() => {
         document.querySelectorAll('.hero-animate').forEach(el => {
@@ -87,26 +72,13 @@ export default function AgenciaPage() {
         return () => obs.disconnect()
     }, [])
 
-    const services = [
-        {
-            title: 'BRANDING PROJECT',
-            link: '/agencia/branding',
-            subtitle: 'Onde identidade vira ativo estratégico.',
-            items: ['Naming & Identidade Visual', 'Arquitetura de Marca', 'Tom de Voz & Posicionamento']
-        },
-        {
-            title: 'COMUNICAÇÃO & PUBLICIDADE',
-            link: '/agencia/comunicacao',
-            subtitle: 'Onde mensagem vira resultado.',
-            items: ['Campanhas integradas', 'Gestão de conteúdo', 'Social media & performance']
-        },
-        {
-            title: 'WEB DEVELOPMENT',
-            link: '/agencia/web',
-            subtitle: 'Onde presença digital vira sistema.',
-            items: ['Sites institucionais', 'Landing pages', 'E-commerce & plataformas']
-        }
-    ]
+    const servicesLinks = ['/agencia/branding', '/agencia/comunicacao', '/agencia/web']
+    const services = t.raw('servicos').map((s, i) => ({
+        title: s.titulo,
+        link: servicesLinks[i],
+        subtitle: s.subtitulo,
+        items: s.itens
+    }))
 
     return (
         <div className="bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary">
@@ -183,7 +155,7 @@ export default function AgenciaPage() {
                     <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                         <div className="max-w-3xl">
                             <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Agência — HMZT
+                                {t('hero_label')}
                             </span>
                             <h1 className="hero-animate text-h1 text-white mb-8 hmzt-hero-title" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 {heroSlides[currentBannerSlide].titulo}
@@ -194,7 +166,7 @@ export default function AgenciaPage() {
                             <button type="button" onClick={openForm}
                                 className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500"
                                 style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                Iniciar projeto
+                                {t('hero_cta')}
                             </button>
                         </div>
                     </div>
@@ -221,8 +193,8 @@ export default function AgenciaPage() {
                 {/* ── PORTFÓLIO GALLERY ── */}
                 <section className="bg-white pt-24 pb-0 w-full mx-auto">
                     <div className="mb-20 text-center flex flex-col items-center">
-                        <span className="text-caption text-zinc-500 block mb-6">Portfólio Agência</span>
-                        <h2 className="text-h2 text-black">Branding. Comunicação. Digital.</h2>
+                        <span className="text-caption text-zinc-500 block mb-6">{t('portfolio_label')}</span>
+                        <h2 className="text-h2 text-black">{t('portfolio_titulo')}</h2>
                         <div className="mt-8 h-[0.5px] w-24 bg-black/30" />
                     </div>
                     <div className="columns-gallery-container">
@@ -254,7 +226,7 @@ export default function AgenciaPage() {
                     </div>
                     <div className="flex justify-center mt-12 pb-16">
                         <Link className="group relative px-12 py-4 border-[0.5px] border-black/30 text-black text-button hover:bg-black hover:text-white transition-all duration-500" href="/portfolio-agencia">
-                            Ver todo o portfólio
+                            {t('see_all_portfolio')}
                         </Link>
                     </div>
                 </section>
@@ -279,21 +251,16 @@ export default function AgenciaPage() {
                         <div className="flex-grow w-full py-4">
                             <div className="grid grid-cols-1 gap-y-16">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                                    {[
-                                        { t: 'Estratégia.', s: 'Clareza antes de execução' },
-                                        { t: 'Identidade.', s: 'Marca como sistema' },
-                                        { t: 'Comunicação.', s: 'Mensagem com intenção' },
-                                        { t: 'Conversão.', s: 'Digital que funciona' },
-                                    ].map((p, i) => (
+                                    {t.raw('pilares').map((p, i) => (
                                         <div key={i} className="text-left">
-                                            <h3 className="text-h3 text-black mb-3">{p.t}</h3>
-                                            <p className="text-caption text-zinc-500">{p.s}</p>
+                                            <h3 className="text-h3 text-black mb-3">{p.titulo}</h3>
+                                            <p className="text-caption text-zinc-500">{p.subtitulo}</p>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="max-w-3xl text-left border-t border-zinc-200 pt-10">
                                     <p className="text-h4 text-zinc-800">
-                                        Antes de aparecer, posicione. Na HMZT Agência, construímos marcas que comunicam com clareza — do branding estratégico ao desenvolvimento digital e à comunicação integrada para empresas que não querem ser mais uma opção no mercado.
+                                        {t('manifesto')}
                                     </p>
                                 </div>
                             </div>
@@ -306,8 +273,8 @@ export default function AgenciaPage() {
                     <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
                         <div className="max-w-[1440px] mx-auto">
                             <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">O que fazemos</span>
-                                <h2 className="text-h2 text-white">Branding, comunicação e desenvolvimento digital integrados sob a mesma direção.</h2>
+                                <span className="text-caption text-zinc-400 mb-6 block">{t('servicos_label')}</span>
+                                <h2 className="text-h2 text-white">{t('servicos_titulo')}</h2>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {services.map((card, idx) => (
@@ -332,7 +299,7 @@ export default function AgenciaPage() {
                                             </ul>
                                         </div>
                                         <Link href={card.link} className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white text-center block">
-                                            Saiba mais
+                                            {t('saiba_mais')}
                                         </Link>
                                     </div>
                                 ))}
@@ -346,27 +313,22 @@ export default function AgenciaPage() {
                     <div className="max-w-[1440px] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
                             <div>
-                                <span className="text-caption text-zinc-400 mb-6 block">Por que a HMZT Agência</span>
-                                <h2 className="text-h2 text-black mb-12">Não trabalhamos com marca como decoração.</h2>
+                                <span className="text-caption text-zinc-400 mb-6 block">{t('diferenciais_label')}</span>
+                                <h2 className="text-h2 text-black mb-12">{t('diferenciais_titulo')}</h2>
                                 <p className="text-body text-zinc-600 measure-editorial mb-12">
-                                    Branding aqui é arquitetura. Cada decisão — do naming ao hexadecimal, do copy ao código — sustenta o posicionamento. Web development não é entrega técnica: é o final do processo criativo, onde a marca se instala no digital com consistência e converte.
+                                    {t('diferenciais_texto')}
                                 </p>
                                 <button type="button" onClick={openForm} className="group relative px-12 py-4 border-[0.5px] border-black/30 text-black text-button hover:bg-black hover:text-white transition-all duration-500">
-                                    Iniciar projeto
+                                    {t('iniciar_projeto')}
                                 </button>
                             </div>
                             <div className="grid grid-cols-1 gap-8">
-                                {[
-                                    { n: '01', t: 'Direção criativa unificada', d: 'O mesmo diretor que assina o branding orienta a comunicação e aprova o desenvolvimento digital. Sem ruído entre equipes.' },
-                                    { n: '02', t: 'Marca antes de mídia', d: 'Não vendemos anúncios sem posicionamento. Primeiro construímos o que vai ser comunicado — depois amplificamos.' },
-                                    { n: '03', t: 'Web orientado à marca', d: 'Sites que carregam a identidade com fidelidade. Nada de templates genéricos: cada projeto nasce do briefing de marca.' },
-                                    { n: '04', t: 'Entrega integrada', d: 'Branding, comunicação e digital no mesmo contrato, na mesma mesa, com o mesmo cuidado.' },
-                                ].map((item, i) => (
+                                {t.raw('diferenciais').map((item, i) => (
                                     <div key={i} className="flex gap-8 border-b border-zinc-100 pb-8">
-                                        <span className="text-caption text-zinc-300 shrink-0 pt-1">{item.n}</span>
+                                        <span className="text-caption text-zinc-300 shrink-0 pt-1">{item.num}</span>
                                         <div>
-                                            <h3 className="text-h4 text-black mb-2">{item.t}</h3>
-                                            <p className="text-body text-zinc-500">{item.d}</p>
+                                            <h3 className="text-h4 text-black mb-2">{item.titulo}</h3>
+                                            <p className="text-body text-zinc-500">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -380,31 +342,31 @@ export default function AgenciaPage() {
                     <div className="noise-overlay absolute inset-0" />
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
                         <h2 className="text-h1 text-white hmzt-hero-title">
-                            Não é sobre ter uma marca bonita. É sobre ter uma marca que trabalha.
+                            {t('cta_titulo')}
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-16">
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Deixe de</p>
+                                <p className="text-caption text-zinc-500">{t('cta_deixe_label')}</p>
                                 <ul className="text-body text-white space-y-3">
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40" /><span>Marca sem estratégia</span></li>
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40" /><span>Site sem identidade</span></li>
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40" /><span>Comunicação sem posicionamento</span></li>
+                                    {t.raw('cta_deixe').map((item, i) => (
+                                        <li key={i} className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40" /><span>{item}</span></li>
+                                    ))}
                                 </ul>
                             </div>
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Passe a</p>
+                                <p className="text-caption text-zinc-500">{t('cta_passe_label')}</p>
                                 <ul className="text-body text-white space-y-3">
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white" /><span>Branding que converte</span></li>
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white" /><span>Digital que representa</span></li>
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white" /><span>Mensagem com intenção</span></li>
+                                    {t.raw('cta_passe').map((item, i) => (
+                                        <li key={i} className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white" /><span>{item}</span></li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-10">
                             <button type="button" onClick={openForm} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
-                                Iniciar uma conversa
+                                {t('cta_btn')}
                             </button>
-                            <p className="text-caption text-zinc-500">Menos ruído. Mais resultado.</p>
+                            <p className="text-caption text-zinc-500">{t('cta_tagline')}</p>
                         </div>
                     </div>
                 </section>
@@ -440,8 +402,8 @@ export default function AgenciaPage() {
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
                         <div className="mb-12">
-                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
-                            <h2 className="text-h2 text-white">Depoimentos</h2>
+                            <span className="text-caption text-zinc-500 block mb-4">{t('depoimentos_label')}</span>
+                            <h2 className="text-h2 text-white">{t('depoimentos_titulo')}</h2>
                         </div>
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1">
@@ -465,27 +427,10 @@ export default function AgenciaPage() {
             {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
             <section className="bg-white py-24 px-8 border-t border-zinc-100">
                 <div className="max-w-3xl mx-auto">
-                    <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-400 mb-6">Perguntas frequentes</p>
-                    <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">O que você precisa saber antes de começar</h2>
+                    <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-400 mb-6">{t('faq_label')}</p>
+                    <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">{t('faq_titulo')}</h2>
                     <div className="space-y-0">
-                        {[
-                            {
-                                q: 'Quanto tempo leva um projeto de branding na House Mazzutti?',
-                                a: 'Um branding project completo leva entre 6 e 12 semanas, dependendo da complexidade da marca. O processo passa por Imersão, Leitura de Mercado, Conceito, Execução e Fine Art antes da entrega final.'
-                            },
-                            {
-                                q: 'Qual a diferença entre branding e identidade visual?',
-                                a: 'Identidade visual é o sistema gráfico (logo, cores, tipografia). Branding é a arquitetura de valor da marca — posicionamento, voz, estratégia e como tudo isso se traduz visualmente. Na House Mazzutti, fazemos branding completo, da estratégia à execução.'
-                            },
-                            {
-                                q: 'A House Mazzutti atende marcas fora de São Paulo?',
-                                a: 'Sim. Atendemos marcas de todo o Brasil remotamente. Para projetos que exigem presença em set, operamos principalmente em São Paulo, mas realizamos produções em outras cidades mediante agendamento.'
-                            },
-                            {
-                                q: 'Como funciona o investimento em um branding project?',
-                                a: 'Cada projeto é orçado individualmente após uma conversa de briefing. O investimento varia de acordo com o escopo — marca nova, reposicionamento ou sistema completo. Entre em contato pelo formulário para receber uma proposta.'
-                            }
-                        ].map(({q, a}, i) => (
+                        {t.raw('faq').map(({q, a}, i) => (
                             <details key={i} className="group border-t border-zinc-100 py-6 cursor-pointer">
                                 <summary className="flex justify-between items-center list-none font-headline italic text-lg text-zinc-900 gap-4">
                                     {q}
@@ -525,9 +470,9 @@ export default function AgenciaPage() {
             </footer>
 
             {formOpen && (
-                <FormDrawer isOpen={formOpen} onClose={closeForm} title="Iniciar projeto" subtitle="Conte-nos sobre seu projeto. Respondemos em até 1 dia útil.">
+                <FormDrawer isOpen={formOpen} onClose={closeForm} title={t('form_title')} subtitle={t('form_subtitle')}>
                     <div className="p-8 text-on-surface">
-                        <p className="text-body text-on-surface-variant mb-6">Entre em contato pelo Instagram ou WhatsApp para iniciar seu projeto:</p>
+                        <p className="text-body text-on-surface-variant mb-6">{t('form_contact_text')}</p>
                         <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener" className="block w-full text-center px-8 py-4 bg-black text-white text-button hover:bg-zinc-800 transition-colors mb-4">
                             Instagram @housemazzutti
                         </a>

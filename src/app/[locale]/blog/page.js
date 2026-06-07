@@ -277,9 +277,9 @@ export default function BlogPage() {
             {/* Hero Section */}
             <section className="bg-white text-black px-8 flex items-center justify-center text-center border-t border-b border-[#e0e0e0]" style={{ borderTopWidth: '0.5px', borderBottomWidth: '0.5px', padding: '100px 0 40px 0', marginTop: '72px' }}>
                 <div className="max-w-4xl mx-auto">
-                    <span className="label-text mb-4 block">House Mazzutti — Editorial</span>
-                    <h2 className="hero-title text-4xl md:text-[2.5rem] mb-4 leading-tight">"Antes de qualquer imagem, existe uma decisão de mercado."</h2>
-                    <p className="label-text text-sm max-w-lg mx-auto leading-relaxed">Notas e ensaios sobre branding, direção criativa, marca pessoal e construção de valor.</p>
+                    <span className="label-text mb-4 block">{t('label')}</span>
+                    <h2 className="hero-title text-4xl md:text-[2.5rem] mb-4 leading-tight">"{t('hero_quote')}"</h2>
+                    <p className="label-text text-sm max-w-lg mx-auto leading-relaxed">{t('hero_subtitle')}</p>
                 </div>
             </section>
 
@@ -303,7 +303,10 @@ export default function BlogPage() {
                             transition: 'all 0.3s ease'
                         }}
                     >
-                        {cat === 'agencia' ? 'AGÊNCIA' : cat}
+                        {cat === 'todos' ? t('filter_todos').toUpperCase() :
+                         cat === 'studio' ? t('filter_studio').toUpperCase() :
+                         cat === 'agencia' ? t('filter_agencia').toUpperCase() :
+                         t('filter_produtora').toUpperCase()}
                     </button>
                 ))}
             </div>
@@ -344,7 +347,7 @@ export default function BlogPage() {
                                     "{article.excerpt}"
                                 </p>
                                 <div className="mb-10">
-                                    <Link className="btn-outline" href={article.link}>Ler Artigo</Link>
+                                    <Link className="btn-outline" href={article.link}>{t('read_article')}</Link>
                                 </div>
                                 <div className="flex justify-between items-center border-t border-gray-100 pt-6">
                                     <span className="label-text text-gray-400">{article.data}</span>
@@ -360,7 +363,7 @@ export default function BlogPage() {
                 {/* QUOTE BLOCK */}
                 <div className="quote-block article-card mt-24" style={{ marginBottom: '0', border: 'none', position: 'relative' }}>
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="quote-text text-[2.5rem] md:text-[3rem] mb-6 italic leading-[1.1]">"Conteúdo sem direção é ruído. E ruído não posiciona."</h2>
+                        <h2 className="quote-text text-[2.5rem] md:text-[3rem] mb-6 italic leading-[1.1]">"{t('closing_quote')}"</h2>
                         <span className="label-text text-[#5E5E5E]">House Mazzutti</span>
                     </div>
                 </div>
@@ -379,14 +382,14 @@ export default function BlogPage() {
                         <Link className="label-text hover:text-gray-400" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">Linkedin</Link>
                     </nav>
                     <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-16">
-                        <Link className="label-text text-xs text-gray-400" href="/">Home</Link>
-                        <Link className="label-text text-xs text-gray-400" href="/studio">Studio</Link>
-                        <Link className="label-text text-xs text-gray-400" href="/portfolio">Portfólio</Link>
-                        <Link className="label-text text-xs text-gray-400" href="/blog">Blog</Link>
-                        <Link className="label-text text-xs text-gray-400" href="/contato">Contato</Link>
+                        <Link className="label-text text-xs text-gray-400" href="/">{t('footer_home')}</Link>
+                        <Link className="label-text text-xs text-gray-400" href="/studio">{t('footer_studio')}</Link>
+                        <Link className="label-text text-xs text-gray-400" href="/portfolio">{t('footer_portfolio')}</Link>
+                        <Link className="label-text text-xs text-gray-400" href="/blog">{t('footer_blog')}</Link>
+                        <Link className="label-text text-xs text-gray-400" href="/contato">{t('footer_contato')}</Link>
                     </nav>
                     <div className="text-gray-600">
-                        <p className="label-text text-[10px]">© 2026 House Mazzutti. Todos os direitos reservados.</p>
+                        <p className="label-text text-[10px]">{t('footer_rights')}</p>
                     </div>
                 </div>
             </footer>

@@ -321,7 +321,64 @@
     "learn_more": "Learn more",
     "cta_titulo": "It's not about showing up more. It's about showing up better.",
     "cta_btn": "Start a conversation",
-    "form_title": "Start a project"
+    "form_title": "Start a project",
+    "grid_label": "Production Portfolio",
+    "grid_titulo": "Advertising. Content MKT. Set Design.",
+    "grid_subtitulo": "Advertising. Brand Content. Art Direction.",
+    "concepts_label": "Structure",
+    "concept_1_title": "Strategy.",
+    "concept_1_desc": "Clarity",
+    "concept_2_title": "Narrative.",
+    "concept_2_desc": "Coherence",
+    "concept_3_title": "Execution.",
+    "concept_3_desc": "Precision",
+    "concept_4_title": "Result.",
+    "concept_4_desc": "Consolidation",
+    "concepts_text": "Before producing, we structure. At HMZT Production, we manage complete audiovisual production, advertising campaigns, strategic content and creative direction for brands and marketing teams that challenge the conventional.",
+    "servicos_label": "Optimize your brand's results",
+    "servicos_titulo": "Executive production and artistic casting for advertising and content marketing.",
+    "servico_1_title": "FASHION EDITORIAL",
+    "servico_1_subtitle": "Where direction takes shape and presence.",
+    "servico_1_item_1": "Lookbook",
+    "servico_1_item_2": "Concept campaign",
+    "servico_1_item_3": "Audiovisual project",
+    "servico_2_title": "ADVERTISING CAMPAIGN",
+    "servico_2_subtitle": "Where execution and care connect.",
+    "servico_2_item_1": "Creative direction",
+    "servico_2_item_2": "Executive production",
+    "servico_2_item_3": "Artistic casting",
+    "servico_3_title": "CONTENT",
+    "servico_3_subtitle": "Where the company gains presence and clarity.",
+    "servico_3_item_1": "Events",
+    "servico_3_item_2": "Educational",
+    "servico_3_item_3": "Storytelling",
+    "cta_leave_label": "Stop",
+    "cta_leave_1": "Production without direction",
+    "cta_leave_2": "Execution without results",
+    "cta_gain_label": "Start",
+    "cta_gain_1": "Content with direction",
+    "cta_gain_2": "Image that consolidates",
+    "cta_tagline": "Less volume. More direction.",
+    "testimonials_label": "What they say",
+    "testimonials_titulo": "Testimonials",
+    "testimonial_1_text": "Film with international standards, led by the same direction that signed the concept. The briefing became editorial material without noise.",
+    "testimonial_1_author": "JULIANA T.",
+    "testimonial_2_text": "Lookbook, film and content were born from the same mind. A coherent narrative — not three disconnected deliveries.",
+    "testimonial_2_author": "RAFAEL S.",
+    "testimonial_3_text": "The director was on set for every decision. We came out with a film that sustains an entire season.",
+    "testimonial_3_author": "CARLA M.",
+    "faq_label": "Frequently asked questions",
+    "faq_titulo": "What you need to know before starting",
+    "faq_1_q": "What does an executive production company do in a campaign?",
+    "faq_1_a": "The executive producer is responsible for everything that happens before, during and after the set: budget, schedule, hiring of technical crew, casting, locations, set design, art direction and final delivery. At House Mazzutti, this process is integrated with creative direction from the concept.",
+    "faq_2_q": "Do you handle casting and set design?",
+    "faq_2_a": "Yes. HMZT Production covers casting (model and talent selection), set design (creation and execution of the set environment) and all production coordination. All under a single creative direction.",
+    "faq_3_q": "Does the Production company serve fashion and beauty brands?",
+    "faq_3_a": "Yes — fashion and beauty are the main segments of HMZT Production. We have experience in campaigns for cosmetics brands, women's fashion, jewelry and accessories, as well as institutional campaigns.",
+    "faq_4_q": "How to start a campaign with House Mazzutti?",
+    "faq_4_a": "The first step is a briefing conversation — campaign objective, product, audience and references. From there, we develop the creative concept and present the production proposal. Use the contact form or WhatsApp to get started.",
+    "footer_copyright": "© 2026 House Mazzutti. All rights reserved.",
+    "form_subtitle": "Tell us about your project. We respond within 1 business day."
   },
   "comunidade_page": {
     "hero_label": "Community — HMZT",
@@ -371,5 +428,241 @@
     "footer_portfolio": "Portfolio",
     "footer_blog": "Blog",
     "footer_contato": "Contact"
+  },
+  "portfolio": {
+    "seoTitle": "House Mazzutti Portfolio — Books, editorials, campaigns and creative direction",
+    "headerLabel": "HOUSE MAZZUTTI — PORTFOLIO",
+    "headline": "Visual records of books, editorials, campaigns and creative directions signed by House Mazzutti.",
+    "filterAll": "ALL",
+    "filterStudio": "STUDIO",
+    "filterAgencia": "AGENCY",
+    "filterProdutora": "PRODUCTION",
+    "emptyState": "Coming soon. New Agency projects will be available.",
+    "cat_book_title": "Book",
+    "cat_book_desc": "Photo books for building presence and professional portfolio.",
+    "cat_ensaio_title": "Personal Editorial",
+    "cat_ensaio_desc": "Authored editorials that translate identity into image.",
+    "cat_acessorios_title": "Accessories",
+    "cat_acessorios_desc": "Image production for accessories brands — creative direction from brief to delivery.",
+    "cat_beleza_title": "Beauty",
+    "cat_beleza_desc": "Campaigns and editorials for the beauty and cosmetics segment.",
+    "cat_moda_title": "Fashion",
+    "cat_moda_desc": "Lookbooks and fashion campaigns — creative direction and executive production.",
+    "cat_institucional_title": "Institutional",
+    "cat_institucional_desc": "Institutional imagery for brands and companies — photography and set direction.",
+    "cat_agencia_title": "Branding & Direction",
+    "cat_agencia_desc": "Branding, identity and creative direction projects signed by the Agency."
+  },
+  "angelo_page": {
+    "page_title": "Angelo Mazzutti — Creative Director | House Mazzutti",
+    "hero_label": "Creative Director",
+    "hero_title": "The architecture of your brand, with sensitivity and precision.",
+    "hero_body": "Angelo combines aesthetic vision and market intelligence for brands and people who seek to go beyond the obvious. He translates the essence of each project into narratives that resonate — not just appear. He turns visibility into desire, and desire into lasting value.",
+    "diferenciais_ghost": "Differentials",
+    "diferenciais_title": "Why brands choose House.",
+    "dif_1_num": "01 / Strategic vision",
+    "dif_1_bold": "Strategic vision.",
+    "dif_1_desc": "Every project designed for lasting results — not for the short attention cycle.",
+    "dif_2_num": "02 / Exclusive curation",
+    "dif_2_bold": "Exclusive curation.",
+    "dif_2_desc": "Angelo's expertise in every detail. Authorial direction, without outsourcing decisions.",
+    "dif_3_num": "03 / Constant innovation",
+    "dif_3_bold": "Constant innovation.",
+    "dif_3_desc": "Technology and trends at the service of the brand. AI, advanced tools and market insight.",
+    "quem_label": "Who is",
+    "quem_title": "The strategist behind the House.",
+    "quem_p1": "Angelo combines aesthetic vision and market intelligence for brands and people who seek to go beyond the obvious.",
+    "quem_p2": "He translates the essence of each project into narratives that resonate — not just appear. He turns visibility into desire, and desire into lasting value.",
+    "servicos_label": "Services",
+    "servicos_title": "Four fronts. One direction.",
+    "srv_1_title": "Launch Campaign",
+    "srv_1_desc": "Integrated strategy for memorable impact.",
+    "srv_2_title": "Branding Project",
+    "srv_2_desc": "Brand identity and positioning.",
+    "srv_3_title": "Web Development",
+    "srv_3_desc": "Platforms that convert and engage.",
+    "srv_4_title": "Visual & Audiovisual Production",
+    "srv_4_desc": "High-standard content for all media.",
+    "estrutura_ghost": "Structure",
+    "estrutura_label": "Structure",
+    "estrutura_title": "Three fronts. One vision.",
+    "est_1_title": "Agency",
+    "est_1_desc": "Strategy & creative direction.",
+    "est_2_title": "Studio",
+    "est_2_desc": "Personal & professional image.",
+    "est_3_title": "Production",
+    "est_3_desc": "High-standard visual execution.",
+    "valor_title": "From visibility to lasting value.",
+    "valor_deixa_label": "You stop",
+    "valor_deixa_1": "Appearing without resonating",
+    "valor_deixa_2": "Competing for obvious attention",
+    "valor_deixa_3": "Depending on constant production",
+    "valor_passa_label": "You start",
+    "valor_passa_1": "Building desire",
+    "valor_passa_2": "Positioning with precision",
+    "valor_passa_3": "Sustaining value over time",
+    "valor_cta": "Elevate my brand",
+    "valor_tagline": "Visibility becomes desire. Desire becomes value.",
+    "dep_label": "What they say",
+    "dep_title": "Testimonials",
+    "dep_ghost": "Testimonials",
+    "dep_slide_1": "Trained in advertising and forged on the sets of major brands and personalities in Brazil.",
+    "dep_slide_2": "He combines the thinking of a brand director with the technical mastery of a scene director. He doesn't just idealize — he knows how to deliver.",
+    "cta_final_title": "Ready to elevate your brand?",
+    "cta_final_btn": "Start a conversation",
+    "form_drawer_title": "Conversation with Angelo",
+    "form_drawer_subtitle": "Branding, launch campaign, creative direction or partnership. We respond within 1 business day."
+  },
+  "agencia": {
+    "hero_label": "Agency — HMZT",
+    "hero_slides": [
+      {
+        "titulo": "Brand with intention. Presence with strategy.",
+        "texto": "Branding, communication and digital development for brands that want to be recognised — not just seen."
+      },
+      {
+        "titulo": "Branding that sustains growth.",
+        "texto": "From visual identity to brand architecture — we build systems that work for you."
+      },
+      {
+        "titulo": "Conversion-driven web development.",
+        "texto": "Websites, landing pages and platforms that carry the brand with precision and turn visits into decisions."
+      }
+    ],
+    "hero_cta": "Start a project",
+    "portfolio_label": "Agency Portfolio",
+    "portfolio_titulo": "Branding. Communication. Digital.",
+    "see_all_portfolio": "See the full portfolio",
+    "pilares": [
+      {
+        "titulo": "Strategy.",
+        "subtitulo": "Clarity before execution"
+      },
+      {
+        "titulo": "Identity.",
+        "subtitulo": "Brand as a system"
+      },
+      {
+        "titulo": "Communication.",
+        "subtitulo": "Message with intention"
+      },
+      {
+        "titulo": "Conversion.",
+        "subtitulo": "Digital that performs"
+      }
+    ],
+    "manifesto": "Before appearing, position. At HMZT Agency, we build brands that communicate with clarity — from strategic branding to digital development and integrated communication for companies that refuse to be just another option in the market.",
+    "servicos_label": "What we do",
+    "servicos_titulo": "Branding, communication and digital development integrated under the same creative direction.",
+    "servicos": [
+      {
+        "titulo": "BRANDING PROJECT",
+        "subtitulo": "Where identity becomes a strategic asset.",
+        "itens": [
+          "Naming & Visual Identity",
+          "Brand Architecture",
+          "Tone of Voice & Positioning"
+        ]
+      },
+      {
+        "titulo": "COMMUNICATION & ADVERTISING",
+        "subtitulo": "Where message becomes results.",
+        "itens": [
+          "Integrated campaigns",
+          "Content management",
+          "Social media & performance"
+        ]
+      },
+      {
+        "titulo": "WEB DEVELOPMENT",
+        "subtitulo": "Where digital presence becomes a system.",
+        "itens": [
+          "Institutional websites",
+          "Landing pages",
+          "E-commerce & platforms"
+        ]
+      }
+    ],
+    "saiba_mais": "Learn more",
+    "diferenciais_label": "Why HMZT Agency",
+    "diferenciais_titulo": "We don't treat brand as decoration.",
+    "diferenciais_texto": "Branding here is architecture. Every decision — from naming to hex code, from copy to code — supports positioning. Web development is not a technical delivery: it is the end of the creative process, where the brand establishes itself in the digital space with consistency and converts.",
+    "iniciar_projeto": "Start a project",
+    "diferenciais": [
+      {
+        "num": "01",
+        "titulo": "Unified creative direction",
+        "desc": "The same director who signs off on branding guides communication and approves digital development. No noise between teams."
+      },
+      {
+        "num": "02",
+        "titulo": "Brand before media",
+        "desc": "We don't sell ads without positioning. First we build what will be communicated — then we amplify it."
+      },
+      {
+        "num": "03",
+        "titulo": "Brand-oriented web",
+        "desc": "Websites that carry the identity faithfully. No generic templates: every project starts from the brand brief."
+      },
+      {
+        "num": "04",
+        "titulo": "Integrated delivery",
+        "desc": "Branding, communication and digital in the same contract, at the same table, with the same care."
+      }
+    ],
+    "cta_titulo": "It's not about having a beautiful brand. It's about having a brand that works.",
+    "cta_deixe_label": "Stop dealing with",
+    "cta_deixe": [
+      "Brand without strategy",
+      "Website without identity",
+      "Communication without positioning"
+    ],
+    "cta_passe_label": "Start experiencing",
+    "cta_passe": [
+      "Branding that converts",
+      "Digital that represents",
+      "Message with intention"
+    ],
+    "cta_btn": "Start a conversation",
+    "cta_tagline": "Less noise. More results.",
+    "depoimentos_label": "What they say",
+    "depoimentos_titulo": "Testimonials",
+    "depoimentos": [
+      {
+        "text": "Before having a website, we had a strategy. House Mazzutti understood that digital presence without positioning is just noise. They delivered brand, website and communication aligned.",
+        "author": "BEATRIZ C. — Founder"
+      },
+      {
+        "text": "The branding wasn't just aesthetics. It was a system. From naming to palette, every decision had a reason. Today the brand speaks for itself.",
+        "author": "RODRIGO M. — CEO"
+      },
+      {
+        "text": "Development and identity in the same team. No translation lost between designers and devs. The result was exactly what we imagined — only better.",
+        "author": "ANA P. — Marketing Director"
+      }
+    ],
+    "faq_label": "Frequently asked questions",
+    "faq_titulo": "What you need to know before starting",
+    "faq": [
+      {
+        "q": "How long does a branding project at House Mazzutti take?",
+        "a": "A complete branding project takes between 6 and 12 weeks, depending on the complexity of the brand. The process goes through Immersion, Market Reading, Concept, Execution and Fine Art before final delivery."
+      },
+      {
+        "q": "What is the difference between branding and visual identity?",
+        "a": "Visual identity is the graphic system (logo, colours, typography). Branding is the brand's value architecture — positioning, voice, strategy and how all of this translates visually. At House Mazzutti, we do complete branding, from strategy to execution."
+      },
+      {
+        "q": "Does House Mazzutti serve brands outside São Paulo?",
+        "a": "Yes. We serve brands from all over Brazil remotely. For projects that require on-set presence, we primarily operate in São Paulo, but we carry out productions in other cities by appointment."
+      },
+      {
+        "q": "How does the investment in a branding project work?",
+        "a": "Each project is budgeted individually after a briefing conversation. The investment varies according to the scope — new brand, repositioning or complete system. Contact us via the form to receive a proposal."
+      }
+    ],
+    "form_title": "Start a project",
+    "form_subtitle": "Tell us about your project. We respond within 1 business day.",
+    "form_contact_text": "Contact us on Instagram or WhatsApp to start your project:"
   }
 }

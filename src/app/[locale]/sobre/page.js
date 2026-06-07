@@ -2,23 +2,15 @@
 
 import Link from 'next/link'
 import Header from '@/app/components/Header'
-
-const FRENTES = [
-  {label: 'AGÊNCIA', sub: 'Estratégia e posicionamento', href: '/agencia'},
-  {label: 'STUDIO', sub: 'Imagem construída com intenção', href: '/studio'},
-  {label: 'PRODUTORA', sub: 'Estratégia que ganha presença', href: '/produtora'},
-  {label: 'COMUNIDADE', sub: 'Crescimento que se sustenta', href: '/comunidade'},
-]
-
-const METODO = [
-  'Diagnóstico profundo',
-  'Definição de posicionamento',
-  'Arquitetura de solução',
-  'Criação e produção',
-  'Implementação e acompanhamento',
-]
+import {useTranslations} from 'next-intl'
 
 export default function SobrePage() {
+  const t = useTranslations('about')
+
+  const boutique_cards = t.raw('boutique_cards')
+  const metodo_items = t.raw('metodo_items')
+  const diferencial_items = t.raw('diferencial_items')
+
   return (
     <div className="bg-white">
       <Header variant="dark" />
@@ -28,26 +20,19 @@ export default function SobrePage() {
         <section className="bg-black text-white px-12 md:px-48 pt-48 pb-32">
           <div className="max-w-4xl">
             <span className="text-caption text-white/60 mb-6 block">
-              Sobre · Casa criativa em São Paulo desde 2016
+              {t('hero_label')}
             </span>
             <h1 className="text-h1 text-white mb-8 hmzt-hero-title">
-              Estruturamos o seu projeto para comunicar com precisão.
+              {t('strategic_subtitulo')}
             </h1>
-            <p className="text-body text-white/75 mb-6 measure-editorial">
-              A House Mazzutti vai além da publicidade. Somos um hub estratégico de
-              construção de imagem e posicionamento, unindo estratégia, direção
-              criativa e produção audiovisual para transformar marcas e pessoas em
-              presenças sólidas e relevantes.
-            </p>
             <p className="text-body text-white/75 mb-12 measure-editorial">
-              Da identidade visual à reputação de mercado, desenvolvemos projetos que
-              sustentam o seu posicionamento com clareza, sofisticação e consistência.
+              {t('hero_texto')}
             </p>
             <Link
               href="/contato"
               className="inline-block px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500"
             >
-              Iniciar conversa estratégica
+              {t('hero_cta')}
             </Link>
           </div>
         </section>
@@ -55,15 +40,15 @@ export default function SobrePage() {
         {/* ORIGEM */}
         <section className="bg-white text-black px-12 md:px-48 py-32">
           <div className="max-w-4xl">
-            <span className="text-caption text-neutral-400 mb-6 block">Origem com visão</span>
+            <span className="text-caption text-neutral-400 mb-6 block">{t('origem_label')}</span>
             <h2 className="text-h2 text-black mb-8">
-              Imagem não é estética. É comunicação silenciosa.
+              {t('origem_titulo')}
             </h2>
+            <p className="text-body text-neutral-600 measure-editorial mb-6">
+              {t('origem_p1')}
+            </p>
             <p className="text-body text-neutral-600 measure-editorial">
-              Em um mercado saturado por excesso de informação, percebemos que o
-              problema não era a falta de produção — mas a ausência de direção. Foi a
-              partir disso que estruturamos um modelo capaz de integrar pensamento,
-              construção e execução em um único fluxo.
+              {t('origem_p2')}
             </p>
           </div>
         </section>
@@ -71,40 +56,36 @@ export default function SobrePage() {
         {/* O QUE SOMOS */}
         <section className="bg-neutral-100 text-black px-12 md:px-48 py-32">
           <div className="max-w-4xl">
-            <span className="text-caption text-neutral-400 mb-6 block">O que somos</span>
+            <span className="text-caption text-neutral-400 mb-6 block">{t('strategic_label')}</span>
             <h2 className="text-h2 text-black mb-8">
-              Uma Strategic House, não uma estrutura fragmentada.
+              {t('strategic_titulo')}
             </h2>
             <p className="text-body text-neutral-600 measure-editorial">
-              Funcionamos como um sistema que conecta todas as etapas necessárias para
-              construir uma marca de forma consistente. Não vendemos serviços isolados:
-              desenhamos soluções completas, baseadas no momento, na ambição e na
-              realidade de cada cliente.
+              {t('strategic_subtitulo')}
             </p>
           </div>
         </section>
 
-        {/* COMO FUNCIONAMOS — frentes */}
+        {/* COMO FUNCIONAMOS — frentes (boutique_cards) */}
         <section className="bg-white text-black px-12 md:px-48 py-32">
           <div className="max-w-5xl">
-            <span className="text-caption text-neutral-400 mb-6 block">Como funcionamos</span>
+            <span className="text-caption text-neutral-400 mb-6 block">{t('boutique_label')}</span>
             <h2 className="text-h2 text-black mb-16">
-              Frentes complementares. Nenhuma funciona sozinha.
+              {t('boutique_titulo')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200">
-              {FRENTES.map((f) => (
-                <Link
-                  key={f.label}
-                  href={f.href}
-                  className="group bg-white p-10 md:p-12 hover:bg-black transition-colors duration-500"
+              {boutique_cards.map((card) => (
+                <div
+                  key={card.title}
+                  className="group bg-white p-10 md:p-12"
                 >
-                  <h3 className="font-headline text-2xl md:text-3xl text-black group-hover:text-white tracking-tight mb-3 transition-colors duration-500">
-                    {f.label}
+                  <h3 className="font-headline text-2xl md:text-3xl text-black tracking-tight mb-3">
+                    {card.title}
                   </h3>
-                  <span className="text-caption text-neutral-500 group-hover:text-white/70 transition-colors duration-500">
-                    {f.sub}
+                  <span className="text-caption text-neutral-500">
+                    {card.subtitle}
                   </span>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
@@ -113,17 +94,17 @@ export default function SobrePage() {
         {/* METODOLOGIA */}
         <section className="bg-black text-white px-12 md:px-48 py-32">
           <div className="max-w-4xl">
-            <span className="text-caption text-white/50 mb-6 block">Metodologia</span>
+            <span className="text-caption text-white/50 mb-6 block">{t('metodo_bg')}</span>
             <h2 className="text-h2 text-white mb-12">
-              Nada começa na execução. Tudo começa no entendimento.
+              {t('metodo_titulo')}
             </h2>
             <ol className="space-y-5">
-              {METODO.map((etapa, i) => (
-                <li key={etapa} className="flex items-baseline gap-6">
+              {metodo_items.map((etapa, i) => (
+                <li key={i} className="flex items-baseline gap-6">
                   <span className="font-headline text-white/40 text-lg w-8">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="text-body text-white/85">{etapa}</span>
+                  <span className="text-body text-white/85">{etapa.desc}</span>
                 </li>
               ))}
             </ol>
@@ -133,43 +114,41 @@ export default function SobrePage() {
         {/* DIFERENCIAL */}
         <section className="bg-white text-black px-12 md:px-48 py-32">
           <div className="max-w-4xl">
-            <span className="text-caption text-neutral-400 mb-6 block">Diferencial</span>
+            <span className="text-caption text-neutral-400 mb-6 block">{t('diferencial_label')}</span>
             <h2 className="text-h2 text-black mb-8">
-              O que nos diferencia não é o que fazemos. É como pensamos.
+              {t('diferencial_titulo')}
             </h2>
-            <p className="text-body text-neutral-600 mb-8 measure-editorial">
-              Unimos sensibilidade estética, inteligência estratégica, experiência de
-              mercado e execução precisa — com curadoria direta de{' '}
-              <strong className="text-black">Angelo Mazzutti, Diretor Criativo</strong>,
-              garantindo consistência em cada detalhe.
+            <p className="text-body text-neutral-600 mb-4 measure-editorial">
+              {t('diferencial_intro')}
             </p>
+            <ul className="space-y-2">
+              {diferencial_items.map((item, i) => (
+                <li key={i} className="text-body text-neutral-600">{item}</li>
+              ))}
+            </ul>
           </div>
         </section>
 
         {/* LIDERANÇA */}
         <section className="bg-neutral-100 text-black px-12 md:px-48 py-32">
           <div className="max-w-5xl">
-            <span className="text-caption text-neutral-400 mb-6 block">Liderança</span>
+            <span className="text-caption text-neutral-400 mb-6 block">{t('origem_label')}</span>
             <h2 className="text-h2 text-black mb-16">
-              Direção e operação sob a mesma casa.
+              {t('producao_label')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200">
               <div className="bg-white p-10 md:p-12">
                 <div className="text-h3 text-black">Angelo Mazzutti</div>
-                <div className="text-caption text-neutral-500 mt-2 mb-6">Diretor Criativo</div>
+                <div className="text-caption text-neutral-500 mt-2 mb-6">{t('origem_role')}</div>
                 <p className="text-body text-neutral-600">
-                  15+ anos de audiovisual e direção de imagem. Traduz estratégia de
-                  marca em direção criativa autoral, com presença em cada decisão
-                  crítica do projeto.
+                  {t('origem_p1')}
                 </p>
               </div>
               <div className="bg-white p-10 md:p-12">
                 <div className="text-h3 text-black">Mateus Sacavem</div>
-                <div className="text-caption text-neutral-500 mt-2 mb-6">Produtor Executivo</div>
+                <div className="text-caption text-neutral-500 mt-2 mb-6">{t('producao_role')}</div>
                 <p className="text-body text-neutral-600">
-                  Comanda a operação executiva da House — coordenação técnica,
-                  cronogramas, produção e integração de equipes especializadas. A
-                  engrenagem que sustenta cada projeto, da pré-produção ao master final.
+                  {t('producao_p1')}
                 </p>
               </div>
             </div>
@@ -180,16 +159,16 @@ export default function SobrePage() {
         <section className="bg-black text-white px-12 md:px-48 py-40 text-center">
           <div className="max-w-4xl mx-auto space-y-10">
             <h2 className="text-h1 text-white hmzt-hero-title">
-              Autoridade não se cria. Se constrói.
+              {t('cta_titulo')}
             </h2>
             <p className="text-body text-white/70 measure-editorial mx-auto">
-              Se sua marca precisa de direção, não de volume — estamos prontos.
+              {t('hero_texto')}
             </p>
             <Link
               href="/contato"
               className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500"
             >
-              Iniciar uma conversa
+              {t('hero_cta')}
             </Link>
           </div>
         </section>

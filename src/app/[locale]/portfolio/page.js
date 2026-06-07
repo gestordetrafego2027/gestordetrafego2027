@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/app/components/Header';
+import { useTranslations } from 'next-intl';
 
 const toTitleCase = (slug) =>
   slug
@@ -85,75 +86,89 @@ const agenciaProjetos = [
   : item
 );
 
-const categories = [
-  {
-    slug: 'book',
-    unit: 'STUDIO',
-    title: 'Book',
-    description: 'Books fotográficos para construção de presença e portfólio profissional.',
-    cover: studioBook[0].cover,
-    basePath: '/portfolio-studio',
-    projects: studioBook
-  },
-  {
-    slug: 'acessorios',
-    unit: 'PRODUTORA',
-    title: 'Acessórios',
-    description: 'Produção de imagem para marcas de acessórios — direção criativa do briefing à entrega.',
-    cover: produtoraAcessorios[0].cover,
-    basePath: '/portfolio-produtora',
-    projects: produtoraAcessorios
-  },
-  {
-    slug: 'ensaio-pessoal',
-    unit: 'STUDIO',
-    title: 'Ensaio Pessoal',
-    description: 'Ensaios autorais que traduzem identidade em imagem.',
-    cover: '/images/studio/carol-costa/capa-hub.webp',
-    basePath: '/portfolio-studio',
-    projects: studioEnsaio
-  },
-  {
-    slug: 'beleza',
-    unit: 'PRODUTORA',
-    title: 'Beleza',
-    description: 'Campanhas e ensaios para o segmento de beleza e cosméticos.',
-    cover: produtoraBeleza[0].cover,
-    basePath: '/portfolio-produtora',
-    projects: produtoraBeleza
-  },
-  {
-    slug: 'moda',
-    unit: 'PRODUTORA',
-    title: 'Moda',
-    description: 'Lookbooks e campanhas de moda — direção criativa e produção executiva.',
-    cover: '/images/produtora/moda/unique-chic/11.webp',
-    basePath: '/portfolio-produtora',
-    projects: produtoraModa
-  },
-  {
-    slug: 'institucional',
-    unit: 'PRODUTORA',
-    title: 'Institucional',
-    description: 'Imagem institucional para marcas e empresas — fotografia e direção de set.',
-    cover: produtoraInstitucional[0].cover,
-    basePath: '/portfolio-produtora',
-    projects: produtoraInstitucional
-  },
-  {
-    slug: 'agencia-projetos',
-    unit: 'AGÊNCIA',
-    title: 'Branding & Direção',
-    description: 'Projetos de branding, identidade e direção criativa assinados pela Agência.',
-    cover: agenciaProjetos[0].cover,
-    basePath: '/portfolio-agencia',
-    projects: agenciaProjetos
-  }
-];
-
-const FILTERS = ['TODOS', 'STUDIO', 'AGÊNCIA', 'PRODUTORA'];
-
 export default function PortfolioPage() {
+  const t = useTranslations('portfolio');
+
+  const FILTERS = [
+    { key: 'ALL', label: t('filterAll'), value: 'TODOS' },
+    { key: 'STUDIO', label: t('filterStudio'), value: 'STUDIO' },
+    { key: 'AGENCIA', label: t('filterAgencia'), value: 'AGÊNCIA' },
+    { key: 'PRODUTORA', label: t('filterProdutora'), value: 'PRODUTORA' },
+  ];
+
+  const categories = [
+    {
+      slug: 'book',
+      unit: 'STUDIO',
+      unitLabel: t('filterStudio'),
+      title: t('cat_book_title'),
+      description: t('cat_book_desc'),
+      cover: studioBook[0].cover,
+      basePath: '/portfolio-studio',
+      projects: studioBook
+    },
+    {
+      slug: 'acessorios',
+      unit: 'PRODUTORA',
+      unitLabel: t('filterProdutora'),
+      title: t('cat_acessorios_title'),
+      description: t('cat_acessorios_desc'),
+      cover: produtoraAcessorios[0].cover,
+      basePath: '/portfolio-produtora',
+      projects: produtoraAcessorios
+    },
+    {
+      slug: 'ensaio-pessoal',
+      unit: 'STUDIO',
+      unitLabel: t('filterStudio'),
+      title: t('cat_ensaio_title'),
+      description: t('cat_ensaio_desc'),
+      cover: '/images/studio/carol-costa/capa-hub.webp',
+      basePath: '/portfolio-studio',
+      projects: studioEnsaio
+    },
+    {
+      slug: 'beleza',
+      unit: 'PRODUTORA',
+      unitLabel: t('filterProdutora'),
+      title: t('cat_beleza_title'),
+      description: t('cat_beleza_desc'),
+      cover: produtoraBeleza[0].cover,
+      basePath: '/portfolio-produtora',
+      projects: produtoraBeleza
+    },
+    {
+      slug: 'moda',
+      unit: 'PRODUTORA',
+      unitLabel: t('filterProdutora'),
+      title: t('cat_moda_title'),
+      description: t('cat_moda_desc'),
+      cover: '/images/produtora/moda/unique-chic/11.webp',
+      basePath: '/portfolio-produtora',
+      projects: produtoraModa
+    },
+    {
+      slug: 'institucional',
+      unit: 'PRODUTORA',
+      unitLabel: t('filterProdutora'),
+      title: t('cat_institucional_title'),
+      description: t('cat_institucional_desc'),
+      cover: produtoraInstitucional[0].cover,
+      basePath: '/portfolio-produtora',
+      projects: produtoraInstitucional
+    },
+    {
+      slug: 'agencia-projetos',
+      unit: 'AGÊNCIA',
+      unitLabel: t('filterAgencia'),
+      title: t('cat_agencia_title'),
+      description: t('cat_agencia_desc'),
+      cover: agenciaProjetos[0].cover,
+      basePath: '/portfolio-agencia',
+      projects: agenciaProjetos
+    }
+  ];
+
   const [activeFilter, setActiveFilter] = useState('TODOS');
 
   const filteredCategories =
@@ -163,7 +178,7 @@ export default function PortfolioPage() {
 
   return (
     <div className="bg-white text-black min-h-screen">
-      <h1 className="sr-only">Portfólio House Mazzutti — Books, ensaios, campanhas e direção criativa</h1>
+      <h1 className="sr-only">{t('seoTitle')}</h1>
 
       <Header variant="light" />
 
@@ -174,10 +189,10 @@ export default function PortfolioPage() {
       >
         <div className="max-w-4xl mx-auto">
           <span className="font-label uppercase tracking-wider text-sm text-black mb-6 block">
-            HOUSE MAZZUTTI — PORTFÓLIO
+            {t('headerLabel')}
           </span>
           <h2 className="font-headline font-bold uppercase text-4xl md:text-6xl leading-tight">
-            Registros visuais de books, ensaios, campanhas e direções criativas assinadas pela House Mazzutti.
+            {t('headline')}
           </h2>
         </div>
       </section>
@@ -185,18 +200,18 @@ export default function PortfolioPage() {
       {/* MENU DE FILTROS */}
       <div className="flex flex-wrap justify-center items-center gap-12 py-12 px-6">
         {FILTERS.map((f) => {
-          const isActive = activeFilter === f;
+          const isActive = activeFilter === f.value;
           return (
             <button
-              key={f}
-              onClick={() => setActiveFilter(f)}
+              key={f.key}
+              onClick={() => setActiveFilter(f.value)}
               className={`font-label uppercase tracking-wider text-sm cursor-pointer transition-colors duration-300 pb-1 ${
                 isActive
                   ? 'text-black border-b-2 border-black'
                   : 'text-neutral-400 border-b-2 border-transparent hover:text-neutral-600'
               }`}
             >
-              {f}
+              {f.label}
             </button>
           );
         })}
@@ -206,7 +221,7 @@ export default function PortfolioPage() {
       <main className="max-w-7xl mx-auto px-6 pb-24">
         {filteredCategories.length === 0 && (
           <p className="font-body italic text-neutral-500 text-center py-32">
-            Em breve. Novos projetos da Agência estarão disponíveis.
+            {t('emptyState')}
           </p>
         )}
 
@@ -232,7 +247,7 @@ export default function PortfolioPage() {
               {/* Title block */}
               <div className="mt-8">
                 <span className="font-label uppercase tracking-wider text-xs text-neutral-500 block">
-                  {category.unit}
+                  {category.unitLabel}
                 </span>
                 <h3 className="font-headline font-bold text-3xl md:text-5xl mt-2 leading-tight">
                   {category.title}
