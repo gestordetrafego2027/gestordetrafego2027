@@ -38,9 +38,34 @@ const nextConfig = {
   // 3. SEO e Consistência
   trailingSlash: true,
 
-  // 4. Cache Headers para Arquivos Estáticos (Performance)
+  // 4. Headers de segurança (todas as rotas) + cache de estáticos
   async headers() {
+    const securityHeaders = [
+      // Força HTTPS por 2 anos, incluindo subdomínios.
+      {
+        key: 'Strict-Transport-Security',
+        value: 'max-age=63072000; includeSubDomains; preload',
+      },
+      // Impede que o site seja embutido em <iframe> de terceiros (clickjacking).
+      { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+      // Impede MIME-sniffing.
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      // Não vaza a URL completa para outros sites.
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      // Desliga APIs sensíveis que o site não usa.
+      {
+        key: 'Permissions-Policy',
+        value: 'camera=(), microphone=(), geolocation=(), browsing-topics=(), interest-cohort=()',
+      },
+      { key: 'X-DNS-Prefetch-Control', value: 'on' },
+    ];
+
     return [
+      {
+        // Aplica os headers de segurança a todas as rotas.
+        source: '/:path*',
+        headers: securityHeaders,
+      },
       {
         source: '/:all*(svg|jpg|jpeg|png|gif|ico|webp|avif|mp4|webm|woff|woff2|ttf|otf)',
         headers: [

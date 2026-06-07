@@ -32,7 +32,7 @@ export const policies = {
       },
       {
         heading: '5. Compartilhamento de dados',
-        body: `Não vendemos seus dados. Podemos compartilhá-los com:\n\n- **Processadores de pagamento:** Stripe e Asaas (para transações financeiras).\n- **Plataformas de e-mail:** para envio de newsletters (com garantia contratual de conformidade com a LGPD).\n- **Autoridades públicas:** quando exigido por lei ou ordem judicial.\n\nTodos os parceiros são contratualmente obrigados a proteger seus dados.`
+        body: `Não vendemos seus dados. Podemos compartilhá-los com operadores que nos prestam serviços, sempre sob obrigação contratual de proteção:\n\n- **Processadores de pagamento:** Stripe e Asaas (para transações financeiras).\n- **Envio de e-mail:** Resend (confirmações de pedido e newsletter).\n- **Antifraude / segurança:** Google reCAPTCHA (proteção dos formulários contra robôs e spam).\n- **Análise e marketing (com seu consentimento):** Google Analytics e Meta (Facebook) Pixel.\n- **Infraestrutura:** Supabase (banco de dados e autenticação) e provedores de hospedagem.\n- **Autoridades públicas:** quando exigido por lei ou ordem judicial.\n\nAlguns desses parceiros podem tratar dados fora do Brasil; nesses casos, exigimos salvaguardas adequadas conforme a LGPD. Este site é protegido pelo reCAPTCHA do Google — aplicam-se a **Política de Privacidade** e os **Termos de Serviço** do Google.`
       },
       {
         heading: '6. Cookies',
@@ -128,7 +128,7 @@ export const policies = {
       },
       {
         heading: '3. Cookies de terceiros',
-        body: `Algumas funcionalidades podem utilizar cookies de terceiros:\n\n- **Google Analytics / Tag Manager:** análise de tráfego.\n- **Meta Pixel:** rastreamento de conversões (se ativo).\n- **Stripe / Asaas:** processamento seguro de pagamentos.\n\nEssas empresas têm suas próprias políticas de privacidade e uso de dados.`
+        body: `Algumas funcionalidades podem utilizar cookies de terceiros:\n\n- **Google Analytics:** análise de tráfego (apenas com consentimento).\n- **Meta Pixel:** rastreamento de conversões (apenas com consentimento).\n- **Google reCAPTCHA:** proteção dos formulários contra robôs e spam (cookie essencial de segurança). Aplicam-se a Política de Privacidade e os Termos do Google.\n- **Stripe / Asaas:** processamento seguro de pagamentos.\n\nEssas empresas têm suas próprias políticas de privacidade e uso de dados.`
       },
       {
         heading: '4. Como gerenciar cookies',
