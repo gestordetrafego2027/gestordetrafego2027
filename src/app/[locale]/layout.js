@@ -8,11 +8,9 @@ import {ConsentProvider} from '@/components/consent/ConsentProvider';
 import CookieBanner from '@/components/consent/CookieBanner';
 import Tracking from '@/components/analytics/Tracking';
 
-// Gera estaticamente os 3 locales no build — páginas protegidas
-// (academy, verify, obrigado) adicionam seu próprio force-dynamic.
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+// Necessário: páginas com useEffect/window (agencia, portfolio, etc.) falham
+// na pré-renderização estática. force-dynamic garante SSR seguro em todo [locale].
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({params}) {
   const {locale} = await params;
