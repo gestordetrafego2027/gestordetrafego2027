@@ -11,7 +11,18 @@
     "portfolio": "PORTFOLIO",
     "blog": "BLOG",
     "contato": "CONTACT",
-    "cliente": "CLIENT AREA"
+    "cliente": "CLIENT AREA",
+    "solucoes": "SOLUTIONS",
+    "agencia_desc": "Branding · Web · Communication",
+    "produtora_desc": "Fashion · Beauty · Institutional",
+    "studio_desc": "Book · Editorial · Coverage",
+    "unidades": "UNITS",
+    "localizacao": "LOCATION",
+    "follow": "FOLLOW US",
+    "privacidade": "Privacy",
+    "termos": "Terms",
+    "cookies_link": "Cookies",
+    "cookies_prefs": "Cookie preferences"
   },
   "hero": {
     "slide1": {

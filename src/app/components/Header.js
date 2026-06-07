@@ -6,15 +6,17 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LangSwitcher from './LangSwitcher';
 import { CartButton } from '@/components/ecommerce/CartButton';
+import { useTranslations } from 'next-intl';
 
 /**
  * GLOBAL HEADER COMPONENT
  * Handles main navigation and fullscreen side menu overlay
- * 
+ *
  * @param {string} variant - 'light' (white bg, black text) or 'dark' (transparent bg, white text)
  */
 export default function Header({ variant = 'dark' }) {
     const pathname = usePathname();
+    const t = useTranslations('nav');
     const [sideMenuOpen, setSideMenuOpen] = useState(false);
     const [solucoesOpen, setSolucoesOpen] = useState(false);
     const [closing, setClosing] = useState(false);
@@ -81,8 +83,8 @@ export default function Header({ variant = 'dark' }) {
     const currentBorder = scrolled || isLightVariant ? '0.5px solid #e0e0e0' : 'none';
 
     const getLinkStyle = (path) => {
-        const isActive = pathname === path || 
-                         pathname === path + '/' || 
+        const isActive = pathname === path ||
+                         pathname === path + '/' ||
                          (path !== '/' && pathname.startsWith(path))
         return {
             color: currentTextColor,
@@ -93,9 +95,9 @@ export default function Header({ variant = 'dark' }) {
 
     return (
         <>
-            <header 
+            <header
                 className="flex justify-between items-center px-12"
-                style={{ 
+                style={{
                     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
                     transition: 'transform 0.4s ease',
                     backgroundColor: currentBgColor,
@@ -108,8 +110,8 @@ export default function Header({ variant = 'dark' }) {
                     paddingBottom: '28px'
                 }}
             >
-                <Link 
-                    href="/" 
+                <Link
+                    href="/"
                     className="uppercase no-underline flex items-baseline"
                     style={{ color: currentTextColor }}
                 >
@@ -120,7 +122,7 @@ export default function Header({ variant = 'dark' }) {
                 </Link>
 
                 <nav className="hidden md:flex items-center space-x-12 ml-auto mr-12">
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">HOME</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/')} href="/">{t('home')}</Link>
                     <div
                         className="relative"
                         onMouseEnter={() => setSolucoesOpen(true)}
@@ -140,19 +142,19 @@ export default function Header({ variant = 'dark' }) {
                             aria-haspopup="true"
                             aria-expanded={solucoesOpen}
                         >
-                            SOLUÇÕES
+                            {t('solucoes')}
                             <span style={{ fontSize: '8px', transform: solucoesOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}>▾</span>
                         </button>
                         {solucoesOpen && (
                             <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: '22px', zIndex: 120 }}>
                                 <div style={{ background: '#ffffff', border: '0.5px solid #e0e0e0', minWidth: '236px', padding: '8px 0', boxShadow: '0 12px 32px rgba(0,0,0,0.10)' }}>
                                     {[
-                                        { label: 'AGÊNCIA', href: '/agencia', desc: 'Branding · Web · Comunicação' },
-                                        { label: 'PRODUTORA', href: '/produtora', desc: 'Moda · Beleza · Institucional' },
-                                        { label: 'STUDIO', href: '/studio', desc: 'Book · Ensaio · Cobertura' },
+                                        { label: t('agencia'), href: '/agencia', desc: t('agencia_desc') },
+                                        { label: t('produtora'), href: '/produtora', desc: t('produtora_desc') },
+                                        { label: t('studio'), href: '/studio', desc: t('studio_desc') },
                                     ].map((item) => (
                                         <Link
-                                            key={item.label}
+                                            key={item.href}
                                             href={item.href}
                                             onClick={() => setSolucoesOpen(false)}
                                             style={{ display: 'block', padding: '12px 20px', textDecoration: 'none', transition: 'background 0.2s' }}
@@ -167,12 +169,12 @@ export default function Header({ variant = 'dark' }) {
                             </div>
                         )}
                     </div>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">COMUNIDADE</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/academy')} href="/academy">ACADEMY</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">PORTFÓLIO</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">BLOG</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">CONTATO</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/login')} href="/login">ÁREA DO CLIENTE</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">{t('comunidade')}</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/academy')} href="/academy">{t('academy')}</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">{t('portfolio')}</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">{t('blog')}</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">{t('contato')}</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/login')} href="/login">{t('cliente')}</Link>
                 </nav>
 
                 <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
@@ -181,7 +183,7 @@ export default function Header({ variant = 'dark' }) {
                     <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
                         <span className="material-symbols-outlined" data-icon="search">search</span>
                     </button>
-                    
+
                     {/* ANIMATED HAMBURGER */}
                     <button
                       onClick={() => toggleMenu(true)}
@@ -215,7 +217,7 @@ export default function Header({ variant = 'dark' }) {
 
             {sideMenuOpen && (
               <>
-                <div 
+                <div
                   onClick={() => closeMenu()}
                   style={{position:'fixed', inset:0, zIndex:99998,
                           background:'rgba(0,0,0,0.3)'}}
@@ -227,12 +229,12 @@ export default function Header({ variant = 'dark' }) {
                   display:'flex', flexDirection:'column',
                   justifyContent:'space-between',
                   padding:'60px 48px',
-                  animation: closing 
-                    ? 'slideOut 0.4s cubic-bezier(0.4,0,0.2,1) forwards' 
+                  animation: closing
+                    ? 'slideOut 0.4s cubic-bezier(0.4,0,0.2,1) forwards'
                     : 'slideIn 0.5s cubic-bezier(0.4,0,0.2,1) forwards'
                 }}>
 
-            
+
                   <div>
                     <div style={{display:'flex', justifyContent:'space-between',
                       alignItems:'center', marginBottom:'60px'}}>
@@ -242,9 +244,9 @@ export default function Header({ variant = 'dark' }) {
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
                       </div>
-                      <div 
+                      <div
                         onClick={() => closeMenu()}
-                        style={{cursor:'pointer', position:'relative', 
+                        style={{cursor:'pointer', position:'relative',
                                 width:'24px', height:'24px'}}
                       >
                         <span style={{display:'block', width:'24px', height:'1px',
@@ -259,16 +261,16 @@ export default function Header({ variant = 'dark' }) {
                     <nav style={{display:'flex', flexDirection:'column',
                       gap:'16px', marginBottom:'40px'}}>
                       {[
-                        {label:'HOME', href:'/'},
-                        {label:'COMUNIDADE', href:'/comunidade'},
-                        {label:'ACADEMY', href:'/academy'},
+                        {label: t('home'), href:'/'},
+                        {label: t('comunidade'), href:'/comunidade'},
+                        {label: t('academy'), href:'/academy'},
                         {label:'↳ MARKETING PARA MODELOS · VOL. 01', href:'/academy/marketing-para-modelos', sub: true},
-                        {label:'PORTFÓLIO', href:'/portfolio'},
-                        {label:'BLOG', href:'/blog'},
-                        {label:'CONTATO', href:'/contato'},
-                        {label:'ÁREA DO CLIENTE', href:'/login', highlight: true},
+                        {label: t('portfolio'), href:'/portfolio'},
+                        {label: t('blog'), href:'/blog'},
+                        {label: t('contato'), href:'/contato'},
+                        {label: t('cliente'), href:'/login', highlight: true},
                       ].map(item => (
-                        <Link key={item.label} href={item.href}
+                        <Link key={item.href} href={item.href}
                           onClick={() => closeMenu()}
                           style={{
                             fontFamily:'RocGrotesk, sans-serif',
@@ -284,25 +286,25 @@ export default function Header({ variant = 'dark' }) {
                             borderTop: item.highlight ? '1px solid #333' : undefined,
                             fontWeight: item.highlight ? 500 : undefined,
                           }}
-                          onMouseEnter={e => e.currentTarget.style.color = item.sub ? 'white' : 'white'}
+                          onMouseEnter={e => e.currentTarget.style.color = 'white'}
                           onMouseLeave={e => e.currentTarget.style.color = item.highlight ? 'white' : (item.sub ? '#a4e80a' : '#aaa')}
                         >{item.label}</Link>
                       ))}
                     </nav>
 
-                    {/* Unidades — grupo secundário */}
+                    {/* Soluções — grupo secundário */}
                     <div style={{marginBottom:'40px'}}>
                       <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
-                        color:'#444', marginBottom:'16px'}}>SOLUÇÕES</p>
+                        color:'#444', marginBottom:'16px'}}>{t('solucoes')}</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'14px'}}>
                         {[
-                          {label:'AGÊNCIA', href:'/agencia'},
-                          {label:'PRODUTORA', href:'/produtora'},
-                          {label:'STUDIO', href:'/studio'},
-                          {label:'ANGELO', href:'/angelo'},
+                          {label: t('agencia'), href:'/agencia'},
+                          {label: t('produtora'), href:'/produtora'},
+                          {label: t('studio'), href:'/studio'},
+                          {label: t('angelo'), href:'/angelo'},
                         ].map(item => (
-                          <Link key={item.label} href={item.href}
+                          <Link key={item.href} href={item.href}
                             onClick={() => closeMenu()}
                             style={{
                               fontFamily:'RocGrotesk, sans-serif',
@@ -319,11 +321,11 @@ export default function Header({ variant = 'dark' }) {
                         ))}
                       </div>
                     </div>
-            
+
                     <div style={{marginBottom:'48px'}}>
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
-                        color:'#555', marginBottom:'16px'}}>LOCALIZAÇÃO</p>
+                        color:'#555', marginBottom:'16px'}}>{t('localizacao')}</p>
                       <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
                         fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
                         São Paulo, Brasil
@@ -333,14 +335,14 @@ export default function Header({ variant = 'dark' }) {
                         23.5505° S, 46.6333° W
                       </p>
                     </div>
-            
-                    <div style={{width:'100%', height:'0.5px', 
+
+                    <div style={{width:'100%', height:'0.5px',
                       background:'#222', marginBottom:'48px'}}/>
-            
+
                     <div>
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
-                        color:'#555', marginBottom:'16px'}}>FOLLOW US</p>
+                        color:'#555', marginBottom:'16px'}}>{t('follow')}</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
                         <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener" style={{fontFamily:'Newsreader, serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',
@@ -357,10 +359,10 @@ export default function Header({ variant = 'dark' }) {
                       </div>
                     </div>
                   </div>
-            
+
                   <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
                     letterSpacing:'0.2em', textTransform:'uppercase',
-                    color:'#333', margin:0}}>© 2025 HOUSE MAZZUTTI</p>
+                    color:'#333', margin:0}}>{t('footer_copy') || '© 2026 HOUSE MAZZUTTI'}</p>
                 </div>
               </>
             )}
@@ -368,13 +370,13 @@ export default function Header({ variant = 'dark' }) {
             <style>{`
                 .font-label { font-family: var(--font-body), sans-serif; }
                 .font-headline { font-family: var(--font-headline), serif; }
-                @keyframes slideIn { 
-                  from{transform:translateX(100%)} 
-                  to{transform:translateX(0)} 
+                @keyframes slideIn {
+                  from{transform:translateX(100%)}
+                  to{transform:translateX(0)}
                 }
-                @keyframes slideOut { 
-                  from{transform:translateX(0)} 
-                  to{transform:translateX(100%)} 
+                @keyframes slideOut {
+                  from{transform:translateX(0)}
+                  to{transform:translateX(100%)}
                 }
             `}</style>
         </>

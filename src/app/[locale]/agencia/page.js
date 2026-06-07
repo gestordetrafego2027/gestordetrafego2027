@@ -14,6 +14,8 @@ export const dynamic = 'force-dynamic'
 
 export default function AgenciaPage() {
     const t = useTranslations('agencia')
+    const tFooter = useTranslations('footer')
+    const tNav = useTranslations('nav')
     const [formOpen, setFormOpen] = useState(false)
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentBannerSlide, setCurrentBannerSlide] = useState(0)
@@ -466,7 +468,7 @@ export default function AgenciaPage() {
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/blog">Blog</Link>
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="flex flex-col items-center gap-3"><div className="text-caption text-neutral-700">© 2026 House Mazzutti. Todos os direitos reservados.</div><div className="flex gap-6"><a href="/politicas/privacidade" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Privacidade</a><a href="/politicas/termos-de-uso" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Termos</a><a href="/politicas/cookies" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Cookies</a><a href="/politicas/cancelamento-e-reembolso" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Cancelamento</a></div></div>
+                    <div className="flex flex-col items-center gap-3"><div className="text-caption text-neutral-700">{tFooter('copyright')}</div><div className="flex gap-6"><a href="/politicas/privacidade" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Privacidade</a><a href="/politicas/termos-de-uso" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Termos</a><a href="/politicas/cookies" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Cookies</a><a href="/politicas/cancelamento-e-reembolso" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Cancelamento</a></div></div>
                 </div>
               <div className="mt-6"><SiteFooterLinks /></div>
             </footer>

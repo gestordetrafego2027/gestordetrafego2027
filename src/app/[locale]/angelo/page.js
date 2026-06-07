@@ -12,6 +12,7 @@ import FormAngelo from "@/app/components/forms/FormAngelo";
 
 export default function AngeloPage() {
     const t = useTranslations("angelo_page");
+    const tFooter = useTranslations('footer');
     const [formCta, setFormCta] = useState(null);
     const openForm = (ctaLocation) => setFormCta({ ctaLocation });
     const closeForm = () => setFormCta(null);
@@ -352,7 +353,7 @@ export default function AngeloPage() {
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
                     <div className="text-caption text-neutral-700">
-                        © 2026 House Mazzutti. Todos os direitos reservados.
+                        {tFooter('copyright')}
                     </div>
                 </div>
               <div className="mt-6"><SiteFooterLinks /></div>

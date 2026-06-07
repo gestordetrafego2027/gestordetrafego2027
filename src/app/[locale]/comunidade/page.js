@@ -14,6 +14,7 @@ import {useTranslations} from 'next-intl';
 export default function ComunidadePage() {
     const t = useTranslations('comunidade_page');
     const tCta = useTranslations('cta');
+    const tFooter = useTranslations('footer');
     const [currentSlide, setCurrentSlide] = useState(0);
     const [talentsForm, setTalentsForm] = useState(null); // { ctaLocation }
     const openTalentsForm = (ctaLocation) => setTalentsForm({ ctaLocation });
@@ -464,7 +465,7 @@ export default function ComunidadePage() {
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
                     <div className="text-caption text-neutral-700">
-                        © 2026 House Mazzutti. Todos os direitos reservados.
+                        {tFooter('copyright')}
                     </div>
                 </div>
               <div className="mt-6"><SiteFooterLinks /></div>

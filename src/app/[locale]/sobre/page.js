@@ -7,6 +7,7 @@ import {useTranslations} from 'next-intl'
 
 export default function SobrePage() {
   const t = useTranslations('about')
+    const tFooter = useTranslations('footer');
 
   const boutique_cards = t.raw('boutique_cards')
   const metodo_items = t.raw('metodo_items')
@@ -195,7 +196,7 @@ export default function SobrePage() {
             <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
           </nav>
           <div className="text-caption text-neutral-700">
-            © 2026 House Mazzutti. Todos os direitos reservados.
+            {tFooter('copyright')}
           </div>
         </div>
         <div className="mt-6"><SiteFooterLinks /></div>

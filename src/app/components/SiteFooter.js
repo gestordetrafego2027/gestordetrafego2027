@@ -1,15 +1,11 @@
 'use client'
 
-/**
- * SiteFooter — rodapé canônico da House Mazzutti.
- * Espelha o rodapé padrão usado nas páginas de portfólio (logo, redes,
- * copyright) e acrescenta a linha de links legais + preferências de cookies.
- */
-
 import Link from 'next/link'
 import SiteFooterLinks from './SiteFooterLinks'
+import { useTranslations } from 'next-intl'
 
 export default function SiteFooter() {
+  const t = useTranslations('footer')
   return (
     <footer className="bg-[#0a0a0a] px-12 py-8">
       <div className="flex flex-col items-center space-y-6">
@@ -21,7 +17,7 @@ export default function SiteFooter() {
         <div className="text-white">
           <SiteFooterLinks />
         </div>
-        <p className="text-[#808080] font-inter text-[10px] tracking-wider">© 2026 House Mazzutti</p>
+        <p className="text-[#808080] font-inter text-[10px] tracking-wider">{t('copyright')}</p>
       </div>
     </footer>
   )

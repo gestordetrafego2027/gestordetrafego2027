@@ -565,7 +565,7 @@ export default function Home() {
                         <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
                     </nav>
                     <div className="text-caption text-neutral-700">
-                        © 2026 House Mazzutti. Todos os direitos reservados.
+                        {t('footer.copyright')}
                     </div>
                 </div>
               <div className="mt-6"><SiteFooterLinks /></div>
