@@ -5,6 +5,7 @@ import { getStripe } from '@/lib/stripe/server'
 import { featureFlags } from '@/lib/feature-flags'
 import { createClient } from '@/lib/supabase/server'
 import { logger } from '@/lib/logger'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 
 const CheckoutBodySchema = z.object({
   items: z
@@ -18,6 +19,7 @@ const CheckoutBodySchema = z.object({
     .max(20),
   couponCode: z.string().optional(),
   locale: z.enum(['pt', 'en']).default('pt'),
+  consent: z.object({ accepted: z.literal(true), termsVersion: z.string().min(1) }).optional(),
 })
 
 export async function POST(req: NextRequest) {
@@ -25,6 +27,15 @@ export async function POST(req: NextRequest) {
 
   if (!featureFlags.isStoreEnabled()) {
     return NextResponse.json({ error: 'Loja não disponível.' }, { status: 503 })
+  }
+
+  // Rate limit — protege a criação de sessões de checkout.
+  const rl = await checkRateLimit('checkout', getClientIp(req))
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: 'Muitas tentativas. Aguarde um instante e tente novamente.' },
+      { status: 429, headers: { 'Retry-After': String(rl.retryAfter ?? 60) } },
+    )
   }
 
   // Parse + validação
@@ -113,6 +124,12 @@ export async function POST(req: NextRequest) {
       currency: 'brl',
       // Sprint 9: Pix/Boleto migrados para Asaas; Stripe responde apenas por cartão.
       payment_method_types: ['card'],
+      // Aceite do Termo de Compra e Venda — propagado p/ o webhook persistir no pedido
+      metadata: {
+        ...(body.consent
+          ? { consent_accepted: 'true', consent_terms_version: body.consent.termsVersion }
+          : {}),
+      },
       payment_intent_data: {
         description: 'House Mazzutti — Loja',
         metadata: { user_id: user?.id ?? 'guest', source: 'store_checkout' },

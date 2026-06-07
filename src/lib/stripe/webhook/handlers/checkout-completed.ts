@@ -4,6 +4,7 @@ import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
 import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
 import { resolveDigitalProduct, createDownloadUrl } from '@/lib/digital-products'
+import { buildConsentRecord } from '@/lib/legal/consent'
 
 /**
  * Processa checkout.session.completed com idempotência total.
@@ -81,7 +82,15 @@ export async function handleCheckoutCompleted(
           ? promoCode
           : (promoCode as any).code ?? null
         : null,
-      metadata: { stripe_mode: session.mode, locale: session.locale },
+      metadata: {
+        stripe_mode: session.mode,
+        locale: session.locale,
+        consent: buildConsentRecord(
+          session.metadata?.consent_accepted === 'true'
+            ? { accepted: true, termsVersion: session.metadata?.consent_terms_version ?? '' }
+            : null,
+        ),
+      },
     })
     .select('id')
     .single()

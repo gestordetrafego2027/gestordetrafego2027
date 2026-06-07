@@ -59,9 +59,21 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
   },
 }
 
+/**
+ * Aliases de slug — tolera variações que existem nos produtos do Stripe.
+ * Ex.: um produto Stripe usa `o-preco-da-relevancia` (com "o-"), mas o catálogo
+ * é chaveado por `preco-da-relevancia`. Sem isto, a entrega do Vol. 02 no cartão
+ * não resolveria o produto e o e-mail não sairia.
+ */
+const SLUG_ALIASES: Record<string, string> = {
+  'o-preco-da-relevancia': 'preco-da-relevancia',
+  'marketing-para-modelos-vol-01': 'marketing-para-modelos',
+}
+
 export function resolveDigitalProduct(slug: string | null | undefined): DigitalProduct | null {
   if (!slug) return null
-  return DIGITAL_PRODUCTS[slug] ?? null
+  const key = SLUG_ALIASES[slug] ?? slug
+  return DIGITAL_PRODUCTS[key] ?? null
 }
 
 /**

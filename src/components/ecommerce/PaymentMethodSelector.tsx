@@ -9,6 +9,7 @@
  *   Boleto  → POST /api/store/checkout/asaas → redirect /checkout/boleto/[orderId]
  */
 import { useState } from 'react'
+import { TERMS_VERSION } from '@/lib/legal/consent'
 
 type Method = 'card' | 'pix' | 'boleto'
 
@@ -51,8 +52,10 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
   const [cpf, setCpf] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [accepted, setAccepted] = useState(false)
 
   const needsDetails = selected === 'pix' || selected === 'boleto'
+  const consent = { accepted: true, termsVersion: TERMS_VERSION }
 
   const inputStyle: React.CSSProperties = {
     width: '100%',
@@ -70,6 +73,10 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
   async function handlePay() {
     setError(null)
 
+    if (!accepted) {
+      return setError('Para continuar, marque que leu e aceita o Termo de Compra e Venda.')
+    }
+
     if (needsDetails) {
       if (!name.trim()) return setError('Informe seu nome completo.')
       if (!isValidEmail(email)) return setError('Informe um e-mail válido para receber o livro.')
@@ -82,7 +89,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
         const res = await fetch('/api/store/checkout', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ items: [{ stripePriceId, quantity: 1 }], locale }),
+          body: JSON.stringify({ items: [{ stripePriceId, quantity: 1 }], locale, consent }),
         })
         const data = await res.json()
         if (!res.ok || !data.url) throw new Error(data.error ?? 'Erro ao abrir checkout.')
@@ -101,6 +108,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
           email: email.trim(),
           name: name.trim(),
           cpf: onlyDigits(cpf),
+          consent,
         }),
       })
       const data = await res.json()
@@ -188,12 +196,56 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
         </div>
       )}
 
+      <label
+        style={{
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 10,
+          margin: '0 0 16px',
+          fontFamily: 'Georgia, serif',
+          fontSize: 13,
+          lineHeight: 1.5,
+          color: '#555',
+          textAlign: 'left',
+          cursor: 'pointer',
+        }}
+      >
+        <input
+          type="checkbox"
+          checked={accepted}
+          onChange={(e) => setAccepted(e.target.checked)}
+          style={{ marginTop: 3, width: 16, height: 16, flexShrink: 0, cursor: 'pointer' }}
+          aria-label="Aceite do Termo de Compra e Venda"
+        />
+        <span>
+          Li e aceito o{' '}
+          <a
+            href={`/${locale}/politicas/termos-de-uso`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#14140e', textDecoration: 'underline' }}
+          >
+            Termo de Compra e Venda
+          </a>{' '}
+          e a{' '}
+          <a
+            href={`/${locale}/politicas/cancelamento-e-reembolso`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#14140e', textDecoration: 'underline' }}
+          >
+            Política de Cancelamento e Reembolso
+          </a>
+          . Compreendo que é um produto digital de entrega imediata.
+        </span>
+      </label>
+
       <button
         onClick={handlePay}
-        disabled={loading}
+        disabled={loading || !accepted}
         style={{
           width: '100%',
-          background: loading ? '#888' : '#c92a2a',
+          background: loading || !accepted ? '#888' : '#c92a2a',
           color: '#fff',
           fontFamily: '"Rock Grotesque", system-ui, sans-serif',
           fontWeight: 600,
@@ -203,7 +255,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
           padding: '18px 24px',
           border: 'none',
           borderRadius: 4,
-          cursor: loading ? 'not-allowed' : 'pointer',
+          cursor: loading || !accepted ? 'not-allowed' : 'pointer',
           transition: 'background 0.15s',
         }}
         aria-busy={loading}

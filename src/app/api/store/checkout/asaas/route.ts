@@ -12,6 +12,7 @@ import { createServiceClient } from '@/lib/supabase/service'
 import { upsertCustomer } from '@/lib/asaas/customer'
 import { createPixCharge } from '@/lib/asaas/pix'
 import { createBoletoCharge } from '@/lib/asaas/boleto'
+import { buildConsentRecord } from '@/lib/legal/consent'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -24,6 +25,7 @@ const Body = z.object({
   email: z.string().email(),
   name: z.string().min(1),
   cpf: z.string().regex(/^\d{11}$/, 'CPF deve ter 11 dígitos'),
+  consent: z.object({ accepted: z.literal(true), termsVersion: z.string().min(1) }),
 })
 
 export async function POST(req: NextRequest) {
@@ -42,6 +44,11 @@ export async function POST(req: NextRequest) {
 
   const supabase = await createClient()
   const serviceSupabase = createServiceClient()
+
+  // Registro de aceite do Termo de Compra e Venda (carimbado no servidor)
+  const consent = buildConsentRecord(body.consent, {
+    ip: req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? null,
+  })
 
   // Sessão do usuário (guest permitido)
   const { data: { user } } = await supabase.auth.getUser()
@@ -102,6 +109,7 @@ export async function POST(req: NextRequest) {
         product_name: productName,
         stripe_price_id: body.stripePriceId,
         locale: body.locale,
+        consent,
       },
     })
     .select('id')
@@ -132,6 +140,7 @@ export async function POST(req: NextRequest) {
       stripe_price_id: body.stripePriceId,
       locale: body.locale,
       asaas_customer_id: customer.id,
+      consent,
     }
 
     if (body.method === 'pix') {
