@@ -110,15 +110,27 @@ export const contact: Contact = {
 /** CNPJ oficial — fonte única. Usar em schemas, políticas e documentos fiscais. */
 export const cnpj = '64.448.222/0001-54' as const
 
+/** Razão social (cartão CNPJ). Usar em contratos e páginas legais. */
+export const razaoSocial = 'HOUSE MAZZUTTI PRODUÇÕES LTDA' as const
+
+/**
+ * Encarregado de Proteção de Dados (DPO/LGPD) — canal oficial.
+ * Decisão da Direção (07/06/2026): canal dedicado privacidade@.
+ */
+export const dpo = {
+  name: 'Mateus Sacavem',
+  email: 'privacidade@housemazzutti.com',
+} as const
+
 // ---------------------------------------------------------------------------
 // 0.4 — NAP (único e público)
 // ---------------------------------------------------------------------------
 export const nap: Nap = {
   street: 'Rua General Chagas Santos, 1058',
-  neighborhood: 'Bosque da Saúde',
+  neighborhood: 'Vila da Saúde',
   city: 'São Paulo',
   region: 'SP',
-  postalCode: '04146-050',
+  postalCode: '04146-051',
   country: 'BR',
   isPublic: true,
   privateLabel: 'São Paulo – SP, atendimento sob agendamento',

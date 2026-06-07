@@ -15,6 +15,7 @@ export default function SiteFooterLinks() {
       <Link href="/politicas/termos-de-uso" className={linkClass}>{t('termos')}</Link>
       <Link href="/politicas/cookies" className={linkClass}>{t('cookies_link')}</Link>
       <CookiePrefsButton label={t('cookies_prefs')} className={linkClass} />
+      <Link href="/politicas" className={linkClass}>Central de Privacidade e Termos →</Link>
     </div>
   )
 }
