@@ -318,7 +318,9 @@
     ],
     "hero_cta": "Iniciar projeto",
     "learn_more": "Saiba mais",
-    "form_title": "Iniciar projeto"
+    "form_title": "Iniciar projeto",
+    "blog_see_all": "VER TODOS →",
+    "blog_read": "LER →"
   },
   "produtora_page": {
     "hero_label": "Produtora — HMZT",
@@ -402,7 +404,9 @@
     "faq_4_q": "Como começar uma campanha com a House Mazzutti?",
     "faq_4_a": "O primeiro passo é uma conversa de briefing — objetivo da campanha, produto, público e referências. A partir daí, desenvolvemos o conceito criativo e apresentamos a proposta de produção. Use o formulário de contato ou o WhatsApp para iniciar.",
     "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados.",
-    "form_subtitle": "Conte-nos sobre seu projeto. Respondemos em até 1 dia útil."
+    "form_subtitle": "Conte-nos sobre seu projeto. Respondemos em até 1 dia útil.",
+    "blog_see_all": "VER TODOS →",
+    "blog_read": "LER →"
   },
   "comunidade_page": {
     "hero_label": "Comunidade — HMZT",
@@ -799,7 +803,9 @@
     ],
     "form_title": "Iniciar projeto",
     "form_subtitle": "Conte-nos sobre seu projeto. Respondemos em até 1 dia útil.",
-    "form_contact_text": "Entre em contato pelo Instagram ou WhatsApp para iniciar seu projeto:"
+    "form_contact_text": "Entre em contato pelo Instagram ou WhatsApp para iniciar seu projeto:",
+    "blog_see_all": "VER TODOS →",
+    "blog_read": "LER →"
   },
   "studio_cobertura": {
     "hero_label": "COBERTURA EXTERNA · PROPOSTA SOB MEDIDA",

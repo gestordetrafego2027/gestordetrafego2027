@@ -390,6 +390,8 @@ export default function ProdutoraPage() {
                         'producao-executiva-sistema-campanhas',
                         'por-que-campanhas-caras-falham',
                     ]}
+                    allLabel={t('blog_see_all')}
+                    readLabel={t('blog_read')}
                 />
 
                 <ClientLogos />

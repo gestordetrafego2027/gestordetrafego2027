@@ -318,7 +318,9 @@
     ],
     "hero_cta": "Iniciar proyecto",
     "learn_more": "Más información",
-    "form_title": "Iniciar proyecto"
+    "form_title": "Iniciar proyecto",
+    "blog_see_all": "VER TODOS →",
+    "blog_read": "LEER →"
   },
   "produtora_page": {
     "hero_label": "Producción — HMZT",
@@ -402,7 +404,9 @@
     "faq_4_q": "¿Cómo iniciar una campaña con House Mazzutti?",
     "faq_4_a": "El primer paso es una conversación de briefing — objetivo de la campaña, producto, público y referencias. A partir de ahí, desarrollamos el concepto creativo y presentamos la propuesta de producción. Usa el formulario de contacto o WhatsApp para comenzar.",
     "footer_copyright": "© 2026 House Mazzutti. Todos los derechos reservados.",
-    "form_subtitle": "Cuéntanos sobre tu proyecto. Respondemos en hasta 1 día hábil."
+    "form_subtitle": "Cuéntanos sobre tu proyecto. Respondemos en hasta 1 día hábil.",
+    "blog_see_all": "VER TODOS →",
+    "blog_read": "LEER →"
   },
   "comunidade_page": {
     "hero_label": "Comunidad — HMZT",
@@ -744,7 +748,9 @@
     ],
     "form_title": "Iniciar proyecto",
     "form_subtitle": "Cuéntanos sobre tu proyecto. Respondemos en hasta 1 día hábil.",
-    "form_contact_text": "Contáctanos en Instagram o WhatsApp para iniciar tu proyecto:"
+    "form_contact_text": "Contáctanos en Instagram o WhatsApp para iniciar tu proyecto:",
+    "blog_see_all": "VER TODOS →",
+    "blog_read": "LEER →"
   },
   "studio_book": {
     "seo_h1": "Book Profesional para Modelos | Portafolio con Dirección de Imagen House Mazzutti",

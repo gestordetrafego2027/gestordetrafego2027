@@ -11,6 +11,7 @@ import {nap, contact} from '@/config/site';
 
 export default function ContatoPage() {
     const t = useTranslations('contato_page');
+    const tFooter = useTranslations('footer');
     useEffect(() => {
         const handleScroll = function () {
             const nav = document.getElementById('main-nav');
@@ -152,7 +153,7 @@ export default function ContatoPage() {
                         <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
                     </nav>
                     <div className="font-label text-[9px] text-neutral-700">
-                        © 2026 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
+                        {tFooter('copyright')}
                     </div>
                 </div>
               <div className="mt-6"><SiteFooterLinks /></div>

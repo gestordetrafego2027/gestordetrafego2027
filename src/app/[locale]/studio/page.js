@@ -495,6 +495,8 @@ export default function StudioPage() {
                         'ensaio-pessoal-imagem-autoridade',
                         'cobertura-externa-presenca-alto-valor',
                     ]}
+                    allLabel={t('blog_see_all')}
+                    readLabel={t('blog_read')}
                 />
                             {/* STRUCTURE SELECTION */}
                 <section className="bg-white px-[40px]">

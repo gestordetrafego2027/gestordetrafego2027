@@ -318,7 +318,9 @@
     ],
     "hero_cta": "Start a project",
     "learn_more": "Learn more",
-    "form_title": "Start a project"
+    "form_title": "Start a project",
+    "blog_see_all": "SEE ALL →",
+    "blog_read": "READ →"
   },
   "produtora_page": {
     "hero_label": "Production — HMZT",
@@ -402,7 +404,9 @@
     "faq_4_q": "How to start a campaign with House Mazzutti?",
     "faq_4_a": "The first step is a briefing conversation — campaign objective, product, audience and references. From there, we develop the creative concept and present the production proposal. Use the contact form or WhatsApp to get started.",
     "footer_copyright": "© 2026 House Mazzutti. All rights reserved.",
-    "form_subtitle": "Tell us about your project. We respond within 1 business day."
+    "form_subtitle": "Tell us about your project. We respond within 1 business day.",
+    "blog_see_all": "SEE ALL →",
+    "blog_read": "READ →"
   },
   "comunidade_page": {
     "hero_label": "Community — HMZT",
@@ -744,7 +748,9 @@
     ],
     "form_title": "Start a project",
     "form_subtitle": "Tell us about your project. We respond within 1 business day.",
-    "form_contact_text": "Contact us on Instagram or WhatsApp to start your project:"
+    "form_contact_text": "Contact us on Instagram or WhatsApp to start your project:",
+    "blog_see_all": "SEE ALL →",
+    "blog_read": "READ →"
   },
   "studio_cobertura": {
     "hero_label": "ON-LOCATION COVERAGE · CUSTOM PROPOSAL",

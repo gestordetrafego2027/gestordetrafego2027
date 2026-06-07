@@ -382,6 +382,8 @@ export default function AgenciaPage() {
                         'quanto-investir-em-branding',
                         'por-que-campanhas-falham',
                     ]}
+                    allLabel={t('blog_see_all')}
+                    readLabel={t('blog_read')}
                 />
 
                 <ClientLogos />
