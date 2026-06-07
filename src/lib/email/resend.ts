@@ -1,10 +1,9 @@
 import { Resend } from 'resend'
 
 const apiKey = process.env.RESEND_API_KEY
-// IMPORTANTE: usar subdomínio `send.housemazzutti.com` — é onde o Resend está
-// autenticado (SPF amazonses + DKIM). Enviar pelo domínio raiz quebra SPF
-// e manda os emails pra spam.
-const FROM = process.env.RESEND_FROM || 'House Mazzutti <noreply@send.housemazzutti.com>'
+// SPF raiz autoriza Amazon SES (Resend) + DKIM resend._domainkey existe no raiz.
+// DMARC p=quarantine com adkim/aspf relaxed.
+const FROM = process.env.RESEND_FROM || 'House Mazzutti <noreply@housemazzutti.com>'
 
 let _client: Resend | null = null
 function getClient(): Resend | null {
