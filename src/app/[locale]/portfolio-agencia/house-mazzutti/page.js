@@ -90,7 +90,7 @@ export default function HouseMazzuttiPage() {
                     <div className="lg:w-2/3 flex flex-col gap-8">
                         {verticalImages.map((src, i) => (
                             <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(i)} style={{height:'600px'}}>
-                                <Image alt="vertical" src={src} fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover transition-all duration-700" />
+                                <Image alt="vertical" src={src} fill sizes="(max-width: 768px) 100vw, 66vw" quality={i===0?85:80} loading={i===0?undefined:"lazy"} priority={i===0?true:undefined} className="w-full h-full object-cover transition-all duration-700" />
                             </div>
                         ))}
                         {horizontalImages.map((src, i) => (

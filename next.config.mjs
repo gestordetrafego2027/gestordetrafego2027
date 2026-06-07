@@ -14,23 +14,11 @@ const nextConfig = {
 
   // 2. Otimização de Imagens
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
-        port: '',
-        pathname: '/aida-public/**',
-      },
-    ],
-    // Serve WebP / AVIF automaticamente para todos os navegadores modernos
+    remotePatterns: [],
     formats: ['image/avif', 'image/webp'],
-    // Breakpoints de largura usados no srcset (px)
     deviceSizes: [640, 828, 1080, 1280, 1920],
-    // Tamanhos para imagens com width/height fixos
     imageSizes: [64, 128, 256, 384, 512],
-    // Cache de 30 dias para imagens otimizadas
     minimumCacheTTL: 2592000,
-    // Desabilita varredura de domínios desnecessários
     dangerouslyAllowSVG: false,
     contentDispositionType: 'attachment',
   },
