@@ -48,7 +48,7 @@ export const policies = {
       },
       {
         heading: '8. Seus direitos (LGPD, art. 18)',
-        body: `Você tem direito a:\n\n- **Acesso:** saber quais dados temos sobre você.\n- **Correção:** corrigir dados incompletos ou desatualizados.\n- **Exclusão:** solicitar a exclusão de dados tratados com base em consentimento.\n- **Portabilidade:** receber seus dados em formato estruturado.\n- **Revogação do consentimento:** a qualquer momento, sem custo.\n- **Informação sobre compartilhamento:** saber com quem compartilhamos seus dados.\n\nPara exercer qualquer direito, fale com nosso Encarregado de Dados: **${dpo.email}**`
+        body: `Você tem direito a:\n\n- **Acesso:** saber quais dados temos sobre você.\n- **Correção:** corrigir dados incompletos ou desatualizados.\n- **Anonimização, bloqueio ou eliminação** de dados desnecessários, excessivos ou tratados em desconformidade (art. 18, IV).\n- **Exclusão:** solicitar a exclusão de dados tratados com base em consentimento.\n- **Portabilidade:** receber seus dados em formato estruturado.\n- **Revogação do consentimento:** a qualquer momento, sem custo.\n- **Informação sobre compartilhamento:** saber com quem compartilhamos seus dados.\n- **Informação sobre a possibilidade de não consentir** e sobre as consequências da negativa (art. 18, VIII).\n- **Oposição** a tratamento feito com base em hipótese sem consentimento, em caso de descumprimento da lei (art. 18, §2º).\n- **Petição à ANPD** (Autoridade Nacional de Proteção de Dados) e revisão de decisões automatizadas (art. 20).\n\nPara exercer qualquer direito, fale com nosso Encarregado de Dados: **${dpo.email}**`
       },
       {
         heading: '9. Crianças e adolescentes',
@@ -106,7 +106,7 @@ export const policies = {
       },
       {
         heading: '6. Responsabilidade',
-        body: `A House Mazzutti não se responsabiliza por:\n\n- Interrupções temporárias de acesso ao site por manutenção ou fatores externos.\n- Uso inadequado de informações publicadas no site por terceiros.\n- Danos indiretos ou lucros cessantes decorrentes do uso dos serviços, exceto em casos de dolo ou culpa grave.`
+        body: `A House Mazzutti não se responsabiliza por:\n\n- Interrupções temporárias de acesso ao site por manutenção ou fatores externos.\n- Uso inadequado de informações publicadas no site por terceiros.\n- Danos indiretos ou lucros cessantes decorrentes do uso dos serviços, exceto em casos de dolo ou culpa grave, ressalvados em qualquer hipótese os direitos do consumidor previstos no CDC.`
       },
       {
         heading: '7. Links externos',
@@ -254,7 +254,7 @@ export const policies = {
       },
       {
         heading: '4. Prazo e território',
-        body: `Prazo: 5 (cinco) anos, renovável automaticamente por iguais períodos, salvo manifestação em contrário do Retratado. Território: mundial, dado o alcance da internet.`
+        body: `Prazo: 5 (cinco) anos, renovável mediante manifestação expressa das partes (não há renovação automática). Território: mundial, dado o alcance da internet. O Retratado pode revogar a autorização para usos futuros a qualquer tempo, por escrito.`
       },
       {
         heading: '5. Gratuidade ou remuneração',
@@ -460,7 +460,7 @@ export const policies = {
       },
       {
         heading: '6. Arrependimento, troca e devolução',
-        body: `**Arrependimento (CDC, art. 49):** nas compras pela internet, é assegurado o prazo de 7 (sete) dias corridos para desistência, exercido junto ao marketplace onde a compra foi feita, conforme o procedimento da plataforma.\n\n**E-book de acesso imediato:** quando o conteúdo é liberado de imediato, o direito de arrependimento sobre a parte já acessada observa a regra de renúncia informada adotada pela plataforma no momento da compra.\n\nTrocas e devoluções seguem a política do marketplace e a Política de Cancelamento e Reembolso da House, no que couber.`
+        body: `**Arrependimento (CDC, art. 49):** nas compras pela internet, é assegurado o prazo de 7 (sete) dias corridos para desistência, exercido junto ao marketplace onde a compra foi feita, conforme o procedimento da plataforma.\n\n**E-book de acesso imediato:** o direito de arrependimento em 7 dias é assegurado e **irrenunciável** (art. 49 c/c art. 51, I e XV, do CDC); eventual compensação limita-se ao efetivamente consumido, sem renúncia ao direito.\n\nTrocas e devoluções seguem a política do marketplace e a Política de Cancelamento e Reembolso da House, no que couber.`
       },
       {
         heading: '7. Proteção do conteúdo',
@@ -490,7 +490,7 @@ export const policies = {
     sections: [
       {
         heading: '1. Produtos digitais (cursos, e-books, workshops online)',
-        body: `Conforme o art. 49 do Código de Defesa do Consumidor (CDC) e a Lei 8.078/1990, você tem **7 dias corridos** a partir da data de compra para solicitar cancelamento e reembolso integral, sem necessidade de justificativa, desde que o produto não tenha sido consumido integralmente (ex.: módulo de vídeo assistido em sua totalidade).\n\nApós 7 dias, não há direito a reembolso para produtos digitais já acessados, salvo defeito comprovado.`
+        body: `Conforme o art. 49 do Código de Defesa do Consumidor (CDC) e a Lei 8.078/1990, você tem **7 dias corridos** a partir da data de compra para solicitar cancelamento e reembolso integral, sem necessidade de justificativa. Esse direito de arrependimento é assegurado dentro dos 7 dias **independentemente** de o conteúdo já ter sido acessado, sendo irrenunciável (art. 51, I e XV, do CDC).\n\nApós 7 dias, não há direito a reembolso para produtos digitais já acessados, salvo defeito comprovado.`
       },
       {
         heading: '2. Produtos físicos (livros, materiais)',
@@ -498,7 +498,7 @@ export const policies = {
       },
       {
         heading: '3. Serviços (Studio, Agência, Produtora)',
-        body: `Para serviços contratados (books, ensaios, produções, branding), as condições de cancelamento são estabelecidas no contrato ou proposta específica firmada entre as partes.\n\n**Regra geral para cancelamentos sem contrato específico:**\n\n- Cancelamento com **mais de 7 dias de antecedência:** reembolso integral do valor pago.\n- Cancelamento com **3 a 7 dias de antecedência:** retenção de 30% do valor como taxa de reagendamento e reserva de agenda.\n- Cancelamento com **menos de 3 dias de antecedência ou no dia:** retenção de 50% do valor.\n- **No-show (ausência sem aviso):** sem reembolso.\n\nReagendamentos são aceitos com no mínimo 72 horas de antecedência, sujeitos à disponibilidade.`
+        body: `Para serviços contratados (books, ensaios, produções, branding), as condições de cancelamento são estabelecidas no contrato ou proposta específica firmada entre as partes.\n\n**Regra geral para cancelamentos sem contrato específico:**\n\n- Cancelamento com **mais de 7 dias de antecedência:** reembolso integral do valor pago.\n- Cancelamento com **3 a 7 dias de antecedência:** retenção de 30% do valor como taxa de reagendamento e reserva de agenda.\n- Cancelamento com **menos de 3 dias de antecedência ou no dia:** retenção de 50% do valor.\n- **No-show (ausência sem aviso):** sem reembolso.\n\nReagendamentos são aceitos com no mínimo 72 horas de antecedência, sujeitos à disponibilidade.\n\nNas relações de consumo, eventuais retenções limitam-se ao custo efetivamente incorrido e não podem ser abusivas (arts. 51, IV, e 53 do CDC).`
       },
       {
         heading: '4. Academy — inscrições em eventos presenciais e workshops',
@@ -762,7 +762,7 @@ export const policies = {
       },
       {
         heading: '6. Arrependimento e reembolso',
-        body: `Conforme o art. 49 do CDC, o aluno tem 7 (sete) dias corridos a partir da compra para desistir e obter reembolso integral. Quando há liberação imediata do conteúdo, o arrependimento sobre a parte já acessada observa a renúncia informada no momento da compra. As demais regras seguem a Política de Cancelamento, Trocas e Reembolso.`
+        body: `Conforme o art. 49 do CDC, o aluno tem 7 (sete) dias corridos a partir da compra para desistir e obter reembolso integral — direito assegurado e **irrenunciável**, independentemente de o conteúdo já ter sido acessado (art. 51, I e XV, do CDC). Eventual compensação limita-se ao efetivamente consumido. As demais regras seguem a Política de Cancelamento, Trocas e Reembolso.`
       },
       {
         heading: '7. Conduta do aluno',
@@ -888,7 +888,7 @@ export const policies = {
       },
       {
         heading: '5. Resposta a incidentes',
-        body: `Em caso de incidente de segurança com risco relevante aos titulares, a House adota detecção, contenção e correção, e comunica os titulares afetados e a ANPD em prazo razoável, conforme o art. 48 da LGPD.`
+        body: `Em caso de incidente de segurança com risco relevante aos titulares, a House adota detecção, contenção e correção, e comunica os titulares afetados e a ANPD em prazo não superior a 3 (três) dias úteis, conforme o art. 48 da LGPD e a Resolução CD/ANPD nº 15/2024.`
       },
       {
         heading: '6. Responsabilidade dos usuários',

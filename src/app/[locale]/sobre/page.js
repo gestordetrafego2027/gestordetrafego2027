@@ -1,13 +1,11 @@
-'use client'
-
 import Link from 'next/link'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Header from '@/app/components/Header'
-import {useTranslations} from 'next-intl'
+import {getTranslations} from 'next-intl/server'
 
-export default function SobrePage() {
-  const t = useTranslations('about')
-    const tFooter = useTranslations('footer');
+export default async function SobrePage() {
+  const t = await getTranslations('about')
+  const tFooter = await getTranslations('footer');
 
   const boutique_cards = t.raw('boutique_cards')
   const metodo_items = t.raw('metodo_items')

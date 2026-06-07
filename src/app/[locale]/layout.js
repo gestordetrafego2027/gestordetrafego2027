@@ -8,11 +8,11 @@ import {ConsentProvider} from '@/components/consent/ConsentProvider';
 import CookieBanner from '@/components/consent/CookieBanner';
 import Tracking from '@/components/analytics/Tracking';
 
-// Todas as páginas sob [locale] são dinâmicas porque o middleware do
-// Supabase (updateSession) lê/escreve cookies em cada request.
-// Sem isso, o Next.js falha no "Generating static pages" com
-// DYNAMIC_SERVER_USAGE durante o build.
-export const dynamic = 'force-dynamic';
+// Gera estaticamente os 3 locales no build — páginas protegidas
+// (academy, verify, obrigado) adicionam seu próprio force-dynamic.
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({params}) {
   const {locale} = await params;

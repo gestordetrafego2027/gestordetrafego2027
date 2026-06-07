@@ -1,13 +1,11 @@
-'use client'
-
 import Link from 'next/link'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Header from '@/app/components/Header'
 import FormModelo from '@/app/components/forms/FormModelo'
-import {useTranslations} from 'next-intl'
+import {getTranslations} from 'next-intl/server'
 
-export default function ComunidadeVagasPage() {
-  const t = useTranslations('comunidade_vagas')
+export default async function ComunidadeVagasPage() {
+  const t = await getTranslations('comunidade_vagas')
   return (
     <div className="bg-surface text-on-surface font-body antialiased">
       <Header variant="light" />
