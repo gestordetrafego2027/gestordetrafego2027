@@ -1,69 +1,58 @@
 'use client'
 
-import { useEffect } from 'react'
-import Image from 'next/image'
+const logos = [
+  { src: '/images/angelo/logos/wepink.webp',        alt: 'Wepink' },
+  { src: '/images/angelo/logos/oceane.webp',         alt: 'Océane' },
+  { src: '/images/angelo/logos/elyah.webp',          alt: 'Elyah' },
+  { src: '/images/angelo/logos/jequiti.webp',        alt: 'Jequiti' },
+  { src: '/images/angelo/logos/natalia-beauty.webp', alt: 'Natalia Beauty' },
+  { src: '/images/angelo/logos/signus.webp',         alt: 'Signus' },
+  { src: '/images/angelo/logos/poema-paris.webp',    alt: 'Poema Paris' },
+  { src: '/images/angelo/logos/dumond.webp',         alt: 'Dumond' },
+  { src: '/images/angelo/logos/unique-chic.webp',    alt: 'Unique Chic' },
+  { src: '/images/angelo/logos/beatco.webp',         alt: 'Beatco' },
+  { src: '/images/angelo/logos/saue.webp',           alt: 'Saue' },
+  { src: '/images/angelo/logos/camilla-scarpa.webp', alt: 'Camilla Scarpa' },
+]
+
 export default function ClientLogos() {
-    useEffect(() => {
-        const track = document.getElementById('logos-track')
-        if (!track) return
-        const totalLogos = 13
-        const step = 4
-        let current = 0
-        const advance = () => {
-            current += step
-            track.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)'
-            track.style.transform = 'translateX(-' + (current * 25) + '%)'
-            if (current >= totalLogos) {
-                setTimeout(() => {
-                    track.style.transition = 'none'
-                    current = current - totalLogos
-                    track.style.transform = 'translateX(-' + (current * 25) + '%)'
-                }, 850)
-            }
+  // Duplicar para loop contínuo sem salto visível
+  const loop = [...logos, ...logos]
+
+  return (
+    <section className="bg-white border-b border-neutral-100 py-16 w-full overflow-hidden">
+      <style>{`
+        @keyframes marquee-clientes {
+          from { transform: translateX(0); }
+          to   { transform: translateX(-50%); }
         }
-        const interval = setInterval(advance, 3500)
-        return () => clearInterval(interval)
-    }, [])
+        .marquee-clientes {
+          display: flex;
+          width: max-content;
+          animation: marquee-clientes 40s linear infinite;
+        }
+        .marquee-clientes:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
 
-    const logos = [
-        'wepink', 'oceane', 'elyah', 'jequiti',
-        'natalia-beauty', 'signus', 'poema-paris',
-        'dumond', 'unique-chic', 'beatco', 'saue',
-        'camilla-scarpa'
-    ]
-    const looped = [...logos, ...logos]
-
-    return (
-        <section className="bg-white border-b border-neutral-100 py-16 relative overflow-hidden">
-            <style>{`
-                .logos-slider-track {
-                    display: flex;
-                    align-items: center;
-                    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-                }
-                .logos-slider-item {
-                    flex: 0 0 25%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100px;
-                    padding: 0 24px;
-                }
-                .logos-slider-item img {
-                    opacity: 0.5;
-                    transition: opacity 0.3s;
-                }
-                .logos-slider-item img:hover { opacity: 1; }
-            `}</style>
-            <div className="max-w-7xl mx-auto px-8 overflow-hidden">
-                <div className="logos-slider-track" id="logos-track">
-                    {looped.map((name, i) => (
-                        <div key={`${name}-${i}`} className="logos-slider-item relative">
-                            <Image src={`/images/angelo/logos/${name}.webp`} alt={name} width={140} height={70} className="object-contain" style={{maxHeight: '70px', width: 'auto'}} />
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    )
+      <div className="marquee-clientes">
+        {loop.map((logo, i) => (
+          <div
+            key={i}
+            className="shrink-0 flex items-center justify-center px-16"
+            style={{ height: '80px' }}
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="h-10 w-auto object-contain opacity-50 grayscale
+                         transition duration-300 hover:opacity-100 hover:grayscale-0"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  )
 }
