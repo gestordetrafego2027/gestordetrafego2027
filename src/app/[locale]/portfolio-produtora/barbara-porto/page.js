@@ -40,7 +40,7 @@ export default function BarbaraPortoPage() {
         }
         animate();
 
-        const images = Array.from({length: 8}, (_, i) => `/images/produtora/acessorios/barbara-porto/    return (.webp`);
+        const images = Array.from({length: 8}, (_, i) => `/images/produtora/acessorios/barbara-porto/${i+1}.webp`);
 
     return () => {
             observer.disconnect();

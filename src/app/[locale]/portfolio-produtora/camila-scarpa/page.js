@@ -39,7 +39,7 @@ export default function CamilaScarpaPage() {
         }
         animate();
 
-        const images = Array.from({length: 5}, (_, i) => `/images/produtora/acessorios/camila-scarpa/    return (.webp`);
+        const images = Array.from({length: 5}, (_, i) => `/images/produtora/acessorios/camila-scarpa/${i+1}.webp`);
 
     return () => {
             observer.disconnect();

@@ -40,7 +40,7 @@ export default function OceanePage() {
         }
         animate();
 
-        const images = Array.from({length: 3}, (_, i) => `/images/produtora/beleza/oceane/    return (.webp`);
+        const images = Array.from({length: 3}, (_, i) => `/images/produtora/beleza/oceane/${i+1}.webp`);
 
     return () => {
             observer.disconnect();

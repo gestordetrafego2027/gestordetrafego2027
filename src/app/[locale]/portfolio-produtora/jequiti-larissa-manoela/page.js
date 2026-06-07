@@ -39,7 +39,7 @@ export default function JequitiLarissaManoelaPage() {
         }
         animate();
 
-        const images = Array.from({length: 5}, (_, i) => `/images/produtora/beleza/jequiti-larissa-manoela/    return (.webp`);
+        const images = Array.from({length: 5}, (_, i) => `/images/produtora/beleza/jequiti-larissa-manoela/${i+1}.webp`);
 
     return () => {
             observer.disconnect();

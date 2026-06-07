@@ -39,7 +39,7 @@ export default function NataliaBeautyPage() {
         }
         animate();
 
-        const images = Array.from({length: 6}, (_, i) => `/images/produtora/beleza/natalia-beauty/    return (.webp`);
+        const images = Array.from({length: 6}, (_, i) => `/images/produtora/beleza/natalia-beauty/${i+1}.webp`);
 
     return () => {
             observer.disconnect();

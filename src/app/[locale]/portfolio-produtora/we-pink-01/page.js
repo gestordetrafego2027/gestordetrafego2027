@@ -39,7 +39,7 @@ export default function WePink01Page() {
         }
         animate();
 
-        const images = Array.from({length: 7}, (_, i) => `/images/produtora/beleza/we-pink-01/    return (.webp`);
+        const images = Array.from({length: 7}, (_, i) => `/images/produtora/beleza/we-pink-01/${i+1}.webp`);
 
     return () => {
             observer.disconnect();

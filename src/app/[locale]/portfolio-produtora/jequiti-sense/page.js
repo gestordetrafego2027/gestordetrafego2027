@@ -39,7 +39,7 @@ export default function JequitiSensePage() {
         }
         animate();
 
-        const images = Array.from({length: 3}, (_, i) => `/images/produtora/beleza/jequiti-sense/    return (.webp`);
+        const images = Array.from({length: 3}, (_, i) => `/images/produtora/beleza/jequiti-sense/${i+1}.webp`);
 
     return () => {
             observer.disconnect();

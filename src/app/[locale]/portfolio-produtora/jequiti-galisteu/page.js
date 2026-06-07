@@ -39,7 +39,7 @@ export default function JequitiGalisteuPage() {
         }
         animate();
 
-        const images = Array.from({length: 4}, (_, i) => `/images/produtora/beleza/jequiti-galisteu/    return (.webp`);
+        const images = Array.from({length: 4}, (_, i) => `/images/produtora/beleza/jequiti-galisteu/${i+1}.webp`);
 
     return () => {
             observer.disconnect();

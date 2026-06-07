@@ -39,7 +39,7 @@ export default function WePinkZeFelipePage() {
         }
         animate();
 
-        const images = Array.from({length: 4}, (_, i) => `/images/produtora/beleza/we-pink-ze-felipe/    return (.webp`);
+        const images = Array.from({length: 4}, (_, i) => `/images/produtora/beleza/we-pink-ze-felipe/${i+1}.webp`);
 
     return () => {
             observer.disconnect();
