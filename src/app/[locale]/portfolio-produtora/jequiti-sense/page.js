@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function JequitiSensePage() {
@@ -149,6 +150,8 @@ export default function JequitiSensePage() {
             </main>
             
             <PortfolioVideo unit="produtora" slug="jequiti-sense" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/kVg_XcuuTAs?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="jequiti-sense" />
 

@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function CamilaScarpaPage() {
@@ -155,6 +156,8 @@ export default function CamilaScarpaPage() {
             </main>
             
             <PortfolioVideo unit="produtora" slug="camila-scarpa" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/FlNa1Ho2YxE?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="camila-scarpa" />
 

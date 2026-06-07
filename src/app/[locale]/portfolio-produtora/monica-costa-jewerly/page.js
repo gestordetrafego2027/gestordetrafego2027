@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function MonicaCostajewerlyPage() {
@@ -113,6 +114,8 @@ export default function MonicaCostajewerlyPage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="monica-costa-jewerly" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/hdKSNnVnkBM?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="monica-costa-jewerly" />
 

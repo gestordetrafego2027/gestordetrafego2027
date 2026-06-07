@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function NataliaBeautyPage() {
@@ -158,6 +159,8 @@ export default function NataliaBeautyPage() {
             </main>
             
             <PortfolioVideo unit="produtora" slug="natalia-beauty" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/eILOFwGTkEI?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="natalia-beauty" />
 

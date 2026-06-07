@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function SenseHotelPage() {
@@ -113,6 +114,8 @@ export default function SenseHotelPage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="sense-hotel" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/1VVzJ2iqUe4?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="sense-hotel" />
 

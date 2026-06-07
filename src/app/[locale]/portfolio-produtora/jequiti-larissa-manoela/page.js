@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function JequitiLarissaManoelaPage() {
@@ -155,6 +156,8 @@ export default function JequitiLarissaManoelaPage() {
             </main>
             
             <PortfolioVideo unit="produtora" slug="jequiti-larissa-manoela" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/JqCwqv7dn7c?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="jequiti-larissa-manoela" />
 

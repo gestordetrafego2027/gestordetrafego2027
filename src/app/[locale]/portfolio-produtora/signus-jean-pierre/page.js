@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function SignusJeanPierrePage() {
@@ -113,6 +114,8 @@ export default function SignusJeanPierrePage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="signus-jean-pierre" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/TVti1pAA_JA?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="signus-jean-pierre" />
 

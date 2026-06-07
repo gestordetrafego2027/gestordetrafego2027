@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function SuperbiaPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -101,6 +102,8 @@ export default function SuperbiaPage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="superbia" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/kM66725FhV8?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="superbia" />
 

@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function JequitiGalisteuPage() {
@@ -152,6 +153,8 @@ export default function JequitiGalisteuPage() {
             </main>
             
             <PortfolioVideo unit="produtora" slug="jequiti-galisteu" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/K5hS892LVY0?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="jequiti-galisteu" />
 

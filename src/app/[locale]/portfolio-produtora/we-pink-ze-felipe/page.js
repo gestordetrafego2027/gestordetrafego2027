@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function WePinkZeFelipePage() {
@@ -152,6 +153,8 @@ export default function WePinkZeFelipePage() {
             </main>
             
             <PortfolioVideo unit="produtora" slug="we-pink-ze-felipe" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/AmfGK-XrA2I?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="we-pink-ze-felipe" />
 

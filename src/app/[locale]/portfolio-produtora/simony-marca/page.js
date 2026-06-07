@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 
 export default function SimonyMarcaPage() {
     const [selectedImg, setSelectedImg] = useState(null)
@@ -101,6 +102,8 @@ export default function SimonyMarcaPage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="simony-marca" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/pFLwoz9b_FA?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="simony-marca" />
 

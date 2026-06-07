@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function UniqueChicPage() {
@@ -113,6 +114,8 @@ export default function UniqueChicPage() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="unique-chic" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/LEi_egcF1d4?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="unique-chic" />
 

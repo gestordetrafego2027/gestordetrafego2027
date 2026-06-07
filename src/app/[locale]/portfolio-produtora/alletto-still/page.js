@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function AllettoStillPage() {
@@ -150,6 +151,8 @@ export default function AllettoStillPage() {
             </main>
             
             <PortfolioVideo unit="produtora" slug="alletto-still" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/DCD71ir1U3k?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="alletto-still" />
 

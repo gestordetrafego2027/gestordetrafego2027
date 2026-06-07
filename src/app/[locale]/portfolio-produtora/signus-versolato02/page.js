@@ -7,6 +7,7 @@ import Image from "next/image";
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 import PortfolioVideo from '@/app/components/PortfolioVideo';
+import YouTubeShort from '@/app/components/YouTubeShort';
 import Lightbox from '@/app/components/Lightbox';
 
 export default function SignusVersolato02Page() {
@@ -113,6 +114,8 @@ export default function SignusVersolato02Page() {
                 </div>
             </div>
             <PortfolioVideo unit="produtora" slug="signus-versolato02" />
+
+            <YouTubeShort urls="https://youtube.com/shorts/2i9Zp9LAGec?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="signus-versolato02" />
 
