@@ -2,6 +2,8 @@ import type Stripe from 'stripe'
 import { getStripe } from '../server'
 import { logger } from '@/lib/logger'
 import { handleCheckoutCompleted } from './handlers/checkout-completed'
+import { handlePaymentFailed } from './handlers/payment-failed'
+import { handleChargeRefunded } from './handlers/charge-refunded'
 
 /**
  * Verifica a assinatura do webhook Stripe e retorna o evento tipado.
@@ -31,8 +33,17 @@ export async function dispatchWebhookEvent(event: Stripe.Event): Promise<void> {
       break
     }
     case 'payment_intent.payment_failed': {
-      log.warn({ pi: (event.data.object as Stripe.PaymentIntent).id }, 'pagamento falhou')
-      // Sprint 5: enviar email de falha via Resend
+      await handlePaymentFailed(event.data.object as Stripe.PaymentIntent)
+      break
+    }
+    case 'charge.refunded': {
+      await handleChargeRefunded(event.data.object as Stripe.Charge)
+      break
+    }
+    case 'charge.dispute.created':
+    case 'charge.dispute.closed': {
+      const dispute = event.data.object as Stripe.Dispute
+      log.warn({ dispute_id: dispute.id, status: dispute.status, reason: dispute.reason }, 'dispute event — review manual')
       break
     }
     case 'customer.subscription.updated':

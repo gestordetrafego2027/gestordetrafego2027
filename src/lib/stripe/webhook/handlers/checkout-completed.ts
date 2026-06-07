@@ -5,6 +5,7 @@ import { sendEmail } from '@/lib/email/resend'
 import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
 import { resolveDigitalProduct, createDownloadUrl } from '@/lib/digital-products'
 import { buildConsentRecord } from '@/lib/legal/consent'
+import { issueNfse } from '@/lib/fiscal/nfeio'
 
 /**
  * Processa checkout.session.completed com idempotência total.
@@ -196,6 +197,32 @@ export async function handleCheckoutCompleted(
     }
   } catch (err) {
     log.error({ err }, 'erro no envio de email de entrega — pedido permanece OK')
+  }
+
+  // ── Emite NFS-e (não bloqueia entrega digital) ──────────────────
+  try {
+    const buyerEmailNf = session.customer_details?.email ?? session.customer_email
+    const buyerNameNf = session.customer_details?.name ?? 'Consumidor Final'
+    const buyerCpf = session.metadata?.buyer_cpf ?? session.customer_details?.tax_ids?.[0]?.value
+    const description =
+      lineItems?.map((li) => `${li.quantity}x ${li.description}`).join(' + ') ??
+      `Pedido ${order.id}`
+
+    if (buyerEmailNf) {
+      await issueNfse({
+        orderId: order.id,
+        buyerEmail: buyerEmailNf,
+        buyerName: buyerNameNf || 'Consumidor Final',
+        totalCents,
+        currency: (session.currency || 'brl').toUpperCase(),
+        description,
+        buyerCpfCnpj: buyerCpf,
+      })
+    } else {
+      log.warn({ order_id: order.id }, 'sem email — NFS-e não emitida')
+    }
+  } catch (err) {
+    log.error({ err }, 'erro ao emitir NFS-e — pedido permanece OK')
   }
 
   log.info({ order_id: order.id, total: totalCents }, 'checkout.session.completed processado')

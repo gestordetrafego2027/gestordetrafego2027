@@ -7,6 +7,7 @@ import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
 import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
 import { resolveDigitalProduct, createDownloadUrl } from '@/lib/digital-products'
+import { issueNfse } from '@/lib/fiscal/nfeio'
 
 const log = logger.child({ module: 'asaas/webhook' })
 
@@ -50,6 +51,26 @@ export async function handlePaymentConfirmed(ctx: HandlerCtx): Promise<void> {
     .from('store_orders')
     .update({ status: 'paid', paid_at: new Date().toISOString() })
     .eq('id', order.id)
+
+  // Emite NFS-e (best-effort, não bloqueia entrega digital)
+  try {
+    const meta = (order.metadata ?? {}) as Record<string, unknown>
+    const productName = (meta.product_name as string) ?? 'Pedido House Mazzutti'
+    const buyerCpf = (meta.buyer_cpf as string) ?? undefined
+    if (order.buyer_email) {
+      await issueNfse({
+        orderId: order.id,
+        buyerEmail: order.buyer_email,
+        buyerName: order.buyer_name ?? 'Consumidor Final',
+        totalCents: order.total_cents,
+        currency: 'BRL',
+        description: productName,
+        buyerCpfCnpj: buyerCpf,
+      })
+    }
+  } catch (err) {
+    log.error({ err: String(err), order_id: order.id }, 'falha ao emitir NFS-e')
+  }
 
   // Entrega digital (best-effort): resolve o produto a partir do slug guardado
   // no metadata do pedido e envia o email com o link de download do PDF.
