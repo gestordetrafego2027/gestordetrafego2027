@@ -2,8 +2,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import LangSwitcher from './LangSwitcher';
 import { CartButton } from '@/components/ecommerce/CartButton';
 import { useTranslations } from 'next-intl';

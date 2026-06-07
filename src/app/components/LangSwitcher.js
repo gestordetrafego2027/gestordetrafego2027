@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter, usePathname } from '@/i18n/navigation';
+import { useLocale } from 'next-intl';
 
 const LOCALES = [
   { code: 'pt', label: 'PT', flag: '🇧🇷' },
@@ -10,20 +11,21 @@ const LOCALES = [
 ];
 
 export default function LangSwitcher({ textColor = '#fff' }) {
+  // usePathname de @/i18n/navigation retorna o path SEM prefixo de locale
+  // useLocale retorna o locale atual ('pt', 'en', 'es')
+  // router.push(path, { locale }) navega mantendo a página atual no novo idioma
   const pathname = usePathname();
   const router = useRouter();
+  const currentLocale = useLocale();
+  const current = LOCALES.find(l => l.code === currentLocale);
+
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
-  const segments = pathname.split('/').filter(Boolean);
-  const currentLocale = LOCALES.find(l => l.code === segments[0])?.code ?? 'pt';
-  const current = LOCALES.find(l => l.code === currentLocale);
-
   const switchLocale = (code) => {
     if (code === currentLocale) { setOpen(false); return; }
-    const rest = segments[0] === currentLocale ? segments.slice(1) : segments;
-    const newPath = `/${code}${rest.length ? '/' + rest.join('/') : ''}`;
-    router.push(newPath);
+    // Navega para o mesmo pathname mas no novo locale — preserva a página atual
+    router.push(pathname, { locale: code });
     setOpen(false);
   };
 
