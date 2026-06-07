@@ -88,13 +88,13 @@ export default function MabdoPage() {
                 <div className="flex flex-col lg:flex-row gap-16">
                     <div className="lg:w-2/3 flex flex-col gap-8">
                         {verticalImages.map((src, i) => (
-                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(i)} style={{maxHeight:'600px'}}>
-                                <Image alt="vertical" src={src} style={{maxHeight:'600px'}} fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover transition-all duration-700" />
+                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(i)} style={{height:'600px'}}>
+                                <Image alt="vertical" src={src} fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover transition-all duration-700" />
                             </div>
                         ))}
                         {horizontalImages.map((src, i) => (
-                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(4 + i)}>
-                                <Image alt="horizontal" src={src} style={{aspectRatio:'16/9', objectFit:'cover'}} fill sizes="100vw" quality={80} loading="lazy" className="w-full transition-all duration-700" />
+                            <div key={i} className="image-anim relative overflow-hidden group cursor-pointer" onClick={() => openImg(4 + i)} style={{aspectRatio:'16/9'}}>
+                                <Image alt="horizontal" src={src} fill sizes="100vw" quality={80} loading="lazy" className="object-cover w-full transition-all duration-700" />
                             </div>
                         ))}
                     </div>

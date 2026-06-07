@@ -85,16 +85,16 @@ export default function ProjetoProdutoraPage() {
                     <div className="lg:w-2/3">
                         <div className="images-grid">
                             <div className="relative overflow-hidden group">
-                                <Image alt="Architectural detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAVU5IcLwEy2U0gDo52S417SIZIkTqBpRKp-umWW21jk_P2A-CiMGM96C56TQqRq1V87ae0u-SZ8rRgG7oeLJmHfpDQHmhkf6hiDMTUxImdbm42MBoJZdr8uZBcs5FyiZ6Z-Tl5vsOdmxMaiDuysypUDYoTvOOkt4O-CH6a1JSyL9zD9hOtdCO_KhRQE2-3IwzTsB_atS76_2Yh24aObNroL_ah-dPlUh9Dv003teuBMxcZ_FNC3Xz6AdsKmTacsBWbFDp20Y7Wsc" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="transition-all duration-700" />
+                                <Image alt="House Mazzutti Produtora" src="/images/produtora/acessorios/barbara-porto/1.webp" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="object-cover transition-all duration-700" />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <Image alt="Portrait sculpture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoa7wVF9sDY_bVRgCbXawPmvrvjcan0epMoLbqhxiQjfZsIL26H7dQQTvm55i2feaDrrNk3K-JeCVHknR0ufxTVA27ahMsTu3H1kVGeiqLUO_I7rVIQ_E9uQcE9anpdsElbkIzhApw_ViKPv1VWEl6fPs7tzEliwICc0u7M_neiUVT62UgncBv8BdgJkg60-tYrZa8_IXi2V0fvZ5GlAK4Dqrg6K6XI0BJH_4FRvRjpm1Bf73kIuJgDxPBWor1XS8VaAU9TZLSF4s" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="transition-all duration-700" />
+                                <Image alt="House Mazzutti Produtora" src="/images/produtora/acessorios/barbara-porto/2.webp" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="object-cover transition-all duration-700" />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <Image alt="Close up texture hand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCYgrLvUftwbIxYONAg4GDj_g11IpwqxMUA0WPkr20r6T_qusAS6uQs4lBQQMKZ2Gy367x85gsxFa2W0_94Gwrhco5_DvHwadS7Fg9IqTQXSWKWTXugk9h4u1qn7ueDjisGWDLfIdwPXoqGBRsZwszaTdwQn8vokhg5NYTQ8czrMt5ke5CgkXYhU_hdqloBtiPJZ7z2kB7tCKUWyzBk4MVPGxqP3or5ake9fZdUWUgt7Fzh3wgTB5gBUz-9L8exZch1FFwsiygJrg" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="transition-all duration-700" />
+                                <Image alt="House Mazzutti Produtora" src="/images/produtora/acessorios/barbara-porto/3.webp" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="object-cover transition-all duration-700" />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <Image alt="Spiral staircase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDWq23mfl1pQgRbban0OaoOKLTt25CIn3zM4JuOlLaylmxJxNOFyKO4F1RoloLCkCzNbNrK9OyTClkpn8ghhBZ5kObv4hU6GZxe2o8ZloSqKHSmvbNaSnrp4_liMCZ50FnB0KmSPmjMAKshykmB1aYEOnLBZs-MJ8R8pD39Yn_or-F5YawxWxuoNVLoOhkv_kkISKorvUlrMTLa4K_g0zhQSgs-Sf-xHdIn0JFEdukphuhuxa6ur3Q1qqckUkGyJSAuzuHtJMiuJM" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="transition-all duration-700" />
+                                <Image alt="House Mazzutti Produtora" src="/images/produtora/acessorios/barbara-porto/4.webp" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="object-cover transition-all duration-700" />
                             </div>
                         </div>
                     </div>
