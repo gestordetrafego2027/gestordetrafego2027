@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { signUpAction } from './actions'
+import RecaptchaField from '@/components/security/RecaptchaField'
 
 export const metadata = { title: 'Criar conta | House Mazzutti CRM' }
 
@@ -20,6 +21,8 @@ export default async function CadastroPage({ searchParams }: { searchParams: SP 
             Acesso restrito a equipe e parceiros da House Mazzutti.
           </p>
         </header>
+
+        <RecaptchaField action="signup" />
 
         <label className="block space-y-1">
           <span className="text-sm font-medium">Nome completo</span>

@@ -1229,5 +1229,36 @@
     "footer_blog": "BLOG",
     "form_drawer_title": "Iniciar projeto",
     "form_drawer_subtitle": "Conte-nos sobre seu ensaio. Respondemos em até 1 dia útil."
+  },
+  "cookies": {
+    "bar": {
+      "text": "Usamos cookies essenciais para o funcionamento do site e, com seu consentimento, cookies de análise e marketing para entender a navegação e personalizar experiências. Saiba mais na"
+    },
+    "customize": "Personalizar",
+    "reject": "Recusar não-essenciais",
+    "acceptAll": "Aceitar tudo",
+    "save": "Salvar preferências",
+    "close": "Fechar",
+    "always": "Sempre ativo",
+    "policyPrefix": "Para detalhes sobre cada categoria, consulte a",
+    "policyLink": "Política de Cookies",
+    "prefs": {
+      "eyebrow": "Preferências de cookies",
+      "intro": "Escolha quais categorias de cookies deseja permitir. Os essenciais são necessários para o funcionamento do site e não podem ser desativados. Você pode alterar sua decisão a qualquer momento."
+    },
+    "cat": {
+      "essential": {
+        "title": "Essenciais",
+        "desc": "Necessários para login, idioma, carrinho, segurança (incluindo proteção anti-spam reCAPTCHA) e funcionamento básico. Sempre ativos."
+      },
+      "analytics": {
+        "title": "Análise",
+        "desc": "Ajudam a entender como o site é usado, de forma agregada (Google Analytics), para melhorarmos a experiência."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Permitem medir campanhas e exibir conteúdo mais relevante (Meta Pixel e remarketing)."
+      }
+    }
   }
 }

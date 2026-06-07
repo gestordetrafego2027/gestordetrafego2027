@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { signInWithPassword } from './actions'
+import RecaptchaField from '@/components/security/RecaptchaField'
 
 export const metadata = { title: 'Login | House Mazzutti CRM' }
 
@@ -24,6 +25,7 @@ export default async function LoginPage({
         </header>
 
         <input type="hidden" name="next" value={next ?? '/crm'} />
+        <RecaptchaField action="login" />
 
         <label className="block space-y-1">
           <span className="text-sm font-medium">Email</span>

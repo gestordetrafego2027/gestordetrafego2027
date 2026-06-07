@@ -11,6 +11,7 @@ import { logger } from '@/lib/logger'
 import { featureFlags } from '@/lib/feature-flags'
 import { createServiceClient } from '@/lib/supabase/service'
 import { createClient } from '@/lib/supabase/server'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 
 const Body = z.object({
   items: z
@@ -34,6 +35,15 @@ export async function POST(req: NextRequest) {
 
   if (!featureFlags.isStoreEnabled() || !featureFlags.isAsaasEnabled()) {
     return NextResponse.json({ error: 'indisponível' }, { status: 503 })
+  }
+
+  // Rate limit — protege a criação de pedidos (guest checkout).
+  const rl = await checkRateLimit('checkout', getClientIp(req))
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: 'Muitas tentativas. Aguarde um instante.' },
+      { status: 429, headers: { 'Retry-After': String(rl.retryAfter ?? 60) } },
+    )
   }
 
   let body: z.infer<typeof Body>

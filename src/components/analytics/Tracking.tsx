@@ -16,6 +16,7 @@
 'use client'
 
 import Script from 'next/script'
+import { useConsent } from '@/components/consent/ConsentProvider'
 
 const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
@@ -82,11 +83,21 @@ export function track(event: TrackEvent, payload: TrackPayload = {}) {
 }
 
 export default function Tracking() {
+  const { consent } = useConsent()
+
   if (!FB_PIXEL_ID && !GA_ID) return null
+
+  // Gate LGPD: GA só carrega com consentimento 'analytics';
+  // Meta Pixel só carrega com consentimento 'marketing'.
+  // Sem decisão (consent === null) → nada dispara.
+  const allowAnalytics = consent?.analytics === true
+  const allowMarketing = consent?.marketing === true
+
+  if (!allowAnalytics && !allowMarketing) return null
 
   return (
     <>
-      {FB_PIXEL_ID && (
+      {FB_PIXEL_ID && allowMarketing && (
         <>
           <Script
             id="fb-pixel"
@@ -116,7 +127,7 @@ export default function Tracking() {
         </>
       )}
 
-      {GA_ID && (
+      {GA_ID && allowAnalytics && (
         <>
           <Script
             id="ga4-loader"
@@ -131,6 +142,13 @@ export default function Tracking() {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
+                // Consent Mode v2 — reflete a decisão do visitante.
+                gtag('consent', 'default', {
+                  ad_storage: '${allowMarketing ? 'granted' : 'denied'}',
+                  ad_user_data: '${allowMarketing ? 'granted' : 'denied'}',
+                  ad_personalization: '${allowMarketing ? 'granted' : 'denied'}',
+                  analytics_storage: 'granted'
+                });
                 gtag('config', '${GA_ID}', { send_page_view: true });
               `,
             }}

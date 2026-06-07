@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { getRecaptchaToken } from '@/lib/recaptcha/client'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -35,6 +36,7 @@ export default function FormNewsletter({ sourceUrl = '/', variant = 'light' }) {
     setStatus('submitting')
 
     try {
+      const recaptchaToken = await getRecaptchaToken('newsletter')
       const res = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
@@ -43,6 +45,7 @@ export default function FormNewsletter({ sourceUrl = '/', variant = 'light' }) {
           name: name.trim() || null,
           source: sourceUrl,
           utm: getUtmFromUrl(),
+          recaptchaToken,
         }),
       })
 

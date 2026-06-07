@@ -5,7 +5,6 @@
  */
 import React from 'react';
 import Link from 'next/link';
-import Tracking from '@/components/analytics/Tracking';
 import { MpmViewContent, BuyLink } from '@/components/analytics/MpmTracking';
 
 const SITE_URL = 'https://housemazzutti.com';
@@ -546,7 +545,6 @@ export default function MarketingParaModelosPage() {
 
   return (
     <div className="mpm-root">
-      <Tracking />
       <MpmViewContent />
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <script

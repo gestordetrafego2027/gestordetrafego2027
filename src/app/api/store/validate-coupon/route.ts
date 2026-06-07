@@ -3,12 +3,22 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getStripe } from '@/lib/stripe/server'
 import { featureFlags } from '@/lib/feature-flags'
 import { logger } from '@/lib/logger'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 
 export async function GET(req: NextRequest) {
   const log = logger.child({ route: 'GET /api/store/validate-coupon' })
 
   if (!featureFlags.isStoreEnabled()) {
     return NextResponse.json({ error: 'Loja não disponível.' }, { status: 503 })
+  }
+
+  // Rate limit — impede brute-force/enumeração de cupons.
+  const rl = await checkRateLimit('coupon', getClientIp(req))
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { valid: false, error: 'Muitas tentativas. Aguarde um instante.' },
+      { status: 429, headers: { 'Retry-After': String(rl.retryAfter ?? 60) } },
+    )
   }
 
   const code = req.nextUrl.searchParams.get('code')?.trim().toUpperCase()

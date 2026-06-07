@@ -1229,5 +1229,36 @@
     "footer_nav_blog": "BLOG",
     "form_title": "Start a project",
     "form_subtitle": "Tell us about your fashion project. We respond within 1 business day."
+  },
+  "cookies": {
+    "bar": {
+      "text": "We use essential cookies to run the site and, with your consent, analytics and marketing cookies to understand browsing and personalize experiences. Learn more in our"
+    },
+    "customize": "Customize",
+    "reject": "Reject non-essential",
+    "acceptAll": "Accept all",
+    "save": "Save preferences",
+    "close": "Close",
+    "always": "Always on",
+    "policyPrefix": "For details on each category, see our",
+    "policyLink": "Cookie Policy",
+    "prefs": {
+      "eyebrow": "Cookie preferences",
+      "intro": "Choose which cookie categories to allow. Essential cookies are required for the site to work and cannot be turned off. You can change your choice at any time."
+    },
+    "cat": {
+      "essential": {
+        "title": "Essential",
+        "desc": "Required for login, language, cart, security (including reCAPTCHA anti-spam) and basic functionality. Always active."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "desc": "Help us understand how the site is used, in aggregate (Google Analytics), to improve the experience."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Allow us to measure campaigns and show more relevant content (Meta Pixel and remarketing)."
+      }
+    }
   }
 }

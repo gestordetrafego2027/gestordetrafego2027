@@ -26,8 +26,9 @@ const serverSchema = z.object({
   RESEND_API_KEY: z.string().optional(),
   EMAIL_FROM: z.string().optional().default('House Mazzutti <contato@housemazzutti.com>'),
 
-  // Antifraude
+  // Antifraude — reCAPTCHA v3
   RECAPTCHA_SITE_KEY: z.string().optional(),
+  NEXT_PUBLIC_RECAPTCHA_SITE_KEY: z.string().optional(),
   RECAPTCHA_SECRET_KEY: z.string().optional(),
 
   // Rate limit

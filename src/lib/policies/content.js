@@ -124,7 +124,7 @@ export const policies = {
       },
       {
         heading: '2. Cookies que utilizamos',
-        body: `**Cookies essenciais:** necessários para o funcionamento básico do site (autenticação, carrinho de compras, sessão). Não podem ser desativados sem comprometer o funcionamento.\n\n**Cookies de desempenho:** coletam dados agregados e anônimos sobre como o site é usado (páginas mais visitadas, tempo de sessão). Usamos esses dados para melhorar a experiência.\n\n**Cookies de funcionalidade:** lembram suas preferências (idioma, região) para personalizar a experiência.\n\n**Cookies de marketing:** [REVISAR — ativar apenas se houver pixel de Meta Ads ou Google Ads] usados para exibir anúncios relevantes em outras plataformas. Requerem consentimento explícito.`
+        body: `**Cookies essenciais:** necessários para o funcionamento básico do site (autenticação, carrinho de compras, sessão, preferência de idioma e proteção anti-spam via reCAPTCHA). Não podem ser desativados sem comprometer o funcionamento.\n\n**Cookies de análise:** coletam dados agregados e anônimos sobre como o site é usado (páginas mais visitadas, tempo de sessão) por meio do Google Analytics. Só são ativados com o seu consentimento e podem ser desativados a qualquer momento.\n\n**Cookies de marketing:** usados para medir campanhas e exibir conteúdo relevante em outras plataformas (Meta Pixel e remarketing). Requerem consentimento explícito e ficam desativados por padrão.`
       },
       {
         heading: '3. Cookies de terceiros',
@@ -132,7 +132,7 @@ export const policies = {
       },
       {
         heading: '4. Como gerenciar cookies',
-        body: `Você pode gerenciar ou desativar cookies nas configurações do seu navegador:\n\n- **Chrome:** Configurações → Privacidade e segurança → Cookies\n- **Safari:** Preferências → Privacidade\n- **Firefox:** Configurações → Privacidade e segurança\n\nDesativar cookies pode afetar o funcionamento de algumas partes do site.`
+        body: `Você pode rever sua decisão a qualquer momento pelo botão **"Gerenciar preferências de cookies"** no final desta página, ou ajustar/desativar cookies nas configurações do seu navegador:\n\n- **Chrome:** Configurações → Privacidade e segurança → Cookies\n- **Safari:** Preferências → Privacidade\n- **Firefox:** Configurações → Privacidade e segurança\n\nDesativar cookies pode afetar o funcionamento de algumas partes do site.`
       },
       {
         heading: '5. Consentimento',

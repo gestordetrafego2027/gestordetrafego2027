@@ -1229,5 +1229,36 @@
     "footer_home": "Inicio",
     "footer_comunidade": "Comunidad",
     "footer_contato": "Contacto"
+  },
+  "cookies": {
+    "bar": {
+      "text": "Usamos cookies esenciales para el funcionamiento del sitio y, con su consentimiento, cookies de análisis y marketing para entender la navegación y personalizar experiencias. Más información en nuestra"
+    },
+    "customize": "Personalizar",
+    "reject": "Rechazar no esenciales",
+    "acceptAll": "Aceptar todo",
+    "save": "Guardar preferencias",
+    "close": "Cerrar",
+    "always": "Siempre activo",
+    "policyPrefix": "Para más detalles sobre cada categoría, consulte nuestra",
+    "policyLink": "Política de Cookies",
+    "prefs": {
+      "eyebrow": "Preferencias de cookies",
+      "intro": "Elija qué categorías de cookies desea permitir. Las esenciales son necesarias para el funcionamiento del sitio y no se pueden desactivar. Puede cambiar su decisión en cualquier momento."
+    },
+    "cat": {
+      "essential": {
+        "title": "Esenciales",
+        "desc": "Necesarias para inicio de sesión, idioma, carrito, seguridad (incluida la protección anti-spam reCAPTCHA) y funcionamiento básico. Siempre activas."
+      },
+      "analytics": {
+        "title": "Análisis",
+        "desc": "Ayudan a entender cómo se usa el sitio, de forma agregada (Google Analytics), para mejorar la experiencia."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Permiten medir campañas y mostrar contenido más relevante (Meta Pixel y remarketing)."
+      }
+    }
   }
 }

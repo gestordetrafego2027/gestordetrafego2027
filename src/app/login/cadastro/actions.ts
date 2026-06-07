@@ -3,12 +3,15 @@
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+import { checkRateLimit } from '@/lib/rate-limit'
+import { verifyRecaptcha } from '@/lib/recaptcha'
 
 export async function signUpAction(formData: FormData): Promise<void> {
   const name = String(formData.get('name') ?? '').trim()
   const email = String(formData.get('email') ?? '').trim().toLowerCase()
   const password = String(formData.get('password') ?? '')
   const confirm = String(formData.get('confirm') ?? '')
+  const recaptchaToken = String(formData.get('recaptchaToken') ?? '')
 
   if (!name) {
     redirect('/login/cadastro?error=' + encodeURIComponent('Informe seu nome.'))
@@ -24,6 +27,20 @@ export async function signUpAction(formData: FormData): Promise<void> {
   }
 
   const hdrs = await headers()
+  const ip =
+    hdrs.get('x-real-ip') ??
+    hdrs.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+    '127.0.0.1'
+
+  const rl = await checkRateLimit('auth', ip)
+  if (!rl.allowed) {
+    redirect('/login/cadastro?error=' + encodeURIComponent('Muitas tentativas. Aguarde um minuto e tente novamente.'))
+  }
+
+  const captcha = await verifyRecaptcha(recaptchaToken, 'signup')
+  if (!captcha.ok) {
+    redirect('/login/cadastro?error=' + encodeURIComponent('Falha na verificação de segurança. Tente novamente.'))
+  }
   const origin =
     process.env.NEXT_PUBLIC_SITE_URL ||
     `https://${hdrs.get('host') ?? 'housemazzutti.com'}`

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { requestPasswordReset } from './actions'
+import RecaptchaField from '@/components/security/RecaptchaField'
 
 export const metadata = { title: 'Recuperar senha | House Mazzutti CRM' }
 
@@ -29,6 +30,7 @@ export default async function RecuperarPage({
           </div>
         ) : (
           <form action={requestPasswordReset} className="space-y-4">
+            <RecaptchaField action="recover" />
             <label className="block space-y-1">
               <span className="text-sm font-medium">Email</span>
               <input

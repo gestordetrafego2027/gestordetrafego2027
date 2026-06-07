@@ -4,6 +4,9 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import {globalJsonLd} from '@/lib/seo/jsonld';
 import {pageMetadata, SITE_URL} from '@/lib/seo/metadata';
+import {ConsentProvider} from '@/components/consent/ConsentProvider';
+import CookieBanner from '@/components/consent/CookieBanner';
+import Tracking from '@/components/analytics/Tracking';
 
 // Todas as páginas sob [locale] são dinâmicas porque o middleware do
 // Supabase (updateSession) lê/escreve cookies em cada request.
@@ -46,7 +49,11 @@ export default async function LocaleLayout({children, params}) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{__html: JSON.stringify(globalJsonLd)}}
       />
-      {children}
+      <ConsentProvider>
+        {children}
+        <Tracking />
+        <CookieBanner />
+      </ConsentProvider>
     </NextIntlClientProvider>
   );
 }

@@ -25,6 +25,31 @@ type LeadPayload = {
     answers?: Record<string, unknown>
   }>
   campaign_slug?: string
+  recaptchaToken?: string
+}
+
+// reCAPTCHA v3 — validação server-side. Fail-open se o secret não estiver
+// configurado (RECAPTCHA_SECRET_KEY nos secrets da Edge Function), para
+// nunca bloquear leads legítimos por erro de infraestrutura.
+const RECAPTCHA_MIN_SCORE = 0.5
+async function verifyRecaptcha(token?: string): Promise<boolean> {
+  const secret = Deno.env.get("RECAPTCHA_SECRET_KEY")
+  if (!secret) return true // fail-open: não configurado
+  if (!token) return false
+  try {
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ secret, response: token }),
+    })
+    if (!res.ok) return true // fail-open em erro de rede/Google
+    const data = await res.json()
+    if (!data.success) return false
+    if (typeof data.score === "number" && data.score < RECAPTCHA_MIN_SCORE) return false
+    return true
+  } catch {
+    return true // fail-open
+  }
 }
 
 const cors = {
@@ -45,6 +70,12 @@ Deno.serve(async (req) => {
 
   if (!body?.name || !body?.segment || !body?.lead_type) {
     return json({ error: "missing_fields", required: ["name","segment","lead_type"] }, 400)
+  }
+
+  // Anti-bot: valida o token reCAPTCHA v3 antes de qualquer escrita.
+  const captchaOk = await verifyRecaptcha(body.recaptchaToken)
+  if (!captchaOk) {
+    return json({ error: "recaptcha_failed" }, 400)
   }
 
   const supabase = createClient(

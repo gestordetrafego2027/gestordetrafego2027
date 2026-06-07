@@ -4,6 +4,7 @@ import { policies, policySlugs } from '@/lib/policies/content'
 import { pageMetadata } from '@/lib/seo/metadata'
 import { breadcrumbSchema } from '@/lib/seo/schemas'
 import { brand } from '@/config/site'
+import CookiePrefsButton from '@/components/consent/CookiePrefsButton'
 
 export function generateStaticParams() {
   return policySlugs.map((slug) => ({ slug }))
@@ -91,6 +92,16 @@ export default async function PolicyPage({ params }) {
               </section>
             ))}
           </div>
+
+          {/* Gerenciar consentimento (somente na Política de Cookies) */}
+          {slug === 'cookies' && (
+            <div className="mt-16 pt-10 border-t border-zinc-100">
+              <p className="text-[11px] font-label uppercase tracking-[0.25em] text-zinc-400 mb-6">
+                Suas preferências
+              </p>
+              <CookiePrefsButton />
+            </div>
+          )}
 
           {/* Links para outras políticas */}
           <div className="mt-20 pt-10 border-t border-zinc-100">
