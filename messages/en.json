@@ -48,8 +48,6 @@
     "solutions_title": "One house. Three fronts.",
     "testimonials_label": "What they say",
     "testimonials_title": "Testimonials",
-    "blog_label": "Editorial",
-    "blog_title": "Latest articles",
     "studio_card_title": "HMZT | STUDIO",
     "studio_card_subtitle": "Photo, video and personal image direction.",
     "studio_card_items": [
@@ -355,5 +353,23 @@
     "second": "second",
     "seconds": "seconds",
     "back_home": "Back to home"
+  },
+  "blog_page": {
+    "seo_title": "House Mazzutti Editorial — Branding, Creative Direction and Personal Brand",
+    "label": "House Mazzutti — Editorial",
+    "hero_quote": "Before any image, there is a market decision.",
+    "hero_subtitle": "Notes and essays on branding, creative direction, personal brand and value building.",
+    "filter_todos": "All",
+    "filter_studio": "Studio",
+    "filter_agencia": "Agency",
+    "filter_produtora": "Production",
+    "read_article": "Read Article",
+    "closing_quote": "Content without direction is noise. And noise does not position.",
+    "footer_rights": "© 2026 House Mazzutti. All rights reserved.",
+    "footer_home": "Home",
+    "footer_studio": "Studio",
+    "footer_portfolio": "Portfolio",
+    "footer_blog": "Blog",
+    "footer_contato": "Contact"
   }
 }

@@ -46,7 +46,7 @@ export default function JequitiAnaCastelaPage() {
         };
     }, []);
 
-    const images = Array.from({length: 4}, (_, i) => `/images/produtora/beleza/jequiti-ana-castela/${i+1}.webp`);
+    const images = Array.from({length: 3}, (_, i) => `/images/produtora/beleza/jequiti-ana-castela/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

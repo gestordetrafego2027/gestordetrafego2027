@@ -2,11 +2,13 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import NewsletterStrip from '@/app/components/NewsletterStrip';
 import { articles as articleData } from './[slug]/articles';
 
 export default function BlogPage() {
+    const t = useTranslations('blog_page');
     const [activeCategory, setActiveCategory] = useState('todos');
 
     const articles = [
@@ -268,7 +270,7 @@ export default function BlogPage() {
                 }
             `}} />
 
-            <h1 hidden>Editorial House Mazzutti — Branding, Direção Criativa e Marca Pessoal</h1>
+            <h1 hidden>{t('seo_title')}</h1>
             
             <Header variant="light" />
 
