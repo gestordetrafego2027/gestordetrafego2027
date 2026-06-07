@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/app/components/Header";
@@ -466,6 +467,7 @@ export default function ComunidadePage() {
                         © 2026 House Mazzutti. Todos os direitos reservados.
                     </div>
                 </div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
 
             <FormDrawer

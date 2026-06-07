@@ -61,7 +61,7 @@ export default function BlogSection({
 
         <div className="grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-4 bg-black/10">
           {posts.map((post, i) => (
-            <BlogCard key={i} post={post} />
+            <BlogCard key={i} post={post} readLabel={readLabel} />
           ))}
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function BlogSection({
 }
 
 /* ─── card individual ─────────────────────────────────────────────── */
-function BlogCard({ post }) {
+function BlogCard({ post, readLabel = 'Ler →' }) {
   return (
     <Link
       href={post.link}

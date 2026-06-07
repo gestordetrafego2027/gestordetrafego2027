@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { notFound } from 'next/navigation'
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { featureFlags } from '@/lib/feature-flags'
 import { createClient } from '@/lib/supabase/server'
 import Image from 'next/image'
@@ -233,7 +234,8 @@ export default async function ProdutoPage({ params }: Props) {
               © {new Date().getFullYear()} House Mazzutti · Pagamentos processados por Stripe
             </span>
           </div>
-        </footer>
+          <div className="mt-6"><SiteFooterLinks /></div>
+            </footer>
       </div>
     </>
   )

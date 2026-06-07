@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Header from '@/app/components/Header'
 import FormModelo from '@/app/components/forms/FormModelo'
 import {useTranslations} from 'next-intl'
@@ -84,7 +85,8 @@ export default function ComunidadeVagasPage() {
             {t('footer_copyright')}
           </div>
         </div>
-      </footer>
+        <div className="mt-6"><SiteFooterLinks /></div>
+            </footer>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import AOS from 'aos';
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -183,6 +184,7 @@ export default function StudioCoberturaPage() {
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">{t('footer_copyright')}</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">23.5505° S, 46.6333° W</p>
                 </div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
 
             <FormDrawer

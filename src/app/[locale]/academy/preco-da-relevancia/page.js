@@ -3,6 +3,7 @@
  * House Mazzutti Academy · Vol. 02 · 2026
  */
 import React from 'react'
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -813,7 +814,8 @@ export default function PrecoDaRelevanciaPage() {
             <span>São Paulo · Brasil</span>
           </div>
         </div>
-      </footer>
+        <div className="mt-6"><SiteFooterLinks /></div>
+            </footer>
     </div>
   )
 }

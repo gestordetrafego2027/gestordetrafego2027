@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -489,6 +490,7 @@ export default function ProdutoraPage() {
                         {t('footer_copyright')}
                     </div>
                 </div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
             <FormDrawer
                 isOpen={!!formCta}

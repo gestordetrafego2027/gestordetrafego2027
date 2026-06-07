@@ -1,6 +1,7 @@
 'use client';
 
 import AOS from 'aos';
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -181,6 +182,7 @@ export default function AgenciaComunicacaoPage() {
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600">{t('footer_copyright')}</p>
                     <p className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-600 mt-4 md:mt-0">{t('footer_coords')}</p>
                 </div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
 
             <FormDrawer isOpen={formOpen} onClose={() => setFormOpen(false)} title={t('form_title')} subtitle={t('form_subtitle')}>

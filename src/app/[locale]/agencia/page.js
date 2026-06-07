@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
@@ -467,6 +468,7 @@ export default function AgenciaPage() {
                     </nav>
                     <div className="flex flex-col items-center gap-3"><div className="text-caption text-neutral-700">© 2026 House Mazzutti. Todos os direitos reservados.</div><div className="flex gap-6"><a href="/politicas/privacidade" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Privacidade</a><a href="/politicas/termos-de-uso" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Termos</a><a href="/politicas/cookies" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Cookies</a><a href="/politicas/cancelamento-e-reembolso" className="text-caption text-neutral-600 hover:text-neutral-300 transition-colors">Cancelamento</a></div></div>
                 </div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
 
             {formOpen && (

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { policyList } from '@/lib/policies/content'
 import { pageMetadata } from '@/lib/seo/metadata'
 
@@ -59,7 +60,8 @@ export default function PoliciesIndexPage() {
         <Link href="/" className="mt-3 inline-block text-[11px] text-zinc-400 hover:text-zinc-700 transition-colors">
           ← Voltar ao site
         </Link>
-      </footer>
+        <div className="mt-6"><SiteFooterLinks /></div>
+            </footer>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Header from '@/app/components/Header'
 import {useTranslations} from 'next-intl'
 
@@ -197,7 +198,8 @@ export default function SobrePage() {
             © 2026 House Mazzutti. Todos os direitos reservados.
           </div>
         </div>
-      </footer>
+        <div className="mt-6"><SiteFooterLinks /></div>
+            </footer>
     </div>
   )
 }

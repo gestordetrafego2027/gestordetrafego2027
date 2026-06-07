@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import Header from '@/app/components/Header';
@@ -308,6 +309,7 @@ export default function ArticleContent({ slug }) {
                         © 2026 HOUSE MAZZUTTI · São Paulo / Global
                     </div>
                 </div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
         </div>
     );

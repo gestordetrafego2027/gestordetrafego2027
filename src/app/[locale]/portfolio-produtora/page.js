@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 export default function PortfolioProdutoraPage() {
@@ -236,6 +237,7 @@ export default function PortfolioProdutoraPage() {
                     <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</Link>
                 </div>
                 <div className="font-manrope text-[10px] uppercase tracking-wider text-[#333]">Copyright © 2025 House Mazzutti</div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
         </div>
     );

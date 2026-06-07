@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Link from "next/link";
 import Header from "@/app/components/Header";
 import FormContatoGeral from "@/app/components/forms/FormContatoGeral";
@@ -154,6 +155,7 @@ export default function ContatoPage() {
                         © 2026 House Mazzutti. TODOS OS DIREITOS RESERVADOS.
                     </div>
                 </div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
         </div>
     );

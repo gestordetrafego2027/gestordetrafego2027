@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
@@ -392,6 +393,7 @@ export default function BlogPage() {
                         <p className="label-text text-[10px]">{t('footer_rights')}</p>
                     </div>
                 </div>
+              <div className="mt-6"><SiteFooterLinks /></div>
             </footer>
         </div>
     );

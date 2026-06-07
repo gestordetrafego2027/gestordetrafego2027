@@ -4,6 +4,7 @@
  * Design hi-fi reproduzido a partir do handoff editorial.
  */
 import React from 'react';
+import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Link from 'next/link';
 import { MpmViewContent, BuyLink } from '@/components/analytics/MpmTracking';
 
@@ -980,7 +981,8 @@ export default function MarketingParaModelosPage() {
             <span>São Paulo · Brasil</span>
           </div>
         </div>
-      </footer>
+        <div className="mt-6"><SiteFooterLinks /></div>
+            </footer>
     </div>
   );
 }
