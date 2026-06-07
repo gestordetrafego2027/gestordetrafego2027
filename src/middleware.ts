@@ -18,10 +18,23 @@ export async function middleware(request: NextRequest) {
 
   // next-intl: detecta locale, redireciona / → /pt/, etc.
   const intlResponse = intlMiddleware(request);
+
+  // Redirect/rewrite do intl (ex: / → /pt/) — retorna direto
   if (intlResponse && intlResponse.status !== 200) return intlResponse;
 
-  // Supabase session (mantém cookie atualizado)
-  return await updateSession(request);
+  // Para respostas 200: roda o Supabase E preserva as headers de locale
+  // que o next-intl definiu (x-next-intl-locale, etc.)
+  const supabaseResponse = await updateSession(request);
+
+  // Copia headers do intlResponse para o supabaseResponse
+  // sem isso, requestLocale em request.ts nunca recebe o locale correto
+  if (intlResponse) {
+    intlResponse.headers.forEach((value, key) => {
+      supabaseResponse.headers.set(key, value);
+    });
+  }
+
+  return supabaseResponse;
 }
 
 export const config = {
