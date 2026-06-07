@@ -253,16 +253,11 @@ export default function Home() {
                 {/* ── SOBRE / STRATEGIC HOUSE ─────────────────────────────── */}
                 <section className="min-h-[calc(100vh+20px)] flex items-center bg-[#fafafa]">
                     <div className="w-full flex flex-col justify-center px-12 py-32 space-y-10 pl-[calc(3rem+15px+20px)] md:pl-[calc(6rem+15px+20px)]">
-                        <span className="text-caption text-black/70">Strategic House</span>
-                        <h2 className="text-h1 text-black">Vamos além da publicidade.</h2>
-                        <p className="text-h4 text-[#555555] measure-editorial">Estruturamos o seu projeto para comunicar com precisão.</p>
+                        <span className="text-caption text-black/70">{t('about.strategic_label')}</span>
+                        <h2 className="text-h1 text-black">{t('about.strategic_titulo')}</h2>
+                        <p className="text-h4 text-[#555555] measure-editorial">{t('about.strategic_subtitulo')}</p>
                         <div className="space-y-6 pt-8 w-4/5 md:w-1/3">
-                            {[
-                                { label: "Estratégia", value: "92%" },
-                                { label: "Posicionamento", value: "88%" },
-                                { label: "Direção criativa", value: "95%" },
-                                { label: "Produção", value: "85%" },
-                            ].map((item, index) => (
+                            {t.raw('about.strategic_items').map((item, index) => (
                                 <div key={index} className="space-y-4">
                                     <div className="flex justify-between text-caption text-black">
                                         <span>{item.label}</span>
@@ -284,8 +279,8 @@ export default function Home() {
                     style={{ maxWidth: "95vw" }}
                 >
                     <div className="mb-20 text-center flex flex-col items-center">
-                        <span className="text-caption text-zinc-500 block mb-6">Obras</span>
-                        <h2 className="text-h2 text-black">Trabalhos selecionados</h2>
+                        <span className="text-caption text-zinc-500 block mb-6">{t('home.works_label')}</span>
+                        <h2 className="text-h2 text-black">{t('home.works_title')}</h2>
                         <div className="line-divider mt-8 text-black"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -345,15 +340,14 @@ export default function Home() {
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
                     <div className="w-full md:w-1/2 bg-[#f5f5f5] flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-600">Diferencial</span>
-                            <h2 className="text-h2 text-black">O que diferencia a House não é o que fazemos.</h2>
+                            <span className="text-caption text-neutral-600">{t('about.diferencial_label')}</span>
+                            <h2 className="text-h2 text-black">{t('about.diferencial_titulo')}</h2>
                             <div className="space-y-5 text-body text-neutral-700">
-                                <p>É como pensamos. Unimos:</p>
+                                <p>{t('about.diferencial_intro')}</p>
                                 <ul className="space-y-2">
-                                    <li>— sensibilidade estética</li>
-                                    <li>— inteligência criativa</li>
-                                    <li>— experiência de set</li>
-                                    <li>— execução precisa</li>
+                                    {t.raw('about.diferencial_items').map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -368,16 +362,16 @@ export default function Home() {
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
                     <div className="w-full md:w-1/2 bg-black flex flex-col justify-center px-8 md:px-24 pb-24 pt-[calc(8rem-30px)]">
                         <div className="max-w-lg space-y-10">
-                            <span className="text-caption text-neutral-400">Direção Criativa /01</span>
-                            <h2 className="text-h2 text-white">Estratégia e execução. Na mesma mente.</h2>
+                            <span className="text-caption text-neutral-400">{t('about.origem_label')}</span>
+                            <h2 className="text-h2 text-white">{t('about.origem_titulo')}</h2>
                             <div className="space-y-5 text-body text-neutral-300">
-                                <p>Mente formada na publicidade e forjada nos sets de grandes marcas e personalidades do Brasil. 15+ anos de audiovisual e fotografia traduzidos em direção criativa autoral, com presença em cada decisão crítica do projeto.</p>
-                                <p>Cada peça que sai da House passa pela sua supervisão direta: do briefing estratégico ao acabamento final. É o que garante que a essência da marca chegue intacta — sem ruído entre o conceito e o pixel.</p>
-                                <p className="italic text-neutral-400">"Toda imagem que entrego carrega uma decisão de mercado. Estética sem propósito é apenas decoração."</p>
+                                <p>{t('about.origem_p1')}</p>
+                                <p>{t('about.origem_p2')}</p>
+                                <p className="italic text-neutral-400">{t('about.origem_quote')}</p>
                             </div>
                             <div className="pt-6">
                                 <div className="text-h3 text-white/90">Angelo Mazzutti</div>
-                                <div className="text-caption text-neutral-500 mt-2">Diretor Criativo</div>
+                                <div className="text-caption text-neutral-500 mt-2">{t('about.origem_role')}</div>
                             </div>
                         </div>
                     </div>
@@ -386,15 +380,9 @@ export default function Home() {
                 {/* ── SOBRE / METODOLOGIA ─────────────────────────────────── */}
                 <section className="bg-white text-black py-40 overflow-hidden relative">
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
-                        <h2 className="text-h2 text-black text-center mb-32 max-w-3xl mx-auto">Nada começa na execução. Tudo começa no entendimento.</h2>
+                        <h2 className="text-h2 text-black text-center mb-32 max-w-3xl mx-auto">{t('about.metodo_titulo')}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-                            {[
-                                { num: "01 / Imersão", desc: "Mergulho no DNA e nos objetivos do projeto." },
-                                { num: "02 / Leitura", desc: "Identificação de lacunas e oportunidades." },
-                                { num: "03 / Conceito", desc: "Direção criativa que guia toda a entrega." },
-                                { num: "04 / Execução", desc: "Produção sob supervisão direta do diretor." },
-                                { num: "05 / Fine Art", desc: "Edição artesanal com acabamento editorial." }
-                            ].map((item, i) => (
+                            {t.raw('about.metodo_items').map((item, i) => (
                                 <div key={i} className="space-y-6">
                                     <span className="text-caption text-neutral-700 block">{item.num}</span>
                                     <div className="h-px bg-neutral-300 w-full"></div>
@@ -409,9 +397,9 @@ export default function Home() {
                 <section className="bg-white">
                     <div className="flex flex-col md:flex-row h-auto md:h-[85vh]">
                         {[
-                            { label: 'AGÊNCIA', sub: 'Branding · Web · Comunicação', img: '/images/agencia/banners/banner-1.webp', href: '/agencia' },
-                            { label: 'STUDIO', sub: 'Book · Ensaio · Cobertura', img: '/images/studio/banners/banner-1.webp', href: '/studio' },
-                            { label: 'PRODUTORA', sub: 'Moda · Beleza · Institucional', img: '/images/produtora/banners/banner-1.webp', href: '/produtora' },
+                            { label: t('home.frentes_agencia_label'), sub: t('home.frentes_agencia_sub'), img: '/images/agencia/banners/banner-1.webp', href: '/agencia' },
+                            { label: t('home.frentes_studio_label'), sub: t('home.frentes_studio_sub'), img: '/images/studio/banners/banner-1.webp', href: '/studio' },
+                            { label: t('home.frentes_produtora_label'), sub: t('home.frentes_produtora_sub'), img: '/images/produtora/banners/banner-1.webp', href: '/produtora' },
                         ].map((item) => (
                             <Link
                                 key={item.label}
@@ -428,7 +416,7 @@ export default function Home() {
                                 <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-12">
                                     <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 mb-3 block">{item.sub}</span>
                                     <h3 className="font-headline text-3xl md:text-4xl text-white tracking-tight mb-6">{item.label}</h3>
-                                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white border-b border-white/40 pb-1 w-fit group-hover:border-white transition-colors duration-300">SAIBA MAIS →</span>
+                                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white border-b border-white/40 pb-1 w-fit group-hover:border-white transition-colors duration-300">{t('home.frentes_cta')}</span>
                                 </div>
                             </Link>
                         ))}
@@ -455,7 +443,7 @@ export default function Home() {
                             userSelect: 'none', zIndex: 0
                         }}
                     >
-                        Depoimentos
+                        {t('home.testimonials_ghost')}
                     </div>
 
                     {/* Navigation Arrows */}
@@ -484,8 +472,8 @@ export default function Home() {
 
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
                         <div className="mb-12">
-                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
-                            <h2 className="text-h2 text-white">Depoimentos</h2>
+                            <span className="text-caption text-zinc-500 block mb-4">{t('home.testimonials_label')}</span>
+                            <h2 className="text-h2 text-white">{t('home.testimonials_titulo')}</h2>
                         </div>
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1" style={{ minHeight: '220px' }}>
@@ -522,6 +510,10 @@ export default function Home() {
                         'editorial-moda-narrativa-visual',
                         'campanha-lancamento-arquitetura-invisivel',
                     ]}
+                    eyebrow={t('home.blog_section_label')}
+                    title={t('home.blog_section_title')}
+                    allLabel={t('home.blog_see_all')}
+                    readLabel={t('home.blog_read')}
                 />
 
                 {/* CTA CONTACT SECTION */}

@@ -40,7 +40,32 @@ const nextConfig = {
 
   // 4. Headers de segurança (todas as rotas) + cache de estáticos
   async headers() {
+    // CSP em modo Report-Only: NÃO bloqueia nada, apenas reporta violações
+    // no console do navegador. Serve para validar a allowlist com tráfego real
+    // antes de promover para Content-Security-Policy (enforce). Domínios:
+    //   Google (reCAPTCHA + GA/Tag Manager), Meta Pixel, Stripe, Supabase, Fonts.
+    const csp = [
+      "default-src 'self'",
+      "base-uri 'self'",
+      "object-src 'none'",
+      "frame-ancestors 'self'",
+      "form-action 'self'",
+      // inline/eval necessários hoje (GA/fbq/reCAPTCHA/JSON-LD). Numa futura
+      // versão enforce, trocar por nonces.
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://js.stripe.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com data:",
+      "img-src 'self' data: blob: https:",
+      "connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://*.facebook.com https://connect.facebook.net https://api.stripe.com",
+      // iframes de terceiros legítimos: reCAPTCHA, Stripe, Meta.
+      "frame-src https://www.google.com https://recaptcha.google.com https://js.stripe.com https://hooks.stripe.com https://www.facebook.com",
+      "worker-src 'self' blob:",
+      "upgrade-insecure-requests",
+    ].join('; ');
+
     const securityHeaders = [
+      // CSP só observando (não quebra o site).
+      { key: 'Content-Security-Policy-Report-Only', value: csp },
       // Força HTTPS por 2 anos, incluindo subdomínios.
       {
         key: 'Strict-Transport-Security',

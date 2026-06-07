@@ -37,6 +37,8 @@ export default function BlogSection({
   eyebrow = 'Editorial',
   title = 'Do Blog',
   allHref = '/blog',
+  allLabel = 'Ver todos →',
+  readLabel = 'Ler →',
 }) {
   const posts = resolvePosts(slugs)
   if (!posts.length) return null
@@ -53,7 +55,7 @@ export default function BlogSection({
             href={allHref}
             className="text-button text-black/50 hover:text-black transition-colors border-b border-black/20 hover:border-black pb-0.5"
           >
-            Ver todos →
+            {allLabel}
           </Link>
         </div>
 
@@ -79,7 +81,7 @@ function BlogCard({ post }) {
       <h3 className="text-h4 text-black mb-3 line-clamp-3">{post.titulo}</h3>
       <p className="text-body text-black/50 line-clamp-3 text-sm mb-6">{post.excerpt}</p>
       <span className="text-button text-black/30 group-hover:text-black transition-colors border-b border-black/10 group-hover:border-black pb-0.5">
-        Ler →
+        {readLabel}
       </span>
     </Link>
   )
