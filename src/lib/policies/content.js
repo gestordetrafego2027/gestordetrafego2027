@@ -731,6 +731,178 @@ export const policies = {
         body: `Descumprimento autoriza a rescisão e a retenção de pagamentos relativos a entregas não realizadas. Lei brasileira; foro de São Paulo/SP.`
       }
     ]
+  },
+
+  'academy': {
+    slug: 'academy',
+    title: 'Termos da Academy (Cursos Online)',
+    metaTitle: 'Termos da Academy — Cursos Online — House Mazzutti',
+    metaDescription: 'Termos de uso dos cursos, workshops e conteúdos digitais da House Mazzutti Academy: acesso, certificado, licença e reembolso.',
+    updated,
+    sections: [
+      {
+        heading: '1. Objeto e partes',
+        body: `Estes Termos regem a matrícula e o acesso aos cursos, workshops e conteúdos educativos digitais (EAD) da House Mazzutti Academy, oferecidos por ${razaoSocial} (CNPJ ${cnpj}, "House"), pelo site ${brand.url}. Aplicam-se o CDC (Lei nº 8.078/1990), a Lei nº 9.610/1998 e o Decreto nº 7.962/2013.`
+      },
+      {
+        heading: '2. Matrícula e acesso',
+        body: `A matrícula é confirmada após a aprovação do pagamento. O acesso ao conteúdo é pessoal e liberado na conta do aluno, pelo prazo informado na página de cada curso. A House pode atualizar ou aprimorar o conteúdo durante esse período.`
+      },
+      {
+        heading: '3. Licença de uso do conteúdo',
+        body: `A compra concede licença de uso pessoal, não exclusiva e intransferível. É vedado gravar, reproduzir, distribuir, revender, compartilhar arquivos ou credenciais de acesso, ou disponibilizar publicamente o conteúdo, no todo ou em parte. A violação sujeita o infrator às sanções da Lei nº 9.610/1998 e ao cancelamento do acesso, sem reembolso.`
+      },
+      {
+        heading: '4. Certificado',
+        body: `Quando previsto no curso, será emitido certificado de conclusão ao aluno que cumprir os requisitos (ex.: conclusão dos módulos). O certificado atesta a participação, não constituindo título acadêmico oficial.`
+      },
+      {
+        heading: '5. Requisitos técnicos',
+        body: `O acesso requer conexão à internet, dispositivo compatível e navegador atualizado. A House não se responsabiliza por falhas decorrentes do equipamento ou da conexão do aluno.`
+      },
+      {
+        heading: '6. Arrependimento e reembolso',
+        body: `Conforme o art. 49 do CDC, o aluno tem 7 (sete) dias corridos a partir da compra para desistir e obter reembolso integral. Quando há liberação imediata do conteúdo, o arrependimento sobre a parte já acessada observa a renúncia informada no momento da compra. As demais regras seguem a Política de Cancelamento, Trocas e Reembolso.`
+      },
+      {
+        heading: '7. Conduta do aluno',
+        body: `O aluno compromete-se a usar a plataforma de boa-fé, respeitar instrutores e colegas e não compartilhar seu acesso. Condutas abusivas podem levar à suspensão sem reembolso.`
+      },
+      {
+        heading: '8. Suporte',
+        body: `Dúvidas sobre cursos e acesso: **${contact.academyEmail}**.`
+      },
+      {
+        heading: '9. Proteção de dados e foro',
+        body: `Dados tratados conforme a Política de Privacidade (Encarregado/DPO: ${dpo.email}). Lei brasileira; foro de domicílio do consumidor.`
+      }
+    ]
+  },
+
+  'comunidade': {
+    slug: 'comunidade',
+    title: 'Termos e Código de Conduta da Comunidade',
+    metaTitle: 'Termos e Código de Conduta da Comunidade — House Mazzutti',
+    metaDescription: 'Regras de participação, conduta, conteúdo do usuário e moderação da Comunidade House Mazzutti.',
+    updated,
+    sections: [
+      {
+        heading: '1. Objeto',
+        body: `Estes Termos regulam a participação na Comunidade da House Mazzutti (${razaoSocial}, CNPJ ${cnpj}) — grupos, fóruns e canais oficiais —, complementando os Termos de Uso e a Política de Privacidade.`
+      },
+      {
+        heading: '2. Elegibilidade',
+        body: `A participação é destinada a maiores de 18 anos. O membro fornece dados verdadeiros e é responsável pela segurança da sua conta.`
+      },
+      {
+        heading: '3. Código de conduta',
+        body: `É esperado respeito mútuo. São vedados: discurso de ódio, discriminação, assédio, ameaças, conteúdo ilícito ou sexualmente explícito, spam, divulgação não autorizada e compartilhamento de dados de terceiros sem consentimento.`
+      },
+      {
+        heading: '4. Conteúdo do usuário (UGC)',
+        body: `O membro mantém a titularidade do conteúdo que publica e declara ser original e não violar direitos de terceiros. Ao publicar, concede à House licença não exclusiva e gratuita para exibir e moderar esse conteúdo nos canais da Comunidade. A House pode remover conteúdo que viole estes Termos.`
+      },
+      {
+        heading: '5. Moderação e penalidades',
+        body: `A House pode advertir, ocultar conteúdo, suspender ou banir membros que descumpram estas regras, a seu critério e sem aviso prévio quando houver risco. Decisões podem ser revistas mediante contato.`
+      },
+      {
+        heading: '6. Propriedade intelectual',
+        body: `O membro respeita a marca e os conteúdos da House e de terceiros (ver Política de Propriedade Intelectual), sendo vedada a reprodução não autorizada.`
+      },
+      {
+        heading: '7. Proteção de dados (LGPD)',
+        body: `Os dados dos membros são tratados conforme a Política de Privacidade. Encarregado/DPO: **${dpo.email}**.`
+      },
+      {
+        heading: '8. Isenção e foro',
+        body: `A House não se responsabiliza por opiniões e condutas de membros. Lei brasileira; foro de São Paulo/SP, ressalvado o foro do consumidor.`
+      }
+    ]
+  },
+
+  'tratamento-de-dados': {
+    slug: 'tratamento-de-dados',
+    title: 'Adendo de Proteção de Dados (Operadores)',
+    metaTitle: 'Adendo de Proteção de Dados (DPA) — House Mazzutti',
+    metaDescription: 'Cláusulas de tratamento de dados pessoais entre a House Mazzutti (controladora) e seus operadores, conforme a LGPD.',
+    updated,
+    sections: [
+      {
+        heading: '1. Objeto',
+        body: `Este Adendo (DPA) regula o tratamento de dados pessoais realizado por fornecedores e prestadores ("Operador") por conta de ${razaoSocial} (CNPJ ${cnpj}, "Controladora"), no âmbito dos serviços contratados, nos termos do art. 39 da LGPD (Lei nº 13.709/2018). Complementa o Termo Geral de Fornecedores.`
+      },
+      {
+        heading: '2. Papéis',
+        body: `A House é a Controladora (define finalidades e meios); o Operador trata dados exclusivamente em nome da House e segundo suas instruções documentadas.`
+      },
+      {
+        heading: '3. Obrigações do Operador',
+        body: `O Operador compromete-se a: tratar dados apenas para a finalidade contratada; manter confidencialidade; adotar medidas de segurança técnicas e administrativas; não usar os dados para finalidade própria; e subcontratar apenas com autorização e sob as mesmas obrigações.`
+      },
+      {
+        heading: '4. Segurança e incidentes',
+        body: `O Operador notificará a Controladora imediatamente sobre qualquer incidente de segurança envolvendo dados pessoais, colaborando na resposta e na eventual comunicação a titulares e à ANPD.`
+      },
+      {
+        heading: '5. Apoio aos direitos do titular',
+        body: `O Operador auxiliará a House a atender às solicitações dos titulares (art. 18 da LGPD) e às requisições da ANPD, nos prazos legais.`
+      },
+      {
+        heading: '6. Transferência internacional',
+        body: `Quando houver tratamento fora do Brasil, o Operador garante salvaguardas adequadas conforme o art. 33 da LGPD.`
+      },
+      {
+        heading: '7. Término',
+        body: `Encerrado o contrato, o Operador devolverá ou eliminará os dados pessoais, conforme instrução da House, salvo obrigação legal de retenção.`
+      },
+      {
+        heading: '8. Contato e foro',
+        body: `Encarregado/DPO da House: **${dpo.email}**. Lei brasileira; foro de São Paulo/SP.`
+      }
+    ]
+  },
+
+  'seguranca-da-informacao': {
+    slug: 'seguranca-da-informacao',
+    title: 'Política de Segurança da Informação',
+    metaTitle: 'Política de Segurança da Informação — House Mazzutti',
+    metaDescription: 'Compromisso e controles de segurança da informação da House Mazzutti e fluxo de resposta a incidentes (LGPD).',
+    updated,
+    sections: [
+      {
+        heading: '1. Compromisso',
+        body: `A House Mazzutti (${razaoSocial}, CNPJ ${cnpj}) adota medidas para proteger a confidencialidade, a integridade e a disponibilidade dos dados de clientes, parceiros e usuários, em linha com a LGPD e as boas práticas de segurança.`
+      },
+      {
+        heading: '2. Controles técnicos',
+        body: `Entre as medidas adotadas: criptografia em trânsito (HTTPS/TLS), política de segurança de conteúdo (CSP), controle de acesso, criptografia de dados sensíveis, backups, proteção antifraude (reCAPTCHA), limitação de requisições (rate-limiting) e monitoramento de erros.`
+      },
+      {
+        heading: '3. Acesso e contas',
+        body: `Aplica-se o princípio do menor privilégio: cada pessoa acessa apenas o necessário à sua função. Recomenda-se autenticação forte e, quando disponível, verificação em duas etapas.`
+      },
+      {
+        heading: '4. Operadores',
+        body: `Fornecedores que tratam dados por conta da House seguem padrão de proteção compatível, formalizado no Adendo de Proteção de Dados.`
+      },
+      {
+        heading: '5. Resposta a incidentes',
+        body: `Em caso de incidente de segurança com risco relevante aos titulares, a House adota detecção, contenção e correção, e comunica os titulares afetados e a ANPD em prazo razoável, conforme o art. 48 da LGPD.`
+      },
+      {
+        heading: '6. Responsabilidade dos usuários',
+        body: `Usuários devem manter suas credenciais em sigilo, usar senhas fortes e comunicar imediatamente qualquer suspeita de acesso indevido.`
+      },
+      {
+        heading: '7. Relato de vulnerabilidades',
+        body: `Suspeitas de vulnerabilidade ou incidente podem ser comunicadas a **${dpo.email}** (ou ${contact.email}). A House agradece a divulgação responsável e não tomará medidas contra quem reportar de boa-fé.`
+      },
+      {
+        heading: '8. Revisão e foro',
+        body: `Esta Política é revisada periodicamente. Lei brasileira; foro de São Paulo/SP, ressalvado o foro do consumidor.`
+      }
+    ]
   }
 }
 
