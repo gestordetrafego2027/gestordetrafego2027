@@ -20,6 +20,8 @@ export const SIGNED_URL_TTL_SECONDS = 60 * 60 * 24 * 7
 export interface DigitalProduct {
   slug: string
   name: string
+  /** Stripe Price ID canônico (fonte de verdade do checkout — independe de env/Coolify). */
+  stripePriceId?: string
   /** Caminho do PDF dentro do bucket privado (fonte primária de entrega). */
   storagePath?: string
   /** Bucket do Storage; default DIGITAL_PRODUCTS_BUCKET. */
@@ -38,6 +40,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
   'marketing-para-modelos': {
     slug: 'marketing-para-modelos',
     name: 'Marketing para Modelos · Vol. 01',
+    stripePriceId: 'price_1TcmbpLcrEu1967n5O39YUoF', // R$ 49,00 · prod_Uc0dKAMVbuf28H
     storagePath: 'marketing-para-modelos/vol-01.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_MARKETING_PARA_MODELOS ??
@@ -49,6 +52,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
   'preco-da-relevancia': {
     slug: 'preco-da-relevancia',
     name: 'O Preço da Relevância · Vol. 02',
+    stripePriceId: 'price_1TfhyILcrEu1967n07dxw5z7', // R$ 54,00 · prod_Uc0jsoMdxr4oaj
     storagePath: 'preco-da-relevancia/vol-02.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_PRECO_DA_RELEVANCIA ??

@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PaymentMethodSelector } from '@/components/ecommerce/PaymentMethodSelector'
 import { createClient } from '@/lib/supabase/server'
+import { DIGITAL_PRODUCTS } from '@/lib/digital-products'
 
 export const metadata: Metadata = {
   title: 'Checkout · O Preço da Relevância · House Mazzutti Academy',
@@ -16,7 +17,9 @@ export const metadata: Metadata = {
 export const dynamic = 'force-dynamic'
 
 const SLUG = 'preco-da-relevancia'
-const STRIPE_PRICE_ID = process.env.STRIPE_PRICE_PRECO_DA_RELEVANCIA ?? ''
+// Fonte de verdade: catálogo (independe de env/Coolify). Env fica só como override.
+const STRIPE_PRICE_ID =
+  DIGITAL_PRODUCTS[SLUG]?.stripePriceId ?? process.env.STRIPE_PRICE_PRECO_DA_RELEVANCIA ?? ''
 
 const brl = (cents: number | null | undefined) =>
   ((cents ?? 0) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
