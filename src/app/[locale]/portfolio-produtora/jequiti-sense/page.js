@@ -14,6 +14,8 @@ export default function JequitiSensePage() {
     const openImg = (idx) => { setLightboxIdx(idx); document.body.style.overflow = 'hidden'; const h = document.querySelector('header'); if(h) h.style.display = 'none'; }
     const closeImg = () => { setLightboxIdx(null); document.body.style.overflow = ''; const h = document.querySelector('header'); if(h) h.style.display = ''; }
 
+    const images = Array.from({length: 3}, (_, i) => `/images/produtora/beleza/jequiti-sense/${i+1}.webp`);
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => { 
             entries.forEach(e => { 
@@ -40,7 +42,6 @@ export default function JequitiSensePage() {
         }
         animate();
 
-        const images = Array.from({length: 3}, (_, i) => `/images/produtora/beleza/jequiti-sense/${i+1}.webp`);
 
     return () => {
             observer.disconnect();
