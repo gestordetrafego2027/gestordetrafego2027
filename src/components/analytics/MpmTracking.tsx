@@ -14,7 +14,7 @@ const PRODUCT_PAYLOAD = {
   content_name: 'Marketing para Modelos · Vol. 01',
   content_ids: ['marketing-para-modelos'],
   content_type: 'product' as const,
-  value: 117,
+  value: 49,
   currency: 'BRL',
 }
 

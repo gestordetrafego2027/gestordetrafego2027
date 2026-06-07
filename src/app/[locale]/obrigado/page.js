@@ -1,6 +1,8 @@
 import { getTranslations } from 'next-intl/server'
 import Countdown from './Countdown'
 import Link from 'next/link'
+import { createClient } from '@/lib/supabase/server'
+import ConversionOnMount from '@/components/analytics/ConversionOnMount'
 
 export const metadata = {
   title: 'Obrigado — House Mazzutti',
@@ -13,10 +15,40 @@ export default async function ObrigadoPage({ searchParams }) {
   const fromRaw = params.from
   const from = Array.isArray(fromRaw) ? fromRaw[0] : fromRaw
 
-  // Pedido da loja — exibe confirmação especial
+  // Pedido da loja — exibe confirmação especial + dispara conversão de COMPRA
   if (from === 'loja') {
+    const sidRaw = params.session_id
+    const sessionId = Array.isArray(sidRaw) ? sidRaw[0] : sidRaw
+    let purchaseValue
+    let transactionId = sessionId
+    if (sessionId) {
+      try {
+        const supabase = await createClient()
+        const { data: order } = await supabase
+          .from('store_orders')
+          .select('total_cents, order_number')
+          .eq('stripe_session_id', sessionId)
+          .maybeSingle()
+        if (order) {
+          if (typeof order.total_cents === 'number') purchaseValue = order.total_cents / 100
+          if (order.order_number) transactionId = String(order.order_number)
+        }
+      } catch {
+        /* tracking não deve quebrar a página de sucesso */
+      }
+    }
+
     return (
       <main className="min-h-screen bg-white flex items-center justify-center px-6">
+        <ConversionOnMount
+          event="Purchase"
+          payload={{
+            value: purchaseValue,
+            currency: 'BRL',
+            transaction_id: transactionId,
+            content_type: 'product',
+          }}
+        />
         <div className="flex flex-col items-center text-center max-w-2xl gap-6">
           {/* Ícone de sucesso */}
           <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center">
@@ -66,6 +98,8 @@ export default async function ObrigadoPage({ searchParams }) {
 
   return (
     <main className="min-h-screen bg-background flex items-center justify-center px-6">
+      {/* Lead — dispara conversão de lead (formulários studio/produtora/agencia/default) */}
+      <ConversionOnMount event="Lead" payload={{ lead_type: from || 'default' }} />
       <div className="flex flex-col items-center text-center max-w-2xl">
         <h1 className="font-headline text-5xl md:text-7xl text-black">{t('title')}</h1>
         <p className="font-body text-lg md:text-xl text-zinc-600 mt-4 max-w-xl">{t(subKey)}</p>
