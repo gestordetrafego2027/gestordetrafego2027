@@ -128,7 +128,7 @@ export default function ProdutoraPublicidadePage() {
                                         { t: t('com_3_title'), d: t('com_3_desc') },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6">
-                                            <span className="material-symbols-outlined text-zinc-700 pt-1" data-icon="check_circle">check_circle</span>
+                                            <svg className="text-zinc-700 pt-1 shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polyline points="9 12 12 15 16 10" /></svg>
                                             <div>
                                                 <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
                                                 <p className="text-zinc-500 text-sm">{i.d}</p>

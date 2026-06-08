@@ -295,7 +295,7 @@ export default function AgenciaPage() {
                                             <ul className="space-y-4 mb-12">
                                                 {card.items.map((item, i) => (
                                                     <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
-                                                        <span className="material-symbols-outlined text-lg">check</span>
+                                                        <svg className="shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                                                         <span>{item}</span>
                                                     </li>
                                                 ))}
