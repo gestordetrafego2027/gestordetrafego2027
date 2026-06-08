@@ -70,12 +70,12 @@ const PARTS = [
 ]
 
 const AUDIENCE = [
-  { n: '01', ttl: 'Você já produz conteúdo e quer entender o sistema antes de continuar dentro dele.', d: 'Tem 30 mil ou 300 mil seguidores e desconfia que está pagando um preço que ninguém te explicou.' },
-  { n: '02', ttl: 'Opera no mercado como agência, marca ou plataforma.', d: 'Quer ver a engrenagem por dentro, sem manual edulcorado nem narrativa de empreendedorismo.' },
-  { n: '03', ttl: 'Acompanha o fenômeno como leitor.', d: 'Jornalista, pesquisador, empresário, advogado, estrategista — e quer um diagnóstico com base brasileira.' },
-  { n: '04', ttl: 'É creator profissional há mais de dois anos no jogo.', d: 'Os capítulos sobre operação, ensaio visual e carreira como sistema cobrem o que ninguém escreveu antes.' },
-  { n: '05', ttl: 'Está pensando em montar marca pessoal a partir do zero.', d: 'A Parte II disseca posicionamento, narrativa, estética e tom de voz como decisões de produto — não de copy.' },
-  { n: '06', ttl: 'Trabalha com creators e precisa entender as regras de 2026.', d: 'CONAR, Lei 15.325, tributação, casos CPI Bets e Hytalo Santos. O que mudou na operação real.' },
+  { n: '01', ttl: 'Você é pai, mãe ou responsável e quer entender o terreno em que seu filho está pisando.',     d: 'Conversa pra ter em casa com vocabulário que vocês não tinham. Antes de assinar contrato com agência de creator, antes do primeiro publi pago, antes de virar profissão.' },
+  { n: '02', ttl: 'Tem entre 14 e 28 anos e quer profissionalizar a carreira de influenciador.',                 d: 'O caminho contemporâneo: marca pessoal estruturada como empresa, monetização com poder de barganha, posicionamento que dura mais que viral. Não é manual de algoritmo — é arquitetura de negócio.' },
+  { n: '03', ttl: 'Já produz conteúdo e quer parar de ser refém de algoritmo, agência ou contratante.',          d: 'Diagnóstico de quem está pagando preço que ninguém explicou. Como sair de talento operado pra marca que opera — e barganhar percentual, exclusividade, perpetuidade de imagem.' },
+  { n: '04', ttl: 'Está montando marca pessoal do zero e quer fazer certo desde o primeiro dia.',                d: 'Parte II disseca posicionamento, narrativa, estética e tom de voz como decisões de produto. Pra não ter que refazer marca aos 25.' },
+  { n: '05', ttl: 'Opera o mercado como agência, marca ou plataforma e quer ver a engrenagem.',                  d: 'Sem manual edulcorado nem narrativa de empreendedorismo. CONAR, Lei 15.325, tributação, casos CPI Bets e Hytalo Santos — o que mudou na operação real em 2026.' },
+  { n: '06', ttl: 'Acompanha o fenômeno como leitor — jornalista, pesquisador, advogado, estrategista.',          d: 'Diagnóstico do mercado da atenção no Brasil com base local. O ângulo de quem decide quem entra ou não em campanha.' },
 ]
 
 const TESTIMONIALS = [
@@ -489,7 +489,7 @@ export default function PrecoDaRelevanciaPage() {
                 <span className="l2">Relevância.</span>
               </h1>
               <p className="hero-sub">
-                <em>Um manifesto sobre o colapso da identidade na era da atenção digital.</em> Influenciadores, plataformas e a guerra silenciosa pela atenção — por quem fica do lado de quem paga.
+                <em>Um manual da empresa que existe por trás dos likes.</em> Para pais e jovens que querem profissionalizar a carreira de influenciador com poder de barganha — não como talento dependente, mas como marca que negocia, monetiza e dura. Escrito por quem fica do lado de quem paga.
               </p>
             </div>
             <div className="hero-meta">
@@ -530,25 +530,25 @@ export default function PrecoDaRelevanciaPage() {
         <div className="wrap">
           <div className="promise-head">
             <h2>O que você<em>tem em mãos.</em></h2>
-            <p className="lede">Esse não é um manual de carreira de creator. É um diagnóstico do sistema em que carreiras de influência são construídas, monetizadas, queimadas e descartadas. Escrito por quem está em reuniões onde se decide quem entra ou não em campanha.</p>
+            <p className="lede">Não é manual de algoritmo. É o blueprint da empresa que precisa existir por trás dos likes — pra pais e jovens que querem profissionalizar carreira de creator com poder de barganha, monetização estruturada e independência de plataforma. Escrito por quem fica em reuniões onde se decide quem entra ou não em campanha.</p>
           </div>
           <div className="promise-cols">
             <div className="col isnot">
               <h3>Esse livro não é</h3>
               <ul>
                 <li>Truque de algoritmo ou hack de engajamento</li>
-                <li>Template de copy para Stories</li>
-                <li>Discurso de motivação para começar</li>
-                <li>Promessa de que o jogo é justo</li>
+                <li>Template de copy pra Stories</li>
+                <li>Discurso motivacional de criador que viralizou</li>
+                <li>Promessa de que likes pagam aluguel</li>
               </ul>
             </div>
             <div className="col is">
               <h3>Esse livro é</h3>
               <ul>
-                <li>Um diagnóstico do mercado da atenção no Brasil em 2026</li>
-                <li>A engenharia do eu — posicionamento, marca, estética</li>
-                <li>Como as plataformas operam como árbitros invisíveis</li>
-                <li>A informação que separa quem opera de quem é operado</li>
+                <li>Filtro familiar antes de assinar com agência de creator</li>
+                <li>Mapa pra construir empresa por trás do perfil — não talento operado</li>
+                <li>Estratégia de barganha: percentual, exclusividade, perpetuidade</li>
+                <li>Posicionamento e marca pessoal como decisão de produto, não de copy</li>
               </ul>
             </div>
           </div>

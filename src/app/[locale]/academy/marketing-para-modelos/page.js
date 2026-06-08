@@ -517,12 +517,12 @@ const CHAPTERS = [
 ];
 
 const AUDIENCE = [
-  { n: '01', t: 'Você tem entre 14 e 28 anos e está pensando em ser modelo.',           d: 'Quer entender o terreno antes de gastar dinheiro, e desconfia das promessas que circulam.' },
-  { n: '02', t: 'Já tem um Instagram, mas não sabe se “tá certo”.',                     d: 'Tem um capítulo inteiro sobre como o seu perfil é lido por bookers profissionais — em 9 critérios.' },
-  { n: '03', t: 'Está pensando em fazer book e não sabe quanto vale.',                  d: 'As 10 perguntas, o contrato, os 5 erros que custam dinheiro. Em duas páginas você sabe se segue.' },
-  { n: '04', t: 'Recebeu uma proposta de agência e não sabe se confia.',                d: 'A lista de características observáveis de uma agência sólida — e o que separa de fachada.' },
-  { n: '05', t: 'É mãe, pai ou responsável e está com medo de golpe.',                  d: 'Esse livro funciona como filtro familiar antes de qualquer assinatura, qualquer pix, qualquer viagem.' },
-  { n: '06', t: 'É iniciante há até dois anos e sente que está girando em falso.',      d: 'O capítulo sobre os primeiros 12 meses te dá um roadmap concreto pra recolocar o eixo.' },
+  { n: '01', t: 'Você é pai, mãe ou responsável e quer entender o terreno antes de assinar.',  d: 'Funciona como filtro familiar antes de qualquer pix de book, viagem, contrato ou agência. A conversa que precisa acontecer em casa, com vocabulário que vocês não tinham.' },
+  { n: '02', t: 'Tem entre 14 e 28 anos e quer profissionalizar a carreira de modelo.',         d: 'Mapa do mercado em 2026, leitura de perfil em 9 critérios, roadmap dos primeiros 12 meses. O caminho contemporâneo: digital, estratégico, com plano de monetização.' },
+  { n: '03', t: 'Tem Instagram, mas não sabe se “está certo” para o mercado.',                  d: 'Capítulo inteiro sobre como bookers e diretores criativos lêem seu perfil. Você passa a ser dona da narrativa — não refém do feed.' },
+  { n: '04', t: 'Está pensando em fazer book e não sabe quanto vale ou se vale.',                d: 'As 10 perguntas, o contrato modelo, os 5 erros que custam dinheiro. Em duas páginas você decide com cabeça, não com pressa.' },
+  { n: '05', t: 'Recebeu proposta de agência e não sabe se confia ou se barganha.',             d: 'Características observáveis de uma agência sólida, sinais de fachada e como negociar percentuais e exclusividade sem perder a oportunidade.' },
+  { n: '06', t: 'Está há até 2 anos no mercado e sente que está girando em falso.',             d: 'Roadmap pra recolocar o eixo: marca pessoal, posicionamento, monetização. Sair de talento dependente — virar empresa por trás do book.' },
 ];
 
 const TESTIMONIALS = [
@@ -621,7 +621,7 @@ export default function MarketingParaModelosPage() {
                 <span className="yellow ital">p</span><span className="ital">ara</span><br/>
                 <span className="blue ital">M</span><span className="ital">odelos.</span>
               </h1>
-              <p className="hero-sub"><em>Da passarela física ao império digital.</em> O guia honesto de quem quer ser modelo no Brasil de hoje — escrito por quem está do outro lado da mesa.</p>
+              <p className="hero-sub"><em>Da passarela física ao império digital.</em> Para pais e jovens que querem profissionalizar a carreira de modelo com estratégia — antes de assinar contrato, gastar com book ou viajar pra agência. Escrito por quem está do outro lado da mesa.</p>
             </div>
             <div className="hero-meta">
               <div className="cell"><span className="k">Autor</span><span className="v">Angelo Mazzutti</span></div>
@@ -660,25 +660,25 @@ export default function MarketingParaModelosPage() {
         <div className="wrap">
           <div className="promise-head">
             <h2><span>O que você</span><em>tem em mãos.</em></h2>
-            <p className="lede">Esse livro foi escrito do lado de quem contrata, dirige a narrativa e aprova quem vai pra campanha — sobre como você pode chegar melhor preparada. É o ângulo que faltava no mercado.</p>
+            <p className="lede">Esse livro foi escrito do lado de quem contrata, dirige a narrativa e aprova quem vai pra campanha — para que a família que está decidindo junto chegue melhor preparada. É o ângulo que faltava no mercado brasileiro: estratégia profissional sem promessa fácil.</p>
           </div>
           <div className="promise-cols">
             <div className="col isnot">
               <h3>Esse livro não é</h3>
               <ul>
-                <li>Um manual de poses</li>
-                <li>Um conjunto de afirmações motivacionais</li>
-                <li>Uma lista de agências para mandar email</li>
-                <li>Uma promessa de que você vai ser modelo</li>
+                <li>Um manual de poses ou pílulas motivacionais</li>
+                <li>Uma promessa de que você vai virar modelo</li>
+                <li>Lista de agências pra mandar email</li>
+                <li>Hype de creator que ganhou no algoritmo</li>
               </ul>
             </div>
             <div className="col is">
               <h3>Esse livro é</h3>
               <ul>
-                <li>Um mapa do mercado de modelos no Brasil em 2026</li>
-                <li>Um filtro pra decidir antes de gastar dinheiro</li>
-                <li>Um guia prático dos primeiros doze meses</li>
-                <li>A informação que separa passo informado de passo emocional</li>
+                <li>Filtro familiar antes de qualquer pix, contrato ou viagem</li>
+                <li>Mapa do mercado de modelos no Brasil em 2026</li>
+                <li>Roadmap dos primeiros 12 meses — passo a passo</li>
+                <li>Caminho pra deixar de ser refém de terceiros e virar empresa</li>
               </ul>
             </div>
           </div>
