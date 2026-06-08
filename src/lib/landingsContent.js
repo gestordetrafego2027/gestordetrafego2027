@@ -137,6 +137,8 @@ export const pricingByService = {
         items: [
           '04 looks estratégicos',
           '25 fotos tratadas',
+          'Direção de modelo / poses e expressão',
+          'Estúdio próprio em SP',
           'Moodboard personalizado',
           '01 video reel de apresentação',
         ],
