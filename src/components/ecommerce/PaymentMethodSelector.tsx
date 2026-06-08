@@ -10,6 +10,7 @@
  */
 import { useState } from 'react'
 import { TERMS_VERSION } from '@/lib/legal/consent'
+import { validateEmail } from '@/lib/email-validate'
 
 type Method = 'card' | 'pix' | 'boleto'
 
@@ -42,17 +43,34 @@ function formatCpf(s: string) {
 }
 
 function isValidEmail(s: string) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)
+  return validateEmail(s).valid
 }
 
 export function PaymentMethodSelector({ stripePriceId, productSlug, locale, priceCents }: Props) {
   const [selected, setSelected] = useState<Method>('card')
   const [email, setEmail] = useState('')
+  const [emailSuggestion, setEmailSuggestion] = useState<string | null>(null)
+  const [emailError, setEmailError] = useState<string | null>(null)
   const [name, setName] = useState('')
   const [cpf, setCpf] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [accepted, setAccepted] = useState(false)
+
+  function onEmailBlur() {
+    if (!email) return
+    const r = validateEmail(email)
+    setEmailError(r.valid ? null : r.error ?? null)
+    setEmailSuggestion(r.suggestion ?? null)
+  }
+
+  function acceptSuggestion() {
+    if (emailSuggestion) {
+      setEmail(emailSuggestion)
+      setEmailSuggestion(null)
+      setEmailError(null)
+    }
+  }
 
   const needsDetails = selected === 'pix' || selected === 'boleto'
   const consent = { accepted: true, termsVersion: TERMS_VERSION }
@@ -178,13 +196,52 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
             autoComplete="name"
           />
           <input
-            style={inputStyle}
+            style={{
+              ...inputStyle,
+              marginBottom: emailError || emailSuggestion ? 4 : 10,
+              borderColor: emailError ? '#c92a2a' : inputStyle.border?.toString().includes('ddd6c8') ? '#ddd6c8' : '#ddd6c8',
+            }}
             type="email"
             placeholder="Seu e-mail (para receber o livro)"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value)
+              setEmailError(null)
+              setEmailSuggestion(null)
+            }}
+            onBlur={onEmailBlur}
             autoComplete="email"
+            inputMode="email"
+            spellCheck={false}
           />
+          {emailError && (
+            <div style={{ fontSize: 13, color: '#c92a2a', marginBottom: 10, fontFamily: 'Georgia, serif' }}>
+              {emailError}
+            </div>
+          )}
+          {emailSuggestion && (
+            <div style={{ fontSize: 13, color: '#14140e', marginBottom: 10, fontFamily: 'Georgia, serif' }}>
+              Você quis dizer{' '}
+              <button
+                type="button"
+                onClick={acceptSuggestion}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  color: '#c92a2a',
+                  textDecoration: 'underline',
+                  cursor: 'pointer',
+                  fontFamily: 'Georgia, serif',
+                  fontSize: 13,
+                  fontWeight: 600,
+                }}
+              >
+                {emailSuggestion}
+              </button>
+              ?
+            </div>
+          )}
           <input
             style={{ ...inputStyle, marginBottom: 0 }}
             type="text"

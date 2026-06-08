@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useCartStore } from '@/lib/cart/store'
 import { useRouter } from 'next/navigation'
+import { validateEmail } from '@/lib/email-validate'
 
 function formatPrice(cents: number) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
@@ -20,6 +21,8 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
   const [checkoutError, setCheckoutError] = useState('')
   const [method, setMethod] = useState<PaymentMethodChoice>('card')
   const [buyerEmail, setBuyerEmail] = useState('')
+  const [buyerEmailError, setBuyerEmailError] = useState<string | null>(null)
+  const [buyerEmailSuggestion, setBuyerEmailSuggestion] = useState<string | null>(null)
   const [buyerName, setBuyerName] = useState('')
   const [buyerCpf, setBuyerCpf] = useState('')
   const router = useRouter()
@@ -212,10 +215,44 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
                 type="email"
                 placeholder="Email *"
                 value={buyerEmail}
-                onChange={(e) => setBuyerEmail(e.target.value)}
-                className="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-neutral-900"
+                onChange={(e) => {
+                  setBuyerEmail(e.target.value)
+                  setBuyerEmailError(null)
+                  setBuyerEmailSuggestion(null)
+                }}
+                onBlur={() => {
+                  if (!buyerEmail) return
+                  const r = validateEmail(buyerEmail)
+                  setBuyerEmailError(r.valid ? null : r.error ?? null)
+                  setBuyerEmailSuggestion(r.suggestion ?? null)
+                }}
+                className={`w-full border rounded-lg px-3 py-2 text-sm focus:outline-none ${
+                  buyerEmailError ? 'border-red-600 focus:border-red-700' : 'border-neutral-200 focus:border-neutral-900'
+                }`}
+                inputMode="email"
+                spellCheck={false}
                 required
               />
+              {buyerEmailError && (
+                <p className="text-xs text-red-600">{buyerEmailError}</p>
+              )}
+              {buyerEmailSuggestion && (
+                <p className="text-xs text-neutral-700">
+                  Você quis dizer{' '}
+                  <button
+                    type="button"
+                    className="text-red-700 underline font-semibold"
+                    onClick={() => {
+                      setBuyerEmail(buyerEmailSuggestion)
+                      setBuyerEmailSuggestion(null)
+                      setBuyerEmailError(null)
+                    }}
+                  >
+                    {buyerEmailSuggestion}
+                  </button>
+                  ?
+                </p>
+              )}
               <input
                 type="text"
                 placeholder="Nome completo"
