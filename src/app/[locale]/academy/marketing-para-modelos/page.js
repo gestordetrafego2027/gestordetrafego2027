@@ -734,6 +734,7 @@ export default function MarketingParaModelosPage() {
             <div>
               <div className="eyebrow">Objeto editorial</div>
               <h2>Um livro <em>pra ter na mão</em> — não pra rolar no feed.</h2>
+              <p style={{marginTop:'14px',fontFamily:'var(--mono,monospace)',fontSize:'.72rem',letterSpacing:'.18em',textTransform:'uppercase',color:'var(--accent,#c1440e)',fontWeight:400}}>⏳ Em Breve · Lançamento agosto de 2026</p>
             </div>
             <p className="copy">Diagramação editorial, paleta Mondrian sobre lima saturado, capa em peso de revista de moda. Pensado pra ficar visível na estante — e ser aberto antes de cada decisão importante de carreira.</p>
           </div>
