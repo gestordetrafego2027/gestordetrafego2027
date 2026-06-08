@@ -6,6 +6,7 @@
 import React from 'react';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MpmViewContent, BuyLink } from '@/components/analytics/MpmTracking';
 
 const SITE_URL = 'https://housemazzutti.com';
@@ -332,6 +333,8 @@ const CSS = `
 .mpm-root .author { background: var(--paper); padding: 110px 0 130px; border-top: 1px solid var(--rule-soft); }
 .mpm-root .author-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: start; }
 .mpm-root .author-card { background: var(--ink); color: var(--paper); padding: 40px 36px 36px; position: relative; }
+.mpm-root .author-avatar { width: 100%; aspect-ratio: 1/1; margin: 0 0 24px; overflow: hidden; border: 1px solid rgba(239,233,218,0.18); background: rgba(239,233,218,0.04); }
+.mpm-root .author-avatar-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(8%); display: block; }
 .mpm-root .author-card .label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--lime); }
 .mpm-root .author-card .nm { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 46px; line-height: 1.0; color: var(--paper); margin: 18px 0 8px; }
 .mpm-root .author-card .role { font-family: var(--serif); font-style: italic; font-size: 16px; color: rgba(239,233,218,0.7); }
@@ -792,6 +795,9 @@ export default function MarketingParaModelosPage() {
         <div className="wrap">
           <div className="author-grid">
             <aside className="author-card">
+              <div className="author-avatar">
+                <Image src="/images/angelo/angelo-portrait.webp" alt="Angelo Mazzutti — autor, House Mazzutti" width={520} height={520} sizes="(max-width: 768px) 60vw, 280px" quality={90} className="author-avatar-img" />
+              </div>
               <div className="mondrian-pill">
                 <div className="a"></div>
                 <div className="b"></div>
@@ -800,7 +806,7 @@ export default function MarketingParaModelosPage() {
               </div>
               <div className="label">O autor</div>
               <div className="nm">Angelo<br/><em>Mazzutti.</em></div>
-              <div className="role">Publicitário, estrategista de marca e diretor criativo da House Mazzutti — São Paulo.</div>
+              <div className="role">Publicitário, estrategista de marca e diretor criativo da House Mazzutti — São Paulo. Escreve este livro pelo lado de quem contrata.</div>
               <div className="meta-rows">
                 <div className="row"><span>Atuação</span><span className="v">+15 anos</span></div>
                 <div className="row"><span>Frentes</span><span className="v">Agência · Produtora · Studio</span></div>
