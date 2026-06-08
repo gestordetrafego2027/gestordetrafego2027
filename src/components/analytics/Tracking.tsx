@@ -20,9 +20,6 @@ import { useConsent } from '@/components/consent/ConsentProvider'
 
 const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-// Google Ads (conversões). Default fixo para a conta House Mazzutti;
-// pode ser sobrescrito por env. Carrega junto da tag do Google (gtag.js).
-const GADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-16938050518'
 
 declare global {
   interface Window {
@@ -88,18 +85,13 @@ export function track(event: TrackEvent, payload: TrackPayload = {}) {
 export default function Tracking() {
   const { consent } = useConsent()
 
-  if (!FB_PIXEL_ID && !GA_ID && !GADS_ID) return null
+  if (!FB_PIXEL_ID && !GA_ID) return null
 
   // Gate LGPD: GA só carrega com consentimento 'analytics';
-  // Google Ads e Meta Pixel só carregam com consentimento 'marketing'.
+  // Meta Pixel só carrega com consentimento 'marketing'.
   // Sem decisão (consent === null) → nada dispara.
   const allowAnalytics = consent?.analytics === true
   const allowMarketing = consent?.marketing === true
-  // A tag do Google (gtag.js) sobe se houver GA4 (com analytics) OU
-  // Google Ads (com marketing).
-  const loadGoogleTag =
-    (GA_ID && allowAnalytics) || (GADS_ID && allowMarketing)
-  const googleTagId = GA_ID || GADS_ID
 
   if (!allowAnalytics && !allowMarketing) return null
 
@@ -135,12 +127,12 @@ export default function Tracking() {
         </>
       )}
 
-      {loadGoogleTag && (
+      {GA_ID && allowAnalytics && (
         <>
           <Script
             id="ga4-loader"
             strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           />
           <Script
             id="ga4-init"
@@ -157,8 +149,7 @@ export default function Tracking() {
                   ad_personalization: '${allowMarketing ? 'granted' : 'denied'}',
                   analytics_storage: 'granted'
                 });
-                ${GA_ID && allowAnalytics ? `gtag('config', '${GA_ID}', { send_page_view: true });` : ''}
-                ${GADS_ID && allowMarketing ? `gtag('config', '${GADS_ID}');` : ''}
+                gtag('config', '${GA_ID}', { send_page_view: true });
               `,
             }}
           />

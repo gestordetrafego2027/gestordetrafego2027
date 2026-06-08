@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from 'next/script';
 import NonBlockingStyles from '@/app/components/NonBlockingStyles';
 
 export const metadata = {
@@ -26,6 +27,18 @@ export default function RootLayout({ children }) {
 
         {/* Material Symbols — carregado de forma não-bloqueante via Client Component */}
         <NonBlockingStyles />
+
+        {/* Google tag (gtag.js) — Google Ads AW-16938050518 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16938050518"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-16938050518');`}
+        </Script>
       </head>
       <body className="font-body">
         {children}
