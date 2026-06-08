@@ -62,7 +62,7 @@ const PRODUCTS = [
     subtitle: 'Do briefing ao resultado — como pensar, dirigir e executar projetos visuais com consistência de marca.',
     features: ['Videoaulas gravadas', 'Materiais de acompanhamento', 'Acesso vitalício'],
     price: 'R$ 249',
-    href: '/academy/workshop/direcao-criativa-producao-executiva',
+    href: '/academy/workshop-producao-direcao-01',
     cover: '/images/academy/direcao-criativa/cover.webp',
   },
   {

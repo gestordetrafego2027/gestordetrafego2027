@@ -6,7 +6,7 @@ import { updateSession } from '@/lib/supabase/middleware';
 const intlMiddleware = createMiddleware(routing);
 
 // Rotas fora do i18n (sem prefixo de locale)
-const NON_I18N = ['/crm', '/login', '/logout', '/api', '/academy', '/auth', '/downloads', '/sitemap.xml', '/robots.txt'];
+const NON_I18N = ['/crm', '/login', '/logout', '/api', '/academy', '/auth', '/downloads', '/lp', '/sitemap.xml', '/robots.txt'];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
