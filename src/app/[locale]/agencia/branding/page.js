@@ -8,7 +8,6 @@ import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import LandingTeam from '@/app/components/LandingTeam';
-import HmBullet from '@/app/components/HmBullet';
 
 export default function AgenciaBrandingPage() {
     const t = useTranslations('agencia_branding');
@@ -126,9 +125,7 @@ export default function AgenciaBrandingPage() {
                                     { t: t('com_2_titulo'), d: t('com_2_desc') },
                                     { t: t('com_3_titulo'), d: t('com_3_desc') },
                                 ].map((i) => (
-                                    <li key={i.t} className="flex items-start gap-6">
-                                        <HmBullet size="lg" className="text-zinc-700 mt-1.5" />
-                                        <div>
+                                    <li key={i.t} className="flex items-start gap-6"> <div>
                                             <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
                                             <p className="text-zinc-500 text-sm">{i.d}</p>
                                         </div>

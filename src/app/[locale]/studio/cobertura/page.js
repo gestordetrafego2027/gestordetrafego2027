@@ -11,7 +11,6 @@ import FormStudio from '@/app/components/forms/FormStudio';
 import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
-import HmBullet from '@/app/components/HmBullet';
 
 export default function StudioCoberturaPage() {
     const t = useTranslations('studio_cobertura');
@@ -122,9 +121,7 @@ export default function StudioCoberturaPage() {
                                 <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparative_com_label')}</h3>
                                 <ul className="space-y-10">
                                     {comparativeComItems.map((i) => (
-                                        <li key={i.t} className="flex items-start gap-6">
-                                            <HmBullet size="lg" className="text-zinc-700 mt-1.5" />
-                                            <div>
+                                        <li key={i.t} className="flex items-start gap-6"> <div>
                                                 <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
                                                 <p className="text-zinc-500 text-sm">{i.d}</p>
                                             </div>

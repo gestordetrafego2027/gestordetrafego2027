@@ -9,7 +9,6 @@ import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
 import FormDrawer from '@/app/components/FormDrawer'
 import BlogSection from '@/app/components/BlogSection'
-import HmBullet from '@/app/components/HmBullet';
 
 export const dynamic = 'force-dynamic'
 
@@ -295,9 +294,7 @@ export default function AgenciaPage() {
                                             <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>
                                             <ul className="space-y-4 mb-12">
                                                 {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
-                                                        <HmBullet />
-                                                        <span>{item}</span>
+                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80"> <span>{item}</span>
                                                     </li>
                                                 ))}
                                             </ul>

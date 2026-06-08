@@ -10,7 +10,6 @@ import FormDrawer from '@/app/components/FormDrawer'
 import FormStudio from '@/app/components/forms/FormStudio'
 import BlogSection from '@/app/components/BlogSection'
 import {useTranslations} from 'next-intl'
-import HmBullet from '@/app/components/HmBullet';
 
 export default function StudioPage() {
     const t = useTranslations('studio')
@@ -535,9 +534,7 @@ export default function StudioPage() {
                                             <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>
                                             <ul className="space-y-4 mb-12">
                                                 {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80">
-                                                        <HmBullet />
-                                                        <span>{item}</span>
+                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80"> <span>{item}</span>
                                                     </li>
                                                 ))}
                                             </ul>

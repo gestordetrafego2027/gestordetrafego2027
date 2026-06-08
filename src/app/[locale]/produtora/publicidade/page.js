@@ -11,7 +11,6 @@ import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
 import {useTranslations} from 'next-intl';
-import HmBullet from '@/app/components/HmBullet';
 
 export default function ProdutoraPublicidadePage() {
     const t = useTranslations('produtora_publicidade');
@@ -136,9 +135,7 @@ export default function ProdutoraPublicidadePage() {
                                         { t: t('com_2_title'), d: t('com_2_desc') },
                                         { t: t('com_3_title'), d: t('com_3_desc') },
                                     ].map((i) => (
-                                        <li key={i.t} className="flex items-start gap-6">
-                                            <HmBullet size="lg" className="text-zinc-700 mt-1.5" />
-                                            <div>
+                                        <li key={i.t} className="flex items-start gap-6"> <div>
                                                 <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
                                                 <p className="text-zinc-500 text-sm">{i.d}</p>
                                             </div>
