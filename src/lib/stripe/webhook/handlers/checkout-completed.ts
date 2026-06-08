@@ -69,6 +69,7 @@ export async function handleCheckoutCompleted(
           ? session.customer
           : session.customer?.id ?? null,
       status: 'paid',
+      paid_at: new Date().toISOString(),
       subtotal_cents: subtotalCents,
       discount_cents: discountCents,
       tax_cents: taxCents,
