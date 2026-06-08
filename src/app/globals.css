@@ -118,6 +118,23 @@ html {
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
         font-size: 20px;
+        /* Esconde o texto literal do glifo enquanto a fonte de ícones
+           não carregou. Sem isso, navegadores mostram 'check', 'lightbulb'
+           etc como string. Quando a fonte chega, o navegador troca pelo
+           glifo correto automaticamente — sem dependência de JS. */
+        font-family: 'Material Symbols Outlined', 'MaterialSymbolsLoading';
+    }
+    /* Fallback invisível: declara uma família local fake que renderiza
+       qualquer caractere como espaço em branco. Browser tenta primeiro
+       'Material Symbols Outlined' (rede), enquanto isso usa este fallback
+       (transparente). Resultado: nunca vê 'check' como texto. */
+    @font-face {
+        font-family: 'MaterialSymbolsLoading';
+        src: local('Arial');
+        size-adjust: 0%;
+        ascent-override: 0%;
+        descent-override: 0%;
+        line-gap-override: 0%;
     }
 
     .hero-slider-container {
