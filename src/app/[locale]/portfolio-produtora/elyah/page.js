@@ -117,9 +117,10 @@ export default function ElyahPage() {
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="/portfolio-produtora"><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Próximo Projeto</span><span className="material-symbols-outlined text-sm">east</span></Link>
                 </div>
             </div>
-            <PortfolioVideo unit="produtora" slug="elyah" />
-
-            <YouTubeShort urls="https://youtube.com/shorts/QNraZvoGQ80?feature=share" />
+            {/* Vídeos removidos a pedido do Diretor (07/06/2026) — restaurar abaixo se reativar:
+                 <PortfolioVideo unit="produtora" slug="elyah" />
+                 <YouTubeShort urls="https://youtube.com/shorts/QNraZvoGQ80?feature=share" />
+            */}
 
             <PortfolioCTA businessUnit="produtora" projectSlug="elyah" />
 
