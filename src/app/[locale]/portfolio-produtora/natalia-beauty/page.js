@@ -161,9 +161,10 @@ export default function NataliaBeautyPage() {
                 </div>
             </main>
             
-            <PortfolioVideo unit="produtora" slug="natalia-beauty" />
-
-            <YouTubeShort urls="https://youtube.com/shorts/eILOFwGTkEI?feature=share" />
+            {/* Vídeos removidos a pedido do Diretor (07/06/2026) — YouTubeShort movido para andressa-gomiero.
+                 <PortfolioVideo unit="produtora" slug="natalia-beauty" />
+                 <YouTubeShort urls="https://youtube.com/shorts/eILOFwGTkEI?feature=share" />
+            */}
 
             <PortfolioCTA businessUnit="produtora" projectSlug="natalia-beauty" />
 
