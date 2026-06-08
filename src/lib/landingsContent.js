@@ -154,7 +154,7 @@ export const pricingByService = {
         ctaLabel: 'SELECIONAR',
         items: [
           'Looks ilimitados',
-          '40 fotos high-end',
+          '30 fotos high-end',
           'Direção de imagem completa',
           '03 video reels de conteúdo',
         ],
