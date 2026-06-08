@@ -118,7 +118,6 @@ export default function PontokPage() {
             </div>
             <PortfolioVideo unit="produtora" slug="pontok" />
 
-            <YouTubeShort urls="https://youtube.com/shorts/Q2RJh8mhPO4?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="pontok" />
 
