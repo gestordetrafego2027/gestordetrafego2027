@@ -11,6 +11,7 @@ import FormProdutora from '@/app/components/forms/FormProdutora';
 import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
+import HmBullet from '@/app/components/HmBullet';
 
 export default function ProdutoraInstitucionalPage() {
     const t = useTranslations('produtora_institucional');
@@ -128,7 +129,7 @@ export default function ProdutoraInstitucionalPage() {
                                         { t: t('com_3_title'), d: t('com_3_desc') },
                                     ].map((i) => (
                                         <li key={i.t} className="flex items-start gap-6">
-                                            <svg className="text-zinc-700 pt-1 shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polyline points="9 12 12 15 16 10" /></svg>
+                                            <HmBullet size="lg" className="text-zinc-700 mt-1.5" />
                                             <div>
                                                 <p className="font-headline text-lg mb-2 text-black">{i.t}</p>
                                                 <p className="text-zinc-500 text-sm">{i.d}</p>

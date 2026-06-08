@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { pricingByService } from '@/lib/landingsContent';
+import HmBullet from '@/app/components/HmBullet';
 
 /**
  * Seção de pricing das landings de serviço.
@@ -64,9 +65,7 @@ export default function LandingPricing({ service, openForm }) {
                         key={i}
                         className="flex items-center gap-3 text-sm text-on-surface-variant group-hover:text-white/80"
                       >
-                        <svg className="shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
+                        <HmBullet size="sm" />
                         {item}
                       </li>
                     ))}
