@@ -19,7 +19,7 @@ export default function StudioCoberturaPage() {
     const closeForm = () => setFormCta(null);
 
     useEffect(() => {
-        AOS.init({ duration: 800, once: true, easing: 'ease-out' })
+        const cleanup = initAosNative(); return cleanup;
     }, []);
 
     const servicos = t.raw('servicos');

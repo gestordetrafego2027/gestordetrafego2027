@@ -19,7 +19,7 @@ export default function ProdutoraPublicidadePage() {
     const closeForm = () => setFormCta(null);
 
     useEffect(() => {
-        AOS.init({ duration: 800, once: true, easing: 'ease-out' })
+        const cleanup = initAosNative(); return cleanup;
     }, []);
 
     return (
