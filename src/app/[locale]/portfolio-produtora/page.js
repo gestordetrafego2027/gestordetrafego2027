@@ -229,6 +229,69 @@ export default async function PortfolioProdutoraPage() {
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Sense Hotel</span>
                             </div>
                         </Link>
+                        <Link href="/portfolio-produtora/tf" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/institucional/tf/capa.webp" alt="TF" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">INSTITUCIONAL</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">TF</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/bia" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/acessorios/bia/capa.webp" alt="Bia" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Bia</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/festiva" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/acessorios/festiva/capa.webp" alt="Festiva" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">ACESSÓRIOS</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Festiva</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/jequiti-ana-castela" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/beleza/jequiti-ana-castela/capa.webp" alt="Jequiti — Ana Castela" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti — Ana Castela</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/jequiti-galisteu" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/beleza/jequiti-galisteu/capa.webp" alt="Jequiti — Adriane Galisteu" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti — Adriane Galisteu</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/jequiti-larissa-manoela" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/beleza/jequiti-larissa-manoela/capa.webp" alt="Jequiti — Larissa Manoela" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jequiti — Larissa Manoela</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/we-pink-ze-felipe" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/beleza/we-pink-ze-felipe/capa.webp" alt="We Pink — Zé Felipe" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">We Pink — Zé Felipe</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/superbia" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/beleza/superbia/capa.webp" alt="Superbia" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Superbia</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-produtora/simony-marca" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/produtora/beleza/simony-marca/capa.webp" alt="Simony Marca" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">BELEZA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Simony Marca</span>
+                            </div>
+                        </Link>
                     </div>
                 </section>
             </main>
