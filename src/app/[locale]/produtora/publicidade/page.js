@@ -40,12 +40,20 @@ export default function ProdutoraPublicidadePage() {
             <Header variant="dark" />
 
             {/* HERO */}
-            <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="/images/produtora/beleza/we-pink-ze-felipe/capa.webp"
-                        alt="Campanha publicitária — produção House Mazzutti"
-                        className="w-full h-full object-cover object-center"
+            <section className="relative w-full overflow-hidden bg-black m-0 p-0 border-0" style={{ height: "105vh" }}>
+                <div className="absolute inset-0 z-0 bg-black">
+                    <video
+                        src="/videos/house-mazzutti-fashion-film-hero.mp4"
+                        poster="/images/produtora/beleza/we-pink-ze-felipe/capa.webp"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        width={1920}
+                        height={1080}
+                        aria-label="Campanha publicitária — produção House Mazzutti"
+                        className="absolute inset-0 w-full h-full object-cover object-top"
                     />
                     <div className="absolute inset-0 bg-black/55"></div>
                 </div>
