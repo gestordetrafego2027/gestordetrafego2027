@@ -2,12 +2,22 @@ import {pageMetadata} from '@/lib/seo/metadata'
 
 export async function generateMetadata({params}) {
   const {locale} = await params
-  return pageMetadata({
+  const base = pageMetadata({
     path: '/portfolio-produtora/signus-versolato01',
     locale,
-    title: 'Signus Versolato01 | Produtora — House Mazzutti',
-    description: 'Produção fotográfica Signus Versolato01 — direção de imagem e fotografia de produto pela House Mazzutti. Veja o ensaio completo.',
+    title: 'Versolato 01 · Signus — Fashion Film | House Mazzutti São Paulo',
+    description: 'Versolato 01 · Signus — fashion film e campanha da House Mazzutti, produtora de moda em São Paulo. Direção criativa e direção de imagem. Assista ao filme completo.',
   })
+  const image = 'https://housemazzutti.com/images/produtora/acessorios/signus-versolato01/1.webp'
+  return {
+    ...base,
+    openGraph: {
+      ...base.openGraph,
+      type: 'video.other',
+      images: [{url: image, width: 800, height: 1200, alt: 'Versolato 01 · Signus — fashion film House Mazzutti São Paulo'}],
+    },
+    twitter: {...base.twitter, images: [image]},
+  }
 }
 
 export default function Layout({children}) {

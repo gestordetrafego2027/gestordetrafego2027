@@ -2,12 +2,22 @@ import {pageMetadata} from '@/lib/seo/metadata'
 
 export async function generateMetadata({params}) {
   const {locale} = await params
-  return pageMetadata({
+  const base = pageMetadata({
     path: '/portfolio-produtora/monica-costa-jewerly',
     locale,
-    title: 'Monica Costa Jewerly | Produtora — House Mazzutti',
-    description: 'Produção fotográfica Monica Costa Jewerly — direção de imagem e fotografia de produto pela House Mazzutti. Veja o ensaio completo.',
+    title: 'Mônica Costa · Joias — Fashion Film | House Mazzutti São Paulo',
+    description: 'Mônica Costa · Joias — fashion film e campanha da House Mazzutti, produtora de moda em São Paulo. Direção criativa e direção de imagem. Assista ao filme completo.',
   })
+  const image = 'https://housemazzutti.com/images/produtora/acessorios/monica-costa-jewerly/1.webp'
+  return {
+    ...base,
+    openGraph: {
+      ...base.openGraph,
+      type: 'video.other',
+      images: [{url: image, width: 800, height: 1200, alt: 'Mônica Costa · Joias — fashion film House Mazzutti São Paulo'}],
+    },
+    twitter: {...base.twitter, images: [image]},
+  }
 }
 
 export default function Layout({children}) {
