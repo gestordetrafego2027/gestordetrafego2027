@@ -107,7 +107,7 @@ export default function StudioCheckoutPage() {
         <div>
           {coverImage && (
             <div className="aspect-[4/5] overflow-hidden mb-8">
-              <img src={coverImage} alt={product.name} className="w-full h-full object-cover object-center" />
+              <img fetchpriority="high" src={coverImage} alt={product.name} className="w-full h-full object-cover object-center" />
             </div>
           )}
           <span className="font-label uppercase tracking-[0.2em] text-[9px] text-zinc-400 block mb-2">

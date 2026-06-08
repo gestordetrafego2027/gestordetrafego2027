@@ -209,7 +209,7 @@ export default function ComunidadePage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                         {gridImages.map((img, i) => (
                             <div key={i} className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay={i * 100} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                                <img alt={img.alt} className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src={img.src} />
+                                <img fetchpriority="high" alt={img.alt} className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src={img.src} />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
                                     <p className="text-h4 text-black">{img.label}</p>
                                     <p className="text-caption text-zinc-500 mt-2">{img.sublabel}</p>
@@ -311,7 +311,7 @@ export default function ComunidadePage() {
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
                         <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img alt="B&W editorial photography" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" />
+                                <img loading="lazy" alt="B&W editorial photography" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHOOyecCxbUCU6_y9vpcFi6a1ZBmoHI59QTvX7-mYJHcU8SfV0rY1_M6fRpvrgcf1v5KuSRnO7opF15zAf29T5zCf08pMyHvaiZ3XGXEBKtgBCjkNScMmeU5GGltKS0Oo9t0Wv3bGq9PB3UvL93v_LlQkpfl3-LhK55rlnWxOMKNZTON2x8enWcwwJDVBKYCalcw0uB02-OgQAnRr5qEJ7eUY62VPxKwDfWI5Gesxo3Y6IZInsc8yYwcsY2YWwYfHsV3jGxJqCcg" />
                             </div>
                         </div>
                         <div className="flex-grow w-full py-4">
@@ -421,7 +421,7 @@ export default function ComunidadePage() {
                                 className="relative flex-1 overflow-hidden group"
                                 style={{ minHeight: '380px' }}
                             >
-                                <img src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img loading="lazy" src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/55 transition-colors duration-500" />
                                 <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-12">
                                     <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 mb-3 block">{item.sub}</span>

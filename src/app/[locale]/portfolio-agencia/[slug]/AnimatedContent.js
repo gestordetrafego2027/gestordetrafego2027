@@ -84,16 +84,16 @@ export default function AnimatedContent() {
                     <div className="lg:w-2/3">
                         <div className="images-grid">
                             <div className="relative overflow-hidden group">
-                                <img alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/1.webp"/>
+                                <img fetchpriority="high" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/1.webp"/>
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/2.webp"/>
+                                <img loading="lazy" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/2.webp"/>
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/3.webp"/>
+                                <img loading="lazy" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/3.webp"/>
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/4.webp"/>
+                                <img loading="lazy" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/4.webp"/>
                             </div>
                         </div>
                     </div>
