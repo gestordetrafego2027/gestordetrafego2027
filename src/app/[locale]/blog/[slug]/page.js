@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import ArticleContent from './ArticleContent';
 import { articles } from './articles';
 import { buildAlternates } from '@/lib/seo/metadata';
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }) {
 export default async function BlogSlugPage({ params }) {
     const { slug } = await params;
     const article = articles[slug];
+    if (!article) notFound();
 
     const crumbs = breadcrumbSchema([
         { name: 'House Mazzutti', url: `${brand.url}/pt/` },

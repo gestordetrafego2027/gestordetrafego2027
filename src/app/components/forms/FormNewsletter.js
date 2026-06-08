@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { getRecaptchaToken } from '@/lib/recaptcha/client'
+import { clientLog } from '@/lib/logger-client';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -58,7 +59,7 @@ export default function FormNewsletter({ sourceUrl = '/', variant = 'light' }) {
       setEmail('')
       setName('')
     } catch (err) {
-      console.error('[FormNewsletter]', err)
+      clientLog.error('[FormNewsletter]', err)
       setError('Não foi possível inscrever. Tente novamente.')
       setStatus('idle')
     }

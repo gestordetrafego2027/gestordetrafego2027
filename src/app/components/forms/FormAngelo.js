@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
+import { clientLog } from '@/lib/logger-client';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -67,7 +68,7 @@ export default function FormAngelo({ onClose, sourceUrl = '/angelo', ctaLocation
 
       router.push('/obrigado?from=angelo')
     } catch (err) {
-      console.error('[FormAngelo] Unexpected error:', err)
+      clientLog.error('[FormAngelo] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }

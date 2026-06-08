@@ -12,7 +12,57 @@ export const dynamic = 'force-dynamic'
  * - Quando topic=payment, busca payment no MP, mapeia status e atualiza order
  * - Trigger no banco concede matrículas quando order.status -> 'paid'
  */
+/**
+ * Validação opcional de assinatura do Mercado Pago.
+ * Se MP_WEBHOOK_SECRET estiver configurado, exige x-signature válida.
+ * Sem a env, segue por compatibilidade (fail-open) — útil em dev/sandbox.
+ */
+async function verifyMpSignature(req: Request): Promise<boolean> {
+  const secret = process.env.MP_WEBHOOK_SECRET
+  if (!secret) return true // fail-open quando não configurado
+
+  const signature = req.headers.get('x-signature') ?? ''
+  const requestId = req.headers.get('x-request-id') ?? ''
+  if (!signature || !requestId) return false
+
+  const parts = Object.fromEntries(
+    signature.split(',').map((p) => p.split('=').map((s) => s.trim()) as [string, string]),
+  )
+  const ts = parts.ts
+  const v1 = parts.v1
+  if (!ts || !v1) return false
+
+  const url = new URL(req.url)
+  const dataId = url.searchParams.get('data.id') ?? url.searchParams.get('id') ?? ''
+  const manifest = `id:${dataId};request-id:${requestId};ts:${ts};`
+
+  try {
+    const enc = new TextEncoder()
+    const key = await crypto.subtle.importKey(
+      'raw',
+      enc.encode(secret),
+      { name: 'HMAC', hash: 'SHA-256' },
+      false,
+      ['sign'],
+    )
+    const sigBuf = await crypto.subtle.sign('HMAC', key, enc.encode(manifest))
+    const expected = Array.from(new Uint8Array(sigBuf))
+      .map((b) => b.toString(16).padStart(2, '0'))
+      .join('')
+    if (expected.length !== v1.length) return false
+    let diff = 0
+    for (let i = 0; i < expected.length; i++) diff |= expected.charCodeAt(i) ^ v1.charCodeAt(i)
+    return diff === 0
+  } catch {
+    return false
+  }
+}
+
 export async function POST(req: Request) {
+  if (!(await verifyMpSignature(req))) {
+    return NextResponse.json({ error: 'invalid signature' }, { status: 401 })
+  }
+
   const url = new URL(req.url)
   const topic = url.searchParams.get('topic') || url.searchParams.get('type') || 'unknown'
   const resourceQuery = url.searchParams.get('id') || url.searchParams.get('data.id')

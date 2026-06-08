@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { submitLead } from '@/lib/submitLead'
+import { clientLog } from '@/lib/logger-client';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -102,7 +103,7 @@ export default function FormGeral({ onClose, sourceUrl = '/', ctaLocation = null
 
       router.push(`/obrigado?from=${form.unit}`)
     } catch (err) {
-      console.error('[FormGeral] Unexpected error:', err)
+      clientLog.error('[FormGeral] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }

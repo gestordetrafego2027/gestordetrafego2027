@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
+import { clientLog } from '@/lib/logger-client';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -71,7 +72,7 @@ export default function FormProdutora({
 
       router.push('/obrigado?from=produtora')
     } catch (err) {
-      console.error('[FormProdutora] Unexpected error:', err)
+      clientLog.error('[FormProdutora] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }

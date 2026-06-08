@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
+import { clientLog } from '@/lib/logger-client';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -60,7 +61,7 @@ export default function FormContatoGeral({ sourceUrl = '/contato' }) {
 
       router.push('/obrigado?from=contato')
     } catch (err) {
-      console.error('[FormContatoGeral] Unexpected error:', err)
+      clientLog.error('[FormContatoGeral] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }

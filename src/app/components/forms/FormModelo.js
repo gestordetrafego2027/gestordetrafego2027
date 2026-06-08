@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
+import { clientLog } from '@/lib/logger-client';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -76,7 +77,7 @@ export default function FormModelo({ onClose, sourceUrl = '/comunidade/vagas', c
 
       router.push('/obrigado?from=representacao')
     } catch (err) {
-      console.error('[FormModelo] Unexpected error:', err)
+      clientLog.error('[FormModelo] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')
       setIsSubmitting(false)
     }

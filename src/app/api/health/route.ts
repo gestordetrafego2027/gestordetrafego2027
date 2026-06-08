@@ -10,8 +10,12 @@ async function checkSupabase(): Promise<{ ok: boolean; latencyMs: number }> {
   try {
     const supabase = await createClient()
     const { error } = await supabase.from('_health').select('1').limit(1).maybeSingle()
-    // Tabela inexistente retorna erro de schema, não de conexão — conexão OK
-    const ok = !error || error.code === 'PGRST116' || error.message?.includes('does not exist')
+    // Tabela inexistente retorna erro de schema, não de conexão — conexão OK.
+    // PGRST116 (no rows) / PGRST205 (table not found in schema cache) / 42P01 (relation does not exist) → conexão saudável.
+    const ok =
+      !error ||
+      ['PGRST116', 'PGRST205', '42P01'].includes(error.code ?? '') ||
+      /does not exist|could not find/i.test(error.message ?? '')
     return { ok, latencyMs: Date.now() - start }
   } catch {
     return { ok: false, latencyMs: Date.now() - start }
