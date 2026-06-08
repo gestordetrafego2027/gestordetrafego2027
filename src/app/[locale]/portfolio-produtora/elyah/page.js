@@ -90,8 +90,8 @@ export default function ElyahPage() {
                                 </div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2025</p></div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Cenografia</p><p className="font-inter text-sm font-medium">Angelo Mazzutti</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Direção</p><p className="font-inter text-sm font-medium">Angelo Mazzutti</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção</p><p className="font-inter text-sm font-medium">Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -104,7 +104,7 @@ export default function ElyahPage() {
                                     {`Campanha em narrativa adulta e contemporânea — peça como assinatura, não como item de inventário. Elenco, beauty, fashion film e estilo em uma só linha. Banco denso para mídia editorial, canal próprio e ponto de venda.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Produção Executiva: Angelo Mazzutti · Cenografia: Angelo Mazzutti · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
+                                    {`Direção: Angelo Mazzutti · Produção: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
                                 </p>
                             </div>
                         </div>
