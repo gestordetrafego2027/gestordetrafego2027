@@ -823,8 +823,7 @@ export default function MarketingParaModelosPage() {
             </aside>
             <div className="author-body">
               <h2>Quem te escreve <em>não é modelo.</em><br/>É quem fica do outro lado da mesa.</h2>
-              <p>Sou publicitário de formação, estrategista de marca por escolha, e diretor criativo no dia a dia. Construí a House Mazzutti exatamente porque, em algum momento, percebi que não dava mais pra separar essas três disciplinas.</p>
-              <p>Quem hoje contrata uma modelo não está contratando uma foto — está contratando um pedaço da narrativa de uma marca. E quem está contratando essa narrativa precisa pensar marketing, produção e direção criativa ao mesmo tempo.</p>
+<p>Quem hoje contrata uma modelo não está contratando uma foto — está contratando um pedaço da narrativa de uma marca. E quem está contratando essa narrativa precisa pensar marketing, produção e direção criativa ao mesmo tempo.</p>
               <p>Esse livro foi escrito pelo lado de quem contrata e pelo lado de quem dirige a narrativa, sobre como o lado de quem é contratado pode chegar melhor preparado.</p>
               <div className="signature">— Angelo Mazzutti</div>
               <div className="triangle">
