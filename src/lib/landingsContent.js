@@ -136,7 +136,7 @@ export const pricingByService = {
         popular: true,
         items: [
           '04 looks estratégicos',
-          '25 fotos tratadas',
+          '20 fotos tratadas',
           'Direção de modelo / poses e expressão',
           'Estúdio próprio em SP',
           'Moodboard personalizado',
