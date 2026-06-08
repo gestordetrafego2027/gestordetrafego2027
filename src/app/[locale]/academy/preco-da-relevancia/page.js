@@ -266,8 +266,11 @@ export default function PrecoDaRelevanciaPage() {
     .pdr-root .author-grid { display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 64px; align-items: start; }
     .pdr-root .author-card { background: var(--ink); color: var(--paper); padding: 36px 32px 40px; position: sticky; top: 100px; }
     .pdr-root .author-card .blood-strip { height: 4px; background: var(--blood); margin-bottom: 32px; }
-    .pdr-root .author-avatar { width: 100%; aspect-ratio: 1/1; margin: 0 0 24px; overflow: hidden; border: 1px solid rgba(241,236,221,0.18); background: rgba(241,236,221,0.04); }
-    .pdr-root .author-avatar-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(8%); display: block; }
+    /* Avatar — editorial sóbrio: borda blood, faixa vermelha lateral, sem cromia */
+    .pdr-root .author-avatar-wrap { position: relative; margin: 0 0 28px; padding-left: 8px; }
+    .pdr-root .author-avatar-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--blood); z-index: 0; }
+    .pdr-root .author-avatar { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; overflow: hidden; border: 1px solid rgba(241,236,221,0.22); background: var(--ink); }
+    .pdr-root .author-avatar-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(20%) contrast(1.05); display: block; }
     .pdr-root .author-card .label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--blood-bright); margin-bottom: 14px; }
     .pdr-root .author-card .nm { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 56px; line-height: 0.92; color: var(--paper); margin-bottom: 18px; letter-spacing: -0.018em; }
     .pdr-root .author-card .nm em { font-style: normal; color: var(--blood-bright); display: block; }
@@ -641,8 +644,10 @@ export default function PrecoDaRelevanciaPage() {
           <div className="author-grid">
             <aside className="author-card">
               <div className="blood-strip" />
-              <div className="author-avatar">
-                <Image src="/images/angelo/angelo-portrait.webp" alt="Ângelo Mazzutti — autor, House Mazzutti" width={520} height={520} sizes="(max-width: 768px) 60vw, 280px" quality={90} className="author-avatar-img" />
+              <div className="author-avatar-wrap">
+                <div className="author-avatar">
+                  <Image src="/images/angelo/angelo-portrait.webp" alt="Ângelo Mazzutti — autor, House Mazzutti" width={520} height={650} sizes="(max-width: 768px) 60vw, 280px" quality={90} className="author-avatar-img" />
+                </div>
               </div>
               <div className="label">O autor</div>
               <div className="nm">Ângelo<br /><em>Mazzutti.</em></div>

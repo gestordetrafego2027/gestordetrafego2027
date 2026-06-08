@@ -333,8 +333,12 @@ const CSS = `
 .mpm-root .author { background: var(--paper); padding: 110px 0 130px; border-top: 1px solid var(--rule-soft); }
 .mpm-root .author-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: start; }
 .mpm-root .author-card { background: var(--ink); color: var(--paper); padding: 40px 36px 36px; position: relative; }
-.mpm-root .author-avatar { width: 100%; aspect-ratio: 1/1; margin: 0 0 24px; overflow: hidden; border: 1px solid rgba(239,233,218,0.18); background: rgba(239,233,218,0.04); }
-.mpm-root .author-avatar-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(8%); display: block; }
+/* Avatar — Mondrian feel: 2 blocos cromáticos (lime + paper) atrás da foto, sem arredondamento */
+.mpm-root .author-avatar-wrap { position: relative; margin: 0 0 28px; }
+.mpm-root .author-avatar-wrap::before { content: ''; position: absolute; inset: -10px -8px 14px -14px; background: var(--lime); z-index: 0; }
+.mpm-root .author-avatar-wrap::after { content: ''; position: absolute; inset: 10px -14px -10px 8px; background: var(--paper); opacity: 0.08; z-index: 0; }
+.mpm-root .author-avatar { position: relative; z-index: 1; width: 100%; aspect-ratio: 1/1; overflow: hidden; border: 1px solid var(--paper); }
+.mpm-root .author-avatar-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .mpm-root .author-card .label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--lime); }
 .mpm-root .author-card .nm { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 46px; line-height: 1.0; color: var(--paper); margin: 18px 0 8px; }
 .mpm-root .author-card .role { font-family: var(--serif); font-style: italic; font-size: 16px; color: rgba(239,233,218,0.7); }
@@ -795,8 +799,10 @@ export default function MarketingParaModelosPage() {
         <div className="wrap">
           <div className="author-grid">
             <aside className="author-card">
-              <div className="author-avatar">
-                <Image src="/images/angelo/angelo-portrait.webp" alt="Angelo Mazzutti — autor, House Mazzutti" width={520} height={520} sizes="(max-width: 768px) 60vw, 280px" quality={90} className="author-avatar-img" />
+              <div className="author-avatar-wrap">
+                <div className="author-avatar">
+                  <Image src="/images/angelo/angelo-portrait.webp" alt="Angelo Mazzutti — autor, House Mazzutti" width={520} height={520} sizes="(max-width: 768px) 60vw, 280px" quality={90} className="author-avatar-img" />
+                </div>
               </div>
               <div className="mondrian-pill">
                 <div className="a"></div>
