@@ -93,6 +93,17 @@ const nextConfig = {
       },
     ];
   },
+
+  async redirects() {
+    return [
+      // URL antiga do workshop → nova landing page
+      {
+        source: '/academy/workshop/direcao-criativa-producao-executiva',
+        destination: '/academy/workshop-producao-direcao-01',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
