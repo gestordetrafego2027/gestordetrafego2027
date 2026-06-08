@@ -118,8 +118,6 @@ export default function DumondPage() {
             </div>
             <PortfolioVideo unit="produtora" slug="dumond" />
 
-            <YouTubeShort urls="https://youtube.com/shorts/L57ZhRJeNLM?feature=share" />
-
             <PortfolioCTA businessUnit="produtora" projectSlug="dumond" />
 
             <SiteFooter />

@@ -117,6 +117,8 @@ export default function IdrissiPage() {
 
             <YouTubeShort urls="https://youtube.com/shorts/WmoHymvnxWw?feature=share" />
 
+            <YouTubeShort urls="https://youtube.com/shorts/L57ZhRJeNLM?feature=share" />
+
             <PortfolioCTA businessUnit="produtora" projectSlug="idrissi" />
 
             <SiteFooter />
