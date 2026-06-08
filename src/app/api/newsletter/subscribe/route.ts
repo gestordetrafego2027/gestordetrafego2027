@@ -25,7 +25,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Configuração do servidor ausente.' }, { status: 500 })
   }
 
-  const { email, name, source, utm, recaptchaToken } = await req.json()
+  let body: { email?: string; name?: string; source?: string; utm?: unknown; recaptchaToken?: string }
+  try {
+    body = await req.json()
+  } catch {
+    return NextResponse.json({ error: 'Payload inválido.' }, { status: 400 })
+  }
+  const { email, name, source, utm, recaptchaToken } = body
 
   if (!email) {
     return NextResponse.json({ error: 'E-mail obrigatório.' }, { status: 400 })
