@@ -222,13 +222,9 @@ export default async function PortfolioProdutoraPage() {
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Idrissi</span>
                             </div>
                         </Link>
-                        <Link href="/portfolio-produtora/sense-hotel" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
-                            <Image src="/images/produtora/institucional/sense-hotel/capa.webp" alt="Sense Hotel" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
-                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">INSTITUCIONAL</span>
-                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Sense Hotel</span>
-                            </div>
-                        </Link>
+                        {/* STANDBY: sense-hotel removido do hub a pedido do Diretor (07/06/2026).
+                             Pasta src/app/[locale]/portfolio-produtora/sense-hotel/ mantida.
+                             Pra reativar: restaurar este <Link>. */}
                         <Link href="/portfolio-produtora/tf" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
                             <Image src="/images/produtora/institucional/tf/capa.webp" alt="TF" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
                             <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
