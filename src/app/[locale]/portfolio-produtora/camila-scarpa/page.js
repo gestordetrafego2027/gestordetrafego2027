@@ -134,6 +134,13 @@ export default function CamilaScarpaPage() {
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
                                     <p className="font-inter text-sm font-medium">2023</p>
                                 </div>
+                                <div className="h-px w-full bg-outline-variant/10"></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Fotografia</p><p className="font-inter text-sm font-medium">Ita Mazzutti</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Cenografia</p><p className="font-inter text-sm font-medium">Renata Tina</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Beauty</p><p className="font-inter text-sm font-medium">Hailton Hasse</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Modelo</p><p className="font-inter text-sm font-medium">Rayssa Moseli</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Stylist</p><p className="font-inter text-sm font-medium">Rapha Mendonça</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
@@ -147,7 +154,7 @@ export default function CamilaScarpaPage() {
                                     {`Campanha em narrativa adulta dos produtos — peças apresentadas em contexto, não em vitrine. Elenco, beauty, stylist e ambiente em uma só linha. Imagem de marca que reposiciona a percepção sobre a linha.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Direção Criativa: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Beauty: Hailton Hasse · Modelo: Rayssa Moseli · Stylist: Rapha Mendonça`}
+                                    {`Produção Executiva: Angelo Mazzutti & Mateus Sacavem · Fotografia: Ita Mazzutti · Cenografia: Renata Tina · Beauty: Hailton Hasse · Modelo: Rayssa Moseli · Stylist: Rapha Mendonça`}
                                 </p>
                             </div>
                         </div>
