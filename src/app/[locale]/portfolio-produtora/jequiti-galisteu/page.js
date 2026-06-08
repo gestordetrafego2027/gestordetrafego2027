@@ -155,9 +155,10 @@ export default function JequitiGalisteuPage() {
                 </div>
             </main>
             
-            <PortfolioVideo unit="produtora" slug="jequiti-galisteu" />
-
-            <YouTubeShort urls="https://youtube.com/shorts/K5hS892LVY0?feature=share" />
+            {/* Vídeos removidos a pedido do Diretor (07/06/2026) — restaurar abaixo se reativar:
+                 <PortfolioVideo unit="produtora" slug="jequiti-galisteu" />
+                 <YouTubeShort urls="https://youtube.com/shorts/K5hS892LVY0?feature=share" />
+            */}
 
             <PortfolioCTA businessUnit="produtora" projectSlug="jequiti-galisteu" />
 
