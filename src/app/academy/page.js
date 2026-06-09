@@ -277,38 +277,31 @@ function BookCard({ book }) {
 
       {/* ── capa ── */}
       <div
-        className="relative flex items-end justify-center overflow-hidden"
-        style={{ background: book.coverBg ?? '#1a1a1a', aspectRatio: '2/3', paddingBottom: 0 }}
+        className="relative flex items-center justify-center overflow-hidden"
+        style={{ background: book.coverBg ?? '#1a1a1a', aspectRatio: '3/4' }}
       >
-        {/* gradiente base */}
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.35) 100%)' }}
-        />
-
         {/* capa flutuante */}
         {book.cover ? (
           <div
-            className="relative z-10 transition-transform duration-700 group-hover:-translate-y-2"
+            className="relative z-10 transition-transform duration-700 group-hover:scale-[1.03]"
             style={{
-              width: '55%',
+              width: '72%',
               aspectRatio: '2/3',
-              marginBottom: -1,
-              filter: 'drop-shadow(0 32px 48px rgba(0,0,0,0.45)) drop-shadow(0 8px 16px rgba(0,0,0,0.3))',
-              transform: 'rotate(-1.5deg)',
+              filter: 'drop-shadow(0 24px 40px rgba(0,0,0,0.55)) drop-shadow(0 6px 12px rgba(0,0,0,0.35))',
+              transform: 'rotate(-1deg)',
             }}
           >
             <Image
               src={book.cover}
               alt={`Capa ${book.title}`}
               fill
-              sizes="(max-width: 768px) 55vw, 20vw"
+              sizes="(max-width: 768px) 72vw, 25vw"
               className="object-cover"
             />
           </div>
         ) : (
-          <div className="relative z-10 flex items-center justify-center w-full h-full pb-12">
-            <span className="text-white/20 text-[64px] font-light" style={{ fontFamily: 'serif' }}>03</span>
+          <div className="relative z-10 flex items-center justify-center w-full h-full">
+            <span className="text-white/15 text-[96px] font-light" style={{ fontFamily: 'serif' }}>03</span>
           </div>
         )}
 
