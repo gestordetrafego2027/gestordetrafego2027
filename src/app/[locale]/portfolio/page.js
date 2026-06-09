@@ -108,7 +108,7 @@ export default function PortfolioPage() {
       unitLabel: t('filterStudio'),
       title: t('cat_book_title'),
       description: t('cat_book_desc'),
-      cover: studioBook[0].cover,
+      cover: '/images/studio/desktop-house-mazzutti-book.webp',
       basePath: '/portfolio-studio',
       projects: studioBook
     },
