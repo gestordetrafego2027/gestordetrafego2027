@@ -301,19 +301,19 @@
     ]
   },
   "studio": {
-    "hero_label": "Studio — HMZT",
+    "hero_label": "10 AÑOS — STUDIO HMZT",
     "hero_slides": [
       {
-        "titulo": "Dirección de imagen con arte y narrativa.",
-        "texto": "Construimos tu imagen con intención. Registramos los momentos que importan — con cuidado editorial."
+        "titulo": "Una década de marca.",
+        "texto": "Diez años construyendo imagen con método, intención y resultado."
       },
       {
-        "titulo": "Imagen construida con intención.",
-        "texto": "Cada producción empieza con una escucha — y termina en imágenes que sostienen tu presencia."
+        "titulo": "Posicionamiento que se ve.",
+        "texto": "Cada imagen, un argumento. Cada producción, una toma de posición."
       },
       {
-        "titulo": "Books, sesiones y coberturas.",
-        "texto": "Del concepto a la entrega, cada detalle pensado para comunicar con claridad y elegancia."
+        "titulo": "Tu imagen, con diez años de intención.",
+        "texto": "Construimos presencia desde el principio — y seguimos refinando cada detalle."
       }
     ],
     "hero_cta": "Iniciar proyecto",
@@ -323,19 +323,19 @@
     "blog_read": "LEER →"
   },
   "produtora_page": {
-    "hero_label": "Producción — HMZT",
+    "hero_label": "10 AÑOS — PRODUCTORA HMZT",
     "hero_slides": [
       {
-        "titulo": "Producción y dirección para publicidad.",
-        "texto": "Producción audiovisual, campañas y contenido con dirección creativa cuidadosa."
+        "titulo": "El tiempo afina el estilo.",
+        "texto": "Refinamiento que viene de adentro — de la dirección a la entrega final."
       },
       {
-        "titulo": "Campañas que comunican con claridad.",
-        "texto": "De la preproducción a la entrega final — cada decisión pensada para sostener el resultado."
+        "titulo": "La elegancia no es un accidente.",
+        "texto": "Diez años transformando concepto en imagen con rigor y ligereza."
       },
       {
-        "titulo": "Sets, editoriales y contenido con dirección.",
-        "texto": "Ejecución técnica y visión creativa en la misma mente. Para marcas que quieren aparecer con intención."
+        "titulo": "De la idea a la pantalla, con cuidado.",
+        "texto": "Cada producción lleva la precisión de quien ya lo ha hecho cientos de veces."
       }
     ],
     "hero_cta": "Iniciar proyecto",
@@ -599,19 +599,19 @@
     "form_subtitle": "Cuéntanos sobre tu campaña publicitaria. Respondemos en hasta 1 día hábil."
   },
   "agencia": {
-    "hero_label": "Agencia — HMZT",
+    "hero_label": "10 AÑOS — AGENCIA HMZT",
     "hero_slides": [
       {
-        "titulo": "Marca con intención. Presencia con estrategia.",
-        "texto": "Branding, comunicación y desarrollo digital para marcas que quieren ser reconocidas — no solo vistas."
+        "titulo": "Marcas que la gente quiere cerca.",
+        "texto": "Diez años transformando presencia en pertenencia."
       },
       {
-        "titulo": "Branding que sostiene el crecimiento.",
-        "texto": "De la identidad visual a la arquitectura de marca — construimos sistemas que trabajan por ti."
+        "titulo": "El deseo empieza antes del clic.",
+        "texto": "Construimos marcas que la gente siente antes de entender."
       },
       {
-        "titulo": "Desarrollo web orientado a la conversión.",
-        "texto": "Sitios, landing pages y plataformas que cargan la marca con precisión y transforman visitas en decisiones."
+        "titulo": "No solo vista. Deseada.",
+        "texto": "De la identidad al posicionamiento — marcas que permanecen en la memoria."
       }
     ],
     "hero_cta": "Iniciar proyecto",
