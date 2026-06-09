@@ -211,19 +211,19 @@ export function GET() {
 <div class="photo-strip">
   <div class="ps-track">
     <!-- set 1 -->
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.png" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.png" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.png" alt="Model · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.png" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.png" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.png" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.jpg" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.jpg" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.jpg" alt="Model · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.jpg" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.jpg" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.jpg" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
     <!-- set 2 — duplicado para loop contínuo -->
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.png" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.png" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.png" alt="Model · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.png" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.png" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.png" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.jpg" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.jpg" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.jpg" alt="Model · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.jpg" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.jpg" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.jpg" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
   </div>
 </div>
 
