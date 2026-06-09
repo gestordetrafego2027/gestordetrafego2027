@@ -205,18 +205,27 @@ export function GET() {
       <span class="sec-index">Inside Out · Edit 01 · Uberlândia</span>
     </div>
     <h2 class="h-2 display" data-reveal style="margin-bottom:clamp(30px,4vw,56px)">Por trás<br>das câmeras</h2>
-    <div class="grid-photos">
-      <image-slot id="g1" data-reveal radius="0" placeholder="Bastidores 01 · Direção de arte" fit="cover"></image-slot>
-      <image-slot id="g2" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores 02 · Equipe no set" fit="cover"></image-slot>
-      <image-slot id="g3" data-reveal data-reveal-d="2" radius="0" placeholder="Bastidores 03 · Iluminação" fit="cover"></image-slot>
-      <image-slot id="g4" data-reveal radius="0" placeholder="Bastidores 04 · Angelo Mazzutti" fit="cover" class="wide"></image-slot>
-      <image-slot id="g5" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores 05 · Participantes" fit="cover"></image-slot>
-      <image-slot id="g6" data-reveal data-reveal-d="2" radius="0" placeholder="Bastidores 06 · Shooting" fit="cover"></image-slot>
-      <image-slot id="g7" data-reveal radius="0" placeholder="Bastidores 07 · Produto em cena" fit="cover"></image-slot>
-      <image-slot id="g8" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores 08 · Networking" fit="cover"></image-slot>
-    </div>
   </div>
 </section>
+<!-- photo strip — full bleed fora do wrap -->
+<div class="photo-strip">
+  <div class="ps-track">
+    <!-- set 1 -->
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.png" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.png" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.png" alt="Model · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.png" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.png" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.png" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
+    <!-- set 2 — duplicado para loop contínuo -->
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.png" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.png" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.png" alt="Model · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.png" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.png" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.png" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
+  </div>
+</div>
 
 <!-- ============ AFTERMOVIE ============ -->
 <section class="video-section ink" id="video">
