@@ -79,12 +79,12 @@ const PRODUCTS = [
 
 /* ─── galeria ─────────────────────────────────────────────────── */
 const GALLERY = [
-  { src: '/images/studio/banners/banner-1.webp', alt: 'Workshop Fotografia — bastidores' },
-  { src: '/images/studio/banners/banner-2.webp', alt: 'Workshop Fotografia — produção' },
-  { src: '/images/home/banner-1.webp', alt: 'Workshop Fotografia — making of' },
-  { src: '/images/home/banner-2.webp', alt: 'Workshop Fotografia — equipe' },
-  { src: '/images/home/banner-3.webp', alt: 'Workshop Fotografia — ambiente' },
-  { src: '/images/home/philosophy-bg.webp', alt: 'Workshop Fotografia — resultado' },
+  { src: '/images/academy/gallery/grid-1.webp', alt: 'Workshop Inside Out — bastidores' },
+  { src: '/images/academy/gallery/grid-2.webp', alt: 'Workshop Inside Out — produção' },
+  { src: '/images/academy/gallery/grid-3.webp', alt: 'Workshop Inside Out — making of' },
+  { src: '/images/academy/gallery/grid-4.webp', alt: 'Workshop Inside Out — equipe' },
+  { src: '/images/academy/gallery/grid-5.webp', alt: 'Workshop Inside Out — ambiente' },
+  { src: '/images/academy/gallery/grid-6.webp', alt: 'Workshop Inside Out — resultado' },
 ]
 
 /* ══════════════════════════════════════════════════════════════════
@@ -193,7 +193,7 @@ export default function AcademyHomePage() {
             <div className="mb-16 flex items-end justify-between">
               <div>
                 <span className="text-caption text-white/40 mb-4 block">Último Evento</span>
-                <h2 className="text-h2 text-white">Workshop Fotografia</h2>
+                <h2 className="text-h2 text-white">Workshop Inside Out</h2>
               </div>
             </div>
 
