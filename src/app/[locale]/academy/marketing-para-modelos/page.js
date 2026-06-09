@@ -10,7 +10,7 @@ import Image from 'next/image';
 import { MpmViewContent, BuyLink } from '@/components/analytics/MpmTracking';
 
 const SITE_URL = 'https://housemazzutti.com';
-const PAGE_PATH = '/academy/marketing-para-modelos';
+const PAGE_PATH = '/pt/academy/marketing-para-modelos';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 const COVER = '/images/academy/marketing-para-modelos/cover.webp';
 const MOCKUP_FRONT = '/images/academy/marketing-para-modelos/mockup-front.webp';
@@ -82,7 +82,7 @@ export const metadata = {
     'book:release_date': '2026',
     'product:price:amount': '49.00',
     'product:price:currency': 'BRL',
-    'product:availability': 'preorder',
+    'product:availability': 'instock',
   },
 };
 
@@ -111,7 +111,7 @@ const PRODUCT_SCHEMA = {
     '@type': 'Offer',
     price: '49.00',
     priceCurrency: 'BRL',
-    availability: 'https://schema.org/PreOrder',
+    availability: 'https://schema.org/InStock',
     url: PAGE_URL + '#comprar',
     priceValidUntil: '2026-12-31',
     seller: { '@type': 'Organization', name: 'House Mazzutti Edições' },

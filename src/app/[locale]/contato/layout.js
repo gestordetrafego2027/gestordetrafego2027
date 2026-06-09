@@ -1,6 +1,7 @@
 import {pageMetadata} from '@/lib/seo/metadata'
 import {breadcrumbSchema} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
+import {globalJsonLd} from '@/lib/seo/jsonld'
 
 export async function generateMetadata({params}) {
   const {locale} = await params
@@ -23,6 +24,10 @@ export default function ContatoLayout({children}) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(globalJsonLd)}}
       />
       {children}
     </>

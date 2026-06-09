@@ -10,9 +10,21 @@ export function GET() {
 <meta name="description" content="A imersão completa do Inside Out agora em vídeo on-demand. Direção criativa e produção executiva de campanhas — do processo interno à entrega final. Por Ângelo Mazzutti.">
 <meta property="og:title" content="Inside Out · Masterclass On-demand">
 <meta property="og:description" content="A imersão completa em vídeo. Direção criativa do processo interno à entrega final — assista no seu ritmo.">
+<meta property="og:image" content="https://housemazzutti.com/images/academy/inside-out/og-image.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://housemazzutti.com/pt/academy/inside-out/">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="House Mazzutti Academy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inside Out · Masterclass On-demand">
+<meta name="twitter:description" content="A imersão completa em vídeo. Direção criativa do processo interno à entrega final — assista no seu ritmo.">
+<meta name="twitter:image" content="https://housemazzutti.com/images/academy/inside-out/og-image.webp">
 <link rel="canonical" href="https://housemazzutti.com/pt/academy/inside-out/">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R61KK25PBK');gtag('config','AW-16938050518');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Archivo+Expanded:wght@400..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">

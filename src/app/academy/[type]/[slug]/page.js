@@ -5,16 +5,28 @@ import { getProductBySlug, formatPriceBRL } from '@/lib/academy/queries'
 import { createClient } from '@/lib/supabase/server'
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params
+  const { type, slug } = await params
   const product = await getProductBySlug(slug)
   if (!product) return { title: 'Produto — House Mazzutti Academy' }
+  const canonicalUrl = `https://housemazzutti.com/academy/${type}/${slug}/`
   return {
-    title: `${product.title} — Academy`,
+    title: `${product.seo_title || product.title} — House Mazzutti Academy`,
     description: product.seo_description || product.short_description || product.subtitle || '',
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: product.seo_title || product.title,
       description: product.seo_description || product.short_description || '',
-      images: product.og_image_url ? [{ url: product.og_image_url }] : undefined,
+      url: canonicalUrl,
+      siteName: 'House Mazzutti Academy',
+      type: 'website',
+      images: product.og_image_url
+        ? [{ url: product.og_image_url, width: 1200, height: 630, alt: product.title }]
+        : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: product.seo_title || product.title,
+      description: product.seo_description || product.short_description || '',
     },
   }
 }

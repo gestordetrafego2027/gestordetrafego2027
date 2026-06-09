@@ -8,6 +8,15 @@ export const metadata = {
     default: 'House Mazzutti — Direção Criativa e Branding em São Paulo',
     template: '%s',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+    other: [
+      { rel: 'manifest', url: '/site.webmanifest' },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
             url: alternates.canonical,
             type: 'article',
             siteName: 'House Mazzutti',
-            ...(article.cover && { images: [{ url: `${brand.url}${article.cover.src}`, alt: article.cover.alt }] }),
+            ...(article.cover && { images: [{ url: `${brand.url}${article.cover.src}`, alt: article.cover.alt, width: 1200, height: 630 }] }),
         },
         twitter: {
             card: 'summary_large_image',

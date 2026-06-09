@@ -8,6 +8,18 @@ export function GET() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inside Out · Edit 01 · Uberlândia — House Mazzutti</title>
 <meta name="description" content="Tudo que rolou na primeira edição do Workshop Inside Out — 2 dias de direção criativa e produção executiva em Uberlândia, MG. Setembro de 2025.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://housemazzutti.com/academy/workshop-inside-out-edit-01/">
+<meta property="og:title" content="Inside Out · Edit 01 · Uberlândia — House Mazzutti">
+<meta property="og:description" content="Tudo que rolou na primeira edição do Workshop Inside Out — 2 dias de direção criativa e produção executiva em Uberlândia, MG.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://housemazzutti.com/academy/workshop-inside-out-edit-01/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="House Mazzutti Academy">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R61KK25PBK');gtag('config','AW-16938050518');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
