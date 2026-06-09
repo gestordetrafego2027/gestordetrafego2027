@@ -80,7 +80,12 @@ const produtoraInstitucional = [
 
 const agenciaProjetos = [
   'house-mazzutti', 'knowhol', 'mabdo', 'on-take', 'pous', 'samrat',
-  { slug: 'alletto', name: 'Alletto', cover: '/images/agencia/alletto/capa.jpg' }
+  { slug: 'alletto', name: 'Alletto', cover: '/images/agencia/alletto/capa.jpg' },
+  { slug: 'fort', name: 'Fort Negócios Imobiliários', cover: '/images/agencia/fort/fort-negocios-imobiliarios-branding-identidade-visual-house-mazzutti-agencia-capa.webp' },
+  { slug: 'dra-ariadne-barbosa', name: 'Dra. Ariadne Barbosa', cover: '/images/agencia/dra-ariadne-barbosa/dra-ariadne-barbosa-logo-branding-manual-de-marca-identidade-visual-house-mazzutti-agencia-capa.webp' },
+  { slug: 'jucileia-soares', name: 'Jucileia Soares', cover: '/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-capa.webp' },
+  { slug: 'lbo', name: 'LBO Consultoria', cover: '/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-capa.webp' },
+  { slug: 'luiz-jr', name: 'Luiz Jr', cover: '/images/agencia/luiz-jr/luiz-jr-branding-identidade-visual-house-mazzutti-agencia-capa.webp' }
 ].map((item) => typeof item === 'string'
   ? { slug: item, name: toTitleCase(item), cover: `/images/agencia/${item}/capa.webp` }
   : item

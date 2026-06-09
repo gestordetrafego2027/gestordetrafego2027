@@ -107,6 +107,41 @@ export default async function PortfolioAgenciaPage() {
                                 <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Alletto</span>
                             </div>
                         </Link>
+                        <Link href="/portfolio-agencia/fort" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/agencia/fort/fort-negocios-imobiliarios-branding-identidade-visual-house-mazzutti-agencia-capa.webp" alt="Fort Negócios Imobiliários" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Fort Negócios Imobiliários</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-agencia/dra-ariadne-barbosa" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/agencia/dra-ariadne-barbosa/dra-ariadne-barbosa-logo-branding-manual-de-marca-identidade-visual-house-mazzutti-agencia-capa.webp" alt="Dra. Ariadne Barbosa" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Dra. Ariadne Barbosa</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-agencia/jucileia-soares" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-capa.webp" alt="Jucileia Soares" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Jucileia Soares</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-agencia/lbo" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-capa.webp" alt="LBO Consultoria" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">LBO Consultoria</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-agencia/luiz-jr" className="gallery-item relative overflow-hidden bg-[#f3f3f4] w-full block" style={{aspectRatio: '2/3'}}>
+                            <Image src="/images/agencia/luiz-jr/luiz-jr-branding-identidade-visual-house-mazzutti-agencia-capa.webp" alt="Luiz Jr" fill sizes="(max-width: 768px) 100vw, 33vw" quality={80} loading="lazy" className="w-full h-full object-cover object-center" />
+                            <div className="overlay absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="font-raleway text-[12px] uppercase tracking-[0.2em] text-black mb-2">AGÊNCIA</span>
+                                <span className="font-raleway text-[14px] italic text-[#5f5e5e]">Luiz Jr</span>
+                            </div>
+                        </Link>
                     </div>
                 </section>
             </main>
