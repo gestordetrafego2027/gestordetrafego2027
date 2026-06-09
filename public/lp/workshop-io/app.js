@@ -81,8 +81,8 @@
   }, 3400);
 
   /* ---- countdown ---- */
-  // Edit 2 — São Paulo. Placeholder date (ajustável): 26/09/2026 09:00 BRT
-  const TARGET = new Date('2026-09-26T09:00:00-03:00').getTime();
+  // Edit 2 — São Paulo. Data confirmada: 05/09/2026 09:00 BRT
+  const TARGET = new Date('2026-09-05T09:00:00-03:00').getTime();
   const cd = {
     d: $('[data-cd="d"]'), h: $('[data-cd="h"]'),
     m: $('[data-cd="m"]'), s: $('[data-cd="s"]')

@@ -111,6 +111,24 @@ export function GET() {
     </div>
 
     <div class="hero-foot">
+      <div class="event-info-bar">
+        <div class="eib-item">
+          <span class="eib-l">Cidade</span>
+          <span class="eib-v">São Paulo</span>
+        </div>
+        <div class="eib-sep"></div>
+        <div class="eib-item">
+          <span class="eib-l">Data · 2 dias</span>
+          <span class="eib-v">05·06 Set 2026</span>
+        </div>
+        <div class="eib-sep"></div>
+        <div class="eib-item">
+          <span class="eib-l">Vagas</span>
+          <span class="eib-v">Turma de 30</span>
+        </div>
+        <div class="eib-sep"></div>
+        <a class="eib-cta" data-reserve href="#planos">Reservar vaga <span>↗</span></a>
+      </div>
       <div class="countdown" id="countdown">
         <div class="cd-unit"><span class="cd-num" data-cd="d">00</span><span class="cd-lab">Dias</span></div>
         <div class="cd-unit"><span class="cd-num" data-cd="h">00</span><span class="cd-lab">Horas</span></div>
@@ -327,7 +345,7 @@ export function GET() {
     </div>
     <div class="faq" data-reveal>
       <details open><summary>Para quem é a imersão? <span class="pm">+</span></summary><div class="ans">Estudantes e profissionais de Publicidade, Moda, Design, Audiovisual, Fotografia e Marketing que querem dominar o processo completo de uma produção — da ideia à execução. Turma única de 30 pessoas.</div></details>
-      <details><summary>Onde e quando acontece? <span class="pm">+</span></summary><div class="ans">Edit 2 acontece em São Paulo, em dois dias intensivos e presenciais. Data e local exatos confirmados na sua inscrição. (Edição 1 foi realizada em Uberlândia/MG.)</div></details>
+      <details><summary>Onde e quando acontece? <span class="pm">+</span></summary><div class="ans">Edit 2 acontece em São Paulo nos dias <strong>05 e 06 de setembro de 2026</strong>, em dois dias intensivos e presenciais. O endereço exato é confirmado na sua inscrição. (Edição 1 foi realizada em Uberlândia/MG.)</div></details>
       <details><summary>Preciso de experiência prévia? <span class="pm">+</span></summary><div class="ans">Não. O conteúdo vai do fundamento ao nível profissional. Você sai sabendo, na prática, desenvolver uma produção audiovisual e fotográfica do zero.</div></details>
       <details><summary>O que está incluso? <span class="pm">+</span></summary><div class="ans">Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido.</div></details>
       <details><summary>Qual a política de cancelamento? <span class="pm">+</span></summary><div class="ans">Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso. Solicitações por marketing@mztgrupo.com.</div></details>
