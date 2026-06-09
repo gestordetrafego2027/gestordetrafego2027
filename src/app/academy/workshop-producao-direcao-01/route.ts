@@ -16,7 +16,11 @@ export function GET() {
 <meta property="og:url" content="https://housemazzutti.com/academy/workshop-producao-direcao-01/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="House Mazzutti Academy">
+<meta property="og:image" content="https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp">
 <meta name="twitter:title" content="Inside Out · Edit 2 — Workshop HMZT">
 <meta name="twitter:description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas. São Paulo, 2026.">
 <!-- Google tag (gtag.js) -->
@@ -67,8 +71,14 @@ export function GET() {
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
   <div class="hero-media" id="heroMedia">
-    <div class="hero-slide active">
-      <image-slot id="hero-1" placeholder="Bastidores · campanha HMZT" fit="cover"></image-slot>
+    <div class="hero-slide active hero-slide--video">
+      <iframe
+        src="https://www.youtube.com/embed/TYY69q29omc?autoplay=1&mute=1&loop=1&playlist=TYY69q29omc&controls=0&playsinline=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Inside Out · bastidores"
+        style="position:absolute;inset:-10%;width:120%;height:120%;border:none;pointer-events:none;"
+      ></iframe>
     </div>
     <div class="hero-slide">
       <image-slot id="hero-2" placeholder="Shooting · direção de arte" fit="cover"></image-slot>
