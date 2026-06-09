@@ -49,15 +49,14 @@ export default function JucileiaSoaresPage() {
 
     const verticalImages = [
         "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-01.webp",
-        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-02.webp"
+        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-02.webp",
+        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-03.webp",
+        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-04.webp"
     ];
 
     const horizontalImages = [
-        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-03.webp",
-        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-04.webp",
         "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-05.webp",
-        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-06.webp",
-        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-07.webp"
+        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-06.webp"
     ];
 
     const images = [...verticalImages, ...horizontalImages];
