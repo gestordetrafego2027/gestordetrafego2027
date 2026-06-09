@@ -300,22 +300,26 @@ html {
        ExtraLight mapeado para Light (300) por restrição de arquivo.
        ========================================================================== */
 
-    /* H1 — HERO / STATEMENT — monumental, editorial, dominante */
+    /* H1 — HERO / STATEMENT — Roc Grotesk Condensed Bold uppercase (padrão logo MAZZUTTI) */
     .text-h1 {
-        font-family: 'RocGrotesk', sans-serif;
+        font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif;
         font-weight: 700;
+        font-stretch: condensed;
         font-size: clamp(2.625rem, 6vw + 0.5rem, 6.875rem); /* 42px → 110px */
         line-height: 0.92;
-        letter-spacing: -0.05em;
+        letter-spacing: 0;
+        text-transform: uppercase;
     }
 
-    /* H2 — SEÇÕES PRINCIPAIS — clean, fashion, premium */
+    /* H2 — SEÇÕES PRINCIPAIS — Roc Grotesk Condensed Bold uppercase */
     .text-h2 {
-        font-family: 'RocGrotesk', sans-serif;
-        font-weight: 400;
+        font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif;
+        font-weight: 700;
+        font-stretch: condensed;
         font-size: clamp(1.75rem, 3vw + 0.5rem, 4rem); /* 28px → 64px */
-        line-height: 1.04;
-        letter-spacing: -0.03em;
+        line-height: 0.96;
+        letter-spacing: 0;
+        text-transform: uppercase;
     }
 
     /* H3 — SUBSEÇÕES — leve, elegante, refinada */

@@ -1190,13 +1190,13 @@ export const articles = {
     },
     "interior": [
       {
-        "src": "/images/blog/workshop-inside-out-ita-mazzutti/01.webp",
+        "src": "/images/blog/workshop-inside-out-ita-mazzutti/01.jpg",
         "fallback": "/images/academy/edit-01/edit01-equipe.jpg",
         "alt": "Turma reduzida em workshop presencial da House Mazzutti em São Paulo",
         "caption": "Turma reduzida · formação presencial"
       },
       {
-        "src": "/images/blog/workshop-inside-out-ita-mazzutti/02.webp",
+        "src": "/images/blog/workshop-inside-out-ita-mazzutti/02.jpg",
         "fallback": "/images/academy/edit-01/edit01-quadro.jpg",
         "alt": "Aula prática de direção e fotografia no workshop da House Mazzutti",
         "caption": "Prática · do conceito à entrega"
