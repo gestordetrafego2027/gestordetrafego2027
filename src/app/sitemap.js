@@ -63,6 +63,7 @@ export default async function sitemap() {
     // Academy (landings)
     {p: '/academy/preco-da-relevancia', priority: 0.7},
     {p: '/academy/marketing-para-modelos', priority: 0.7},
+    {p: '/academy/casos-da-producao', priority: 0.7},
     {p: '/academy/inside-out', priority: 0.8},
     // Institucional / comercial
     {p: '/sobre', priority: 0.8},

@@ -264,6 +264,8 @@ export default function Header({ variant = 'dark' }) {
                         {label: t('comunidade'), href:'/comunidade'},
                         {label: t('academy'), href:'/academy'},
                         {label:'↳ MARKETING PARA MODELOS · VOL. 01', href:'/academy/marketing-para-modelos', sub: true},
+                        {label:'↳ O PREÇO DA RELEVÂNCIA · VOL. 02', href:'/academy/preco-da-relevancia', sub: true},
+                        {label:'↳ CASOS DA PRODUÇÃO · VOL. 03', href:'/academy/casos-da-producao', sub: true},
                         {label: t('portfolio'), href:'/portfolio'},
                         {label: t('blog'), href:'/blog'},
                         {label: t('contato'), href:'/contato'},

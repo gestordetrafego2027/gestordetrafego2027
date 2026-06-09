@@ -55,17 +55,17 @@ const BOOKS = [
     id: 'vol-03',
     vol: 'Vol. 03',
     year: '2026',
-    title: 'Em breve',
-    subtitle: 'O próximo volume da série editorial House Mazzutti está em produção.',
+    title: 'Casos da Produção',
+    subtitle: 'Sete bastidores reais. Do conceito à entrega — com contexto de mercado, direção criativa e a assinatura da House.',
     pages: '—',
-    chapters: '—',
+    chapters: '7',
     format: 'Ebook',
     priceFull: null,
-    price: '—',
+    price: 'Em breve',
     discount: null,
-    href: null,
+    href: '/pt/academy/casos-da-producao',
     cover: null,
-    coverBg: '#111111',
+    coverBg: '#1c3420',
     status: 'Em breve',
     available: false,
   },
@@ -175,7 +175,7 @@ export default function AcademyHomePage() {
                 <span className="text-caption text-black/50 mb-4 block">Publicações · Série Editorial</span>
                 <h2 className="text-h2 text-black">Livros</h2>
               </div>
-              <span className="text-caption text-black/40">{BOOKS.filter(b => b.available).length} volumes · Vol. 03 em breve</span>
+              <span className="text-caption text-black/40">{BOOKS.filter(b => b.available).length} volumes disponíveis · <Link href="/pt/academy/casos-da-producao" style={{color:'inherit', textDecoration:'underline'}}>Vol. 03 em breve</Link></span>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -359,7 +359,7 @@ function BookCard({ book }) {
     </div>
   )
 
-  if (!book.available || !book.href) return <div>{inner}</div>
+  if (!book.href) return <div>{inner}</div>
   return <Link href={book.href} style={{ textDecoration: 'none', display: 'block' }}>{inner}</Link>
 }
 

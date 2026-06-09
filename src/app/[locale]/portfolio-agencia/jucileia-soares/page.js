@@ -49,7 +49,6 @@ export default function JucileiaSoaresPage() {
 
     const verticalImages = [
         "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-01.webp",
-        "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-02.webp",
         "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-03.webp",
         "/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-04.webp"
     ];

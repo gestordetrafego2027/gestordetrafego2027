@@ -971,8 +971,8 @@ export default function MarketingParaModelosPage() {
             <div className="col">
               <h4>Catálogo</h4>
               <a href="#sumario">Vol. 01 · Marketing para Modelos</a>
-              <span className="dim">Vol. 02 · em breve</span>
-              <span className="dim">Vol. 03 · em breve</span>
+              <Link href="/pt/academy/preco-da-relevancia">Vol. 02 · O Preço da Relevância</Link>
+              <Link href="/pt/academy/casos-da-producao">Vol. 03 · Casos da Produção</Link>
             </div>
             <div className="col">
               <h4>House Mazzutti</h4>

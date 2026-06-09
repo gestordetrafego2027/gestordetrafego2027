@@ -803,7 +803,7 @@ export default function PrecoDaRelevanciaPage() {
               <h4>Catálogo</h4>
               <Link href="/pt/academy/marketing-para-modelos">Vol. 01 · Marketing para Modelos</Link>
               <a href="#sumario">Vol. 02 · O Preço da Relevância</a>
-              <span className="dim">Vol. 03 · em breve</span>
+              <Link href="/pt/academy/casos-da-producao">Vol. 03 · Casos da Produção</Link>
             </div>
             <div className="col">
               <h4>House Mazzutti</h4>

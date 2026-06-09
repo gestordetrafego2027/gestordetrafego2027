@@ -75,6 +75,19 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     volumeLabel: 'Vol. 02',
     detail: '107 páginas em 10 capítulos. Leitura sugerida em ordem — cada parte se apoia na anterior.',
   },
+  'casos-da-producao': {
+    slug: 'casos-da-producao',
+    name: 'Casos da Produção · Vol. 03',
+    // TODO: preencher após criar o produto no painel Stripe (prod)
+    stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? '',
+    storagePath: 'casos-da-producao/vol-03.pdf',
+    downloadUrl:
+      process.env.DOWNLOAD_URL_CASOS_DA_PRODUCAO ??
+      '/downloads/casos-da-producao-hmzt-vol-03.pdf',
+    expiresIn: '7 dias',
+    volumeLabel: 'Vol. 03',
+    detail: '7 bastidores reais — do conceito à entrega com contexto de mercado e direção criativa.',
+  },
 }
 
 /**
