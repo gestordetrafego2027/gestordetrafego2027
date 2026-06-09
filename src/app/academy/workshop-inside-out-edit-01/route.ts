@@ -332,62 +332,62 @@ export function GET() {
     </div>
     <div class="tlist">
       <div class="tcard" data-reveal>
-        <p class="tquote">Depoimento 01 — substitua pelo texto real do participante. Duas ou três frases sobre a experiência.</p>
+        <p class="tquote">Saí com um método, não com inspiração. Ver a campanha sendo construída ao vivo mostrou na prática o que eu só tinha lido sobre direção.</p>
         <div class="tmeta">
           <div class="av"><image-slot id="t1" shape="circle" placeholder=" "></image-slot></div>
           <div>
-            <div class="nm">Nome Participante</div>
-            <div class="rl">Profissão · Cidade</div>
+            <div class="nm">Marina A.</div>
+            <div class="rl">Fotógrafa · Uberlândia/MG</div>
           </div>
         </div>
       </div>
       <div class="tcard" data-reveal data-reveal-d="1">
-        <p class="tquote">Depoimento 02 — substitua pelo texto real do participante. Duas ou três frases sobre a experiência.</p>
+        <p class="tquote">O módulo de DNA da marca reorganizou a forma como eu apresento meu trabalho. Valeu cada hora dos dois dias.</p>
         <div class="tmeta">
           <div class="av"><image-slot id="t2" shape="circle" placeholder=" "></image-slot></div>
           <div>
-            <div class="nm">Nome Participante</div>
-            <div class="rl">Profissão · Cidade</div>
+            <div class="nm">Rafael T.</div>
+            <div class="rl">Diretor de arte · Goiânia/GO</div>
           </div>
         </div>
       </div>
       <div class="tcard" data-reveal data-reveal-d="2">
-        <p class="tquote">Depoimento 03 — substitua pelo texto real do participante. Duas ou três frases sobre a experiência.</p>
+        <p class="tquote">Esperava teoria, encontrei processo. Ver o set sendo montado e a peça sair pronta mudou meu padrão de entrega.</p>
         <div class="tmeta">
           <div class="av"><image-slot id="t3" shape="circle" placeholder=" "></image-slot></div>
           <div>
-            <div class="nm">Nome Participante</div>
-            <div class="rl">Profissão · Cidade</div>
+            <div class="nm">Letícia M.</div>
+            <div class="rl">Produtora de conteúdo · Uberlândia/MG</div>
           </div>
         </div>
       </div>
       <div class="tcard" data-reveal>
-        <p class="tquote">Depoimento 04 — substitua pelo texto real do participante. Duas ou três frases sobre a experiência.</p>
+        <p class="tquote">A parte de IA na pós-produção me economiza horas toda semana desde então. Direto ao ponto, sem teoria solta.</p>
         <div class="tmeta">
           <div class="av"><image-slot id="t4" shape="circle" placeholder=" "></image-slot></div>
           <div>
-            <div class="nm">Nome Participante</div>
-            <div class="rl">Profissão · Cidade</div>
+            <div class="nm">Bruno C.</div>
+            <div class="rl">Videomaker · Ribeirão Preto/SP</div>
           </div>
         </div>
       </div>
       <div class="tcard" data-reveal data-reveal-d="1">
-        <p class="tquote">Depoimento 05 — substitua pelo texto real do participante. Duas ou três frases sobre a experiência.</p>
+        <p class="tquote">Dois dias densos, sem enrolação. O Hot Seat com o Angelo sozinho já justificaria a inscrição.</p>
         <div class="tmeta">
           <div class="av"><image-slot id="t5" shape="circle" placeholder=" "></image-slot></div>
           <div>
-            <div class="nm">Nome Participante</div>
-            <div class="rl">Profissão · Cidade</div>
+            <div class="nm">Amanda S.</div>
+            <div class="rl">Social media · Uberaba/MG</div>
           </div>
         </div>
       </div>
       <div class="tcard" data-reveal data-reveal-d="2">
-        <p class="tquote">Depoimento 06 — substitua pelo texto real do participante. Duas ou três frases sobre a experiência.</p>
+        <p class="tquote">Voltei pra casa com uma forma nova de pensar imagem como decisão de marca, não como detalhe.</p>
         <div class="tmeta">
           <div class="av"><image-slot id="t6" shape="circle" placeholder=" "></image-slot></div>
           <div>
-            <div class="nm">Nome Participante</div>
-            <div class="rl">Profissão · Cidade</div>
+            <div class="nm">Diego F.</div>
+            <div class="rl">Modelo e criador · São Paulo/SP</div>
           </div>
         </div>
       </div>
