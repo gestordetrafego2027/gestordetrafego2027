@@ -66,7 +66,7 @@ button{font-family:inherit;cursor:pointer;}
 .display{font-family:var(--display);font-weight:700;text-transform:uppercase;line-height:.92;letter-spacing:0;margin:0;}
 .h-hero{font-size:clamp(3rem,9vw,9.5rem);}
 .h-2{font-size:clamp(2.2rem,5.2vw,5rem);}
-.lead{font-size:clamp(1.25rem,2.3vw,2.1rem);line-height:1.28;font-variation-settings:'wght' 440,'wdth' 100;letter-spacing:-.01em;}
+.lead{font-size:clamp(1.25rem,2.3vw,2.1rem);line-height:1.28;letter-spacing:-.01em;}
 
 /* ---------- layout ---------- */
 .section{padding:clamp(72px,11vh,160px) var(--pad);position:relative;}
@@ -139,7 +139,7 @@ button{font-family:inherit;cursor:pointer;}
 .ficha{border-top:1px solid var(--line);padding-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 @media(max-width:500px){.ficha{grid-template-columns:1fr;}}
 .ficha-item .fi-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke);margin-bottom:6px;}
-.ficha-item .fi-v{font-variation-settings:'wght' 600,'wdth' 104;font-size:1rem;line-height:1.3;}
+.ficha-item .fi-v{font-size:1rem;line-height:1.3;}
 
 /* ============================================================
    MÉTODO INSIDE / OUT
@@ -161,7 +161,7 @@ button{font-family:inherit;cursor:pointer;}
 .modulos li{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:13px 0;border-top:1px solid var(--line-d2);align-items:baseline;}
 .io-col.out .modulos li{border-top-color:var(--line-2);}
 .modulos .mn{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.08em;color:var(--accent);white-space:nowrap;}
-.modulos .mt{font-size:1rem;font-variation-settings:'wght' 580,'wdth' 100;line-height:1.2;}
+.modulos .mt{font-size:1rem;line-height:1.2;}
 
 /* ============================================================
    GALERIA PRINCIPAL
@@ -217,12 +217,12 @@ button{font-family:inherit;cursor:pointer;}
 @media(max-width:900px){.tlist{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.tlist{grid-template-columns:1fr;}}
 .tcard{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-direction:column;gap:20px;}
-.tquote{font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.34;font-variation-settings:'wght' 480,'wdth' 100;letter-spacing:-.01em;}
+.tquote{font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.34;letter-spacing:-.01em;}
 .tquote::before{content:"\"";color:var(--accent);}
 .tmeta{display:flex;align-items:center;gap:14px;margin-top:auto;}
 .tmeta .av{width:48px;height:48px;border-radius:50%;background:var(--paper-2);flex:none;overflow:hidden;}
 .tmeta .av image-slot{width:100%;height:100%;}
-.tmeta .nm{font-variation-settings:'wght' 700,'wdth' 104;text-transform:uppercase;font-size:.86rem;letter-spacing:.02em;}
+.tmeta .nm{text-transform:uppercase;font-size:.86rem;letter-spacing:.02em;}
 .tmeta .rl{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--smoke);}
 
 /* ============================================================
@@ -242,7 +242,7 @@ button{font-family:inherit;cursor:pointer;}
 @media(max-width:600px){.benefits-grid{grid-template-columns:1fr;}}
 .benefit-item{background:var(--paper);padding:clamp(28px,3.5vw,44px);}
 .bi-icon{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.2em;color:var(--accent);margin-bottom:18px;}
-.bi-title{font-variation-settings:'wght' 720,'wdth' 108;font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:-.01em;margin-bottom:10px;color:var(--ink);}
+.bi-title{font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:-.01em;margin-bottom:10px;color:var(--ink);}
 .bi-desc{color:#54524d;line-height:1.65;font-size:clamp(.88rem,1.2vw,1rem);}
 
 /* ============================================================
