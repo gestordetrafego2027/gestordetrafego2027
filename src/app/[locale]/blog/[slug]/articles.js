@@ -843,5 +843,390 @@ export const articles = {
     ],
     citacao: 'Produção executiva transforma incerteza em previsibilidade.',
     conclusao: 'Investir mais raramente resolve problemas estruturais. Investir melhor sim. A combinação entre orçamento adequado, direção criativa autoral e produção executiva premium é o que separa campanhas que apenas custaram caro daquelas que efetivamente performaram. A House Mazzutti opera nessa combinação — porque é o único lugar onde o investimento se transforma, de fato, em resultado.'
-  }
+  },
+
+  "exposicao-fragmentos-ita-mazzutti": {
+    "categoria": "Produtora — Eventos",
+    "titulo": "Fragmentos: a exposição que transforma retrato em arte",
+    "metaTitle": "Fragmentos: a exposição de Ita Mazzutti | House Mazzutti",
+    "metaDescription": "Como a House Mazzutti transformou 23 retratos em obras de arte na exposição Fragmentos, em São Paulo — conceito, direção e propósito social.",
+    "keywords": "exposição de arte em São Paulo, Ita Mazzutti, fine art, retrato artístico, produção cultural, House Mazzutti, evento autoral",
+    "data": "Junho 2026",
+    "cover": {
+      "src": "/images/blog/exposicao-fragmentos-ita-mazzutti/cover.webp",
+      "fallback": "/images/academy/direcao-criativa/cover.webp",
+      "alt": "Obra da exposição Fragmentos, de Ita Mazzutti, retrato em fine art — House Mazzutti",
+      "caption": "Exposição Fragmentos · direção de Ita Mazzutti"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/exposicao-fragmentos-ita-mazzutti/01.webp",
+        "fallback": "/images/academy/gallery/grid-1.webp",
+        "alt": "Retrato em fine art da coleção Fragmentos exposto em São Paulo",
+        "caption": "Coleção Fragmentos · impressão fine art"
+      },
+      {
+        "src": "/images/blog/exposicao-fragmentos-ita-mazzutti/02.webp",
+        "fallback": "/images/academy/gallery/grid-2.webp",
+        "alt": "Convidados na exposição Fragmentos no Gran Mercure Ibirapuera",
+        "caption": "Mostra intimista · Gran Mercure Ibirapuera"
+      }
+    ],
+    "intro": "Uma exposição não se mede pela parede. Mede-se pelo que permanece no olhar de quem sai. Em uma única noite, em novembro de 2022, a House Mazzutti levou 23 personalidades para dentro dessa ideia — e provou que produção e propósito não vivem em campos separados.",
+    "sections": [
+      {
+        "h2": "O conceito: a beleza das cicatrizes",
+        "paragraphs": [
+          "Estamos habituados a admirar a beleza no que está pronto. Fragmentos parte do oposto — do que se quebrou. A referência é o kintsugi, técnica japonesa que repara a cerâmica quebrada com ouro e transforma a cicatriz em parte da beleza.",
+          "No Gran Mercure Ibirapuera, o fotógrafo e diretor criativo Ita Mazzutti reuniu convidados em torno de uma mostra intimista: 23 histórias, 23 personalidades, 23 obras. Cada retrato deixava de ser registro para virar peça — fotografia que atravessa o físico e o digital até repousar em impressão fine art, em papel de algodão com qualidade de museu."
+        ]
+      },
+      {
+        "h2": "A direção por trás da mostra",
+        "paragraphs": [
+          "Ita Mazzutti assina peças em capas e editoriais de algumas das maiores revistas do Brasil. Ao seu lado, Angelo Mazzutti — publicitário, estrategista de marcas e produtor executivo da casa — conduziu a operação que sustenta um evento desse porte: curadoria, cenografia, imprensa, cerimonial e captação.",
+          "O processo criativo nasce no ensaio fotográfico, passa pela edição, retorna ao físico e recebe intervenção de tinta, vidro, flores e materiais. Cada obra carrega um QR code que abre o vídeo do próprio processo — a história que sustenta a imagem. Entre as homenageadas estavam Juliana Paes, Larissa Manoela, Rafa Kalimann, Sheron Menezzes, Celina Locks e Nicole Bahls, entre outras. Não foi uma seleção por alcance: foi curadoria por história."
+        ]
+      },
+      {
+        "h2": "O propósito além da parede",
+        "paragraphs": [
+          "Fragmentos nasceu com viés social. Parte da arrecadação, incluindo o leilão da obra principal, foi destinada à instituição We Social, que reinsere pessoas em situação de vulnerabilidade por meio da arte, da cultura e da educação.",
+          "É a tese que a casa carrega desde a fundação, em 2016: a produção existe para servir ao propósito. Concepção, cenografia, imprensa e captação operaram como um único organismo — exatamente o que a House oferece a quem precisa transformar uma ideia em experiência memorável."
+        ]
+      }
+    ],
+    "citacao": "Arte não repara o que se quebrou. Dá a isso uma moldura — e um motivo para ser olhado de novo.",
+    "conclusao": "Sua marca tem uma história que merece virar experiência? A House Mazzutti concebe e produz exposições, ativações e eventos autorais do conceito à execução, em São Paulo. Fragmentos é a prova de que um evento bem dirigido não decora um espaço — instala uma percepção. Conheça o portfólio da casa e vamos desenhar o seu próximo projeto."
+  },
+
+  "fashion-film-beatriz-kubota": {
+    "categoria": "Produtora — Editorial",
+    "titulo": "Beatriz Kubota: o editorial que nasceu no ateliê",
+    "metaTitle": "Fashion Film Beatriz Kubota | House Mazzutti Produtora",
+    "metaDescription": "Bastidores do editorial de moda da House Mazzutti com a newface Beatriz Kubota: peças feitas à mão, direção de Ita Mazzutti e fashion film.",
+    "keywords": "fashion film em São Paulo, editorial de moda, direção criativa, produtora audiovisual, newface, House Mazzutti",
+    "data": "Junho 2026",
+    "cover": {
+      "src": "/images/blog/fashion-film-beatriz-kubota/cover.webp",
+      "fallback": "/images/produtora/moda/idrissi/capa.webp",
+      "alt": "Editorial de moda da House Mazzutti com a newface Beatriz Kubota",
+      "caption": "Editorial de moda · direção de Ita Mazzutti"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/fashion-film-beatriz-kubota/01.webp",
+        "fallback": "/images/produtora/moda/idrissi/1.webp",
+        "alt": "Look exclusivo construído à mão para editorial da House Mazzutti",
+        "caption": "Peça exclusiva · styling autoral"
+      },
+      {
+        "src": "/images/blog/fashion-film-beatriz-kubota/02.webp",
+        "fallback": "/images/produtora/moda/idrissi/2.webp",
+        "alt": "Composição em vermelho IDRISSI no fashion film da House Mazzutti",
+        "caption": "Direção de cor · parceria IDRISSI"
+      }
+    ],
+    "intro": "A moda mais interessante raramente vem da prateleira. Vem do ateliê. Há editoriais que apresentam peças — este construiu as peças antes de fotografá-las. E é nessa inversão que a Produtora House Mazzutti revela seu método.",
+    "sections": [
+      {
+        "h2": "Quando a roupa ainda é ideia",
+        "paragraphs": [
+          "Na Produtora House Mazzutti, a newface Beatriz Kubota — representada pela agência OFFEN Scouting — protagonizou um editorial pensado do tecido à imagem final. As roupas exclusivas foram construídas à mão pelos estilistas parceiros da casa, Arnaldo Ventura e Eliseu Almeida. Antes do clique, havia costura.",
+          "A captação ficou sob as lentes de Ita Mazzutti, na direção criativa. O fashion film foi assinado por Lucas Brandão, que traduziu a sofisticação do editorial em movimento. Na segunda produção, o vermelho da parceira IDRISSI elevou o conceito — glamour contemporâneo e forma, em uma sinfonia visual de elegância e volume."
+        ]
+      },
+      {
+        "h2": "Por que o fashion film converte",
+        "paragraphs": [
+          "A leitura de mercado sustenta a escolha do formato. Pesquisas de vídeo marketing apontam que 66% dos consumidores preferem assistir a um vídeo curto para conhecer um produto, contra 18% que preferem texto — e que, na moda, o audiovisual ajuda a aumentar o entendimento da peça em 99% dos casos e a influenciar a decisão de compra em 87%.",
+          "Para uma marca de moda, o fashion film deixou de ser sofisticação opcional. Virou a forma mais eficiente de transformar uma coleção em desejo."
+        ]
+      },
+      {
+        "h2": "A assinatura da casa",
+        "paragraphs": [
+          "“Este editorial é mais do que uma sessão fotográfica. São artistas produzindo uma coleção de imagens que atravessa as fronteiras da moda tradicional”, define Angelo Mazzutti, produtor executivo da House.",
+          "Fotografia, vídeo e design de moda servem ao mesmo todo — maior que a soma das partes. É o método que a casa aplica a cada projeto: a peça não vale pelo acabamento, mas pela narrativa que ela sustenta."
+        ]
+      }
+    ],
+    "citacao": "Quando talentos se encontram com intenção, a moda deixa de ser produto e vira linguagem.",
+    "conclusao": "Tem uma coleção, uma marca ou uma campanha de moda para lançar? A House Mazzutti concebe e produz editoriais e fashion films com direção de ponta a ponta, em São Paulo. Conheça o portfólio da Produtora e fale com a nossa equipe sobre o seu próximo editorial."
+  },
+
+  "campanha-larissa-manoela-jequiti": {
+    "categoria": "Produtora — Campanhas",
+    "titulo": "Larissa Manoela e a Jequiti: beleza com direção",
+    "metaTitle": "Campanha Larissa Manoela para a Jequiti | House Mazzutti",
+    "metaDescription": "Case da produção de foto e vídeo da House Mazzutti para a Jequiti com Larissa Manoela: set design, direção de arte e produção executiva.",
+    "keywords": "produção de campanha publicitária, produção executiva, campanha de beleza, set design, foto e vídeo, Larissa Manoela, Jequiti, House Mazzutti",
+    "data": "Junho 2026",
+    "cover": {
+      "src": "/images/blog/campanha-larissa-manoela-jequiti/cover.webp",
+      "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/capa.webp",
+      "alt": "Campanha Jequiti com Larissa Manoela produzida pela House Mazzutti",
+      "caption": "Campanha de beleza · produção House Mazzutti"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/campanha-larissa-manoela-jequiti/01.webp",
+        "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/1.webp",
+        "alt": "Set design da campanha Jequiti produzida pela House Mazzutti",
+        "caption": "Set design · direção de arte"
+      },
+      {
+        "src": "/images/blog/campanha-larissa-manoela-jequiti/02.webp",
+        "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/2.webp",
+        "alt": "Captação de foto e vídeo da campanha de beleza com Larissa Manoela",
+        "caption": "Captação integrada · foto e vídeo"
+      }
+    ],
+    "intro": "Trabalhar com um grande nome não garante uma boa campanha. O que garante é a produção que existe por trás dele. Uma celebridade entrega audiência; a direção entrega percepção. A campanha precisa das duas — e foi essa a equação que a House resolveu para a Jequiti.",
+    "sections": [
+      {
+        "h2": "O tamanho do jogo",
+        "paragraphs": [
+          "Para a linha Splash, da Jequiti, a House Mazzutti assinou a produção de foto e vídeo com a atriz Larissa Manoela. Não foi apenas uma sessão com a estrela — foi um set construído do conceito ao set design, pensado para que cada imagem comunicasse a marca antes mesmo da legenda.",
+          "O contexto explica o cuidado. O Brasil é o terceiro maior mercado de beleza e cuidados pessoais do mundo, segundo a Euromonitor, e movimentou R$ 242,3 bilhões em 2025 — alta de 11,2% sobre o ano anterior, de acordo com a ABIHPEC. Nesse porte, a imagem de uma campanha não é detalhe estético: é disputa direta por percepção e venda."
+        ]
+      },
+      {
+        "h2": "O que sustenta o set",
+        "paragraphs": [
+          "Set design próprio, direção de arte e captação integrada de imagem e movimento. A produtora opera o que chama de produção executiva: a engrenagem que transforma briefing em campanha, do roteiro à entrega final.",
+          "É esse sistema que permite a um talento do porte de Larissa Manoela chegar ao set e encontrar tudo no lugar — para que a entrega dela seja sobre presença, não sobre logística."
+        ]
+      },
+      {
+        "h2": "Por que isso decide o resultado",
+        "paragraphs": [
+          "Campanhas com grandes nomes falham quando a estrela carrega sozinha o peso da peça. Acertam quando a produção a sustenta.",
+          "A diferença entre uma foto bonita e uma campanha que vende mora exatamente aí: na direção que ninguém vê, mas todos sentem."
+        ]
+      }
+    ],
+    "citacao": "O nome abre a porta. A direção decide o que se vê quando ela se abre.",
+    "conclusao": "Vai colocar uma marca de beleza no mercado — com ou sem celebridade? A House Mazzutti produz campanhas de ponta a ponta, do conceito ao set, com a produção executiva que transforma investimento em resultado. Conheça nossos cases e vamos desenhar a sua próxima campanha."
+  },
+
+  "campanha-wepink-virginia-fonseca": {
+    "categoria": "Produtora — Campanhas",
+    "titulo": "Wepink: quando um perfume vira narrativa",
+    "metaTitle": "Campanha Wepink de Virginia Fonseca | House Mazzutti",
+    "metaDescription": "Como a House Mazzutti produziu foto e vídeo para a Wepink, de Virginia Fonseca, construindo desejo por meio da direção de imagem.",
+    "keywords": "produção audiovisual para perfumaria, campanha de perfume, direção de imagem, fashion film, beleza, Wepink, House Mazzutti",
+    "data": "Junho 2026",
+    "cover": {
+      "src": "/images/blog/campanha-wepink-virginia-fonseca/cover.webp",
+      "fallback": "/images/produtora/beleza/we-pink-01/capa.webp",
+      "alt": "Campanha da Wepink produzida pela House Mazzutti, foto e vídeo de perfumaria",
+      "caption": "Campanha Wepink · produção House Mazzutti"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/campanha-wepink-virginia-fonseca/01.webp",
+        "fallback": "/images/produtora/beleza/we-pink-01/1.webp",
+        "alt": "Direção de imagem para campanha de perfumaria da Wepink",
+        "caption": "Atmosfera · direção de imagem"
+      },
+      {
+        "src": "/images/blog/campanha-wepink-virginia-fonseca/02.webp",
+        "fallback": "/images/produtora/beleza/we-pink-01/2.webp",
+        "alt": "Fashion film de perfume produzido pela House Mazzutti",
+        "caption": "Fashion film · perfumaria"
+      }
+    ],
+    "intro": "Vender um frasco é fácil. Difícil é fazer alguém desejar o que ele representa. Perfume não se mostra — se sugere. E o que se sugere depende inteiramente da direção. Foi nesse território que a House entrou pela campanha da Wepink.",
+    "sections": [
+      {
+        "h2": "O desafio do segmento",
+        "paragraphs": [
+          "Na campanha da Wepink, marca da empresária Virginia Fonseca, a Produtora House Mazzutti assinou a produção de foto e vídeo. Captação sob a direção de Ita Mazzutti, fashion film conduzido por Lucas Brandão — a mesma equipe que traduz conceito em imagem nas produções da casa.",
+          "Beleza e perfumaria competem por desejo, não por explicação. A peça precisa construir atmosfera: luz, textura, ritmo. Cada take existe para fazer a marca ser sentida antes de ser lida."
+        ]
+      },
+      {
+        "h2": "O dado que sustenta a estratégia",
+        "paragraphs": [
+          "Páginas com vídeo registram taxa de rejeição 34% menor e aumentam em 2,6 vezes o tempo de permanência, segundo estudos de vídeo marketing. Para uma marca de perfumaria que vive de atmosfera, isso é o que separa um anúncio ignorado de um produto desejado.",
+          "É um território onde a House se move com naturalidade — produção de material fotográfico e audiovisual para campanhas de moda, beleza e bem-estar, com a direção criativa como espinha dorsal."
+        ]
+      },
+      {
+        "h2": "A entrega",
+        "paragraphs": [
+          "Imagem e movimento construídos para sustentar a presença de uma das marcas mais visíveis do mercado de beleza brasileiro.",
+          "Não para registrar o produto — para dar a ele uma narrativa."
+        ]
+      }
+    ],
+    "citacao": "Um bom produto pede atenção. Uma boa imagem cria desejo.",
+    "conclusao": "Sua marca de beleza precisa de imagens que vendem, não apenas que ilustram? A House Mazzutti produz campanhas de perfumaria e cosmética com direção criativa de alto padrão. Conheça o portfólio da Produtora e fale com a nossa equipe."
+  },
+
+  "fashion-film-joias-barbara-porto": {
+    "categoria": "Produtora — Editorial",
+    "titulo": "Bárbara Porto: a joia em movimento",
+    "metaTitle": "Fashion Film de Joias — Bárbara Porto | House Mazzutti",
+    "metaDescription": "Case do fashion film de joias da House Mazzutti para Bárbara Porto: conceito, direção de arte e a imagem que transforma a peça em desejo.",
+    "keywords": "fashion film de joias, direção de arte, vídeo para joalheria, produção audiovisual, design, Bárbara Porto, House Mazzutti",
+    "data": "Junho 2026",
+    "cover": {
+      "src": "/images/blog/fashion-film-joias-barbara-porto/cover.webp",
+      "fallback": "/images/produtora/acessorios/barbara-porto/capa.webp",
+      "alt": "Fashion film de joias da Bárbara Porto produzido pela House Mazzutti",
+      "caption": "Fashion film de joias · direção House Mazzutti"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/fashion-film-joias-barbara-porto/01.webp",
+        "fallback": "/images/produtora/acessorios/barbara-porto/1.webp",
+        "alt": "Joia em destaque sob direção de arte da House Mazzutti",
+        "caption": "Direção de arte · joalheria"
+      },
+      {
+        "src": "/images/blog/fashion-film-joias-barbara-porto/02.webp",
+        "fallback": "/images/produtora/acessorios/barbara-porto/2.webp",
+        "alt": "Captação de vídeo para coleção de joias Bárbara Porto",
+        "caption": "Captação · objeto de desejo"
+      }
+    ],
+    "intro": "Joia parada é catálogo. Joia em movimento é desejo. Uma peça de joalheria fotografada bem informa; filmada com direção, encanta. A House escolheu o segundo caminho para a Bárbara Porto.",
+    "sections": [
+      {
+        "h2": "O conceito",
+        "paragraphs": [
+          "Para a Bárbara Porto, a Produtora House Mazzutti desenvolveu um fashion film centrado no conceito e no design das joias. Fotografia de Ita Mazzutti, edição e finalização de Lucas Brandão — vídeo pensado para revelar a peça como objeto de desejo, não como item de vitrine.",
+          "Acessórios, moda e design convivem na mesma narrativa. A direção de arte coloca a joia em contexto: luz, modelo, gesto. Cada elemento existe para que o brilho conte uma história — e não apenas reflita."
+        ]
+      },
+      {
+        "h2": "A imagem é o produto antes do produto",
+        "paragraphs": [
+          "No segmento de joias, quem decide a compra raramente toca a peça primeiro: vê. Por isso a captação de alto padrão deixa de ser luxo e vira condição de venda — sobretudo num cenário em que o vídeo deve responder pela maior parte do tráfego on-line e o consumidor de moda usa o audiovisual para entender e decidir.",
+          "Você já desejou uma peça antes mesmo de saber o preço? Foi a imagem que fez isso. É exatamente esse efeito que a House constrói com método."
+        ]
+      },
+      {
+        "h2": "Direção como diferencial",
+        "paragraphs": [
+          "A joia carrega valor intrínseco. A produção decide se esse valor será percebido. É a camada que transforma um belo objeto em um objeto desejado.",
+          "Esse é o trabalho que a Produtora entrega a marcas de joalheria e acessórios: imagem que vende antes da etiqueta."
+        ]
+      }
+    ],
+    "citacao": "A joia carrega valor. A imagem decide se esse valor será percebido.",
+    "conclusao": "Tem uma coleção de joias ou acessórios para apresentar ao mercado? A House Mazzutti cria fashion films e campanhas que transformam design em desejo. Conheça o portfólio e fale com a nossa produção."
+  },
+
+  "fashion-film-emanuely-terres": {
+    "categoria": "Produtora — Editorial",
+    "titulo": "Emanuely Terres: um fashion film sobre presença",
+    "metaTitle": "Fashion Film Emanuely Terres | House Mazzutti Produtora",
+    "metaDescription": "Case do fashion film de Emanuely Terres pela House Mazzutti em São Paulo: direção criativa, linguagem audiovisual e construção de presença.",
+    "keywords": "produtora de fashion film em São Paulo, fashion film, direção criativa, audiovisual de moda, presença, Emanuely Terres, House Mazzutti",
+    "data": "Junho 2026",
+    "cover": {
+      "src": "/images/blog/fashion-film-emanuely-terres/cover.webp",
+      "fallback": "/images/studio/emanuelly-terres/capa.webp",
+      "alt": "Fashion film de Emanuely Terres produzido pela House Mazzutti em São Paulo",
+      "caption": "Fashion film · direção de Ita Mazzutti"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/fashion-film-emanuely-terres/01.webp",
+        "fallback": "/images/studio/emanuelly-terres/1.webp",
+        "alt": "Retrato editorial de Emanuely Terres pela House Mazzutti",
+        "caption": "Editorial · presença"
+      },
+      {
+        "src": "/images/blog/fashion-film-emanuely-terres/02.webp",
+        "fallback": "/images/studio/emanuelly-terres/2.webp",
+        "alt": "Direção criativa em fashion film de moda da House Mazzutti",
+        "caption": "Direção criativa · atmosfera"
+      }
+    ],
+    "intro": "Um fashion film não vende roupa. Constrói presença. E presença é o ativo mais difícil de fabricar. Moda boa veste o corpo; direção boa revela quem o habita. Foi essa a aposta da House no filme de Emanuely Terres.",
+    "sections": [
+      {
+        "h2": "A linguagem",
+        "paragraphs": [
+          "No fashion film de Emanuely Terres, a Produtora House Mazzutti reuniu sua estrutura completa de foto e vídeo em São Paulo. Direção criativa de Ita Mazzutti, edição de Lucas Brandão — a assinatura visual que marca as produções da casa.",
+          "O fashion film é o formato em que a House mais se reconhece: imagem em movimento a serviço de um conceito. Não existe para mostrar peças em sequência, mas para criar atmosfera — um universo onde a moda se torna narrativa."
+        ]
+      },
+      {
+        "h2": "Por que presença virou disputa",
+        "paragraphs": [
+          "Vivemos um mercado saturado de imagem — projeta-se que o vídeo responda por mais de 80% de todo o tráfego on-line. Nesse volume, presença é o que separa quem é visto de quem é lembrado.",
+          "O fashion film constrói essa presença com tempo, ritmo e direção, recursos que a foto isolada não alcança. São Paulo concentra o mercado criativo brasileiro, e é daqui que a House opera — perto das marcas, dos talentos e dos sets que definem o padrão estético do país."
+        ]
+      },
+      {
+        "h2": "O que permanece",
+        "paragraphs": [
+          "Roupa passa de estação. Presença, quando bem construída, permanece. É por isso que um fashion film bem dirigido segue trabalhando pela marca muito depois da campanha.",
+          "Essa durabilidade é o que a Produtora entrega: não um vídeo, mas um ativo de percepção."
+        ]
+      }
+    ],
+    "citacao": "Roupa passa de estação. Presença, quando bem construída, permanece.",
+    "conclusao": "Quer construir uma presença que o mercado lembra? A House Mazzutti dirige e produz fashion films com identidade, em São Paulo. Conheça o nosso trabalho e vamos criar o seu."
+  },
+
+  "workshop-inside-out-ita-mazzutti": {
+    "categoria": "Studio — Academy",
+    "titulo": "Inside Out: a House também forma o olhar",
+    "metaTitle": "Workshop Inside Out de Ita Mazzutti | House Mazzutti Academy",
+    "metaDescription": "O workshop Inside Out, de Ita Mazzutti e da House Mazzutti, ensina direção e fotografia do conceito à entrega para novos profissionais em São Paulo.",
+    "keywords": "workshop de fotografia e direção em São Paulo, formação audiovisual, direção criativa, Academy, mentoria de imagem, Ita Mazzutti, House Mazzutti",
+    "data": "Junho 2026",
+    "cover": {
+      "src": "/images/blog/workshop-inside-out-ita-mazzutti/cover.webp",
+      "fallback": "/images/academy/direcao-criativa/cover.webp",
+      "alt": "Workshop Inside Out conduzido por Ita Mazzutti na House Mazzutti",
+      "caption": "Workshop Inside Out · House Mazzutti Academy"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/workshop-inside-out-ita-mazzutti/01.webp",
+        "fallback": "/images/academy/edit-01/edit01-equipe.jpg",
+        "alt": "Turma reduzida em workshop presencial da House Mazzutti em São Paulo",
+        "caption": "Turma reduzida · formação presencial"
+      },
+      {
+        "src": "/images/blog/workshop-inside-out-ita-mazzutti/02.webp",
+        "fallback": "/images/academy/edit-01/edit01-quadro.jpg",
+        "alt": "Aula prática de direção e fotografia no workshop da House Mazzutti",
+        "caption": "Prática · do conceito à entrega"
+      }
+    ],
+    "intro": "Toda casa criativa sabe produzir. Poucas sabem ensinar a produzir. Quem domina a técnica entrega um trabalho; quem domina a direção forma outros olhares. Foi para essa diferença que nasceu o Inside Out.",
+    "sections": [
+      {
+        "h2": "O que se aprende",
+        "paragraphs": [
+          "O workshop presencial conduzido por Ita Mazzutti — e ampliado na edição Inside Out — abre a produtora para turmas reduzidas e mostra o que normalmente fica nos bastidores: como se constrói uma imagem do conceito à entrega.",
+          "Não é um curso de equipamento. É uma formação de leitura — como enxergar uma cena, dirigir uma produção e tomar as decisões criativas que separam um registro de uma peça. A técnica entra a serviço da direção, nunca o contrário."
+        ]
+      },
+      {
+        "h2": "Por que a House ensina",
+        "paragraphs": [
+          "Formar olhar é coerente com a tese da casa: imagem é estratégia, não acessório. Num mercado em que a carreira de criador se profissionaliza e a demanda por imagem de alto padrão só cresce, dominar direção virou diferencial competitivo real.",
+          "Ao abrir o método para novos profissionais, a House amplia o próprio território — de produtora a referência de formação no mercado criativo de São Paulo."
+        ]
+      },
+      {
+        "h2": "Para quem é",
+        "paragraphs": [
+          "Você quer aprender a fotografar melhor ou a dirigir a imagem que o mercado valoriza? O Inside Out responde à segunda pergunta — e é por isso que reúne fotógrafos, criadores e profissionais de marca em um mesmo set.",
+          "Turmas reduzidas, formato presencial, método aplicado em produções reais para grandes marcas."
+        ]
+      }
+    ],
+    "citacao": "Produzir é entregar uma imagem. Ensinar é multiplicar a capacidade de criá-las.",
+    "conclusao": "Quer dominar direção de imagem com quem produz para grandes marcas? As turmas do Inside Out são reduzidas e presenciais, em São Paulo. Conheça a House Mazzutti Academy e garanta seu interesse na próxima turma."
+  },
 };

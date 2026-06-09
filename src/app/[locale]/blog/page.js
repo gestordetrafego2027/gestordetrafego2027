@@ -140,7 +140,63 @@ export default function BlogPage() {
             excerpt: "Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas na prática, o que determina o resultado não é o valor investido.",
             link: "/blog/por-que-campanhas-caras-falham",
             data: "Janeiro 2026"
-        }
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Eventos",
+            titulo: "Fragmentos: a exposição que transforma retrato em arte",
+            excerpt: "Uma exposição não se mede pela parede — mede-se pelo que fica no olhar. Em uma noite, a House levou 23 personalidades para dentro dessa ideia.",
+            link: "/blog/exposicao-fragmentos-ita-mazzutti",
+            data: "Junho 2026"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Editorial",
+            titulo: "Beatriz Kubota: o editorial que nasceu no ateliê",
+            excerpt: "Há editoriais que apresentam peças. Este construiu as peças antes de fotografá-las — do tecido à imagem final.",
+            link: "/blog/fashion-film-beatriz-kubota",
+            data: "Junho 2026"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Campanhas",
+            titulo: "Larissa Manoela e a Jequiti: beleza com direção",
+            excerpt: "Trabalhar com um grande nome não garante uma boa campanha. O que garante é a produção que existe por trás dele.",
+            link: "/blog/campanha-larissa-manoela-jequiti",
+            data: "Junho 2026"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Campanhas",
+            titulo: "Wepink: quando um perfume vira narrativa",
+            excerpt: "Vender um frasco é fácil. Difícil é fazer alguém desejar o que ele representa. A diferença está na imagem.",
+            link: "/blog/campanha-wepink-virginia-fonseca",
+            data: "Junho 2026"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Editorial",
+            titulo: "Bárbara Porto: a joia em movimento",
+            excerpt: "Joia parada é catálogo. Joia em movimento é desejo. A House escolheu o segundo caminho.",
+            link: "/blog/fashion-film-joias-barbara-porto",
+            data: "Junho 2026"
+        },
+        {
+            categoria: "produtora",
+            subcategoria: "Produtora — Editorial",
+            titulo: "Emanuely Terres: um fashion film sobre presença",
+            excerpt: "Um fashion film não vende roupa. Constrói presença — o ativo mais difícil de fabricar.",
+            link: "/blog/fashion-film-emanuely-terres",
+            data: "Junho 2026"
+        },
+        {
+            categoria: "studio",
+            subcategoria: "Studio — Academy",
+            titulo: "Inside Out: a House também forma o olhar",
+            excerpt: "Toda casa criativa sabe produzir. Poucas sabem ensinar a produzir. Foi para essa diferença que nasceu o workshop.",
+            link: "/blog/workshop-inside-out-ita-mazzutti",
+            data: "Junho 2026"
+        },
     ];
 
     return (
