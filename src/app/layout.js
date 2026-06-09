@@ -28,15 +28,16 @@ export default function RootLayout({ children }) {
         {/* Material Symbols — carregado de forma não-bloqueante via Client Component */}
         <NonBlockingStyles />
 
-        {/* Google tag (gtag.js) — Google Ads AW-16938050518 */}
+        {/* Google tag (gtag.js) — GA4 G-R61KK25PBK + Google Ads AW-16938050518 */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16938050518"
+          src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"
           strategy="afterInteractive"
         />
-        <Script id="google-ads-gtag" strategy="afterInteractive">
+        <Script id="google-gtag" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+gtag('config', 'G-R61KK25PBK');
 gtag('config', 'AW-16938050518');`}
         </Script>
       </head>
