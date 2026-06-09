@@ -51,6 +51,24 @@ const BOOKS = [
     status: 'Lançamento',
     available: true,
   },
+  {
+    id: 'vol-03',
+    vol: 'Vol. 03',
+    year: '2026',
+    title: 'Em breve',
+    subtitle: 'O próximo volume da série editorial House Mazzutti está em produção.',
+    pages: '—',
+    chapters: '—',
+    format: 'Ebook',
+    priceFull: null,
+    price: '—',
+    discount: null,
+    href: null,
+    cover: null,
+    coverBg: '#111111',
+    status: 'Em breve',
+    available: false,
+  },
 ]
 
 /* ─── produtos ────────────────────────────────────────────────── */
@@ -157,10 +175,10 @@ export default function AcademyHomePage() {
                 <span className="text-caption text-black/50 mb-4 block">Publicações · Série Editorial</span>
                 <h2 className="text-h2 text-black">Livros</h2>
               </div>
-              <span className="text-caption text-black/40">{BOOKS.length} volumes</span>
+              <span className="text-caption text-black/40">{BOOKS.filter(b => b.available).length} volumes · Vol. 03 em breve</span>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {BOOKS.map((book) => (
                 <BookCard key={book.id} book={book} />
               ))}
@@ -210,15 +228,12 @@ export default function AcademyHomePage() {
                     fill
                     sizes="(max-width: 768px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 hover:scale-105"
-                    style={{ opacity: 0.85 }}
+                    style={{ opacity: 1 }}
                   />
                 </div>
               ))}
             </div>
 
-            <p className="text-caption text-white/30 text-center mt-8">
-              Registro do último workshop presencial — House Mazzutti
-            </p>
           </div>
         </section>
 
@@ -263,7 +278,7 @@ function BookCard({ book }) {
       {/* ── capa ── */}
       <div
         className="relative flex items-end justify-center overflow-hidden"
-        style={{ background: book.coverBg ?? '#1a1a1a', minHeight: 420, paddingBottom: 0 }}
+        style={{ background: book.coverBg ?? '#1a1a1a', aspectRatio: '2/3', paddingBottom: 0 }}
       >
         {/* gradiente base */}
         <div
@@ -272,24 +287,30 @@ function BookCard({ book }) {
         />
 
         {/* capa flutuante */}
-        <div
-          className="relative z-10 transition-transform duration-700 group-hover:-translate-y-2"
-          style={{
-            width: 200,
-            aspectRatio: '2/3',
-            marginBottom: -1,
-            filter: 'drop-shadow(0 32px 48px rgba(0,0,0,0.45)) drop-shadow(0 8px 16px rgba(0,0,0,0.3))',
-            transform: 'rotate(-1.5deg)',
-          }}
-        >
-          <Image
-            src={book.cover}
-            alt={`Capa ${book.title}`}
-            fill
-            sizes="200px"
-            className="object-cover"
-          />
-        </div>
+        {book.cover ? (
+          <div
+            className="relative z-10 transition-transform duration-700 group-hover:-translate-y-2"
+            style={{
+              width: '55%',
+              aspectRatio: '2/3',
+              marginBottom: -1,
+              filter: 'drop-shadow(0 32px 48px rgba(0,0,0,0.45)) drop-shadow(0 8px 16px rgba(0,0,0,0.3))',
+              transform: 'rotate(-1.5deg)',
+            }}
+          >
+            <Image
+              src={book.cover}
+              alt={`Capa ${book.title}`}
+              fill
+              sizes="(max-width: 768px) 55vw, 20vw"
+              className="object-cover"
+            />
+          </div>
+        ) : (
+          <div className="relative z-10 flex items-center justify-center w-full h-full pb-12">
+            <span className="text-white/20 text-[64px] font-light" style={{ fontFamily: 'serif' }}>03</span>
+          </div>
+        )}
 
         {/* badge vol/status */}
         <div className="absolute top-5 left-5 flex items-center gap-2 z-20">
@@ -376,7 +397,7 @@ function ProductCard({ product }) {
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
-          style={{ opacity: 0.55 }}
+          style={{ opacity: 1 }}
         />
         <div className="absolute top-5 left-5">
           <span
