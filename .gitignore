@@ -27,3 +27,9 @@ tests/e2e/.auth/
 dev.log
 output.html
 scripts/_probe_stripe.mjs
+
+# Documentos de trabalho/entregáveis (não versionar no repo do site)
+/*.docx
+/*.xlsx
+/.~lock.*#
+INDEXACAO_BLOG_CASES.md
