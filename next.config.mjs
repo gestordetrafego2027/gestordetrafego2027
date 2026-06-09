@@ -102,6 +102,18 @@ const nextConfig = {
         destination: '/academy/workshop-producao-direcao-01',
         permanent: true,
       },
+
+      // ── WordPress legacy (URLs indexadas / linkadas externamente) ──
+      { source: '/wp-content/:path*',  destination: '/',         permanent: true },
+      { source: '/wp-admin/:path*',    destination: '/',         permanent: true },
+      { source: '/wp-login.php',       destination: '/',         permanent: true },
+      { source: '/feed',               destination: '/pt/blog/', permanent: true },
+      { source: '/feed/',              destination: '/pt/blog/', permanent: true },
+      { source: '/category/:path*',    destination: '/pt/blog/', permanent: true },
+      { source: '/tag/:path*',         destination: '/pt/blog/', permanent: true },
+      { source: '/author/:path*',      destination: '/pt/blog/', permanent: true },
+      { source: '/page/:path*',        destination: '/pt/blog/', permanent: true },
+      // /?p=NNN é tratado no middleware (Next não filtra query params aqui)
     ];
   },
 };

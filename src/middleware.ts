@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
-import { type NextRequest } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { updateSession } from '@/lib/supabase/middleware';
 
 const intlMiddleware = createMiddleware(routing);
@@ -9,7 +9,20 @@ const intlMiddleware = createMiddleware(routing);
 const NON_I18N = ['/crm', '/login', '/logout', '/api', '/academy', '/auth', '/downloads', '/lp', '/sitemap.xml', '/robots.txt'];
 
 export async function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, searchParams } = request.nextUrl;
+
+  // WordPress legacy: ?p=NNN, ?page_id=NNN, ?cat=NNN → blog
+  if (
+    searchParams.has('p') ||
+    searchParams.has('page_id') ||
+    searchParams.has('cat') ||
+    searchParams.has('s')
+  ) {
+    const dest = searchParams.has('s')
+      ? `/pt/blog/?q=${encodeURIComponent(searchParams.get('s') ?? '')}`
+      : '/pt/blog/';
+    return NextResponse.redirect(new URL(dest, request.url), { status: 301 });
+  }
 
   // Rotas sem i18n: só Supabase auth
   if (NON_I18N.some(prefix => pathname.startsWith(prefix))) {
