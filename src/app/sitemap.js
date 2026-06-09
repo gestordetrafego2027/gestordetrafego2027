@@ -65,6 +65,9 @@ export default async function sitemap() {
     {p: '/academy/marketing-para-modelos', priority: 0.7},
     {p: '/academy/casos-da-producao', priority: 0.7},
     {p: '/academy/inside-out', priority: 0.8},
+    // Workshop LPs (fora do locale — rotas brutas)
+    {p: '/academy/workshop-inside-out-edit-01', priority: 0.9},
+    {p: '/academy/workshop-producao-direcao-01', priority: 0.9},
     // Institucional / comercial
     {p: '/sobre', priority: 0.8},
     {p: '/angelo', priority: 0.7},

@@ -16,7 +16,17 @@ export function GET() {
 <meta property="og:url" content="https://housemazzutti.com/academy/workshop-inside-out-edit-01/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="House Mazzutti Academy">
+<meta property="og:image" content="https://housemazzutti.com/images/academy/edit-01/edit01-equipe.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://housemazzutti.com/images/academy/edit-01/edit01-equipe.jpg">
+<meta name="twitter:title" content="Inside Out · Edit 01 — Imersão Gravada | House Mazzutti">
+<meta name="twitter:description" content="Dois dias de imersão em direção criativa, produção e narrativa de marca, gravados em Uberlândia. Acesso vitalício por R$ 145.">
+<!-- JSON-LD: Product (imersão gravada) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"Inside Out · Edit 01 — Imersão Gravada","description":"Dois dias de imersão em direção criativa, produção e narrativa de marca, gravados em Uberlândia. Oito módulos, uma campanha entregue ao vivo. Acesso vitalício.","image":"https://housemazzutti.com/images/academy/edit-01/edit01-equipe.jpg","url":"https://housemazzutti.com/academy/workshop-inside-out-edit-01/","brand":{"@type":"Brand","name":"House Mazzutti Academy"},"offers":{"@type":"Offer","priceCurrency":"BRL","price":"145.00","availability":"https://schema.org/InStock","url":"https://housemazzutti.com/academy/workshop-inside-out-edit-01/"}}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R61KK25PBK');gtag('config','AW-16938050518');</script>
@@ -181,12 +191,12 @@ export function GET() {
         <div class="io-word">Inside</div>
         <p class="io-desc">A arquitetura da criação. O DNA da marca com Angelo Mazzutti, o mapa do conteúdo infinito, o storytelling que vende e a ideação com inteligência artificial. Onde a ideia ganha estrutura antes de ganhar imagem.</p>
         <ul class="modulos">
-          <li><span class="mn">09:00</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Welcome</b>Coffee & networking dirigido</span></li>
-          <li><span class="mn">09:30</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 01</b>O DNA da Marca — com Angelo Mazzutti</span></li>
-          <li><span class="mn">11:00</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 02</b>O Mapa do Conteúdo Infinito</span></li>
-          <li><span class="mn">14:00</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 03</b>Storytelling que Vende</span></li>
-          <li><span class="mn">16:00</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 04</b>Ideação com Inteligência Artificial</span></li>
-          <li><span class="mn">17:30</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Encerramento</b>Happy hour & conexões</span></li>
+          <li><span class="mn">09:00</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Welcome</b>Coffee & networking dirigido</span></li>
+          <li><span class="mn">09:30</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 01</b>O DNA da Marca — com Angelo Mazzutti</span></li>
+          <li><span class="mn">11:00</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 02</b>O Mapa do Conteúdo Infinito</span></li>
+          <li><span class="mn">14:00</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 03</b>Storytelling que Vende</span></li>
+          <li><span class="mn">16:00</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 04</b>Ideação com Inteligência Artificial</span></li>
+          <li><span class="mn">17:30</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Encerramento</b>Happy hour & conexões</span></li>
         </ul>
       </div>
       <div class="io-col out" data-reveal data-reveal-d="1">
@@ -197,12 +207,12 @@ export function GET() {
         <div class="io-word">Out</div>
         <p class="io-desc">A maestria da execução. Destravar a câmera, o arsenal da produção rápida e a pós-produção com IA. Fecha com o Hot Seat de Angelo, a campanha entregue ao vivo e a cerimônia de encerramento.</p>
         <ul class="modulos" style="--line-d2:rgba(10,10,10,.08)">
-          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">09:00</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 05</b>Destravando a Câmera</span></li>
-          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">10:30</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 06</b>O Arsenal da Produção Rápida</span></li>
-          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">14:00</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 07</b>A Mágica da Pós-Produção com IA</span></li>
-          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">16:00</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 08</b>Hot Seat com Angelo Mazzutti</span></li>
-          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">17:00</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Shooting</b>Campanha final ao vivo</span></li>
-          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">17:30</span><span class="mt"><b style="font-variation-settings:'wght' 700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Cerimônia</b>Encerramento & premiação</span></li>
+          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">09:00</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 05</b>Destravando a Câmera</span></li>
+          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">10:30</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 06</b>O Arsenal da Produção Rápida</span></li>
+          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">14:00</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 07</b>A Mágica da Pós-Produção com IA</span></li>
+          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">16:00</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Módulo 08</b>Hot Seat com Angelo Mazzutti</span></li>
+          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">17:00</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Shooting</b>Campanha final ao vivo</span></li>
+          <li style="border-top-color:var(--line-2)"><span class="mn" style="color:var(--accent)">17:30</span><span class="mt"><b style="font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;display:block;color:var(--accent);margin-bottom:2px">Cerimônia</b>Encerramento & premiação</span></li>
         </ul>
       </div>
     </div>
