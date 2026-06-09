@@ -1,7 +1,7 @@
 /**
- * Checkout · Casos da Produção · Vol. 03
+ * Checkout · Inside Out · Vol. 03
  * Server component — preço/título puxados de academy_products (slug=casos-da-producao).
- * TODO: criar produto no Stripe e preencher STRIPE_PRICE_ID_CASOS_DA_PRODUCAO no env.
+ * Stripe: prod_Ufv6mQL1zD4Bxf · price_1TgZGILcrEu1967nxsNG52fO · R$ 47,00
  */
 import type { Metadata } from 'next'
 import Link from 'next/link'

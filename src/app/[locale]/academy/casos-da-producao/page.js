@@ -711,8 +711,7 @@ export default function CasosDaProducaoPage() {
               <div className="num-line">
                 <span className="pill">Edição de lançamento</span>
               </div>
-              {/* TODO: substituir XX pelo preço final */}
-              <div className="price"><span className="cur">R$</span>XX</div>
+              <div className="price"><span className="cur">R$</span>47</div>
               <div className="pix-line"><em>à vista · cartão, pix ou boleto</em></div>
               <div>
                 <a href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></a>
