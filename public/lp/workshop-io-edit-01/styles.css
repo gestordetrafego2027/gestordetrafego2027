@@ -215,6 +215,34 @@ button{font-family:inherit;cursor:pointer;}
 .num-item .l{font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke);margin-top:10px;}
 
 /* ============================================================
+   BENEFITS GRID
+   ============================================================ */
+.benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#e0ded9;margin-top:clamp(32px,4vw,56px);}
+@media(max-width:600px){.benefits-grid{grid-template-columns:1fr;}}
+.benefit-item{background:var(--paper);padding:clamp(28px,3.5vw,44px);}
+.bi-icon{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.2em;color:var(--accent);margin-bottom:18px;}
+.bi-title{font-variation-settings:'wght' 720,'wdth' 108;font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:-.01em;margin-bottom:10px;color:var(--ink);}
+.bi-desc{color:#54524d;line-height:1.65;font-size:clamp(.88rem,1.2vw,1rem);}
+
+/* ============================================================
+   CTA BUY BLOCK
+   ============================================================ */
+.cta-buy{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start;}
+@media(max-width:820px){.cta-buy{grid-template-columns:1fr;}}
+.cta-buy-left .eyebrow{display:block;margin-bottom:12px;}
+.includes-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;}
+.includes-list li{display:flex;align-items:flex-start;gap:14px;color:var(--smoke-lt);font-size:clamp(.86rem,1.2vw,.98rem);line-height:1.5;}
+.includes-list li::before{content:"";width:20px;height:1px;background:var(--accent);margin-top:.75em;flex:none;}
+.price-box{border:1px solid var(--line-d);padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;align-items:flex-start;gap:8px;position:sticky;top:calc(var(--nav-h,68px) + 16px);}
+.price-label{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke);}
+.price-value{font-variation-settings:'wght' 820,'wdth' 118;font-size:clamp(2.6rem,5vw,4rem);line-height:.9;color:var(--paper);letter-spacing:-.02em;}
+.price-note{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);margin-bottom:4px;}
+.cta-main{width:100%;justify-content:space-between;background:var(--accent);border-color:var(--accent);color:#fff;}
+.cta-main::after{background:#c1300c;}
+.cta-main:hover{border-color:#c1300c;}
+.guarantee{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--smoke);margin-top:16px;line-height:1.6;}
+
+/* ============================================================
    CTA → EDIT 02
    ============================================================ */
 .cta-next{text-align:center;display:flex;flex-direction:column;align-items:center;gap:clamp(22px,3vw,34px);}
