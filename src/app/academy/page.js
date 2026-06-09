@@ -193,7 +193,7 @@ export default function AcademyHomePage() {
             <div className="mb-16 flex items-end justify-between">
               <div>
                 <span className="text-caption text-white/40 mb-4 block">Último Evento</span>
-                <h2 className="text-h2 text-white">Workshop Inside Out</h2>
+                <h2 className="text-h2 text-white">Por trás das câmeras</h2>
               </div>
             </div>
 
