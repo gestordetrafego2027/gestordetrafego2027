@@ -10,8 +10,8 @@ import { createClient } from '@/lib/supabase/server'
 import { DIGITAL_PRODUCTS } from '@/lib/digital-products'
 
 export const metadata: Metadata = {
-  title: 'Checkout · Casos da Produção · House Mazzutti Academy',
-  description: 'Finalize sua compra do ebook Casos da Produção · Vol. 03.',
+  title: 'Checkout · Inside Out · House Mazzutti Academy',
+  description: 'Finalize sua compra do ebook Inside Out · Vol. 03.',
   robots: { index: false, follow: false },
 }
 
@@ -80,8 +80,8 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             letterSpacing: '-0.01em',
           }}
         >
-          Casos da<br />
-          <em style={{ fontStyle: 'italic', color: '#7ab648' }}>Produção</em>
+          Inside<br />
+          <em style={{ fontStyle: 'italic', color: '#7ab648' }}>Out</em>
         </h1>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: '#ccc', margin: '0 0 8px' }}>
           {subtitleLine}

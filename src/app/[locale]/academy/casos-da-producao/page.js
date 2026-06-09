@@ -14,13 +14,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const SITE_URL   = 'https://housemazzutti.com'
-const COVER      = '/images/academy/casos-da-producao/cover.webp'
+const COVER      = '/images/academy/casos-da-producao/cover.png'
 const COVER_ABS  = `${SITE_URL}${COVER}`
 const CHECKOUT_URL = '/pt/checkout/casos-da-producao'
 
-/* ─── título provisório — trocar antes do lançamento ───────────── */
-const TITULO = 'Casos da Produção'
-const SUBTITULO = 'Sete bastidores reais. Do conceito à entrega — com contexto de mercado, direção criativa e a assinatura da House.'
+const TITULO = 'Inside Out'
+const SUBTITULO = 'Operação enxuta com método. Como a House pensa, dirige e entrega — sete bastidores reais de ponta a ponta.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -125,18 +124,18 @@ const FAQS = [
 export default function CasosDaProducaoPage() {
   const css = `
     .cdp-root {
-      --paper: #f2efe8;
-      --paper-warm: #ebe7dc;
-      --paper-edge: #ddd8cc;
-      --ink: #0d110d;
-      --ink-soft: #1a221a;
-      --ink-mute: #5a6655;
-      --ink-light: #8fa082;
-      --rule-soft: #d4d0c4;
-      --forest: #2a4a2e;
-      --forest-deep: #1c3420;
-      --forest-light: #4a7a50;
-      --signal: #7ab648;
+      --paper: #f0e8d6;
+      --paper-warm: #e8dfc8;
+      --paper-edge: #ddd4ba;
+      --ink: #0a0a08;
+      --ink-soft: #1a1a16;
+      --ink-mute: #5a5646;
+      --ink-light: #8a8470;
+      --rule-soft: #d0c8b0;
+      --forest: #0a0a08;
+      --forest-deep: #0a0a08;
+      --forest-light: #3a3830;
+      --signal: #c9a85c;
       --display: "Anton", "Oswald", "Impact", sans-serif;
       --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
       --sans: "Inter", Arial, sans-serif;
@@ -185,7 +184,7 @@ export default function CasosDaProducaoPage() {
     .cdp-root .nav-cta:hover { background: var(--ink); }
 
     /* Hero */
-    .cdp-root .hero { background: var(--forest-deep); background-image: radial-gradient(ellipse at top right, rgba(74,122,80,0.45), transparent 55%), radial-gradient(ellipse at bottom left, rgba(0,0,0,0.5), transparent 70%); color: var(--paper); position: relative; overflow: hidden; }
+    .cdp-root .hero { background: #0a0a08; background-image: radial-gradient(ellipse at top right, rgba(201,168,92,0.18), transparent 55%), radial-gradient(ellipse at bottom left, rgba(0,0,0,0.6), transparent 70%); color: var(--paper); position: relative; overflow: hidden; }
     .cdp-root .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: stretch; min-height: 92vh; padding: 64px 56px 80px; max-width: 1440px; margin: 0 auto; }
     .cdp-root .hero-left { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
     .cdp-root .hero-tag { display: flex; align-items: center; gap: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--paper); }
@@ -439,9 +438,9 @@ export default function CasosDaProducaoPage() {
           {[...Array(2)].map((_, i) => (
             <React.Fragment key={i}>
               <span>House Mazzutti Academy</span><span className="star">★</span>
-              <span>Volume 03 — Casos da Produção</span><span className="star">★</span>
-              <span>Sete bastidores reais — do conceito à entrega</span><span className="star">★</span>
-              <span>7 cases · Edição 2026 · São Paulo</span><span className="star">★</span>
+              <span>Inside Out — Operação Enxuta com Método</span><span className="star">★</span>
+              <span>Ângelo Mazzutti · Volume 03 · 2026</span><span className="star">★</span>
+              <span>7 bastidores reais · do conceito à entrega</span><span className="star">★</span>
               <span>Fragmentos · Beatriz Kubota · Wepink · Inside Out</span><span className="star">★</span>
             </React.Fragment>
           ))}
@@ -466,7 +465,7 @@ export default function CasosDaProducaoPage() {
       {/* ── NAV ──────────────────────────────────────────────────── */}
       <nav className="nav">
         <div className="nav-inner">
-          <a href="#" className="nav-brand"><span className="pip" />Casos da Produção · Ebook</a>
+          <a href="#" className="nav-brand"><span className="pip" />Inside Out · Ebook</a>
           <div className="nav-links">
             <a href="#cases">Os 7 cases</a>
             <a href="#trecho">Trecho</a>
@@ -490,12 +489,11 @@ export default function CasosDaProducaoPage() {
                 <span className="ms" />
               </div>
               <h1 className="hero-headline">
-                Casos<br />
-                <span className="da">DA</span><br />
-                Produção.
+                Inside<br />
+                Out.
               </h1>
               <p className="hero-sub">
-                <em>Sete bastidores reais. Do conceito à entrega.</em> Como a House Mazzutti pensa, dirige e executa — de campanhas com grandes talentos a exposições autorais, de fashion films de joias a workshops de formação. Escrito por quem assinou cada projeto.
+                <em>Operação enxuta com método.</em> Como a House Mazzutti pensa, dirige e entrega — sete bastidores reais, do briefing à execução final. Por Ângelo Mazzutti.
               </p>
             </div>
             <div className="hero-meta">
@@ -508,19 +506,21 @@ export default function CasosDaProducaoPage() {
 
           <div className="hero-right">
             <div className="cover-stack">
-              {/* Trocar pela Image real quando a capa estiver pronta */}
-              <div className="cover-placeholder">
-                <span className="vol">Vol. 03 · 2026</span>
-                <span className="num">03</span>
-                <span className="label">Casos da Produção</span>
-              </div>
+              <Image
+                src={COVER}
+                alt="Capa Inside Out — Operação Enxuta com Método · House Mazzutti Academy Vol. 03"
+                fill
+                sizes="(max-width: 980px) 280px, 420px"
+                className="object-cover"
+                style={{ border: '1px solid rgba(0,0,0,0.5)' }}
+              />
             </div>
           </div>
         </div>
 
         <div className="hero-foot">
-          <span><span className="star">★</span> Uma imagem boa não se tira — se dirige</span>
-          <span>Edição 2026 · House Mazzutti Edições</span>
+          <span><span className="star">★</span> Inside Out · Operação Enxuta com Método</span>
+          <span>Ângelo Mazzutti · House Mazzutti Edições · 2026</span>
         </div>
       </header>
 
@@ -528,11 +528,12 @@ export default function CasosDaProducaoPage() {
       <section className="pullband">
         <div className="wrap">
           <p className="quote">
-            Joia parada é catálogo.<br />
-            <span className="em">Joia em movimento é desejo.</span>
+            Operação enxuta<br />
+            <span className="em">não é fazer menos.</span><br />
+            É saber o que não fazer.
           </p>
           <div className="strip" />
-          <div className="attr">— Case 05 · Bárbara Porto · Ângelo Mazzutti</div>
+          <div className="attr">— Inside Out · Ângelo Mazzutti</div>
         </div>
       </section>
 
@@ -696,7 +697,7 @@ export default function CasosDaProducaoPage() {
             <div className="price-left">
               <div>
                 <div className="badge"><span className="dot" /> Lançamento · Edição inaugural</div>
-                <h3>Casos da Produção<em>Vol. 03 · 2026</em></h3>
+                <h3>Inside Out<em>Vol. 03 · 2026 · Operação Enxuta com Método</em></h3>
               </div>
               <div className="product-meta">
                 <div className="row"><span>Formato</span><span className="v">Ebook · PDF (alta)</span></div>
@@ -755,11 +756,11 @@ export default function CasosDaProducaoPage() {
       <section className="final">
         <div className="wrap-narrow">
           <p className="quote">
-            Produção boa não aparece.<br />
-            <span className="green">É o que faz</span><br />
-            <em>tudo o mais aparecer bem.</em>
+            O método não é fórmula.<br />
+            <span className="green">É o que sobra</span><br />
+            <em>quando o improviso vai embora.</em>
           </p>
-          <p className="sub">Sete projetos reais. Sete decisões documentadas. O processo que transforma briefing em campanha — por quem estava no set quando aconteceu.</p>
+          <p className="sub">Sete bastidores reais da House Mazzutti. Como uma operação enxuta pensa, decide e entrega — por quem estava dentro de cada projeto.</p>
           <div className="cta-row">
             <a href="#comprar" className="btn-primary">Garantir meu exemplar <span>→</span></a>
             <a href="#cases" className="btn-secondary">Ver os 7 cases</a>
@@ -784,13 +785,13 @@ export default function CasosDaProducaoPage() {
             <div className="brand-block col">
               <h4>O selo</h4>
               <span className="dim" style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 15, letterSpacing: 0 }}>House Mazzutti Edições — selo editorial da House Mazzutti, dirigido por Ângelo Mazzutti.</span>
-              <p className="meta">Uma imagem boa não se tira.<br />Se dirige.</p>
+              <p className="meta">Operação enxuta com método.<br />Por Ângelo Mazzutti.</p>
             </div>
             <div className="col">
               <h4>Catálogo</h4>
               <Link href="/pt/academy/marketing-para-modelos">Vol. 01 · Marketing para Modelos</Link>
               <Link href="/pt/academy/preco-da-relevancia">Vol. 02 · O Preço da Relevância</Link>
-              <a href="#" style={{ color: 'var(--forest)', fontWeight: 500 }}>Vol. 03 · Casos da Produção</a>
+              <a href="#" style={{ color: 'var(--signal)', fontWeight: 500 }}>Vol. 03 · Inside Out</a>
             </div>
             <div className="col">
               <h4>House Mazzutti</h4>

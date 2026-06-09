@@ -77,7 +77,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
   },
   'casos-da-producao': {
     slug: 'casos-da-producao',
-    name: 'Casos da Produção · Vol. 03',
+    name: 'Inside Out · Vol. 03',
     // TODO: preencher após criar o produto no painel Stripe (prod)
     stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? '',
     storagePath: 'casos-da-producao/vol-03.pdf',
