@@ -10,8 +10,8 @@ export function GET() {
 <meta name="description" content="Dois dias de imersão em direção criativa, produção e narrativa de marca, gravados em Uberlândia. Oito módulos, uma campanha entregue ao vivo. Acesso vitalício por R$ 145.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://housemazzutti.com/academy/workshop-inside-out-edit-01/">
-<meta property="og:title" content="Inside Out · Edit 01 · Uberlândia — House Mazzutti">
-<meta property="og:description" content="Tudo que rolou na primeira edição do Workshop Inside Out — 2 dias de direção criativa e produção executiva em Uberlândia, MG.">
+<meta property="og:title" content="Inside Out · Edit 01 — Imersão Gravada | House Mazzutti">
+<meta property="og:description" content="Dois dias de imersão em direção criativa, produção e narrativa de marca, gravados em Uberlândia. Oito módulos, campanha ao vivo. Acesso vitalício por R$ 145.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://housemazzutti.com/academy/workshop-inside-out-edit-01/">
 <meta property="og:locale" content="pt_BR">
