@@ -37,6 +37,20 @@ export interface DigitalProduct {
 }
 
 export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
+  'inside-out': {
+    slug: 'inside-out',
+    name: 'Inside Out · Masterclass On-demand',
+    // Stripe Price ID — preencher após criar o produto no painel Stripe (prod)
+    stripePriceId: process.env.STRIPE_PRICE_ID_INSIDE_OUT ?? '',
+    // Vídeos hospedados no Vimeo (privados). Após a compra o aluno recebe
+    // um link de acesso ao Showcase privado — não um download de arquivo.
+    // storagePath fica vazio; a entrega é feita via downloadUrl (link Vimeo).
+    downloadUrl:
+      process.env.VIMEO_SHOWCASE_INSIDE_OUT ??
+      'https://vimeo.com/showcase/inside-out-hmzt', // substituir pelo link real
+    expiresIn: 'vitalício',
+    detail: 'Masterclass completa em vídeo — assista quantas vezes quiser, no seu ritmo.',
+  },
   'marketing-para-modelos': {
     slug: 'marketing-para-modelos',
     name: 'Marketing para Modelos · Vol. 01',
@@ -72,6 +86,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
 const SLUG_ALIASES: Record<string, string> = {
   'o-preco-da-relevancia': 'preco-da-relevancia',
   'marketing-para-modelos-vol-01': 'marketing-para-modelos',
+  'inside-out-masterclass': 'inside-out',
 }
 
 export function resolveDigitalProduct(slug: string | null | undefined): DigitalProduct | null {
