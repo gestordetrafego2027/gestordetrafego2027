@@ -247,8 +247,7 @@ export function GET() {
       <span class="sec-index">Dois minutos da imersão</span>
     </div>
     <h2 class="h-2 display" data-reveal style="margin-bottom:clamp(24px,3vw,40px)">Veja a sala<br>em movimento.</h2>
-    <!-- Para ativar: adicione data-ytid="SEU_ID_YOUTUBE" ao div abaixo -->
-    <div class="video-frame" id="videoFrame" data-ytid="">
+    <div class="video-frame" id="videoFrame" data-ytid="T4nCR2NuTPo"
       <image-slot id="video-thumb" placeholder="Thumbnail · Aftermovie Inside Out Edit 01" fit="cover" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
       <div class="video-placeholder" id="videoPlaceholder">
         <div class="play-btn">▶</div>
