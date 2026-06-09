@@ -73,7 +73,7 @@ const PRODUCTS = [
     features: ['Videoaulas gravadas', 'Materiais de acompanhamento', 'Acesso vitalício'],
     price: 'R$ 145',
     href: '/academy/workshop-inside-out-edit-01',
-    cover: '/images/academy/comunicacao-360/cover.webp',
+    cover: '/images/academy/comunicacao-360/cover.jpg',
   },
 ]
 
