@@ -1,12 +1,7 @@
 /**
- * Landing · Ebook Vol. 03 — Casos da Produção
+ * Landing · Ebook Vol. 03 — Inside Out
  * House Mazzutti Academy · Vol. 03 · 2026
- *
- * TODO antes de publicar:
- *  - Substituir TITULO_DO_LIVRO pelo título final
- *  - Adicionar cover.webp em /public/images/academy/casos-da-producao/
- *  - Definir CHECKOUT_URL e preço
- *  - Confirmar número de páginas do PDF
+ * 29 páginas · 7 cases · Ângelo & Ita Mazzutti
  */
 import React from 'react'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks'
@@ -50,7 +45,7 @@ const CASES = [
     title: 'Fragmentos',
     sub: 'A exposição que transformou retrato em arte',
     detail: 'Gran Mercure Ibirapuera · São Paulo · 2022',
-    pg: '14',
+    pg: '04',
   },
   {
     n: '02',
@@ -58,7 +53,7 @@ const CASES = [
     title: 'Beatriz Kubota',
     sub: 'O editorial que nasceu no ateliê',
     detail: 'Peças à mão · OFFEN Scouting',
-    pg: '32',
+    pg: '06',
   },
   {
     n: '03',
@@ -66,7 +61,7 @@ const CASES = [
     title: 'Larissa Manoela · Jequiti',
     sub: 'Beleza com direção',
     detail: 'Set design · foto · vídeo',
-    pg: '48',
+    pg: '10',
   },
   {
     n: '04',
@@ -74,7 +69,7 @@ const CASES = [
     title: 'Virginia Fonseca · Wepink',
     sub: 'Quando um perfume vira narrativa',
     detail: 'Foto · vídeo · fashion film',
-    pg: '64',
+    pg: '14',
   },
   {
     n: '05',
@@ -82,7 +77,7 @@ const CASES = [
     title: 'Bárbara Porto',
     sub: 'A joia em movimento',
     detail: 'Conceito · direção de arte · vídeo',
-    pg: '80',
+    pg: '18',
   },
   {
     n: '06',
@@ -90,7 +85,7 @@ const CASES = [
     title: 'Emanuely Terres',
     sub: 'Um fashion film sobre presença',
     detail: 'Direção criativa · São Paulo',
-    pg: '96',
+    pg: '22',
   },
   {
     n: '07',
@@ -98,7 +93,7 @@ const CASES = [
     title: 'Inside Out',
     sub: 'A House também forma o olhar',
     detail: 'Workshop presencial · Academy',
-    pg: '112',
+    pg: '26',
   },
 ]
 
@@ -500,7 +495,7 @@ export default function CasosDaProducaoPage() {
               <div className="cell"><span className="k">Autores</span><span className="v">Ângelo &amp; Ita Mazzutti</span></div>
               <div className="cell"><span className="k">Formato</span><span className="v">Ebook · PDF</span></div>
               <div className="cell"><span className="k">Cases</span><span className="v">7 bastidores</span></div>
-              <div className="cell"><span className="k">Ano</span><span className="v">2026</span></div>
+              <div className="cell"><span className="k">Páginas</span><span className="v">29</span></div>
             </div>
           </div>
 
@@ -605,7 +600,7 @@ export default function CasosDaProducaoPage() {
           <aside className="meta">
             <div className="label">Trecho · Case 01</div>
             <h3>Fragmentos:<br />a exposição que<br />transforma retrato<br />em arte.</h3>
-            <div className="from">Páginas 14–30 · edição 2026</div>
+            <div className="from">29 páginas · edição 2026</div>
           </aside>
           <div className="excerpt-body">
             <p className="dropcap">Uma exposição não se mede pela parede. Mede-se pelo que permanece no olhar de quem sai. Em uma única noite, a House levou 23 personalidades para dentro dessa ideia.</p>

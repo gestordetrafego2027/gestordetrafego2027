@@ -85,7 +85,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
       '/downloads/casos-da-producao-hmzt-vol-03.pdf',
     expiresIn: '7 dias',
     volumeLabel: 'Vol. 03',
-    detail: '7 bastidores reais — do conceito à entrega com contexto de mercado e direção criativa.',
+    detail: '29 páginas · 7 bastidores reais — do conceito à entrega com contexto de mercado e direção criativa.',
   },
 }
 
