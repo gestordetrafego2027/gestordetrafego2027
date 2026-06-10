@@ -137,11 +137,22 @@ export default function NataliaBeautyPage() {
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Cliente</p><p className="font-inter text-sm font-medium">Natália Beauty</p></div>
+      
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Sessão editorial em torno da leitura adulta do produto — relação entre presença, textura e luz como eixo visual. Elenco, set e fashion film em uma só linha. Material para mídia, ponto de venda e canal próprio sob a mesma assinatura.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Artista: Natália Beauty`}
+                                </p>
+                            </div>
                             </div>
                             
                     </div>
                 </div>
             </main>
+    
             
             {/* Vídeos removidos a pedido do Diretor (07/06/2026) — YouTubeShort movido para andressa-gomiero.
                  <PortfolioVideo unit="produtora" slug="natalia-beauty" />

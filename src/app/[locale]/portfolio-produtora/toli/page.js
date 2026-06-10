@@ -92,11 +92,22 @@ export default function ToliPage() {
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
+      
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Sessão editorial em diálogo entre estilo, modelagem e presença. Elenco, beauty, stylist e set em uma só linha. Banco denso para mídia editorial, ponto de venda, e-commerce e canal próprio — coleção com autoridade visual.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção de Arte e Cenografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Andre Mattos · Modelo: Jaquelini Bertan · Stylist: Juciléia`}
+                                </p>
+                            </div>
                             </div>
                             
                     </div>
                 </div>
             </main>
+    
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">
                 <div className="flex justify-between items-center border-t border-outline-variant/15 pt-12">
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors" href="/portfolio-produtora"><span className="material-symbols-outlined text-sm">west</span><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Projeto Anterior</span></Link>

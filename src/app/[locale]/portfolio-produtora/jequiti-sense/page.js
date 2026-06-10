@@ -128,11 +128,22 @@ export default function JequitiSensePage() {
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Casting e Cenografia</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Fotos</p><p className="font-inter text-sm font-medium">Bruno Fonze</p></div>
+      
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Campanha Sensi para uma das maiores plataformas de cosméticos do Brasil — narrativa feminina contemporânea, dupla de presença sustentando o eixo visual. Material para circulação nacional: catálogo, ponto de venda, comissão e mídia.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção Executiva: Mateus Sacavem · Fotografia: Brunico · Beauty: Eliseu Almeida · Modelos: Barbara, Samara Same`}
+                                </p>
+                            </div>
                             </div>
                             
                     </div>
                 </div>
             </main>
+    
             
             <PortfolioCTA businessUnit="produtora" projectSlug="jequiti-sense" />
 

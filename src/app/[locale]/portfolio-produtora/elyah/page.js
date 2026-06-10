@@ -93,11 +93,22 @@ export default function ElyahPage() {
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Direção</p><p className="font-inter text-sm font-medium">Angelo Mazzutti</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção</p><p className="font-inter text-sm font-medium">Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
+      
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Campanha em narrativa adulta e contemporânea — peça como assinatura, não como item de inventário. Elenco, beauty, fashion film e estilo em uma só linha. Banco denso para mídia editorial, canal próprio e ponto de venda.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
+                                </p>
+                            </div>
                             </div>
                             
                     </div>
                 </div>
             </main>
+    
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">
                 <div className="flex justify-between items-center border-t border-outline-variant/15 pt-12">
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors" href="/portfolio-produtora"><span className="material-symbols-outlined text-sm">west</span><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Projeto Anterior</span></Link>

@@ -149,11 +149,22 @@ export default function BarbaraPortoPage() {
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Beauty</p><p className="font-inter text-sm font-medium">Nathan</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Modelos</p><p className="font-inter text-sm font-medium">Barbara Porto &amp; Talita Dalbó</p></div>
+      
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Campanha editorial com peças tratadas como objetos de desejo, não como inventário. Elenco, beauty, fashion film e estilo em uma só linha narrativa. Circulação dupla — comercial e editorial — para mídia, ponto de venda e canal próprio sob a mesma assinatura.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção Executiva: Angelo Mazzutti & Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelos: Barbara Porto & Talita Dalbó`}
+                                </p>
+                            </div>
                             </div>
                             
                     </div>
                 </div>
             </main>
+    
             
             <PortfolioVideo unit="produtora" slug="barbara-porto" />
 

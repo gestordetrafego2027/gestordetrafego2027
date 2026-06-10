@@ -92,11 +92,22 @@ export default function SignusVersolato02Page() {
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
+      
+                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
+                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
+                                    {`Coleção 2026 da Versolato em campanha que dialoga com a anterior e abre o próximo capítulo — narrativa visual mais adulta, leitura editorial cosmopolita. Material para mídia editorial, canal de óticas e ponto de venda, sustentando a marca como referência de design brasileiro.`}
+                                </p>
+                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
+                                    {`Produção Executiva: Mateus Sacavem · Fotografia: Neto Lins · Vídeo: Thyago Barriviera · Beauty: Andre Mattos · Modelo: Gianne Albertoni`}
+                                </p>
+                            </div>
                             </div>
                             
                     </div>
                 </div>
             </main>
+    
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">
                 <div className="flex justify-between items-center border-t border-outline-variant/15 pt-12">
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors" href="/portfolio-produtora"><span className="material-symbols-outlined text-sm">west</span><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Projeto Anterior</span></Link>
