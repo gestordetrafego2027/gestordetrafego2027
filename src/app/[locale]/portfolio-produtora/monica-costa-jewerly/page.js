@@ -90,10 +90,7 @@ export default function MonicaCostajewerlyPage() {
                                 </div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2024</p></div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
-      
-                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
                                     {`Campanha em que cada joia é tratada como objeto autoral — contraste entre pele, luz e metal. Elenco, beauty e fashion film em uma só linha. Banco denso para mídia editorial, canal próprio e ponto de venda — joalheria apresentada com autoridade.`}

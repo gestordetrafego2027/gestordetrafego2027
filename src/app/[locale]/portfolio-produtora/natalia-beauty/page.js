@@ -135,7 +135,6 @@ export default function NataliaBeautyPage() {
                                     <p className="font-inter text-sm font-medium">2021</p>
                                 </div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Cliente</p><p className="font-inter text-sm font-medium">Natália Beauty</p></div>
       
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">

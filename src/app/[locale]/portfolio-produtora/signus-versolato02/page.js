@@ -90,10 +90,7 @@ export default function SignusVersolato02Page() {
                                 </div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2026</p></div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
-      
-                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
+                                <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
                                     {`Coleção 2026 da Versolato em campanha que dialoga com a anterior e abre o próximo capítulo — narrativa visual mais adulta, leitura editorial cosmopolita. Material para mídia editorial, canal de óticas e ponto de venda, sustentando a marca como referência de design brasileiro.`}
