@@ -270,7 +270,7 @@ export function GET() {
       <div class="plan" data-reveal>
         <div class="plan-tag"><span>Insider</span><span>01</span></div>
         <div class="plan-name">Insider</div>
-        <div class="plan-price">R$ 690<small>à vista ou parcelado</small></div>
+        <div class="plan-price">R$ 2.450<small>à vista ou parcelado</small></div>
         <ul class="plan-feats">
           <li>Participação completa nos 2 dias</li>
           <li>Materiais digitais + certificado oficial</li>
@@ -283,7 +283,7 @@ export function GET() {
         <span class="ribbon">Mais escolhido</span>
         <div class="plan-tag"><span>Pro</span><span>02</span></div>
         <div class="plan-name">Pro</div>
-        <div class="plan-price">R$ 890<small>melhor custo-benefício</small></div>
+        <div class="plan-price">R$ 2.800<small>melhor custo-benefício</small></div>
         <ul class="plan-feats">
           <li>Tudo do plano Insider</li>
           <li>Kit exclusivo HMZT + fotos oficiais</li>
@@ -296,7 +296,7 @@ export function GET() {
       <div class="plan" data-reveal data-reveal-d="2">
         <div class="plan-tag"><span>Executivo</span><span>03</span></div>
         <div class="plan-name">Executivo</div>
-        <div class="plan-price">R$ 1.200<small>experiência completa</small></div>
+        <div class="plan-price">R$ 3.200<small>experiência completa</small></div>
         <ul class="plan-feats">
           <li>Tudo do plano Pro</li>
           <li>Destaque no vídeo final da imersão</li>
@@ -416,7 +416,7 @@ export function GET() {
         <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name"><div class="msg">Informe seu nome</div></div>
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
-        <div class="field"><label>Plano</label><select name="plano"><option>Insider — R$ 690</option><option selected>Pro — R$ 890</option><option>Executivo — R$ 1.200</option></select><div class="msg"></div></div>
+        <div class="field"><label>Plano</label><select name="plano"><option>Insider — R$ 2.450</option><option selected>Pro — R$ 2.800</option><option>Executivo — R$ 3.200</option></select><div class="msg"></div></div>
         <button class="btn solid" type="submit"><span class="lbl">Garantir minha vaga</span><span class="ar">↗</span></button>
       </form>
     </div>
