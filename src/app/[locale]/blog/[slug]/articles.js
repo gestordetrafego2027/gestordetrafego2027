@@ -1182,72 +1182,72 @@ export const articles = {
     "conclusao": "Tem uma coleção, uma marca ou uma campanha de moda para lançar? A House Mazzutti concebe e produz editoriais e fashion films com direção de ponta a ponta, em São Paulo. Conheça o portfólio da Produtora e fale com a nossa equipe sobre o seu próximo editorial."
   },
   "campanha-larissa-manoela-jequiti": {
-    "categoria": "Produtora — Campanhas",
-    "titulo": "Larissa Manoela e a Jequiti: beleza com direção",
-    "metaTitle": "Campanha Larissa Manoela para a Jequiti | House Mazzutti",
-    "metaDescription": "Case da produção de foto e vídeo da House Mazzutti para a Jequiti com Larissa Manoela: set design, direção de arte e produção executiva.",
-    "keywords": "produção de campanha publicitária, produção executiva, campanha de beleza, set design, foto e vídeo, Larissa Manoela, Jequiti, House Mazzutti",
+    "categoria": "Produtora — Set Design",
+    "titulo": "Larissa Manoela e a Jequiti: o set que sustenta a estrela",
+    "metaTitle": "Set design e direção de arte para Jequiti com Larissa Manoela | House Mazzutti",
+    "metaDescription": "Como o set design e a direção de arte da House Mazzutti construíram o ambiente visual que sustentou a presença de Larissa Manoela na campanha da linha Splash, da Jequiti.",
+    "keywords": "set design para campanha de beleza, direção de arte, cenografia publicitária, Larissa Manoela, Jequiti, House Mazzutti, produção audiovisual beleza",
     "data": "Junho 2026",
     "cover": {
       "src": "/images/blog/campanha-larissa-manoela-jequiti/cover.webp",
       "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/capa.webp",
-      "alt": "Campanha Jequiti com Larissa Manoela produzida pela House Mazzutti",
-      "caption": "Campanha de beleza · produção House Mazzutti"
+      "alt": "Set design e direção de arte para a Jequiti com Larissa Manoela — House Mazzutti",
+      "caption": "Set design · direção de arte · House Mazzutti"
     },
     "interior": [
       {
         "src": "/images/blog/campanha-larissa-manoela-jequiti/01.webp",
         "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/1.webp",
-        "alt": "Set design da campanha Jequiti produzida pela House Mazzutti",
+        "alt": "Set design e cenografia da House Mazzutti para a campanha Jequiti",
         "caption": "Set design · direção de arte"
       },
       {
         "src": "/images/blog/campanha-larissa-manoela-jequiti/02.webp",
         "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/2.webp",
-        "alt": "Captação de foto e vídeo da campanha de beleza com Larissa Manoela",
-        "caption": "Captação integrada · foto e vídeo"
+        "alt": "Foto e vídeo da campanha Jequiti com Larissa Manoela",
+        "caption": "Foto e vídeo: Bruno Fonze / Monteiro Produtora"
       }
     ],
-    "intro": "Trabalhar com um grande nome não garante uma boa campanha. O que garante é a produção que existe por trás dele. Uma celebridade entrega audiência; a direção entrega percepção. A campanha precisa das duas — e foi essa a equação que a House resolveu para a Jequiti.",
+    "intro": "Uma celebridade entrega audiência. O set entrega percepção. Quando Larissa Manoela entrou no frame, o ambiente já estava respondendo pela marca — e foi aí que a House Mazzutti trabalhou.",
     "sections": [
       {
         "h2": "O tamanho do jogo",
         "paragraphs": [
-          "Para a linha Splash, da Jequiti, a House Mazzutti assinou a produção de foto e vídeo com a atriz Larissa Manoela. Não foi apenas uma sessão com a estrela — foi um set construído do conceito ao set design, pensado para que cada imagem comunicasse a marca antes mesmo da legenda.",
-          "O contexto explica o cuidado. O Brasil é o terceiro maior mercado de beleza e cuidados pessoais do mundo, segundo a Euromonitor, e movimentou R$ 242,3 bilhões em 2025 — alta de 11,2% sobre o ano anterior, de acordo com a ABIHPEC. Nesse porte, a imagem de uma campanha não é detalhe estético: é disputa direta por percepção e venda."
+          "Para a linha Splash, da Jequiti, a House Mazzutti assinou o set design e a direção de arte do ambiente onde a atriz Larissa Manoela foi fotografada e filmada. Um set construído do conceito à cenografia, pensado para que cada imagem comunicasse a marca antes mesmo da legenda.",
+          "O contexto explica o cuidado. O Brasil é o terceiro maior mercado de beleza e cuidados pessoais do mundo, segundo a Euromonitor, e movimentou R$ 242,3 bilhões em 2025 — alta de 11,2% sobre o ano anterior, de acordo com a ABIHPEC. Nesse porte, a imagem não é detalhe estético: é disputa direta por percepção e venda."
         ]
       },
       {
-        "h2": "O que sustenta o set",
+        "h2": "O que a direção de arte resolve",
         "paragraphs": [
-          "Set design próprio, direção de arte e captação integrada de imagem e movimento. A produtora opera o que chama de produção executiva: a engrenagem que transforma briefing em campanha, do roteiro à entrega final.",
-          "É esse sistema que permite a um talento do porte de Larissa Manoela chegar ao set e encontrar tudo no lugar — para que a entrega dela seja sobre presença, não sobre logística."
+          "Quando um grande nome chega ao set, o ambiente já precisa estar respondendo pela marca. Set design, paleta, textura e luz não são escolhas estéticas — são decisões de posicionamento que acontecem antes de qualquer clique.",
+          "É esse trabalho anterior ao frame que permite ao talento entregar presença, não logística. A câmera captura o que a direção de arte construiu."
         ]
       },
       {
         "h2": "Por que isso decide o resultado",
         "paragraphs": [
-          "Campanhas com grandes nomes falham quando a estrela carrega sozinha o peso da peça. Acertam quando a produção a sustenta.",
-          "A diferença entre uma foto bonita e uma campanha que vende mora exatamente aí: na direção que ninguém vê, mas todos sentem."
+          "Produções com grandes nomes falham quando a estrela carrega sozinha o peso visual da peça. Acertam quando o set a sustenta.",
+          "A diferença entre uma foto bonita e uma imagem que posiciona a marca mora exatamente aí: na direção que ninguém vê, mas todos sentem."
         ]
       },
       {
-        "h2": "Celebridade amplia — não substitui",
+        "h2": "Celebridade amplia — o set define",
         "paragraphs": [
-          "Um grande nome multiplica o alcance, mas não garante a leitura da marca. Sem direção, a campanha vende a estrela; com direção, vende o produto através dela.",
-          "A diferença está em quem controla a narrativa: o talento entrega presença, a produção entrega percepção."
+          "Um grande nome multiplica o alcance, mas não garante a leitura da marca. Sem direção de arte, a imagem vende a estrela. Com um set bem construído, vende o produto através dela.",
+          "A narrativa começa no ambiente — quem controla o set controla a percepção."
         ]
       },
       {
         "h2": "Set design é estratégia, não cenário",
         "paragraphs": [
-          "O ambiente de uma campanha de beleza não é decoração — é argumento de venda. Cor, textura e luz comunicam o posicionamento do produto antes de qualquer claim.",
+          "O ambiente de uma produção de beleza não é decoração — é argumento de venda. Cor, textura e luz comunicam o posicionamento do produto antes de qualquer claim.",
           "Por isso o set se constrói a partir do conceito, não do improviso: cada elemento sustenta a marca dentro do frame."
         ]
       }
     ],
-    "citacao": "O nome abre a porta. A direção decide o que se vê quando ela se abre.",
-    "conclusao": "Vai colocar uma marca de beleza no mercado — com ou sem celebridade? A House Mazzutti produz campanhas de ponta a ponta, do conceito ao set, com a produção executiva que transforma investimento em resultado. Conheça nossos cases e vamos desenhar a sua próxima campanha."
+    "citacao": "O nome abre a porta. O set decide o que se vê quando ela se abre.",
+    "conclusao": "Vai colocar uma marca no mercado e precisa de um set que responda pela identidade antes do primeiro clique? A House Mazzutti assina set design e direção de arte para produções de beleza, moda e lifestyle. Conheça nossos cases."
   },
   "campanha-wepink-virginia-fonseca": {
     "categoria": "Produtora — Campanhas",
