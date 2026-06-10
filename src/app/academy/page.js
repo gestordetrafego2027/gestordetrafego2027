@@ -81,7 +81,7 @@ const PRODUCTS = [
     features: ['Videoaulas gravadas', 'Materiais de acompanhamento', 'Acesso vitalício'],
     price: 'R$ 249',
     href: '/academy/workshop-producao-direcao-01',
-    cover: '/images/academy/banner-workshop-edit02-sp.webp',
+    cover: '/images/academy/capa-proximo-curso.png',
   },
   {
     id: 'comunicacao-360',
