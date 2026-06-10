@@ -91,7 +91,7 @@ const PRODUCTS = [
     features: ['Gravação completa do evento', 'Direção criativa e produção ao vivo', 'Acesso vitalício'],
     price: 'R$ 145',
     href: '/academy/workshop-inside-out-edit-01',
-    cover: '/images/academy/edit-01/edit01-model.webp',
+    cover: '/images/academy/banner-inside-out-workshop.png',
   },
 ]
 
