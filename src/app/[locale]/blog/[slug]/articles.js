@@ -1,6 +1,6 @@
 // House Mazzutti — Editorial
-// Conjunto de artigos editoriais expandido (intro, sections, citação, conclusão) + metadata SEO + imagens (cover/interior com fallback).
-// Cada peça inclui dados de mercado atribuídos (Firjan, ABIHPEC/Euromonitor, Lucidpress, Edelman/LinkedIn, vídeo marketing) para reforço de E-E-A-T.
+// Conjunto de artigos editoriais (intro, sections, citação, conclusão) + metadata SEO + imagens (cover/interior com fallback).
+// Cada peça inclui dados de mercado atribuídos (Firjan, ABIHPEC/Euromonitor, Lucidpress, Edelman/LinkedIn, vídeo marketing).
 
 export const articles = {
   "book-para-modelos-quem-e-escolhido": {
@@ -54,14 +54,14 @@ export const articles = {
         "h2": "O mercado que decide em segundos",
         "paragraphs": [
           "São Paulo concentra o maior polo criativo do país. Segundo o Mapeamento da Indústria Criativa 2025, da Firjan, a indústria criativa brasileira já responde por 3,59% do PIB — e a capital paulista sozinha concentra 5,3% desse valor, acima da média nacional. Tradução prática: mais marcas, mais castings e mais concorrência por um mesmo lugar.",
-          "Num mercado desse tamanho, a primeira leitura é feita em segundos, sobre uma tela. O book não compete pela sua beleza — compete pela clareza com que comunica versatilidade e potência comercial antes de qualquer reunião."
+          "Num mercado desse tamanho, a primeira leitura acontece em segundos, sobre uma tela. O book não disputa pela beleza — disputa pela legibilidade. Vence quem é mais fácil de aprovar à distância."
         ]
       },
       {
         "h2": "Imagem como ativo, não como gasto",
         "paragraphs": [
           "Um book não é uma despesa de início de carreira. É um ativo que trabalha enquanto você não está na sala — o material que circula entre bookers, marcas e diretores de casting sem precisar de você presente.",
-          "Quando dirigido com método, ele deixa de pedir oportunidade e passa a sustentar uma escolha. Esse é o retorno real: não fotos bonitas, mas convites que chegam porque a leitura já foi feita."
+          "Diferente de uma sessão pontual, ele se mantém útil por temporadas — circula entre quem decide e justifica o investimento muitas vezes depois de pronto. O retorno não é a foto: é o convite que ela provoca."
         ]
       }
     ],
@@ -126,7 +126,7 @@ export const articles = {
         "h2": "Quando o portfólio gera o convite",
         "paragraphs": [
           "Um book bem construído opera como prova social silenciosa. Ele responde, antes da conversa, à única pergunta que o mercado faz: essa pessoa entende imagem?",
-          "É a diferença entre perseguir oportunidades e ser convocado por elas. A imagem, bem dirigida, passa a trabalhar por você em todas as mesas onde você não está."
+          "É a diferença entre perseguir oportunidades e ser lembrado quando elas surgem — sem precisar estar na sala para defender o próprio nome."
         ]
       }
     ],
@@ -181,7 +181,7 @@ export const articles = {
         ]
       },
       {
-        "h2": "Autoridade hoje se constrói na percepção",
+        "h2": "O dado: percepção pesa mais que publicidade",
         "paragraphs": [
           "Um estudo da Edelman com o LinkedIn (2025) mostrou que 73% dos decisores no mercado B2B afirmam que conteúdo de liderança e posicionamento influencia sua percepção sobre alguém mais do que a publicidade tradicional. A imagem profissional é a camada visual dessa percepção.",
           "Em outras palavras: competência abre a porta, percepção decide a sala. E percepção começa pela forma como você é visto antes de ser ouvido."
@@ -318,10 +318,10 @@ export const articles = {
         ]
       },
       {
-        "h2": "Presença não se improvisa, se dirige",
+        "h2": "Um acervo que rende a temporada inteira",
         "paragraphs": [
-          "A diferença entre estar e ser visto é direção. Uma cobertura externa de alto valor decide enquadramento, luz e narrativa antes do acontecimento — não depois.",
-          "O resultado é um acervo que posiciona: imagens que sustentam autoridade muito além do dia em que foram feitas."
+          "Uma cobertura de alto valor não entrega fotos de um dia — entrega um banco de imagens coerente, pensado para alimentar canais e sustentar posicionamento por meses.",
+          "É a lógica do ativo: o investimento de uma agenda se paga em todo o material que ela gera depois, sem exigir uma nova produção a cada semana."
         ]
       }
     ],
@@ -376,7 +376,7 @@ export const articles = {
         ]
       },
       {
-        "h2": "A experiência que vira ativo",
+        "h2": "Por que registrar deixou de ser opcional",
         "paragraphs": [
           "Projeta-se que o vídeo responda por mais de 80% de todo o tráfego on-line, e o público de moda e lifestyle usa o audiovisual para entender e decidir. Uma experiência registrada com direção deixa de ser lembrança e vira ativo de comunicação.",
           "Cada deslocamento por São Paulo carrega potencial narrativo. A cobertura em tempo real transforma esse potencial em peça."
@@ -443,7 +443,7 @@ export const articles = {
       {
         "h2": "O número por trás da consistência",
         "paragraphs": [
-          "Marca não é estética — é arquitetura de percepção. Um estudo da Lucidpress aponta que a consistência de marca em todos os pontos de contato pode elevar a receita em até 23% e o reconhecimento em até 80%, com recall de marca 3,5 vezes maior.",
+          "Marca não é estética — é arquitetura de percepção. Estudos de consistência de marca apontam que padronizar todos os pontos de contato eleva o reconhecimento em até 80% e gera um recall 3,5 vezes maior — o que sustenta o ganho de receita citado acima.",
           "Ainda assim, menos de um quarto das empresas aplica diretrizes de marca de forma consistente. O espaço competitivo, portanto, não está no logo — está na coerência."
         ]
       },
@@ -508,7 +508,7 @@ export const articles = {
       {
         "h2": "Branding reduz o custo de vender",
         "paragraphs": [
-          "Quando a marca é forte, a venda fica mais barata. A consistência de marca eleva a receita em até 23%, segundo a Lucidpress, justamente porque encurta o caminho entre conhecer e confiar.",
+          "Quando a marca é forte, a venda fica mais barata: o reconhecimento já está construído antes do primeiro contato. Marcas com recall até 3,5 vezes maior, segundo estudos de consistência, encurtam o caminho entre conhecer e confiar.",
           "Performance sem marca é aluguel de atenção: você paga toda vez. Marca é patrimônio: você constrói uma vez e colhe sempre."
         ]
       },
@@ -573,7 +573,7 @@ export const articles = {
         ]
       },
       {
-        "h2": "O custo invisível de não investir",
+        "h2": "O preço da inconsistência",
         "paragraphs": [
           "A pergunta certa não é quanto custa o branding — é quanto custa a inconsistência. Apresentação de marca desalinhada gera confusão em 71% dos casos, segundo a Lucidpress, e confusão é atrito direto na venda.",
           "Cada ponto de contato incoerente cobra um imposto silencioso sobre a percepção. Não investir não é economizar: é pagar de outra forma."
@@ -705,7 +705,7 @@ export const articles = {
       {
         "h2": "Mais peças, menos impacto",
         "paragraphs": [
-          "O paradoxo do excesso é real: com o vídeo já dominando o tráfego on-line, produzir mais raramente significa converter mais. O que separa ruído de impacto é direção, não volume.",
+          "Projeta-se que o vídeo represente mais de 80% do tráfego on-line — e, ainda assim, mais volume raramente vira mais conversão. O que separa ruído de impacto não é a quantidade de peças: é a direção que as unifica.",
           "Campanhas falham quando confundem quantidade com presença. Presença é consistência — e consistência, segundo a Lucidpress, vale até 23% de receita."
         ]
       },
@@ -775,10 +775,10 @@ export const articles = {
         ]
       },
       {
-        "h2": "Narrativa antes de produto",
+        "h2": "A assinatura que o público reconhece",
         "paragraphs": [
-          "Uma boa imagem de moda não mostra a roupa: revela o mundo que a roupa habita. É essa camada de sentido que separa uma marca lembrada de um item esquecido.",
-          "A narrativa visual é a assinatura da casa — a forma como cada peça passa a contar uma história maior que ela mesma."
+          "Uma marca de moda reconhecível não troca de linguagem a cada coleção — mantém uma assinatura visual que o público aprende a identificar. É a consistência que vira memória, e memória que vira preferência.",
+          "A narrativa visual é essa assinatura: a forma como cada peça passa a contar uma história maior que ela mesma, coleção após coleção."
         ]
       }
     ],
@@ -905,10 +905,10 @@ export const articles = {
         ]
       },
       {
-        "h2": "Estrutura transforma intenção em entrega",
+        "h2": "A velocidade que só a estrutura entrega",
         "paragraphs": [
-          "Produção executiva é a camada que converte intenção em resultado: cronograma, decisão e coerência operando em conjunto.",
-          "Sem ela, cada imprevisto vira crise. Com ela, vira ajuste. Essa é a diferença entre uma ideia admirada e uma campanha entregue."
+          "Ideias morrem na lentidão tanto quanto na desorganização. Em produção, cada decisão renegociada custa tempo — e tempo, em set, é orçamento queimado.",
+          "Estrutura é o que permite decidir uma vez e seguir. É a diferença entre uma ideia que chega íntegra ao público e uma que se dilui no caminho."
         ]
       }
     ],
@@ -1028,17 +1028,17 @@ export const articles = {
         ]
       },
       {
-        "h2": "Orçamento não é estratégia",
+        "h2": "O mito de que caro é mais seguro",
         "paragraphs": [
-          "Existe uma expectativa implícita de que mais investimento gera mais resultado. Na prática, orçamento alto sem estrutura apenas paga ineficiência mais rápido.",
-          "O que determina o resultado não é o valor investido — é a qualidade das decisões tomadas com esse valor."
+          "Existe a crença de que orçamento alto compra tranquilidade. Na prática, ele compra mais peças móveis — e cada peça a mais é um ponto onde o conceito pode se perder.",
+          "Quanto maior a produção, mais decisões por minuto. Sem uma direção única, o tamanho do investimento vira o tamanho do risco."
         ]
       },
       {
-        "h2": "Investir melhor, não apenas mais",
+        "h2": "O que faz o dinheiro virar resultado",
         "paragraphs": [
-          "A combinação que funciona é rara: orçamento adequado ao escopo somado a uma camada de governança que protege o conceito do início ao fim.",
-          "É essa camada — a produção executiva — que transforma investimento em resultado, em vez de transformá-lo apenas em custo."
+          "O que separa uma campanha cara que performa de uma que decepciona não é o valor — é quem protege o conceito do briefing ao master. Projetos bem estruturados têm até 2,5 vezes mais chance de atingir o objetivo original.",
+          "Investir melhor é destinar parte do orçamento à governança que garante que o resto seja bem gasto. Sem essa camada, dinheiro vira custo; com ela, vira retorno."
         ]
       }
     ],
