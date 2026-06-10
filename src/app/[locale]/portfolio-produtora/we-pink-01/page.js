@@ -141,8 +141,7 @@ export default function WePink01Page() {
                                     <p className="font-inter text-sm font-medium">2022</p>
                                 </div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Cliente</p><p className="font-inter text-sm font-medium">Virginia Fonseca · Gabriela Versiani</p></div>
                             </div>
                             
                     </div>
