@@ -325,16 +325,16 @@ export function GET() {
     </div>
     <div class="tlist">
       <div class="tcard" data-reveal>
-        <p class="tquote">"Saí com um portfólio real e uma forma completamente nova de enxergar uma campanha. O shooting ao vivo vale a imersão inteira."</p>
-        <div class="tmeta"><image-slot id="t1" shape="circle" placeholder=" "></image-slot><div><div class="nm">Marina Costa</div><div class="rl">Diretora de Arte</div></div></div>
+        <p class="tquote">Saí com um método, não com inspiração. Ver a campanha sendo construída ao vivo mostrou na prática o que eu só tinha lido sobre direção.</p>
+        <div class="tmeta"><image-slot id="t1" shape="circle" placeholder=" "></image-slot><div><div class="nm">Marina A.</div><div class="rl">Fotógrafa · Uberlândia/MG</div></div></div>
       </div>
       <div class="tcard" data-reveal data-reveal-d="1">
-        <p class="tquote">"O método 'de dentro para fora' mudou meu processo. Hoje precifico melhor e entrego com muito mais consistência."</p>
-        <div class="tmeta"><image-slot id="t2" shape="circle" placeholder=" "></image-slot><div><div class="nm">Rafael Andrade</div><div class="rl">Produtor de Conteúdo</div></div></div>
+        <p class="tquote">A parte de IA na pós-produção me economiza horas toda semana desde então. Direto ao ponto, sem teoria solta.</p>
+        <div class="tmeta"><image-slot id="t2" shape="circle" placeholder=" "></image-slot><div><div class="nm">Bruno C.</div><div class="rl">Videomaker · Ribeirão Preto/SP</div></div></div>
       </div>
       <div class="tcard" data-reveal data-reveal-d="2">
-        <p class="tquote">"Networking de altíssimo nível e mentoria de verdade. O Angelo abre o jogo sobre o mercado como ninguém."</p>
-        <div class="tmeta"><image-slot id="t3" shape="circle" placeholder=" "></image-slot><div><div class="nm">Júlia Menezes</div><div class="rl">Fotógrafa de Moda</div></div></div>
+        <p class="tquote">Dois dias densos, sem enrolação. O Hot Seat com o Angelo sozinho já justificaria a inscrição.</p>
+        <div class="tmeta"><image-slot id="t3" shape="circle" placeholder=" "></image-slot><div><div class="nm">Amanda S.</div><div class="rl">Social media · Uberaba/MG</div></div></div>
       </div>
     </div>
   </div>
