@@ -499,53 +499,53 @@ export default function StudioPage() {
                     readLabel={t('blog_read')}
                 />
                             {/* STRUCTURE SELECTION */}
-                <section className="bg-white px-[40px]">
-                    <div className="bg-surface-container-lowest py-32 px-12 md:px-12 lg:px-24">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="text-center mb-24">
-                                <span className="text-caption text-zinc-400 mb-6 block">Escolha seu nível</span>
-                                <h2 className="text-h2 text-white">Escolha o nível ideal para o seu momento.</h2>
-                            </div>
-                            
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {[
-                                    {
-                                        title: "BOOK",
-                                        link: "/studio/book",
-                                        subtitle: 'Onde a imagem é construída com intenção.',
-                                        items: ["Book profissional", "Direção de imagem", "Ensaio editorial", "Entrega high-end"]
-                                    },
-                                    {
-                                        title: "ENSAIO",
-                                        link: "/studio/ensaio",
-                                        subtitle: 'Onde a presença ganha forma e elegância.',
-                                        items: ["Ensaio pessoal", "Direção de imagem", "Linguagem visual", "Entrega premium"]
-                                    },
-                                    {
-                                        title: "COBERTURA",
-                                        link: "/studio/cobertura",
-                                        subtitle: 'Onde sua agenda vira narrativa visual.',
-                                        items: ["Acompanhamento real", "Captação dedicada", "Direção de presença", "Entrega premium"]
-                                    }
-                                ].map((card, idx) => (
-                                    <div key={idx} className="p-10 border border-[#e0e0e0] flex flex-col justify-between h-full bg-white transition-all duration-400 ease-in-out hover:bg-black hover:scale-[1.04] hover:z-10 group hover-transition-refined scroll-reveal" data-delay={idx * 150} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.4s ease, box-shadow 0.4s ease' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                                        <div>
-                                            <h3 className="text-h3 mb-6 group-hover:text-white uppercase">{card.title}</h3>
-                                            <p className="text-body text-on-surface-variant mb-12 group-hover:text-white/70">{card.subtitle}</p>
-                                            <ul className="space-y-4 mb-12">
-                                                {card.items.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3 text-body text-on-surface-variant group-hover:text-white/80"> <span>{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <Link href={card.link} className="w-full border border-black py-5 text-button hover:bg-black hover:text-white transition-all duration-500 group-hover:border-white group-hover:text-white text-center block">
-                                            Saiba mais
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                <section className="bg-white">
+                    <div className="flex flex-col md:flex-row" style={{ height: 'clamp(520px, 80vh, 900px)' }}>
+                        {[
+                            {
+                                title: "BOOK",
+                                link: "/studio/book",
+                                tag: "Book profissional · Direção de imagem · Ensaio editorial",
+                                image: '/images/studio/gustavo-vioto/1.webp'
+                            },
+                            {
+                                title: "ENSAIO",
+                                link: "/studio/ensaio",
+                                tag: "Ensaio pessoal · Direção de imagem · Linguagem visual",
+                                image: '/images/studio/emanuelly-terres/1.webp'
+                            },
+                            {
+                                title: "COBERTURA",
+                                link: "/studio/cobertura",
+                                tag: "Acompanhamento real · Captação dedicada · Direção de presença",
+                                image: '/images/studio/marjorie-rossi/1.webp'
+                            }
+                        ].map((card, idx) => (
+                            <Link
+                                key={idx}
+                                href={card.link}
+                                className="relative flex-1 overflow-hidden group"
+                                style={{ minHeight: '300px' }}
+                            >
+                                <Image
+                                    src={card.image}
+                                    alt={card.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    quality={85}
+                                    loading="lazy"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                                <div className="absolute bottom-0 left-0 p-8 md:p-10">
+                                    <p className="text-caption text-white/60 mb-3 uppercase tracking-widest">{card.tag}</p>
+                                    <h3 className="text-h3 text-white font-bold uppercase mb-4">{card.title}</h3>
+                                    <span className="text-caption text-white/80 flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
+                                        Saiba mais →
+                                    </span>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </section>
                 <ClientLogos />
