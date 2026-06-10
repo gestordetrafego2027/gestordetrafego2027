@@ -503,6 +503,57 @@ export default function Home() {
                 </section>
 
 
+                {/* COMUNIDADE SECTION */}
+                <section className="bg-black py-24 px-6 md:px-12 overflow-hidden">
+                    <div className="max-w-[1440px] mx-auto">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+                            <div>
+                                <span className="text-caption text-white/40 uppercase tracking-widest block mb-4">House Mazzutti Academy</span>
+                                <h2 className="text-h2 text-white leading-tight">Comunidade.</h2>
+                                <p className="text-body text-white/50 mt-4 max-w-md">
+                                    Espaços de troca entre alunos, talentos e profissionais. Operação no mesmo padrão da casa.
+                                </p>
+                            </div>
+                            <Link
+                                href="/academy/comunidade"
+                                className="shrink-0 px-8 py-3 border border-white/20 text-white text-caption uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+                            >
+                                Entrar na comunidade →
+                            </Link>
+                        </div>
+
+                        {/* Grid de imagens */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+                            {[
+                                { src: '/images/comunidade/grid-1.webp', tall: true },
+                                { src: '/images/comunidade/grid-2.webp', tall: false },
+                                { src: '/images/comunidade/grid-3.webp', tall: false },
+                                { src: '/images/comunidade/grid-4.webp', tall: false },
+                                { src: '/images/comunidade/grid-5.webp', tall: false },
+                                { src: '/images/comunidade/grid-6.webp', tall: false },
+                            ].map((img, i) => (
+                                <Link
+                                    key={i}
+                                    href="/academy/comunidade"
+                                    className={`relative overflow-hidden bg-neutral-900 group ${i === 0 ? 'row-span-2' : ''}`}
+                                    style={{ aspectRatio: i === 0 ? 'auto' : '4/3', minHeight: i === 0 ? '360px' : '180px' }}
+                                >
+                                    <Image
+                                        src={img.src}
+                                        alt="Comunidade House Mazzutti"
+                                        fill
+                                        sizes="(max-width: 768px) 50vw, 33vw"
+                                        quality={80}
+                                        loading="lazy"
+                                        className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* BLOG SECTION */}
                 <BlogSection
                     slugs={[
