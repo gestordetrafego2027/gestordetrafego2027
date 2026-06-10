@@ -522,24 +522,24 @@ export default function Home() {
                             </Link>
                         </div>
 
-                        {/* Grid de imagens */}
+                        {/* Grid de imagens — 6 células iguais 3×2 */}
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
                             {[
-                                { src: '/images/comunidade/grid-1.webp', tall: true },
-                                { src: '/images/comunidade/grid-2.webp', tall: false },
-                                { src: '/images/comunidade/grid-3.webp', tall: false },
-                                { src: '/images/comunidade/grid-4.webp', tall: false },
-                                { src: '/images/comunidade/grid-5.webp', tall: false },
-                                { src: '/images/comunidade/grid-6.webp', tall: false },
-                            ].map((img, i) => (
+                                '/images/comunidade/grid-1.webp',
+                                '/images/comunidade/grid-2.webp',
+                                '/images/comunidade/grid-3.webp',
+                                '/images/comunidade/grid-4.webp',
+                                '/images/comunidade/grid-5.webp',
+                                '/images/comunidade/grid-6.webp',
+                            ].map((src, i) => (
                                 <Link
                                     key={i}
                                     href="/academy/comunidade"
-                                    className={`relative overflow-hidden bg-neutral-900 group ${i === 0 ? 'row-span-2' : ''}`}
-                                    style={{ aspectRatio: i === 0 ? 'auto' : '4/3', minHeight: i === 0 ? '360px' : '180px' }}
+                                    className="relative overflow-hidden bg-neutral-900 group"
+                                    style={{ aspectRatio: '4/3' }}
                                 >
                                     <Image
-                                        src={img.src}
+                                        src={src}
                                         alt="Comunidade House Mazzutti"
                                         fill
                                         sizes="(max-width: 768px) 50vw, 33vw"
