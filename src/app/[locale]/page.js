@@ -288,7 +288,7 @@ export default function Home() {
                         {[
                             { title: "Amanda Oliveira", sub: "Book", src: "/images/studio/amanda-oliveira/capa.webp", hover: "/images/studio/amanda-oliveira/2.webp", link: "/portfolio-studio/amanda-oliveira" },
                             { title: "Patricia Marafon", sub: "Book", src: "/images/studio/patricia-marafon/capa.webp", hover: "/images/studio/patricia-marafon/2.webp", link: "/portfolio-studio/patricia-marafon" },
-                            { title: "Signus - Versolato 02", sub: "Acessórios", src: "/images/produtora/acessorios/signus-versolato02/capa.webp", hover: "/images/produtora/acessorios/signus-versolato02/2.webp", link: "/portfolio-produtora/signus-versolato02" },
+                            { title: "Signus - Lavorato", sub: "Acessórios", src: "/images/produtora/acessorios/signus-lavorato/capa.webp", hover: "/images/produtora/acessorios/signus-lavorato/2.webp", link: "/portfolio-produtora/signus-lavorato" },
                             { title: "Elyah", sub: "Acessórios", src: "/images/produtora/acessorios/elyah/capa.webp", hover: "/images/produtora/acessorios/elyah/2.webp", link: "/portfolio-produtora/elyah" },
                             { title: "Knowhol", sub: "Direção de Imagem", src: "/images/agencia/knowhol/capa.webp", hover: "/images/agencia/knowhol/2.webp", link: "/portfolio-agencia/knowhol" },
                             { title: "Samrat", sub: "Direção de Imagem", src: "/images/agencia/samrat/capa.webp", hover: "/images/agencia/samrat/2.webp", link: "/portfolio-agencia/samrat" },
