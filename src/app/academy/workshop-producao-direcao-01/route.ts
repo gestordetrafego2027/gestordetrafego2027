@@ -84,17 +84,6 @@ export function GET() {
         style="position:absolute;inset:-10%;width:120%;height:120%;border:none;pointer-events:none;"
       ></iframe>
     </div>
-    <div class="hero-slide">
-      <image-slot id="hero-2" src="/images/produtora/moda/idrissi/1.webp" placeholder="Shooting · direção de arte" fit="cover"></image-slot>
-    </div>
-    <div class="hero-slide">
-      <image-slot id="hero-3" src="/images/produtora/beleza/superbia/1.webp" placeholder="Editorial · moda & beleza" fit="cover"></image-slot>
-    </div>
-    <div class="hero-media-nav">
-      <button id="heroPrev" aria-label="Anterior">←</button>
-      <button id="heroNext" aria-label="Próximo">→</button>
-    </div>
-    <span class="slide-num" id="slideNum">01 — 03</span>
     <span class="slide-cap">House Mazzutti · HMZT Produtora<br>10 anos de direção criativa</span>
   </div>
 
