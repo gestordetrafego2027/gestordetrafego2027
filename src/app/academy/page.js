@@ -57,17 +57,17 @@ const BOOKS = [
     year: '2026',
     title: 'Inside Out',
     subtitle: 'Operação enxuta com método. Como a House pensa, dirige e entrega — sete bastidores reais de ponta a ponta.',
-    pages: '—',
+    pages: '29',
     chapters: '7',
     format: 'Ebook',
     priceFull: null,
-    price: 'Em breve',
+    price: 'R$ 47',
     discount: null,
     href: '/pt/academy/casos-da-producao',
-    cover: '/images/academy/inside-out/cover.webp',
+    cover: '/images/academy/inside-out/cover.png',
     coverBg: '#1c3420',
-    status: 'Em breve',
-    available: false,
+    status: 'Disponível',
+    available: true,
   },
 ]
 
@@ -81,7 +81,7 @@ const PRODUCTS = [
     features: ['Videoaulas gravadas', 'Materiais de acompanhamento', 'Acesso vitalício'],
     price: 'R$ 249',
     href: '/academy/workshop-producao-direcao-01',
-    cover: '/images/academy/direcao-criativa/cover.webp',
+    cover: '/images/academy/edit-01/edit01-amanda.webp',
   },
   {
     id: 'comunicacao-360',
@@ -91,7 +91,7 @@ const PRODUCTS = [
     features: ['Gravação completa do evento', 'Direção criativa e produção ao vivo', 'Acesso vitalício'],
     price: 'R$ 145',
     href: '/academy/workshop-inside-out-edit-01',
-    cover: '/images/academy/comunicacao-360/cover.webp',
+    cover: '/images/academy/edit-01/edit01-model.webp',
   },
 ]
 
@@ -175,7 +175,7 @@ export default function AcademyHomePage() {
                 <span className="text-caption text-black/50 mb-4 block">Publicações · Série Editorial</span>
                 <h2 className="text-h2 text-black">Livros</h2>
               </div>
-              <span className="text-caption text-black/40">{BOOKS.filter(b => b.available).length} volumes disponíveis · <Link href="/pt/academy/casos-da-producao" style={{color:'inherit', textDecoration:'underline'}}>Vol. 03 em breve</Link></span>
+              <span className="text-caption text-black/40">{BOOKS.filter(b => b.available).length} volumes disponíveis</span>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
