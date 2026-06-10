@@ -16,16 +16,16 @@ export function GET() {
 <meta property="og:url" content="https://housemazzutti.com/academy/workshop-inside-out-edit-01/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="House Mazzutti Academy">
-<meta property="og:image" content="https://housemazzutti.com/images/academy/edit-01/edit01-equipe.jpg">
+<meta property="og:image" content="https://housemazzutti.com/images/academy/edit-01/edit01-equipe.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://housemazzutti.com/images/academy/edit-01/edit01-equipe.jpg">
+<meta name="twitter:image" content="https://housemazzutti.com/images/academy/edit-01/edit01-equipe.webp">
 <meta name="twitter:title" content="Inside Out · Edit 01 — Imersão Gravada | House Mazzutti">
 <meta name="twitter:description" content="Dois dias de imersão em direção criativa, produção e narrativa de marca, gravados em Uberlândia. Acesso vitalício por R$ 145.">
 <!-- JSON-LD: Product (imersão gravada) -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"Inside Out · Edit 01 — Imersão Gravada","description":"Dois dias de imersão em direção criativa, produção e narrativa de marca, gravados em Uberlândia. Oito módulos, uma campanha entregue ao vivo. Acesso vitalício.","image":"https://housemazzutti.com/images/academy/edit-01/edit01-equipe.jpg","url":"https://housemazzutti.com/academy/workshop-inside-out-edit-01/","brand":{"@type":"Brand","name":"House Mazzutti Academy"},"offers":{"@type":"Offer","priceCurrency":"BRL","price":"145.00","availability":"https://schema.org/InStock","url":"https://housemazzutti.com/academy/workshop-inside-out-edit-01/"}}
+{"@context":"https://schema.org","@type":"Product","name":"Inside Out · Edit 01 — Imersão Gravada","description":"Dois dias de imersão em direção criativa, produção e narrativa de marca, gravados em Uberlândia. Oito módulos, uma campanha entregue ao vivo. Acesso vitalício.","image":"https://housemazzutti.com/images/academy/edit-01/edit01-equipe.webp","url":"https://housemazzutti.com/academy/workshop-inside-out-edit-01/","brand":{"@type":"Brand","name":"House Mazzutti Academy"},"offers":{"@type":"Offer","priceCurrency":"BRL","price":"145.00","availability":"https://schema.org/InStock","url":"https://housemazzutti.com/academy/workshop-inside-out-edit-01/"}}
 </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"></script>
@@ -73,7 +73,7 @@ export function GET() {
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
   <div class="hero-bg">
-    <image-slot id="hero-bg" src="/images/academy/edit-01/edit01-quadro.jpg" placeholder="Foto hero · Inside Out Edit 01 · Uberlândia" fit="cover"></image-slot>
+    <image-slot id="hero-bg" src="/images/academy/edit-01/edit01-quadro.webp" placeholder="Foto hero · Inside Out Edit 01 · Uberlândia" fit="cover"></image-slot>
   </div>
 
   <div class="hero-body">
@@ -233,19 +233,19 @@ export function GET() {
 <div class="photo-strip">
   <div class="ps-track">
     <!-- set 1 -->
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.jpg" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.jpg" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.jpg" alt="Model · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.jpg" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.jpg" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.jpg" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.webp" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.webp" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.webp" alt="Model · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.webp" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.webp" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.webp" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
     <!-- set 2 — duplicado para loop contínuo -->
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.jpg" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.jpg" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.jpg" alt="Model · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.jpg" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.jpg" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
-    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.jpg" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-equipe.webp" alt="Equipe e alunos · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-amanda.webp" alt="Amanda · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-model.webp" alt="Model · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-quadro.webp" alt="Quadro · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.webp" alt="Scouting · Inside Out Edit 01" loading="lazy"></div>
+    <div class="ps-item"><img src="/images/academy/edit-01/edit01-scarpin.webp" alt="Detalhe · Inside Out Edit 01" loading="lazy"></div>
   </div>
 </div>
 

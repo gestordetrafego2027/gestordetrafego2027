@@ -14,10 +14,14 @@ const nextConfig = {
 
   // 2. Otimização de Imagens
   images: {
-    remotePatterns: [],
+    remotePatterns: [
+      // Supabase Storage (prod + dev) — capas de cursos, avatares, produtos digitais
+      { protocol: 'https', hostname: 'ohmnzalkfbhdivtttzsa.supabase.co', pathname: '/storage/v1/object/**' },
+      { protocol: 'https', hostname: 'urfrxirqkkrosyrvvtdo.supabase.co', pathname: '/storage/v1/object/**' },
+    ],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 828, 1080, 1280, 1920],
-    imageSizes: [64, 128, 256, 384, 512],
+    imageSizes: [64, 128, 256, 384],
     minimumCacheTTL: 2592000,
     dangerouslyAllowSVG: false,
     contentDispositionType: 'attachment',

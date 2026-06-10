@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 
@@ -145,7 +146,7 @@ export default async function StudentDashboardPage() {
                   <div key={e.id} className="rounded-lg border border-neutral-200 bg-white overflow-hidden flex flex-col">
                     {e.product.cover_url && (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={e.product.cover_url} alt={e.product.title} className="w-full aspect-video object-cover" />
+                      <Image src={e.product.cover_url} alt={e.product.title} width={640} height={360} className="w-full aspect-video object-cover" loading="lazy" />
                     )}
                     <div className="p-4 flex-1 flex flex-col">
                       <div className="text-xs uppercase text-neutral-500 mb-1">Curso</div>
@@ -186,7 +187,7 @@ export default async function StudentDashboardPage() {
                 >
                   {l.cover_url && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={l.cover_url} alt={l.title} className="w-20 h-20 rounded object-cover shrink-0" />
+                    <Image src={l.cover_url} alt={l.title} width={80} height={80} className="w-20 h-20 rounded object-cover shrink-0" loading="lazy" />
                   )}
                   <div className="flex-1 min-w-0">
                     <div className="text-xs text-neutral-500">
@@ -273,7 +274,7 @@ export default async function StudentDashboardPage() {
                 >
                   {e.product.cover_url && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={e.product.cover_url} alt={e.product.title} className="w-full aspect-[3/4] object-cover" />
+                    <Image src={e.product.cover_url} alt={e.product.title} width={300} height={400} className="w-full aspect-[3/4] object-cover" loading="lazy" />
                   )}
                   <div className="p-3 text-sm font-medium leading-tight">{e.product.title}</div>
                 </Link>

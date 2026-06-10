@@ -69,6 +69,8 @@ export default function VideoPlayer({
         <iframe
           src={embed}
           className="w-full h-full"
+          loading="lazy"
+          title="Vídeo da aula"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
@@ -83,6 +85,8 @@ export default function VideoPlayer({
         <iframe
           src={embed}
           className="w-full h-full"
+          loading="lazy"
+          title="Vídeo da aula"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
         />
