@@ -116,10 +116,6 @@ export default function SenseHotelPage() {
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="/portfolio-produtora"><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Próximo Projeto</span><span className="material-symbols-outlined text-sm">east</span></Link>
                 </div>
             </div>
-            <PortfolioVideo unit="produtora" slug="sense-hotel" />
-
-            <YouTubeShort urls="https://youtube.com/shorts/1VVzJ2iqUe4?feature=share" />
-
             <PortfolioCTA businessUnit="produtora" projectSlug="sense-hotel" />
 
             <SiteFooter />
