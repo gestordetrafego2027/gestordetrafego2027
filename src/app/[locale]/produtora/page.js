@@ -305,19 +305,19 @@ export default function ProdutoraPage() {
                                 title: t('servico_1_title'),
                                 link: "/produtora/moda",
                                 tag: t('servico_1_item_1') + ' · ' + t('servico_1_item_2') + ' · ' + t('servico_1_item_3'),
-                                image: '/images/produtora/moda/beatco/1.webp'
+                                image: '/images/produtora/acessorios/elyah/1.webp'
                             },
                             {
                                 title: t('servico_2_title'),
                                 link: "/produtora/publicidade",
                                 tag: t('servico_2_item_1') + ' · ' + t('servico_2_item_2') + ' · ' + t('servico_2_item_3'),
-                                image: '/images/produtora/acessorios/elyah/1.webp'
+                                image: '/images/produtora/beleza/oceane/1.webp'
                             },
                             {
                                 title: t('servico_3_title'),
                                 link: "/produtora/institucional",
                                 tag: t('servico_3_item_1') + ' · ' + t('servico_3_item_2') + ' · ' + t('servico_3_item_3'),
-                                image: '/images/produtora/beleza/oceane/1.webp'
+                                image: '/images/studio/carol-costa/1.webp'
                             }
                         ].map((card, idx) => (
                             <Link
