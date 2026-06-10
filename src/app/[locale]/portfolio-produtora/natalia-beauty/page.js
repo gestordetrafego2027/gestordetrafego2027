@@ -128,10 +128,7 @@ export default function NataliaBeautyPage() {
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">PRODUTORA / PRODUÇÃO EXECUTIVA</p>
-                                </div>
-                                <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
+                                    <p className="font-inter text-sm font-medium">PRODUTORA / Produção Executiva</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
@@ -139,7 +136,7 @@ export default function NataliaBeautyPage() {
                                 </div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Cliente</p><p className="font-inter text-sm font-medium">Natália Beauty</p></div>
                             </div>
                             
                     </div>
