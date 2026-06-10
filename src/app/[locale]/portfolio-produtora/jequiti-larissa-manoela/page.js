@@ -136,6 +136,8 @@ export default function JequitiLarissaManoelaPage() {
                                 </div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Set Design</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Fotos</p><p className="font-inter text-sm font-medium">Bruno Fonze</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
@@ -150,7 +152,7 @@ export default function JequitiLarissaManoelaPage() {
                                     {`Campanha de fragrância em mais um capítulo da parceria com a artista — leitura editorial adulta, set construído em torno de presença e narrativa. Material capaz de sustentar lançamento nacional, catálogo, comissão, mídia e ponto de venda com a mesma assinatura visual da marca.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Produção Executiva: Mateus Sacavem · Direção: House Mazzutti · Fotografia: Brunico · Vídeo: Monteiro · Talento: Larissa Manoela`}
+                                    {`Produção Executiva: Mateus Sacavem · Set Design: House Mazzutti · Fotos: Bruno Fonze · Vídeo: Monteiro · Talento: Larissa Manoela`}
                                 </p>
                             </div>
                         </div>
