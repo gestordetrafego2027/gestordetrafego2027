@@ -208,6 +208,7 @@ export default function AgenciaPage() {
                             { href: '/portfolio-agencia/on-take', src: '/images/agencia/on-take/capa.webp', fallback: '/images/home/banner-4.webp', label: 'Comunicação', title: 'On Take' },
                             { href: '/portfolio-agencia/pous', src: '/images/agencia/pous/capa.webp', fallback: '/images/home/banner-1.webp', label: 'Branding & Digital', title: 'Pous' },
                             { href: '/portfolio-agencia/samrat', src: '/images/agencia/samrat/capa.webp', fallback: '/images/home/banner-2.webp', label: 'Branding & Digital', title: 'Samrat' },
+                            { href: '/portfolio-agencia/alletto', src: '/images/agencia/alletto/capa.webp', fallback: '/images/home/banner-3.webp', label: 'Comunicação & Publicidade', title: 'Alletto' },
                         ].map((item, i) => (
                             <Link key={i} className="gallery-column group" href={item.href}>
                                 <Image
@@ -276,7 +277,7 @@ export default function AgenciaPage() {
                     {(() => {
                         const panelImages = [
                             '/images/agencia/fort/fort-negocios-imobiliarios-branding-identidade-visual-house-mazzutti-agencia-02.webp',
-                            '/images/agencia/dra-ariadne-barbosa/dra-ariadne-barbosa-logo-branding-manual-de-marca-identidade-visual-house-mazzutti-agencia-03.webp',
+                            '/images/agencia/alletto/2.webp',
                             '/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-03.webp',
                         ]
                         return (
