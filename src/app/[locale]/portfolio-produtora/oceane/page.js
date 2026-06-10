@@ -119,26 +119,17 @@ export default function OceanePage() {
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p>
-                                    <p className="font-inter text-sm font-medium">PRODUTORA / PRODUÇÃO EXECUTIVA</p>
-                                </div>
-                                <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
+                                    <p className="font-inter text-sm font-medium">PRODUTORA / Produção Audiovisual</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
                                     <p className="font-inter text-sm font-medium">2022</p>
                                 </div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Fotografia</p><p className="font-inter text-sm font-medium">Ita Mazzutti</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Vitor Terra</p></div>
                             </div>
                             <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
-                                <p className="font-inter text-xs text-on-surface-variant leading-relaxed">
-                                    Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
-                                </p>
-                            </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
                                     {`Linha de maquiagem assinada pela artista, lançada sob a premissa de presença múltipla — leitura editorial sustentada em cada bloco de produto. Material para lançamento nacional, mídia, comunicação da artista e ponto de venda, instalando a coleção como categoria autoral.`}
