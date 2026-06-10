@@ -281,13 +281,13 @@ export default function AgenciaPage() {
                             '/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-03.webp',
                         ]
                         return (
-                            <div className="flex flex-col md:flex-row" style={{ height: 'clamp(520px, 80vh, 900px)' }}>
+                            <div className="flex flex-col md:flex-row" style={{ minHeight: 'clamp(520px, 80vh, 900px)' }}>
                                 {services.map((card, idx) => (
                                     <Link
                                         key={idx}
                                         href={card.link}
                                         className="relative flex-1 overflow-hidden group"
-                                        style={{ minHeight: '300px' }}
+                                        style={{ minHeight: 'clamp(300px, 50vw, 900px)' }}
                                     >
                                         <Image
                                             src={panelImages[idx]}
@@ -295,10 +295,11 @@ export default function AgenciaPage() {
                                             fill
                                             sizes="(max-width: 768px) 100vw, 33vw"
                                             quality={75}
+                                            priority={idx === 0}
                                             loading="eager"
-                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 transition-all duration-500" />
                                         <div className="absolute bottom-0 left-0 p-8 md:p-10">
                                             <p className="text-caption text-white/60 mb-3 uppercase tracking-widest">{card.items.join(' · ')}</p>
                                             <h3 className="text-h3 text-white font-bold uppercase mb-4">{card.title}</h3>

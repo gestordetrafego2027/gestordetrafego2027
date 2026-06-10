@@ -500,32 +500,35 @@ export default function StudioPage() {
                 />
                             {/* STRUCTURE SELECTION */}
                 <section className="bg-white">
-                    <div className="flex flex-col md:flex-row" style={{ height: 'clamp(520px, 80vh, 900px)' }}>
+                    <div className="flex flex-col md:flex-row" style={{ minHeight: 'clamp(520px, 80vh, 900px)' }}>
                         {[
                             {
                                 title: "BOOK",
                                 link: "/studio/book",
                                 tag: "Book profissional · Direção de imagem · Ensaio editorial",
-                                image: '/images/studio/ana-rockenbach/capa.webp'
+                                image: '/images/studio/ana-rockenbach/capa.webp',
+                                pos: 'object-top'
                             },
                             {
                                 title: "ENSAIO",
                                 link: "/studio/ensaio",
                                 tag: "Ensaio pessoal · Direção de imagem · Linguagem visual",
-                                image: '/images/studio/emanuelly-terres/1.webp'
+                                image: '/images/studio/emanuelly-terres/1.webp',
+                                pos: 'object-top'
                             },
                             {
                                 title: "COBERTURA",
                                 link: "/studio/cobertura",
                                 tag: "Acompanhamento real · Captação dedicada · Direção de presença",
-                                image: '/images/studio/marjorie-rossi/1.webp'
+                                image: '/images/studio/marjorie-rossi/1.webp',
+                                pos: 'object-top'
                             }
                         ].map((card, idx) => (
                             <Link
                                 key={idx}
                                 href={card.link}
                                 className="relative flex-1 overflow-hidden group"
-                                style={{ minHeight: '300px' }}
+                                style={{ minHeight: 'clamp(300px, 50vw, 900px)' }}
                             >
                                 <Image
                                     src={card.image}
@@ -533,10 +536,11 @@ export default function StudioPage() {
                                     fill
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                     quality={75}
-                                    loading="eager"
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    priority={idx === 0}
+                                    loading={idx === 0 ? 'eager' : 'eager'}
+                                    className={`object-cover ${card.pos} transition-transform duration-700 group-hover:scale-105`}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 transition-all duration-500" />
                                 <div className="absolute bottom-0 left-0 p-8 md:p-10">
                                     <p className="text-caption text-white/60 mb-3 uppercase tracking-widest">{card.tag}</p>
                                     <h3 className="text-h3 text-white font-bold uppercase mb-4">{card.title}</h3>

@@ -299,32 +299,35 @@ export default function ProdutoraPage() {
                 </section>
                             {/* STRUCTURE SELECTION */}
                 <section className="bg-white">
-                    <div className="flex flex-col md:flex-row" style={{ height: 'clamp(520px, 80vh, 900px)' }}>
+                    <div className="flex flex-col md:flex-row" style={{ minHeight: 'clamp(520px, 80vh, 900px)' }}>
                         {[
                             {
                                 title: t('servico_1_title'),
                                 link: "/produtora/moda",
                                 tag: t('servico_1_item_1') + ' · ' + t('servico_1_item_2') + ' · ' + t('servico_1_item_3'),
-                                image: '/images/produtora/acessorios/elyah/1.webp'
+                                image: '/images/produtora/acessorios/elyah/1.webp',
+                                pos: 'object-top'
                             },
                             {
                                 title: t('servico_2_title'),
                                 link: "/produtora/publicidade",
                                 tag: t('servico_2_item_1') + ' · ' + t('servico_2_item_2') + ' · ' + t('servico_2_item_3'),
-                                image: '/images/produtora/beleza/oceane/1.webp'
+                                image: '/images/produtora/beleza/oceane/1.webp',
+                                pos: 'object-center'
                             },
                             {
                                 title: t('servico_3_title'),
                                 link: "/produtora/institucional",
                                 tag: t('servico_3_item_1') + ' · ' + t('servico_3_item_2') + ' · ' + t('servico_3_item_3'),
-                                image: '/images/studio/carol-costa/1.webp'
+                                image: '/images/studio/carol-costa/1.webp',
+                                pos: 'object-top'
                             }
                         ].map((card, idx) => (
                             <Link
                                 key={idx}
                                 href={card.link}
                                 className="relative flex-1 overflow-hidden group"
-                                style={{ minHeight: '300px' }}
+                                style={{ minHeight: 'clamp(300px, 50vw, 900px)' }}
                             >
                                 <Image
                                     src={card.image}
@@ -332,10 +335,11 @@ export default function ProdutoraPage() {
                                     fill
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                     quality={75}
+                                    priority={idx === 0}
                                     loading="eager"
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className={`object-cover ${card.pos} transition-transform duration-700 group-hover:scale-105`}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 transition-all duration-500" />
                                 <div className="absolute bottom-0 left-0 p-8 md:p-10">
                                     <p className="text-caption text-white/60 mb-3 uppercase tracking-widest">{card.tag}</p>
                                     <h3 className="text-h3 text-white font-bold uppercase mb-4">{card.title}</h3>
