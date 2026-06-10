@@ -189,14 +189,14 @@ export default function PortfolioPage() {
 
       {/* HEADER EDITORIAL */}
       <section
-        className="border-y border-neutral-200 text-center px-6 py-20 md:py-32"
+        className="border-y border-neutral-200 text-center px-6 py-10 md:py-14"
         style={{ marginTop: '72px', borderTopWidth: '0.5px', borderBottomWidth: '0.5px' }}
       >
-        <div className="max-w-4xl mx-auto">
-          <span className="font-label uppercase tracking-wider text-sm text-black mb-6 block">
+        <div className="max-w-5xl mx-auto">
+          <span className="font-label uppercase tracking-wider text-xs text-neutral-500 mb-3 block">
             {t('headerLabel')}
           </span>
-          <h2 className="font-headline font-bold uppercase text-4xl md:text-6xl leading-tight">
+          <h2 className="font-headline font-bold uppercase text-3xl md:text-5xl leading-tight">
             {t('headline')}
           </h2>
         </div>
