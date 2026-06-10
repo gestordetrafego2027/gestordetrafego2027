@@ -64,7 +64,7 @@ const BOOKS = [
     price: 'Em breve',
     discount: null,
     href: '/pt/academy/casos-da-producao',
-    cover: null,
+    cover: '/images/academy/inside-out/cover.png',
     coverBg: '#1c3420',
     status: 'Em breve',
     available: false,
