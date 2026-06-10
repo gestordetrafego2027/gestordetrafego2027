@@ -79,7 +79,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     slug: 'casos-da-producao',
     name: 'Inside Out · Vol. 03',
     stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? 'price_1TgZGILcrEu1967nxsNG52fO',
-    storagePath: 'inside-out-proucao-direcao.pdf',
+    storagePath: 'casos-da-producao/vol-03.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_CASOS_DA_PRODUCAO ??
       '/downloads/casos-da-producao-hmzt-vol-03.pdf',
