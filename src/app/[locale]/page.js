@@ -551,6 +551,20 @@ export default function Home() {
                                 </Link>
                             ))}
                         </div>
+
+                        {/* CTA pós-grid */}
+                        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-white/10 pt-10">
+                            <div>
+                                <p className="text-white text-base font-medium leading-snug">Faça parte da comunidade House Mazzutti.</p>
+                                <p className="text-white/40 text-sm mt-1">Acesso exclusivo a conteúdo, bastidores e conexões do mercado criativo.</p>
+                            </div>
+                            <Link
+                                href="/academy/comunidade"
+                                className="shrink-0 px-10 py-4 bg-white text-black text-xs font-semibold uppercase tracking-widest hover:bg-neutral-100 transition-colors duration-300"
+                            >
+                                Entrar na comunidade →
+                            </Link>
+                        </div>
                     </div>
                 </section>
 
