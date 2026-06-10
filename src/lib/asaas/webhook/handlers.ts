@@ -49,7 +49,7 @@ export async function handlePaymentConfirmed(ctx: HandlerCtx): Promise<void> {
   }
   await ctx.supabase
     .from('store_orders')
-    .update({ status: 'paid', paid_at: new Date().toISOString() })
+    .update({ status: 'paid', paid_at: new Date().toISOString(), payment_gateway: 'asaas' })
     .eq('id', order.id)
 
   // Emite NFS-e (best-effort, não bloqueia entrega digital)
@@ -101,6 +101,10 @@ export async function handlePaymentConfirmed(ctx: HandlerCtx): Promise<void> {
           log.error({ err: r.error, order_id: order.id }, 'falha ao enviar email de entrega')
         } else {
           log.info({ order_id: order.id, slug }, 'email de entrega enviado')
+          await ctx.supabase.from('store_orders').update({
+            delivery_sent_at: new Date().toISOString(),
+            delivery_email_id: r.id ?? null,
+          }).eq('id', order.id)
         }
       } else {
         log.warn({ order_id: order.id, slug }, 'produto digital não resolvido — enviando confirmação simples')

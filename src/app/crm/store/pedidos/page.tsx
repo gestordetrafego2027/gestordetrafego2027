@@ -43,6 +43,7 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
     .select(`
       id, order_number, status, total_cents, currency,
       buyer_name, buyer_email, created_at,
+      payment_gateway, delivery_sent_at, delivery_email_id,
       nfse_id, nfse_number, nfse_status,
       store_order_items ( id, product_snapshot, quantity, unit_amount )
     `, { count: 'exact' })
@@ -107,9 +108,25 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
                       </p>
                     </div>
                     <div className="flex items-center gap-3 flex-wrap">
+                      {/* Gateway */}
+                      {order.payment_gateway && (
+                        <span className={`text-xs font-medium px-2 py-0.5 rounded border ${order.payment_gateway === 'stripe' ? 'text-indigo-700 bg-indigo-50 border-indigo-100' : 'text-sky-700 bg-sky-50 border-sky-100'}`}>
+                          {order.payment_gateway === 'stripe' ? 'Cartão' : 'Pix/Boleto'}
+                        </span>
+                      )}
                       <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${STATUS_COLOR[order.status] ?? 'text-neutral-500 bg-neutral-100 border-neutral-200'}`}>
                         {STATUS_LABEL[order.status] ?? order.status}
                       </span>
+                      {/* Entrega */}
+                      {order.delivery_sent_at ? (
+                        <span className="text-xs font-medium px-2.5 py-1 rounded-full border text-emerald-700 bg-emerald-50 border-emerald-100" title={`Entregue em ${new Date(order.delivery_sent_at).toLocaleString('pt-BR')}`}>
+                          ✓ PDF entregue
+                        </span>
+                      ) : order.status === 'paid' ? (
+                        <span className="text-xs font-medium px-2.5 py-1 rounded-full border text-red-600 bg-red-50 border-red-100">
+                          ⚠ PDF não entregue
+                        </span>
+                      ) : null}
                       <span className="text-base font-bold text-neutral-900">{fmt(order.total_cents)}</span>
                     </div>
                   </div>

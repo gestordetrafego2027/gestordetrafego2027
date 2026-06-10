@@ -83,6 +83,7 @@ export async function handleCheckoutCompleted(
           : session.customer?.id ?? null,
       status: 'paid',
       paid_at: new Date().toISOString(),
+      payment_gateway: 'stripe',
       subtotal_cents: subtotalCents,
       discount_cents: discountCents,
       tax_cents: taxCents,
@@ -206,6 +207,10 @@ export async function handleCheckoutCompleted(
           log.error({ err: r.error, order_id: order.id }, 'falha ao enviar email de entrega')
         } else {
           log.info({ email_id: r.id, order_id: order.id }, 'email de entrega enviado')
+          await supabase.from('store_orders').update({
+            delivery_sent_at: new Date().toISOString(),
+            delivery_email_id: r.id ?? null,
+          }).eq('id', order.id)
         }
       }
     }
