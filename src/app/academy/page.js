@@ -64,7 +64,7 @@ const BOOKS = [
     price: 'R$ 47',
     discount: null,
     href: '/pt/academy/casos-da-producao',
-    cover: '/images/academy/inside-out/cover.png',
+    cover: '/images/academy/inside-out/cover.webp',
     coverBg: '#1c3420',
     status: 'Disponível',
     available: true,
