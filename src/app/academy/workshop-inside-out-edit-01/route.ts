@@ -73,7 +73,7 @@ export function GET() {
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
   <div class="hero-bg">
-    <image-slot id="hero-bg" placeholder="Foto hero · Inside Out Edit 01 · Uberlândia" fit="cover"></image-slot>
+    <image-slot id="hero-bg" src="/images/academy/edit-01/edit01-quadro.jpg" placeholder="Foto hero · Inside Out Edit 01 · Uberlândia" fit="cover"></image-slot>
   </div>
 
   <div class="hero-body">

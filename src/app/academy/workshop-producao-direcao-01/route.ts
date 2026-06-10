@@ -85,10 +85,10 @@ export function GET() {
       ></iframe>
     </div>
     <div class="hero-slide">
-      <image-slot id="hero-2" placeholder="Shooting · direção de arte" fit="cover"></image-slot>
+      <image-slot id="hero-2" src="/images/produtora/moda/idrissi/1.webp" placeholder="Shooting · direção de arte" fit="cover"></image-slot>
     </div>
     <div class="hero-slide">
-      <image-slot id="hero-3" placeholder="Editorial · moda & beleza" fit="cover"></image-slot>
+      <image-slot id="hero-3" src="/images/produtora/beleza/superbia/1.webp" placeholder="Editorial · moda & beleza" fit="cover"></image-slot>
     </div>
     <div class="hero-media-nav">
       <button id="heroPrev" aria-label="Anterior">←</button>
@@ -228,12 +228,12 @@ export function GET() {
     </div>
     <h2 class="h-2 display" data-reveal style="margin-bottom:clamp(30px,4vw,56px)">Por trás<br>das câmeras</h2>
     <div class="gallery-grid">
-      <image-slot id="g1" class="rv" data-reveal radius="0" placeholder="Bastidores · 01" fit="cover"></image-slot>
-      <image-slot id="g2" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores · 02" fit="cover"></image-slot>
-      <image-slot id="g3" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Bastidores · 03" fit="cover"></image-slot>
-      <image-slot id="g4" class="rv" data-reveal radius="0" placeholder="Bastidores · 04" fit="cover"></image-slot>
-      <image-slot id="g5" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores · 05" fit="cover"></image-slot>
-      <image-slot id="g6" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Bastidores · 06" fit="cover"></image-slot>
+      <image-slot id="g1" src="/images/academy/edit-01/edit01-equipe.jpg" class="rv" data-reveal radius="0" placeholder="Bastidores · 01" fit="cover"></image-slot>
+      <image-slot id="g2" src="/images/academy/edit-01/edit01-model.jpg" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores · 02" fit="cover"></image-slot>
+      <image-slot id="g3" src="/images/academy/edit-01/edit01-modelo-scouting.jpg" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Bastidores · 03" fit="cover"></image-slot>
+      <image-slot id="g4" src="/images/academy/edit-01/edit01-amanda.jpg" class="rv" data-reveal radius="0" placeholder="Bastidores · 04" fit="cover"></image-slot>
+      <image-slot id="g5" src="/images/academy/edit-01/edit01-scarpin.jpg" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores · 05" fit="cover"></image-slot>
+      <image-slot id="g6" src="/images/academy/gallery/grid-1.webp" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Bastidores · 06" fit="cover"></image-slot>
     </div>
     <p class="mono" data-reveal style="margin-top:clamp(22px,3vw,34px);color:var(--smoke)">House Mazzutti · Direção, fotografia, moda e publicidade — uma década de produções.</p>
   </div>
@@ -243,7 +243,7 @@ export function GET() {
 <section class="section paper" id="mentor">
   <div class="wrap mentor">
     <div class="mentor-img" data-reveal>
-      <image-slot id="mentor" placeholder="Retrato · Angelo Mazzutti" fit="cover"></image-slot>
+      <image-slot id="mentor" src="/images/about/angelo-mazzutti.webp" placeholder="Retrato · Angelo Mazzutti" fit="cover"></image-slot>
     </div>
     <div data-reveal data-reveal-d="1">
       <span class="eyebrow">04 — O Mentor</span>
