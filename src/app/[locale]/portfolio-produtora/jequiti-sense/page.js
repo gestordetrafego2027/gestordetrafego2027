@@ -122,25 +122,18 @@ export default function JequitiSensePage() {
                                     <p className="font-inter text-sm font-medium">PRODUTORA / PRODUÇÃO EXECUTIVA</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
-                                </div>
-                                <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
                                     <p className="font-inter text-sm font-medium">2026</p>
                                 </div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Casting e Cenografia</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Fotos</p><p className="font-inter text-sm font-medium">Bruno Fonze</p></div>
                             </div>
                             
                     </div>
                 </div>
             </main>
             
-            <PortfolioVideo unit="produtora" slug="jequiti-sense" />
-
-            <YouTubeShort urls="https://youtube.com/shorts/kVg_XcuuTAs?feature=share" />
-
             <PortfolioCTA businessUnit="produtora" projectSlug="jequiti-sense" />
 
             {/* Navigation Links before footer */}
