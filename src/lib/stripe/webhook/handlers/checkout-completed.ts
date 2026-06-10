@@ -1,5 +1,6 @@
 import type Stripe from 'stripe'
 import { createServiceClient } from '@/lib/supabase/service'
+import { getStripe } from '@/lib/stripe/server'
 import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
 import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
@@ -31,8 +32,20 @@ export async function handleCheckoutCompleted(
     return
   }
 
+  // Re-busca a session com line_items expandidos — o evento de webhook não expande por padrão
+  let fullSession = session
+  if (!session.line_items?.data?.length) {
+    try {
+      fullSession = await getStripe().checkout.sessions.retrieve(session.id, {
+        expand: ['line_items', 'line_items.data.price.product'],
+      }) as Stripe.Checkout.Session
+    } catch (err) {
+      log.error({ err }, 'falha ao re-buscar session com line_items')
+    }
+  }
+
   // Monta itens a partir dos line_items expandidos
-  const lineItems = (session as any).line_items?.data as Stripe.LineItem[] | undefined
+  const lineItems = (fullSession as any).line_items?.data as Stripe.LineItem[] | undefined
   if (!lineItems?.length) {
     log.warn('session sem line_items expandidos — verifique expand na criação da session')
   }
