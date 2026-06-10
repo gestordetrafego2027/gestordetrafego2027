@@ -146,10 +146,29 @@
   $$('[data-reserve]').forEach(b=> b.addEventListener('click', e=>{ e.preventDefault(); openModal(b.dataset.plan); }));
   $$('[data-close]').forEach(b=> b.addEventListener('click', closeModal));
 
-  /* ---- form validation ---- */
+  /* ---- método de pagamento ---- */
+  const methodBtns = $$('[data-method]', form.closest('.modal-card'));
+  let selectedMethod = 'card';
+  function setMethodActive(active){
+    methodBtns.forEach(b=>{
+      const on = b===active;
+      b.style.background = on ? '#14140e' : 'transparent';
+      b.style.color = on ? '#efe9da' : '#14140e';
+      b.style.borderColor = on ? '#14140e' : '#ddd6c8';
+    });
+  }
+  setMethodActive(methodBtns[0]);
+  methodBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      selectedMethod = btn.dataset.method;
+      setMethodActive(btn);
+    });
+  });
+
+  /* ---- form validation + checkout ---- */
   const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   function setErr(input, on){ input.closest('.field').classList.toggle('err', on); }
-  form.addEventListener('submit', e=>{
+  form.addEventListener('submit', async e=>{
     e.preventDefault();
     let ok = true;
     const nome = form.nome, email = form.email, fone = form.fone;
@@ -162,8 +181,35 @@
       if(f) f.querySelector('input').focus();
       return;
     }
-    formWrap.style.display='none';
-    success.style.display='block';
+
+    // Determina plano selecionado
+    const planText = form.plano.value; // ex: "Pro — R$ 2.800"
+    const plan = planText.split(' ')[0]; // "Insider" | "Pro" | "Executivo"
+
+    const submitBtn = form.querySelector('[type=submit]');
+    if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Aguarde…'; }
+
+    try {
+      const res = await fetch('/api/workshop/checkout', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          name: nome.value.trim(),
+          email: email.value.trim(),
+          phone: digits,
+          plan,
+          method: selectedMethod,
+        }),
+      });
+      const data = await res.json();
+      if(!res.ok || !data.url) throw new Error(data.error || 'Erro ao iniciar pagamento.');
+      window.location.href = data.url;
+    } catch(err){
+      if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = 'Confirmar inscrição'; }
+      const errEl = form.querySelector('.form-error');
+      if(errEl){ errEl.textContent = err.message; errEl.style.display='block'; }
+      else { alert(err.message); }
+    }
   });
   form.querySelectorAll('input').forEach(inp=>{
     inp.addEventListener('input', ()=> inp.closest('.field').classList.remove('err'));

@@ -406,7 +406,16 @@ export function GET() {
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
         <div class="field"><label>Plano</label><select name="plano"><option>Insider — R$ 2.450</option><option selected>Pro — R$ 2.800</option><option>Executivo — R$ 3.200</option></select><div class="msg"></div></div>
-        <button class="btn solid" type="submit"><span class="lbl">Garantir minha vaga</span><span class="ar">↗</span></button>
+        <div class="field" style="margin-bottom:18px">
+          <label style="margin-bottom:8px;display:block">Forma de pagamento</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button type="button" data-method="card" class="method-btn active" style="flex:1;min-width:90px;padding:10px 8px;border:2px solid #14140e;background:#14140e;color:#efe9da;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em">💳 Cartão</button>
+            <button type="button" data-method="pix" class="method-btn" style="flex:1;min-width:90px;padding:10px 8px;border:2px solid #ddd6c8;background:transparent;color:#14140e;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em">📱 Pix</button>
+            <button type="button" data-method="boleto" class="method-btn" style="flex:1;min-width:90px;padding:10px 8px;border:2px solid #ddd6c8;background:transparent;color:#14140e;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em">📄 Boleto</button>
+          </div>
+        </div>
+        <div class="form-error" style="display:none;color:#c92a2a;font-size:13px;margin-bottom:12px;text-align:center"></div>
+        <button class="btn solid" type="submit"><span class="lbl">Confirmar inscrição</span><span class="ar">↗</span></button>
       </form>
     </div>
     <div class="modal-success" id="modalSuccess" style="display:none">
