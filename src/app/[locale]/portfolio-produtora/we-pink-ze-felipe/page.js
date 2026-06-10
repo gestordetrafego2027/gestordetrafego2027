@@ -135,22 +135,7 @@ export default function WePinkZeFelipePage() {
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
                             </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
-                                <p className="font-inter text-xs text-on-surface-variant leading-relaxed">
-                                    Direção de beleza com foco em pele, luz e presença. Da supervisão de set ao corte final, padrão internacional.
-                                </p>
-                            </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
-                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Campanha de marca para uma das maiores operações de cosmético do país — leitura editorial do casal, produto tratado como autoridade. Elenco, beauty e set em uma só linha. Banco para live commerce, mídia, redes próprias e ponto de venda na escala em que a marca opera.`}
-                                </p>
-                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Direção Criativa: Ita Mazzutti · Produção Executiva: Angelo Mazzutti · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nikolas Beauty · Talentos: Virginia Fonseca, Zé Felipe`}
-                                </p>
-                            </div>
-                        </div>
+                            
                     </div>
                 </div>
             </main>

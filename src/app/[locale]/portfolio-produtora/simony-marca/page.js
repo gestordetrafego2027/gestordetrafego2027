@@ -84,7 +84,6 @@ export default function SimonyMarcaPage() {
                             <p className="info-col-anim font-newsreader text-2xl italic leading-relaxed text-on-surface-variant">"Nada foi feito para parecer. Foi feito para sustentar."</p>
                             <div className="space-y-[16px] pt-4">
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Categoria</p><p className="font-inter text-sm font-medium">Beleza</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p><p className="font-inter text-sm font-medium">2024</p></div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Direção</p><p className="font-inter text-sm font-medium">Angelo Mazzutti</p></div>

@@ -93,20 +93,7 @@ export default function BeatcoPage() {
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
                             </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
-                                <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de moda com foco em silhueta, materialidade e narrativa visual. Captação supervisionada, ritmo editorial.</p>
-                            </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
-                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Campanha que traduz performance em editorial — movimento e textura como eixo visual. Elenco, beauty e set em uma só linha narrativa. Banco denso para mídia, e-commerce e ponto de venda com mesma assinatura.`}
-                                </p>
-                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Produção de Arte e Cenografia: Angelo Mazzutti · Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Beauty: Nathan · Modelo: Talita Dalbó`}
-                                </p>
-                            </div>
-                        </div>
+                            
                     </div>
                 </div>
             </main>

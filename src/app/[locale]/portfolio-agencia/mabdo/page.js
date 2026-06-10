@@ -115,10 +115,6 @@ export default function MabdoPage() {
                                     <p className="font-inter text-sm font-medium">Agência</p>
                                 </div>
                                 <div className="info-col-anim flex flex-col">
-                                    <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Autor</p>
-                                    <p className="font-inter text-sm font-medium">House Mazzutti</p>
-                                </div>
-                                <div className="info-col-anim flex flex-col">
                                     <p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Ano</p>
                                     <p className="font-inter text-sm font-medium">2026</p>
                                 </div>

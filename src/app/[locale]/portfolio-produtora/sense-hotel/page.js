@@ -93,20 +93,7 @@ export default function SenseHotelPage() {
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Produção Executiva</p><p className="font-inter text-sm font-medium">Angelo Mazzutti &amp; Mateus Sacavem</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Vídeo</p><p className="font-inter text-sm font-medium">Lucas Brando</p></div>
                             </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-8 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Filosofia do estúdio</h3>
-                                <p className="font-inter text-xs text-on-surface-variant leading-relaxed">Direção de imagem institucional. Atmosfera, lugar e narrativa de marca em padrão de campanha.</p>
-                            </div>
-                            <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
-                                <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
-                                <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
-                                    {`Campanha institucional em que o lugar aparece como atmosfera — relação entre cenário, presença e luz natural como eixo visual. Set em locação com ritmo profissional. Banco institucional denso para comunicação digital, materiais corporativos e mídia editorial.`}
-                                </p>
-                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Direção Criativa e Produção Executiva: Angelo Mazzutti · Fotografia: Ita Mazzutti · Vídeo: Vitor Terra · Beauty: Everson Rocha · Modelo: Nakamura`}
-                                </p>
-                            </div>
-                        </div>
+                            
                     </div>
                 </div>
             </main>
