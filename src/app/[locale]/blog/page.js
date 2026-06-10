@@ -143,22 +143,6 @@ export default function BlogPage() {
         },
         {
             categoria: "produtora",
-            subcategoria: "Produtora — Eventos",
-            titulo: "Fragmentos: a exposição que transforma retrato em arte",
-            excerpt: "Uma exposição não se mede pela parede — mede-se pelo que fica no olhar. Em uma noite, a House levou 23 personalidades para dentro dessa ideia.",
-            link: "/blog/exposicao-fragmentos-ita-mazzutti",
-            data: "Junho 2026"
-        },
-        {
-            categoria: "produtora",
-            subcategoria: "Produtora — Editorial",
-            titulo: "Beatriz Kubota: o editorial que nasceu no ateliê",
-            excerpt: "Há editoriais que apresentam peças. Este construiu as peças antes de fotografá-las — do tecido à imagem final.",
-            link: "/blog/fashion-film-beatriz-kubota",
-            data: "Junho 2026"
-        },
-        {
-            categoria: "produtora",
             subcategoria: "Produtora — Campanhas",
             titulo: "Larissa Manoela e a Jequiti: beleza com direção",
             excerpt: "Trabalhar com um grande nome não garante uma boa campanha. O que garante é a produção que existe por trás dele.",
