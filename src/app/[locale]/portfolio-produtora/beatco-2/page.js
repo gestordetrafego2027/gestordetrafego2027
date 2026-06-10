@@ -102,7 +102,8 @@ export default function BeatCo2Page() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">

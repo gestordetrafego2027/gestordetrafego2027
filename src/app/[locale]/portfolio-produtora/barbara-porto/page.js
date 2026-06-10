@@ -160,7 +160,8 @@ export default function BarbaraPortoPage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             

@@ -146,7 +146,8 @@ export default function WePinkZeFelipePage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             

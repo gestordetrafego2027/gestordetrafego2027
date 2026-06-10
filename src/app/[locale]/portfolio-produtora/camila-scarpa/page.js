@@ -153,7 +153,8 @@ export default function CamilaScarpaPage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             

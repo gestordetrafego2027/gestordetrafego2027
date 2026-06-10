@@ -155,7 +155,8 @@ export default function WePink01Page() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             

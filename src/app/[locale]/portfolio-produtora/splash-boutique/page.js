@@ -102,7 +102,8 @@ export default function SplashBoutiquePage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
 

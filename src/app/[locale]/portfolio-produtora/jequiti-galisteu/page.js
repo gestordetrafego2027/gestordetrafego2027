@@ -148,7 +148,8 @@ export default function JequitiGalisteuPage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             

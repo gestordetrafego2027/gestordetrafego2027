@@ -141,7 +141,8 @@ export default function JequitiSensePage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             

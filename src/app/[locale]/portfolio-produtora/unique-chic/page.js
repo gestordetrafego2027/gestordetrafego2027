@@ -102,7 +102,8 @@ export default function UniqueChicPage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             <div className="px-8 pb-12 max-w-[1600px] mx-auto">

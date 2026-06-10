@@ -142,7 +142,8 @@ export default function AllettoStillPage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             

@@ -149,7 +149,8 @@ export default function NataliaBeautyPage() {
                             </div>
                             
                     </div>
-                </div>
+                </div>            </div>
+
             </main>
     
             
