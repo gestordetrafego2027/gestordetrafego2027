@@ -506,7 +506,7 @@ export default function StudioPage() {
                                 title: "BOOK",
                                 link: "/studio/book",
                                 tag: "Book profissional · Direção de imagem · Ensaio editorial",
-                                image: '/images/studio/gustavo-vioto/1.webp'
+                                image: '/images/studio/ana-rockenbach/capa.webp'
                             },
                             {
                                 title: "ENSAIO",

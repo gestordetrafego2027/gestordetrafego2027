@@ -62,3 +62,39 @@ export async function updateProfile(
   revalidatePath('/minha-conta')
   return { success: true }
 }
+
+export async function uploadAvatar(
+  formData: FormData,
+): Promise<{ error?: string }> {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return { error: 'Sessão expirada.' }
+
+  const file = formData.get('avatar') as File | null
+  if (!file || file.size === 0) return { error: 'Nenhum arquivo enviado.' }
+  if (file.size > 2 * 1024 * 1024) return { error: 'Tamanho máximo: 2 MB.' }
+  if (!file.type.startsWith('image/')) return { error: 'Tipo de arquivo inválido.' }
+
+  const ext = file.name.split('.').pop()?.toLowerCase() ?? 'jpg'
+  const path = `${user.id}/avatar.${ext}`
+  const bytes = await file.arrayBuffer()
+
+  const { error: uploadError } = await supabase.storage
+    .from('avatars')
+    .upload(path, bytes, { contentType: file.type, upsert: true })
+
+  if (uploadError) return { error: uploadError.message }
+
+  const { data: { publicUrl } } = supabase.storage.from('avatars').getPublicUrl(path)
+
+  const { error: updateError } = await supabase
+    .from('profiles')
+    .update({ avatar_url: publicUrl, updated_at: new Date().toISOString() })
+    .eq('id', user.id)
+
+  if (updateError) return { error: updateError.message }
+
+  revalidatePath('/minha-conta/dados')
+  revalidatePath('/minha-conta')
+  return {}
+}

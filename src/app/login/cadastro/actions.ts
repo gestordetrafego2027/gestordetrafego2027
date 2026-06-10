@@ -51,7 +51,7 @@ export async function signUpAction(formData: FormData): Promise<void> {
     password,
     options: {
       data: { full_name: name },
-      emailRedirectTo: `${origin}/auth/callback?next=/crm`,
+      emailRedirectTo: `${origin}/auth/callback?next=/pt/minha-conta`,
     },
   })
 
@@ -64,6 +64,6 @@ export async function signUpAction(formData: FormData): Promise<void> {
   if (!data.session) {
     redirect('/login/sucesso?email=' + encodeURIComponent(email) + '&kind=confirm')
   }
-  // Se ja entrou direto (confirma desligada no Supabase), redireciona pro CRM.
-  redirect('/crm?welcome=1')
+  // Se ja entrou direto (confirma desligada no Supabase), redireciona para minha conta.
+  redirect('/pt/minha-conta?welcome=1')
 }

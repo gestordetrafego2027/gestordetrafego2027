@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
@@ -9,10 +8,17 @@ function formatPrice(cents: number) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
 }
 
-export default async function MinhaContaPage() {
+export default async function MinhaContaPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  if (!user) {
+    const { locale } = await params
+    redirect(`/login?next=/${locale}/minha-conta`)
+  }
 
   const { data: profile } = await supabase
     .from('profiles')

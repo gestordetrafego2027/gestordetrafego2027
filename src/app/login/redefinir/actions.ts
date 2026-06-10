@@ -25,5 +25,5 @@ export async function setNewPassword(formData: FormData): Promise<void> {
     redirect(`/login/redefinir?error=${encodeURIComponent(error.message)}`)
   }
 
-  redirect('/crm?reset=ok')
+  redirect('/minha-conta?reset=ok')
 }

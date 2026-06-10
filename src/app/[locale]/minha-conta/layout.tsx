@@ -12,6 +12,7 @@ const NAV = [
   { href: '/minha-conta', label: 'Visão geral', exact: true },
   { href: '/minha-conta/pedidos', label: 'Meus pedidos' },
   { href: '/minha-conta/dados', label: 'Dados pessoais' },
+  { href: '/minha-conta/senha', label: 'Alterar senha' },
   { href: '/minha-conta/lgpd', label: 'Privacidade & LGPD' },
 ]
 

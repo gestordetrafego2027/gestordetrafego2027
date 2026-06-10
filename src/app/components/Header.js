@@ -6,6 +6,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import LangSwitcher from './LangSwitcher';
 import { CartButton } from '@/components/ecommerce/CartButton';
 import { useTranslations } from 'next-intl';
+import { createClient } from '@/lib/supabase/browser';
 
 /**
  * GLOBAL HEADER COMPONENT
@@ -18,6 +19,18 @@ export default function Header({ variant = 'dark' }) {
     const t = useTranslations('nav');
     const [sideMenuOpen, setSideMenuOpen] = useState(false);
     const [solucoesOpen, setSolucoesOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const supabase = createClient();
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setIsLoggedIn(!!session);
+        });
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+            setIsLoggedIn(!!session);
+        });
+        return () => subscription.unsubscribe();
+    }, []);
     const [closing, setClosing] = useState(false);
     const [visible, setVisible] = useState(true);
     const [scrolled, setScrolled] = useState(false);
@@ -173,7 +186,7 @@ export default function Header({ variant = 'dark' }) {
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">{t('portfolio')}</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">{t('blog')}</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">{t('contato')}</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/login')} href="/login">{t('cliente')}</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/minha-conta')} href={isLoggedIn ? '/minha-conta' : '/login?next=/minha-conta'}>{t('cliente')}</Link>
                 </nav>
 
                 <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
@@ -269,7 +282,7 @@ export default function Header({ variant = 'dark' }) {
                         {label: t('portfolio'), href:'/portfolio'},
                         {label: t('blog'), href:'/blog'},
                         {label: t('contato'), href:'/contato'},
-                        {label: t('cliente'), href:'/login', highlight: true},
+                        {label: t('cliente'), href: isLoggedIn ? '/minha-conta' : '/login?next=/minha-conta', highlight: true},
                       ].map(item => (
                         <Link key={item.href} href={item.href}
                           onClick={() => closeMenu()}

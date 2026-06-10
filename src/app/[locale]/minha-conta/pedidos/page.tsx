@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 
