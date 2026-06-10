@@ -262,7 +262,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
           fontFamily: 'Georgia, serif',
           fontSize: 13,
           lineHeight: 1.5,
-          color: '#555',
+          color: '#aaa',
           textAlign: 'left',
           cursor: 'pointer',
         }}
@@ -280,7 +280,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
             href={`/${locale}/politicas/termos-de-uso`}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: '#14140e', textDecoration: 'underline' }}
+            style={{ color: '#cccccc', textDecoration: 'underline' }}
           >
             Termo de Compra e Venda
           </a>{' '}
@@ -289,7 +289,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
             href={`/${locale}/politicas/cancelamento-e-reembolso`}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: '#14140e', textDecoration: 'underline' }}
+            style={{ color: '#cccccc', textDecoration: 'underline' }}
           >
             Política de Cancelamento e Reembolso
           </a>
