@@ -151,14 +151,6 @@ export default function BlogPage() {
         },
         {
             categoria: "produtora",
-            subcategoria: "Produtora — Campanhas",
-            titulo: "Wepink: quando um perfume vira narrativa",
-            excerpt: "Vender um frasco é fácil. Difícil é fazer alguém desejar o que ele representa. A diferença está na imagem.",
-            link: "/blog/campanha-wepink-virginia-fonseca",
-            data: "Junho 2026"
-        },
-        {
-            categoria: "produtora",
             subcategoria: "Produtora — Editorial",
             titulo: "Bárbara Porto: a joia em movimento",
             excerpt: "Joia parada é catálogo. Joia em movimento é desejo. A House escolheu o segundo caminho.",
