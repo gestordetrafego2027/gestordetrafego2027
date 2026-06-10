@@ -134,7 +134,7 @@ export default function JequitiGalisteuPage() {
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Cenografia</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Fotos</p><p className="font-inter text-sm font-medium">Bruno Fonze</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Audiovisual</p><p className="font-inter text-sm font-medium">Monteiro Produtora</p></div>
+
                             </div>
                             
                     </div>
