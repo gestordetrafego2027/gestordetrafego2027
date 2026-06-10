@@ -20,7 +20,7 @@ export default function ClientLogos() {
   const loop = [...logos, ...logos]
 
   return (
-    <section className="bg-white border-b border-neutral-100 py-16 w-full overflow-hidden">
+    <section className="bg-white border-b border-neutral-100 py-20 w-full overflow-hidden">
       <style>{`
         @keyframes marquee-clientes {
           from { transform: translateX(0); }
@@ -29,7 +29,7 @@ export default function ClientLogos() {
         .marquee-clientes {
           display: flex;
           width: max-content;
-          animation: marquee-clientes 40s linear infinite;
+          animation: marquee-clientes 50s linear infinite;
         }
         .marquee-clientes:hover {
           animation-play-state: paused;
@@ -40,13 +40,13 @@ export default function ClientLogos() {
         {loop.map((logo, i) => (
           <div
             key={i}
-            className="shrink-0 flex items-center justify-center px-16"
-            style={{ height: '80px' }}
+            className="shrink-0 flex items-center justify-center px-24"
+            style={{ height: '120px' }}
           >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-10 w-auto object-contain opacity-50 grayscale
+              className="h-16 w-auto object-contain opacity-50 grayscale
                          transition duration-300 hover:opacity-100 hover:grayscale-0"
               loading="lazy"
             />
