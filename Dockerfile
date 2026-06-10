@@ -15,6 +15,9 @@ COPY . .
 # Desabilita telemetria do Next.js durante o build
 ENV NEXT_TELEMETRY_DISABLED 1
 
+# Aumenta heap do Node para evitar OOM durante o build de produção
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
 RUN npm run build
 
 # Estágio 3: Runner (Produção)

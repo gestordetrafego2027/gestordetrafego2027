@@ -1,6 +1,6 @@
 // House Mazzutti — Editorial
-// Conjunto de artigos editoriais (intro, sections, citação, conclusão) + metadata SEO + imagens (cover/interior com fallback).
-// Cada peça inclui dados de mercado atribuídos (Firjan, ABIHPEC/Euromonitor, Lucidpress, Edelman/LinkedIn, vídeo marketing).
+// Artigos editoriais (intro, sections, citação, conclusão) + metadata SEO + imagens (cover/interior com fallback).
+// Dados de mercado atribuídos (Firjan, ABIHPEC/Euromonitor, Lucidpress, Edelman/LinkedIn, vídeo marketing). Seções únicas por peça (sem duplicação).
 
 export const articles = {
   "book-para-modelos-quem-e-escolhido": {
@@ -1164,17 +1164,17 @@ export const articles = {
         ]
       },
       {
-        "h2": "O ateliê como diferencial",
+        "h2": "O making-of que também comunica",
         "paragraphs": [
-          "Construir as peças à mão antes do clique não é capricho — é controle criativo total. A imagem nasce coerente porque o objeto nasceu com a mesma direção.",
-          "É o que separa um editorial que apresenta produtos de um editorial que cria um universo."
+          "Quando a peça nasce no ateliê, o próprio processo vira material. O bastidor de uma criação à mão é conteúdo que aproxima a marca de quem compra — algo que nenhuma imagem de banco oferece.",
+          "Cada etapa registrada multiplica o editorial: a mesma produção rende a campanha e a história por trás dela."
         ]
       },
       {
-        "h2": "Por que o fashion film converte",
+        "h2": "Lançar uma newface com direção",
         "paragraphs": [
-          "Na moda, o audiovisual aumenta o entendimento da peça em 99% dos casos e influencia a compra em 87%, segundo pesquisas de vídeo marketing. O fashion film virou a forma mais eficiente de transformar coleção em desejo.",
-          "Para a marca, isso significa uma decisão simples: dirigir a imagem em movimento deixou de ser luxo e virou padrão competitivo."
+          "Apresentar um novo rosto ao mercado exige mais do que boas fotos: exige leitura de posicionamento. A direção define como aquele talento será lido — comercial, editorial ou ambos.",
+          "É o que transforma uma estreia em portfólio sólido, pronto para circular entre bookers e marcas."
         ]
       }
     ],
@@ -1232,17 +1232,17 @@ export const articles = {
         ]
       },
       {
-        "h2": "O peso de um mercado bilionário",
+        "h2": "Celebridade amplia — não substitui",
         "paragraphs": [
-          "O Brasil é o terceiro maior mercado de beleza do mundo e movimentou R$ 242,3 bilhões em 2025, alta de 11,2% sobre o ano anterior, segundo a ABIHPEC. Nesse porte, a imagem de uma campanha disputa percepção e venda diretamente.",
-          "Trabalhar com um grande nome amplia o alcance. A direção é o que garante que esse alcance vire marca, não apenas visibilidade."
+          "Um grande nome multiplica o alcance, mas não garante a leitura da marca. Sem direção, a campanha vende a estrela; com direção, vende o produto através dela.",
+          "A diferença está em quem controla a narrativa: o talento entrega presença, a produção entrega percepção."
         ]
       },
       {
-        "h2": "A direção que sustenta a estrela",
+        "h2": "Set design é estratégia, não cenário",
         "paragraphs": [
-          "Campanhas com celebridades falham quando o talento carrega sozinho o peso da peça. Acertam quando a produção sustenta a entrega — set design, direção de arte e captação integrada.",
-          "É a engrenagem invisível da produção executiva que permite à estrela entregar presença, não logística."
+          "O ambiente de uma campanha de beleza não é decoração — é argumento de venda. Cor, textura e luz comunicam o posicionamento do produto antes de qualquer claim.",
+          "Por isso o set se constrói a partir do conceito, não do improviso: cada elemento sustenta a marca dentro do frame."
         ]
       }
     ],
@@ -1300,17 +1300,17 @@ export const articles = {
         ]
       },
       {
-        "h2": "Perfumaria se vende por atmosfera",
+        "h2": "Perfume é o produto mais difícil de filmar",
         "paragraphs": [
-          "Perfume não se explica — se sugere. Num mercado de beleza que já é o terceiro maior do mundo, segundo a ABIHPEC, a disputa é por desejo, e desejo se constrói com luz, textura e ritmo.",
-          "Cada take existe para fazer a marca ser sentida antes de ser lida."
+          "Não se mostra cheiro. A produção precisa traduzir uma sensação invisível em luz, textura e ritmo — o desafio criativo mais exigente da perfumaria.",
+          "É um exercício de sinestesia: fazer o público sentir o que não pode ver."
         ]
       },
       {
-        "h2": "A imagem que segura a atenção",
+        "h2": "Imagem de marca, não só de produto",
         "paragraphs": [
-          "Páginas com vídeo têm rejeição 34% menor e até 2,6 vezes mais tempo de permanência, segundo estudos de vídeo marketing. Para uma marca de perfumaria, isso é a diferença entre ser ignorada e ser desejada.",
-          "Não produzimos para registrar o produto. Produzimos para dar a ele uma narrativa."
+          "Numa marca de creator, o frasco e a fundadora dividem o mesmo frame. A direção precisa equilibrar produto e pessoa sem que um apague o outro.",
+          "É o que transforma uma campanha de perfume em construção de marca — não apenas em anúncio de lançamento."
         ]
       }
     ],
@@ -1368,17 +1368,17 @@ export const articles = {
         ]
       },
       {
-        "h2": "No segmento de joias, a imagem é o produto",
+        "h2": "Joia pede close, luz e tempo",
         "paragraphs": [
-          "Quem decide comprar uma joia raramente toca a peça primeiro: vê. Por isso a captação de alto padrão deixou de ser luxo e virou condição de venda — sobretudo num cenário em que o vídeo domina o tráfego on-line.",
-          "A direção de arte coloca a joia em contexto: luz, gesto, movimento. O brilho deixa de apenas refletir e passa a contar uma história."
+          "Diferente da moda, a joia exige uma gramática própria de captação: macro, controle de reflexo, tempo de respiro para o brilho aparecer. É técnica a serviço do desejo.",
+          "Sem essa direção específica, a peça vira item de catálogo — informa, mas não seduz."
         ]
       },
       {
-        "h2": "Movimento cria desejo",
+        "h2": "Do still ao filme: a peça em narrativa",
         "paragraphs": [
-          "Joia parada informa. Joia em movimento encanta. O fashion film é o formato que revela a peça como objeto de desejo, não item de vitrine.",
-          "Você já desejou uma peça antes de saber o preço? Foi a imagem que fez isso — e é exatamente esse efeito que se constrói com método."
+          "O fashion film leva a joia além da foto parada: dá movimento, contexto e gesto. A peça deixa de ser objeto e passa a habitar uma cena.",
+          "É o formato que transforma design em desejo — e desejo em decisão de compra."
         ]
       }
     ],
@@ -1436,10 +1436,10 @@ export const articles = {
         ]
       },
       {
-        "h2": "Presença é o ativo que permanece",
+        "h2": "Fashion film não é anúncio longo",
         "paragraphs": [
-          "Num mercado em que o vídeo deve responder por mais de 80% do tráfego on-line, presença é o que separa quem é visto de quem é lembrado.",
-          "O fashion film constrói essa presença com tempo, ritmo e direção — recursos que a foto isolada não alcança."
+          "Um fashion film não estende um comercial — inverte a lógica: começa pela atmosfera e deixa o produto emergir. É narrativa antes de oferta.",
+          "Essa inversão é o que cria identidade: a marca passa a ser lembrada pelo universo que constrói, não pelo que anuncia."
         ]
       },
       {
@@ -1511,10 +1511,10 @@ export const articles = {
         ]
       },
       {
-        "h2": "Método, não equipamento",
+        "h2": "Aprender com quem entrega para o mercado",
         "paragraphs": [
-          "O Inside Out não ensina botão de câmera — ensina leitura: como enxergar uma cena, dirigir uma produção e tomar as decisões que separam um registro de uma peça.",
-          "Imagem é estratégia, não acessório. Ao abrir o método, a House amplia o próprio território — de produtora a referência de formação."
+          "A diferença de um workshop conduzido por quem produz para grandes marcas está no repertório real — casos, erros e decisões que só existem em set, não em apostila.",
+          "Não é teoria sobre o mercado: é o mercado mostrando como decide."
         ]
       }
     ],
