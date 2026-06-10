@@ -122,8 +122,8 @@ export default function AcademyHomePage() {
         >
           <div className="absolute inset-0 z-0 bg-black">
             <Image
-              src="/images/home/banner-2.webp"
-              alt="House Mazzutti Academy"
+              src="/images/academy/hero-academy.webp"
+              alt="House Mazzutti Academy — bastidores workshop"
               fill
               priority
               sizes="100vw"
