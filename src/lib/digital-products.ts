@@ -12,7 +12,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 /** Bucket privado no Supabase Storage onde os PDFs ficam (não-público). */
-export const DIGITAL_PRODUCTS_BUCKET = 'digital-products'
+export const DIGITAL_PRODUCTS_BUCKET = 'produtos digitais'
 
 /** Validade da signed URL de download — casa com o texto "7 dias" do email. */
 export const SIGNED_URL_TTL_SECONDS = 60 * 60 * 24 * 7
