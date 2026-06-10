@@ -48,22 +48,22 @@ export default function AllettoPage() {
 
     // Anúncios feed (formato quadrado/vertical — 1:1 ou 4:5)
     const feedAds = [
-        "/images/agencia/alletto/1.jpg",
-        "/images/agencia/alletto/2.jpg",
-        "/images/agencia/alletto/3.jpg",
-        "/images/agencia/alletto/4.jpg",
-        "/images/agencia/alletto/8.jpg",
-        "/images/agencia/alletto/10.jpg",
-        "/images/agencia/alletto/11.jpg",
-        "/images/agencia/alletto/12.jpg",
+        "/images/agencia/alletto/1.webp",
+        "/images/agencia/alletto/2.webp",
+        "/images/agencia/alletto/3.webp",
+        "/images/agencia/alletto/4.webp",
+        "/images/agencia/alletto/8.webp",
+        "/images/agencia/alletto/10.webp",
+        "/images/agencia/alletto/11.webp",
+        "/images/agencia/alletto/12.webp",
     ];
 
     // Anúncios full-page / lâminas (horizontal)
     const pageAds = [
-        "/images/agencia/alletto/5.jpg",
-        "/images/agencia/alletto/6.jpg",
-        "/images/agencia/alletto/7.jpg",
-        "/images/agencia/alletto/9.jpg",
+        "/images/agencia/alletto/5.webp",
+        "/images/agencia/alletto/6.webp",
+        "/images/agencia/alletto/7.webp",
+        "/images/agencia/alletto/9.webp",
     ];
 
     const images = [...feedAds, ...pageAds];

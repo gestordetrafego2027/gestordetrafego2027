@@ -9,7 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const SITE_URL   = 'https://housemazzutti.com'
-const COVER      = '/images/academy/casos-da-producao/cover.png'
+const COVER      = '/images/academy/casos-da-producao/cover.webp'
 const COVER_ABS  = `${SITE_URL}${COVER}`
 const CHECKOUT_URL = '/pt/checkout/casos-da-producao'
 

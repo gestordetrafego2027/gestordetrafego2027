@@ -64,7 +64,7 @@ const BOOKS = [
     price: 'Em breve',
     discount: null,
     href: '/pt/academy/casos-da-producao',
-    cover: '/images/academy/inside-out/cover.png',
+    cover: '/images/academy/inside-out/cover.webp',
     coverBg: '#1c3420',
     status: 'Em breve',
     available: false,
@@ -81,7 +81,7 @@ const PRODUCTS = [
     features: ['Videoaulas gravadas', 'Materiais de acompanhamento', 'Acesso vitalício'],
     price: 'R$ 249',
     href: '/academy/workshop-producao-direcao-01',
-    cover: '/images/academy/direcao-criativa/cover.jpg',
+    cover: '/images/academy/direcao-criativa/cover.webp',
   },
   {
     id: 'comunicacao-360',
@@ -91,7 +91,7 @@ const PRODUCTS = [
     features: ['Gravação completa do evento', 'Direção criativa e produção ao vivo', 'Acesso vitalício'],
     price: 'R$ 145',
     href: '/academy/workshop-inside-out-edit-01',
-    cover: '/images/academy/comunicacao-360/cover.jpg',
+    cover: '/images/academy/comunicacao-360/cover.webp',
   },
 ]
 

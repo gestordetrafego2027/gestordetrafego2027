@@ -3,9 +3,9 @@
 // + metadata SEO completa + sistema de imagens (cover + interior) com filenames e alts otimizados.
 //
 // Convenção de imagens:
-//   /public/images/blog/<slug>/cover.jpg     → 1600x900, capa hero
-//   /public/images/blog/<slug>/01.jpg        → 1200x800, interior #1 (após section 2)
-//   /public/images/blog/<slug>/02.jpg        → 1200x800, interior #2 (após section 2)
+//   /public/images/blog/<slug>/cover.webp     → 1600x900, capa hero
+//   /public/images/blog/<slug>/01.webp        → 1200x800, interior #1 (após section 2)
+//   /public/images/blog/<slug>/02.webp        → 1200x800, interior #2 (após section 2)
 //
 // Filename strategy: keyword principal no slug do diretório + numeração para diferenciação.
 // Alt strategy: descrição contextual + keyword secundária + brand mention quando aplicável.
@@ -1190,14 +1190,14 @@ export const articles = {
     },
     "interior": [
       {
-        "src": "/images/blog/workshop-inside-out-ita-mazzutti/01.jpg",
-        "fallback": "/images/academy/edit-01/edit01-equipe.jpg",
+        "src": "/images/blog/workshop-inside-out-ita-mazzutti/01.webp",
+        "fallback": "/images/academy/edit-01/edit01-equipe.webp",
         "alt": "Turma reduzida em workshop presencial da House Mazzutti em São Paulo",
         "caption": "Turma reduzida · formação presencial"
       },
       {
-        "src": "/images/blog/workshop-inside-out-ita-mazzutti/02.jpg",
-        "fallback": "/images/academy/edit-01/edit01-quadro.jpg",
+        "src": "/images/blog/workshop-inside-out-ita-mazzutti/02.webp",
+        "fallback": "/images/academy/edit-01/edit01-quadro.webp",
         "alt": "Aula prática de direção e fotografia no workshop da House Mazzutti",
         "caption": "Prática · do conceito à entrega"
       }
