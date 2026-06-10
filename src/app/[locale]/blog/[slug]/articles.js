@@ -1045,7 +1045,7 @@ export const articles = {
     "citacao": "Produção executiva transforma incerteza em previsibilidade.",
     "conclusao": "Investir mais raramente resolve problemas estruturais. Investir melhor sim. A combinação entre orçamento adequado, direção criativa autoral e produção executiva premium é o que separa campanhas que apenas custaram caro daquelas que efetivamente performaram. A House Mazzutti opera nessa combinação — porque é o único lugar onde o investimento se transforma, de fato, em resultado."
   },
-  “campanha-larissa-manoela-jequiti”: {
+  "campanha-larissa-manoela-jequiti": {
     "categoria": "Produtora — Set Design",
     "titulo": "Larissa Manoela e a Jequiti: o set que sustenta a estrela",
     "metaTitle": "Set design e direção de arte para Jequiti com Larissa Manoela | House Mazzutti",
