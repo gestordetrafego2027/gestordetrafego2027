@@ -156,7 +156,7 @@ export default function StudioCoberturaPage() {
             </section>
 
             {/* FOOTER */}
-            <footer className="bg-black text-white py-24 px-12 border-t-[0.5px] border-zinc-900 flex flex-col items-center w-full text-center space-y-8">
+            <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">
                 <div className="mb-12">
                     <span className="hm-logo" style={{fontSize: '32px', color: 'white'}}>
                         <span className="hm-house">House</span>

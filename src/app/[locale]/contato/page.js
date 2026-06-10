@@ -104,11 +104,11 @@ export default function ContatoPage() {
                         <div className="space-y-4">
                             <a className="flex items-center gap-3 group" href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}>
                                 <span className="material-symbols-outlined text-neutral-400 group-hover:text-black transition-colors">chat_bubble</span>
-                                <span className="font-['Inter'] text-neutral-700">{contact.phone}</span>
+                                <span className="font-['Inter'] text-zinc-400">{contact.phone}</span>
                             </a>
                             <a className="flex items-center gap-3 group" href="mailto:contato@housemazzutti.com">
                                 <span className="material-symbols-outlined text-neutral-400 group-hover:text-black transition-colors">mail</span>
-                                <span className="font-['Inter'] text-neutral-700">contato@housemazzutti.com</span>
+                                <span className="font-['Inter'] text-zinc-400">contato@housemazzutti.com</span>
                             </a>
                         </div>
                     </div>
@@ -133,9 +133,9 @@ export default function ContatoPage() {
             <NewsletterStrip sourceUrl="/contato" variant="dark" />
 
             {/* 5. FOOTER (Shared) */}
-            <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+            <footer className="bg-white text-zinc-900 py-24 px-8 border-t border-zinc-200">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-neutral-50 mb-12">
+                    <div className="text-zinc-900 mb-12">
                         <span className="hm-logo" style={{fontSize: '32px'}}>
                             <span className="hm-house">House</span>
                             <span className="hm-mazzutti">Mazzutti</span>
@@ -152,7 +152,7 @@ export default function ContatoPage() {
                         <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/blog">BLOG</Link>
                         <Link className="font-label text-[10px] text-neutral-500 hover:text-neutral-300 transition-colors" href="/contato">CONTATO</Link>
                     </nav>
-                    <div className="font-label text-[9px] text-neutral-700">
+                    <div className="font-label text-[9px] text-zinc-400">
                         {tFooter('copyright')}
                     </div>
                 </div>

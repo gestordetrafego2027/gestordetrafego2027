@@ -66,20 +66,20 @@ export default async function ComunidadeVagasPage() {
         </section>
       </main>
 
-      <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+      <footer className="bg-white text-zinc-900 py-24 px-8 border-t border-zinc-200">
         <div className="flex flex-col items-center text-center">
-          <div className="text-neutral-50 mb-12">
+          <div className="text-zinc-900 mb-12">
             <span className="hm-logo" style={{ fontSize: '40px' }}>
               <span className="hm-house">House</span>
               <span className="hm-mazzutti">Mazzutti</span>
             </span>
           </div>
           <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-12">
-            <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">{t('footer_home')}</Link>
-            <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/comunidade">{t('footer_comunidade')}</Link>
-            <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">{t('footer_contato')}</Link>
+            <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/">{t('footer_home')}</Link>
+            <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/comunidade">{t('footer_comunidade')}</Link>
+            <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/contato">{t('footer_contato')}</Link>
           </nav>
-          <div className="text-caption text-neutral-700">
+          <div className="text-caption text-zinc-400">
             {t('footer_copyright')}
           </div>
         </div>

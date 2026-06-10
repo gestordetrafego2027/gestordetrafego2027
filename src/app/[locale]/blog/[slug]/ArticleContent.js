@@ -298,7 +298,7 @@ export default function ArticleContent({ slug }) {
             </main>
 
             {/* Footer */}
-            <footer className="bg-[#0a0a0a] py-12 px-8">
+            <footer className="bg-white border-t border-zinc-200 py-12 px-8">
                 <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="text-xl font-headline italic text-white">HOUSE MAZZUTTI</div>
                     <div className="flex gap-12">

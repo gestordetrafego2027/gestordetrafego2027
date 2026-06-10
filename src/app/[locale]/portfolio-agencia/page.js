@@ -147,7 +147,7 @@ export default async function PortfolioAgenciaPage() {
             </main>
 
             {/* 4. FOOTER */}
-            <footer className="bg-[#0a0a0a] w-full flex justify-between items-center px-[48px] py-[32px] text-white">
+            <footer className="bg-white border-t border-zinc-200 w-full flex justify-between items-center px-[48px] py-[32px] text-white">
                 <div className="text-white">
                     <span className="hm-logo" style={{fontSize: '22px'}}>
                         <span className="hm-house">House</span>

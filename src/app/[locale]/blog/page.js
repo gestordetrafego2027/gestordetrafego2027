@@ -429,7 +429,7 @@ export default function BlogPage() {
             <NewsletterStrip sourceUrl="/blog" variant="dark" />
 
             {/* Footer */}
-            <footer className="bg-[#0a0a0a] text-white py-24 px-8 text-center">
+            <footer className="bg-white text-zinc-900 py-24 px-8 text-center">
                 <div className="max-w-screen-lg mx-auto">
                     <div className="mb-12">
                         <span className="font-newsreader text-3xl uppercase tracking-widest font-medium">House Mazzutti</span>

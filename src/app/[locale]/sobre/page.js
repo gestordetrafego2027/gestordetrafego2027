@@ -175,7 +175,7 @@ export default async function SobrePage() {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+      <footer className="bg-white text-zinc-900 py-24 px-8 border-t border-zinc-200">
         <div className="flex flex-col items-center text-center">
           <div className="mb-16">
             <span className="hm-logo" style={{fontSize: '40px', color: '#fafafa'}}>
@@ -184,16 +184,16 @@ export default async function SobrePage() {
             </span>
           </div>
           <div className="flex space-x-10 mb-16">
-            <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
-            <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
+            <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
+            <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
           </div>
           <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
-            <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>
-            <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/studio">Studio</Link>
-            <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/portfolio">Portfólio</Link>
-            <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
+            <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/">Home</Link>
+            <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/studio">Studio</Link>
+            <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/portfolio">Portfólio</Link>
+            <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/contato">Contato</Link>
           </nav>
-          <div className="text-caption text-neutral-700">
+          <div className="text-caption text-zinc-400">
             {tFooter('copyright')}
           </div>
         </div>

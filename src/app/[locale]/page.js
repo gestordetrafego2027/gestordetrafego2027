@@ -343,7 +343,7 @@ export default function Home() {
                         <div className="max-w-lg space-y-10">
                             <span className="text-caption text-neutral-600">{t('about.diferencial_label')}</span>
                             <h2 className="text-h2 text-black">{t('about.diferencial_titulo')}</h2>
-                            <div className="space-y-5 text-body text-neutral-700">
+                            <div className="space-y-5 text-body text-zinc-400">
                                 <p>{t('about.diferencial_intro')}</p>
                                 <ul className="space-y-2">
                                     {t.raw('about.diferencial_items').map((item, i) => (
@@ -385,7 +385,7 @@ export default function Home() {
                         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                             {t.raw('about.metodo_items').map((item, i) => (
                                 <div key={i} className="space-y-6">
-                                    <span className="text-caption text-neutral-700 block">{item.num}</span>
+                                    <span className="text-caption text-zinc-400 block">{item.num}</span>
                                     <div className="h-px bg-neutral-300 w-full"></div>
                                     <p className="text-body text-neutral-600">{item.desc}</p>
                                 </div>
@@ -610,26 +610,26 @@ export default function Home() {
             </main>
 
             {/* FOOTER */}
-            <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+            <footer className="bg-white text-zinc-900 py-24 px-8 border-t border-zinc-200">
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-neutral-50 mb-12">
+                    <div className="text-zinc-900 mb-12">
                         <span className="hm-logo" style={{fontSize: '40px'}}>
                             <span className="hm-house">House</span>
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
                     </div>
                     <div className="flex space-x-10 mb-16">
-                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
-                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
+                        <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
+                        <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/studio">Studio</Link>
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/portfolio">Portfólio</Link>
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/blog">Blog</Link>
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/">Home</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/studio">Studio</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/portfolio">Portfólio</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/blog">Blog</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="text-caption text-neutral-700">
+                    <div className="text-caption text-zinc-400">
                         {t('footer.copyright')}
                     </div>
                 </div>

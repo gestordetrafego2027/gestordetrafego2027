@@ -139,7 +139,7 @@ export default function AngeloPage() {
                             <h2 className="text-h2 text-black">
                                 {t("quem_title")}
                             </h2>
-                            <div className="space-y-5 text-body text-neutral-700">
+                            <div className="space-y-5 text-body text-zinc-400">
                                 <p>{t("quem_p1")}</p>
                                 <p>{t("quem_p2")}</p>
                             </div>
@@ -222,7 +222,7 @@ export default function AngeloPage() {
                         <div className="grid md:grid-cols-2 gap-12 text-left pt-8">
                             <div className="space-y-6">
                                 <h4 className="text-caption text-neutral-500">{t("valor_deixa_label")}</h4>
-                                <ul className="space-y-4 text-body text-neutral-700">
+                                <ul className="space-y-4 text-body text-zinc-400">
                                     {[t("valor_deixa_1"), t("valor_deixa_2"), t("valor_deixa_3")].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
                                             <span className="w-3 h-[1px] bg-neutral-400"></span>
@@ -233,7 +233,7 @@ export default function AngeloPage() {
                             </div>
                             <div className="space-y-6">
                                 <h4 className="text-caption text-neutral-500">{t("valor_passa_label")}</h4>
-                                <ul className="space-y-4 text-body text-neutral-700">
+                                <ul className="space-y-4 text-body text-zinc-400">
                                     {[t("valor_passa_1"), t("valor_passa_2"), t("valor_passa_3")].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
                                             <span className="w-3 h-[1px] bg-black"></span>
@@ -334,7 +334,7 @@ export default function AngeloPage() {
             </main>
 
             {/* FOOTER */}
-            <footer className="bg-neutral-950 text-neutral-50 py-24 px-8 border-t border-neutral-800">
+            <footer className="bg-white text-zinc-900 py-24 px-8 border-t border-zinc-200">
                 <div className="flex flex-col items-center text-center">
                     <div className="mb-16">
                         <span className="hm-logo" style={{fontSize: '40px', color: '#fafafa'}}>
@@ -343,16 +343,16 @@ export default function AngeloPage() {
                         </span>
                     </div>
                     <div className="flex space-x-10 mb-16">
-                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
-                        <a className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
+                        <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
+                        <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/">Home</Link>
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/studio">Studio</Link>
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/portfolio">Portfólio</Link>
-                        <Link className="text-caption text-neutral-500 hover:text-neutral-200 transition-colors" href="/contato">Contato</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/">Home</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/studio">Studio</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/portfolio">Portfólio</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/contato">Contato</Link>
                     </nav>
-                    <div className="text-caption text-neutral-700">
+                    <div className="text-caption text-zinc-400">
                         {tFooter('copyright')}
                     </div>
                 </div>

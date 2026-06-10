@@ -291,8 +291,8 @@ export default async function PortfolioProdutoraPage() {
                     </div>
                 </section>
             </main>
-            <footer className="bg-[#0a0a0a] w-full flex justify-between items-center px-[48px] py-[32px] text-white">
-                <div className="font-newsreader italic text-lg text-white">HOUSE MAZZUTTI</div>
+            <footer className="bg-white border-t border-zinc-200 w-full flex justify-between items-center px-[48px] py-[32px] text-zinc-900">
+                <div className="font-newsreader italic text-lg text-zinc-900">HOUSE MAZZUTTI</div>
                 <div className="flex gap-8 items-center">
                     <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</Link>
                     <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</Link>
