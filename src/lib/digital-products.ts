@@ -12,7 +12,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 /** Bucket privado no Supabase Storage onde os PDFs ficam (não-público). */
-export const DIGITAL_PRODUCTS_BUCKET = 'produtos digitais'
+export const DIGITAL_PRODUCTS_BUCKET = 'digital-products'
 
 /** Validade da signed URL de download — casa com o texto "7 dias" do email. */
 export const SIGNED_URL_TTL_SECONDS = 60 * 60 * 24 * 7
@@ -79,7 +79,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     slug: 'casos-da-producao',
     name: 'Inside Out · Vol. 03',
     stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? 'price_1TgZGILcrEu1967nxsNG52fO',
-    storagePath: 'casos-da-producao/vol-03.pdf',
+    storagePath: 'inside-out-proucao-direcao.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_CASOS_DA_PRODUCAO ??
       '/downloads/casos-da-producao-hmzt-vol-03.pdf',
