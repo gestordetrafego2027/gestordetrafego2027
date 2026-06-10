@@ -209,6 +209,11 @@ export default function AgenciaPage() {
                             { href: '/portfolio-agencia/pous', src: '/images/agencia/pous/capa.webp', fallback: '/images/home/banner-1.webp', label: 'Branding & Digital', title: 'Pous' },
                             { href: '/portfolio-agencia/samrat', src: '/images/agencia/samrat/capa.webp', fallback: '/images/home/banner-2.webp', label: 'Branding & Digital', title: 'Samrat' },
                             { href: '/portfolio-agencia/alletto', src: '/images/agencia/alletto/capa.webp', fallback: '/images/home/banner-3.webp', label: 'Comunicação & Publicidade', title: 'Alletto' },
+                            { href: '/portfolio-agencia/fort', src: '/images/agencia/fort/fort-negocios-imobiliarios-branding-identidade-visual-house-mazzutti-agencia-01.webp', fallback: '/images/home/banner-4.webp', label: 'Branding & Identidade', title: 'Fort Negócios Imobiliários' },
+                            { href: '/portfolio-agencia/dra-ariadne-barbosa', src: '/images/agencia/dra-ariadne-barbosa/dra-ariadne-barbosa-logo-branding-manual-de-marca-identidade-visual-house-mazzutti-agencia-01.webp', fallback: '/images/home/banner-1.webp', label: 'Branding & Manual de Marca', title: 'Dra. Ariadne Barbosa' },
+                            { href: '/portfolio-agencia/jucileia-soares', src: '/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-01.webp', fallback: '/images/home/banner-2.webp', label: 'Branding & Identidade', title: 'Jucileia Soares' },
+                            { href: '/portfolio-agencia/lbo', src: '/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-01.webp', fallback: '/images/home/banner-3.webp', label: 'Branding & Consultoria', title: 'LBO Consultoria' },
+                            { href: '/portfolio-agencia/luiz-jr', src: '/images/agencia/luiz-jr/luiz-jr-branding-identidade-visual-house-mazzutti-agencia-01.webp', fallback: '/images/home/banner-4.webp', label: 'Branding & Identidade', title: 'Luiz Jr' },
                         ].map((item, i) => (
                             <Link key={i} className="gallery-column group" href={item.href}>
                                 <Image
