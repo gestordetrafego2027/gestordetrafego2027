@@ -1,6 +1,6 @@
 // House Mazzutti — Editorial
-// Artigos editoriais (intro, sections, citação, conclusão) + metadata SEO + imagens (cover/interior com fallback).
-// Dados de mercado atribuídos (Firjan, ABIHPEC/Euromonitor, Lucidpress, Edelman/LinkedIn, vídeo marketing). Seções únicas por peça (sem duplicação).
+// Artigos editoriais (intro, sections, citação, conclusão) + metadata SEO (âncoras diferenciadas, sem canibalização) + imagens (cover/interior com fallback).
+// Dados de mercado atribuídos (Firjan, ABIHPEC/Euromonitor, Lucidpress, Edelman/LinkedIn, vídeo marketing).
 
 export const articles = {
   "book-para-modelos-quem-e-escolhido": {
@@ -202,8 +202,8 @@ export const articles = {
     "categoria": "Studio — Ensaio",
     "titulo": "Ensaio pessoal: quando sua imagem deixa de acompanhar sua trajetória — e passa a liderá-la",
     "metaTitle": "Ensaio Pessoal: quando a imagem lidera sua percepção | House Mazzutti",
-    "metaDescription": "A transição em que sua imagem deixa de refletir o que você já foi e passa a sustentar o que você representa hoje. Direção de marca pessoal premium.",
-    "keywords": "ensaio pessoal premium, marca pessoal, direção de imagem, branding pessoal, retrato editorial, posicionamento, executivas, fundadoras, House Mazzutti Studio",
+    "metaDescription": "Reposicionamento de imagem: quando sua marca pessoal precisa liderar a percepção, não apenas acompanhar sua trajetória. Ensaio premium sob direção.",
+    "keywords": "reposicionamento de marca pessoal, ensaio pessoal premium, direção de imagem, branding pessoal, retrato editorial, executivas, fundadoras, House Mazzutti Studio",
     "data": "Março 2026",
     "cover": {
       "src": "/images/blog/ensaio-lidera-percepcao/ensaio-pessoal-reposicionamento-marca-pessoal-house-mazzutti.webp",
@@ -332,8 +332,8 @@ export const articles = {
     "categoria": "Studio — Cobertura",
     "titulo": "Cobertura externa em tempo real: quando São Paulo se transforma em narrativa visual",
     "metaTitle": "Cobertura Externa em SP como Narrativa Visual | House Mazzutti",
-    "metaDescription": "Quando a cidade deixa de ser pano de fundo e passa a operar como cenário editorial. Cobertura premium para experiências, viagens e agendas em São Paulo.",
-    "keywords": "cobertura externa São Paulo, narrativa visual, fotografia editorial, marca pessoal, experiência de marca, conteúdo premium, House Mazzutti Studio",
+    "metaDescription": "Cobertura editorial premium em São Paulo: quando a cidade vira cenário e cada agenda se transforma em narrativa visual de marca pessoal.",
+    "keywords": "narrativa visual São Paulo, cobertura editorial premium, fotografia editorial, marca pessoal, experiência de marca, conteúdo premium, House Mazzutti Studio",
     "data": "Fevereiro 2026",
     "cover": {
       "src": "/images/blog/cobertura-narrativa-visual/cobertura-narrativa-visual-sao-paulo-house-mazzutti.webp",
@@ -660,7 +660,7 @@ export const articles = {
     "titulo": "Por que a maioria das campanhas falha: a economia da atenção e o erro estrutural",
     "metaTitle": "Por que a maioria das campanhas falha | House Mazzutti",
     "metaDescription": "Mais conteúdo, menos impacto. Por que campanhas falham por falta de estrutura — e o que separa quem produz de quem performa.",
-    "keywords": "campanha publicitária, falha de campanha, marketing de conteúdo, ROI campanha, direção criativa, estrutura de campanha, House Mazzutti, agência São Paulo",
+    "keywords": "por que campanhas falham, estrutura de campanha, direção criativa, consistência de marca, governança criativa, marketing de performance, House Mazzutti",
     "data": "Janeiro 2026",
     "cover": {
       "src": "/images/blog/por-que-campanhas-falham/por-que-campanhas-falham-direcao-criativa-house-mazzutti.webp",
@@ -789,8 +789,8 @@ export const articles = {
     "categoria": "Produtora — Editorial",
     "titulo": "Editorial de moda orientado à performance: quando imagem passa a vender",
     "metaTitle": "Editorial de Moda + Performance | House Mazzutti",
-    "metaDescription": "Como editoriais premium podem performar em vendas sem perder linguagem editorial. Direção de imagem que conduz a percepção até a decisão.",
-    "keywords": "editorial de moda, performance, conversão moda, fashion film, e-commerce premium, direção criativa, imagem que vende, House Mazzutti",
+    "metaDescription": "Editorial de moda orientado à performance: imagem premium que conduz da percepção à compra, sem perder linguagem editorial — para e-commerce e campanhas.",
+    "keywords": "editorial de moda performance, fotografia de moda que vende, imagem para e-commerce de moda, direção de imagem, conversão em moda, branding de moda, House Mazzutti Produtora",
     "data": "Março 2026",
     "cover": {
       "src": "/images/blog/editorial-performance/editorial-moda-performance-conversao-house-mazzutti.webp",
@@ -855,7 +855,7 @@ export const articles = {
     "titulo": "Por que boas ideias não garantem bons resultados: o papel da produção executiva",
     "metaTitle": "Por que boas ideias não garantem resultados | House Mazzutti",
     "metaDescription": "Ideias fortes morrem em execuções fracas. O papel da produção executiva premium em transformar conceito em resultado real e mensurável.",
-    "keywords": "produção executiva, gestão de campanha, ROI campanha, produtora audiovisual, fashion film, brand content, House Mazzutti Produtora",
+    "keywords": "execução de campanha publicitária, produção executiva premium, governança criativa, conceito e execução, ROI de campanha, direção autoral, House Mazzutti",
     "data": "Fevereiro 2026",
     "cover": {
       "src": "/images/blog/ideia-vs-resultado/producao-executiva-gestao-campanha-house-mazzutti.webp",
@@ -985,7 +985,7 @@ export const articles = {
     "titulo": "Por que campanhas com alto investimento falham: a economia invisível do retrabalho",
     "metaTitle": "Por que Campanhas Caras Falham | House Mazzutti",
     "metaDescription": "Orçamento alto não garante resultado. Por que campanhas premium falham e como produção executiva transforma incerteza em previsibilidade.",
-    "keywords": "campanha publicitária, alto investimento, ROI campanha, produção executiva, fashion film premium, direção criativa, produtora audiovisual, House Mazzutti",
+    "keywords": "campanha publicitária cara, orçamento de campanha, produção executiva premium, governança criativa, ROI de campanha, previsibilidade, House Mazzutti",
     "data": "Janeiro 2026",
     "cover": {
       "src": "/images/blog/campanhas-caras-falham/campanhas-caras-falham-roi-campanha-house-mazzutti.webp",
