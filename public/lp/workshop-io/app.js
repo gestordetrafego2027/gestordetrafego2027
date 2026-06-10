@@ -190,7 +190,7 @@
     if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Aguarde…'; }
 
     try {
-      const res = await fetch('/api/workshop/checkout', {
+      const res = await fetch('/api/workshop/checkout/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
