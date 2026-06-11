@@ -135,7 +135,7 @@ export default function JequitiSensePage() {
                                     {`Campanha Sensi para uma das maiores plataformas de cosméticos do Brasil — narrativa feminina contemporânea, dupla de presença sustentando o eixo visual. Material para circulação nacional: catálogo, ponto de venda, comissão e mídia.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Produção Executiva: Mateus Sacavem · Fotografia: Brunico · Beauty: Eliseu Almeida · Modelos: Barbara, Samara Same`}
+                                    {`Produção Executiva: Mateus Sacavem · Casting e Dir. Arte: Angelo Mazzutti · Fotografia: Bruno Fonze · Beauty: Eliseu Almeida · Higienização: Hignino · Modelos: Barbara Nogueira, Samara Same e Mylena`}
                                 </p>
                             </div>
                             </div>
