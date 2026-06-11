@@ -100,10 +100,6 @@ export default function SimonyMarcaPage() {
                     <Link className="group flex items-center space-x-4 text-on-surface-variant hover:text-black transition-colors text-right" href="/portfolio-produtora"><span className="font-inter text-[9px] uppercase tracking-[0.2em]">Próximo Projeto</span><span className="material-symbols-outlined text-sm">east</span></Link>
                 </div>
             </div>
-            <PortfolioVideo unit="produtora" slug="simony-marca" />
-
-            <YouTubeShort urls="https://youtube.com/shorts/pFLwoz9b_FA?feature=share" />
-
             <PortfolioCTA businessUnit="produtora" projectSlug="simony-marca" />
 
             <SiteFooter />
