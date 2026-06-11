@@ -143,7 +143,7 @@ export default function NataliaBeautyPage() {
                                     {`Sessão editorial em torno da leitura adulta do produto — relação entre presença, textura e luz como eixo visual. Elenco, set e fashion film em uma só linha. Material para mídia, ponto de venda e canal próprio sob a mesma assinatura.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Produção Executiva: Mateus Sacavem · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Artista: Natália Beauty`}
+                                    {`Produção Executiva: Angelo Mazzutti · Fotografia: Ita Mazzutti · Vídeo: Lucas Brando · Artista: Natália Beauty`}
                                 </p>
                             </div>
                             </div>
