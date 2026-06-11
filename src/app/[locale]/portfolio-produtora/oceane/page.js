@@ -139,9 +139,9 @@ export default function OceanePage() {
                 </div>
             </main>
             
-            <PortfolioVideo unit="produtora" slug="oceane" />
+            <PortfolioVideo unit="produtora" slug="jequiti-larissa-manoela" />
 
-            <YouTubeShort urls="https://youtube.com/shorts/KA1IPu-UyGM?feature=share" />
+            <YouTubeShort urls="https://youtube.com/shorts/JqCwqv7dn7c?feature=share" />
 
             <PortfolioCTA businessUnit="produtora" projectSlug="oceane" />
 

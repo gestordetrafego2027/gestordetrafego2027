@@ -149,10 +149,6 @@ export default function JequitiLarissaManoelaPage() {
                 </div>
             </main>
             
-            <PortfolioVideo unit="produtora" slug="jequiti-larissa-manoela" />
-
-            <YouTubeShort urls="https://youtube.com/shorts/JqCwqv7dn7c?feature=share" />
-
             <PortfolioCTA businessUnit="produtora" projectSlug="jequiti-larissa-manoela" />
 
             {/* Navigation Links before footer */}
