@@ -54,7 +54,6 @@ export default function LboPage() {
     const horizontalImages = [
         "/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-01.webp",
         "/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-02.webp",
-        "/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-03.webp",
         "/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-04.webp",
         "/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-05.webp",
         "/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-06.webp",
