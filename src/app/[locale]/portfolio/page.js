@@ -113,16 +113,6 @@ export default function PortfolioPage() {
       projects: studioBook
     },
     {
-      slug: 'acessorios',
-      unit: 'PRODUTORA',
-      unitLabel: t('filterProdutora'),
-      title: t('cat_acessorios_title'),
-      description: t('cat_acessorios_desc'),
-      cover: produtoraAcessorios[0].cover,
-      basePath: '/portfolio-produtora',
-      projects: produtoraAcessorios
-    },
-    {
       slug: 'ensaio-pessoal',
       unit: 'STUDIO',
       unitLabel: t('filterStudio'),
@@ -131,6 +121,16 @@ export default function PortfolioPage() {
       cover: '/images/studio/carol-costa/capa-hub.webp',
       basePath: '/portfolio-studio',
       projects: studioEnsaio
+    },
+    {
+      slug: 'acessorios',
+      unit: 'PRODUTORA',
+      unitLabel: t('filterProdutora'),
+      title: t('cat_acessorios_title'),
+      description: t('cat_acessorios_desc'),
+      cover: produtoraAcessorios[0].cover,
+      basePath: '/portfolio-produtora',
+      projects: produtoraAcessorios
     },
     {
       slug: 'beleza',
