@@ -133,9 +133,6 @@ export default function OceanePage() {
                                 <p className="font-inter text-sm text-on-surface-variant leading-relaxed">
                                     {`Linha de maquiagem assinada pela artista, lançada sob a premissa de presença múltipla — leitura editorial sustentada em cada bloco de produto. Material para lançamento nacional, mídia, comunicação da artista e ponto de venda, instalando a coleção como categoria autoral.`}
                                 </p>
-                                <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Produção Executiva: Mateus Sacavem · Direção: House Mazzutti · Fotografia: Ita Mazzutti · Vídeo: Vitor Terra`}
-                                </p>
                             </div>
                         </div>
                     </div>
