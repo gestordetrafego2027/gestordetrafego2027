@@ -133,7 +133,7 @@ export default function JequitiGalisteuPage() {
                                 </div>
                                 <div className="h-px w-full bg-outline-variant/10"></div>
                                 <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Cenografia</p><p className="font-inter text-sm font-medium">House Mazzutti</p></div>
-                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Fotos</p><p className="font-inter text-sm font-medium">Bruno Fonze</p></div>
+                                <div className="info-col-anim flex flex-col"><p className="font-inter text-[9px] uppercase tracking-[0.2em] text-outline-variant mb-1">Fotos</p><p className="font-inter text-sm font-medium">Danilo Borges</p></div>
       
                             <div className="info-col-anim bg-white/50 p-8 mt-4 border border-outline-variant/10">
                                 <h3 className="font-newsreader text-xl mb-4">Sobre este trabalho</h3>
@@ -141,7 +141,7 @@ export default function JequitiGalisteuPage() {
                                     {`Campanha em leitura editorial adulta da apresentadora — elenco, set e ritmo de captação alinhados em uma só linha. Banco denso para catálogo, comissão, mídia e ponto de venda sob a mesma assinatura, sustentando uma das parcerias mais sólidas da perfumaria brasileira.`}
                                 </p>
                                 <p className="font-inter text-[10px] italic text-outline-variant leading-relaxed mt-4">
-                                    {`Cenografia: House Mazzutti · Fotos: Bruno Fonze · Audiovisual: Monteiro Produtora · Artista: Adriane Galisteu`}
+                                    {`Cenografia: House Mazzutti · Fotos: Danilo Borges · Audiovisual: Monteiro Produtora · Artista: Adriane Galisteu`}
                                 </p>
                             </div>
 
