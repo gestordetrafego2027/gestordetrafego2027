@@ -148,8 +148,8 @@ export default function Header({ variant = 'dark' }) {
                                 background: 'none',
                                 border: 'none',
                                 cursor: 'pointer',
-                                borderTop: ['/agencia', '/produtora', '/studio'].some((p) => pathname.startsWith(p)) ? `0.5px solid ${currentTextColor}` : 'none',
-                                paddingTop: ['/agencia', '/produtora', '/studio'].some((p) => pathname.startsWith(p)) ? '4px' : '0',
+                                borderTop: ['/agencia', '/produtora', '/studio', '/academy'].some((p) => pathname.startsWith(p)) ? `0.5px solid ${currentTextColor}` : 'none',
+                                paddingTop: ['/agencia', '/produtora', '/studio', '/academy'].some((p) => pathname.startsWith(p)) ? '4px' : '0',
                             }}
                             aria-haspopup="true"
                             aria-expanded={solucoesOpen}
@@ -164,12 +164,13 @@ export default function Header({ variant = 'dark' }) {
                                         { label: t('agencia'), href: '/agencia', desc: t('agencia_desc') },
                                         { label: t('produtora'), href: '/produtora', desc: t('produtora_desc') },
                                         { label: t('studio'), href: '/studio', desc: t('studio_desc') },
+                                        { label: t('academy'), href: '/academy', desc: t('academy_desc'), divider: true },
                                     ].map((item) => (
                                         <Link
                                             key={item.href}
                                             href={item.href}
                                             onClick={() => setSolucoesOpen(false)}
-                                            style={{ display: 'block', padding: '12px 20px', textDecoration: 'none', transition: 'background 0.2s' }}
+                                            style={{ display: 'block', padding: '12px 20px', textDecoration: 'none', transition: 'background 0.2s', borderTop: item.divider ? '0.5px solid #e0e0e0' : 'none', marginTop: item.divider ? '4px' : '0' }}
                                             onMouseEnter={(e) => (e.currentTarget.style.background = '#f4f4f4')}
                                             onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
                                         >
@@ -181,9 +182,8 @@ export default function Header({ variant = 'dark' }) {
                             </div>
                         )}
                     </div>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">{t('comunidade')}</Link>
-                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/academy')} href="/academy">{t('academy')}</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/portfolio')} href="/portfolio">{t('portfolio')}</Link>
+                    <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/comunidade')} href="/comunidade">{t('comunidade')}</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/blog')} href="/blog">{t('blog')}</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/contato')} href="/contato">{t('contato')}</Link>
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/minha-conta')} href={isLoggedIn ? '/minha-conta' : '/login?next=/minha-conta'}>{t('cliente')}</Link>
@@ -274,12 +274,12 @@ export default function Header({ variant = 'dark' }) {
                       gap:'16px', marginBottom:'40px'}}>
                       {[
                         {label: t('home'), href:'/'},
+                        {label: t('portfolio'), href:'/portfolio'},
                         {label: t('comunidade'), href:'/comunidade'},
                         {label: t('academy'), href:'/academy'},
                         {label:'↳ MARKETING PARA MODELOS · VOL. 01', href:'/academy/marketing-para-modelos', sub: true},
                         {label:'↳ O PREÇO DA RELEVÂNCIA · VOL. 02', href:'/academy/preco-da-relevancia', sub: true},
                         {label:'↳ INSIDE OUT · VOL. 03', href:'/academy/casos-da-producao', sub: true},
-                        {label: t('portfolio'), href:'/portfolio'},
                         {label: t('blog'), href:'/blog'},
                         {label: t('contato'), href:'/contato'},
                         {label: t('cliente'), href: isLoggedIn ? '/minha-conta' : '/login?next=/minha-conta', highlight: true},
