@@ -207,6 +207,80 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
+      {/* ── LOCAL & ACOMODAÇÃO ─────────────────────────────────────── */}
+      <section className="bg-black overflow-hidden">
+        <style>{`
+          @keyframes marquee-local {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+          }
+          .marquee-local {
+            display: flex;
+            width: max-content;
+            animation: marquee-local 32s linear infinite;
+          }
+          .marquee-local:hover { animation-play-state: paused; }
+        `}</style>
+
+        {/* Texto */}
+        <div className="max-w-[1100px] mx-auto px-6 md:px-20 pt-20 pb-14">
+          <div className="flex flex-col md:flex-row gap-14 md:gap-24 items-start">
+            <div className="shrink-0 md:w-[380px]" data-aos="fade-right">
+              <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 block mb-4">
+                O Local · Canoinhas, SC
+              </span>
+              <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-5">
+                Cobertura com pé-direito duplo, luz natural e set preparado para você.
+              </h2>
+              <p className="font-label uppercase tracking-[0.35em] text-[10px] text-white/50 italic">
+                Santa Catarina Plaza · Cobertura Privativa
+              </p>
+            </div>
+            <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
+              <p className="font-body text-white/55 text-[15px] leading-relaxed">
+                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas — espaço amplo, pé-direito duplo e luz natural abundante que transforma cada cena em editorial. Set montado, equipe presente, tudo preparado para que você chegue e apenas seja dirigida.
+              </p>
+              <p className="font-body text-white/35 text-[14px] leading-relaxed">
+                Ambiente controlado, atmosfera de luxo, discrição total. Nenhum detalhe é deixado ao acaso.
+              </p>
+              <div className="flex gap-8 pt-3">
+                {['Luz natural', 'Set montado', 'Ambiente privativo', 'Infraestrutura completa'].map(tag => (
+                  <span key={tag} className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Galeria corrida */}
+        <div className="marquee-local pb-20">
+          {[...Array(2)].map((_, loop) => (
+            [
+              '/images/produtora/institucional/tf/1.webp',
+              '/images/produtora/institucional/tf/3.webp',
+              '/images/produtora/institucional/tf/5.webp',
+              '/images/produtora/institucional/tf/7.webp',
+              '/images/produtora/institucional/tf/9.webp',
+              '/images/produtora/institucional/tf/11.webp',
+            ].map((src, i) => (
+              <div
+                key={`${loop}-${i}`}
+                className="shrink-0 w-[280px] md:w-[360px] h-[420px] md:h-[500px] mx-[3px] overflow-hidden"
+              >
+                <img
+                  src={src}
+                  alt="Local do ensaio — Canoinhas"
+                  loading="lazy"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                />
+              </div>
+            ))
+          ))}
+        </div>
+      </section>
+
       {/* ── PLANOS ─────────────────────────────────────────────────── */}
       <section id="planos" className="bg-zinc-950 px-6 md:px-[40px] py-20 md:py-28">
         <div className="max-w-[1100px] mx-auto">
