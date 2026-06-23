@@ -10,6 +10,7 @@ export async function generateMetadata({params}) {
     title: 'Produtora de Moda, Beleza e Publicidade em São Paulo',
     description:
       'Produção executiva, casting e set design para campanhas de moda, beleza e institucional. Produtora da House Mazzutti em SP.',
+    image: { src: '/images/produtora/moda/hero.webp', alt: 'Produtora House Mazzutti — Moda, Beleza e Publicidade em São Paulo' },
   })
 }
 

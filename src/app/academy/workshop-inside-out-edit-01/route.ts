@@ -27,9 +27,10 @@ export function GET() {
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Inside Out · Edit 01 — Imersão Gravada","description":"Dois dias de imersão em direção criativa, produção e narrativa de marca, gravados em Uberlândia. Oito módulos, uma campanha entregue ao vivo. Acesso vitalício.","image":"https://housemazzutti.com/images/academy/edit-01/edit01-equipe.webp","url":"https://housemazzutti.com/academy/workshop-inside-out-edit-01/","brand":{"@type":"Brand","name":"House Mazzutti Academy"},"offers":{"@type":"Offer","priceCurrency":"BRL","price":"145.00","availability":"https://schema.org/InStock","url":"https://housemazzutti.com/academy/workshop-inside-out-edit-01/"}}
 </script>
-<!-- Google tag (gtag.js) -->
+<!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R61KK25PBK');gtag('config','AW-16938050518');</script>
+<script>gtag('js',new Date());gtag('config','G-R61KK25PBK',{send_page_view:true});gtag('config','AW-16938050518');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">

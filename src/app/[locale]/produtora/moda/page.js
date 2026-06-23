@@ -24,9 +24,6 @@ export default function ProdutoraModaPage() {
 
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
-            <title>House Mazzutti — PRODUTORA | Editorial de Moda</title>
-            <meta name="description" content="Editorial de moda com direção criativa, fotografia fashion, lookbook e campanhas para marcas que buscam posicionamento, desejo e valor percebido." />
-
             <style dangerouslySetInnerHTML={{ __html: `
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
                 .no-scrollbar::-webkit-scrollbar { display: none; }

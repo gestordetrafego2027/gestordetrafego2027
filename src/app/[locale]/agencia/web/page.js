@@ -19,9 +19,6 @@ export default function AgenciaWebPage() {
 
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
-            <title>{t('seo_title')}</title>
-            <meta name="description" content={t('seo_desc')} />
-
             <style dangerouslySetInnerHTML={{ __html: `
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
             `}} />

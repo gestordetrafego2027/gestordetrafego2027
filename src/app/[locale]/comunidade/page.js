@@ -129,8 +129,6 @@ export default function ComunidadePage() {
 
     return (
         <div className="bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary">
-            <title>Comunidade | House Mazzutti</title>
-
             <style dangerouslySetInnerHTML={{
                 __html: `
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; font-size: 20px; }

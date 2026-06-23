@@ -1,25 +1,27 @@
 /**
- * Tracking — Meta Pixel + Google Analytics 4
+ * Tracking — Meta Pixel + Google Analytics 4 + Google Ads Consent Mode v2
  *
- * Injetado uma vez por página via <Tracking />.
- * Lê os IDs de `process.env.NEXT_PUBLIC_FB_PIXEL_ID` e
- * `process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID`. Se nenhum estiver
- * configurado, o componente não renderiza nada.
+ * Gerencia consentimento LGPD e disparo de eventos.
+ * O gtag base (GA4 + Ads) é carregado em layout.js com consent defaults=denied.
+ * Este componente atualiza o consentimento quando o usuário decide e dispara
+ * o pageview GA4 (que foi desativado no layout para evitar double-count).
  *
- * Eventos custom usam o helper `track()` exportado abaixo.
- *   track('ViewContent',     { content_name, content_ids, value, currency })
- *   track('InitiateCheckout',{ content_name, content_ids, value, currency })
- *   track('Purchase',        { value, currency, content_ids })
- *
- * Cada chamada dispara tanto no fbq quanto no gtag.
+ * Conversões Google Ads: defina NEXT_PUBLIC_GADS_LEAD_LABEL e
+ * NEXT_PUBLIC_GADS_PURCHASE_LABEL nas env vars com os labels da conta.
+ *   track('Lead',     { lead_type: 'contato', value: 0 })
+ *   track('Purchase', { value: 149, currency: 'BRL', transaction_id: 'xxx' })
  */
 'use client'
 
 import Script from 'next/script'
+import { useEffect } from 'react'
 import { useConsent } from '@/components/consent/ConsentProvider'
 
 const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const GADS_ID = 'AW-16938050518'
+const GADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GADS_LEAD_LABEL ?? ''
+const GADS_PURCHASE_LABEL = process.env.NEXT_PUBLIC_GADS_PURCHASE_LABEL ?? ''
 
 declare global {
   interface Window {
@@ -49,26 +51,26 @@ export interface TrackPayload {
 
 export function track(event: TrackEvent, payload: TrackPayload = {}) {
   if (typeof window === 'undefined') return
+
+  // Meta Pixel
   try {
     if (typeof window.fbq === 'function') {
       window.fbq('track', event, payload)
     }
   } catch {}
+
+  // GA4 + Google Ads
   try {
     if (typeof window.gtag === 'function') {
-      // GA4 usa nomes em snake_case
-      const gaEvent =
-        event === 'ViewContent'
-          ? 'view_item'
-          : event === 'InitiateCheckout'
-            ? 'begin_checkout'
-            : event === 'AddToCart'
-              ? 'add_to_cart'
-              : event === 'Purchase'
-                ? 'purchase'
-                : event === 'Lead'
-                  ? 'generate_lead'
-                  : 'sign_up'
+      const gaEventMap: Record<TrackEvent, string> = {
+        ViewContent: 'view_item',
+        InitiateCheckout: 'begin_checkout',
+        AddToCart: 'add_to_cart',
+        Purchase: 'purchase',
+        Lead: 'generate_lead',
+        CompleteRegistration: 'sign_up',
+      }
+      const gaEvent = gaEventMap[event]
       window.gtag('event', gaEvent, {
         currency: payload.currency,
         value: payload.value,
@@ -78,6 +80,23 @@ export function track(event: TrackEvent, payload: TrackPayload = {}) {
         })),
         ...payload,
       })
+
+      // Google Ads conversions específicas (Smart Bidding)
+      if (event === 'Lead' && GADS_LEAD_LABEL) {
+        window.gtag('event', 'conversion', {
+          send_to: `${GADS_ID}/${GADS_LEAD_LABEL}`,
+          value: payload.value ?? 0,
+          currency: payload.currency ?? 'BRL',
+        })
+      }
+      if (event === 'Purchase' && GADS_PURCHASE_LABEL) {
+        window.gtag('event', 'conversion', {
+          send_to: `${GADS_ID}/${GADS_PURCHASE_LABEL}`,
+          value: payload.value ?? 0,
+          currency: payload.currency ?? 'BRL',
+          transaction_id: payload.transaction_id as string | undefined,
+        })
+      }
     }
   } catch {}
 }
@@ -85,15 +104,27 @@ export function track(event: TrackEvent, payload: TrackPayload = {}) {
 export default function Tracking() {
   const { consent } = useConsent()
 
-  if (!FB_PIXEL_ID && !GA_ID) return null
-
-  // Gate LGPD: GA só carrega com consentimento 'analytics';
-  // Meta Pixel só carrega com consentimento 'marketing'.
-  // Sem decisão (consent === null) → nada dispara.
   const allowAnalytics = consent?.analytics === true
   const allowMarketing = consent?.marketing === true
 
-  if (!allowAnalytics && !allowMarketing) return null
+  // Consent Mode v2 update — dispara quando o usuário decide no banner LGPD.
+  // O 'default' já foi configurado como 'denied' no layout.js (beforeInteractive).
+  // Este useEffect atualiza o sinal assim que o ConsentProvider tem a decisão.
+  useEffect(() => {
+    if (consent === null) return // ainda sem decisão
+    if (typeof window === 'undefined' || typeof window.gtag !== 'function') return
+    window.gtag('consent', 'update', {
+      ad_storage: allowMarketing ? 'granted' : 'denied',
+      ad_user_data: allowMarketing ? 'granted' : 'denied',
+      ad_personalization: allowMarketing ? 'granted' : 'denied',
+      analytics_storage: allowAnalytics ? 'granted' : 'denied',
+    })
+    // Dispara o pageview GA4 agora que o consent foi estabelecido
+    // (layout.js carregou com send_page_view: false para evitar double-count)
+    if (allowAnalytics && GA_ID) {
+      window.gtag('event', 'page_view', { send_to: GA_ID })
+    }
+  }, [allowAnalytics, allowMarketing, consent])
 
   return (
     <>
@@ -124,35 +155,6 @@ export default function Tracking() {
               src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
             />
           </noscript>
-        </>
-      )}
-
-      {GA_ID && allowAnalytics && (
-        <>
-          <Script
-            id="ga4-loader"
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          />
-          <Script
-            id="ga4-init"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                // Consent Mode v2 — reflete a decisão do visitante.
-                gtag('consent', 'default', {
-                  ad_storage: '${allowMarketing ? 'granted' : 'denied'}',
-                  ad_user_data: '${allowMarketing ? 'granted' : 'denied'}',
-                  ad_personalization: '${allowMarketing ? 'granted' : 'denied'}',
-                  analytics_storage: 'granted'
-                });
-                gtag('config', '${GA_ID}', { send_page_view: true });
-              `,
-            }}
-          />
         </>
       )}
     </>

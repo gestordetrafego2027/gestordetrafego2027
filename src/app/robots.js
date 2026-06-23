@@ -19,14 +19,13 @@ export default function robots() {
           '/minha-conta/dados',
           '/minha-conta/pedidos',
           '/minha-conta/lgpd',
-          // Checkout e transacionais
+          // Checkout e transacionais (não indexar; /obrigado removido — precisa ser rastreável para verificação de conversão Google Ads)
           '/academy/checkout',
           '/academy/checkout/',
           '/academy/dashboard',
           '/academy/certificado/',
           '/checkout/',
           '/carrinho/',
-          '/obrigado',
           // Páginas de sistema
           '/p/',
         ],

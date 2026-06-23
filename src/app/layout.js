@@ -37,16 +37,28 @@ export default function RootLayout({ children }) {
         {/* Material Symbols — carregado de forma não-bloqueante via Client Component */}
         <NonBlockingStyles />
 
-        {/* Google tag (gtag.js) — GA4 G-R61KK25PBK + Google Ads AW-16938050518 */}
+        {/* Google tag (gtag.js) — GA4 + Google Ads com Consent Mode v2 (LGPD/GDPR) */}
+        {/* Consent Mode v2: defaults negados até o usuário decidir no banner LGPD.       */}
+        {/* Deve estar ANTES de qualquer gtag('config',...) para que o consentimento       */}
+        {/* seja respeitado desde o primeiro hit — requisito do Google para Smart Bidding. */}
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  wait_for_update: 500
+});`}
+        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"
           strategy="afterInteractive"
         />
         <Script id="google-gtag" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-R61KK25PBK');
+          {`gtag('js', new Date());
+gtag('config', 'G-R61KK25PBK', { send_page_view: false });
 gtag('config', 'AW-16938050518');`}
         </Script>
       </head>

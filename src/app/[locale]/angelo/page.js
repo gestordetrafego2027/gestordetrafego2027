@@ -37,8 +37,6 @@ export default function AngeloPage() {
 
     return (
         <div className="antialiased font-body" style={{ fontWeight: 300, backgroundColor: "#fafafa", color: "#1a1c1c" }}>
-            <title>{t("page_title")}</title>
-
             <style dangerouslySetInnerHTML={{
                 __html: `
                 body { font-weight: 300; background-color: #fafafa; color: #1a1c1c; }

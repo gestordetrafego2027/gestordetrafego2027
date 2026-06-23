@@ -24,9 +24,6 @@ export default function ProdutoraPublicidadePage() {
 
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
-            <title>{t('page_title')}</title>
-            <meta name="description" content={t('page_description')} />
-
             <style dangerouslySetInnerHTML={{ __html: `
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
                 .no-scrollbar::-webkit-scrollbar { display: none; }

@@ -19,8 +19,11 @@ export function buildAlternates(path = '', locale = DEFAULT_LOCALE) {
   }
 }
 
-export function pageMetadata({ path, locale = DEFAULT_LOCALE, title, description }) {
+export function pageMetadata({ path, locale = DEFAULT_LOCALE, title, description, image }) {
   const alternates = buildAlternates(path, locale)
+  const ogImage = image
+    ? [{ url: `${SITE_URL}${image.src}`, width: image.width ?? 1200, height: image.height ?? 630, alt: image.alt ?? title }]
+    : [{ url: `${SITE_URL}/images/og-default.webp`, width: 1200, height: 630, alt: title }]
   return {
     title,
     description,
@@ -32,11 +35,13 @@ export function pageMetadata({ path, locale = DEFAULT_LOCALE, title, description
       type: 'website',
       siteName: brand.name,
       locale: 'pt_BR',
+      images: ogImage,
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ogImage,
     },
   }
 }

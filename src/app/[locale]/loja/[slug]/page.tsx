@@ -21,10 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .select('name, seo_title, seo_description, og_image_url, images')
     .eq('slug', slug).eq('active', true).maybeSingle()
   if (!p) return { title: 'Produto não encontrado' }
+  const canonical = `https://housemazzutti.com/pt/loja/${slug}/`
   return {
     title: p.seo_title ?? `${p.name} — House Mazzutti`,
     description: p.seo_description,
-    openGraph: { images: p.og_image_url ? [p.og_image_url] : p.images?.[0] ? [p.images[0]] : [] },
+    // Canonical próprio: sem isto o produto herda a canonical raiz (/pt/) do [locale]/layout.
+    alternates: { canonical },
+    openGraph: { url: canonical, images: p.og_image_url ? [p.og_image_url] : p.images?.[0] ? [p.images[0]] : [] },
   }
 }
 

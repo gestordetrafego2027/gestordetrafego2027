@@ -10,6 +10,7 @@ export async function generateMetadata({params}) {
     title: 'Studio HMZT — Book, Ensaio e Direção de Imagem em SP',
     description:
       'Book, ensaio e cobertura com direção de imagem pessoal em São Paulo. Foto e vídeo com intenção, sob direção de Angelo Mazzutti.',
+    image: { src: '/images/studio/ana-laura-saar/1.webp', alt: 'Studio House Mazzutti — Book e Ensaio Fotográfico em São Paulo' },
   })
 }
 

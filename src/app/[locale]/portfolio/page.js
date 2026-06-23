@@ -70,14 +70,6 @@ const produtoraModa = [
   cover: `/images/produtora/moda/${slug}/capa.webp`
 }));
 
-const produtoraInstitucional = [
-  'sense-hotel', 'tf'
-].map((slug) => ({
-  slug,
-  name: toTitleCase(slug),
-  cover: `/images/produtora/institucional/${slug}/capa.webp`
-}));
-
 const agenciaProjetos = [
   'house-mazzutti', 'knowhol', 'mabdo', 'on-take', 'pous', 'samrat',
   { slug: 'alletto', name: 'Alletto', cover: '/images/agencia/alletto/capa.webp' },
@@ -151,16 +143,6 @@ export default function PortfolioPage() {
       cover: '/images/produtora/moda/unique-chic/11.webp',
       basePath: '/portfolio-produtora',
       projects: produtoraModa
-    },
-    {
-      slug: 'institucional',
-      unit: 'PRODUTORA',
-      unitLabel: t('filterProdutora'),
-      title: t('cat_institucional_title'),
-      description: t('cat_institucional_desc'),
-      cover: produtoraInstitucional[0].cover,
-      basePath: '/portfolio-produtora',
-      projects: produtoraInstitucional
     },
     {
       slug: 'agencia-projetos',

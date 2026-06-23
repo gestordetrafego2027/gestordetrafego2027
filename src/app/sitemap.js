@@ -65,9 +65,6 @@ export default async function sitemap() {
     {p: '/academy/marketing-para-modelos', priority: 0.7},
     {p: '/academy/casos-da-producao', priority: 0.7},
     {p: '/academy/inside-out', priority: 0.8},
-    // Workshop LPs (fora do locale — rotas brutas)
-    {p: '/academy/workshop-inside-out-edit-01', priority: 0.9},
-    {p: '/academy/workshop-producao-direcao-01', priority: 0.9},
     // Institucional / comercial
     {p: '/sobre', priority: 0.8},
     {p: '/angelo', priority: 0.7},
@@ -82,6 +79,18 @@ export default async function sitemap() {
     {p: '/contato', priority: 0.6},
   ].map(({p, priority}) => ({
     url: `${BASE}${L}${p}/`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority,
+  }))
+
+  // Rotas fora do i18n (sem prefixo /pt) — canônica é sem locale.
+  // Workshop LPs vivem em /academy/workshop-* (não-i18n); /pt/academy/workshop-* dá 404.
+  const rawPages = [
+    {p: '/academy/workshop-inside-out-edit-01', priority: 0.9},
+    {p: '/academy/workshop-producao-direcao-01', priority: 0.9},
+  ].map(({p, priority}) => ({
+    url: `${BASE}${p}/`,
     lastModified: now,
     changeFrequency: 'weekly',
     priority,
@@ -119,7 +128,9 @@ export default async function sitemap() {
       .select('slug, type, updated_at')
       .eq('status', 'published')
     academyProducts = (data ?? []).map((p) => ({
-      url: `${BASE}${L}/academy/${p.type}/${p.slug}/`,
+      // Produtos da Academy vivem em /academy/[type]/[slug] (não-i18n, canônica sem /pt).
+      // /pt/academy/[type]/[slug] dá 404 — por isso sem o prefixo L.
+      url: `${BASE}/academy/${p.type}/${p.slug}/`,
       lastModified: p.updated_at ? new Date(p.updated_at) : now,
       changeFrequency: 'weekly',
       priority: 0.7,
@@ -128,5 +139,5 @@ export default async function sitemap() {
     // Build sem credenciais — ignora.
   }
 
-  return [...staticPages, ...blogPosts, ...portfolioPages, ...policyPages, ...academyProducts]
+  return [...staticPages, ...rawPages, ...blogPosts, ...portfolioPages, ...policyPages, ...academyProducts]
 }

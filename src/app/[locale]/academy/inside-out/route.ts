@@ -22,9 +22,10 @@ export function GET() {
 <meta name="twitter:description" content="A imersão completa em vídeo. Direção criativa do processo interno à entrega final — assista no seu ritmo.">
 <meta name="twitter:image" content="https://housemazzutti.com/images/academy/inside-out/og-image.webp">
 <link rel="canonical" href="https://housemazzutti.com/pt/academy/inside-out/">
-<!-- Google tag (gtag.js) -->
+<!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R61KK25PBK');gtag('config','AW-16938050518');</script>
+<script>gtag('js',new Date());gtag('config','G-R61KK25PBK',{send_page_view:true});gtag('config','AW-16938050518');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Archivo+Expanded:wght@400..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">

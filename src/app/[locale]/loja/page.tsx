@@ -12,9 +12,13 @@ export const revalidate = 60
 export const metadata: Metadata = {
   title: 'Loja — House Mazzutti',
   description: 'Serviços, cursos e produtos digitais da House Mazzutti.',
+  // Canonical próprio: sem isto a página herda a canonical raiz (/pt/) do [locale]/layout,
+  // o que apontava a loja para a home e impedia sua indexação.
+  alternates: { canonical: 'https://housemazzutti.com/pt/loja/' },
   openGraph: {
     title: 'Loja — House Mazzutti',
     description: 'Serviços, cursos e produtos digitais da House Mazzutti.',
+    url: 'https://housemazzutti.com/pt/loja/',
   },
 }
 

@@ -10,6 +10,7 @@ export async function generateMetadata({params}) {
     title: 'Agência de Branding e Direção Criativa em São Paulo',
     description:
       'Branding, web e comunicação para marcas que querem presença com estratégia. Direção criativa autoral da House Mazzutti em SP.',
+    image: { src: '/images/agencia/banners/banner-1.webp', alt: 'Agência House Mazzutti — Branding e Direção Criativa em São Paulo' },
   })
 }
 
