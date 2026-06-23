@@ -1,4 +1,7 @@
-export const dynamic = 'force-static';
+// Dynamic temporariamente para garantir que o novo conteúdo seja servido.
+// Voltar para 'force-static' depois de confirmar a propagação em prod.
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export function GET() {
   const html = `<!DOCTYPE html>
@@ -804,7 +807,7 @@ export function GET() {
   return new Response(html, {
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600',
+      'Cache-Control': 'public, max-age=60, s-maxage=60',
     },
   });
 }
