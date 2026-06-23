@@ -1130,7 +1130,22 @@
     "form_titulo": "Branding Project",
     "form_subtitulo": "Conte-nos sobre sua marca. Respondemos em até 1 dia útil.",
     "form_whatsapp_btn": "CONTINUAR VIA WHATSAPP",
-    "form_instagram_btn": "CONTINUAR VIA INSTAGRAM"
+    "form_instagram_btn": "CONTINUAR VIA INSTAGRAM",
+    "manifesto_texto": "Marcas que não se explicam. Marcas que se sentem.",
+    "processo_label": "COMO TRABALHAMOS",
+    "processo_titulo": "Um processo. Uma marca.",
+    "processo_1_num": "01",
+    "processo_1_titulo": "Imersão",
+    "processo_1_desc": "Mergulhamos no negócio, no mercado e no público. Entendemos antes de criar.",
+    "processo_2_num": "02",
+    "processo_2_titulo": "Conceito",
+    "processo_2_desc": "Definimos o posicionamento, o naming e a direção criativa que norteia tudo.",
+    "processo_3_num": "03",
+    "processo_3_titulo": "Identidade",
+    "processo_3_desc": "Desenvolvemos o sistema visual completo — logo, paleta, tipografia e tom de voz.",
+    "processo_4_num": "04",
+    "processo_4_titulo": "Entrega",
+    "processo_4_desc": "Brand book final com todas as regras de uso e aplicação da marca."
   },
   "produtora_institucional": {
     "hero_label": "VÍDEO INSTITUCIONAL · PROPOSTA SOB MEDIDA",

@@ -1149,7 +1149,22 @@
     "form_titulo": "Branding Project",
     "form_subtitulo": "Cuéntanos sobre tu marca. Respondemos en hasta 1 día hábil.",
     "form_whatsapp_btn": "CONTINUAR VIA WHATSAPP",
-    "form_instagram_btn": "CONTINUAR VIA INSTAGRAM"
+    "form_instagram_btn": "CONTINUAR VIA INSTAGRAM",
+    "manifesto_texto": "Marcas que no se explican. Marcas que se sienten.",
+    "processo_label": "CÓMO TRABAJAMOS",
+    "processo_titulo": "Un proceso. Una marca.",
+    "processo_1_num": "01",
+    "processo_1_titulo": "Inmersión",
+    "processo_1_desc": "Nos sumergimos en el negocio, el mercado y el público. Entendemos antes de crear.",
+    "processo_2_num": "02",
+    "processo_2_titulo": "Concepto",
+    "processo_2_desc": "Definimos el posicionamiento, el naming y la dirección creativa que guía todo.",
+    "processo_3_num": "03",
+    "processo_3_titulo": "Identidad",
+    "processo_3_desc": "Desarrollamos el sistema visual completo — logo, paleta, tipografía y tono de voz.",
+    "processo_4_num": "04",
+    "processo_4_titulo": "Entrega",
+    "processo_4_desc": "Brand book final con todas las reglas de uso y aplicación de la marca."
   },
   "studio_cobertura": {
     "hero_label": "COBERTURA EXTERNA · PROPUESTA A MEDIDA",

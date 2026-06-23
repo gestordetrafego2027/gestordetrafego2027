@@ -1204,7 +1204,22 @@
     "form_titulo": "Branding Project",
     "form_subtitulo": "Tell us about your brand. We respond within 1 business day.",
     "form_whatsapp_btn": "CONTINUE VIA WHATSAPP",
-    "form_instagram_btn": "CONTINUE VIA INSTAGRAM"
+    "form_instagram_btn": "CONTINUE VIA INSTAGRAM",
+    "manifesto_texto": "Brands that don't explain themselves. Brands that are felt.",
+    "processo_label": "HOW WE WORK",
+    "processo_titulo": "One process. One brand.",
+    "processo_1_num": "01",
+    "processo_1_titulo": "Immersion",
+    "processo_1_desc": "We dive into the business, market and audience. We understand before we create.",
+    "processo_2_num": "02",
+    "processo_2_titulo": "Concept",
+    "processo_2_desc": "We define positioning, naming and the creative direction that guides everything.",
+    "processo_3_num": "03",
+    "processo_3_titulo": "Identity",
+    "processo_3_desc": "We develop the complete visual system — logo, palette, typography and tone of voice.",
+    "processo_4_num": "04",
+    "processo_4_titulo": "Delivery",
+    "processo_4_desc": "Final brand book with all usage rules and brand applications."
   },
   "produtora_moda": {
     "hero_label": "FASHION & EDITORIAL — HMZT · CUSTOM PROPOSAL",
