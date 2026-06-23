@@ -302,31 +302,6 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
-      {/* ── SOBRE A HOUSE ──────────────────────────────────────────── */}
-      <section className="bg-black py-24 px-6 md:px-20 border-t border-white/6">
-        <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-start">
-          <div className="shrink-0" data-aos="fade-right">
-            <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 block mb-3">
-              Sobre a House
-            </span>
-            <p className="font-headline text-[1.65rem] md:text-[2.1rem] text-white leading-snug tracking-tight max-w-[320px]">
-              Não é sobre tirar fotos. É sobre criar ícones.
-            </p>
-          </div>
-          <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
-            <p className="font-body text-white/55 text-[15px] leading-relaxed max-w-[500px]">
-              A House Mazzutti é uma produtora criativa com estúdio próprio em São Paulo, especializada em direção de imagem pessoal, editorial e audiovisual. Cada projeto nasce de um diagnóstico — não de um orçamento.
-            </p>
-            <p className="font-body text-white/40 text-[14px] leading-relaxed max-w-[500px]">
-              Uma experiência pensada do conceito à curadoria — para quem já ocupa um lugar e precisa ser vista nele.
-            </p>
-            <p className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 pt-2">
-              Controle estético · Coerência · Atmosfera
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ── ANGELO MAZZUTTI ────────────────────────────────────────── */}
       <section className="bg-black border-t border-white/6">
         <div className="flex flex-col md:flex-row">
@@ -356,6 +331,31 @@ export default function TourMarcaPessoalPage() {
               </p>
             </div>
             <p className="font-headline text-white/70 text-lg italic">— Angelo Mazzutti</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SOBRE A HOUSE ──────────────────────────────────────────── */}
+      <section className="bg-black py-24 px-6 md:px-20 border-t border-white/6">
+        <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-start">
+          <div className="shrink-0" data-aos="fade-right">
+            <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 block mb-3">
+              Sobre a House
+            </span>
+            <p className="font-headline text-[1.65rem] md:text-[2.1rem] text-white leading-snug tracking-tight max-w-[320px]">
+              Não é sobre tirar fotos. É sobre criar ícones.
+            </p>
+          </div>
+          <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
+            <p className="font-body text-white/55 text-[15px] leading-relaxed max-w-[500px]">
+              A House Mazzutti é uma produtora criativa com estúdio próprio em São Paulo, especializada em direção de imagem pessoal, editorial e audiovisual. Cada projeto nasce de um diagnóstico — não de um orçamento.
+            </p>
+            <p className="font-body text-white/40 text-[14px] leading-relaxed max-w-[500px]">
+              Uma experiência pensada do conceito à curadoria — para quem já ocupa um lugar e precisa ser vista nele.
+            </p>
+            <p className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 pt-2">
+              Controle estético · Coerência · Atmosfera
+            </p>
           </div>
         </div>
       </section>
