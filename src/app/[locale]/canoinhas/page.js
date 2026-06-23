@@ -246,40 +246,8 @@ export default function TourMarcaPessoalPage() {
           .marquee-local:hover { animation-play-state: paused; }
         `}</style>
 
-        {/* Texto */}
-        <div className="max-w-[1100px] mx-auto px-6 md:px-20 pt-20 pb-14">
-          <div className="flex flex-col md:flex-row gap-14 md:gap-24 items-start">
-            <div className="shrink-0 md:w-[380px]" data-aos="fade-right">
-              <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 block mb-4">
-                O Local · Canoinhas, SC
-              </span>
-              <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-5">
-                Studio completo, equipamentos de primeira linha e um espaço feito para você brilhar.
-              </h2>
-              <p className="font-label uppercase tracking-[0.35em] text-[10px] text-white/50 italic">
-                Santa Catarina Plaza · Cobertura Privativa
-              </p>
-            </div>
-            <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
-              <p className="font-body text-white/55 text-[15px] leading-relaxed">
-                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas — um studio montado com iluminação profissional, equipamentos de última geração e toda a infraestrutura necessária para uma produção de alto padrão. Você chega. A equipe faz o resto.
-              </p>
-              <p className="font-body text-white/35 text-[14px] leading-relaxed">
-                Espaço amplo, atmosfera de luxo, discrição total. Cada detalhe pensado para que o resultado seja impecável.
-              </p>
-              <div className="flex gap-8 pt-3">
-                {['Studio completo', 'Equipamentos pro', 'Ambiente privativo', 'Infraestrutura total'].map(tag => (
-                  <span key={tag} className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Galeria corrida */}
-        <div className="marquee-local pb-20">
+        <div className="marquee-local pt-20">
           {[...Array(2)].map((_, loop) => (
             [
               '/images/studio/canoinhas-hotel/1.webp',
@@ -307,6 +275,38 @@ export default function TourMarcaPessoalPage() {
               </div>
             ))
           ))}
+        </div>
+
+        {/* Texto — após galeria */}
+        <div className="max-w-[1100px] mx-auto px-6 md:px-20 pt-14 pb-20">
+          <div className="flex flex-col md:flex-row gap-14 md:gap-24 items-start">
+            <div className="shrink-0 md:w-[380px]" data-aos="fade-right">
+              <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 block mb-4">
+                O Local · Canoinhas, SC
+              </span>
+              <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-5">
+                Studio completo, equipamentos de primeira linha e um espaço feito para você brilhar.
+              </h2>
+              <p className="font-label uppercase tracking-[0.35em] text-[10px] text-white/50 italic">
+                Santa Catarina Plaza · Cobertura Privativa
+              </p>
+            </div>
+            <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
+              <p className="font-body text-white/55 text-[15px] leading-relaxed">
+                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas — um studio montado com iluminação profissional, equipamentos de última geração e toda a infraestrutura necessária para uma produção de alto padrão. Você chega. A equipe faz o resto.
+              </p>
+              <p className="font-body text-white/35 text-[14px] leading-relaxed">
+                Espaço amplo, atmosfera de luxo, discrição total. Cada detalhe pensado para que o resultado seja impecável.
+              </p>
+              <div className="flex flex-wrap gap-8 pt-3">
+                {['Studio completo', 'Equipamentos pro', 'Ambiente privativo', 'Infraestrutura total'].map(tag => (
+                  <span key={tag} className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
