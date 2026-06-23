@@ -217,9 +217,33 @@ export default function TourMarcaPessoalPage() {
                 titulo: 'Profissionais em transição',
                 desc: 'Você está se reposicionando e precisa de uma imagem que abra portas — não que explique o passado.',
               },
+              {
+                titulo: 'Consultoras e coaches',
+                desc: 'Você vende autoridade e transformação — sua imagem precisa transmitir isso antes mesmo de falar.',
+              },
+              {
+                titulo: 'Criativas e artistas',
+                desc: 'Você tem um universo estético próprio e quer um ensaio que finalmente faça jus ao que você cria.',
+              },
+              {
+                titulo: 'Influenciadoras e creators',
+                desc: 'Você quer elevar o padrão do seu conteúdo com produção editorial de alto nível e direção criativa real.',
+              },
+              {
+                titulo: 'Médicas e profissionais da saúde',
+                desc: 'Você constrói autoridade no digital e precisa de uma imagem que transmita credibilidade e sofisticação.',
+              },
+              {
+                titulo: 'Advogadas e juristas',
+                desc: 'Você representa pessoas e causas — e quer que sua presença inspire confiança à primeira impressão.',
+              },
+              {
+                titulo: 'Mulheres em lançamento',
+                desc: 'Você está lançando algo grande — um livro, um curso, uma marca — e precisa de imagens à altura do momento.',
+              },
             ].map((item, i) => (
-              <div key={i} className="p-10 border border-white/6" data-aos="fade-up" data-aos-delay={(i + 1) * 80}>
-                <span className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 block mb-5">0{i + 1}</span>
+              <div key={i} className="p-10 border border-white/6" data-aos="fade-up" data-aos-delay={(i % 3 + 1) * 60}>
+                <span className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 block mb-5">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="font-headline text-xl text-white mb-4 leading-tight">{item.titulo}</h3>
                 <p className="font-body text-white/40 text-sm leading-relaxed">{item.desc}</p>
               </div>
