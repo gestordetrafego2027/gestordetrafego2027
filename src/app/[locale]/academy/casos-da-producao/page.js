@@ -1,7 +1,7 @@
 /**
- * Landing · Ebook Vol. 03 — Inside Out
+ * Landing · Livro Vol. 03 — Operação Criativa
  * House Mazzutti Academy · Vol. 03 · 2026
- * 29 páginas · 7 cases · Ângelo & Ita Mazzutti
+ * 336 páginas · 12 capítulos · 3 partes · Ângelo Mazzutti
  */
 import React from 'react'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks'
@@ -13,104 +13,79 @@ const COVER      = '/images/academy/casos-da-producao/cover.webp'
 const COVER_ABS  = `${SITE_URL}${COVER}`
 const CHECKOUT_URL = '/pt/checkout/casos-da-producao'
 
-const TITULO = 'Inside Out'
-const SUBTITULO = 'Operação enxuta com método. Como a House pensa, dirige e entrega — sete bastidores reais de ponta a ponta.'
+const TITULO = 'Operação Criativa'
+const SUBTITULO = 'Não é estética. É leitura. Ensaio autoral de Ângelo Mazzutti sobre vinte anos dirigindo a publicidade brasileira por dentro. 336 páginas. House Mazzutti Academy, Vol. 03 · 2026.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: `${TITULO} · Ebook · House Mazzutti Academy Vol. 03`,
+  title: `${TITULO} · Livro de Ângelo Mazzutti sobre direção criativa brasileira`,
   description: SUBTITULO,
-  keywords: ['cases de produção', 'fashion film', 'branding', 'direção criativa', 'House Mazzutti', 'Ângelo Mazzutti', 'Ita Mazzutti'],
+  keywords: [
+    'livro de direção criativa',
+    'ângelo mazzutti livro',
+    'operação criativa livro',
+    'house mazzutti academy',
+    'direção criativa brasileira',
+    'livro sobre publicidade brasileira',
+    'ofício do diretor criativo',
+    'método de direção criativa',
+    'agência boutique brasileira',
+    'como dirigir agência criativa',
+  ],
   authors: [{ name: 'Ângelo Mazzutti', url: SITE_URL }],
   creator: 'Ângelo Mazzutti',
-  publisher: 'House Mazzutti Edições',
+  publisher: 'House Mazzutti Editora',
+  robots: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
   alternates: { canonical: `${SITE_URL}/pt/academy/casos-da-producao` },
   openGraph: {
     type: 'book',
     locale: 'pt_BR',
     url: `${SITE_URL}/pt/academy/casos-da-producao`,
-    siteName: 'House Mazzutti Academy',
-    title: `${TITULO} · Vol. 03`,
-    description: SUBTITULO,
-    images: [{ url: COVER_ABS, width: 768, height: 1152, alt: `Capa ${TITULO} — House Mazzutti Academy Vol. 03` }],
+    siteName: 'House Mazzutti',
+    title: `${TITULO} — Ângelo Mazzutti`,
+    description: 'Não é estética. É leitura. Vinte anos dirigindo a publicidade brasileira por dentro.',
+    images: [{ url: COVER_ABS, width: 1200, height: 630, alt: `Capa do livro ${TITULO}, de Ângelo Mazzutti — House Mazzutti Academy Vol. 03` }],
   },
-  twitter: { card: 'summary_large_image', title: `${TITULO} · Vol. 03`, images: [COVER_ABS] },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${TITULO} — Ângelo Mazzutti`,
+    description: 'Não é estética. É leitura.',
+    images: [COVER_ABS],
+    creator: '@housemazzutti',
+  },
 }
 
 /* ─── 7 casos ───────────────────────────────────────────────────── */
-const CASES = [
-  {
-    n: '01',
-    tag: 'Evento Próprio · Pilar 3',
-    title: 'Fragmentos',
-    sub: 'A exposição que transformou retrato em arte',
-    detail: 'Gran Mercure Ibirapuera · São Paulo · 2022',
-    pg: '04',
-  },
-  {
-    n: '02',
-    tag: 'Fashion Film · Pilar 3',
-    title: 'Beatriz Kubota',
-    sub: 'O editorial que nasceu no ateliê',
-    detail: 'Peças à mão · OFFEN Scouting',
-    pg: '06',
-  },
-  {
-    n: '03',
-    tag: 'Campanha de Beleza · Pilar 3',
-    title: 'Larissa Manoela · Jequiti',
-    sub: 'Beleza com direção',
-    detail: 'Set design · foto · vídeo',
-    pg: '10',
-  },
-  {
-    n: '04',
-    tag: 'Campanha de Perfumaria · Pilar 3',
-    title: 'Virginia Fonseca · Wepink',
-    sub: 'Quando um perfume vira narrativa',
-    detail: 'Foto · vídeo · fashion film',
-    pg: '14',
-  },
-  {
-    n: '05',
-    tag: 'Fashion Film de Joias · Pilar 3',
-    title: 'Bárbara Porto',
-    sub: 'A joia em movimento',
-    detail: 'Conceito · direção de arte · vídeo',
-    pg: '18',
-  },
-  {
-    n: '06',
-    tag: 'Fashion Film · Pilar 3',
-    title: 'Emanuely Terres',
-    sub: 'Um fashion film sobre presença',
-    detail: 'Direção criativa · São Paulo',
-    pg: '22',
-  },
-  {
-    n: '07',
-    tag: 'Evento de Formação · Pilar 2',
-    title: 'Inside Out',
-    sub: 'A House também forma o olhar',
-    detail: 'Workshop presencial · Academy',
-    pg: '26',
-  },
+const CAPITULOS = [
+  { n: '01', tag: 'Parte I · Dentro',  title: 'A operação invisível',          sub: 'O que acontece entre o briefing e a entrega que ninguém escreve em case.', detail: 'Abertura · Parte I',       pg: '17' },
+  { n: '02', tag: 'Parte I · Dentro',  title: 'Direção é decisão',              sub: 'Sobre as escolhas internas que nenhum cliente vê — e que sustentam todo o resto.', detail: 'Decisão · método', pg: '37' },
+  { n: '03', tag: 'Parte I · Dentro',  title: 'Briefing como diagnóstico',      sub: 'Por que a maior parte das campanhas falha antes de existir.', detail: 'Cliente · escopo · risco', pg: '59' },
+  { n: '04', tag: 'Parte I · Dentro',  title: 'A política da estética',         sub: 'Gosto não é neutro. O lado de quem decide o que é "bonito" na sala de aprovação.', detail: 'Aprovação · poder · linguagem', pg: '83' },
+  { n: '05', tag: 'Parte II · Defesa', title: 'Equipe criativa não é planilha', sub: 'Construir, manter e perder gente — o que sustenta um time além do salário.', detail: 'Liderança · cultura · saída', pg: '107' },
+  { n: '06', tag: 'Parte II · Defesa', title: 'A reunião que decide tudo',      sub: 'A apresentação criativa como ato político — defender ideia sem trair a ideia.', detail: 'Apresentação · defesa · entrega', pg: '129' },
+  { n: '07', tag: 'Parte II · Defesa', title: 'O custo do não',                 sub: 'Quando dizer não pra cliente, pra ideia, pra job. E o que sobra depois.', detail: 'Limite · ética · margem', pg: '153' },
+  { n: '08', tag: 'Parte II · Defesa', title: 'Produção é narrativa',           sub: 'Cronograma, orçamento e set como camadas de uma só história — não áreas separadas.', detail: 'Execução · integração', pg: '177' },
+  { n: '09', tag: 'Parte III · Fora',  title: 'A entrega depois da entrega',    sub: 'Pós-campanha: o que define se uma marca te recontrata em 6 meses ou nunca mais.', detail: 'Recompra · vínculo · legado', pg: '203' },
+  { n: '10', tag: 'Parte III · Fora',  title: 'Agência boutique como tese',     sub: 'Por que uma estrutura pequena e dirigida vence escala genérica em mercado adulto.', detail: 'Negócio · escala · escolha', pg: '229' },
+  { n: '11', tag: 'Parte III · Fora',  title: 'Falhar com método',              sub: 'As campanhas que erraram — e por que continuam ensinando dez anos depois.', detail: 'Falha · aprendizado · honestidade', pg: '257' },
+  { n: '12', tag: 'Parte III · Fora',  title: 'Carta ao diretor criativo iniciante', sub: 'O que eu diria pra mim mesmo aos vinte e cinco, sabendo o que sei aos quarenta e cinco.', detail: 'Carta · síntese · próxima geração', pg: '297' },
 ]
 
 const AUDIENCE = [
-  { n: '01', ttl: 'Você produz conteúdo ou lidera campanhas e quer ver como uma casa pensa de ponta a ponta.', d: 'Cada case abre o processo completo — briefing, conceito, execução e entrega — sem simplificar as decisões reais que acontecem no set e na mesa de edição.' },
-  { n: '02', ttl: 'É criador de moda, beleza ou lifestyle e quer entender o padrão editorial que marcas grandes exigem.', d: 'Sete projetos reais com grandes talentos mostram o que separa um "bom trabalho" de uma campanha que vende — e o que está nos bastidores dessa diferença.' },
-  { n: '03', ttl: 'Quer montar uma produtora ou studio e precisa de referência de processo, não só de resultado.', d: 'Desde o set de campanha de beleza com celebridade até o workshop de formação: como a House estrutura operação, equipe e entrega em cada tipo de projeto.' },
-  { n: '04', ttl: 'É marca ou diretora de marketing e quer ver como uma produtora com visão estratégica trabalha.', d: 'Cases com dados de mercado contextualizados — por que o formato foi escolhido, o que o justifica e qual o impacto esperado para cada segmento.' },
-  { n: '05', ttl: 'Trabalha com imagem pessoal e quer estudar como posicionamento visual é construído na prática.', d: 'Da modelo newface ao fashion film institucional: como a House traduz posicionamento em decisão visual — luz, modelo, ritmo, set design.' },
+  { n: '01', ttl: 'Você dirige uma agência criativa, produtora ou studio e quer ler quem ainda está dentro da operação.',                            d: 'Doze capítulos sobre as decisões que ninguém escreve em case — política interna, equipe, defesa de ideia, relação com cliente. Escrito por quem dirige uma boutique brasileira há mais de vinte anos.' },
+  { n: '02', ttl: 'É diretor criativo, head de arte ou produtor executivo e procura ensaio adulto sobre o ofício.',                                 d: 'Não é introdução à publicidade. É reflexão sobre o que se aprende dirigindo — acertos, erros, padrões que se repetem. Para quem já vive a rotina e quer reorganizar como decide.' },
+  { n: '03', ttl: 'Está montando uma agência boutique e precisa de referência de método, não de manual genérico.',                                 d: 'A Parte III sintetiza por que uma estrutura pequena e dirigida vence escala genérica em mercado adulto. Tese, não receita.' },
+  { n: '04', ttl: 'É cliente — marca, fundador, CMO — e quer entender por dentro como uma operação criativa séria funciona.',                       d: 'Leitura que muda como você briefa, aprova e dá feedback. Cliente que entende a operação contrata melhor, recontrata mais, paga menos retrabalho.' },
+  { n: '05', ttl: 'Está começando como diretor criativo e quer um mapa escrito por quem já fez o caminho.',                                         d: 'A "Carta ao diretor criativo iniciante" (capítulo final) condensa o que o autor diria a si mesmo aos vinte e cinco anos. Atalho real para evitar erros caros.' },
 ]
 
 const FAQS = [
-  { n: '01', q: 'O livro tem conteúdo técnico ou é só inspiração?', a: 'Os dois. Cada case tem contexto de mercado com dados reais, descrição do processo criativo e registro das decisões que moldaram a entrega. Não é álbum de fotos — é bastidor documentado.' },
-  { n: '02', q: 'Precisa entender de fotografia ou audiovisual pra acompanhar?', a: 'Não. Os cases foram escritos para serem lidos por quem produz imagem e por quem contrata produção de imagem. O vocabulário técnico aparece quando serve ao entendimento, nunca como barreira.' },
-  { n: '03', q: 'Como é a entrega?', a: 'Ebook — PDF em alta resolução com diagramação editorial completa, pronto para ler no celular, tablet ou computador. Entrega imediata após confirmação do pagamento, por e-mail e link de download direto.' },
-  { n: '04', q: 'Tem acesso às imagens e vídeos dos projetos?', a: 'O livro inclui registros fotográficos de cada case. Para os fashion films, os cases indicam onde acessar as produções completas. O foco é o processo escrito e documentado, não o showreel.' },
-  { n: '05', q: 'E se eu comprar e não gostar?', a: 'Sete dias de garantia incondicional. Escreve pra academy@housemazzutti.com dizendo que não foi pra você — devolvemos o valor integral. Sem formulário, sem ligação, sem justificativa.' },
+  { n: '01', q: 'É manual técnico, ensaio autoral ou livro de negócios?', a: 'Ensaio autoral com método embutido. Cada capítulo é uma reflexão em primeira pessoa, com pontos práticos no fim. Não é manual passo-a-passo — é leitura adulta que reorganiza como você decide. Quem espera template encontrará tese; quem espera tese encontrará prática aplicada.' },
+  { n: '02', q: 'Quem deve ler este livro?', a: 'Diretores criativos, donos de agência boutique, produtores executivos, profissionais de branding e marca que já operam no mercado. Também serve para clientes adultos que querem entender por dentro como uma operação criativa séria funciona.' },
+  { n: '03', q: 'A compra inclui livro impresso e ebook?', a: 'Sim. Edição inaugural inclui o livro impresso (formato 16 × 23 cm, capa fosca, 336 páginas) com frete incluso para todo o Brasil e o ebook em PDF de alta resolução com acesso imediato após o pagamento — você começa a ler enquanto o físico não chega.' },
+  { n: '04', q: 'Quanto tempo o impresso leva para chegar?', a: 'Brasil inteiro. Capitais 3–5 dias úteis · interior 5–10 dias úteis. O ebook chega no seu e-mail em até cinco minutos depois da confirmação do pagamento — pix é imediato, cartão depende do antifraude.' },
+  { n: '05', q: 'Há tradução em inglês ou espanhol?', a: 'Por enquanto só português brasileiro. Tradução em estudo para a segunda tiragem. Assine a newsletter da House Mazzutti para ser avisado quando sair — sem spam, só lançamentos.' },
+  { n: '06', q: 'E se eu comprar e não gostar?', a: 'Sete dias de garantia incondicional (Art. 49 CDC). Escreve pra academy@housemazzutti.com dizendo que não foi pra você — devolvemos o valor integral. Sem formulário, sem ligação, sem justificativa. Você fica com o livro.' },
 ]
 
 /* ══════════════════════════════════════════════════════════════════
@@ -234,7 +209,7 @@ export default function CasosDaProducaoPage() {
     .cdp-root .promise-cols .col.is ul li::before { content: "+"; position: absolute; left: 0; top: 16px; font-family: var(--mono); font-style: normal; font-weight: 600; font-size: 16px; color: var(--signal); }
     .cdp-root .promise-cols .col.isnot ul li::before { content: "×"; position: absolute; left: 0; top: 14px; font-family: var(--mono); font-style: normal; font-weight: 600; font-size: 20px; color: var(--forest); }
 
-    /* TOC — 7 cases */
+    /* TOC — sumário */
     .cdp-root .toc-sec { background: var(--paper-warm); padding: 120px 0 130px; }
     .cdp-root .toc-sec .head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 56px; align-items: end; }
     .cdp-root .toc-sec .head h2 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(64px, 9vw, 148px); line-height: 0.88; color: var(--ink); margin: 0; letter-spacing: -0.018em; }
@@ -433,10 +408,10 @@ export default function CasosDaProducaoPage() {
           {[...Array(2)].map((_, i) => (
             <React.Fragment key={i}>
               <span>House Mazzutti Academy</span><span className="star">★</span>
-              <span>Inside Out — Operação Enxuta com Método</span><span className="star">★</span>
+              <span>Operação Criativa — não é estética, é leitura</span><span className="star">★</span>
               <span>Ângelo Mazzutti · Volume 03 · 2026</span><span className="star">★</span>
-              <span>7 bastidores reais · do conceito à entrega</span><span className="star">★</span>
-              <span>Fragmentos · Beatriz Kubota · Wepink · Inside Out</span><span className="star">★</span>
+              <span>336 páginas · 12 capítulos · 3 partes</span><span className="star">★</span>
+              <span>Vinte anos dirigindo a publicidade brasileira por dentro</span><span className="star">★</span>
             </React.Fragment>
           ))}
         </div>
@@ -460,20 +435,20 @@ export default function CasosDaProducaoPage() {
       {/* ── NAV ──────────────────────────────────────────────────── */}
       <nav className="nav">
         <div className="nav-inner">
-          <a href="#" className="nav-brand"><span className="pip" />Inside Out · Ebook</a>
+          <a href="#" className="nav-brand"><span className="pip" />Operação Criativa · Livro</a>
           <div className="nav-links">
-            <a href="#cases">Os 7 cases</a>
+            <a href="#sumario">Sumário</a>
             <a href="#trecho">Trecho</a>
             <a href="#autor">O autor</a>
             <a href="#faq">Perguntas</a>
           </div>
-          <a href="#comprar" className="nav-cta">Comprar ebook →</a>
+          <a href="#comprar" className="nav-cta">Quero o livro →</a>
         </div>
       </nav>
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <header className="hero">
-        <div className="grid-marks">CDP · 2026<br />EPS · 100<br />7 CASES</div>
+        <div className="grid-marks">OC · 2026<br />EPS · 336<br />12 CAPS</div>
         <div className="grid-marks-r">UN · LIVRO<br />BR · 2026<br />VOL · 03</div>
 
         <div className="hero-grid">
@@ -484,18 +459,18 @@ export default function CasosDaProducaoPage() {
                 <span className="ms" />
               </div>
               <h1 className="hero-headline">
-                Inside<br />
-                Out.
+                Operação<br />
+                Criativa.
               </h1>
               <p className="hero-sub">
-                <em>Operação enxuta com método.</em> Como a House Mazzutti pensa, dirige e entrega — sete bastidores reais, do briefing à execução final. Por Ângelo Mazzutti.
+                <em>Não é estética. É leitura.</em> Vinte anos dirigindo a publicidade brasileira <em>por dentro</em> — ensaio autoral de Ângelo Mazzutti sobre o ofício do diretor criativo. Para quem ainda está na operação, não nas arquibancadas.
               </p>
             </div>
             <div className="hero-meta">
-              <div className="cell"><span className="k">Autores</span><span className="v">Ângelo &amp; Ita Mazzutti</span></div>
-              <div className="cell"><span className="k">Formato</span><span className="v">Ebook · PDF</span></div>
-              <div className="cell"><span className="k">Cases</span><span className="v">7 bastidores</span></div>
-              <div className="cell"><span className="k">Páginas</span><span className="v">29</span></div>
+              <div className="cell"><span className="k">Autor</span><span className="v">Ângelo Mazzutti</span></div>
+              <div className="cell"><span className="k">Formato</span><span className="v">Impresso + ebook</span></div>
+              <div className="cell"><span className="k">Capítulos</span><span className="v">12 em 3 partes</span></div>
+              <div className="cell"><span className="k">Páginas</span><span className="v">336</span></div>
             </div>
           </div>
 
@@ -503,7 +478,7 @@ export default function CasosDaProducaoPage() {
             <div className="cover-stack">
               <Image
                 src={COVER}
-                alt="Capa Inside Out — Operação Enxuta com Método · House Mazzutti Academy Vol. 03"
+                alt="Capa do livro Operação Criativa, de Ângelo Mazzutti — House Mazzutti Academy Vol. 03"
                 fill
                 sizes="(max-width: 980px) 280px, 420px"
                 className="object-cover"
@@ -514,8 +489,8 @@ export default function CasosDaProducaoPage() {
         </div>
 
         <div className="hero-foot">
-          <span><span className="star">★</span> Inside Out · Operação Enxuta com Método</span>
-          <span>Ângelo Mazzutti · House Mazzutti Edições · 2026</span>
+          <span><span className="star">★</span> Operação Criativa · ensaio sobre o ofício do diretor criativo brasileiro</span>
+          <span>Ângelo Mazzutti · House Mazzutti Editora · 2026</span>
         </div>
       </header>
 
@@ -523,12 +498,12 @@ export default function CasosDaProducaoPage() {
       <section className="pullband">
         <div className="wrap">
           <p className="quote">
-            Operação enxuta<br />
-            <span className="em">não é fazer menos.</span><br />
-            É saber o que não fazer.
+            Operação criativa<br />
+            <span className="em">não é estética.</span><br />
+            É leitura do mercado.
           </p>
           <div className="strip" />
-          <div className="attr">— Inside Out · Ângelo Mazzutti</div>
+          <div className="attr">— Operação Criativa · Ângelo Mazzutti</div>
         </div>
       </section>
 
@@ -537,25 +512,25 @@ export default function CasosDaProducaoPage() {
         <div className="wrap">
           <div className="promise-head">
             <h2>O que você<em>tem em mãos.</em></h2>
-            <p className="lede">Não é inspiração. É processo documentado. Cada um dos sete cases abre o que normalmente fica fechado — as decisões antes do clique, a lógica do set, a direção que ninguém vê mas todo mundo sente. Por quem estava lá.</p>
+            <p className="lede">Não é manual de criatividade. É <em>relatório operacional</em> escrito por quem dirige uma agência boutique brasileira há mais de vinte anos. O ofício do diretor criativo lido por dentro: equipe, política, conflito de cliente, defesa de ideia, ganho e perda de conta — tudo o que não cabe em case e sustenta toda a operação.</p>
           </div>
           <div className="promise-cols">
             <div className="col isnot">
               <h3>Esse livro não é</h3>
               <ul>
-                <li>Álbum de fotos ou showreel impresso</li>
-                <li>Tutorial de técnica de câmera ou iluminação</li>
-                <li>Inspiração sem contexto de processo</li>
-                <li>Portfólio sem bastidor</li>
+                <li>Manual de criatividade ou template de processo</li>
+                <li>Coletânea de cases prontos para Instagram</li>
+                <li>Receita de viralização ou hack de algoritmo</li>
+                <li>Livro escrito por consultor de fora da operação</li>
               </ul>
             </div>
             <div className="col is">
               <h3>Esse livro é</h3>
               <ul>
-                <li>Processo real — do briefing à entrega final</li>
-                <li>Dados de mercado que justificam cada formato escolhido</li>
-                <li>A lógica criativa por trás de cada decisão visual</li>
-                <li>Referência de como uma casa com método pensa e opera</li>
+                <li>Ensaio autoral sobre o ofício do diretor criativo</li>
+                <li>Vinte anos de operação adulta documentados em 336 páginas</li>
+                <li>Tese sobre agência boutique como modelo de negócio</li>
+                <li>Carta direta a quem ainda decide o que vai pra rua</li>
               </ul>
             </div>
           </div>
@@ -563,15 +538,15 @@ export default function CasosDaProducaoPage() {
       </section>
 
       {/* ── SUMÁRIO ──────────────────────────────────────────────── */}
-      <section className="toc-sec" id="cases">
+      <section className="toc-sec" id="sumario">
         <div className="wrap">
           <div className="head">
-            <h2>7 <em>Cases.</em></h2>
-            <p className="desc"><em>Sete projetos reais da House Mazzutti. Cada case tem: contexto de mercado, descrição do processo criativo, decisões de direção e ficha técnica completa.</em></p>
+            <h2>12 <em>Capítulos.</em></h2>
+            <p className="desc"><em>Três partes — Dentro · Defesa · Fora. Cada capítulo é um ensaio em primeira pessoa, com pontos práticos de aplicação no fim. 336 páginas para ler em ordem ou abrir onde dói mais.</em></p>
           </div>
 
           <div className="toc-list">
-            {CASES.map((c) => (
+            {CAPITULOS.map((c) => (
               <article className="toc-item" key={c.n}>
                 <div className="num">{c.n}</div>
                 <div className="body">
@@ -588,8 +563,8 @@ export default function CasosDaProducaoPage() {
           </div>
 
           <div className="toc-foot">
-            <span><strong>7</strong> cases · Produtora, Studio e Academy</span>
-            <span>+ Fichas técnicas · São Paulo · <strong>2026</strong></span>
+            <span><strong>12</strong> capítulos · Dentro · Defesa · Fora</span>
+            <span><strong>336</strong> páginas · House Mazzutti Editora · <strong>2026</strong></span>
           </div>
         </div>
       </section>
@@ -598,16 +573,16 @@ export default function CasosDaProducaoPage() {
       <section className="excerpt" id="trecho">
         <div className="excerpt-grid">
           <aside className="meta">
-            <div className="label">Trecho · Case 01</div>
-            <h3>Fragmentos:<br />a exposição que<br />transforma retrato<br />em arte.</h3>
-            <div className="from">29 páginas · edição 2026</div>
+            <div className="label">Trecho · Cap. 02</div>
+            <h3>Direção<br />é decisão.</h3>
+            <div className="from">336 páginas · edição inaugural 2026</div>
           </aside>
           <div className="excerpt-body">
-            <p className="dropcap">Uma exposição não se mede pela parede. Mede-se pelo que permanece no olhar de quem sai. Em uma única noite, a House levou 23 personalidades para dentro dessa ideia.</p>
-            <p>Estamos habituados a admirar a beleza no que está pronto. Fragmentos parte do oposto — do que se quebrou. Em novembro de 2022, no Gran Mercure Ibirapuera, o fotógrafo e diretor criativo Ita Mazzutti reuniu convidados em torno de uma mostra intimista. Vinte e três histórias, 23 personalidades, 23 obras.</p>
-            <p className="pullquote">Cada retrato deixava de ser registro para virar peça.</p>
-            <p>A referência é o kintsugi — técnica japonesa que repara a cerâmica quebrada com ouro e transforma a cicatriz em parte da beleza. A leitura da exposição segue a mesma direção: aquilo que se partiu não se esconde, ganha sentido. O processo nasce no ensaio fotográfico, passa pela edição, retorna ao físico e recebe intervenção de tinta, vidro, flores e materiais. Depois volta ao digital para os ajustes finais e segue para a moldura. Cada obra carrega um QR code que abre o vídeo do próprio processo — a história que sustenta a imagem.</p>
-            <p>Arte não repara o que se quebrou. Dá a isso uma moldura — e um motivo para ser olhado de novo.</p>
+            <p className="dropcap">Quem dirige uma agência criativa por tempo suficiente entende uma coisa que nenhum manual ensina: a maior parte do trabalho não é criar — é decidir. Decidir o que entra no deck e o que fica fora. Decidir qual cliente atender e qual recusar. Decidir quando defender uma ideia e quando ceder sem traí-la. Decidir quem entra na equipe e, mais difícil, quem sai.</p>
+            <p>A indústria gosta de falar de criatividade como se fosse o coração da agência. É a estética da coisa. A verdade operacional é outra: o coração da agência é o sistema de decisão que sustenta a criatividade. Tira a decisão e a criatividade vira inspiração — bonita, sazonal, inútil pra sustentar uma operação.</p>
+            <p className="pullquote">Direção é o que separa um trabalho que existe de um trabalho que acontece.</p>
+            <p>Existir é fácil. Toda agência tem trabalhos que existem — apresentações em PDF, moodboards bem feitos, decks impecáveis. Acontecer é diferente. Acontecer é uma campanha que vai pra rua, gera resposta, vende produto, recontrata cliente. Entre existir e acontecer há sempre uma série de decisões que ninguém te ensina a tomar — e que, tomadas mal, destroem o trabalho antes que ele saia do escritório.</p>
+            <p>Este capítulo é sobre essas decisões. Não as criativas — as operacionais. As que ninguém escreve em case.</p>
           </div>
         </div>
       </section>
@@ -618,9 +593,9 @@ export default function CasosDaProducaoPage() {
           <div className="audience-head">
             <div>
               <div className="eyebrow">Para quem foi escrito</div>
-              <h2>Esse livro <em>é pra você</em><br />se você produz,<br />contrata ou dirige imagem.</h2>
+              <h2>Esse livro <em>é pra você</em><br />se ainda está<br />na operação.</h2>
             </div>
-            <p className="copy">Foi escrito para quem está dentro do mercado criativo — não para quem observa de fora. Se você trabalha com imagem, campanha, moda ou direção criativa, está no lugar certo.</p>
+            <p className="copy">Não é introdução à publicidade. É ensaio adulto sobre o ofício de dirigir — escrito de dentro, para quem decide. Se você fecha briefing, defende ideia em sala, contrata e demite, lida com cliente difícil e ainda assim opera com método, está no lugar certo.</p>
           </div>
           <div className="audience-grid">
             {AUDIENCE.map((a) => (
@@ -655,19 +630,19 @@ export default function CasosDaProducaoPage() {
               </div>
               <div className="label">O autor</div>
               <div className="nm">Ângelo<br /><em>Mazzutti.</em></div>
-              <div className="role">Publicitário, estrategista de marca e produtor executivo da House Mazzutti — São Paulo.</div>
+              <div className="role">Diretor Criativo · Fundador da House Mazzutti — agência boutique brasileira por escolha, não por tamanho. São Paulo.</div>
               <div className="meta-rows">
-                <div className="row"><span>Atuação</span><span className="v">+20 anos</span></div>
+                <div className="row"><span>Atuação</span><span className="v">+20 anos de direção</span></div>
                 <div className="row"><span>Frentes</span><span className="v">Agência · Produtora · Studio</span></div>
                 <div className="row"><span>Cidade</span><span className="v">São Paulo, Brasil</span></div>
-                <div className="row"><span>Selo</span><span className="v">House Mazzutti Edições</span></div>
+                <div className="row"><span>Selo</span><span className="v">House Mazzutti Editora</span></div>
               </div>
             </aside>
             <div className="author-body">
-              <h2>Quem escreve <em>é quem estava</em><br />no set — não<br />nas arquibancadas.</h2>
-              <p>Dirijo e produzo projetos visuais há mais de vinte anos. Cada case deste livro foi escrito por quem tomou as decisões nele — o briefing real, os problemas reais, as soluções que funcionaram e as que foram descartadas antes de você ver o resultado final.</p>
-              <p>A maioria dos livros sobre produção criativa mostra o que ficou pronto. Este mostra o que foi decidido antes. O que estava em disputa. O que foi rejeitado. Esse é o trecho que mais interessa a quem quer entender o processo — não apenas admirar o resultado.</p>
-              <p>Ao lado do meu irmão Ita Mazzutti — fotógrafo e diretor criativo —, cada caso aqui foi vivido, não reconstituído.</p>
+              <h2>Quem escreve <em>é quem ainda</em><br />está na sala — não<br />nas arquibancadas.</h2>
+              <p>Dirijo a House Mazzutti há mais de vinte anos. Vivo a operação criativa todos os dias: briefing real, cliente real, equipe real, escolha real. <em>Operação Criativa</em> é a síntese desse tempo — o que se aprende quando se atende cliente, se dirige equipe, se assina capa e se assume responsabilidade.</p>
+              <p>Quase nenhum livro sobre o ofício do diretor criativo foi escrito por quem ainda está dentro da operação. A maioria é olhar de fora — consultor, observador, jornalista. Este é diferente. Foi escrito de dentro, por uma razão simples: o que sustenta uma boutique é exatamente o que esses outros livros não conseguem ver.</p>
+              <p>Doze capítulos. Três partes. Trezentas e trinta e seis páginas. <em>Não é estética. É leitura.</em></p>
               <div className="signature">— Ângelo Mazzutti</div>
               <div className="triangle">
                 <div className="cell"><div className="k">Agência</div><div className="v">Estratégia e posicionamento de marca.</div></div>
@@ -684,36 +659,36 @@ export default function CasosDaProducaoPage() {
         <div className="wrap">
           <div className="pricing-head">
             <div>
-              <div className="eyebrow">Edição de lançamento · Volume 03</div>
-              <h2>Antes de entrar<br />no próximo<br /><span className="em">set, vale ler.</span></h2>
+              <div className="eyebrow">Edição inaugural · Volume 03</div>
+              <h2>Antes de aprovar<br />a próxima<br /><span className="em">campanha, vale ler.</span></h2>
             </div>
           </div>
           <div className="price-card">
             <div className="price-left">
               <div>
                 <div className="badge"><span className="dot" /> Lançamento · Edição inaugural</div>
-                <h3>Inside Out<em>Vol. 03 · 2026 · Operação Enxuta com Método</em></h3>
+                <h3>Operação Criativa<em>Vol. 03 · 2026 · Livro impresso + ebook</em></h3>
               </div>
               <div className="product-meta">
-                <div className="row"><span>Formato</span><span className="v">Ebook · PDF (alta)</span></div>
-                <div className="row"><span>Cases</span><span className="v">7 bastidores completos</span></div>
-                <div className="row"><span>Fichas técnicas</span><span className="v">7 fichas</span></div>
-                <div className="row"><span>Entrega</span><span className="v">Imediata após confirmação</span></div>
-                <div className="row"><span>Atualizações</span><span className="v">Vitalícias na v.1</span></div>
+                <div className="row"><span>Formato</span><span className="v">Impresso 16 × 23 cm + ebook PDF</span></div>
+                <div className="row"><span>Páginas</span><span className="v">336 · 12 capítulos · 3 partes</span></div>
+                <div className="row"><span>Envio</span><span className="v">Brasil — frete incluso</span></div>
+                <div className="row"><span>Ebook</span><span className="v">Acesso imediato após pagamento</span></div>
+                <div className="row"><span>Selo</span><span className="v">House Mazzutti Editora</span></div>
               </div>
             </div>
             <div className="price-right">
               <div className="num-line">
                 <span className="pill">Edição de lançamento</span>
               </div>
-              <div className="price"><span className="cur">R$</span>47</div>
+              <div className="price"><span className="cur">R$</span>197</div>
               <div className="pix-line"><em>à vista · cartão, pix ou boleto</em></div>
               <div>
-                <a href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></a>
+                <a href={CHECKOUT_URL} className="btn-buy">Quero meu exemplar <span className="arrow">→</span></a>
               </div>
               <div className="micro">
                 <span>Pagamento seguro</span>
-                <span>Acesso vitalício</span>
+                <span>Frete incluso</span>
                 <span>Garantia 7 dias</span>
               </div>
             </div>
@@ -722,7 +697,7 @@ export default function CasosDaProducaoPage() {
             <div className="g-num">7</div>
             <div className="g-body">
               <div className="k">Garantia incondicional</div>
-              <div className="v"><em>Sete dias para ler, aplicar nas suas decisões e desistir.</em> Se não fizer sentido pra você, devolvemos cem por cento — sem perguntar nada.</div>
+              <div className="v"><em>Sete dias para folhear, ler o primeiro capítulo e decidir.</em> Se não for o que você esperava, devolvemos o valor integral — sem perguntas, sem formulário. Você fica com o livro.</div>
             </div>
           </div>
         </div>
@@ -750,14 +725,14 @@ export default function CasosDaProducaoPage() {
       <section className="final">
         <div className="wrap-narrow">
           <p className="quote">
-            O método não é fórmula.<br />
-            <span className="green">É o que sobra</span><br />
-            <em>quando o improviso vai embora.</em>
+            Não é estética.<br />
+            <span className="green">É leitura.</span><br />
+            <em>Vinte anos por dentro, agora em livro.</em>
           </p>
-          <p className="sub">Sete bastidores reais da House Mazzutti. Como uma operação enxuta pensa, decide e entrega — por quem estava dentro de cada projeto.</p>
+          <p className="sub">336 páginas. 12 capítulos. Três partes. Ensaio autoral de Ângelo Mazzutti sobre o ofício do diretor criativo brasileiro — escrito por quem ainda está na sala.</p>
           <div className="cta-row">
             <a href="#comprar" className="btn-primary">Garantir meu exemplar <span>→</span></a>
-            <a href="#cases" className="btn-secondary">Ver os 7 cases</a>
+            <a href="#sumario" className="btn-secondary">Ver o sumário</a>
           </div>
         </div>
       </section>
@@ -778,14 +753,14 @@ export default function CasosDaProducaoPage() {
           <div className="footer-grid">
             <div className="brand-block col">
               <h4>O selo</h4>
-              <span className="dim" style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 15, letterSpacing: 0 }}>House Mazzutti Edições — selo editorial da House Mazzutti, dirigido por Ângelo Mazzutti.</span>
-              <p className="meta">Operação enxuta com método.<br />Por Ângelo Mazzutti.</p>
+              <span className="dim" style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 15, letterSpacing: 0 }}>House Mazzutti Editora — selo editorial da House Mazzutti, dirigido por Ângelo Mazzutti.</span>
+              <p className="meta">Não é estética. É leitura.<br />Por Ângelo Mazzutti.</p>
             </div>
             <div className="col">
               <h4>Catálogo</h4>
               <Link href="/pt/academy/marketing-para-modelos">Vol. 01 · Marketing para Modelos</Link>
               <Link href="/pt/academy/preco-da-relevancia">Vol. 02 · O Preço da Relevância</Link>
-              <a href="#" style={{ color: 'var(--signal)', fontWeight: 500 }}>Vol. 03 · Inside Out</a>
+              <a href="#" style={{ color: 'var(--signal)', fontWeight: 500 }}>Vol. 03 · Operação Criativa</a>
             </div>
             <div className="col">
               <h4>House Mazzutti</h4>
