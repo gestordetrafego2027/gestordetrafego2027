@@ -25,25 +25,47 @@ export default function RebecaCabralPage() {
         const infoCol = document.querySelector('.info-col');
         let currentY = 0;
         let targetY = 0;
-        
+        let animationFrameId;
+
         const handleScroll = () => {
             targetY = Math.max(0, window.scrollY * 0.5);
         };
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        
-        let animationFrameId;
         function animate() {
             currentY += (targetY - currentY) * 0.08;
             if (infoCol) infoCol.style.transform = `translateY(${currentY}px)`;
             animationFrameId = requestAnimationFrame(animate);
         }
-        animate();
+
+        function startParallax() {
+            currentY = 0;
+            targetY = 0;
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            animate();
+        }
+
+        function stopParallax() {
+            window.removeEventListener('scroll', handleScroll);
+            if (animationFrameId) { cancelAnimationFrame(animationFrameId); animationFrameId = undefined; }
+            if (infoCol) infoCol.style.transform = 'none';
+        }
+
+        const mq = window.matchMedia('(min-width: 1024px)');
+        if (mq.matches) {
+            startParallax();
+        } else {
+            if (infoCol) infoCol.style.transform = 'none';
+        }
+
+        const handleMqChange = (e) => {
+            if (e.matches) { startParallax(); } else { stopParallax(); }
+        };
+        mq.addEventListener('change', handleMqChange);
 
         return () => {
             observer.disconnect();
-            window.removeEventListener('scroll', handleScroll);
-            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            stopParallax();
+            mq.removeEventListener('change', handleMqChange);
         };
     }, []);
 
