@@ -464,18 +464,6 @@ export default function TourMarcaPessoalPage() {
               </p>
             </div>
           </div>
-          {/* Fotos em cor */}
-          <div className="shrink-0 flex flex-row md:flex-col gap-[3px] w-full md:w-[220px]" data-aos="fade-left" data-aos-delay="80">
-            <div className="flex-1 md:flex-none aspect-[2/3] overflow-hidden">
-              <img src="/images/comunidade/grid-1.webp" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="House Mazzutti" />
-            </div>
-            <div className="flex-1 md:flex-none aspect-[2/3] overflow-hidden">
-              <img src="/images/comunidade/grid-3.webp" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="House Mazzutti" />
-            </div>
-            <div className="flex-1 md:flex-none aspect-[2/3] overflow-hidden">
-              <img src="/images/comunidade/grid-5.webp" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="House Mazzutti" />
-            </div>
-          </div>
         </div>
       </section>
 
