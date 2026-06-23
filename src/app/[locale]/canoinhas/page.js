@@ -115,17 +115,6 @@ export default function TourMarcaPessoalPage() {
         </picture>
         <div className="absolute inset-0 bg-black/65" />
 
-        {/* datas */}
-        <div className="absolute top-0 inset-x-0 z-20 pt-[72px] flex justify-center">
-          <div className="flex items-center gap-5" data-aos="fade-down" data-aos-delay="0">
-            <div className="hmzt-line w-8" />
-            <span className="font-label uppercase tracking-[0.4em] text-[13px] text-white/70">
-              20 · 21 · 22 de Julho · <strong className="font-bold text-white">Canoinhas, SC</strong>
-            </span>
-            <div className="hmzt-line w-8" />
-          </div>
-        </div>
-
         <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center px-6">
 
           <span
@@ -135,7 +124,7 @@ export default function TourMarcaPessoalPage() {
             House Mazzutti apresenta
           </span>
 
-          <div className="mb-7" data-aos="fade-up" data-aos-delay="100">
+          <div className="mb-5" data-aos="fade-up" data-aos-delay="100">
             <p className="font-headline text-[5.5rem] md:text-[8rem] lg:text-[10rem] text-white leading-[0.85] tracking-tight">
               TOUR
             </p>
@@ -144,14 +133,16 @@ export default function TourMarcaPessoalPage() {
             </p>
           </div>
 
-          <div className="hmzt-line w-14 mx-auto mb-7" data-aos="fade-up" data-aos-delay="150" />
+          {/* datas abaixo de Marca Pessoal */}
+          <div className="flex items-center gap-4 mb-6" data-aos="fade-up" data-aos-delay="140">
+            <div className="hmzt-line w-6" />
+            <span className="font-label uppercase tracking-[0.4em] text-[12px] text-white/65">
+              20 · 21 · 22 de Julho · <strong className="font-bold text-white">Canoinhas, SC</strong>
+            </span>
+            <div className="hmzt-line w-6" />
+          </div>
 
-          <p
-            className="font-label uppercase tracking-[0.28em] text-[9px] text-white/45 mb-9 max-w-xs mx-auto leading-relaxed"
-            data-aos="fade-up" data-aos-delay="200"
-          >
-            Posicione sua imagem com quem entende do assunto.
-          </p>
+          <div className="hmzt-line w-14 mx-auto mb-7" data-aos="fade-up" data-aos-delay="170" />
 
           <div className="flex flex-col sm:flex-row gap-3" data-aos="fade-up" data-aos-delay="320">
             <button
@@ -177,68 +168,19 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
-      {/* ── PORTFÓLIO GRID ─────────────────────────────────────────── */}
+      {/* ── PORTFÓLIO GRID — 2×3 portrait ─────────────────────────── */}
       <section className="bg-black">
-        {/* Linha 1: 4 quadrados */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-[2px]">
-          {PORTFOLIO.slice(0, 4).map((img, i) => (
-            <div key={i} className="aspect-square overflow-hidden group">
-              <img src={img.src} alt={img.alt} loading="lazy"
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+        <div className="grid grid-cols-2 gap-[2px]">
+          {PORTFOLIO.map((img, i) => (
+            <div key={i} className="aspect-[2/3] overflow-hidden group">
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
             </div>
           ))}
-        </div>
-        {/* Linha 2: 1 portrait largo + 2 quadrados */}
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-[2px]">
-          <div className="aspect-[4/3] md:aspect-auto overflow-hidden group" style={{minHeight:'320px'}}>
-            <img src={PORTFOLIO[4].src} alt={PORTFOLIO[4].alt} loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div className="aspect-square overflow-hidden group">
-            <img src={PORTFOLIO[5].src} alt={PORTFOLIO[5].alt} loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div className="aspect-square overflow-hidden group">
-            <img src={PORTFOLIO[6].src} alt={PORTFOLIO[6].alt} loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
-        </div>
-        {/* Linha 3: 2 quadrados + 1 wide */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_2fr] gap-[2px]">
-          <div className="aspect-square overflow-hidden group">
-            <img src={PORTFOLIO[7].src} alt={PORTFOLIO[7].alt} loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div className="aspect-square overflow-hidden group">
-            <img src={PORTFOLIO[8].src} alt={PORTFOLIO[8].alt} loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div className="aspect-[2/1] overflow-hidden group">
-            <img src={PORTFOLIO[9].src} alt={PORTFOLIO[9].alt} loading="lazy"
-              className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-          </div>
-        </div>
-        {/* Linha 4: 2 wide */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px]">
-          <div className="aspect-[3/2] overflow-hidden group">
-            <img src={PORTFOLIO[10].src} alt={PORTFOLIO[10].alt} loading="lazy"
-              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div className="aspect-[3/2] overflow-hidden group">
-            <img src={PORTFOLIO[11].src} alt={PORTFOLIO[11].alt} loading="lazy"
-              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-          </div>
-        </div>
-        {/* Linha 5: 2 restantes */}
-        <div className="grid grid-cols-2 gap-[2px]">
-          <div className="aspect-square overflow-hidden group">
-            <img src={PORTFOLIO[12].src} alt={PORTFOLIO[12].alt} loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div className="aspect-square overflow-hidden group">
-            <img src={PORTFOLIO[13].src} alt={PORTFOLIO[13].alt} loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
         </div>
       </section>
 
@@ -275,7 +217,7 @@ export default function TourMarcaPessoalPage() {
             </span>
             <h2 className="font-headline text-[1.8rem] md:text-[2.6rem] text-white tracking-tight">
               Escolha seu nível.<br />
-              <em>Feche agora.</em>
+              <em>Posicione sua imagem com quem entende do assunto.</em>
             </h2>
             <p className="font-label uppercase tracking-[0.25em] text-[9px] text-white/30 mt-4">
               Vagas limitadas para 20 · 21 · 22 de Julho.
