@@ -94,18 +94,21 @@ const FAQS = [
 export default function CasosDaProducaoPage() {
   const css = `
     .cdp-root {
-      --paper: #f0e8d6;
-      --paper-warm: #e8dfc8;
-      --paper-edge: #ddd4ba;
-      --ink: #0a0a08;
-      --ink-soft: #1a1a16;
-      --ink-mute: #5a5646;
-      --ink-light: #8a8470;
-      --rule-soft: #d0c8b0;
-      --forest: #0a0a08;
-      --forest-deep: #0a0a08;
-      --forest-light: #3a3830;
-      --signal: #c9a85c;
+      /* Paleta B&W + cinzas — sem bege, mais arejada */
+      --paper:       #ffffff;   /* branco puro */
+      --paper-warm:  #f6f6f6;   /* cinza quase imperceptível */
+      --paper-edge:  #ececec;   /* cinza claro */
+      --ink:         #0d0d0d;   /* preto profundo */
+      --ink-soft:    #2a2a2a;   /* cinza escuro */
+      --ink-mute:    #6a6a6a;   /* cinza médio (textos secundários) */
+      --ink-light:   #a0a0a0;   /* cinza claro */
+      --rule-soft:   #e6e6e6;   /* borda padrão */
+      --rule-2:      #ededed;   /* borda mais leve */
+      --forest:      #0d0d0d;   /* "verde" agora é só preto */
+      --forest-deep: #181818;   /* preto-cinza dos blocos escuros */
+      --forest-light:#3a3a3a;   /* cinza-grafite */
+      --signal:      #999999;   /* destaque agora é cinza médio, não dourado */
+      --signal-warm: #c4c4c4;   /* destaque claro */
       --display: "Anton", "Oswald", "Impact", sans-serif;
       --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
       --sans: "Inter", Arial, sans-serif;
@@ -143,7 +146,7 @@ export default function CasosDaProducaoPage() {
     .cdp-root .masthead-right { justify-self: end; color: var(--ink-mute); }
 
     /* Nav */
-    .cdp-root .nav { position: sticky; top: 0; z-index: 50; background: rgba(242,239,232,0.94); border-bottom: 1px solid var(--rule-soft); backdrop-filter: blur(8px); }
+    .cdp-root .nav { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, 0.94); border-bottom: 1px solid var(--rule-soft); backdrop-filter: blur(8px); }
     .cdp-root .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; max-width: 1440px; margin: 0 auto; }
     .cdp-root .nav-brand { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink); display: flex; align-items: center; gap: 14px; text-decoration: none; }
     .cdp-root .nav-brand .pip { width: 7px; height: 7px; background: var(--forest); display: inline-block; }
@@ -154,33 +157,33 @@ export default function CasosDaProducaoPage() {
     .cdp-root .nav-cta:hover { background: var(--ink); }
 
     /* Hero */
-    .cdp-root .hero { background: #0a0a08; background-image: radial-gradient(ellipse at top right, rgba(201,168,92,0.18), transparent 55%), radial-gradient(ellipse at bottom left, rgba(0,0,0,0.6), transparent 70%); color: var(--paper); position: relative; overflow: hidden; }
+    .cdp-root .hero { background: var(--forest-deep); background-image: radial-gradient(ellipse at top right, rgba(255,255,255,0.06), transparent 55%), radial-gradient(ellipse at bottom left, rgba(0,0,0,0.45), transparent 70%); color: var(--paper); position: relative; overflow: hidden; }
     .cdp-root .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: stretch; min-height: 92vh; padding: 64px 56px 80px; max-width: 1440px; margin: 0 auto; }
     .cdp-root .hero-left { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
     .cdp-root .hero-tag { display: flex; align-items: center; gap: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--paper); }
     .cdp-root .hero-tag .dot { width: 8px; height: 8px; background: var(--signal); display: inline-block; }
     .cdp-root .hero-tag .ms { flex: 1; height: 1px; background: var(--paper); opacity: 0.35; max-width: 200px; }
-    .cdp-root .hero-headline { font-family: var(--display); font-weight: 400; font-size: clamp(56px, 9vw, 148px); line-height: 0.88; letter-spacing: -0.018em; margin: 28px 0 0; color: var(--paper); text-transform: uppercase; }
+    .cdp-root .hero-headline { font-family: var(--display); font-weight: 400; font-size: clamp(56px, 9vw, 148px); line-height: 0.92; letter-spacing: -0.008em; margin: 28px 0 0; color: var(--paper); text-transform: uppercase; }
     .cdp-root .hero-headline .da { color: var(--paper); opacity: 0.5; font-size: 0.5em; vertical-align: middle; padding: 0 0.1em; }
     .cdp-root .hero-sub { font-family: var(--serif); font-style: italic; font-size: clamp(18px, 1.7vw, 26px); line-height: 1.32; color: var(--paper); max-width: 560px; margin: 36px 0 0; opacity: 0.9; border-left: 2px solid var(--signal); padding-left: 18px; }
-    .cdp-root .hero-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; padding-top: 22px; border-top: 1px solid rgba(242,239,232,0.25); }
+    .cdp-root .hero-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.25); }
     .cdp-root .hero-meta .cell .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--paper); opacity: 0.55; display: block; margin-bottom: 6px; }
     .cdp-root .hero-meta .cell .v { font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.1; color: var(--paper); }
     .cdp-root .hero-right { position: relative; display: flex; align-items: center; justify-content: center; }
     .cdp-root .cover-stack { position: relative; width: 100%; max-width: 420px; aspect-ratio: 2 / 3; transform: rotate(-2deg); filter: drop-shadow(0 35px 70px rgba(0,0,0,0.5)) drop-shadow(0 10px 20px rgba(0,0,0,0.4)); transition: transform .6s cubic-bezier(.2,.7,.3,1); }
     .cdp-root .cover-stack:hover { transform: rotate(-0.8deg) translateY(-6px); }
-    .cdp-root .cover-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; border: 1px solid rgba(242,239,232,0.15); }
+    .cdp-root .cover-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; border: 1px solid rgba(255, 255, 255, 0.15); }
     .cdp-root .cover-placeholder .vol { font-family: var(--mono); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--paper); opacity: 0.5; }
     .cdp-root .cover-placeholder .num { font-family: var(--display); font-weight: 400; font-size: 120px; line-height: 0.85; color: var(--paper); opacity: 0.15; letter-spacing: -0.02em; }
     .cdp-root .cover-placeholder .label { font-family: var(--display); font-weight: 400; font-size: 22px; text-transform: uppercase; color: var(--paper); opacity: 0.4; letter-spacing: -0.01em; text-align: center; padding: 0 24px; }
-    .cdp-root .grid-marks { position: absolute; top: 30px; left: 56px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: rgba(242,239,232,0.28); line-height: 1.7; }
-    .cdp-root .grid-marks-r { position: absolute; bottom: 80px; right: 56px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: rgba(242,239,232,0.28); line-height: 1.7; text-align: right; }
-    .cdp-root .hero-foot { border-top: 1px solid rgba(242,239,232,0.15); padding: 18px 56px; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--paper); background: rgba(0,0,0,0.3); max-width: 1440px; margin: 0 auto; }
+    .cdp-root .grid-marks { position: absolute; top: 30px; left: 56px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: rgba(255, 255, 255, 0.28); line-height: 1.7; }
+    .cdp-root .grid-marks-r { position: absolute; bottom: 80px; right: 56px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: rgba(255, 255, 255, 0.28); line-height: 1.7; text-align: right; }
+    .cdp-root .hero-foot { border-top: 1px solid rgba(255, 255, 255, 0.15); padding: 18px 56px; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--paper); background: rgba(0,0,0,0.3); max-width: 1440px; margin: 0 auto; }
     .cdp-root .hero-foot .star { color: var(--signal); }
 
     /* Pullband */
     .cdp-root .pullband { background: var(--ink); color: var(--paper); padding: 130px 0 120px; text-align: center; position: relative; overflow: hidden; }
-    .cdp-root .pullband::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(42,74,46,0.5), transparent 70%); pointer-events: none; }
+    .cdp-root .pullband::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(30, 30, 30, 0.5), transparent 70%); pointer-events: none; }
     .cdp-root .pullband .wrap { position: relative; }
     .cdp-root .pullband .quote { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 5.6vw, 96px); line-height: 0.96; letter-spacing: -0.012em; text-transform: uppercase; color: var(--paper); margin: 0 auto; max-width: 1080px; }
     .cdp-root .pullband .quote .em { color: var(--signal); display: block; }
@@ -203,7 +206,7 @@ export default function CasosDaProducaoPage() {
     .cdp-root .promise-cols .col h3::before { content: ""; width: 24px; height: 2px; background: currentColor; }
     .cdp-root .promise-cols ul { list-style: none; padding: 0; margin: 0; }
     .cdp-root .promise-cols ul li { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 21px; line-height: 1.32; padding: 18px 0 18px 36px; position: relative; border-bottom: 1px solid; }
-    .cdp-root .promise-cols .col.is ul li { border-color: rgba(242,239,232,0.14); }
+    .cdp-root .promise-cols .col.is ul li { border-color: rgba(255, 255, 255, 0.14); }
     .cdp-root .promise-cols .col.isnot ul li { border-color: var(--rule-soft); }
     .cdp-root .promise-cols ul li:last-child { border-bottom: 0; }
     .cdp-root .promise-cols .col.is ul li::before { content: "+"; position: absolute; left: 0; top: 16px; font-family: var(--mono); font-style: normal; font-weight: 600; font-size: 16px; color: var(--signal); }
@@ -212,7 +215,7 @@ export default function CasosDaProducaoPage() {
     /* TOC — sumário */
     .cdp-root .toc-sec { background: var(--paper-warm); padding: 120px 0 130px; }
     .cdp-root .toc-sec .head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 56px; align-items: end; }
-    .cdp-root .toc-sec .head h2 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(64px, 9vw, 148px); line-height: 0.88; color: var(--ink); margin: 0; letter-spacing: -0.018em; }
+    .cdp-root .toc-sec .head h2 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(64px, 9vw, 148px); line-height: 0.92; color: var(--ink); margin: 0; letter-spacing: -0.005em; }
     .cdp-root .toc-sec .head h2 em { font-style: normal; color: var(--forest); }
     .cdp-root .toc-sec .head .desc { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.45; color: var(--ink-soft); }
     .cdp-root .toc-list { border-top: 1.5px solid var(--ink); }
@@ -238,7 +241,7 @@ export default function CasosDaProducaoPage() {
     .cdp-root .excerpt .meta .from { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--paper); opacity: 0.55; }
     .cdp-root .excerpt-body p { font-family: var(--serif); font-size: 18px; line-height: 1.65; color: var(--paper); opacity: 0.93; margin: 0 0 1.2em; }
     .cdp-root .excerpt-body p.dropcap::first-letter { font-family: var(--display); font-weight: 400; font-size: 4.2em; line-height: 0.92; float: left; padding: 0.06em 0.12em 0 0; color: var(--signal); margin-right: 0.06em; }
-    .cdp-root .excerpt-body .pullquote { font-family: var(--display); font-weight: 400; font-size: 34px; line-height: 1.0; text-transform: uppercase; color: var(--signal); margin: 1.4em -8px; padding: 18px 22px; border-left: 4px solid var(--signal); background: rgba(42,74,46,0.22); letter-spacing: -0.01em; }
+    .cdp-root .excerpt-body .pullquote { font-family: var(--display); font-weight: 400; font-size: 34px; line-height: 1.0; text-transform: uppercase; color: var(--signal); margin: 1.4em -8px; padding: 18px 22px; border-left: 4px solid var(--signal); background: rgba(30, 30, 30, 0.22); letter-spacing: -0.01em; }
 
     /* Audience */
     .cdp-root .audience { background: var(--paper); padding: 120px 0 130px; border-bottom: 1px solid var(--rule-soft); }
@@ -259,14 +262,14 @@ export default function CasosDaProducaoPage() {
     .cdp-root .author-card .strip { height: 4px; background: var(--forest); margin-bottom: 32px; }
     .cdp-root .author-avatar-wrap { position: relative; margin: 0 0 28px; padding-left: 8px; }
     .cdp-root .author-avatar-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--forest); z-index: 0; }
-    .cdp-root .author-avatar { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; overflow: hidden; border: 1px solid rgba(242,239,232,0.18); background: var(--ink); }
+    .cdp-root .author-avatar { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.18); background: var(--ink); }
     .cdp-root .author-avatar-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(15%) contrast(1.05); display: block; }
     .cdp-root .author-card .label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--signal); margin-bottom: 14px; }
     .cdp-root .author-card .nm { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 52px; line-height: 0.92; color: var(--paper); margin-bottom: 18px; letter-spacing: -0.018em; }
     .cdp-root .author-card .nm em { font-style: normal; color: var(--signal); display: block; }
     .cdp-root .author-card .role { font-family: var(--serif); font-style: italic; font-size: 15px; line-height: 1.45; color: var(--paper); opacity: 0.78; margin-bottom: 28px; }
-    .cdp-root .author-card .meta-rows { border-top: 1px solid rgba(242,239,232,0.16); }
-    .cdp-root .author-card .meta-rows .row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(242,239,232,0.16); font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; }
+    .cdp-root .author-card .meta-rows { border-top: 1px solid rgba(255, 255, 255, 0.16); }
+    .cdp-root .author-card .meta-rows .row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.16); font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; }
     .cdp-root .author-card .meta-rows .row span:first-child { color: var(--paper); opacity: 0.5; }
     .cdp-root .author-card .meta-rows .row .v { color: var(--paper); font-family: var(--serif); font-style: italic; font-size: 13px; letter-spacing: 0; text-transform: none; }
     .cdp-root .author-body h2 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(38px, 4.8vw, 72px); line-height: 0.94; color: var(--ink); margin: 0 0 32px; letter-spacing: -0.018em; }
@@ -281,7 +284,7 @@ export default function CasosDaProducaoPage() {
 
     /* Pricing */
     .cdp-root .pricing { background: var(--forest-deep); color: var(--paper); padding: 130px 0; position: relative; overflow: hidden; }
-    .cdp-root .pricing::before { content: ""; position: absolute; top: -30%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(74,122,80,0.5), transparent 70%); pointer-events: none; }
+    .cdp-root .pricing::before { content: ""; position: absolute; top: -30%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(60, 60, 60, 0.5), transparent 70%); pointer-events: none; }
     .cdp-root .pricing .wrap { position: relative; }
     .cdp-root .pricing-head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 56px; align-items: end; }
     .cdp-root .pricing-head .eyebrow { color: var(--signal); display: flex; align-items: center; gap: 14px; }
@@ -299,7 +302,7 @@ export default function CasosDaProducaoPage() {
     .cdp-root .price-right { padding: 40px 36px 44px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; }
     .cdp-root .num-line { display: flex; align-items: center; gap: 14px; }
     .cdp-root .num-line .pill { background: var(--forest); color: var(--paper); font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; padding: 6px 10px; font-weight: 500; }
-    .cdp-root .price { font-family: var(--display); font-weight: 400; font-size: 132px; line-height: 0.86; color: var(--ink); letter-spacing: -0.025em; margin: 8px 0 0; }
+    .cdp-root .price { font-family: var(--display); font-weight: 400; font-size: 132px; line-height: 0.92; color: var(--ink); letter-spacing: -0.012em; margin: 8px 0 0; }
     .cdp-root .price .cur { font-family: var(--mono); font-size: 22px; color: var(--forest); letter-spacing: 0; vertical-align: top; margin-right: 8px; font-weight: 500; }
     .cdp-root .pix-line { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--ink-soft); }
     .cdp-root .btn-buy { display: flex; justify-content: space-between; align-items: center; background: var(--forest); color: var(--paper); font-family: var(--mono); font-weight: 600; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; padding: 22px 26px; text-decoration: none; transition: background .2s; }
@@ -332,7 +335,7 @@ export default function CasosDaProducaoPage() {
 
     /* Final */
     .cdp-root .final { background: var(--ink); color: var(--paper); padding: 150px 0 160px; text-align: center; position: relative; overflow: hidden; }
-    .cdp-root .final::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(42,74,46,0.38), transparent 65%); pointer-events: none; }
+    .cdp-root .final::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(30, 30, 30, 0.38), transparent 65%); pointer-events: none; }
     .cdp-root .final .wrap-narrow { position: relative; }
     .cdp-root .final .quote { font-family: var(--display); font-weight: 400; font-size: clamp(34px, 4.4vw, 68px); line-height: 1.06; text-transform: uppercase; color: var(--paper); margin: 0; letter-spacing: -0.012em; }
     .cdp-root .final .quote .green { color: var(--signal); }
@@ -342,13 +345,13 @@ export default function CasosDaProducaoPage() {
     .cdp-root .btn-primary { background: var(--forest); color: var(--paper); font-family: var(--mono); font-weight: 600; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; padding: 20px 32px; text-decoration: none; transition: background .2s; display: inline-flex; align-items: center; gap: 16px; }
     .cdp-root .btn-primary:hover { background: var(--forest-light); }
     .cdp-root .btn-primary span { font-family: var(--display); font-size: 22px; letter-spacing: 0; }
-    .cdp-root .btn-secondary { background: transparent; color: var(--paper); font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; padding: 20px 28px; text-decoration: none; border: 1px solid rgba(242,239,232,0.28); transition: border-color .2s; }
+    .cdp-root .btn-secondary { background: transparent; color: var(--paper); font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; padding: 20px 28px; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.28); transition: border-color .2s; }
     .cdp-root .btn-secondary:hover { border-color: var(--paper); }
 
     /* Footer */
     .cdp-root footer { background: var(--paper); color: var(--ink); padding: 0 0 32px; border-top: 1px solid var(--rule-soft); }
     .cdp-root .mega-mark { text-align: center; padding: 80px 0 60px; border-bottom: 1px solid var(--rule-soft); }
-    .cdp-root .mega-mark .mark-inner { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(72px, 13vw, 200px); line-height: 0.85; color: var(--ink); letter-spacing: -0.025em; }
+    .cdp-root .mega-mark .mark-inner { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(72px, 13vw, 200px); line-height: 0.92; color: var(--ink); letter-spacing: -0.01em; }
     .cdp-root .mega-mark .mark-inner em { font-style: normal; color: var(--forest); }
     .cdp-root .mega-mark .mark-foot { display: flex; justify-content: space-between; margin-top: 32px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ink-mute); }
     .cdp-root .mega-mark .mark-foot .dot { display: inline-block; width: 4px; height: 4px; background: var(--forest); border-radius: 50%; vertical-align: middle; margin: 0 6px; }
