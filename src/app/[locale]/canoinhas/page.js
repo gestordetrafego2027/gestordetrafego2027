@@ -282,12 +282,17 @@ export default function TourMarcaPessoalPage() {
         <div className="marquee-local pb-20">
           {[...Array(2)].map((_, loop) => (
             [
-              '/images/produtora/institucional/tf/1.webp',
-              '/images/produtora/institucional/tf/3.webp',
-              '/images/produtora/institucional/tf/5.webp',
-              '/images/produtora/institucional/tf/7.webp',
-              '/images/produtora/institucional/tf/9.webp',
-              '/images/produtora/institucional/tf/11.webp',
+              '/images/studio/canoinhas-hotel/1.webp',
+              '/images/studio/canoinhas-hotel/2.webp',
+              '/images/studio/canoinhas-hotel/3.webp',
+              '/images/studio/canoinhas-hotel/4.webp',
+              '/images/studio/canoinhas-hotel/5.webp',
+              '/images/studio/canoinhas-hotel/6.webp',
+              '/images/studio/canoinhas-hotel/7.webp',
+              '/images/studio/canoinhas-hotel/8.webp',
+              '/images/studio/canoinhas-hotel/9.webp',
+              '/images/studio/canoinhas-hotel/10.webp',
+              '/images/studio/canoinhas-hotel/11.webp',
             ].map((src, i) => (
               <div
                 key={`${loop}-${i}`}
