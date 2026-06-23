@@ -407,15 +407,17 @@ export default function TourMarcaPessoalPage() {
 
       {/* ── ANGELO MAZZUTTI ────────────────────────────────────────── */}
       <section className="bg-black border-t border-white/6">
-        <div className="flex flex-col md:flex-row">
-          {/* Foto */}
-          <div className="w-full md:w-[42%] aspect-[3/4] md:aspect-auto md:min-h-[560px] relative overflow-hidden">
-            <img
-              src="/images/angelo/angelo-portrait.webp"
-              alt="Angelo Mazzutti — Diretor Criativo"
-              loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover object-top grayscale"
-            />
+        <div className="flex flex-col md:flex-row items-center">
+          {/* Foto em moldura */}
+          <div className="w-full md:w-[42%] flex items-center justify-center py-16 md:py-24 px-10 md:px-16" data-aos="fade-right">
+            <div className="border border-white/20 p-3 w-full max-w-[260px] md:max-w-[300px]">
+              <img
+                src="/images/angelo/angelo-portrait.webp"
+                alt="Angelo Mazzutti — Diretor Criativo"
+                loading="lazy"
+                className="w-full aspect-[3/4] object-cover object-top"
+              />
+            </div>
           </div>
           {/* Texto */}
           <div className="flex-1 flex flex-col justify-center px-10 md:px-16 py-16 md:py-24" data-aos="fade-left">
