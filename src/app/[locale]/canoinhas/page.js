@@ -110,7 +110,7 @@ export default function TourMarcaPessoalPage() {
             fetchPriority="high"
             src="/images/studio/canoinhas-hero/hero.webp"
             alt="Tour Marca Pessoal — House Mazzutti"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="absolute inset-0 w-full h-full object-cover object-top md:object-[center_30%]"
           />
         </picture>
         <div className="absolute inset-0 bg-black/65" />
