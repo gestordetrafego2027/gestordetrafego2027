@@ -168,6 +168,30 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
+      {/* ── PROMESSA ───────────────────────────────────────────────── */}
+      <section className="bg-white py-20 md:py-28 px-6 text-center">
+        <div className="max-w-[860px] mx-auto">
+          <span
+            className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-300 mb-8 block"
+            data-aos="fade-up"
+          >
+            House Mazzutti · Canoinhas, SC
+          </span>
+          <h2
+            className="font-headline text-black text-[2.2rem] md:text-[3.6rem] lg:text-[4.4rem] leading-[1.0] tracking-tight mb-8"
+            data-aos="fade-up" data-aos-delay="80"
+          >
+            Chegou a hora de transformar sua história em uma mega produção de moda e beleza.
+          </h2>
+          <p
+            className="font-headline text-[1.8rem] md:text-[2.8rem] italic text-zinc-300 tracking-tight"
+            data-aos="fade-up" data-aos-delay="160"
+          >
+            Are u ready?
+          </p>
+        </div>
+      </section>
+
       {/* ── PORTFÓLIO GRID — 2×3 portrait ─────────────────────────── */}
       <section className="bg-black">
         <div className="grid grid-cols-2 gap-[2px]">
