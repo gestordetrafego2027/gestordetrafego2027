@@ -199,53 +199,27 @@ export default function TourMarcaPessoalPage() {
             <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4">
               Para quem é
             </span>
-            <h2 className="font-headline text-[2rem] md:text-[3rem] text-white leading-tight tracking-tight max-w-[600px]">
-              Feito para mulheres que já chegaram — e precisam ser vistas assim.
+            <h2 className="font-headline text-[2.2rem] md:text-[3.4rem] text-white leading-[1.0] tracking-tight max-w-[700px] mb-6">
+              Revela a beleza do seu agora.
             </h2>
+            <p className="font-body text-white/45 text-base md:text-lg leading-relaxed max-w-[560px]">
+              Mãe, empreendedora, solteira, casada, divorciada, empresária, aposentada — não importa a sua fase nem a sua idade. O que importa é que você existe, e merece ser vista.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] border border-white/8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] border border-white/8">
             {[
-              {
-                titulo: 'Empreendedoras',
-                desc: 'Você tem um negócio sólido e precisa que sua imagem comunique o mesmo nível do que entrega.',
-              },
-              {
-                titulo: 'Executivas e líderes',
-                desc: 'Você ocupa uma posição de influência e quer que sua presença digital reflita quem você é de verdade.',
-              },
-              {
-                titulo: 'Profissionais em transição',
-                desc: 'Você está se reposicionando e precisa de uma imagem que abra portas — não que explique o passado.',
-              },
-              {
-                titulo: 'Consultoras e coaches',
-                desc: 'Você vende autoridade e transformação — sua imagem precisa transmitir isso antes mesmo de falar.',
-              },
-              {
-                titulo: 'Criativas e artistas',
-                desc: 'Você tem um universo estético próprio e quer um ensaio que finalmente faça jus ao que você cria.',
-              },
-              {
-                titulo: 'Influenciadoras e creators',
-                desc: 'Você quer elevar o padrão do seu conteúdo com produção editorial de alto nível e direção criativa real.',
-              },
-              {
-                titulo: 'Médicas e profissionais da saúde',
-                desc: 'Você constrói autoridade no digital e precisa de uma imagem que transmita credibilidade e sofisticação.',
-              },
-              {
-                titulo: 'Advogadas e juristas',
-                desc: 'Você representa pessoas e causas — e quer que sua presença inspire confiança à primeira impressão.',
-              },
-              {
-                titulo: 'Mulheres em lançamento',
-                desc: 'Você está lançando algo grande — um livro, um curso, uma marca — e precisa de imagens à altura do momento.',
-              },
+              { titulo: 'Mães', desc: 'Que se esqueceram de aparecer — e estão prontas para se reconhecer.' },
+              { titulo: 'Empreendedoras', desc: 'Que constroem negócios e precisam de uma imagem à altura do que entregam.' },
+              { titulo: 'Solteiras', desc: 'Que estão vivendo uma nova fase e querem celebrar quem se tornaram.' },
+              { titulo: 'Casadas', desc: 'Que querem se reconectar com sua própria identidade — além do papel que ocupam.' },
+              { titulo: 'Divorciadas', desc: 'Que estão recomeçando e precisam de uma imagem que mostre a força desse novo começo.' },
+              { titulo: 'Empresárias', desc: 'Que lideram times e mercados e querem presença visual que inspire respeito.' },
+              { titulo: 'Aposentadas', desc: 'Que chegaram na melhor fase — e têm muito a mostrar sobre quem são agora.' },
+              { titulo: 'Em qualquer fase', desc: 'Porque beleza não tem prazo. Você merece um registro à altura de quem você é hoje.' },
             ].map((item, i) => (
-              <div key={i} className="p-10 border border-white/6" data-aos="fade-up" data-aos-delay={(i % 3 + 1) * 60}>
-                <span className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 block mb-5">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="font-headline text-xl text-white mb-4 leading-tight">{item.titulo}</h3>
-                <p className="font-body text-white/40 text-sm leading-relaxed">{item.desc}</p>
+              <div key={i} className="p-8 border border-white/6" data-aos="fade-up" data-aos-delay={(i % 4 + 1) * 50}>
+                <h3 className="font-headline text-lg text-white mb-3 leading-tight">{item.titulo}</h3>
+                <p className="font-body text-white/35 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
