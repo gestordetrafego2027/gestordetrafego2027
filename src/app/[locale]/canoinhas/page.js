@@ -55,8 +55,8 @@ const PLANOS = [
 
 /* ─── Portfolio grid (12 fotos curadas) ──────────────────── */
 const PORTFOLIO = [
-  { src: '/images/studio/leticia-moraes/capa.webp',    alt: 'Leticia Moraes — House Mazzutti' },
-  { src: '/images/studio/ana-rockenbach/capa.webp',    alt: 'Ana Rockenbach — House Mazzutti' },
+  { src: '/images/produtora/beleza/superbia/1.webp',    alt: 'Superbia — House Mazzutti' },
+  { src: '/images/produtora/beleza/superbia/2.webp',   alt: 'Superbia — House Mazzutti' },
   { src: '/images/studio/talita-dalbo/4.webp',         alt: 'Talita Dalbo — House Mazzutti' },
   { src: '/images/studio/talita-dalbo/3.webp',         alt: 'Talita Dalbo — House Mazzutti' },
   { src: '/images/studio/fernanda-costas/2.webp',      alt: 'Fernanda Costas — House Mazzutti' },
