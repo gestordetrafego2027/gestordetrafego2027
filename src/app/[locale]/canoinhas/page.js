@@ -67,8 +67,8 @@ const PORTFOLIO = [
   { src: '/images/studio/fernanda-treml/3.webp',       alt: 'Fernanda Treml — House Mazzutti' },
   { src: '/images/studio/cynthia-andrade/3.webp',      alt: 'Cynthia Andrade — House Mazzutti' },
   { src: '/images/studio/cynthia-andrade/1.webp',      alt: 'Cynthia Andrade — House Mazzutti' },
-  { src: '/images/produtora/beleza/superbia/3.webp',    alt: 'Superbia — House Mazzutti' },
-  { src: '/images/produtora/beleza/superbia/4.webp',   alt: 'Superbia — House Mazzutti' },
+  { src: '/images/produtora/beleza/superbia/1.webp',    alt: 'Superbia — House Mazzutti' },
+  { src: '/images/produtora/beleza/superbia/2.webp',   alt: 'Superbia — House Mazzutti' },
 ];
 
 /* ─── Galeria final — comunidade (B&W) ───────────────────── */
