@@ -327,11 +327,11 @@ export default function TourMarcaPessoalPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px]">
+          <div className="flex flex-col gap-[2px]">
             {PLANOS.map((plano, idx) => (
               <div
                 key={plano.id}
-                className="relative border border-white/10 p-9 flex flex-col justify-between overflow-hidden group"
+                className="relative aspect-[3/2] border border-white/10 overflow-hidden group"
                 data-aos="fade-up"
                 data-aos-delay={(idx + 1) * 80}
               >
@@ -344,57 +344,58 @@ export default function TourMarcaPessoalPage() {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Overlay escuro */}
-                <div className="absolute inset-0 bg-black/70 group-hover:bg-black/55 transition-colors duration-500" />
-                {/* Conteúdo relativo ao overlay */}
-                <div className="relative z-10 flex flex-col h-full">
+                <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-colors duration-500" />
 
                 {plano.popular && (
-                  <span className="absolute top-5 right-5 font-label text-[8px] tracking-widest bg-white text-black px-2 py-1 group-hover:bg-black group-hover:text-white transition-colors">
+                  <span className="absolute top-5 right-5 font-label text-[8px] tracking-widest bg-white text-black px-2 py-1 z-10">
                     MAIS ESCOLHIDO
                   </span>
                 )}
 
-                <div>
-                  <h3 className="font-headline text-2xl mb-1">{plano.nome}</h3>
-                  <p className="font-label uppercase tracking-[0.2em] text-[9px] text-white/40 group-hover:text-black/50 mb-7">
-                    {plano.tagline}
-                  </p>
-
-                  {/* Tabela de entregáveis */}
-                  <div className="space-y-[6px] mb-8">
-                    {[
-                      { label: 'Produções', valor: plano.producoes },
-                      { label: 'Fotos tratadas', valor: plano.fotos },
-                      { label: 'Vídeo', valor: plano.video },
-                    ].map(({ label, valor }) => (
-                      <div key={label} className="flex items-baseline justify-between gap-4 border-b border-white/8 group-hover:border-black/10 pb-[5px]">
-                        <span className="font-label uppercase tracking-[0.18em] text-[8px] text-white/35 group-hover:text-black/40">{label}</span>
-                        <span className="font-body text-sm text-white/80 group-hover:text-black/80 text-right">{valor}</span>
-                      </div>
-                    ))}
+                {/* Conteúdo em layout horizontal */}
+                <div className="relative z-10 h-full flex flex-col md:flex-row items-stretch p-8 md:p-12 gap-8">
+                  {/* Coluna esquerda: nome + entregáveis */}
+                  <div className="flex flex-col justify-center flex-1">
+                    <h3 className="font-headline text-3xl md:text-4xl text-white mb-1">{plano.nome}</h3>
+                    <p className="font-label uppercase tracking-[0.2em] text-[9px] text-white/40 mb-8">
+                      {plano.tagline}
+                    </p>
+                    <div className="space-y-[6px] max-w-[320px]">
+                      {[
+                        { label: 'Produções', valor: plano.producoes },
+                        { label: 'Fotos tratadas', valor: plano.fotos },
+                        { label: 'Vídeo', valor: plano.video },
+                      ].map(({ label, valor }) => (
+                        <div key={label} className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-[5px]">
+                          <span className="font-label uppercase tracking-[0.18em] text-[8px] text-white/40">{label}</span>
+                          <span className="font-body text-sm text-white/80 text-right">{valor}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Preços */}
-                  <div className="mb-8">
-                    <div className="flex items-center gap-3 mb-1">
-                      <span className="font-body text-sm text-white/25 group-hover:text-black/25 line-through">{plano.precoOriginal}</span>
-                      <span className="font-label text-[8px] tracking-widest text-white/35 group-hover:text-black/40 bg-white/8 group-hover:bg-black/8 px-2 py-[3px]">VOUCHER {plano.voucher}</span>
+                  {/* Divisor vertical */}
+                  <div className="hidden md:block w-px bg-white/10 self-stretch" />
+
+                  {/* Coluna direita: preço + CTA */}
+                  <div className="flex flex-col justify-center items-start md:items-end md:min-w-[220px] gap-4">
+                    <div>
+                      <div className="flex items-center gap-3 mb-1">
+                        <span className="font-body text-sm text-white/30 line-through">{plano.precoOriginal}</span>
+                        <span className="font-label text-[8px] tracking-widest text-white/40 bg-white/8 px-2 py-[3px]">VOUCHER {plano.voucher}</span>
+                      </div>
+                      <span className="font-headline text-4xl md:text-5xl italic text-white block">{plano.preco}</span>
+                      <span className="font-label text-[8px] tracking-widest text-white/30 block mt-1">{plano.label}</span>
                     </div>
-                    <span className="font-headline text-4xl italic text-white group-hover:text-black">{plano.preco}</span>
-                    <span className="font-label text-[8px] tracking-widest text-white/30 group-hover:text-black/40 block mt-1">
-                      {plano.label}
-                    </span>
+                    <button
+                      type="button"
+                      onClick={() => openForm(`plano_${plano.id}`, `${plano.nome} — ${plano.preco}`)}
+                      className="border border-white/50 px-8 py-[14px] font-label uppercase text-[10px] tracking-widest text-white hover:bg-white hover:text-black transition-all duration-300 w-full md:w-auto"
+                    >
+                      {plano.cta}
+                    </button>
                   </div>
                 </div>
-
-                <button
-                  type="button"
-                  onClick={() => openForm(`plano_${plano.id}`, `${plano.nome} — ${plano.preco}`)}
-                  className="w-full border border-white/50 py-[14px] font-label uppercase text-[10px] tracking-widest text-white hover:bg-white hover:text-black transition-all duration-300"
-                >
-                  {plano.cta}
-                </button>
-                </div>{/* /z-10 */}
               </div>
             ))}
           </div>
