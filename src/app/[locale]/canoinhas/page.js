@@ -192,6 +192,78 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
+      {/* ── PÚBLICO ────────────────────────────────────────────────── */}
+      <section className="bg-zinc-950 py-20 md:py-28 px-6 md:px-20 border-t border-white/6">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-14" data-aos="fade-up">
+            <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4">
+              Para quem é
+            </span>
+            <h2 className="font-headline text-[2rem] md:text-[3rem] text-white leading-tight tracking-tight max-w-[600px]">
+              Feito para mulheres que já chegaram — e precisam ser vistas assim.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] border border-white/8">
+            {[
+              {
+                titulo: 'Empreendedoras',
+                desc: 'Você tem um negócio sólido e precisa que sua imagem comunique o mesmo nível do que entrega.',
+              },
+              {
+                titulo: 'Executivas e líderes',
+                desc: 'Você ocupa uma posição de influência e quer que sua presença digital reflita quem você é de verdade.',
+              },
+              {
+                titulo: 'Profissionais em transição',
+                desc: 'Você está se reposicionando e precisa de uma imagem que abra portas — não que explique o passado.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="p-10 border border-white/6" data-aos="fade-up" data-aos-delay={(i + 1) * 80}>
+                <span className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 block mb-5">0{i + 1}</span>
+                <h3 className="font-headline text-xl text-white mb-4 leading-tight">{item.titulo}</h3>
+                <p className="font-body text-white/40 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DIFERENCIAIS ───────────────────────────────────────────── */}
+      <section className="bg-black py-20 md:py-28 px-6 md:px-20 border-t border-white/6">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="flex flex-col md:flex-row gap-16 md:gap-24">
+            <div className="shrink-0 md:w-[340px]" data-aos="fade-right">
+              <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4">
+                Diferenciais
+              </span>
+              <h2 className="font-headline text-[1.9rem] md:text-[2.4rem] text-white leading-tight tracking-tight">
+                Uma produção completa.<br /><em>Não uma sessão de fotos.</em>
+              </h2>
+            </div>
+            <div className="flex-1" data-aos="fade-left" data-aos-delay="80">
+              <div className="space-y-0">
+                {[
+                  { titulo: 'Direção criativa do início ao fim', desc: 'Angelo Mazzutti dirige cada produção com foco em posicionamento, não apenas estética.' },
+                  { titulo: 'Styling e curadoria de looks', desc: 'Cada produção tem looks selecionados para comunicar quem você é — com intenção estratégica.' },
+                  { titulo: 'Set profissional montado', desc: 'Studio completo com iluminação de estúdio, fundo, refletores e equipe técnica presente.' },
+                  { titulo: 'Fotos tratadas em alta resolução', desc: 'Entrega de arquivos prontos para uso em redes sociais, site, press kit e mídia.' },
+                  { titulo: 'Vídeos BTS e fashion film', desc: 'Conteúdo audiovisual para alimentar redes sociais com autoridade e alcance.' },
+                  { titulo: 'Experiência exclusiva e privativa', desc: 'Cobertura exclusiva, equipe dedicada. Nenhum compartilhamento de espaço ou atenção.' },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6 py-5 border-b border-white/8 group" data-aos="fade-up" data-aos-delay={i * 50}>
+                    <span className="font-label text-[9px] text-white/20 pt-[3px] shrink-0 w-5">{String(i + 1).padStart(2, '0')}</span>
+                    <div>
+                      <p className="font-headline text-white text-base mb-1 group-hover:text-white/80 transition-colors">{item.titulo}</p>
+                      <p className="font-body text-white/35 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── PORTFÓLIO GRID — 2×3 portrait ─────────────────────────── */}
       <section className="bg-black">
         <div className="grid grid-cols-2 gap-[2px]">
