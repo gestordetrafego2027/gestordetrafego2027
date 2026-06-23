@@ -254,7 +254,7 @@ export default function TourMarcaPessoalPage() {
                 O Local · Canoinhas, SC
               </span>
               <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-5">
-                Cobertura com pé-direito duplo, luz natural e set preparado para você.
+                Studio completo, equipamentos de primeira linha e um espaço feito para você brilhar.
               </h2>
               <p className="font-label uppercase tracking-[0.35em] text-[10px] text-white/50 italic">
                 Santa Catarina Plaza · Cobertura Privativa
@@ -262,13 +262,13 @@ export default function TourMarcaPessoalPage() {
             </div>
             <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
               <p className="font-body text-white/55 text-[15px] leading-relaxed">
-                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas — espaço amplo, pé-direito duplo e luz natural abundante que transforma cada cena em editorial. Set montado, equipe presente, tudo preparado para que você chegue e apenas seja dirigida.
+                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas — um studio montado com iluminação profissional, equipamentos de última geração e toda a infraestrutura necessária para uma produção de alto padrão. Você chega. A equipe faz o resto.
               </p>
               <p className="font-body text-white/35 text-[14px] leading-relaxed">
-                Ambiente controlado, atmosfera de luxo, discrição total. Nenhum detalhe é deixado ao acaso.
+                Espaço amplo, atmosfera de luxo, discrição total. Cada detalhe pensado para que o resultado seja impecável.
               </p>
               <div className="flex gap-8 pt-3">
-                {['Luz natural', 'Set montado', 'Ambiente privativo', 'Infraestrutura completa'].map(tag => (
+                {['Studio completo', 'Equipamentos pro', 'Ambiente privativo', 'Infraestrutura total'].map(tag => (
                   <span key={tag} className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20">
                     {tag}
                   </span>
