@@ -307,11 +307,8 @@ export default function TourMarcaPessoalPage() {
             </h2>
           </div>
           <div data-aos="fade-left" data-aos-delay="100">
-            <p className="font-body text-zinc-500 text-base leading-relaxed mb-5">
+            <p className="font-body text-zinc-500 text-base leading-relaxed">
               O Tour Marca Pessoal reúne em três dias tudo o que você precisaria para construir uma imagem de verdade: conceito, styling, set montado, direção criativa e entrega de fotos e vídeos prontos para usar.
-            </p>
-            <p className="font-body text-zinc-400 text-sm leading-relaxed">
-              Uma experiência pensada para mulheres que já têm muito a contar — e merecem imagens que estejam à altura disso.
             </p>
           </div>
         </div>
@@ -328,7 +325,7 @@ export default function TourMarcaPessoalPage() {
               Revela a beleza do seu agora.
             </h2>
             <p className="font-body text-white/50 text-base md:text-lg leading-relaxed max-w-[580px]">
-              Você não precisa esperar emagrecer, chegar em algum lugar ou se sentir "pronta". A melhor foto da sua vida pode ser tirada hoje — exatamente como você está, exatamente quem você é.
+              Uma experiência pensada para mulheres que já têm muito a contar — e merecem imagens que estejam à altura disso.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] border border-white/8">
