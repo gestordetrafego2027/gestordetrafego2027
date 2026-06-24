@@ -275,20 +275,20 @@ export default function TourMarcaPessoalPage() {
             <h2 className="font-headline text-[2.2rem] md:text-[3.4rem] text-white leading-[1.0] tracking-tight max-w-[700px] mb-6">
               Revela a beleza do seu agora.
             </h2>
-            <p className="font-body text-white/45 text-base md:text-lg leading-relaxed max-w-[560px]">
-              Mãe, empreendedora, solteira, casada, divorciada, empresária, aposentada — não importa a sua fase nem a sua idade. O que importa é que você existe, e merece ser vista.
+            <p className="font-body text-white/50 text-base md:text-lg leading-relaxed max-w-[580px]">
+              Você não precisa esperar emagrecer, chegar em algum lugar ou se sentir "pronta". A melhor foto da sua vida pode ser tirada hoje — exatamente como você está, exatamente quem você é.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] border border-white/8">
             {[
-              { titulo: 'Mães', desc: 'Que se esqueceram de aparecer — e estão prontas para se reconhecer.' },
-              { titulo: 'Empreendedoras', desc: 'Que constroem negócios e precisam de uma imagem à altura do que entregam.' },
-              { titulo: 'Solteiras', desc: 'Que estão vivendo uma nova fase e querem celebrar quem se tornaram.' },
-              { titulo: 'Casadas', desc: 'Que querem se reconectar com sua própria identidade — além do papel que ocupam.' },
-              { titulo: 'Divorciadas', desc: 'Que estão recomeçando e precisam de uma imagem que mostre a força desse novo começo.' },
-              { titulo: 'Empresárias', desc: 'Que lideram times e mercados e querem presença visual que inspire respeito.' },
-              { titulo: 'Aposentadas', desc: 'Que chegaram na melhor fase — e têm muito a mostrar sobre quem são agora.' },
-              { titulo: 'Em qualquer fase', desc: 'Porque beleza não tem prazo. Você merece um registro à altura de quem você é hoje.' },
+              { titulo: 'Mães', desc: 'Que vivem para os outros e finalmente decidiram aparecer também.' },
+              { titulo: 'Empreendedoras', desc: 'Que constroem tanto — e já é hora de o mundo ver quem está por trás disso.' },
+              { titulo: 'Solteiras', desc: 'Que estão vivendo a própria vida com muita intensidade e querem guardar esse momento.' },
+              { titulo: 'Casadas', desc: 'Que querem se reconhecer além do papel de mãe, esposa, filha.' },
+              { titulo: 'Divorciadas', desc: 'Que saíram mais fortes de um recomeço e têm muito a celebrar.' },
+              { titulo: 'Empresárias', desc: 'Que lideram com presença e querem que sua imagem comunique isso.' },
+              { titulo: 'Aposentadas', desc: 'Que chegaram na fase mais bonita — e nunca se permitiram um registro à altura.' },
+              { titulo: 'Em qualquer fase', desc: 'Beleza não tem prazo. Você merece aparecer agora.' },
             ].map((item, i) => (
               <div key={i} className="p-8 border border-white/6" data-aos="fade-up" data-aos-delay={(i % 4 + 1) * 50}>
                 <h3 className="font-headline text-lg text-white mb-3 leading-tight">{item.titulo}</h3>
