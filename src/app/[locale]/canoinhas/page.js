@@ -369,7 +369,6 @@ export default function TourMarcaPessoalPage() {
             [
               '/images/studio/canoinhas-hotel/1.webp',
               '/images/studio/canoinhas-hotel/2.webp',
-              '/images/studio/canoinhas-hotel/3.webp',
               '/images/studio/canoinhas-hotel/4.webp',
               '/images/studio/canoinhas-hotel/5.webp',
               '/images/studio/canoinhas-hotel/6.webp',
