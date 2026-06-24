@@ -494,17 +494,17 @@ export default function TourMarcaPessoalPage() {
               Direção Criativa
             </span>
             <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-8">
-              O estrategista<br />por trás da House.
+              Ele não tira fotos.<br /><em>Ele conta quem você é.</em>
             </h2>
             <div className="space-y-4 mb-8">
               <p className="font-body text-white/55 text-[15px] leading-relaxed max-w-[420px]">
-                Angelo une visão estética e inteligência de mercado para marcas e pessoas que buscam ir além do óbvio.
+                Angelo Mazzutti é diretor criativo com mais de uma década construindo imagens que fazem sentido — para marcas, empresas e mulheres que querem ser vistas do jeito certo.
               </p>
               <p className="font-body text-white/40 text-[14px] leading-relaxed max-w-[420px]">
-                Traduz a essência de cada projeto em narrativas que ressoam — não apenas aparecem. Transforma visibilidade em desejo, e desejo em valor duradouro.
+                No Tour Marca Pessoal, ele dirige cada detalhe da sua produção com um olhar que mistura estratégia e sensibilidade. O resultado não é uma foto bonita. É um retrato verdadeiro — e poderoso — de quem você é.
               </p>
             </div>
-            <p className="font-headline text-white/70 text-lg italic">— Angelo Mazzutti</p>
+            <p className="font-headline text-white/60 text-lg italic">— Angelo Mazzutti</p>
           </div>
         </div>
       </section>
