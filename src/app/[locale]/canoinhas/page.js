@@ -183,7 +183,7 @@ export default function TourMarcaPessoalPage() {
             className="font-body text-zinc-500 text-base md:text-lg leading-relaxed max-w-[560px] mx-auto mb-8"
             data-aos="fade-up" data-aos-delay="130"
           >
-            O Tour Marca Pessoal não é uma sessão de fotos. É uma experiência completa de direção de imagem — com styling, produção editorial e audiovisual — que acontece em três dias inesquecíveis em Canoinhas, SC.
+            O Tour Marca Pessoal não é apenas uma sessão de fotos. É uma experiência completa de direção de imagem — com styling, produção editorial e audiovisual — que acontece em três dias inesquecíveis em Canoinhas, SC.
           </p>
           <p
             className="font-headline text-[1.6rem] md:text-[2.2rem] italic text-zinc-300 tracking-tight"
