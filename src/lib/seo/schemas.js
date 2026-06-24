@@ -74,6 +74,73 @@ export const agenciaServiceSchema = {
   },
 }
 
+export const brandingServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/agencia/branding/#service`,
+  name: 'Branding e Identidade de Marca',
+  serviceType: 'Branding',
+  url: `${SITE}/pt/agencia/branding/`,
+  description:
+    'Naming, identidade visual e posicionamento para marcas que precisam ser reconhecidas antes de serem explicadas. Da imersão ao fine art, em 35 a 75 dias.',
+  areaServed: {
+    '@type': 'City',
+    name: 'São Paulo',
+    '@id': 'https://www.wikidata.org/wiki/Q174',
+  },
+  provider: {'@id': ORG_ID},
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Branding Project — House Mazzutti',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Naming', description: 'Nome com fonética, disponibilidade e território de posicionamento definidos.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Identidade Visual', description: 'Logo, paleta, tipografia e sistema gráfico aplicável em qualquer ponto de contato.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tom de Voz', description: 'A linguagem da marca — como ela fala, o que afirma, o que recusa.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Arquitetura de Marca', description: 'Hierarquia clara entre marca, linhas e sub-marcas.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand Book', description: 'Manual com todas as regras de uso, reduções e aplicações.' } },
+    ],
+  },
+}
+
+export const brandingFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo leva um projeto de branding na House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Entre 35 e 75 dias, conforme o escopo. A imersão começa na semana um; a entrega final fecha o ciclo.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre branding e identidade visual?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Identidade visual é como a marca aparece. Branding é por que ela é reconhecida. O primeiro é parte — o segundo é o todo.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti atende marcas fora de São Paulo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. O processo é remoto na maior parte — imersão, leitura e aprovações acontecem à distância, com a mesma precisão.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como funciona o investimento em um Branding Project?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sob proposta. O valor responde ao escopo — da marca inteira a uma etapa específica. A leitura inicial define o tamanho do projeto.',
+      },
+    },
+  ],
+}
+
 export const studioServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',

@@ -1,5 +1,6 @@
 'use client';
 import { initAosNative } from '@/lib/aosNative';
+import Image from 'next/image';
 
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useState, useEffect } from 'react';
@@ -7,11 +8,13 @@ import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
+import FormBranding from '@/app/components/forms/FormBranding';
 import LandingTeam from '@/app/components/LandingTeam';
 
 export default function AgenciaBrandingPage() {
     const t = useTranslations('agencia_branding');
     const [formOpen, setFormOpen] = useState(false);
+    const [faqOpen, setFaqOpen] = useState(null);
 
     useEffect(() => {
         const cleanup = initAosNative(); return cleanup;
@@ -22,6 +25,14 @@ export default function AgenciaBrandingPage() {
         { num: t('processo_2_num'), titulo: t('processo_2_titulo'), desc: t('processo_2_desc') },
         { num: t('processo_3_num'), titulo: t('processo_3_titulo'), desc: t('processo_3_desc') },
         { num: t('processo_4_num'), titulo: t('processo_4_titulo'), desc: t('processo_4_desc') },
+        { num: t('processo_5_num'), titulo: t('processo_5_titulo'), desc: t('processo_5_desc') },
+    ];
+
+    const faqItems = [
+        { q: t('faq_1_q'), a: t('faq_1_a') },
+        { q: t('faq_2_q'), a: t('faq_2_a') },
+        { q: t('faq_3_q'), a: t('faq_3_a') },
+        { q: t('faq_4_q'), a: t('faq_4_a') },
     ];
 
     return (
@@ -34,7 +45,14 @@ export default function AgenciaBrandingPage() {
 
             {/* HERO */}
             <section className="relative h-screen w-full overflow-hidden">
-                <img fetchpriority="high" src="/images/agencia/knowhol/capa.webp" alt="Branding Project — House Mazzutti" className="absolute inset-0 w-full h-full object-cover object-center" />
+                <Image
+                    src="/images/agencia/knowhol/capa.webp"
+                    alt="Projeto de branding e identidade de marca — House Mazzutti, São Paulo"
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover object-center"
+                />
                 <div className="absolute inset-0 bg-black/55" />
                 <div className="relative z-10 w-full h-full flex items-center justify-center">
                     <div className="w-full max-w-[600px] flex flex-col items-center text-center px-6">
@@ -46,30 +64,35 @@ export default function AgenciaBrandingPage() {
                         </div>
                         <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">{t('hero_label')}</span>
                         <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
-                        <p className="font-label uppercase tracking-[0.2em] text-[12px] text-white/60 mt-4 mb-8 max-w-[450px] mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">{t('hero_subtitulo')}</p>
-                        <div data-aos="fade-up" data-aos-delay="400">
+                        <p className="font-body text-white/70 mt-4 mb-8 max-w-[440px] mx-auto leading-relaxed text-base md:text-lg" data-aos="fade-up" data-aos-delay="300">{t('hero_subtitulo')}</p>
+                        <div className="flex flex-col sm:flex-row gap-4 items-center" data-aos="fade-up" data-aos-delay="400">
                             <button type="button" onClick={() => setFormOpen(true)} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
                                 {t('hero_cta_btn')}
                             </button>
+                            <a href="#marcas" className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 hover:text-white transition-colors px-4 py-5">
+                                {t('hero_cta_secondary')} ↓
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* MANIFESTO */}
+            {/* REFRAME */}
             <section className="bg-black py-20 px-6 text-center" data-aos="fade-up">
-                <p className="font-headline text-white text-2xl md:text-4xl lg:text-5xl italic leading-tight max-w-4xl mx-auto tracking-tight">
+                <h2 className="font-headline text-white text-2xl md:text-4xl lg:text-5xl leading-tight max-w-4xl mx-auto tracking-tight mb-4">
                     {t('manifesto_texto')}
+                </h2>
+                <p className="font-body text-white/50 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+                    {t('manifesto_desc')}
                 </p>
             </section>
 
-            {/* SERVICES */}
+            {/* ESCOPO */}
             <section className="bg-[#f5f5f5] pt-[5rem] pb-[8rem]">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-16">
                     <div className="mb-16 max-w-2xl" data-aos="fade-up">
                         <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black/50 mb-4 block">{t('services_label')}</span>
                         <h2 className="font-headline text-black tracking-tight text-[1.8rem] md:text-[2.85rem] leading-tight">{t('services_titulo')}</h2>
-                        <p className="text-on-surface-variant font-body font-light text-base md:text-lg mt-4">{t('services_desc')}</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10">
@@ -88,6 +111,10 @@ export default function AgenciaBrandingPage() {
                             </div>
                         ))}
                     </div>
+
+                    <p className="font-body text-on-surface-variant text-sm md:text-base mt-10 text-center" data-aos="fade-up">
+                        {t('services_footer')}
+                    </p>
                 </div>
             </section>
 
@@ -98,9 +125,9 @@ export default function AgenciaBrandingPage() {
                         <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black/40 mb-4 block">{t('processo_label')}</span>
                         <h2 className="font-headline text-black text-[1.8rem] md:text-[2.85rem] leading-tight tracking-tight">{t('processo_titulo')}</h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-black/10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-0 border border-black/10">
                         {processoSteps.map((step, i) => (
-                            <div key={step.num} className={`p-10 flex flex-col gap-6 ${i < processoSteps.length - 1 ? 'border-b md:border-b-0 md:border-r border-black/10' : ''}`} data-aos="fade-up" data-aos-delay={i * 100}>
+                            <div key={step.num} className={`p-10 flex flex-col gap-6 ${i < processoSteps.length - 1 ? 'border-b md:border-b lg:border-b-0 lg:border-r border-black/10' : ''}`} data-aos="fade-up" data-aos-delay={i * 80}>
                                 <span className="font-headline text-5xl text-black/10 leading-none">{step.num}</span>
                                 <div>
                                     <h3 className="font-headline text-xl tracking-tight mb-3">{step.titulo}</h3>
@@ -109,11 +136,14 @@ export default function AgenciaBrandingPage() {
                             </div>
                         ))}
                     </div>
+                    <p className="font-label uppercase tracking-[0.2em] text-[10px] text-black/40 mt-8 text-center" data-aos="fade-up">
+                        {t('processo_prazo')}
+                    </p>
                 </div>
             </section>
 
-            {/* GALLERY — editorial */}
-            <section className="bg-zinc-950 py-24 px-6 md:px-16">
+            {/* PROVA — cases */}
+            <section id="marcas" className="bg-zinc-950 py-24 px-6 md:px-16">
                 <div className="max-w-[1440px] mx-auto">
                     <div className="flex items-end justify-between mb-12" data-aos="fade-up">
                         <div>
@@ -125,60 +155,122 @@ export default function AgenciaBrandingPage() {
                         </Link>
                     </div>
 
-                    {/* Row 1: 1 large + 2 small */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2">
+                    {/* CASE 1: House Mazzutti — dado real */}
+                    <div className="mb-2 grid grid-cols-1 md:grid-cols-3 gap-2">
                         <div className="md:col-span-2 aspect-[16/9] overflow-hidden relative group" data-aos="fade-up">
-                            <img loading="lazy" src="/images/agencia/knowhol/1.webp" alt="Knowhol — House Mazzutti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
-                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Knowhol</span>
+                            <Image
+                                src="/images/agencia/house-mazzutti/capa.webp"
+                                alt="Identidade visual House Mazzutti desenvolvida pela House Mazzutti"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 66vw"
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/50 block mb-1">Casa criativa estratégica</span>
+                                <p className="font-headline text-white text-lg leading-snug">House Mazzutti</p>
+                                <p className="font-body text-white/60 text-sm mt-1">A marca que dirige a leitura das outras: sistema brutalista, monocromático, editorial.</p>
                             </div>
                         </div>
                         <div className="flex flex-col gap-2">
-                            <div className="flex-1 overflow-hidden relative group" data-aos="fade-up" data-aos-delay="50">
-                                <img loading="lazy" src="/images/agencia/knowhol/2.webp" alt="Knowhol — House Mazzutti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="flex-1 min-h-[160px] overflow-hidden relative group" data-aos="fade-up" data-aos-delay="50">
+                                <Image
+                                    src="/images/agencia/house-mazzutti/1.webp"
+                                    alt="Sistema visual House Mazzutti — identidade brutalista e monocromática"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
                             </div>
-                            <div className="flex-1 overflow-hidden relative group" data-aos="fade-up" data-aos-delay="100">
-                                <img loading="lazy" src="/images/agencia/knowhol/3.webp" alt="Knowhol — House Mazzutti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="flex-1 min-h-[160px] overflow-hidden relative group" data-aos="fade-up" data-aos-delay="100">
+                                <Image
+                                    src="/images/agencia/house-mazzutti/2.webp"
+                                    alt="Brand book House Mazzutti — manual de identidade visual"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
                             </div>
                         </div>
                     </div>
 
-                    {/* Row 2: 3 equal + 1 wide */}
+                    {/* Grid visual — demais marcas (segmento/resultado pendente de preenchimento) */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                         <div className="aspect-square overflow-hidden relative group" data-aos="fade-up">
-                            <img loading="lazy" src="/images/agencia/mabdo/1.webp" alt="Mabdo — House Mazzutti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <Image
+                                src="/images/agencia/mabdo/1.webp"
+                                alt="Identidade visual Mabdo desenvolvida pela House Mazzutti"
+                                fill
+                                sizes="(max-width: 768px) 50vw, 25vw"
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Mabdo</span>
                             </div>
                         </div>
                         <div className="aspect-square overflow-hidden relative group" data-aos="fade-up" data-aos-delay="50">
-                            <img loading="lazy" src="/images/agencia/mabdo/2.webp" alt="Mabdo — House Mazzutti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <Image
+                                src="/images/agencia/samrat/capa.webp"
+                                alt="Identidade visual Samrat desenvolvida pela House Mazzutti"
+                                fill
+                                sizes="(max-width: 768px) 50vw, 25vw"
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Samrat</span>
+                            </div>
                         </div>
                         <div className="aspect-square overflow-hidden relative group" data-aos="fade-up" data-aos-delay="100">
-                            <img loading="lazy" src="/images/agencia/alletto/1.webp" alt="Alletto — House Mazzutti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <Image
+                                src="/images/agencia/dra-ariadne-barbosa/dra-ariadne-barbosa-logo-branding-manual-de-marca-identidade-visual-house-mazzutti-agencia-capa.webp"
+                                alt="Identidade visual Dra. Ariadne Barbosa desenvolvida pela House Mazzutti"
+                                fill
+                                sizes="(max-width: 768px) 50vw, 25vw"
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Alletto</span>
+                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Ariadne</span>
                             </div>
                         </div>
                         <div className="aspect-square overflow-hidden relative group" data-aos="fade-up" data-aos-delay="150">
-                            <img loading="lazy" src="/images/agencia/alletto/2.webp" alt="Alletto — House Mazzutti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <Image
+                                src="/images/agencia/knowhol/1.webp"
+                                alt="Identidade visual Knowhol desenvolvida pela House Mazzutti"
+                                fill
+                                sizes="(max-width: 768px) 50vw, 25vw"
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Knowhol</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <LandingTeam
-                heading={t('diferenciais_heading')}
-                items={[
-                    { title: t('diferencial_1_titulo'), desc: t('diferencial_1_desc'), image: '/images/agencia/diferenciais/identidade-coesa.webp', alt: 'Identidade visual coesa — House Mazzutti' },
-                    { title: t('diferencial_2_titulo'), desc: t('diferencial_2_desc'), image: '/images/agencia/diferenciais/posicionamento.webp', alt: 'Posicionamento estratégico de marca — House Mazzutti' },
-                    { title: t('diferencial_3_titulo'), desc: t('diferencial_3_desc'), image: '/images/agencia/diferenciais/brand-book.webp', alt: 'Brand book completo — House Mazzutti' },
-                ]}
-            />
+            {/* DIFERENCIAL */}
+            <div>
+                <div className="max-w-[1440px] mx-auto px-6 md:px-16 pt-20" data-aos="fade-up">
+                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black/40 block">{t('diferenciais_label')}</span>
+                </div>
+                <LandingTeam
+                    heading={t('diferenciais_heading')}
+                    items={[
+                        { title: t('diferencial_1_titulo'), desc: t('diferencial_1_desc'), image: '/images/agencia/diferenciais/identidade-coesa.webp', alt: 'Identidade visual coesa — House Mazzutti' },
+                        { title: t('diferencial_2_titulo'), desc: t('diferencial_2_desc'), image: '/images/agencia/diferenciais/posicionamento.webp', alt: 'Posicionamento estratégico de marca — House Mazzutti' },
+                        { title: t('diferencial_3_titulo'), desc: t('diferencial_3_desc'), image: '/images/agencia/diferenciais/brand-book.webp', alt: 'Brand book completo — House Mazzutti' },
+                    ]}
+                />
+            </div>
 
-            {/* QUOTE */}
+            {/* QUOTE — bloco de citação */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden">
-                <img loading="lazy" src="/images/agencia/mabdo/capa.webp" alt="Branding — House Mazzutti" className="absolute inset-0 w-full h-full object-cover object-center" />
+                <Image
+                    src="/images/agencia/mabdo/capa.webp"
+                    alt="Branding — House Mazzutti"
+                    fill
+                    sizes="100vw"
+                    className="object-cover object-center"
+                />
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 text-center px-8">
                     <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">{t('quote_texto')}</h2>
@@ -186,12 +278,11 @@ export default function AgenciaBrandingPage() {
                 </div>
             </section>
 
-            {/* COMPARATIVE */}
+            {/* COM / SEM */}
             <section className="bg-zinc-50 py-32 px-12 md:px-24">
                 <div className="max-w-[1440px] mx-auto">
                     <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">{t('comparativo_titulo')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black/10">
-                        {/* COM */}
                         <div className="p-12 md:p-16 bg-black" data-aos="fade-right">
                             <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-white/50 mb-12">{t('comparativo_com_label')}</h3>
                             <ul className="space-y-10">
@@ -210,7 +301,6 @@ export default function AgenciaBrandingPage() {
                                 ))}
                             </ul>
                         </div>
-                        {/* SEM */}
                         <div className="p-12 md:p-16" data-aos="fade-left">
                             <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-12">{t('comparativo_sem_label')}</h3>
                             <ul className="space-y-10">
@@ -233,7 +323,46 @@ export default function AgenciaBrandingPage() {
                 </div>
             </section>
 
-            {/* FINAL CTA */}
+            {/* FAQ */}
+            <section className="bg-white py-24 md:py-32 px-6 md:px-24">
+                <div className="max-w-[1440px] mx-auto">
+                    <div className="mb-16" data-aos="fade-up">
+                        <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black/40 mb-4 block">{t('faq_label')}</span>
+                    </div>
+                    <div className="divide-y divide-black/10" data-aos="fade-up">
+                        {faqItems.map((item, i) => (
+                            <div key={i} className="py-6">
+                                <button
+                                    type="button"
+                                    onClick={() => setFaqOpen(faqOpen === i ? null : i)}
+                                    className="w-full flex items-start justify-between gap-6 text-left"
+                                    aria-expanded={faqOpen === i}
+                                >
+                                    <span className="font-headline text-lg md:text-xl tracking-tight">{item.q}</span>
+                                    <span className="material-symbols-outlined text-black/40 shrink-0 mt-1 transition-transform duration-200" style={{transform: faqOpen === i ? 'rotate(45deg)' : 'none'}}>add</span>
+                                </button>
+                                {faqOpen === i && (
+                                    <p className="font-body text-on-surface-variant font-light leading-relaxed mt-4 max-w-3xl">{item.a}</p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* DEPOIMENTOS — aguardando conteúdo real (DEPOIMENTOS ainda <<PREENCHER>>) */}
+            {/*
+            <section className="bg-zinc-50 py-24 md:py-32 px-6 md:px-24">
+                <div className="max-w-[1440px] mx-auto">
+                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black/40 mb-4 block">REPUTAÇÃO</span>
+                    <h2 className="font-headline text-black text-[1.8rem] md:text-[2.85rem] leading-tight tracking-tight mb-16">
+                        O que dizem as marcas que passaram pela House.
+                    </h2>
+                </div>
+            </section>
+            */}
+
+            {/* CTA FINAL */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                 <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up">{t('cta_final_titulo')}</h2>
                 <button type="button" onClick={() => setFormOpen(true)} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="100">
@@ -262,14 +391,7 @@ export default function AgenciaBrandingPage() {
             </footer>
 
             <FormDrawer isOpen={formOpen} onClose={() => setFormOpen(false)} title={t('form_titulo')} subtitle={t('form_subtitulo')}>
-                <div className="flex flex-col gap-6 pt-4">
-                    <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Branding%20Project." target="_blank" rel="noopener noreferrer" className="w-full py-4 bg-black text-white font-label uppercase tracking-[0.2em] text-[10px] text-center hover:bg-zinc-800 transition-colors">
-                        {t('form_whatsapp_btn')}
-                    </a>
-                    <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener noreferrer" className="w-full py-4 border border-black text-black font-label uppercase tracking-[0.2em] text-[10px] text-center hover:bg-black hover:text-white transition-colors">
-                        {t('form_instagram_btn')}
-                    </a>
-                </div>
+                <FormBranding onClose={() => setFormOpen(false)} />
             </FormDrawer>
         </div>
     );
