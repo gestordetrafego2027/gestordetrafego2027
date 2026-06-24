@@ -179,11 +179,17 @@ export default function TourMarcaPessoalPage() {
             className="font-headline text-black text-[2.2rem] md:text-[3.6rem] lg:text-[4.4rem] leading-[1.0] tracking-tight mb-8"
             data-aos="fade-up" data-aos-delay="80"
           >
-            Chegou a hora de transformar sua história em uma mega produção de moda e beleza.
+            Três dias. Uma nova forma de aparecer no mundo.
           </h2>
           <p
-            className="font-headline text-[1.8rem] md:text-[2.8rem] italic text-zinc-300 tracking-tight"
-            data-aos="fade-up" data-aos-delay="160"
+            className="font-body text-zinc-500 text-base md:text-lg leading-relaxed max-w-[560px] mx-auto mb-8"
+            data-aos="fade-up" data-aos-delay="130"
+          >
+            O Tour Marca Pessoal não é uma sessão de fotos. É uma experiência completa de direção de imagem — com styling, produção editorial e audiovisual — que acontece em três dias inesquecíveis em Canoinhas, SC.
+          </p>
+          <p
+            className="font-headline text-[1.6rem] md:text-[2.2rem] italic text-zinc-300 tracking-tight"
+            data-aos="fade-up" data-aos-delay="190"
           >
             Are u ready?
           </p>
@@ -199,18 +205,18 @@ export default function TourMarcaPessoalPage() {
                 Diferenciais
               </span>
               <h2 className="font-headline text-[1.9rem] md:text-[2.4rem] text-white leading-tight tracking-tight">
-                Uma produção completa.<br /><em>Não uma sessão de fotos.</em>
+                Tudo pensado<br /><em>para que você só precise aparecer.</em>
               </h2>
             </div>
             <div className="flex-1" data-aos="fade-left" data-aos-delay="80">
               <div className="space-y-0">
                 {[
-                  { titulo: 'Direção criativa do início ao fim', desc: 'Angelo Mazzutti dirige cada produção com foco em posicionamento, não apenas estética.' },
-                  { titulo: 'Styling e curadoria de looks', desc: 'Cada produção tem looks selecionados para comunicar quem você é — com intenção estratégica.' },
-                  { titulo: 'Set profissional montado', desc: 'Studio completo com iluminação de estúdio, fundo, refletores e equipe técnica presente.' },
-                  { titulo: 'Fotos tratadas em alta resolução', desc: 'Entrega de arquivos prontos para uso em redes sociais, site, press kit e mídia.' },
-                  { titulo: 'Vídeos BTS e fashion film', desc: 'Conteúdo audiovisual para alimentar redes sociais com autoridade e alcance.' },
-                  { titulo: 'Experiência exclusiva e privativa', desc: 'Cobertura exclusiva, equipe dedicada. Nenhum compartilhamento de espaço ou atenção.' },
+                  { titulo: 'Direção criativa do início ao fim', desc: 'Angelo está presente em cada detalhe — do conceito ao clique. Você não precisa saber posar. Ele te guia.' },
+                  { titulo: 'Styling e curadoria de looks', desc: 'Cada produção tem looks escolhidos a dedo para contar quem você é — sem parecer fantasia.' },
+                  { titulo: 'Set profissional montado para você', desc: 'Iluminação, cenário, equipe técnica. Você chega, a gente já preparou tudo.' },
+                  { titulo: 'Fotos tratadas e prontas para usar', desc: 'Arquivos em alta resolução entregues para redes sociais, site, press kit e o que mais precisar.' },
+                  { titulo: 'Vídeos que fazem o feed parar', desc: 'BTS e fashion film para mostrar quem você é em movimento — com autoridade e leveza.' },
+                  { titulo: 'Só você. Nenhuma divisão de atenção.', desc: 'Cobertura exclusiva, equipe dedicada inteiramente a você. Do check-in ao último clique.' },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6 py-5 border-b border-white/8 group" data-aos="fade-up" data-aos-delay={i * 50}>
                     <span className="font-label text-[9px] text-white/20 pt-[3px] shrink-0 w-5">{String(i + 1).padStart(2, '0')}</span>
@@ -226,10 +232,58 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
-      {/* ── PORTFÓLIO GRID — 2×3 portrait ─────────────────────────── */}
+      {/* ── PORTFÓLIO GRID — primeiras 6 fotos ────────────────────── */}
       <section className="bg-black">
         <div className="grid grid-cols-2 gap-[2px]">
-          {PORTFOLIO.map((img, i) => (
+          {PORTFOLIO.slice(0, 6).map((img, i) => (
+            <div key={i} className="aspect-[2/3] overflow-hidden group">
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── BENEFÍCIOS ─────────────────────────────────────────────── */}
+      <section className="bg-white py-20 md:py-28 px-6 md:px-20">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-14" data-aos="fade-up">
+            <span className="font-label uppercase tracking-[0.45em] text-[8px] text-zinc-300 block mb-4">
+              O que está incluído
+            </span>
+            <h2 className="font-headline text-black text-[2rem] md:text-[3rem] leading-[1.0] tracking-tight max-w-[600px]">
+              Tudo que você precisa para uma produção de alto nível.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] border border-black/8">
+            {[
+              { num: '01', titulo: 'Direção criativa completa', desc: 'Angelo Mazzutti dirige cada detalhe — do conceito ao resultado final. Nada por acaso.' },
+              { num: '02', titulo: 'Styling e curadoria de looks', desc: 'Looks selecionados para comunicar quem você é, com intenção e coerência visual.' },
+              { num: '03', titulo: 'Set profissional montado', desc: 'Studio com iluminação de estúdio, fundos, refletores e equipe técnica dedicada.' },
+              { num: '04', titulo: 'Fotos tratadas em alta resolução', desc: 'Arquivos prontos para redes sociais, site, press kit e mídia impressa.' },
+              { num: '05', titulo: 'Vídeo BTS e fashion film', desc: 'Conteúdo audiovisual para alimentar suas redes com autoridade e alcance.' },
+              { num: '06', titulo: 'Experiência exclusiva e privativa', desc: 'Cobertura dedicada. Nenhum compartilhamento de espaço, atenção ou tempo.' },
+            ].map((item, i) => (
+              <div key={i} className="p-8 md:p-10 border border-black/8 flex gap-6" data-aos="fade-up" data-aos-delay={(i % 2) * 60}>
+                <span className="font-label text-[10px] text-black/20 pt-1 shrink-0">{item.num}</span>
+                <div>
+                  <h3 className="font-headline text-black text-lg mb-2 leading-tight">{item.titulo}</h3>
+                  <p className="font-body text-zinc-400 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PORTFÓLIO GRID — últimas 6 fotos ──────────────────────── */}
+      <section className="bg-black">
+        <div className="grid grid-cols-2 gap-[2px]">
+          {PORTFOLIO.slice(6).map((img, i) => (
             <div key={i} className="aspect-[2/3] overflow-hidden group">
               <img
                 src={img.src}
@@ -250,16 +304,16 @@ export default function TourMarcaPessoalPage() {
               O que é
             </span>
             <h2 className="font-headline text-black text-[2rem] md:text-[2.8rem] leading-[1.05] tracking-tight">
-              Experiência e método.<br />
-              <em>Nada por acaso.</em>
+              Três dias que mudam<br />
+              <em>como o mundo te vê.</em>
             </h2>
           </div>
           <div data-aos="fade-left" data-aos-delay="100">
             <p className="font-body text-zinc-500 text-base leading-relaxed mb-5">
-              O Tour Marca Pessoal é uma experiência completa de direção de imagem — conceito, styling, set e curadoria — concentrada em três dias em Canoinhas.
+              O Tour Marca Pessoal reúne em três dias tudo o que você precisaria para construir uma imagem de verdade: conceito, styling, set montado, direção criativa e entrega de fotos e vídeos prontos para usar.
             </p>
             <p className="font-body text-zinc-400 text-sm leading-relaxed">
-              Não é uma sessão de fotos. É a construção da imagem que você vai usar para se posicionar no seu próximo passo.
+              Uma experiência pensada para mulheres que já têm muito a contar — e merecem imagens que estejam à altura disso.
             </p>
           </div>
         </div>
@@ -353,7 +407,7 @@ export default function TourMarcaPessoalPage() {
                 O Local · Canoinhas, SC
               </span>
               <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-5">
-                Studio completo, equipamentos de primeira linha e um espaço feito para você brilhar.
+                Um lugar feito para você se sentir protagonista desde que entra.
               </h2>
               <p className="font-label uppercase tracking-[0.35em] text-[10px] text-white/50 italic">
                 Santa Catarina Plaza · Cobertura Privativa
@@ -361,13 +415,13 @@ export default function TourMarcaPessoalPage() {
             </div>
             <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
               <p className="font-body text-white/55 text-[15px] leading-relaxed">
-                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas — um studio montado com iluminação profissional, equipamentos de última geração e toda a infraestrutura necessária para uma produção de alto padrão. Você chega. A equipe faz o resto.
+                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas. Studio montado com iluminação profissional, equipamentos de última geração e uma atmosfera que coloca você no centro — não no meio de uma agenda cheia.
               </p>
               <p className="font-body text-white/35 text-[14px] leading-relaxed">
-                Espaço amplo, atmosfera de luxo, discrição total. Cada detalhe pensado para que o resultado seja impecável.
+                Espaço amplo, privativo e com toda a infraestrutura para uma produção de alto padrão. Você não precisa se preocupar com nada. A gente cuida de tudo.
               </p>
               <div className="flex flex-wrap gap-8 pt-3">
-                {['Studio completo', 'Equipamentos pro', 'Ambiente privativo', 'Infraestrutura total'].map(tag => (
+                {['Studio completo', 'Equipamentos pro', 'Espaço privativo', 'Infraestrutura total'].map(tag => (
                   <span key={tag} className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20">
                     {tag}
                   </span>
@@ -387,11 +441,11 @@ export default function TourMarcaPessoalPage() {
               Investimento
             </span>
             <h2 className="font-headline text-[1.8rem] md:text-[2.6rem] text-white tracking-tight">
-              Escolha seu nível.<br />
-              <em>Posicione sua imagem com quem entende do assunto.</em>
+              Escolha o seu.<br />
+              <em>Cada nível foi pensado para um momento diferente.</em>
             </h2>
             <p className="font-label uppercase tracking-[0.25em] text-[9px] text-white/30 mt-4">
-              Vagas limitadas para 20 · 21 · 22 de Julho.
+              Vagas limitadas · 20, 21 e 22 de Julho · Canoinhas, SC
             </p>
           </div>
 
@@ -518,17 +572,17 @@ export default function TourMarcaPessoalPage() {
               Sobre a House
             </span>
             <p className="font-headline text-[1.65rem] md:text-[2.1rem] text-white leading-snug tracking-tight mb-8">
-              Não é sobre tirar fotos. É sobre criar ícones.
+              A gente não faz sessão de fotos. A gente constrói a sua imagem.
             </p>
             <div className="space-y-5">
               <p className="font-body text-white/55 text-[15px] leading-relaxed">
-                A House Mazzutti é uma produtora criativa com estúdio próprio em São Paulo, especializada em direção de imagem pessoal, editorial e audiovisual. Cada projeto nasce de um diagnóstico — não de um orçamento.
+                A House Mazzutti é uma produtora criativa com estúdio próprio em São Paulo. Trabalhamos com marcas e pessoas que entendem que imagem não é vaidade — é estratégia. Cada projeto começa com escuta. Termina com algo que só poderia ser você.
               </p>
               <p className="font-body text-white/40 text-[14px] leading-relaxed">
-                Uma experiência pensada do conceito à curadoria — para quem já ocupa um lugar e precisa ser vista nele.
+                O Tour Marca Pessoal é a nossa experiência mais completa levada para fora de São Paulo — para chegar perto de quem quer se reconhecer na própria imagem, onde quer que esteja.
               </p>
               <p className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 pt-2">
-                Controle estético · Coerência · Atmosfera
+                Escuta · Intenção · Resultado
               </p>
             </div>
           </div>
@@ -582,19 +636,19 @@ export default function TourMarcaPessoalPage() {
             className="font-headline text-[1.9rem] md:text-[3rem] text-white leading-tight tracking-tight mb-8"
             data-aos="fade-up" data-aos-delay="80"
           >
-            Chegou a hora de posicionar e viver essa experiência com a House Mazzutti.
+            Você chegou até aqui.<br /><em>Essa é a sua vaga.</em>
           </h2>
           <p
-            className="font-label uppercase tracking-[0.45em] text-[10px] text-white/60 mb-3"
+            className="font-body text-white/50 text-base leading-relaxed max-w-[500px] mx-auto mb-3"
             data-aos="fade-up" data-aos-delay="150"
           >
-            Vagas limitadas.
+            Em julho, em Canoinhas, a House Mazzutti abre portas para mulheres que estão prontas para aparecer de verdade. São vagas contadas — e cada uma delas tem um nome.
           </p>
           <p
-            className="font-body text-white/40 text-sm mb-10"
+            className="font-label uppercase tracking-[0.4em] text-[9px] text-white/30 mb-10"
             data-aos="fade-up" data-aos-delay="190"
           >
-            Escolha seu plano e garanta sua data agora.
+            20 · 21 · 22 de Julho · Canoinhas, SC · Vagas limitadas
           </p>
           <div data-aos="fade-up" data-aos-delay="220">
             <button
