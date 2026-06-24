@@ -14,10 +14,7 @@ const PLANOS = [
     producoes: 3,
     fotos: 10,
     video: 'Making of',
-    precoOriginal: 'R$ 2.700',
-    voucher: '− R$ 500',
-    preco: 'R$ 2.100',
-    label: 'com voucher aplicado',
+    preco: 'R$ 2.700',
     tagline: 'O início da sua imagem.',
     bg: '/images/studio/leticia-moraes/capa.webp',
     cta: 'Fechar Ensaio 01',
@@ -28,10 +25,7 @@ const PLANOS = [
     producoes: 4,
     fotos: 15,
     video: '1 BTS 20"',
-    precoOriginal: 'R$ 3.100',
-    voucher: '− R$ 500',
-    preco: 'R$ 2.600',
-    label: 'com voucher aplicado',
+    preco: 'R$ 3.100',
     tagline: 'Volume e variedade.',
     popular: true,
     bg: '/images/studio/carol-costa/3.webp',
@@ -43,10 +37,7 @@ const PLANOS = [
     producoes: 5,
     fotos: 20,
     video: '1 BTS 20" + 1 Fashion Film 20"',
-    precoOriginal: 'R$ 3.800',
-    voucher: '− R$ 500',
-    preco: 'R$ 3.300',
-    label: 'com voucher aplicado',
+    preco: 'R$ 3.800',
     tagline: 'O pacote completo.',
     bg: '/images/studio/cynthia-andrade/3.webp',
     cta: 'Fechar Ensaio 03',
@@ -476,12 +467,7 @@ export default function TourMarcaPessoalPage() {
                   {/* Coluna direita: preço + CTA */}
                   <div className="flex flex-col justify-center items-start md:items-end md:min-w-[220px] gap-4">
                     <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <span className="font-body text-sm text-white/30 line-through">{plano.precoOriginal}</span>
-                        <span className="font-label text-[8px] tracking-widest text-white/40 bg-white/8 px-2 py-[3px]">VOUCHER {plano.voucher}</span>
-                      </div>
                       <span className="font-headline text-4xl md:text-5xl italic text-white block">{plano.preco}</span>
-                      <span className="font-label text-[8px] tracking-widest text-white/30 block mt-1">{plano.label}</span>
                     </div>
                     <button
                       type="button"
