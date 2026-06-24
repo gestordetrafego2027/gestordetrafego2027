@@ -294,26 +294,6 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
-      {/* ── PROPOSTA ───────────────────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-28 px-6 md:px-[40px]">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-end">
-          <div data-aos="fade-right">
-            <span className="font-label uppercase tracking-[0.35em] text-[9px] text-zinc-400 mb-5 block">
-              O que é
-            </span>
-            <h2 className="font-headline text-black text-[2rem] md:text-[2.8rem] leading-[1.05] tracking-tight">
-              Três dias que mudam<br />
-              <em>como o mundo te vê.</em>
-            </h2>
-          </div>
-          <div data-aos="fade-left" data-aos-delay="100">
-            <p className="font-body text-zinc-500 text-base leading-relaxed">
-              O Tour Marca Pessoal reúne em três dias tudo o que você precisaria para construir uma imagem de verdade: conceito, styling, set montado, direção criativa e entrega de fotos e vídeos prontos para usar.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ── PÚBLICO ────────────────────────────────────────────────── */}
       <section className="bg-zinc-950 py-20 md:py-28 px-6 md:px-20 border-t border-white/6">
         <div className="max-w-[1100px] mx-auto">
