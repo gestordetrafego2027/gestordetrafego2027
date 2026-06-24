@@ -177,7 +177,7 @@ export default function TourMarcaPessoalPage() {
             className="font-headline text-black text-[2.2rem] md:text-[3.6rem] lg:text-[4.4rem] leading-[1.0] tracking-tight mb-8"
             data-aos="fade-up" data-aos-delay="80"
           >
-            Três dias. Uma nova forma de aparecer no mundo.
+            Uma nova forma de aparecer no mundo.
           </h2>
           <p
             className="font-body text-zinc-500 text-base md:text-lg leading-relaxed max-w-[560px] mx-auto mb-8"
