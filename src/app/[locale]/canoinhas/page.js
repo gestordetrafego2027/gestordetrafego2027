@@ -590,6 +590,19 @@ export default function TourMarcaPessoalPage() {
         `}</style>
       </section>
 
+      {/* ── VÍDEO ──────────────────────────────────────────────────── */}
+      <section className="bg-black py-20 md:py-28 px-6 flex flex-col items-center">
+        <div className="w-full max-w-[400px] aspect-[9/16] rounded-sm overflow-hidden" data-aos="fade-up">
+          <iframe
+            src="https://www.youtube.com/embed/P57Wt8VLMuc"
+            title="Tour Marca Pessoal — House Mazzutti"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+      </section>
+
       {/* ── CTA FINAL ──────────────────────────────────────────────── */}
       <section className="relative py-36 px-6 overflow-hidden">
         <img
