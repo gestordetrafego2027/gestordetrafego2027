@@ -1,5 +1,1 @@
-import { permanentRedirect } from 'next/navigation';
-
-export default function AcademyLocalePage() {
-  permanentRedirect('/academy');
-}
+export { default, metadata } from '@/app/academy/page';

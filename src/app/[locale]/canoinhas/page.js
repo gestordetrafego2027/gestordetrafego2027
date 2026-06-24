@@ -69,15 +69,6 @@ const PORTFOLIO = [
   { src: '/images/produtora/beleza/superbia/2.webp',   alt: 'Superbia — House Mazzutti' },
 ];
 
-/* ─── Galeria final — comunidade (B&W) ───────────────────── */
-const GALLERY_BW = [
-  '/images/comunidade/grid-1.webp',
-  '/images/comunidade/grid-2.webp',
-  '/images/comunidade/grid-3.webp',
-  '/images/comunidade/grid-4.webp',
-  '/images/comunidade/grid-5.webp',
-  '/images/comunidade/grid-6.webp',
-];
 
 export default function TourMarcaPessoalPage() {
   const [formCta, setFormCta] = useState(null);
@@ -392,7 +383,7 @@ export default function TourMarcaPessoalPage() {
                   src={src}
                   alt="Local do ensaio — Canoinhas"
                   loading="lazy"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             ))
