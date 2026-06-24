@@ -382,13 +382,6 @@ export default function TourMarcaPessoalPage() {
               <p className="font-body text-white/55 text-[15px] leading-relaxed">
                 O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas. Studio montado com iluminação profissional, equipamentos de última geração e uma atmosfera que coloca você no centro.
               </p>
-              <div className="flex flex-wrap gap-8 pt-3">
-                {['Studio completo', 'Equipamentos pro', 'Espaço privativo', 'Infraestrutura total'].map(tag => (
-                  <span key={tag} className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20">
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </div>
