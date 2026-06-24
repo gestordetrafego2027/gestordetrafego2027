@@ -372,10 +372,10 @@ export default function TourMarcaPessoalPage() {
                 O Local · Canoinhas, SC
               </span>
               <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-5">
-                Um lugar feito para você se sentir protagonista desde que entra.
+                Santa Catarina Plaza ·
               </h2>
               <p className="font-label uppercase tracking-[0.35em] text-[10px] text-white/50 italic">
-                Santa Catarina Plaza · Cobertura Privativa
+                Cobertura Privativa
               </p>
             </div>
             <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
