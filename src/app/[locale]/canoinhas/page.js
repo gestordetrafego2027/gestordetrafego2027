@@ -128,14 +128,7 @@ export default function TourMarcaPessoalPage() {
 
           <div className="hmzt-line w-14 mx-auto mb-7" data-aos="fade-in" data-aos-delay="260" />
 
-          <p
-            className="font-label uppercase tracking-[0.28em] text-[9px] text-white/45 mb-9 max-w-xs mx-auto leading-relaxed"
-            data-aos="fade-in" data-aos-delay="320"
-          >
-            Posicione sua imagem com quem entende do assunto.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3" data-aos="fade-in" data-aos-delay="420">
+          <div className="flex flex-col sm:flex-row gap-3" data-aos="fade-in" data-aos-delay="320">
             <button
               type="button"
               onClick={() => openForm('hero')}
