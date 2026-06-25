@@ -403,7 +403,7 @@ export default function StudioPage() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             <div className="flex flex-col items-center space-y-8">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="architecture">architecture</span>
-                                <h3 className="text-h3 uppercase">Pré-produção</h3>
+                                <h3 className="font-headline font-light text-xl">Pré-produção</h3>
                                 <div className="text-body text-secondary measure-tight space-y-2 text-left">
                                     <p>— Reunião de briefing</p>
                                     <p>— Análise de perfil</p>
@@ -414,7 +414,7 @@ export default function StudioPage() {
                             </div>
                             <div className="flex flex-col items-center space-y-8">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="design_services">design_services</span>
-                                <h3 className="text-h3 uppercase">Execução</h3>
+                                <h3 className="font-headline font-light text-xl">Execução</h3>
                                 <div className="text-body text-secondary measure-tight space-y-2 text-left">
                                     <p>— Call sheet e preparação</p>
                                     <p>— Roteiros visuais e trilhas</p>
@@ -425,7 +425,7 @@ export default function StudioPage() {
                             </div>
                             <div className="flex flex-col items-center space-y-8">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="brush">brush</span>
-                                <h3 className="text-h3 uppercase">Pós-produção</h3>
+                                <h3 className="font-headline font-light text-xl">Pós-produção</h3>
                                 <div className="text-body text-secondary measure-tight space-y-2 text-left">
                                     <p>— Aprovação e escolha</p>
                                     <p>— Edições finais</p>
@@ -542,8 +542,8 @@ export default function StudioPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 transition-all duration-500" />
                                 <div className="absolute bottom-0 left-0 p-8 md:p-10">
-                                    <p className="text-caption text-white/60 mb-3 uppercase tracking-widest">{card.tag}</p>
-                                    <h3 className="text-h3 text-white font-bold uppercase mb-4">{card.title}</h3>
+                                    <p className="font-label uppercase tracking-[0.45em] text-[9px] text-white/40 mb-3">{card.tag}</p>
+                                    <h3 className="font-headline font-light text-white text-2xl mb-4">{card.title}</h3>
                                     <span className="text-caption text-white/80 flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
                                         Saiba mais →
                                     </span>
@@ -590,7 +590,7 @@ export default function StudioPage() {
             {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
             <section className="bg-white py-24 px-8 border-t border-zinc-100">
                 <div className="max-w-3xl mx-auto">
-                    <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-400 mb-6">Perguntas frequentes</p>
+                    <p className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-400 mb-6">Perguntas frequentes</p>
                     <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">O que você precisa saber antes de começar</h2>
                     <div className="space-y-0">
                         {[

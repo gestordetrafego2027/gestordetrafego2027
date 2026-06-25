@@ -20,7 +20,7 @@ export default function LandingPricing({ service, openForm }) {
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-24">
             <span
-              className="font-label uppercase tracking-[0.2em] text-[10px] text-outline mb-4 block"
+              className="font-label uppercase tracking-[0.45em] text-[9px] text-outline mb-4 block"
               data-aos="fade-up"
             >
               {config.sectionKicker}
@@ -44,7 +44,7 @@ export default function LandingPricing({ service, openForm }) {
               >
                 {tier.popular && (
                   <div className="absolute top-6 right-6">
-                    <span className="font-label text-[8px] tracking-widest bg-black text-white px-2 py-1 group-hover:bg-white group-hover:text-black">
+                    <span className="font-label text-[8px] tracking-[0.4em] bg-black text-white px-2 py-1 group-hover:bg-white group-hover:text-black">
                       MOST POPULAR
                     </span>
                   </div>
@@ -78,7 +78,7 @@ export default function LandingPricing({ service, openForm }) {
                       openForm(`package_${tier.id}`, `${tier.name} - ${tier.price}`);
                     }
                   }}
-                  className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all group-hover:border-white"
+                  className="w-full border border-primary py-4 font-label uppercase text-[10px] tracking-[0.4em] hover:bg-primary hover:text-white transition-all group-hover:border-white"
                 >
                   {tier.ctaLabel}
                 </button>

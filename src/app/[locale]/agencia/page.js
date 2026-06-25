@@ -307,8 +307,8 @@ export default function AgenciaPage() {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 transition-all duration-500" />
                                         <div className="absolute bottom-0 left-0 p-8 md:p-10">
-                                            <p className="text-caption text-white/60 mb-3 uppercase tracking-widest">{card.items.join(' · ')}</p>
-                                            <h3 className="text-h3 text-white font-bold uppercase mb-4">{card.title}</h3>
+                                            <p className="font-label uppercase tracking-[0.45em] text-[9px] text-white/40 mb-3">{card.items.join(' · ')}</p>
+                                            <h3 className="font-headline font-light text-white text-2xl mb-4">{card.title}</h3>
                                             <span className="text-caption text-white/80 flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
                                                 {t('saiba_mais')} →
                                             </span>
@@ -441,7 +441,7 @@ export default function AgenciaPage() {
             {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
             <section className="bg-white py-24 px-8 border-t border-zinc-100">
                 <div className="max-w-3xl mx-auto">
-                    <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-400 mb-6">{t('faq_label')}</p>
+                    <p className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-400 mb-6">{t('faq_label')}</p>
                     <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">{t('faq_titulo')}</h2>
                     <div className="space-y-0">
                         {t.raw('faq').map(({q, a}, i) => (

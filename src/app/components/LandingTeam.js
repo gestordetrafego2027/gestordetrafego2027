@@ -44,7 +44,7 @@ export default function LandingTeam({
     <section className="bg-white px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-12">
-          <span className="font-label uppercase tracking-[0.3em] text-zinc-400 block mb-2 text-[10px]">
+          <span className="font-label uppercase tracking-[0.45em] text-zinc-400 block mb-2 text-[9px]">
             {eyebrow}
           </span>
           <h2 className="font-headline text-3xl md:text-4xl text-black">
