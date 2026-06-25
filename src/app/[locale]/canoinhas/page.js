@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { initAosNative } from '@/lib/aosNative';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
-import FormStudio from '@/app/components/forms/FormStudio';
+import FormCanoinhas from '@/app/components/forms/FormCanoinhas';
 
 /* ─── Planos ─────────────────────────────────────────────── */
 const PLANOS = [
@@ -605,10 +605,8 @@ export default function TourMarcaPessoalPage() {
         }
         subtitle="Vagas limitadas · 20, 21 e 22 de Julho · Canoinhas, SC"
       >
-        <FormStudio
+        <FormCanoinhas
           onClose={closeForm}
-          serviceType="ensaio"
-          sourceUrl="/canoinhas"
           packageSelected={formCta?.packageSelected ?? null}
           ctaLocation={formCta?.ctaLocation ?? null}
         />
