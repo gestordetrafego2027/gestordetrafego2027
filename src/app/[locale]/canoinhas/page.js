@@ -165,7 +165,7 @@ export default function TourMarcaPessoalPage() {
             House Mazzutti · Canoinhas, SC
           </span>
           <h2
-            className="font-headline text-black text-[2.2rem] md:text-[3.6rem] lg:text-[4.4rem] leading-[1.0] tracking-tight mb-8"
+            className="font-headline font-light text-black text-[2.2rem] md:text-[3.6rem] lg:text-[4.4rem] leading-[1.05] tracking-normal mb-8"
             data-aos="fade-up" data-aos-delay="80"
           >
             Uma nova forma de aparecer no mundo.
@@ -208,7 +208,7 @@ export default function TourMarcaPessoalPage() {
             <span className="font-label uppercase tracking-[0.45em] text-[8px] text-zinc-300 block mb-4">
               O que está incluído
             </span>
-            <h2 className="font-headline text-black text-[2rem] md:text-[3rem] leading-[1.0] tracking-tight max-w-[600px]">
+            <h2 className="font-headline font-light text-black text-[2rem] md:text-[3rem] leading-[1.05] tracking-normal max-w-[600px]">
               Tudo que você precisa para uma produção de alto nível.
             </h2>
           </div>
@@ -256,7 +256,7 @@ export default function TourMarcaPessoalPage() {
             <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4">
               Para quem é
             </span>
-            <h2 className="font-headline text-[2.2rem] md:text-[3.4rem] text-white leading-[1.0] tracking-tight max-w-[700px] mb-6">
+            <h2 className="font-headline font-light text-[2.2rem] md:text-[3.4rem] text-white leading-[1.05] tracking-normal max-w-[700px] mb-6">
               Revela a beleza do seu agora.
             </h2>
             <p className="font-body text-white/50 text-base md:text-lg leading-relaxed max-w-[580px]">
@@ -335,7 +335,7 @@ export default function TourMarcaPessoalPage() {
               <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 block mb-4">
                 O Local · Canoinhas, SC
               </span>
-              <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-5">
+              <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-normal mb-5">
                 Santa Catarina Plaza ·
               </h2>
               <p className="font-label uppercase tracking-[0.35em] text-[10px] text-white/50 italic">
@@ -359,7 +359,7 @@ export default function TourMarcaPessoalPage() {
             <span className="font-label uppercase tracking-[0.35em] text-[9px] text-white/40 mb-4 block">
               Investimento
             </span>
-            <h2 className="font-headline text-[1.8rem] md:text-[2.6rem] text-white tracking-tight">
+            <h2 className="font-headline font-light text-[1.8rem] md:text-[2.6rem] text-white tracking-normal">
               Escolha o seu.<br />
               <em>Cada nível foi pensado para um momento diferente.</em>
             </h2>
@@ -461,7 +461,7 @@ export default function TourMarcaPessoalPage() {
             <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 mb-6 block">
               Direção Criativa
             </span>
-            <h2 className="font-headline text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-tight mb-8">
+            <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-normal mb-8">
               Ele não tira fotos.<br /><em>Ele conta quem você é.</em>
             </h2>
             <div className="space-y-4 mb-8">
@@ -485,7 +485,7 @@ export default function TourMarcaPessoalPage() {
             <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 block mb-3">
               Sobre a House
             </span>
-            <p className="font-headline text-[1.65rem] md:text-[2.1rem] text-white leading-snug tracking-tight mb-8">
+            <p className="font-headline font-light text-[1.65rem] md:text-[2.1rem] text-white leading-snug tracking-normal mb-8">
               A gente não faz sessão de fotos. A gente constrói a sua imagem.
             </p>
             <div className="space-y-5">
@@ -560,7 +560,7 @@ export default function TourMarcaPessoalPage() {
             20 · 21 · 22 de Julho · Canoinhas, SC
           </span>
           <h2
-            className="font-headline text-[1.9rem] md:text-[3rem] text-white leading-tight tracking-tight mb-8"
+            className="font-headline font-light text-[1.9rem] md:text-[3rem] text-white leading-tight tracking-normal mb-8"
             data-aos="fade-up" data-aos-delay="80"
           >
             Você chegou até aqui.<br /><em>Essa é a sua vaga.</em>
