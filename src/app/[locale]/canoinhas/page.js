@@ -16,7 +16,7 @@ const PLANOS = [
     video: 'Making of',
     preco: 'R$ 2.700',
     tagline: 'O início da sua imagem.',
-    bg: '/images/studio/leticia-moraes/capa.webp',
+    bg: '/images/studio/carol-costa/4.webp',
     cta: 'Fechar Ensaio 01',
   },
   {
@@ -28,7 +28,7 @@ const PLANOS = [
     preco: 'R$ 3.100',
     tagline: 'Volume e variedade.',
     popular: true,
-    bg: '/images/studio/carol-costa/3.webp',
+    bg: '/images/produtora/beleza/superbia/1.webp',
     cta: 'Fechar Ensaio 02',
   },
   {
@@ -50,12 +50,8 @@ const PORTFOLIO = [
   { src: '/images/studio/talita-dalbo/3.webp',         alt: 'Talita Dalbo — House Mazzutti' },
   { src: '/images/studio/fernanda-costas/2.webp',      alt: 'Fernanda Costas — House Mazzutti' },
   { src: '/images/studio/fernanda-costas/3.webp',      alt: 'Fernanda Costas — House Mazzutti' },
-  { src: '/images/studio/carol-costa/3.webp',          alt: 'Carol Costa — House Mazzutti' },
-  { src: '/images/studio/carol-costa/4.webp',          alt: 'Carol Costa — House Mazzutti' },
   { src: '/images/studio/fernanda-treml/1.webp',       alt: 'Fernanda Treml — House Mazzutti' },
   { src: '/images/studio/fernanda-treml/3.webp',       alt: 'Fernanda Treml — House Mazzutti' },
-  { src: '/images/studio/cynthia-andrade/3.webp',      alt: 'Cynthia Andrade — House Mazzutti' },
-  { src: '/images/studio/cynthia-andrade/1.webp',      alt: 'Cynthia Andrade — House Mazzutti' },
 ];
 
 
