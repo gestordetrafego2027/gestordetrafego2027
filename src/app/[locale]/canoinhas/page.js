@@ -56,8 +56,6 @@ const PORTFOLIO = [
   { src: '/images/studio/fernanda-treml/3.webp',       alt: 'Fernanda Treml — House Mazzutti' },
   { src: '/images/studio/cynthia-andrade/3.webp',      alt: 'Cynthia Andrade — House Mazzutti' },
   { src: '/images/studio/cynthia-andrade/1.webp',      alt: 'Cynthia Andrade — House Mazzutti' },
-  { src: '/images/produtora/beleza/superbia/1.webp',    alt: 'Superbia — House Mazzutti' },
-  { src: '/images/produtora/beleza/superbia/2.webp',   alt: 'Superbia — House Mazzutti' },
 ];
 
 
@@ -233,7 +231,7 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
-      {/* ── PORTFÓLIO GRID — últimas 6 fotos ──────────────────────── */}
+      {/* ── PORTFÓLIO GRID — últimas fotos ────────────────────────── */}
       <section className="bg-black">
         <div className="grid grid-cols-2 gap-[2px]">
           {PORTFOLIO.slice(6).map((img, i) => (
@@ -246,6 +244,41 @@ export default function TourMarcaPessoalPage() {
               />
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── ANGELO MAZZUTTI ────────────────────────────────────────── */}
+      <section className="bg-white border-t border-black/8">
+        <div className="flex flex-col md:flex-row items-center">
+          {/* Foto em moldura */}
+          <div className="w-full md:w-[42%] flex items-center justify-center py-16 md:py-24 px-10 md:px-16" data-aos="fade-right">
+            <div className="border border-black/15 p-3 w-full max-w-[260px] md:max-w-[300px]">
+              <img
+                src="/images/angelo/angelo-portrait.webp"
+                alt="Angelo Mazzutti — Diretor Criativo"
+                loading="lazy"
+                className="w-full aspect-[3/4] object-cover object-top"
+              />
+            </div>
+          </div>
+          {/* Texto */}
+          <div className="flex-1 flex flex-col justify-center px-10 md:px-16 py-16 md:py-24" data-aos="fade-left">
+            <span className="font-label uppercase tracking-[0.4em] text-[8px] text-black/30 mb-6 block">
+              Direção Criativa
+            </span>
+            <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-black leading-tight tracking-normal mb-8">
+              Ele conta quem você é.<br /><em>Publicitário, Diretor Criativo e Fotógrafo.</em>
+            </h2>
+            <div className="space-y-4 mb-8">
+              <p className="font-body text-zinc-600 text-[15px] leading-relaxed max-w-[420px]">
+                Angelo Mazzutti é diretor criativo com mais de uma década construindo imagens que fazem sentido — para marcas, empresas e mulheres que querem ser vistas do jeito certo.
+              </p>
+              <p className="font-body text-zinc-400 text-[14px] leading-relaxed max-w-[420px]">
+                No Tour Marca Pessoal, ele dirige cada detalhe da sua produção com um olhar que mistura estratégia e sensibilidade. O resultado não é uma foto bonita. É um retrato verdadeiro — e poderoso — de quem você é.
+              </p>
+            </div>
+            <p className="font-headline text-zinc-400 text-lg italic">— Angelo Mazzutti</p>
+          </div>
         </div>
       </section>
 
@@ -439,41 +472,6 @@ export default function TourMarcaPessoalPage() {
           <p className="font-body text-white/25 text-xs text-center mt-8" data-aos="fade-up">
             Reserva com 30% · saldo na entrega · cartão ou PIX
           </p>
-        </div>
-      </section>
-
-      {/* ── ANGELO MAZZUTTI ────────────────────────────────────────── */}
-      <section className="bg-white border-t border-black/8">
-        <div className="flex flex-col md:flex-row items-center">
-          {/* Foto em moldura */}
-          <div className="w-full md:w-[42%] flex items-center justify-center py-16 md:py-24 px-10 md:px-16" data-aos="fade-right">
-            <div className="border border-black/15 p-3 w-full max-w-[260px] md:max-w-[300px]">
-              <img
-                src="/images/angelo/angelo-portrait.webp"
-                alt="Angelo Mazzutti — Diretor Criativo"
-                loading="lazy"
-                className="w-full aspect-[3/4] object-cover object-top"
-              />
-            </div>
-          </div>
-          {/* Texto */}
-          <div className="flex-1 flex flex-col justify-center px-10 md:px-16 py-16 md:py-24" data-aos="fade-left">
-            <span className="font-label uppercase tracking-[0.4em] text-[8px] text-black/30 mb-6 block">
-              Direção Criativa
-            </span>
-            <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-black leading-tight tracking-normal mb-8">
-              Ele conta quem você é.<br /><em>Publicitário, Diretor Criativo e Fotógrafo.</em>
-            </h2>
-            <div className="space-y-4 mb-8">
-              <p className="font-body text-zinc-600 text-[15px] leading-relaxed max-w-[420px]">
-                Angelo Mazzutti é diretor criativo com mais de uma década construindo imagens que fazem sentido — para marcas, empresas e mulheres que querem ser vistas do jeito certo.
-              </p>
-              <p className="font-body text-zinc-400 text-[14px] leading-relaxed max-w-[420px]">
-                No Tour Marca Pessoal, ele dirige cada detalhe da sua produção com um olhar que mistura estratégia e sensibilidade. O resultado não é uma foto bonita. É um retrato verdadeiro — e poderoso — de quem você é.
-              </p>
-            </div>
-            <p className="font-headline text-zinc-400 text-lg italic">— Angelo Mazzutti</p>
-          </div>
         </div>
       </section>
 
