@@ -5,7 +5,7 @@ import { submitLead } from '@/lib/submitLead'
 import { clientLog } from '@/lib/logger-client'
 
 // ⚠️  Substitua pelo número real com DDI+DDD, sem espaços ou símbolos
-const HOUSE_WHATSAPP = '5511999999999'
+const HOUSE_WHATSAPP = '5511952347533'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
