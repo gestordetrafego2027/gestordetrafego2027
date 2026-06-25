@@ -443,11 +443,11 @@ export default function TourMarcaPessoalPage() {
       </section>
 
       {/* ── ANGELO MAZZUTTI ────────────────────────────────────────── */}
-      <section className="bg-black border-t border-white/6">
+      <section className="bg-white border-t border-black/8">
         <div className="flex flex-col md:flex-row items-center">
           {/* Foto em moldura */}
           <div className="w-full md:w-[42%] flex items-center justify-center py-16 md:py-24 px-10 md:px-16" data-aos="fade-right">
-            <div className="border border-white/20 p-3 w-full max-w-[260px] md:max-w-[300px]">
+            <div className="border border-black/15 p-3 w-full max-w-[260px] md:max-w-[300px]">
               <img
                 src="/images/angelo/angelo-portrait.webp"
                 alt="Angelo Mazzutti — Diretor Criativo"
@@ -458,21 +458,21 @@ export default function TourMarcaPessoalPage() {
           </div>
           {/* Texto */}
           <div className="flex-1 flex flex-col justify-center px-10 md:px-16 py-16 md:py-24" data-aos="fade-left">
-            <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 mb-6 block">
+            <span className="font-label uppercase tracking-[0.4em] text-[8px] text-black/30 mb-6 block">
               Direção Criativa
             </span>
-            <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-normal mb-8">
+            <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-black leading-tight tracking-normal mb-8">
               Ele não tira fotos.<br /><em>Ele conta quem você é.</em>
             </h2>
             <div className="space-y-4 mb-8">
-              <p className="font-body text-white/55 text-[15px] leading-relaxed max-w-[420px]">
+              <p className="font-body text-zinc-600 text-[15px] leading-relaxed max-w-[420px]">
                 Angelo Mazzutti é diretor criativo com mais de uma década construindo imagens que fazem sentido — para marcas, empresas e mulheres que querem ser vistas do jeito certo.
               </p>
-              <p className="font-body text-white/40 text-[14px] leading-relaxed max-w-[420px]">
+              <p className="font-body text-zinc-400 text-[14px] leading-relaxed max-w-[420px]">
                 No Tour Marca Pessoal, ele dirige cada detalhe da sua produção com um olhar que mistura estratégia e sensibilidade. O resultado não é uma foto bonita. É um retrato verdadeiro — e poderoso — de quem você é.
               </p>
             </div>
-            <p className="font-headline text-white/60 text-lg italic">— Angelo Mazzutti</p>
+            <p className="font-headline text-zinc-400 text-lg italic">— Angelo Mazzutti</p>
           </div>
         </div>
       </section>
