@@ -137,7 +137,7 @@ export default function TourMarcaPessoalPage() {
               onClick={() => openForm('hero')}
               className="border border-white text-white px-12 py-[17px] font-label uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-colors duration-300"
             >
-              Garantir minha vaga
+              Garantir minha agenda
             </button>
             <button
               type="button"
@@ -182,42 +182,6 @@ export default function TourMarcaPessoalPage() {
           >
             Are u ready?
           </p>
-        </div>
-      </section>
-
-      {/* ── DIFERENCIAIS ───────────────────────────────────────────── */}
-      <section className="bg-black py-20 md:py-28 px-6 md:px-20 border-t border-white/6">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="flex flex-col md:flex-row gap-16 md:gap-24">
-            <div className="shrink-0 md:w-[340px]" data-aos="fade-right">
-              <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4">
-                Diferenciais
-              </span>
-              <h2 className="font-headline text-[1.9rem] md:text-[2.4rem] text-white leading-tight tracking-tight">
-                Tudo pensado<br /><em>para que você só precise aparecer.</em>
-              </h2>
-            </div>
-            <div className="flex-1" data-aos="fade-left" data-aos-delay="80">
-              <div className="space-y-0">
-                {[
-                  { titulo: 'Direção criativa do início ao fim', desc: 'Angelo está presente em cada detalhe — do conceito ao clique. Você não precisa saber posar. Ele te guia.' },
-                  { titulo: 'Styling e curadoria de looks', desc: 'Cada produção tem looks escolhidos a dedo para contar quem você é — sem parecer fantasia.' },
-                  { titulo: 'Set profissional montado para você', desc: 'Iluminação, cenário, equipe técnica. Você chega, a gente já preparou tudo.' },
-                  { titulo: 'Fotos tratadas e prontas para usar', desc: 'Arquivos em alta resolução entregues para redes sociais, site, press kit e o que mais precisar.' },
-                  { titulo: 'Vídeos que fazem o feed parar', desc: 'BTS e fashion film para mostrar quem você é em movimento — com autoridade e leveza.' },
-                  { titulo: 'Só você. Nenhuma divisão de atenção.', desc: 'Cobertura exclusiva, equipe dedicada inteiramente a você. Do check-in ao último clique.' },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-6 py-5 border-b border-white/8 group" data-aos="fade-up" data-aos-delay={i * 50}>
-                    <span className="font-label text-[9px] text-white/20 pt-[3px] shrink-0 w-5">{String(i + 1).padStart(2, '0')}</span>
-                    <div>
-                      <p className="font-headline text-white text-base mb-1 group-hover:text-white/80 transition-colors">{item.titulo}</p>
-                      <p className="font-body text-white/35 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -619,7 +583,7 @@ export default function TourMarcaPessoalPage() {
               onClick={() => openForm('cta_final')}
               className="border border-white text-white px-14 py-[18px] font-label uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-colors duration-300"
             >
-              Garantir minha vaga
+              Garantir minha agenda
             </button>
           </div>
         </div>
@@ -643,7 +607,7 @@ export default function TourMarcaPessoalPage() {
         title={
           formCta?.packageSelected
             ? `Fechar — ${formCta.packageSelected}`
-            : 'Garantir minha vaga'
+            : 'Garantir minha agenda'
         }
         subtitle="Vagas limitadas · 20, 21 e 22 de Julho · Canoinhas, SC"
       >
