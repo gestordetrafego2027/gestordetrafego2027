@@ -63,9 +63,10 @@ export async function POST(req: NextRequest) {
     .from('store_orders')
     .insert({
       status: 'pending',
-      payment_provider: 'asaas',
+      payment_gateway: 'asaas',
       subtotal_cents: plan.cents,
       discount_cents: 0,
+      tax_cents: 0,
       total_cents: plan.cents,
       currency: 'brl',
       buyer_email: body.buyerEmail,
