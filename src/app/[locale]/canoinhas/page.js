@@ -192,20 +192,14 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
-      {/* ── PORTFÓLIO GRID — primeiras 6 fotos ────────────────────── */}
+      {/* ── GRID PORTFOLIO — imagem colagem ───────────────────────── */}
       <section className="bg-black">
-        <div className="grid grid-cols-2 gap-[2px]">
-          {PORTFOLIO.slice(0, 6).map((img, i) => (
-            <div key={i} className="aspect-[2/3] overflow-hidden group">
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-          ))}
-        </div>
+        <img
+          src="/images/house-mazzutti-foto-grid-portfolio-mulheres-ensaio.jpg"
+          alt="Portfólio House Mazzutti — Ensaio Pessoal"
+          loading="lazy"
+          className="w-full block"
+        />
       </section>
 
       {/* ── BENEFÍCIOS ─────────────────────────────────────────────── */}
