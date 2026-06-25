@@ -525,7 +525,7 @@ export default function TourMarcaPessoalPage() {
                 A House Mazzutti é uma produtora criativa com estúdio próprio em São Paulo. Trabalhamos com marcas e pessoas que entendem que imagem não é vaidade — é estratégia. Cada projeto começa com escuta. Termina com algo que só poderia ser você.
               </p>
               <p className="font-body text-white/40 text-[14px] leading-relaxed">
-                O Tour Marca Pessoal é a nossa experiência mais completa levada para fora de São Paulo — para chegar perto de quem quer se reconhecer na própria imagem, onde quer que esteja.
+                O Tour Marca Pessoal é a nossa experiência mais completa — criada para chegar perto de quem quer se reconhecer na própria imagem, onde quer que esteja.
               </p>
               <p className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 pt-2">
                 Escuta · Intenção · Resultado
