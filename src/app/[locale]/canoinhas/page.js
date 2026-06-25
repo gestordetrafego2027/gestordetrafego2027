@@ -85,7 +85,7 @@ export default function TourMarcaPessoalPage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
         >
-          <source src="/videos/hero-tour.mp4" type="video/mp4" />
+          <source src="/videos/hero-tour-new.mp4" type="video/mp4" />
         </video>
         {/* Desktop: foto */}
         <picture className="hidden md:block">
