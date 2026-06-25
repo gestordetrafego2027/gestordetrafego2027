@@ -68,7 +68,7 @@ export default function TourMarcaPessoalPage() {
 
   return (
     <div className="bg-black text-white font-body antialiased">
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style>{`
         .hmzt-line { height: 0.5px; background: currentColor; opacity: 0.2; }
         @keyframes marquee-local { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         .marquee-local { display: flex; width: max-content; animation: marquee-local 32s linear infinite; will-change: transform; backface-visibility: hidden; }
@@ -76,7 +76,7 @@ export default function TourMarcaPessoalPage() {
         @keyframes marquee-house { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         .marquee-house { display: flex; width: max-content; animation: marquee-house 28s linear infinite; will-change: transform; backface-visibility: hidden; }
         .marquee-house:hover { animation-play-state: paused; }
-      `}} />
+      `}</style>
 
       <h1 className="sr-only">Tour Marca Pessoal — House Mazzutti · Canoinhas, SC · 20, 21 e 22 de Julho</h1>
       <Header variant="dark" />
@@ -365,7 +365,7 @@ export default function TourMarcaPessoalPage() {
             </div>
             <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
               <p className="font-body text-black/55 text-[15px] leading-relaxed">
-                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas. Studio montado com iluminação profissional, equipamentos de última geração e uma atmosfera que coloca você no centro.
+                O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas. Estúdio montado com iluminação profissional, equipamentos de última geração e uma atmosfera que coloca você no centro.
               </p>
             </div>
           </div>
