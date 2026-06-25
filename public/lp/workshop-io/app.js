@@ -60,8 +60,8 @@
     if(numEl) numEl.textContent = pad(si+1) + ' — ' + pad(slides.length);
   }
   function auto(){ clearInterval(sTimer); sTimer = setInterval(()=> go(si+1), 4600); }
-  $('#heroNext').addEventListener('click', ()=>{ go(si+1); auto(); });
-  $('#heroPrev').addEventListener('click', ()=>{ go(si-1); auto(); });
+  $('#heroNext')?.addEventListener('click', ()=>{ go(si+1); auto(); });
+  $('#heroPrev')?.addEventListener('click', ()=>{ go(si-1); auto(); });
   auto();
 
   /* ---- rotating taglines ---- */

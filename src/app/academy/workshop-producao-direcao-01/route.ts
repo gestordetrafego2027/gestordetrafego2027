@@ -101,7 +101,7 @@ export function GET() {
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
       <div class="hero-rot"><span class="rot" id="rot">Onde a criação encontra a execução</span></div>
-      <p class="hero-sub">Uma imersão de direção criativa e produção executiva de campanhas. Viva uma campanha por inteiro — da concepção da ideia <em>(Inside)</em> à execução de excelência <em>(Out)</em>.</p>
+      <p class="hero-sub">Uma imersão de direção criativa e produção executiva de campanhas. Viva uma produção por inteiro — da concepção da ideia <em>(Inside)</em> à execução de excelência <em>(Out)</em>.</p>
     </div>
 
     <div class="hero-foot">
@@ -141,7 +141,7 @@ export function GET() {
       <span class="eyebrow">01 — Conceito</span>
       <span class="sec-index">Imersão Inside Out · Edit 2</span>
     </div>
-    <h2 class="big" data-reveal>Você está pronto para criar conteúdo <em>de verdade?</em></h2>
+    <h2 class="big" data-reveal>Cansado de executar sem <em>entender o processo?</em></h2>
     <div class="concept-foot">
       <p class="lead" data-reveal>Mais do que um curso. Uma experiência criativa, profunda e estratégica onde você vai aprender, praticar e <strong>entregar uma campanha publicitária real</strong> — do briefing ao shooting.</p>
       <p data-reveal data-reveal-d="1" style="color:#54524d;line-height:1.5">Em dois dias intensivos, Angelo Mazzutti condensa uma década de visão, técnica e mercado. <em>Inside Out</em> é uma metáfora sobre autoconhecimento criativo e exposição profissional: da essência à imagem, da ideia à campanha.</p>
