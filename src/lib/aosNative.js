@@ -9,14 +9,21 @@ export function initAosNative() {
   style.textContent = `
     [data-aos] {
       opacity: 0;
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition: opacity 1s cubic-bezier(0.25,0.1,0.25,1), transform 1s cubic-bezier(0.25,0.1,0.25,1);
     }
-    [data-aos="fade-up"]   { transform: translateY(32px); }
-    [data-aos="fade-down"] { transform: translateY(-32px); }
-    [data-aos="fade-left"] { transform: translateX(32px); }
-    [data-aos="fade-right"]{ transform: translateX(-32px); }
-    [data-aos="zoom-in"]   { transform: scale(0.92); }
-    [data-aos].aos-visible { opacity: 1; transform: none; }
+    /* Fotos — aparecem com leveza, leve escala */
+    [data-aos="fade-photo"]  { transform: scale(1.04); transition: opacity 1.4s cubic-bezier(0.25,0.1,0.25,1), transform 1.4s cubic-bezier(0.25,0.1,0.25,1); }
+    /* Títulos grandes — deslizam com elegância */
+    [data-aos="slide-title"] { transform: translateY(40px); transition: opacity 1.1s cubic-bezier(0.16,1,0.3,1), transform 1.1s cubic-bezier(0.16,1,0.3,1); }
+    /* Texto pequeno / labels — aparecem no lugar */
+    [data-aos="fade-in"]     { transition: opacity 1s cubic-bezier(0.25,0.1,0.25,1); }
+    /* Legados */
+    [data-aos="fade-up"]     { transform: translateY(28px); }
+    [data-aos="fade-down"]   { transform: translateY(-28px); }
+    [data-aos="fade-left"]   { transform: translateX(28px); }
+    [data-aos="fade-right"]  { transform: translateX(-28px); }
+    [data-aos="zoom-in"]     { transform: scale(0.94); }
+    [data-aos].aos-visible   { opacity: 1; transform: none; }
   `;
   if (!document.getElementById('aos-native-style')) document.head.appendChild(style);
 

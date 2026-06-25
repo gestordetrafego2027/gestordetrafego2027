@@ -103,12 +103,12 @@ export default function TourMarcaPessoalPage() {
 
           <span
             className="font-label uppercase tracking-[0.45em] text-[9px] text-white/40 mb-3 block"
-            data-aos="fade-up" data-aos-delay="50"
+            data-aos="fade-in" data-aos-delay="50"
           >
             House Mazzutti apresenta
           </span>
 
-          <div className="mb-5" data-aos="fade-up" data-aos-delay="100">
+          <div className="mb-5" data-aos="slide-title" data-aos-delay="100">
             <p className="font-headline text-[5.5rem] md:text-[8rem] lg:text-[10rem] text-white leading-[0.85] tracking-tight">
               TOUR
             </p>
@@ -118,7 +118,7 @@ export default function TourMarcaPessoalPage() {
           </div>
 
           {/* datas abaixo de Marca Pessoal */}
-          <div className="flex items-center gap-4 mb-6" data-aos="fade-up" data-aos-delay="140">
+          <div className="flex items-center gap-4 mb-6" data-aos="fade-in" data-aos-delay="200">
             <div className="hmzt-line w-6" />
             <span className="font-label uppercase tracking-[0.4em] text-[12px] text-white/65">
               20 · 21 · 22 de Julho · <strong className="font-bold text-white">Canoinhas, SC</strong>
@@ -126,16 +126,16 @@ export default function TourMarcaPessoalPage() {
             <div className="hmzt-line w-6" />
           </div>
 
-          <div className="hmzt-line w-14 mx-auto mb-7" data-aos="fade-up" data-aos-delay="170" />
+          <div className="hmzt-line w-14 mx-auto mb-7" data-aos="fade-in" data-aos-delay="260" />
 
           <p
             className="font-label uppercase tracking-[0.28em] text-[9px] text-white/45 mb-9 max-w-xs mx-auto leading-relaxed"
-            data-aos="fade-up" data-aos-delay="240"
+            data-aos="fade-in" data-aos-delay="320"
           >
             Posicione sua imagem com quem entende do assunto.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3" data-aos="fade-up" data-aos-delay="320">
+          <div className="flex flex-col sm:flex-row gap-3" data-aos="fade-in" data-aos-delay="420">
             <button
               type="button"
               onClick={() => openForm('hero')}
@@ -164,25 +164,25 @@ export default function TourMarcaPessoalPage() {
         <div className="max-w-[860px] mx-auto">
           <span
             className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-300 mb-8 block"
-            data-aos="fade-up"
+            data-aos="fade-in"
           >
             House Mazzutti · Canoinhas, SC
           </span>
           <h2
             className="font-headline font-light text-black text-[2.2rem] md:text-[3.6rem] lg:text-[4.4rem] leading-[1.05] tracking-normal mb-8"
-            data-aos="fade-up" data-aos-delay="80"
+            data-aos="slide-title" data-aos-delay="80"
           >
             Uma nova forma de aparecer no mundo.
           </h2>
           <p
             className="font-body text-zinc-500 text-base md:text-lg leading-relaxed max-w-[560px] mx-auto mb-8"
-            data-aos="fade-up" data-aos-delay="130"
+            data-aos="fade-in" data-aos-delay="200"
           >
             O Tour Marca Pessoal não é apenas uma sessão de fotos. É uma experiência completa de direção de imagem — com styling, produção editorial e audiovisual — que acontece em três dias inesquecíveis em Canoinhas, SC.
           </p>
           <p
             className="font-headline text-[1.6rem] md:text-[2.2rem] italic text-zinc-300 tracking-tight"
-            data-aos="fade-up" data-aos-delay="190"
+            data-aos="slide-title" data-aos-delay="300"
           >
             Are u ready?
           </p>
@@ -195,6 +195,7 @@ export default function TourMarcaPessoalPage() {
           src="/images/house-mazzutti-foto-grid-portfolio-mulheres-ensaio.jpg"
           alt="Portfólio House Mazzutti — Ensaio Pessoal"
           loading="lazy"
+          data-aos="fade-photo"
           className="w-full block"
         />
       </section>
@@ -202,11 +203,11 @@ export default function TourMarcaPessoalPage() {
       {/* ── BENEFÍCIOS ─────────────────────────────────────────────── */}
       <section className="bg-white py-20 md:py-28 px-6 md:px-20">
         <div className="max-w-[1100px] mx-auto">
-          <div className="mb-14" data-aos="fade-up">
-            <span className="font-label uppercase tracking-[0.45em] text-[8px] text-zinc-300 block mb-4">
+          <div className="mb-14">
+            <span className="font-label uppercase tracking-[0.45em] text-[8px] text-zinc-300 block mb-4" data-aos="fade-in">
               O que está incluído
             </span>
-            <h2 className="font-headline font-light text-black text-[2rem] md:text-[3rem] leading-[1.05] tracking-normal max-w-[600px]">
+            <h2 className="font-headline font-light text-black text-[2rem] md:text-[3rem] leading-[1.05] tracking-normal max-w-[600px]" data-aos="slide-title" data-aos-delay="80">
               Tudo que você precisa para uma produção de alto nível.
             </h2>
           </div>
@@ -235,7 +236,7 @@ export default function TourMarcaPessoalPage() {
       <section className="bg-black">
         <div className="grid grid-cols-2 gap-[2px]">
           {PORTFOLIO.slice(6).map((img, i) => (
-            <div key={i} className="aspect-[2/3] overflow-hidden group">
+            <div key={i} className="aspect-[2/3] overflow-hidden group" data-aos="fade-photo" data-aos-delay={i * 80}>
               <img
                 src={img.src}
                 alt={img.alt}
@@ -251,7 +252,7 @@ export default function TourMarcaPessoalPage() {
       <section className="bg-white border-t border-black/8">
         <div className="flex flex-col md:flex-row items-center">
           {/* Foto em moldura */}
-          <div className="w-full md:w-[42%] flex items-center justify-center py-16 md:py-24 px-10 md:px-16" data-aos="fade-right">
+          <div className="w-full md:w-[42%] flex items-center justify-center py-16 md:py-24 px-10 md:px-16" data-aos="fade-photo">
             <div className="border border-black/15 p-3 w-full max-w-[260px] md:max-w-[300px]">
               <img
                 src="/images/angelo/angelo-portrait.webp"
@@ -262,11 +263,11 @@ export default function TourMarcaPessoalPage() {
             </div>
           </div>
           {/* Texto */}
-          <div className="flex-1 flex flex-col justify-center px-10 md:px-16 py-16 md:py-24" data-aos="fade-left">
-            <span className="font-label uppercase tracking-[0.4em] text-[8px] text-black/30 mb-6 block">
+          <div className="flex-1 flex flex-col justify-center px-10 md:px-16 py-16 md:py-24">
+            <span className="font-label uppercase tracking-[0.4em] text-[8px] text-black/30 mb-6 block" data-aos="fade-in">
               Direção Criativa
             </span>
-            <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-black leading-tight tracking-normal mb-8">
+            <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-black leading-tight tracking-normal mb-8" data-aos="slide-title" data-aos-delay="100">
               Ele conta quem você é.<br /><em>Publicitário, Diretor Criativo e Fotógrafo.</em>
             </h2>
             <div className="space-y-4 mb-8">
@@ -285,14 +286,14 @@ export default function TourMarcaPessoalPage() {
       {/* ── PÚBLICO ────────────────────────────────────────────────── */}
       <section className="bg-zinc-950 py-20 md:py-28 px-6 md:px-20 border-t border-white/6">
         <div className="max-w-[1100px] mx-auto">
-          <div className="mb-14" data-aos="fade-up">
-            <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4">
+          <div className="mb-14">
+            <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4" data-aos="fade-in">
               Para quem é
             </span>
-            <h2 className="font-headline font-light text-[2.2rem] md:text-[3.4rem] text-white leading-[1.05] tracking-normal max-w-[700px] mb-6">
+            <h2 className="font-headline font-light text-[2.2rem] md:text-[3.4rem] text-white leading-[1.05] tracking-normal max-w-[700px] mb-6" data-aos="slide-title" data-aos-delay="80">
               Revela a beleza do seu agora.
             </h2>
-            <p className="font-body text-white/50 text-base md:text-lg leading-relaxed max-w-[580px]">
+            <p className="font-body text-white/50 text-base md:text-lg leading-relaxed max-w-[580px]" data-aos="fade-in" data-aos-delay="180">
               Uma experiência pensada para mulheres que já têm muito a contar — e merecem imagens que estejam à altura disso.
             </p>
           </div>
@@ -388,15 +389,15 @@ export default function TourMarcaPessoalPage() {
       <section id="planos" className="bg-zinc-950 px-6 md:px-[40px] py-20 md:py-28">
         <div className="max-w-[1100px] mx-auto">
 
-          <div className="mb-16" data-aos="fade-up">
-            <span className="font-label uppercase tracking-[0.35em] text-[9px] text-white/40 mb-4 block">
+          <div className="mb-16">
+            <span className="font-label uppercase tracking-[0.35em] text-[9px] text-white/40 mb-4 block" data-aos="fade-in">
               Investimento
             </span>
-            <h2 className="font-headline font-light text-[1.8rem] md:text-[2.6rem] text-white tracking-normal">
+            <h2 className="font-headline font-light text-[1.8rem] md:text-[2.6rem] text-white tracking-normal" data-aos="slide-title" data-aos-delay="80">
               Escolha o seu.<br />
               <em>Cada nível foi pensado para um momento diferente.</em>
             </h2>
-            <p className="font-label uppercase tracking-[0.25em] text-[9px] text-white/30 mt-4">
+            <p className="font-label uppercase tracking-[0.25em] text-[9px] text-white/30 mt-4" data-aos="fade-in" data-aos-delay="200">
               Vagas limitadas · 20, 21 e 22 de Julho · Canoinhas, SC
             </p>
           </div>
@@ -539,35 +540,36 @@ export default function TourMarcaPessoalPage() {
           loading="lazy"
           src="/images/studio/francielle-reis/4.webp"
           alt=""
+          data-aos="fade-photo"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/72" />
         <div className="relative z-10 max-w-[700px] mx-auto text-center">
           <span
             className="font-label uppercase tracking-[0.4em] text-[9px] text-white/35 mb-7 block"
-            data-aos="fade-up"
+            data-aos="fade-in"
           >
             20 · 21 · 22 de Julho · Canoinhas, SC
           </span>
           <h2
             className="font-headline font-light text-[1.9rem] md:text-[3rem] text-white leading-tight tracking-normal mb-8"
-            data-aos="fade-up" data-aos-delay="80"
+            data-aos="slide-title" data-aos-delay="80"
           >
             Você chegou até aqui.<br /><em>Essa é a sua vaga.</em>
           </h2>
           <p
             className="font-body text-white/50 text-base leading-relaxed max-w-[500px] mx-auto mb-3"
-            data-aos="fade-up" data-aos-delay="150"
+            data-aos="fade-in" data-aos-delay="200"
           >
             Em julho, em Canoinhas, a House Mazzutti abre portas para mulheres que estão prontas para aparecer de verdade. São vagas contadas — e cada uma delas tem um nome.
           </p>
           <p
             className="font-label uppercase tracking-[0.4em] text-[9px] text-white/30 mb-10"
-            data-aos="fade-up" data-aos-delay="190"
+            data-aos="fade-in" data-aos-delay="280"
           >
             20 · 21 · 22 de Julho · Canoinhas, SC · Vagas limitadas
           </p>
-          <div data-aos="fade-up" data-aos-delay="220">
+          <div data-aos="fade-in" data-aos-delay="360">
             <button
               type="button"
               onClick={() => openForm('cta_final')}
