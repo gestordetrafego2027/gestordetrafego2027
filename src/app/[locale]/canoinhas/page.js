@@ -318,7 +318,7 @@ export default function TourMarcaPessoalPage() {
       </section>
 
       {/* ── LOCAL & ACOMODAÇÃO ─────────────────────────────────────── */}
-      <section className="bg-black overflow-hidden">
+      <section className="bg-[#f4f4f2] overflow-hidden">
         <style>{`
           @keyframes marquee-local {
             from { transform: translateX(0); }
