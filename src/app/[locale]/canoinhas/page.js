@@ -81,15 +81,16 @@ export default function TourMarcaPessoalPage() {
 
       {/* ── HERO ───────────────────────────────────────────────────── */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Mobile: vídeo YouTube como fundo */}
-        <div className="absolute inset-0 md:hidden overflow-hidden">
-          <iframe
-            src="https://www.youtube.com/embed/P57Wt8VLMuc?autoplay=1&mute=1&loop=1&playlist=P57Wt8VLMuc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-            allow="autoplay; encrypted-media"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] pointer-events-none"
-            style={{ border: 'none' }}
-          />
-        </div>
+        {/* Mobile: vídeo MP4 como fundo */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
+        >
+          <source src="/videos/hero-tour.mp4" type="video/mp4" />
+        </video>
         {/* Desktop: foto */}
         <picture className="hidden md:block">
           <source media="(min-width: 768px)" srcSet="/images/studio/canoinhas-hero/desktop.webp" />
