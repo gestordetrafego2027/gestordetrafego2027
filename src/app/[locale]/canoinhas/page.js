@@ -386,18 +386,18 @@ export default function TourMarcaPessoalPage() {
       </section>
 
       {/* ── PLANOS ─────────────────────────────────────────────────── */}
-      <section id="planos" className="bg-zinc-950 px-6 md:px-[40px] py-20 md:py-28">
+      <section id="planos" className="bg-white px-6 md:px-[40px] py-20 md:py-28">
         <div className="max-w-[1100px] mx-auto">
 
           <div className="mb-16">
-            <span className="font-label uppercase tracking-[0.35em] text-[9px] text-white/40 mb-4 block" data-aos="fade-in">
+            <span className="font-label uppercase tracking-[0.35em] text-[9px] text-black/40 mb-4 block" data-aos="fade-in">
               Investimento
             </span>
-            <h2 className="font-headline font-light text-[1.8rem] md:text-[2.6rem] text-white tracking-normal" data-aos="slide-title" data-aos-delay="80">
+            <h2 className="font-headline font-light text-[1.8rem] md:text-[2.6rem] text-black tracking-normal" data-aos="slide-title" data-aos-delay="80">
               Escolha o seu.<br />
               <em>Cada nível foi pensado para um momento diferente.</em>
             </h2>
-            <p className="font-label uppercase tracking-[0.25em] text-[9px] text-white/30 mt-4" data-aos="fade-in" data-aos-delay="200">
+            <p className="font-label uppercase tracking-[0.25em] text-[9px] text-black/30 mt-4" data-aos="fade-in" data-aos-delay="200">
               Vagas limitadas · 20, 21 e 22 de Julho · Canoinhas, SC
             </p>
           </div>
@@ -462,7 +462,7 @@ export default function TourMarcaPessoalPage() {
             ))}
           </div>
 
-          <p className="font-body text-white/25 text-xs text-center mt-8" data-aos="fade-up">
+          <p className="font-body text-black/25 text-xs text-center mt-8" data-aos="fade-up">
             Reserva com 30% · saldo na entrega · cartão ou PIX
           </p>
         </div>
