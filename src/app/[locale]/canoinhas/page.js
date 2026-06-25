@@ -215,10 +215,10 @@ export default function TourMarcaPessoalPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] border border-black/8">
             {[
               { num: '01', titulo: 'Direção criativa do início ao fim', desc: 'Angelo está presente em cada detalhe — do conceito ao clique. Você não precisa saber posar. Ele te guia.' },
-              { num: '02', titulo: 'Beauty, styling e curadoria de looks', desc: 'Cabelo, maquiagem e looks escolhidos a dedo para cada produção. Você chega como está — a gente cuida do resto.' },
-              { num: '03', titulo: 'Set profissional montado para você', desc: 'Iluminação, cenário, equipe técnica. Você chega, a gente já preparou tudo.' },
-              { num: '04', titulo: 'Fotos tratadas e prontas para usar', desc: 'Arquivos em alta resolução entregues para redes sociais, site, press kit e o que mais precisar.' },
-              { num: '05', titulo: 'Vídeos que fazem o feed parar', desc: 'BTS e fashion film para mostrar quem você é em movimento — com autoridade e leveza.' },
+              { num: '02', titulo: 'Produção de beauty', desc: 'Cabelo e maquiagem profissional inclusos em cada dia de produção. Você chega como está — a gente transforma.' },
+              { num: '03', titulo: 'Styling e curadoria de looks', desc: 'Looks escolhidos a dedo para cada produção — para contar quem você é sem parecer fantasia.' },
+              { num: '04', titulo: 'Set profissional montado para você', desc: 'Iluminação, cenário, equipe técnica. Você chega, a gente já preparou tudo.' },
+              { num: '05', titulo: 'Fotos e vídeos prontos para usar', desc: 'Fotos tratadas em alta resolução + BTS e fashion film — tudo entregue para alimentar suas redes com imagem e movimento.' },
               { num: '06', titulo: 'Só você. Nenhuma divisão de atenção.', desc: 'Cobertura exclusiva, equipe dedicada inteiramente a você. Do check-in ao último clique.' },
             ].map((item, i) => (
               <div key={i} className="p-8 md:p-10 border border-black/8 flex gap-6" data-aos="fade-up" data-aos-delay={(i % 2) * 60}>
