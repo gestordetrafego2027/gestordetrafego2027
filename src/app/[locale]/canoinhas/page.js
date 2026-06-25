@@ -522,7 +522,7 @@ export default function TourMarcaPessoalPage() {
       </section>
 
       {/* ── VÍDEO ──────────────────────────────────────────────────── */}
-      <section className="bg-black py-20 md:py-28 px-6 flex flex-col items-center">
+      <section className="hidden md:flex bg-black py-20 md:py-28 px-6 flex-col items-center">
         <div className="w-full max-w-[400px] aspect-[9/16] rounded-sm overflow-hidden" data-aos="fade-up">
           <iframe
             src="https://www.youtube.com/embed/P57Wt8VLMuc"
