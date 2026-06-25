@@ -235,7 +235,7 @@ export default function TourMarcaPessoalPage() {
       {/* ── PORTFÓLIO GRID — últimas fotos ────────────────────────── */}
       <section className="bg-black">
         <div className="grid grid-cols-2 gap-[2px]">
-          {PORTFOLIO.slice(6).map((img, i) => (
+          {PORTFOLIO.map((img, i) => (
             <div key={i} className="aspect-[2/3] overflow-hidden group" data-aos="fade-photo" data-aos-delay={i * 80}>
               <img
                 src={img.src}
@@ -600,7 +600,7 @@ export default function TourMarcaPessoalPage() {
         onClose={closeForm}
         title={
           formCta?.packageSelected
-            ? `Fechar — ${formCta.packageSelected}`
+            ? `${formCta.packageSelected}`
             : 'Garantir minha agenda'
         }
         subtitle="Vagas limitadas · 20, 21 e 22 de Julho · Canoinhas, SC"
