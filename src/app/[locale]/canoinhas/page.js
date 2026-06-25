@@ -28,7 +28,7 @@ const PLANOS = [
     preco: 'R$ 3.100',
     tagline: 'Volume e variedade.',
     popular: true,
-    bg: '/images/produtora/beleza/superbia/1.webp',
+    bg: '/images/produtora/beleza/superbia/2.webp',
     cta: 'Fechar Ensaio 02',
   },
   {
