@@ -24,7 +24,7 @@ const PLANOS = [
     nome: 'Ensaio 02',
     producoes: 4,
     fotos: 15,
-    video: '1 BTS 20"',
+    video: '1 Backstage 20"',
     preco: 'R$ 3.100',
     tagline: 'Volume e variedade.',
     popular: true,
@@ -36,7 +36,7 @@ const PLANOS = [
     nome: 'Ensaio 03',
     producoes: 5,
     fotos: 20,
-    video: '1 BTS 20" + 1 Fashion Film 20"',
+    video: '1 Backstage 20" + 1 Fashion Film 20"',
     preco: 'R$ 3.800',
     tagline: 'O pacote completo.',
     bg: '/images/studio/cynthia-andrade/3.webp',
@@ -217,7 +217,7 @@ export default function TourMarcaPessoalPage() {
               { num: '02', titulo: 'Produção de beauty', desc: 'Cabelo e maquiagem profissional inclusos em cada dia de produção. Você chega como está — a gente transforma.' },
               { num: '03', titulo: 'Styling e curadoria de looks', desc: 'Looks escolhidos a dedo para cada produção — para contar quem você é sem parecer fantasia.' },
               { num: '04', titulo: 'Set profissional montado para você', desc: 'Iluminação, cenário, equipe técnica. Você chega, a gente já preparou tudo.' },
-              { num: '05', titulo: 'Fotos e vídeos prontos para usar', desc: 'Fotos tratadas em alta resolução + BTS e fashion film — tudo entregue para alimentar suas redes com imagem e movimento.' },
+              { num: '05', titulo: 'Fotos e vídeos prontos para usar', desc: 'Fotos tratadas em alta resolução + Backstage e fashion film — tudo entregue para alimentar suas redes com imagem e movimento.' },
               { num: '06', titulo: 'Só você. Nenhuma divisão de atenção.', desc: 'Cobertura exclusiva, equipe dedicada inteiramente a você. Do check-in ao último clique.' },
             ].map((item, i) => (
               <div key={i} className="p-8 md:p-10 border border-black/8 flex gap-6" data-aos="fade-up" data-aos-delay={(i % 2) * 60}>
