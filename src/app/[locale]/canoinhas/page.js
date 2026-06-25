@@ -14,7 +14,8 @@ const PLANOS = [
     producoes: 3,
     fotos: 10,
     video: 'Making of',
-    preco: 'R$ 2.700',
+    preco: 'R$ 2.500',
+    parcela: '3x de R$ 833,33',
     tagline: 'O início da sua imagem.',
     bg: '/images/studio/carol-costa/4.webp',
     cta: 'Quero o Ensaio 01',
@@ -26,6 +27,7 @@ const PLANOS = [
     fotos: 15,
     video: '1 Backstage 20"',
     preco: 'R$ 3.100',
+    parcela: '3x de R$ 1.033,33',
     tagline: 'Volume e variedade.',
     popular: true,
     bg: '/images/produtora/beleza/superbia/2.webp',
@@ -38,6 +40,7 @@ const PLANOS = [
     fotos: 20,
     video: '1 Backstage 20" + 1 Fashion Film 20"',
     preco: 'R$ 3.800',
+    parcela: '3x de R$ 1.266,67',
     tagline: 'O pacote completo.',
     bg: '/images/studio/cynthia-andrade/3.webp',
     cta: 'Quero o Ensaio 03',
@@ -435,7 +438,12 @@ export default function TourMarcaPessoalPage() {
                     ))}
                   </div>
                   <div className="flex items-center justify-between gap-4 pt-1">
-                    <span className="font-headline text-3xl italic text-white">{plano.preco}</span>
+                    <div>
+                      <span className="font-headline text-3xl italic text-white">{plano.preco}</span>
+                      <p className="font-label text-[8px] text-white/35 tracking-wide mt-[3px]">
+                        ou {plano.parcela} (+ acrésc. operadora)
+                      </p>
+                    </div>
                     <button
                       type="button"
                       onClick={() => openForm(`plano_${plano.id}`, `${plano.nome} — ${plano.preco}`)}
