@@ -248,6 +248,40 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
+      {/* ── PÚBLICO ────────────────────────────────────────────────── */}
+      <section className="bg-zinc-950 py-20 md:py-28 px-6 md:px-20 border-t border-white/6">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-14">
+            <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4" data-aos="fade-in">
+              Para quem é
+            </span>
+            <h2 className="font-headline font-light text-[2.2rem] md:text-[3.4rem] text-white leading-[1.05] tracking-normal max-w-[700px] mb-6" data-aos="slide-title" data-aos-delay="80">
+              Revela a beleza do seu agora.
+            </h2>
+            <p className="font-body text-white/50 text-base md:text-lg leading-relaxed max-w-[580px]" data-aos="fade-in" data-aos-delay="180">
+              Uma experiência pensada para mulheres que já têm muito a contar — e merecem imagens que estejam à altura disso.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] border border-white/8">
+            {[
+              { titulo: 'Mães', desc: 'Que vivem para os outros e finalmente decidiram aparecer também.' },
+              { titulo: 'Empreendedoras', desc: 'Que constroem tanto — e já é hora de o mundo ver quem está por trás disso.' },
+              { titulo: 'Solteiras', desc: 'Que estão vivendo a própria vida com muita intensidade e querem guardar esse momento.' },
+              { titulo: 'Casadas', desc: 'Que querem se reconhecer além do papel de mãe, esposa, filha.' },
+              { titulo: 'Divorciadas', desc: 'Que saíram mais fortes de um recomeço e têm muito a celebrar.' },
+              { titulo: 'Empresárias', desc: 'Que lideram com presença e querem que sua imagem comunique isso.' },
+              { titulo: 'Aposentadas', desc: 'Que chegaram na fase mais bonita — e nunca se permitiram um registro à altura.' },
+              { titulo: 'Em qualquer fase', desc: 'Beleza não tem prazo. Você merece aparecer agora.' },
+            ].map((item, i) => (
+              <div key={i} className="p-8 border border-white/6" data-aos="fade-up" data-aos-delay={(i % 4 + 1) * 50}>
+                <h3 className="font-headline text-lg text-white mb-3 leading-tight">{item.titulo}</h3>
+                <p className="font-body text-white/35 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── ANGELO MAZZUTTI ────────────────────────────────────────── */}
       <section className="bg-white border-t border-black/8">
         <div className="flex flex-col md:flex-row items-center">
@@ -279,40 +313,6 @@ export default function TourMarcaPessoalPage() {
               </p>
             </div>
             <p className="font-headline text-zinc-400 text-lg italic">— Angelo Mazzutti</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PÚBLICO ────────────────────────────────────────────────── */}
-      <section className="bg-zinc-950 py-20 md:py-28 px-6 md:px-20 border-t border-white/6">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="mb-14">
-            <span className="font-label uppercase tracking-[0.45em] text-[8px] text-white/25 block mb-4" data-aos="fade-in">
-              Para quem é
-            </span>
-            <h2 className="font-headline font-light text-[2.2rem] md:text-[3.4rem] text-white leading-[1.05] tracking-normal max-w-[700px] mb-6" data-aos="slide-title" data-aos-delay="80">
-              Revela a beleza do seu agora.
-            </h2>
-            <p className="font-body text-white/50 text-base md:text-lg leading-relaxed max-w-[580px]" data-aos="fade-in" data-aos-delay="180">
-              Uma experiência pensada para mulheres que já têm muito a contar — e merecem imagens que estejam à altura disso.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] border border-white/8">
-            {[
-              { titulo: 'Mães', desc: 'Que vivem para os outros e finalmente decidiram aparecer também.' },
-              { titulo: 'Empreendedoras', desc: 'Que constroem tanto — e já é hora de o mundo ver quem está por trás disso.' },
-              { titulo: 'Solteiras', desc: 'Que estão vivendo a própria vida com muita intensidade e querem guardar esse momento.' },
-              { titulo: 'Casadas', desc: 'Que querem se reconhecer além do papel de mãe, esposa, filha.' },
-              { titulo: 'Divorciadas', desc: 'Que saíram mais fortes de um recomeço e têm muito a celebrar.' },
-              { titulo: 'Empresárias', desc: 'Que lideram com presença e querem que sua imagem comunique isso.' },
-              { titulo: 'Aposentadas', desc: 'Que chegaram na fase mais bonita — e nunca se permitiram um registro à altura.' },
-              { titulo: 'Em qualquer fase', desc: 'Beleza não tem prazo. Você merece aparecer agora.' },
-            ].map((item, i) => (
-              <div key={i} className="p-8 border border-white/6" data-aos="fade-up" data-aos-delay={(i % 4 + 1) * 50}>
-                <h3 className="font-headline text-lg text-white mb-3 leading-tight">{item.titulo}</h3>
-                <p className="font-body text-white/35 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
