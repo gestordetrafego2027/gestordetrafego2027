@@ -72,6 +72,48 @@ export async function handlePaymentConfirmed(ctx: HandlerCtx): Promise<void> {
     log.error({ err: String(err), order_id: order.id }, 'falha ao emitir NFS-e')
   }
 
+  // Reserva Tour Marca Pessoal — email de confirmação específico
+  const meta = (order.metadata ?? {}) as Record<string, unknown>
+  if (meta.product_type === 'tour' && order.buyer_email) {
+    try {
+      const planNames: Record<string, string> = {
+        'ensaio-01': 'Ensaio 01 — R$ 1.900',
+        'ensaio-02': 'Ensaio 02 — R$ 2.600',
+        'ensaio-03': 'Ensaio 03 — R$ 3.200',
+      }
+      const planLabel = planNames[(meta.plan_id as string) ?? ''] ?? meta.product_name ?? 'Ensaio'
+      await sendEmail({
+        to: order.buyer_email,
+        subject: `Reserva confirmada · Tour Marca Pessoal · ${planLabel}`,
+        html: `
+          <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:40px 24px;color:#111">
+            <p style="font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:#999;margin-bottom:32px">House Mazzutti · Tour Canoinhas</p>
+            <h1 style="font-weight:300;font-size:28px;line-height:1.1;margin-bottom:16px">Sua reserva está confirmada.</h1>
+            <p style="color:#555;line-height:1.7;margin-bottom:24px">
+              Olá, <strong>${order.buyer_name ?? ''}</strong>.<br>
+              Recebemos seu pagamento e sua agenda no <strong>Tour Marca Pessoal · Canoinhas, SC</strong> está reservada.
+            </p>
+            <div style="border:1px solid #eee;padding:20px;margin-bottom:24px">
+              <p style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#aaa;margin-bottom:8px">Sua reserva</p>
+              <p style="font-size:18px;font-weight:300;margin:0">${planLabel}</p>
+              <p style="color:#888;font-size:13px;margin-top:6px">20 · 21 · 22 de Julho · Canoinhas, SC</p>
+            </div>
+            <p style="color:#555;line-height:1.7;margin-bottom:32px">
+              Entraremos em contato pelo WhatsApp para alinhar todos os detalhes da sua produção.<br>
+              Qualquer dúvida, responda este e-mail ou fale diretamente com a House.
+            </p>
+            <p style="font-size:11px;color:#bbb">Pedido ${order.order_number} · contato@housemazzutti.com</p>
+          </div>
+        `,
+        replyTo: 'contato@housemazzutti.com',
+      })
+      log.info({ order_id: order.id }, 'email de confirmação tour enviado')
+    } catch (err) {
+      log.error({ err: String(err), order_id: order.id }, 'falha ao enviar email tour')
+    }
+    return
+  }
+
   // Entrega digital (best-effort): resolve o produto a partir do slug guardado
   // no metadata do pedido e envia o email com o link de download do PDF.
   // Sem slug resolvível, cai no email de confirmação simples.

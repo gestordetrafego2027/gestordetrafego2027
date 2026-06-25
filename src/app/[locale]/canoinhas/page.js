@@ -444,13 +444,12 @@ export default function TourMarcaPessoalPage() {
                         ou {plano.parcela} (+ acrésc. operadora)
                       </p>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() => openForm(`plano_${plano.id}`, `${plano.nome} — ${plano.preco}`)}
-                      className="border border-white/50 px-6 py-[12px] font-label uppercase text-[9px] tracking-widest text-white hover:bg-white hover:text-black transition-all duration-300 shrink-0"
+                    <a
+                      href={`/pt/canoinhas/checkout?plano=${plano.id}`}
+                      className="border border-white/50 px-6 py-[12px] font-label uppercase text-[9px] tracking-widest text-white hover:bg-white hover:text-black transition-all duration-300 shrink-0 inline-block text-center"
                     >
                       {plano.cta}
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -493,13 +492,12 @@ export default function TourMarcaPessoalPage() {
             Em julho, em Canoinhas, a House Mazzutti abre portas para mulheres que estão prontas para aparecer de verdade. São vagas contadas — e cada uma delas tem um nome.
           </p>
           <div data-aos="fade-in" data-aos-delay="360">
-            <button
-              type="button"
-              onClick={() => openForm('cta_final')}
-              className="border border-white text-white px-14 py-[18px] font-label uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-colors duration-300"
+            <a
+              href="/pt/canoinhas/checkout"
+              className="inline-block border border-white text-white px-14 py-[18px] font-label uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-colors duration-300"
             >
               Garantir minha agenda
-            </button>
+            </a>
           </div>
         </div>
       </section>
