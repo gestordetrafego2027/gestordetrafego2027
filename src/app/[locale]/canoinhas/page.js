@@ -468,6 +468,53 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
+      {/* ── CTA FINAL ──────────────────────────────────────────────── */}
+      <section className="relative py-36 px-6 overflow-hidden">
+        <img
+          loading="lazy"
+          src="/images/studio/francielle-reis/4.webp"
+          alt=""
+          data-aos="fade-photo"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-black/72" />
+        <div className="relative z-10 max-w-[700px] mx-auto text-center">
+          <span
+            className="font-label uppercase tracking-[0.4em] text-[9px] text-white/35 mb-7 block"
+            data-aos="fade-in"
+          >
+            20 · 21 · 22 de Julho · Canoinhas, SC
+          </span>
+          <h2
+            className="font-headline font-light text-[1.9rem] md:text-[3rem] text-white leading-tight tracking-normal mb-8"
+            data-aos="slide-title" data-aos-delay="80"
+          >
+            Você chegou até aqui.<br /><em>Essa é a sua vaga.</em>
+          </h2>
+          <p
+            className="font-body text-white/50 text-base leading-relaxed max-w-[500px] mx-auto mb-3"
+            data-aos="fade-in" data-aos-delay="200"
+          >
+            Em julho, em Canoinhas, a House Mazzutti abre portas para mulheres que estão prontas para aparecer de verdade. São vagas contadas — e cada uma delas tem um nome.
+          </p>
+          <p
+            className="font-label uppercase tracking-[0.4em] text-[9px] text-white/30 mb-10"
+            data-aos="fade-in" data-aos-delay="280"
+          >
+            20 · 21 · 22 de Julho · Canoinhas, SC · Vagas limitadas
+          </p>
+          <div data-aos="fade-in" data-aos-delay="360">
+            <button
+              type="button"
+              onClick={() => openForm('cta_final')}
+              className="border border-white text-white px-14 py-[18px] font-label uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Garantir minha agenda
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* ── SOBRE A HOUSE ──────────────────────────────────────────── */}
       <section className="bg-black py-24 px-6 md:px-20 border-t border-white/6">
         <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-start">
@@ -533,53 +580,6 @@ export default function TourMarcaPessoalPage() {
           >
             <source src="/videos/hero-tour-new.mp4" type="video/mp4" />
           </video>
-        </div>
-      </section>
-
-      {/* ── CTA FINAL ──────────────────────────────────────────────── */}
-      <section className="relative py-36 px-6 overflow-hidden">
-        <img
-          loading="lazy"
-          src="/images/studio/francielle-reis/4.webp"
-          alt=""
-          data-aos="fade-photo"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
-        <div className="absolute inset-0 bg-black/72" />
-        <div className="relative z-10 max-w-[700px] mx-auto text-center">
-          <span
-            className="font-label uppercase tracking-[0.4em] text-[9px] text-white/35 mb-7 block"
-            data-aos="fade-in"
-          >
-            20 · 21 · 22 de Julho · Canoinhas, SC
-          </span>
-          <h2
-            className="font-headline font-light text-[1.9rem] md:text-[3rem] text-white leading-tight tracking-normal mb-8"
-            data-aos="slide-title" data-aos-delay="80"
-          >
-            Você chegou até aqui.<br /><em>Essa é a sua vaga.</em>
-          </h2>
-          <p
-            className="font-body text-white/50 text-base leading-relaxed max-w-[500px] mx-auto mb-3"
-            data-aos="fade-in" data-aos-delay="200"
-          >
-            Em julho, em Canoinhas, a House Mazzutti abre portas para mulheres que estão prontas para aparecer de verdade. São vagas contadas — e cada uma delas tem um nome.
-          </p>
-          <p
-            className="font-label uppercase tracking-[0.4em] text-[9px] text-white/30 mb-10"
-            data-aos="fade-in" data-aos-delay="280"
-          >
-            20 · 21 · 22 de Julho · Canoinhas, SC · Vagas limitadas
-          </p>
-          <div data-aos="fade-in" data-aos-delay="360">
-            <button
-              type="button"
-              onClick={() => openForm('cta_final')}
-              className="border border-white text-white px-14 py-[18px] font-label uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-colors duration-300"
-            >
-              Garantir minha agenda
-            </button>
-          </div>
         </div>
       </section>
 
