@@ -1,10 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
-import { clientLog } from '@/lib/logger-client';
+import { clientLog } from '@/lib/logger-client'
+import { redirectToHouseWhatsApp } from '@/lib/whatsappRedirect'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -25,7 +24,6 @@ export default function FormAgenciaB2B({
   serviceOfInterest = '',
   ctaLocation = null,
 }) {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
   const [form, setForm] = useState({
@@ -56,7 +54,7 @@ export default function FormAgenciaB2B({
         email: form.email,
         phone: form.phone,
         segment: 'commercial',
-        lead_type: 'cliente_agencia',
+        lead_type: 'cliente_agência',
         status: 'novo',
         source: sourceUrl,
         details: {
@@ -73,7 +71,18 @@ export default function FormAgenciaB2B({
         utm: getUtmFromUrl(),
       })
 
-      router.push('/obrigado?from=agencia')
+      redirectToHouseWhatsApp('Agência B2B', [
+        { label: 'Empresa', value: form.company },
+        { label: 'Nome', value: form.name },
+        { label: 'Cargo', value: form.role },
+        { label: 'WhatsApp', value: form.phone },
+        { label: 'Email', value: form.email },
+        { label: 'Site', value: form.companySite },
+        { label: 'Serviço', value: form.serviceInterest },
+        { label: 'Prazo', value: form.timeline },
+        { label: 'Como nos encontrou', value: form.referral },
+        { label: 'Briefing', value: form.briefing },
+      ])
     } catch (err) {
       clientLog.error('[FormAgenciaB2B] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')

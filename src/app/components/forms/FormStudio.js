@@ -1,10 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
-import { clientLog } from '@/lib/logger-client';
+import { clientLog } from '@/lib/logger-client'
+import { redirectToHouseWhatsApp } from '@/lib/whatsappRedirect'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -33,7 +32,6 @@ export default function FormStudio({
   packageSelected = null,
   ctaLocation = null,
 }) {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
   const [form, setForm] = useState({
@@ -63,7 +61,7 @@ export default function FormStudio({
         email: form.email,
         phone: form.phone,
         segment: 'commercial',
-        lead_type: 'cliente_studio',
+        lead_type: 'estúdio_cliente',
         status: 'novo',
         source: sourceUrl,
         details: {
@@ -80,7 +78,17 @@ export default function FormStudio({
         utm: getUtmFromUrl(),
       })
 
-      router.push('/obrigado?from=studio')
+      redirectToHouseWhatsApp('Studio', [
+        { label: 'Nome', value: form.name },
+        { label: 'Data de nascimento', value: form.birthDate },
+        { label: 'WhatsApp', value: form.phone },
+        { label: 'Email', value: form.email },
+        { label: 'Instagram', value: form.instagram },
+        { label: 'Serviço', value: SERVICE_LABEL[form.serviceType] ?? form.serviceType },
+        { label: 'Data desejada', value: form.desiredDate },
+        { label: 'Como nos encontrou', value: form.referral },
+        { label: 'Mensagem', value: form.message },
+      ])
     } catch (err) {
       clientLog.error('[FormStudio] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')

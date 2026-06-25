@@ -1,10 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
-import { clientLog } from '@/lib/logger-client';
+import { clientLog } from '@/lib/logger-client'
+import { redirectToHouseWhatsApp } from '@/lib/whatsappRedirect'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -20,7 +19,6 @@ function getUtmFromUrl() {
 }
 
 export default function FormContatoGeral({ sourceUrl = '/contato' }) {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
   const [form, setForm] = useState({
@@ -59,7 +57,14 @@ export default function FormContatoGeral({ sourceUrl = '/contato' }) {
         utm: getUtmFromUrl(),
       })
 
-      router.push('/obrigado?from=contato')
+      redirectToHouseWhatsApp('Contato Geral', [
+        { label: 'Nome', value: form.name },
+        { label: 'Email', value: form.email },
+        { label: 'WhatsApp', value: form.phone },
+        { label: 'Assunto', value: form.subject },
+        { label: 'Como nos encontrou', value: form.referral },
+        { label: 'Mensagem', value: form.message },
+      ])
     } catch (err) {
       clientLog.error('[FormContatoGeral] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')

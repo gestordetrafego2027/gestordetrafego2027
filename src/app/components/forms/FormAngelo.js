@@ -1,10 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
-import { clientLog } from '@/lib/logger-client';
+import { clientLog } from '@/lib/logger-client'
+import { redirectToHouseWhatsApp } from '@/lib/whatsappRedirect'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -20,7 +19,6 @@ function getUtmFromUrl() {
 }
 
 export default function FormAngelo({ onClose, sourceUrl = '/angelo', ctaLocation = null }) {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
   const [form, setForm] = useState({
@@ -66,7 +64,17 @@ export default function FormAngelo({ onClose, sourceUrl = '/angelo', ctaLocation
         utm: getUtmFromUrl(),
       })
 
-      router.push('/obrigado?from=angelo')
+      redirectToHouseWhatsApp('Angelo — Mentoria / Palestra', [
+        { label: 'Nome', value: form.name },
+        { label: 'Empresa', value: form.company },
+        { label: 'WhatsApp', value: form.phone },
+        { label: 'Email', value: form.email },
+        { label: 'Instagram', value: form.instagram },
+        { label: 'Tipo de interação', value: form.interactionType },
+        { label: 'Data desejada', value: form.desiredDate },
+        { label: 'Como nos encontrou', value: form.referral },
+        { label: 'Sobre você', value: form.about },
+      ])
     } catch (err) {
       clientLog.error('[FormAngelo] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')

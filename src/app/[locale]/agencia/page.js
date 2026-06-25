@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
@@ -490,9 +491,13 @@ export default function AgenciaPage() {
                         <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener" className="block w-full text-center px-8 py-4 bg-black text-white text-button hover:bg-zinc-800 transition-colors mb-4">
                             Instagram @housemazzutti
                         </a>
-                        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" className="block w-full text-center px-8 py-4 border border-black text-black text-button hover:bg-black hover:text-white transition-colors">
+                        <button
+                            type="button"
+                            onClick={() => trackAndOpenWhatsApp({ location: 'agencia_form_drawer', message: 'Olá, quero dar andamento na minha produção com a House Mazzutti.' })}
+                            className="block w-full text-center px-8 py-4 border border-black text-black text-button hover:bg-black hover:text-white transition-colors"
+                        >
                             WhatsApp
-                        </a>
+                        </button>
                     </div>
                 </FormDrawer>
             )}

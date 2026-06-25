@@ -1,10 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/browser'
 import { submitLead } from '@/lib/submitLead'
-import { clientLog } from '@/lib/logger-client';
+import { clientLog } from '@/lib/logger-client'
+import { redirectToHouseWhatsApp } from '@/lib/whatsappRedirect'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -20,7 +19,6 @@ function getUtmFromUrl() {
 }
 
 export default function FormModelo({ onClose, sourceUrl = '/comunidade/vagas', ctaLocation = null }) {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
   const [form, setForm] = useState({
@@ -75,7 +73,21 @@ export default function FormModelo({ onClose, sourceUrl = '/comunidade/vagas', c
         utm: getUtmFromUrl(),
       })
 
-      router.push('/obrigado?from=representacao')
+      redirectToHouseWhatsApp('Representação / Casting', [
+        { label: 'Nome', value: form.name },
+        { label: 'Data de nascimento', value: form.birthDate },
+        { label: 'Cidade', value: form.city },
+        { label: 'Estado', value: form.state },
+        { label: 'Altura', value: form.height },
+        { label: 'WhatsApp', value: form.phone },
+        { label: 'Email', value: form.email },
+        { label: 'Instagram', value: form.instagram },
+        { label: 'Possui agência?', value: form.hasAgency },
+        { label: 'Experiência', value: form.experience },
+        { label: 'Portfolio', value: form.portfolioUrl },
+        { label: 'Como nos encontrou', value: form.referral },
+        { label: 'Sobre você', value: form.about },
+      ])
     } catch (err) {
       clientLog.error('[FormModelo] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')

@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { submitLead } from '@/lib/submitLead'
+import { redirectToHouseWhatsApp } from '@/lib/whatsappRedirect'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -26,7 +26,6 @@ const ESCOPOS = [
 ]
 
 export default function FormBranding({ onClose }) {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
   const [form, setForm] = useState({
@@ -77,7 +76,7 @@ export default function FormBranding({ onClose }) {
         email: form.email,
         phone: form.phone,
         segment: 'commercial',
-        lead_type: 'cliente_agencia',
+        lead_type: 'cliente_agência',
         source: 'site/branding',
         notes: notes || null,
         details: {
@@ -90,7 +89,15 @@ export default function FormBranding({ onClose }) {
         utm: getUtmFromUrl(),
       })
 
-      router.push('/obrigado?from=branding')
+      redirectToHouseWhatsApp('Branding', [
+        { label: 'Nome', value: form.name },
+        { label: 'Empresa / Marca', value: form.company },
+        { label: 'Email', value: form.email },
+        { label: 'WhatsApp', value: form.phone },
+        { label: 'Momento da marca', value: form.momento },
+        { label: 'Escopo de interesse', value: form.escopos.length ? form.escopos.join(', ') : null },
+        { label: 'Sobre a marca', value: form.sobre },
+      ])
     } catch (err) {
       setError(err?.message || 'Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.')
       setIsSubmitting(false)

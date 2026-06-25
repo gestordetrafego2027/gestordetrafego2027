@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Link from "next/link";
 import Header from "@/app/components/Header";
@@ -102,19 +103,27 @@ export default function ContatoPage() {
                             </p>
                         </div>
                         <div className="space-y-4">
-                            <a className="flex items-center gap-3 group" href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}>
+                            <button
+                                type="button"
+                                onClick={() => trackAndOpenWhatsApp({ location: 'contato_phone_link', message: 'Olá, quero dar andamento na minha produção com a House Mazzutti.' })}
+                                className="flex items-center gap-3 group text-left"
+                            >
                                 <span className="material-symbols-outlined text-neutral-400 group-hover:text-black transition-colors">chat_bubble</span>
                                 <span className="font-['Inter'] text-zinc-400">{contact.phone}</span>
-                            </a>
+                            </button>
                             <a className="flex items-center gap-3 group" href="mailto:contato@housemazzutti.com">
                                 <span className="material-symbols-outlined text-neutral-400 group-hover:text-black transition-colors">mail</span>
                                 <span className="font-['Inter'] text-zinc-400">contato@housemazzutti.com</span>
                             </a>
                         </div>
                     </div>
-                    <a className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center" href="https://wa.me/5511952347533" target="_blank" rel="noopener noreferrer">
+                    <button
+                        type="button"
+                        onClick={() => trackAndOpenWhatsApp({ location: 'contato_schedule_cta', message: 'Olá, quero dar andamento na minha produção com a House Mazzutti.' })}
+                        className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center"
+                    >
                         {t('schedule_cta')}
-                    </a>
+                    </button>
                 </div>
             </section>
 

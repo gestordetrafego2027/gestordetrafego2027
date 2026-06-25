@@ -3,9 +3,7 @@
 import { useState } from 'react'
 import { submitLead } from '@/lib/submitLead'
 import { clientLog } from '@/lib/logger-client'
-
-// ⚠️  Substitua pelo número real com DDI+DDD, sem espaços ou símbolos
-const HOUSE_WHATSAPP = '5511952347533'
+import { redirectToHouseWhatsApp } from '@/lib/whatsappRedirect'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -32,28 +30,6 @@ const PAGAMENTOS = [
   { value: 'cartao3x', label: 'Cartão 3x (+ acréscimo da operadora)' },
 ]
 
-function buildWhatsAppMessage(form) {
-  const planoLabel = PLANOS.find(p => p.value === form.plano)?.label ?? form.plano
-  const pagtoLabel = PAGAMENTOS.find(p => p.value === form.pagamento)?.label ?? form.pagamento
-
-  const lines = [
-    'Olá, quero confirmar minha agenda. 🗓️',
-    '',
-    '📋 *Dados do formulário:*',
-    `• Nome: ${form.name}`,
-    `• WhatsApp: ${form.phone}`,
-    `• Email: ${form.email}`,
-    form.instagram ? `• Instagram: ${form.instagram}` : null,
-    `• Plano escolhido: ${planoLabel}`,
-    `• Forma de pagamento: ${pagtoLabel}`,
-    form.referral ? `• Como nos encontrou: ${form.referral}` : null,
-    form.message ? `• Mensagem: ${form.message}` : null,
-    '',
-    '📅 Tour Marca Pessoal · 20, 21 e 22 de Julho · Canoinhas, SC',
-  ].filter(Boolean).join('\n')
-
-  return encodeURIComponent(lines)
-}
 
 export default function FormCanoinhas({
   onClose,
@@ -107,9 +83,18 @@ export default function FormCanoinhas({
         utm: getUtmFromUrl(),
       })
 
-      // Redireciona para WhatsApp com cópia do formulário
-      const msg = buildWhatsAppMessage(form)
-      window.location.href = `https://wa.me/${HOUSE_WHATSAPP}?text=${msg}`
+      const planoLabel = PLANOS.find(p => p.value === form.plano)?.label ?? form.plano
+      const pagtoLabel = PAGAMENTOS.find(p => p.value === form.pagamento)?.label ?? form.pagamento
+      redirectToHouseWhatsApp('Tour Marca Pessoal · Canoinhas', [
+        { label: 'Nome', value: form.name },
+        { label: 'WhatsApp', value: form.phone },
+        { label: 'Email', value: form.email },
+        { label: 'Instagram', value: form.instagram },
+        { label: 'Plano escolhido', value: planoLabel },
+        { label: 'Forma de pagamento', value: pagtoLabel },
+        { label: 'Como nos encontrou', value: form.referral },
+        { label: 'Mensagem', value: form.message },
+      ])
     } catch (err) {
       clientLog.error('[FormCanoinhas] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')

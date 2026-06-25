@@ -1,6 +1,6 @@
 'use client';
 import { initAosNative } from '@/lib/aosNative';
-
+import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useState, useEffect } from 'react';
 import { Link } from '@/i18n/navigation';
@@ -182,9 +182,13 @@ export default function AgenciaWebPage() {
 
             <FormDrawer isOpen={formOpen} onClose={() => setFormOpen(false)} title={t('form_title')} subtitle={t('form_subtitle')}>
                 <div className="flex flex-col gap-6 pt-4">
-                    <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20em%20Web%20Development." target="_blank" rel="noopener noreferrer" className="w-full py-4 bg-black text-white font-label uppercase tracking-[0.2em] text-[10px] text-center hover:bg-zinc-800 transition-colors">
+                    <button
+                        type="button"
+                        onClick={() => trackAndOpenWhatsApp({ location: 'agencia_web_form_drawer', message: 'Olá, tenho interesse em Web Development com a House Mazzutti.' })}
+                        className="w-full py-4 bg-black text-white font-label uppercase tracking-[0.2em] text-[10px] text-center hover:bg-zinc-800 transition-colors"
+                    >
                         {t('form_whatsapp')}
-                    </a>
+                    </button>
                     <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener noreferrer" className="w-full py-4 border border-black text-black font-label uppercase tracking-[0.2em] text-[10px] text-center hover:bg-black hover:text-white transition-colors">
                         {t('form_instagram')}
                     </a>

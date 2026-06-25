@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { submitLead } from '@/lib/submitLead'
-import { clientLog } from '@/lib/logger-client';
+import { clientLog } from '@/lib/logger-client'
+import { redirectToHouseWhatsApp } from '@/lib/whatsappRedirect'
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
@@ -25,8 +25,8 @@ const UNITS = [
 ]
 
 const LEAD_TYPE_BY_UNIT = {
-  studio: 'cliente_studio',
-  agencia: 'cliente_agencia',
+  studio: 'estúdio_cliente',
+  agencia: 'cliente_agência',
   produtora: 'cliente_produtora',
 }
 
@@ -52,7 +52,6 @@ const SERVICE_OPTIONS = {
 }
 
 export default function FormGeral({ onClose, sourceUrl = '/', ctaLocation = null }) {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
   const [form, setForm] = useState({
@@ -101,7 +100,14 @@ export default function FormGeral({ onClose, sourceUrl = '/', ctaLocation = null
         utm: getUtmFromUrl(),
       })
 
-      router.push(`/obrigado?from=${form.unit}`)
+      redirectToHouseWhatsApp('Formulário Geral', [
+        { label: 'Nome', value: form.name },
+        { label: 'Email', value: form.email },
+        { label: 'WhatsApp', value: form.phone },
+        { label: 'Unidade', value: UNITS.find(u => u.value === form.unit)?.label },
+        { label: 'Serviço', value: form.serviceType },
+        { label: 'Mensagem', value: form.message },
+      ])
     } catch (err) {
       clientLog.error('[FormGeral] Unexpected error:', err)
       setError(err?.message || 'Não foi possível enviar. Tente novamente em instantes.')

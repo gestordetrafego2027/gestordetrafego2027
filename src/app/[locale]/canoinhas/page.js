@@ -17,7 +17,7 @@ const PLANOS = [
     preco: 'R$ 2.700',
     tagline: 'O início da sua imagem.',
     bg: '/images/studio/carol-costa/4.webp',
-    cta: 'Fechar Ensaio 01',
+    cta: 'Quero o Ensaio 01',
   },
   {
     id: 'ensaio-02',
@@ -29,7 +29,7 @@ const PLANOS = [
     tagline: 'Volume e variedade.',
     popular: true,
     bg: '/images/produtora/beleza/superbia/2.webp',
-    cta: 'Fechar Ensaio 02',
+    cta: 'Quero o Ensaio 02',
   },
   {
     id: 'ensaio-03',
@@ -40,7 +40,7 @@ const PLANOS = [
     preco: 'R$ 3.800',
     tagline: 'O pacote completo.',
     bg: '/images/studio/cynthia-andrade/3.webp',
-    cta: 'Fechar Ensaio 03',
+    cta: 'Quero o Ensaio 03',
   },
 ];
 
@@ -184,7 +184,7 @@ export default function TourMarcaPessoalPage() {
             className="font-headline text-[1.6rem] md:text-[2.2rem] italic text-zinc-300 tracking-tight"
             data-aos="slide-title" data-aos-delay="300"
           >
-            Are u ready?
+            Você está pronta?
           </p>
         </div>
       </section>
@@ -208,7 +208,7 @@ export default function TourMarcaPessoalPage() {
               O que está incluído
             </span>
             <h2 className="font-headline font-light text-black text-[2rem] md:text-[3rem] leading-[1.05] tracking-normal max-w-[600px]" data-aos="slide-title" data-aos-delay="80">
-              Tudo que você precisa para uma produção de alto nível.
+              Tudo o que você precisa para uma produção de alto nível.
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] border border-black/8">
@@ -217,7 +217,7 @@ export default function TourMarcaPessoalPage() {
               { num: '02', titulo: 'Produção de beauty', desc: 'Cabelo e maquiagem profissional inclusos em cada dia de produção. Você chega como está — a gente transforma.' },
               { num: '03', titulo: 'Styling e curadoria de looks', desc: 'Looks escolhidos a dedo para cada produção — para contar quem você é sem parecer fantasia.' },
               { num: '04', titulo: 'Set profissional montado para você', desc: 'Iluminação, cenário, equipe técnica. Você chega, a gente já preparou tudo.' },
-              { num: '05', titulo: 'Fotos e vídeos prontos para usar', desc: 'Fotos tratadas em alta resolução + Backstage e fashion film — tudo entregue para alimentar suas redes com imagem e movimento.' },
+              { num: '05', titulo: 'Fotos e vídeos prontos para usar', desc: 'Fotos tratadas em alta resolução + o Backstage e o Fashion Film — tudo entregue para alimentar suas redes com imagem e movimento.' },
               { num: '06', titulo: 'Só você. Nenhuma divisão de atenção.', desc: 'Cobertura exclusiva, equipe dedicada inteiramente a você. Do check-in ao último clique.' },
             ].map((item, i) => (
               <div key={i} className="p-8 md:p-10 border border-black/8 flex gap-6" data-aos="fade-up" data-aos-delay={(i % 2) * 60}>
@@ -463,7 +463,7 @@ export default function TourMarcaPessoalPage() {
           </div>
 
           <p className="font-body text-black/25 text-xs text-center mt-8" data-aos="fade-up">
-            Reserva com 30% · saldo na entrega · cartão ou PIX
+            Reserva com 30% de entrada · saldo na entrega · PIX ou cartão
           </p>
         </div>
       </section>
@@ -496,12 +496,6 @@ export default function TourMarcaPessoalPage() {
             data-aos="fade-in" data-aos-delay="200"
           >
             Em julho, em Canoinhas, a House Mazzutti abre portas para mulheres que estão prontas para aparecer de verdade. São vagas contadas — e cada uma delas tem um nome.
-          </p>
-          <p
-            className="font-label uppercase tracking-[0.4em] text-[9px] text-white/30 mb-10"
-            data-aos="fade-in" data-aos-delay="280"
-          >
-            20 · 21 · 22 de Julho · Canoinhas, SC · Vagas limitadas
           </p>
           <div data-aos="fade-in" data-aos-delay="360">
             <button
