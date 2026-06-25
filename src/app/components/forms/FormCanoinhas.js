@@ -19,9 +19,9 @@ function getUtmFromUrl() {
 }
 
 const PLANOS = [
-  { value: 'ensaio-01', label: 'Ensaio 01 — R$ 2.500 · 3 produções · 10 fotos' },
-  { value: 'ensaio-02', label: 'Ensaio 02 — R$ 3.100 · 4 produções · 15 fotos ⭐ Mais escolhido' },
-  { value: 'ensaio-03', label: 'Ensaio 03 — R$ 3.800 · 5 produções · 20 fotos' },
+  { value: 'ensaio-01', label: 'Ensaio 01 — R$ 1.900 · 3 produções · 10 fotos' },
+  { value: 'ensaio-02', label: 'Ensaio 02 — R$ 2.600 · 4 produções · 15 fotos ⭐ Mais escolhido' },
+  { value: 'ensaio-03', label: 'Ensaio 03 — R$ 3.200 · 5 produções · 20 fotos' },
 ]
 
 const PAGAMENTOS = [
