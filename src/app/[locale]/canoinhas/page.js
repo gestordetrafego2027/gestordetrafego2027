@@ -192,8 +192,8 @@ export default function TourMarcaPessoalPage() {
       {/* ── GRID PORTFOLIO — imagem colagem ───────────────────────── */}
       <section className="bg-black">
         <img
-          src="/images/house-mazzutti-foto-grid-portfolio-mulheres-ensaio.jpg"
-          alt="Portfólio House Mazzutti — Ensaio Pessoal"
+          src="/images/hmzt-tour-canoinhas-winter-2026.webp"
+          alt="Tour Marca Pessoal — House Mazzutti · Canoinhas Winter 2026"
           loading="lazy"
           data-aos="fade-photo"
           className="w-full block"
