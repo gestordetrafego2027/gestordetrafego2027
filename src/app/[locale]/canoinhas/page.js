@@ -328,6 +328,8 @@ export default function TourMarcaPessoalPage() {
             display: flex;
             width: max-content;
             animation: marquee-local 32s linear infinite;
+            will-change: transform;
+            backface-visibility: hidden;
           }
           .marquee-local:hover { animation-play-state: paused; }
         `}</style>
@@ -355,7 +357,7 @@ export default function TourMarcaPessoalPage() {
                   src={src}
                   alt="Local do ensaio — Canoinhas"
                   loading="lazy"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ))
@@ -549,7 +551,7 @@ export default function TourMarcaPessoalPage() {
                 '/images/comunidade/grid-6.webp',
               ].map((src, i) => (
                 <div key={`${loop}-${i}`} className="shrink-0 w-[280px] md:w-[360px] h-[420px] md:h-[500px] mx-[3px] overflow-hidden">
-                  <img src={src} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-all duration-700" alt="House Mazzutti" />
+                  <img src={src} loading="lazy" className="w-full h-full object-cover" alt="House Mazzutti" />
                 </div>
               ))
             ))}
@@ -557,7 +559,7 @@ export default function TourMarcaPessoalPage() {
         </div>
         <style>{`
           @keyframes marquee-house { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-          .marquee-house { display: flex; width: max-content; animation: marquee-house 28s linear infinite; }
+          .marquee-house { display: flex; width: max-content; animation: marquee-house 28s linear infinite; will-change: transform; backface-visibility: hidden; }
           .marquee-house:hover { animation-play-state: paused; }
         `}</style>
       </section>
