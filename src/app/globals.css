@@ -288,7 +288,7 @@ html {
         transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
     }
 
-    .font-headline { font-family: 'RocGrotesk', sans-serif; font-weight: 700; }
+    .font-headline { font-family: 'RocGrotesk', sans-serif; font-weight: 300; }
     .font-body { font-family: 'RocGrotesk', sans-serif; font-weight: 400; }
     .font-label { font-family: 'RocGrotesk', sans-serif; font-weight: 500; }
     .font-raleway { font-family: 'RocGrotesk', sans-serif; font-weight: 300; }
