@@ -524,13 +524,15 @@ export default function TourMarcaPessoalPage() {
       {/* ── VÍDEO ──────────────────────────────────────────────────── */}
       <section className="hidden md:flex bg-black py-20 md:py-28 px-6 flex-col items-center">
         <div className="w-full max-w-[400px] aspect-[9/16] rounded-sm overflow-hidden" data-aos="fade-up">
-          <iframe
-            src="https://www.youtube.com/embed/P57Wt8VLMuc"
-            title="Tour Marca Pessoal — House Mazzutti"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/videos/hero-tour-new.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
