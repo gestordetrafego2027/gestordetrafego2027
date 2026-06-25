@@ -462,7 +462,7 @@ export default function TourMarcaPessoalPage() {
               Direção Criativa
             </span>
             <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-black leading-tight tracking-normal mb-8">
-              Ele não tira fotos.<br /><em>Ele conta quem você é.</em>
+              Ele conta quem você é.<br /><em>Publicitário, Diretor Criativo e Fotógrafo.</em>
             </h2>
             <div className="space-y-4 mb-8">
               <p className="font-body text-zinc-600 text-[15px] leading-relaxed max-w-[420px]">
