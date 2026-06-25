@@ -70,6 +70,12 @@ export default function TourMarcaPessoalPage() {
     <div className="bg-black text-white font-body antialiased">
       <style dangerouslySetInnerHTML={{ __html: `
         .hmzt-line { height: 0.5px; background: currentColor; opacity: 0.2; }
+        @keyframes marquee-local { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .marquee-local { display: flex; width: max-content; animation: marquee-local 32s linear infinite; will-change: transform; backface-visibility: hidden; }
+        .marquee-local:hover { animation-play-state: paused; }
+        @keyframes marquee-house { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .marquee-house { display: flex; width: max-content; animation: marquee-house 28s linear infinite; will-change: transform; backface-visibility: hidden; }
+        .marquee-house:hover { animation-play-state: paused; }
       `}} />
 
       <h1 className="sr-only">Tour Marca Pessoal — House Mazzutti · Canoinhas, SC · 20, 21 e 22 de Julho</h1>
@@ -83,6 +89,7 @@ export default function TourMarcaPessoalPage() {
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
         >
           <source src="/videos/hero-tour-new.mp4" type="video/mp4" />
@@ -312,21 +319,6 @@ export default function TourMarcaPessoalPage() {
 
       {/* ── LOCAL & ACOMODAÇÃO ─────────────────────────────────────── */}
       <section className="bg-[#f4f4f2] overflow-hidden">
-        <style>{`
-          @keyframes marquee-local {
-            from { transform: translateX(0); }
-            to   { transform: translateX(-50%); }
-          }
-          .marquee-local {
-            display: flex;
-            width: max-content;
-            animation: marquee-local 32s linear infinite;
-            will-change: transform;
-            backface-visibility: hidden;
-          }
-          .marquee-local:hover { animation-play-state: paused; }
-        `}</style>
-
         {/* Galeria corrida */}
         <div className="marquee-local pt-20">
           {[...Array(2)].map((_, loop) => (
@@ -532,7 +524,6 @@ export default function TourMarcaPessoalPage() {
 
       {/* ── GALERIA MARQUEE — HOUSE ────────────────────────────────── */}
       <section className="bg-black overflow-hidden pb-0">
-        <div className="overflow-hidden">
           <div className="marquee-house">
             {[...Array(2)].map((_, loop) => (
               [
@@ -549,12 +540,6 @@ export default function TourMarcaPessoalPage() {
               ))
             ))}
           </div>
-        </div>
-        <style>{`
-          @keyframes marquee-house { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-          .marquee-house { display: flex; width: max-content; animation: marquee-house 28s linear infinite; will-change: transform; backface-visibility: hidden; }
-          .marquee-house:hover { animation-play-state: paused; }
-        `}</style>
       </section>
 
       {/* ── VÍDEO ──────────────────────────────────────────────────── */}
@@ -565,6 +550,7 @@ export default function TourMarcaPessoalPage() {
             muted
             loop
             playsInline
+            preload="none"
             className="w-full h-full object-cover"
           >
             <source src="/videos/hero-tour-new.mp4" type="video/mp4" />
