@@ -366,18 +366,18 @@ export default function TourMarcaPessoalPage() {
         <div className="max-w-[1100px] mx-auto px-6 md:px-20 pt-14 pb-20">
           <div className="flex flex-col md:flex-row gap-14 md:gap-24 items-start">
             <div className="shrink-0 md:w-[380px]" data-aos="fade-right">
-              <span className="font-label uppercase tracking-[0.4em] text-[8px] text-white/25 block mb-4">
+              <span className="font-label uppercase tracking-[0.4em] text-[8px] text-black/35 block mb-4">
                 O Local · Canoinhas, SC
               </span>
-              <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-white leading-tight tracking-normal mb-5">
+              <h2 className="font-headline font-light text-[2rem] md:text-[2.6rem] text-black leading-tight tracking-normal mb-5">
                 Santa Catarina Plaza ·
               </h2>
-              <p className="font-label uppercase tracking-[0.35em] text-[10px] text-white/50 italic">
+              <p className="font-label uppercase tracking-[0.35em] text-[10px] text-black/45 italic">
                 Cobertura Privativa
               </p>
             </div>
             <div className="space-y-5 pt-1" data-aos="fade-left" data-aos-delay="80">
-              <p className="font-body text-white/55 text-[15px] leading-relaxed">
+              <p className="font-body text-black/55 text-[15px] leading-relaxed">
                 O ensaio acontece em uma cobertura exclusiva no coração de Canoinhas. Studio montado com iluminação profissional, equipamentos de última geração e uma atmosfera que coloca você no centro.
               </p>
             </div>
