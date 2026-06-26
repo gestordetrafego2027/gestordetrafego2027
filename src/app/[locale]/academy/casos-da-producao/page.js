@@ -146,20 +146,22 @@ export default function CasosDaProducaoPage() {
       {/* ===== Estilos locais — identidade visual da capa do livro ===== */}
       <style dangerouslySetInnerHTML={{ __html: `
         .bmp-root { --paper: #fafaf7; --ink: #0b0b0a; --blood: #8b1f1f; --mute: #6a6a6a; --rule: #e6e4dc; background: var(--paper); color: var(--ink); }
-        .bmp-display { font-family: 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.045em; line-height: 0.86; text-transform: uppercase; }
+        /* Tipografia idêntica à capa do livro: RocGroteskCondensed Bold — geométrica, mais alta que larga */
+        .bmp-display { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.025em; line-height: 0.88; text-transform: uppercase; }
         .bmp-display em { font-style: normal; color: var(--blood); }
-        .bmp-h2 { font-family: 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.03em; line-height: 0.92; text-transform: uppercase; }
+        .bmp-h2 { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.018em; line-height: 0.94; text-transform: uppercase; }
         .bmp-h2 em { font-style: normal; color: var(--blood); }
-        .bmp-h3 { font-family: 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.015em; line-height: 1.0; text-transform: uppercase; }
-        .bmp-num { font-family: 'RocGrotesk', sans-serif; font-weight: 700; color: var(--blood); letter-spacing: -0.02em; line-height: 1; }
-        .bmp-quote { font-family: 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.025em; line-height: 0.95; text-transform: uppercase; }
+        .bmp-h3 { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.012em; line-height: 1.0; text-transform: uppercase; }
+        .bmp-num { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif; font-weight: 700; color: var(--blood); letter-spacing: -0.02em; line-height: 1; }
+        .bmp-quote { font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.018em; line-height: 0.96; text-transform: uppercase; }
         .bmp-quote em { font-style: normal; color: var(--blood); }
         .bmp-tag { font-family: 'RocGrotesk', sans-serif; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; font-size: 11px; color: var(--mute); }
         .bmp-cta { font-family: 'RocGrotesk', sans-serif; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; }
         .bmp-blood-strip { background: var(--blood); height: 4px; }
         .bmp-blood-dot { width: 10px; height: 10px; background: var(--blood); display: inline-block; }
-        .bmp-hero-headline { font-size: clamp(72px, 13vw, 220px); }
-        .bmp-section-headline { font-size: clamp(48px, 8vw, 128px); }
+        /* Headline reduzida pra equilibrar visualmente com a capa que ganhou destaque */
+        .bmp-hero-headline { font-size: clamp(56px, 9.5vw, 160px); }
+        .bmp-section-headline { font-size: clamp(44px, 7vw, 112px); }
         .bmp-spectrum { background: linear-gradient(180deg, var(--paper) 0%, #f2efe6 100%); }
       `}} />
 
@@ -175,29 +177,29 @@ export default function CasosDaProducaoPage() {
             <p className="bmp-tag hidden md:block">2026 · 417 págs · 25 capítulos</p>
           </div>
 
-          {/* Grid: título + capa */}
-          <div className="grid md:grid-cols-[1.35fr_1fr] gap-10 md:gap-16 items-center">
+          {/* Grid: título + capa — capa ganha mais espaço e a tipografia desce um nível pra equilibrar */}
+          <div className="grid md:grid-cols-[1fr_1.05fr] gap-10 md:gap-14 items-center">
             <div>
               <h1 className="bmp-display bmp-hero-headline">
                 Briefing<br /><em>Mal Passado.</em>
               </h1>
 
-              <div className="bmp-blood-strip w-24 mt-8 md:mt-12" />
+              <div className="bmp-blood-strip w-24 mt-8 md:mt-10" />
 
-              <p className="font-headline text-lg md:text-2xl text-neutral-800 mt-8 max-w-xl leading-snug">
+              <p className="font-headline text-base md:text-xl text-neutral-800 mt-6 max-w-xl leading-snug" style={{fontWeight:500}}>
                 Bastidores do caos criativo na publicidade brasileira.
               </p>
             </div>
 
-            {/* Capa do livro */}
-            <div className="relative aspect-[3/4] w-full max-w-[420px] mx-auto md:ml-auto md:mr-0">
+            {/* Capa do livro — ampliada, drop-shadow editorial, leve perspectiva */}
+            <div className="relative aspect-[3/4] w-full max-w-[640px] mx-auto md:ml-auto md:mr-0">
               <Image
                 src="/images/academy/casos-da-producao/cover.webp"
                 alt="Capa do livro Briefing Mal Passado — Ângelo Mazzutti, House Mazzutti Academy Vol. 03"
                 fill
                 priority
-                sizes="(max-width: 768px) 80vw, 420px"
-                className="object-contain object-center drop-shadow-[0_25px_60px_rgba(0,0,0,0.18)]"
+                sizes="(max-width: 768px) 92vw, 640px"
+                className="object-contain object-center drop-shadow-[0_35px_90px_rgba(0,0,0,0.22)]"
               />
             </div>
           </div>
