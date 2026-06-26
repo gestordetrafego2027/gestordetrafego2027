@@ -238,10 +238,11 @@ export default function CasosDaProducaoPage() {
         </section>
 
         {/* ===================== O MONSTRO ===================== */}
-        <section id="monstro" className="px-6 py-24 md:py-32 bg-neutral-50 border-t border-neutral-200">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-12">
-              O monstro de todo mundo
+        <section id="monstro" className="px-6 py-24 md:py-32 bmp-spectrum border-t border-[var(--rule)]">
+          <div className="max-w-4xl mx-auto">
+            <p className="bmp-tag mb-6">— 01 · O monstro</p>
+            <h2 className="bmp-h2 bmp-section-headline mb-12">
+              O monstro<br /><em>de todo mundo.</em>
             </h2>
 
             <div className="font-body text-lg space-y-6 text-neutral-800">
@@ -257,70 +258,74 @@ export default function CasosDaProducaoPage() {
               </p>
             </div>
 
-            <blockquote className="font-headline text-xl md:text-2xl leading-snug max-w-2xl border-l-2 border-neutral-900 pl-6 my-12 text-neutral-700">
-              <em>
-                Briefing mal passado não é falha individual. É falha sistêmica. Forma como ensinaram a passar briefing.
-              </em>
+            <blockquote className="bmp-quote my-12 max-w-3xl border-l-[6px] border-[var(--blood)] pl-6 md:pl-8 py-2" style={{fontSize:'clamp(26px,3.4vw,44px)'}}>
+              Briefing mal passado não é <em>falha individual.</em><br />
+              É falha <em>sistêmica.</em>
             </blockquote>
 
-            <p className="font-body text-lg text-neutral-900 mt-8">
-              Este livro nomeia o monstro. E ensina o que fazer com ele.
+            <p className="font-headline text-xl md:text-2xl text-[var(--ink)] mt-8" style={{fontWeight:700, letterSpacing:'-0.012em', lineHeight:1.2}}>
+              Este livro nomeia o monstro.<br />E ensina o que fazer com ele.
             </p>
           </div>
         </section>
 
         {/* ===================== 7 SINAIS ===================== */}
         <section className="px-6 py-24 md:py-32 max-w-6xl mx-auto">
-          <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-4">
-            Os 7 sinais do briefing mal passado
+          <p className="bmp-tag mb-6">— 02 · Diagnóstico</p>
+          <h2 className="bmp-h2 bmp-section-headline mb-6">
+            Os 7 sinais do<br /><em>briefing mal passado.</em>
           </h2>
-          <p className="font-raleway text-lg text-neutral-600 mb-16">
+          <p className="font-headline text-lg md:text-2xl text-neutral-600 mb-16 max-w-2xl" style={{fontWeight:500}}>
             Reconheça antes que ele entre em produção.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-12">
             {SINAIS.map((s) => (
-              <div key={s.n} className="border-t border-neutral-200 pt-6">
-                <p className="font-label text-sm tracking-widest text-neutral-500 mb-2">{s.n}</p>
-                <h3 className="font-headline text-2xl mb-3">{s.titulo}</h3>
-                <p className="font-body text-base text-neutral-700">{s.texto}</p>
+              <div key={s.n} className="border-t-2 border-[var(--ink)] pt-6 group">
+                <div className="flex items-baseline gap-4 mb-4">
+                  <span className="bmp-num text-5xl md:text-6xl">{s.n}</span>
+                  <h3 className="bmp-h3 text-2xl md:text-3xl">{s.titulo}</h3>
+                </div>
+                <p className="font-body text-base md:text-lg text-neutral-700 leading-relaxed">{s.texto}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* ===================== 7 PERGUNTAS ===================== */}
-        <section className="px-6 py-24 md:py-32 bg-neutral-900 text-neutral-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-4">
-              E as 7 perguntas que constroem briefing bem passado
+        <section className="px-6 py-24 md:py-32 bg-[var(--ink)] text-[var(--paper)]">
+          <div className="max-w-5xl mx-auto">
+            <p className="bmp-tag mb-6" style={{color:'#a0a0a0'}}>— 03 · Antídoto</p>
+            <h2 className="bmp-h2 bmp-section-headline mb-6 text-[var(--paper)]">
+              E as 7 perguntas que<br /><span style={{color:'var(--blood)'}}>constroem briefing bem passado.</span>
             </h2>
-            <p className="font-raleway text-lg text-neutral-400 mb-16">
+            <p className="font-headline text-lg md:text-2xl text-neutral-400 mb-16 max-w-2xl" style={{fontWeight:500}}>
               Decora antes de aceitar o próximo projeto.
             </p>
 
-            <ol className="space-y-6">
+            <ol className="space-y-2">
               {PERGUNTAS.map((p, i) => (
-                <li key={i} className="flex gap-6 items-start border-t border-neutral-700 pt-6">
-                  <span className="font-label text-sm tracking-widest text-neutral-500 shrink-0 pt-1">
+                <li key={i} className="grid grid-cols-[auto_1fr] gap-6 md:gap-10 items-baseline border-t border-neutral-800 py-6 md:py-8 hover:bg-neutral-800/30 transition-colors px-2 md:px-4 -mx-2 md:-mx-4">
+                  <span className="bmp-num text-4xl md:text-6xl" style={{color:'var(--blood)'}}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <p className="font-body text-lg md:text-xl leading-snug">{p}</p>
+                  <p className="font-headline text-xl md:text-3xl leading-snug text-[var(--paper)]" style={{fontWeight:500}}>{p}</p>
                 </li>
               ))}
             </ol>
 
-            <blockquote className="font-headline text-xl md:text-2xl leading-snug max-w-2xl border-l-2 border-neutral-50 pl-6 mt-16 text-neutral-200">
-              <em>
-                Quem aprende a passar briefing direito economiza, ao longo da carreira, mais horas, dinheiro e relacionamentos do que qualquer outra habilidade técnica.
-              </em>
+            <blockquote className="bmp-quote mt-20 max-w-4xl border-l-[6px] border-[var(--blood)] pl-6 md:pl-10 py-2" style={{fontSize:'clamp(26px,3.4vw,44px)', color:'var(--paper)'}}>
+              Quem aprende a passar briefing direito economiza, ao longo da carreira, mais horas, dinheiro e relacionamentos que <em>qualquer outra habilidade técnica.</em>
             </blockquote>
           </div>
         </section>
 
         {/* ===================== A OBRA ===================== */}
         <section className="px-6 py-24 md:py-32 max-w-6xl mx-auto">
-          <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-8">A obra</h2>
+          <p className="bmp-tag mb-6">— 04 · A obra</p>
+          <h2 className="bmp-h2 bmp-section-headline mb-10">
+            <em>417</em> páginas.<br />25 capítulos. 3 partes.
+          </h2>
 
           <div className="font-body text-lg text-neutral-700 max-w-3xl mb-16 space-y-4">
             <p>
@@ -332,9 +337,9 @@ export default function CasosDaProducaoPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="border-t border-neutral-900 pt-6">
-              <p className="font-label text-xs tracking-widest text-neutral-500 mb-2">PARTE I</p>
-              <h3 className="font-headline text-2xl mb-4">A Direção</h3>
+            <div className="border-t-[3px] border-[var(--blood)] pt-6">
+              <p className="bmp-tag mb-3" style={{color:'var(--blood)'}}>PARTE I</p>
+              <h3 className="bmp-h3 text-3xl md:text-4xl mb-4">A Direção</h3>
               <p className="font-body text-base text-neutral-700 mb-4">
                 A arquitetura da criação. Cultura visual. Briefing. Posicionamento. Moodboard. Storytelling. IA aplicada à ideação.
               </p>
@@ -343,9 +348,9 @@ export default function CasosDaProducaoPage() {
               </p>
             </div>
 
-            <div className="border-t border-neutral-900 pt-6">
-              <p className="font-label text-xs tracking-widest text-neutral-500 mb-2">PARTE II</p>
-              <h3 className="font-headline text-2xl mb-4">A Produção</h3>
+            <div className="border-t-[3px] border-[var(--blood)] pt-6">
+              <p className="bmp-tag mb-3" style={{color:'var(--blood)'}}>PARTE II</p>
+              <h3 className="bmp-h3 text-3xl md:text-4xl mb-4">A Produção</h3>
               <p className="font-body text-base text-neutral-700 mb-4">
                 A maestria da execução. Direção de arte. Câmera. Casting. Pré-produção. Orçamento. Regulamentação. Edição. Pós. Cinco cases reais da House.
               </p>
@@ -354,9 +359,9 @@ export default function CasosDaProducaoPage() {
               </p>
             </div>
 
-            <div className="border-t border-neutral-900 pt-6">
-              <p className="font-label text-xs tracking-widest text-neutral-500 mb-2">PARTE III</p>
-              <h3 className="font-headline text-2xl mb-4">O Diretor Criativo</h3>
+            <div className="border-t-[3px] border-[var(--blood)] pt-6">
+              <p className="bmp-tag mb-3" style={{color:'var(--blood)'}}>PARTE III</p>
+              <h3 className="bmp-h3 text-3xl md:text-4xl mb-4">O Diretor Criativo</h3>
               <p className="font-body text-base text-neutral-700 mb-4">
                 O ofício e a vida. Liderança em operação enxuta. Negociação e venda. Atendimento ao cliente. Construção de carreira.
               </p>
@@ -372,16 +377,19 @@ export default function CasosDaProducaoPage() {
         </section>
 
         {/* ===================== PARA QUEM É ===================== */}
-        <section className="px-6 py-24 md:py-32 bg-neutral-50 border-t border-neutral-200">
+        <section className="px-6 py-24 md:py-32 bmp-spectrum border-t border-[var(--rule)]">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-16">
-              Para quem este livro foi escrito
+            <p className="bmp-tag mb-6">— 05 · Corte de público</p>
+            <h2 className="bmp-h2 bmp-section-headline mb-16">
+              Para quem este<br /><em>livro foi escrito.</em>
             </h2>
 
             <div className="grid md:grid-cols-2 gap-16">
               <div>
-                <p className="font-label text-sm tracking-widest text-neutral-900 mb-6">PARA VOCÊ</p>
-                <ul className="font-body text-base space-y-4 text-neutral-800">
+                <p className="bmp-tag mb-6 flex items-center gap-3" style={{color:'var(--blood)'}}>
+                  <span className="bmp-blood-dot" /> Para você
+                </p>
+                <ul className="font-body text-base md:text-lg space-y-4 text-neutral-800">
                   <li>→ Você dirige uma operação criativa boutique e quer profissionalizar sem virar agência grande.</li>
                   <li>→ Você trabalha em agência tradicional e está cansado do mesmo ciclo: briefing mal passado, virar a noite, entregar mesmo assim, repetir.</li>
                   <li>→ Você é freelancer e cobra menos do que deveria porque ainda não tem método pra defender preço.</li>
@@ -391,8 +399,10 @@ export default function CasosDaProducaoPage() {
               </div>
 
               <div>
-                <p className="font-label text-sm tracking-widest text-neutral-500 mb-6">PARA VOCÊ NÃO</p>
-                <ul className="font-body text-base space-y-4 text-neutral-600">
+                <p className="bmp-tag mb-6 flex items-center gap-3">
+                  <span style={{width:'10px', height:'10px', display:'inline-block', background:'#cdcdcd'}} /> Para você não
+                </p>
+                <ul className="font-body text-base md:text-lg space-y-4 text-neutral-600">
                   <li>→ Você quer um guia em dez passos com transformação garantida em trinta dias.</li>
                   <li>→ Você quer ouvir que o cliente é sempre o problema. Não é.</li>
                   <li>→ Você quer um manual técnico genérico de publicidade. Hegarty, Ogilvy e Sullivan já fizeram esse trabalho.</li>
@@ -408,8 +418,11 @@ export default function CasosDaProducaoPage() {
         </section>
 
         {/* ===================== AUTOR ===================== */}
-        <section className="px-6 py-24 md:py-32 max-w-4xl mx-auto">
-          <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-12">Sobre o autor</h2>
+        <section className="px-6 py-24 md:py-32 max-w-5xl mx-auto">
+          <p className="bmp-tag mb-6">— 06 · Quem escreve</p>
+          <h2 className="bmp-h2 bmp-section-headline mb-12">
+            Ângelo<br /><em>Mazzutti.</em>
+          </h2>
 
           <div className="font-body text-lg space-y-6 text-neutral-800 mb-12">
             <p>
@@ -426,29 +439,30 @@ export default function CasosDaProducaoPage() {
             </p>
           </div>
 
-          <blockquote className="font-headline text-xl md:text-2xl leading-snug border-l-2 border-neutral-900 pl-6 text-neutral-700">
-            <em>
-              Briefing Mal Passado é o primeiro livro de Ângelo Mazzutti. Não é fim de carreira — é régua editorial cravada no meio do ofício, pra que quem vier depois encontre o que ele não encontrou no começo.
-            </em>
+          <blockquote className="bmp-quote border-l-[6px] border-[var(--blood)] pl-6 md:pl-10 py-2 mt-4" style={{fontSize:'clamp(24px,3.2vw,40px)'}}>
+            <em>Briefing Mal Passado</em> é o primeiro livro de Ângelo. Não é fim de carreira — é <em>régua editorial</em> cravada no meio do ofício.
           </blockquote>
         </section>
 
         {/* ===================== FORMATOS / INVESTIMENTO ===================== */}
-        <section id="formatos" className="px-6 py-24 md:py-32 bg-neutral-900 text-neutral-50">
+        <section id="formatos" className="px-6 py-24 md:py-32 bg-[var(--ink)] text-[var(--paper)]">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-4">Duas formas de ler</h2>
-            <p className="font-raleway text-lg text-neutral-400 mb-16">
+            <p className="bmp-tag mb-6" style={{color:'#a0a0a0'}}>— 07 · Adquirir</p>
+            <h2 className="bmp-h2 bmp-section-headline mb-6 text-[var(--paper)]">
+              Duas formas<br /><span style={{color:'var(--blood)'}}>de ler.</span>
+            </h2>
+            <p className="font-headline text-lg md:text-2xl text-neutral-400 mb-16 max-w-2xl" style={{fontWeight:500}}>
               Mesma obra. Mesmo conteúdo. Você escolhe como.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-10">
+            <div className="grid md:grid-cols-2 gap-6">
               {/* DIGITAL */}
-              <div className="border border-neutral-700 p-10 transition hover:border-neutral-500">
-                <p className="font-label text-xs tracking-widest text-neutral-500 mb-2">VERSÃO DIGITAL</p>
-                <h3 className="font-headline text-3xl mb-6">PDF</h3>
+              <div className="border border-neutral-700 p-10 transition hover:border-[var(--blood)] relative">
+                <p className="bmp-tag mb-3" style={{color:'#a0a0a0'}}>VERSÃO DIGITAL</p>
+                <h3 className="bmp-h3 text-4xl md:text-5xl mb-8">PDF</h3>
 
-                <p className="font-headline text-5xl mb-8">
-                  R$ 54<span className="text-2xl">,00</span>
+                <p className="bmp-display mb-8" style={{fontSize:'clamp(64px,9vw,128px)', lineHeight:0.86}}>
+                  <span style={{fontSize:'0.42em', color:'var(--blood)', verticalAlign:'top', marginRight:'0.2em'}}>R$</span>54
                 </p>
 
                 <p className="font-body text-base text-neutral-300 mb-8">
@@ -457,19 +471,20 @@ export default function CasosDaProducaoPage() {
 
                 <a
                   href={CHECKOUT_DIGITAL_URL}
-                  className="inline-block w-full text-center bg-neutral-50 text-neutral-900 font-label tracking-wide text-sm uppercase px-8 py-4 hover:bg-neutral-200 transition"
+                  className="bmp-cta inline-block w-full text-center bg-[var(--paper)] text-[var(--ink)] text-sm px-8 py-5 hover:bg-[var(--blood)] hover:text-[var(--paper)] transition-colors"
                 >
-                  Comprar versão digital
+                  Comprar versão digital →
                 </a>
               </div>
 
               {/* IMPRESSO */}
-              <div className="border border-neutral-700 p-10 transition hover:border-neutral-500">
-                <p className="font-label text-xs tracking-widest text-neutral-500 mb-2">VERSÃO IMPRESSA</p>
-                <h3 className="font-headline text-3xl mb-6">Livro físico</h3>
+              <div className="border-2 border-[var(--blood)] p-10 transition bg-neutral-900/30 relative">
+                <span className="absolute top-0 right-0 bg-[var(--blood)] text-[var(--paper)] bmp-tag px-3 py-1.5" style={{color:'var(--paper)'}}>Mais procurado</span>
+                <p className="bmp-tag mb-3" style={{color:'var(--blood)'}}>VERSÃO IMPRESSA</p>
+                <h3 className="bmp-h3 text-4xl md:text-5xl mb-8">Livro físico</h3>
 
-                <p className="font-headline text-5xl mb-8">
-                  R$ 95<span className="text-2xl">,00</span>
+                <p className="bmp-display mb-8" style={{fontSize:'clamp(64px,9vw,128px)', lineHeight:0.86}}>
+                  <span style={{fontSize:'0.42em', color:'var(--blood)', verticalAlign:'top', marginRight:'0.2em'}}>R$</span>95
                 </p>
 
                 <p className="font-body text-base text-neutral-300 mb-8">
@@ -478,9 +493,9 @@ export default function CasosDaProducaoPage() {
 
                 <a
                   href={CHECKOUT_IMPRESSO_URL}
-                  className="inline-block w-full text-center bg-neutral-50 text-neutral-900 font-label tracking-wide text-sm uppercase px-8 py-4 hover:bg-neutral-200 transition"
+                  className="bmp-cta inline-block w-full text-center bg-[var(--blood)] text-[var(--paper)] text-sm px-8 py-5 hover:bg-[var(--paper)] hover:text-[var(--ink)] transition-colors"
                 >
-                  Comprar versão impressa
+                  Comprar versão impressa →
                 </a>
               </div>
             </div>
@@ -492,8 +507,11 @@ export default function CasosDaProducaoPage() {
         </section>
 
         {/* ===================== FAQ ===================== */}
-        <section className="px-6 py-24 md:py-32 max-w-3xl mx-auto">
-          <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-16">Antes de comprar</h2>
+        <section className="px-6 py-24 md:py-32 max-w-4xl mx-auto">
+          <p className="bmp-tag mb-6">— 08 · Antes de comprar</p>
+          <h2 className="bmp-h2 bmp-section-headline mb-16">
+            Antes de<br /><em>comprar.</em>
+          </h2>
 
           <div className="space-y-10">
             <Faq q="Qual a diferença entre a versão online e a impressa?">
@@ -527,10 +545,11 @@ export default function CasosDaProducaoPage() {
         </section>
 
         {/* ===================== CTA FINAL ===================== */}
-        <section className="px-6 py-24 md:py-32 bg-neutral-50 border-t border-neutral-200">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-5xl leading-tight mb-12">
-              Antes de fechar esta página
+        <section className="px-6 py-24 md:py-32 bmp-spectrum border-t border-[var(--rule)]">
+          <div className="max-w-4xl mx-auto">
+            <p className="bmp-tag mb-6">— Última chamada</p>
+            <h2 className="bmp-h2 bmp-section-headline mb-12">
+              Antes de fechar<br /><em>esta página.</em>
             </h2>
 
             <div className="font-body text-lg space-y-6 text-neutral-800 mb-12">
@@ -543,16 +562,16 @@ export default function CasosDaProducaoPage() {
               <p>Este livro é a régua pra escolher o segundo caminho.</p>
             </div>
 
-            <blockquote className="font-headline text-2xl md:text-3xl leading-tight border-l-2 border-neutral-900 pl-6 mb-12 text-neutral-900">
-              <em>Briefing mal passado mata projeto.</em><br />
-              <em>Briefing bem passado salva carreira.</em>
+            <blockquote className="bmp-quote border-l-[6px] border-[var(--blood)] pl-6 md:pl-10 py-2 mb-12" style={{fontSize:'clamp(28px,4vw,56px)'}}>
+              Briefing mal passado <em>mata projeto.</em><br />
+              Briefing bem passado <em>salva carreira.</em>
             </blockquote>
 
             <a
               href="#formatos"
-              className="inline-block bg-neutral-900 text-white font-label tracking-wide text-sm uppercase px-8 py-4 hover:bg-neutral-700 transition"
+              className="bmp-cta inline-block bg-[var(--ink)] text-[var(--paper)] text-sm px-10 py-5 hover:bg-[var(--blood)] transition-colors"
             >
-              Quero o livro
+              Quero o livro →
             </a>
           </div>
         </section>
