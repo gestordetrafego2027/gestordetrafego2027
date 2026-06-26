@@ -7,6 +7,7 @@
 // Centralizar aqui protege TODOS os formulários de lead sem alterar cada um.
 
 import { getRecaptchaToken } from '@/lib/recaptcha/client'
+import { clientLog as logger } from '@/lib/logger-client'
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -28,7 +29,7 @@ const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 export async function submitLead(payload) {
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
     const msg = 'Supabase URL ou Anon Key não configurados.'
-    console.error('[submitLead]', msg)
+    logger.error('[submitLead] ' + msg)
     throw new Error(msg)
   }
   const recaptchaToken = await getRecaptchaToken('lead')
@@ -44,13 +45,13 @@ export async function submitLead(payload) {
       body: JSON.stringify({ ...payload, recaptchaToken }),
     })
   } catch (networkErr) {
-    console.error('[submitLead] network error:', networkErr)
+    logger.error({ err: networkErr }, '[submitLead] network error')
     throw new Error('Sem conexão com o servidor. Verifique sua internet e tente novamente.')
   }
   const data = await res.json().catch(() => ({}))
   if (!res.ok) {
     const detail = data?.error || `HTTP ${res.status}`
-    console.error('[submitLead] falhou:', { status: res.status, detail, payload })
+    logger.error({ status: res.status, detail, payload }, '[submitLead] falhou')
     throw new Error(`Falha ao enviar (${detail}). Se persistir, fale com contato@housemazzutti.com.`)
   }
   return data

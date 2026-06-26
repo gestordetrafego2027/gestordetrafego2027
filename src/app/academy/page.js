@@ -128,12 +128,12 @@ export default function AcademyHomePage() {
               priority
               sizes="100vw"
               className="object-cover object-center"
-              style={{ opacity: 0.35 }}
+              style={{ opacity: 0.6 }}
             />
           </div>
           <div
             className="absolute inset-0 z-10"
-            style={{ background: 'linear-gradient(to top, #000 25%, transparent 65%)' }}
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.85) 10%, transparent 60%)' }}
           />
 
           <div className="relative z-20 h-full flex flex-col justify-center px-12 md:pl-48">
