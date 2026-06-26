@@ -77,15 +77,15 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
   },
   'casos-da-producao': {
     slug: 'casos-da-producao',
-    name: 'Inside Out · Vol. 03',
-    stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? 'price_1TgZGILcrEu1967nxsNG52fO',
+    name: 'Briefing Mal Passado · Vol. 03',
+    stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? 'price_1TmRsPLcrEu1967n9eZD8U0e', // R$ 54,00 · prod_Ufv6mQL1zD4Bxf
     storagePath: 'casos-da-producao/vol-03.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_CASOS_DA_PRODUCAO ??
       '/downloads/casos-da-producao-hmzt-vol-03.pdf',
     expiresIn: '7 dias',
     volumeLabel: 'Vol. 03',
-    detail: '29 páginas · 7 bastidores reais — do conceito à entrega com contexto de mercado e direção criativa.',
+    detail: '417 páginas em 25 capítulos · 3 partes. Bastidores do caos criativo na publicidade brasileira.',
   },
 }
 
