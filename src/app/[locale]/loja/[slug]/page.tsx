@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { notFound } from 'next/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { featureFlags } from '@/lib/feature-flags'
@@ -27,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: p.seo_description,
     // Canonical próprio: sem isto o produto herda a canonical raiz (/pt/) do [locale]/layout.
     alternates: { canonical },
-    openGraph: { url: canonical, images: p.og_image_url ? [p.og_image_url] : p.images?.[0] ? [p.images[0]] : [] },
+    openGraph: { url: canonical, images: p.og_image_url ? [p.og_image_url] : Array.isArray(p.images) && p.images[0] ? [(p.images as string[])[0]] : [] },
   }
 }
 
@@ -45,18 +44,20 @@ export default async function ProdutoPage({ params }: Props) {
     .select(`id, slug, name, description, product_type, images, features,
       metadata, seo_title, seo_description, og_image_url, featured,
       store_prices (id, stripe_price_id, unit_amount, currency, price_type,
-        recurring_interval, recurring_interval_count, nickname, active),
+        recurring_interval, recurring_interval_count, nickname, active, metadata),
       store_product_categories (store_categories (id, slug, name))`)
     .eq('slug', slug).eq('active', true).maybeSingle()
 
   if (!product) notFound()
 
-  const allPrices = (product.store_prices as any[]) ?? []
-  const mainPrice = allPrices.find((p: any) => p.active) ?? null
-  const isQuoteOnly = mainPrice?.metadata?.quote_only === 'true'
-  const mainImage = product.og_image_url ?? product.images?.[0] ?? null
-  const galleryImages = product.images ?? []
-  const category = (product.store_product_categories as any[])?.[0]?.store_categories
+  const allPrices = Array.isArray(product.store_prices) ? product.store_prices : []
+  const mainPrice = allPrices.find((p) => p.active) ?? null
+  const isQuoteOnly = (mainPrice?.metadata as { quote_only?: string } | null)?.quote_only === 'true'
+  const rawImages = Array.isArray(product.images) ? (product.images as string[]) : []
+  const mainImage = product.og_image_url ?? rawImages[0] ?? null
+  const galleryImages = rawImages
+  const productCats = Array.isArray(product.store_product_categories) ? product.store_product_categories : []
+  const category = (productCats[0] as { store_categories?: { id?: string; slug?: string; name?: string } } | undefined)?.store_categories
 
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'Product',

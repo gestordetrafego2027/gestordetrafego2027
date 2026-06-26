@@ -111,12 +111,9 @@ export const pricingByService = {
       {
         id: 'essencial',
         name: 'ESSENCIAL',
-        price: 'R$ 2.7k',
-        priceCents: 270000,
-        slug: 'book-essencial',
-        coverImage: '/images/studio/banners/banner-1.webp',
-        priceLabel: 'A PARTIR DE · ENTREGA EM 7 DIAS',
-        ctaLabel: 'SELECIONAR',
+        price: 'Sob consulta',
+        priceLabel: 'ENTREGA EM 7 DIAS',
+        ctaLabel: 'SOLICITAR PROPOSTA',
         items: [
           '02 looks estratégicos',
           '10 fotos tratadas',
@@ -127,12 +124,9 @@ export const pricingByService = {
       {
         id: 'estrategico',
         name: 'ESTRATÉGICO',
-        price: 'R$ 3.5k',
-        priceCents: 350000,
-        slug: 'book-estrategico',
-        coverImage: '/images/studio/banners/banner-2.webp',
+        price: 'Sob consulta',
         priceLabel: 'MAIS ESCOLHIDO · ENTREGA EM 10 DIAS',
-        ctaLabel: 'SELECIONAR AGORA',
+        ctaLabel: 'SOLICITAR PROPOSTA',
         popular: true,
         items: [
           '04 looks estratégicos',
@@ -146,12 +140,9 @@ export const pricingByService = {
       {
         id: 'premium',
         name: 'PREMIUM',
-        price: 'R$ 6.1k',
-        priceCents: 610000,
-        slug: 'book-premium',
-        coverImage: '/images/studio/banners/banner-3.webp',
+        price: 'Sob consulta',
         priceLabel: 'PRODUÇÃO FULL-DAY',
-        ctaLabel: 'SELECIONAR',
+        ctaLabel: 'SOLICITAR PROPOSTA',
         items: [
           'Looks ilimitados',
           '30 fotos high-end',
@@ -163,17 +154,14 @@ export const pricingByService = {
   },
   ensaio: {
     sectionKicker: 'INVESTIMENTO',
-    sectionTitle: 'Projetos de impacto. Valores reais.',
+    sectionTitle: 'Projetos de impacto. Proposta sob medida.',
     tiers: [
       {
         id: 'essencial',
         name: 'AUTORAL',
-        price: 'R$ 3.7k',
-        priceCents: 370000,
-        slug: 'ensaio-autoral',
-        coverImage: '/images/studio/marjorie-rossi/capa.webp',
-        priceLabel: 'A PARTIR DE · ENTREGA EM 10 DIAS',
-        ctaLabel: 'SELECIONAR',
+        price: 'Sob consulta',
+        priceLabel: 'ENTREGA EM 10 DIAS',
+        ctaLabel: 'SOLICITAR PROPOSTA',
         items: [
           'Conceito e moodboard',
           '02 looks de cena',
@@ -184,12 +172,9 @@ export const pricingByService = {
       {
         id: 'estrategico',
         name: 'EDITORIAL',
-        price: 'R$ 6.7k',
-        priceCents: 670000,
-        slug: 'ensaio-editorial',
-        coverImage: '/images/studio/marina-machado/capa.webp',
+        price: 'Sob consulta',
         priceLabel: 'MAIS ESCOLHIDO · ENTREGA EM 15 DIAS',
-        ctaLabel: 'SELECIONAR AGORA',
+        ctaLabel: 'SOLICITAR PROPOSTA',
         popular: true,
         items: [
           'Conceito editorial',
@@ -202,12 +187,9 @@ export const pricingByService = {
       {
         id: 'premium',
         name: 'SIGNATURE',
-        price: 'R$ 12k',
-        priceCents: 1200000,
-        slug: 'ensaio-signature',
-        coverImage: '/images/studio/mileide-mihaile/capa.webp',
+        price: 'Sob consulta',
         priceLabel: 'PRODUÇÃO COMPLETA · FULL-DAY',
-        ctaLabel: 'SELECIONAR',
+        ctaLabel: 'SOLICITAR PROPOSTA',
         items: [
           'Direção criativa completa',
           'Looks ilimitados',

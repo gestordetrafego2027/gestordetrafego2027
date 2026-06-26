@@ -116,9 +116,9 @@ export default async function ClientDetailPage({
               <span className={`rounded px-2 py-0.5 ${statusBadge[client.status] ?? ''}`}>
                 {client.status}
               </span>
-              {lead?.data && (
+              {lead && (
                 <Link
-                  href={`/crm/leads/${lead.data.id}`}
+                  href={`/crm/leads/${lead.id}`}
                   className="rounded bg-blue-50 text-blue-700 px-2 py-0.5 hover:underline"
                 >
                   ← lead de origem

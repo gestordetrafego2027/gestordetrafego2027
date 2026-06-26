@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client'
 
 import { useEffect, useState } from 'react'
@@ -64,12 +63,13 @@ export default function NewsletterPage() {
 
   async function loadData() {
     setLoading(true)
-    const [{ data: subs }, { data: snds }] = await Promise.all([
-      supabase.from('newsletter_subscribers').select('*').order('created_at', { ascending: false }),
-      supabase.from('newsletter_sends').select('*').order('sent_at', { ascending: false }).limit(20),
+    // newsletter_subscribers e newsletter_sends não estão no schema gerado — cast necessário.
+    const [subsResult, sndsResult] = await Promise.all([
+      (supabase as unknown as { from: (t: string) => { select: (c: string) => { order: (col: string, o: { ascending: boolean }) => Promise<{ data: Subscriber[] | null }> } } }).from('newsletter_subscribers').select('*').order('created_at', { ascending: false }),
+      (supabase as unknown as { from: (t: string) => { select: (c: string) => { order: (col: string, o: { ascending: boolean }) => { limit: (n: number) => Promise<{ data: Send[] | null }> } } } }).from('newsletter_sends').select('*').order('sent_at', { ascending: false }).limit(20),
     ])
-    setSubscribers(subs ?? [])
-    setSends(snds ?? [])
+    setSubscribers(subsResult.data ?? [])
+    setSends(sndsResult.data ?? [])
     setLoading(false)
   }
 
@@ -81,25 +81,16 @@ export default function NewsletterPage() {
     setSending(true)
     setSendResult(null)
 
-    const { data: { session } } = await supabase.auth.getSession()
-    const token = session?.access_token
-
     try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/send_newsletter`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            article_slug: article.slug,
-            article_title: article.title,
-            article_excerpt: customExcerpt,
-          }),
-        }
-      )
+      const res = await fetch('/api/newsletter/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          article_slug: article.slug,
+          article_title: article.title,
+          article_excerpt: customExcerpt,
+        }),
+      })
       const data = await res.json()
       setSendResult(res.ok ? { ok: true, total_sent: data.total_sent } : { ok: false, error: data.error ?? 'Erro desconhecido.' })
       if (res.ok) {
@@ -115,7 +106,8 @@ export default function NewsletterPage() {
   }
 
   async function toggleSubscriber(id: string, active: boolean) {
-    await supabase.from('newsletter_subscribers').update({ active: !active }).eq('id', id)
+    type SubClient = { from: (t: string) => { update: (v: Record<string, unknown>) => { eq: (col: string, val: string) => Promise<unknown> } } }
+    await (supabase as unknown as SubClient).from('newsletter_subscribers').update({ active: !active }).eq('id', id)
     setSubscribers(prev => prev.map(s => s.id === id ? { ...s, active: !active } : s))
   }
 

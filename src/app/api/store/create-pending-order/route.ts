@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Cria um store_orders com status='pending' a partir dos itens do carrinho.
  * Usado pelo fluxo Asaas (Pix/Boleto), que precisa de um orderId existente

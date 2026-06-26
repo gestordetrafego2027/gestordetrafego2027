@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { getStripe } from '@/lib/stripe/server'
@@ -79,7 +78,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Bloqueia quote_only no checkout direto
-  const quoteOnlyItem = prices.find((p) => p.metadata?.quote_only === 'true')
+  const quoteOnlyItem = prices.find((p) => (p.metadata as { quote_only?: string } | null)?.quote_only === 'true')
   if (quoteOnlyItem) {
     return NextResponse.json(
       { error: 'Este item exige orçamento — use o formulário de contato.' },
@@ -124,6 +123,12 @@ export async function POST(req: NextRequest) {
       currency: 'brl',
       // Sprint 9: Pix/Boleto migrados para Asaas; Stripe responde apenas por cartão.
       payment_method_types: ['card'],
+      // Parcelamento no cartão — juros repassados ao cliente pelo Stripe automaticamente.
+      payment_method_options: {
+        card: {
+          installments: { enabled: true },
+        },
+      },
       // Aceite do Termo de Compra e Venda — propagado p/ o webhook persistir no pedido
       metadata: {
         ...(body.consent

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/app/components/Header'
 import BlogSection from '@/app/components/BlogSection'
+import { priceLabelForSlug } from '@/lib/digital-products'
 
 export const metadata = {
   title: 'Academy — House Mazzutti',
@@ -43,7 +44,8 @@ const BOOKS = [
     chapters: '12',
     format: 'Ebook',
     priceFull: null,
-    price: 'R$ 49',
+    slug: 'marketing-para-modelos',
+    price: priceLabelForSlug('marketing-para-modelos'),
     discount: null,
     href: '/pt/academy/marketing-para-modelos',
     cover: '/images/academy/marketing-para-modelos/cover.webp',
@@ -61,7 +63,8 @@ const BOOKS = [
     chapters: '10',
     format: 'Ebook',
     priceFull: null,
-    price: 'R$ 46',
+    slug: 'preco-da-relevancia',
+    price: priceLabelForSlug('preco-da-relevancia'),
     discount: null,
     href: '/pt/academy/preco-da-relevancia',
     cover: '/images/academy/preco-da-relevancia/cover.webp',
@@ -79,7 +82,8 @@ const BOOKS = [
     chapters: '25',
     format: 'PDF + Impresso',
     priceFull: null,
-    price: 'R$ 54',
+    slug: 'casos-da-producao',
+    price: priceLabelForSlug('casos-da-producao'),
     discount: null,
     href: '/pt/academy/casos-da-producao',
     cover: '/images/academy/inside-out/cover.webp',
@@ -123,12 +127,104 @@ const GALLERY = [
   { src: '/images/academy/gallery/grid-6.webp', alt: 'Workshop Inside Out — resultado' },
 ]
 
+/* ─── structured data (SEO/AEO) ───────────────────────────────────
+   Gerado a partir de BOOKS e PRODUCTS, então nunca dessincroniza. */
+const SITE_URL = 'https://housemazzutti.com'
+
+function priceToNumber(label) {
+  if (!label) return null
+  const n = Number(String(label).replace(/[^\d]/g, ''))
+  return Number.isFinite(n) && n > 0 ? n : null
+}
+
+function buildAcademyJsonLd() {
+  const author = { '@type': 'Person', name: 'Angelo Mazzutti' }
+  const provider = {
+    '@type': 'Organization',
+    name: 'House Mazzutti',
+    url: SITE_URL,
+  }
+
+  const books = BOOKS.map((b) => {
+    const price = priceToNumber(b.price)
+    const pages = Number(b.pages)
+    return {
+      '@type': 'Book',
+      name: b.title,
+      url: `${SITE_URL}${b.href}/`,
+      image: `${SITE_URL}${b.cover}`,
+      description: b.subtitle,
+      author,
+      inLanguage: 'pt-BR',
+      bookFormat: String(b.format).includes('Impresso')
+        ? 'https://schema.org/Hardcover'
+        : 'https://schema.org/EBook',
+      ...(Number.isFinite(pages) && pages > 0 ? { numberOfPages: pages } : {}),
+      ...(price
+        ? {
+            offers: {
+              '@type': 'Offer',
+              price,
+              priceCurrency: 'BRL',
+              availability: 'https://schema.org/InStock',
+              url: `${SITE_URL}${b.href}/`,
+            },
+          }
+        : {}),
+    }
+  })
+
+  const courses = PRODUCTS.map((p) => {
+    const price = priceToNumber(p.price)
+    return {
+      '@type': 'Course',
+      name: p.title,
+      description: p.subtitle,
+      url: `${SITE_URL}${p.href}/`,
+      image: `${SITE_URL}${p.cover}`,
+      provider,
+      inLanguage: 'pt-BR',
+      ...(price
+        ? {
+            offers: {
+              '@type': 'Offer',
+              price,
+              priceCurrency: 'BRL',
+              category: 'Paid',
+              availability: 'https://schema.org/InStock',
+              url: `${SITE_URL}${p.href}/`,
+            },
+          }
+        : {}),
+    }
+  })
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        name: 'House Mazzutti Academy',
+        url: `${SITE_URL}/pt/academy/`,
+        description:
+          'Cursos, workshops, ebooks e comunidade da House Mazzutti. Conteúdo prático sobre direção criativa, moda e comunicação.',
+      },
+      ...books,
+      ...courses,
+    ],
+  }
+}
+
 /* ══════════════════════════════════════════════════════════════════
    PAGE
 ══════════════════════════════════════════════════════════════════ */
 export default function AcademyHomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildAcademyJsonLd()) }}
+      />
       <Header variant="dark" />
 
       <main className="bg-black text-white">

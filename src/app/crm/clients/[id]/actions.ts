@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { logger } from '@/lib/logger'
 
 type PaymentMethod =
   | 'pix' | 'boleto' | 'cartao_credito' | 'cartao_debito'
@@ -30,7 +31,7 @@ export async function recordPaymentAction(formData: FormData): Promise<void> {
     reference,
     paid_at: paidAt,
   })
-  if (payErr) { console.error('[recordPaymentAction]', payErr.message); return }
+  if (payErr) { logger.error({ err: payErr }, '[recordPaymentAction]'); return }
 
   // 2) atualiza fatura: paid_brl acumulado + status (paga/parcial)
   const { data: inv } = await supabase

@@ -3,6 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import { logger } from '@/lib/logger'
 
 type Trigger =
   | 'lead_created' | 'lead_status_change' | 'stage_change'
@@ -39,7 +40,7 @@ export async function createRuleAction(formData: FormData): Promise<void> {
     .select('id')
     .single()
 
-  if (error || !data) { console.error('[createRuleAction]', error?.message); return }
+  if (error || !data) { logger.error({ err: error }, '[createRuleAction]'); return }
   revalidatePath('/crm/automations')
   redirect(`/crm/automations/${data.id}`)
 }
@@ -67,7 +68,7 @@ export async function updateRuleAction(formData: FormData): Promise<void> {
       active,
     })
     .eq('id', id)
-  if (error) { console.error('[updateRuleAction]', error.message); return }
+  if (error) { logger.error({ err: error }, '[updateRuleAction]'); return }
   revalidatePath('/crm/automations')
   revalidatePath(`/crm/automations/${id}`)
 }
@@ -79,7 +80,7 @@ export async function toggleRuleAction(formData: FormData): Promise<void> {
   const supabase = await createClient()
   const { error } = await supabase
     .from('automation_rules').update({ active: !active }).eq('id', id)
-  if (error) { console.error('[toggleRuleAction]', error.message); return }
+  if (error) { logger.error({ err: error }, '[toggleRuleAction]'); return }
   revalidatePath('/crm/automations')
 }
 
@@ -88,7 +89,7 @@ export async function deleteRuleAction(formData: FormData): Promise<void> {
   if (!id) return
   const supabase = await createClient()
   const { error } = await supabase.from('automation_rules').delete().eq('id', id)
-  if (error) { console.error('[deleteRuleAction]', error.message); return }
+  if (error) { logger.error({ err: error }, '[deleteRuleAction]'); return }
   revalidatePath('/crm/automations')
   redirect('/crm/automations')
 }

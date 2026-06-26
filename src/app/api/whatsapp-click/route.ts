@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { logger } from '@/lib/logger'
 import { getClientIp } from '@/lib/rate-limit'
 
 export const dynamic = 'force-dynamic'
@@ -38,7 +39,7 @@ export async function POST(req: NextRequest) {
   })
 
   if (error) {
-    console.error('[whatsapp-click]', error.message)
+    logger.error({ err: error }, '[whatsapp-click]')
     // Não bloqueia o usuário — o clique já abriu o WA
     return NextResponse.json({ ok: false }, { status: 500 })
   }

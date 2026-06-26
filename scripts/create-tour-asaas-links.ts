@@ -70,7 +70,7 @@ async function main() {
       value: plan.value,
       billingType: 'CREDIT_CARD',
       chargeType: 'INSTALLMENT',
-      installmentCount: 3,
+      maxInstallmentCount: 3,
       dueDateLimitDays: 30,
       isAddressRequired: false,
       notificationEnabled: true,

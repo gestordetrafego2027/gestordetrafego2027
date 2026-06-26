@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useCartStore } from '@/lib/cart/store'

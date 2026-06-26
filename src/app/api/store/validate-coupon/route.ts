@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { NextRequest, NextResponse } from 'next/server'
 import { getStripe } from '@/lib/stripe/server'
 import { featureFlags } from '@/lib/feature-flags'
@@ -35,7 +34,11 @@ export async function GET(req: NextRequest) {
     }
 
     const promo = promoCodes.data[0]
-    const coupon = promo.coupon
+    const coupon = typeof promo.promotion.coupon === 'string' ? null : promo.promotion.coupon
+
+    if (!coupon) {
+      return NextResponse.json({ valid: false, error: 'Cupom inválido.' }, { status: 200 })
+    }
 
     // Verifica validade temporal
     const now = Math.floor(Date.now() / 1000)

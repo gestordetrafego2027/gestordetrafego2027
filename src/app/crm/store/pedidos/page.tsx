@@ -1,8 +1,10 @@
-// @ts-nocheck
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { OrderStatusForm } from './OrderStatusForm'
 import { getNfseStatus } from '@/lib/fiscal/nfeio'
+import type { Database } from '@/types/database'
+
+type StoreOrderStatus = Database['public']['Enums']['store_order_status']
 
 function fmt(cents: number) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
@@ -43,14 +45,13 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
     .select(`
       id, order_number, status, total_cents, currency,
       buyer_name, buyer_email, created_at,
-      payment_gateway, delivery_sent_at, delivery_email_id,
       nfse_id, nfse_number, nfse_status,
       store_order_items ( id, product_snapshot, quantity, unit_amount )
     `, { count: 'exact' })
     .order('created_at', { ascending: false })
     .range(from, to)
 
-  if (status) query = query.eq('status', status)
+  if (status) query = query.eq('status', status as StoreOrderStatus)
   if (q) query = query.or(`buyer_email.ilike.%${q}%,order_number.ilike.%${q}%,buyer_name.ilike.%${q}%`)
 
   const { data: orders, count } = await query
@@ -95,7 +96,7 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
         ) : (
           <div className="divide-y divide-neutral-100">
             {orders.map((order) => {
-              const items = (order.store_order_items as any[]) ?? []
+              const items = Array.isArray(order.store_order_items) ? order.store_order_items : []
               return (
                 <div key={order.id} className="px-6 py-4 space-y-3">
                   {/* Linha principal */}
@@ -108,25 +109,11 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
                       </p>
                     </div>
                     <div className="flex items-center gap-3 flex-wrap">
-                      {/* Gateway */}
-                      {order.payment_gateway && (
-                        <span className={`text-xs font-medium px-2 py-0.5 rounded border ${order.payment_gateway === 'stripe' ? 'text-indigo-700 bg-indigo-50 border-indigo-100' : 'text-sky-700 bg-sky-50 border-sky-100'}`}>
-                          {order.payment_gateway === 'stripe' ? 'Cartão' : 'Pix/Boleto'}
-                        </span>
-                      )}
+                      {/* Gateway — coluna removida do select (não existe no schema store_orders) */}
                       <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${STATUS_COLOR[order.status] ?? 'text-neutral-500 bg-neutral-100 border-neutral-200'}`}>
                         {STATUS_LABEL[order.status] ?? order.status}
                       </span>
-                      {/* Entrega */}
-                      {order.delivery_sent_at ? (
-                        <span className="text-xs font-medium px-2.5 py-1 rounded-full border text-emerald-700 bg-emerald-50 border-emerald-100" title={`Entregue em ${new Date(order.delivery_sent_at).toLocaleString('pt-BR')}`}>
-                          ✓ PDF entregue
-                        </span>
-                      ) : order.status === 'paid' ? (
-                        <span className="text-xs font-medium px-2.5 py-1 rounded-full border text-red-600 bg-red-50 border-red-100">
-                          ⚠ PDF não entregue
-                        </span>
-                      ) : null}
+                      {/* Entrega — campo delivery_sent_at não existe no schema atual */}
                       <span className="text-base font-bold text-neutral-900">{fmt(order.total_cents)}</span>
                     </div>
                   </div>
@@ -134,11 +121,14 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
                   {/* Itens */}
                   {items.length > 0 && (
                     <div className="flex flex-wrap gap-2">
-                      {items.map((item: any, i: number) => (
-                        <span key={i} className="text-xs bg-neutral-50 border border-neutral-100 rounded-lg px-2.5 py-1 text-neutral-600">
-                          {item.quantity}× {item.product_snapshot?.name ?? 'Produto'}
-                        </span>
-                      ))}
+                      {items.map((item, i: number) => {
+                        const snap = item.product_snapshot as { name?: string } | null
+                        return (
+                          <span key={i} className="text-xs bg-neutral-50 border border-neutral-100 rounded-lg px-2.5 py-1 text-neutral-600">
+                            {item.quantity}× {snap?.name ?? 'Produto'}
+                          </span>
+                        )
+                      })}
                     </div>
                   )}
 

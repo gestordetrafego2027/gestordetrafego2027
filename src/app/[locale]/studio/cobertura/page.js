@@ -31,6 +31,9 @@ export default function StudioCoberturaPage() {
 
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
+            <title>House Mazzutti — STUDIO | Cobertura Externa</title>
+            <meta name="description" content="Acompanhamento premium, direção de imagem e produção de conteúdo em tempo real para sua agenda em São Paulo. Proposta sob medida." />
+
             <style dangerouslySetInnerHTML={{ __html: `
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
                 .no-scrollbar::-webkit-scrollbar { display: none; }

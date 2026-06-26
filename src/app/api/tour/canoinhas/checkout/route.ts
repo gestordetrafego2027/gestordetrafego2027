@@ -13,6 +13,8 @@ import { createServiceClient } from '@/lib/supabase/service'
 import { upsertCustomer } from '@/lib/asaas/customer'
 import { createPixCharge } from '@/lib/asaas/pix'
 import { createBoletoCharge } from '@/lib/asaas/boleto'
+import { createCreditCardPaymentLink } from '@/lib/asaas/credit-card'
+import type { InstallmentCount } from '@/lib/asaas/installments'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -26,6 +28,8 @@ const PLANS: Record<string, { name: string; cents: number; priceId: string }> = 
 const Body = z.object({
   planId: z.enum(['ensaio-01', 'ensaio-02', 'ensaio-03']),
   paymentMethod: z.enum(['pix', 'boleto', 'credit_card']),
+  /** Número de parcelas — apenas para credit_card. Default 1 (à vista). */
+  installments: z.number().int().min(1).max(12).default(1),
   buyerName: z.string().min(2),
   buyerEmail: z.string().email(),
   buyerCpf: z.string().min(11).max(14),
@@ -45,16 +49,8 @@ export async function POST(req: NextRequest) {
 
   const plan = PLANS[body.planId]
 
-  // Cartão 3x → redirect para o payment link Asaas (hospedado)
-  if (body.paymentMethod === 'credit_card') {
-    const envKey = `ASAAS_LINK_${body.planId.toUpperCase().replace('-', '_')}`
-    const linkUrl = process.env[envKey]
-    if (!linkUrl) {
-      log.error({ envKey }, 'Payment link não configurado')
-      return NextResponse.json({ error: 'Link de pagamento não configurado. Tente PIX ou Boleto.' }, { status: 503 })
-    }
-    return NextResponse.json({ redirectUrl: linkUrl })
-  }
+  // Cartão → cobrança Asaas com parcelamento (juros repassados ao cliente via totalValue)
+  // O bloco de credit_card é tratado dentro do try/catch abaixo junto com pix e boleto
 
   const supabase = createServiceClient()
 
@@ -189,6 +185,55 @@ export async function POST(req: NextRequest) {
         identificationField: payment.identificationField,
         barCode: payment.barCode,
         dueDate: payment.dueDate,
+      })
+    }
+
+    if (body.paymentMethod === 'credit_card') {
+      const result = await createCreditCardPaymentLink({
+        customerId: customer.id,
+        baseCents: plan.cents,
+        installments: body.installments as InstallmentCount,
+        externalReference: order.id,
+        description: `${plan.name} — House Mazzutti · Canoinhas`,
+        idempotencyKey: `tour:${order.id}:cc`,
+      })
+
+      await supabase
+        .from('store_orders')
+        .update({
+          total_cents: result.totalCents,
+          metadata: {
+            source: 'tour_canoinhas',
+            product_type: 'tour',
+            product_name: plan.name,
+            plan_id: body.planId,
+            instagram: body.instagram ?? null,
+            payment_method: 'credit_card',
+            provider: 'asaas',
+            asaas_payment_id: result.payment.id,
+            asaas_customer_id: customer.id,
+            installment_count: result.installmentCount,
+            installment_cents: result.installmentCents,
+            asaas: {
+              method: 'credit_card',
+              paymentUrl: result.paymentUrl,
+              installmentCount: result.installmentCount,
+              installmentCents: result.installmentCents,
+              totalCents: result.totalCents,
+            },
+          },
+        })
+        .eq('id', order.id)
+
+      return NextResponse.json({
+        orderId: order.id,
+        orderNumber: order.order_number,
+        paymentId: result.payment.id,
+        method: 'credit_card',
+        paymentUrl: result.paymentUrl,
+        installmentCount: result.installmentCount,
+        installmentCents: result.installmentCents,
+        totalCents: result.totalCents,
       })
     }
   } catch (err) {

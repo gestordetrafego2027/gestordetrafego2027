@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { logger } from '@/lib/logger'
 
 export async function promoteLeadAction(formData: FormData): Promise<void> {
   const leadId = String(formData.get('lead_id') ?? '')
@@ -15,7 +16,7 @@ export async function promoteLeadAction(formData: FormData): Promise<void> {
   })
 
   if (error) {
-    console.error('[promoteLeadAction]', error.message)
+    logger.error({ err: error }, '[promoteLeadAction]')
     return
   }
   revalidatePath('/crm/leads')

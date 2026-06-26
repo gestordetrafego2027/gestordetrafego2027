@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createClient as createServerClient } from '@supabase/supabase-js'
+import { logger } from '@/lib/logger'
+import { z } from 'zod'
 import { getPayment, mpStatusToOrderStatus } from '@/lib/academy/mp'
 import type { Database } from '@/types/database'
 
@@ -67,13 +69,24 @@ export async function POST(req: Request) {
   const topic = url.searchParams.get('topic') || url.searchParams.get('type') || 'unknown'
   const resourceQuery = url.searchParams.get('id') || url.searchParams.get('data.id')
 
-  let payload: any = {}
-  try { payload = await req.json() } catch { payload = {} }
+  const mpPayloadSchema = z.object({
+    data: z.object({ id: z.union([z.string(), z.number()]) }).optional(),
+    resource: z.union([z.string(), z.number()]).optional(),
+    action: z.string().optional(),
+  }).passthrough()
+
+  type MpPayload = z.infer<typeof mpPayloadSchema>
+  let payload: MpPayload = {}
+  try {
+    const raw = await req.json() as unknown
+    const parsed = mpPayloadSchema.safeParse(raw)
+    payload = parsed.success ? parsed.data : {}
+  } catch { payload = {} }
 
   const resourceId =
     resourceQuery ||
-    payload?.data?.id?.toString() ||
-    payload?.resource?.toString() ||
+    payload.data?.id?.toString() ||
+    payload.resource?.toString() ||
     'unknown'
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -91,8 +104,8 @@ export async function POST(req: Request) {
     .insert({
       topic,
       resource_id: resourceId,
-      action: payload?.action || null,
-      payload,
+      action: payload.action ?? null,
+      payload: payload as unknown as import('@/types/database').Json,
       processing_status: 'processing',
       processing_attempts: 1,
     })
@@ -101,7 +114,7 @@ export async function POST(req: Request) {
 
   if (logErr) {
     // Pode ser duplicata (unique). Não trava o webhook — retornar 200 evita retry desnecessário.
-    console.warn('[mp/webhook] insert log:', logErr.message)
+    logger.warn({ err: logErr }, '[mp/webhook] insert log')
     return NextResponse.json({ ok: true, dedup: true })
   }
 
@@ -163,7 +176,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ ok: true })
   } catch (err: any) {
-    console.error('[mp/webhook] error:', err)
+    logger.error({ err }, '[mp/webhook] error')
     await sb
       .from('academy_mp_webhooks')
       .update({ processing_status: 'error', error_message: String(err?.message || err) })

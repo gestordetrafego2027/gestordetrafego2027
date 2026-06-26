@@ -229,7 +229,7 @@ export default function Sidebar({
           </div>
         ) : (
           <form action="/logout" method="post" className="flex justify-center">
-            <button type="submit" title="Sair" className="text-neutral-400 hover:text-neutral-700 text-xs p-1">
+            <button type="submit" title="Sair" aria-label="Sair" className="text-neutral-400 hover:text-neutral-700 text-xs p-1">
               ↩
             </button>
           </form>

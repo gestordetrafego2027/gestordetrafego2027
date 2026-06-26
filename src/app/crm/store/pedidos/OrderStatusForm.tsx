@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client'
 
 import { useTransition } from 'react'
@@ -28,7 +27,7 @@ export function OrderStatusForm({ orderId, currentStatus }: { orderId: string; c
       {actions.map((a) => (
         <form
           key={a.value}
-          action={(fd) => startTransition(() => updateOrderStatus(fd))}
+          action={(fd) => { startTransition(() => { void updateOrderStatus(fd) }) }}
         >
           <input type="hidden" name="orderId" value={orderId} />
           <input type="hidden" name="status" value={a.value} />

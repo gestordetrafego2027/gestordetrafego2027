@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { notFound } from 'next/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { featureFlags } from '@/lib/feature-flags'

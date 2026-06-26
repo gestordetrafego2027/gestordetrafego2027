@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { logger } from '@/lib/logger'
 import { verifyRecaptcha } from '@/lib/recaptcha'
 import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 
@@ -53,7 +54,7 @@ export async function POST(req: NextRequest) {
     )
 
   if (error) {
-    console.error('[newsletter/subscribe]', error)
+    logger.error({ err: error }, '[newsletter/subscribe]')
     return NextResponse.json({ error: error.message }, { status: 400 })
   }
 

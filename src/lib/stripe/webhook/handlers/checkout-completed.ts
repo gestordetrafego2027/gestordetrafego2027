@@ -222,7 +222,7 @@ export async function handleCheckoutCompleted(
   try {
     const buyerEmailNf = session.customer_details?.email ?? session.customer_email
     const buyerNameNf = session.customer_details?.name ?? 'Consumidor Final'
-    const buyerCpf = session.metadata?.buyer_cpf ?? session.customer_details?.tax_ids?.[0]?.value
+    const buyerCpf = session.metadata?.buyer_cpf ?? session.customer_details?.tax_ids?.[0]?.value ?? undefined
     const description =
       lineItems?.map((li) => `${li.quantity}x ${li.description}`).join(' + ') ??
       `Pedido ${order.id}`

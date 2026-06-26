@@ -1,4 +1,5 @@
 import { Resend } from 'resend'
+import { logger } from '@/lib/logger'
 
 const apiKey = process.env.RESEND_API_KEY
 // SPF raiz autoriza Amazon SES (Resend) + DKIM resend._domainkey existe no raiz.
@@ -35,7 +36,7 @@ export interface SendEmailResult {
 export async function sendEmail(params: SendEmailParams): Promise<SendEmailResult> {
   const client = getClient()
   if (!client) {
-    console.warn('[email/resend] RESEND_API_KEY ausente — email nao enviado:', params.subject)
+    logger.warn('[email/resend] RESEND_API_KEY ausente — email nao enviado: ' + params.subject)
     return { ok: false, id: null, error: 'RESEND_API_KEY ausente' }
   }
   try {
@@ -48,13 +49,13 @@ export async function sendEmail(params: SendEmailParams): Promise<SendEmailResul
       ...(params.tags ? { tags: params.tags } : {}),
     })
     if (error) {
-      console.error('[email/resend] erro ao enviar:', error)
+      logger.error({ err: error }, '[email/resend] erro ao enviar')
       return { ok: false, error: error.message || 'Resend send failed' }
     }
     return { ok: true, id: data?.id ?? null }
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err)
-    console.error('[email/resend] erro ao enviar:', msg)
+    logger.error({ err: err }, '[email/resend] erro ao enviar')
     return { ok: false, error: msg }
   }
 }

@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import type { Database } from '@/types/database'
+import { logger } from '@/lib/logger'
 
 type CatalogRow = Database['public']['Tables']['academy_products']['Row'] & {
   category?: { id: string; slug: string; name: string } | null
@@ -36,7 +37,7 @@ export async function listPublishedProducts(opts?: {
 
   const { data, error } = await q
   if (error) {
-    console.error('[academy/queries] listPublishedProducts:', error)
+    logger.error({ err: error }, '[academy/queries] listPublishedProducts')
     return [] as CatalogRow[]
   }
   return (data ?? []) as unknown as CatalogRow[]
@@ -55,7 +56,7 @@ export async function getProductBySlug(slug: string) {
     .eq('status', 'published')
     .maybeSingle()
   if (error) {
-    console.error('[academy/queries] getProductBySlug:', error)
+    logger.error({ err: error }, '[academy/queries] getProductBySlug')
     return null
   }
   return data

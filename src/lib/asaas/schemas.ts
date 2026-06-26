@@ -19,6 +19,9 @@ export const AsaasPaymentSchema = z.object({
   status: z.string(), // PENDING, RECEIVED, CONFIRMED, OVERDUE, REFUNDED, etc.
   value: z.number(),
   netValue: z.number().optional(),
+  totalValue: z.number().optional().nullable(),
+  installmentCount: z.number().optional().nullable(),
+  installmentValue: z.number().optional().nullable(),
   billingType: z.enum(['PIX', 'BOLETO', 'CREDIT_CARD', 'UNDEFINED']).optional(),
   dueDate: z.string().optional(),
   invoiceUrl: z.string().optional().nullable(),

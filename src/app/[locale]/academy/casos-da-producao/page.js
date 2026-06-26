@@ -6,6 +6,7 @@
  */
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 // ============================================================
 // PLACEHOLDERS — quando decidir checkout/prazo/frete, troca aqui

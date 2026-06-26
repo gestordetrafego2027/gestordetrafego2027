@@ -22,6 +22,12 @@ export interface DigitalProduct {
   name: string
   /** Stripe Price ID canônico (fonte de verdade do checkout — independe de env/Coolify). */
   stripePriceId?: string
+  /**
+   * Preço de tabela em reais inteiros (ex.: 54 → "R$ 54"). Fonte canônica do
+   * preço de DISPLAY (vitrine/Academy). A cobrança real continua sendo o
+   * `stripePriceId`; mantenha os dois alinhados ao mudar de preço.
+   */
+  priceBRL?: number
   /** Caminho do PDF dentro do bucket privado (fonte primária de entrega). */
   storagePath?: string
   /** Bucket do Storage; default DIGITAL_PRODUCTS_BUCKET. */
@@ -55,6 +61,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     slug: 'marketing-para-modelos',
     name: 'Marketing para Modelos · Vol. 01',
     stripePriceId: 'price_1TcmbpLcrEu1967n5O39YUoF', // R$ 49,00 · prod_Uc0dKAMVbuf28H
+    priceBRL: 49,
     storagePath: 'marketing-para-modelos/vol-01.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_MARKETING_PARA_MODELOS ??
@@ -67,6 +74,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     slug: 'preco-da-relevancia',
     name: 'O Preço da Relevância · Vol. 02',
     stripePriceId: 'price_1TfpoYLcrEu1967nFjwWSZzJ', // R$ 46,00 · prod_Uc0jsoMdxr4oaj
+    priceBRL: 46,
     storagePath: 'preco-da-relevancia/vol-02.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_PRECO_DA_RELEVANCIA ??
@@ -79,6 +87,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     slug: 'casos-da-producao',
     name: 'Briefing Mal Passado · Vol. 03',
     stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? 'price_1TmRsPLcrEu1967n9eZD8U0e', // R$ 54,00 · prod_Ufv6mQL1zD4Bxf
+    priceBRL: 54,
     storagePath: 'casos-da-producao/vol-03.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_CASOS_DA_PRODUCAO ??
@@ -99,6 +108,17 @@ const SLUG_ALIASES: Record<string, string> = {
   'o-preco-da-relevancia': 'preco-da-relevancia',
   'marketing-para-modelos-vol-01': 'marketing-para-modelos',
   'inside-out-masterclass': 'inside-out',
+}
+
+/** Formata o preço de tabela ("R$ 54"). Centraliza o display em um só lugar. */
+export function formatPriceBRL(value: number): string {
+  return `R$ ${value}`
+}
+
+/** Preço de tabela formatado a partir do slug do catálogo (ex.: "casos-da-producao" → "R$ 54"). */
+export function priceLabelForSlug(slug: string): string | null {
+  const product = resolveDigitalProduct(slug)
+  return product?.priceBRL != null ? formatPriceBRL(product.priceBRL) : null
 }
 
 export function resolveDigitalProduct(slug: string | null | undefined): DigitalProduct | null {

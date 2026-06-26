@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { logger } from '@/lib/logger'
 import Header from '@/app/components/Header'
 import { createClient } from '@/lib/supabase/server'
 import { createPreference } from '@/lib/academy/mp'
@@ -116,7 +117,7 @@ export default async function CheckoutPage({ searchParams }) {
       />
     )
   } catch (e) {
-    console.error('[checkout] MP error:', e)
+    logger.error({ err: e }, '[checkout] MP error')
     return <CheckoutError message={`Erro ao iniciar pagamento: ${String(e.message || e)}`} />
   }
 }

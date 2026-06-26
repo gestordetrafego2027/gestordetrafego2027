@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { logger } from '@/lib/logger'
 
 export async function addNoteAction(formData: FormData): Promise<void> {
   const leadId = String(formData.get('lead_id') ?? '')
@@ -14,7 +15,7 @@ export async function addNoteAction(formData: FormData): Promise<void> {
     .from('notes')
     .insert({ lead_id: leadId, body, author_id: user?.id ?? null })
   if (error) {
-    console.error('[addNoteAction]', error.message)
+    logger.error({ err: error }, '[addNoteAction]')
     return
   }
   revalidatePath(`/crm/leads/${leadId}`)
@@ -31,7 +32,7 @@ export async function updateLeadStatusAction(formData: FormData): Promise<void> 
     .update({ status: status as never })
     .eq('id', leadId)
   if (error) {
-    console.error('[updateLeadStatusAction]', error.message)
+    logger.error({ err: error }, '[updateLeadStatusAction]')
     return
   }
 
@@ -56,7 +57,7 @@ export async function attachTagAction(formData: FormData): Promise<void> {
     .from('lead_tags')
     .insert({ lead_id: leadId, tag_id: tagId })
   if (error && !error.message.includes('duplicate')) {
-    console.error('[attachTagAction]', error.message)
+    logger.error({ err: error }, '[attachTagAction]')
     return
   }
   revalidatePath(`/crm/leads/${leadId}`)
@@ -75,7 +76,7 @@ export async function detachTagAction(formData: FormData): Promise<void> {
     .eq('lead_id', leadId)
     .eq('tag_id', tagId)
   if (error) {
-    console.error('[detachTagAction]', error.message)
+    logger.error({ err: error }, '[detachTagAction]')
     return
   }
   revalidatePath(`/crm/leads/${leadId}`)
@@ -99,7 +100,7 @@ export async function logActivityAction(formData: FormData): Promise<void> {
     author_id: user?.id ?? null,
   })
   if (error) {
-    console.error('[logActivityAction]', error.message)
+    logger.error({ err: error }, '[logActivityAction]')
     return
   }
   revalidatePath(`/crm/leads/${leadId}`)

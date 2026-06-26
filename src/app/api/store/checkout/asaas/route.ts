@@ -12,6 +12,8 @@ import { createServiceClient } from '@/lib/supabase/service'
 import { upsertCustomer } from '@/lib/asaas/customer'
 import { createPixCharge } from '@/lib/asaas/pix'
 import { createBoletoCharge } from '@/lib/asaas/boleto'
+import { createCreditCardPaymentLink } from '@/lib/asaas/credit-card'
+import type { InstallmentCount } from '@/lib/asaas/installments'
 import { buildConsentRecord } from '@/lib/legal/consent'
 
 export const runtime = 'nodejs'
@@ -20,7 +22,9 @@ export const dynamic = 'force-dynamic'
 const Body = z.object({
   stripePriceId: z.string().min(1),
   productSlug: z.string().min(1),
-  method: z.enum(['pix', 'boleto']),
+  method: z.enum(['pix', 'boleto', 'credit_card']),
+  /** Número de parcelas — apenas para credit_card. Default 1 (à vista). */
+  installments: z.number().int().min(1).max(12).default(1),
   locale: z.enum(['pt', 'en']).default('pt'),
   email: z.string().email(),
   name: z.string().min(1),
@@ -143,7 +147,45 @@ export async function POST(req: NextRequest) {
       consent,
     }
 
-    if (body.method === 'pix') {
+    if (body.method === 'credit_card') {
+      const result = await createCreditCardPaymentLink({
+        customerId: customer.id,
+        baseCents: totalCents,
+        installments: body.installments as InstallmentCount,
+        externalReference: order.id,
+        description: `${productName} — House Mazzutti`,
+        idempotencyKey: `store:${order.id}:cc`,
+      })
+
+      await serviceSupabase
+        .from('store_orders')
+        .update({
+          total_cents: result.totalCents,
+          metadata: {
+            ...baseMeta,
+            asaas_payment_id: result.payment.id,
+            installment_count: result.installmentCount,
+            installment_cents: result.installmentCents,
+            asaas: {
+              method: 'credit_card',
+              paymentUrl: result.paymentUrl,
+              installmentCount: result.installmentCount,
+              installmentCents: result.installmentCents,
+              totalCents: result.totalCents,
+            },
+          },
+        })
+        .eq('id', order.id)
+
+      return NextResponse.json({
+        orderId: order.id,
+        method: 'credit_card',
+        paymentUrl: result.paymentUrl,
+        installmentCount: result.installmentCount,
+        installmentCents: result.installmentCents,
+        totalCents: result.totalCents,
+      })
+    } else if (body.method === 'pix') {
       const { payment, qrCode } = await createPixCharge({
         customerId: customer.id,
         valueCents: totalCents,
