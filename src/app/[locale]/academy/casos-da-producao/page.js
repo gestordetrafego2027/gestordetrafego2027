@@ -10,8 +10,8 @@ import Link from 'next/link'
 // ============================================================
 // PLACEHOLDERS — quando decidir checkout/prazo/frete, troca aqui
 // ============================================================
-const CHECKOUT_DIGITAL_URL  = '/pt/checkout/casos-da-producao?formato=digital'
-const CHECKOUT_IMPRESSO_URL = '/pt/checkout/casos-da-producao?formato=impresso'
+const CHECKOUT_DIGITAL_URL  = '/pt/checkout/casos-da-producao'
+const CHECKOUT_IMPRESSO_URL = '/pt/checkout/briefing-mal-passado-impresso'
 const PRAZO_IMPRESSO_DIAS   = '10' // dias úteis até despacho
 const REGRA_FRETE           = 'Frete calculado no checkout pelos Correios para todo o Brasil.'
 const SITE_URL              = 'https://housemazzutti.com'
