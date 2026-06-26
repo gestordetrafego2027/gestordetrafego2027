@@ -1,30 +1,34 @@
 /**
- * Checkout · Briefing Mal Passado · Vol. 03 · Digital (PDF)
- * Server component — preço/título puxados de academy_products (slug=casos-da-producao).
- * Stripe: prod_Ufv6mQL1zD4Bxf · price_1TmRsPLcrEu1967n9eZD8U0e · R$ 54,00
+ * Checkout · Briefing Mal Passado · Vol. 03 · Impresso
+ * Server component — preço/título puxados de academy_products (slug=briefing-mal-passado-impresso).
+ * Stripe: prod_Um008RUkxLtmGQ · price_1TmS0KLcrEu1967ngdZ2bk5k · R$ 95,00 (shippable)
+ *
+ * Diferenças do digital:
+ *  - Aviso explícito de envio físico (10 dias úteis, Brasil inteiro)
+ *  - Stripe Checkout coleta endereço (product.shippable=true na sessão)
+ *  - Sem download imediato — entrega via Correios
  */
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PaymentMethodSelector } from '@/components/ecommerce/PaymentMethodSelector'
 import { createClient } from '@/lib/supabase/server'
-import { DIGITAL_PRODUCTS } from '@/lib/digital-products'
 
 export const metadata: Metadata = {
-  title: 'Checkout · Briefing Mal Passado · House Mazzutti Academy',
-  description: 'Finalize sua compra do livro Briefing Mal Passado · Vol. 03 — versão digital (PDF).',
+  title: 'Checkout · Briefing Mal Passado · Impresso · House Mazzutti Academy',
+  description: 'Finalize sua compra do livro físico Briefing Mal Passado · Vol. 03 — capa cartonada, 417 páginas, envio para todo o Brasil.',
   robots: { index: false, follow: false },
 }
 
 export const dynamic = 'force-dynamic'
 
-const SLUG = 'casos-da-producao'
+const SLUG = 'briefing-mal-passado-impresso'
 const STRIPE_PRICE_ID =
-  DIGITAL_PRODUCTS[SLUG]?.stripePriceId ?? process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? ''
+  process.env.STRIPE_PRICE_ID_BRIEFING_MAL_PASSADO_IMPRESSO ?? 'price_1TmS0KLcrEu1967ngdZ2bk5k'
 
 const brl = (cents: number | null | undefined) =>
   ((cents ?? 0) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-export default async function CheckoutPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function CheckoutImpressoPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const supabase = await createClient()
   const { data: product } = await supabase
@@ -33,7 +37,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
     .eq('slug', SLUG)
     .maybeSingle()
 
-  const finalCents = product?.price_cents ?? 5400
+  const finalCents = product?.price_cents ?? 9500
   const originalCents = product?.original_price_cents ?? null
   const hasDiscount = originalCents !== null && originalCents > finalCents
   const discountPct = hasDiscount
@@ -41,7 +45,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
     : 0
 
   const subtitleLine =
-    product?.subtitle ?? 'Versão digital (PDF) · Vol. 03 · 417 páginas em 25 capítulos'
+    product?.subtitle ?? 'Livro físico · capa cartonada · Vol. 03'
 
   return (
     <main
@@ -63,11 +67,11 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             fontSize: 10,
             letterSpacing: '0.34em',
             textTransform: 'uppercase',
-            color: '#4a7a50',
+            color: '#a0a0a0',
             marginBottom: 18,
           }}
         >
-          ● House Mazzutti Academy · Vol. 03 · PDF
+          ● House Mazzutti Academy · Vol. 03 · Impresso
         </div>
         <h1
           style={{
@@ -88,7 +92,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
         </p>
 
         {/* Bloco de preço */}
-        <div style={{ margin: '12px 0 32px' }}>
+        <div style={{ margin: '12px 0 24px' }}>
           {hasDiscount && (
             <div
               style={{
@@ -116,7 +120,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             }}
           >
             <span>
-              <span style={{ fontSize: 18, color: '#4a7a50', verticalAlign: 'top', marginRight: 4 }}>
+              <span style={{ fontSize: 18, color: '#a0a0a0', verticalAlign: 'top', marginRight: 4 }}>
                 R$
               </span>
               {((finalCents) / 100).toLocaleString('pt-BR', {
@@ -133,7 +137,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
                   letterSpacing: '0.24em',
                   textTransform: 'uppercase',
                   color: '#f2efe8',
-                  background: '#2a4a2e',
+                  background: '#3a3a3a',
                   padding: '4px 8px',
                   borderRadius: 2,
                 }}
@@ -144,6 +148,38 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
           </div>
         </div>
 
+        {/* Aviso de envio físico */}
+        <div
+          style={{
+            border: '1px solid rgba(255,255,255,0.16)',
+            borderLeft: '3px solid #a0a0a0',
+            padding: '14px 18px',
+            textAlign: 'left',
+            margin: '0 auto 28px',
+            maxWidth: 440,
+            fontSize: 13,
+            color: '#ccc',
+            lineHeight: 1.55,
+            background: 'rgba(255,255,255,0.03)',
+          }}
+        >
+          <div
+            style={{
+              fontFamily: 'monospace',
+              fontSize: 9.5,
+              letterSpacing: '0.28em',
+              textTransform: 'uppercase',
+              color: '#a0a0a0',
+              marginBottom: 6,
+            }}
+          >
+            Envio físico
+          </div>
+          Livro despachado em até <strong>10 dias úteis</strong> após a confirmação do pagamento.
+          Frete calculado pelos Correios no checkout, para todo o Brasil. Endereço de entrega
+          coletado na próxima etapa.
+        </div>
+
         {STRIPE_PRICE_ID ? (
           <PaymentMethodSelector
             stripePriceId={STRIPE_PRICE_ID}
@@ -152,7 +188,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             priceCents={finalCents}
           />
         ) : (
-          <p style={{ color: '#4a7a50', fontSize: 14 }}>
+          <p style={{ color: '#a0a0a0', fontSize: 14 }}>
             Checkout em configuração — volte em breve.
           </p>
         )}
@@ -162,7 +198,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
         </p>
 
         <Link
-          href={`/${locale}/academy/casos-da-producao`}
+          href={`/${locale}/academy/casos-da-producao#formatos`}
           style={{
             display: 'inline-block',
             marginTop: 24,
@@ -171,7 +207,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             textDecoration: 'underline',
           }}
         >
-          ← Voltar para a página do livro
+          ← Prefere o PDF? Veja as duas formas de ler
         </Link>
       </div>
     </main>
