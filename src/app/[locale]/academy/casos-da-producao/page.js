@@ -16,7 +16,7 @@ const PRAZO_IMPRESSO_DIAS   = '10' // dias úteis até despacho
 const REGRA_FRETE           = 'Frete calculado no checkout pelos Correios para todo o Brasil.'
 const SITE_URL              = 'https://housemazzutti.com'
 const CANONICAL_URL         = `${SITE_URL}/pt/academy/casos-da-producao/`
-const OG_IMAGE              = `${SITE_URL}/images/academy/casos-da-producao/cover.webp`
+const OG_IMAGE              = `${SITE_URL}/og/briefing-mal-passado.webp`
 
 // ============================================================
 // METADATA — Next.js App Router
