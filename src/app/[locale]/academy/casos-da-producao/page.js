@@ -143,44 +143,94 @@ export default function CasosDaProducaoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <main className="bg-white text-neutral-900">
+      {/* ===== Estilos locais — identidade visual da capa do livro ===== */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .bmp-root { --paper: #fafaf7; --ink: #0b0b0a; --blood: #8b1f1f; --mute: #6a6a6a; --rule: #e6e4dc; background: var(--paper); color: var(--ink); }
+        .bmp-display { font-family: 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.045em; line-height: 0.86; text-transform: uppercase; }
+        .bmp-display em { font-style: normal; color: var(--blood); }
+        .bmp-h2 { font-family: 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.03em; line-height: 0.92; text-transform: uppercase; }
+        .bmp-h2 em { font-style: normal; color: var(--blood); }
+        .bmp-h3 { font-family: 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.015em; line-height: 1.0; text-transform: uppercase; }
+        .bmp-num { font-family: 'RocGrotesk', sans-serif; font-weight: 700; color: var(--blood); letter-spacing: -0.02em; line-height: 1; }
+        .bmp-quote { font-family: 'RocGrotesk', sans-serif; font-weight: 700; letter-spacing: -0.025em; line-height: 0.95; text-transform: uppercase; }
+        .bmp-quote em { font-style: normal; color: var(--blood); }
+        .bmp-tag { font-family: 'RocGrotesk', sans-serif; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; font-size: 11px; color: var(--mute); }
+        .bmp-cta { font-family: 'RocGrotesk', sans-serif; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; }
+        .bmp-blood-strip { background: var(--blood); height: 4px; }
+        .bmp-blood-dot { width: 10px; height: 10px; background: var(--blood); display: inline-block; }
+        .bmp-hero-headline { font-size: clamp(72px, 13vw, 220px); }
+        .bmp-section-headline { font-size: clamp(48px, 8vw, 128px); }
+        .bmp-spectrum { background: linear-gradient(180deg, var(--paper) 0%, #f2efe6 100%); }
+      `}} />
+
+      <main className="bmp-root">
 
         {/* ===================== HERO ===================== */}
-        <section className="px-6 py-24 md:py-32 max-w-5xl mx-auto">
-          <p className="font-label text-xs md:text-sm tracking-widest uppercase text-neutral-500 mb-6">
-            House Mazzutti Academy · Vol. 03
-          </p>
-
-          <h1 className="font-headline text-5xl md:text-7xl leading-none tracking-tight mb-4">
-            Briefing<br />Mal Passado
-          </h1>
-
-          <p className="font-raleway text-lg md:text-xl text-neutral-700 mb-12 max-w-2xl">
-            Bastidores do caos criativo na publicidade brasileira.
-          </p>
-
-          <div className="font-body text-base md:text-lg text-neutral-800 max-w-2xl space-y-4 mb-12">
-            <p>
-              Existe um inimigo silencioso que atravessa a publicidade brasileira de ponta a ponta. Do estágio em agência grande à direção de operação boutique. Do freelancer recém-formado ao publicitário com vinte anos de estrada.
+        <section className="px-6 py-16 md:py-24 max-w-[1440px] mx-auto">
+          {/* Topo: identificação editorial */}
+          <div className="flex items-baseline justify-between mb-10 md:mb-16">
+            <p className="bmp-tag flex items-center gap-3">
+              <span className="bmp-blood-dot" /> House Mazzutti Academy · Vol. 03
             </p>
-            <p>Ele tem um nome curto e desconfortável.</p>
+            <p className="bmp-tag hidden md:block">2026 · 417 págs · 25 capítulos</p>
           </div>
 
-          <blockquote className="font-headline text-2xl md:text-4xl leading-tight max-w-3xl border-l-2 border-neutral-900 pl-6 my-12">
-            <em>Briefing mal passado mata projeto.</em><br />
-            <em>Briefing bem passado salva carreira.</em>
+          {/* Grid: título + capa */}
+          <div className="grid md:grid-cols-[1.35fr_1fr] gap-10 md:gap-16 items-center">
+            <div>
+              <h1 className="bmp-display bmp-hero-headline">
+                Briefing<br /><em>Mal Passado.</em>
+              </h1>
+
+              <div className="bmp-blood-strip w-24 mt-8 md:mt-12" />
+
+              <p className="font-headline text-lg md:text-2xl text-neutral-800 mt-8 max-w-xl leading-snug">
+                Bastidores do caos criativo na publicidade brasileira.
+              </p>
+            </div>
+
+            {/* Capa do livro */}
+            <div className="relative aspect-[3/4] w-full max-w-[420px] mx-auto md:ml-auto md:mr-0">
+              <Image
+                src="/images/academy/casos-da-producao/cover.webp"
+                alt="Capa do livro Briefing Mal Passado — Ângelo Mazzutti, House Mazzutti Academy Vol. 03"
+                fill
+                priority
+                sizes="(max-width: 768px) 80vw, 420px"
+                className="object-contain object-center drop-shadow-[0_25px_60px_rgba(0,0,0,0.18)]"
+              />
+            </div>
+          </div>
+
+          {/* Linha de tensão */}
+          <div className="mt-16 md:mt-24 max-w-3xl">
+            <div className="font-body text-base md:text-lg text-neutral-800 space-y-4">
+              <p>
+                Existe um inimigo silencioso que atravessa a publicidade brasileira de ponta a ponta. Do estágio em agência grande à direção de operação boutique. Do freelancer recém-formado ao publicitário com vinte anos de estrada.
+              </p>
+              <p className="text-xl md:text-2xl font-headline" style={{fontWeight:700, letterSpacing:'-0.01em'}}>
+                Ele tem um nome curto e desconfortável.
+              </p>
+            </div>
+          </div>
+
+          {/* Pull quote ÂNCORA — peso máximo */}
+          <blockquote className="bmp-quote mt-16 md:mt-20 max-w-5xl border-l-[6px] border-[var(--blood)] pl-6 md:pl-10 py-2" style={{fontSize:'clamp(34px,5.4vw,76px)'}}>
+            Briefing mal passado <em>mata projeto.</em><br />
+            Briefing bem passado <em>salva carreira.</em>
           </blockquote>
 
-          <div className="flex flex-col md:flex-row gap-4 mt-12">
+          {/* CTAs */}
+          <div className="flex flex-col md:flex-row gap-3 mt-12 md:mt-16">
             <a
               href="#formatos"
-              className="inline-block bg-neutral-900 text-white font-label tracking-wide text-sm uppercase px-8 py-4 hover:bg-neutral-700 transition"
+              className="bmp-cta inline-block bg-[var(--ink)] text-[var(--paper)] text-sm px-10 py-5 hover:bg-[var(--blood)] transition-colors"
             >
-              Quero o livro
+              Quero o livro →
             </a>
             <a
               href="#monstro"
-              className="inline-block font-label tracking-wide text-sm uppercase px-8 py-4 border border-neutral-900 hover:bg-neutral-100 transition"
+              className="bmp-cta inline-block text-sm px-10 py-5 border border-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--paper)] transition-colors"
             >
               Ler o que tem dentro
             </a>
