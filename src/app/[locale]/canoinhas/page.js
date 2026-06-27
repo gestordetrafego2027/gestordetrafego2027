@@ -74,7 +74,7 @@ export default function TourMarcaPessoalPage() {
       <style>{`
         .hmzt-line { height: 0.5px; background: currentColor; opacity: 0.2; }
         @keyframes marquee-local { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        .marquee-local { display: flex; width: max-content; animation: marquee-local 32s linear infinite; will-change: transform; backface-visibility: hidden; }
+        .marquee-local { display: flex; width: max-content; animation: marquee-local 22s linear infinite; will-change: transform; backface-visibility: hidden; }
         .marquee-local:hover { animation-play-state: paused; }
         @keyframes marquee-house { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         .marquee-house { display: flex; width: max-content; animation: marquee-house 28s linear infinite; will-change: transform; backface-visibility: hidden; }
