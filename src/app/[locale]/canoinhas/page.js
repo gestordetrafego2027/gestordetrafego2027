@@ -51,10 +51,10 @@ const PLANOS = [
 const PORTFOLIO = [
   { src: '/images/studio/talita-dalbo/4.webp',         alt: 'Talita Dalbo — House Mazzutti' },
   { src: '/images/studio/talita-dalbo/3.webp',         alt: 'Talita Dalbo — House Mazzutti' },
-  { src: '/images/studio/fernanda-costas/2.webp',      alt: 'Emily Pauzer — House Mazzutti' },
-  { src: '/images/studio/fernanda-costas/3.webp',      alt: 'Emily Pauzer — House Mazzutti' },
-  { src: '/images/studio/fernanda-treml/1.webp',       alt: 'Franciele Reis — House Mazzutti' },
-  { src: '/images/studio/fernanda-treml/3.webp',       alt: 'Franciele Reis — House Mazzutti' },
+  { src: '/images/studio/emily-pauzer/1.webp',         alt: 'Emily Pauzer — House Mazzutti' },
+  { src: '/images/studio/emily-pauzer/2.webp',         alt: 'Emily Pauzer — House Mazzutti' },
+  { src: '/images/studio/franciele-reis/1.webp',       alt: 'Franciele Reis — House Mazzutti' },
+  { src: '/images/studio/franciele-reis/2.webp',       alt: 'Franciele Reis — House Mazzutti' },
 ];
 
 
