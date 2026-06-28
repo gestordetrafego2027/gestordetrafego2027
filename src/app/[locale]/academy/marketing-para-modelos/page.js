@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { MpmViewContent, BuyLink } from '@/components/analytics/MpmTracking';
 

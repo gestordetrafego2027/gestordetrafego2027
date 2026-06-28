@@ -2,7 +2,7 @@
  * Checkout placeholder · Ebook Marketing para Modelos
  * Substituir por integração real (Hotmart / Eduzz / Cakto / Stripe) quando definido.
  */
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 export const metadata = {
   title: 'Checkout · Marketing para Modelos · House Mazzutti Academy',

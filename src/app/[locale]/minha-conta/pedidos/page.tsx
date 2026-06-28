@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 function formatPrice(cents: number, currency = 'brl') {
   return new Intl.NumberFormat('pt-BR', {

@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import SiteFooter from '@/app/components/SiteFooter';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Header from '@/app/components/Header';
 import PortfolioCTA from '@/app/components/PortfolioCTA';
 

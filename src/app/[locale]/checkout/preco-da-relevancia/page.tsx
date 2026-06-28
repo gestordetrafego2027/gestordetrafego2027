@@ -3,7 +3,7 @@
  * Server component — preço/título puxados de academy_products (slug=preco-da-relevancia).
  */
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { PaymentMethodSelector } from '@/components/ecommerce/PaymentMethodSelector'
 import { createClient } from '@/lib/supabase/server'
 import { DIGITAL_PRODUCTS } from '@/lib/digital-products'

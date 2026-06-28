@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import type { ReactNode } from 'react'
 
 // Área logada — fora do índice de busca.

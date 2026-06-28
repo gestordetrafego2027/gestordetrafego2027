@@ -5,7 +5,7 @@
 import React from 'react'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 const SITE_URL = 'https://housemazzutti.com'
 const COVER = '/images/academy/preco-da-relevancia/cover.webp'

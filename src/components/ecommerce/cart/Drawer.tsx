@@ -3,7 +3,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { useCartStore } from '@/lib/cart/store'
 import { CartLine } from './Line'
 import { CartSummary } from './Summary'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 export function CartDrawer() {
   const { drawerOpen, closeDrawer, items, clearCart, itemCount } = useCartStore()

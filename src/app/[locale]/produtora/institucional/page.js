@@ -1,9 +1,10 @@
 'use client';
+import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
 
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
@@ -41,10 +42,13 @@ export default function ProdutoraInstitucionalPage() {
             {/* HERO */}
             <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                 <div className="absolute inset-0 z-0">
-                    <img
+                    <Image
                         src="/images/produtora/institucional/sense-hotel/capa.webp"
                         alt="Vídeo institucional — House Mazzutti"
-                        className="w-full h-full object-cover object-center"
+                        fill
+                        priority
+                        className="object-cover object-center"
+                        sizes="100vw"
                     />
                     <div className="absolute inset-0 bg-black/55"></div>
                 </div>
@@ -102,7 +106,7 @@ export default function ProdutoraInstitucionalPage() {
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                    <img fetchpriority="high" alt="Vídeo institucional — House Mazzutti" className="absolute inset-0 w-full h-full object-cover opacity-80" src="/images/produtora/institucional/sense-hotel/capa.webp" />
+                    <Image src="/images/produtora/institucional/sense-hotel/capa.webp" alt="Vídeo institucional — House Mazzutti" fill priority className="object-cover opacity-80" sizes="100vw" />
                     <div className="relative z-10 text-center px-8">
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>

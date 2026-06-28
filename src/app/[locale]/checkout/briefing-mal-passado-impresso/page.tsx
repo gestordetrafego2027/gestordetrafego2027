@@ -9,7 +9,7 @@
  *  - Sem download imediato — entrega via Correios
  */
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { PaymentMethodSelector } from '@/components/ecommerce/PaymentMethodSelector'
 import { createClient } from '@/lib/supabase/server'
 

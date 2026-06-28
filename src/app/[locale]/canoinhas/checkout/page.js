@@ -2,7 +2,7 @@
 
 import { useState, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 const PLANS = {
   'ensaio-01': { nome: 'Ensaio 01', preco: 'R$ 1.900', cents: 190000, desc: '3 produções · 10 fotos · Making of' },

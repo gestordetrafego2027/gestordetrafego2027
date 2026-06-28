@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import Countdown from './Countdown'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { createClient } from '@/lib/supabase/server'
 import ConversionOnMount from '@/components/analytics/ConversionOnMount'
 

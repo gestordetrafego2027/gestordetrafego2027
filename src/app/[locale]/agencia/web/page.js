@@ -110,7 +110,7 @@ export default function AgenciaWebPage() {
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden">
-                <img loading="lazy" src="/images/agencia/samrat/capa.webp" alt="Web Development — House Mazzutti" className="absolute inset-0 w-full h-full object-cover object-center" />
+                <Image src="/images/agencia/samrat/capa.webp" alt="Web Development — House Mazzutti" fill className="object-cover object-center" sizes="100vw" />
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 text-center px-8">
                     <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">{t('quote_texto')}</h2>

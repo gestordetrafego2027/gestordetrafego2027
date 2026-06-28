@@ -2,7 +2,7 @@
 import { useCartStore } from '@/lib/cart/store'
 import { CartLine } from '@/components/ecommerce/cart/Line'
 import { CartSummary } from '@/components/ecommerce/cart/Summary'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { useEffect, useState } from 'react'
 
 export function CarrinhoClient() {

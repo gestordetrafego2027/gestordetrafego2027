@@ -4,7 +4,7 @@
  * Stripe: prod_Ufv6mQL1zD4Bxf · price_1TmRsPLcrEu1967n9eZD8U0e · R$ 54,00
  */
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { PaymentMethodSelector } from '@/components/ecommerce/PaymentMethodSelector'
 import { createClient } from '@/lib/supabase/server'
 import { DIGITAL_PRODUCTS } from '@/lib/digital-products'

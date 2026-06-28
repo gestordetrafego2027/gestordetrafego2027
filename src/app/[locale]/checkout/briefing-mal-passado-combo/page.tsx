@@ -7,7 +7,7 @@
  * a página exibe estado "Em breve · pré-reserva" — não quebra o funil.
  */
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { PaymentMethodSelector } from '@/components/ecommerce/PaymentMethodSelector'
 import { createClient } from '@/lib/supabase/server'
 

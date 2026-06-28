@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { policyList } from '@/lib/policies/content'
 import { pageMetadata } from '@/lib/seo/metadata'

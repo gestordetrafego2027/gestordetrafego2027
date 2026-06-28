@@ -5,7 +5,7 @@
  * Três formas de leitura: PDF R$ 54 · Impresso R$ 95 · Combo R$ 119
  */
 
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import { SampleLeadForm } from '@/components/academy/SampleLeadForm'
 

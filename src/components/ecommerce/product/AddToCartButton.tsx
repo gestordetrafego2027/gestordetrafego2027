@@ -2,7 +2,7 @@
 import { useCartStore } from '@/lib/cart/store'
 import type { CartItem } from '@/lib/schemas/cart'
 import { useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 interface Props {
   item: Omit<CartItem, 'quantity'>

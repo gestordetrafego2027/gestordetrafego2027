@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
 
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
@@ -37,7 +38,7 @@ export default function StudioEnsaioPage() {
 
             {/* HERO */}
             <section className="relative h-screen w-full overflow-hidden">
-                <img fetchpriority="high" src="/images/studio/marjorie-rossi/capa.webp" alt="Ensaio fotográfico — House Mazzutti" className="absolute inset-0 w-full h-full object-cover object-center" />
+                <Image src="/images/studio/marjorie-rossi/capa.webp" alt="Ensaio fotográfico — House Mazzutti" fill priority className="object-cover object-center" sizes="100vw" />
                 <div className="absolute inset-0 bg-black/55" />
                 <div className="relative z-10 w-full h-full flex items-center justify-center">
                     <div className="w-full max-w-[600px] flex flex-col items-center text-center px-6">
@@ -97,7 +98,7 @@ export default function StudioEnsaioPage() {
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                    <img loading="lazy" alt="Ensaio editorial — House Mazzutti" className="absolute inset-0 w-full h-full object-cover opacity-80" src="/images/studio/marjorie-rossi/capa.webp" />
+                    <Image src="/images/studio/marjorie-rossi/capa.webp" alt="Ensaio editorial — House Mazzutti" fill className="object-cover opacity-80" sizes="100vw" />
                     <div className="relative z-10 text-center px-8">
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>

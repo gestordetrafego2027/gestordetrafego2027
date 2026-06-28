@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
-import Link from 'next/link'
+import Header from '@/app/components/Header';
+import { Link } from '@/i18n/navigation'
 import { policies, policySlugs } from '@/lib/policies/content'
 import { pageMetadata } from '@/lib/seo/metadata'
 import { breadcrumbSchema } from '@/lib/seo/schemas'
@@ -42,17 +43,9 @@ export default async function PolicyPage({ params }) {
       />
 
       <div className="min-h-screen bg-white">
-        {/* Header simples */}
-        <header className="border-b border-zinc-100 px-8 py-6">
-          <Link href="/" className="inline-block">
-            <span className="hm-logo" style={{ fontSize: '24px' }}>
-              <span className="hm-house">House</span>
-              <span className="hm-mazzutti">Mazzutti</span>
-            </span>
-          </Link>
-        </header>
+        <Header variant="light" />
 
-        <main className="max-w-3xl mx-auto px-8 py-20">
+        <main className="max-w-3xl mx-auto px-8 pt-36 pb-20">
           {/* Breadcrumb visual */}
           <nav className="flex items-center gap-2 text-[11px] font-label uppercase tracking-[0.2em] text-zinc-400 mb-12">
             <Link href="/" className="hover:text-zinc-700 transition-colors">Home</Link>
