@@ -141,10 +141,10 @@ export default function ComunidadePage() {
                 {/* [1] HERO */}
                 <section className="relative w-full overflow-hidden bg-primary m-0 p-0 border-0" style={{ height: "105vh" }}>
                     <div className="absolute inset-0 z-0">
-                        <img
+                        <Image
                             src="/images/comunidade/hero.webp"
                             alt="Produção House Mazzutti — equipe em set"
-                            className="w-full h-full object-cover"
+                            fill priority className="object-cover" sizes="100vw"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/30"></div>
                     </div>
@@ -194,7 +194,7 @@ export default function ComunidadePage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                         {gridImages.map((img, i) => (
                             <div key={i} className="relative group bg-white aspect-[4/3] overflow-hidden scroll-reveal" data-delay={i * 100} style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-                                <img fetchpriority="high" alt={img.alt} className="w-full h-full object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" src={img.src} />
+                                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover grayscale transition-opacity duration-[0.6s] ease-in-out group-hover:opacity-0" />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-4">
                                     <p className="text-h4 text-black">{img.label}</p>
                                     <p className="text-caption text-zinc-500 mt-2">{img.sublabel}</p>
@@ -270,7 +270,7 @@ export default function ComunidadePage() {
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
                         <div className="w-full lg:w-1/4 flex-shrink-0">
                             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-sm">
-                                <img loading="lazy" alt="Bastidor de set — House Mazzutti" className="w-full h-full object-cover grayscale" src="/images/comunidade/hero.webp" />
+                                <Image src="/images/comunidade/hero.webp" alt="Bastidor de set — House Mazzutti" fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover grayscale" />
                             </div>
                         </div>
                         <div className="flex-grow w-full py-4">
@@ -380,7 +380,7 @@ export default function ComunidadePage() {
                                 className="relative flex-1 overflow-hidden group"
                                 style={{ minHeight: '380px' }}
                             >
-                                <img loading="lazy" src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <Image src={item.img} alt={item.label} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/55 transition-colors duration-500" />
                                 <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-12">
                                     <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 mb-3 block">{item.sub}</span>
