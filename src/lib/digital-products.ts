@@ -83,14 +83,21 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     volumeLabel: 'Vol. 02',
     detail: '107 páginas em 10 capítulos. Leitura sugerida em ordem — cada parte se apoia na anterior.',
   },
-  'casos-da-producao': {
-    slug: 'casos-da-producao',
+  'briefing-mal-passado': {
+    slug: 'briefing-mal-passado',
     name: 'Briefing Mal Passado · Vol. 03',
-    stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? 'price_1TmRsPLcrEu1967n9eZD8U0e', // R$ 54,00 · prod_Ufv6mQL1zD4Bxf
+    stripePriceId:
+      process.env.STRIPE_PRICE_ID_BRIEFING_MAL_PASSADO ??
+      process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? // legado
+      'price_1TmRsPLcrEu1967n9eZD8U0e', // R$ 54,00 · prod_Ufv6mQL1zD4Bxf
     priceBRL: 54,
+    // Storage path mantém pasta antiga "casos-da-producao/" porque o blob físico
+    // ainda está lá no S3 do Supabase Storage. Para limpar, mover o arquivo via
+    // dashboard (Storage → digital-products → recortar/colar) e ajustar aqui.
     storagePath: 'casos-da-producao/Briefing-Mal-Passado.pdf',
     downloadUrl:
-      process.env.DOWNLOAD_URL_CASOS_DA_PRODUCAO ??
+      process.env.DOWNLOAD_URL_BRIEFING_MAL_PASSADO ??
+      process.env.DOWNLOAD_URL_CASOS_DA_PRODUCAO ?? // legado
       '/downloads/briefing-mal-passado-hmzt-vol-03.pdf',
     expiresIn: '7 dias',
     volumeLabel: 'Vol. 03',
@@ -108,6 +115,9 @@ const SLUG_ALIASES: Record<string, string> = {
   'o-preco-da-relevancia': 'preco-da-relevancia',
   'marketing-para-modelos-vol-01': 'marketing-para-modelos',
   'inside-out-masterclass': 'inside-out',
+  // Slug antigo do Vol. 03 — preservado para resolver pedidos pagos antes da
+  // renomeação para 'briefing-mal-passado' e quaisquer webhooks atrasados.
+  'casos-da-producao': 'briefing-mal-passado',
 }
 
 /** Formata o preço de tabela ("R$ 54"). Centraliza o display em um só lugar. */
