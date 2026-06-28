@@ -3,7 +3,7 @@
  * Captura email, registra em newsletter_subscribers (source='sample-vol-03')
  * e envia link de download do capítulo 1 (signed URL · TTL 7d).
  *
- * O arquivo sample fica em storage privado `digital-products/casos-da-producao/sample-cap-01.pdf`
+ * O arquivo sample fica em storage privado `digital-products/briefing-mal-passado/sample-cap-01.pdf`
  * — sobe via dashboard quando estiver pronto. Enquanto não existe, o e-mail é
  * enviado mesmo assim (fallback para link da landing).
  */
@@ -18,7 +18,7 @@ export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
 
 const SAMPLE_BUCKET = 'digital-products'
-const SAMPLE_PATH = 'casos-da-producao/sample-cap-01.pdf'
+const SAMPLE_PATH = 'briefing-mal-passado/sample-cap-01.pdf'
 const SAMPLE_TTL = 60 * 60 * 24 * 7
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://housemazzutti.com'
 
@@ -42,7 +42,7 @@ function sampleEmailHTML(name: string | null, sampleUrl: string) {
       O link expira em 7 dias. Se quiser o livro completo — 25 capítulos, 417 páginas — é por aqui:
     </p>
     <p style="margin:0 0 32px;">
-      <a href="${SITE}/pt/academy/casos-da-producao#formatos" style="color:#8b1f1f;text-decoration:underline;font-size:13px;">housemazzutti.com/academy/casos-da-producao</a>
+      <a href="${SITE}/pt/academy/briefing-mal-passado#formatos" style="color:#8b1f1f;text-decoration:underline;font-size:13px;">housemazzutti.com/academy/briefing-mal-passado</a>
     </p>
     <hr style="border:none;border-top:1px solid #e6e4dc;margin:32px 0;"/>
     <p style="font-size:11px;color:#a0a0a0;line-height:1.6;margin:0;">
@@ -100,7 +100,7 @@ export async function POST(req: NextRequest) {
 
   // 2) Tenta gerar signed URL do sample. Se o arquivo ainda não foi enviado,
   //    aponta pra landing pra não bloquear o lead capture.
-  let sampleUrl = `${SITE}/pt/academy/casos-da-producao`
+  let sampleUrl = `${SITE}/pt/academy/briefing-mal-passado`
   try {
     const { data, error } = await supabase.storage
       .from(SAMPLE_BUCKET)
@@ -121,7 +121,7 @@ export async function POST(req: NextRequest) {
     html: sampleEmailHTML(name ?? null, sampleUrl),
     tags: [
       { name: 'kind', value: 'sample' },
-      { name: 'product', value: 'casos-da-producao' },
+      { name: 'product', value: 'briefing-mal-passado' },
     ],
   })
 

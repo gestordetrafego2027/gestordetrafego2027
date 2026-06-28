@@ -92,8 +92,9 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
       'price_1TmRsPLcrEu1967n9eZD8U0e', // R$ 54,00 · prod_Ufv6mQL1zD4Bxf
     priceBRL: 54,
     // Storage path mantém pasta antiga "casos-da-producao/" porque o blob físico
-    // ainda está lá no S3 do Supabase Storage. Para limpar, mover o arquivo via
-    // dashboard (Storage → digital-products → recortar/colar) e ajustar aqui.
+    // ainda está lá no S3 do Supabase Storage (renomear via SQL quebra o lookup).
+    // Para limpar, mover o arquivo via dashboard (Storage → digital-products →
+    // recortar/colar para a pasta briefing-mal-passado/) e ajustar este path.
     storagePath: 'casos-da-producao/Briefing-Mal-Passado.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_BRIEFING_MAL_PASSADO ??
@@ -125,7 +126,7 @@ export function formatPriceBRL(value: number): string {
   return `R$ ${value}`
 }
 
-/** Preço de tabela formatado a partir do slug do catálogo (ex.: "casos-da-producao" → "R$ 54"). */
+/** Preço de tabela formatado a partir do slug do catálogo (ex.: "briefing-mal-passado" → "R$ 54"). */
 export function priceLabelForSlug(slug: string): string | null {
   const product = resolveDigitalProduct(slug)
   return product?.priceBRL != null ? formatPriceBRL(product.priceBRL) : null

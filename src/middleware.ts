@@ -17,8 +17,14 @@ const ACADEMY_I18N_REDIRECTS: Record<string, string> = {
   '/academy': '/pt/academy/',
   '/academy/marketing-para-modelos': '/pt/academy/marketing-para-modelos/',
   '/academy/preco-da-relevancia': '/pt/academy/preco-da-relevancia/',
-  '/academy/casos-da-producao': '/pt/academy/casos-da-producao/',
+  '/academy/briefing-mal-passado': '/pt/academy/briefing-mal-passado/',
   '/academy/inside-out': '/pt/academy/inside-out/',
+  // Slug antigo do Vol. 03 (Casos da Produção) → nova landing Briefing Mal Passado.
+  // Cobre tanto sem locale quanto com /pt prefixado (links externos, indexação antiga).
+  '/academy/casos-da-producao': '/pt/academy/briefing-mal-passado/',
+  '/pt/academy/casos-da-producao': '/pt/academy/briefing-mal-passado/',
+  '/checkout/casos-da-producao': '/pt/checkout/briefing-mal-passado/',
+  '/pt/checkout/casos-da-producao': '/pt/checkout/briefing-mal-passado/',
 };
 
 export async function middleware(request: NextRequest) {

@@ -211,7 +211,7 @@ export default async function CheckoutComboPage({ params }: { params: Promise<{ 
             O combo está em configuração final. Deixe seu e-mail no botão abaixo — avisamos no instante em que abrir.
             <div style={{ marginTop: 18 }}>
               <Link
-                href={`/${locale}/academy/casos-da-producao#sample`}
+                href={`/${locale}/academy/briefing-mal-passado#sample`}
                 style={{
                   display: 'inline-block',
                   background: '#f2efe8',
@@ -235,7 +235,7 @@ export default async function CheckoutComboPage({ params }: { params: Promise<{ 
         </p>
 
         <Link
-          href={`/${locale}/academy/casos-da-producao#formatos`}
+          href={`/${locale}/academy/briefing-mal-passado#formatos`}
           style={{
             display: 'inline-block',
             marginTop: 24,

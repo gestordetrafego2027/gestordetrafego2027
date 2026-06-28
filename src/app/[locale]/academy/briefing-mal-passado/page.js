@@ -12,13 +12,13 @@ import { SampleLeadForm } from '@/components/academy/SampleLeadForm'
 // ============================================================
 // PLACEHOLDERS — quando decidir checkout/prazo/frete, troca aqui
 // ============================================================
-const CHECKOUT_DIGITAL_URL  = '/pt/checkout/casos-da-producao'
+const CHECKOUT_DIGITAL_URL  = '/pt/checkout/briefing-mal-passado'
 const CHECKOUT_IMPRESSO_URL = '/pt/checkout/briefing-mal-passado-impresso'
 const CHECKOUT_COMBO_URL    = '/pt/checkout/briefing-mal-passado-combo'
 const PRAZO_IMPRESSO_DIAS   = '10' // dias úteis até despacho
 const REGRA_FRETE           = 'Frete calculado no checkout pelos Correios para todo o Brasil.'
 const SITE_URL              = 'https://housemazzutti.com'
-const CANONICAL_URL         = `${SITE_URL}/pt/academy/casos-da-producao/`
+const CANONICAL_URL         = `${SITE_URL}/pt/academy/briefing-mal-passado/`
 const OG_IMAGE              = `${SITE_URL}/og/briefing-mal-passado.webp`
 
 // ============================================================
@@ -196,7 +196,7 @@ export default function CasosDaProducaoPage() {
             {/* Capa do livro — ampliada, drop-shadow editorial, leve perspectiva */}
             <div className="relative aspect-[3/4] w-full max-w-[640px] mx-auto md:ml-auto md:mr-0">
               <Image
-                src="/images/academy/casos-da-producao/cover.webp"
+                src="/images/academy/briefing-mal-passado/cover.webp"
                 alt="Capa do livro Briefing Mal Passado — Ângelo Mazzutti, House Mazzutti Academy Vol. 03"
                 fill
                 priority

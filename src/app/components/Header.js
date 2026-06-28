@@ -318,7 +318,7 @@ export default function Header({ variant = 'dark' }) {
                         {label: t('academy'), href:'/academy'},
                         {label:'↳ MARKETING PARA MODELOS · VOL. 01', href:'/academy/marketing-para-modelos', sub: true},
                         {label:'↳ O PREÇO DA RELEVÂNCIA · VOL. 02', href:'/academy/preco-da-relevancia', sub: true},
-                        {label:'↳ INSIDE OUT · VOL. 03', href:'/academy/casos-da-producao', sub: true},
+                        {label:'↳ BRIEFING MAL PASSADO · VOL. 03', href:'/academy/briefing-mal-passado', sub: true},
                         {label: t('blog'), href:'/blog'},
                         {label: t('contato'), href:'/contato'},
                         {label: t('cliente'), href: isLoggedIn ? '/minha-conta' : '/login?next=/minha-conta', highlight: true},

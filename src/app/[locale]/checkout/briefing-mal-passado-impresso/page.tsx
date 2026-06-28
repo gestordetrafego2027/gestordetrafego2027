@@ -198,7 +198,7 @@ export default async function CheckoutImpressoPage({ params }: { params: Promise
         </p>
 
         <Link
-          href={`/${locale}/academy/casos-da-producao#formatos`}
+          href={`/${locale}/academy/briefing-mal-passado#formatos`}
           style={{
             display: 'inline-block',
             marginTop: 24,

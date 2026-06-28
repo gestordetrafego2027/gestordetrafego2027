@@ -1,6 +1,6 @@
 /**
  * Checkout · Briefing Mal Passado · Vol. 03 · Digital (PDF)
- * Server component — preço/título puxados de academy_products (slug=casos-da-producao).
+ * Server component — preço/título puxados de academy_products (slug=briefing-mal-passado).
  * Stripe: prod_Ufv6mQL1zD4Bxf · price_1TmRsPLcrEu1967n9eZD8U0e · R$ 54,00
  */
 import type { Metadata } from 'next'
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export const dynamic = 'force-dynamic'
 
-const SLUG = 'casos-da-producao'
+const SLUG = 'briefing-mal-passado'
 const STRIPE_PRICE_ID =
   DIGITAL_PRODUCTS[SLUG]?.stripePriceId ?? process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? ''
 
@@ -162,7 +162,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
         </p>
 
         <Link
-          href={`/${locale}/academy/casos-da-producao`}
+          href={`/${locale}/academy/briefing-mal-passado`}
           style={{
             display: 'inline-block',
             marginTop: 24,
