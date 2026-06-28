@@ -85,9 +85,26 @@ export default function ContatoPage() {
             {/* 3. MAP + INFO SECTION */}
             <section className="flex flex-col md:flex-row w-full bg-white py-[60px] px-[40px]">
                 {/* Col 1: Map */}
-                <div className="w-full md:w-[60%] h-[400px] md:h-auto bg-surface-container-lowest opacity-90 max-w-[760px] mx-auto !h-[430px]">
-                    <iframe frameBorder="0" height="430" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=pt&amp;q=Rua%20General%20Chagas%20Santos,%201058%20Bosque%20da%20Sa%C3%BAde%20S%C3%A3o%20Paulo&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style={{ filter: "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)" }} width="100%">
-                    </iframe>
+                <div className="w-full md:w-[60%] bg-surface-container-lowest opacity-90 max-w-[760px] mx-auto relative" style={{ height: '430px' }}>
+                    <iframe
+                        title="Localização House Mazzutti no Google Maps"
+                        frameBorder="0"
+                        height="430"
+                        marginHeight="0"
+                        marginWidth="0"
+                        scrolling="no"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=pt&amp;q=Rua%20General%20Chagas%20Santos,%201058%20Bosque%20da%20Sa%C3%BAde%20S%C3%A3o%20Paulo&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        style={{ filter: "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)" }}
+                        width="100%"
+                    />
+                    <a
+                        href="https://maps.google.com/maps?q=Rua+General+Chagas+Santos,+1058+Bosque+da+Sa%C3%BAde+S%C3%A3o+Paulo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute bottom-3 right-3 font-['Raleway'] uppercase tracking-[0.15em] text-[9px] bg-white/90 text-neutral-700 px-3 py-2 hover:bg-white transition-colors"
+                    >
+                        Ver no Google Maps ↗
+                    </a>
                 </div>
                 {/* Col 2: Info */}
                 <div className="w-full md:w-[40%] bg-white p-12 md:p-24 flex flex-col justify-center pt-12 md:pt-0 pb-0 px-0">

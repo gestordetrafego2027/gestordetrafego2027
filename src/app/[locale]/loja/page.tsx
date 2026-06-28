@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { featureFlags } from '@/lib/feature-flags'
 import { createClient } from '@/lib/supabase/server'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 

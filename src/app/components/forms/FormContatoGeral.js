@@ -73,70 +73,94 @@ export default function FormContatoGeral({ sourceUrl = '/contato' }) {
   return (
     <form className="space-y-12" onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <label htmlFor="cf-name" className="sr-only">Nome</label>
+          <input
+            id="cf-name"
+            className={inputBase}
+            required
+            value={form.name}
+            onChange={handleChange('name')}
+            placeholder="NOME *"
+            type="text"
+            autoComplete="name"
+          />
+        </div>
+        <div>
+          <label htmlFor="cf-email" className="sr-only">E-mail</label>
+          <input
+            id="cf-email"
+            className={inputBase}
+            required
+            value={form.email}
+            onChange={handleChange('email')}
+            placeholder="EMAIL *"
+            type="email"
+            autoComplete="email"
+          />
+        </div>
+      </div>
+      <div>
+        <label htmlFor="cf-phone" className="sr-only">WhatsApp</label>
         <input
+          id="cf-phone"
           className={inputBase}
           required
-          value={form.name}
-          onChange={handleChange('name')}
-          placeholder="NOME *"
-          type="text"
-          autoComplete="name"
-        />
-        <input
-          className={inputBase}
-          required
-          value={form.email}
-          onChange={handleChange('email')}
-          placeholder="EMAIL *"
-          type="email"
-          autoComplete="email"
+          value={form.phone}
+          onChange={handleChange('phone')}
+          placeholder="WHATSAPP *"
+          type="tel"
+          autoComplete="tel"
         />
       </div>
-      <input
-        className={inputBase}
-        required
-        value={form.phone}
-        onChange={handleChange('phone')}
-        placeholder="WHATSAPP *"
-        type="tel"
-        autoComplete="tel"
-      />
-      <select
-        className={`${inputBase} text-white`}
-        required
-        value={form.subject}
-        onChange={handleChange('subject')}
-        style={{ backgroundColor: '#0f0f0f' }}
-      >
-        <option value="" disabled>ASSUNTO *</option>
-        <option value="studio">Studio</option>
-        <option value="agencia">Agência</option>
-        <option value="produtora">Produtora</option>
-        <option value="angelo">Angelo (mentoria/palestra)</option>
-        <option value="representacao">Representação (talento)</option>
-        <option value="outro">Outro</option>
-      </select>
-      <select
-        className={`${inputBase} text-white`}
-        required
-        value={form.referral}
-        onChange={handleChange('referral')}
-        style={{ backgroundColor: '#0f0f0f' }}
-      >
-        <option value="" disabled>ONDE NOS ENCONTROU *</option>
-        <option value="instagram">Instagram</option>
-        <option value="google">Google</option>
-        <option value="indicacao">Indicação</option>
-        <option value="outro">Outro</option>
-      </select>
-      <textarea
-        className={`${inputBase} resize-none`}
-        required
-        value={form.message}
-        onChange={handleChange('message')}
-        placeholder="SUA MENSAGEM *"
-        rows={4}
-      />
+      <div>
+        <label htmlFor="cf-subject" className="sr-only">Assunto</label>
+        <select
+          id="cf-subject"
+          className={`${inputBase} text-white`}
+          required
+          value={form.subject}
+          onChange={handleChange('subject')}
+          style={{ backgroundColor: '#0f0f0f' }}
+        >
+          <option value="" disabled>ASSUNTO *</option>
+          <option value="studio">Studio</option>
+          <option value="agencia">Agência</option>
+          <option value="produtora">Produtora</option>
+          <option value="angelo">Angelo (mentoria/palestra)</option>
+          <option value="representacao">Representação (talento)</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+      <div>
+        <label htmlFor="cf-referral" className="sr-only">Onde nos encontrou</label>
+        <select
+          id="cf-referral"
+          className={`${inputBase} text-white`}
+          required
+          value={form.referral}
+          onChange={handleChange('referral')}
+          style={{ backgroundColor: '#0f0f0f' }}
+        >
+          <option value="" disabled>ONDE NOS ENCONTROU *</option>
+          <option value="instagram">Instagram</option>
+          <option value="google">Google</option>
+          <option value="indicacao">Indicação</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+      <div>
+        <label htmlFor="cf-message" className="sr-only">Mensagem</label>
+        <textarea
+          id="cf-message"
+          className={`${inputBase} resize-none`}
+          required
+          value={form.message}
+          onChange={handleChange('message')}
+          placeholder="SUA MENSAGEM *"
+          rows={4}
+        />
+      </div>
       {error ? (
         <p className="font-['Inter'] text-sm text-red-400" role="alert">
           {error}

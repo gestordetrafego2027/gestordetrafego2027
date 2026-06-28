@@ -3,7 +3,7 @@ import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { featureFlags } from '@/lib/feature-flags'
 import { createClient } from '@/lib/supabase/server'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import type { Metadata } from 'next'
 import { AddToCartButton } from '@/components/ecommerce/product/AddToCartButton'
 

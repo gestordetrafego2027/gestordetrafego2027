@@ -76,7 +76,9 @@ export default function FormNewsletter({ sourceUrl = '/', variant = 'light' }) {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 md:gap-6 items-stretch md:items-end w-full max-w-2xl">
       <div className="flex-1">
+        <label htmlFor="fn-name" className="sr-only">Nome</label>
         <input
+          id="fn-name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -86,7 +88,9 @@ export default function FormNewsletter({ sourceUrl = '/', variant = 'light' }) {
         />
       </div>
       <div className="flex-1">
+        <label htmlFor="fn-email" className="sr-only">E-mail</label>
         <input
+          id="fn-email"
           type="email"
           required
           value={email}

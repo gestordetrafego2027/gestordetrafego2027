@@ -185,14 +185,14 @@ export default function PortfolioPage() {
       </section>
 
       {/* MENU DE FILTROS */}
-      <div className="flex flex-wrap justify-center items-center gap-12 py-12 px-6">
+      <div className="flex overflow-x-auto md:flex-wrap md:justify-center items-center gap-8 md:gap-12 py-12 px-6 scrollbar-none" style={{ scrollbarWidth: 'none' }}>
         {FILTERS.map((f) => {
           const isActive = activeFilter === f.value;
           return (
             <button
               key={f.key}
               onClick={() => setActiveFilter(f.value)}
-              className={`font-label uppercase tracking-wider text-sm cursor-pointer transition-colors duration-300 pb-1 ${
+              className={`font-label uppercase tracking-wider text-sm cursor-pointer transition-colors duration-300 pb-1 whitespace-nowrap flex-shrink-0 ${
                 isActive
                   ? 'text-black border-b-2 border-black'
                   : 'text-neutral-400 border-b-2 border-transparent hover:text-neutral-600'
