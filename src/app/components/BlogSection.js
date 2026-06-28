@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { articles as _articlesMap } from '@/app/[locale]/blog/[slug]/articles'
 
 /* ─── resolve posts a partir de slugs (ou os 4 primeiros do mapa) ─── */
