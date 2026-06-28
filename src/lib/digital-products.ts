@@ -88,10 +88,10 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     name: 'Briefing Mal Passado · Vol. 03',
     stripePriceId: process.env.STRIPE_PRICE_ID_CASOS_DA_PRODUCAO ?? 'price_1TmRsPLcrEu1967n9eZD8U0e', // R$ 54,00 · prod_Ufv6mQL1zD4Bxf
     priceBRL: 54,
-    storagePath: 'casos-da-producao/vol-03.pdf',
+    storagePath: 'casos-da-producao/Briefing-Mal-Passado.pdf',
     downloadUrl:
       process.env.DOWNLOAD_URL_CASOS_DA_PRODUCAO ??
-      '/downloads/casos-da-producao-hmzt-vol-03.pdf',
+      '/downloads/briefing-mal-passado-hmzt-vol-03.pdf',
     expiresIn: '7 dias',
     volumeLabel: 'Vol. 03',
     detail: '417 páginas em 25 capítulos · 3 partes. Bastidores do caos criativo na publicidade brasileira.',
