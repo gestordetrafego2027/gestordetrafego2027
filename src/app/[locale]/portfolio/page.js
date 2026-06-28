@@ -157,6 +157,16 @@ export default function PortfolioPage() {
   ];
 
   const [activeFilter, setActiveFilter] = useState('TODOS');
+  const [expandedCategories, setExpandedCategories] = useState(new Set());
+  const INITIAL_PROJECTS = 6;
+
+  const toggleCategory = (slug) => {
+    setExpandedCategories((prev) => {
+      const next = new Set(prev);
+      next.has(slug) ? next.delete(slug) : next.add(slug);
+      return next;
+    });
+  };
 
   const filteredCategories =
     activeFilter === 'TODOS'
@@ -245,28 +255,47 @@ export default function PortfolioPage() {
               </div>
 
               {/* Sub-grid of projects */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                {category.projects.map((project) => (
-                  <Link
-                    key={project.slug}
-                    href={`${category.basePath}/${project.slug}`}
-                    className="group block transition-opacity duration-300 hover:opacity-80"
-                  >
-                    <div className="relative w-full overflow-hidden bg-neutral-100" style={{ aspectRatio: '4 / 5' }}>
-                      <Image
-                        src={project.cover}
-                        alt={project.name}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                      />
+              {(() => {
+                const isExpanded = expandedCategories.has(category.slug);
+                const visible = isExpanded ? category.projects : category.projects.slice(0, INITIAL_PROJECTS);
+                const hidden = category.projects.length - INITIAL_PROJECTS;
+                return (
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                      {visible.map((project) => (
+                        <Link
+                          key={project.slug}
+                          href={`${category.basePath}/${project.slug}`}
+                          className="group block transition-opacity duration-300 hover:opacity-80"
+                        >
+                          <div className="relative w-full overflow-hidden bg-neutral-100" style={{ aspectRatio: '4 / 5' }}>
+                            <Image
+                              src={project.cover}
+                              alt={project.name}
+                              fill
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                            />
+                          </div>
+                          <span className="font-label uppercase tracking-wider text-xs mt-3 block text-black">
+                            {project.name}
+                          </span>
+                        </Link>
+                      ))}
                     </div>
-                    <span className="font-label uppercase tracking-wider text-xs mt-3 block text-black">
-                      {project.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
+                    {!isExpanded && hidden > 0 && (
+                      <div className="mt-10 text-center">
+                        <button
+                          onClick={() => toggleCategory(category.slug)}
+                          className="font-label uppercase tracking-[0.2em] text-[11px] border border-neutral-300 px-8 py-3 text-neutral-500 hover:border-black hover:text-black transition-all duration-300"
+                        >
+                          {t('loadMore')} ({hidden})
+                        </button>
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
             </section>
           );
         })}
