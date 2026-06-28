@@ -19,6 +19,7 @@ export default function Home() {
     const t = useTranslations();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
+    const [isHeroPaused, setIsHeroPaused] = useState(false);
     const [isHomeFormOpen, setIsHomeFormOpen] = useState(false);
 
     const heroSlides = [
@@ -54,11 +55,13 @@ export default function Home() {
     };
 
     useEffect(() => {
+        const reduce = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce || isHeroPaused) return;
         const interval = setInterval(() => {
             nextHeroSlide();
         }, 9000);
         return () => clearInterval(interval);
-    }, []);
+    }, [isHeroPaused]);
 
     useEffect(() => {
         /* Camada 4 — respeita prefers-reduced-motion: sem animação, conteúdo imediatamente visível */
@@ -238,8 +241,22 @@ export default function Home() {
                             </div>
                         </button>
                     </div>
+                    {/* Pause / Play */}
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+                        <button
+                            onClick={() => setIsHeroPaused((p) => !p)}
+                            aria-label={isHeroPaused ? 'Retomar apresentação automática' : 'Pausar apresentação automática'}
+                            className="w-8 h-8 flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity focus:outline-none focus:ring-2 focus:ring-white"
+                        >
+                            {isHeroPaused ? (
+                                <svg width="14" height="16" viewBox="0 0 14 16" fill="white" aria-hidden="true"><polygon points="0,0 14,8 0,16" /></svg>
+                            ) : (
+                                <svg width="12" height="16" viewBox="0 0 12 16" fill="white" aria-hidden="true"><rect x="0" y="0" width="4" height="16"/><rect x="8" y="0" width="4" height="16"/></svg>
+                            )}
+                        </button>
+                    </div>
                     <div className="absolute inset-y-0 right-12 flex items-center z-20">
-                        <button 
+                        <button
                             className="nav-btn flex items-center opacity-40 hover:opacity-100 transition-opacity"
                             onClick={nextHeroSlide}
                         >

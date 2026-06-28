@@ -34,6 +34,9 @@ export default function ClientLogos() {
         .marquee-clientes:hover {
           animation-play-state: paused;
         }
+        @media (prefers-reduced-motion: reduce) {
+          .marquee-clientes { animation: none; }
+        }
       `}</style>
 
       <div className="marquee-clientes">
