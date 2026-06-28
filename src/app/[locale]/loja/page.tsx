@@ -130,9 +130,16 @@ export default async function LojaPage() {
             <span className="hm-house">House</span>
             <span className="hm-mazzutti">Mazzutti</span>
           </Link>
-          <span className="font-label uppercase tracking-[0.3em] text-[8px]" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            CHECKOUT SEGURO · STRIPE
-          </span>
+          <nav className="hidden md:flex items-center gap-6" aria-label="Navegação principal">
+            {[['Studio', '/studio'], ['Agência', '/agencia'], ['Produtora', '/produtora'], ['Academy', '/academy']].map(([l, h]) => (
+              <Link key={l} href={h as string} className="font-label uppercase tracking-[0.2em] text-[8px] transition-colors duration-300" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                {l}
+              </Link>
+            ))}
+            <span className="font-label uppercase tracking-[0.3em] text-[8px] ml-4" style={{ color: 'rgba(255,255,255,0.18)', borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '24px' }}>
+              CHECKOUT SEGURO · STRIPE
+            </span>
+          </nav>
         </div>
 
         {/* Hero text */}
