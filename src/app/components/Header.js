@@ -38,12 +38,14 @@ export default function Header({ variant = 'dark' }) {
 
     useEffect(() => {
         setVisible(true);
-        setScrolled(window.scrollY > window.innerHeight * 0.9);
+        /* G1 — threshold de 60px garante que o header vai sólido antes de
+           o usuário chegar a qualquer seção clara, eliminando branco sobre branco */
+        setScrolled(window.scrollY > 60);
         lastScroll.current = window.scrollY;
 
         const handleScroll = () => {
             const current = window.scrollY;
-            if (current < window.innerHeight * 0.9) {
+            if (current <= 60) {
                 setVisible(true);
                 setScrolled(false);
                 return;
@@ -59,6 +61,14 @@ export default function Header({ variant = 'dark' }) {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [pathname]);
+
+    /* G12 / a11y — Esc fecha o menu lateral */
+    useEffect(() => {
+        if (!sideMenuOpen) return;
+        const onKey = (e) => { if (e.key === 'Escape') closeMenu(); };
+        document.addEventListener('keydown', onKey);
+        return () => document.removeEventListener('keydown', onKey);
+    }, [sideMenuOpen]);
 
     const toggleMenu = (open) => {
         setSideMenuOpen(open);
@@ -91,7 +101,9 @@ export default function Header({ variant = 'dark' }) {
 
     const isLightVariant = variant === 'light';
     const currentTextColor = isLightVariant ? '#000000' : scrolled ? '#000000' : '#ffffff';
-    const currentBgColor = scrolled ? '#ffffff' : isLightVariant ? '#ffffff' : 'transparent';
+    /* G1 — fundo semi-opaco + blur garante legibilidade sobre qualquer seção */
+    const currentBgColor = scrolled ? 'rgba(255,255,255,0.95)' : isLightVariant ? '#ffffff' : 'transparent';
+    const currentBackdrop = scrolled ? 'blur(8px)' : 'none';
     const currentBorder = scrolled || isLightVariant ? '0.5px solid #e0e0e0' : 'none';
 
     const getLinkStyle = (path) => {
@@ -111,8 +123,10 @@ export default function Header({ variant = 'dark' }) {
                 className="flex justify-between items-center px-12"
                 style={{
                     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
-                    transition: 'transform 0.4s ease',
+                    transition: 'transform 0.4s ease, background-color 0.3s ease',
                     backgroundColor: currentBgColor,
+                    backdropFilter: currentBackdrop,
+                    WebkitBackdropFilter: currentBackdrop,
                     borderBottom: currentBorder,
                     position: 'fixed',
                     top: 0,
@@ -189,18 +203,33 @@ export default function Header({ variant = 'dark' }) {
                     <Link className="font-label uppercase tracking-[0.15em] text-[10px] font-light hover:opacity-70 transition-opacity duration-300" style={getLinkStyle('/minha-conta')} href={isLoggedIn ? '/minha-conta' : '/login?next=/minha-conta'}>{t('cliente')}</Link>
                 </nav>
 
-                <div className="flex items-center space-x-6" style={{ color: currentTextColor }}>
+                <div className="flex items-center space-x-2" style={{ color: currentTextColor }}>
                     <LangSwitcher textColor={currentTextColor} />
                     <CartButton color={currentTextColor === '#000000' ? 'black' : 'white'} />
-                    <button className="hover:opacity-70 transition-opacity duration-100 scale-100 active:scale-[0.99] transition-transform">
+                    {/* G12 — hit area ≥ 44×44px; aria-label para leitores de tela */}
+                    <button
+                        aria-label="Buscar"
+                        className="hover:opacity-70 transition-opacity duration-100"
+                        style={{
+                            background: 'none', border: 'none', cursor: 'pointer',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            width: '44px', height: '44px'
+                        }}
+                    >
                         <span className="material-symbols-outlined" data-icon="search">search</span>
                     </button>
 
-                    {/* ANIMATED HAMBURGER */}
+                    {/* ANIMATED HAMBURGER — G12: 44×44px hit area */}
                     <button
+                      aria-label="Abrir menu"
+                      aria-expanded={sideMenuOpen}
+                      aria-controls="menu-lateral"
                       onClick={() => toggleMenu(true)}
-                      style={{background:'none', border:'none', cursor:'pointer',
-                              padding:0, position:'relative', width:'36px', height:'28px'}}
+                      style={{
+                        background:'none', border:'none', cursor:'pointer',
+                        display:'flex', alignItems:'center', justifyContent:'center',
+                        width:'44px', height:'44px', position:'relative'
+                      }}
                       onMouseEnter={e => {
                         const spans = e.currentTarget.querySelectorAll('span')
                         spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)'
@@ -214,14 +243,14 @@ export default function Header({ variant = 'dark' }) {
                         spans[2].style.transform = 'none'
                       }}
                     >
-                      <span style={{display:'block', width:'36px', height:'1px',
-                        background: currentTextColor, position:'absolute', top:'4px', left:0,
+                      <span style={{display:'block', width:'28px', height:'1px',
+                        background: currentTextColor, position:'absolute', top:'14px', left:'8px',
                         transition:'all 0.3s ease'}}/>
-                      <span style={{display:'block', width:'36px', height:'1px',
-                        background: currentTextColor, position:'absolute', top:'14px', left:0,
+                      <span style={{display:'block', width:'28px', height:'1px',
+                        background: currentTextColor, position:'absolute', top:'22px', left:'8px',
                         transition:'all 0.3s ease'}}/>
-                      <span style={{display:'block', width:'36px', height:'1px',
-                        background: currentTextColor, position:'absolute', top:'24px', left:0,
+                      <span style={{display:'block', width:'28px', height:'1px',
+                        background: currentTextColor, position:'absolute', top:'30px', left:'8px',
                         transition:'all 0.3s ease'}}/>
                     </button>
                 </div>
@@ -234,7 +263,12 @@ export default function Header({ variant = 'dark' }) {
                   style={{position:'fixed', inset:0, zIndex:99998,
                           background:'rgba(0,0,0,0.3)'}}
                 />
-                <div style={{
+                <div
+                  id="menu-lateral"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label="Menu de navegação"
+                  style={{
                   position:'fixed', top:0, right:0, bottom:0,
                   width:'25vw', minWidth:'320px',
                   background:'#0a0a0a', zIndex:99999,
@@ -256,18 +290,23 @@ export default function Header({ variant = 'dark' }) {
                             <span className="hm-mazzutti">Mazzutti</span>
                         </span>
                       </div>
-                      <div
+                      {/* G12 — botão fechar: elemento semântico + hit area 44×44px */}
+                      <button
+                        aria-label="Fechar menu"
                         onClick={() => closeMenu()}
-                        style={{cursor:'pointer', position:'relative',
-                                width:'24px', height:'24px'}}
+                        style={{
+                          background:'none', border:'none', cursor:'pointer',
+                          position:'relative', width:'44px', height:'44px',
+                          display:'flex', alignItems:'center', justifyContent:'center'
+                        }}
                       >
                         <span style={{display:'block', width:'24px', height:'1px',
-                          background:'white', position:'absolute', top:'12px',
+                          background:'white', position:'absolute',
                           transform:'rotate(45deg)'}}/>
                         <span style={{display:'block', width:'24px', height:'1px',
-                          background:'white', position:'absolute', top:'12px',
+                          background:'white', position:'absolute',
                           transform:'rotate(-45deg)'}}/>
-                      </div>
+                      </button>
                     </div>
 
                     <nav style={{display:'flex', flexDirection:'column',

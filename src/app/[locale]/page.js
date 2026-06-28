@@ -61,6 +61,18 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
+        /* Camada 4 — respeita prefers-reduced-motion: sem animação, conteúdo imediatamente visível */
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (reduce) {
+            document.querySelectorAll('.hero-animate').forEach((el) => {
+                el.style.transition = 'none';
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+            return;
+        }
+
         // Reset animations immediately
         document.querySelectorAll('.hero-animate').forEach((el) => {
             el.style.transition = 'none';
