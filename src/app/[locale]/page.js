@@ -420,10 +420,12 @@ export default function Home() {
                                 className="relative flex-1 overflow-hidden group"
                                 style={{ minHeight: '380px' }}
                             >
-                                <img
+                                <Image
                                     src={item.img}
                                     alt={item.label}
-                                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/55 transition-colors duration-500" />
                                 <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-12">

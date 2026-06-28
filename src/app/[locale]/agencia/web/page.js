@@ -4,6 +4,7 @@ import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useState, useEffect } from 'react';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import LandingTeam from '@/app/components/LandingTeam';
@@ -27,7 +28,7 @@ export default function AgenciaWebPage() {
 
             {/* HERO */}
             <section className="relative h-screen w-full overflow-hidden">
-                <img fetchpriority="high" src="/images/agencia/house-mazzutti/capa.webp" alt="Web Development — House Mazzutti" className="absolute inset-0 w-full h-full object-cover object-center" />
+                <Image src="/images/agencia/house-mazzutti/capa.webp" alt="Web Development — House Mazzutti" fill priority sizes="100vw" className="object-cover object-center" />
                 <div className="absolute inset-0 bg-black/55" />
                 <div className="relative z-10 w-full h-full flex items-center justify-center">
                     <div className="w-full max-w-[600px] flex flex-col items-center text-center px-6">
@@ -81,11 +82,19 @@ export default function AgenciaWebPage() {
                     <span className="font-label uppercase tracking-[0.2em] text-[10px] text-black/50 mb-4 block" data-aos="fade-up">{t('portfolio_label')}</span>
                     <h2 className="font-headline text-black text-3xl md:text-4xl mb-16 tracking-tight" data-aos="fade-up" data-aos-delay="100">{t('portfolio_titulo')}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                        {['house-mazzutti/1','house-mazzutti/2','house-mazzutti/3','house-mazzutti/4','samrat/1','samrat/2','samrat/3','samrat/4'].map((img, i) => (
-                            <div key={img} className="aspect-square overflow-hidden" data-aos="fade-up" data-aos-delay={i * 50}>
-                                <img loading="lazy" src={`/images/agencia/${img}.webp`} alt="" className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" />
-                            </div>
-                        ))}
+                        {['house-mazzutti/1','house-mazzutti/2','house-mazzutti/3','house-mazzutti/4','samrat/1','samrat/2','samrat/3','samrat/4'].map((img, i) => {
+                            const project = img.split('/')[0].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+                            return (
+                                <div key={img} className="aspect-square overflow-hidden relative" data-aos="fade-up" data-aos-delay={i * 50}>
+                                    <Image
+                                        src={`/images/agencia/${img}.webp`}
+                                        alt={`Projeto ${project} — Web Design House Mazzutti`}
+                                        fill sizes="(max-width: 768px) 50vw, 25vw"
+                                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                                    />
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </section>

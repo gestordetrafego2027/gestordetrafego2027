@@ -50,6 +50,15 @@ export default function ProdutoraPage() {
 
     useEffect(() => {
         // [1] HERO ANIMATION (TEXTOS)
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        if (reduce) {
+            document.querySelectorAll('.hero-animate').forEach((el) => {
+                el.style.transition = 'none'
+                el.style.opacity = '1'
+                el.style.transform = 'translateY(0)'
+            })
+            return
+        }
         document.querySelectorAll('.hero-animate').forEach((el) => {
             el.style.opacity = '0'
             el.style.transform = 'translateY(30px)'
