@@ -9,25 +9,31 @@ export default function robots() {
           '/crm/',
           // APIs — não indexar
           '/api/',
-          // Autenticação
+          // Autenticação (rotas não-i18n)
           '/login',
           '/logout',
           '/auth/',
           '/verify',
-          // Área logada
+          // Área logada — sem e com prefixo de locale /pt/
           '/minha-conta/',
-          '/minha-conta/dados',
-          '/minha-conta/pedidos',
-          '/minha-conta/lgpd',
-          // Checkout e transacionais (não indexar; /obrigado removido — precisa ser rastreável para verificação de conversão Google Ads)
+          '/pt/minha-conta/',
+          // Checkout e transacionais — sem e com prefixo de locale /pt/
           '/academy/checkout',
-          '/academy/checkout/',
           '/academy/dashboard',
           '/academy/certificado/',
+          '/academy/curso/',
           '/checkout/',
+          '/pt/checkout/',
           '/carrinho/',
-          // Páginas de sistema
+          '/pt/carrinho/',
+          // Confirmação de pagamento locale
+          '/pt/canoinhas/checkout/',
+          '/pt/canoinhas/confirmacao/',
+          // Newsletter de cancelamento (transacional)
+          '/pt/newsletter/cancelado/',
+          // Páginas de sistema (propostas via token — noindex no metadata também)
           '/p/',
+          '/pt/p/',
         ],
       },
     ],
