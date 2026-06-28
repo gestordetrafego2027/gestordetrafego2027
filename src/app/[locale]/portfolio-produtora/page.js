@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Image from "next/image";
 import Header from '@/app/components/Header';

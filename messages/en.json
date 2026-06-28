@@ -417,7 +417,87 @@
     "grid_label": "Community",
     "grid_titulo": "Four fronts. One standard.",
     "frentes_label": "Entry points",
-    "frentes_titulo": "Each profile has its place — and its door."
+    "frentes_titulo": "Each profile has its place — and its door.",
+    "testimonials": [
+      {
+        "text": "Joining the House community was accessing a network where every conversation has direction. No noise, just care.",
+        "author": "HMZT MEMBER"
+      },
+      {
+        "text": "Those who orbit the House operate at the same standard as the house. That coherence is rare in any creative network.",
+        "author": "HMZT MEMBER"
+      },
+      {
+        "text": "Client, partner, talent — everyone shares the same level of care and rigor.",
+        "author": "HMZT MEMBER"
+      }
+    ],
+    "team_role_0": "Creative Director",
+    "team_role_1": "Executive Producer",
+    "team_role_2": "AI Manager",
+    "grid_img_0_label": "Backstage",
+    "grid_img_0_sub": "Direction",
+    "grid_img_1_label": "Set",
+    "grid_img_1_sub": "Production",
+    "grid_img_2_label": "Studio",
+    "grid_img_2_sub": "Capture",
+    "grid_img_3_label": "Team",
+    "grid_img_3_sub": "Operations",
+    "grid_img_4_label": "Scene",
+    "grid_img_4_sub": "Lighting",
+    "grid_img_5_label": "Direction",
+    "grid_img_5_sub": "Execution",
+    "frente_num_label": "Front",
+    "frentes": [
+      {
+        "num": "01",
+        "label": "For those already walking with the House",
+        "title": "Client Area.",
+        "desc": "Where projects become process. Briefings, approvals, files, and conversations gathered in one place — private, organized, with your brand treated as a work of art.",
+        "cta": "Access client area"
+      },
+      {
+        "num": "02",
+        "label": "For those who refer and drive momentum",
+        "title": "Affiliates.",
+        "desc": "Editorial referral with returns. For professionals and friends of the house who introduce the House to those seeking direction — with transparency, standards, and care in every referral.",
+        "cta": "Become an affiliate"
+      },
+      {
+        "num": "03",
+        "label": "For aligned brands and professionals",
+        "title": "Partners.",
+        "desc": "Co-creation between brands, agencies, and professionals who share the same level of rigor. Integrated projects, events, editorial and strategic collaborations.",
+        "cta": "Propose a partnership"
+      },
+      {
+        "num": "04",
+        "label": "For talents who want to contribute",
+        "title": "Openings & Opportunities.",
+        "desc": "Open positions, selected freelancers, and editorial castings. Space for those who understand that building requires thinking — not just execution.",
+        "cta": "I want to be represented"
+      }
+    ],
+    "filosofia_titulo": "Connections that expand what we build.",
+    "filosofia_caption": "House Philosophy",
+    "filosofia_alt_titulo": "We don't seek volume. We seek alignment.",
+    "filosofia_alt_caption": "Differentiation",
+    "dep_label": "What they say",
+    "dep_titulo": "Testimonials",
+    "cta_titulo": "If you connect with what the House builds — this is your entry point.",
+    "cta_btn": "Choose your door",
+    "cta_sub": "Less guessing. More direction.",
+    "banner_agencia_label": "AGENCY",
+    "banner_agencia_sub": "Branding · Web · Communications",
+    "banner_studio_label": "STUDIO",
+    "banner_studio_sub": "Book · Shoot · Coverage",
+    "banner_produtora_label": "PRODUCTION",
+    "banner_produtora_sub": "Fashion · Beauty · Institutional",
+    "banner_saiba_mais": "LEARN MORE →",
+    "blog_see_all": "SEE ALL →",
+    "blog_read": "READ →",
+    "form_titulo": "Join our network",
+    "form_sub": "Talents, partners and friends of the house — fill in below to enter our panel."
   },
   "contato_page": {
     "title": "CONTACT",

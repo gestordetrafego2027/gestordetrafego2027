@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import NewsletterStrip from '@/app/components/NewsletterStrip';

@@ -416,7 +416,87 @@
     "grid_label": "Comunidad",
     "grid_titulo": "Cuatro frentes. Un mismo estándar.",
     "frentes_label": "Puntos de entrada",
-    "frentes_titulo": "Cada perfil tiene su lugar — y su puerta."
+    "frentes_titulo": "Cada perfil tiene su lugar — y su puerta.",
+    "testimonials": [
+      {
+        "text": "Unirme a la comunidad de la House fue acceder a una red donde cada conversación tiene dirección. Sin ruido, con cuidado.",
+        "author": "MIEMBRO HMZT"
+      },
+      {
+        "text": "Quienes orbitan la House operan con el mismo estándar de la casa. Es raro encontrar esa coherencia en cualquier red creativa.",
+        "author": "MIEMBRO HMZT"
+      },
+      {
+        "text": "Cliente, socio, talento — todos comparten el mismo nivel de cuidado y exigencia.",
+        "author": "MIEMBRO HMZT"
+      }
+    ],
+    "team_role_0": "Director Creativo",
+    "team_role_1": "Productor Ejecutivo",
+    "team_role_2": "Gestor de IA",
+    "grid_img_0_label": "Bastidor",
+    "grid_img_0_sub": "Dirección",
+    "grid_img_1_label": "Set",
+    "grid_img_1_sub": "Producción",
+    "grid_img_2_label": "Estudio",
+    "grid_img_2_sub": "Captación",
+    "grid_img_3_label": "Equipo",
+    "grid_img_3_sub": "Operación",
+    "grid_img_4_label": "Escena",
+    "grid_img_4_sub": "Iluminación",
+    "grid_img_5_label": "Dirección",
+    "grid_img_5_sub": "Ejecución",
+    "frente_num_label": "Frente",
+    "frentes": [
+      {
+        "num": "01",
+        "label": "Para quienes ya caminan con la House",
+        "title": "Área del Cliente.",
+        "desc": "Donde los proyectos se convierten en proceso. Briefings, aprobaciones, archivos y conversaciones reunidos en un solo lugar — privado, organizado, con tu marca tratada como obra.",
+        "cta": "Acceder al área de cliente"
+      },
+      {
+        "num": "02",
+        "label": "Para quienes refieren y generan movimiento",
+        "title": "Afiliados.",
+        "desc": "Referencia editorial con retorno. Para profesionales y amigos de la casa que presentan la House a quienes buscan dirección — con transparencia, estándar y cuidado en cada traspaso.",
+        "cta": "Convertirme en afiliado"
+      },
+      {
+        "num": "03",
+        "label": "Para marcas y profesionales alineados",
+        "title": "Socios.",
+        "desc": "Co-creación entre marcas, agencias y profesionales que comparten el mismo nivel de exigencia. Proyectos integrados, eventos, colaboraciones editoriales y estratégicas.",
+        "cta": "Proponer una alianza"
+      },
+      {
+        "num": "04",
+        "label": "Para talentos que quieran aportar",
+        "title": "Vacantes & Oportunidades.",
+        "desc": "Posiciones abiertas, freelances seleccionados y castings editoriales. Espacio para quienes entienden que construir exige pensamiento — no solo ejecución.",
+        "cta": "Quiero ser representado"
+      }
+    ],
+    "filosofia_titulo": "Conexiones que amplían lo que construimos.",
+    "filosofia_caption": "Filosofía House",
+    "filosofia_alt_titulo": "No buscamos volumen. Buscamos alineación.",
+    "filosofia_alt_caption": "Diferenciación",
+    "dep_label": "Lo que dicen",
+    "dep_titulo": "Testimonios",
+    "cta_titulo": "Si te conectas con lo que la House construye — este es tu punto de entrada.",
+    "cta_btn": "Elegir tu puerta",
+    "cta_sub": "Menos intentos. Más dirección.",
+    "banner_agencia_label": "AGENCIA",
+    "banner_agencia_sub": "Branding · Web · Comunicación",
+    "banner_studio_label": "STUDIO",
+    "banner_studio_sub": "Book · Ensayo · Cobertura",
+    "banner_produtora_label": "PRODUCTORA",
+    "banner_produtora_sub": "Moda · Belleza · Institucional",
+    "banner_saiba_mais": "SABER MÁS →",
+    "blog_see_all": "VER TODOS →",
+    "blog_read": "LEER →",
+    "form_titulo": "Únete a nuestra red",
+    "form_sub": "Talentos, socios y amigos de la casa — completa el formulario a continuación para entrar en nuestro panel."
   },
   "contato_page": {
     "title": "CONTACTO",

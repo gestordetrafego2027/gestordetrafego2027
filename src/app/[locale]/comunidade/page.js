@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
-import Link from "next/link";
+import { Link } from '@/i18n/navigation';
 import Image from "next/image";
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
@@ -21,20 +21,7 @@ export default function ComunidadePage() {
     const closeTalentsForm = () => setTalentsForm(null);
 
 
-    const testimonials = [
-        {
-            text: "Entrar para a comunidade da House foi acessar uma rede onde cada conversa tem direção. Sem ruído, com cuidado.",
-            author: "MEMBRO HMZT",
-        },
-        {
-            text: "Quem orbita a House opera no mesmo padrão da casa. É raro encontrar essa coerência em qualquer rede criativa.",
-            author: "MEMBRO HMZT",
-        },
-        {
-            text: "Cliente, parceiro, talento — todos partilham o mesmo nível de cuidado e exigência.",
-            author: "MEMBRO HMZT",
-        },
-    ];
+    const testimonials = t.raw('testimonials');
 
     const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % testimonials.length);
     const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -94,18 +81,18 @@ export default function ComunidadePage() {
     }, [])
 
     const teamMembers = [
-        { name: "Angelo Mazzutti", role: "Diretor Criativo", src: "/images/angelo/angelo-portrait.webp" },
-        { name: "Mateus Sacavem", role: "Produtor Executivo", src: "/images/comunidade/grid-1.webp" },
-        { name: "Henry Almeida", role: "Gestor de IA", src: "/images/comunidade/grid-2.webp" },
+        { name: "Angelo Mazzutti", role: t('team_role_0'), src: "/images/angelo/angelo-portrait.webp" },
+        { name: "Mateus Sacavem", role: t('team_role_1'), src: "/images/comunidade/grid-1.webp" },
+        { name: "Henry Almeida", role: t('team_role_2'), src: "/images/comunidade/grid-2.webp" },
     ];
 
     const gridImages = [
-        { src: "/images/comunidade/grid-1.webp", alt: "Bastidor — House Mazzutti em set", label: "Bastidor", sublabel: "Direção" },
-        { src: "/images/comunidade/grid-2.webp", alt: "Set de produção — House Mazzutti", label: "Set", sublabel: "Produção" },
-        { src: "/images/comunidade/grid-3.webp", alt: "Estúdio em captação — House Mazzutti", label: "Estúdio", sublabel: "Captação" },
-        { src: "/images/comunidade/grid-4.webp", alt: "Equipe em operação — House Mazzutti", label: "Equipe", sublabel: "Operação" },
-        { src: "/images/comunidade/grid-5.webp", alt: "Cena com iluminação cênica — House Mazzutti", label: "Cena", sublabel: "Iluminação" },
-        { src: "/images/comunidade/grid-6.webp", alt: "Direção e execução em set — House Mazzutti", label: "Direção", sublabel: "Execução" },
+        { src: "/images/comunidade/grid-1.webp", alt: "Bastidor — House Mazzutti em set", label: t('grid_img_0_label'), sublabel: t('grid_img_0_sub') },
+        { src: "/images/comunidade/grid-2.webp", alt: "Set de produção — House Mazzutti", label: t('grid_img_1_label'), sublabel: t('grid_img_1_sub') },
+        { src: "/images/comunidade/grid-3.webp", alt: "Estúdio em captação — House Mazzutti", label: t('grid_img_2_label'), sublabel: t('grid_img_2_sub') },
+        { src: "/images/comunidade/grid-4.webp", alt: "Equipe em operação — House Mazzutti", label: t('grid_img_3_label'), sublabel: t('grid_img_3_sub') },
+        { src: "/images/comunidade/grid-5.webp", alt: "Cena com iluminação cênica — House Mazzutti", label: t('grid_img_4_label'), sublabel: t('grid_img_4_sub') },
+        { src: "/images/comunidade/grid-6.webp", alt: "Direção e execução em set — House Mazzutti", label: t('grid_img_5_label'), sublabel: t('grid_img_5_sub') },
     ];
 
     const SocialIcons = () => (
@@ -227,40 +214,14 @@ export default function ComunidadePage() {
                     </div>
 
                     {(() => {
-                        const frentes = [
-                            {
-                                num: "01",
-                                label: "Para quem já caminha com a House",
-                                title: "Área do Cliente.",
-                                desc: "Onde projetos viram processo. Briefings, aprovações, arquivos e conversas reunidos em um só lugar — privado, organizado, com a sua marca tratada como obra.",
-                                cta: "Acessar área do cliente",
-                                action: { type: "link", href: "/login" },
-                            },
-                            {
-                                num: "02",
-                                label: "Para quem indica e movimenta",
-                                title: "Afiliados.",
-                                desc: "Indicação editorial com retorno. Para profissionais e amigos da casa que apresentam a House a quem busca direção — com transparência, padrão e cuidado em cada repasse.",
-                                cta: "Tornar-se afiliado",
-                                action: { type: "link", href: "/comunidade/afiliados" },
-                            },
-                            {
-                                num: "03",
-                                label: "Para marcas e profissionais alinhados",
-                                title: "Parceiros.",
-                                desc: "Co-criação entre marcas, agências e profissionais que partilham o mesmo nível de exigência. Projetos integrados, eventos, colaborações editoriais e estratégicas.",
-                                cta: "Propor uma parceria",
-                                action: { type: "talents-form", location: "comunidade_parceiros" },
-                            },
-                            {
-                                num: "04",
-                                label: "Para talentos que queiram somar",
-                                title: "Vagas & Oportunidades.",
-                                desc: "Posições abertas, freelas selecionados e castings editoriais. Espaço para quem entende que construção exige pensamento — não apenas execução.",
-                                cta: "Quero ser representado",
-                                action: { type: "talents-form", location: "comunidade_vagas" },
-                            },
+                        const frentesData = t.raw('frentes');
+                        const frentesActions = [
+                            { type: "link", href: "/login" },
+                            { type: "link", href: "/comunidade/afiliados" },
+                            { type: "talents-form", location: "comunidade_parceiros" },
+                            { type: "talents-form", location: "comunidade_vagas" },
                         ];
+                        const frentes = frentesData.map((f, i) => ({ ...f, action: frentesActions[i] }));
                         return (
                             <div className="border-t-[0.5px] border-zinc-200">
                                 {frentes.map((f, i) => (
@@ -270,7 +231,7 @@ export default function ComunidadePage() {
                                     >
                                         <div className="max-w-[1440px] mx-auto px-12 py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
                                             <div className="md:col-span-3">
-                                                <span className="text-caption text-zinc-500 block">{f.num} / Frente</span>
+                                                <span className="text-caption text-zinc-500 block">{f.num} / {t('frente_num_label')}</span>
                                                 <p className="text-caption text-zinc-400 mt-3">{f.label}</p>
                                             </div>
                                             <div className="md:col-span-6">
@@ -316,16 +277,16 @@ export default function ComunidadePage() {
                             <div className="grid grid-cols-1 gap-y-8">
                                 <div className="max-w-xl text-left">
                                     <h2 className="text-h2 text-black mb-6">
-                                        Conexões que ampliam o que construímos.
+                                        {t('filosofia_titulo')}
                                     </h2>
-                                    <p className="text-caption text-zinc-500">Filosofia House</p>
+                                    <p className="text-caption text-zinc-500">{t('filosofia_caption')}</p>
                                 </div>
                                 <div className="flex justify-end">
                                     <div className="max-w-xl text-right">
                                         <h3 className="text-h2 text-black mb-6">
-                                            Não buscamos volume.<br />Buscamos alinhamento.
+                                            {t('filosofia_alt_titulo')}
                                         </h3>
-                                        <p className="text-caption text-zinc-500">Diferenciação</p>
+                                        <p className="text-caption text-zinc-500">{t('filosofia_alt_caption')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -335,7 +296,7 @@ export default function ComunidadePage() {
 
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40">Depoimentos</span>
+                        <span className="font-body font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40">{t('dep_titulo')}</span>
                     </div>
                     <div className="absolute left-16 inset-y-0 flex items-center z-20">
                         <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
@@ -355,8 +316,8 @@ export default function ComunidadePage() {
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
                         <div className="mb-12">
-                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
-                            <h2 className="text-h2 text-white">Depoimentos</h2>
+                            <span className="text-caption text-zinc-500 block mb-4">{t('dep_label')}</span>
+                            <h2 className="text-h2 text-white">{t('dep_titulo')}</h2>
                         </div>
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1">
@@ -392,13 +353,13 @@ export default function ComunidadePage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
                         <h2 className="text-h1 text-white hmzt-hero-title">
-                            Se você se conecta com o que a House constrói — esse é o seu ponto de entrada.
+                            {t('cta_titulo')}
                         </h2>
                         <div className="flex flex-col items-center space-y-10">
                             <a className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500" href="#frentes">
-                                Escolher a sua porta
+                                {t('cta_btn')}
                             </a>
-                            <p className="text-caption text-zinc-500">Menos tentativa. Mais direção.</p>
+                            <p className="text-caption text-zinc-500">{t('cta_sub')}</p>
                         </div>
                     </div>
                 </section>
@@ -409,9 +370,9 @@ export default function ComunidadePage() {
                 <section className="bg-white">
                     <div className="flex flex-col md:flex-row h-auto md:h-[85vh]">
                         {[
-                            { label: 'AGÊNCIA', sub: 'Branding · Web · Comunicação', img: '/images/agencia/banners/banner-1.webp', href: '/agencia' },
-                            { label: 'STUDIO', sub: 'Book · Ensaio · Cobertura', img: '/images/studio/banners/banner-1.webp', href: '/studio' },
-                            { label: 'PRODUTORA', sub: 'Moda · Beleza · Institucional', img: '/images/produtora/banners/banner-1.webp', href: '/produtora' },
+                            { label: t('banner_agencia_label'), sub: t('banner_agencia_sub'), img: '/images/agencia/banners/banner-1.webp', href: '/agencia' },
+                            { label: t('banner_studio_label'), sub: t('banner_studio_sub'), img: '/images/studio/banners/banner-1.webp', href: '/studio' },
+                            { label: t('banner_produtora_label'), sub: t('banner_produtora_sub'), img: '/images/produtora/banners/banner-1.webp', href: '/produtora' },
                         ].map((item) => (
                             <Link
                                 key={item.label}
@@ -424,7 +385,7 @@ export default function ComunidadePage() {
                                 <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-12">
                                     <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 mb-3 block">{item.sub}</span>
                                     <h3 className="font-headline text-3xl md:text-4xl text-white tracking-tight mb-6">{item.label}</h3>
-                                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white border-b border-white/40 pb-1 w-fit group-hover:border-white transition-colors duration-300">SAIBA MAIS →</span>
+                                    <span className="font-label uppercase tracking-[0.2em] text-[10px] text-white border-b border-white/40 pb-1 w-fit group-hover:border-white transition-colors duration-300">{t('banner_saiba_mais')}</span>
                                 </div>
                             </Link>
                         ))}
@@ -439,6 +400,8 @@ export default function ComunidadePage() {
                         'editorial-moda-narrativa-visual',
                         'campanha-lancamento-arquitetura-invisivel',
                     ]}
+                    allLabel={t('blog_see_all')}
+                    readLabel={t('blog_read')}
                 />
 
             </main>
@@ -457,10 +420,10 @@ export default function ComunidadePage() {
                         <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
-                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/">Home</Link>
-                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/studio">Studio</Link>
-                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/portfolio">Portfólio</Link>
-                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/contato">Contato</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/">{tFooter('home')}</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/studio">{tFooter('studio')}</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/portfolio">{tFooter('portfolio')}</Link>
+                        <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/contato">{tFooter('contato')}</Link>
                     </nav>
                     <div className="text-caption text-zinc-400">
                         {tFooter('copyright')}
@@ -472,8 +435,8 @@ export default function ComunidadePage() {
             <FormDrawer
                 isOpen={!!talentsForm}
                 onClose={closeTalentsForm}
-                title="Faça parte da nossa rede"
-                subtitle="Talentos, parceiros e amigos da casa — preencha abaixo para entrar no nosso painel."
+                title={t('form_titulo')}
+                subtitle={t('form_sub')}
             >
                 {talentsForm ? (
                     <FormModelo
