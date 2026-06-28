@@ -1,6 +1,7 @@
 import "./globals.css";
 import Script from 'next/script';
 import NonBlockingStyles from '@/app/components/NonBlockingStyles';
+import SkipLink from '@/app/components/SkipLink';
 
 export const metadata = {
   metadataBase: new URL('https://housemazzutti.com'),
@@ -63,7 +64,10 @@ gtag('config', 'AW-16938050518');`}
         </Script>
       </head>
       <body className="font-body">
-        {children}
+        <SkipLink />
+        <main id="conteudo">
+          {children}
+        </main>
       </body>
     </html>
   );

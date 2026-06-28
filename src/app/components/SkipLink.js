@@ -1,0 +1,7 @@
+export default function SkipLink() {
+    return (
+        <a href="#conteudo" className="skip-link">
+            Pular para o conteúdo
+        </a>
+    );
+}
