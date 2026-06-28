@@ -2,17 +2,19 @@
  * Landing — Briefing Mal Passado
  * House Mazzutti Academy · Vol. 03 · 2026
  * 25 capítulos · 417 páginas · 3 partes
- * Duas formas de leitura: PDF R$ 54 · Impresso R$ 95
+ * Três formas de leitura: PDF R$ 54 · Impresso R$ 95 · Combo R$ 119
  */
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { SampleLeadForm } from '@/components/academy/SampleLeadForm'
 
 // ============================================================
 // PLACEHOLDERS — quando decidir checkout/prazo/frete, troca aqui
 // ============================================================
 const CHECKOUT_DIGITAL_URL  = '/pt/checkout/casos-da-producao'
 const CHECKOUT_IMPRESSO_URL = '/pt/checkout/briefing-mal-passado-impresso'
+const CHECKOUT_COMBO_URL    = '/pt/checkout/briefing-mal-passado-combo'
 const PRAZO_IMPRESSO_DIAS   = '10' // dias úteis até despacho
 const REGRA_FRETE           = 'Frete calculado no checkout pelos Correios para todo o Brasil.'
 const SITE_URL              = 'https://housemazzutti.com'
@@ -446,58 +448,145 @@ export default function CasosDaProducaoPage() {
           </blockquote>
         </section>
 
+        {/* ===================== PROVA SOCIAL ===================== */}
+        <section className="px-6 py-24 md:py-32 bg-[var(--paper)] border-t border-[var(--rule)]">
+          <div className="max-w-6xl mx-auto">
+            <p className="bmp-tag mb-6">— 06.5 · Leitores</p>
+            <h2 className="bmp-h2 bmp-section-headline mb-4">
+              Quem leu<br /><em>antes.</em>
+            </h2>
+            <p className="font-headline text-lg md:text-xl text-neutral-600 mb-16 max-w-2xl" style={{fontWeight:500}}>
+              Vols. 01 e 02 já circulam entre diretores criativos, planners e líderes de agência. Trechos do que voltou:
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  quote: 'Briefing Mal Passado é manual de sobrevivência. Devia ser leitura obrigatória em sala de criação.',
+                  author: '[Nome do leitor]',
+                  role: '[Cargo · Agência]',
+                  vol: 'Sobre Vol. 03',
+                },
+                {
+                  quote: 'Mazzutti escreve do jeito que dirige reunião: sem rodeio, com tese, e doendo onde precisa doer.',
+                  author: '[Nome do leitor]',
+                  role: '[Cargo · Empresa]',
+                  vol: 'Sobre Vol. 02',
+                },
+                {
+                  quote: 'Cada capítulo é uma cena que eu vivi. A diferença é que ele teve coragem de nomear.',
+                  author: '[Nome do leitor]',
+                  role: '[Cargo · Estúdio]',
+                  vol: 'Sobre Vol. 01',
+                },
+              ].map((t, i) => (
+                <figure key={i} className="border border-[var(--rule)] p-8 bg-white flex flex-col">
+                  <blockquote className="bmp-quote text-2xl md:text-3xl flex-1 mb-8" style={{lineHeight:1.05, letterSpacing:'-0.02em', textTransform:'none'}}>
+                    <span style={{color:'var(--blood)'}}>“</span>{t.quote}<span style={{color:'var(--blood)'}}>”</span>
+                  </blockquote>
+                  <figcaption>
+                    <p className="font-headline text-base font-semibold text-[var(--ink)]">{t.author}</p>
+                    <p className="font-body text-sm text-neutral-500">{t.role}</p>
+                    <p className="bmp-tag mt-3" style={{fontSize:'9.5px'}}>{t.vol}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+
+            <p className="font-raleway text-xs text-neutral-500 italic mt-10 text-center">
+              Depoimentos coletados em 2025-2026 pelo time editorial da House Mazzutti.
+            </p>
+          </div>
+        </section>
+
+        {/* ===================== SAMPLE LEAD MAGNET ===================== */}
+        <section id="sample" className="px-6 py-24 md:py-32 bg-[var(--paper)]">
+          <div className="max-w-3xl mx-auto">
+            <p className="bmp-tag mb-6">— 06.8 · Antes de comprar, leia</p>
+            <h2 className="bmp-h2 bmp-section-headline mb-6">
+              Capítulo 1.<br /><em>De graça.</em>
+            </h2>
+            <p className="font-headline text-lg md:text-xl text-neutral-600 mb-10 max-w-2xl" style={{fontWeight:500, lineHeight:1.5}}>
+              O primeiro capítulo é o que abre o livro — e o que define o tom. Recebe no e-mail, lê em 15 minutos, decide depois.
+            </p>
+            <SampleLeadForm />
+          </div>
+        </section>
+
         {/* ===================== FORMATOS / INVESTIMENTO ===================== */}
         <section id="formatos" className="px-6 py-24 md:py-32 bg-[var(--ink)] text-[var(--paper)]">
           <div className="max-w-5xl mx-auto">
             <p className="bmp-tag mb-6" style={{color:'#a0a0a0'}}>— 07 · Adquirir</p>
             <h2 className="bmp-h2 bmp-section-headline mb-6 text-[var(--paper)]">
-              Duas formas<br /><span style={{color:'var(--blood)'}}>de ler.</span>
+              Três formas<br /><span style={{color:'var(--blood)'}}>de ler.</span>
             </h2>
             <p className="font-headline text-lg md:text-2xl text-neutral-400 mb-16 max-w-2xl" style={{fontWeight:500}}>
               Mesma obra. Mesmo conteúdo. Você escolhe como.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 items-stretch">
               {/* DIGITAL */}
-              <div className="border border-neutral-700 p-10 transition hover:border-[var(--blood)] relative">
+              <div className="border border-neutral-700 p-8 md:p-10 transition hover:border-[var(--blood)] relative flex flex-col">
                 <p className="bmp-tag mb-3" style={{color:'#a0a0a0'}}>VERSÃO DIGITAL</p>
-                <h3 className="bmp-h3 text-4xl md:text-5xl mb-8">PDF</h3>
+                <h3 className="bmp-h3 text-3xl md:text-4xl mb-6">PDF</h3>
 
-                <p className="bmp-display mb-8" style={{fontSize:'clamp(64px,9vw,128px)', lineHeight:0.86}}>
+                <p className="bmp-display mb-6" style={{fontSize:'clamp(56px,7vw,96px)', lineHeight:0.86}}>
                   <span style={{fontSize:'0.42em', color:'var(--blood)', verticalAlign:'top', marginRight:'0.2em'}}>R$</span>54
                 </p>
 
-                <p className="font-body text-base text-neutral-300 mb-8">
-                  PDF de alta resolução, otimizado para leitura em tablet, computador e leitor de ebook. Entrega imediata após confirmação do pagamento. Licenciado para uso individual.
+                <p className="font-body text-sm text-neutral-300 mb-8 flex-1">
+                  PDF de alta resolução, otimizado para leitura em tablet, computador e leitor de ebook. Entrega imediata após confirmação do pagamento.
                 </p>
 
                 <a
                   href={CHECKOUT_DIGITAL_URL}
-                  className="bmp-cta inline-block w-full text-center bg-[var(--paper)] text-[var(--ink)] text-sm px-8 py-5 hover:bg-[var(--blood)] hover:text-[var(--paper)] transition-colors"
+                  className="bmp-cta inline-block w-full text-center bg-[var(--paper)] text-[var(--ink)] text-xs px-6 py-4 hover:bg-[var(--blood)] hover:text-[var(--paper)] transition-colors"
                 >
-                  Comprar versão digital →
+                  Comprar PDF →
+                </a>
+              </div>
+
+              {/* COMBO — destaque (Best value) */}
+              <div className="border-2 border-[var(--blood)] p-8 md:p-10 transition bg-neutral-900/40 relative flex flex-col md:scale-105 md:shadow-2xl md:shadow-[var(--blood)]/20">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--blood)] text-[var(--paper)] bmp-tag px-4 py-1.5 whitespace-nowrap" style={{color:'var(--paper)', fontSize:'10px'}}>Melhor valor · economiza R$ 30</span>
+                <p className="bmp-tag mb-3" style={{color:'var(--blood)'}}>COMBO PDF + IMPRESSO</p>
+                <h3 className="bmp-h3 text-3xl md:text-4xl mb-6">Ler + colecionar</h3>
+
+                <p className="bmp-display mb-2" style={{fontSize:'clamp(56px,7vw,96px)', lineHeight:0.86}}>
+                  <span style={{fontSize:'0.42em', color:'var(--blood)', verticalAlign:'top', marginRight:'0.2em'}}>R$</span>119
+                </p>
+                <p className="font-mono text-xs text-neutral-400 mb-6 line-through">de R$ 149 avulso</p>
+
+                <p className="font-body text-sm text-neutral-300 mb-8 flex-1">
+                  PDF imediato no e-mail <em>+</em> livro físico em capa cartonada, despachado em até {PRAZO_IMPRESSO_DIAS} dias úteis. Leia agora, colecione depois.
+                </p>
+
+                <a
+                  href={CHECKOUT_COMBO_URL}
+                  className="bmp-cta inline-block w-full text-center bg-[var(--blood)] text-[var(--paper)] text-xs px-6 py-4 hover:bg-[var(--paper)] hover:text-[var(--ink)] transition-colors"
+                >
+                  Quero o combo →
                 </a>
               </div>
 
               {/* IMPRESSO */}
-              <div className="border-2 border-[var(--blood)] p-10 transition bg-neutral-900/30 relative">
-                <span className="absolute top-0 right-0 bg-[var(--blood)] text-[var(--paper)] bmp-tag px-3 py-1.5" style={{color:'var(--paper)'}}>Mais procurado</span>
-                <p className="bmp-tag mb-3" style={{color:'var(--blood)'}}>VERSÃO IMPRESSA</p>
-                <h3 className="bmp-h3 text-4xl md:text-5xl mb-8">Livro físico</h3>
+              <div className="border border-neutral-700 p-8 md:p-10 transition hover:border-[var(--blood)] relative flex flex-col">
+                <p className="bmp-tag mb-3" style={{color:'#a0a0a0'}}>VERSÃO IMPRESSA</p>
+                <h3 className="bmp-h3 text-3xl md:text-4xl mb-6">Livro físico</h3>
 
-                <p className="bmp-display mb-8" style={{fontSize:'clamp(64px,9vw,128px)', lineHeight:0.86}}>
+                <p className="bmp-display mb-6" style={{fontSize:'clamp(56px,7vw,96px)', lineHeight:0.86}}>
                   <span style={{fontSize:'0.42em', color:'var(--blood)', verticalAlign:'top', marginRight:'0.2em'}}>R$</span>95
                 </p>
 
-                <p className="font-body text-base text-neutral-300 mb-8">
-                  Edição em capa cartonada, miolo em papel offset 90g, formato 16 × 23 cm. Produção própria da House Mazzutti. Envio em até {PRAZO_IMPRESSO_DIAS} dias úteis após confirmação do pagamento.
+                <p className="font-body text-sm text-neutral-300 mb-8 flex-1">
+                  Capa cartonada, miolo em offset 90g, formato 16 × 23 cm. Produção da House Mazzutti. Envio em até {PRAZO_IMPRESSO_DIAS} dias úteis após pagamento.
                 </p>
 
                 <a
                   href={CHECKOUT_IMPRESSO_URL}
-                  className="bmp-cta inline-block w-full text-center bg-[var(--blood)] text-[var(--paper)] text-sm px-8 py-5 hover:bg-[var(--paper)] hover:text-[var(--ink)] transition-colors"
+                  className="bmp-cta inline-block w-full text-center bg-[var(--paper)] text-[var(--ink)] text-xs px-6 py-4 hover:bg-[var(--blood)] hover:text-[var(--paper)] transition-colors"
                 >
-                  Comprar versão impressa →
+                  Comprar impresso →
                 </a>
               </div>
             </div>
