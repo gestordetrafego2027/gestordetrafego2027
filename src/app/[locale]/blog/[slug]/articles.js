@@ -531,19 +531,19 @@ export const articles = {
     "keywords": "quanto custa branding, investimento em branding, preço de branding, branding project, branding premium, ROI de marca, agência de branding, House Mazzutti",
     "data": "Março 2026",
     "cover": {
-      "src": "/images/blog/investir-em-branding/quanto-investir-branding-guia-estrategico-house-mazzutti.webp",
-      "alt": "Investimento em branding estratégico — guia de preço para empresas premium House Mazzutti",
+      "src": "/images/agencia/house-mazzutti/capa.webp",
+      "alt": "Case de branding House Mazzutti — identidade visual premium como ativo de mercado",
       "caption": "Branding como infraestrutura · Agência HMZT"
     },
     "interior": [
       {
-        "src": "/images/blog/investir-em-branding/branding-project-completo-empresa-premium-house-mazzutti.webp",
-        "alt": "Branding project completo com manuais de marca para empresa estratégica",
+        "src": "/images/agencia/house-mazzutti/4.webp",
+        "alt": "Aplicação editorial da identidade House Mazzutti — branding project completo",
         "caption": "Branding completo · entrega estruturada"
       },
       {
-        "src": "/images/blog/investir-em-branding/investimento-marca-roi-branding-house-mazzutti.webp",
-        "alt": "Identidade visual premium aplicada em diferentes pontos de contato de marca",
+        "src": "/images/agencia/house-mazzutti/6.webp",
+        "alt": "Sistema visual House Mazzutti aplicado em pontos de contato premium",
         "caption": "Aplicações premium · consistência editorial"
       }
     ],

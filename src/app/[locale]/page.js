@@ -515,7 +515,7 @@ export default function Home() {
                                 </p>
                             </div>
                             <Link
-                                href="/academy/comunidade"
+                                href="/comunidade"
                                 className="shrink-0 px-8 py-3 border border-white/20 text-white text-caption uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
                             >
                                 Entrar na comunidade →
@@ -534,7 +534,7 @@ export default function Home() {
                             ].map((src, i) => (
                                 <Link
                                     key={i}
-                                    href="/academy/comunidade"
+                                    href="/comunidade"
                                     className="relative overflow-hidden bg-neutral-900 group"
                                     style={{ aspectRatio: '4/3' }}
                                 >
@@ -559,7 +559,7 @@ export default function Home() {
                                 <p className="text-white/40 text-sm mt-1">Acesso exclusivo a conteúdo, bastidores e conexões do mercado criativo.</p>
                             </div>
                             <Link
-                                href="/academy/comunidade"
+                                href="/comunidade"
                                 className="shrink-0 px-10 py-4 bg-white text-black text-xs font-semibold uppercase tracking-widest hover:bg-neutral-100 transition-colors duration-300"
                             >
                                 Entrar na comunidade →
