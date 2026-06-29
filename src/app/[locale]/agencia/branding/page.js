@@ -44,32 +44,26 @@ export default function AgenciaBrandingPage() {
             <Header variant="dark" />
 
             {/* HERO */}
-            <section className="relative h-screen w-full overflow-hidden">
-                <Image
-                    src="/images/agencia/knowhol/capa.webp"
-                    alt="Projeto de branding e identidade de marca — House Mazzutti, São Paulo"
-                    fill
-                    priority
-                    sizes="100vw"
-                    className="object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-black/55" />
-                <div className="relative z-10 w-full h-full flex items-center justify-center">
-                    <div className="w-full max-w-[600px] flex flex-col items-center text-center px-6">
-                        <div className="mb-8">
-                            <svg className="w-[42px] h-[42px] text-white/80" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </div>
-                        <span className="font-label uppercase tracking-[0.4em] text-[10px] text-white/60 mb-6 block" data-aos="fade-up" data-aos-delay="100">{t('hero_label')}</span>
-                        <h1 className="font-headline text-4xl md:text-[3.6rem] text-white leading-[1.05] tracking-tight hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
-                        <p className="font-body text-white/70 mt-4 mb-8 max-w-[440px] mx-auto leading-relaxed text-base md:text-lg" data-aos="fade-up" data-aos-delay="300">{t('hero_subtitulo')}</p>
-                        <div className="flex flex-col sm:flex-row gap-4 items-center" data-aos="fade-up" data-aos-delay="400">
-                            <button type="button" onClick={() => setFormOpen(true)} className="bg-transparent text-white border border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-colors active:scale-95 duration-200">
+            <section className="relative w-full overflow-hidden bg-black m-0 p-0 border-0" style={{ height: "105vh" }}>
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/agencia/knowhol/capa.webp"
+                        alt="Projeto de branding e identidade de marca — House Mazzutti, São Paulo"
+                        fill priority sizes="100vw"
+                        className="object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-black/50"></div>
+                </div>
+                <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
+                    <div className="max-w-3xl">
+                        <span className="text-caption text-white/70 mb-6 block" data-aos="fade-up" data-aos-delay="100">{t('hero_label')}</span>
+                        <h1 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
+                        <p className="text-body text-white/80 mb-12 measure-editorial" data-aos="fade-up" data-aos-delay="300">{t('hero_subtitulo')}</p>
+                        <div className="flex flex-col sm:flex-row gap-6 items-start" data-aos="fade-up" data-aos-delay="400">
+                            <button type="button" onClick={() => setFormOpen(true)} className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 {t('hero_cta_btn')}
                             </button>
-                            <a href="#marcas" className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 hover:text-white transition-colors px-4 py-5">
+                            <a href="#marcas" className="font-label uppercase tracking-[0.2em] text-[10px] text-white/60 hover:text-white transition-colors py-4">
                                 {t('hero_cta_secondary')} ↓
                             </a>
                         </div>
