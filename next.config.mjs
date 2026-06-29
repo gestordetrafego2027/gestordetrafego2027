@@ -5,7 +5,10 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  
+
+  // Fix: next-intl v4 + Next.js 15 edge runtime re-export issue no dev server
+  transpilePackages: ['next-intl'],
+
   // 1. Standalone Output: Otimiza para deploy em containers (Coolify)
   output: 'standalone',
 
