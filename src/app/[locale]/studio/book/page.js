@@ -97,9 +97,9 @@ export default function StudioBookPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_item_1_titulo'), desc: t('team_item_1_desc'), image: '/images/studio/fernanda-treml/capa.webp', alt: 'Leitura de perfil e direção de book — House Mazzutti Studio' },
-                    { title: t('team_item_2_titulo'), desc: t('team_item_2_desc'), image: '/images/studio/maria-eduarda/capa.webp', alt: 'Moodboard estratégico de book — House Mazzutti Studio' },
-                    { title: t('team_item_3_titulo'), desc: t('team_item_3_desc'), image: '/images/studio/marina-machado/capa.webp', alt: 'Curadoria e entrega high-end — House Mazzutti Studio' },
+                    { title: t('team_item_1_titulo'), desc: t('team_item_1_desc'), image: '/images/studio/diferenciais/leitura-perfil.webp', alt: 'Leitura de perfil e direção de book — House Mazzutti Studio' },
+                    { title: t('team_item_2_titulo'), desc: t('team_item_2_desc'), image: '/images/studio/diferenciais/moodboard.webp', alt: 'Moodboard estratégico de book — House Mazzutti Studio' },
+                    { title: t('team_item_3_titulo'), desc: t('team_item_3_desc'), image: '/images/studio/diferenciais/curadoria-high-end.webp', alt: 'Curadoria e entrega high-end — House Mazzutti Studio' },
                 ]}
             />
 

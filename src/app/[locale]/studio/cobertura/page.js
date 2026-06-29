@@ -93,9 +93,9 @@ export default function StudioCoberturaPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: teamItems[0].title, desc: teamItems[0].desc, image: '/images/produtora/beleza/natalia-beauty/capa.webp', alt: 'Beauty artist e suporte de produção — House Mazzutti' },
-                    { title: teamItems[1].title, desc: teamItems[1].desc, image: '/images/produtora/moda/pous/capa.webp', alt: 'Captação estratégica em locação — House Mazzutti' },
-                    { title: teamItems[2].title, desc: teamItems[2].desc, image: '/images/produtora/institucional/tf/capa.webp', alt: 'Entrega premium ágil de conteúdo — House Mazzutti' },
+                    { title: teamItems[0].title, desc: teamItems[0].desc, image: '/images/studio/diferenciais/suporte-completo.webp', alt: 'Beauty artist e suporte de produção — House Mazzutti' },
+                    { title: teamItems[1].title, desc: teamItems[1].desc, image: '/images/studio/diferenciais/captacao-tempo-real.webp', alt: 'Captação estratégica em locação — House Mazzutti' },
+                    { title: teamItems[2].title, desc: teamItems[2].desc, image: '/images/studio/diferenciais/entrega-48h.webp', alt: 'Entrega premium ágil de conteúdo — House Mazzutti' },
                 ]}
             />
 

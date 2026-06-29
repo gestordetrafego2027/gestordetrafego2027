@@ -98,9 +98,9 @@ export default function ProdutoraInstitucionalPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/institucional/tf/capa.webp', alt: 'Narrativa corporativa em vídeo — House Mazzutti' },
-                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/institucional/sense-hotel/capa.webp', alt: 'Cases de sucesso e prova social — House Mazzutti' },
-                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/institucional/tf/5.webp', alt: 'Banco de imagem corporativo — House Mazzutti' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/diferenciais/narrativa-peso.webp', alt: 'Narrativa corporativa em vídeo — House Mazzutti' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/diferenciais/prova-social.webp', alt: 'Cases de sucesso e prova social — House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/diferenciais/banco-imagem.webp', alt: 'Banco de imagem corporativo — House Mazzutti' },
                 ]}
             />
 

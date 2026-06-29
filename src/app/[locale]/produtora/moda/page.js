@@ -95,9 +95,9 @@ export default function ProdutoraModaPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/moda/idrissi/capa.webp', alt: 'Gestão de contratos e direitos de imagem — House Mazzutti' },
-                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/moda/toli/capa.webp', alt: 'Processos otimizados de produção — House Mazzutti' },
-                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/moda/eivi/capa.webp', alt: 'Direção criativa e produção executiva na mesma casa — House Mazzutti' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/diferenciais/contratos-direitos.webp', alt: 'Gestão de contratos e direitos de imagem — House Mazzutti' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/diferenciais/menos-custo-eficiencia.webp', alt: 'Processos otimizados de produção — House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/diferenciais/tudo-mesma-casa.webp', alt: 'Direção criativa e produção executiva na mesma casa — House Mazzutti' },
                 ]}
             />
 

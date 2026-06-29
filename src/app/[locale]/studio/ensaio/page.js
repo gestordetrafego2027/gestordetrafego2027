@@ -90,9 +90,9 @@ export default function StudioEnsaioPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/studio/marjorie-rossi/capa.webp', alt: 'Direção de imagem em ensaio — House Mazzutti Studio' },
-                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/acessorios/bia/capa.webp', alt: 'Styling e curadoria de looks — House Mazzutti' },
-                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/studio/simonny/capa.webp', alt: 'Set de luxo próprio — House Mazzutti Studio' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/studio/diferenciais/direcao-imagem.webp', alt: 'Direção de imagem em ensaio — House Mazzutti Studio' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/studio/diferenciais/styling-moda.webp', alt: 'Styling e curadoria de looks — House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/studio/diferenciais/set-proprio.webp', alt: 'Set de luxo próprio — House Mazzutti Studio' },
                 ]}
             />
 

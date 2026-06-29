@@ -100,9 +100,9 @@ export default function ProdutoraPublicidadePage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_item_1_title'), desc: t('team_item_1_desc'), image: '/images/produtora/moda/beatco/capa.webp', alt: 'Filmes publicitários de alta performance — House Mazzutti' },
-                    { title: t('team_item_2_title'), desc: t('team_item_2_desc'), image: '/images/studio/vitoria-boidt/capa.webp', alt: 'Casting e gestão de talentos — House Mazzutti' },
-                    { title: t('team_item_3_title'), desc: t('team_item_3_desc'), image: '/images/produtora/moda/unique-chic/capa.webp', alt: 'Operação e logística de produção — House Mazzutti' },
+                    { title: t('team_item_1_title'), desc: t('team_item_1_desc'), image: '/images/produtora/diferenciais/filmes-que-vendem.webp', alt: 'Filmes publicitários de alta performance — House Mazzutti' },
+                    { title: t('team_item_2_title'), desc: t('team_item_2_desc'), image: '/images/produtora/diferenciais/casting-influencia.webp', alt: 'Casting e gestão de talentos — House Mazzutti' },
+                    { title: t('team_item_3_title'), desc: t('team_item_3_desc'), image: '/images/produtora/diferenciais/operacao-controle.webp', alt: 'Operação e logística de produção — House Mazzutti' },
                 ]}
             />
 
