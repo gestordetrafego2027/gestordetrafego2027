@@ -361,6 +361,38 @@ export default function ProdutoraPage() {
                     </div>
                 </section>
 
+                {/* Extra Services Grid */}
+                <section className="bg-zinc-50 py-24 px-12 md:px-24">
+                    <div className="max-w-[1440px] mx-auto">
+                        <div className="mb-16">
+                            <span className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-400 mb-3 block">{t('servicos_extras_label')}</span>
+                            <h2 className="font-headline text-2xl md:text-4xl text-black tracking-tight">{t('servicos_extras_titulo')}</h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {[
+                                { link: '/produtora/direcao', titleKey: 'servico_4_title', subKey: 'servico_4_subtitle', items: ['servico_4_item_1','servico_4_item_2','servico_4_item_3'] },
+                                { link: '/produtora/educacao', titleKey: 'servico_5_title', subKey: 'servico_5_subtitle', items: ['servico_5_item_1','servico_5_item_2','servico_5_item_3'] },
+                                { link: '/produtora/eventos', titleKey: 'servico_6_title', subKey: 'servico_6_subtitle', items: ['servico_6_item_1','servico_6_item_2','servico_6_item_3'] },
+                                { link: '/produtora/executiva', titleKey: 'servico_7_title', subKey: 'servico_7_subtitle', items: ['servico_7_item_1','servico_7_item_2','servico_7_item_3'] },
+                            ].map((card) => (
+                                <Link key={card.link} href={card.link} className="group bg-white border border-zinc-200 p-8 hover:border-zinc-900 hover:shadow-sm transition-all duration-300 block">
+                                    <h3 className="font-label uppercase tracking-[0.2em] text-[10px] text-zinc-900 mb-3 group-hover:text-black">{t(card.titleKey)}</h3>
+                                    <p className="font-body text-zinc-500 text-sm mb-6 leading-relaxed">{t(card.subKey)}</p>
+                                    <ul className="space-y-2">
+                                        {card.items.map((k) => (
+                                            <li key={k} className="font-label text-[9px] uppercase tracking-[0.15em] text-zinc-400 flex items-center gap-2">
+                                                <span className="w-3 h-px bg-zinc-300 inline-block"></span>
+                                                {t(k)}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <span className="mt-8 block text-caption text-zinc-400 group-hover:text-zinc-900 transition-colors">{t('learn_more')} →</span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* Section 7: Editorial CTA */}
                 <section className="bg-black py-64 px-12 text-center relative overflow-hidden" id="contato">
                     <div className="noise-overlay absolute inset-0"></div>

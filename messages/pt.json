@@ -407,7 +407,29 @@
     "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados.",
     "form_subtitle": "Conte-nos sobre seu projeto. Respondemos em até 1 dia útil.",
     "blog_see_all": "VER TODOS →",
-    "blog_read": "LER →"
+    "blog_read": "LER →",
+    "servicos_extras_label": "MAIS SOLUÇÕES",
+    "servicos_extras_titulo": "Cada projeto tem uma frente certa.",
+    "servico_4_title": "DIREÇÃO & CRIAÇÃO ESTRATÉGICA",
+    "servico_4_subtitle": "Onde conceito e execução chegam juntos.",
+    "servico_4_item_1": "Direção criativa",
+    "servico_4_item_2": "Videografia & fotografia",
+    "servico_4_item_3": "Narrativa publicitária",
+    "servico_5_title": "PRODUÇÃO DE EDUCAÇÃO",
+    "servico_5_subtitle": "Onde expertise vira narrativa visual.",
+    "servico_5_item_1": "Videoaulas & treinamentos",
+    "servico_5_item_2": "Cases de sucesso",
+    "servico_5_item_3": "Cursos e infoprodutos",
+    "servico_6_title": "PRODUÇÃO DE EVENTOS",
+    "servico_6_subtitle": "Onde o registro honra o evento.",
+    "servico_6_item_1": "Cobertura foto & vídeo",
+    "servico_6_item_2": "Transmissão ao vivo",
+    "servico_6_item_3": "Captação aérea com drone",
+    "servico_7_title": "PRODUÇÃO EXECUTIVA",
+    "servico_7_subtitle": "Onde operação e resultado se conectam.",
+    "servico_7_item_1": "Cinco núcleos coordenados",
+    "servico_7_item_2": "Especialistas curados",
+    "servico_7_item_3": "Do time enxuto ao set completo"
   },
   "comunidade_page": {
     "hero_label": "Comunidade — HMZT",
@@ -802,6 +824,15 @@
           "Sites institucionais",
           "Landing pages",
           "E-commerce & plataformas"
+        ]
+      },
+      {
+        "titulo": "RP & MARKETING DIRETO",
+        "subtitulo": "Onde reputação vira ativo permanente.",
+        "itens": [
+          "Assessoria de imprensa",
+          "Relações públicas estratégicas",
+          "Marketing direto & formadores de opinião"
         ]
       }
     ],

@@ -407,7 +407,29 @@
     "footer_copyright": "© 2026 House Mazzutti. All rights reserved.",
     "form_subtitle": "Tell us about your project. We respond within 1 business day.",
     "blog_see_all": "SEE ALL →",
-    "blog_read": "READ →"
+    "blog_read": "READ →",
+    "servicos_extras_label": "MAIS SOLUÇÕES",
+    "servicos_extras_titulo": "Cada projeto tem uma frente certa.",
+    "servico_4_title": "DIREÇÃO & CRIAÇÃO ESTRATÉGICA",
+    "servico_4_subtitle": "Onde conceito e execução chegam juntos.",
+    "servico_4_item_1": "Direção criativa",
+    "servico_4_item_2": "Videografia & fotografia",
+    "servico_4_item_3": "Narrativa publicitária",
+    "servico_5_title": "PRODUÇÃO DE EDUCAÇÃO",
+    "servico_5_subtitle": "Onde expertise vira narrativa visual.",
+    "servico_5_item_1": "Videoaulas & treinamentos",
+    "servico_5_item_2": "Cases de sucesso",
+    "servico_5_item_3": "Cursos e infoprodutos",
+    "servico_6_title": "PRODUÇÃO DE EVENTOS",
+    "servico_6_subtitle": "Onde o registro honra o evento.",
+    "servico_6_item_1": "Cobertura foto & vídeo",
+    "servico_6_item_2": "Transmissão ao vivo",
+    "servico_6_item_3": "Captação aérea com drone",
+    "servico_7_title": "PRODUÇÃO EXECUTIVA",
+    "servico_7_subtitle": "Onde operação e resultado se conectam.",
+    "servico_7_item_1": "Cinco núcleos coordenados",
+    "servico_7_item_2": "Especialistas curados",
+    "servico_7_item_3": "Do time enxuto ao set completo"
   },
   "comunidade_page": {
     "hero_label": "Community — HMZT",
@@ -724,29 +746,38 @@
     "servicos": [
       {
         "titulo": "BRANDING PROJECT",
-        "subtitulo": "Where identity becomes a strategic asset.",
+        "subtitulo": "Onde identidade vira ativo estratégico.",
         "itens": [
-          "Naming & Visual Identity",
-          "Brand Architecture",
-          "Tone of Voice & Positioning"
+          "Naming & Identidade Visual",
+          "Arquitetura de Marca",
+          "Tom de Voz & Posicionamento"
         ]
       },
       {
-        "titulo": "COMMUNICATION & ADVERTISING",
-        "subtitulo": "Where message becomes results.",
+        "titulo": "COMUNICAÇÃO & PUBLICIDADE",
+        "subtitulo": "Onde mensagem vira resultado.",
         "itens": [
-          "Integrated campaigns",
-          "Content management",
+          "Campanhas integradas",
+          "Gestão de conteúdo",
           "Social media & performance"
         ]
       },
       {
         "titulo": "WEB DEVELOPMENT",
-        "subtitulo": "Where digital presence becomes a system.",
+        "subtitulo": "Onde presença digital vira sistema.",
         "itens": [
-          "Institutional websites",
+          "Sites institucionais",
           "Landing pages",
-          "E-commerce & platforms"
+          "E-commerce & plataformas"
+        ]
+      },
+      {
+        "titulo": "RP & MARKETING DIRETO",
+        "subtitulo": "Onde reputação vira ativo permanente.",
+        "itens": [
+          "Assessoria de imprensa",
+          "Relações públicas estratégicas",
+          "Marketing direto & formadores de opinião"
         ]
       }
     ],

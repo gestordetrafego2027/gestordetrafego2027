@@ -85,7 +85,7 @@ export default function AgenciaPage() {
         return () => obs.disconnect()
     }, [])
 
-    const servicesLinks = ['/agencia/branding', '/agencia/comunicacao', '/agencia/web']
+    const servicesLinks = ['/agencia/branding', '/agencia/comunicacao', '/agencia/web', '/agencia/rp']
     const services = t.raw('servicos').map((s, i) => ({
         title: s.titulo,
         link: servicesLinks[i],
