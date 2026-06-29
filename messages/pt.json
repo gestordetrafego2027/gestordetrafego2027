@@ -305,16 +305,16 @@
     "hero_label": "10 ANOS — STUDIO HMZT",
     "hero_slides": [
       {
-        "titulo": "Uma década de marca.",
-        "texto": "Dez anos construindo imagem com método, intenção e resultado."
+        "titulo": "Para pessoas que importam — e sabem disso.",
+        "texto": "Um espaço feito para quem leva a própria imagem a sério."
       },
       {
-        "titulo": "Posicionamento que se vê.",
-        "texto": "Cada imagem, um argumento. Cada produção, uma tomada de posição."
+        "titulo": "Para quem quer se ver diferente. De novo.",
+        "texto": "Cada sessão é um recomeço — com direção, cuidado e resultado que fica."
       },
       {
-        "titulo": "Sua imagem, com dez anos de intenção.",
-        "texto": "Construímos presença desde o começo — e seguimos refinando cada detalhe."
+        "titulo": "Para talentos que merecem ser encontrados.",
+        "texto": "Dez anos construindo portfólios, coberturas e ensaios que abrem portas."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -327,16 +327,16 @@
     "hero_label": "10 ANOS — PRODUTORA HMZT",
     "hero_slides": [
       {
-        "titulo": "O tempo afina o estilo.",
-        "texto": "Refinamento que vem de dentro — da direção à entrega final."
+        "titulo": "Para quem cria com intenção e quer que o mundo sinta isso.",
+        "texto": "Produção audiovisual que carrega propósito — do conceito ao frame final."
       },
       {
-        "titulo": "Elegância não é acidente.",
-        "texto": "Dez anos transformando conceito em imagem com rigor e leveza."
+        "titulo": "Para marcas com algo real a dizer sobre o tempo que vivemos.",
+        "texto": "Imagens que não apenas comunicam. Que conectam, movem e ficam."
       },
       {
-        "titulo": "Da ideia à tela, com cuidado.",
-        "texto": "Cada produção carrega a precisão de quem já fez isso centenas de vezes."
+        "titulo": "Para os que ainda acreditam no poder de uma boa história.",
+        "texto": "Dez anos colocando câmera onde a narrativa pede — e saindo com algo que importa."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -650,7 +650,7 @@
     "page_description": "Produção executiva para campanhas publicitárias: direção criativa, audiovisual, casting e gestão completa de set.",
     "hero_sr_title": "Produção Executiva para Campanhas Publicitárias",
     "hero_label": "PUBLICIDADE & CONTEÚDO · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Vídeos que vendem. Imagens que engajam.",
+    "hero_titulo": "Para quem cria com intenção e quer que o mundo sinta isso.",
     "hero_texto": "Produção de conteúdo dinâmico e filmes publicitários de alta performance para marcas que buscam autoridade e resultados reais no ambiente digital.",
     "hero_cta": "Iniciar campanha",
     "servicos_label": "SERVIÇOS PUBLICITÁRIOS",
@@ -704,7 +704,7 @@
   },
   "produtora_moda": {
     "hero_label": "MODA & EDITORIAL — HMZT · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "A estética que vende. A imagem que inspira.",
+    "hero_titulo": "Para marcas com algo real a dizer sobre o tempo que vivemos.",
     "hero_texto": "Produção audiovisual especializada em moda — conceitos traduzidos em narrativas visuais de alto impacto para marcas e estilistas.",
     "hero_cta": "Iniciar projeto editorial",
     "servicos_label": "SERVIÇOS DE MODA",
@@ -761,16 +761,16 @@
     "hero_label": "10 ANOS — AGÊNCIA HMZT",
     "hero_slides": [
       {
-        "titulo": "Marcas que as pessoas querem perto.",
-        "texto": "Dez anos transformando presença em pertencimento."
+        "titulo": "Para quem finalmente quer aparecer como sempre foi.",
+        "texto": "Marcas construídas de dentro pra fora — com identidade, intenção e presença real."
       },
       {
-        "titulo": "Desejo começa antes do clique.",
-        "texto": "Construímos marcas que as pessoas sentem antes de entender."
+        "titulo": "Para que as pessoas certas te encontrem.",
+        "texto": "Dez anos conectando marcas às pessoas que já estavam esperando por elas."
       },
       {
-        "titulo": "Não apenas vista. Desejada.",
-        "texto": "Da identidade ao posicionamento — marcas que ficam na memória."
+        "titulo": "Para marcas que existem por razão.",
+        "texto": "Não construímos vitrines. Construímos relações que duram."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -922,8 +922,8 @@
   },
   "studio_cobertura": {
     "hero_label": "COBERTURA EXTERNA · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Viver São Paulo exige presença. Nós produzimos a sua.",
-    "hero_subtexto": "Acompanhamento premium, direção de imagem e conteúdo em tempo real para transformar sua agenda em narrativa visual de alto valor.",
+    "hero_titulo": "Para quem vive — e quer guardar isso com cuidado.",
+    "hero_subtexto": "Acompanhamento de imagem em tempo real para quem tem uma agenda que vale ser documentada.",
     "hero_cta_btn": "QUERO SER ACOMPANHADA",
     "services_label": "COBERTURA EXTERNA",
     "services_titulo": "Não é cobertura. É produção de presença.",
@@ -1015,8 +1015,8 @@
   "studio_book": {
     "seo_h1": "Book Profissional para Modelos | Portfólio com Direção de Imagem House Mazzutti",
     "hero_label": "BOOK PROFISSIONAL · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Se o seu material não posiciona — ele te limita.",
-    "hero_subtitulo": "Book com direção estratégica de imagem para modelos, influenciadores e talentos que precisam de portfólio aprovado por agências e mercado.",
+    "hero_titulo": "Para talentos que merecem ser encontrados.",
+    "hero_subtitulo": "Book com direção de imagem feita para quem sabe o que quer — e precisa que o mercado também saiba.",
     "hero_cta": "INICIAR MEU BOOK",
     "services_label": "BOOK PROFISSIONAL",
     "services_titulo": "Direção antes. Execução depois.",
@@ -1071,8 +1071,8 @@
     "seo_title": "House Mazzutti — Web Development | Sites e Plataformas Digitais",
     "seo_desc": "Sites institucionais, landing pages e e-commerce com design premium. House Mazzutti Agência — São Paulo.",
     "hero_label": "WEB DEVELOPMENT · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Onde presença digital vira sistema.",
-    "hero_subtitulo": "Sites institucionais, landing pages e e-commerce construídos com design premium, performance técnica e foco total em conversão.",
+    "hero_titulo": "Para marcas que merecem um endereço digital à altura do que fazem.",
+    "hero_subtitulo": "Sites, landing pages e e-commerce que recebem bem — porque toda conexão começa pela primeira impressão.",
     "hero_cta": "INICIAR MEU PROJETO WEB",
     "services_label": "WEB DEVELOPMENT",
     "services_titulo": "Não é só um site. É sua maior vitrine.",
@@ -1131,8 +1131,8 @@
     "page_title": "House Mazzutti — Comunicação & Publicidade | Campanhas de Impacto",
     "page_description": "Campanhas integradas, gestão de conteúdo e performance. House Mazzutti Agência — São Paulo.",
     "hero_label": "COMUNICAÇÃO & PUBLICIDADE · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Onde mensagem vira resultado.",
-    "hero_subtitulo": "Campanhas integradas, gestão de conteúdo e performance para marcas que querem crescer com consistência e impacto real.",
+    "hero_titulo": "Para que as pessoas certas te encontrem.",
+    "hero_subtitulo": "Campanhas, conteúdo e gestão de presença para marcas que não querem apenas aparecer — querem ser lembradas.",
     "hero_cta": "INICIAR MINHA CAMPANHA",
     "servicos_label": "COMUNICAÇÃO & PUBLICIDADE",
     "servicos_titulo": "Estratégia que gera presença. Presença que gera negócio.",
@@ -1189,8 +1189,8 @@
   },
   "agencia_branding": {
     "hero_label": "BRANDING & IDENTIDADE DE MARCA · SÃO PAULO",
-    "hero_titulo": "Onde identidade vira ativo estratégico.",
-    "hero_subtitulo": "Naming, identidade visual e posicionamento para marcas que precisam ser reconhecidas antes de serem explicadas.",
+    "hero_titulo": "Para quem finalmente quer aparecer como sempre foi.",
+    "hero_subtitulo": "Identidade visual, naming e posicionamento construídos a partir de quem você já é — não de quem o mercado manda você ser.",
     "hero_cta_btn": "INICIAR O BRANDING",
     "hero_cta_secondary": "VER MARCAS QUE CONSTRUÍMOS",
     "manifesto_texto": "Marca não é logo. É percepção construída.",
@@ -1277,7 +1277,7 @@
   },
   "produtora_institucional": {
     "hero_label": "VÍDEO INSTITUCIONAL · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Sua história merece uma narrativa de peso.",
+    "hero_titulo": "Para quem construiu algo que merece ser visto como é.",
     "hero_texto": "Produção audiovisual institucional de alto padrão para empresas e profissionais que projetam autoridade, confiança e excelência através da imagem.",
     "hero_cta": "Iniciar projeto",
     "servicos_label": "SOLUÇÕES CORPORATIVAS",
@@ -1352,8 +1352,8 @@
     "page_description": "Ensaio fotográfico autoral com direção de cena, moda e narrativa visual. House Mazzutti — São Paulo.",
     "sr_titulo": "Ensaio Pessoal com Direção de Imagem | House Mazzutti",
     "hero_label": "DIREÇÃO DE ENSAIO · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "A imagem que você projeta define como o mundo te percebe.",
-    "hero_subtitulo": "Ensaios autorais com direção de cena, moda e narrativa visual para quem busca autenticidade, autoridade e impacto.",
+    "hero_titulo": "Para quem quer se ver diferente. De novo.",
+    "hero_subtitulo": "Ensaios com direção de imagem, moda e narrativa para quem não quer apenas uma foto bonita — quer uma foto verdadeira.",
     "hero_cta": "INICIAR MEU ENSAIO",
     "servicos_label": "ENSAIO STUDIO",
     "servicos_titulo": "Não é sobre tirar fotos. É sobre criar ícones.",
