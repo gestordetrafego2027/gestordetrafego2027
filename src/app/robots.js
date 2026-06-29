@@ -19,6 +19,7 @@ export default function robots() {
           '/pt/minha-conta/',
           // Checkout e transacionais — sem e com prefixo de locale /pt/
           '/academy/checkout',
+          '/academy/comunidade/',
           '/academy/dashboard',
           '/academy/certificado/',
           '/academy/curso/',
