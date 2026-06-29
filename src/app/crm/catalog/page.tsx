@@ -9,6 +9,12 @@ const unitLabel: Record<string, string> = {
   produtora: 'Produtora',
 }
 
+const unitTagline: Record<string, string> = {
+  agencia: 'Estratégia, posicionamento e direção de marca.',
+  studio: 'Imagem com intenção — posicionamento visível.',
+  produtora: 'Execução com direção. Materializa estratégia com controle absoluto.',
+}
+
 export default async function CatalogPage() {
   const supabase = await createClient()
   const { data: services, error } = await supabase
@@ -67,28 +73,38 @@ export default async function CatalogPage() {
           if (list.length === 0) return null
           return (
             <section key={unit}>
-              <h2 className="text-xs uppercase tracking-wide text-neutral-500 mb-2">
-                {unitLabel[unit] ?? unit}
-              </h2>
+              <div className="flex items-baseline gap-3 mb-3">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-900">
+                  {unitLabel[unit] ?? unit}
+                </h2>
+                {unitTagline[unit] && (
+                  <span className="text-xs text-neutral-400 italic">{unitTagline[unit]}</span>
+                )}
+                <span className="text-[10px] text-neutral-300 ml-auto">{list.length} serviço{list.length !== 1 ? 's' : ''}</span>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {list.map((s) => (
                   <Link
                     key={s.id}
                     href={`/crm/catalog/services/${s.id}`}
-                    className="rounded-lg border border-neutral-200 bg-white p-4 hover:border-neutral-400 transition-colors block"
+                    className="group rounded-lg border border-neutral-200 bg-white p-5 hover:border-neutral-900 hover:shadow-sm transition-all block"
                   >
-                    <div className="flex items-start justify-between gap-2">
-                      <div className="font-medium">{s.name}</div>
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <div className="font-semibold text-sm text-neutral-900 group-hover:text-neutral-700 leading-snug">
+                        {s.name}
+                      </div>
                       {!s.active && (
-                        <span className="rounded bg-neutral-100 text-neutral-500 text-[10px] px-1.5 py-0.5">
+                        <span className="rounded bg-neutral-100 text-neutral-400 text-[10px] px-1.5 py-0.5 shrink-0">
                           inativo
                         </span>
                       )}
                     </div>
-                    <div className="text-[10px] font-mono text-neutral-400 mt-0.5">{s.slug}</div>
                     {s.description && (
-                      <p className="text-xs text-neutral-600 mt-2 line-clamp-2">{s.description}</p>
+                      <p className="text-xs text-neutral-500 mt-2 line-clamp-3 leading-relaxed">
+                        {s.description}
+                      </p>
                     )}
+                    <div className="text-[10px] font-mono text-neutral-300 mt-3">{s.slug}</div>
                   </Link>
                 ))}
               </div>
