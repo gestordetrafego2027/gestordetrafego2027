@@ -77,9 +77,9 @@ export default function AgenciaRpPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/agencia/banners/banner-1.webp', alt: 'Presença em mídia premium — House Mazzutti' },
-                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/agencia/banners/banner-3.webp', alt: 'Agenda estratégica de eventos — House Mazzutti' },
-                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/agencia/on-take/1.webp', alt: 'Narrativa integrada de RP — House Mazzutti' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/agencia/diferenciais/midia-premium.webp', alt: 'Presença em mídia premium — House Mazzutti' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/agencia/diferenciais/agenda-eventos.webp', alt: 'Agenda estratégica de eventos — House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/agencia/diferenciais/narrativa-rp.webp', alt: 'Narrativa integrada de RP — House Mazzutti' },
                 ]}
             />
 

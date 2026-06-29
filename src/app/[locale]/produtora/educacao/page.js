@@ -85,9 +85,9 @@ export default function ProdutoraEducacaoPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/institucional/tf/capa.webp', alt: 'Direção editorial em conteúdo educacional — House Mazzutti' },
-                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/institucional/sense-hotel/1.webp', alt: 'Clareza com estética — House Mazzutti' },
-                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/institucional/sense-hotel/2.webp', alt: 'Entrega completa de produção educacional — House Mazzutti' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/diferenciais/direcao-educacional.webp', alt: 'Direção editorial em conteúdo educacional — House Mazzutti' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/diferenciais/clareza-estetica.webp', alt: 'Clareza com estética — House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/diferenciais/entrega-educacao.webp', alt: 'Entrega completa de produção educacional — House Mazzutti' },
                 ]}
             />
 

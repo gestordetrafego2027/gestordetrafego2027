@@ -87,9 +87,9 @@ export default function ProdutoraExecutivaPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/banners/banner-1.webp', alt: 'Governança total de produção — House Mazzutti' },
-                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/moda/idrissi/capa.webp', alt: 'Especialistas curados pela House Mazzutti' },
-                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/moda/toli/capa.webp', alt: 'Escala com controle — House Mazzutti' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/diferenciais/governanca-producao.webp', alt: 'Governança total de produção — House Mazzutti' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/diferenciais/especialistas-curados.webp', alt: 'Especialistas curados pela House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/diferenciais/escala-controle.webp', alt: 'Escala com controle — House Mazzutti' },
                 ]}
             />
 

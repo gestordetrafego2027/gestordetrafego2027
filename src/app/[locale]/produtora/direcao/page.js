@@ -85,9 +85,9 @@ export default function ProdutoraDirecaoPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/banners/banner-1.webp', alt: 'Critério criativo — House Mazzutti' },
-                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/banners/banner-2.webp', alt: 'Execução integrada — House Mazzutti' },
-                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/banners/banner-3.webp', alt: 'Conceito intacto do briefing ao resultado — House Mazzutti' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/diferenciais/criterio-criativo.webp', alt: 'Critério criativo — House Mazzutti' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/diferenciais/execucao-integrada.webp', alt: 'Execução integrada — House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/diferenciais/conceito-intacto.webp', alt: 'Conceito intacto do briefing ao resultado — House Mazzutti' },
                 ]}
             />
 

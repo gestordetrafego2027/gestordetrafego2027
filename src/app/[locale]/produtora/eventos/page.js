@@ -85,9 +85,9 @@ export default function ProdutoraEventosPage() {
             <LandingTeam
                 heading={t('team_heading')}
                 items={[
-                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/banners/banner-3.webp', alt: 'Direção editorial em eventos — House Mazzutti' },
-                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/institucional/tf/1.webp', alt: 'Entrega rápida de cobertura — House Mazzutti' },
-                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/institucional/tf/2.webp', alt: 'Cobertura 360 de eventos — House Mazzutti' },
+                    { title: t('team_1_title'), desc: t('team_1_desc'), image: '/images/produtora/diferenciais/direcao-eventos.webp', alt: 'Direção editorial em eventos — House Mazzutti' },
+                    { title: t('team_2_title'), desc: t('team_2_desc'), image: '/images/produtora/diferenciais/entrega-rapida-eventos.webp', alt: 'Entrega rápida de cobertura — House Mazzutti' },
+                    { title: t('team_3_title'), desc: t('team_3_desc'), image: '/images/produtora/diferenciais/cobertura-360-eventos.webp', alt: 'Cobertura 360 de eventos — House Mazzutti' },
                 ]}
             />
 
