@@ -1,5 +1,7 @@
 import { PasswordForm } from './PasswordForm'
 
+export const metadata = { robots: { index: false, follow: false } }
+
 export default function SenhaPage() {
   return (
     <div className="bg-white rounded-2xl border border-neutral-100 p-6">

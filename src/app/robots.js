@@ -14,6 +14,7 @@ export default function robots() {
           '/logout',
           '/auth/',
           '/verify',
+          '/pt/verify/',
           // Área logada — sem e com prefixo de locale /pt/
           '/minha-conta/',
           '/pt/minha-conta/',

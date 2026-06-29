@@ -101,7 +101,7 @@ export default async function ObrigadoPage({ searchParams }) {
       {/* Lead — dispara conversão de lead (formulários studio/produtora/agencia/default) */}
       <ConversionOnMount event="Lead" payload={{ lead_type: from || 'default' }} />
       <div className="flex flex-col items-center text-center max-w-2xl">
-        <h1 className="font-headline text-5xl md:text-7xl text-black">{t('title')}</h1>
+        <h2 className="font-headline text-5xl md:text-7xl text-black">{t('title')}</h2>
         <p className="font-body text-lg md:text-xl text-zinc-600 mt-4 max-w-xl">{t(subKey)}</p>
         <Countdown seconds={5} />
       </div>

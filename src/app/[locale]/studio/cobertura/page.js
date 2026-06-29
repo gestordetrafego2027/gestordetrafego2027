@@ -55,7 +55,7 @@ export default function StudioCoberturaPage() {
                 <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
                     <div className="max-w-3xl">
                         <span className="text-caption text-white/70 mb-6 block" data-aos="fade-up" data-aos-delay="100">{t('hero_label')}</span>
-                        <h1 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
+                        <h2 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h2>
                         <p className="text-body text-white/80 mb-12 measure-editorial" data-aos="fade-up" data-aos-delay="300">{t('hero_subtexto')}</p>
                         <div data-aos="fade-up" data-aos-delay="400">
                             <button type="button" onClick={() => openForm('hero')} className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
