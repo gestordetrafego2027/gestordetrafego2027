@@ -140,7 +140,7 @@
   },
   "about": {
     "hero_label": "SOBRE — HMZT",
-    "hero_titulo": "Para quem quer saber quem faz o trabalho.",
+    "hero_titulo": "Para quem quer saber quem faz isso.",
     "hero_texto": "Estratégia, direção e produção na mesma casa — sem ruído entre uma etapa e a outra.",
     "hero_cta": "Iniciar uma conversa",
     "diferencial_label": "Diferencial",
@@ -306,15 +306,15 @@
     "hero_slides": [
       {
         "titulo": "Para pessoas que sabem o que valem.",
-        "texto": "Um espaço feito para quem leva a própria imagem a sério."
+        "texto": "Um espaço para quem leva a própria imagem a sério."
       },
       {
         "titulo": "Para quem quer se ver diferente.",
-        "texto": "Cada sessão é um recomeço — com direção, cuidado e resultado que fica."
+        "texto": "Cada sessão é um recomeço — com direção e resultado que fica."
       },
       {
         "titulo": "Para talentos que merecem ser vistos.",
-        "texto": "Dez anos construindo portfólios, coberturas e ensaios que abrem portas."
+        "texto": "Portfólios, coberturas e ensaios que abrem portas."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -328,15 +328,15 @@
     "hero_slides": [
       {
         "titulo": "Para quem cria com intenção.",
-        "texto": "Produção audiovisual que carrega propósito — do conceito ao frame final."
+        "texto": "Produção audiovisual com propósito — do conceito ao frame final."
       },
       {
         "titulo": "Para marcas com algo real a dizer.",
-        "texto": "Imagens que não apenas comunicam. Que conectam, movem e ficam."
+        "texto": "Imagens que não apenas comunicam. Que conectam e ficam."
       },
       {
         "titulo": "Para quem crê no poder de uma história.",
-        "texto": "Dez anos colocando câmera onde a narrativa pede — e saindo com algo que importa."
+        "texto": "Câmera onde a narrativa pede — e saindo com algo que importa."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -762,15 +762,15 @@
     "hero_slides": [
       {
         "titulo": "Para quem quer aparecer de verdade.",
-        "texto": "Marcas construídas de dentro pra fora — com identidade, intenção e presença real."
+        "texto": "Marcas construídas de dentro pra fora — com identidade e presença real."
       },
       {
         "titulo": "Para as pessoas certas te encontrarem.",
-        "texto": "Dez anos conectando marcas às pessoas que já estavam esperando por elas."
+        "texto": "Conectando marcas às pessoas que já estavam esperando por elas."
       },
       {
         "titulo": "Para marcas com razão de existir.",
-        "texto": "Não construímos vitrines. Construímos relações que duram."
+        "texto": "Não construímos vitrines. Construímos relações."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -922,7 +922,7 @@
   },
   "studio_cobertura": {
     "hero_label": "COBERTURA EXTERNA · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Para quem vive e quer guardar com cuidado.",
+    "hero_titulo": "Para quem vive e quer guardar.",
     "hero_subtexto": "Acompanhamento de imagem em tempo real para quem tem uma agenda que vale ser documentada.",
     "hero_cta_btn": "QUERO SER ACOMPANHADA",
     "services_label": "COBERTURA EXTERNA",
@@ -1015,7 +1015,7 @@
   "studio_book": {
     "seo_h1": "Book Profissional para Modelos | Portfólio com Direção de Imagem House Mazzutti",
     "hero_label": "BOOK PROFISSIONAL · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Para talentos que merecem ser encontrados.",
+    "hero_titulo": "Para talentos que merecem ser vistos.",
     "hero_subtitulo": "Book com direção de imagem feita para quem sabe o que quer — e precisa que o mercado também saiba.",
     "hero_cta": "INICIAR MEU BOOK",
     "services_label": "BOOK PROFISSIONAL",
@@ -1332,7 +1332,7 @@
   },
   "comunidade_vagas": {
     "hero_breadcrumb": "Comunidade / Talentos",
-    "hero_titulo": "Para talentos que querem fazer parte de algo maior.",
+    "hero_titulo": "Para talentos que querem fazer parte.",
     "hero_texto": "Cadastro para talentos que querem fazer parte do casting House Mazzutti. Buscamos presença, posicionamento e disposição editorial — não só portfólio. Cada cadastro é avaliado pela direção da casa.",
     "hero_badge": "Avaliação editorial · Casting selecionado · Sem taxa de cadastro",
     "form_titulo": "Sua candidatura.",
@@ -1496,7 +1496,7 @@
     "seo_title": "Direção & Criação Estratégica em São Paulo | House Mazzutti",
     "seo_description": "Liderança criativa, videografia, fotografia e narrativa publicitária para projetos onde o conceito precisa chegar intacto ao resultado. House Mazzutti — São Paulo.",
     "hero_label": "DIREÇÃO & CRIAÇÃO ESTRATÉGICA · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Para quem sabe que câmera é decisão de marca.",
+    "hero_titulo": "Para quem sabe que câmera é marca.",
     "hero_texto": "Liderança criativa, videografia, fotografia, cenografia e narrativa publicitária em projetos onde o conceito precisa chegar intacto ao resultado final. Seis frentes de atuação. Nada é escolha estética isolada.",
     "hero_cta": "INICIAR PROJETO CRIATIVO",
     "servicos_label": "DIREÇÃO & CRIAÇÃO",
@@ -1553,7 +1553,7 @@
     "seo_title": "Produção de Conteúdo Educacional | House Mazzutti Produtora",
     "seo_description": "Vídeos de treinamento, videoaulas e cases de sucesso com direção de nível editorial. Conhecimento bem produzido que muda percepção. House Mazzutti — São Paulo.",
     "hero_label": "PRODUÇÃO DE EDUCAÇÃO · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Para quem entende que embalagem é mensagem.",
+    "hero_titulo": "Para quem sabe que embalagem é mensagem.",
     "hero_texto": "A House traduz expertise em audiovisual — vídeos de treinamento, videoaulas e cases de sucesso — com o mesmo nível de direção que aplica em campanhas para grandes marcas. Para empresas que entendem que a embalagem é parte da mensagem.",
     "hero_cta": "INICIAR PROJETO EDUCACIONAL",
     "servicos_label": "PRODUÇÃO EDUCACIONAL",
@@ -1667,7 +1667,7 @@
     "seo_title": "Produção Executiva 360° em São Paulo | House Mazzutti",
     "seo_description": "Inteligência operacional para campanhas complexas — cinco núcleos: Direção & Criação, Audiovisual, Moda & Beleza, Casting & Influência, Produção & Estrutura. House Mazzutti.",
     "hero_label": "PRODUÇÃO EXECUTIVA · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Para produções que não aceitam desconexão.",
+    "hero_titulo": "Para produções sem espaço para falha.",
     "hero_texto": "A Produção Executiva lidera e viabiliza produções complexas em cinco núcleos: Direção & Criação, Audiovisual, Moda & Beleza, Casting & Influência e Produção & Estrutura. Para grandes marcas e campanhas onde equipes desconectadas não são uma opção.",
     "hero_cta": "MONTAR MINHA EQUIPE",
     "servicos_label": "PRODUÇÃO EXECUTIVA 360°",

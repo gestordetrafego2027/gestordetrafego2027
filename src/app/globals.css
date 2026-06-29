@@ -635,3 +635,17 @@ html {
 
 /* G10 — Texto auxiliar com contraste ≥4,5:1 sobre branco (#5B5B5B = 7,1:1) */
 .text-muted { color: #5B5B5B; }
+
+/* Typewriter cursor */
+.hmzt-cursor {
+  display: inline-block;
+  width: 2px;
+  background: currentColor;
+  margin-left: 2px;
+  vertical-align: baseline;
+  animation: hmzt-blink 0.7s step-end infinite;
+}
+@keyframes hmzt-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}

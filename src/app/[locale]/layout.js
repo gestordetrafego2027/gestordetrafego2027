@@ -8,6 +8,7 @@ import {ConsentProvider} from '@/components/consent/ConsentProvider';
 import CookieBanner from '@/components/consent/CookieBanner';
 import Tracking from '@/components/analytics/Tracking';
 import WhatsAppFloatingButton from '@/app/components/WhatsAppFloatingButton';
+import TypewriterInit from '@/app/components/TypewriterInit';
 
 // Necessário: páginas com useEffect/window (agencia, portfolio, etc.) falham
 // na pré-renderização estática. force-dynamic garante SSR seguro em todo [locale].
@@ -50,6 +51,7 @@ export default async function LocaleLayout({children, params}) {
       />
       <ConsentProvider>
         {children}
+        <TypewriterInit />
         <WhatsAppFloatingButton />
         <Tracking />
         <CookieBanner />

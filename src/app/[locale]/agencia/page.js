@@ -10,6 +10,7 @@ import Header from '@/app/components/Header'
 import ClientLogos from '@/app/components/ClientLogos'
 import FormDrawer from '@/app/components/FormDrawer'
 import BlogSection from '@/app/components/BlogSection'
+import TypewriterText from '@/app/components/TypewriterText'
 
 export const dynamic = 'force-dynamic'
 
@@ -170,8 +171,8 @@ export default function AgenciaPage() {
                             <span className="hero-animate text-caption text-white/70 mb-6 block" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 {t('hero_label')}
                             </span>
-                            <h1 className="hero-animate text-h1 text-white mb-8 hmzt-hero-title" style={{ opacity: 0, transform: 'translateY(30px)' }}>
-                                {heroSlides[currentBannerSlide].titulo}
+                            <h1 data-tw-slide className="hero-animate text-h1 text-white mb-8 hmzt-hero-title" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                <TypewriterText text={heroSlides[currentBannerSlide].titulo} delay={600} />
                             </h1>
                             <p className="hero-animate text-body text-white/80 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                 {heroSlides[currentBannerSlide].texto}

@@ -10,6 +10,7 @@ import ClientLogos from "@/app/components/ClientLogos";
 import BlogSection from "@/app/components/BlogSection";
 import FormDrawer from "@/app/components/FormDrawer";
 import FormGeral from "@/app/components/forms/FormGeral";
+import TypewriterText from '@/app/components/TypewriterText';
 
 /**
  * HOME PAGE - HOUSE MAZZUTTI
@@ -198,10 +199,11 @@ export default function Home() {
                                 {heroSlides[currentHeroSlide].label}
                             </span>
                             <h1
+                                data-tw-slide
                                 className="hero-animate text-h1 text-white mb-8 hmzt-hero-title"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
                             >
-                                {heroSlides[currentHeroSlide].titulo}
+                                <TypewriterText text={heroSlides[currentHeroSlide].titulo} delay={600} />
                             </h1>
                             <p
                                 className="hero-animate text-body text-white/75 mb-12 measure-editorial"
