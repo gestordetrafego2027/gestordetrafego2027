@@ -374,8 +374,8 @@ export function GET() {
 
       <div class="plan plan--lote">
         <div class="plan-tag"><span>Lote 2</span><span>02</span></div>
-        <div class="plan-name">R$ 1.430</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>Após esgotamento do Lote 1</small></div>
+        <div class="plan-name">R$ 1.500</div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>Disponível a partir de 10 Jul</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -387,13 +387,13 @@ export function GET() {
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
         </ul>
-        <button class="btn" data-reserve data-plan="Inside Out — Lote 2" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível em breve</span></button>
+        <button class="btn" data-reserve data-plan="Inside Out — Lote 2" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível 10 Jul</span></button>
       </div>
 
       <div class="plan plan--lote">
         <div class="plan-tag"><span>Lote 3</span><span>03</span></div>
-        <div class="plan-name">R$ 1.560</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>Último lote · preço final</small></div>
+        <div class="plan-name">R$ 1.700</div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>Disponível a partir de 05 Ago</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -405,7 +405,7 @@ export function GET() {
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
         </ul>
-        <button class="btn" data-reserve data-plan="Inside Out — Lote 3" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível em breve</span></button>
+        <button class="btn" data-reserve data-plan="Inside Out — Lote 3" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível 05 Ago</span></button>
       </div>
 
     </div>
@@ -539,7 +539,7 @@ export function GET() {
         <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name"><div class="msg">Informe seu nome</div></div>
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
-        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.300</option><option disabled>Lote 2 — R$ 1.430 (em breve)</option><option disabled>Lote 3 — R$ 1.560 (em breve)</option></select><div class="msg"></div></div>
+        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.300</option><option disabled>Lote 2 — R$ 1.500 (10 Jul)</option><option disabled>Lote 3 — R$ 1.700 (05 Ago)</option></select><div class="msg"></div></div>
         <div class="field" style="margin-bottom:18px">
           <label style="margin-bottom:8px;display:block">Forma de pagamento</label>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
