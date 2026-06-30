@@ -260,9 +260,9 @@ export function GET() {
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
-        <div class="crew-photo crew-photo--empty"><span>Fotógrafo<br>de Moda</span></div>
+        <div class="crew-photo"><img src="/images/academy/crew/neto-lins.webp" alt="Neto Lins" loading="lazy"></div>
         <div class="crew-role">Fotógrafo de Moda</div>
-        <div class="crew-name">A confirmar</div>
+        <div class="crew-name">Neto Lins</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
