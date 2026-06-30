@@ -54,7 +54,7 @@ export default function FormAgenciaB2B({
         email: form.email,
         phone: form.phone,
         segment: 'commercial',
-        lead_type: 'cliente_agência',
+        lead_type: 'cliente_agencia',
         status: 'novo',
         source: sourceUrl,
         details: {

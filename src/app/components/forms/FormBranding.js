@@ -76,7 +76,7 @@ export default function FormBranding({ onClose }) {
         email: form.email,
         phone: form.phone,
         segment: 'commercial',
-        lead_type: 'cliente_agência',
+        lead_type: 'cliente_agencia',
         source: 'site/branding',
         notes: notes || null,
         details: {

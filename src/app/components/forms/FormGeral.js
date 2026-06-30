@@ -25,8 +25,8 @@ const UNITS = [
 ]
 
 const LEAD_TYPE_BY_UNIT = {
-  studio: 'estúdio_cliente',
-  agencia: 'cliente_agência',
+  studio: 'cliente_studio',
+  agencia: 'cliente_agencia',
   produtora: 'cliente_produtora',
 }
 

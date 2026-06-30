@@ -61,7 +61,7 @@ export default function FormStudio({
         email: form.email,
         phone: form.phone,
         segment: 'commercial',
-        lead_type: 'estúdio_cliente',
+        lead_type: 'cliente_studio',
         status: 'novo',
         source: sourceUrl,
         details: {

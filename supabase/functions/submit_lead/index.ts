@@ -16,6 +16,7 @@ type LeadPayload = {
   phone?: string
   city?: string
   source?: string
+  notes?: string
   details?: Record<string, unknown>
   utm?: Record<string, string | undefined>
   service_interests?: Array<{
@@ -27,6 +28,24 @@ type LeadPayload = {
   campaign_slug?: string
   recaptchaToken?: string
 }
+
+// Defesa em profundidade: espelha os enums do banco (public.lead_segment /
+// public.lead_type). Mantenha sincronizado com as migrations. Se o payload
+// trouxer um valor fora desta lista, devolvemos erro CLARO e logamos — em vez
+// de propagar o erro cru do Postgres e perder o lead silenciosamente.
+const VALID_SEGMENTS = new Set(["talents", "commercial"])
+const VALID_LEAD_TYPES = new Set([
+  "aluno_curso",
+  "afiliada",
+  "agenciado_casting",
+  "talento",
+  "fornecedor",
+  "parceiro",
+  "cliente_agencia",
+  "cliente_produtora",
+  "cliente_studio",
+  "cliente_tour_canoinhas",
+])
 
 // reCAPTCHA v3 — validação server-side. Fail-open se o secret não estiver
 // configurado (RECAPTCHA_SECRET_KEY nos secrets da Edge Function), para
@@ -72,6 +91,18 @@ Deno.serve(async (req) => {
     return json({ error: "missing_fields", required: ["name","segment","lead_type"] }, 400)
   }
 
+  // Defesa em profundidade: valida enums ANTES do INSERT. Erro explícito +
+  // log para detectar imediatamente um form enviando valor inválido (foi o
+  // que derrubou silenciosamente os funis Studio/Branding/Agência).
+  if (!VALID_SEGMENTS.has(body.segment)) {
+    console.error("[submit_lead] segment inválido:", body.segment)
+    return json({ error: "invalid_segment", value: body.segment }, 400)
+  }
+  if (!VALID_LEAD_TYPES.has(body.lead_type)) {
+    console.error("[submit_lead] lead_type inválido:", body.lead_type)
+    return json({ error: "invalid_lead_type", value: body.lead_type }, 400)
+  }
+
   // Anti-bot: valida o token reCAPTCHA v3 antes de qualquer escrita.
   const captchaOk = await verifyRecaptcha(body.recaptchaToken)
   if (!captchaOk) {
@@ -94,6 +125,7 @@ Deno.serve(async (req) => {
       phone: body.phone ?? null,
       city: body.city ?? null,
       source: body.source ?? "site_form",
+      notes: body.notes ?? null,
       details: body.details ?? {},
       utm: { ...(body.utm ?? {}), _ip: ip, _ua: req.headers.get("user-agent") },
     })
