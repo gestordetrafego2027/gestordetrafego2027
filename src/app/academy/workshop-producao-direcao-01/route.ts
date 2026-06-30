@@ -278,7 +278,7 @@ export function GET() {
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
-        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-amanda.webp" alt="Beauty Artist" loading="lazy"></div>
+        <div class="crew-photo crew-photo--empty"><span>Beauty<br>Artist</span></div>
         <div class="crew-role">Beauty Artist</div>
         <div class="crew-name">A confirmar</div>
       </div>
@@ -290,19 +290,19 @@ export function GET() {
       </div>
 
       <div class="crew-card" data-reveal>
-        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-model.webp" alt="Modelo Moda" loading="lazy"></div>
+        <div class="crew-photo crew-photo--empty"><span>Modelo<br>Moda</span></div>
         <div class="crew-role">Modelo · Moda</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
-        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-modelo-scouting.webp" alt="Modelo Beauty" loading="lazy"></div>
+        <div class="crew-photo crew-photo--empty"><span>Modelo<br>Beauty</span></div>
         <div class="crew-role">Modelo · Beauty</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
-        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-equipe.webp" alt="Equipe HMZT" loading="lazy"></div>
+        <div class="crew-photo crew-photo--empty"><span>Staff &<br>Produção</span></div>
         <div class="crew-role">Staff & Produção</div>
         <div class="crew-name">Equipe HMZT</div>
       </div>
