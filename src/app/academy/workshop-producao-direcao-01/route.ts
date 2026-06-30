@@ -289,18 +289,6 @@ export function GET() {
         <div class="crew-name">Fernanda Olive</div>
       </div>
 
-      <div class="crew-card" data-reveal data-reveal-d="1">
-        <div class="crew-photo crew-photo--empty"><span>Modelo<br>Beauty</span></div>
-        <div class="crew-role">Modelo · Beauty</div>
-        <div class="crew-name">A confirmar</div>
-      </div>
-
-      <div class="crew-card" data-reveal data-reveal-d="2">
-        <div class="crew-photo crew-photo--empty"><span>Staff &<br>Produção</span></div>
-        <div class="crew-role">Staff & Produção</div>
-        <div class="crew-name">Equipe HMZT</div>
-      </div>
-
     </div>
     <p class="mono" data-reveal style="margin-top:clamp(24px,3vw,40px);color:#888;font-size:.65rem">Equipe sujeita a alteração conforme confirmações. Todas as funções serão preenchidas por profissionais ativos no mercado.</p>
   </div>
