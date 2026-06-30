@@ -253,12 +253,6 @@ export function GET() {
     <h2 class="h-2 display" data-reveal style="margin-bottom:clamp(36px,5vw,64px)">Quem estará<br>no set.</h2>
     <div class="crew-grid">
 
-      <div class="crew-card" data-reveal>
-        <div class="crew-photo"><img src="/images/academy/crew/angelo-mazzutti-crew.webp" alt="Angelo Mazzutti" loading="lazy"></div>
-        <div class="crew-role">Diretor Criativo</div>
-        <div class="crew-name">Angelo Mazzutti</div>
-      </div>
-
       <div class="crew-card" data-reveal data-reveal-d="1">
         <div class="crew-photo"><img src="/images/academy/crew/neto-lins.webp" alt="Neto Lins" loading="lazy"></div>
         <div class="crew-role">Fotógrafo de Moda</div>
@@ -324,24 +318,44 @@ export function GET() {
 .crew-name{font-weight:700;font-size:clamp(.9rem,1.2vw,1.05rem);color:var(--ink);letter-spacing:-.01em;}
 </style>
 
-<!-- ============ MENTOR ============ -->
-<section class="section paper" id="mentor">
-  <div class="wrap mentor">
-    <div class="mentor-img" data-reveal>
-      <image-slot id="mentor-portrait" src="/images/about/angelo-mazzutti.webp" placeholder="Retrato · Angelo Mazzutti" fit="cover"></image-slot>
+<!-- ============ DIRETOR ============ -->
+<section class="section ink diretor-section" id="mentor">
+  <div class="wrap">
+    <div class="diretor-eyebrow" data-reveal>
+      <span class="eyebrow" style="color:var(--smoke)">04 — Quem dirige</span>
+      <span class="mono" style="color:var(--smoke);font-size:.62rem;letter-spacing:.14em">Diretor Criativo · Inside Out Edit 2</span>
     </div>
-    <div data-reveal data-reveal-d="1">
-      <span class="eyebrow">04 — Quem dirige</span>
-      <h2 class="mentor-name" style="margin-top:18px">Angelo<br>Mazzutti</h2>
-      <p class="mentor-role">Diretor Criativo · Fundador House Mazzutti & HMZT Produtora</p>
-      <p>Dez anos de campanhas reais para marcas de moda, beleza e lifestyle. Angelo não ensina o que leu — ensina o que fez. No Studio Plano, ele abre o processo que conduz seus próprios sets: as decisões de direção criativa, os bastidores da produção executiva, os acertos e os erros que nenhum curso mostra. Você vai trabalhar ao lado de quem constrói o que você quer construir.</p>
-      <div class="stats">
-        <div class="stat"><div class="v">10</div><div class="l">Anos de carreira</div></div>
-        <div class="stat"><div class="v">20</div><div class="l">Cadeiras · turma única</div></div>
-        <div class="stat"><div class="v">2</div><div class="l">Dias de imersão</div></div>
+    <div class="diretor-grid" data-reveal>
+      <div class="diretor-foto">
+        <img src="/images/academy/crew/angelo-mazzutti-crew.webp" alt="Angelo Mazzutti · Diretor Criativo" loading="lazy">
+        <div class="diretor-label"><span class="mono">ANGELO MAZZUTTI</span></div>
+      </div>
+      <div class="diretor-bio" data-reveal data-reveal-d="1">
+        <h2 class="diretor-name">Angelo<br>Mazzutti</h2>
+        <p class="diretor-role mono">Diretor Criativo · Fundador<br>House Mazzutti & HMZT Produtora</p>
+        <p class="diretor-text">Dez anos de campanhas reais para marcas de moda, beleza e lifestyle. Angelo não ensina o que leu — ensina o que fez. No Studio Plano, ele abre o processo que conduz seus próprios sets: as decisões de direção criativa, os bastidores da produção executiva, os acertos e os erros que nenhum curso mostra.</p>
+        <p class="diretor-text">Você vai trabalhar ao lado de quem constrói o que você quer construir.</p>
+        <div class="stats" style="margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--line-d);padding-top:24px">
+          <div class="stat"><div class="v" style="color:var(--paper)">10</div><div class="l">Anos de carreira</div></div>
+          <div class="stat"><div class="v" style="color:var(--paper)">20</div><div class="l">Cadeiras · turma única</div></div>
+          <div class="stat"><div class="v" style="color:var(--paper)">2</div><div class="l">Dias de imersão</div></div>
+        </div>
       </div>
     </div>
   </div>
+  <style>
+.diretor-section{background:var(--ink);color:var(--paper);}
+.diretor-eyebrow{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:clamp(32px,4vw,56px);padding-bottom:18px;border-bottom:1px solid var(--line-d);}
+.diretor-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);align-items:start;}
+@media(max-width:860px){.diretor-grid{grid-template-columns:1fr;}}
+.diretor-foto{position:relative;}
+.diretor-foto img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;filter:grayscale(.15);}
+.diretor-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,10,8,.85) 0%,transparent 100%);padding:clamp(16px,3vw,32px);display:flex;align-items:flex-end;}
+.diretor-label span{font-size:.6rem;letter-spacing:.22em;color:rgba(239,233,218,.7);}
+.diretor-name{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(3rem,7vw,7rem);line-height:.88;letter-spacing:0;margin:0 0 20px;}
+.diretor-role{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);margin-bottom:clamp(20px,3vw,36px);line-height:1.8;}
+.diretor-text{color:#c8c2b6;line-height:1.7;max-width:48ch;margin-bottom:1em;}
+  </style>
 </section>
 
 <!-- ============ PLANOS ============ -->
