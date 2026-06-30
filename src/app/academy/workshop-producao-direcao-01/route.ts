@@ -7,7 +7,7 @@ export function GET() {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inside Out · Edit 2 — Workshop HMZT · House Mazzutti</title>
-<meta name="description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas com Ângelo Mazzutti. Inside Out Edit 2 — São Paulo, 05 e 06 de setembro de 2026. Turma de 30 pessoas.">
+<meta name="description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas com Ângelo Mazzutti. Inside Out Edit 2 — São Paulo, 05 e 06 de setembro de 2026. 20 cadeiras.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://housemazzutti.com/academy/workshop-producao-direcao-01/">
 <meta property="og:title" content="Inside Out · Edit 2 — Workshop HMZT">
@@ -25,7 +25,7 @@ export function GET() {
 <meta name="twitter:description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas. São Paulo, 2026.">
 <!-- JSON-LD: Event + FAQPage -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias de imersão em direção criativa e produção executiva de campanhas com Ângelo Mazzutti. Turma de 30 pessoas.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"São Paulo","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":30},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é a imersão?","acceptedAnswer":{"@type":"Answer","text":"Estudantes e profissionais de Publicidade, Moda, Design, Audiovisual, Fotografia e Marketing que querem dominar o processo completo de uma produção — da ideia à execução. Turma única de 30 pessoas."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. O endereço exato é confirmado na sua inscrição."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"Não. O conteúdo vai do fundamento ao nível profissional. Você sai sabendo, na prática, desenvolver uma produção audiovisual e fotográfica do zero."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial com design profissional, além do Destaque da Imersão — premiação para o participante que mais se destacar ao longo dos dois dias."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias de imersão em direção criativa e produção executiva de campanhas com Ângelo Mazzutti. 20 cadeiras.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"São Paulo","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":20},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é a imersão?","acceptedAnswer":{"@type":"Answer","text":"Estudantes e profissionais de Publicidade, Moda, Design, Audiovisual, Fotografia e Marketing que querem dominar o processo completo de uma produção — da ideia à execução. Turma única de 30 pessoas."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. O endereço exato é confirmado na sua inscrição."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"Não. O conteúdo vai do fundamento ao nível profissional. Você sai sabendo, na prática, desenvolver uma produção audiovisual e fotográfica do zero."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial com design profissional, além do Destaque da Imersão — premiação para o participante que mais se destacar ao longo dos dois dias."}}]}]}
 </script>
 <!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
@@ -118,7 +118,7 @@ export function GET() {
         <div class="eib-sep"></div>
         <div class="eib-item">
           <span class="eib-l">Vagas</span>
-          <span class="eib-v">Turma de 30</span>
+          <span class="eib-v">20 cadeiras</span>
         </div>
         <div class="eib-sep"></div>
         <a class="eib-cta" data-reserve href="#planos">Reservar vaga <span>↗</span></a>
@@ -154,17 +154,15 @@ export function GET() {
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">02 — O que você vai vivenciar</span>
-      <span class="sec-index">8 frentes · teoria + prática + mentoria</span>
+      <span class="sec-index">6 frentes · presencial + online + encerramento</span>
     </div>
     <div class="exp">
-      <div class="exp-item" data-reveal><span class="exp-n">01</span><div><div class="exp-t">Direção Criativa</div><div class="exp-d">Estética, atmosfera e propósito visual. A alma estratégica da campanha.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">02</span><div><div class="exp-t">Produção Executiva</div><div class="exp-d">Cronogramas, orçamentos e controle real. A execução que torna a ideia realidade.</div></div></div>
-      <div class="exp-item" data-reveal><span class="exp-n">03</span><div><div class="exp-t">Conceito do Zero</div><div class="exp-d">Construção de um conceito de campanha do briefing ao moodboard apresentável.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">04</span><div><div class="exp-t">Shooting Real ao Vivo</div><div class="exp-d">Acompanhe um shooting completo — modelos, figurino e direção de arte.</div></div></div>
-      <div class="exp-item" data-reveal><span class="exp-n">05</span><div><div class="exp-t">Branding & Storytelling</div><div class="exp-d">Identidade visual e narrativa que posicionam marcas em mercado saturado.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">06</span><div><div class="exp-t">IA na Criação</div><div class="exp-d">Aplicações reais de inteligência artificial em ideação, imagem e pós.</div></div></div>
-      <div class="exp-item" data-reveal><span class="exp-n">07</span><div><div class="exp-t">Pós & Entrega Final</div><div class="exp-d">Seleção, edição, coloração e entrega do material no nível profissional.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">08</span><div><div class="exp-t">Certificação + Prêmio</div><div class="exp-d">Certificação oficial e o "Destaque da Imersão" com premiação exclusiva.</div></div></div>
+      <div class="exp-item" data-reveal><span class="exp-n">01</span><div><div class="exp-t">Produção do início ao fim</div><div class="exp-d">Todo o processo produtivo em um único dia — brief, direção, execução e entrega. Sem atalhos.</div></div></div>
+      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">02</span><div><div class="exp-t">Direção de moodboard</div><div class="exp-d">Do conceito à referência visual: como construir um moodboard que orienta todo um time criativo.</div></div></div>
+      <div class="exp-item" data-reveal><span class="exp-n">03</span><div><div class="exp-t">2 Sets ao vivo — Moda & Beauty</div><div class="exp-d">Você dentro do set. Dois shootings reais com direção de campanha still e lookbook em tempo real.</div></div></div>
+      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">04</span><div><div class="exp-t">Pós-produção intensiva</div><div class="exp-d">Manhã de edição ao vivo no segundo dia — 4 horas de imersão em pós-produção com a turma fechada.</div></div></div>
+      <div class="exp-item" data-reveal><span class="exp-n">05</span><div><div class="exp-t">Material de apoio pré-produção</div><div class="exp-d">Conteúdo exclusivo enviado antes do evento: referências, templates e orientações para chegar preparado.</div></div></div>
+      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">06</span><div><div class="exp-t">Rede de fornecedores SP + Certificação</div><div class="exp-d">Lista curada de parceiros e fornecedores de São Paulo, compartilhada no grupo. E certificado oficial.</div></div></div>
     </div>
   </div>
 </section>
@@ -180,30 +178,31 @@ export function GET() {
   <div class="wrap" style="max-width:var(--maxw)">
     <div class="io">
       <div class="io-col inside" data-reveal>
-        <div class="io-tag"><span class="io-day">Dia 01</span><span class="mono">Arquitetura da Criação</span></div>
+        <div class="io-tag"><span class="io-day">05 Set · Dia 01</span><span class="mono">Produção Pura</span></div>
         <div class="io-word">Inside</div>
-        <p class="io-sub" style="margin-top:18px;color:var(--smoke)">Estratégia · Branding · Storytelling · Ideação</p>
+        <p class="io-sub" style="margin-top:18px;color:var(--smoke)">Presencial · São Paulo · Sets reais</p>
         <ul class="sched">
-          <li><span class="tm">09:00</span><span class="ds"><b>Welcome</b>Coffee & networking dirigido</span></li>
-          <li><span class="tm">09:30</span><span class="ds"><b>Módulo 01</b>O DNA da Marca — com Angelo Mazzutti</span></li>
-          <li><span class="tm">11:00</span><span class="ds"><b>Módulo 02</b>O Mapa do Conteúdo Infinito</span></li>
-          <li><span class="tm">14:00</span><span class="ds"><b>Módulo 03</b>Storytelling que Vende</span></li>
-          <li><span class="tm">16:00</span><span class="ds"><b>Módulo 04</b>Ideação com Inteligência Artificial</span></li>
-          <li><span class="tm">17:30</span><span class="ds"><b>Encerramento</b>Happy hour & conexões</span></li>
+          <li><span class="tm">Manhã</span><span class="ds"><b>Abertura</b>Boas-vindas, entrega de material e briefing do dia</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>Moodboard ao vivo</b>Direção de conceito e construção visual do zero</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>Set 01 · Moda</b>Acompanhamento completo — still, lookbook e direção de campanha</span></li>
+          <li><span class="tm">Tarde</span><span class="ds"><b>Set 02 · Beauty</b>Segundo shooting ao vivo — outra atmosfera, mesma exigência</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>Suporte em tempo real</b>Orientação e feedback direto durante toda a produção</span></li>
+          <li><span class="tm">Pré-evento</span><span class="ds"><b>Material online</b>Conteúdo de pré-produção enviado via link antes do dia 05</span></li>
         </ul>
+        <p style="margin-top:20px;font-size:12px;color:var(--smoke);line-height:1.6"><em>Traga: câmera, celular, prancheta, notebook e toda a sua criatividade.</em></p>
       </div>
       <div class="io-col out" data-reveal data-reveal-d="1">
-        <div class="io-tag"><span class="io-day">Dia 02</span><span class="mono">Maestria da Execução</span></div>
+        <div class="io-tag"><span class="io-day">06 Set · Dia 02</span><span class="mono">Pós & Encerramento</span></div>
         <div class="io-word">Out</div>
-        <p class="io-sub" style="margin-top:18px;color:#6b6862">Produção · Ferramentas · Shooting · Entrega</p>
+        <p class="io-sub" style="margin-top:18px;color:#6b6862">Semi-presencial · Google Meet + Bar Dona Onça</p>
         <ul class="sched">
-          <li><span class="tm">09:00</span><span class="ds"><b>Módulo 05</b>Destravando a Câmera</span></li>
-          <li><span class="tm">10:30</span><span class="ds"><b>Módulo 06</b>O Arsenal da Produção Rápida</span></li>
-          <li><span class="tm">14:00</span><span class="ds"><b>Módulo 07</b>A Mágica da Pós-Produção com IA</span></li>
-          <li><span class="tm">16:00</span><span class="ds"><b>Módulo 08</b>Hot Seat com Angelo Mazzutti</span></li>
-          <li><span class="tm">17:00</span><span class="ds"><b>Shooting</b>Campanha final ao vivo</span></li>
-          <li><span class="tm">17:30</span><span class="ds"><b>Cerimônia</b>Encerramento & premiação</span></li>
+          <li><span class="tm">08:00</span><span class="ds"><b>Aulão de edição</b>Sala fechada no Google Meet — exclusivo para a turma</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>Pós-produção intensiva</b>4 horas de imersão em edição profissional ao vivo</span></li>
+          <li><span class="tm">12:00</span><span class="ds"><b>Encerramento online</b>Entrega final, feedbacks e lista de fornecedores SP</span></li>
+          <li><span class="tm">14:00</span><span class="ds"><b>Almoço · Happy Hour</b>Bar Dona Onça — São Paulo. Conexões que ficam.</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>Certificação</b>Certificado oficial da House Mazzutti · HMZT</span></li>
         </ul>
+        <p style="margin-top:20px;font-size:12px;color:#6b6862;line-height:1.6"><em>O segundo dia começa online e termina à mesa — da tela para o mundo real.</em></p>
       </div>
     </div>
   </div>
@@ -242,7 +241,7 @@ export function GET() {
       <p>Uma década dedicada à criação de valor estético e narrativo para marcas. À frente da HMZT Produtora, Angelo dirige campanhas de moda, beleza e publicidade que transformam marcas em referências. No Inside Out, ele compartilha o processo real — visão, técnica, acertos e erros — que separa o amador do profissional.</p>
       <div class="stats">
         <div class="stat"><div class="v">10</div><div class="l">Anos de carreira</div></div>
-        <div class="stat"><div class="v">30</div><div class="l">Vagas · turma única</div></div>
+        <div class="stat"><div class="v">20</div><div class="l">Cadeiras · turma única</div></div>
         <div class="stat"><div class="v">2</div><div class="l">Dias de imersão</div></div>
       </div>
     </div>
@@ -254,7 +253,7 @@ export function GET() {
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow" style="color:var(--smoke)">05 — Planos de Inscrição</span>
-      <span class="sec-index">Turma de 30 · São Paulo</span>
+      <span class="sec-index">20 cadeiras · São Paulo</span>
     </div>
     <div class="plans">
       <div class="plan" data-reveal>
@@ -299,7 +298,7 @@ export function GET() {
     </div>
 
     <div class="scarcity" data-reveal>
-      <span class="vagas-txt" id="vagasTxt">23 / 30 vagas preenchidas</span>
+      <span class="vagas-txt" id="vagasTxt">14 / 20 vagas preenchidas</span>
       <span class="vagas-bar"><i id="vagasBar"></i></span>
       <span class="vagas-txt" style="color:var(--accent)">● Lote 2 encerrando</span>
     </div>
@@ -338,10 +337,10 @@ export function GET() {
       <span class="sec-index">Tudo o que você precisa saber</span>
     </div>
     <div class="faq" data-reveal>
-      <details open><summary>Para quem é a imersão? <span class="pm">+</span></summary><div class="ans">Estudantes e profissionais de Publicidade, Moda, Design, Audiovisual, Fotografia e Marketing que querem dominar o processo completo de uma produção — da ideia à execução. Turma única de 30 pessoas.</div></details>
-      <details><summary>Onde e quando acontece? <span class="pm">+</span></summary><div class="ans">Edit 2 acontece em São Paulo nos dias <strong>05 e 06 de setembro de 2026</strong>, em dois dias intensivos e presenciais. O endereço exato é confirmado na sua inscrição. (Edição 1 foi realizada em Uberlândia/MG.)</div></details>
+      <details open><summary>Para quem é a imersão? <span class="pm">+</span></summary><div class="ans">Para fotógrafos, diretores, videomakers, social media, estudantes e profissionais de Publicidade, Moda, Design e Marketing que querem ver — e viver — o processo completo de uma produção. Turma fechada: apenas 20 cadeiras.</div></details>
+      <details><summary>Onde e quando acontece? <span class="pm">+</span></summary><div class="ans">Edit 2 acontece em <strong>São Paulo, dias 05 e 06 de setembro de 2026</strong>. O dia 05 é 100% presencial — dois sets reais ao vivo. O dia 06 começa online (Google Meet, das 8h às 12h) e encerra com almoço/happy hour no <strong>Bar Dona Onça</strong>. O endereço exato do dia presencial é confirmado na sua inscrição.</div></details>
       <details><summary>Preciso de experiência prévia? <span class="pm">+</span></summary><div class="ans">Não. O conteúdo vai do fundamento ao nível profissional. Você sai sabendo, na prática, desenvolver uma produção audiovisual e fotográfica do zero.</div></details>
-      <details><summary>O que está incluso? <span class="pm">+</span></summary><div class="ans">Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido.</div></details>
+      <details><summary>O que está incluso? <span class="pm">+</span></summary><div class="ans">Material online de pré-produção (enviado antes do evento), participação nos 2 sets ao vivo no dia 05, aulão de edição/pós-produção online no dia 06, almoço/happy hour no Bar Dona Onça, lista curada de fornecedores e parceiros de São Paulo, e certificação oficial. Conforme o plano escolhido, podem ser acrescidos kit, fotos e mentoria.</div></details>
       <details><summary>Qual a política de cancelamento? <span class="pm">+</span></summary><div class="ans">Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso. Solicitações por marketing@mztgrupo.com.</div></details>
       <details><summary>Existe certificado? <span class="pm">+</span></summary><div class="ans">Sim. Certificação oficial com design profissional, além do "Destaque da Imersão" — premiação para o participante que mais se destacar ao longo dos dois dias.</div></details>
     </div>
@@ -351,7 +350,7 @@ export function GET() {
 <!-- ============ CTA FINAL ============ -->
 <section class="section ink" id="reservar">
   <div class="wrap cta-final">
-    <span class="eyebrow" style="color:var(--smoke)" data-reveal>Vagas limitadas · turma de 30</span>
+    <span class="eyebrow" style="color:var(--smoke)" data-reveal>Vagas limitadas · turma de 20</span>
     <h2 class="big" data-reveal>Da ideia à<br><span class="o">campanha.</span></h2>
     <p class="lead" data-reveal style="max-width:30ch;color:var(--smoke-lt)">De dentro para fora: onde a criação encontra a execução.</p>
     <button class="btn solid lg" data-reveal data-reserve data-plan="Pro"><span class="lbl">Reservar minha vaga</span><span class="ar">↗</span></button>
