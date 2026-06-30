@@ -150,15 +150,10 @@ export default function AgenciaBrandingPage() {
                     </div>
 
                     {/* CASE 1: House Mazzutti — dado real */}
+                    {/* Linha 1: House Mazzutti — destaque grande */}
                     <div className="mb-2 grid grid-cols-1 md:grid-cols-3 gap-2">
                         <Link href="/portfolio-agencia/house-mazzutti" className="md:col-span-2 aspect-[16/9] overflow-hidden relative group block" data-aos="fade-up">
-                            <Image
-                                src="/images/agencia/house-mazzutti/capa.webp"
-                                alt="Identidade visual House Mazzutti desenvolvida pela House Mazzutti"
-                                fill
-                                sizes="(max-width: 768px) 100vw, 66vw"
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                            <Image src="/images/agencia/house-mazzutti/capa.webp" alt="Identidade visual House Mazzutti" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/50 block mb-1">Casa criativa estratégica</span>
                                 <p className="font-headline text-white text-lg leading-snug">House Mazzutti</p>
@@ -166,75 +161,73 @@ export default function AgenciaBrandingPage() {
                             </div>
                         </Link>
                         <div className="flex flex-col gap-2">
-                            <Link href="/portfolio-agencia/house-mazzutti" className="flex-1 min-h-[160px] overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="50">
-                                <Image
-                                    src="/images/agencia/house-mazzutti/1.webp"
-                                    alt="Sistema visual House Mazzutti — identidade brutalista e monocromática"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 33vw"
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                            <Link href="/portfolio-agencia/on-take" className="flex-1 min-h-[160px] overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="50">
+                                <Image src="/images/agencia/on-take/capa.webp" alt="Identidade visual On Take" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                                    <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">On Take</span>
+                                </div>
                             </Link>
-                            <Link href="/portfolio-agencia/house-mazzutti" className="flex-1 min-h-[160px] overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="100">
-                                <Image
-                                    src="/images/agencia/house-mazzutti/2.webp"
-                                    alt="Brand book House Mazzutti — manual de identidade visual"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 33vw"
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                            <Link href="/portfolio-agencia/pous" className="flex-1 min-h-[160px] overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="100">
+                                <Image src="/images/agencia/pous/capa.webp" alt="Identidade visual Pous" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                                    <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Pous</span>
+                                </div>
                             </Link>
                         </div>
                     </div>
 
-                    {/* Grid visual — demais marcas */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    {/* Linha 2: grid 4 colunas */}
+                    <div className="mb-2 grid grid-cols-2 md:grid-cols-4 gap-2">
                         <Link href="/portfolio-agencia/mabdo" className="aspect-square overflow-hidden relative group block" data-aos="fade-up">
-                            <Image
-                                src="/images/agencia/mabdo/1.webp"
-                                alt="Identidade visual Mabdo desenvolvida pela House Mazzutti"
-                                fill
-                                sizes="(max-width: 768px) 50vw, 25vw"
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                            <Image src="/images/agencia/mabdo/capa.webp" alt="Identidade visual Mabdo" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Mabdo</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-agencia/samrat" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="50">
-                            <Image
-                                src="/images/agencia/samrat/capa.webp"
-                                alt="Identidade visual Samrat desenvolvida pela House Mazzutti"
-                                fill
-                                sizes="(max-width: 768px) 50vw, 25vw"
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                            <Image src="/images/agencia/samrat/capa.webp" alt="Identidade visual Samrat" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Samrat</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-agencia/dra-ariadne-barbosa" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="100">
-                            <Image
-                                src="/images/agencia/dra-ariadne-barbosa/dra-ariadne-barbosa-logo-branding-manual-de-marca-identidade-visual-house-mazzutti-agencia-capa.webp"
-                                alt="Identidade visual Dra. Ariadne Barbosa desenvolvida pela House Mazzutti"
-                                fill
-                                sizes="(max-width: 768px) 50vw, 25vw"
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                            <Image src="/images/agencia/dra-ariadne-barbosa/dra-ariadne-barbosa-logo-branding-manual-de-marca-identidade-visual-house-mazzutti-agencia-01.webp" alt="Identidade visual Dra. Ariadne Barbosa" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Ariadne</span>
                             </div>
                         </Link>
                         <Link href="/portfolio-agencia/knowhol" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="150">
-                            <Image
-                                src="/images/agencia/knowhol/1.webp"
-                                alt="Identidade visual Knowhol desenvolvida pela House Mazzutti"
-                                fill
-                                sizes="(max-width: 768px) 50vw, 25vw"
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                            <Image src="/images/agencia/knowhol/capa.webp" alt="Identidade visual Knowhol" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Knowhol</span>
+                            </div>
+                        </Link>
+                    </div>
+
+                    {/* Linha 3: grid 4 colunas */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <Link href="/portfolio-agencia/fort" className="aspect-square overflow-hidden relative group block" data-aos="fade-up">
+                            <Image src="/images/agencia/fort/fort-negocios-imobiliarios-branding-identidade-visual-house-mazzutti-agencia-01.webp" alt="Identidade visual Fort" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Fort</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-agencia/lbo" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="50">
+                            <Image src="/images/agencia/lbo/lbo-consultoria-logo-marca-branding-house-mazzutti-agencia-design-01.webp" alt="Identidade visual LBO" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">LBO</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-agencia/jucileia-soares" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="100">
+                            <Image src="/images/agencia/jucileia-soares/jucileia-soares-branding-identidade-visual-house-mazzutti-agencia-01.webp" alt="Identidade visual Jucileia Soares" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Jucileia Soares</span>
+                            </div>
+                        </Link>
+                        <Link href="/portfolio-agencia/luiz-jr" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="150">
+                            <Image src="/images/agencia/luiz-jr/luiz-jr-branding-identidade-visual-house-mazzutti-agencia-01.webp" alt="Identidade visual Luiz Jr" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Luiz Jr</span>
                             </div>
                         </Link>
                     </div>
