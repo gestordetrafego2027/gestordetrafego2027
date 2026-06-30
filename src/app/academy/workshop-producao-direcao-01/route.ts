@@ -373,9 +373,10 @@ export function GET() {
       </div>
 
       <div class="plan plan--lote">
+        <span class="ribbon" style="background:#2a2a22;color:#efe9da">Abre 02 Jul</span>
         <div class="plan-tag"><span>Lote 2</span><span>02</span></div>
         <div class="plan-name">R$ 1.500</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>Disponível a partir de 10 Jul</small></div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>Abertura: 02 de Julho de 2026</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -387,7 +388,7 @@ export function GET() {
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
         </ul>
-        <button class="btn" data-reserve data-plan="Inside Out — Lote 2" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível 10 Jul</span></button>
+        <button class="btn" disabled style="opacity:.5;cursor:not-allowed;border-style:dashed"><span class="lbl">Aguarde · em breve</span></button>
       </div>
 
       <div class="plan plan--lote">
