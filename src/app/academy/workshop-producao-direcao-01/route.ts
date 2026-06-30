@@ -254,7 +254,7 @@ export function GET() {
     <div class="crew-grid">
 
       <div class="crew-card" data-reveal>
-        <div class="crew-photo"><img src="/images/about/angelo-mazzutti.webp" alt="Angelo Mazzutti" loading="lazy"></div>
+        <div class="crew-photo"><img src="/images/academy/crew/angelo-mazzutti-crew.webp" alt="Angelo Mazzutti" loading="lazy"></div>
         <div class="crew-role">Diretor Criativo</div>
         <div class="crew-name">Angelo Mazzutti</div>
       </div>
