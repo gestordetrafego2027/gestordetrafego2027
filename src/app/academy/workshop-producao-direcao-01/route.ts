@@ -272,9 +272,9 @@ export function GET() {
       </div>
 
       <div class="crew-card" data-reveal>
-        <div class="crew-photo crew-photo--empty"><span>Video&shy;maker</span></div>
-        <div class="crew-role">Videomaker</div>
-        <div class="crew-name">A confirmar</div>
+        <div class="crew-photo"><img src="/images/academy/crew/mateus-sacaem.webp" alt="Mateus Sacaem" loading="lazy"></div>
+        <div class="crew-role">Produtor Executivo</div>
+        <div class="crew-name">Mateus Sacaem</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
