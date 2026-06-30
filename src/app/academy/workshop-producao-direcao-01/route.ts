@@ -232,14 +232,14 @@ export function GET() {
     </div>
     <h2 class="h-2 display" data-reveal style="margin-bottom:clamp(30px,4vw,56px)">Dentro<br>do set.</h2>
     <div class="gallery-grid">
-      <image-slot id="g1" src="/images/academy/edit-01/edit01-equipe.webp" class="rv" data-reveal radius="0" placeholder="Bastidores · 01" fit="cover"></image-slot>
-      <image-slot id="g2" src="/images/academy/edit-01/edit01-model.webp" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores · 02" fit="cover"></image-slot>
-      <image-slot id="g3" src="/images/academy/edit-01/edit01-modelo-scouting.webp" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Bastidores · 03" fit="cover"></image-slot>
-      <image-slot id="g4" src="/images/academy/edit-01/edit01-amanda.webp" class="rv" data-reveal radius="0" placeholder="Bastidores · 04" fit="cover"></image-slot>
-      <image-slot id="g5" src="/images/academy/edit-01/edit01-scarpin.webp" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Bastidores · 05" fit="cover"></image-slot>
-      <image-slot id="g6" src="/images/academy/gallery/grid-1.webp" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Bastidores · 06" fit="cover"></image-slot>
+      <image-slot id="g1" src="/images/academy/studio-plano/studio-plano-1.webp" class="rv" data-reveal radius="0" placeholder="Studio Plano · Camarim" fit="cover"></image-slot>
+      <image-slot id="g2" src="/images/academy/studio-plano/studio-plano-2.webp" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Studio Plano · Ciclorama" fit="cover"></image-slot>
+      <image-slot id="g3" src="/images/academy/studio-plano/studio-plano-3.webp" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Studio Plano · Lounge" fit="cover"></image-slot>
+      <image-slot id="g4" src="/images/academy/edit-01/edit01-equipe.webp" class="rv" data-reveal radius="0" placeholder="Edit 01 · Equipe" fit="cover"></image-slot>
+      <image-slot id="g5" src="/images/academy/edit-01/edit01-model.webp" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Edit 01 · Set" fit="cover"></image-slot>
+      <image-slot id="g6" src="/images/academy/edit-01/edit01-amanda.webp" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Edit 01 · Produção" fit="cover"></image-slot>
     </div>
-    <p class="mono" data-reveal style="margin-top:clamp(22px,3vw,34px);color:var(--smoke)">House Mazzutti · HMZT Produtora — é isso que você vai viver no Studio Plano, em setembro.</p>
+    <p class="mono" data-reveal style="margin-top:clamp(22px,3vw,34px);color:var(--smoke)">Studio Plano · São Paulo — o espaço onde o Edit 2 acontece em setembro de 2026.</p>
   </div>
 </section>
 
