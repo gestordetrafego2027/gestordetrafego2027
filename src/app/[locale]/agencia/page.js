@@ -53,7 +53,7 @@ export default function AgenciaPage() {
         const t = setTimeout(() => {
             document.querySelectorAll('.hero-animate').forEach((el, i) => {
                 setTimeout(() => {
-                    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease'
+                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'
                     el.style.opacity = '1'
                     el.style.transform = 'translateY(0)'
                 }, i * 150)
@@ -63,7 +63,7 @@ export default function AgenciaPage() {
     }, [currentBannerSlide])
 
     useEffect(() => {
-        const interval = setInterval(() => setCurrentBannerSlide(prev => (prev + 1) % 3), 7000)
+        const interval = setInterval(() => setCurrentBannerSlide(prev => (prev + 1) % 3), 4550)
         return () => clearInterval(interval)
     }, [])
 

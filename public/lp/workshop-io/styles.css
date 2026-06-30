@@ -191,7 +191,7 @@ button{font-family:inherit;cursor:pointer;}
 
 .hero-media{position:relative;overflow:hidden;border-right:1px solid var(--line-d2);}
 @media (max-width:980px){ .hero-media{height:46svh;border-right:none;border-bottom:1px solid var(--line-d2);} }
-.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s var(--ease),transform 6s linear;}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 0.7s var(--ease),transform 6s linear;}
 .hero-slide.active{opacity:1;}
 .hero-slide image-slot{width:100%;height:100%;}
 .slide-num{position:absolute;left:20px;bottom:18px;z-index:3;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:#fff;mix-blend-mode:difference;}

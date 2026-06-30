@@ -68,7 +68,7 @@ export default function ProdutoraPage() {
         const timer = setTimeout(() => {
             document.querySelectorAll('.hero-animate').forEach((el, i) => {
                 setTimeout(() => {
-                    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease'
+                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'
                     el.style.opacity = '1'
                     el.style.transform = 'translateY(0)'
                 }, i * 150)
@@ -114,7 +114,7 @@ export default function ProdutoraPage() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentBannerSlide(prev => (prev + 1) % 3)
-        }, 7000)
+        }, 4550)
         return () => clearInterval(interval)
     }, [])
 
@@ -186,7 +186,7 @@ export default function ProdutoraPage() {
                         return <>
                             <div className="absolute inset-0 z-0">
                                 {['/images/produtora/banners/banner-1.webp','/images/produtora/banners/banner-2.webp','/images/produtora/banners/banner-3.webp'].map((src, i) => (
-                                    <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
+                                    <div key={i} className="absolute inset-0 transition-opacity duration-600" style={{opacity: currentBannerSlide === i ? 1 : 0}}>
                                         <Image src={src} alt="" fill sizes="100vw" quality={85} priority={i === 0} className="object-cover object-top" />
                                         <div className="absolute inset-0 bg-black/20"></div>
                                     </div>

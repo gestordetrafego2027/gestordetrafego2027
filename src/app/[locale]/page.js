@@ -60,7 +60,7 @@ export default function Home() {
         if (reduce || isHeroPaused) return;
         const interval = setInterval(() => {
             nextHeroSlide();
-        }, 9000);
+        }, 5850);
         return () => clearInterval(interval);
     }, [isHeroPaused]);
 
@@ -87,7 +87,7 @@ export default function Home() {
         const timer = setTimeout(() => {
             document.querySelectorAll('.hero-animate').forEach((el, i) => {
                 setTimeout(() => {
-                    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                     el.style.opacity = '1';
                     el.style.transform = 'translateY(0)';
                 }, i * 150);
@@ -194,27 +194,27 @@ export default function Home() {
                         <div className="max-w-4xl fade-in">
                             <span
                                 className="hero-animate text-caption text-white/70 mb-6 block"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.5s ease, transform 0.5s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].label}
                             </span>
                             <h1
                                 data-tw-slide
                                 className="hero-animate text-h1 text-white mb-8 hmzt-hero-title"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.5s ease, transform 0.5s ease' }}
                             >
                                 <TypewriterText text={heroSlides[currentHeroSlide].titulo} delay={600} />
                             </h1>
                             <p
                                 className="hero-animate text-body text-white/75 mb-12 measure-editorial"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.5s ease, transform 0.5s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].texto}
                             </p>
                             <Link
                                 href={heroSlides[currentHeroSlide].link}
                                 className="hero-animate inline-block group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500"
-                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+                                style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.5s ease, transform 0.5s ease' }}
                             >
                                 {heroSlides[currentHeroSlide].cta}
                             </Link>
