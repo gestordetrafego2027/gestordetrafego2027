@@ -15,7 +15,8 @@ import { createClient } from '@/lib/supabase/server'
 
 export const metadata: Metadata = {
   title: 'Checkout · Briefing Mal Passado · Impresso · House Mazzutti Academy',
-  description: 'Finalize sua compra do livro físico Briefing Mal Passado · Vol. 03 — capa cartonada, 417 páginas, envio para todo o Brasil.',
+  description:
+    'Finalize sua compra do livro físico Briefing Mal Passado · Vol. 03 — capa cartonada, 417 páginas, envio para todo o Brasil.',
   robots: { index: false, follow: false },
 }
 
@@ -28,7 +29,11 @@ const STRIPE_PRICE_ID =
 const brl = (cents: number | null | undefined) =>
   ((cents ?? 0) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-export default async function CheckoutImpressoPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function CheckoutImpressoPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
   const { locale } = await params
   const supabase = await createClient()
   const { data: product } = await supabase
@@ -44,8 +49,7 @@ export default async function CheckoutImpressoPage({ params }: { params: Promise
     ? Math.round(((originalCents! - finalCents) / originalCents!) * 100)
     : 0
 
-  const subtitleLine =
-    product?.subtitle ?? 'Livro físico · capa cartonada · Vol. 03'
+  const subtitleLine = product?.subtitle ?? 'Livro físico · capa cartonada · Vol. 03'
 
   return (
     <main
@@ -84,7 +88,8 @@ export default async function CheckoutImpressoPage({ params }: { params: Promise
             letterSpacing: '-0.01em',
           }}
         >
-          Briefing<br />
+          Briefing
+          <br />
           <em style={{ fontStyle: 'italic', color: '#a0a0a0' }}>Mal Passado</em>
         </h1>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: '#ccc', margin: '0 0 8px' }}>
@@ -120,10 +125,12 @@ export default async function CheckoutImpressoPage({ params }: { params: Promise
             }}
           >
             <span>
-              <span style={{ fontSize: 18, color: '#a0a0a0', verticalAlign: 'top', marginRight: 4 }}>
+              <span
+                style={{ fontSize: 18, color: '#a0a0a0', verticalAlign: 'top', marginRight: 4 }}
+              >
                 R$
               </span>
-              {((finalCents) / 100).toLocaleString('pt-BR', {
+              {(finalCents / 100).toLocaleString('pt-BR', {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               })}

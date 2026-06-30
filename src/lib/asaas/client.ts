@@ -17,9 +17,7 @@ export type AsaasEnv = 'sandbox' | 'production'
 
 export function getAsaasBaseUrl(env?: AsaasEnv): string {
   const e = env ?? (process.env.ASAAS_ENV as AsaasEnv | undefined) ?? 'sandbox'
-  return e === 'production'
-    ? 'https://api.asaas.com/v3'
-    : 'https://sandbox.asaas.com/api/v3'
+  return e === 'production' ? 'https://api.asaas.com/v3' : 'https://sandbox.asaas.com/api/v3'
 }
 
 function getApiKey(): string {

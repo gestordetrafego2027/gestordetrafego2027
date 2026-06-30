@@ -25,7 +25,9 @@ function Highlight({ text, q }: { text: string | null | undefined; q: string }) 
     <>
       {parts.map((p, i) =>
         re.test(p) ? (
-          <mark key={i} className="bg-yellow-200 text-neutral-900 px-0.5 rounded">{p}</mark>
+          <mark key={i} className="bg-yellow-200 text-neutral-900 px-0.5 rounded">
+            {p}
+          </mark>
         ) : (
           <span key={i}>{p}</span>
         ),
@@ -34,7 +36,8 @@ function Highlight({ text, q }: { text: string | null | undefined; q: string }) 
   )
 }
 
-type EntityKey = 'all' | 'leads' | 'clients' | 'opportunities' | 'quotes' | 'invoices' | 'campaigns' | 'catalog'
+type EntityKey =
+  'all' | 'leads' | 'clients' | 'opportunities' | 'quotes' | 'invoices' | 'campaigns' | 'catalog'
 
 const ENTITY_LABELS: Record<EntityKey, string> = {
   all: 'Tudo',
@@ -54,11 +57,17 @@ export default async function SearchPage({
 }) {
   const { q: rawQ = '', type } = await searchParams
   const term = rawQ.trim()
-  const VALID_ENTITIES = ['leads','clients','opportunities','quotes','invoices','campaigns','catalog'] as const
+  const VALID_ENTITIES = [
+    'leads',
+    'clients',
+    'opportunities',
+    'quotes',
+    'invoices',
+    'campaigns',
+    'catalog',
+  ] as const
   const entity: EntityKey =
-    type && (VALID_ENTITIES as readonly string[]).includes(type)
-      ? (type as EntityKey)
-      : 'all'
+    type && (VALID_ENTITIES as readonly string[]).includes(type) ? (type as EntityKey) : 'all'
 
   const supabase = await createClient()
 
@@ -81,39 +90,54 @@ export default async function SearchPage({
         <header>
           <h1 className="text-2xl font-semibold tracking-tight">Busca global</h1>
           <p className="text-sm text-neutral-500">
-            Digite no campo do topo. Busca em leads, clientes, oportunidades, propostas, faturas, campanhas, serviços e tags.
+            Digite no campo do topo. Busca em leads, clientes, oportunidades, propostas, faturas,
+            campanhas, serviços e tags.
           </p>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <section className="rounded-lg border border-neutral-200 bg-white p-4">
-            <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Leads recentes</div>
+            <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">
+              Leads recentes
+            </div>
             <ul className="space-y-1 text-sm">
               {(recentLeads ?? []).map((l) => (
                 <li key={l.id}>
-                  <Link href={`/crm/leads/${l.id}`} className="hover:underline">{l.name}</Link>
+                  <Link href={`/crm/leads/${l.id}`} className="hover:underline">
+                    {l.name}
+                  </Link>
                   <span className="text-xs text-neutral-500 ml-2">{l.lead_type}</span>
                 </li>
               ))}
-              {!recentLeads?.length && <li className="text-xs text-neutral-400 italic">Sem leads ainda.</li>}
+              {!recentLeads?.length && (
+                <li className="text-xs text-neutral-400 italic">Sem leads ainda.</li>
+              )}
             </ul>
           </section>
           <section className="rounded-lg border border-neutral-200 bg-white p-4">
-            <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Clientes recentes</div>
+            <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">
+              Clientes recentes
+            </div>
             <ul className="space-y-1 text-sm">
               {(recentClients ?? []).map((c) => (
                 <li key={c.id}>
-                  <Link href={`/crm/clients/${c.id}`} className="hover:underline">{c.display_name}</Link>
+                  <Link href={`/crm/clients/${c.id}`} className="hover:underline">
+                    {c.display_name}
+                  </Link>
                   <span className="text-xs text-neutral-500 ml-2 capitalize">{c.unit}</span>
                 </li>
               ))}
-              {!recentClients?.length && <li className="text-xs text-neutral-400 italic">Sem clientes ainda.</li>}
+              {!recentClients?.length && (
+                <li className="text-xs text-neutral-400 italic">Sem clientes ainda.</li>
+              )}
             </ul>
           </section>
         </div>
 
         <p className="text-xs text-neutral-500">
-          Dica: digite o nome de uma <strong>tag</strong> para encontrar todos os leads classificados com ela. Funciona também com email, telefone, CPF/CNPJ, número de fatura, slug ou UTM.
+          Dica: digite o nome de uma <strong>tag</strong> para encontrar todos os leads
+          classificados com ela. Funciona também com email, telefone, CPF/CNPJ, número de fatura,
+          slug ou UTM.
         </p>
       </div>
     )
@@ -133,7 +157,10 @@ export default async function SearchPage({
     const { data: lt } = await supabase
       .from('lead_tags')
       .select('lead_id')
-      .in('tag_id', matchedTags.map((t) => t.id))
+      .in(
+        'tag_id',
+        matchedTags.map((t) => t.id),
+      )
     for (const r of lt ?? []) taggedLeadIds.push(r.lead_id)
   }
 
@@ -167,7 +194,9 @@ export default async function SearchPage({
     want('clients')
       ? supabase
           .from('clients')
-          .select('id, display_name, legal_name, email, phone, document, unit, status, lifetime_value_brl')
+          .select(
+            'id, display_name, legal_name, email, phone, document, unit, status, lifetime_value_brl',
+          )
           .or(buildOrFilter(term, ['display_name', 'legal_name', 'email', 'phone', 'document']))
           .order('created_at', { ascending: false })
           .limit(30)
@@ -200,7 +229,16 @@ export default async function SearchPage({
       ? supabase
           .from('campaigns')
           .select('id, name, slug, channel, status, unit, utm_campaign, utm_source')
-          .or(buildOrFilter(term, ['name', 'slug', 'utm_campaign', 'utm_source', 'utm_medium', 'goal']))
+          .or(
+            buildOrFilter(term, [
+              'name',
+              'slug',
+              'utm_campaign',
+              'utm_source',
+              'utm_medium',
+              'goal',
+            ]),
+          )
           .limit(30)
       : Promise.resolve({ data: [] as never[] }),
     want('catalog')
@@ -229,8 +267,13 @@ export default async function SearchPage({
     catalog: servicesRes.data?.length ?? 0,
   }
   counts.all =
-    counts.leads + counts.clients + counts.opportunities +
-    counts.quotes + counts.invoices + counts.campaigns + counts.catalog
+    counts.leads +
+    counts.clients +
+    counts.opportunities +
+    counts.quotes +
+    counts.invoices +
+    counts.campaigns +
+    counts.catalog
 
   const empty = counts.all === 0
 
@@ -240,9 +283,14 @@ export default async function SearchPage({
       <header>
         <h1 className="text-2xl font-semibold tracking-tight">Busca global</h1>
         <p className="text-sm text-neutral-500">
-          {counts.all} resultado{counts.all === 1 ? '' : 's'} para “<span className="font-medium">{term}</span>”
+          {counts.all} resultado{counts.all === 1 ? '' : 's'} para “
+          <span className="font-medium">{term}</span>”
           {matchedTags && matchedTags.length > 0 && (
-            <> · {matchedTags.length} tag{matchedTags.length === 1 ? '' : 's'} casaram → {taggedLeadIds.length} lead{taggedLeadIds.length === 1 ? '' : 's'}</>
+            <>
+              {' '}
+              · {matchedTags.length} tag{matchedTags.length === 1 ? '' : 's'} casaram →{' '}
+              {taggedLeadIds.length} lead{taggedLeadIds.length === 1 ? '' : 's'}
+            </>
           )}
         </p>
       </header>
@@ -290,9 +338,7 @@ export default async function SearchPage({
         </section>
       )}
 
-      {empty && (
-        <p className="text-sm text-neutral-500 italic">Nada encontrado.</p>
-      )}
+      {empty && <p className="text-sm text-neutral-500 italic">Nada encontrado.</p>}
 
       {/* Leads */}
       {leads.length > 0 && (
@@ -308,7 +354,8 @@ export default async function SearchPage({
                     <Highlight text={l.name} q={term} />
                   </Link>
                   <div className="text-xs text-neutral-500">
-                    <Highlight text={l.email ?? '—'} q={term} /> · <Highlight text={l.phone ?? '—'} q={term} /> · {l.lead_type} · {l.segment}
+                    <Highlight text={l.email ?? '—'} q={term} /> ·{' '}
+                    <Highlight text={l.phone ?? '—'} q={term} /> · {l.lead_type} · {l.segment}
                   </div>
                 </div>
                 <span className="text-xs self-center rounded bg-amber-100 text-amber-900 px-2 py-0.5">
@@ -334,7 +381,9 @@ export default async function SearchPage({
                     <Highlight text={c.display_name} q={term} />
                   </Link>
                   <div className="text-xs text-neutral-500">
-                    <Highlight text={c.email ?? '—'} q={term} /> · <Highlight text={c.phone ?? '—'} q={term} /> · {c.unit} · <Highlight text={c.document ?? '—'} q={term} />
+                    <Highlight text={c.email ?? '—'} q={term} /> ·{' '}
+                    <Highlight text={c.phone ?? '—'} q={term} /> · {c.unit} ·{' '}
+                    <Highlight text={c.document ?? '—'} q={term} />
                   </div>
                 </div>
                 <span className="text-xs self-center tabular-nums">
@@ -361,8 +410,30 @@ export default async function SearchPage({
                   </span>
                   <div className="text-xs text-neutral-500 capitalize">
                     {o.stage} · {o.unit}
-                    {o.lead_id && <> · <Link href={`/crm/leads/${o.lead_id}`} className="text-blue-600 hover:underline">lead</Link></>}
-                    {o.client_id && <> · <Link href={`/crm/clients/${o.client_id}`} className="text-blue-600 hover:underline">cliente</Link></>}
+                    {o.lead_id && (
+                      <>
+                        {' '}
+                        ·{' '}
+                        <Link
+                          href={`/crm/leads/${o.lead_id}`}
+                          className="text-blue-600 hover:underline"
+                        >
+                          lead
+                        </Link>
+                      </>
+                    )}
+                    {o.client_id && (
+                      <>
+                        {' '}
+                        ·{' '}
+                        <Link
+                          href={`/crm/clients/${o.client_id}`}
+                          className="text-blue-600 hover:underline"
+                        >
+                          cliente
+                        </Link>
+                      </>
+                    )}
                   </div>
                 </div>
                 <span className="text-xs self-center tabular-nums">{brl(o.amount_brl)}</span>
@@ -404,13 +475,20 @@ export default async function SearchPage({
             {invoicesRes.data.map((inv) => (
               <li key={inv.id} className="px-4 py-2 flex justify-between">
                 <div>
-                  <Link href={`/crm/invoices/${inv.id}`} className="font-medium hover:underline font-mono text-xs">
+                  <Link
+                    href={`/crm/invoices/${inv.id}`}
+                    className="font-medium hover:underline font-mono text-xs"
+                  >
                     <Highlight text={inv.number ?? inv.id.slice(0, 8)} q={term} />
                   </Link>
                   <div className="text-xs text-neutral-500">
                     {inv.status}
-                    {inv.issue_date && <> · emitida {new Date(inv.issue_date).toLocaleDateString('pt-BR')}</>}
-                    {inv.due_date && <> · vence {new Date(inv.due_date).toLocaleDateString('pt-BR')}</>}
+                    {inv.issue_date && (
+                      <> · emitida {new Date(inv.issue_date).toLocaleDateString('pt-BR')}</>
+                    )}
+                    {inv.due_date && (
+                      <> · vence {new Date(inv.due_date).toLocaleDateString('pt-BR')}</>
+                    )}
                   </div>
                 </div>
                 <span className="text-xs self-center tabular-nums">{brl(inv.total_brl)}</span>
@@ -435,7 +513,13 @@ export default async function SearchPage({
                   </Link>
                   <div className="text-xs text-neutral-500 capitalize">
                     {c.channel} · {c.status}
-                    {c.utm_source && <> · utm:<Highlight text={c.utm_source} q={term} /></>}
+                    {c.utm_source && (
+                      <>
+                        {' '}
+                        · utm:
+                        <Highlight text={c.utm_source} q={term} />
+                      </>
+                    )}
                   </div>
                 </div>
                 <span className="text-xs self-center text-neutral-500">{c.unit ?? '—'}</span>
@@ -455,12 +539,20 @@ export default async function SearchPage({
             {servicesRes.data.map((s) => (
               <li key={s.id} className="px-4 py-2 flex justify-between">
                 <div>
-                  <Link href={`/crm/catalog/services/${s.id}`} className="font-medium hover:underline">
+                  <Link
+                    href={`/crm/catalog/services/${s.id}`}
+                    className="font-medium hover:underline"
+                  >
                     <Highlight text={s.name} q={term} />
                   </Link>
                   <div className="text-xs text-neutral-500">
                     <span className="font-mono">{s.slug}</span> · {s.unit}
-                    {!s.active && <> · <span className="text-rose-600">inativo</span></>}
+                    {!s.active && (
+                      <>
+                        {' '}
+                        · <span className="text-rose-600">inativo</span>
+                      </>
+                    )}
                   </div>
                 </div>
               </li>

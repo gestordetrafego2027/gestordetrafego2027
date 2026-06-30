@@ -13,9 +13,7 @@ import { issueNfse } from '@/lib/fiscal/nfeio'
  * Cria store_orders + store_order_items usando UPSERT idempotente.
  * Se o evento chegar duplicado, o ON CONFLICT garante no-op.
  */
-export async function handleCheckoutCompleted(
-  session: Stripe.Checkout.Session,
-): Promise<void> {
+export async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promise<void> {
   const log = logger.child({ session_id: session.id, handler: 'checkout-completed' })
 
   // Idempotência: se o pedido já existe para esta session, sai sem erro
@@ -28,7 +26,10 @@ export async function handleCheckoutCompleted(
     .maybeSingle()
 
   if (existing) {
-    log.info({ order_id: existing.id, status: existing.status }, 'pedido já existe — idempotente, ignorando')
+    log.info(
+      { order_id: existing.id, status: existing.status },
+      'pedido já existe — idempotente, ignorando',
+    )
     return
   }
 
@@ -36,9 +37,9 @@ export async function handleCheckoutCompleted(
   let fullSession = session
   if (!session.line_items?.data?.length) {
     try {
-      fullSession = await getStripe().checkout.sessions.retrieve(session.id, {
+      fullSession = (await getStripe().checkout.sessions.retrieve(session.id, {
         expand: ['line_items', 'line_items.data.price.product'],
-      }) as Stripe.Checkout.Session
+      })) as Stripe.Checkout.Session
     } catch (err) {
       log.error({ err }, 'falha ao re-buscar session com line_items')
     }
@@ -52,7 +53,10 @@ export async function handleCheckoutCompleted(
 
   const subtotalCents = session.amount_subtotal ?? 0
   const totalCents = session.amount_total ?? 0
-  const discountCents = Math.max(0, subtotalCents - totalCents + (session.total_details?.amount_tax ?? 0))
+  const discountCents = Math.max(
+    0,
+    subtotalCents - totalCents + (session.total_details?.amount_tax ?? 0),
+  )
   const taxCents = session.total_details?.amount_tax ?? 0
 
   // Resolve coupon_id se houver discount
@@ -76,11 +80,9 @@ export async function handleCheckoutCompleted(
       stripe_payment_intent_id:
         typeof session.payment_intent === 'string'
           ? session.payment_intent
-          : session.payment_intent?.id ?? null,
+          : (session.payment_intent?.id ?? null),
       stripe_customer_id:
-        typeof session.customer === 'string'
-          ? session.customer
-          : session.customer?.id ?? null,
+        typeof session.customer === 'string' ? session.customer : (session.customer?.id ?? null),
       status: 'paid',
       paid_at: new Date().toISOString(),
       payment_gateway: 'stripe',
@@ -96,7 +98,7 @@ export async function handleCheckoutCompleted(
       coupon_code_snapshot: promoCode
         ? typeof promoCode === 'string'
           ? promoCode
-          : (promoCode as any).code ?? null
+          : ((promoCode as any).code ?? null)
         : null,
       metadata: {
         stripe_mode: session.mode,
@@ -149,8 +151,7 @@ export async function handleCheckoutCompleted(
 
   // Atualiza stripe_customer_id no perfil do usuário (se tiver user_id)
   if (session.client_reference_id && session.customer) {
-    const customerId =
-      typeof session.customer === 'string' ? session.customer : session.customer.id
+    const customerId = typeof session.customer === 'string' ? session.customer : session.customer.id
     await supabase
       .from('profiles')
       .update({ stripe_customer_id: customerId })
@@ -207,10 +208,13 @@ export async function handleCheckoutCompleted(
           log.error({ err: r.error, order_id: order.id }, 'falha ao enviar email de entrega')
         } else {
           log.info({ email_id: r.id, order_id: order.id }, 'email de entrega enviado')
-          await supabase.from('store_orders').update({
-            delivery_sent_at: new Date().toISOString(),
-            delivery_email_id: r.id ?? null,
-          }).eq('id', order.id)
+          await supabase
+            .from('store_orders')
+            .update({
+              delivery_sent_at: new Date().toISOString(),
+              delivery_email_id: r.id ?? null,
+            })
+            .eq('id', order.id)
         }
       }
     }
@@ -222,7 +226,8 @@ export async function handleCheckoutCompleted(
   try {
     const buyerEmailNf = session.customer_details?.email ?? session.customer_email
     const buyerNameNf = session.customer_details?.name ?? 'Consumidor Final'
-    const buyerCpf = session.metadata?.buyer_cpf ?? session.customer_details?.tax_ids?.[0]?.value ?? undefined
+    const buyerCpf =
+      session.metadata?.buyer_cpf ?? session.customer_details?.tax_ids?.[0]?.value ?? undefined
     const description =
       lineItems?.map((li) => `${li.quantity}x ${li.description}`).join(' + ') ??
       `Pedido ${order.id}`

@@ -28,7 +28,9 @@ export async function POST(req: NextRequest) {
   const supabase = createServiceClient()
   const { data: order, error: orderErr } = await supabase
     .from('store_orders')
-    .select('id, order_number, total_cents, buyer_email, buyer_name, buyer_cpf, user_id, status, metadata')
+    .select(
+      'id, order_number, total_cents, buyer_email, buyer_name, buyer_cpf, user_id, status, metadata',
+    )
     .eq('id', body.orderId)
     .maybeSingle()
 

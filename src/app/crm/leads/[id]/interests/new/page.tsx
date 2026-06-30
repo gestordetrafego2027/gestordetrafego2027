@@ -32,7 +32,7 @@ export default async function NewInterestPage({
   if (leadErr || !lead) notFound()
 
   const service = selectedServiceId
-    ? (services ?? []).find((s) => s.id === selectedServiceId) ?? null
+    ? ((services ?? []).find((s) => s.id === selectedServiceId) ?? null)
     : null
 
   // Pacotes + adicionais do serviço selecionado
@@ -58,7 +58,9 @@ export default async function NewInterestPage({
   }
 
   const brl = (n: number | null | undefined) =>
-    n === null || n === undefined ? '' : Number(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    n === null || n === undefined
+      ? ''
+      : Number(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
   return (
     <div className="max-w-3xl space-y-6">
@@ -66,7 +68,10 @@ export default async function NewInterestPage({
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Novo interesse</h1>
           <p className="text-sm text-neutral-500">
-            Lead: <Link href={`/crm/leads/${lead.id}`} className="hover:underline font-medium">{lead.name}</Link>
+            Lead:{' '}
+            <Link href={`/crm/leads/${lead.id}`} className="hover:underline font-medium">
+              {lead.name}
+            </Link>
           </p>
         </div>
         <Link
@@ -78,9 +83,7 @@ export default async function NewInterestPage({
       </header>
 
       {error && (
-        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">
-          {error}
-        </p>
+        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">{error}</p>
       )}
 
       {/* Step 1: escolher service */}
@@ -154,7 +157,9 @@ export default async function NewInterestPage({
                       <input type="radio" name="package_id" value={p.id} />
                       <span className="text-sm font-medium">{p.name}</span>
                     </span>
-                    <span className="text-xs tabular-nums text-neutral-600">{brl(p.price_brl)}</span>
+                    <span className="text-xs tabular-nums text-neutral-600">
+                      {brl(p.price_brl)}
+                    </span>
                   </label>
                 ))}
               </div>
@@ -175,7 +180,9 @@ export default async function NewInterestPage({
                       <input type="checkbox" name="addon_id" value={a.id} />
                       <span className="text-sm">{a.name}</span>
                     </span>
-                    <span className="text-xs tabular-nums text-neutral-600">{brl(a.price_brl)}</span>
+                    <span className="text-xs tabular-nums text-neutral-600">
+                      {brl(a.price_brl)}
+                    </span>
                   </label>
                 ))}
               </div>

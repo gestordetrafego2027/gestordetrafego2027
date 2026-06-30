@@ -35,7 +35,13 @@ export function CartLine({ item }: { item: CartItem }) {
       {/* Info */}
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-neutral-900 leading-tight truncate">{item.name}</p>
-        <p className="text-xs text-neutral-400 mt-0.5 capitalize">{item.productType === 'digital' ? 'Digital' : item.productType === 'service' ? 'Serviço' : 'Físico'}</p>
+        <p className="text-xs text-neutral-400 mt-0.5 capitalize">
+          {item.productType === 'digital'
+            ? 'Digital'
+            : item.productType === 'service'
+              ? 'Serviço'
+              : 'Físico'}
+        </p>
 
         <div className="flex items-center justify-between mt-2">
           {/* Quantidade */}
@@ -45,13 +51,17 @@ export function CartLine({ item }: { item: CartItem }) {
                 onClick={() => updateQuantity(item.id, item.quantity - 1)}
                 className="w-7 h-7 flex items-center justify-center text-neutral-500 hover:bg-neutral-100 transition-colors text-sm"
                 aria-label="Diminuir"
-              >−</button>
+              >
+                −
+              </button>
               <span className="w-6 text-center text-sm font-medium">{item.quantity}</span>
               <button
                 onClick={() => updateQuantity(item.id, item.quantity + 1)}
                 className="w-7 h-7 flex items-center justify-center text-neutral-500 hover:bg-neutral-100 transition-colors text-sm"
                 aria-label="Aumentar"
-              >+</button>
+              >
+                +
+              </button>
             </div>
           ) : (
             <span className="text-xs text-neutral-400">1 serviço</span>
@@ -68,7 +78,12 @@ export function CartLine({ item }: { item: CartItem }) {
               aria-label="Remover item"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>

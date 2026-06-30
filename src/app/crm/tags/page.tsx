@@ -16,9 +16,7 @@ export default async function TagsPage({ searchParams }: { searchParams: SearchP
     .order('name', { ascending: true })
 
   // Contagem de uso (lead_tags) por tag, em uma query separada agregada client-side.
-  const { data: leadTagRows } = await supabase
-    .from('lead_tags')
-    .select('tag_id')
+  const { data: leadTagRows } = await supabase.from('lead_tags').select('tag_id')
 
   const usage = new Map<string, number>()
   for (const row of leadTagRows ?? []) {
@@ -32,9 +30,7 @@ export default async function TagsPage({ searchParams }: { searchParams: SearchP
       <header className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Tags</h1>
-          <p className="text-sm text-neutral-500">
-            Rótulos reutilizáveis para classificar leads.
-          </p>
+          <p className="text-sm text-neutral-500">Rótulos reutilizáveis para classificar leads.</p>
         </div>
         <Link href="/crm/leads" className="text-sm text-neutral-500 hover:text-neutral-900">
           ← Leads
@@ -42,9 +38,7 @@ export default async function TagsPage({ searchParams }: { searchParams: SearchP
       </header>
 
       {error && (
-        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">
-          {error}
-        </p>
+        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">{error}</p>
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -58,9 +52,7 @@ export default async function TagsPage({ searchParams }: { searchParams: SearchP
               {editingTag ? 'Editar tag' : 'Nova tag'}
             </h2>
 
-            {editingTag && (
-              <input type="hidden" name="tag_id" value={editingTag.id} />
-            )}
+            {editingTag && <input type="hidden" name="tag_id" value={editingTag.id} />}
 
             <label className="block space-y-1">
               <span className="text-sm font-medium">Nome *</span>
@@ -82,9 +74,7 @@ export default async function TagsPage({ searchParams }: { searchParams: SearchP
                   defaultValue={editingTag?.color ?? '#9ca3af'}
                   className="h-9 w-12 rounded border border-neutral-300 p-0.5"
                 />
-                <span className="text-xs text-neutral-500 self-center">
-                  hex, ex: #ef4444
-                </span>
+                <span className="text-xs text-neutral-500 self-center">hex, ex: #ef4444</span>
               </div>
             </label>
 
@@ -140,9 +130,7 @@ export default async function TagsPage({ searchParams }: { searchParams: SearchP
                         {t.name}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-xs text-neutral-500 font-mono">
-                      {t.slug}
-                    </td>
+                    <td className="px-4 py-3 text-xs text-neutral-500 font-mono">{t.slug}</td>
                     <td className="px-4 py-3 text-right text-neutral-600 tabular-nums">
                       {usage.get(t.id) ?? 0}
                     </td>

@@ -7,8 +7,13 @@ import WhatsAppButton from '../../components/WhatsAppButton'
 import { waTemplates } from '@/lib/whatsapp'
 
 const METHODS = [
-  'pix', 'boleto', 'cartao_credito', 'cartao_debito',
-  'transferencia', 'dinheiro', 'outro',
+  'pix',
+  'boleto',
+  'cartao_credito',
+  'cartao_debito',
+  'transferencia',
+  'dinheiro',
+  'outro',
 ] as const
 
 export const dynamic = 'force-dynamic'
@@ -32,11 +37,7 @@ const invoiceStatusBadge: Record<string, string> = {
   cancelada: 'bg-neutral-200 text-neutral-500',
 }
 
-export default async function ClientDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
+export default async function ClientDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const supabase = await createClient()
 
@@ -65,10 +66,15 @@ export default async function ClientDetailPage({
       .eq('client_id', id)
       .order('paid_at', { ascending: false })
       .limit(20),
-    supabase.from('clients').select('lead_id').eq('id', id).single().then(async (r) => {
-      if (!r.data?.lead_id) return { data: null }
-      return supabase.from('leads').select('id, name, email').eq('id', r.data.lead_id).single()
-    }),
+    supabase
+      .from('clients')
+      .select('lead_id')
+      .eq('id', id)
+      .single()
+      .then(async (r) => {
+        if (!r.data?.lead_id) return { data: null }
+        return supabase.from('leads').select('id, name, email').eq('id', r.data.lead_id).single()
+      }),
     supabase
       .from('attachments')
       .select('id, storage_path, file_name, mime_type, size_bytes, kind, created_at, description')
@@ -80,7 +86,8 @@ export default async function ClientDetailPage({
 
   const totalPago = (payments ?? []).reduce((a, p) => a + Number(p.amount_brl ?? 0), 0)
   const totalFaturado = (invoices ?? []).reduce((a, i) => a + Number(i.total_brl ?? 0), 0)
-  const totalAberto = (invoices ?? []).filter(i => i.status !== 'paga' && i.status !== 'cancelada')
+  const totalAberto = (invoices ?? [])
+    .filter((i) => i.status !== 'paga' && i.status !== 'cancelada')
     .reduce((a, i) => a + (Number(i.total_brl ?? 0) - Number(i.paid_brl ?? 0)), 0)
 
   return (
@@ -102,7 +109,12 @@ export default async function ClientDetailPage({
               {client.email && <span>✉️ {client.email}</span>}
               {client.phone && <span>📞 {client.phone}</span>}
               {client.document && <span>🪪 {client.document}</span>}
-              {client.city && <span>📍 {client.city}{client.state ? `/${client.state}` : ''}</span>}
+              {client.city && (
+                <span>
+                  📍 {client.city}
+                  {client.state ? `/${client.state}` : ''}
+                </span>
+              )}
               {client.phone && (
                 <WhatsAppButton
                   phone={client.phone}
@@ -132,7 +144,9 @@ export default async function ClientDetailPage({
       <section className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <div className="rounded-lg border border-neutral-200 bg-white p-4">
           <div className="text-[10px] uppercase tracking-wide text-neutral-500">LTV</div>
-          <div className="text-xl font-semibold mt-1 tabular-nums">{brl(client.lifetime_value_brl)}</div>
+          <div className="text-xl font-semibold mt-1 tabular-nums">
+            {brl(client.lifetime_value_brl)}
+          </div>
         </div>
         <div className="rounded-lg border border-neutral-200 bg-white p-4">
           <div className="text-[10px] uppercase tracking-wide text-neutral-500">Total faturado</div>
@@ -144,7 +158,9 @@ export default async function ClientDetailPage({
         </div>
         <div className="rounded-lg border border-neutral-200 bg-white p-4">
           <div className="text-[10px] uppercase tracking-wide text-neutral-500">Em aberto</div>
-          <div className="text-xl font-semibold mt-1 tabular-nums text-rose-600">{brl(totalAberto)}</div>
+          <div className="text-xl font-semibold mt-1 tabular-nums text-rose-600">
+            {brl(totalAberto)}
+          </div>
         </div>
       </section>
 
@@ -173,12 +189,16 @@ export default async function ClientDetailPage({
                     </div>
                   </td>
                   <td className="py-1">
-                    <span className={`rounded px-2 py-0.5 text-xs ${invoiceStatusBadge[i.status] ?? ''}`}>
+                    <span
+                      className={`rounded px-2 py-0.5 text-xs ${invoiceStatusBadge[i.status] ?? ''}`}
+                    >
                       {i.status}
                     </span>
                   </td>
                   <td className="py-1 text-right tabular-nums">{brl(i.total_brl)}</td>
-                  <td className="py-1 text-right tabular-nums text-emerald-700">{brl(i.paid_brl)}</td>
+                  <td className="py-1 text-right tabular-nums text-emerald-700">
+                    {brl(i.paid_brl)}
+                  </td>
                 </tr>
               ))}
               {!invoices?.length && (
@@ -205,8 +225,12 @@ export default async function ClientDetailPage({
             </a>
           </div>
 
-          {!!(invoices ?? []).filter((i) => i.status !== 'paga' && i.status !== 'cancelada').length && (
-            <form action={recordPaymentAction} className="space-y-2 mb-4 border-b border-neutral-100 pb-4">
+          {!!(invoices ?? []).filter((i) => i.status !== 'paga' && i.status !== 'cancelada')
+            .length && (
+            <form
+              action={recordPaymentAction}
+              className="space-y-2 mb-4 border-b border-neutral-100 pb-4"
+            >
               <input type="hidden" name="client_id" value={client.id} />
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <label>
@@ -220,7 +244,8 @@ export default async function ClientDetailPage({
                       .filter((i) => i.status !== 'paga' && i.status !== 'cancelada')
                       .map((i) => (
                         <option key={i.id} value={i.id}>
-                          {i.number ?? `#${i.id.slice(0, 6)}`} · {brl(Number(i.total_brl) - Number(i.paid_brl))} pendente
+                          {i.number ?? `#${i.id.slice(0, 6)}`} ·{' '}
+                          {brl(Number(i.total_brl) - Number(i.paid_brl))} pendente
                         </option>
                       ))}
                   </select>
@@ -228,22 +253,32 @@ export default async function ClientDetailPage({
                 <label>
                   Valor (R$)
                   <input
-                    type="number" name="amount_brl" step="0.01" min="0.01" required
+                    type="number"
+                    name="amount_brl"
+                    step="0.01"
+                    min="0.01"
+                    required
                     className="mt-1 w-full rounded border border-neutral-200 px-2 py-1 tabular-nums"
                   />
                 </label>
                 <label>
                   Método
-                  <select name="method" className="mt-1 w-full rounded border border-neutral-200 px-2 py-1">
+                  <select
+                    name="method"
+                    className="mt-1 w-full rounded border border-neutral-200 px-2 py-1"
+                  >
                     {METHODS.map((m) => (
-                      <option key={m} value={m}>{m.replace('_', ' ')}</option>
+                      <option key={m} value={m}>
+                        {m.replace('_', ' ')}
+                      </option>
                     ))}
                   </select>
                 </label>
                 <label>
                   Referência (Pix/NSU/…)
                   <input
-                    type="text" name="reference"
+                    type="text"
+                    name="reference"
                     className="mt-1 w-full rounded border border-neutral-200 px-2 py-1"
                   />
                 </label>
@@ -267,9 +302,7 @@ export default async function ClientDetailPage({
                     {p.reference && ` · ref: ${p.reference}`}
                   </div>
                 </div>
-                <div className="tabular-nums text-emerald-700 font-medium">
-                  {brl(p.amount_brl)}
-                </div>
+                <div className="tabular-nums text-emerald-700 font-medium">{brl(p.amount_brl)}</div>
               </li>
             ))}
             {!payments?.length && (

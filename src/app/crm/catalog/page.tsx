@@ -80,7 +80,9 @@ export default async function CatalogPage() {
                 {unitTagline[unit] && (
                   <span className="text-xs text-neutral-400 italic">{unitTagline[unit]}</span>
                 )}
-                <span className="text-[10px] text-neutral-300 ml-auto">{list.length} serviço{list.length !== 1 ? 's' : ''}</span>
+                <span className="text-[10px] text-neutral-300 ml-auto">
+                  {list.length} serviço{list.length !== 1 ? 's' : ''}
+                </span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {list.map((s) => (

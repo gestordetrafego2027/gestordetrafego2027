@@ -26,7 +26,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Configuração do servidor ausente.' }, { status: 500 })
   }
 
-  let body: { email?: string; name?: string; source?: string; utm?: unknown; recaptchaToken?: string }
+  let body: {
+    email?: string
+    name?: string
+    source?: string
+    utm?: unknown
+    recaptchaToken?: string
+  }
   try {
     body = await req.json()
   } catch {
@@ -46,12 +52,15 @@ export async function POST(req: NextRequest) {
 
   const supabase = createClient(url, key, { auth: { persistSession: false } })
 
-  const { error } = await supabase
-    .from('newsletter_subscribers')
-    .upsert(
-      { email: email.toLowerCase().trim(), name: name ?? null, source: source ?? 'blog', utm: utm ?? {} },
-      { onConflict: 'email', ignoreDuplicates: false }
-    )
+  const { error } = await supabase.from('newsletter_subscribers').upsert(
+    {
+      email: email.toLowerCase().trim(),
+      name: name ?? null,
+      source: source ?? 'blog',
+      utm: utm ?? {},
+    },
+    { onConflict: 'email', ignoreDuplicates: false },
+  )
 
   if (error) {
     logger.error({ err: error }, '[newsletter/subscribe]')

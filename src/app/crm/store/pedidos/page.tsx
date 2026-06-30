@@ -11,9 +11,14 @@ function fmt(cents: number) {
 }
 
 const STATUS_LABEL: Record<string, string> = {
-  paid: 'Pago', pending: 'Pendente', processing: 'Processando',
-  failed: 'Falhou', refunded: 'Reembolsado', partially_refunded: 'Reemb. parcial',
-  cancelled: 'Cancelado', chargeback: 'Chargeback',
+  paid: 'Pago',
+  pending: 'Pendente',
+  processing: 'Processando',
+  failed: 'Falhou',
+  refunded: 'Reembolsado',
+  partially_refunded: 'Reemb. parcial',
+  cancelled: 'Cancelado',
+  chargeback: 'Chargeback',
 }
 const STATUS_COLOR: Record<string, string> = {
   paid: 'text-green-700 bg-green-50 border-green-100',
@@ -30,7 +35,9 @@ type Props = { searchParams: Promise<{ status?: string; q?: string; page?: strin
 
 export default async function PedidosAdminPage({ searchParams }: Props) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const md = (user?.app_metadata ?? {}) as { role?: string }
   if (md.role !== 'admin') redirect('/crm')
 
@@ -42,17 +49,21 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
 
   let query = supabase
     .from('store_orders')
-    .select(`
+    .select(
+      `
       id, order_number, status, total_cents, currency,
       buyer_name, buyer_email, created_at,
       nfse_id, nfse_number, nfse_status,
       store_order_items ( id, product_snapshot, quantity, unit_amount )
-    `, { count: 'exact' })
+    `,
+      { count: 'exact' },
+    )
     .order('created_at', { ascending: false })
     .range(from, to)
 
   if (status) query = query.eq('status', status as StoreOrderStatus)
-  if (q) query = query.or(`buyer_email.ilike.%${q}%,order_number.ilike.%${q}%,buyer_name.ilike.%${q}%`)
+  if (q)
+    query = query.or(`buyer_email.ilike.%${q}%,order_number.ilike.%${q}%,buyer_name.ilike.%${q}%`)
 
   const { data: orders, count } = await query
   const totalPages = Math.ceil((count ?? 0) / perPage)
@@ -77,10 +88,15 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
             className="border border-neutral-200 rounded-lg px-3 py-1.5 text-sm bg-white focus:outline-none"
           >
             {STATUSES.map((s) => (
-              <option key={s} value={s}>{s ? STATUS_LABEL[s] : 'Todos os status'}</option>
+              <option key={s} value={s}>
+                {s ? STATUS_LABEL[s] : 'Todos os status'}
+              </option>
             ))}
           </select>
-          <button type="submit" className="px-4 py-1.5 bg-neutral-900 text-white text-sm rounded-lg hover:bg-neutral-700">
+          <button
+            type="submit"
+            className="px-4 py-1.5 bg-neutral-900 text-white text-sm rounded-lg hover:bg-neutral-700"
+          >
             Filtrar
           </button>
         </form>
@@ -102,19 +118,27 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
                   {/* Linha principal */}
                   <div className="flex flex-wrap items-start gap-4 justify-between">
                     <div>
-                      <p className="text-sm font-bold text-neutral-900 font-mono">{order.order_number}</p>
-                      <p className="text-xs text-neutral-400 mt-0.5">{order.buyer_name ?? ''} &middot; {order.buyer_email}</p>
+                      <p className="text-sm font-bold text-neutral-900 font-mono">
+                        {order.order_number}
+                      </p>
+                      <p className="text-xs text-neutral-400 mt-0.5">
+                        {order.buyer_name ?? ''} &middot; {order.buyer_email}
+                      </p>
                       <p className="text-xs text-neutral-400">
                         {new Date(order.created_at).toLocaleString('pt-BR')}
                       </p>
                     </div>
                     <div className="flex items-center gap-3 flex-wrap">
                       {/* Gateway — coluna removida do select (não existe no schema store_orders) */}
-                      <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${STATUS_COLOR[order.status] ?? 'text-neutral-500 bg-neutral-100 border-neutral-200'}`}>
+                      <span
+                        className={`text-xs font-medium px-2.5 py-1 rounded-full border ${STATUS_COLOR[order.status] ?? 'text-neutral-500 bg-neutral-100 border-neutral-200'}`}
+                      >
                         {STATUS_LABEL[order.status] ?? order.status}
                       </span>
                       {/* Entrega — campo delivery_sent_at não existe no schema atual */}
-                      <span className="text-base font-bold text-neutral-900">{fmt(order.total_cents)}</span>
+                      <span className="text-base font-bold text-neutral-900">
+                        {fmt(order.total_cents)}
+                      </span>
                     </div>
                   </div>
 
@@ -124,7 +148,10 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
                       {items.map((item, i: number) => {
                         const snap = item.product_snapshot as { name?: string } | null
                         return (
-                          <span key={i} className="text-xs bg-neutral-50 border border-neutral-100 rounded-lg px-2.5 py-1 text-neutral-600">
+                          <span
+                            key={i}
+                            className="text-xs bg-neutral-50 border border-neutral-100 rounded-lg px-2.5 py-1 text-neutral-600"
+                          >
                             {item.quantity}× {snap?.name ?? 'Produto'}
                           </span>
                         )
@@ -137,7 +164,9 @@ export default async function PedidosAdminPage({ searchParams }: Props) {
                     <div className="text-xs text-neutral-400 flex items-center gap-2">
                       <span className="font-medium text-neutral-600">NFS-e</span>
                       <span className="font-mono">{order.nfse_number ?? order.nfse_id}</span>
-                      <span className={`px-2 py-0.5 rounded-full ${order.nfse_status === 'issued' ? 'bg-green-50 text-green-700' : 'bg-yellow-50 text-yellow-700'}`}>
+                      <span
+                        className={`px-2 py-0.5 rounded-full ${order.nfse_status === 'issued' ? 'bg-green-50 text-green-700' : 'bg-yellow-50 text-yellow-700'}`}
+                      >
                         {order.nfse_status ?? 'pendente'}
                       </span>
                     </div>

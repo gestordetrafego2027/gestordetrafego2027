@@ -38,9 +38,7 @@ export function BoletoClient(props: Props) {
   return (
     <main className="min-h-screen bg-white pt-24 pb-16">
       <div className="max-w-2xl mx-auto px-4 md:px-8">
-        <h1 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">
-          Pague com Boleto
-        </h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">Pague com Boleto</h1>
         <p className="text-sm text-neutral-500 mb-8">
           Pedido <strong>{props.orderNumber}</strong> · {formatPrice(props.totalCents)}
         </p>
@@ -79,8 +77,9 @@ export function BoletoClient(props: Props) {
           )}
 
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-            Boletos podem levar até <strong>2 dias úteis</strong> para serem
-            compensados. Você receberá um email em <strong>{props.buyerEmail}</strong> assim que o pagamento for confirmado.
+            Boletos podem levar até <strong>2 dias úteis</strong> para serem compensados. Você
+            receberá um email em <strong>{props.buyerEmail}</strong> assim que o pagamento for
+            confirmado.
           </div>
         </div>
       </div>

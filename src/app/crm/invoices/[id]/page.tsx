@@ -2,8 +2,10 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import {
-  updateInvoiceStatusAction, deleteInvoiceAction,
-  addPaymentAction, deletePaymentAction,
+  updateInvoiceStatusAction,
+  deleteInvoiceAction,
+  addPaymentAction,
+  deletePaymentAction,
 } from '../actions'
 
 export const dynamic = 'force-dynamic'
@@ -12,21 +14,24 @@ const brl = (n: number | null | undefined) =>
   (n ?? 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
 const statusBadge: Record<string, string> = {
-  rascunho:   'bg-neutral-100 text-neutral-700',
-  emitida:    'bg-blue-100 text-blue-700',
-  paga:       'bg-emerald-100 text-emerald-700',
-  parcial:    'bg-amber-100 text-amber-800',
-  vencida:    'bg-rose-100 text-rose-700',
-  cancelada:  'bg-neutral-200 text-neutral-500',
+  rascunho: 'bg-neutral-100 text-neutral-700',
+  emitida: 'bg-blue-100 text-blue-700',
+  paga: 'bg-emerald-100 text-emerald-700',
+  parcial: 'bg-amber-100 text-amber-800',
+  vencida: 'bg-rose-100 text-rose-700',
+  cancelada: 'bg-neutral-200 text-neutral-500',
 }
 
-const STATUS_VALUES = [
-  'rascunho','emitida','paga','parcial','vencida','cancelada',
-] as const
+const STATUS_VALUES = ['rascunho', 'emitida', 'paga', 'parcial', 'vencida', 'cancelada'] as const
 
 const METHODS = [
-  'pix', 'boleto', 'cartao_credito', 'cartao_debito',
-  'transferencia', 'dinheiro', 'outro',
+  'pix',
+  'boleto',
+  'cartao_credito',
+  'cartao_debito',
+  'transferencia',
+  'dinheiro',
+  'outro',
 ] as const
 
 type SearchParams = Promise<{ error?: string }>
@@ -42,32 +47,32 @@ export default async function InvoiceDetailPage({
   const { error } = await searchParams
   const supabase = await createClient()
 
-  const [
-    { data: invoice, error: invErr },
-    { data: items },
-    { data: payments },
-  ] = await Promise.all([
-    supabase
-      .from('invoices')
-      .select(`
+  const [{ data: invoice, error: invErr }, { data: items }, { data: payments }] = await Promise.all(
+    [
+      supabase
+        .from('invoices')
+        .select(
+          `
         id, number, status, issue_date, due_date,
         subtotal_brl, discount_brl, tax_brl, total_brl, paid_brl,
         notes, quote_id,
         client_id, clients(id, display_name, email, phone, unit)
-      `)
-      .eq('id', id)
-      .single(),
-    supabase
-      .from('invoice_items')
-      .select('id, label, description, quantity, unit_price_brl, total_brl, position')
-      .eq('invoice_id', id)
-      .order('position', { ascending: true }),
-    supabase
-      .from('payments')
-      .select('id, amount_brl, method, paid_at, reference')
-      .eq('invoice_id', id)
-      .order('paid_at', { ascending: false }),
-  ])
+      `,
+        )
+        .eq('id', id)
+        .single(),
+      supabase
+        .from('invoice_items')
+        .select('id, label, description, quantity, unit_price_brl, total_brl, position')
+        .eq('invoice_id', id)
+        .order('position', { ascending: true }),
+      supabase
+        .from('payments')
+        .select('id, amount_brl, method, paid_at, reference')
+        .eq('invoice_id', id)
+        .order('paid_at', { ascending: false }),
+    ],
+  )
 
   if (invErr || !invoice) notFound()
 
@@ -89,9 +94,7 @@ export default async function InvoiceDetailPage({
       </div>
 
       {error && (
-        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">
-          {error}
-        </p>
+        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">{error}</p>
       )}
 
       <header className="rounded-lg border border-neutral-200 bg-white p-5">
@@ -138,7 +141,12 @@ export default async function InvoiceDetailPage({
               pago: <span className="text-emerald-700 tabular-nums">{brl(invoice.paid_brl)}</span>
             </div>
             <div className="text-xs text-neutral-500">
-              em aberto: <span className={`tabular-nums ${totalDue > 0 ? 'text-rose-700' : 'text-emerald-700'}`}>{brl(totalDue)}</span>
+              em aberto:{' '}
+              <span
+                className={`tabular-nums ${totalDue > 0 ? 'text-rose-700' : 'text-emerald-700'}`}
+              >
+                {brl(totalDue)}
+              </span>
             </div>
           </div>
         </div>
@@ -174,30 +182,44 @@ export default async function InvoiceDetailPage({
             ))}
             {(items ?? []).length === 0 && (
               <tr>
-                <td colSpan={4} className="py-4 text-center text-neutral-400 italic">Sem itens</td>
+                <td colSpan={4} className="py-4 text-center text-neutral-400 italic">
+                  Sem itens
+                </td>
               </tr>
             )}
           </tbody>
           <tfoot className="border-t-2 border-neutral-200">
             <tr>
-              <td colSpan={3} className="py-1 text-right text-xs text-neutral-500">Subtotal</td>
+              <td colSpan={3} className="py-1 text-right text-xs text-neutral-500">
+                Subtotal
+              </td>
               <td className="py-1 text-right tabular-nums">{brl(invoice.subtotal_brl)}</td>
             </tr>
             {Number(invoice.discount_brl ?? 0) > 0 && (
               <tr>
-                <td colSpan={3} className="py-1 text-right text-xs text-neutral-500">Desconto</td>
-                <td className="py-1 text-right tabular-nums text-rose-600">- {brl(invoice.discount_brl)}</td>
+                <td colSpan={3} className="py-1 text-right text-xs text-neutral-500">
+                  Desconto
+                </td>
+                <td className="py-1 text-right tabular-nums text-rose-600">
+                  - {brl(invoice.discount_brl)}
+                </td>
               </tr>
             )}
             {Number(invoice.tax_brl ?? 0) > 0 && (
               <tr>
-                <td colSpan={3} className="py-1 text-right text-xs text-neutral-500">Impostos</td>
+                <td colSpan={3} className="py-1 text-right text-xs text-neutral-500">
+                  Impostos
+                </td>
                 <td className="py-1 text-right tabular-nums">{brl(invoice.tax_brl)}</td>
               </tr>
             )}
             <tr>
-              <td colSpan={3} className="py-1 text-right text-sm font-semibold">Total</td>
-              <td className="py-1 text-right tabular-nums font-semibold">{brl(invoice.total_brl)}</td>
+              <td colSpan={3} className="py-1 text-right text-sm font-semibold">
+                Total
+              </td>
+              <td className="py-1 text-right tabular-nums font-semibold">
+                {brl(invoice.total_brl)}
+              </td>
             </tr>
           </tfoot>
         </table>
@@ -233,7 +255,9 @@ export default async function InvoiceDetailPage({
                 </td>
                 <td className="py-2 text-xs capitalize">{p.method}</td>
                 <td className="py-2 text-xs text-neutral-500 font-mono">{p.reference ?? '—'}</td>
-                <td className="py-2 text-right tabular-nums text-emerald-700 font-medium">{brl(p.amount_brl)}</td>
+                <td className="py-2 text-right tabular-nums text-emerald-700 font-medium">
+                  {brl(p.amount_brl)}
+                </td>
                 <td className="py-2 text-right">
                   <form action={deletePaymentAction} className="inline">
                     <input type="hidden" name="payment_id" value={p.id} />
@@ -281,7 +305,9 @@ export default async function InvoiceDetailPage({
                 className="w-full rounded border border-neutral-300 px-2 py-1 text-sm bg-white"
               >
                 {METHODS.map((m) => (
-                  <option key={m} value={m}>{m}</option>
+                  <option key={m} value={m}>
+                    {m}
+                  </option>
                 ))}
               </select>
             </label>
@@ -316,9 +342,7 @@ export default async function InvoiceDetailPage({
 
       {/* Ações */}
       <section className="rounded-lg border border-neutral-200 bg-white p-5 space-y-3">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
-          Ações
-        </h2>
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">Ações</h2>
         <div className="flex flex-wrap gap-3 items-end">
           <form action={updateInvoiceStatusAction} className="flex gap-1 items-end">
             <input type="hidden" name="invoice_id" value={invoice.id} />
@@ -330,7 +354,9 @@ export default async function InvoiceDetailPage({
                 className="rounded border border-neutral-300 px-2 py-1 text-sm bg-white"
               >
                 {STATUS_VALUES.map((s) => (
-                  <option key={s} value={s}>{s}</option>
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
                 ))}
               </select>
             </label>

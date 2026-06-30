@@ -4,22 +4,18 @@ import { createLead } from './actions'
 type SearchParams = Promise<{ error?: string }>
 
 const LEAD_TYPES: { value: string; label: string; segment: 'commercial' | 'talents' }[] = [
-  { value: 'cliente_agencia',   label: 'Cliente Agência',     segment: 'commercial' },
-  { value: 'cliente_produtora', label: 'Cliente Produtora',   segment: 'commercial' },
-  { value: 'cliente_studio',    label: 'Cliente Studio',      segment: 'commercial' },
-  { value: 'aluno_curso',       label: 'Aluno de curso',      segment: 'talents' },
-  { value: 'afiliada',          label: 'Afiliada',            segment: 'talents' },
+  { value: 'cliente_agencia', label: 'Cliente Agência', segment: 'commercial' },
+  { value: 'cliente_produtora', label: 'Cliente Produtora', segment: 'commercial' },
+  { value: 'cliente_studio', label: 'Cliente Studio', segment: 'commercial' },
+  { value: 'aluno_curso', label: 'Aluno de curso', segment: 'talents' },
+  { value: 'afiliada', label: 'Afiliada', segment: 'talents' },
   { value: 'agenciado_casting', label: 'Agenciado / Casting', segment: 'talents' },
-  { value: 'talento',           label: 'Talento',             segment: 'talents' },
-  { value: 'fornecedor',        label: 'Fornecedor',          segment: 'talents' },
-  { value: 'parceiro',          label: 'Parceiro',            segment: 'talents' },
+  { value: 'talento', label: 'Talento', segment: 'talents' },
+  { value: 'fornecedor', label: 'Fornecedor', segment: 'talents' },
+  { value: 'parceiro', label: 'Parceiro', segment: 'talents' },
 ]
 
-export default async function NewLeadPage({
-  searchParams,
-}: {
-  searchParams: SearchParams
-}) {
+export default async function NewLeadPage({ searchParams }: { searchParams: SearchParams }) {
   const { error } = await searchParams
 
   return (
@@ -31,7 +27,10 @@ export default async function NewLeadPage({
         </Link>
       </header>
 
-      <form action={createLead} className="space-y-4 bg-white border border-neutral-200 rounded-lg p-6">
+      <form
+        action={createLead}
+        className="space-y-4 bg-white border border-neutral-200 rounded-lg p-6"
+      >
         <label className="block space-y-1">
           <span className="text-sm font-medium">Nome *</span>
           <input

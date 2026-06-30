@@ -137,8 +137,7 @@ export const nap: Nap = {
 } as const
 
 /** Endereço formatado em 1 linha — usar em rodapés, schema, certificados. */
-export const napOneLine =
-  `${nap.street} – ${nap.neighborhood}, ${nap.city} – ${nap.region}, ${nap.postalCode}`
+export const napOneLine = `${nap.street} – ${nap.neighborhood}, ${nap.city} – ${nap.region}, ${nap.postalCode}`
 
 // ---------------------------------------------------------------------------
 // 0.10 — Redes (foco: Instagram primário, LinkedIn secundário)

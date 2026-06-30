@@ -14,7 +14,10 @@ export async function sendQuoteAction(formData: FormData): Promise<void> {
     .from('quotes')
     .update({ status: 'enviado', sent_at: new Date().toISOString() })
     .eq('id', quoteId)
-  if (error) { logger.error({ err: error }, '[sendQuoteAction]'); return }
+  if (error) {
+    logger.error({ err: error }, '[sendQuoteAction]')
+    return
+  }
 
   revalidatePath(`/crm/quotes/${quoteId}`)
 }
@@ -24,11 +27,11 @@ export async function acceptQuoteAction(formData: FormData): Promise<void> {
   if (!quoteId) return
 
   const supabase = await createClient()
-  const { error } = await supabase
-    .from('quotes')
-    .update({ status: 'aceito' })
-    .eq('id', quoteId)
-  if (error) { logger.error({ err: error }, '[acceptQuoteAction]'); return }
+  const { error } = await supabase.from('quotes').update({ status: 'aceito' }).eq('id', quoteId)
+  if (error) {
+    logger.error({ err: error }, '[acceptQuoteAction]')
+    return
+  }
 
   revalidatePath(`/crm/quotes/${quoteId}`)
   revalidatePath('/crm/leads')
@@ -40,9 +43,11 @@ export async function rejectQuoteAction(formData: FormData): Promise<void> {
   if (!quoteId) return
 
   const supabase = await createClient()
-  const { error } = await supabase
-    .from('quotes').update({ status: 'recusado' }).eq('id', quoteId)
-  if (error) { logger.error({ err: error }, '[rejectQuoteAction]'); return }
+  const { error } = await supabase.from('quotes').update({ status: 'recusado' }).eq('id', quoteId)
+  if (error) {
+    logger.error({ err: error }, '[rejectQuoteAction]')
+    return
+  }
   revalidatePath(`/crm/quotes/${quoteId}`)
 }
 
@@ -52,29 +57,41 @@ export async function generateInvoiceFromQuoteAction(formData: FormData): Promis
   if (!quoteId) return
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   const { data: quote, error: qerr } = await supabase
     .from('quotes')
-    .select(`
+    .select(
+      `
       id, title, total_brl, subtotal_brl, discount_brl, lead_id,
       quote_items (label, description, quantity, unit_price_brl, position)
-    `)
+    `,
+    )
     .eq('id', quoteId)
     .single()
-  if (qerr || !quote) { logger.error({ err: qerr }, '[generateInvoice] fetch quote'); return }
+  if (qerr || !quote) {
+    logger.error({ err: qerr }, '[generateInvoice] fetch quote')
+    return
+  }
 
   const { data: existingClient } = await supabase
-    .from('clients').select('id').eq('lead_id', quote.lead_id).maybeSingle()
+    .from('clients')
+    .select('id')
+    .eq('lead_id', quote.lead_id)
+    .maybeSingle()
 
   let clientId = existingClient?.id
   if (!clientId) {
-    const { data: newClient, error: prom } = await supabase
-      .rpc('promote_lead_to_client', {
-        p_lead_id: quote.lead_id,
-        p_amount_brl: Number(quote.total_brl ?? 0),
-      })
-    if (prom) { logger.error({ err: prom }, '[generateInvoice] promote lead'); return }
+    const { data: newClient, error: prom } = await supabase.rpc('promote_lead_to_client', {
+      p_lead_id: quote.lead_id,
+      p_amount_brl: Number(quote.total_brl ?? 0),
+    })
+    if (prom) {
+      logger.error({ err: prom }, '[generateInvoice] promote lead')
+      return
+    }
     clientId = newClient as string
   }
 
@@ -94,19 +111,27 @@ export async function generateInvoiceFromQuoteAction(formData: FormData): Promis
     })
     .select('id')
     .single()
-  if (ierr || !invoice) { logger.error({ err: ierr }, '[generateInvoice] insert invoice'); return }
+  if (ierr || !invoice) {
+    logger.error({ err: ierr }, '[generateInvoice] insert invoice')
+    return
+  }
 
-  const items = (quote.quote_items ?? []).map((qi: {
-    label: string; description: string | null; quantity: number;
-    unit_price_brl: number; position: number;
-  }) => ({
-    invoice_id: invoice.id,
-    label: qi.label,
-    description: qi.description,
-    quantity: qi.quantity,
-    unit_price_brl: qi.unit_price_brl,
-    position: qi.position,
-  }))
+  const items = (quote.quote_items ?? []).map(
+    (qi: {
+      label: string
+      description: string | null
+      quantity: number
+      unit_price_brl: number
+      position: number
+    }) => ({
+      invoice_id: invoice.id,
+      label: qi.label,
+      description: qi.description,
+      quantity: qi.quantity,
+      unit_price_brl: qi.unit_price_brl,
+      position: qi.position,
+    }),
+  )
   if (items.length) {
     await supabase.from('invoice_items').insert(items)
   }

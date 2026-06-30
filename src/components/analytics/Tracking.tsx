@@ -32,12 +32,7 @@ declare global {
 }
 
 export type TrackEvent =
-  | 'ViewContent'
-  | 'InitiateCheckout'
-  | 'AddToCart'
-  | 'Purchase'
-  | 'Lead'
-  | 'CompleteRegistration'
+  'ViewContent' | 'InitiateCheckout' | 'AddToCart' | 'Purchase' | 'Lead' | 'CompleteRegistration'
 
 export interface TrackPayload {
   content_name?: string

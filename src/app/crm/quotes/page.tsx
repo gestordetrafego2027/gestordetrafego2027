@@ -27,10 +27,12 @@ export default async function QuotesPage({
 
   let q = supabase
     .from('quotes')
-    .select(`
+    .select(
+      `
       id, title, status, total_brl, valid_until, sent_at, accepted_at, created_at,
       leads(id, name)
-    `)
+    `,
+    )
     .order('created_at', { ascending: false })
     .limit(100)
 
@@ -109,7 +111,9 @@ export default async function QuotesPage({
                       <Link href={`/crm/leads/${lead.id}`} className="hover:underline">
                         {lead.name}
                       </Link>
-                    ) : '—'}
+                    ) : (
+                      '—'
+                    )}
                   </td>
                   <td className="px-4 py-2">
                     <span className={`rounded px-2 py-0.5 text-xs ${statusBadge[q.status] ?? ''}`}>

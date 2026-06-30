@@ -6,16 +6,11 @@ import { logger } from '@/lib/logger'
  * Marca pedido como failed quando o pagamento falha.
  * Procura o pedido por payment_intent_id; se não achar, só registra o evento.
  */
-export async function handlePaymentFailed(
-  pi: Stripe.PaymentIntent,
-): Promise<void> {
+export async function handlePaymentFailed(pi: Stripe.PaymentIntent): Promise<void> {
   const log = logger.child({ pi_id: pi.id, handler: 'payment-failed' })
   const supabase = createServiceClient()
 
-  const reason =
-    pi.last_payment_error?.message ??
-    pi.last_payment_error?.code ??
-    'unknown'
+  const reason = pi.last_payment_error?.message ?? pi.last_payment_error?.code ?? 'unknown'
 
   const { data: order, error: findErr } = await supabase
     .from('store_orders')
@@ -29,7 +24,9 @@ export async function handlePaymentFailed(
   }
 
   if (!order) {
-    log.warn('nenhum pedido encontrado para este PI — possivelmente é tentativa anterior a criação do pedido')
+    log.warn(
+      'nenhum pedido encontrado para este PI — possivelmente é tentativa anterior a criação do pedido',
+    )
     return
   }
 

@@ -1,9 +1,9 @@
 import { z } from 'zod'
 
 export const CartItemSchema = z.object({
-  id: z.string().uuid(),                  // store_prices.id (UUID interno)
-  stripePriceId: z.string(),              // price_xxx do Stripe
-  stripeProductId: z.string(),            // prod_xxx do Stripe
+  id: z.string().uuid(), // store_prices.id (UUID interno)
+  stripePriceId: z.string(), // price_xxx do Stripe
+  stripeProductId: z.string(), // prod_xxx do Stripe
   slug: z.string(),
   name: z.string(),
   description: z.string().nullable().optional(),

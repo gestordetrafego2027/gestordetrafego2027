@@ -44,7 +44,8 @@ export async function createServiceAction(formData: FormData) {
   const questionsRaw = String(formData.get('questions_schema') ?? '')
   const questions_schema = parseJson(questionsRaw, {})
 
-  if (!name) redirect('/crm/catalog/services/new?error=' + encodeURIComponent('Nome é obrigatório.'))
+  if (!name)
+    redirect('/crm/catalog/services/new?error=' + encodeURIComponent('Nome é obrigatório.'))
 
   const payload: TablesInsert<'services'> = {
     name,
@@ -70,7 +71,9 @@ export async function updateServiceAction(formData: FormData) {
 
   const name = String(formData.get('name') ?? '').trim()
   if (!name) {
-    redirect(`/crm/catalog/services/${id}?edit=1&error=` + encodeURIComponent('Nome é obrigatório.'))
+    redirect(
+      `/crm/catalog/services/${id}?edit=1&error=` + encodeURIComponent('Nome é obrigatório.'),
+    )
   }
 
   const patch: TablesUpdate<'services'> = {
@@ -112,7 +115,10 @@ export async function upsertPackageAction(formData: FormData) {
   const serviceId = String(formData.get('service_id') ?? '')
   const name = String(formData.get('name') ?? '').trim()
   if (!serviceId || !name) {
-    redirect(`/crm/catalog/services/${serviceId}?error=` + encodeURIComponent('Service/Nome obrigatórios.'))
+    redirect(
+      `/crm/catalog/services/${serviceId}?error=` +
+        encodeURIComponent('Service/Nome obrigatórios.'),
+    )
   }
 
   const description = String(formData.get('description') ?? '').trim() || null
@@ -178,7 +184,10 @@ export async function upsertAddonAction(formData: FormData) {
   const serviceId = String(formData.get('service_id') ?? '')
   const name = String(formData.get('name') ?? '').trim()
   if (!serviceId || !name) {
-    redirect(`/crm/catalog/services/${serviceId}?error=` + encodeURIComponent('Service/Nome obrigatórios.'))
+    redirect(
+      `/crm/catalog/services/${serviceId}?error=` +
+        encodeURIComponent('Service/Nome obrigatórios.'),
+    )
   }
 
   const description = String(formData.get('description') ?? '').trim() || null
@@ -197,7 +206,8 @@ export async function upsertAddonAction(formData: FormData) {
       active,
     }
     const { error } = await supabase.from('service_addons').update(patch).eq('id', id)
-    if (error) redirect(`/crm/catalog/services/${serviceId}?error=` + encodeURIComponent(error.message))
+    if (error)
+      redirect(`/crm/catalog/services/${serviceId}?error=` + encodeURIComponent(error.message))
   } else {
     const payload: TablesInsert<'service_addons'> = {
       service_id: serviceId,
@@ -209,7 +219,8 @@ export async function upsertAddonAction(formData: FormData) {
       active,
     }
     const { error } = await supabase.from('service_addons').insert(payload)
-    if (error) redirect(`/crm/catalog/services/${serviceId}?error=` + encodeURIComponent(error.message))
+    if (error)
+      redirect(`/crm/catalog/services/${serviceId}?error=` + encodeURIComponent(error.message))
   }
 
   revalidatePath(`/crm/catalog/services/${serviceId}`)
@@ -223,7 +234,8 @@ export async function deleteAddonAction(formData: FormData) {
 
   const supabase = await createClient()
   const { error } = await supabase.from('service_addons').delete().eq('id', id)
-  if (error) redirect(`/crm/catalog/services/${serviceId}?error=` + encodeURIComponent(error.message))
+  if (error)
+    redirect(`/crm/catalog/services/${serviceId}?error=` + encodeURIComponent(error.message))
   revalidatePath(`/crm/catalog/services/${serviceId}`)
   redirect(`/crm/catalog/services/${serviceId}`)
 }

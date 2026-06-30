@@ -15,9 +15,11 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const body = await req.json().catch(() => null) as
-      | { lesson_id?: string; product_id?: string; position?: number }
-      | null
+    const body = (await req.json().catch(() => null)) as {
+      lesson_id?: string
+      product_id?: string
+      position?: number
+    } | null
     if (!body?.lesson_id || !body?.product_id) {
       return NextResponse.json({ ok: false, error: 'missing_params' }, { status: 400 })
     }

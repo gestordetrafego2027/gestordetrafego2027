@@ -18,10 +18,7 @@ export function normalizePhone(raw: string | null | undefined): string | null {
 }
 
 /** Gera URL wa.me a partir de telefone e mensagem opcional. */
-export function whatsappUrl(
-  phone: string | null | undefined,
-  message?: string,
-): string | null {
+export function whatsappUrl(phone: string | null | undefined, message?: string): string | null {
   const n = normalizePhone(phone)
   if (!n) return null
   const params = message ? `?text=${encodeURIComponent(message)}` : ''

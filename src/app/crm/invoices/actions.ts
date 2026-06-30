@@ -7,8 +7,7 @@ import type { TablesInsert, TablesUpdate } from '@/types/database'
 
 type InvoiceStatus = 'rascunho' | 'emitida' | 'paga' | 'parcial' | 'vencida' | 'cancelada'
 type PaymentMethod =
-  | 'pix' | 'boleto' | 'cartao_credito' | 'cartao_debito'
-  | 'transferencia' | 'dinheiro' | 'outro'
+  'pix' | 'boleto' | 'cartao_credito' | 'cartao_debito' | 'transferencia' | 'dinheiro' | 'outro'
 
 function num(v: FormDataEntryValue | null): number {
   if (v === null || v === '') return 0
@@ -32,9 +31,10 @@ export async function createManualInvoiceAction(formData: FormData) {
   const clientId = String(formData.get('client_id') ?? '')
   if (!clientId) bounce('/crm/invoices/new', 'Selecione um cliente.')
 
-  const issueDate = String(formData.get('issue_date') ?? '').trim() || new Date().toISOString().slice(0, 10)
+  const issueDate =
+    String(formData.get('issue_date') ?? '').trim() || new Date().toISOString().slice(0, 10)
   const dueDate = nullableStr(formData.get('due_date'))
-  const status = (String(formData.get('status') ?? 'rascunho') as InvoiceStatus)
+  const status = String(formData.get('status') ?? 'rascunho') as InvoiceStatus
   const number = nullableStr(formData.get('number'))
   const notes = nullableStr(formData.get('notes'))
   const discount = num(formData.get('discount_brl'))
@@ -75,7 +75,11 @@ export async function createManualInvoiceAction(formData: FormData) {
     total_brl: total,
   }
 
-  const { data: inv, error } = await supabase.from('invoices').insert(payload).select('id, client_id').single()
+  const { data: inv, error } = await supabase
+    .from('invoices')
+    .insert(payload)
+    .select('id, client_id')
+    .single()
   if (error || !inv) bounce('/crm/invoices/new', error?.message ?? 'erro')
 
   // Itens
@@ -104,7 +108,8 @@ export async function updateInvoiceFullAction(formData: FormData) {
   const id = String(formData.get('invoice_id') ?? '')
   if (!id) redirect('/crm/invoices')
 
-  const issueDate = String(formData.get('issue_date') ?? '').trim() || new Date().toISOString().slice(0, 10)
+  const issueDate =
+    String(formData.get('issue_date') ?? '').trim() || new Date().toISOString().slice(0, 10)
   const dueDate = nullableStr(formData.get('due_date'))
   const number = nullableStr(formData.get('number'))
   const notes = nullableStr(formData.get('notes'))
@@ -228,7 +233,7 @@ export async function addPaymentAction(formData: FormData) {
   const amount = num(formData.get('amount_brl'))
   if (amount <= 0) bounce(`/crm/invoices/${invoiceId}`, 'Valor inválido.')
 
-  const method = (String(formData.get('method') ?? 'pix') as PaymentMethod)
+  const method = String(formData.get('method') ?? 'pix') as PaymentMethod
   const paidAt = String(formData.get('paid_at') ?? '').trim() || new Date().toISOString()
   const reference = nullableStr(formData.get('reference'))
 

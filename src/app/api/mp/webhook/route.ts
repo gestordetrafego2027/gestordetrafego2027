@@ -69,25 +69,26 @@ export async function POST(req: Request) {
   const topic = url.searchParams.get('topic') || url.searchParams.get('type') || 'unknown'
   const resourceQuery = url.searchParams.get('id') || url.searchParams.get('data.id')
 
-  const mpPayloadSchema = z.object({
-    data: z.object({ id: z.union([z.string(), z.number()]) }).optional(),
-    resource: z.union([z.string(), z.number()]).optional(),
-    action: z.string().optional(),
-  }).passthrough()
+  const mpPayloadSchema = z
+    .object({
+      data: z.object({ id: z.union([z.string(), z.number()]) }).optional(),
+      resource: z.union([z.string(), z.number()]).optional(),
+      action: z.string().optional(),
+    })
+    .passthrough()
 
   type MpPayload = z.infer<typeof mpPayloadSchema>
   let payload: MpPayload = {}
   try {
-    const raw = await req.json() as unknown
+    const raw = (await req.json()) as unknown
     const parsed = mpPayloadSchema.safeParse(raw)
     payload = parsed.success ? parsed.data : {}
-  } catch { payload = {} }
+  } catch {
+    payload = {}
+  }
 
   const resourceId =
-    resourceQuery ||
-    payload.data?.id?.toString() ||
-    payload.resource?.toString() ||
-    'unknown'
+    resourceQuery || payload.data?.id?.toString() || payload.resource?.toString() || 'unknown'
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -121,10 +122,7 @@ export async function POST(req: Request) {
   try {
     if (topic === 'payment' && resourceId !== 'unknown') {
       const payment = await getPayment(resourceId)
-      const orderId =
-        payment?.external_reference ||
-        payment?.metadata?.order_id ||
-        null
+      const orderId = payment?.external_reference || payment?.metadata?.order_id || null
       const newStatus = mpStatusToOrderStatus(payment?.status || 'pending')
 
       if (orderId) {
@@ -153,7 +151,7 @@ export async function POST(req: Request) {
             gateway_response: payment,
             paid_at: payment?.date_approved || null,
           },
-          { onConflict: 'mp_payment_id' }
+          { onConflict: 'mp_payment_id' },
         )
       }
 
@@ -185,7 +183,9 @@ export async function POST(req: Request) {
   }
 }
 
-function mapMpPaymentMethod(id?: string | null): Database['public']['Enums']['academy_payment_method'] | null {
+function mapMpPaymentMethod(
+  id?: string | null,
+): Database['public']['Enums']['academy_payment_method'] | null {
   if (!id) return null
   if (id === 'pix') return 'pix'
   if (id === 'bolbradesco' || id === 'boleto') return 'boleto'

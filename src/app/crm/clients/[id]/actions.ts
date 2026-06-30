@@ -5,8 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import { logger } from '@/lib/logger'
 
 type PaymentMethod =
-  | 'pix' | 'boleto' | 'cartao_credito' | 'cartao_debito'
-  | 'transferencia' | 'dinheiro' | 'outro'
+  'pix' | 'boleto' | 'cartao_credito' | 'cartao_debito' | 'transferencia' | 'dinheiro' | 'outro'
 
 export async function recordPaymentAction(formData: FormData): Promise<void> {
   const clientId = String(formData.get('client_id') ?? '')
@@ -31,11 +30,17 @@ export async function recordPaymentAction(formData: FormData): Promise<void> {
     reference,
     paid_at: paidAt,
   })
-  if (payErr) { logger.error({ err: payErr }, '[recordPaymentAction]'); return }
+  if (payErr) {
+    logger.error({ err: payErr }, '[recordPaymentAction]')
+    return
+  }
 
   // 2) atualiza fatura: paid_brl acumulado + status (paga/parcial)
   const { data: inv } = await supabase
-    .from('invoices').select('total_brl, paid_brl, status').eq('id', invoiceId).single()
+    .from('invoices')
+    .select('total_brl, paid_brl, status')
+    .eq('id', invoiceId)
+    .single()
   if (inv) {
     const newPaid = Number(inv.paid_brl ?? 0) + amount
     const total = Number(inv.total_brl ?? 0)
@@ -48,7 +53,10 @@ export async function recordPaymentAction(formData: FormData): Promise<void> {
 
   // 3) atualiza LTV do cliente
   const { data: client } = await supabase
-    .from('clients').select('lifetime_value_brl').eq('id', clientId).single()
+    .from('clients')
+    .select('lifetime_value_brl')
+    .eq('id', clientId)
+    .single()
   if (client) {
     await supabase
       .from('clients')

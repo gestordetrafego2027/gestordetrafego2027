@@ -8,7 +8,10 @@ export async function GET(req: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY
   if (!url || !key) {
-    return new NextResponse('<h2>Configuração do servidor ausente.</h2>', { status: 500, headers: { 'content-type': 'text/html' } })
+    return new NextResponse('<h2>Configuração do servidor ausente.</h2>', {
+      status: 500,
+      headers: { 'content-type': 'text/html' },
+    })
   }
 
   const supabase = createClient(url, key, { auth: { persistSession: false } })
@@ -16,7 +19,10 @@ export async function GET(req: NextRequest) {
   const token = req.nextUrl.searchParams.get('token')
 
   if (!token) {
-    return new NextResponse('<h2>Link inválido.</h2>', { status: 400, headers: { 'content-type': 'text/html' } })
+    return new NextResponse('<h2>Link inválido.</h2>', {
+      status: 400,
+      headers: { 'content-type': 'text/html' },
+    })
   }
 
   const { error } = await supabase
@@ -25,7 +31,10 @@ export async function GET(req: NextRequest) {
     .eq('unsubscribe_token', token)
 
   if (error) {
-    return new NextResponse('<h2>Erro ao processar. Tente novamente.</h2>', { status: 500, headers: { 'content-type': 'text/html' } })
+    return new NextResponse('<h2>Erro ao processar. Tente novamente.</h2>', {
+      status: 500,
+      headers: { 'content-type': 'text/html' },
+    })
   }
 
   return NextResponse.redirect(new URL('/pt/newsletter/cancelado', req.url))

@@ -57,12 +57,11 @@ export function calcInstallmentOptions(baseCents: number): InstallmentOption[] {
  * Retorna a opção para um número específico de parcelas.
  * Lança se a quantidade não está disponível.
  */
-export function getInstallmentOption(
-  baseCents: number,
-  count: number,
-): InstallmentOption {
+export function getInstallmentOption(baseCents: number, count: number): InstallmentOption {
   if (!AVAILABLE_INSTALLMENTS.includes(count as InstallmentCount)) {
-    throw new Error(`Parcelamento em ${count}x não disponível. Use: ${AVAILABLE_INSTALLMENTS.join(', ')}`)
+    throw new Error(
+      `Parcelamento em ${count}x não disponível. Use: ${AVAILABLE_INSTALLMENTS.join(', ')}`,
+    )
   }
   return calcInstallmentOptions(baseCents).find((o) => o.count === count)!
 }

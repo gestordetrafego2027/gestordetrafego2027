@@ -40,8 +40,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
     ? Math.round(((originalCents! - finalCents) / originalCents!) * 100)
     : 0
 
-  const subtitleLine =
-    product?.subtitle ?? 'Manifesto sobre creator economy · Ebook · Vol. 02'
+  const subtitleLine = product?.subtitle ?? 'Manifesto sobre creator economy · Ebook · Vol. 02'
 
   return (
     <main
@@ -80,7 +79,8 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             letterSpacing: '-0.01em',
           }}
         >
-          O Preço da<br />
+          O Preço da
+          <br />
           <em style={{ fontStyle: 'italic', color: '#8b0000' }}>Relevância</em>
         </h1>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: '#ccc', margin: '0 0 8px' }}>
@@ -116,10 +116,12 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             }}
           >
             <span>
-              <span style={{ fontSize: 18, color: '#8b0000', verticalAlign: 'top', marginRight: 4 }}>
+              <span
+                style={{ fontSize: 18, color: '#8b0000', verticalAlign: 'top', marginRight: 4 }}
+              >
                 R$
               </span>
-              {((finalCents) / 100).toLocaleString('pt-BR', {
+              {(finalCents / 100).toLocaleString('pt-BR', {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               })}

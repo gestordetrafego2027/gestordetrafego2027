@@ -26,7 +26,9 @@ export async function updateProfile(
   const log = logger.child({ action: 'updateProfile' })
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return { error: 'Sessão expirada. Faça login novamente.' }
 
   const raw = {
@@ -34,7 +36,10 @@ export async function updateProfile(
     display_name: String(formData.get('display_name') ?? '').trim() || undefined,
     phone: String(formData.get('phone') ?? '').trim() || undefined,
     city: String(formData.get('city') ?? '').trim() || undefined,
-    state: String(formData.get('state') ?? '').trim().toUpperCase() || undefined,
+    state:
+      String(formData.get('state') ?? '')
+        .trim()
+        .toUpperCase() || undefined,
   }
 
   const parsed = ProfileSchema.safeParse(raw)
@@ -63,11 +68,11 @@ export async function updateProfile(
   return { success: true }
 }
 
-export async function uploadAvatar(
-  formData: FormData,
-): Promise<{ error?: string }> {
+export async function uploadAvatar(formData: FormData): Promise<{ error?: string }> {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return { error: 'Sessão expirada.' }
 
   const file = formData.get('avatar') as File | null
@@ -85,7 +90,9 @@ export async function uploadAvatar(
 
   if (uploadError) return { error: uploadError.message }
 
-  const { data: { publicUrl } } = supabase.storage.from('avatars').getPublicUrl(path)
+  const {
+    data: { publicUrl },
+  } = supabase.storage.from('avatars').getPublicUrl(path)
 
   const { error: updateError } = await supabase
     .from('profiles')

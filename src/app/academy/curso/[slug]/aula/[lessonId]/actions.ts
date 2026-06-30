@@ -15,7 +15,9 @@ export async function toggleLessonCompleteAction(formData: FormData): Promise<vo
   if (!lessonId || !productId) return
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return
 
   // Garante que user tem enrollment ativo
@@ -73,7 +75,9 @@ export async function pingLessonProgressAction(
   positionSeconds: number,
 ): Promise<void> {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return
 
   const { data: existing } = await supabase

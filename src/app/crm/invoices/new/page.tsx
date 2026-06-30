@@ -31,9 +31,7 @@ export default async function NewInvoicePage({ searchParams }: { searchParams: S
       </header>
 
       {error && (
-        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">
-          {error}
-        </p>
+        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">{error}</p>
       )}
 
       <form
@@ -48,7 +46,9 @@ export default async function NewInvoicePage({ searchParams }: { searchParams: S
             defaultValue={preselectedClient ?? ''}
             className="w-full rounded border border-neutral-300 px-3 py-2 text-sm bg-white"
           >
-            <option value="" disabled>Selecione…</option>
+            <option value="" disabled>
+              Selecione…
+            </option>
             {(clients ?? []).map((c) => (
               <option key={c.id} value={c.id}>
                 {c.display_name} ({c.unit})

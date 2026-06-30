@@ -8,37 +8,32 @@ const brl = (n: number | null | undefined) =>
   (n ?? 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
 const statusBadge: Record<string, string> = {
-  rascunho:  'bg-neutral-100 text-neutral-700',
-  ativa:     'bg-emerald-100 text-emerald-700',
-  pausada:   'bg-amber-100 text-amber-800',
+  rascunho: 'bg-neutral-100 text-neutral-700',
+  ativa: 'bg-emerald-100 text-emerald-700',
+  pausada: 'bg-amber-100 text-amber-800',
   encerrada: 'bg-neutral-200 text-neutral-500',
 }
 
-export default async function CampaignDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
+export default async function CampaignDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const supabase = await createClient()
 
-  const [
-    { data: campaign, error: campErr },
-    { data: perf },
-    { data: campaignLeads },
-  ] = await Promise.all([
-    supabase.from('campaigns').select('*').eq('id', id).single(),
-    supabase.from('v_campaign_performance').select('*').eq('id', id).maybeSingle(),
-    supabase
-      .from('campaign_leads')
-      .select(`
+  const [{ data: campaign, error: campErr }, { data: perf }, { data: campaignLeads }] =
+    await Promise.all([
+      supabase.from('campaigns').select('*').eq('id', id).single(),
+      supabase.from('v_campaign_performance').select('*').eq('id', id).maybeSingle(),
+      supabase
+        .from('campaign_leads')
+        .select(
+          `
         id, touch_type, attributed_value_brl, created_at,
         leads(id, name, segment, status)
-      `)
-      .eq('campaign_id', id)
-      .order('created_at', { ascending: false })
-      .limit(200),
-  ])
+      `,
+        )
+        .eq('campaign_id', id)
+        .order('created_at', { ascending: false })
+        .limit(200),
+    ])
 
   if (campErr || !campaign) notFound()
 
@@ -94,9 +89,7 @@ export default async function CampaignDetailPage({
       <section className="grid grid-cols-2 md:grid-cols-5 gap-3">
         <div className="rounded-lg border border-neutral-200 bg-white p-4">
           <div className="text-[10px] uppercase tracking-wide text-neutral-500">Leads</div>
-          <div className="text-2xl font-semibold mt-1 tabular-nums">
-            {perf?.leads_count ?? 0}
-          </div>
+          <div className="text-2xl font-semibold mt-1 tabular-nums">{perf?.leads_count ?? 0}</div>
         </div>
         <div className="rounded-lg border border-neutral-200 bg-white p-4">
           <div className="text-[10px] uppercase tracking-wide text-neutral-500">Gasto</div>
@@ -108,16 +101,24 @@ export default async function CampaignDetailPage({
           )}
         </div>
         <div className="rounded-lg border border-neutral-200 bg-white p-4">
-          <div className="text-[10px] uppercase tracking-wide text-neutral-500">Receita atribuída</div>
+          <div className="text-[10px] uppercase tracking-wide text-neutral-500">
+            Receita atribuída
+          </div>
           <div className="text-2xl font-semibold mt-1 tabular-nums">
             {brl(perf?.attributed_revenue_brl)}
           </div>
         </div>
         <div className="rounded-lg border border-neutral-200 bg-white p-4">
           <div className="text-[10px] uppercase tracking-wide text-neutral-500">ROAS</div>
-          <div className={`text-2xl font-semibold mt-1 tabular-nums ${
-            roas !== null && roas >= 1 ? 'text-emerald-700' : roas !== null && roas < 1 ? 'text-rose-700' : ''
-          }`}>
+          <div
+            className={`text-2xl font-semibold mt-1 tabular-nums ${
+              roas !== null && roas >= 1
+                ? 'text-emerald-700'
+                : roas !== null && roas < 1
+                  ? 'text-rose-700'
+                  : ''
+            }`}
+          >
             {roas !== null ? `${roas.toFixed(2)}×` : '—'}
           </div>
         </div>
@@ -126,9 +127,7 @@ export default async function CampaignDetailPage({
           <div className="text-xs mt-1 text-neutral-600 font-mono">
             {campaign.utm_source ?? '—'} / {campaign.utm_medium ?? '—'}
           </div>
-          <div className="text-xs text-neutral-500 font-mono">
-            {campaign.utm_campaign ?? '—'}
-          </div>
+          <div className="text-xs text-neutral-500 font-mono">{campaign.utm_campaign ?? '—'}</div>
         </div>
       </section>
 
@@ -159,7 +158,9 @@ export default async function CampaignDetailPage({
                       <Link href={`/crm/leads/${lead.id}`} className="hover:underline">
                         {lead.name}
                       </Link>
-                    ) : '—'}
+                    ) : (
+                      '—'
+                    )}
                   </td>
                   <td className="py-2 text-xs capitalize">{lead?.segment ?? '—'}</td>
                   <td className="py-2 text-xs capitalize">{lead?.status ?? '—'}</td>

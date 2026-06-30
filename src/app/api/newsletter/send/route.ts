@@ -12,7 +12,10 @@ const bodySchema = z.object({
 export async function POST(req: NextRequest) {
   try {
     const supabase = await createClient()
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser()
 
     if (authError || !user) {
       return NextResponse.json({ error: 'Não autorizado.' }, { status: 401 })
@@ -42,7 +45,10 @@ export async function POST(req: NextRequest) {
     const data = await res.json()
     if (!res.ok) {
       logger.error({ status: res.status, data }, 'newsletter/send: Edge Function retornou erro')
-      return NextResponse.json({ error: data.error ?? 'Erro ao enviar newsletter.' }, { status: res.status })
+      return NextResponse.json(
+        { error: data.error ?? 'Erro ao enviar newsletter.' },
+        { status: res.status },
+      )
     }
 
     return NextResponse.json(data)

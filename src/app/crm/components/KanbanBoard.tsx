@@ -95,17 +95,15 @@ export default function KanbanBoard<I, C extends string>({
             onDragLeave={() => setDragOverCol(null)}
             onDrop={(e) => handleDrop(e, col.id)}
             className={`rounded-lg border bg-white transition-colors ${
-              isOver
-                ? col.accentClass ?? 'border-blue-500 bg-blue-50'
-                : 'border-neutral-200'
+              isOver ? (col.accentClass ?? 'border-blue-500 bg-blue-50') : 'border-neutral-200'
             }`}
           >
             <div className="border-b border-neutral-100 px-3 py-2 sticky top-0 bg-inherit">
-              <div className="text-xs uppercase tracking-wide text-neutral-500">
-                {col.label}
-              </div>
+              <div className="text-xs uppercase tracking-wide text-neutral-500">{col.label}</div>
               <div className="text-sm font-medium">
-                {renderColumnFooter ? renderColumnFooter(colItems) : `${colItems.length} item${colItems.length === 1 ? '' : 's'}`}
+                {renderColumnFooter
+                  ? renderColumnFooter(colItems)
+                  : `${colItems.length} item${colItems.length === 1 ? '' : 's'}`}
               </div>
             </div>
             <ul className="divide-y divide-neutral-100 min-h-[80px]">

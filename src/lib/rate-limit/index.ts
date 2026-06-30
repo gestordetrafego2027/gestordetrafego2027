@@ -17,13 +17,16 @@ function getRedis(): Redis | null {
 
 type LimiterKey = 'checkout' | 'coupon' | 'api_general' | 'newsletter' | 'lead' | 'auth'
 
-const LIMITS: Record<LimiterKey, { requests: number; window: `${number} s` | `${number} m` | `${number} h` }> = {
-  checkout:    { requests: 5,  window: '1 m' },   // 5 checkouts/min por IP
-  coupon:      { requests: 10, window: '1 m' },   // 10 validações/min por IP
-  api_general: { requests: 60, window: '1 m' },   // 60 req/min por IP (geral)
-  newsletter:  { requests: 5,  window: '1 m' },   // 5 inscrições/min por IP
-  lead:        { requests: 5,  window: '1 m' },   // 5 leads/min por IP
-  auth:        { requests: 8,  window: '1 m' },   // 8 tentativas de login/min por IP
+const LIMITS: Record<
+  LimiterKey,
+  { requests: number; window: `${number} s` | `${number} m` | `${number} h` }
+> = {
+  checkout: { requests: 5, window: '1 m' }, // 5 checkouts/min por IP
+  coupon: { requests: 10, window: '1 m' }, // 10 validações/min por IP
+  api_general: { requests: 60, window: '1 m' }, // 60 req/min por IP (geral)
+  newsletter: { requests: 5, window: '1 m' }, // 5 inscrições/min por IP
+  lead: { requests: 5, window: '1 m' }, // 5 leads/min por IP
+  auth: { requests: 8, window: '1 m' }, // 8 tentativas de login/min por IP
 }
 
 function getLimiter(key: LimiterKey): Ratelimit | null {

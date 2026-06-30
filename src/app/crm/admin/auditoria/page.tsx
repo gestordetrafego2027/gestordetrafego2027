@@ -29,7 +29,9 @@ export default async function AuditoriaPage({
   const supabase = await createClient()
 
   // Bloqueia não-admin
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const role = (user?.app_metadata as { role?: string } | undefined)?.role
   if (role !== 'admin') {
     redirect('/crm?error=' + encodeURIComponent('Apenas admin acessa a auditoria.'))
@@ -45,7 +47,20 @@ export default async function AuditoriaPage({
   if (entity) q = q.eq('entity', entity)
   if (actor) q = q.eq('actor_email', actor)
 
-  const { data: rows, error } = await q as { data: { id: string; ts: string; actor_email: string | null; entity: string; entity_id: string | null; action: string; diff: unknown }[] | null; error: { message: string } | null }
+  const { data: rows, error } = (await q) as {
+    data:
+      | {
+          id: string
+          ts: string
+          actor_email: string | null
+          entity: string
+          entity_id: string | null
+          action: string
+          diff: unknown
+        }[]
+      | null
+    error: { message: string } | null
+  }
 
   const entities = ['leads', 'clients', 'opportunities', 'quotes', 'invoices', 'payments']
 
@@ -70,7 +85,9 @@ export default async function AuditoriaPage({
             key={e}
             href={`/crm/admin/auditoria?entity=${e}`}
             className={`rounded px-2 py-1 capitalize ${
-              entity === e ? 'bg-neutral-900 text-white' : 'border border-neutral-200 hover:bg-neutral-100'
+              entity === e
+                ? 'bg-neutral-900 text-white'
+                : 'border border-neutral-200 hover:bg-neutral-100'
             }`}
           >
             {e}
@@ -124,7 +141,9 @@ export default async function AuditoriaPage({
                   {r.diff ? (
                     <details>
                       <summary className="cursor-pointer text-neutral-500">
-                        {Object.keys(r.diff as Record<string, unknown>).slice(0, 4).join(', ')}
+                        {Object.keys(r.diff as Record<string, unknown>)
+                          .slice(0, 4)
+                          .join(', ')}
                         {Object.keys(r.diff as Record<string, unknown>).length > 4 ? '…' : ''}
                       </summary>
                       <pre className="mt-1 bg-neutral-50 p-2 rounded overflow-x-auto whitespace-pre-wrap">

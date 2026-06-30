@@ -16,12 +16,12 @@ type Opp = {
 }
 
 const COLUMNS: KanbanColumn<Stage>[] = [
-  { id: 'descoberta',    label: 'Descoberta' },
-  { id: 'qualificacao',  label: 'Qualificação' },
-  { id: 'proposta',      label: 'Proposta' },
-  { id: 'negociacao',    label: 'Negociação' },
-  { id: 'ganho',         label: 'Ganho',   accentClass: 'border-emerald-500 bg-emerald-50' },
-  { id: 'perdido',       label: 'Perdido', accentClass: 'border-rose-500 bg-rose-50' },
+  { id: 'descoberta', label: 'Descoberta' },
+  { id: 'qualificacao', label: 'Qualificação' },
+  { id: 'proposta', label: 'Proposta' },
+  { id: 'negociacao', label: 'Negociação' },
+  { id: 'ganho', label: 'Ganho', accentClass: 'border-emerald-500 bg-emerald-50' },
+  { id: 'perdido', label: 'Perdido', accentClass: 'border-rose-500 bg-rose-50' },
 ]
 
 const brl = (n: number | null | undefined) =>
@@ -47,7 +47,11 @@ export default function OpportunitiesKanban({ initial }: { initial: Opp[] }) {
       )}
       renderColumnFooter={(items) => {
         const total = items.reduce((a, o) => a + Number(o.amount_brl ?? 0), 0)
-        return <>{items.length} · {brl(total)}</>
+        return (
+          <>
+            {items.length} · {brl(total)}
+          </>
+        )
       }}
       gridClassName="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3"
     />

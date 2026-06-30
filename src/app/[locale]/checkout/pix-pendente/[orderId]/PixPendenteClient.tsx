@@ -92,9 +92,7 @@ export function PixPendenteClient(props: Props) {
   return (
     <main className="min-h-screen bg-white pt-24 pb-16">
       <div className="max-w-2xl mx-auto px-4 md:px-8">
-        <h1 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">
-          Pague com Pix
-        </h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">Pague com Pix</h1>
         <p className="text-sm text-neutral-500 mb-8">
           Pedido <strong>{props.orderNumber}</strong> · {formatPrice(props.totalCents)}
         </p>

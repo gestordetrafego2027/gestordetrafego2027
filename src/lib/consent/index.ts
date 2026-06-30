@@ -59,9 +59,7 @@ export function parseConsent(raw: string | undefined | null): ConsentState | nul
 /** Lê o consentimento do `document.cookie` (apenas no browser). */
 export function readConsentClient(): ConsentState | null {
   if (typeof document === 'undefined') return null
-  const match = document.cookie
-    .split('; ')
-    .find((c) => c.startsWith(`${CONSENT_COOKIE}=`))
+  const match = document.cookie.split('; ').find((c) => c.startsWith(`${CONSENT_COOKIE}=`))
   return parseConsent(match?.split('=').slice(1).join('='))
 }
 

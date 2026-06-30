@@ -7,11 +7,7 @@ export const metadata = { title: 'Login | House Mazzutti CRM' }
 
 type SearchParams = Promise<{ error?: string; next?: string }>
 
-export default async function LoginPage({
-  searchParams,
-}: {
-  searchParams: SearchParams
-}) {
+export default async function LoginPage({ searchParams }: { searchParams: SearchParams }) {
   const { error, next } = await searchParams
 
   return (
@@ -49,17 +45,14 @@ export default async function LoginPage({
               Esqueci minha senha
             </Link>
           </div>
-          <PasswordInput
-            name="password"
-            required
-            autoComplete="current-password"
-          />
+          <PasswordInput name="password" required autoComplete="current-password" />
         </div>
 
         {error && (
           <div className="text-sm text-red-700 border border-red-200 bg-red-50 rounded p-3 space-y-1">
             <div className="font-medium">
-              {error.toLowerCase().includes('invalid') || error.toLowerCase().includes('credentials')
+              {error.toLowerCase().includes('invalid') ||
+              error.toLowerCase().includes('credentials')
                 ? 'Email ou senha incorretos.'
                 : error}
             </div>

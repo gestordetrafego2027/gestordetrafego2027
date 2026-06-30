@@ -6,7 +6,7 @@ type Item = {
   href: string
   label: string
   desc: string
-  who?: string  // quem usa / quando
+  who?: string // quem usa / quando
 }
 
 type Section = {
@@ -301,18 +301,23 @@ export default function AjudaPage() {
           </li>
           <li>
             <span className="inline-block w-4 h-4 rounded-full bg-amber-500 align-middle"></span>{' '}
-            <strong>Âmbar em Leads:</strong> leads em status &quot;novo&quot; ou &quot;em contato&quot; — precisam ação.
+            <strong>Âmbar em Leads:</strong> leads em status &quot;novo&quot; ou &quot;em
+            contato&quot; — precisam ação.
           </li>
           <li>
             <span className="inline-block w-4 h-4 rounded-full bg-rose-500 align-middle"></span>{' '}
             <strong>Vermelho em Clientes:</strong> faturas vencidas — cobrar.
           </li>
           <li>
-            <span className="inline-block rounded bg-violet-100 text-violet-700 text-[10px] px-1.5 py-0.5 uppercase align-middle">admin</span>{' '}
+            <span className="inline-block rounded bg-violet-100 text-violet-700 text-[10px] px-1.5 py-0.5 uppercase align-middle">
+              admin
+            </span>{' '}
             <strong>Badge violeta:</strong> você é admin (vê tudo).
           </li>
           <li>
-            <span className="inline-block rounded bg-blue-100 text-blue-700 text-[10px] px-1.5 py-0.5 uppercase align-middle">studio</span>{' '}
+            <span className="inline-block rounded bg-blue-100 text-blue-700 text-[10px] px-1.5 py-0.5 uppercase align-middle">
+              studio
+            </span>{' '}
             <strong>Badge azul:</strong> você vê só dados da sua unidade.
           </li>
         </ul>
@@ -327,8 +332,8 @@ export default function AjudaPage() {
             <dt className="font-medium">Lead vs. Cliente</dt>
             <dd className="text-neutral-600">
               Lead = contato em qualquer estágio do funil. Cliente = lead que já comprou. Promoção
-              acontece automaticamente ao gerar a primeira fatura, ou manualmente via &quot;→ Promover
-              a Cliente&quot;.
+              acontece automaticamente ao gerar a primeira fatura, ou manualmente via &quot;→
+              Promover a Cliente&quot;.
             </dd>
           </div>
           <div>
@@ -341,9 +346,9 @@ export default function AjudaPage() {
           <div>
             <dt className="font-medium">Automação</dt>
             <dd className="text-neutral-600">
-              Regras que disparam sozinhas. Exemplo: ao criar lead, gera atividade
-              &quot;Lead recebido&quot;; ao aceitar proposta, marca oportunidade como ganho. Configurável
-              em /crm/automations.
+              Regras que disparam sozinhas. Exemplo: ao criar lead, gera atividade &quot;Lead
+              recebido&quot;; ao aceitar proposta, marca oportunidade como ganho. Configurável em
+              /crm/automations.
             </dd>
           </div>
           <div>

@@ -20,8 +20,16 @@ import { useConsent } from './ConsentProvider'
 
 export default function CookieBanner() {
   const t = useTranslations('cookies')
-  const { showBanner, prefsOpen, openPreferences, closePreferences, acceptAll, rejectAll, save, consent } =
-    useConsent()
+  const {
+    showBanner,
+    prefsOpen,
+    openPreferences,
+    closePreferences,
+    acceptAll,
+    rejectAll,
+    save,
+    consent,
+  } = useConsent()
 
   const [analytics, setAnalytics] = useState(false)
   const [marketing, setMarketing] = useState(false)
@@ -47,7 +55,9 @@ export default function CookieBanner() {
                 <h2 className="font-label uppercase tracking-[0.2em] text-[11px] text-black/60">
                   {t('prefs.eyebrow')}
                 </h2>
-                <p className="font-body text-sm text-black/70 leading-relaxed">{t('prefs.intro')}</p>
+                <p className="font-body text-sm text-black/70 leading-relaxed">
+                  {t('prefs.intro')}
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -113,7 +123,10 @@ export default function CookieBanner() {
           <div className="max-w-6xl mx-auto px-5 py-5 md:py-6 flex flex-col lg:flex-row lg:items-center gap-5">
             <p className="font-body text-sm text-white/80 leading-relaxed flex-1">
               {t('bar.text')}{' '}
-              <Link href="/politicas/cookies" className="underline hover:text-white whitespace-nowrap">
+              <Link
+                href="/politicas/cookies"
+                className="underline hover:text-white whitespace-nowrap"
+              >
                 {t('policyLink')}
               </Link>
               .

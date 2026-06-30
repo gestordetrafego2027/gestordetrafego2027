@@ -8,11 +8,7 @@ export const dynamic = 'force-dynamic'
 const brl = (n: number | null | undefined) =>
   (n ?? 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-export default async function NewQuotePage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
+export default async function NewQuotePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const supabase = await createClient()
 
@@ -134,12 +130,7 @@ export default async function NewQuotePage({
                         key={p.id}
                         className="flex items-start gap-2 rounded border border-neutral-200 p-2 hover:border-neutral-400 cursor-pointer"
                       >
-                        <input
-                          type="checkbox"
-                          name="package_id"
-                          value={p.id}
-                          className="mt-1"
-                        />
+                        <input type="checkbox" name="package_id" value={p.id} className="mt-1" />
                         <div className="flex-1 text-sm">
                           <div className="font-medium">{p.name}</div>
                           <div className="text-xs text-neutral-500">

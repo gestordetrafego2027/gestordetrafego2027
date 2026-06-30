@@ -15,11 +15,15 @@ export async function createQuoteAction(formData: FormData) {
 
   if (!leadId) redirect('/crm/leads?error=' + encodeURIComponent('lead_id_missing'))
   if (!packageIds.length && !addonIds.length) {
-    redirect(`/crm/leads/${leadId}/quote/new?error=` + encodeURIComponent('Selecione ao menos um item.'))
+    redirect(
+      `/crm/leads/${leadId}/quote/new?error=` + encodeURIComponent('Selecione ao menos um item.'),
+    )
   }
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   const [{ data: packages }, { data: addons }] = await Promise.all([
     packageIds.length
@@ -44,29 +48,41 @@ export async function createQuoteAction(formData: FormData) {
   }
 
   const items: Item[] = []
-  ;(packages ?? []).forEach((p: { id: string; name: string; price_brl: number | null; services: { name: string } | { name: string }[] | null }, i: number) => {
-    const svc = Array.isArray(p.services) ? p.services[0] : p.services
-    items.push({
-      kind: 'package',
-      reference_id: p.id,
-      label: `${svc?.name ?? 'Serviço'} — ${p.name}`,
-      description: null,
-      unit_price_brl: Number(p.price_brl ?? 0),
-      quantity: 1,
-      position: i,
-    })
-  })
-  ;(addons ?? []).forEach((a: { id: string; name: string; price_brl: number | null }, i: number) => {
-    items.push({
-      kind: 'addon',
-      reference_id: a.id,
-      label: a.name,
-      description: null,
-      unit_price_brl: Number(a.price_brl ?? 0),
-      quantity: 1,
-      position: items.length + i,
-    })
-  })
+  ;(packages ?? []).forEach(
+    (
+      p: {
+        id: string
+        name: string
+        price_brl: number | null
+        services: { name: string } | { name: string }[] | null
+      },
+      i: number,
+    ) => {
+      const svc = Array.isArray(p.services) ? p.services[0] : p.services
+      items.push({
+        kind: 'package',
+        reference_id: p.id,
+        label: `${svc?.name ?? 'Serviço'} — ${p.name}`,
+        description: null,
+        unit_price_brl: Number(p.price_brl ?? 0),
+        quantity: 1,
+        position: i,
+      })
+    },
+  )
+  ;(addons ?? []).forEach(
+    (a: { id: string; name: string; price_brl: number | null }, i: number) => {
+      items.push({
+        kind: 'addon',
+        reference_id: a.id,
+        label: a.name,
+        description: null,
+        unit_price_brl: Number(a.price_brl ?? 0),
+        quantity: 1,
+        position: items.length + i,
+      })
+    },
+  )
 
   const subtotal = items.reduce((acc, it) => acc + it.quantity * it.unit_price_brl, 0)
   const total = Math.max(0, subtotal - discount)
@@ -88,7 +104,9 @@ export async function createQuoteAction(formData: FormData) {
     .single()
 
   if (quoteErr || !quote) {
-    redirect(`/crm/leads/${leadId}/quote/new?error=` + encodeURIComponent(quoteErr?.message ?? 'erro'))
+    redirect(
+      `/crm/leads/${leadId}/quote/new?error=` + encodeURIComponent(quoteErr?.message ?? 'erro'),
+    )
   }
 
   const { error: itemsErr } = await supabase

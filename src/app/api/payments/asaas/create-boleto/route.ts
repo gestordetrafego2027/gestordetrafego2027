@@ -11,7 +11,10 @@ export const dynamic = 'force-dynamic'
 
 const Body = z.object({
   orderId: z.string().uuid(),
-  dueDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+  dueDate: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .optional(),
 })
 
 export async function POST(req: NextRequest) {
@@ -31,7 +34,9 @@ export async function POST(req: NextRequest) {
   const supabase = createServiceClient()
   const { data: order, error: orderErr } = await supabase
     .from('store_orders')
-    .select('id, order_number, total_cents, buyer_email, buyer_name, buyer_cpf, user_id, status, metadata')
+    .select(
+      'id, order_number, total_cents, buyer_email, buyer_name, buyer_cpf, user_id, status, metadata',
+    )
     .eq('id', body.orderId)
     .maybeSingle()
 

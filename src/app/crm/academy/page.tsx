@@ -10,7 +10,9 @@ const brl = (cents: number | null | undefined) =>
 
 export default async function AcademyAdminHome() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const role = (user?.app_metadata as { role?: string } | undefined)?.role
   if (role !== 'admin') redirect('/crm?error=acesso_negado')
 
@@ -27,15 +29,38 @@ export default async function AcademyAdminHome() {
     { data: recentOrders },
   ] = await Promise.all([
     supabase.from('academy_products').select('*', { count: 'exact', head: true }),
-    supabase.from('academy_products').select('*', { count: 'exact', head: true }).eq('status', 'published'),
-    supabase.from('academy_orders').select('*', { count: 'exact', head: true }).gte('created_at', since30),
-    supabase.from('academy_orders').select('*', { count: 'exact', head: true }).eq('status', 'paid').gte('paid_at', since30),
-    supabase.from('academy_enrollments').select('*', { count: 'exact', head: true }).eq('status', 'active'),
-    supabase.from('academy_orders').select('total_cents').eq('status', 'paid').gte('paid_at', since30),
-    supabase.from('academy_products').select('id, slug, title, type, sales_count, price_cents').order('sales_count', { ascending: false }).limit(5),
-    supabase.from('academy_orders')
+    supabase
+      .from('academy_products')
+      .select('*', { count: 'exact', head: true })
+      .eq('status', 'published'),
+    supabase
+      .from('academy_orders')
+      .select('*', { count: 'exact', head: true })
+      .gte('created_at', since30),
+    supabase
+      .from('academy_orders')
+      .select('*', { count: 'exact', head: true })
+      .eq('status', 'paid')
+      .gte('paid_at', since30),
+    supabase
+      .from('academy_enrollments')
+      .select('*', { count: 'exact', head: true })
+      .eq('status', 'active'),
+    supabase
+      .from('academy_orders')
+      .select('total_cents')
+      .eq('status', 'paid')
+      .gte('paid_at', since30),
+    supabase
+      .from('academy_products')
+      .select('id, slug, title, type, sales_count, price_cents')
+      .order('sales_count', { ascending: false })
+      .limit(5),
+    supabase
+      .from('academy_orders')
       .select('id, number, total_cents, status, buyer_full_name, buyer_email, created_at, paid_at')
-      .order('created_at', { ascending: false }).limit(10),
+      .order('created_at', { ascending: false })
+      .limit(10),
   ])
 
   const revenue30 = (revenueData ?? []).reduce((acc, o) => acc + (o.total_cents ?? 0), 0)
@@ -45,7 +70,9 @@ export default async function AcademyAdminHome() {
       <header className="flex items-end justify-between">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Academy</h1>
-          <p className="text-sm text-neutral-500">Gestão de produtos, pedidos, alunos e financeiro.</p>
+          <p className="text-sm text-neutral-500">
+            Gestão de produtos, pedidos, alunos e financeiro.
+          </p>
         </div>
         <Link
           href="/crm/academy/products/new"
@@ -56,21 +83,38 @@ export default async function AcademyAdminHome() {
       </header>
 
       <nav className="flex flex-wrap gap-1 text-xs">
-        <Link href="/crm/academy" className="rounded bg-neutral-900 text-white px-3 py-1">Visão geral</Link>
-        <Link href="/crm/academy/products" className="rounded border border-neutral-200 px-3 py-1 hover:bg-neutral-100">Produtos</Link>
+        <Link href="/crm/academy" className="rounded bg-neutral-900 text-white px-3 py-1">
+          Visão geral
+        </Link>
+        <Link
+          href="/crm/academy/products"
+          className="rounded border border-neutral-200 px-3 py-1 hover:bg-neutral-100"
+        >
+          Produtos
+        </Link>
       </nav>
 
       <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-        <Kpi label="Produtos" value={productsTotal ?? 0} sub={`${productsPublished ?? 0} publicados`} />
+        <Kpi
+          label="Produtos"
+          value={productsTotal ?? 0}
+          sub={`${productsPublished ?? 0} publicados`}
+        />
         <Kpi label="Pedidos (30d)" value={ordersTotal ?? 0} sub={`${ordersPaid ?? 0} pagos`} />
         <Kpi label="Receita (30d)" value={brl(revenue30)} />
         <Kpi label="Matrículas ativas" value={enrollmentsActive ?? 0} />
-        <Kpi label="Ticket médio" value={
-          ordersPaid ? brl(Math.round(revenue30 / Math.max(1, ordersPaid))) : 'R$ 0,00'
-        } />
-        <Kpi label="Conversão" value={
-          ordersTotal ? `${Math.round((ordersPaid ?? 0) / Math.max(1, ordersTotal) * 100)}%` : '—'
-        } />
+        <Kpi
+          label="Ticket médio"
+          value={ordersPaid ? brl(Math.round(revenue30 / Math.max(1, ordersPaid))) : 'R$ 0,00'}
+        />
+        <Kpi
+          label="Conversão"
+          value={
+            ordersTotal
+              ? `${Math.round(((ordersPaid ?? 0) / Math.max(1, ordersTotal)) * 100)}%`
+              : '—'
+          }
+        />
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -91,7 +135,10 @@ export default async function AcademyAdminHome() {
               {(topProducts ?? []).map((p) => (
                 <tr key={p.id} className="border-t border-neutral-100">
                   <td className="py-1">
-                    <Link href={`/crm/academy/products/${p.id}`} className="font-medium hover:underline">
+                    <Link
+                      href={`/crm/academy/products/${p.id}`}
+                      className="font-medium hover:underline"
+                    >
                       {p.title}
                     </Link>
                   </td>
@@ -101,7 +148,11 @@ export default async function AcademyAdminHome() {
                 </tr>
               ))}
               {!topProducts?.length && (
-                <tr><td colSpan={4} className="py-4 text-center text-neutral-400 italic">Sem produtos.</td></tr>
+                <tr>
+                  <td colSpan={4} className="py-4 text-center text-neutral-400 italic">
+                    Sem produtos.
+                  </td>
+                </tr>
               )}
             </tbody>
           </table>
@@ -116,14 +167,22 @@ export default async function AcademyAdminHome() {
               <li key={o.id} className="flex justify-between border-b border-neutral-100 py-1">
                 <span>
                   <span className="font-mono">{o.number}</span>
-                  <span className="ml-2 text-neutral-600">{o.buyer_full_name ?? o.buyer_email ?? '—'}</span>
+                  <span className="ml-2 text-neutral-600">
+                    {o.buyer_full_name ?? o.buyer_email ?? '—'}
+                  </span>
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className={`rounded px-2 py-0.5 text-[10px] ${
-                    o.status === 'paid' ? 'bg-emerald-100 text-emerald-700' :
-                    o.status === 'pending' ? 'bg-amber-100 text-amber-700' :
-                    'bg-neutral-100 text-neutral-600'
-                  }`}>{o.status}</span>
+                  <span
+                    className={`rounded px-2 py-0.5 text-[10px] ${
+                      o.status === 'paid'
+                        ? 'bg-emerald-100 text-emerald-700'
+                        : o.status === 'pending'
+                          ? 'bg-amber-100 text-amber-700'
+                          : 'bg-neutral-100 text-neutral-600'
+                    }`}
+                  >
+                    {o.status}
+                  </span>
                   <span className="tabular-nums">{brl(o.total_cents)}</span>
                 </span>
               </li>

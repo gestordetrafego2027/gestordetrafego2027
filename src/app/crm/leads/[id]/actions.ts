@@ -10,7 +10,9 @@ export async function addNoteAction(formData: FormData): Promise<void> {
   if (!leadId || !body) return
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const { error } = await supabase
     .from('notes')
     .insert({ lead_id: leadId, body, author_id: user?.id ?? null })
@@ -53,9 +55,7 @@ export async function attachTagAction(formData: FormData): Promise<void> {
   if (!leadId || !tagId) return
 
   const supabase = await createClient()
-  const { error } = await supabase
-    .from('lead_tags')
-    .insert({ lead_id: leadId, tag_id: tagId })
+  const { error } = await supabase.from('lead_tags').insert({ lead_id: leadId, tag_id: tagId })
   if (error && !error.message.includes('duplicate')) {
     logger.error({ err: error }, '[attachTagAction]')
     return
@@ -91,7 +91,9 @@ export async function logActivityAction(formData: FormData): Promise<void> {
   if (!leadId || !title) return
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const { error } = await supabase.from('activities').insert({
     lead_id: leadId,
     type: type as never,

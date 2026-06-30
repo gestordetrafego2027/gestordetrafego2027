@@ -41,10 +41,7 @@ export async function upsertCategoryAction(formData: FormData) {
       slug: slugify(name),
       position,
     }
-    const { error } = await supabase
-      .from('team_resource_categories')
-      .update(patch)
-      .eq('id', id)
+    const { error } = await supabase.from('team_resource_categories').update(patch).eq('id', id)
     if (error) bounce(error.message)
   } else {
     const payload: TablesInsert<'team_resource_categories'> = {

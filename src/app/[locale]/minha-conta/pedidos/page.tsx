@@ -31,18 +31,22 @@ const STATUS_COLOR: Record<string, string> = {
 
 export default async function PedidosPage() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   const { data: orders } = await supabase
     .from('store_orders')
-    .select(`
+    .select(
+      `
       id, order_number, status, total_cents, currency,
       created_at, buyer_email,
       store_order_items (
         id, quantity, unit_amount,
         product_snapshot
       )
-    `)
+    `,
+    )
     .eq('user_id', user!.id)
     .order('created_at', { ascending: false })
 
@@ -53,7 +57,10 @@ export default async function PedidosPage() {
       {!orders?.length ? (
         <div className="bg-white rounded-2xl border border-neutral-100 p-12 text-center">
           <p className="text-neutral-400 text-sm">Nenhum pedido encontrado.</p>
-          <Link href="/loja" className="mt-4 inline-block text-sm font-medium text-neutral-900 underline underline-offset-4">
+          <Link
+            href="/loja"
+            className="mt-4 inline-block text-sm font-medium text-neutral-900 underline underline-offset-4"
+          >
             Ir para a loja
           </Link>
         </div>
@@ -62,14 +69,19 @@ export default async function PedidosPage() {
           const items = (order.store_order_items as any[]) ?? []
           const color = STATUS_COLOR[order.status] ?? STATUS_COLOR.cancelled
           return (
-            <div key={order.id} className="bg-white rounded-2xl border border-neutral-100 overflow-hidden">
+            <div
+              key={order.id}
+              className="bg-white rounded-2xl border border-neutral-100 overflow-hidden"
+            >
               {/* Header do pedido */}
               <div className="flex flex-wrap items-center justify-between gap-3 px-6 py-4 border-b border-neutral-100 bg-neutral-50">
                 <div>
                   <p className="text-sm font-semibold text-neutral-900">{order.order_number}</p>
                   <p className="text-xs text-neutral-400 mt-0.5">
                     {new Date(order.created_at).toLocaleDateString('pt-BR', {
-                      day: '2-digit', month: 'long', year: 'numeric',
+                      day: '2-digit',
+                      month: 'long',
+                      year: 'numeric',
                     })}
                   </p>
                 </div>

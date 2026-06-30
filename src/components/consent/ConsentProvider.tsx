@@ -14,14 +14,7 @@
  * reabrir o painel sem precisar de acesso ao contexto.
  */
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-  type ReactNode,
-} from 'react'
+import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
 import {
   DENIED,
   GRANTED_ALL,

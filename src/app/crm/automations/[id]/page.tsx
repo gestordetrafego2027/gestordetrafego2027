@@ -121,9 +121,9 @@ export default async function AutomationEditPage({
           <span className="text-neutral-500 mr-2 self-center">Status:</span>
           {[
             { v: undefined, label: 'todos' },
-            { v: 'success',   label: 'sucesso' },
-            { v: 'error',     label: 'erro' },
-            { v: 'skipped',   label: 'skip' },
+            { v: 'success', label: 'sucesso' },
+            { v: 'error', label: 'erro' },
+            { v: 'skipped', label: 'skip' },
           ].map((opt) => {
             const active = (opt.v === undefined && !statusFilter) || statusFilter === opt.v
             const qs = new URLSearchParams()
@@ -142,8 +142,8 @@ export default async function AutomationEditPage({
 
           <span className="text-neutral-500 ml-4 mr-2 self-center">Período:</span>
           {[
-            { v: '7',   label: '7d' },
-            { v: '30',  label: '30d' },
+            { v: '7', label: '7d' },
+            { v: '30', label: '30d' },
             { v: 'all', label: 'todos' },
           ].map((opt) => {
             const active = (opt.v === '30' && !period) || period === opt.v
@@ -171,8 +171,8 @@ export default async function AutomationEditPage({
                     r.status === 'success'
                       ? 'text-emerald-700'
                       : r.status === 'error'
-                      ? 'text-rose-700'
-                      : 'text-neutral-500'
+                        ? 'text-rose-700'
+                        : 'text-neutral-500'
                   }
                 >
                   ● {r.status}
@@ -201,7 +201,10 @@ export default async function AutomationEditPage({
             </li>
           ))}
           {!runs?.length && (
-            <li className="text-neutral-400 italic">Nenhuma execução {statusFilter ? `com status "${statusFilter}"` : ''} {periodLabel === 'todos' ? '' : `nos últimos ${periodLabel}`}.</li>
+            <li className="text-neutral-400 italic">
+              Nenhuma execução {statusFilter ? `com status "${statusFilter}"` : ''}{' '}
+              {periodLabel === 'todos' ? '' : `nos últimos ${periodLabel}`}.
+            </li>
           )}
         </ul>
       </section>

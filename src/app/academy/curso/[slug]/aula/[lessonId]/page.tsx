@@ -23,11 +23,15 @@ export default async function LessonPlayerPage({
   if (prodErr || !product) notFound()
 
   // 2) Auth + enrollment (a lesson pode ser preview/grátis)
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   const { data: lesson } = await supabase
     .from('academy_lessons')
-    .select('id, module_id, product_id, order_index, title, subtitle, type, video_url, video_provider, duration_seconds, body_md, is_preview, is_free_for_all, thumbnail_url')
+    .select(
+      'id, module_id, product_id, order_index, title, subtitle, type, video_url, video_provider, duration_seconds, body_md, is_preview, is_free_for_all, thumbnail_url',
+    )
     .eq('id', lessonId)
     .eq('product_id', product.id)
     .single()
@@ -49,7 +53,9 @@ export default async function LessonPlayerPage({
     const now = new Date()
     const expired = enrollment?.expires_at && new Date(enrollment.expires_at) < now
     if (!enrollment || expired) {
-      redirect(`/academy/curso/${slug}?error=${encodeURIComponent('Você não tem acesso a esta aula. Faça a matrícula para liberar.')}`)
+      redirect(
+        `/academy/curso/${slug}?error=${encodeURIComponent('Você não tem acesso a esta aula. Faça a matrícula para liberar.')}`,
+      )
     }
   }
 
@@ -77,11 +83,23 @@ export default async function LessonPlayerPage({
             .select('lesson_id, completed_at, last_position_seconds')
             .eq('user_id', user.id)
             .eq('product_id', product.id)
-        : Promise.resolve({ data: [] as Array<{ lesson_id: string; completed_at: string | null; last_position_seconds: number | null }> }),
+        : Promise.resolve({
+            data: [] as Array<{
+              lesson_id: string
+              completed_at: string | null
+              last_position_seconds: number | null
+            }>,
+          }),
     ])
 
   const progressMap = new Map<string, { completed: boolean; pos: number }>()
-  ;((progress ?? []) as Array<{ lesson_id: string; completed_at: string | null; last_position_seconds: number | null }>).forEach((p) => {
+  ;(
+    (progress ?? []) as Array<{
+      lesson_id: string
+      completed_at: string | null
+      last_position_seconds: number | null
+    }>
+  ).forEach((p) => {
     progressMap.set(p.lesson_id, { completed: !!p.completed_at, pos: p.last_position_seconds ?? 0 })
   })
 
@@ -92,9 +110,8 @@ export default async function LessonPlayerPage({
 
   const currentProgress = progressMap.get(lesson.id) ?? { completed: false, pos: 0 }
   const totalCompleted = Array.from(progressMap.values()).filter((p) => p.completed).length
-  const completionPct = sortedLessons.length > 0
-    ? Math.round((totalCompleted / sortedLessons.length) * 100)
-    : 0
+  const completionPct =
+    sortedLessons.length > 0 ? Math.round((totalCompleted / sortedLessons.length) * 100) : 0
 
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
@@ -108,7 +125,10 @@ export default async function LessonPlayerPage({
               {totalCompleted}/{sortedLessons.length} aulas · {completionPct}%
             </span>
             <div className="w-32 h-1.5 bg-neutral-200 rounded overflow-hidden">
-              <div className="h-full bg-emerald-500 transition-all" style={{ width: `${completionPct}%` }} />
+              <div
+                className="h-full bg-emerald-500 transition-all"
+                style={{ width: `${completionPct}%` }}
+              />
             </div>
           </div>
         </div>
@@ -127,9 +147,7 @@ export default async function LessonPlayerPage({
 
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">{lesson.title}</h1>
-            {lesson.subtitle && (
-              <p className="text-neutral-500 mt-1 text-sm">{lesson.subtitle}</p>
-            )}
+            {lesson.subtitle && <p className="text-neutral-500 mt-1 text-sm">{lesson.subtitle}</p>}
             <div className="mt-2 flex flex-wrap gap-2 text-xs">
               <span className="rounded bg-neutral-100 px-2 py-0.5">{lesson.type ?? 'video'}</span>
               {lesson.duration_seconds && (
@@ -208,7 +226,9 @@ export default async function LessonPlayerPage({
               >
                 ← {prevLesson.title}
               </Link>
-            ) : <span />}
+            ) : (
+              <span />
+            )}
             {nextLesson ? (
               <Link
                 href={`/academy/curso/${slug}/aula/${nextLesson.id}`}
@@ -253,12 +273,18 @@ export default async function LessonPlayerPage({
                                 isCurrent ? 'bg-blue-50 border-l-2 border-blue-500' : ''
                               }`}
                             >
-                              <span className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] shrink-0 ${
-                                p?.completed ? 'bg-emerald-500 text-white' : 'border border-neutral-300'
-                              }`}>
+                              <span
+                                className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] shrink-0 ${
+                                  p?.completed
+                                    ? 'bg-emerald-500 text-white'
+                                    : 'border border-neutral-300'
+                                }`}
+                              >
                                 {p?.completed ? '✓' : ''}
                               </span>
-                              <span className={`truncate ${isCurrent ? 'font-medium' : 'text-neutral-700'}`}>
+                              <span
+                                className={`truncate ${isCurrent ? 'font-medium' : 'text-neutral-700'}`}
+                              >
                                 {l.title}
                               </span>
                               {l.duration_seconds && (

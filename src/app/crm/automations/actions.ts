@@ -6,12 +6,21 @@ import { createClient } from '@/lib/supabase/server'
 import { logger } from '@/lib/logger'
 
 type Trigger =
-  | 'lead_created' | 'lead_status_change' | 'stage_change'
-  | 'quote_accepted' | 'invoice_overdue' | 'inactivity' | 'cron'
+  | 'lead_created'
+  | 'lead_status_change'
+  | 'stage_change'
+  | 'quote_accepted'
+  | 'invoice_overdue'
+  | 'inactivity'
+  | 'cron'
 
 function parseJson(value: string, fallback: unknown): unknown {
   if (!value.trim()) return fallback
-  try { return JSON.parse(value) } catch { return fallback }
+  try {
+    return JSON.parse(value)
+  } catch {
+    return fallback
+  }
 }
 
 export async function createRuleAction(formData: FormData): Promise<void> {
@@ -25,7 +34,9 @@ export async function createRuleAction(formData: FormData): Promise<void> {
   if (!name) return
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const { data, error } = await supabase
     .from('automation_rules')
     .insert({
@@ -40,7 +51,10 @@ export async function createRuleAction(formData: FormData): Promise<void> {
     .select('id')
     .single()
 
-  if (error || !data) { logger.error({ err: error }, '[createRuleAction]'); return }
+  if (error || !data) {
+    logger.error({ err: error }, '[createRuleAction]')
+    return
+  }
   revalidatePath('/crm/automations')
   redirect(`/crm/automations/${data.id}`)
 }
@@ -68,7 +82,10 @@ export async function updateRuleAction(formData: FormData): Promise<void> {
       active,
     })
     .eq('id', id)
-  if (error) { logger.error({ err: error }, '[updateRuleAction]'); return }
+  if (error) {
+    logger.error({ err: error }, '[updateRuleAction]')
+    return
+  }
   revalidatePath('/crm/automations')
   revalidatePath(`/crm/automations/${id}`)
 }
@@ -78,9 +95,11 @@ export async function toggleRuleAction(formData: FormData): Promise<void> {
   const active = String(formData.get('active') ?? 'false') === 'true'
   if (!id) return
   const supabase = await createClient()
-  const { error } = await supabase
-    .from('automation_rules').update({ active: !active }).eq('id', id)
-  if (error) { logger.error({ err: error }, '[toggleRuleAction]'); return }
+  const { error } = await supabase.from('automation_rules').update({ active: !active }).eq('id', id)
+  if (error) {
+    logger.error({ err: error }, '[toggleRuleAction]')
+    return
+  }
   revalidatePath('/crm/automations')
 }
 
@@ -89,7 +108,10 @@ export async function deleteRuleAction(formData: FormData): Promise<void> {
   if (!id) return
   const supabase = await createClient()
   const { error } = await supabase.from('automation_rules').delete().eq('id', id)
-  if (error) { logger.error({ err: error }, '[deleteRuleAction]'); return }
+  if (error) {
+    logger.error({ err: error }, '[deleteRuleAction]')
+    return
+  }
   revalidatePath('/crm/automations')
   redirect('/crm/automations')
 }

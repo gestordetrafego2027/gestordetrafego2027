@@ -7,7 +7,9 @@ export async function GET() {
   const supabase = await createClient()
   const { data, error } = await supabase
     .from('clients')
-    .select('id, display_name, legal_name, document, email, phone, unit, status, lifetime_value_brl, first_purchase_at, last_purchase_at, created_at')
+    .select(
+      'id, display_name, legal_name, document, email, phone, unit, status, lifetime_value_brl, first_purchase_at, last_purchase_at, created_at',
+    )
     .order('created_at', { ascending: false })
     .limit(5000)
 

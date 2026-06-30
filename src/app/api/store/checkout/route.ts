@@ -51,7 +51,9 @@ export async function POST(req: NextRequest) {
   const supabase = await createClient()
 
   // Sessão do usuário (opcional — guest checkout permitido)
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   // Resolve stripe_customer_id se logado
   let stripeCustomerId: string | undefined
@@ -68,7 +70,9 @@ export async function POST(req: NextRequest) {
   const priceIds = body.items.map((i) => i.stripePriceId)
   const { data: prices, error: pricesErr } = await supabase
     .from('store_prices')
-    .select('id, stripe_price_id, unit_amount, active, metadata, store_products(name, product_type)')
+    .select(
+      'id, stripe_price_id, unit_amount, active, metadata, store_products(name, product_type)',
+    )
     .in('stripe_price_id', priceIds)
     .eq('active', true)
 
@@ -78,7 +82,9 @@ export async function POST(req: NextRequest) {
   }
 
   // Bloqueia quote_only no checkout direto
-  const quoteOnlyItem = prices.find((p) => (p.metadata as { quote_only?: string } | null)?.quote_only === 'true')
+  const quoteOnlyItem = prices.find(
+    (p) => (p.metadata as { quote_only?: string } | null)?.quote_only === 'true',
+  )
   if (quoteOnlyItem) {
     return NextResponse.json(
       { error: 'Este item exige orçamento — use o formulário de contato.' },

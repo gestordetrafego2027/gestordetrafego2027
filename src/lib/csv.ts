@@ -12,9 +12,7 @@ export function rowsToCsv<T extends Record<string, unknown>>(
   columns: { key: keyof T; label: string }[],
 ): string {
   const header = columns.map((c) => esc(c.label)).join(',')
-  const body = rows
-    .map((r) => columns.map((c) => esc(r[c.key])).join(','))
-    .join('\n')
+  const body = rows.map((r) => columns.map((c) => esc(r[c.key])).join(',')).join('\n')
   return `﻿${header}\n${body}\n` // BOM p/ Excel reconhecer UTF-8
 }
 

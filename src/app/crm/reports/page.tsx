@@ -29,14 +29,8 @@ export default async function ReportsPage() {
     { data: leadsFunnel },
     { data: opps30 },
   ] = await Promise.all([
-    supabase
-      .from('leads')
-      .select('*', { count: 'exact', head: true })
-      .gte('created_at', since),
-    supabase
-      .from('clients')
-      .select('*', { count: 'exact', head: true })
-      .gte('created_at', since),
+    supabase.from('leads').select('*', { count: 'exact', head: true }).gte('created_at', since),
+    supabase.from('clients').select('*', { count: 'exact', head: true }).gte('created_at', since),
     supabase
       .from('invoices')
       .select('*', { count: 'exact', head: true })
@@ -46,11 +40,7 @@ export default async function ReportsPage() {
       .select('*', { count: 'exact', head: true })
       .eq('status', 'paga')
       .gte('issue_date', since.slice(0, 10)),
-    supabase
-      .from('v_revenue_monthly')
-      .select('*')
-      .order('month', { ascending: false })
-      .limit(12),
+    supabase.from('v_revenue_monthly').select('*').order('month', { ascending: false }).limit(12),
     supabase
       .from('v_campaign_performance')
       .select('*')
@@ -75,7 +65,16 @@ export default async function ReportsPage() {
     : null
 
   // Funil agregado por status
-  const STATUS_ORDER = ['novo','em_contato','qualificado','proposta_enviada','negociacao','ganho','perdido','arquivado']
+  const STATUS_ORDER = [
+    'novo',
+    'em_contato',
+    'qualificado',
+    'proposta_enviada',
+    'negociacao',
+    'ganho',
+    'perdido',
+    'arquivado',
+  ]
   const totalByStatus = new Map<string, number>()
   ;(leadsFunnel ?? []).forEach((f) => {
     if (!f.status) return
@@ -124,26 +123,28 @@ export default async function ReportsPage() {
         <h2 className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Últimos 30 dias</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           <div className="rounded-lg border border-neutral-200 bg-white p-4">
-            <div className="text-[10px] uppercase tracking-wide text-neutral-500">Oportunidades criadas</div>
+            <div className="text-[10px] uppercase tracking-wide text-neutral-500">
+              Oportunidades criadas
+            </div>
             <div className="text-2xl font-semibold mt-1 tabular-nums">{opps30?.length ?? 0}</div>
           </div>
           <div className="rounded-lg border border-neutral-200 bg-white p-4">
-            <div className="text-[10px] uppercase tracking-wide text-neutral-500">Win-rate (30d)</div>
-            <div className="text-2xl font-semibold mt-1 tabular-nums">
-              {winRate30.toFixed(1)}%
+            <div className="text-[10px] uppercase tracking-wide text-neutral-500">
+              Win-rate (30d)
             </div>
+            <div className="text-2xl font-semibold mt-1 tabular-nums">{winRate30.toFixed(1)}%</div>
             <div className="text-xs text-neutral-500 mt-0.5">
               {won30.length}/{closed30.length} fechadas
             </div>
           </div>
           <div className="rounded-lg border border-neutral-200 bg-white p-4">
-            <div className="text-[10px] uppercase tracking-wide text-neutral-500">ROAS médio (campanhas)</div>
+            <div className="text-[10px] uppercase tracking-wide text-neutral-500">
+              ROAS médio (campanhas)
+            </div>
             <div className="text-2xl font-semibold mt-1 tabular-nums">
               {avgRoas === null ? '—' : `${avgRoas.toFixed(2)}×`}
             </div>
-            <div className="text-xs text-neutral-500 mt-0.5">
-              {validCampaigns.length} campanhas
-            </div>
+            <div className="text-xs text-neutral-500 mt-0.5">{validCampaigns.length} campanhas</div>
           </div>
         </div>
       </section>
@@ -162,13 +163,12 @@ export default async function ReportsPage() {
                 <li key={s} className="flex items-center gap-3 text-sm">
                   <span className="w-32 text-neutral-600 capitalize">{s.replace('_', ' ')}</span>
                   <div className="flex-1 bg-neutral-100 rounded h-4 relative overflow-hidden">
-                    <div
-                      className="bg-blue-500 h-4 rounded"
-                      style={{ width: `${pct}%` }}
-                    />
+                    <div className="bg-blue-500 h-4 rounded" style={{ width: `${pct}%` }} />
                   </div>
                   <span className="w-16 text-right tabular-nums">{v}</span>
-                  <span className="w-14 text-right text-xs text-neutral-500 tabular-nums">{pct.toFixed(1)}%</span>
+                  <span className="w-14 text-right text-xs text-neutral-500 tabular-nums">
+                    {pct.toFixed(1)}%
+                  </span>
                 </li>
               )
             })}
@@ -195,15 +195,26 @@ export default async function ReportsPage() {
               {(revenueByUnit ?? []).map((r, i) => (
                 <tr key={`${r.month}-${r.unit}-${i}`} className="border-t border-neutral-100">
                   <td className="px-4 py-2 text-xs text-neutral-600">
-                    {r.month ? new Date(r.month).toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' }) : '—'}
+                    {r.month
+                      ? new Date(r.month).toLocaleDateString('pt-BR', {
+                          month: 'short',
+                          year: 'numeric',
+                        })
+                      : '—'}
                   </td>
                   <td className="px-4 py-2 text-xs capitalize">{r.unit ?? '—'}</td>
                   <td className="px-4 py-2 text-right tabular-nums">{r.invoices_paid ?? 0}</td>
-                  <td className="px-4 py-2 text-right tabular-nums font-medium">{brl(r.revenue_brl)}</td>
+                  <td className="px-4 py-2 text-right tabular-nums font-medium">
+                    {brl(r.revenue_brl)}
+                  </td>
                 </tr>
               ))}
               {(revenueByUnit ?? []).length === 0 && (
-                <tr><td colSpan={4} className="px-4 py-6 text-center text-neutral-400 italic">Sem dados</td></tr>
+                <tr>
+                  <td colSpan={4} className="px-4 py-6 text-center text-neutral-400 italic">
+                    Sem dados
+                  </td>
+                </tr>
               )}
             </tbody>
           </table>
@@ -235,19 +246,27 @@ export default async function ReportsPage() {
                       <Link href={`/crm/campaigns/${c.id}`} className="hover:underline">
                         {c.name ?? '—'}
                       </Link>
-                    ) : (c.name ?? '—')}
+                    ) : (
+                      (c.name ?? '—')
+                    )}
                   </td>
                   <td className="px-4 py-2 text-xs capitalize">{c.channel ?? '—'}</td>
                   <td className="px-4 py-2 text-right tabular-nums">{c.leads_count ?? 0}</td>
                   <td className="px-4 py-2 text-right tabular-nums">{brl(c.spent_brl)}</td>
-                  <td className="px-4 py-2 text-right tabular-nums">{brl(c.attributed_revenue_brl)}</td>
+                  <td className="px-4 py-2 text-right tabular-nums">
+                    {brl(c.attributed_revenue_brl)}
+                  </td>
                   <td className="px-4 py-2 text-right tabular-nums font-medium">
                     {c.roas ? `${Number(c.roas).toFixed(2)}×` : '—'}
                   </td>
                 </tr>
               ))}
               {(campaignPerf ?? []).length === 0 && (
-                <tr><td colSpan={6} className="px-4 py-6 text-center text-neutral-400 italic">Sem campanhas</td></tr>
+                <tr>
+                  <td colSpan={6} className="px-4 py-6 text-center text-neutral-400 italic">
+                    Sem campanhas
+                  </td>
+                </tr>
               )}
             </tbody>
           </table>
@@ -256,12 +275,14 @@ export default async function ReportsPage() {
 
       {/* Exports CSV */}
       <section>
-        <h2 className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Exportar dados (CSV)</h2>
+        <h2 className="text-xs uppercase tracking-wide text-neutral-500 mb-2">
+          Exportar dados (CSV)
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
           {[
-            { entity: 'leads',    label: 'Leads' },
-            { entity: 'clients',  label: 'Clientes' },
-            { entity: 'quotes',   label: 'Propostas' },
+            { entity: 'leads', label: 'Leads' },
+            { entity: 'clients', label: 'Clientes' },
+            { entity: 'quotes', label: 'Propostas' },
             { entity: 'invoices', label: 'Faturas' },
             { entity: 'payments', label: 'Pagamentos' },
           ].map((x) => (

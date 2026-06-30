@@ -13,7 +13,8 @@ import { createClient } from '@/lib/supabase/server'
 
 export const metadata: Metadata = {
   title: 'Checkout · Briefing Mal Passado · Combo · House Mazzutti Academy',
-  description: 'Combo Briefing Mal Passado — PDF imediato + livro físico em capa cartonada. R$ 119 (economiza R$ 30).',
+  description:
+    'Combo Briefing Mal Passado — PDF imediato + livro físico em capa cartonada. R$ 119 (economiza R$ 30).',
   robots: { index: false, follow: false },
 }
 
@@ -25,7 +26,11 @@ const STRIPE_PRICE_ID = process.env.STRIPE_PRICE_ID_BRIEFING_MAL_PASSADO_COMBO ?
 const brl = (cents: number | null | undefined) =>
   ((cents ?? 0) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-export default async function CheckoutComboPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function CheckoutComboPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
   const { locale } = await params
   const supabase = await createClient()
   const { data: product } = await supabase
@@ -81,12 +86,17 @@ export default async function CheckoutComboPage({ params }: { params: Promise<{ 
             letterSpacing: '-0.01em',
           }}
         >
-          Briefing<br />
+          Briefing
+          <br />
           <em style={{ fontStyle: 'italic', color: '#a0a0a0' }}>Mal Passado</em>
           <br />
-          <span style={{ fontSize: '0.45em', color: '#8b1f1f', letterSpacing: '0.02em' }}>— Combo</span>
+          <span style={{ fontSize: '0.45em', color: '#8b1f1f', letterSpacing: '0.02em' }}>
+            — Combo
+          </span>
         </h1>
-        <p style={{ fontSize: 15, lineHeight: 1.6, color: '#ccc', margin: '0 0 8px' }}>{subtitleLine}</p>
+        <p style={{ fontSize: 15, lineHeight: 1.6, color: '#ccc', margin: '0 0 8px' }}>
+          {subtitleLine}
+        </p>
 
         <div style={{ margin: '12px 0 24px' }}>
           {hasDiscount && (
@@ -116,8 +126,12 @@ export default async function CheckoutComboPage({ params }: { params: Promise<{ 
             }}
           >
             <span>
-              <span style={{ fontSize: 18, color: '#8b1f1f', verticalAlign: 'top', marginRight: 4 }}>R$</span>
-              {((finalCents) / 100).toLocaleString('pt-BR', {
+              <span
+                style={{ fontSize: 18, color: '#8b1f1f', verticalAlign: 'top', marginRight: 4 }}
+              >
+                R$
+              </span>
+              {(finalCents / 100).toLocaleString('pt-BR', {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               })}
@@ -170,10 +184,13 @@ export default async function CheckoutComboPage({ params }: { params: Promise<{ 
             O combo entrega
           </div>
           <div style={{ marginBottom: 6 }}>
-            <strong style={{ color: '#f2efe8' }}>1.</strong> PDF de alta resolução — entrega imediata por e-mail após pagamento.
+            <strong style={{ color: '#f2efe8' }}>1.</strong> PDF de alta resolução — entrega
+            imediata por e-mail após pagamento.
           </div>
           <div>
-            <strong style={{ color: '#f2efe8' }}>2.</strong> Livro físico — capa cartonada, 417 págs, 16×23 cm, despachado em até 10 dias úteis para todo o Brasil. Endereço coletado na próxima etapa.
+            <strong style={{ color: '#f2efe8' }}>2.</strong> Livro físico — capa cartonada, 417
+            págs, 16×23 cm, despachado em até 10 dias úteis para todo o Brasil. Endereço coletado na
+            próxima etapa.
           </div>
         </div>
 
@@ -208,7 +225,8 @@ export default async function CheckoutComboPage({ params }: { params: Promise<{ 
             >
               ● Pré-reserva aberta
             </div>
-            O combo está em configuração final. Deixe seu e-mail no botão abaixo — avisamos no instante em que abrir.
+            O combo está em configuração final. Deixe seu e-mail no botão abaixo — avisamos no
+            instante em que abrir.
             <div style={{ marginTop: 18 }}>
               <Link
                 href={`/${locale}/academy/briefing-mal-passado#sample`}

@@ -11,7 +11,8 @@ import { DIGITAL_PRODUCTS } from '@/lib/digital-products'
 
 export const metadata: Metadata = {
   title: 'Checkout · Briefing Mal Passado · House Mazzutti Academy',
-  description: 'Finalize sua compra do livro Briefing Mal Passado · Vol. 03 — versão digital (PDF).',
+  description:
+    'Finalize sua compra do livro Briefing Mal Passado · Vol. 03 — versão digital (PDF).',
   robots: { index: false, follow: false },
 }
 
@@ -80,7 +81,8 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             letterSpacing: '-0.01em',
           }}
         >
-          Briefing<br />
+          Briefing
+          <br />
           <em style={{ fontStyle: 'italic', color: '#a0a0a0' }}>Mal Passado</em>
         </h1>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: '#ccc', margin: '0 0 8px' }}>
@@ -116,10 +118,12 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             }}
           >
             <span>
-              <span style={{ fontSize: 18, color: '#4a7a50', verticalAlign: 'top', marginRight: 4 }}>
+              <span
+                style={{ fontSize: 18, color: '#4a7a50', verticalAlign: 'top', marginRight: 4 }}
+              >
                 R$
               </span>
-              {((finalCents) / 100).toLocaleString('pt-BR', {
+              {(finalCents / 100).toLocaleString('pt-BR', {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               })}

@@ -4,8 +4,8 @@ import { createServiceAction } from '../../actions'
 type SearchParams = Promise<{ error?: string }>
 
 const UNITS = [
-  { value: 'agencia',   label: 'Agência' },
-  { value: 'studio',    label: 'Studio' },
+  { value: 'agencia', label: 'Agência' },
+  { value: 'studio', label: 'Studio' },
   { value: 'produtora', label: 'Produtora' },
 ] as const
 
@@ -42,7 +42,9 @@ export default async function NewServicePage({ searchParams }: { searchParams: S
             className="w-full rounded border border-neutral-300 px-3 py-2 text-sm bg-white"
           >
             {UNITS.map((u) => (
-              <option key={u.value} value={u.value}>{u.label}</option>
+              <option key={u.value} value={u.value}>
+                {u.label}
+              </option>
             ))}
           </select>
         </label>

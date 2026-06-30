@@ -9,6 +9,9 @@ export async function acceptQuoteByTokenAction(formData: FormData): Promise<void
   if (!token) return
   const supabase = await createClient()
   const { error } = await supabase.rpc('accept_quote_by_token', { p_token: token })
-  if (error) { logger.error({ err: error }, '[accept_quote_by_token]'); return }
+  if (error) {
+    logger.error({ err: error }, '[accept_quote_by_token]')
+    return
+  }
   revalidatePath(`/p/${token}`)
 }

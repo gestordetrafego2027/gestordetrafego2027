@@ -2,7 +2,9 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import {
-  sendQuoteAction, acceptQuoteAction, rejectQuoteAction,
+  sendQuoteAction,
+  acceptQuoteAction,
+  rejectQuoteAction,
   generateInvoiceFromQuoteAction,
 } from './actions'
 import CopyLinkButton from './CopyLinkButton'
@@ -22,34 +24,40 @@ const statusBadge: Record<string, string> = {
   expirado: 'bg-amber-100 text-amber-800',
 }
 
-export default async function QuoteDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
+export default async function QuoteDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const supabase = await createClient()
 
   const { data: quote, error } = await supabase
     .from('quotes')
-    .select(`
+    .select(
+      `
       id, title, status, notes, subtotal_brl, discount_brl, total_brl,
       valid_until, sent_at, accepted_at, created_at, lead_id, public_token,
       leads (id, name, email, phone),
       quote_items (id, kind, label, description, quantity, unit_price_brl, total_brl, position)
-    `)
+    `,
+    )
     .eq('id', id)
     .single()
 
   if (error || !quote) notFound()
 
-  const lead = quote.leads as unknown as { id: string; name: string; email: string | null; phone: string | null } | null
+  const lead = quote.leads as unknown as {
+    id: string
+    name: string
+    email: string | null
+    phone: string | null
+  } | null
   const items = (quote.quote_items ?? [])
     .slice()
     .sort((a: { position: number }, b: { position: number }) => a.position - b.position)
 
   const { data: invoice } = await supabase
-    .from('invoices').select('id, status, total_brl').eq('quote_id', id).maybeSingle()
+    .from('invoices')
+    .select('id, status, total_brl')
+    .eq('quote_id', id)
+    .maybeSingle()
 
   return (
     <div className="space-y-6">
@@ -58,7 +66,9 @@ export default async function QuoteDetailPage({
           <Link href={`/crm/leads/${lead.id}`} className="text-neutral-500 hover:text-neutral-900">
             ← Voltar para o lead
           </Link>
-        ) : <span />}
+        ) : (
+          <span />
+        )}
       </div>
 
       <header className="rounded-lg border border-neutral-200 bg-white p-5">
@@ -67,7 +77,10 @@ export default async function QuoteDetailPage({
             <h1 className="text-2xl font-semibold tracking-tight">{quote.title}</h1>
             {lead && (
               <div className="mt-1 text-sm text-neutral-500">
-                Lead: <Link href={`/crm/leads/${lead.id}`} className="hover:underline font-medium">{lead.name}</Link>
+                Lead:{' '}
+                <Link href={`/crm/leads/${lead.id}`} className="hover:underline font-medium">
+                  {lead.name}
+                </Link>
                 {lead.email && <span> · ✉️ {lead.email}</span>}
                 {lead.phone && <span> · 📞 {lead.phone}</span>}
               </div>
@@ -116,18 +129,24 @@ export default async function QuoteDetailPage({
             </tr>
           </thead>
           <tbody>
-            {items.map((it: {
-              id: string; label: string; kind: string; quantity: number;
-              unit_price_brl: number; total_brl: number | null;
-            }) => (
-              <tr key={it.id} className="border-t border-neutral-100">
-                <td className="py-1 font-medium">{it.label}</td>
-                <td className="py-1 text-xs text-neutral-500 capitalize">{it.kind}</td>
-                <td className="py-1 text-right tabular-nums">{it.quantity}</td>
-                <td className="py-1 text-right tabular-nums">{brl(it.unit_price_brl)}</td>
-                <td className="py-1 text-right tabular-nums">{brl(it.total_brl)}</td>
-              </tr>
-            ))}
+            {items.map(
+              (it: {
+                id: string
+                label: string
+                kind: string
+                quantity: number
+                unit_price_brl: number
+                total_brl: number | null
+              }) => (
+                <tr key={it.id} className="border-t border-neutral-100">
+                  <td className="py-1 font-medium">{it.label}</td>
+                  <td className="py-1 text-xs text-neutral-500 capitalize">{it.kind}</td>
+                  <td className="py-1 text-right tabular-nums">{it.quantity}</td>
+                  <td className="py-1 text-right tabular-nums">{brl(it.unit_price_brl)}</td>
+                  <td className="py-1 text-right tabular-nums">{brl(it.total_brl)}</td>
+                </tr>
+              ),
+            )}
             {!items.length && (
               <tr>
                 <td colSpan={5} className="py-4 text-center text-neutral-400 italic">
@@ -138,17 +157,25 @@ export default async function QuoteDetailPage({
           </tbody>
           <tfoot className="border-t-2 border-neutral-200">
             <tr>
-              <td colSpan={4} className="py-1 text-right text-xs text-neutral-500">Subtotal</td>
+              <td colSpan={4} className="py-1 text-right text-xs text-neutral-500">
+                Subtotal
+              </td>
               <td className="py-1 text-right tabular-nums">{brl(quote.subtotal_brl)}</td>
             </tr>
             {Number(quote.discount_brl ?? 0) > 0 && (
               <tr>
-                <td colSpan={4} className="py-1 text-right text-xs text-neutral-500">Desconto</td>
-                <td className="py-1 text-right tabular-nums text-rose-600">- {brl(quote.discount_brl)}</td>
+                <td colSpan={4} className="py-1 text-right text-xs text-neutral-500">
+                  Desconto
+                </td>
+                <td className="py-1 text-right tabular-nums text-rose-600">
+                  - {brl(quote.discount_brl)}
+                </td>
               </tr>
             )}
             <tr>
-              <td colSpan={4} className="py-1 text-right text-sm font-semibold">Total</td>
+              <td colSpan={4} className="py-1 text-right text-sm font-semibold">
+                Total
+              </td>
               <td className="py-1 text-right tabular-nums font-semibold">{brl(quote.total_brl)}</td>
             </tr>
           </tfoot>

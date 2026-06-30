@@ -119,8 +119,7 @@ export async function handlePaymentConfirmed(ctx: HandlerCtx): Promise<void> {
   // Sem slug resolvível, cai no email de confirmação simples.
   if (order.buyer_email) {
     const slug = (order.metadata as Record<string, unknown> | null)?.product_slug as
-      | string
-      | undefined
+      string | undefined
     const product = resolveDigitalProduct(slug)
     try {
       if (product) {
@@ -143,13 +142,19 @@ export async function handlePaymentConfirmed(ctx: HandlerCtx): Promise<void> {
           log.error({ err: r.error, order_id: order.id }, 'falha ao enviar email de entrega')
         } else {
           log.info({ order_id: order.id, slug }, 'email de entrega enviado')
-          await ctx.supabase.from('store_orders').update({
-            delivery_sent_at: new Date().toISOString(),
-            delivery_email_id: r.id ?? null,
-          }).eq('id', order.id)
+          await ctx.supabase
+            .from('store_orders')
+            .update({
+              delivery_sent_at: new Date().toISOString(),
+              delivery_email_id: r.id ?? null,
+            })
+            .eq('id', order.id)
         }
       } else {
-        log.warn({ order_id: order.id, slug }, 'produto digital não resolvido — enviando confirmação simples')
+        log.warn(
+          { order_id: order.id, slug },
+          'produto digital não resolvido — enviando confirmação simples',
+        )
         await sendEmail({
           to: order.buyer_email,
           subject: `Pagamento confirmado — pedido ${order.order_number}`,
@@ -202,10 +207,7 @@ export async function handlePaymentDeleted(ctx: HandlerCtx): Promise<void> {
 }
 
 /** Dispatcher por event type. Retorna true se o evento foi tratado. */
-export async function dispatchAsaasEvent(
-  eventType: string,
-  ctx: HandlerCtx,
-): Promise<boolean> {
+export async function dispatchAsaasEvent(eventType: string, ctx: HandlerCtx): Promise<boolean> {
   switch (eventType) {
     case 'PAYMENT_CREATED':
       await handlePaymentCreated(ctx)

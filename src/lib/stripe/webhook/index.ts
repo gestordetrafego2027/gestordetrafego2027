@@ -43,7 +43,10 @@ export async function dispatchWebhookEvent(event: Stripe.Event): Promise<void> {
     case 'charge.dispute.created':
     case 'charge.dispute.closed': {
       const dispute = event.data.object as Stripe.Dispute
-      log.warn({ dispute_id: dispute.id, status: dispute.status, reason: dispute.reason }, 'dispute event — review manual')
+      log.warn(
+        { dispute_id: dispute.id, status: dispute.status, reason: dispute.reason },
+        'dispute event — review manual',
+      )
       break
     }
     case 'customer.subscription.updated':

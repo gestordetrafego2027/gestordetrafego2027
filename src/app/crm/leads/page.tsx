@@ -16,8 +16,14 @@ const statusLabel: Record<string, string> = {
 }
 
 const STATUS_VALUES = [
-  'novo','em_contato','qualificado','proposta_enviada',
-  'negociacao','ganho','perdido','arquivado',
+  'novo',
+  'em_contato',
+  'qualificado',
+  'proposta_enviada',
+  'negociacao',
+  'ganho',
+  'perdido',
+  'arquivado',
 ] as const
 const SEGMENT_VALUES = ['commercial', 'talents'] as const
 
@@ -44,10 +50,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
   // 2) Se filtro por tag, obter os lead_ids dessa tag
   let leadIdsFromTag: string[] | null = null
   if (tag) {
-    const { data: lt } = await supabase
-      .from('lead_tags')
-      .select('lead_id')
-      .eq('tag_id', tag)
+    const { data: lt } = await supabase.from('lead_tags').select('lead_id').eq('tag_id', tag)
     leadIdsFromTag = (lt ?? []).map((r) => r.lead_id)
     if (leadIdsFromTag.length === 0) leadIdsFromTag = ['__none__'] // força resultado vazio
   }
@@ -55,7 +58,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
   // 3) Query principal
   let q = supabase
     .from('leads')
-    .select('id, name, email, phone, segment, lead_type, status, stage_id, created_at, pipeline_stages(name)')
+    .select(
+      'id, name, email, phone, segment, lead_type, status, stage_id, created_at, pipeline_stages(name)',
+    )
     .order('created_at', { ascending: false })
     .limit(100)
 
@@ -81,7 +86,15 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
         .from('lead_tags')
         .select('lead_id, tags(id, name, slug, color)')
         .in('lead_id', leadIds)
-    : { data: [] as { lead_id: string; tags: { id: string; name: string; slug: string; color: string | null } | { id: string; name: string; slug: string; color: string | null }[] | null }[] }
+    : {
+        data: [] as {
+          lead_id: string
+          tags:
+            | { id: string; name: string; slug: string; color: string | null }
+            | { id: string; name: string; slug: string; color: string | null }[]
+            | null
+        }[],
+      }
 
   const tagsByLead = new Map<string, { id: string; name: string; color: string | null }[]>()
   for (const row of leadTagRows ?? []) {
@@ -100,7 +113,8 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Leads</h1>
           <p className="text-sm text-neutral-500">
-            {leads?.length ?? 0} resultado{(leads?.length ?? 0) === 1 ? '' : 's'} {hasFilter ? '(filtrado)' : '(últimos 100)'}.
+            {leads?.length ?? 0} resultado{(leads?.length ?? 0) === 1 ? '' : 's'}{' '}
+            {hasFilter ? '(filtrado)' : '(últimos 100)'}.
           </p>
         </div>
         <div className="flex gap-2">
@@ -131,7 +145,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
         className="flex flex-wrap items-end gap-2 rounded-lg border border-neutral-200 bg-white p-3 text-sm"
       >
         <label className="space-y-0.5">
-          <span className="block text-[10px] uppercase tracking-wide text-neutral-500">Segmento</span>
+          <span className="block text-[10px] uppercase tracking-wide text-neutral-500">
+            Segmento
+          </span>
           <select
             name="segment"
             defaultValue={segment ?? ''}
@@ -151,12 +167,16 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
           >
             <option value="">todos</option>
             {STATUS_VALUES.map((s) => (
-              <option key={s} value={s}>{statusLabel[s] ?? s}</option>
+              <option key={s} value={s}>
+                {statusLabel[s] ?? s}
+              </option>
             ))}
           </select>
         </label>
         <label className="space-y-0.5">
-          <span className="block text-[10px] uppercase tracking-wide text-neutral-500">Estágio</span>
+          <span className="block text-[10px] uppercase tracking-wide text-neutral-500">
+            Estágio
+          </span>
           <select
             name="stage"
             defaultValue={stage ?? ''}
@@ -164,7 +184,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
           >
             <option value="">todos</option>
             {(stages ?? []).map((s) => (
-              <option key={s.id} value={s.id}>{s.name} ({s.segment})</option>
+              <option key={s.id} value={s.id}>
+                {s.name} ({s.segment})
+              </option>
             ))}
           </select>
         </label>
@@ -177,7 +199,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
           >
             <option value="">todas</option>
             {(allTags ?? []).map((t) => (
-              <option key={t.id} value={t.id}>{t.name}</option>
+              <option key={t.id} value={t.id}>
+                {t.name}
+              </option>
             ))}
           </select>
         </label>
@@ -221,12 +245,16 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
             {!leads?.length && (
               <tr>
                 <td colSpan={8} className="px-4 py-8 text-center text-neutral-500">
-                  {hasFilter ? 'Nenhum lead encontrado com esses filtros.' : 'Nenhum lead ainda. Crie o primeiro.'}
+                  {hasFilter
+                    ? 'Nenhum lead encontrado com esses filtros.'
+                    : 'Nenhum lead ainda. Crie o primeiro.'}
                 </td>
               </tr>
             )}
             {leads?.map((l) => {
-              const stageObj = Array.isArray(l.pipeline_stages) ? l.pipeline_stages[0] : l.pipeline_stages
+              const stageObj = Array.isArray(l.pipeline_stages)
+                ? l.pipeline_stages[0]
+                : l.pipeline_stages
               const stageName = stageObj?.name ?? null
               const leadTagList = tagsByLead.get(l.id) ?? []
               return (

@@ -1,9 +1,9 @@
 import { baseLayout } from './base'
 
-export function dataExportEmail(props: {
-  buyerName: string
-  exportJson: string
-}): { subject: string; html: string } {
+export function dataExportEmail(props: { buyerName: string; exportJson: string }): {
+  subject: string
+  html: string
+} {
   const content = `
     <h1 style="margin:0 0 8px;font-size:22px;font-weight:700;color:#111">Seus dados pessoais</h1>
     <p style="margin:0 0 20px;font-size:15px;color:#6b7280">

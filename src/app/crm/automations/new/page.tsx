@@ -15,8 +15,8 @@ export default function NewAutomationPage() {
       <header>
         <h1 className="text-2xl font-semibold tracking-tight">Nova automação</h1>
         <p className="text-sm text-neutral-500">
-          Configure gatilho, condições (JSON) e ações (JSON). Use os botões de template
-          para começar com um exemplo.
+          Configure gatilho, condições (JSON) e ações (JSON). Use os botões de template para começar
+          com um exemplo.
         </p>
       </header>
       <RuleForm action={createRuleAction} submitLabel="Criar regra" />

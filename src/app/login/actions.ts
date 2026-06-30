@@ -8,11 +8,7 @@ import { verifyRecaptcha } from '@/lib/recaptcha'
 
 async function clientIp(): Promise<string> {
   const h = await headers()
-  return (
-    h.get('x-real-ip') ??
-    h.get('x-forwarded-for')?.split(',')[0]?.trim() ??
-    '127.0.0.1'
-  )
+  return h.get('x-real-ip') ?? h.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '127.0.0.1'
 }
 
 export async function signInWithPassword(formData: FormData) {
@@ -22,19 +18,25 @@ export async function signInWithPassword(formData: FormData) {
   const recaptchaToken = String(formData.get('recaptchaToken') ?? '')
 
   if (!email || !password) {
-    redirect(`/login?error=${encodeURIComponent('Informe email e senha.')}&next=${encodeURIComponent(next)}`)
+    redirect(
+      `/login?error=${encodeURIComponent('Informe email e senha.')}&next=${encodeURIComponent(next)}`,
+    )
   }
 
   // Rate limit por IP — barra brute-force / credential stuffing.
   const rl = await checkRateLimit('auth', await clientIp())
   if (!rl.allowed) {
-    redirect(`/login?error=${encodeURIComponent('Muitas tentativas. Aguarde um minuto e tente novamente.')}&next=${encodeURIComponent(next)}`)
+    redirect(
+      `/login?error=${encodeURIComponent('Muitas tentativas. Aguarde um minuto e tente novamente.')}&next=${encodeURIComponent(next)}`,
+    )
   }
 
   // reCAPTCHA v3 (fail-open se não configurado).
   const captcha = await verifyRecaptcha(recaptchaToken, 'login')
   if (!captcha.ok) {
-    redirect(`/login?error=${encodeURIComponent('Falha na verificação de segurança. Tente novamente.')}&next=${encodeURIComponent(next)}`)
+    redirect(
+      `/login?error=${encodeURIComponent('Falha na verificação de segurança. Tente novamente.')}&next=${encodeURIComponent(next)}`,
+    )
   }
 
   const supabase = await createClient()

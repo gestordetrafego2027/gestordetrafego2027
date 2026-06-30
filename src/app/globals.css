@@ -1,9 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @font-face {
   font-family: 'RocGrotesk';
-  src: url('/fonts/fonnts.com-Roc_Grotesk_ExtraLight.woff2') format('woff2'),
-       url('/fonts/fonnts.com-Roc_Grotesk_ExtraLight.otf') format('opentype');
+  src:
+    url('/fonts/fonnts.com-Roc_Grotesk_ExtraLight.woff2') format('woff2'),
+    url('/fonts/fonnts.com-Roc_Grotesk_ExtraLight.otf') format('opentype');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -11,8 +12,9 @@
 
 @font-face {
   font-family: 'RocGrotesk';
-  src: url('/fonts/fonnts.com-Roc_Grotesk_Light.woff2') format('woff2'),
-       url('/fonts/fonnts.com-Roc_Grotesk_Light.otf') format('opentype');
+  src:
+    url('/fonts/fonnts.com-Roc_Grotesk_Light.woff2') format('woff2'),
+    url('/fonts/fonnts.com-Roc_Grotesk_Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -20,8 +22,9 @@
 
 @font-face {
   font-family: 'RocGrotesk';
-  src: url('/fonts/fonnts.com-Roc_Grotesk_Regular.woff2') format('woff2'),
-       url('/fonts/fonnts.com-Roc_Grotesk_Regular.otf') format('opentype');
+  src:
+    url('/fonts/fonnts.com-Roc_Grotesk_Regular.woff2') format('woff2'),
+    url('/fonts/fonnts.com-Roc_Grotesk_Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -29,8 +32,9 @@
 
 @font-face {
   font-family: 'RocGrotesk';
-  src: url('/fonts/fonnts.com-Roc_Grotesk_Medium.woff2') format('woff2'),
-       url('/fonts/fonnts.com-Roc_Grotesk_Medium.otf') format('opentype');
+  src:
+    url('/fonts/fonnts.com-Roc_Grotesk_Medium.woff2') format('woff2'),
+    url('/fonts/fonnts.com-Roc_Grotesk_Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -38,8 +42,9 @@
 
 @font-face {
   font-family: 'RocGrotesk';
-  src: url('/fonts/fonnts.com-Roc_Grotesk_Bold.woff2') format('woff2'),
-       url('/fonts/fonnts.com-Roc_Grotesk_Bold.otf') format('opentype');
+  src:
+    url('/fonts/fonnts.com-Roc_Grotesk_Bold.woff2') format('woff2'),
+    url('/fonts/fonnts.com-Roc_Grotesk_Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -50,8 +55,9 @@
    ========================================================================== */
 @font-face {
   font-family: 'RocGroteskCondensed';
-  src: url('/fonts/fonnts.com-Roc_Grotesk_Condensed.woff2') format('woff2'),
-       url('/fonts/fonnts.com-Roc_Grotesk_Condensed.otf') format('opentype');
+  src:
+    url('/fonts/fonnts.com-Roc_Grotesk_Condensed.woff2') format('woff2'),
+    url('/fonts/fonnts.com-Roc_Grotesk_Condensed.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-stretch: condensed;
@@ -60,14 +66,14 @@
 
 @font-face {
   font-family: 'RocGroteskCondensed';
-  src: url('/fonts/fonnts.com-Roc_Grotesk_Condensed_Bold.woff2') format('woff2'),
-       url('/fonts/fonnts.com-Roc_Grotesk_Condensed_Bold.otf') format('opentype');
+  src:
+    url('/fonts/fonnts.com-Roc_Grotesk_Condensed_Bold.woff2') format('woff2'),
+    url('/fonts/fonnts.com-Roc_Grotesk_Condensed_Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-stretch: condensed;
   font-display: swap;
 }
-
 
 html {
   scrollbar-gutter: stable;
@@ -76,448 +82,496 @@ html {
 
 /* Removido duplicata pois já está definido em utilities */
 
-
-
-
 @theme {
-    /* Sistema tipográfico — RockGrotesk única (manual editorial) */
-    --font-headline: 'RocGrotesk', sans-serif;
-    --font-body: 'RocGrotesk', sans-serif;
-    --font-label: 'RocGrotesk', sans-serif;
+  /* Sistema tipográfico — RockGrotesk única (manual editorial) */
+  --font-headline: 'RocGrotesk', sans-serif;
+  --font-body: 'RocGrotesk', sans-serif;
+  --font-label: 'RocGrotesk', sans-serif;
 
-    /* Aliases legados — apontam para RocGrotesk para compatibilidade visual */
-    --font-playfair: 'RocGrotesk', sans-serif;
-    --font-montserrat: 'RocGrotesk', sans-serif;
-    --font-worksans: 'RocGrotesk', sans-serif;
-    --font-notoserif: 'RocGrotesk', sans-serif;
+  /* Aliases legados — apontam para RocGrotesk para compatibilidade visual */
+  --font-playfair: 'RocGrotesk', sans-serif;
+  --font-montserrat: 'RocGrotesk', sans-serif;
+  --font-worksans: 'RocGrotesk', sans-serif;
+  --font-notoserif: 'RocGrotesk', sans-serif;
 
-    /* Sincronização com tailwind.config.mjs para v4 */
-    --color-primary: #000000;
-    --color-on-background: #1a1c1c;
-    --color-background: #fafafa;
-    --color-secondary: #5f5e5e;
+  /* Sincronização com tailwind.config.mjs para v4 */
+  --color-primary: #000000;
+  --color-on-background: #1a1c1c;
+  --color-background: #fafafa;
+  --color-secondary: #5f5e5e;
 
-    /* Raios — luxo minimalista, sem arredondamento exceto pill */
-    --radius-default: 0px;
-    --radius-lg: 0px;
-    --radius-xl: 0px;
-    --radius-full: 9999px;
+  /* Raios — luxo minimalista, sem arredondamento exceto pill */
+  --radius-default: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-full: 9999px;
 }
 
 @layer base {
-    body {
-        background-color: var(--color-background);
-        color: var(--color-on-background);
-        font-family: var(--font-body);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 @layer utilities {
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-        font-size: 20px;
-        /* Esconde o texto literal do glifo enquanto a fonte de ícones
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 200,
+      'GRAD' 0,
+      'opsz' 24;
+    font-size: 20px;
+    /* Esconde o texto literal do glifo enquanto a fonte de ícones
            não carregou. Sem isso, navegadores mostram 'check', 'lightbulb'
            etc como string. Quando a fonte chega, o navegador troca pelo
            glifo correto automaticamente — sem dependência de JS. */
-        font-family: 'Material Symbols Outlined', 'MaterialSymbolsLoading';
-    }
-    /* Fallback invisível: declara uma família local fake que renderiza
+    font-family: 'Material Symbols Outlined', 'MaterialSymbolsLoading';
+  }
+  /* Fallback invisível: declara uma família local fake que renderiza
        qualquer caractere como espaço em branco. Browser tenta primeiro
        'Material Symbols Outlined' (rede), enquanto isso usa este fallback
        (transparente). Resultado: nunca vê 'check' como texto. */
-    @font-face {
-        font-family: 'MaterialSymbolsLoading';
-        src: local('Arial');
-        size-adjust: 0%;
-        ascent-override: 0%;
-        descent-override: 0%;
-        line-gap-override: 0%;
-    }
+  @font-face {
+    font-family: 'MaterialSymbolsLoading';
+    src: local('Arial');
+    size-adjust: 0%;
+    ascent-override: 0%;
+    descent-override: 0%;
+    line-gap-override: 0%;
+  }
 
-    .hero-slider-container {
-        perspective: 1000px;
-    }
+  .hero-slider-container {
+    perspective: 1000px;
+  }
 
-    .fade-in {
-        animation: fadeIn 1.2s ease-out forwards;
-    }
+  .fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
     }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-    .nav-line {
-        width: 40px;
-        height: 1px;
-        background-color: white;
-        transition: width 0.3s ease, opacity 0.3s ease;
-    }
+  .nav-line {
+    width: 40px;
+    height: 1px;
+    background-color: white;
+    transition:
+      width 0.3s ease,
+      opacity 0.3s ease;
+  }
 
-    .nav-btn:hover .nav-line {
-        width: 60px;
-    }
+  .nav-btn:hover .nav-line {
+    width: 60px;
+  }
 
-    .text-justify-none { text-align-last: left; }
-    
-    .masonry-item:nth-child(even) { margin-top: 4rem; }
-    
-    .letter-spacing-huge { letter-spacing: 0.3em; }
-    
-    .line-divider { 
-        height: 0.5px; 
-        width: 100px; 
-        background-color: currentColor; 
-        opacity: 0.3; 
-    }
+  .text-justify-none {
+    text-align-last: left;
+  }
 
-    .noise-overlay {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        opacity: 0.02;
-        pointer-events: none;
-    }
+  .masonry-item:nth-child(even) {
+    margin-top: 4rem;
+  }
 
-    /* Testimonial Nav */
-    .custom-nav-line {
-        width: 40px;
-        height: 1px;
-        background-color: white;
-        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+  .letter-spacing-huge {
+    letter-spacing: 0.3em;
+  }
 
-    .custom-nav-btn:hover .custom-nav-line {
-        width: 70px;
-    }
+  .line-divider {
+    height: 0.5px;
+    width: 100px;
+    background-color: currentColor;
+    opacity: 0.3;
+  }
 
-    .testimonial-slide {
-        display: none;
-        animation: slideFade 0.6s ease-in-out forwards;
-    }
-    .testimonial-slide.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 220px;
-        overflow: hidden;
-    }
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    pointer-events: none;
+  }
 
-    @keyframes slideFade {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+  /* Testimonial Nav */
+  .custom-nav-line {
+    width: 40px;
+    height: 1px;
+    background-color: white;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-    /* PROGRESS BAR ANIMATION (ABOUT PAGE) */
-    @keyframes progress-load {
-        from { width: 0; }
-        to { width: var(--target-width); }
-    }
-    
-    .animate-progress {
-        animation: progress-load 1.5s ease-out forwards;
-    }
+  .custom-nav-btn:hover .custom-nav-line {
+    width: 70px;
+  }
 
-    .percentage-tag {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #000000;
-        color: #ffffff;
-        padding: 2px 6px;
-        font-size: 10px;
-        font-family: var(--font-worksans), sans-serif;
-        white-space: nowrap;
+  .testimonial-slide {
+    display: none;
+    animation: slideFade 0.6s ease-in-out forwards;
+  }
+  .testimonial-slide.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  @keyframes slideFade {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
     }
-
-    /* GHOST TEXT EFFECTS */
-    .ghost-text { 
-        -webkit-text-stroke: 1px rgba(255,255,255,0.1); 
-        color: transparent; 
-        pointer-events: none; 
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    .line-growth { 
-        transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); 
+  /* PROGRESS BAR ANIMATION (ABOUT PAGE) */
+  @keyframes progress-load {
+    from {
+      width: 0;
     }
-
-    /* LOGO LAYER HOVER (ABOUT PAGE) */
-    .logo-container {
-        position: relative;
-        overflow: hidden;
-        height: 144px;
-        display: flex;
-        align-items: center;
+    to {
+      width: var(--target-width);
     }
+  }
 
-    .logo-layer {
-        transition: transform 0.4s ease, opacity 0.4s ease;
-        white-space: nowrap;
-        height: 144px;
-        display: flex;
-        align-items: center;
-    }
+  .animate-progress {
+    animation: progress-load 1.5s ease-out forwards;
+  }
 
-    .logo-layer-1 {
-        transform: translateY(0);
-        opacity: 0.4;
-    }
+  .percentage-tag {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-family: var(--font-worksans), sans-serif;
+    white-space: nowrap;
+  }
 
-    .logo-layer-2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+  /* GHOST TEXT EFFECTS */
+  .ghost-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    color: transparent;
+    pointer-events: none;
+  }
 
-    .logo-container:hover .logo-layer-1 {
-        transform: translateY(100%);
-        opacity: 0;
-    }
+  .line-growth {
+    transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
 
-    .logo-container:hover .logo-layer-2 {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  /* LOGO LAYER HOVER (ABOUT PAGE) */
+  .logo-container {
+    position: relative;
+    overflow: hidden;
+    height: 144px;
+    display: flex;
+    align-items: center;
+  }
 
-    .hover-transition-refined {
-        transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
-    }
+  .logo-layer {
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease;
+    white-space: nowrap;
+    height: 144px;
+    display: flex;
+    align-items: center;
+  }
 
-    .font-headline { font-family: 'RocGrotesk', sans-serif; font-weight: 300; }
-    .font-body { font-family: 'RocGrotesk', sans-serif; font-weight: 400; }
-    .font-label { font-family: 'RocGrotesk', sans-serif; font-weight: 500; }
-    .font-raleway { font-family: 'RocGrotesk', sans-serif; font-weight: 300; }
-    .font-serif { font-family: 'RocGrotesk', sans-serif; font-weight: 700; }
+  .logo-layer-1 {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
 
-    /* ==========================================================================
+  .logo-layer-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .logo-container:hover .logo-layer-1 {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  .logo-container:hover .logo-layer-2 {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .hover-transition-refined {
+    transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  .font-headline {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 300;
+  }
+  .font-body {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 400;
+  }
+  .font-label {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 500;
+  }
+  .font-raleway {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 300;
+  }
+  .font-serif {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 700;
+  }
+
+  /* ==========================================================================
        ESCALA TIPOGRÁFICA EDITORIAL — MANUAL HOUSE MAZZUTTI
        Pesos disponíveis: 300 (Light) · 400 (Regular) · 500 (Medium) · 700 (Bold)
        ExtraLight mapeado para Light (300) por restrição de arquivo.
        ========================================================================== */
 
-    /* H1 — HERO / STATEMENT — Roc Grotesk Condensed Bold uppercase (padrão logo MAZZUTTI) */
-    .text-h1 {
-        font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif;
-        font-weight: 700;
-        font-stretch: condensed;
-        font-size: clamp(2.625rem, 6vw + 0.5rem, 6.875rem); /* 42px → 110px */
-        line-height: 0.92;
-        letter-spacing: 0;
-        text-transform: uppercase;
-        /* G9 — respiro para diacríticos condensados (Ç/Ã/Õ/Í não cortam) */
-        padding-bottom: 0.08em;
-        overflow-wrap: anywhere;
-    }
+  /* H1 — HERO / STATEMENT — Roc Grotesk Condensed Bold uppercase (padrão logo MAZZUTTI) */
+  .text-h1 {
+    font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    font-size: clamp(2.625rem, 6vw + 0.5rem, 6.875rem); /* 42px → 110px */
+    line-height: 0.92;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    /* G9 — respiro para diacríticos condensados (Ç/Ã/Õ/Í não cortam) */
+    padding-bottom: 0.08em;
+    overflow-wrap: anywhere;
+  }
 
-    /* H2 — SEÇÕES PRINCIPAIS — Roc Grotesk Condensed Bold uppercase */
-    .text-h2 {
-        font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif;
-        font-weight: 700;
-        font-stretch: condensed;
-        font-size: clamp(1.75rem, 3vw + 0.5rem, 4rem); /* 28px → 64px */
-        line-height: 0.96;
-        letter-spacing: 0;
-        text-transform: uppercase;
-        /* G9 */
-        padding-bottom: 0.06em;
-        overflow-wrap: anywhere;
-    }
+  /* H2 — SEÇÕES PRINCIPAIS — Roc Grotesk Condensed Bold uppercase */
+  .text-h2 {
+    font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    font-size: clamp(1.75rem, 3vw + 0.5rem, 4rem); /* 28px → 64px */
+    line-height: 0.96;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    /* G9 */
+    padding-bottom: 0.06em;
+    overflow-wrap: anywhere;
+  }
 
-    /* H3 — SUBSEÇÕES — leve, elegante, refinada */
-    .text-h3 {
-        font-family: 'RocGrotesk', sans-serif;
-        font-weight: 300;
-        font-size: clamp(1.375rem, 1.5vw + 0.75rem, 2.5rem); /* 22px → 40px */
-        line-height: 1.15;
-        letter-spacing: -0.02em;
-    }
+  /* H3 — SUBSEÇÕES — leve, elegante, refinada */
+  .text-h3 {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1.375rem, 1.5vw + 0.75rem, 2.5rem); /* 22px → 40px */
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
 
-    /* H4 — APOIO EDITORIAL — minimalista, respirada (ExtraLight) */
-    .text-h4 {
-        font-family: 'RocGrotesk', sans-serif;
-        font-weight: 200;
-        font-size: clamp(1.125rem, 0.6vw + 1rem, 1.75rem); /* 18px → 28px */
-        line-height: 1.25;
-        letter-spacing: -0.01em;
-    }
+  /* H4 — APOIO EDITORIAL — minimalista, respirada (ExtraLight) */
+  .text-h4 {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 200;
+    font-size: clamp(1.125rem, 0.6vw + 1rem, 1.75rem); /* 18px → 28px */
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
 
-    /* BODY — leitura editorial confortável */
-    .text-body {
-        font-family: 'RocGrotesk', sans-serif;
-        font-weight: 300;
-        font-size: clamp(0.9375rem, 0.2vw + 0.875rem, 1.125rem); /* 15px → 18px */
-        line-height: 1.75;
-        letter-spacing: 0;
-    }
+  /* BODY — leitura editorial confortável */
+  .text-body {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 300;
+    font-size: clamp(0.9375rem, 0.2vw + 0.875rem, 1.125rem); /* 15px → 18px */
+    line-height: 1.75;
+    letter-spacing: 0;
+  }
 
-    /* CAPTION — labels, categorias, microtextos */
-    .text-caption {
-        font-family: 'RocGrotesk', sans-serif;
-        font-weight: 400;
-        font-size: 0.75rem; /* 12px */
-        line-height: 1.4;
-        letter-spacing: 0.10em;
-        text-transform: uppercase;
-    }
+  /* CAPTION — labels, categorias, microtextos */
+  .text-caption {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem; /* 12px */
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
-    /* BUTTON — refinado, premium, espaçado */
-    .text-button {
-        font-family: 'RocGrotesk', sans-serif;
-        font-weight: 400;
-        font-size: 0.8125rem; /* 13px */
-        line-height: 1;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-    }
+  /* BUTTON — refinado, premium, espaçado */
+  .text-button {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 400;
+    font-size: 0.8125rem; /* 13px */
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
 
-    /* MENU / HEADER — leve, silencioso, sofisticado */
-    .text-menu {
-        font-family: 'RocGrotesk', sans-serif;
-        font-weight: 400;
-        font-size: 0.875rem; /* 14px */
-        line-height: 1;
-        letter-spacing: 0.08em;
-    }
+  /* MENU / HEADER — leve, silencioso, sofisticado */
+  .text-menu {
+    font-family: 'RocGrotesk', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1;
+    letter-spacing: 0.08em;
+  }
 
-    /* Largura editorial confortável para blocos de leitura */
-    .measure-editorial { max-width: 60ch; }
-    .measure-tight { max-width: 48ch; }
+  /* Largura editorial confortável para blocos de leitura */
+  .measure-editorial {
+    max-width: 60ch;
+  }
+  .measure-tight {
+    max-width: 48ch;
+  }
 }
 
 /* THEME SCOPING FOR ABOUT PAGE — tipografia unificada com RocGrotesk */
 .page-about {
-    --color-custom-grey: #1a1a1a;
-    --color-custom-light: #f5f5f5;
+  --color-custom-grey: #1a1a1a;
+  --color-custom-light: #f5f5f5;
 }
 
 /* THEME SCOPING FOR PORTFOLIO PAGE — tipografia unificada com RocGrotesk */
 .page-portfolio {
-    background-color: #ffffff;
-    overflow: hidden;
-    height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .slide {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
 }
 
 .slide.active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 20;
+  opacity: 1;
+  visibility: visible;
+  z-index: 20;
 }
 
 #transition-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    z-index: 30;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 #transition-line {
-    width: 0;
-    height: 1px;
-    background-color: #000000;
-    transition: width 0.3s ease;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  transition: width 0.3s ease;
 }
 
 .is-animating #transition-overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .is-animating #transition-line {
-    width: 200px;
+  width: 200px;
 }
 
 .fine-line {
-    height: 1px;
-    background-color: #000000;
-    width: 40px;
-    opacity: 0.2;
+  height: 1px;
+  background-color: #000000;
+  width: 40px;
+  opacity: 0.2;
 }
 
 .nav-arrow {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    opacity: 0.3;
-    transition: opacity 0.3s ease;
-    color: #000000;
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  color: #000000;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-arrow:hover:not(:disabled) {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-arrow:disabled {
-    opacity: 0.1;
-    cursor: not-allowed;
+  opacity: 0.1;
+  cursor: not-allowed;
 }
 
-.project-overlay { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(255,255,255,1) !important; 
-    color: #000 !important;
-    transform: translateY(-100%);
-    transition: transform 0.4s ease-in, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center;
-    padding: 2rem;
-    z-index: 10;
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 1) !important;
+  color: #000 !important;
+  transform: translateY(-100%);
+  transition:
+    transform 0.4s ease-in,
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 10;
 }
-.gallery-column:hover .project-overlay { 
-    transform: translateY(0);
-    transition: transform 0.4s ease-out;
+.gallery-column:hover .project-overlay {
+  transform: translateY(0);
+  transition: transform 0.4s ease-out;
 }
-.project-overlay h4 { 
-    color: #000000 !important; 
-    font-family: 'RocGrotesk', sans-serif !important; 
-    font-weight: 700; 
-    font-size: 18px; 
-    margin: 0; 
-    letter-spacing: -0.02em;
+.project-overlay h4 {
+  color: #000000 !important;
+  font-family: 'RocGrotesk', sans-serif !important;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: -0.02em;
 }
-.project-overlay span { 
-    color: #000000 !important; 
-    font-family: 'RocGrotesk', sans-serif !important; 
-    font-weight: 300; 
-    font-size: 10px; 
-    text-transform: uppercase; 
-    letter-spacing: 0.2em; 
+.project-overlay span {
+  color: #000000 !important;
+  font-family: 'RocGrotesk', sans-serif !important;
+  font-weight: 300;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 .portfolio-grid {
   display: grid;
@@ -545,31 +599,31 @@ html {
    componente da UI — o restante do site segue o sistema global.
    ========================================================================== */
 .hm-logo {
-    display: inline-flex;
-    align-items: baseline;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1.2em;
-    line-height: 1.22;
-    letter-spacing: 0; /* Tracking 0em — kerning natural, sem espaçamento decorativo */
-    white-space: nowrap;
-    gap: 0.3em; /* Espaço mínimo entre HOUSE e MAZZUTTI */
+  display: inline-flex;
+  align-items: baseline;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2em;
+  line-height: 1.22;
+  letter-spacing: 0; /* Tracking 0em — kerning natural, sem espaçamento decorativo */
+  white-space: nowrap;
+  gap: 0.3em; /* Espaço mínimo entre HOUSE e MAZZUTTI */
 }
 
 /* HOUSE — Roc Grotesk Variable Condensed · Regular/Light */
 .hm-house {
-    font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
-    font-weight: 400 !important;
-    font-stretch: condensed;
-    letter-spacing: 0;
+  font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
+  font-weight: 400 !important;
+  font-stretch: condensed;
+  letter-spacing: 0;
 }
 
 /* MAZZUTTI — Roc Grotesk Variable Condensed · Bold */
 .hm-mazzutti {
-    font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
-    font-weight: 700 !important;
-    font-stretch: condensed;
-    letter-spacing: 0;
+  font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
+  font-weight: 700 !important;
+  font-stretch: condensed;
+  letter-spacing: 0;
 }
 
 /* ==========================================================================
@@ -579,11 +633,11 @@ html {
    full-bleed de qualquer página.
    ========================================================================== */
 .hmzt-hero-title {
-    font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
-    font-weight: 700 !important;
-    font-stretch: condensed;
-    letter-spacing: 0;
-    text-transform: uppercase;
+  font-family: 'RocGroteskCondensed', 'RocGrotesk', sans-serif !important;
+  font-weight: 700 !important;
+  font-stretch: condensed;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -593,48 +647,52 @@ html {
 /* G2 — prefers-reduced-motion: garante que todo conteúdo fica visível mesmo
    sem animação. Covers fadeIn, slideFade, reveals inline (opacity:0) etc. */
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-        scroll-behavior: auto !important;
-    }
-    /* Força visibilidade de qualquer elemento que animações possam esconder */
-    [style*="opacity: 0"],
-    [style*="opacity:0"] {
-        opacity: 1 !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Força visibilidade de qualquer elemento que animações possam esconder */
+  [style*='opacity: 0'],
+  [style*='opacity:0'] {
+    opacity: 1 !important;
+  }
 }
 
 /* Skip link — "Pular para o conteúdo" acessível por teclado */
 .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 0;
-    z-index: 9999;
-    padding: 0.5rem 1rem;
-    background: #000;
-    color: #fff;
-    font-family: 'RocGrotesk', sans-serif;
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    white-space: nowrap;
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #fff;
+  font-family: 'RocGrotesk', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  white-space: nowrap;
 }
 .skip-link:focus {
-    left: 1rem;
-    top: 1rem;
+  left: 1rem;
+  top: 1rem;
 }
 
 /* Foco visível consistente em todos os elementos interativos */
 :where(a, button, input, select, textarea, [tabindex]):focus-visible {
-    outline: 2px solid #000000;
-    outline-offset: 2px;
-    border-radius: 1px;
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+  border-radius: 1px;
 }
 
 /* G10 — Texto auxiliar com contraste ≥4,5:1 sobre branco (#5B5B5B = 7,1:1) */
-.text-muted { color: #5B5B5B; }
+.text-muted {
+  color: #5b5b5b;
+}
 
 /* Typewriter cursor */
 .hmzt-cursor {
@@ -646,6 +704,11 @@ html {
   animation: hmzt-blink 0.7s step-end infinite;
 }
 @keyframes hmzt-blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }

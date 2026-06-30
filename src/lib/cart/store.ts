@@ -7,7 +7,7 @@ import type { CartItem } from '@/lib/schemas/cart'
 interface CartState {
   items: CartItem[]
   couponCode: string | undefined
-  couponDiscount: number          // centavos
+  couponDiscount: number // centavos
   drawerOpen: boolean
 
   // Actions
@@ -42,9 +42,7 @@ export const useCartStore = create<CartState>()(
           if (existing) {
             return {
               items: state.items.map((i) =>
-                i.id === item.id
-                  ? { ...i, quantity: Math.min(i.quantity + item.quantity, 99) }
-                  : i,
+                i.id === item.id ? { ...i, quantity: Math.min(i.quantity + item.quantity, 99) } : i,
               ),
             }
           }

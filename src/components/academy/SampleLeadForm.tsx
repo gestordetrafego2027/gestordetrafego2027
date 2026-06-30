@@ -39,8 +39,13 @@ export function SampleLeadForm() {
   if (status === 'sent') {
     return (
       <div className="border border-[var(--rule)] bg-white p-10 text-center">
-        <p className="bmp-tag mb-4" style={{ color: 'var(--blood)' }}>● Enviado</p>
-        <p className="font-headline text-2xl md:text-3xl text-[var(--ink)]" style={{ fontWeight: 500, lineHeight: 1.2 }}>
+        <p className="bmp-tag mb-4" style={{ color: 'var(--blood)' }}>
+          ● Enviado
+        </p>
+        <p
+          className="font-headline text-2xl md:text-3xl text-[var(--ink)]"
+          style={{ fontWeight: 500, lineHeight: 1.2 }}
+        >
           O capítulo 1 está a caminho do seu e-mail.
         </p>
         <p className="font-body text-sm text-neutral-500 mt-4">
@@ -51,7 +56,10 @@ export function SampleLeadForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="border border-[var(--rule)] bg-white p-8 md:p-10 grid gap-4">
+    <form
+      onSubmit={onSubmit}
+      className="border border-[var(--rule)] bg-white p-8 md:p-10 grid gap-4"
+    >
       <div className="grid md:grid-cols-2 gap-4">
         <input
           type="text"
@@ -78,11 +86,10 @@ export function SampleLeadForm() {
       >
         {status === 'sending' ? 'Enviando…' : 'Receber capítulo 1 grátis →'}
       </button>
-      {errMsg && (
-        <p className="font-body text-sm text-[var(--blood)] mt-2">{errMsg}</p>
-      )}
+      {errMsg && <p className="font-body text-sm text-[var(--blood)] mt-2">{errMsg}</p>}
       <p className="font-raleway text-xs text-neutral-500 italic">
-        Você vai receber o capítulo no e-mail e ficar na lista da House. Sem spam — só conteúdo editorial.
+        Você vai receber o capítulo no e-mail e ficar na lista da House. Sem spam — só conteúdo
+        editorial.
       </p>
     </form>
   )

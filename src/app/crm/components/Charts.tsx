@@ -3,7 +3,10 @@
 type BarDatum = { label: string; value: number; secondary?: number }
 
 export function BarChart({
-  data, height = 160, label = '', formatValue,
+  data,
+  height = 160,
+  label = '',
+  formatValue,
 }: {
   data: BarDatum[]
   height?: number
@@ -26,9 +29,7 @@ export function BarChart({
           const h = (d.value / max) * (height - 24)
           return (
             <div key={i} className="flex-1 flex flex-col items-center">
-              <div className="text-[10px] tabular-nums mb-1 text-neutral-600">
-                {fmt(d.value)}
-              </div>
+              <div className="text-[10px] tabular-nums mb-1 text-neutral-600">{fmt(d.value)}</div>
               <div
                 className="w-full bg-gradient-to-t from-neutral-900 to-neutral-600 rounded-t"
                 style={{ height: Math.max(2, h) }}
@@ -48,7 +49,10 @@ export function BarChart({
 type LinePoint = { label: string; value: number }
 
 export function LineChart({
-  data, height = 160, label = '', formatValue,
+  data,
+  height = 160,
+  label = '',
+  formatValue,
 }: {
   data: LinePoint[]
   height?: number
@@ -81,11 +85,7 @@ export function LineChart({
       {label && (
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">{label}</div>
       )}
-      <svg
-        viewBox={`0 0 ${w} ${h}`}
-        preserveAspectRatio="none"
-        style={{ height, width: '100%' }}
-      >
+      <svg viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none" style={{ height, width: '100%' }}>
         <polygon points={areaPoints} fill="rgba(16,185,129,0.15)" />
         <polyline
           points={points}
@@ -113,15 +113,15 @@ export function LineChart({
 }
 
 export function StageFunnel({
-  data, label = '',
+  data,
+  label = '',
 }: {
   data: { stage: string; total: number; amount: number }[]
   label?: string
 }) {
   if (!data.length) return <EmptyChart height={140} label={label} />
   const max = Math.max(1, ...data.map((d) => d.total))
-  const brl = (n: number) =>
-    n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+  const brl = (n: number) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
   return (
     <div>
       {label && (

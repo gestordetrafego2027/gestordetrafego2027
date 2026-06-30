@@ -31,7 +31,9 @@ export default async function CampaignsPage() {
     <div className="space-y-6">
       <header>
         <h1 className="text-2xl font-semibold tracking-tight">Campanhas</h1>
-        <p className="text-sm text-neutral-500">Atribuição multi-touch, gasto e ROAS por campanha.</p>
+        <p className="text-sm text-neutral-500">
+          Atribuição multi-touch, gasto e ROAS por campanha.
+        </p>
       </header>
 
       {error && (

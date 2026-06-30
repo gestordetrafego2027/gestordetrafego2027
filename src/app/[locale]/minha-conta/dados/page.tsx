@@ -4,7 +4,9 @@ import { AvatarUpload } from './AvatarUpload'
 
 export default async function DadosPage() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   const { data: profile } = await supabase
     .from('profiles')

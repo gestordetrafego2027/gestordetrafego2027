@@ -34,8 +34,7 @@ const COMMON_DOMAINS = [
 
 const COMMON_TLDS = ['com', 'com.br', 'net', 'org', 'me', 'co', 'io'] as const
 
-const EMAIL_REGEX =
-  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/
 
 export interface EmailValidationResult {
   /** true se a string parece um email bem-formado */
@@ -56,9 +55,7 @@ function distance(a: string, b: string): number {
   const bn = b.length
   if (an === 0) return bn
   if (bn === 0) return an
-  const matrix: number[][] = Array.from({ length: an + 1 }, () =>
-    new Array(bn + 1).fill(0),
-  )
+  const matrix: number[][] = Array.from({ length: an + 1 }, () => new Array(bn + 1).fill(0))
   for (let i = 0; i <= an; i++) matrix[i]![0] = i
   for (let j = 0; j <= bn; j++) matrix[0]![j] = j
   for (let i = 1; i <= an; i++) {
@@ -70,12 +67,7 @@ function distance(a: string, b: string): number {
         matrix[i - 1]![j - 1]! + cost,
       )
       // transposição (ab → ba)
-      if (
-        i > 1 &&
-        j > 1 &&
-        a[i - 1] === b[j - 2] &&
-        a[i - 2] === b[j - 1]
-      ) {
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
         matrix[i]![j] = Math.min(matrix[i]![j]!, matrix[i - 2]![j - 2]! + 1)
       }
     }

@@ -34,9 +34,7 @@ export function AddToCartButton({ item, isQuoteOnly = false }: Props) {
     <button
       onClick={handleAdd}
       className={`w-full font-semibold py-3.5 rounded-xl transition-all duration-200 ${
-        added
-          ? 'bg-green-600 text-white'
-          : 'bg-neutral-900 text-white hover:bg-neutral-700'
+        added ? 'bg-green-600 text-white' : 'bg-neutral-900 text-white hover:bg-neutral-700'
       }`}
     >
       {added ? '✓ Adicionado ao carrinho' : 'Adicionar ao carrinho'}

@@ -40,15 +40,13 @@ export async function issueNfse(params: IssueNfseParams): Promise<void> {
   const supabase = createServiceClient()
 
   const body = {
-    cityServiceCode: '1.05',          // Serviços de publicidade/marketing — ajustar por produto
+    cityServiceCode: '1.05', // Serviços de publicidade/marketing — ajustar por produto
     description: params.description,
     servicesAmount: totalBrl,
     borrower: {
       name: params.buyerName || 'Consumidor Final',
       email: params.buyerEmail,
-      ...(params.buyerCpfCnpj
-        ? { federalTaxNumber: params.buyerCpfCnpj.replace(/\D/g, '') }
-        : {}),
+      ...(params.buyerCpfCnpj ? { federalTaxNumber: params.buyerCpfCnpj.replace(/\D/g, '') } : {}),
     },
   }
 
@@ -106,10 +104,9 @@ export async function getNfseStatus(companyId: string, nfseId: string): Promise<
   if (!apiKey) return null
 
   try {
-    const res = await fetch(
-      `${NFEIO_BASE}/companies/${companyId}/serviceinvoices/${nfseId}`,
-      { headers: { Authorization: apiKey } },
-    )
+    const res = await fetch(`${NFEIO_BASE}/companies/${companyId}/serviceinvoices/${nfseId}`, {
+      headers: { Authorization: apiKey },
+    })
     if (!res.ok) return null
     const data = await res.json()
     return (data.flowStatus ?? data.FlowStatus ?? null) as string | null

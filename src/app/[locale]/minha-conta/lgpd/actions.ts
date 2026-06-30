@@ -13,7 +13,9 @@ import { dataExportEmail } from '@/lib/email/templates/data-export'
  */
 export async function updateMarketingConsent(formData: FormData): Promise<void> {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return
 
   const consent = formData.get('marketing_consent') === 'true'
@@ -33,7 +35,9 @@ export async function updateMarketingConsent(formData: FormData): Promise<void> 
  */
 export async function requestDataExport(): Promise<{ ok: boolean; message: string }> {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return { ok: false, message: 'Sessão expirada.' }
 
   logger.info({ user_id: user.id }, 'LGPD: solicitação de exportação de dados')
@@ -41,7 +45,9 @@ export async function requestDataExport(): Promise<{ ok: boolean; message: strin
   // Coleta dados do perfil
   const { data: profile } = await supabase
     .from('profiles')
-    .select('full_name, display_name, email, phone, city, state, created_at, marketing_consent, terms_accepted_at')
+    .select(
+      'full_name, display_name, email, phone, city, state, created_at, marketing_consent, terms_accepted_at',
+    )
     .eq('id', user.id)
     .maybeSingle()
 
@@ -80,7 +86,9 @@ export async function requestDataExport(): Promise<{ ok: boolean; message: strin
  */
 export async function requestAccountDeletion(): Promise<{ ok: boolean; message: string }> {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return { ok: false, message: 'Sessão expirada.' }
 
   const service = createServiceClient()
@@ -88,23 +96,26 @@ export async function requestAccountDeletion(): Promise<{ ok: boolean; message: 
 
   try {
     // Anonimiza o perfil — mantém id para FK de pedidos (obrigação fiscal)
-    await service.from('profiles').update({
-      full_name: '[REMOVIDO]',
-      display_name: null,
-      email: `deleted_${user.id}@removed.invalid`,
-      phone: null,
-      city: null,
-      state: null,
-      cpf: null,
-      avatar_url: null,
-      bio: null,
-      instagram_handle: null,
-      linkedin_handle: null,
-      tiktok_handle: null,
-      marketing_consent: false,
-      metadata: { lgpd_deletion_requested_at: new Date().toISOString() },
-      updated_at: new Date().toISOString(),
-    }).eq('id', user.id)
+    await service
+      .from('profiles')
+      .update({
+        full_name: '[REMOVIDO]',
+        display_name: null,
+        email: `deleted_${user.id}@removed.invalid`,
+        phone: null,
+        city: null,
+        state: null,
+        cpf: null,
+        avatar_url: null,
+        bio: null,
+        instagram_handle: null,
+        linkedin_handle: null,
+        tiktok_handle: null,
+        marketing_consent: false,
+        metadata: { lgpd_deletion_requested_at: new Date().toISOString() },
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', user.id)
 
     // Remove sessões ativas
     await supabase.auth.signOut({ scope: 'global' })
@@ -112,7 +123,10 @@ export async function requestAccountDeletion(): Promise<{ ok: boolean; message: 
     log.info('LGPD: conta anonimizada com sucesso')
   } catch (err) {
     log.error({ err }, 'LGPD: falha ao anonimizar conta')
-    return { ok: false, message: 'Não foi possível processar. Entre em contato: contato@housemazzutti.com' }
+    return {
+      ok: false,
+      message: 'Não foi possível processar. Entre em contato: contato@housemazzutti.com',
+    }
   }
 
   redirect('/login?lgpd=deleted')

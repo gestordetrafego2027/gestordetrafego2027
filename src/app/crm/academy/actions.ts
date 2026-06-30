@@ -6,15 +6,19 @@ import { createClient } from '@/lib/supabase/server'
 
 async function requireAdmin() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const role = (user?.app_metadata as { role?: string } | undefined)?.role
   if (role !== 'admin') redirect('/crm?error=acesso_negado')
   return { supabase, user: user! }
 }
 
 function slugify(s: string) {
-  return s.toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+  return s
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .slice(0, 80)
@@ -26,13 +30,18 @@ export async function createAcademyProductAction(formData: FormData): Promise<vo
   const type = String(formData.get('type') ?? 'course')
   const businessUnit = String(formData.get('business_unit') ?? 'studio')
   const priceCents = Math.round(Number(formData.get('price_brl') ?? 0) * 100)
-  if (!title) redirect('/crm/academy/products/new?error=' + encodeURIComponent('Titulo obrigatorio.'))
+  if (!title)
+    redirect('/crm/academy/products/new?error=' + encodeURIComponent('Titulo obrigatorio.'))
 
   const baseSlug = slugify(title)
   let slug = baseSlug
   let attempt = 0
   while (true) {
-    const { data: exists } = await supabase.from('academy_products').select('id').eq('slug', slug).maybeSingle()
+    const { data: exists } = await supabase
+      .from('academy_products')
+      .select('id')
+      .eq('slug', slug)
+      .maybeSingle()
     if (!exists) break
     attempt++
     slug = `${baseSlug}-${attempt}`
@@ -48,7 +57,10 @@ export async function createAcademyProductAction(formData: FormData): Promise<vo
     .limit(1)
     .maybeSingle()
   if (!defaultAuthor) {
-    redirect('/crm/academy/products/new?error=' + encodeURIComponent('Nenhum autor cadastrado. Cadastre um autor primeiro.'))
+    redirect(
+      '/crm/academy/products/new?error=' +
+        encodeURIComponent('Nenhum autor cadastrado. Cadastre um autor primeiro.'),
+    )
   }
 
   const insertRow = {
@@ -88,9 +100,10 @@ export async function updateAcademyProductAction(formData: FormData): Promise<vo
     business_unit: String(formData.get('business_unit') ?? 'studio'),
     type: String(formData.get('type') ?? 'course'),
     price_cents: Math.round(Number(formData.get('price_brl') ?? 0) * 100),
-    original_price_cents: Number(formData.get('original_price_brl') ?? 0) > 0
-      ? Math.round(Number(formData.get('original_price_brl')) * 100)
-      : null,
+    original_price_cents:
+      Number(formData.get('original_price_brl') ?? 0) > 0
+        ? Math.round(Number(formData.get('original_price_brl')) * 100)
+        : null,
     cover_url: String(formData.get('cover_url') ?? '').trim() || null,
     thumbnail_url: String(formData.get('thumbnail_url') ?? '').trim() || null,
     trailer_video_url: String(formData.get('trailer_video_url') ?? '').trim() || null,
@@ -105,7 +118,10 @@ export async function updateAcademyProductAction(formData: FormData): Promise<vo
     patch.published_at = new Date().toISOString()
   }
 
-  const { error } = await supabase.from('academy_products').update(patch as any).eq('id', id)
+  const { error } = await supabase
+    .from('academy_products')
+    .update(patch as any)
+    .eq('id', id)
   if (error) redirect(`/crm/academy/products/${id}?error=` + encodeURIComponent(error.message))
   revalidatePath(`/crm/academy/products/${id}`)
   revalidatePath('/crm/academy/products')
@@ -118,12 +134,18 @@ export async function createModuleAction(formData: FormData): Promise<void> {
   if (!productId || !title) return
 
   const { data: maxOrder } = await supabase
-    .from('academy_modules').select('order_index')
-    .eq('product_id', productId).order('order_index', { ascending: false }).limit(1).maybeSingle()
+    .from('academy_modules')
+    .select('order_index')
+    .eq('product_id', productId)
+    .order('order_index', { ascending: false })
+    .limit(1)
+    .maybeSingle()
   const nextIdx = (maxOrder?.order_index ?? -1) + 1
 
   await supabase.from('academy_modules').insert({
-    product_id: productId, title, order_index: nextIdx,
+    product_id: productId,
+    title,
+    order_index: nextIdx,
   } as any)
   revalidatePath(`/crm/academy/products/${productId}`)
 }
@@ -137,8 +159,12 @@ export async function createLessonAction(formData: FormData): Promise<void> {
   if (!productId || !moduleId || !title) return
 
   const { data: maxOrder } = await supabase
-    .from('academy_lessons').select('order_index')
-    .eq('module_id', moduleId).order('order_index', { ascending: false }).limit(1).maybeSingle()
+    .from('academy_lessons')
+    .select('order_index')
+    .eq('module_id', moduleId)
+    .order('order_index', { ascending: false })
+    .limit(1)
+    .maybeSingle()
   const nextIdx = (maxOrder?.order_index ?? -1) + 1
 
   await supabase.from('academy_lessons').insert({

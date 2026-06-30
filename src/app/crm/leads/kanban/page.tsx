@@ -99,8 +99,8 @@ export default async function LeadsKanbanPage({ searchParams }: { searchParams: 
       {stages.length === 0 ? (
         <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
           Nenhum estágio definido em <code>pipeline_stages</code>
-          {segment ? ` para o segmento "${segment}"` : ''}.
-          Configure os estágios no banco para usar o kanban.
+          {segment ? ` para o segmento "${segment}"` : ''}. Configure os estágios no banco para usar
+          o kanban.
         </div>
       ) : (
         <LeadsKanban leads={leads} stages={stages} />

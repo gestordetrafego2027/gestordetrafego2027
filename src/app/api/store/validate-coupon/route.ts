@@ -30,7 +30,10 @@ export async function GET(req: NextRequest) {
     const promoCodes = await stripe.promotionCodes.list({ code, active: true, limit: 1 })
 
     if (!promoCodes.data.length) {
-      return NextResponse.json({ valid: false, error: 'Cupom inválido ou expirado.' }, { status: 200 })
+      return NextResponse.json(
+        { valid: false, error: 'Cupom inválido ou expirado.' },
+        { status: 200 },
+      )
     }
 
     const promo = promoCodes.data[0]

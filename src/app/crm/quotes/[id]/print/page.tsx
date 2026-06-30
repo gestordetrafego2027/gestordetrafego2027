@@ -8,35 +8,36 @@ export const metadata = { title: 'Proposta — Imprimir' }
 const brl = (n: number | null | undefined) =>
   (n ?? 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-export default async function QuotePrintPage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
+export default async function QuotePrintPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const supabase = await createClient()
 
   const { data: quote, error } = await supabase
     .from('quotes')
-    .select(`
+    .select(
+      `
       id, title, status, notes, subtotal_brl, discount_brl, total_brl,
       valid_until, sent_at, accepted_at, created_at,
       leads (name, email, phone, city),
       quote_items (id, kind, label, description, quantity, unit_price_brl, total_brl, position)
-    `)
+    `,
+    )
     .eq('id', id)
     .single()
 
   if (error || !quote) notFound()
 
-  const lead = quote.leads as unknown as { name: string; email: string | null; phone: string | null; city: string | null } | null
+  const lead = quote.leads as unknown as {
+    name: string
+    email: string | null
+    phone: string | null
+    city: string | null
+  } | null
   const items = (quote.quote_items ?? [])
     .slice()
     .sort((a: { position: number }, b: { position: number }) => a.position - b.position)
 
-  const issue = quote.created_at
-    ? new Date(quote.created_at).toLocaleDateString('pt-BR')
-    : ''
+  const issue = quote.created_at ? new Date(quote.created_at).toLocaleDateString('pt-BR') : ''
   const validUntil = quote.valid_until
     ? new Date(quote.valid_until).toLocaleDateString('pt-BR')
     : null
@@ -94,22 +95,28 @@ export default async function QuotePrintPage({
             </tr>
           </thead>
           <tbody>
-            {items.map((it: {
-              id: string; label: string; description: string | null;
-              quantity: number; unit_price_brl: number; total_brl: number | null;
-            }) => (
-              <tr key={it.id} className="border-b border-neutral-100 align-top">
-                <td className="py-3">
-                  <div className="font-medium">{it.label}</div>
-                  {it.description && (
-                    <div className="text-xs text-neutral-500 mt-0.5">{it.description}</div>
-                  )}
-                </td>
-                <td className="py-3 text-right tabular-nums">{it.quantity}</td>
-                <td className="py-3 text-right tabular-nums">{brl(it.unit_price_brl)}</td>
-                <td className="py-3 text-right tabular-nums">{brl(it.total_brl)}</td>
-              </tr>
-            ))}
+            {items.map(
+              (it: {
+                id: string
+                label: string
+                description: string | null
+                quantity: number
+                unit_price_brl: number
+                total_brl: number | null
+              }) => (
+                <tr key={it.id} className="border-b border-neutral-100 align-top">
+                  <td className="py-3">
+                    <div className="font-medium">{it.label}</div>
+                    {it.description && (
+                      <div className="text-xs text-neutral-500 mt-0.5">{it.description}</div>
+                    )}
+                  </td>
+                  <td className="py-3 text-right tabular-nums">{it.quantity}</td>
+                  <td className="py-3 text-right tabular-nums">{brl(it.unit_price_brl)}</td>
+                  <td className="py-3 text-right tabular-nums">{brl(it.total_brl)}</td>
+                </tr>
+              ),
+            )}
           </tbody>
         </table>
 
@@ -152,13 +159,12 @@ export default async function QuotePrintPage({
         {/* Condições padrão */}
         <section className="text-xs text-neutral-500 border-t border-neutral-200 pt-6 leading-relaxed">
           <p>
-            <strong>Condições gerais:</strong> validade da proposta {validUntil ? `até ${validUntil}` : '30 dias da emissão'}.
-            Pagamento via PIX, boleto ou cartão (parcelável). Início dos trabalhos sob confirmação.
-            Após aceite, mudanças de escopo serão orçadas separadamente.
+            <strong>Condições gerais:</strong> validade da proposta{' '}
+            {validUntil ? `até ${validUntil}` : '30 dias da emissão'}. Pagamento via PIX, boleto ou
+            cartão (parcelável). Início dos trabalhos sob confirmação. Após aceite, mudanças de
+            escopo serão orçadas separadamente.
           </p>
-          <p className="mt-2">
-            House Mazzutti — Studio · Agência · Produtora · Comunidade
-          </p>
+          <p className="mt-2">House Mazzutti — Studio · Agência · Produtora · Comunidade</p>
         </section>
       </div>
 

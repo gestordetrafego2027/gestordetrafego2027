@@ -55,7 +55,9 @@ export async function POST(req: NextRequest) {
   })
 
   // Sessão do usuário (guest permitido)
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   // Buscar preço — tenta store_prices primeiro, depois academy_products como fallback
   let totalCents = 0
@@ -71,7 +73,9 @@ export async function POST(req: NextRequest) {
   if (price) {
     totalCents = price.unit_amount ?? 0
     const prod = price.store_products
-    productName = (Array.isArray(prod) ? prod[0]?.name : (prod as { name?: string } | null)?.name) ?? body.productSlug
+    productName =
+      (Array.isArray(prod) ? prod[0]?.name : (prod as { name?: string } | null)?.name) ??
+      body.productSlug
   } else {
     // Fallback: buscar em academy_products pelo slug
     const { data: academyProduct } = await supabase
@@ -81,7 +85,10 @@ export async function POST(req: NextRequest) {
       .maybeSingle()
 
     if (!academyProduct) {
-      log.warn({ stripePriceId: body.stripePriceId, slug: body.productSlug }, 'produto não encontrado')
+      log.warn(
+        { stripePriceId: body.stripePriceId, slug: body.productSlug },
+        'produto não encontrado',
+      )
       return NextResponse.json({ error: 'Produto não encontrado.' }, { status: 404 })
     }
 
@@ -233,14 +240,15 @@ export async function POST(req: NextRequest) {
     }
   } catch (err) {
     const detail =
-      err && typeof err === 'object' && 'body' in err
-        ? (err as { body: unknown }).body
-        : undefined
+      err && typeof err === 'object' && 'body' in err ? (err as { body: unknown }).body : undefined
     log.error(
       { err: String(err), asaasDetail: JSON.stringify(detail), orderId: order.id },
       'falha ao gerar cobrança Asaas',
     )
-    return NextResponse.json({ error: 'Falha ao gerar cobrança. Tente novamente.' }, { status: 502 })
+    return NextResponse.json(
+      { error: 'Falha ao gerar cobrança. Tente novamente.' },
+      { status: 502 },
+    )
   }
 
   return NextResponse.json({ orderId: order.id })

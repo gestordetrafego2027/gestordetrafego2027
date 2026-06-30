@@ -40,7 +40,9 @@ export async function createLead(formData: FormData) {
   const segment = TALENT_TYPES.has(lead_type) ? 'talents' : 'commercial'
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   const { error } = await supabase.from('leads').insert({
     name,

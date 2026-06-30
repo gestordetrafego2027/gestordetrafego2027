@@ -3,7 +3,9 @@ import { LgpdClient } from './LgpdClient'
 
 export default async function LgpdPage() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   const { data: profile } = await supabase
     .from('profiles')
@@ -15,8 +17,9 @@ export default async function LgpdPage() {
     <div className="bg-white rounded-2xl border border-neutral-100 p-6">
       <h2 className="text-lg font-semibold text-neutral-900 mb-2">Privacidade & LGPD</h2>
       <p className="text-sm text-neutral-400 mb-6">
-        Gerencie seus consentimentos e exercite seus direitos conforme a Lei Geral de Proteção de Dados
-        (Lei 13.709/2018). Controlador: House Mazzutti Produções Ltda — CNPJ 64.448.222/0001-54.
+        Gerencie seus consentimentos e exercite seus direitos conforme a Lei Geral de Proteção de
+        Dados (Lei 13.709/2018). Controlador: House Mazzutti Produções Ltda — CNPJ
+        64.448.222/0001-54.
       </p>
 
       {profile?.terms_accepted_at && (

@@ -9,7 +9,21 @@ async function checkSupabase(): Promise<{ ok: boolean; latencyMs: number }> {
   try {
     const supabase = await createClient()
     // '_health' não existe no schema tipado; cast necessário para verificação de conectividade.
-    const { error } = await (supabase as unknown as { from: (t: string) => { select: (c: string) => { limit: (n: number) => { maybeSingle: () => Promise<{ error: { code?: string; message?: string } | null }> } } } }).from('_health').select('1').limit(1).maybeSingle()
+    const { error } = await (
+      supabase as unknown as {
+        from: (t: string) => {
+          select: (c: string) => {
+            limit: (n: number) => {
+              maybeSingle: () => Promise<{ error: { code?: string; message?: string } | null }>
+            }
+          }
+        }
+      }
+    )
+      .from('_health')
+      .select('1')
+      .limit(1)
+      .maybeSingle()
     // Tabela inexistente retorna erro de schema, não de conexão — conexão OK.
     // PGRST116 (no rows) / PGRST205 (table not found in schema cache) / 42P01 (relation does not exist) → conexão saudável.
     const ok =

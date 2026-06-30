@@ -64,12 +64,12 @@ export default async function AutomationsPage() {
                   <Link href={`/crm/automations/${r.id}`} className="font-medium hover:underline">
                     {r.name}
                   </Link>
-                  {r.description && (
-                    <div className="text-xs text-neutral-500">{r.description}</div>
-                  )}
+                  {r.description && <div className="text-xs text-neutral-500">{r.description}</div>}
                 </td>
                 <td className="px-4 py-2">
-                  <span className={`rounded px-2 py-0.5 text-xs ${triggerBadge[r.trigger_type] ?? ''}`}>
+                  <span
+                    className={`rounded px-2 py-0.5 text-xs ${triggerBadge[r.trigger_type] ?? ''}`}
+                  >
                     {r.trigger_type}
                   </span>
                 </td>

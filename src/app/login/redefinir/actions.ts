@@ -18,9 +18,14 @@ export async function setNewPassword(
   }
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) {
-    redirect('/login/recuperar?error=' + encodeURIComponent('Sessão expirada. Solicite um novo link de recuperação.'))
+    redirect(
+      '/login/recuperar?error=' +
+        encodeURIComponent('Sessão expirada. Solicite um novo link de recuperação.'),
+    )
   }
 
   const { error } = await supabase.auth.updateUser({ password })

@@ -9,7 +9,9 @@ import { createClient as createSbClient } from '@supabase/supabase-js'
 // Garante que so admin chega aqui
 async function requireAdmin() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const role = (user?.app_metadata as { role?: string } | undefined)?.role
   if (role !== 'admin') redirect('/crm?error=acesso_negado')
   return user!
@@ -19,13 +21,18 @@ async function requireAdmin() {
 function adminClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY!
-  if (!url || !key) throw new Error('Supabase env vars ausentes (NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY)')
+  if (!url || !key)
+    throw new Error(
+      'Supabase env vars ausentes (NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY)',
+    )
   return createSbClient(url, key, { auth: { persistSession: false } })
 }
 
 export async function inviteUserAction(formData: FormData): Promise<void> {
   await requireAdmin()
-  const email = String(formData.get('email') ?? '').trim().toLowerCase()
+  const email = String(formData.get('email') ?? '')
+    .trim()
+    .toLowerCase()
   const role = String(formData.get('role') ?? 'staff')
   const unit = String(formData.get('unit') ?? '').trim() || null
 
@@ -34,7 +41,8 @@ export async function inviteUserAction(formData: FormData): Promise<void> {
   }
 
   const hdrs = await headers()
-  const origin = process.env.NEXT_PUBLIC_SITE_URL || `https://${hdrs.get('host') ?? 'housemazzutti.com'}`
+  const origin =
+    process.env.NEXT_PUBLIC_SITE_URL || `https://${hdrs.get('host') ?? 'housemazzutti.com'}`
 
   const sb = adminClient()
   const { error } = await sb.auth.admin.inviteUserByEmail(email, {
@@ -84,11 +92,14 @@ export async function deleteUserAction(formData: FormData): Promise<void> {
 
 export async function sendRecoveryLinkAction(formData: FormData): Promise<void> {
   await requireAdmin()
-  const email = String(formData.get('email') ?? '').trim().toLowerCase()
+  const email = String(formData.get('email') ?? '')
+    .trim()
+    .toLowerCase()
   if (!email.includes('@')) return
 
   const hdrs = await headers()
-  const origin = process.env.NEXT_PUBLIC_SITE_URL || `https://${hdrs.get('host') ?? 'housemazzutti.com'}`
+  const origin =
+    process.env.NEXT_PUBLIC_SITE_URL || `https://${hdrs.get('host') ?? 'housemazzutti.com'}`
 
   const sb = adminClient()
   await sb.auth.admin.generateLink({

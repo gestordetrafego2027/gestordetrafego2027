@@ -65,10 +65,7 @@ export async function deleteInterestAction(formData: FormData) {
   if (!interestId || !leadId) redirect('/crm/leads')
 
   const supabase = await createClient()
-  const { error } = await supabase
-    .from('lead_service_interests')
-    .delete()
-    .eq('id', interestId)
+  const { error } = await supabase.from('lead_service_interests').delete().eq('id', interestId)
   if (error) {
     redirect(`/crm/leads/${leadId}?error=` + encodeURIComponent(error.message))
   }

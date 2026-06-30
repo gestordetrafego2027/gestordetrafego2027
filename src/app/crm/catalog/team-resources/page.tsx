@@ -1,14 +1,18 @@
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import {
-  upsertCategoryAction, deleteCategoryAction,
-  upsertResourceAction, deleteResourceAction,
+  upsertCategoryAction,
+  deleteCategoryAction,
+  upsertResourceAction,
+  deleteResourceAction,
 } from './actions'
 
 export const dynamic = 'force-dynamic'
 
 const brl = (n: number | null | undefined) =>
-  n === null || n === undefined ? '—' : Number(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+  n === null || n === undefined
+    ? '—'
+    : Number(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
 type SearchParams = Promise<{
   cat_edit?: string
@@ -28,7 +32,9 @@ export default async function TeamResourcesPage({ searchParams }: { searchParams
       .order('position', { ascending: true }),
     supabase
       .from('team_resources')
-      .select('id, category_id, role, slug, description, target_audience, base_price_brl, final_price_brl, position, active')
+      .select(
+        'id, category_id, role, slug, description, target_audience, base_price_brl, final_price_brl, position, active',
+      )
       .order('position', { ascending: true }),
   ])
 
@@ -57,9 +63,7 @@ export default async function TeamResourcesPage({ searchParams }: { searchParams
       </header>
 
       {error && (
-        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">
-          {error}
-        </p>
+        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">{error}</p>
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -104,9 +108,7 @@ export default async function TeamResourcesPage({ searchParams }: { searchParams
             action={upsertCategoryAction}
             className="border-t border-neutral-100 pt-3 space-y-2"
           >
-            {editingCat && (
-              <input type="hidden" name="category_id" value={editingCat.id} />
-            )}
+            {editingCat && <input type="hidden" name="category_id" value={editingCat.id} />}
             <input
               name="name"
               required
@@ -152,10 +154,14 @@ export default async function TeamResourcesPage({ searchParams }: { searchParams
 
           {(categories ?? []).map((cat) => {
             const list = resourcesByCategory.get(cat.id) ?? []
-            const isAddingHere = res_new_cat === cat.id || (editingRes && editingRes.category_id === cat.id)
+            const isAddingHere =
+              res_new_cat === cat.id || (editingRes && editingRes.category_id === cat.id)
 
             return (
-              <div key={cat.id} className="rounded-lg border border-neutral-200 bg-white p-5 space-y-3">
+              <div
+                key={cat.id}
+                className="rounded-lg border border-neutral-200 bg-white p-5 space-y-3"
+              >
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-semibold">{cat.name}</h3>
                   <Link
@@ -192,9 +198,15 @@ export default async function TeamResourcesPage({ searchParams }: { searchParams
                             <div className="text-xs text-neutral-500">{r.description}</div>
                           )}
                         </td>
-                        <td className="py-2 text-xs text-neutral-600">{r.target_audience ?? '—'}</td>
-                        <td className="py-2 text-right tabular-nums text-xs">{brl(r.base_price_brl)}</td>
-                        <td className="py-2 text-right tabular-nums text-xs font-medium">{brl(r.final_price_brl)}</td>
+                        <td className="py-2 text-xs text-neutral-600">
+                          {r.target_audience ?? '—'}
+                        </td>
+                        <td className="py-2 text-right tabular-nums text-xs">
+                          {brl(r.base_price_brl)}
+                        </td>
+                        <td className="py-2 text-right tabular-nums text-xs font-medium">
+                          {brl(r.final_price_brl)}
+                        </td>
                         <td className="py-2 text-right space-x-2">
                           <Link
                             href={`/crm/catalog/team-resources?res_edit=${r.id}`}
@@ -204,14 +216,19 @@ export default async function TeamResourcesPage({ searchParams }: { searchParams
                           </Link>
                           <form action={deleteResourceAction} className="inline">
                             <input type="hidden" name="resource_id" value={r.id} />
-                            <button className="text-xs text-rose-600 hover:underline">excluir</button>
+                            <button className="text-xs text-rose-600 hover:underline">
+                              excluir
+                            </button>
                           </form>
                         </td>
                       </tr>
                     ))}
                     {list.length === 0 && !isAddingHere && (
                       <tr>
-                        <td colSpan={5} className="py-3 text-center text-neutral-400 italic text-xs">
+                        <td
+                          colSpan={5}
+                          className="py-3 text-center text-neutral-400 italic text-xs"
+                        >
                           Sem recursos.
                         </td>
                       </tr>
@@ -240,7 +257,9 @@ export default async function TeamResourcesPage({ searchParams }: { searchParams
                       />
                     </label>
                     <label className="md:col-span-3 space-y-0.5">
-                      <span className="block text-[10px] uppercase text-neutral-500">Público-alvo</span>
+                      <span className="block text-[10px] uppercase text-neutral-500">
+                        Público-alvo
+                      </span>
                       <input
                         name="target_audience"
                         defaultValue={editingRes?.target_audience ?? ''}

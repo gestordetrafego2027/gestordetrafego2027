@@ -24,7 +24,10 @@ export default async function CrmHome() {
     supabase.from('leads').select('*', { count: 'exact', head: true }).eq('segment', 'commercial'),
     supabase.from('leads').select('*', { count: 'exact', head: true }).eq('segment', 'talents'),
     supabase.from('clients').select('*', { count: 'exact', head: true }),
-    supabase.from('opportunities').select('*', { count: 'exact', head: true }).is('closed_at', null),
+    supabase
+      .from('opportunities')
+      .select('*', { count: 'exact', head: true })
+      .is('closed_at', null),
     supabase.from('v_opportunities_pipeline').select('*'),
     supabase.from('v_revenue_monthly').select('*').order('month', { ascending: false }).limit(6),
     supabase
@@ -40,19 +43,23 @@ export default async function CrmHome() {
     if (!f.status) return
     leadsByStatus.set(f.status, (leadsByStatus.get(f.status) ?? 0) + Number(f.total ?? 0))
   })
-  const STATUS_ORDER = ['novo','em_contato','qualificado','proposta_enviada','negociacao','ganho','perdido','arquivado']
-  const leadsBars = STATUS_ORDER
-    .map((s) => ({ label: s.replace('_', ' '), value: leadsByStatus.get(s) ?? 0 }))
-    .filter((b) => b.value > 0)
+  const STATUS_ORDER = [
+    'novo',
+    'em_contato',
+    'qualificado',
+    'proposta_enviada',
+    'negociacao',
+    'ganho',
+    'perdido',
+    'arquivado',
+  ]
+  const leadsBars = STATUS_ORDER.map((s) => ({
+    label: s.replace('_', ' '),
+    value: leadsByStatus.get(s) ?? 0,
+  })).filter((b) => b.value > 0)
 
-  const pipelineAmount = (pipeline ?? []).reduce(
-    (a, p) => a + Number(p.amount_total_brl ?? 0),
-    0,
-  )
-  const pipelineWeighted = (pipeline ?? []).reduce(
-    (a, p) => a + Number(p.weighted_brl ?? 0),
-    0,
-  )
+  const pipelineAmount = (pipeline ?? []).reduce((a, p) => a + Number(p.amount_total_brl ?? 0), 0)
+  const pipelineWeighted = (pipeline ?? []).reduce((a, p) => a + Number(p.weighted_brl ?? 0), 0)
 
   const stats = [
     { label: 'Leads totais', value: totalLeads ?? 0 },
@@ -100,7 +107,9 @@ export default async function CrmHome() {
                 amount: Number(p.amount_total_brl ?? 0),
               }))}
           />
-          <p className="text-xs text-neutral-500 mb-3 mt-4 border-t border-neutral-100 pt-3">Detalhe:</p>
+          <p className="text-xs text-neutral-500 mb-3 mt-4 border-t border-neutral-100 pt-3">
+            Detalhe:
+          </p>
           <table className="w-full text-sm">
             <thead className="text-xs text-neutral-500">
               <tr>
@@ -153,7 +162,9 @@ export default async function CrmHome() {
                 height={140}
                 formatValue={(n) =>
                   n.toLocaleString('pt-BR', {
-                    style: 'currency', currency: 'BRL', maximumFractionDigits: 0,
+                    style: 'currency',
+                    currency: 'BRL',
+                    maximumFractionDigits: 0,
                   })
                 }
               />

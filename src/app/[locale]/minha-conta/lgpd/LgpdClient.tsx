@@ -44,8 +44,8 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
       <section>
         <h3 className="font-semibold text-neutral-900 mb-1">Comunicações de marketing</h3>
         <p className="text-sm text-neutral-500 mb-4">
-          Aceito receber e-mails com novidades, promoções e conteúdos da House Mazzutti.
-          Você pode revogar a qualquer momento (Art. 8, §5º LGPD).
+          Aceito receber e-mails com novidades, promoções e conteúdos da House Mazzutti. Você pode
+          revogar a qualquer momento (Art. 8, §5º LGPD).
         </p>
         <button
           onClick={handleConsentToggle}
@@ -71,8 +71,8 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
       <section>
         <h3 className="font-semibold text-neutral-900 mb-1">Exportar meus dados</h3>
         <p className="text-sm text-neutral-500 mb-4">
-          Direito de acesso e portabilidade (Art. 18, I e V LGPD). Você receberá um arquivo
-          com todos os seus dados cadastrais e histórico de pedidos.
+          Direito de acesso e portabilidade (Art. 18, I e V LGPD). Você receberá um arquivo com
+          todos os seus dados cadastrais e histórico de pedidos.
         </p>
         {exportMsg ? (
           <div className="bg-blue-50 border border-blue-200 text-blue-700 text-sm rounded-xl px-4 py-3">
@@ -95,8 +95,8 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
       <section>
         <h3 className="font-semibold text-red-600 mb-1">Excluir minha conta</h3>
         <p className="text-sm text-neutral-500 mb-2">
-          Direito à eliminação (Art. 18, VI LGPD). Seus dados pessoais serão anonimizados.
-          Registros fiscais são mantidos por obrigação legal (Art. 16, II LGPD).
+          Direito à eliminação (Art. 18, VI LGPD). Seus dados pessoais serão anonimizados. Registros
+          fiscais são mantidos por obrigação legal (Art. 16, II LGPD).
         </p>
         <p className="text-xs text-neutral-400 mb-4">
           ⚠️ Esta ação é irreversível. Acesso à loja e academy será encerrado.
@@ -130,7 +130,10 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
                 {isPendingDelete ? 'Excluindo...' : 'Confirmar exclusão'}
               </button>
               <button
-                onClick={() => { setDeleteConfirm(false); setDeleteInput('') }}
+                onClick={() => {
+                  setDeleteConfirm(false)
+                  setDeleteInput('')
+                }}
                 className="px-5 py-2 border border-neutral-200 text-sm font-medium rounded-lg hover:bg-white transition-colors"
               >
                 Cancelar

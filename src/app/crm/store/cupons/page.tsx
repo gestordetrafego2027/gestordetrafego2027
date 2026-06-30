@@ -7,7 +7,9 @@ function fmt(cents: number) {
 
 export default async function CuponsAdminPage() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const md = (user?.app_metadata ?? {}) as { role?: string }
   if (md.role !== 'admin') redirect('/crm')
 
@@ -21,7 +23,9 @@ export default async function CuponsAdminPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-bold text-neutral-900">Cupons de desconto</h1>
-          <p className="text-sm text-neutral-400 mt-0.5">{coupons?.length ?? 0} cupons cadastrados</p>
+          <p className="text-sm text-neutral-400 mt-0.5">
+            {coupons?.length ?? 0} cupons cadastrados
+          </p>
         </div>
         <a
           href="https://dashboard.stripe.com/test/coupons"
@@ -37,17 +41,29 @@ export default async function CuponsAdminPage() {
         {!coupons?.length ? (
           <div className="px-6 py-12 text-center">
             <p className="text-sm text-neutral-400">Nenhum cupom cadastrado.</p>
-            <p className="text-xs text-neutral-300 mt-1">Crie cupons no Stripe Dashboard — eles são sincronizados automaticamente via webhook.</p>
+            <p className="text-xs text-neutral-300 mt-1">
+              Crie cupons no Stripe Dashboard — eles são sincronizados automaticamente via webhook.
+            </p>
           </div>
         ) : (
           <table className="w-full text-sm">
             <thead className="bg-neutral-50 border-b border-neutral-100">
               <tr>
-                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">Código</th>
-                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">Desconto</th>
-                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">Usos</th>
-                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">Validade</th>
-                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">Status</th>
+                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">
+                  Código
+                </th>
+                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">
+                  Desconto
+                </th>
+                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">
+                  Usos
+                </th>
+                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">
+                  Validade
+                </th>
+                <th className="text-left px-5 py-3 text-xs font-medium text-neutral-400 uppercase tracking-wider">
+                  Status
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-neutral-100">
@@ -66,15 +82,27 @@ export default async function CuponsAdminPage() {
                       {c.max_redemptions ? ` / ${c.max_redemptions}` : ''}
                     </td>
                     <td className="px-5 py-3 text-neutral-500">
-                      {c.valid_until
-                        ? new Date(c.valid_until).toLocaleDateString('pt-BR')
-                        : <span className="text-neutral-300">sem limite</span>}
+                      {c.valid_until ? (
+                        new Date(c.valid_until).toLocaleDateString('pt-BR')
+                      ) : (
+                        <span className="text-neutral-300">sem limite</span>
+                      )}
                     </td>
                     <td className="px-5 py-3">
-                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
-                        isActive ? 'bg-green-50 text-green-700' : 'bg-neutral-100 text-neutral-500'
-                      }`}>
-                        {isActive ? 'Ativo' : expired ? 'Expirado' : exhausted ? 'Esgotado' : 'Inativo'}
+                      <span
+                        className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                          isActive
+                            ? 'bg-green-50 text-green-700'
+                            : 'bg-neutral-100 text-neutral-500'
+                        }`}
+                      >
+                        {isActive
+                          ? 'Ativo'
+                          : expired
+                            ? 'Expirado'
+                            : exhausted
+                              ? 'Esgotado'
+                              : 'Inativo'}
                       </span>
                     </td>
                   </tr>
@@ -86,7 +114,8 @@ export default async function CuponsAdminPage() {
       </div>
 
       <p className="text-xs text-neutral-400 text-center">
-        Cupons são criados no Stripe Dashboard e sincronizados para o Supabase via <code className="font-mono text-neutral-500">scripts/sync-stripe-catalog.ts</code>.
+        Cupons são criados no Stripe Dashboard e sincronizados para o Supabase via{' '}
+        <code className="font-mono text-neutral-500">scripts/sync-stripe-catalog.ts</code>.
       </p>
     </div>
   )

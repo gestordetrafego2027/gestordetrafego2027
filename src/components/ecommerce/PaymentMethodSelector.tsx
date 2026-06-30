@@ -25,9 +25,14 @@ const BRL = (cents: number) =>
   (cents / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
 const METHODS: { id: Method; label: string; desc: string; icon: string }[] = [
-  { id: 'card',   label: 'Cartão de crédito', desc: 'Visa, Master, Elo, Amex · Apple Pay', icon: '💳' },
-  { id: 'pix',    label: 'Pix',               desc: 'Aprovação imediata · taxa R$ 1,99',   icon: '📱' },
-  { id: 'boleto', label: 'Boleto bancário',    desc: 'Vence em 3 dias úteis',               icon: '📄' },
+  {
+    id: 'card',
+    label: 'Cartão de crédito',
+    desc: 'Visa, Master, Elo, Amex · Apple Pay',
+    icon: '💳',
+  },
+  { id: 'pix', label: 'Pix', desc: 'Aprovação imediata · taxa R$ 1,99', icon: '📱' },
+  { id: 'boleto', label: 'Boleto bancário', desc: 'Vence em 3 dias úteis', icon: '📄' },
 ]
 
 function onlyDigits(s: string) {
@@ -60,7 +65,7 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
   function onEmailBlur() {
     if (!email) return
     const r = validateEmail(email)
-    setEmailError(r.valid ? null : r.error ?? null)
+    setEmailError(r.valid ? null : (r.error ?? null))
     setEmailSuggestion(r.suggestion ?? null)
   }
 
@@ -199,7 +204,11 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
             style={{
               ...inputStyle,
               marginBottom: emailError || emailSuggestion ? 4 : 10,
-              borderColor: emailError ? '#c92a2a' : inputStyle.border?.toString().includes('ddd6c8') ? '#ddd6c8' : '#ddd6c8',
+              borderColor: emailError
+                ? '#c92a2a'
+                : inputStyle.border?.toString().includes('ddd6c8')
+                  ? '#ddd6c8'
+                  : '#ddd6c8',
             }}
             type="email"
             placeholder="Seu e-mail (para receber o livro)"
@@ -215,12 +224,26 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
             spellCheck={false}
           />
           {emailError && (
-            <div style={{ fontSize: 13, color: '#c92a2a', marginBottom: 10, fontFamily: 'Georgia, serif' }}>
+            <div
+              style={{
+                fontSize: 13,
+                color: '#c92a2a',
+                marginBottom: 10,
+                fontFamily: 'Georgia, serif',
+              }}
+            >
               {emailError}
             </div>
           )}
           {emailSuggestion && (
-            <div style={{ fontSize: 13, color: '#14140e', marginBottom: 10, fontFamily: 'Georgia, serif' }}>
+            <div
+              style={{
+                fontSize: 13,
+                color: '#14140e',
+                marginBottom: 10,
+                fontFamily: 'Georgia, serif',
+              }}
+            >
               Você quis dizer{' '}
               <button
                 type="button"
@@ -323,7 +346,9 @@ export function PaymentMethodSelector({ stripePriceId, productSlug, locale, pric
       </button>
 
       {error && (
-        <p style={{ color: '#c92a2a', fontSize: 13, marginTop: 12, textAlign: 'center' }}>{error}</p>
+        <p style={{ color: '#c92a2a', fontSize: 13, marginTop: 12, textAlign: 'center' }}>
+          {error}
+        </p>
       )}
 
       <p style={{ fontSize: 11, color: '#888', marginTop: 14, textAlign: 'center' }}>

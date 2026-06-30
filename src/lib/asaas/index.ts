@@ -5,7 +5,11 @@ export type { CreatePixResult } from './pix'
 export { createBoletoCharge } from './boleto'
 export { createCreditCardPaymentLink, createCreditCardCharge } from './credit-card'
 export type { CreditCardLinkResult, CreditCardChargeResult } from './credit-card'
-export { calcInstallmentOptions, getInstallmentOption, AVAILABLE_INSTALLMENTS } from './installments'
+export {
+  calcInstallmentOptions,
+  getInstallmentOption,
+  AVAILABLE_INSTALLMENTS,
+} from './installments'
 export type { InstallmentOption, InstallmentCount } from './installments'
 export { refundPayment } from './refund'
 export * from './schemas'

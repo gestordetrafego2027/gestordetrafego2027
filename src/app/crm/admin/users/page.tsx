@@ -2,8 +2,10 @@ import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { createClient as createSbClient } from '@supabase/supabase-js'
 import {
-  inviteUserAction, updateUserRoleAction,
-  deleteUserAction, sendRecoveryLinkAction,
+  inviteUserAction,
+  updateUserRoleAction,
+  deleteUserAction,
+  sendRecoveryLinkAction,
 } from './actions'
 
 export const dynamic = 'force-dynamic'
@@ -27,7 +29,9 @@ type SP = Promise<{ error?: string; ok?: string }>
 export default async function UsersAdminPage({ searchParams }: { searchParams: SP }) {
   const { error, ok } = await searchParams
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   const role = (user?.app_metadata as { role?: string } | undefined)?.role
   if (role !== 'admin') redirect('/crm?error=acesso_negado')
 
@@ -35,12 +39,16 @@ export default async function UsersAdminPage({ searchParams }: { searchParams: S
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY
   let users: Array<{
-    id: string; email?: string; created_at: string; last_sign_in_at?: string | null;
-    app_metadata: Record<string, unknown>;
+    id: string
+    email?: string
+    created_at: string
+    last_sign_in_at?: string | null
+    app_metadata: Record<string, unknown>
   }> = []
   let listErr: string | null = null
   if (!key) {
-    listErr = 'SUPABASE_SERVICE_ROLE_KEY não configurada no servidor. Adicione a variável de ambiente no Coolify para listar usuários.'
+    listErr =
+      'SUPABASE_SERVICE_ROLE_KEY não configurada no servidor. Adicione a variável de ambiente no Coolify para listar usuários.'
   } else {
     const sb = createSbClient(url, key, { auth: { persistSession: false } })
     const { data, error: err } = await sb.auth.admin.listUsers({ perPage: 200 })
@@ -84,14 +92,30 @@ export default async function UsersAdminPage({ searchParams }: { searchParams: S
           </label>
           <label className="block text-xs">
             Role
-            <select name="role" defaultValue="staff" className="mt-1 w-full rounded border border-neutral-200 px-3 py-2 text-sm">
-              {ROLES.map((r) => <option key={r.v} value={r.v}>{r.l}</option>)}
+            <select
+              name="role"
+              defaultValue="staff"
+              className="mt-1 w-full rounded border border-neutral-200 px-3 py-2 text-sm"
+            >
+              {ROLES.map((r) => (
+                <option key={r.v} value={r.v}>
+                  {r.l}
+                </option>
+              ))}
             </select>
           </label>
           <label className="block text-xs">
             Unidade (opcional)
-            <select name="unit" defaultValue="" className="mt-1 w-full rounded border border-neutral-200 px-3 py-2 text-sm">
-              {UNITS.map((u) => <option key={u.v} value={u.v}>{u.l}</option>)}
+            <select
+              name="unit"
+              defaultValue=""
+              className="mt-1 w-full rounded border border-neutral-200 px-3 py-2 text-sm"
+            >
+              {UNITS.map((u) => (
+                <option key={u.v} value={u.v}>
+                  {u.l}
+                </option>
+              ))}
             </select>
           </label>
           <button className="md:col-span-4 rounded bg-neutral-900 text-white text-sm px-4 py-2 hover:bg-neutral-700">
@@ -134,7 +158,11 @@ export default async function UsersAdminPage({ searchParams }: { searchParams: S
                           defaultValue={meta.role ?? 'staff'}
                           className="rounded border border-neutral-200 px-2 py-1 text-xs"
                         >
-                          {ROLES.map((r) => <option key={r.v} value={r.v}>{r.l}</option>)}
+                          {ROLES.map((r) => (
+                            <option key={r.v} value={r.v}>
+                              {r.l}
+                            </option>
+                          ))}
                         </select>
                         <button className="text-blue-600 hover:underline">salvar</button>
                       </form>
@@ -148,15 +176,21 @@ export default async function UsersAdminPage({ searchParams }: { searchParams: S
                           defaultValue={meta.unit ?? ''}
                           className="rounded border border-neutral-200 px-2 py-1 text-xs"
                         >
-                          {UNITS.map((un) => <option key={un.v} value={un.v}>{un.l.split(' ')[0]}</option>)}
+                          {UNITS.map((un) => (
+                            <option key={un.v} value={un.v}>
+                              {un.l.split(' ')[0]}
+                            </option>
+                          ))}
                         </select>
                         <button className="text-blue-600 hover:underline">salvar</button>
                       </form>
                     </td>
                     <td className="px-4 py-2 text-xs text-neutral-500">
-                      {u.last_sign_in_at
-                        ? new Date(u.last_sign_in_at).toLocaleString('pt-BR')
-                        : <span className="italic text-neutral-400">nunca</span>}
+                      {u.last_sign_in_at ? (
+                        new Date(u.last_sign_in_at).toLocaleString('pt-BR')
+                      ) : (
+                        <span className="italic text-neutral-400">nunca</span>
+                      )}
                     </td>
                     <td className="px-4 py-2 text-right text-xs space-x-2">
                       <form action={sendRecoveryLinkAction} className="inline">
@@ -174,7 +208,11 @@ export default async function UsersAdminPage({ searchParams }: { searchParams: S
                 )
               })}
               {!users.length && (
-                <tr><td colSpan={5} className="px-4 py-8 text-center text-neutral-500">Nenhum usuário.</td></tr>
+                <tr>
+                  <td colSpan={5} className="px-4 py-8 text-center text-neutral-500">
+                    Nenhum usuário.
+                  </td>
+                </tr>
               )}
             </tbody>
           </table>

@@ -6,11 +6,7 @@ export const metadata = { title: 'Recuperar senha | House Mazzutti CRM' }
 
 type SP = Promise<{ error?: string; ok?: string; email?: string }>
 
-export default async function RecuperarPage({
-  searchParams,
-}: {
-  searchParams: SP
-}) {
+export default async function RecuperarPage({ searchParams }: { searchParams: SP }) {
   const { error, ok, email } = await searchParams
 
   return (
@@ -25,8 +21,8 @@ export default async function RecuperarPage({
 
         {ok ? (
           <div className="rounded border border-emerald-200 bg-emerald-50 text-emerald-800 p-3 text-sm">
-            ✓ Email enviado para <strong>{email}</strong>. Verifique a caixa de entrada
-            (e a pasta de spam). O link expira em 1 hora.
+            ✓ Email enviado para <strong>{email}</strong>. Verifique a caixa de entrada (e a pasta
+            de spam). O link expira em 1 hora.
           </div>
         ) : (
           <form action={requestPasswordReset} className="space-y-4">

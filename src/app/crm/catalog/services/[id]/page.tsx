@@ -2,21 +2,26 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import {
-  updateServiceAction, deleteServiceAction,
-  upsertPackageAction, deletePackageAction,
-  upsertAddonAction, deleteAddonAction,
+  updateServiceAction,
+  deleteServiceAction,
+  upsertPackageAction,
+  deletePackageAction,
+  upsertAddonAction,
+  deleteAddonAction,
 } from '../../actions'
 
 export const dynamic = 'force-dynamic'
 
 const UNITS = [
-  { value: 'agencia',   label: 'Agência' },
-  { value: 'studio',    label: 'Studio' },
+  { value: 'agencia', label: 'Agência' },
+  { value: 'studio', label: 'Studio' },
   { value: 'produtora', label: 'Produtora' },
 ] as const
 
 const brl = (n: number | null | undefined) =>
-  n === null || n === undefined ? '—' : Number(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+  n === null || n === undefined
+    ? '—'
+    : Number(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
 type SearchParams = Promise<{
   edit?: string
@@ -36,23 +41,20 @@ export default async function ServiceDetailPage({
   const { edit, pkg_edit, addon_edit, error } = await searchParams
   const supabase = await createClient()
 
-  const [
-    { data: service, error: svcErr },
-    { data: packages },
-    { data: addons },
-  ] = await Promise.all([
-    supabase.from('services').select('*').eq('id', id).single(),
-    supabase
-      .from('service_packages')
-      .select('id, name, slug, description, duration, price_brl, position, active')
-      .eq('service_id', id)
-      .order('position', { ascending: true }),
-    supabase
-      .from('service_addons')
-      .select('id, name, slug, description, price_brl, position, active')
-      .eq('service_id', id)
-      .order('position', { ascending: true }),
-  ])
+  const [{ data: service, error: svcErr }, { data: packages }, { data: addons }] =
+    await Promise.all([
+      supabase.from('services').select('*').eq('id', id).single(),
+      supabase
+        .from('service_packages')
+        .select('id, name, slug, description, duration, price_brl, position, active')
+        .eq('service_id', id)
+        .order('position', { ascending: true }),
+      supabase
+        .from('service_addons')
+        .select('id, name, slug, description, price_brl, position, active')
+        .eq('service_id', id)
+        .order('position', { ascending: true }),
+    ])
 
   if (svcErr || !service) notFound()
 
@@ -69,9 +71,7 @@ export default async function ServiceDetailPage({
       </div>
 
       {error && (
-        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">
-          {error}
-        </p>
+        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">{error}</p>
       )}
 
       {/* Header / Edit form */}
@@ -135,7 +135,9 @@ export default async function ServiceDetailPage({
                   className="w-full rounded border border-neutral-300 px-3 py-2 text-sm bg-white"
                 >
                   {UNITS.map((u) => (
-                    <option key={u.value} value={u.value}>{u.label}</option>
+                    <option key={u.value} value={u.value}>
+                      {u.label}
+                    </option>
                   ))}
                 </select>
               </label>
@@ -208,9 +210,7 @@ export default async function ServiceDetailPage({
               <tr key={p.id} className="border-t border-neutral-100">
                 <td className="py-2">
                   <div className="font-medium">{p.name}</div>
-                  {p.description && (
-                    <div className="text-xs text-neutral-500">{p.description}</div>
-                  )}
+                  {p.description && <div className="text-xs text-neutral-500">{p.description}</div>}
                 </td>
                 <td className="py-2 text-neutral-600 text-xs">{p.duration ?? '—'}</td>
                 <td className="py-2 text-right tabular-nums">{brl(p.price_brl)}</td>
@@ -289,11 +289,7 @@ export default async function ServiceDetailPage({
             />
           </label>
           <label className="md:col-span-1 flex items-center gap-1 pb-1">
-            <input
-              type="checkbox"
-              name="active"
-              defaultChecked={editingPkg?.active ?? true}
-            />
+            <input type="checkbox" name="active" defaultChecked={editingPkg?.active ?? true} />
             <span className="text-xs">ativo</span>
           </label>
           <div className="md:col-span-12">
@@ -343,9 +339,7 @@ export default async function ServiceDetailPage({
               <tr key={a.id} className="border-t border-neutral-100">
                 <td className="py-2">
                   <div className="font-medium">{a.name}</div>
-                  {a.description && (
-                    <div className="text-xs text-neutral-500">{a.description}</div>
-                  )}
+                  {a.description && <div className="text-xs text-neutral-500">{a.description}</div>}
                 </td>
                 <td className="py-2 text-right tabular-nums">{brl(a.price_brl)}</td>
                 <td className="py-2 text-right text-xs text-neutral-500">{a.position}</td>
@@ -413,11 +407,7 @@ export default async function ServiceDetailPage({
             />
           </label>
           <label className="md:col-span-1 flex items-center gap-1 pb-1">
-            <input
-              type="checkbox"
-              name="active"
-              defaultChecked={editingAddon?.active ?? true}
-            />
+            <input type="checkbox" name="active" defaultChecked={editingAddon?.active ?? true} />
             <span className="text-xs">ativo</span>
           </label>
           <div className="md:col-span-12">

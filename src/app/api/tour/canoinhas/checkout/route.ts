@@ -20,9 +20,21 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 const PLANS: Record<string, { name: string; cents: number; priceId: string }> = {
-  'ensaio-01': { name: 'Tour Canoinhas · Ensaio 01', cents: 190000, priceId: 'asaas:tour-canoinhas-ensaio-01' },
-  'ensaio-02': { name: 'Tour Canoinhas · Ensaio 02', cents: 260000, priceId: 'asaas:tour-canoinhas-ensaio-02' },
-  'ensaio-03': { name: 'Tour Canoinhas · Ensaio 03', cents: 320000, priceId: 'asaas:tour-canoinhas-ensaio-03' },
+  'ensaio-01': {
+    name: 'Tour Canoinhas · Ensaio 01',
+    cents: 190000,
+    priceId: 'asaas:tour-canoinhas-ensaio-01',
+  },
+  'ensaio-02': {
+    name: 'Tour Canoinhas · Ensaio 02',
+    cents: 260000,
+    priceId: 'asaas:tour-canoinhas-ensaio-02',
+  },
+  'ensaio-03': {
+    name: 'Tour Canoinhas · Ensaio 03',
+    cents: 320000,
+    priceId: 'asaas:tour-canoinhas-ensaio-03',
+  },
 }
 
 const Body = z.object({
@@ -240,6 +252,9 @@ export async function POST(req: NextRequest) {
     log.error({ err: String(err), orderId: order.id }, 'falha ao criar cobrança Asaas')
     // Cancela o pedido órfão
     await supabase.from('store_orders').update({ status: 'failed' }).eq('id', order.id)
-    return NextResponse.json({ error: 'Falha ao gerar cobrança. Tente novamente.' }, { status: 502 })
+    return NextResponse.json(
+      { error: 'Falha ao gerar cobrança. Tente novamente.' },
+      { status: 502 },
+    )
   }
 }

@@ -12,10 +12,15 @@ export default async function RedefinirPage({
 }) {
   const { error } = await searchParams
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   if (!user) {
-    redirect('/login/recuperar?error=' + encodeURIComponent('Link expirado ou inválido. Solicite um novo link de recuperação.'))
+    redirect(
+      '/login/recuperar?error=' +
+        encodeURIComponent('Link expirado ou inválido. Solicite um novo link de recuperação.'),
+    )
   }
 
   return (

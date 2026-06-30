@@ -21,13 +21,12 @@ export default async function EditInvoicePage({
   const { error } = await searchParams
   const supabase = await createClient()
 
-  const [
-    { data: invoice, error: invErr },
-    { data: items },
-  ] = await Promise.all([
+  const [{ data: invoice, error: invErr }, { data: items }] = await Promise.all([
     supabase
       .from('invoices')
-      .select('id, number, status, issue_date, due_date, discount_brl, tax_brl, notes, paid_brl, total_brl, client_id, clients(display_name)')
+      .select(
+        'id, number, status, issue_date, due_date, discount_brl, tax_brl, notes, paid_brl, total_brl, client_id, clients(display_name)',
+      )
       .eq('id', id)
       .single(),
     supabase
@@ -44,7 +43,12 @@ export default async function EditInvoicePage({
   // Garante pelo menos 6 linhas pra edição (preenche com vazias se faltar)
   const existing = items ?? []
   const blanks = Math.max(0, 6 - existing.length)
-  const rows: { label: string; description: string | null; quantity: number; unit_price_brl: number }[] = [
+  const rows: {
+    label: string
+    description: string | null
+    quantity: number
+    unit_price_brl: number
+  }[] = [
     ...existing.map((it) => ({
       label: it.label,
       description: it.description,
@@ -72,9 +76,7 @@ export default async function EditInvoicePage({
       </header>
 
       {error && (
-        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">
-          {error}
-        </p>
+        <p className="text-sm text-red-600 border border-red-200 bg-red-50 rounded p-3">{error}</p>
       )}
 
       {paidWarning && (
@@ -160,7 +162,8 @@ export default async function EditInvoicePage({
             </div>
           ))}
           <p className="text-xs text-neutral-500">
-            Deixe a coluna "Descrição" em branco para remover a linha. Total é recalculado ao salvar.
+            Deixe a coluna "Descrição" em branco para remover a linha. Total é recalculado ao
+            salvar.
           </p>
         </div>
 

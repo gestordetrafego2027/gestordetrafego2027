@@ -7,32 +7,21 @@ import { PasswordInput } from '@/components/ui/PasswordInput'
 type State = { error?: string }
 
 export function RedefineForm({ serverError }: { serverError?: string }) {
-  const [state, formAction, isPending] = useActionState<State, FormData>(
-    setNewPassword,
-    { error: serverError },
-  )
+  const [state, formAction, isPending] = useActionState<State, FormData>(setNewPassword, {
+    error: serverError,
+  })
 
   return (
     <form action={formAction} className="space-y-4">
       <div className="space-y-1">
         <label className="text-sm font-medium block">Nova senha</label>
-        <PasswordInput
-          name="password"
-          required
-          minLength={8}
-          autoComplete="new-password"
-        />
+        <PasswordInput name="password" required minLength={8} autoComplete="new-password" />
         <span className="block text-xs text-neutral-500">Mínimo 8 caracteres.</span>
       </div>
 
       <div className="space-y-1">
         <label className="text-sm font-medium block">Confirmar nova senha</label>
-        <PasswordInput
-          name="confirm"
-          required
-          minLength={8}
-          autoComplete="new-password"
-        />
+        <PasswordInput name="confirm" required minLength={8} autoComplete="new-password" />
       </div>
 
       {state?.error && (

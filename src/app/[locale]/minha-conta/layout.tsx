@@ -24,7 +24,9 @@ export default async function MinhaContaLayout({
   params: Promise<{ locale: string }>
 }) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   if (!user) {
     const { locale } = await params

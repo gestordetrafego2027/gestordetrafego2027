@@ -30,7 +30,9 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
   const supabase = await createClient()
   const { data: product } = await supabase
     .from('academy_products')
-    .select('title, price_cents, original_price_cents, page_count, module_count, lesson_count, subtitle')
+    .select(
+      'title, price_cents, original_price_cents, page_count, module_count, lesson_count, subtitle',
+    )
     .eq('slug', SLUG)
     .maybeSingle()
 
@@ -45,8 +47,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
   const pageCount = product?.page_count ?? 94
   const moduleCount = product?.module_count ?? 12
   const subtitleLine =
-    product?.subtitle ??
-    `Ebook · ${pageCount} páginas · ${moduleCount} capítulos`
+    product?.subtitle ?? `Ebook · ${pageCount} páginas · ${moduleCount} capítulos`
 
   return (
     <main

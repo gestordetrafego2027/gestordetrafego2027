@@ -6,16 +6,12 @@ import { logger } from '@/lib/logger'
  * Marca pedido como refunded quando uma charge é estornada (total ou parcial).
  * Busca o pedido pelo payment_intent associado à charge.
  */
-export async function handleChargeRefunded(
-  charge: Stripe.Charge,
-): Promise<void> {
+export async function handleChargeRefunded(charge: Stripe.Charge): Promise<void> {
   const log = logger.child({ charge_id: charge.id, handler: 'charge-refunded' })
   const supabase = createServiceClient()
 
   const piId =
-    typeof charge.payment_intent === 'string'
-      ? charge.payment_intent
-      : charge.payment_intent?.id
+    typeof charge.payment_intent === 'string' ? charge.payment_intent : charge.payment_intent?.id
 
   if (!piId) {
     log.warn('charge sem payment_intent — não consigo localizar pedido')

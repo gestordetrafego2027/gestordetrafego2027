@@ -54,11 +54,7 @@ export default function JsonSchemaForm({
   defaultValues?: Record<string, JsonValue>
 }) {
   if (!schema || typeof schema !== 'object') {
-    return (
-      <p className="text-xs text-neutral-400 italic">
-        Sem schema definido para este serviço.
-      </p>
-    )
+    return <p className="text-xs text-neutral-400 italic">Sem schema definido para este serviço.</p>
   }
 
   const obj = schema as ObjectSchema
@@ -83,9 +79,7 @@ export default function JsonSchemaForm({
 
   return (
     <div className="space-y-3">
-      {obj.description && (
-        <p className="text-xs text-neutral-500">{obj.description}</p>
-      )}
+      {obj.description && <p className="text-xs text-neutral-500">{obj.description}</p>}
 
       {entries.map(([key, prop]) => {
         const inputName = `${namePrefix}.${key}`
@@ -116,7 +110,9 @@ export default function JsonSchemaForm({
               >
                 {!isRequired && <option value="">—</option>}
                 {prop.enum.map((opt) => (
-                  <option key={String(opt)} value={String(opt)}>{String(opt)}</option>
+                  <option key={String(opt)} value={String(opt)}>
+                    {String(opt)}
+                  </option>
                 ))}
               </select>
               {helpEl}
@@ -128,12 +124,7 @@ export default function JsonSchemaForm({
         if (prop.type === 'boolean') {
           return (
             <label key={key} className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                name={inputName}
-                defaultChecked={!!dflt}
-                value="true"
-              />
+              <input type="checkbox" name={inputName} defaultChecked={!!dflt} value="true" />
               {labelEl}
               {helpEl}
             </label>

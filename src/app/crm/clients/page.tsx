@@ -18,7 +18,9 @@ export default async function ClientsPage() {
   const supabase = await createClient()
   const { data: clients, error } = await supabase
     .from('clients')
-    .select('id, display_name, email, unit, status, lifetime_value_brl, last_purchase_at, created_at')
+    .select(
+      'id, display_name, email, unit, status, lifetime_value_brl, last_purchase_at, created_at',
+    )
     .order('created_at', { ascending: false })
     .limit(50)
 
@@ -27,7 +29,9 @@ export default async function ClientsPage() {
       <header className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Clientes</h1>
-          <p className="text-sm text-neutral-500">Leads promovidos a cliente. Ordenado por entrada.</p>
+          <p className="text-sm text-neutral-500">
+            Leads promovidos a cliente. Ordenado por entrada.
+          </p>
         </div>
         <a
           href="/crm/api/export?entity=clients"
@@ -72,7 +76,9 @@ export default async function ClientsPage() {
                 </td>
                 <td className="px-4 py-2 text-right tabular-nums">{brl(c.lifetime_value_brl)}</td>
                 <td className="px-4 py-2 text-neutral-600">
-                  {c.last_purchase_at ? new Date(c.last_purchase_at).toLocaleDateString('pt-BR') : '—'}
+                  {c.last_purchase_at
+                    ? new Date(c.last_purchase_at).toLocaleDateString('pt-BR')
+                    : '—'}
                 </td>
               </tr>
             ))}

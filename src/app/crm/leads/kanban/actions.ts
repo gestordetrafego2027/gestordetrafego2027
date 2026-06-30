@@ -24,10 +24,7 @@ export async function moveLeadStageAction(leadId: string, newStageId: string) {
     stageName = stage.name
   }
 
-  const { error } = await supabase
-    .from('leads')
-    .update({ stage_id: stageIdValue })
-    .eq('id', leadId)
+  const { error } = await supabase.from('leads').update({ stage_id: stageIdValue }).eq('id', leadId)
   if (error) return { ok: false, error: error.message }
 
   // Activity na timeline do lead

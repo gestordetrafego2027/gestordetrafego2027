@@ -55,7 +55,9 @@ export async function POST(req: NextRequest) {
 
   // Usuário (se logado) — para client_reference_id
   const userSb = await createClient()
-  const { data: { user } } = await userSb.auth.getUser()
+  const {
+    data: { user },
+  } = await userSb.auth.getUser()
 
   const service = createServiceClient()
 
@@ -77,7 +79,10 @@ export async function POST(req: NextRequest) {
   for (const item of body.items) {
     const p = priceMap.get(item.stripePriceId)
     if (!p) {
-      return NextResponse.json({ error: `price ${item.stripePriceId} não encontrado` }, { status: 404 })
+      return NextResponse.json(
+        { error: `price ${item.stripePriceId} não encontrado` },
+        { status: 404 },
+      )
     }
     subtotal += p.unit_amount * item.quantity
     orderItems.push({
@@ -105,7 +110,8 @@ export async function POST(req: NextRequest) {
         couponId = coupon.id
         couponSnapshot = coupon.code
         if (coupon.amount_off) discount = coupon.amount_off
-        else if (coupon.percent_off) discount = Math.round((subtotal * Number(coupon.percent_off)) / 100)
+        else if (coupon.percent_off)
+          discount = Math.round((subtotal * Number(coupon.percent_off)) / 100)
       }
     }
   }

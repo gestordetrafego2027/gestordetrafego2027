@@ -1,16 +1,10 @@
-export type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | { [key: string]: Json | undefined }
-  | Json[]
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[]
 
 export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.5"
+    PostgrestVersion: '14.5'
   }
   public: {
     Tables: {
@@ -71,11 +65,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_authors_profile_id_fkey"
-            columns: ["profile_id"]
+            foreignKeyName: 'academy_authors_profile_id_fkey'
+            columns: ['profile_id']
             isOneToOne: true
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -103,53 +97,53 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_bundle_items_bundle_product_id_fkey"
-            columns: ["bundle_product_id"]
+            foreignKeyName: 'academy_bundle_items_bundle_product_id_fkey'
+            columns: ['bundle_product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_bundle_items_bundle_product_id_fkey"
-            columns: ["bundle_product_id"]
+            foreignKeyName: 'academy_bundle_items_bundle_product_id_fkey'
+            columns: ['bundle_product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_bundle_items_bundle_product_id_fkey"
-            columns: ["bundle_product_id"]
+            foreignKeyName: 'academy_bundle_items_bundle_product_id_fkey'
+            columns: ['bundle_product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_bundle_items_child_product_id_fkey"
-            columns: ["child_product_id"]
+            foreignKeyName: 'academy_bundle_items_child_product_id_fkey'
+            columns: ['child_product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_bundle_items_child_product_id_fkey"
-            columns: ["child_product_id"]
+            foreignKeyName: 'academy_bundle_items_child_product_id_fkey'
+            columns: ['child_product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_bundle_items_child_product_id_fkey"
-            columns: ["child_product_id"]
+            foreignKeyName: 'academy_bundle_items_child_product_id_fkey'
+            columns: ['child_product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
       academy_categories: {
         Row: {
           active: boolean
-          business_unit: Database["public"]["Enums"]["business_unit"] | null
+          business_unit: Database['public']['Enums']['business_unit'] | null
           cover_url: string | null
           created_at: string
           description: string | null
@@ -167,7 +161,7 @@ export type Database = {
         }
         Insert: {
           active?: boolean
-          business_unit?: Database["public"]["Enums"]["business_unit"] | null
+          business_unit?: Database['public']['Enums']['business_unit'] | null
           cover_url?: string | null
           created_at?: string
           description?: string | null
@@ -185,7 +179,7 @@ export type Database = {
         }
         Update: {
           active?: boolean
-          business_unit?: Database["public"]["Enums"]["business_unit"] | null
+          business_unit?: Database['public']['Enums']['business_unit'] | null
           cover_url?: string | null
           created_at?: string
           description?: string | null
@@ -203,18 +197,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_categories_parent_id_fkey"
-            columns: ["parent_id"]
+            foreignKeyName: 'academy_categories_parent_id_fkey'
+            columns: ['parent_id']
             isOneToOne: false
-            referencedRelation: "academy_categories"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_categories'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_categories_parent_id_fkey"
-            columns: ["parent_id"]
+            foreignKeyName: 'academy_categories_parent_id_fkey'
+            columns: ['parent_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["category_id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['category_id']
           },
         ]
       }
@@ -299,39 +293,39 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_certificates_enrollment_id_fkey"
-            columns: ["enrollment_id"]
+            foreignKeyName: 'academy_certificates_enrollment_id_fkey'
+            columns: ['enrollment_id']
             isOneToOne: true
-            referencedRelation: "academy_enrollments"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_enrollments'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_certificates_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_certificates_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_certificates_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_certificates_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_certificates_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_certificates_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_certificates_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_certificates_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -377,25 +371,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_comments_author_user_id_fkey"
-            columns: ["author_user_id"]
+            foreignKeyName: 'academy_comments_author_user_id_fkey'
+            columns: ['author_user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_comments_parent_comment_id_fkey"
-            columns: ["parent_comment_id"]
+            foreignKeyName: 'academy_comments_parent_comment_id_fkey'
+            columns: ['parent_comment_id']
             isOneToOne: false
-            referencedRelation: "academy_comments"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_comments'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_comments_post_id_fkey"
-            columns: ["post_id"]
+            foreignKeyName: 'academy_comments_post_id_fkey'
+            columns: ['post_id']
             isOneToOne: false
-            referencedRelation: "academy_posts"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_posts'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -450,25 +444,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_community_spaces_required_product_id_fkey"
-            columns: ["required_product_id"]
+            foreignKeyName: 'academy_community_spaces_required_product_id_fkey'
+            columns: ['required_product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_community_spaces_required_product_id_fkey"
-            columns: ["required_product_id"]
+            foreignKeyName: 'academy_community_spaces_required_product_id_fkey'
+            columns: ['required_product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_community_spaces_required_product_id_fkey"
-            columns: ["required_product_id"]
+            foreignKeyName: 'academy_community_spaces_required_product_id_fkey'
+            columns: ['required_product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -499,18 +493,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_coupon_redemptions_coupon_id_fkey"
-            columns: ["coupon_id"]
+            foreignKeyName: 'academy_coupon_redemptions_coupon_id_fkey'
+            columns: ['coupon_id']
             isOneToOne: false
-            referencedRelation: "academy_coupons"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_coupons'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_coupon_redemptions_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_coupon_redemptions_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -524,7 +518,7 @@ export type Database = {
           max_discount_cents: number | null
           min_order_cents: number
           per_user_limit: number | null
-          type: Database["public"]["Enums"]["academy_coupon_type"]
+          type: Database['public']['Enums']['academy_coupon_type']
           updated_at: string
           usage_count: number
           usage_limit: number | null
@@ -541,7 +535,7 @@ export type Database = {
           max_discount_cents?: number | null
           min_order_cents?: number
           per_user_limit?: number | null
-          type: Database["public"]["Enums"]["academy_coupon_type"]
+          type: Database['public']['Enums']['academy_coupon_type']
           updated_at?: string
           usage_count?: number
           usage_limit?: number | null
@@ -558,7 +552,7 @@ export type Database = {
           max_discount_cents?: number | null
           min_order_cents?: number
           per_user_limit?: number | null
-          type?: Database["public"]["Enums"]["academy_coupon_type"]
+          type?: Database['public']['Enums']['academy_coupon_type']
           updated_at?: string
           usage_count?: number
           usage_limit?: number | null
@@ -607,25 +601,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_ebook_chapters_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_ebook_chapters_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_ebook_chapters_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_ebook_chapters_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_ebook_chapters_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_ebook_chapters_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -680,25 +674,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_ebook_files_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_ebook_files_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_ebook_files_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_ebook_files_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_ebook_files_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_ebook_files_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -717,7 +711,7 @@ export type Database = {
           revoked_at: string | null
           revoked_reason: string | null
           source: string
-          status: Database["public"]["Enums"]["academy_enrollment_status"]
+          status: Database['public']['Enums']['academy_enrollment_status']
           updated_at: string
           user_id: string
         }
@@ -735,7 +729,7 @@ export type Database = {
           revoked_at?: string | null
           revoked_reason?: string | null
           source?: string
-          status?: Database["public"]["Enums"]["academy_enrollment_status"]
+          status?: Database['public']['Enums']['academy_enrollment_status']
           updated_at?: string
           user_id: string
         }
@@ -753,38 +747,38 @@ export type Database = {
           revoked_at?: string | null
           revoked_reason?: string | null
           source?: string
-          status?: Database["public"]["Enums"]["academy_enrollment_status"]
+          status?: Database['public']['Enums']['academy_enrollment_status']
           updated_at?: string
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "academy_enrollments_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_enrollments_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_enrollments_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_enrollments_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_enrollments_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_enrollments_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_enrollments_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_enrollments_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -809,18 +803,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_follows_followed_user_id_fkey"
-            columns: ["followed_user_id"]
+            foreignKeyName: 'academy_follows_followed_user_id_fkey'
+            columns: ['followed_user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_follows_follower_user_id_fkey"
-            columns: ["follower_user_id"]
+            foreignKeyName: 'academy_follows_follower_user_id_fkey'
+            columns: ['follower_user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -872,39 +866,39 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_lesson_progress_lesson_id_fkey"
-            columns: ["lesson_id"]
+            foreignKeyName: 'academy_lesson_progress_lesson_id_fkey'
+            columns: ['lesson_id']
             isOneToOne: false
-            referencedRelation: "academy_lessons"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_lessons'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lesson_progress_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lesson_progress_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lesson_progress_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lesson_progress_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lesson_progress_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lesson_progress_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lesson_progress_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_lesson_progress_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -944,11 +938,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_lesson_resources_lesson_id_fkey"
-            columns: ["lesson_id"]
+            foreignKeyName: 'academy_lesson_resources_lesson_id_fkey'
+            columns: ['lesson_id']
             isOneToOne: false
-            referencedRelation: "academy_lessons"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_lessons'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1015,32 +1009,32 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_lessons_module_id_fkey"
-            columns: ["module_id"]
+            foreignKeyName: 'academy_lessons_module_id_fkey'
+            columns: ['module_id']
             isOneToOne: false
-            referencedRelation: "academy_modules"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_modules'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lessons_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lessons_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lessons_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lessons_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lessons_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lessons_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1080,18 +1074,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_live_registrations_live_id_fkey"
-            columns: ["live_id"]
+            foreignKeyName: 'academy_live_registrations_live_id_fkey'
+            columns: ['live_id']
             isOneToOne: false
-            referencedRelation: "academy_lives"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_lives'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_live_registrations_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_live_registrations_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1117,12 +1111,12 @@ export type Database = {
           seo_title: string | null
           slug: string
           started_at: string | null
-          status: Database["public"]["Enums"]["academy_live_status"]
+          status: Database['public']['Enums']['academy_live_status']
           stream_provider: string | null
           stream_url: string | null
           title: string
           updated_at: string
-          visibility: Database["public"]["Enums"]["academy_live_visibility"]
+          visibility: Database['public']['Enums']['academy_live_visibility']
         }
         Insert: {
           attended_count?: number
@@ -1145,12 +1139,12 @@ export type Database = {
           seo_title?: string | null
           slug: string
           started_at?: string | null
-          status?: Database["public"]["Enums"]["academy_live_status"]
+          status?: Database['public']['Enums']['academy_live_status']
           stream_provider?: string | null
           stream_url?: string | null
           title: string
           updated_at?: string
-          visibility?: Database["public"]["Enums"]["academy_live_visibility"]
+          visibility?: Database['public']['Enums']['academy_live_visibility']
         }
         Update: {
           attended_count?: number
@@ -1173,48 +1167,48 @@ export type Database = {
           seo_title?: string | null
           slug?: string
           started_at?: string | null
-          status?: Database["public"]["Enums"]["academy_live_status"]
+          status?: Database['public']['Enums']['academy_live_status']
           stream_provider?: string | null
           stream_url?: string | null
           title?: string
           updated_at?: string
-          visibility?: Database["public"]["Enums"]["academy_live_visibility"]
+          visibility?: Database['public']['Enums']['academy_live_visibility']
         }
         Relationships: [
           {
-            foreignKeyName: "academy_lives_host_author_id_fkey"
-            columns: ["host_author_id"]
+            foreignKeyName: 'academy_lives_host_author_id_fkey'
+            columns: ['host_author_id']
             isOneToOne: false
-            referencedRelation: "academy_authors"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_authors'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lives_host_author_id_fkey"
-            columns: ["host_author_id"]
+            foreignKeyName: 'academy_lives_host_author_id_fkey'
+            columns: ['host_author_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["author_id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['author_id']
           },
           {
-            foreignKeyName: "academy_lives_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lives_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lives_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lives_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_lives_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_lives_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1257,25 +1251,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_modules_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_modules_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_modules_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_modules_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_modules_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_modules_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1327,11 +1321,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_mp_webhooks_payment_id_fkey"
-            columns: ["payment_id"]
+            foreignKeyName: 'academy_mp_webhooks_payment_id_fkey'
+            columns: ['payment_id']
             isOneToOne: false
-            referencedRelation: "academy_payments"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_payments'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1347,7 +1341,7 @@ export type Database = {
           payload: Json
           read_at: string | null
           title: string
-          type: Database["public"]["Enums"]["academy_notification_type"]
+          type: Database['public']['Enums']['academy_notification_type']
           user_id: string
         }
         Insert: {
@@ -1361,7 +1355,7 @@ export type Database = {
           payload?: Json
           read_at?: string | null
           title: string
-          type: Database["public"]["Enums"]["academy_notification_type"]
+          type: Database['public']['Enums']['academy_notification_type']
           user_id: string
         }
         Update: {
@@ -1375,16 +1369,16 @@ export type Database = {
           payload?: Json
           read_at?: string | null
           title?: string
-          type?: Database["public"]["Enums"]["academy_notification_type"]
+          type?: Database['public']['Enums']['academy_notification_type']
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "academy_notifications_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_notifications_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1398,7 +1392,7 @@ export type Database = {
           product_id: string
           product_slug_snapshot: string
           product_title_snapshot: string
-          product_type_snapshot: Database["public"]["Enums"]["academy_product_type"]
+          product_type_snapshot: Database['public']['Enums']['academy_product_type']
           quantity: number
           total_cents: number
           unit_price_cents: number
@@ -1412,7 +1406,7 @@ export type Database = {
           product_id: string
           product_slug_snapshot: string
           product_title_snapshot: string
-          product_type_snapshot: Database["public"]["Enums"]["academy_product_type"]
+          product_type_snapshot: Database['public']['Enums']['academy_product_type']
           quantity?: number
           total_cents: number
           unit_price_cents: number
@@ -1426,39 +1420,39 @@ export type Database = {
           product_id?: string
           product_slug_snapshot?: string
           product_title_snapshot?: string
-          product_type_snapshot?: Database["public"]["Enums"]["academy_product_type"]
+          product_type_snapshot?: Database['public']['Enums']['academy_product_type']
           quantity?: number
           total_cents?: number
           unit_price_cents?: number
         }
         Relationships: [
           {
-            foreignKeyName: "academy_order_items_order_id_fkey"
-            columns: ["order_id"]
+            foreignKeyName: 'academy_order_items_order_id_fkey'
+            columns: ['order_id']
             isOneToOne: false
-            referencedRelation: "academy_orders"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_orders'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_order_items_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_order_items_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_order_items_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_order_items_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_order_items_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_order_items_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1482,14 +1476,12 @@ export type Database = {
           number: string
           paid_at: string | null
           payment_external_id: string | null
-          payment_method:
-            | Database["public"]["Enums"]["academy_payment_method"]
-            | null
+          payment_method: Database['public']['Enums']['academy_payment_method'] | null
           payment_provider: string | null
           payment_url: string | null
           pending_at: string | null
           refunded_at: string | null
-          status: Database["public"]["Enums"]["academy_order_status"]
+          status: Database['public']['Enums']['academy_order_status']
           subtotal_cents: number
           total_cents: number
           updated_at: string
@@ -1515,14 +1507,12 @@ export type Database = {
           number: string
           paid_at?: string | null
           payment_external_id?: string | null
-          payment_method?:
-            | Database["public"]["Enums"]["academy_payment_method"]
-            | null
+          payment_method?: Database['public']['Enums']['academy_payment_method'] | null
           payment_provider?: string | null
           payment_url?: string | null
           pending_at?: string | null
           refunded_at?: string | null
-          status?: Database["public"]["Enums"]["academy_order_status"]
+          status?: Database['public']['Enums']['academy_order_status']
           subtotal_cents?: number
           total_cents?: number
           updated_at?: string
@@ -1548,14 +1538,12 @@ export type Database = {
           number?: string
           paid_at?: string | null
           payment_external_id?: string | null
-          payment_method?:
-            | Database["public"]["Enums"]["academy_payment_method"]
-            | null
+          payment_method?: Database['public']['Enums']['academy_payment_method'] | null
           payment_provider?: string | null
           payment_url?: string | null
           pending_at?: string | null
           refunded_at?: string | null
-          status?: Database["public"]["Enums"]["academy_order_status"]
+          status?: Database['public']['Enums']['academy_order_status']
           subtotal_cents?: number
           total_cents?: number
           updated_at?: string
@@ -1564,11 +1552,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_orders_coupon_id_fkey"
-            columns: ["coupon_id"]
+            foreignKeyName: 'academy_orders_coupon_id_fkey'
+            columns: ['coupon_id']
             isOneToOne: false
-            referencedRelation: "academy_coupons"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_coupons'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1581,7 +1569,7 @@ export type Database = {
           id: string
           installments: number | null
           metadata: Json
-          method: Database["public"]["Enums"]["academy_payment_method"]
+          method: Database['public']['Enums']['academy_payment_method']
           mp_payment_id: string | null
           mp_payment_type: string | null
           mp_status: string | null
@@ -1601,7 +1589,7 @@ export type Database = {
           id?: string
           installments?: number | null
           metadata?: Json
-          method: Database["public"]["Enums"]["academy_payment_method"]
+          method: Database['public']['Enums']['academy_payment_method']
           mp_payment_id?: string | null
           mp_payment_type?: string | null
           mp_status?: string | null
@@ -1621,7 +1609,7 @@ export type Database = {
           id?: string
           installments?: number | null
           metadata?: Json
-          method?: Database["public"]["Enums"]["academy_payment_method"]
+          method?: Database['public']['Enums']['academy_payment_method']
           mp_payment_id?: string | null
           mp_payment_type?: string | null
           mp_status?: string | null
@@ -1651,9 +1639,9 @@ export type Database = {
           pinned: boolean
           reaction_count: number
           space_id: string
-          status: Database["public"]["Enums"]["academy_post_status"]
+          status: Database['public']['Enums']['academy_post_status']
           title: string | null
-          type: Database["public"]["Enums"]["academy_post_type"]
+          type: Database['public']['Enums']['academy_post_type']
           updated_at: string
           view_count: number
         }
@@ -1672,9 +1660,9 @@ export type Database = {
           pinned?: boolean
           reaction_count?: number
           space_id: string
-          status?: Database["public"]["Enums"]["academy_post_status"]
+          status?: Database['public']['Enums']['academy_post_status']
           title?: string | null
-          type?: Database["public"]["Enums"]["academy_post_type"]
+          type?: Database['public']['Enums']['academy_post_type']
           updated_at?: string
           view_count?: number
         }
@@ -1693,26 +1681,26 @@ export type Database = {
           pinned?: boolean
           reaction_count?: number
           space_id?: string
-          status?: Database["public"]["Enums"]["academy_post_status"]
+          status?: Database['public']['Enums']['academy_post_status']
           title?: string | null
-          type?: Database["public"]["Enums"]["academy_post_type"]
+          type?: Database['public']['Enums']['academy_post_type']
           updated_at?: string
           view_count?: number
         }
         Relationships: [
           {
-            foreignKeyName: "academy_posts_author_user_id_fkey"
-            columns: ["author_user_id"]
+            foreignKeyName: 'academy_posts_author_user_id_fkey'
+            columns: ['author_user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_posts_space_id_fkey"
-            columns: ["space_id"]
+            foreignKeyName: 'academy_posts_space_id_fkey'
+            columns: ['space_id']
             isOneToOne: false
-            referencedRelation: "academy_community_spaces"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_community_spaces'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1723,7 +1711,7 @@ export type Database = {
           author_id: string
           avg_rating: number
           bestseller: boolean
-          business_unit: Database["public"]["Enums"]["business_unit"]
+          business_unit: Database['public']['Enums']['business_unit']
           category_id: string | null
           cover_url: string
           created_at: string
@@ -1736,7 +1724,7 @@ export type Database = {
           id: string
           included_in_subscription: boolean
           lesson_count: number
-          level: Database["public"]["Enums"]["academy_product_level"]
+          level: Database['public']['Enums']['academy_product_level']
           long_description: Json | null
           max_devices: number
           metadata: Json
@@ -1757,13 +1745,13 @@ export type Database = {
           seo_title: string | null
           short_description: string | null
           slug: string
-          status: Database["public"]["Enums"]["academy_product_status"]
+          status: Database['public']['Enums']['academy_product_status']
           subtitle: string | null
           target_audience: Json | null
           thumbnail_url: string | null
           title: string
           trailer_video_url: string | null
-          type: Database["public"]["Enums"]["academy_product_type"]
+          type: Database['public']['Enums']['academy_product_type']
           updated_at: string
           views_count: number
         }
@@ -1773,7 +1761,7 @@ export type Database = {
           author_id: string
           avg_rating?: number
           bestseller?: boolean
-          business_unit: Database["public"]["Enums"]["business_unit"]
+          business_unit: Database['public']['Enums']['business_unit']
           category_id?: string | null
           cover_url: string
           created_at?: string
@@ -1786,7 +1774,7 @@ export type Database = {
           id?: string
           included_in_subscription?: boolean
           lesson_count?: number
-          level?: Database["public"]["Enums"]["academy_product_level"]
+          level?: Database['public']['Enums']['academy_product_level']
           long_description?: Json | null
           max_devices?: number
           metadata?: Json
@@ -1807,13 +1795,13 @@ export type Database = {
           seo_title?: string | null
           short_description?: string | null
           slug: string
-          status?: Database["public"]["Enums"]["academy_product_status"]
+          status?: Database['public']['Enums']['academy_product_status']
           subtitle?: string | null
           target_audience?: Json | null
           thumbnail_url?: string | null
           title: string
           trailer_video_url?: string | null
-          type: Database["public"]["Enums"]["academy_product_type"]
+          type: Database['public']['Enums']['academy_product_type']
           updated_at?: string
           views_count?: number
         }
@@ -1823,7 +1811,7 @@ export type Database = {
           author_id?: string
           avg_rating?: number
           bestseller?: boolean
-          business_unit?: Database["public"]["Enums"]["business_unit"]
+          business_unit?: Database['public']['Enums']['business_unit']
           category_id?: string | null
           cover_url?: string
           created_at?: string
@@ -1836,7 +1824,7 @@ export type Database = {
           id?: string
           included_in_subscription?: boolean
           lesson_count?: number
-          level?: Database["public"]["Enums"]["academy_product_level"]
+          level?: Database['public']['Enums']['academy_product_level']
           long_description?: Json | null
           max_devices?: number
           metadata?: Json
@@ -1857,50 +1845,50 @@ export type Database = {
           seo_title?: string | null
           short_description?: string | null
           slug?: string
-          status?: Database["public"]["Enums"]["academy_product_status"]
+          status?: Database['public']['Enums']['academy_product_status']
           subtitle?: string | null
           target_audience?: Json | null
           thumbnail_url?: string | null
           title?: string
           trailer_video_url?: string | null
-          type?: Database["public"]["Enums"]["academy_product_type"]
+          type?: Database['public']['Enums']['academy_product_type']
           updated_at?: string
           views_count?: number
         }
         Relationships: [
           {
-            foreignKeyName: "academy_products_author_id_fkey"
-            columns: ["author_id"]
+            foreignKeyName: 'academy_products_author_id_fkey'
+            columns: ['author_id']
             isOneToOne: false
-            referencedRelation: "academy_authors"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_authors'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_products_author_id_fkey"
-            columns: ["author_id"]
+            foreignKeyName: 'academy_products_author_id_fkey'
+            columns: ['author_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["author_id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['author_id']
           },
           {
-            foreignKeyName: "academy_products_category_id_fkey"
-            columns: ["category_id"]
+            foreignKeyName: 'academy_products_category_id_fkey'
+            columns: ['category_id']
             isOneToOne: false
-            referencedRelation: "academy_categories"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_categories'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_products_category_id_fkey"
-            columns: ["category_id"]
+            foreignKeyName: 'academy_products_category_id_fkey'
+            columns: ['category_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["category_id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['category_id']
           },
         ]
       }
       academy_progress_events: {
         Row: {
-          event: Database["public"]["Enums"]["academy_progress_event"]
+          event: Database['public']['Enums']['academy_progress_event']
           id: string
           lesson_id: string | null
           metadata: Json
@@ -1909,7 +1897,7 @@ export type Database = {
           user_id: string
         }
         Insert: {
-          event: Database["public"]["Enums"]["academy_progress_event"]
+          event: Database['public']['Enums']['academy_progress_event']
           id?: string
           lesson_id?: string | null
           metadata?: Json
@@ -1918,7 +1906,7 @@ export type Database = {
           user_id: string
         }
         Update: {
-          event?: Database["public"]["Enums"]["academy_progress_event"]
+          event?: Database['public']['Enums']['academy_progress_event']
           id?: string
           lesson_id?: string | null
           metadata?: Json
@@ -1928,39 +1916,39 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_progress_events_lesson_id_fkey"
-            columns: ["lesson_id"]
+            foreignKeyName: 'academy_progress_events_lesson_id_fkey'
+            columns: ['lesson_id']
             isOneToOne: false
-            referencedRelation: "academy_lessons"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_lessons'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_progress_events_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_progress_events_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_progress_events_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_progress_events_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_progress_events_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_progress_events_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_progress_events_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_progress_events_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -1991,11 +1979,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_reactions_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_reactions_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2038,18 +2026,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_reports_reporter_user_id_fkey"
-            columns: ["reporter_user_id"]
+            foreignKeyName: 'academy_reports_reporter_user_id_fkey'
+            columns: ['reporter_user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_reports_resolved_by_fkey"
-            columns: ["resolved_by"]
+            foreignKeyName: 'academy_reports_resolved_by_fkey'
+            columns: ['resolved_by']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2064,7 +2052,7 @@ export type Database = {
           replied_at: string | null
           replied_by: string | null
           reply_text: string | null
-          status: Database["public"]["Enums"]["academy_review_status"]
+          status: Database['public']['Enums']['academy_review_status']
           title: string | null
           updated_at: string
           user_id: string
@@ -2079,7 +2067,7 @@ export type Database = {
           replied_at?: string | null
           replied_by?: string | null
           reply_text?: string | null
-          status?: Database["public"]["Enums"]["academy_review_status"]
+          status?: Database['public']['Enums']['academy_review_status']
           title?: string | null
           updated_at?: string
           user_id: string
@@ -2094,46 +2082,46 @@ export type Database = {
           replied_at?: string | null
           replied_by?: string | null
           reply_text?: string | null
-          status?: Database["public"]["Enums"]["academy_review_status"]
+          status?: Database['public']['Enums']['academy_review_status']
           title?: string | null
           updated_at?: string
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "academy_reviews_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_reviews_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_reviews_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_reviews_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_reviews_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_reviews_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_reviews_replied_by_fkey"
-            columns: ["replied_by"]
+            foreignKeyName: 'academy_reviews_replied_by_fkey'
+            columns: ['replied_by']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_reviews_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_reviews_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2185,25 +2173,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_subscription_plans_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_subscription_plans_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_subscription_plans_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_subscription_plans_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_subscription_plans_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_subscription_plans_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2258,18 +2246,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_subscriptions_plan_id_fkey"
-            columns: ["plan_id"]
+            foreignKeyName: 'academy_subscriptions_plan_id_fkey'
+            columns: ['plan_id']
             isOneToOne: false
-            referencedRelation: "academy_subscription_plans"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_subscription_plans'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_subscriptions_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_subscriptions_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2284,7 +2272,7 @@ export type Database = {
           metadata: Json | null
           scheduled_at: string | null
           title: string
-          type: Database["public"]["Enums"]["activity_type"]
+          type: Database['public']['Enums']['activity_type']
         }
         Insert: {
           author_id?: string | null
@@ -2296,7 +2284,7 @@ export type Database = {
           metadata?: Json | null
           scheduled_at?: string | null
           title: string
-          type: Database["public"]["Enums"]["activity_type"]
+          type: Database['public']['Enums']['activity_type']
         }
         Update: {
           author_id?: string | null
@@ -2308,15 +2296,15 @@ export type Database = {
           metadata?: Json | null
           scheduled_at?: string | null
           title?: string
-          type?: Database["public"]["Enums"]["activity_type"]
+          type?: Database['public']['Enums']['activity_type']
         }
         Relationships: [
           {
-            foreignKeyName: "activities_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'activities_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2362,18 +2350,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "attachments_client_id_fkey"
-            columns: ["client_id"]
+            foreignKeyName: 'attachments_client_id_fkey'
+            columns: ['client_id']
             isOneToOne: false
-            referencedRelation: "clients"
-            referencedColumns: ["id"]
+            referencedRelation: 'clients'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "attachments_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'attachments_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2428,7 +2416,7 @@ export type Database = {
           last_run_at: string | null
           name: string
           run_count: number
-          trigger_type: Database["public"]["Enums"]["automation_trigger"]
+          trigger_type: Database['public']['Enums']['automation_trigger']
           updated_at: string
         }
         Insert: {
@@ -2442,7 +2430,7 @@ export type Database = {
           last_run_at?: string | null
           name: string
           run_count?: number
-          trigger_type: Database["public"]["Enums"]["automation_trigger"]
+          trigger_type: Database['public']['Enums']['automation_trigger']
           updated_at?: string
         }
         Update: {
@@ -2456,7 +2444,7 @@ export type Database = {
           last_run_at?: string | null
           name?: string
           run_count?: number
-          trigger_type?: Database["public"]["Enums"]["automation_trigger"]
+          trigger_type?: Database['public']['Enums']['automation_trigger']
           updated_at?: string
         }
         Relationships: []
@@ -2494,25 +2482,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "automation_runs_client_id_fkey"
-            columns: ["client_id"]
+            foreignKeyName: 'automation_runs_client_id_fkey'
+            columns: ['client_id']
             isOneToOne: false
-            referencedRelation: "clients"
-            referencedColumns: ["id"]
+            referencedRelation: 'clients'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "automation_runs_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'automation_runs_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "automation_runs_rule_id_fkey"
-            columns: ["rule_id"]
+            foreignKeyName: 'automation_runs_rule_id_fkey'
+            columns: ['rule_id']
             isOneToOne: false
-            referencedRelation: "automation_rules"
-            referencedColumns: ["id"]
+            referencedRelation: 'automation_rules'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2543,32 +2531,32 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "campaign_leads_campaign_id_fkey"
-            columns: ["campaign_id"]
+            foreignKeyName: 'campaign_leads_campaign_id_fkey'
+            columns: ['campaign_id']
             isOneToOne: false
-            referencedRelation: "campaigns"
-            referencedColumns: ["id"]
+            referencedRelation: 'campaigns'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "campaign_leads_campaign_id_fkey"
-            columns: ["campaign_id"]
+            foreignKeyName: 'campaign_leads_campaign_id_fkey'
+            columns: ['campaign_id']
             isOneToOne: false
-            referencedRelation: "v_campaign_performance"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_campaign_performance'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "campaign_leads_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'campaign_leads_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
         ]
       }
       campaigns: {
         Row: {
           budget_brl: number | null
-          channel: Database["public"]["Enums"]["campaign_channel"]
+          channel: Database['public']['Enums']['campaign_channel']
           created_at: string
           end_at: string | null
           goal: string | null
@@ -2578,8 +2566,8 @@ export type Database = {
           slug: string
           spent_brl: number
           start_at: string | null
-          status: Database["public"]["Enums"]["campaign_status"]
-          unit: Database["public"]["Enums"]["business_unit"] | null
+          status: Database['public']['Enums']['campaign_status']
+          unit: Database['public']['Enums']['business_unit'] | null
           updated_at: string
           utm_campaign: string | null
           utm_medium: string | null
@@ -2587,7 +2575,7 @@ export type Database = {
         }
         Insert: {
           budget_brl?: number | null
-          channel: Database["public"]["Enums"]["campaign_channel"]
+          channel: Database['public']['Enums']['campaign_channel']
           created_at?: string
           end_at?: string | null
           goal?: string | null
@@ -2597,8 +2585,8 @@ export type Database = {
           slug: string
           spent_brl?: number
           start_at?: string | null
-          status?: Database["public"]["Enums"]["campaign_status"]
-          unit?: Database["public"]["Enums"]["business_unit"] | null
+          status?: Database['public']['Enums']['campaign_status']
+          unit?: Database['public']['Enums']['business_unit'] | null
           updated_at?: string
           utm_campaign?: string | null
           utm_medium?: string | null
@@ -2606,7 +2594,7 @@ export type Database = {
         }
         Update: {
           budget_brl?: number | null
-          channel?: Database["public"]["Enums"]["campaign_channel"]
+          channel?: Database['public']['Enums']['campaign_channel']
           created_at?: string
           end_at?: string | null
           goal?: string | null
@@ -2616,8 +2604,8 @@ export type Database = {
           slug?: string
           spent_brl?: number
           start_at?: string | null
-          status?: Database["public"]["Enums"]["campaign_status"]
-          unit?: Database["public"]["Enums"]["business_unit"] | null
+          status?: Database['public']['Enums']['campaign_status']
+          unit?: Database['public']['Enums']['business_unit'] | null
           updated_at?: string
           utm_campaign?: string | null
           utm_medium?: string | null
@@ -2642,8 +2630,8 @@ export type Database = {
           owner_id: string | null
           phone: string | null
           state: string | null
-          status: Database["public"]["Enums"]["client_status"]
-          unit: Database["public"]["Enums"]["business_unit"]
+          status: Database['public']['Enums']['client_status']
+          unit: Database['public']['Enums']['business_unit']
           updated_at: string
         }
         Insert: {
@@ -2662,8 +2650,8 @@ export type Database = {
           owner_id?: string | null
           phone?: string | null
           state?: string | null
-          status?: Database["public"]["Enums"]["client_status"]
-          unit: Database["public"]["Enums"]["business_unit"]
+          status?: Database['public']['Enums']['client_status']
+          unit: Database['public']['Enums']['business_unit']
           updated_at?: string
         }
         Update: {
@@ -2682,17 +2670,17 @@ export type Database = {
           owner_id?: string | null
           phone?: string | null
           state?: string | null
-          status?: Database["public"]["Enums"]["client_status"]
-          unit?: Database["public"]["Enums"]["business_unit"]
+          status?: Database['public']['Enums']['client_status']
+          unit?: Database['public']['Enums']['business_unit']
           updated_at?: string
         }
         Relationships: [
           {
-            foreignKeyName: "clients_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'clients_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2732,11 +2720,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "invoice_items_invoice_id_fkey"
-            columns: ["invoice_id"]
+            foreignKeyName: 'invoice_items_invoice_id_fkey'
+            columns: ['invoice_id']
             isOneToOne: false
-            referencedRelation: "invoices"
-            referencedColumns: ["id"]
+            referencedRelation: 'invoices'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2753,7 +2741,7 @@ export type Database = {
           opportunity_id: string | null
           paid_brl: number
           quote_id: string | null
-          status: Database["public"]["Enums"]["invoice_status"]
+          status: Database['public']['Enums']['invoice_status']
           subtotal_brl: number
           tax_brl: number
           total_brl: number
@@ -2771,7 +2759,7 @@ export type Database = {
           opportunity_id?: string | null
           paid_brl?: number
           quote_id?: string | null
-          status?: Database["public"]["Enums"]["invoice_status"]
+          status?: Database['public']['Enums']['invoice_status']
           subtotal_brl?: number
           tax_brl?: number
           total_brl?: number
@@ -2789,7 +2777,7 @@ export type Database = {
           opportunity_id?: string | null
           paid_brl?: number
           quote_id?: string | null
-          status?: Database["public"]["Enums"]["invoice_status"]
+          status?: Database['public']['Enums']['invoice_status']
           subtotal_brl?: number
           tax_brl?: number
           total_brl?: number
@@ -2797,25 +2785,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "invoices_client_id_fkey"
-            columns: ["client_id"]
+            foreignKeyName: 'invoices_client_id_fkey'
+            columns: ['client_id']
             isOneToOne: false
-            referencedRelation: "clients"
-            referencedColumns: ["id"]
+            referencedRelation: 'clients'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "invoices_opportunity_id_fkey"
-            columns: ["opportunity_id"]
+            foreignKeyName: 'invoices_opportunity_id_fkey'
+            columns: ['opportunity_id']
             isOneToOne: false
-            referencedRelation: "opportunities"
-            referencedColumns: ["id"]
+            referencedRelation: 'opportunities'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "invoices_quote_id_fkey"
-            columns: ["quote_id"]
+            foreignKeyName: 'invoices_quote_id_fkey'
+            columns: ['quote_id']
             isOneToOne: false
-            referencedRelation: "quotes"
-            referencedColumns: ["id"]
+            referencedRelation: 'quotes'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2852,25 +2840,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "lead_service_interests_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'lead_service_interests_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "lead_service_interests_package_id_fkey"
-            columns: ["package_id"]
+            foreignKeyName: 'lead_service_interests_package_id_fkey'
+            columns: ['package_id']
             isOneToOne: false
-            referencedRelation: "service_packages"
-            referencedColumns: ["id"]
+            referencedRelation: 'service_packages'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "lead_service_interests_service_id_fkey"
-            columns: ["service_id"]
+            foreignKeyName: 'lead_service_interests_service_id_fkey'
+            columns: ['service_id']
             isOneToOne: false
-            referencedRelation: "services"
-            referencedColumns: ["id"]
+            referencedRelation: 'services'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2889,18 +2877,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "lead_tags_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'lead_tags_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "lead_tags_tag_id_fkey"
-            columns: ["tag_id"]
+            foreignKeyName: 'lead_tags_tag_id_fkey'
+            columns: ['tag_id']
             isOneToOne: false
-            referencedRelation: "tags"
-            referencedColumns: ["id"]
+            referencedRelation: 'tags'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2911,15 +2899,15 @@ export type Database = {
           details: Json
           email: string | null
           id: string
-          lead_type: Database["public"]["Enums"]["lead_type"]
+          lead_type: Database['public']['Enums']['lead_type']
           name: string
           notes: string | null
           owner_id: string | null
           phone: string | null
-          segment: Database["public"]["Enums"]["lead_segment"]
+          segment: Database['public']['Enums']['lead_segment']
           source: string | null
           stage_id: string | null
-          status: Database["public"]["Enums"]["lead_status"]
+          status: Database['public']['Enums']['lead_status']
           updated_at: string
           utm: Json | null
         }
@@ -2929,15 +2917,15 @@ export type Database = {
           details?: Json
           email?: string | null
           id?: string
-          lead_type: Database["public"]["Enums"]["lead_type"]
+          lead_type: Database['public']['Enums']['lead_type']
           name: string
           notes?: string | null
           owner_id?: string | null
           phone?: string | null
-          segment: Database["public"]["Enums"]["lead_segment"]
+          segment: Database['public']['Enums']['lead_segment']
           source?: string | null
           stage_id?: string | null
-          status?: Database["public"]["Enums"]["lead_status"]
+          status?: Database['public']['Enums']['lead_status']
           updated_at?: string
           utm?: Json | null
         }
@@ -2947,25 +2935,25 @@ export type Database = {
           details?: Json
           email?: string | null
           id?: string
-          lead_type?: Database["public"]["Enums"]["lead_type"]
+          lead_type?: Database['public']['Enums']['lead_type']
           name?: string
           notes?: string | null
           owner_id?: string | null
           phone?: string | null
-          segment?: Database["public"]["Enums"]["lead_segment"]
+          segment?: Database['public']['Enums']['lead_segment']
           source?: string | null
           stage_id?: string | null
-          status?: Database["public"]["Enums"]["lead_status"]
+          status?: Database['public']['Enums']['lead_status']
           updated_at?: string
           utm?: Json | null
         }
         Relationships: [
           {
-            foreignKeyName: "leads_stage_id_fkey"
-            columns: ["stage_id"]
+            foreignKeyName: 'leads_stage_id_fkey'
+            columns: ['stage_id']
             isOneToOne: false
-            referencedRelation: "pipeline_stages"
-            referencedColumns: ["id"]
+            referencedRelation: 'pipeline_stages'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -2996,11 +2984,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "notes_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'notes_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3017,9 +3005,9 @@ export type Database = {
           owner_id: string | null
           probability: number
           source: string | null
-          stage: Database["public"]["Enums"]["opportunity_stage"]
+          stage: Database['public']['Enums']['opportunity_stage']
           title: string
-          unit: Database["public"]["Enums"]["business_unit"]
+          unit: Database['public']['Enums']['business_unit']
           updated_at: string
         }
         Insert: {
@@ -3034,9 +3022,9 @@ export type Database = {
           owner_id?: string | null
           probability?: number
           source?: string | null
-          stage?: Database["public"]["Enums"]["opportunity_stage"]
+          stage?: Database['public']['Enums']['opportunity_stage']
           title: string
-          unit: Database["public"]["Enums"]["business_unit"]
+          unit: Database['public']['Enums']['business_unit']
           updated_at?: string
         }
         Update: {
@@ -3051,25 +3039,25 @@ export type Database = {
           owner_id?: string | null
           probability?: number
           source?: string | null
-          stage?: Database["public"]["Enums"]["opportunity_stage"]
+          stage?: Database['public']['Enums']['opportunity_stage']
           title?: string
-          unit?: Database["public"]["Enums"]["business_unit"]
+          unit?: Database['public']['Enums']['business_unit']
           updated_at?: string
         }
         Relationships: [
           {
-            foreignKeyName: "opportunities_client_id_fkey"
-            columns: ["client_id"]
+            foreignKeyName: 'opportunities_client_id_fkey'
+            columns: ['client_id']
             isOneToOne: false
-            referencedRelation: "clients"
-            referencedColumns: ["id"]
+            referencedRelation: 'clients'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "opportunities_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'opportunities_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3081,7 +3069,7 @@ export type Database = {
           id: string
           invoice_id: string
           metadata: Json
-          method: Database["public"]["Enums"]["payment_method"]
+          method: Database['public']['Enums']['payment_method']
           paid_at: string
           reference: string | null
         }
@@ -3092,7 +3080,7 @@ export type Database = {
           id?: string
           invoice_id: string
           metadata?: Json
-          method: Database["public"]["Enums"]["payment_method"]
+          method: Database['public']['Enums']['payment_method']
           paid_at?: string
           reference?: string | null
         }
@@ -3103,24 +3091,24 @@ export type Database = {
           id?: string
           invoice_id?: string
           metadata?: Json
-          method?: Database["public"]["Enums"]["payment_method"]
+          method?: Database['public']['Enums']['payment_method']
           paid_at?: string
           reference?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "payments_client_id_fkey"
-            columns: ["client_id"]
+            foreignKeyName: 'payments_client_id_fkey'
+            columns: ['client_id']
             isOneToOne: false
-            referencedRelation: "clients"
-            referencedColumns: ["id"]
+            referencedRelation: 'clients'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "payments_invoice_id_fkey"
-            columns: ["invoice_id"]
+            foreignKeyName: 'payments_invoice_id_fkey'
+            columns: ['invoice_id']
             isOneToOne: false
-            referencedRelation: "invoices"
-            referencedColumns: ["id"]
+            referencedRelation: 'invoices'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3132,7 +3120,7 @@ export type Database = {
           is_won: boolean
           name: string
           position: number
-          segment: Database["public"]["Enums"]["lead_segment"]
+          segment: Database['public']['Enums']['lead_segment']
           slug: string
         }
         Insert: {
@@ -3142,7 +3130,7 @@ export type Database = {
           is_won?: boolean
           name: string
           position: number
-          segment: Database["public"]["Enums"]["lead_segment"]
+          segment: Database['public']['Enums']['lead_segment']
           slug: string
         }
         Update: {
@@ -3152,7 +3140,7 @@ export type Database = {
           is_won?: boolean
           name?: string
           position?: number
-          segment?: Database["public"]["Enums"]["lead_segment"]
+          segment?: Database['public']['Enums']['lead_segment']
           slug?: string
         }
         Relationships: []
@@ -3258,7 +3246,7 @@ export type Database = {
           created_at: string
           description: string | null
           id: string
-          kind: Database["public"]["Enums"]["quote_item_kind"]
+          kind: Database['public']['Enums']['quote_item_kind']
           label: string
           position: number
           quantity: number
@@ -3271,7 +3259,7 @@ export type Database = {
           created_at?: string
           description?: string | null
           id?: string
-          kind: Database["public"]["Enums"]["quote_item_kind"]
+          kind: Database['public']['Enums']['quote_item_kind']
           label: string
           position?: number
           quantity?: number
@@ -3284,7 +3272,7 @@ export type Database = {
           created_at?: string
           description?: string | null
           id?: string
-          kind?: Database["public"]["Enums"]["quote_item_kind"]
+          kind?: Database['public']['Enums']['quote_item_kind']
           label?: string
           position?: number
           quantity?: number
@@ -3295,11 +3283,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "quote_items_quote_id_fkey"
-            columns: ["quote_id"]
+            foreignKeyName: 'quote_items_quote_id_fkey'
+            columns: ['quote_id']
             isOneToOne: false
-            referencedRelation: "quotes"
-            referencedColumns: ["id"]
+            referencedRelation: 'quotes'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3314,7 +3302,7 @@ export type Database = {
           owner_id: string | null
           public_token: string
           sent_at: string | null
-          status: Database["public"]["Enums"]["quote_status"]
+          status: Database['public']['Enums']['quote_status']
           subtotal_brl: number
           title: string
           total_brl: number
@@ -3331,7 +3319,7 @@ export type Database = {
           owner_id?: string | null
           public_token?: string
           sent_at?: string | null
-          status?: Database["public"]["Enums"]["quote_status"]
+          status?: Database['public']['Enums']['quote_status']
           subtotal_brl?: number
           title: string
           total_brl?: number
@@ -3348,7 +3336,7 @@ export type Database = {
           owner_id?: string | null
           public_token?: string
           sent_at?: string | null
-          status?: Database["public"]["Enums"]["quote_status"]
+          status?: Database['public']['Enums']['quote_status']
           subtotal_brl?: number
           title?: string
           total_brl?: number
@@ -3357,11 +3345,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "quotes_lead_id_fkey"
-            columns: ["lead_id"]
+            foreignKeyName: 'quotes_lead_id_fkey'
+            columns: ['lead_id']
             isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
+            referencedRelation: 'leads'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3401,11 +3389,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "service_addons_service_id_fkey"
-            columns: ["service_id"]
+            foreignKeyName: 'service_addons_service_id_fkey'
+            columns: ['service_id']
             isOneToOne: false
-            referencedRelation: "services"
-            referencedColumns: ["id"]
+            referencedRelation: 'services'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3454,11 +3442,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "service_packages_service_id_fkey"
-            columns: ["service_id"]
+            foreignKeyName: 'service_packages_service_id_fkey'
+            columns: ['service_id']
             isOneToOne: false
-            referencedRelation: "services"
-            referencedColumns: ["id"]
+            referencedRelation: 'services'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3472,7 +3460,7 @@ export type Database = {
           position: number
           questions_schema: Json
           slug: string
-          unit: Database["public"]["Enums"]["business_unit"]
+          unit: Database['public']['Enums']['business_unit']
           updated_at: string
         }
         Insert: {
@@ -3484,7 +3472,7 @@ export type Database = {
           position?: number
           questions_schema?: Json
           slug: string
-          unit: Database["public"]["Enums"]["business_unit"]
+          unit: Database['public']['Enums']['business_unit']
           updated_at?: string
         }
         Update: {
@@ -3496,7 +3484,7 @@ export type Database = {
           position?: number
           questions_schema?: Json
           slug?: string
-          unit?: Database["public"]["Enums"]["business_unit"]
+          unit?: Database['public']['Enums']['business_unit']
           updated_at?: string
         }
         Relationships: []
@@ -3585,25 +3573,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_cart_items_cart_id_fkey"
-            columns: ["cart_id"]
+            foreignKeyName: 'store_cart_items_cart_id_fkey'
+            columns: ['cart_id']
             isOneToOne: false
-            referencedRelation: "store_carts"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_carts'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "store_cart_items_price_id_fkey"
-            columns: ["price_id"]
+            foreignKeyName: 'store_cart_items_price_id_fkey'
+            columns: ['price_id']
             isOneToOne: false
-            referencedRelation: "store_prices"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_prices'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "store_cart_items_variant_id_fkey"
-            columns: ["variant_id"]
+            foreignKeyName: 'store_cart_items_variant_id_fkey'
+            columns: ['variant_id']
             isOneToOne: false
-            referencedRelation: "store_product_variants"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_product_variants'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3676,11 +3664,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_categories_parent_id_fkey"
-            columns: ["parent_id"]
+            foreignKeyName: 'store_categories_parent_id_fkey'
+            columns: ['parent_id']
             isOneToOne: false
-            referencedRelation: "store_categories"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_categories'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3768,11 +3756,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_inventory_movements_variant_id_fkey"
-            columns: ["variant_id"]
+            foreignKeyName: 'store_inventory_movements_variant_id_fkey'
+            columns: ['variant_id']
             isOneToOne: false
-            referencedRelation: "store_product_variants"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_product_variants'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3784,7 +3772,7 @@ export type Database = {
           metadata: Json
           note: string | null
           order_id: string
-          status: Database["public"]["Enums"]["store_order_status"]
+          status: Database['public']['Enums']['store_order_status']
         }
         Insert: {
           actor?: string | null
@@ -3793,7 +3781,7 @@ export type Database = {
           metadata?: Json
           note?: string | null
           order_id: string
-          status: Database["public"]["Enums"]["store_order_status"]
+          status: Database['public']['Enums']['store_order_status']
         }
         Update: {
           actor?: string | null
@@ -3802,15 +3790,15 @@ export type Database = {
           metadata?: Json
           note?: string | null
           order_id?: string
-          status?: Database["public"]["Enums"]["store_order_status"]
+          status?: Database['public']['Enums']['store_order_status']
         }
         Relationships: [
           {
-            foreignKeyName: "store_order_events_order_id_fkey"
-            columns: ["order_id"]
+            foreignKeyName: 'store_order_events_order_id_fkey'
+            columns: ['order_id']
             isOneToOne: false
-            referencedRelation: "store_orders"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_orders'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3847,11 +3835,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_order_items_order_id_fkey"
-            columns: ["order_id"]
+            foreignKeyName: 'store_order_items_order_id_fkey'
+            columns: ['order_id']
             isOneToOne: false
-            referencedRelation: "store_orders"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_orders'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3885,7 +3873,7 @@ export type Database = {
           recaptcha_score: number | null
           refunded_at: string | null
           shipping_address: Json | null
-          status: Database["public"]["Enums"]["store_order_status"]
+          status: Database['public']['Enums']['store_order_status']
           stripe_customer_id: string | null
           stripe_payment_intent_id: string | null
           stripe_session_id: string | null
@@ -3925,7 +3913,7 @@ export type Database = {
           recaptcha_score?: number | null
           refunded_at?: string | null
           shipping_address?: Json | null
-          status?: Database["public"]["Enums"]["store_order_status"]
+          status?: Database['public']['Enums']['store_order_status']
           stripe_customer_id?: string | null
           stripe_payment_intent_id?: string | null
           stripe_session_id?: string | null
@@ -3965,7 +3953,7 @@ export type Database = {
           recaptcha_score?: number | null
           refunded_at?: string | null
           shipping_address?: Json | null
-          status?: Database["public"]["Enums"]["store_order_status"]
+          status?: Database['public']['Enums']['store_order_status']
           stripe_customer_id?: string | null
           stripe_payment_intent_id?: string | null
           stripe_session_id?: string | null
@@ -3978,11 +3966,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_orders_coupon_id_fkey"
-            columns: ["coupon_id"]
+            foreignKeyName: 'store_orders_coupon_id_fkey'
+            columns: ['coupon_id']
             isOneToOne: false
-            referencedRelation: "store_coupons"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_coupons'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -3994,11 +3982,9 @@ export type Database = {
           id: string
           metadata: Json
           nickname: string | null
-          price_type: Database["public"]["Enums"]["store_price_type"]
+          price_type: Database['public']['Enums']['store_price_type']
           product_id: string
-          recurring_interval:
-            | Database["public"]["Enums"]["store_recurring_interval"]
-            | null
+          recurring_interval: Database['public']['Enums']['store_recurring_interval'] | null
           recurring_interval_count: number | null
           stripe_price_id: string
           trial_period_days: number | null
@@ -4013,11 +3999,9 @@ export type Database = {
           id?: string
           metadata?: Json
           nickname?: string | null
-          price_type?: Database["public"]["Enums"]["store_price_type"]
+          price_type?: Database['public']['Enums']['store_price_type']
           product_id: string
-          recurring_interval?:
-            | Database["public"]["Enums"]["store_recurring_interval"]
-            | null
+          recurring_interval?: Database['public']['Enums']['store_recurring_interval'] | null
           recurring_interval_count?: number | null
           stripe_price_id: string
           trial_period_days?: number | null
@@ -4032,11 +4016,9 @@ export type Database = {
           id?: string
           metadata?: Json
           nickname?: string | null
-          price_type?: Database["public"]["Enums"]["store_price_type"]
+          price_type?: Database['public']['Enums']['store_price_type']
           product_id?: string
-          recurring_interval?:
-            | Database["public"]["Enums"]["store_recurring_interval"]
-            | null
+          recurring_interval?: Database['public']['Enums']['store_recurring_interval'] | null
           recurring_interval_count?: number | null
           stripe_price_id?: string
           trial_period_days?: number | null
@@ -4046,11 +4028,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_prices_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'store_prices_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "store_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_products'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -4069,18 +4051,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_product_categories_category_id_fkey"
-            columns: ["category_id"]
+            foreignKeyName: 'store_product_categories_category_id_fkey'
+            columns: ['category_id']
             isOneToOne: false
-            referencedRelation: "store_categories"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_categories'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "store_product_categories_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'store_product_categories_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "store_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_products'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -4129,18 +4111,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_product_variants_price_id_fkey"
-            columns: ["price_id"]
+            foreignKeyName: 'store_product_variants_price_id_fkey'
+            columns: ['price_id']
             isOneToOne: false
-            referencedRelation: "store_prices"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_prices'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "store_product_variants_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'store_product_variants_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "store_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_products'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -4157,7 +4139,7 @@ export type Database = {
           metadata: Json
           name: string
           og_image_url: string | null
-          product_type: Database["public"]["Enums"]["store_product_type"]
+          product_type: Database['public']['Enums']['store_product_type']
           search_tsv: unknown
           seo_description: string | null
           seo_title: string | null
@@ -4178,7 +4160,7 @@ export type Database = {
           metadata?: Json
           name: string
           og_image_url?: string | null
-          product_type?: Database["public"]["Enums"]["store_product_type"]
+          product_type?: Database['public']['Enums']['store_product_type']
           search_tsv?: unknown
           seo_description?: string | null
           seo_title?: string | null
@@ -4199,7 +4181,7 @@ export type Database = {
           metadata?: Json
           name?: string
           og_image_url?: string | null
-          product_type?: Database["public"]["Enums"]["store_product_type"]
+          product_type?: Database['public']['Enums']['store_product_type']
           search_tsv?: unknown
           seo_description?: string | null
           seo_title?: string | null
@@ -4234,11 +4216,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_restock_alerts_variant_id_fkey"
-            columns: ["variant_id"]
+            foreignKeyName: 'store_restock_alerts_variant_id_fkey'
+            columns: ['variant_id']
             isOneToOne: false
-            referencedRelation: "store_product_variants"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_product_variants'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -4326,11 +4308,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "store_wishlists_price_id_fkey"
-            columns: ["price_id"]
+            foreignKeyName: 'store_wishlists_price_id_fkey'
+            columns: ['price_id']
             isOneToOne: false
-            referencedRelation: "store_prices"
-            referencedColumns: ["id"]
+            referencedRelation: 'store_prices'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -4421,11 +4403,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "team_resources_category_id_fkey"
-            columns: ["category_id"]
+            foreignKeyName: 'team_resources_category_id_fkey'
+            columns: ['category_id']
             isOneToOne: false
-            referencedRelation: "team_resource_categories"
-            referencedColumns: ["id"]
+            referencedRelation: 'team_resource_categories'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -4440,7 +4422,7 @@ export type Database = {
           avatar_override_url: string | null
           avg_rating: number | null
           bestseller: boolean | null
-          business_unit: Database["public"]["Enums"]["business_unit"] | null
+          business_unit: Database['public']['Enums']['business_unit'] | null
           category_id: string | null
           category_name: string | null
           category_slug: string | null
@@ -4451,7 +4433,7 @@ export type Database = {
           featured_order: number | null
           id: string | null
           lesson_count: number | null
-          level: Database["public"]["Enums"]["academy_product_level"] | null
+          level: Database['public']['Enums']['academy_product_level'] | null
           module_count: number | null
           new_release: boolean | null
           original_price_cents: number | null
@@ -4465,7 +4447,7 @@ export type Database = {
           subtitle: string | null
           thumbnail_url: string | null
           title: string | null
-          type: Database["public"]["Enums"]["academy_product_type"] | null
+          type: Database['public']['Enums']['academy_product_type'] | null
         }
         Relationships: []
       }
@@ -4511,39 +4493,39 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "academy_enrollments_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_enrollments_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "academy_products"
-            referencedColumns: ["id"]
+            referencedRelation: 'academy_products'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_enrollments_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_enrollments_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "mv_academy_catalog"
-            referencedColumns: ["id"]
+            referencedRelation: 'mv_academy_catalog'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_enrollments_product_id_fkey"
-            columns: ["product_id"]
+            foreignKeyName: 'academy_enrollments_product_id_fkey'
+            columns: ['product_id']
             isOneToOne: false
-            referencedRelation: "v_academy_search"
-            referencedColumns: ["id"]
+            referencedRelation: 'v_academy_search'
+            referencedColumns: ['id']
           },
           {
-            foreignKeyName: "academy_enrollments_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: 'academy_enrollments_user_id_fkey'
+            columns: ['user_id']
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: 'profiles'
+            referencedColumns: ['id']
           },
         ]
       }
       v_academy_search: {
         Row: {
           avg_rating: number | null
-          business_unit: Database["public"]["Enums"]["business_unit"] | null
+          business_unit: Database['public']['Enums']['business_unit'] | null
           cover_url: string | null
           currency: string | null
           featured: boolean | null
@@ -4557,11 +4539,11 @@ export type Database = {
           subtitle: string | null
           thumbnail_url: string | null
           title: string | null
-          type: Database["public"]["Enums"]["academy_product_type"] | null
+          type: Database['public']['Enums']['academy_product_type'] | null
         }
         Insert: {
           avg_rating?: number | null
-          business_unit?: Database["public"]["Enums"]["business_unit"] | null
+          business_unit?: Database['public']['Enums']['business_unit'] | null
           cover_url?: string | null
           currency?: string | null
           featured?: boolean | null
@@ -4575,11 +4557,11 @@ export type Database = {
           subtitle?: string | null
           thumbnail_url?: string | null
           title?: string | null
-          type?: Database["public"]["Enums"]["academy_product_type"] | null
+          type?: Database['public']['Enums']['academy_product_type'] | null
         }
         Update: {
           avg_rating?: number | null
-          business_unit?: Database["public"]["Enums"]["business_unit"] | null
+          business_unit?: Database['public']['Enums']['business_unit'] | null
           cover_url?: string | null
           currency?: string | null
           featured?: boolean | null
@@ -4593,14 +4575,14 @@ export type Database = {
           subtitle?: string | null
           thumbnail_url?: string | null
           title?: string | null
-          type?: Database["public"]["Enums"]["academy_product_type"] | null
+          type?: Database['public']['Enums']['academy_product_type'] | null
         }
         Relationships: []
       }
       v_campaign_performance: {
         Row: {
           attributed_revenue_brl: number | null
-          channel: Database["public"]["Enums"]["campaign_channel"] | null
+          channel: Database['public']['Enums']['campaign_channel'] | null
           id: string | null
           leads_count: number | null
           name: string | null
@@ -4613,8 +4595,8 @@ export type Database = {
       v_leads_funnel: {
         Row: {
           month: string | null
-          segment: Database["public"]["Enums"]["lead_segment"] | null
-          status: Database["public"]["Enums"]["lead_status"] | null
+          segment: Database['public']['Enums']['lead_segment'] | null
+          status: Database['public']['Enums']['lead_status'] | null
           total: number | null
         }
         Relationships: []
@@ -4622,9 +4604,9 @@ export type Database = {
       v_opportunities_pipeline: {
         Row: {
           amount_total_brl: number | null
-          stage: Database["public"]["Enums"]["opportunity_stage"] | null
+          stage: Database['public']['Enums']['opportunity_stage'] | null
           total: number | null
-          unit: Database["public"]["Enums"]["business_unit"] | null
+          unit: Database['public']['Enums']['business_unit'] | null
           weighted_brl: number | null
         }
         Relationships: []
@@ -4634,7 +4616,7 @@ export type Database = {
           invoices_paid: number | null
           month: string | null
           revenue_brl: number | null
-          unit: Database["public"]["Enums"]["business_unit"] | null
+          unit: Database['public']['Enums']['business_unit'] | null
         }
         Relationships: []
       }
@@ -4647,7 +4629,7 @@ export type Database = {
         Args: {
           p_client_id?: string
           p_lead_id: string
-          p_rule: Database["public"]["Tables"]["automation_rules"]["Row"]
+          p_rule: Database['public']['Tables']['automation_rules']['Row']
         }
         Returns: undefined
       }
@@ -4717,7 +4699,7 @@ export type Database = {
           lead_phone: string
           notes: string
           sent_at: string
-          status: Database["public"]["Enums"]["quote_status"]
+          status: Database['public']['Enums']['quote_status']
           subtotal_brl: number
           title: string
           total_brl: number
@@ -4744,167 +4726,132 @@ export type Database = {
         Args: {
           p_amount_brl?: number
           p_lead_id: string
-          p_unit?: Database["public"]["Enums"]["business_unit"]
+          p_unit?: Database['public']['Enums']['business_unit']
         }
         Returns: string
       }
       run_automation_inactivity: { Args: never; Returns: number }
       run_automation_invoice_overdue: { Args: never; Returns: number }
       show_limit: { Args: never; Returns: number }
-      show_trgm: { Args: { "": string }; Returns: string[] }
-      unaccent: { Args: { "": string }; Returns: string }
+      show_trgm: { Args: { '': string }; Returns: string[] }
+      unaccent: { Args: { '': string }; Returns: string }
     }
     Enums: {
-      academy_coupon_type: "percentage" | "fixed_amount"
-      academy_enrollment_status: "active" | "expired" | "revoked" | "suspended"
-      academy_live_status:
-        | "scheduled"
-        | "live"
-        | "ended"
-        | "cancelled"
-        | "rescheduled"
-      academy_live_visibility: "public" | "enrolled_only" | "subscribers_only"
+      academy_coupon_type: 'percentage' | 'fixed_amount'
+      academy_enrollment_status: 'active' | 'expired' | 'revoked' | 'suspended'
+      academy_live_status: 'scheduled' | 'live' | 'ended' | 'cancelled' | 'rescheduled'
+      academy_live_visibility: 'public' | 'enrolled_only' | 'subscribers_only'
       academy_notification_type:
-        | "order_paid"
-        | "enrollment_granted"
-        | "live_starting"
-        | "new_reply"
-        | "mention"
-        | "admin_announcement"
-        | "product_update"
-        | "community_milestone"
+        | 'order_paid'
+        | 'enrollment_granted'
+        | 'live_starting'
+        | 'new_reply'
+        | 'mention'
+        | 'admin_announcement'
+        | 'product_update'
+        | 'community_milestone'
       academy_order_status:
-        | "pending"
-        | "processing"
-        | "paid"
-        | "failed"
-        | "refunded"
-        | "cancelled"
-        | "expired"
-        | "chargeback"
-      academy_payment_method:
-        | "pix"
-        | "credit_card"
-        | "debit_card"
-        | "boleto"
-        | "free"
-      academy_post_status: "published" | "hidden" | "deleted" | "reported"
-      academy_post_type:
-        | "text"
-        | "image"
-        | "video"
-        | "link"
-        | "question"
-        | "announcement"
-      academy_product_level:
-        | "iniciante"
-        | "intermediario"
-        | "avancado"
-        | "todos"
-      academy_product_status: "draft" | "published" | "archived" | "coming_soon"
+        | 'pending'
+        | 'processing'
+        | 'paid'
+        | 'failed'
+        | 'refunded'
+        | 'cancelled'
+        | 'expired'
+        | 'chargeback'
+      academy_payment_method: 'pix' | 'credit_card' | 'debit_card' | 'boleto' | 'free'
+      academy_post_status: 'published' | 'hidden' | 'deleted' | 'reported'
+      academy_post_type: 'text' | 'image' | 'video' | 'link' | 'question' | 'announcement'
+      academy_product_level: 'iniciante' | 'intermediario' | 'avancado' | 'todos'
+      academy_product_status: 'draft' | 'published' | 'archived' | 'coming_soon'
       academy_product_type:
-        | "ebook"
-        | "course"
-        | "mentorship"
-        | "community_access"
-        | "live_event"
-        | "bundle"
-        | "subscription"
-      academy_progress_event:
-        | "started"
-        | "progress"
-        | "completed"
-        | "certificate_issued"
-      academy_review_status: "pending" | "approved" | "rejected" | "flagged"
+        | 'ebook'
+        | 'course'
+        | 'mentorship'
+        | 'community_access'
+        | 'live_event'
+        | 'bundle'
+        | 'subscription'
+      academy_progress_event: 'started' | 'progress' | 'completed' | 'certificate_issued'
+      academy_review_status: 'pending' | 'approved' | 'rejected' | 'flagged'
       activity_type:
-        | "call"
-        | "email"
-        | "whatsapp"
-        | "meeting"
-        | "note"
-        | "task"
-        | "status_change"
-        | "stage_change"
-        | "quote_sent"
-        | "system"
+        | 'call'
+        | 'email'
+        | 'whatsapp'
+        | 'meeting'
+        | 'note'
+        | 'task'
+        | 'status_change'
+        | 'stage_change'
+        | 'quote_sent'
+        | 'system'
       automation_trigger:
-        | "lead_created"
-        | "lead_status_change"
-        | "stage_change"
-        | "quote_accepted"
-        | "invoice_overdue"
-        | "inactivity"
-        | "cron"
-      business_unit: "agencia" | "studio" | "produtora"
+        | 'lead_created'
+        | 'lead_status_change'
+        | 'stage_change'
+        | 'quote_accepted'
+        | 'invoice_overdue'
+        | 'inactivity'
+        | 'cron'
+      business_unit: 'agencia' | 'studio' | 'produtora'
       campaign_channel:
-        | "instagram"
-        | "meta_ads"
-        | "google_ads"
-        | "tiktok"
-        | "email"
-        | "whatsapp"
-        | "evento"
-        | "indicacao"
-        | "organico"
-        | "outro"
-      campaign_status: "rascunho" | "ativa" | "pausada" | "encerrada"
-      client_status: "ativo" | "inativo" | "churn" | "prospect"
-      invoice_status:
-        | "rascunho"
-        | "emitida"
-        | "paga"
-        | "parcial"
-        | "vencida"
-        | "cancelada"
-      lead_segment: "talents" | "commercial"
+        | 'instagram'
+        | 'meta_ads'
+        | 'google_ads'
+        | 'tiktok'
+        | 'email'
+        | 'whatsapp'
+        | 'evento'
+        | 'indicacao'
+        | 'organico'
+        | 'outro'
+      campaign_status: 'rascunho' | 'ativa' | 'pausada' | 'encerrada'
+      client_status: 'ativo' | 'inativo' | 'churn' | 'prospect'
+      invoice_status: 'rascunho' | 'emitida' | 'paga' | 'parcial' | 'vencida' | 'cancelada'
+      lead_segment: 'talents' | 'commercial'
       lead_status:
-        | "novo"
-        | "em_contato"
-        | "qualificado"
-        | "proposta_enviada"
-        | "negociacao"
-        | "ganho"
-        | "perdido"
-        | "arquivado"
+        | 'novo'
+        | 'em_contato'
+        | 'qualificado'
+        | 'proposta_enviada'
+        | 'negociacao'
+        | 'ganho'
+        | 'perdido'
+        | 'arquivado'
       lead_type:
-        | "aluno_curso"
-        | "afiliada"
-        | "agenciado_casting"
-        | "talento"
-        | "fornecedor"
-        | "parceiro"
-        | "cliente_agencia"
-        | "cliente_produtora"
-        | "cliente_studio"
+        | 'aluno_curso'
+        | 'afiliada'
+        | 'agenciado_casting'
+        | 'talento'
+        | 'fornecedor'
+        | 'parceiro'
+        | 'cliente_agencia'
+        | 'cliente_produtora'
+        | 'cliente_studio'
       opportunity_stage:
-        | "descoberta"
-        | "qualificacao"
-        | "proposta"
-        | "negociacao"
-        | "ganho"
-        | "perdido"
+        'descoberta' | 'qualificacao' | 'proposta' | 'negociacao' | 'ganho' | 'perdido'
       payment_method:
-        | "pix"
-        | "boleto"
-        | "cartao_credito"
-        | "cartao_debito"
-        | "transferencia"
-        | "dinheiro"
-        | "outro"
-      quote_item_kind: "package" | "addon" | "team_resource" | "custom"
-      quote_status: "rascunho" | "enviado" | "aceito" | "recusado" | "expirado"
+        | 'pix'
+        | 'boleto'
+        | 'cartao_credito'
+        | 'cartao_debito'
+        | 'transferencia'
+        | 'dinheiro'
+        | 'outro'
+      quote_item_kind: 'package' | 'addon' | 'team_resource' | 'custom'
+      quote_status: 'rascunho' | 'enviado' | 'aceito' | 'recusado' | 'expirado'
       store_order_status:
-        | "pending"
-        | "processing"
-        | "paid"
-        | "failed"
-        | "refunded"
-        | "partially_refunded"
-        | "cancelled"
-        | "chargeback"
-      store_price_type: "one_time" | "recurring"
-      store_product_type: "physical" | "digital" | "service" | "bundle"
-      store_recurring_interval: "day" | "week" | "month" | "year"
+        | 'pending'
+        | 'processing'
+        | 'paid'
+        | 'failed'
+        | 'refunded'
+        | 'partially_refunded'
+        | 'cancelled'
+        | 'chargeback'
+      store_price_type: 'one_time' | 'recurring'
+      store_product_type: 'physical' | 'digital' | 'service' | 'bundle'
+      store_recurring_interval: 'day' | 'week' | 'month' | 'year'
     }
     CompositeTypes: {
       [_ in never]: never
@@ -4912,33 +4859,31 @@ export type Database = {
   }
 }
 
-type DatabaseWithoutInternals = Omit<Database, "__InternalSupabase">
+type DatabaseWithoutInternals = Omit<Database, '__InternalSupabase'>
 
-type DefaultSchema = DatabaseWithoutInternals[Extract<keyof Database, "public">]
+type DefaultSchema = DatabaseWithoutInternals[Extract<keyof Database, 'public'>]
 
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+    | keyof (DefaultSchema['Tables'] & DefaultSchema['Views'])
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
-    ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
-        DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables'] &
+        DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Views'])
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
-  ? (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
-      DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
+  ? (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables'] &
+      DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Views'])[TableName] extends {
       Row: infer R
     }
     ? R
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &
-        DefaultSchema["Views"])
-    ? (DefaultSchema["Tables"] &
-        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema['Tables'] & DefaultSchema['Views'])
+    ? (DefaultSchema['Tables'] & DefaultSchema['Views'])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
       ? R
@@ -4947,23 +4892,22 @@ export type Tables<
 
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]
-    | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+    keyof DefaultSchema['Tables'] | { schema: keyof DatabaseWithoutInternals },
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
-    ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables']
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
-  ? DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+  ? DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables'][TableName] extends {
       Insert: infer I
     }
     ? I
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema['Tables']
+    ? DefaultSchema['Tables'][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I
       }
       ? I
@@ -4972,23 +4916,22 @@ export type TablesInsert<
 
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]
-    | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+    keyof DefaultSchema['Tables'] | { schema: keyof DatabaseWithoutInternals },
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
-    ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables']
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
-  ? DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+  ? DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables'][TableName] extends {
       Update: infer U
     }
     ? U
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema['Tables']
+    ? DefaultSchema['Tables'][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U
       }
       ? U
@@ -4997,208 +4940,170 @@ export type TablesUpdate<
 
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-    | keyof DefaultSchema["Enums"]
-    | { schema: keyof DatabaseWithoutInternals },
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    keyof DefaultSchema['Enums'] | { schema: keyof DatabaseWithoutInternals },
+  EnumName extends (DefaultSchemaEnumNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
-    ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions['schema']]['Enums']
+    : never) = never,
 > = DefaultSchemaEnumNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
-  ? DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+  ? DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions['schema']]['Enums'][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema['Enums']
+    ? DefaultSchema['Enums'][DefaultSchemaEnumNameOrOptions]
     : never
 
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
-    | keyof DefaultSchema["CompositeTypes"]
-    | { schema: keyof DatabaseWithoutInternals },
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    keyof DefaultSchema['CompositeTypes'] | { schema: keyof DatabaseWithoutInternals },
+  CompositeTypeName extends (PublicCompositeTypeNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
-    ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions['schema']]['CompositeTypes']
+    : never) = never,
 > = PublicCompositeTypeNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
-  ? DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+  ? DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions['schema']]['CompositeTypes'][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema['CompositeTypes']
+    ? DefaultSchema['CompositeTypes'][PublicCompositeTypeNameOrOptions]
     : never
 
 export const Constants = {
   public: {
     Enums: {
-      academy_coupon_type: ["percentage", "fixed_amount"],
-      academy_enrollment_status: ["active", "expired", "revoked", "suspended"],
-      academy_live_status: [
-        "scheduled",
-        "live",
-        "ended",
-        "cancelled",
-        "rescheduled",
-      ],
-      academy_live_visibility: ["public", "enrolled_only", "subscribers_only"],
+      academy_coupon_type: ['percentage', 'fixed_amount'],
+      academy_enrollment_status: ['active', 'expired', 'revoked', 'suspended'],
+      academy_live_status: ['scheduled', 'live', 'ended', 'cancelled', 'rescheduled'],
+      academy_live_visibility: ['public', 'enrolled_only', 'subscribers_only'],
       academy_notification_type: [
-        "order_paid",
-        "enrollment_granted",
-        "live_starting",
-        "new_reply",
-        "mention",
-        "admin_announcement",
-        "product_update",
-        "community_milestone",
+        'order_paid',
+        'enrollment_granted',
+        'live_starting',
+        'new_reply',
+        'mention',
+        'admin_announcement',
+        'product_update',
+        'community_milestone',
       ],
       academy_order_status: [
-        "pending",
-        "processing",
-        "paid",
-        "failed",
-        "refunded",
-        "cancelled",
-        "expired",
-        "chargeback",
+        'pending',
+        'processing',
+        'paid',
+        'failed',
+        'refunded',
+        'cancelled',
+        'expired',
+        'chargeback',
       ],
-      academy_payment_method: [
-        "pix",
-        "credit_card",
-        "debit_card",
-        "boleto",
-        "free",
-      ],
-      academy_post_status: ["published", "hidden", "deleted", "reported"],
-      academy_post_type: [
-        "text",
-        "image",
-        "video",
-        "link",
-        "question",
-        "announcement",
-      ],
-      academy_product_level: [
-        "iniciante",
-        "intermediario",
-        "avancado",
-        "todos",
-      ],
-      academy_product_status: ["draft", "published", "archived", "coming_soon"],
+      academy_payment_method: ['pix', 'credit_card', 'debit_card', 'boleto', 'free'],
+      academy_post_status: ['published', 'hidden', 'deleted', 'reported'],
+      academy_post_type: ['text', 'image', 'video', 'link', 'question', 'announcement'],
+      academy_product_level: ['iniciante', 'intermediario', 'avancado', 'todos'],
+      academy_product_status: ['draft', 'published', 'archived', 'coming_soon'],
       academy_product_type: [
-        "ebook",
-        "course",
-        "mentorship",
-        "community_access",
-        "live_event",
-        "bundle",
-        "subscription",
+        'ebook',
+        'course',
+        'mentorship',
+        'community_access',
+        'live_event',
+        'bundle',
+        'subscription',
       ],
-      academy_progress_event: [
-        "started",
-        "progress",
-        "completed",
-        "certificate_issued",
-      ],
-      academy_review_status: ["pending", "approved", "rejected", "flagged"],
+      academy_progress_event: ['started', 'progress', 'completed', 'certificate_issued'],
+      academy_review_status: ['pending', 'approved', 'rejected', 'flagged'],
       activity_type: [
-        "call",
-        "email",
-        "whatsapp",
-        "meeting",
-        "note",
-        "task",
-        "status_change",
-        "stage_change",
-        "quote_sent",
-        "system",
+        'call',
+        'email',
+        'whatsapp',
+        'meeting',
+        'note',
+        'task',
+        'status_change',
+        'stage_change',
+        'quote_sent',
+        'system',
       ],
       automation_trigger: [
-        "lead_created",
-        "lead_status_change",
-        "stage_change",
-        "quote_accepted",
-        "invoice_overdue",
-        "inactivity",
-        "cron",
+        'lead_created',
+        'lead_status_change',
+        'stage_change',
+        'quote_accepted',
+        'invoice_overdue',
+        'inactivity',
+        'cron',
       ],
-      business_unit: ["agencia", "studio", "produtora"],
+      business_unit: ['agencia', 'studio', 'produtora'],
       campaign_channel: [
-        "instagram",
-        "meta_ads",
-        "google_ads",
-        "tiktok",
-        "email",
-        "whatsapp",
-        "evento",
-        "indicacao",
-        "organico",
-        "outro",
+        'instagram',
+        'meta_ads',
+        'google_ads',
+        'tiktok',
+        'email',
+        'whatsapp',
+        'evento',
+        'indicacao',
+        'organico',
+        'outro',
       ],
-      campaign_status: ["rascunho", "ativa", "pausada", "encerrada"],
-      client_status: ["ativo", "inativo", "churn", "prospect"],
-      invoice_status: [
-        "rascunho",
-        "emitida",
-        "paga",
-        "parcial",
-        "vencida",
-        "cancelada",
-      ],
-      lead_segment: ["talents", "commercial"],
+      campaign_status: ['rascunho', 'ativa', 'pausada', 'encerrada'],
+      client_status: ['ativo', 'inativo', 'churn', 'prospect'],
+      invoice_status: ['rascunho', 'emitida', 'paga', 'parcial', 'vencida', 'cancelada'],
+      lead_segment: ['talents', 'commercial'],
       lead_status: [
-        "novo",
-        "em_contato",
-        "qualificado",
-        "proposta_enviada",
-        "negociacao",
-        "ganho",
-        "perdido",
-        "arquivado",
+        'novo',
+        'em_contato',
+        'qualificado',
+        'proposta_enviada',
+        'negociacao',
+        'ganho',
+        'perdido',
+        'arquivado',
       ],
       lead_type: [
-        "aluno_curso",
-        "afiliada",
-        "agenciado_casting",
-        "talento",
-        "fornecedor",
-        "parceiro",
-        "cliente_agencia",
-        "cliente_produtora",
-        "cliente_studio",
+        'aluno_curso',
+        'afiliada',
+        'agenciado_casting',
+        'talento',
+        'fornecedor',
+        'parceiro',
+        'cliente_agencia',
+        'cliente_produtora',
+        'cliente_studio',
       ],
       opportunity_stage: [
-        "descoberta",
-        "qualificacao",
-        "proposta",
-        "negociacao",
-        "ganho",
-        "perdido",
+        'descoberta',
+        'qualificacao',
+        'proposta',
+        'negociacao',
+        'ganho',
+        'perdido',
       ],
       payment_method: [
-        "pix",
-        "boleto",
-        "cartao_credito",
-        "cartao_debito",
-        "transferencia",
-        "dinheiro",
-        "outro",
+        'pix',
+        'boleto',
+        'cartao_credito',
+        'cartao_debito',
+        'transferencia',
+        'dinheiro',
+        'outro',
       ],
-      quote_item_kind: ["package", "addon", "team_resource", "custom"],
-      quote_status: ["rascunho", "enviado", "aceito", "recusado", "expirado"],
+      quote_item_kind: ['package', 'addon', 'team_resource', 'custom'],
+      quote_status: ['rascunho', 'enviado', 'aceito', 'recusado', 'expirado'],
       store_order_status: [
-        "pending",
-        "processing",
-        "paid",
-        "failed",
-        "refunded",
-        "partially_refunded",
-        "cancelled",
-        "chargeback",
+        'pending',
+        'processing',
+        'paid',
+        'failed',
+        'refunded',
+        'partially_refunded',
+        'cancelled',
+        'chargeback',
       ],
-      store_price_type: ["one_time", "recurring"],
-      store_product_type: ["physical", "digital", "service", "bundle"],
-      store_recurring_interval: ["day", "week", "month", "year"],
+      store_price_type: ['one_time', 'recurring'],
+      store_product_type: ['physical', 'digital', 'service', 'bundle'],
+      store_recurring_interval: ['day', 'week', 'month', 'year'],
     },
   },
 } as const

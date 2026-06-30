@@ -4,13 +4,15 @@ import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 import { createClient } from '@/lib/supabase/server'
 
-const PasswordSchema = z.object({
-  password: z.string().min(8, 'A senha precisa ter ao menos 8 caracteres.').max(128),
-  confirm: z.string(),
-}).refine((d) => d.password === d.confirm, {
-  message: 'As senhas não conferem.',
-  path: ['confirm'],
-})
+const PasswordSchema = z
+  .object({
+    password: z.string().min(8, 'A senha precisa ter ao menos 8 caracteres.').max(128),
+    confirm: z.string(),
+  })
+  .refine((d) => d.password === d.confirm, {
+    message: 'As senhas não conferem.',
+    path: ['confirm'],
+  })
 
 export type ChangePasswordState = {
   success?: boolean
@@ -23,7 +25,9 @@ export async function changePassword(
   formData: FormData,
 ): Promise<ChangePasswordState> {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return { error: 'Sessão expirada. Faça login novamente.' }
 
   const raw = {

@@ -1,13 +1,7 @@
 export type PaymentMethod = 'card' | 'subscription' | 'pix' | 'boleto'
 
 export type PaymentStatus =
-  | 'pending'
-  | 'processing'
-  | 'paid'
-  | 'failed'
-  | 'overdue'
-  | 'refunded'
-  | 'cancelled'
+  'pending' | 'processing' | 'paid' | 'failed' | 'overdue' | 'refunded' | 'cancelled'
 
 export type ProviderName = 'stripe' | 'asaas'
 

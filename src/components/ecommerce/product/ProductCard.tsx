@@ -55,8 +55,11 @@ export function ProductCard({ product }: { product: ProductCardProduct }) {
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-neutral-50">
             <span className="text-4xl" aria-hidden>
-              {product.product_type === 'service' ? '✦' :
-               product.product_type === 'digital' ? '◈' : '◻'}
+              {product.product_type === 'service'
+                ? '✦'
+                : product.product_type === 'digital'
+                  ? '◈'
+                  : '◻'}
             </span>
           </div>
         )}

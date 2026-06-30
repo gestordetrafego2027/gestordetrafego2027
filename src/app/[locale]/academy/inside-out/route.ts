@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+export const dynamic = 'force-static'
 
 export function GET() {
   const html = `<!DOCTYPE html>
@@ -619,12 +619,12 @@ export function GET() {
 <script src="/lp/workshop-io/image-slot.js"></script>
 <script src="/lp/workshop-io/app-masterclass.js"></script>
 </body>
-</html>`;
+</html>`
 
   return new Response(html, {
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
       'Cache-Control': 'public, max-age=3600',
     },
-  });
+  })
 }

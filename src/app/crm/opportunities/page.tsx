@@ -19,14 +19,8 @@ export default async function OpportunitiesPage() {
     supabase.from('v_opportunities_pipeline').select('*'),
   ])
 
-  const totalAberto = (pipeline ?? []).reduce(
-    (acc, p) => acc + Number(p.amount_total_brl ?? 0),
-    0,
-  )
-  const totalPonderado = (pipeline ?? []).reduce(
-    (acc, p) => acc + Number(p.weighted_brl ?? 0),
-    0,
-  )
+  const totalAberto = (pipeline ?? []).reduce((acc, p) => acc + Number(p.amount_total_brl ?? 0), 0)
+  const totalPonderado = (pipeline ?? []).reduce((acc, p) => acc + Number(p.weighted_brl ?? 0), 0)
 
   return (
     <div className="space-y-6">

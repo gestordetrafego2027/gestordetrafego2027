@@ -15,8 +15,7 @@ const ENTITY_QUERIES: Record<
 > = {
   leads: {
     table: 'leads',
-    columns:
-      'id,created_at,name,email,phone,city,segment,lead_type,status,source,owner_id',
+    columns: 'id,created_at,name,email,phone,city,segment,lead_type,status,source,owner_id',
     order: { col: 'created_at', asc: false },
   },
   clients: {
@@ -27,8 +26,7 @@ const ENTITY_QUERIES: Record<
   },
   payments: {
     table: 'payments',
-    columns:
-      'id,paid_at,client_id,invoice_id,method,amount_brl,reference,received_by',
+    columns: 'id,paid_at,client_id,invoice_id,method,amount_brl,reference,received_by',
     order: { col: 'paid_at', asc: false },
   },
   quotes: {
@@ -67,7 +65,9 @@ export async function GET(req: Request) {
   }
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
 
   let q = supabase.from(cfg.table).select(cfg.columns).limit(10000)

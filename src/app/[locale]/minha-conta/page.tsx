@@ -8,13 +8,11 @@ function formatPrice(cents: number) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
 }
 
-export default async function MinhaContaPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
+export default async function MinhaContaPage({ params }: { params: Promise<{ locale: string }> }) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
   if (!user) {
     const { locale } = await params
     redirect(`/login?next=/${locale}/minha-conta`)
@@ -66,7 +64,10 @@ export default async function MinhaContaPage({
       <div className="bg-white rounded-2xl border border-neutral-100 p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-semibold text-neutral-900">Pedidos recentes</h3>
-          <Link href="/minha-conta/pedidos" className="text-sm text-neutral-400 hover:text-neutral-900 transition-colors">
+          <Link
+            href="/minha-conta/pedidos"
+            className="text-sm text-neutral-400 hover:text-neutral-900 transition-colors"
+          >
             Ver todos →
           </Link>
         </div>
@@ -74,7 +75,10 @@ export default async function MinhaContaPage({
         {!recentOrders?.length ? (
           <div className="text-center py-8">
             <p className="text-sm text-neutral-400">Você ainda não fez pedidos.</p>
-            <Link href="/loja" className="mt-3 inline-block text-sm font-medium text-neutral-900 underline underline-offset-4">
+            <Link
+              href="/loja"
+              className="mt-3 inline-block text-sm font-medium text-neutral-900 underline underline-offset-4"
+            >
               Explorar loja
             </Link>
           </div>
@@ -89,7 +93,9 @@ export default async function MinhaContaPage({
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${statusColor[order.status] ?? 'text-neutral-500 bg-neutral-100'}`}>
+                  <span
+                    className={`text-xs font-medium px-2 py-0.5 rounded-full ${statusColor[order.status] ?? 'text-neutral-500 bg-neutral-100'}`}
+                  >
                     {statusLabel[order.status] ?? order.status}
                   </span>
                   <span className="text-sm font-semibold text-neutral-900">
@@ -104,11 +110,17 @@ export default async function MinhaContaPage({
 
       {/* Links rápidos */}
       <div className="grid grid-cols-2 gap-3">
-        <Link href="/minha-conta/dados" className="bg-white rounded-2xl border border-neutral-100 p-5 hover:border-neutral-300 transition-colors">
+        <Link
+          href="/minha-conta/dados"
+          className="bg-white rounded-2xl border border-neutral-100 p-5 hover:border-neutral-300 transition-colors"
+        >
           <p className="text-sm font-semibold text-neutral-900">Dados pessoais</p>
           <p className="text-xs text-neutral-400 mt-1">Nome, telefone, endereço</p>
         </Link>
-        <Link href="/minha-conta/lgpd" className="bg-white rounded-2xl border border-neutral-100 p-5 hover:border-neutral-300 transition-colors">
+        <Link
+          href="/minha-conta/lgpd"
+          className="bg-white rounded-2xl border border-neutral-100 p-5 hover:border-neutral-300 transition-colors"
+        >
           <p className="text-sm font-semibold text-neutral-900">Privacidade</p>
           <p className="text-xs text-neutral-400 mt-1">LGPD, dados e consentimentos</p>
         </Link>

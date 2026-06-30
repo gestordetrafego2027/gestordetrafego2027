@@ -40,8 +40,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
     ? Math.round(((originalCents! - finalCents) / originalCents!) * 100)
     : 0
 
-  const subtitleLine =
-    product?.subtitle ?? '7 bastidores reais · Ebook · Vol. 03'
+  const subtitleLine = product?.subtitle ?? '7 bastidores reais · Ebook · Vol. 03'
 
   return (
     <main
@@ -80,7 +79,8 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             letterSpacing: '-0.01em',
           }}
         >
-          Inside<br />
+          Inside
+          <br />
           <em style={{ fontStyle: 'italic', color: '#7ab648' }}>Out</em>
         </h1>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: '#ccc', margin: '0 0 8px' }}>
@@ -116,10 +116,12 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
             }}
           >
             <span>
-              <span style={{ fontSize: 18, color: '#4a7a50', verticalAlign: 'top', marginRight: 4 }}>
+              <span
+                style={{ fontSize: 18, color: '#4a7a50', verticalAlign: 'top', marginRight: 4 }}
+              >
                 R$
               </span>
-              {((finalCents) / 100).toLocaleString('pt-BR', {
+              {(finalCents / 100).toLocaleString('pt-BR', {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               })}

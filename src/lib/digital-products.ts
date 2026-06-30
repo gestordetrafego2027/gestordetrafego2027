@@ -52,8 +52,7 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
     // um link de acesso ao Showcase privado — não um download de arquivo.
     // storagePath fica vazio; a entrega é feita via downloadUrl (link Vimeo).
     downloadUrl:
-      process.env.VIMEO_SHOWCASE_INSIDE_OUT ??
-      'https://vimeo.com/showcase/inside-out-hmzt', // substituir pelo link real
+      process.env.VIMEO_SHOWCASE_INSIDE_OUT ?? 'https://vimeo.com/showcase/inside-out-hmzt', // substituir pelo link real
     expiresIn: 'vitalício',
     detail: 'Masterclass completa em vídeo — assista quantas vezes quiser, no seu ritmo.',
   },
@@ -81,7 +80,8 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
       '/downloads/preco-da-relevancia-hmzt-vol-02.pdf',
     expiresIn: '7 dias',
     volumeLabel: 'Vol. 02',
-    detail: '107 páginas em 10 capítulos. Leitura sugerida em ordem — cada parte se apoia na anterior.',
+    detail:
+      '107 páginas em 10 capítulos. Leitura sugerida em ordem — cada parte se apoia na anterior.',
   },
   'briefing-mal-passado': {
     slug: 'briefing-mal-passado',
@@ -102,7 +102,8 @@ export const DIGITAL_PRODUCTS: Record<string, DigitalProduct> = {
       '/downloads/briefing-mal-passado-hmzt-vol-03.pdf',
     expiresIn: '7 dias',
     volumeLabel: 'Vol. 03',
-    detail: '417 páginas em 25 capítulos · 3 partes. Bastidores do caos criativo na publicidade brasileira.',
+    detail:
+      '417 páginas em 25 capítulos · 3 partes. Bastidores do caos criativo na publicidade brasileira.',
   },
 }
 

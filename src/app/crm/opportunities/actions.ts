@@ -4,9 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import type { TablesUpdate } from '@/types/database'
 
-type Stage =
-  | 'descoberta' | 'qualificacao' | 'proposta'
-  | 'negociacao' | 'ganho' | 'perdido'
+type Stage = 'descoberta' | 'qualificacao' | 'proposta' | 'negociacao' | 'ganho' | 'perdido'
 
 export async function moveOpportunityAction(oppId: string, newStage: Stage) {
   const supabase = await createClient()
@@ -24,7 +22,10 @@ export async function moveOpportunityAction(oppId: string, newStage: Stage) {
 
   // Activity na timeline do lead vinculado (se houver)
   const { data: opp } = await supabase
-    .from('opportunities').select('lead_id, title').eq('id', oppId).single()
+    .from('opportunities')
+    .select('lead_id, title')
+    .eq('id', oppId)
+    .single()
   if (opp?.lead_id) {
     await supabase.from('activities').insert({
       lead_id: opp.lead_id,

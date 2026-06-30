@@ -13,7 +13,8 @@ type PaymentMethodChoice = 'card' | 'pix' | 'boleto'
 const ASAAS_PUBLIC_FLAG = process.env.NEXT_PUBLIC_FEATURE_ASAAS_ENABLED === 'true'
 
 export function CartSummary({ onClose }: { onClose?: () => void }) {
-  const { subtotal, total, couponCode, couponDiscount, setCoupon, removeCoupon, items, clearCart } = useCartStore()
+  const { subtotal, total, couponCode, couponDiscount, setCoupon, removeCoupon, items, clearCart } =
+    useCartStore()
   const [couponInput, setCouponInput] = useState('')
   const [couponLoading, setCouponLoading] = useState(false)
   const [couponError, setCouponError] = useState('')
@@ -54,9 +55,7 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
     const orderId = orderData.orderId as string
 
     const chargeRes = await fetch(
-      chosen === 'pix'
-        ? '/api/payments/asaas/create-pix'
-        : '/api/payments/asaas/create-boleto',
+      chosen === 'pix' ? '/api/payments/asaas/create-pix' : '/api/payments/asaas/create-boleto',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -71,9 +70,7 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
     onClose?.()
     clearCart()
     router.push(
-      chosen === 'pix'
-        ? `/pt/checkout/pix-pendente/${orderId}`
-        : `/pt/checkout/boleto/${orderId}`,
+      chosen === 'pix' ? `/pt/checkout/pix-pendente/${orderId}` : `/pt/checkout/boleto/${orderId}`,
     )
   }
 
@@ -138,12 +135,17 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
       {/* Cupom */}
       {!couponCode ? (
         <div>
-          <p className="text-xs font-medium text-neutral-500 mb-1.5 uppercase tracking-wide">Cupom de desconto</p>
+          <p className="text-xs font-medium text-neutral-500 mb-1.5 uppercase tracking-wide">
+            Cupom de desconto
+          </p>
           <div className="flex gap-2">
             <input
               type="text"
               value={couponInput}
-              onChange={(e) => { setCouponInput(e.target.value.toUpperCase()); setCouponError('') }}
+              onChange={(e) => {
+                setCouponInput(e.target.value.toUpperCase())
+                setCouponError('')
+              }}
               placeholder="CÓDIGO"
               className="flex-1 border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-neutral-900 font-mono tracking-widest uppercase"
               onKeyDown={(e) => e.key === 'Enter' && handleApplyCoupon()}
@@ -164,7 +166,10 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
             <p className="text-xs font-medium text-green-800 font-mono">{couponCode}</p>
             <p className="text-xs text-green-600">−{formatPrice(couponDiscount)}</p>
           </div>
-          <button onClick={removeCoupon} className="text-green-600 hover:text-green-800 text-xs underline">
+          <button
+            onClick={removeCoupon}
+            className="text-green-600 hover:text-green-800 text-xs underline"
+          >
             Remover
           </button>
         </div>
@@ -191,7 +196,9 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
       {/* Método de pagamento */}
       {asaasEnabled && hasItems && (
         <div className="border-t border-neutral-100 pt-4 space-y-3">
-          <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide">Forma de pagamento</p>
+          <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide">
+            Forma de pagamento
+          </p>
           <div className="grid grid-cols-3 gap-2">
             {(['card', 'pix', 'boleto'] as const).map((m) => (
               <button
@@ -223,19 +230,19 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
                 onBlur={() => {
                   if (!buyerEmail) return
                   const r = validateEmail(buyerEmail)
-                  setBuyerEmailError(r.valid ? null : r.error ?? null)
+                  setBuyerEmailError(r.valid ? null : (r.error ?? null))
                   setBuyerEmailSuggestion(r.suggestion ?? null)
                 }}
                 className={`w-full border rounded-lg px-3 py-2 text-sm focus:outline-none ${
-                  buyerEmailError ? 'border-red-600 focus:border-red-700' : 'border-neutral-200 focus:border-neutral-900'
+                  buyerEmailError
+                    ? 'border-red-600 focus:border-red-700'
+                    : 'border-neutral-200 focus:border-neutral-900'
                 }`}
                 inputMode="email"
                 spellCheck={false}
                 required
               />
-              {buyerEmailError && (
-                <p className="text-xs text-red-600">{buyerEmailError}</p>
-              )}
+              {buyerEmailError && <p className="text-xs text-red-600">{buyerEmailError}</p>}
               {buyerEmailSuggestion && (
                 <p className="text-xs text-neutral-700">
                   Você quis dizer{' '}
@@ -273,9 +280,7 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
       )}
 
       {/* CTA */}
-      {checkoutError && (
-        <p className="text-xs text-red-500 text-center -mb-1">{checkoutError}</p>
-      )}
+      {checkoutError && <p className="text-xs text-red-500 text-center -mb-1">{checkoutError}</p>}
       {hasItems ? (
         <button
           onClick={handleCheckout}
@@ -285,7 +290,10 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
           {checkoutLoading ? 'Redirecionando...' : 'Finalizar compra'}
         </button>
       ) : (
-        <button disabled className="block w-full bg-neutral-200 text-neutral-400 text-center font-semibold py-3.5 rounded-xl cursor-not-allowed">
+        <button
+          disabled
+          className="block w-full bg-neutral-200 text-neutral-400 text-center font-semibold py-3.5 rounded-xl cursor-not-allowed"
+        >
           Carrinho vazio
         </button>
       )}

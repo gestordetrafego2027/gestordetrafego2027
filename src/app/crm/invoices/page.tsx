@@ -6,17 +6,15 @@ export const dynamic = 'force-dynamic'
 const brl = (n: number | null | undefined) =>
   (n ?? 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-const STATUS_VALUES = [
-  'rascunho','emitida','paga','parcial','vencida','cancelada',
-] as const
+const STATUS_VALUES = ['rascunho', 'emitida', 'paga', 'parcial', 'vencida', 'cancelada'] as const
 
 const statusBadge: Record<string, string> = {
-  rascunho:   'bg-neutral-100 text-neutral-700',
-  emitida:    'bg-blue-100 text-blue-700',
-  paga:       'bg-emerald-100 text-emerald-700',
-  parcial:    'bg-amber-100 text-amber-800',
-  vencida:    'bg-rose-100 text-rose-700',
-  cancelada:  'bg-neutral-200 text-neutral-500',
+  rascunho: 'bg-neutral-100 text-neutral-700',
+  emitida: 'bg-blue-100 text-blue-700',
+  paga: 'bg-emerald-100 text-emerald-700',
+  parcial: 'bg-amber-100 text-amber-800',
+  vencida: 'bg-rose-100 text-rose-700',
+  cancelada: 'bg-neutral-200 text-neutral-500',
 }
 
 type SearchParams = Promise<{ status?: string; client?: string }>
@@ -27,11 +25,13 @@ export default async function InvoicesPage({ searchParams }: { searchParams: Sea
 
   let q = supabase
     .from('invoices')
-    .select(`
+    .select(
+      `
       id, number, status, issue_date, due_date,
       subtotal_brl, discount_brl, tax_brl, total_brl, paid_brl,
       client_id, clients(id, display_name)
-    `)
+    `,
+    )
     .order('issue_date', { ascending: false })
     .limit(200)
 
@@ -74,11 +74,15 @@ export default async function InvoicesPage({ searchParams }: { searchParams: Sea
         </div>
         <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-4">
           <div className="text-xs uppercase text-emerald-700">Total pago</div>
-          <div className="text-2xl font-semibold tabular-nums text-emerald-700">{brl(totalPago)}</div>
+          <div className="text-2xl font-semibold tabular-nums text-emerald-700">
+            {brl(totalPago)}
+          </div>
         </div>
         <div className="rounded-lg border border-rose-200 bg-rose-50 p-4">
           <div className="text-xs uppercase text-rose-700">Em aberto (vencidas)</div>
-          <div className="text-2xl font-semibold tabular-nums text-rose-700">{brl(totalVencido)}</div>
+          <div className="text-2xl font-semibold tabular-nums text-rose-700">
+            {brl(totalVencido)}
+          </div>
         </div>
       </div>
 
@@ -96,7 +100,9 @@ export default async function InvoicesPage({ searchParams }: { searchParams: Sea
           >
             <option value="">todos</option>
             {STATUS_VALUES.map((s) => (
-              <option key={s} value={s}>{s}</option>
+              <option key={s} value={s}>
+                {s}
+              </option>
             ))}
           </select>
         </label>
@@ -157,7 +163,9 @@ export default async function InvoicesPage({ searchParams }: { searchParams: Sea
                       <Link href={`/crm/clients/${cli.id}`} className="hover:underline">
                         {cli.display_name}
                       </Link>
-                    ) : '—'}
+                    ) : (
+                      '—'
+                    )}
                   </td>
                   <td className="px-4 py-3 text-xs text-neutral-500">
                     {i.issue_date ? new Date(i.issue_date).toLocaleDateString('pt-BR') : '—'}
@@ -171,7 +179,9 @@ export default async function InvoicesPage({ searchParams }: { searchParams: Sea
                     </span>
                   </td>
                   <td className="px-4 py-3 text-right tabular-nums">{brl(i.total_brl)}</td>
-                  <td className="px-4 py-3 text-right tabular-nums text-emerald-700">{brl(i.paid_brl)}</td>
+                  <td className="px-4 py-3 text-right tabular-nums text-emerald-700">
+                    {brl(i.paid_brl)}
+                  </td>
                 </tr>
               )
             })}

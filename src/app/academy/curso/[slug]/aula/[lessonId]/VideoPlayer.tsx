@@ -48,7 +48,9 @@ export default function VideoPlayer({
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ lesson_id: lessonId, product_id: productId, position: pos }),
         })
-      } catch { /* silent */ }
+      } catch {
+        /* silent */
+      }
     }
     const id = setInterval(ping, 15000)
     return () => clearInterval(id)

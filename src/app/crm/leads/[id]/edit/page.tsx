@@ -6,15 +6,15 @@ import { updateLeadAction } from './actions'
 export const dynamic = 'force-dynamic'
 
 const LEAD_TYPES: { value: string; label: string; segment: 'commercial' | 'talents' }[] = [
-  { value: 'cliente_agencia',   label: 'Cliente Agência',     segment: 'commercial' },
-  { value: 'cliente_produtora', label: 'Cliente Produtora',   segment: 'commercial' },
-  { value: 'cliente_studio',    label: 'Cliente Studio',      segment: 'commercial' },
-  { value: 'aluno_curso',       label: 'Aluno de curso',      segment: 'talents' },
-  { value: 'afiliada',          label: 'Afiliada',            segment: 'talents' },
+  { value: 'cliente_agencia', label: 'Cliente Agência', segment: 'commercial' },
+  { value: 'cliente_produtora', label: 'Cliente Produtora', segment: 'commercial' },
+  { value: 'cliente_studio', label: 'Cliente Studio', segment: 'commercial' },
+  { value: 'aluno_curso', label: 'Aluno de curso', segment: 'talents' },
+  { value: 'afiliada', label: 'Afiliada', segment: 'talents' },
   { value: 'agenciado_casting', label: 'Agenciado / Casting', segment: 'talents' },
-  { value: 'talento',           label: 'Talento',             segment: 'talents' },
-  { value: 'fornecedor',        label: 'Fornecedor',          segment: 'talents' },
-  { value: 'parceiro',          label: 'Parceiro',            segment: 'talents' },
+  { value: 'talento', label: 'Talento', segment: 'talents' },
+  { value: 'fornecedor', label: 'Fornecedor', segment: 'talents' },
+  { value: 'parceiro', label: 'Parceiro', segment: 'talents' },
 ]
 
 export default async function EditLeadPage({
@@ -28,10 +28,7 @@ export default async function EditLeadPage({
   const { error: errorMsg } = await searchParams
   const supabase = await createClient()
 
-  const [
-    { data: lead, error: leadErr },
-    { data: stages },
-  ] = await Promise.all([
+  const [{ data: lead, error: leadErr }, { data: stages }] = await Promise.all([
     supabase.from('leads').select('*').eq('id', id).single(),
     supabase
       .from('pipeline_stages')

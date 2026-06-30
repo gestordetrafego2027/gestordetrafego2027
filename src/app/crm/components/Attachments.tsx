@@ -124,17 +124,9 @@ export default function Attachments({
 
   return (
     <div className="space-y-3">
-      <form
-        onSubmit={handleUpload}
-        className="space-y-2 border-b border-neutral-100 pb-3 mb-3"
-      >
+      <form onSubmit={handleUpload} className="space-y-2 border-b border-neutral-100 pb-3 mb-3">
         <div className="flex gap-2">
-          <input
-            type="file"
-            name="file"
-            required
-            className="text-xs flex-1"
-          />
+          <input type="file" name="file" required className="text-xs flex-1" />
           <select
             name="kind"
             defaultValue="other"
@@ -194,9 +186,7 @@ export default function Attachments({
             </button>
           </li>
         ))}
-        {!items.length && (
-          <li className="text-xs text-neutral-400 italic">Nenhum anexo.</li>
-        )}
+        {!items.length && <li className="text-xs text-neutral-400 italic">Nenhum anexo.</li>}
       </ul>
     </div>
   )

@@ -77,14 +77,22 @@ export async function getPayment(paymentId: string) {
 
 export function mpStatusToOrderStatus(mpStatus: string): string {
   switch (mpStatus) {
-    case 'approved': return 'paid'
-    case 'pending': return 'pending'
+    case 'approved':
+      return 'paid'
+    case 'pending':
+      return 'pending'
     case 'in_process':
-    case 'authorized': return 'processing'
-    case 'rejected': return 'failed'
-    case 'refunded': return 'refunded'
-    case 'cancelled': return 'cancelled'
-    case 'charged_back': return 'chargeback'
-    default: return 'pending'
+    case 'authorized':
+      return 'processing'
+    case 'rejected':
+      return 'failed'
+    case 'refunded':
+      return 'refunded'
+    case 'cancelled':
+      return 'cancelled'
+    case 'charged_back':
+      return 'chargeback'
+    default:
+      return 'pending'
   }
 }

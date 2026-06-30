@@ -4,7 +4,12 @@ import { logger } from '@/lib/logger'
 
 type CatalogRow = Database['public']['Tables']['academy_products']['Row'] & {
   category?: { id: string; slug: string; name: string } | null
-  author?: { id: string; slug: string; pen_name: string | null; avatar_override_url: string | null } | null
+  author?: {
+    id: string
+    slug: string
+    pen_name: string | null
+    avatar_override_url: string | null
+  } | null
 }
 
 /**
@@ -19,14 +24,16 @@ export async function listPublishedProducts(opts?: {
   const supabase = await createClient()
   let q = supabase
     .from('academy_products')
-    .select(`
+    .select(
+      `
       id, slug, type, level, business_unit, title, subtitle, short_description,
       cover_url, thumbnail_url, price_cents, original_price_cents, currency,
       duration_minutes, page_count, module_count, lesson_count,
       featured, bestseller, new_release, avg_rating, rating_count, published_at,
       category:academy_categories(id, slug, name),
       author:academy_authors(id, slug, pen_name, avatar_override_url)
-    `)
+    `,
+    )
     .eq('status', 'published')
     .order('featured', { ascending: false })
     .order('published_at', { ascending: false, nullsFirst: false })
@@ -47,11 +54,13 @@ export async function getProductBySlug(slug: string) {
   const supabase = await createClient()
   const { data, error } = await supabase
     .from('academy_products')
-    .select(`
+    .select(
+      `
       *,
       category:academy_categories(id, slug, name),
       author:academy_authors(id, slug, pen_name, headline, bio_long, avatar_override_url)
-    `)
+    `,
+    )
     .eq('slug', slug)
     .eq('status', 'published')
     .maybeSingle()

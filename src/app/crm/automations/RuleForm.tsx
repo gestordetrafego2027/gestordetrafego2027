@@ -15,25 +15,29 @@ const TRIGGER_OPTIONS = [
 const ACTION_TEMPLATES: Record<string, string> = {
   create_activity: JSON.stringify(
     [{ type: 'create_activity', activity_type: 'system', title: 'Lead recebido (auto)' }],
-    null, 2,
+    null,
+    2,
   ),
-  send_email: JSON.stringify(
-    [{ type: 'send_email', template: 'welcome_lead' }],
-    null, 2,
-  ),
+  send_email: JSON.stringify([{ type: 'send_email', template: 'welcome_lead' }], null, 2),
   update_opportunity_ganho: JSON.stringify(
     [
       { type: 'update_opportunity', stage: 'ganho' },
-      { type: 'create_activity', activity_type: 'system', title: 'Proposta aceita — iniciar onboarding' },
+      {
+        type: 'create_activity',
+        activity_type: 'system',
+        title: 'Proposta aceita — iniciar onboarding',
+      },
     ],
-    null, 2,
+    null,
+    2,
   ),
   follow_up: JSON.stringify(
     [
       { type: 'create_activity', activity_type: 'task', title: 'Follow-up de reengajamento' },
       { type: 'notify_owner' },
     ],
-    null, 2,
+    null,
+    2,
   ),
 }
 
@@ -65,9 +69,7 @@ export default function RuleForm({
   submitLabel?: string
 }) {
   const [trigger, setTrigger] = useState(initial?.trigger_type ?? 'lead_created')
-  const [actionsJson, setActionsJson] = useState(
-    JSON.stringify(initial?.actions ?? [], null, 2),
-  )
+  const [actionsJson, setActionsJson] = useState(JSON.stringify(initial?.actions ?? [], null, 2))
 
   return (
     <form action={action} className="space-y-5">
@@ -92,7 +94,9 @@ export default function RuleForm({
             className="mt-1 w-full rounded border border-neutral-200 px-3 py-2 text-sm"
           >
             {TRIGGER_OPTIONS.map((t) => (
-              <option key={t.value} value={t.value}>{t.label}</option>
+              <option key={t.value} value={t.value}>
+                {t.label}
+              </option>
             ))}
           </select>
         </label>
@@ -144,11 +148,7 @@ export default function RuleForm({
       </div>
 
       <label className="flex items-center gap-2">
-        <input
-          type="checkbox"
-          name="active"
-          defaultChecked={initial?.active ?? true}
-        />
+        <input type="checkbox" name="active" defaultChecked={initial?.active ?? true} />
         <span className="text-sm">Ativa</span>
       </label>
 

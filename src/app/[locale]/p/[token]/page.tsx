@@ -12,23 +12,34 @@ const brl = (n: number | null | undefined) =>
   (n ?? 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
 type QuoteRow = {
-  id: string; title: string; status: string; notes: string | null;
-  subtotal_brl: number; discount_brl: number; total_brl: number;
-  valid_until: string | null; sent_at: string | null;
-  accepted_at: string | null; created_at: string;
-  lead_name: string; lead_email: string | null;
-  lead_phone: string | null; lead_city: string | null;
+  id: string
+  title: string
+  status: string
+  notes: string | null
+  subtotal_brl: number
+  discount_brl: number
+  total_brl: number
+  valid_until: string | null
+  sent_at: string | null
+  accepted_at: string | null
+  created_at: string
+  lead_name: string
+  lead_email: string | null
+  lead_phone: string | null
+  lead_city: string | null
   items: Array<{
-    id: string; kind: string; label: string; description: string | null;
-    quantity: number; unit_price_brl: number; total_brl: number; position: number;
-  }>;
+    id: string
+    kind: string
+    label: string
+    description: string | null
+    quantity: number
+    unit_price_brl: number
+    total_brl: number
+    position: number
+  }>
 }
 
-export default async function PublicQuotePage({
-  params,
-}: {
-  params: Promise<{ token: string }>
-}) {
+export default async function PublicQuotePage({ params }: { params: Promise<{ token: string }> }) {
   const { token } = await params
   const supabase = await createClient()
   const { data, error } = await supabase
@@ -39,7 +50,8 @@ export default async function PublicQuotePage({
   if (error || !quote) notFound()
 
   const validUntil = quote.valid_until
-    ? new Date(quote.valid_until).toLocaleDateString('pt-BR') : null
+    ? new Date(quote.valid_until).toLocaleDateString('pt-BR')
+    : null
   const issue = new Date(quote.created_at).toLocaleDateString('pt-BR')
   const accepted = quote.status === 'aceito'
 
@@ -63,8 +75,8 @@ export default async function PublicQuotePage({
         {accepted && (
           <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-4 py-3 mb-6 text-sm text-emerald-800">
             ✓ Proposta aceita em{' '}
-            {quote.accepted_at && new Date(quote.accepted_at).toLocaleDateString('pt-BR')}.
-            Em breve nossa equipe entrará em contato para iniciar o onboarding.
+            {quote.accepted_at && new Date(quote.accepted_at).toLocaleDateString('pt-BR')}. Em breve
+            nossa equipe entrará em contato para iniciar o onboarding.
           </div>
         )}
 
@@ -154,8 +166,8 @@ export default async function PublicQuotePage({
           <section className="rounded-lg bg-white border-2 border-emerald-500 p-6 mb-6">
             <h2 className="text-lg font-semibold mb-2">Aceitar proposta</h2>
             <p className="text-sm text-neutral-600 mb-4">
-              Ao confirmar, você concorda com os termos descritos acima. Nossa equipe entrará
-              em contato em até 1 dia útil para iniciar o trabalho.
+              Ao confirmar, você concorda com os termos descritos acima. Nossa equipe entrará em
+              contato em até 1 dia útil para iniciar o trabalho.
             </p>
             <form action={acceptQuoteByTokenAction}>
               <input type="hidden" name="token" value={token} />
@@ -171,9 +183,9 @@ export default async function PublicQuotePage({
 
         <section className="text-xs text-neutral-500 border-t border-neutral-200 pt-6 leading-relaxed">
           <p>
-            <strong>Condições gerais:</strong> validade {validUntil ? `até ${validUntil}` : '30 dias da emissão'}.
-            Pagamento via PIX, boleto ou cartão (parcelável). Após aceite, mudanças de
-            escopo serão orçadas separadamente.
+            <strong>Condições gerais:</strong> validade{' '}
+            {validUntil ? `até ${validUntil}` : '30 dias da emissão'}. Pagamento via PIX, boleto ou
+            cartão (parcelável). Após aceite, mudanças de escopo serão orçadas separadamente.
           </p>
           <p className="mt-2">House Mazzutti — Studio · Agência · Produtora · Comunidade</p>
         </section>

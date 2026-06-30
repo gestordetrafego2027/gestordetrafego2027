@@ -32,13 +32,7 @@ const statusBadge: Record<string, string> = {
   arquivado: 'bg-neutral-100 text-neutral-500',
 }
 
-export default function LeadsKanban({
-  leads,
-  stages,
-}: {
-  leads: LeadCard[]
-  stages: StageInfo[]
-}) {
+export default function LeadsKanban({ leads, stages }: { leads: LeadCard[]; stages: StageInfo[] }) {
   const columns: KanbanColumn<string>[] = [
     { id: NO_STAGE, label: 'Sem estágio' },
     ...stages.map((s) => ({ id: s.id, label: `${s.name} · ${s.segment}` })),
@@ -67,7 +61,11 @@ export default function LeadsKanban({
           </div>
         </Link>
       )}
-      renderColumnFooter={(items) => <>{items.length} lead{items.length === 1 ? '' : 's'}</>}
+      renderColumnFooter={(items) => (
+        <>
+          {items.length} lead{items.length === 1 ? '' : 's'}
+        </>
+      )}
       gridClassName={`grid grid-cols-1 md:grid-cols-3 gap-3`}
     />
   )
