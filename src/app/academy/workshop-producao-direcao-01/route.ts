@@ -266,9 +266,9 @@ export function GET() {
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
-        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-quadro.webp" alt="Fotógrafo Still" loading="lazy"></div>
-        <div class="crew-role">Fotógrafo Still</div>
-        <div class="crew-name">A confirmar</div>
+        <div class="crew-photo"><img src="/images/academy/crew/thyago-barriviera.webp" alt="Thyago Barriviera" loading="lazy"></div>
+        <div class="crew-role">Fotógrafo · Publicidade Still</div>
+        <div class="crew-name">Thyago Barriviera</div>
       </div>
 
       <div class="crew-card" data-reveal>
