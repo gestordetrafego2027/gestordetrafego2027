@@ -284,7 +284,6 @@ export function GET() {
           <li>Suporte e orientação em tempo real durante o dia</li>
           <li>Material de pré-produção enviado via link</li>
           <li>Pós-produção intensiva — Dia 02 online · Google Meet</li>
-          <li>Almoço & happy hour · <strong>Bar Dona Onça</strong> · Dia 06</li>
           <li>Lista curada de fornecedores e parceiros SP</li>
           <li>Certificado oficial House Mazzutti · HMZT</li>
         </ul>
@@ -299,6 +298,27 @@ export function GET() {
     </div>
   </div>
 </section>
+
+<!-- ============ BAR DONA ONÇA ============ -->
+<section class="section paper" id="encerramento" style="padding-top:0">
+  <div class="wrap">
+    <div style="border:1px solid var(--line);padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:center;" data-reveal>
+      <div>
+        <span class="eyebrow" style="margin-bottom:18px;display:block">— Encerramento · Dia 06</span>
+        <h2 class="display" style="font-size:clamp(2rem,4vw,3.8rem);font-weight:700;text-transform:uppercase;line-height:.95;margin-bottom:clamp(18px,2.5vw,30px)">Bar<br>Dona<br>Onça</h2>
+        <p style="color:#54524d;line-height:1.6;max-width:36ch">Após quatro horas de pós-produção, a turma se encontra à mesa. Almoço e happy hour no Dona Onça — um dos endereços mais queridos de São Paulo, no coração do Edifício Copan.</p>
+        <p style="margin-top:14px;color:#54524d;line-height:1.6;max-width:36ch">Não é só uma refeição. É onde as conexões começam — entre pessoas que passaram dois dias construindo juntas dentro de um estúdio real.</p>
+        <p style="margin-top:20px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)">06 de Setembro · São Paulo · Incluso em todas as inscrições</p>
+      </div>
+      <div style="aspect-ratio:3/4;background:var(--ink);overflow:hidden;position:relative;">
+        <image-slot id="donaonca" src="/images/academy/studio-plano/studio-plano-3.webp" fit="cover" placeholder="Bar Dona Onça · SP"></image-slot>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.6) 0%,transparent 50%);pointer-events:none"></div>
+        <span style="position:absolute;bottom:16px;left:16px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:#fff;opacity:.7">Edifício Copan · Centro · São Paulo</span>
+      </div>
+    </div>
+  </div>
+</section>
+<style>@media (max-width:760px){#encerramento .wrap > div{grid-template-columns:1fr!important}}</style>
 
 <!-- ============ DEPOIMENTOS ============ -->
 <section class="section paper" id="depoimentos">
