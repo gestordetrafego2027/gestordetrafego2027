@@ -284,9 +284,9 @@ export function GET() {
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
-        <div class="crew-photo crew-photo--empty"><span>Produtor<br>Executivo</span></div>
-        <div class="crew-role">Produtor Executivo</div>
-        <div class="crew-name">A confirmar</div>
+        <div class="crew-photo"><img src="/images/academy/crew/trevizoli.webp" alt="Trevizoli" loading="lazy"></div>
+        <div class="crew-role">Stylist</div>
+        <div class="crew-name">Trevizoli</div>
       </div>
 
       <div class="crew-card" data-reveal>
