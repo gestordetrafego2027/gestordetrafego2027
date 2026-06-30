@@ -300,7 +300,10 @@ button{font-family:inherit;cursor:pointer;}
    ============================================================ */
 .mentor{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);align-items:center;}
 @media (max-width:860px){ .mentor{grid-template-columns:1fr;} }
-.mentor-img image-slot{width:100%;aspect-ratio:4/5;}
+/* height:auto é obrigatório: sem ele, o :host{height:160px} padrão do
+   componente image-slot vence o aspect-ratio e a foto fica cortada numa
+   faixa de 160px (mostrava só o torso/camisa preta — "foto escura"). */
+.mentor-img image-slot{width:100%;height:auto;aspect-ratio:4/5;}
 .mentor-name{font-family:var(--display);font-weight:700;text-transform:uppercase;line-height:.9;font-size:clamp(2.6rem,6vw,6rem);letter-spacing:0;}
 .mentor-role{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke);margin:16px 0 24px;}
 .mentor p{max-width:52ch;color:#3a3a37;}

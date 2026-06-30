@@ -326,7 +326,7 @@ export function GET() {
 <section class="section paper" id="mentor">
   <div class="wrap mentor">
     <div class="mentor-img" data-reveal>
-      <image-slot id="mentor" src="/images/about/angelo-mazzutti.webp" placeholder="Retrato · Angelo Mazzutti" fit="cover"></image-slot>
+      <image-slot id="mentor-portrait" src="/images/about/angelo-mazzutti.webp" placeholder="Retrato · Angelo Mazzutti" fit="cover"></image-slot>
     </div>
     <div data-reveal data-reveal-d="1">
       <span class="eyebrow">04 — Quem dirige</span>
