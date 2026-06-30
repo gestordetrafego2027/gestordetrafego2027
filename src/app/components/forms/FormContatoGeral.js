@@ -48,7 +48,6 @@ export default function FormContatoGeral({ sourceUrl = '/contato' }) {
         phone: form.phone,
         segment: 'commercial',
         lead_type: 'parceiro',
-        status: 'novo',
         source: sourceUrl,
         details: {
           track: 'contato_geral',

@@ -67,7 +67,6 @@ export default function FormCanoinhas({
         phone: form.phone,
         segment: 'commercial',
         lead_type: 'cliente_tour_canoinhas',
-        status: 'novo',
         source: '/pt/canoinhas',
         details: {
           business_unit: 'studio',

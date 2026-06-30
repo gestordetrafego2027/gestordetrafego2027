@@ -53,7 +53,6 @@ export default function FormProdutora({
         phone: form.phone,
         segment: 'commercial',
         lead_type: 'cliente_produtora',
-        status: 'novo',
         source: sourceUrl,
         details: {
           business_unit: 'produtora',

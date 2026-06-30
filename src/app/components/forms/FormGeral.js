@@ -89,7 +89,6 @@ export default function FormGeral({ onClose, sourceUrl = '/', ctaLocation = null
         phone: form.phone,
         segment: 'commercial',
         lead_type: LEAD_TYPE_BY_UNIT[form.unit],
-        status: 'novo',
         source: sourceUrl,
         details: {
           business_unit: form.unit,

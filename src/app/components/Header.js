@@ -7,6 +7,7 @@ import LangSwitcher from './LangSwitcher';
 import { CartButton } from '@/components/ecommerce/CartButton';
 import { useTranslations } from 'next-intl';
 import { createClient } from '@/lib/supabase/browser';
+import { social } from '@/config/site';
 
 /**
  * GLOBAL HEADER COMPONENT
@@ -397,13 +398,13 @@ export default function Header({ variant = 'dark' }) {
                         letterSpacing:'0.2em', textTransform:'uppercase',
                         color:'#555', marginBottom:'16px'}}>{t('follow')}</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
-                        <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener" style={{fontFamily:'Newsreader, serif',
+                        <a href={social.instagram.url} target="_blank" rel="noopener noreferrer" style={{fontFamily:'RocGrotesk, sans-serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',
                           textDecoration:'none', transition:'color 0.3s'}}
                           onMouseEnter={e => e.currentTarget.style.color='white'}
                           onMouseLeave={e => e.currentTarget.style.color='#aaa'}
                         >Instagram</a>
-                        <a href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener" style={{fontFamily:'Newsreader, serif',
+                        <a href={social.linkedin.url} target="_blank" rel="noopener noreferrer" style={{fontFamily:'RocGrotesk, sans-serif',
                           fontSize:'14px', fontStyle:'italic', color:'#aaa',
                           textDecoration:'none', transition:'color 0.3s'}}
                           onMouseEnter={e => e.currentTarget.style.color='white'}

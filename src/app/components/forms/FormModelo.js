@@ -51,9 +51,9 @@ export default function FormModelo({ onClose, sourceUrl = '/comunidade/vagas', c
         name: form.name,
         email: form.email,
         phone: form.phone,
+        city: form.city || null,
         segment: 'talents',
         lead_type: 'agenciado_casting',
-        status: 'novo',
         source: sourceUrl,
         details: {
           business_unit: 'agencia',

@@ -51,7 +51,6 @@ export default function FormAngelo({ onClose, sourceUrl = '/angelo', ctaLocation
         phone: form.phone,
         segment: 'talents',
         lead_type: 'parceiro',
-        status: 'novo',
         source: sourceUrl,
         details: {
           track: 'angelo_mentoria',
