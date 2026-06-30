@@ -255,55 +255,32 @@ export function GET() {
       <span class="eyebrow" style="color:var(--smoke)">05 — Sua cadeira</span>
       <span class="sec-index">20 lugares · turma fechada · sem reprise</span>
     </div>
-    <div class="plans">
-      <div class="plan" data-reveal>
-        <div class="plan-tag"><span>Insider</span><span>01</span></div>
-        <div class="plan-name">Insider</div>
-        <div class="plan-price">R$ 2.450<small>à vista ou parcelado</small></div>
+    <div class="plans" style="justify-content:center">
+      <div class="plan" data-reveal style="max-width:480px;width:100%">
+        <div class="plan-tag"><span>Lote 1</span><span>Esgotado em breve</span></div>
+        <div class="plan-name" style="font-size:clamp(28px,4vw,42px)">Inside Out</div>
+        <div class="plan-price" style="margin:20px 0 8px">R$ 1.500<small>Lote 1 — preço de lançamento</small></div>
+        <p style="font-size:12px;color:var(--smoke);margin-bottom:24px;letter-spacing:.04em">Lote 2 · R$ 1.800 — após esgotamento</p>
         <ul class="plan-feats">
-          <li>Dia 01 completo no Studio Plano</li>
-          <li>Dois sets ao vivo — Moda & Beauty</li>
-          <li>Pós-produção intensiva — Dia 02 online</li>
-          <li>Material de pré-produção (link pré-evento)</li>
-          <li>Almoço · Bar Dona Onça · Dia 06</li>
-          <li>Lista de fornecedores SP + Certificado HMZT</li>
+          <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
+          <li>Direção de moodboard ao vivo com Angelo Mazzutti</li>
+          <li>Set 01 · Moda — still, lookbook, direção de campanha</li>
+          <li>Set 02 · Beauty — segunda produção ao vivo</li>
+          <li>Suporte e orientação em tempo real durante o dia</li>
+          <li>Material de pré-produção enviado via link</li>
+          <li>Pós-produção intensiva — Dia 02 online · Google Meet</li>
+          <li>Almoço & happy hour · <strong>Bar Dona Onça</strong> · Dia 06</li>
+          <li>Lista curada de fornecedores e parceiros SP</li>
+          <li>Certificado oficial House Mazzutti · HMZT</li>
         </ul>
-        <button class="btn" data-reserve data-plan="Insider"><span class="lbl">Reservar</span><span class="ar">↗</span></button>
-      </div>
-
-      <div class="plan feat" data-reveal data-reveal-d="1">
-        <span class="ribbon">Mais escolhido</span>
-        <div class="plan-tag"><span>Pro</span><span>02</span></div>
-        <div class="plan-name">Pro</div>
-        <div class="plan-price">R$ 2.800<small>experiência completa</small></div>
-        <ul class="plan-feats">
-          <li>Tudo do Insider</li>
-          <li>Kit exclusivo HMZT + fotos oficiais do evento</li>
-          <li>E-book da imersão com processos e referências</li>
-          <li>Acesso ao grupo fechado Alumni Inside Out</li>
-        </ul>
-        <button class="btn solid" data-reserve data-plan="Pro"><span class="lbl">Reservar</span><span class="ar">↗</span></button>
-      </div>
-
-      <div class="plan" data-reveal data-reveal-d="2">
-        <div class="plan-tag"><span>Executivo</span><span>03</span></div>
-        <div class="plan-name">Executivo</div>
-        <div class="plan-price">R$ 3.200<small>acesso máximo</small></div>
-        <ul class="plan-feats">
-          <li>Tudo do Pro</li>
-          <li>Mentoria 1:1 com Angelo Mazzutti</li>
-          <li>Destaque no vídeo oficial da imersão</li>
-          <li>Convite para 1 produção real da HMZT</li>
-          <li>Prioridade no Prêmio Inside Out</li>
-        </ul>
-        <button class="btn" data-reserve data-plan="Executivo"><span class="lbl">Reservar</span><span class="ar">↗</span></button>
+        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir minha cadeira · R$ 1.500</span><span class="ar">↗</span></button>
       </div>
     </div>
 
     <div class="scarcity" data-reveal>
       <span class="vagas-txt" id="vagasTxt">14 / 20 cadeiras preenchidas</span>
       <span class="vagas-bar"><i id="vagasBar"></i></span>
-      <span class="vagas-txt" style="color:var(--accent)">● Últimas cadeiras disponíveis</span>
+      <span class="vagas-txt" style="color:var(--accent)">● Lote 1 encerrando</span>
     </div>
   </div>
 </section>
@@ -408,7 +385,7 @@ export function GET() {
         <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name"><div class="msg">Informe seu nome</div></div>
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
-        <div class="field"><label>Plano</label><select name="plano"><option>Insider — R$ 2.450</option><option selected>Pro — R$ 2.800</option><option>Executivo — R$ 3.200</option></select><div class="msg"></div></div>
+        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.500</option><option>Lote 2 — R$ 1.800</option></select><div class="msg"></div></div>
         <div class="field" style="margin-bottom:18px">
           <label style="margin-bottom:8px;display:block">Forma de pagamento</label>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
