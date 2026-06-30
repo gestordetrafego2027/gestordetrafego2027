@@ -349,25 +349,47 @@ export function GET() {
       <span class="eyebrow" style="color:var(--smoke)">05 — Sua cadeira</span>
       <span class="sec-index">20 lugares · turma fechada · sem reprise</span>
     </div>
-    <div class="plans" style="justify-content:center">
-      <div class="plan" data-reveal style="max-width:480px;width:100%">
-        <div class="plan-tag"><span>Lote 1</span><span>Esgotado em breve</span></div>
-        <div class="plan-name" style="font-size:clamp(28px,4vw,42px)">Inside Out</div>
-        <div class="plan-price" style="margin:20px 0 8px">R$ 1.300<small>Lote 1 — preço de lançamento</small></div>
-        <p style="font-size:12px;color:var(--smoke);margin-bottom:24px;letter-spacing:.04em">Lote 2 · R$ 1.500 — após esgotamento</p>
+    <div class="plans plans--lotes" data-reveal>
+
+      <div class="plan plan--lote feat">
+        <span class="ribbon">Lote atual</span>
+        <div class="plan-tag"><span>Lote 1</span><span>01</span></div>
+        <div class="plan-name">R$ 1.300</div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>Preço de lançamento</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
-          <li>Direção de moodboard ao vivo com Angelo Mazzutti</li>
-          <li>Set 01 · Moda — still, lookbook, direção de campanha</li>
-          <li>Set 02 · Beauty — segunda produção ao vivo</li>
-          <li>Suporte e orientação em tempo real durante o dia</li>
-          <li>Material de pré-produção enviado via link</li>
-          <li>Pós-produção intensiva — Dia 02 online · Google Meet</li>
-          <li>Lista curada de fornecedores e parceiros SP</li>
-          <li>Certificado oficial House Mazzutti · HMZT</li>
+          <li>Direção de moodboard ao vivo</li>
+          <li>Set 01 · Moda — still, lookbook, campanha</li>
+          <li>Set 02 · Beauty — ao vivo</li>
+          <li>Suporte e orientação em tempo real</li>
+          <li>Material de pré-produção via link</li>
+          <li>Pós-produção intensiva · Dia 02 online</li>
+          <li>Lista de fornecedores e parceiros SP</li>
+          <li>Certificado oficial HMZT</li>
         </ul>
-        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir minha cadeira · R$ 1.300</span><span class="ar">↗</span></button>
+        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir · R$ 1.300</span><span class="ar">↗</span></button>
       </div>
+
+      <div class="plan plan--lote">
+        <div class="plan-tag"><span>Lote 2</span><span>02</span></div>
+        <div class="plan-name">R$ 1.430</div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>Após esgotamento do Lote 1</small></div>
+        <ul class="plan-feats">
+          <li>Todos os benefícios do Lote 1</li>
+        </ul>
+        <button class="btn" data-reserve data-plan="Inside Out — Lote 2" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível em breve</span></button>
+      </div>
+
+      <div class="plan plan--lote">
+        <div class="plan-tag"><span>Lote 3</span><span>03</span></div>
+        <div class="plan-name">R$ 1.560</div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>Último lote · preço final</small></div>
+        <ul class="plan-feats">
+          <li>Todos os benefícios do Lote 1</li>
+        </ul>
+        <button class="btn" data-reserve data-plan="Inside Out — Lote 3" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível em breve</span></button>
+      </div>
+
     </div>
 
     <div class="scarcity" data-reveal>
@@ -499,7 +521,7 @@ export function GET() {
         <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name"><div class="msg">Informe seu nome</div></div>
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
-        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.300</option><option>Lote 2 — R$ 1.500</option></select><div class="msg"></div></div>
+        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.300</option><option disabled>Lote 2 — R$ 1.430 (em breve)</option><option disabled>Lote 3 — R$ 1.560 (em breve)</option></select><div class="msg"></div></div>
         <div class="field" style="margin-bottom:18px">
           <label style="margin-bottom:8px;display:block">Forma de pagamento</label>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
