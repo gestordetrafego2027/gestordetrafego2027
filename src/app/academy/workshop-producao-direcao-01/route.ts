@@ -232,12 +232,12 @@ export function GET() {
     </div>
     <h2 class="h-2 display" data-reveal style="margin-bottom:clamp(30px,4vw,56px)">Dentro<br>do set.</h2>
     <div class="gallery-grid">
-      <image-slot id="g1" src="/images/academy/studio-plano/studio-plano-1.webp" class="rv" data-reveal radius="0" placeholder="Studio Plano · Camarim" fit="cover"></image-slot>
-      <image-slot id="g2" src="/images/academy/studio-plano/studio-plano-2.webp" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Studio Plano · Ciclorama" fit="cover"></image-slot>
-      <image-slot id="g3" src="/images/academy/studio-plano/studio-plano-3.webp" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Studio Plano · Lounge" fit="cover"></image-slot>
-      <image-slot id="g4" src="/images/academy/edit-01/edit01-equipe.webp" class="rv" data-reveal radius="0" placeholder="Edit 01 · Equipe" fit="cover"></image-slot>
-      <image-slot id="g5" src="/images/academy/edit-01/edit01-model.webp" class="rv" data-reveal data-reveal-d="1" radius="0" placeholder="Edit 01 · Set" fit="cover"></image-slot>
-      <image-slot id="g6" src="/images/academy/edit-01/edit01-amanda.webp" class="rv" data-reveal data-reveal-d="2" radius="0" placeholder="Edit 01 · Produção" fit="cover"></image-slot>
+      <div class="gallery-item" data-reveal><img src="/images/academy/studio-plano/studio-plano-1.webp" alt="Studio Plano · Camarim" loading="lazy"></div>
+      <div class="gallery-item" data-reveal data-reveal-d="1"><img src="/images/academy/studio-plano/studio-plano-2.webp" alt="Studio Plano · Ciclorama" loading="lazy"></div>
+      <div class="gallery-item" data-reveal data-reveal-d="2"><img src="/images/academy/studio-plano/studio-plano-3.webp" alt="Studio Plano · Lounge" loading="lazy"></div>
+      <div class="gallery-item" data-reveal><img src="/images/academy/edit-01/edit01-equipe.webp" alt="Edit 01 · Equipe" loading="lazy"></div>
+      <div class="gallery-item" data-reveal data-reveal-d="1"><img src="/images/academy/edit-01/edit01-model.webp" alt="Edit 01 · Set" loading="lazy"></div>
+      <div class="gallery-item" data-reveal data-reveal-d="2"><img src="/images/academy/edit-01/edit01-amanda.webp" alt="Edit 01 · Produção" loading="lazy"></div>
     </div>
     <p class="mono" data-reveal style="margin-top:clamp(22px,3vw,34px);color:var(--smoke)">Studio Plano · São Paulo — o espaço onde o Edit 2 acontece em setembro de 2026.</p>
   </div>

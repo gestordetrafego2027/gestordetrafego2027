@@ -355,11 +355,8 @@ button{font-family:inherit;cursor:pointer;}
    ============================================================ */
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
 @media (max-width:760px){ .gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px;} }
-.gallery-grid image-slot{width:100%;height:auto;aspect-ratio:4/3;}
-.gallery image-slot{color:rgba(244,241,235,.62)!important;}
-.gallery image-slot::part(frame){background:radial-gradient(120% 120% at 30% 0%, #242424, #121212 76%)!important;}
-.gallery image-slot::part(ring){border-color:rgba(244,241,235,.28)!important;}
-.gallery image-slot::part(image){filter:grayscale(1) contrast(1.03) brightness(.98);}
+.gallery-item{aspect-ratio:4/3;overflow:hidden;background:#1a1a16;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.03) brightness(.98);}
 
 /* ============================================================
    FAQ
