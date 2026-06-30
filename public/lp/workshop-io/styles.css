@@ -332,6 +332,12 @@ button{font-family:inherit;cursor:pointer;}
 .plan-feats li::before{content:"+";color:var(--accent);font-family:var(--mono);}
 .ribbon{position:absolute;top:0;right:0;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;}
 
+/* lotes — 3 cards uniformes, preço como destaque principal */
+.plans--lotes .plan-name{font-size:clamp(2rem,3vw,3rem);margin:18px 0 2px;}
+.plans--lotes .plan-price small{font-size:.78rem;margin-top:4px;}
+.plans--lotes .plan-feats li{font-size:.88rem;gap:9px;}
+@media (max-width:760px){ .plans--lotes{grid-template-columns:1fr!important;} }
+
 /* lots / scarcity bar */
 .scarcity{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:clamp(30px,4vw,50px);padding-top:26px;border-top:1px solid var(--line-d);}
 .vagas-bar{flex:1;min-width:220px;height:6px;background:var(--line-d);position:relative;overflow:hidden;}

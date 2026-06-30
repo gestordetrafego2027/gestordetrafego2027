@@ -254,55 +254,55 @@ export function GET() {
     <div class="crew-grid">
 
       <div class="crew-card" data-reveal>
-        <div class="crew-photo"><image-slot id="crew1" src="/images/about/angelo-mazzutti.webp" fit="cover" placeholder="Angelo Mazzutti"></image-slot></div>
+        <div class="crew-photo"><img src="/images/about/angelo-mazzutti.webp" alt="Angelo Mazzutti" loading="lazy"></div>
         <div class="crew-role">Diretor Criativo</div>
         <div class="crew-name">Angelo Mazzutti</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
-        <div class="crew-photo"><image-slot id="crew2" fit="cover" placeholder="Fotógrafo de Moda"></image-slot></div>
+        <div class="crew-photo crew-photo--empty"><span>Fotógrafo<br>de Moda</span></div>
         <div class="crew-role">Fotógrafo de Moda</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
-        <div class="crew-photo"><image-slot id="crew3" fit="cover" placeholder="Fotógrafo Still"></image-slot></div>
+        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-quadro.webp" alt="Fotógrafo Still" loading="lazy"></div>
         <div class="crew-role">Fotógrafo Still</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal>
-        <div class="crew-photo"><image-slot id="crew4" fit="cover" placeholder="Videomaker"></image-slot></div>
+        <div class="crew-photo crew-photo--empty"><span>Video&shy;maker</span></div>
         <div class="crew-role">Videomaker</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
-        <div class="crew-photo"><image-slot id="crew5" fit="cover" placeholder="Beauty Artist"></image-slot></div>
+        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-amanda.webp" alt="Beauty Artist" loading="lazy"></div>
         <div class="crew-role">Beauty Artist</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
-        <div class="crew-photo"><image-slot id="crew6" fit="cover" placeholder="Produtor Executivo"></image-slot></div>
+        <div class="crew-photo crew-photo--empty"><span>Produtor<br>Executivo</span></div>
         <div class="crew-role">Produtor Executivo</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal>
-        <div class="crew-photo"><image-slot id="crew7" fit="cover" placeholder="Modelo"></image-slot></div>
+        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-model.webp" alt="Modelo Moda" loading="lazy"></div>
         <div class="crew-role">Modelo · Moda</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
-        <div class="crew-photo"><image-slot id="crew8" fit="cover" placeholder="Modelo"></image-slot></div>
+        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-modelo-scouting.webp" alt="Modelo Beauty" loading="lazy"></div>
         <div class="crew-role">Modelo · Beauty</div>
         <div class="crew-name">A confirmar</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
-        <div class="crew-photo crew-photo--staff"><image-slot id="crew9" fit="cover" placeholder="Staff"></image-slot></div>
+        <div class="crew-photo"><img src="/images/academy/edit-01/edit01-equipe.webp" alt="Equipe HMZT" loading="lazy"></div>
         <div class="crew-role">Staff & Produção</div>
         <div class="crew-name">Equipe HMZT</div>
       </div>
@@ -316,8 +316,10 @@ export function GET() {
 @media (max-width:760px){.crew-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:420px){.crew-grid{grid-template-columns:1fr 1fr;gap:14px;}}
 .crew-card{display:flex;flex-direction:column;gap:10px;}
-.crew-photo{aspect-ratio:3/4;overflow:hidden;background:var(--line);position:relative;}
-.crew-photo image-slot{width:100%;height:100%;}
+.crew-photo{aspect-ratio:3/4;overflow:hidden;background:#1e1e18;position:relative;}
+.crew-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.3);}
+.crew-photo--empty{display:flex;align-items:center;justify-content:center;background:#1a1a16;}
+.crew-photo--empty span{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#555;text-align:center;line-height:1.6;}
 .crew-role{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-top:2px;}
 .crew-name{font-weight:700;font-size:clamp(.9rem,1.2vw,1.05rem);color:var(--ink);letter-spacing:-.01em;}
 </style>
@@ -375,7 +377,15 @@ export function GET() {
         <div class="plan-name">R$ 1.430</div>
         <div class="plan-price" style="margin:4px 0 20px"><small>Após esgotamento do Lote 1</small></div>
         <ul class="plan-feats">
-          <li>Todos os benefícios do Lote 1</li>
+          <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
+          <li>Direção de moodboard ao vivo</li>
+          <li>Set 01 · Moda — still, lookbook, campanha</li>
+          <li>Set 02 · Beauty — ao vivo</li>
+          <li>Suporte e orientação em tempo real</li>
+          <li>Material de pré-produção via link</li>
+          <li>Pós-produção intensiva · Dia 02 online</li>
+          <li>Lista de fornecedores e parceiros SP</li>
+          <li>Certificado oficial HMZT</li>
         </ul>
         <button class="btn" data-reserve data-plan="Inside Out — Lote 2" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível em breve</span></button>
       </div>
@@ -385,7 +395,15 @@ export function GET() {
         <div class="plan-name">R$ 1.560</div>
         <div class="plan-price" style="margin:4px 0 20px"><small>Último lote · preço final</small></div>
         <ul class="plan-feats">
-          <li>Todos os benefícios do Lote 1</li>
+          <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
+          <li>Direção de moodboard ao vivo</li>
+          <li>Set 01 · Moda — still, lookbook, campanha</li>
+          <li>Set 02 · Beauty — ao vivo</li>
+          <li>Suporte e orientação em tempo real</li>
+          <li>Material de pré-produção via link</li>
+          <li>Pós-produção intensiva · Dia 02 online</li>
+          <li>Lista de fornecedores e parceiros SP</li>
+          <li>Certificado oficial HMZT</li>
         </ul>
         <button class="btn" data-reserve data-plan="Inside Out — Lote 3" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível em breve</span></button>
       </div>
