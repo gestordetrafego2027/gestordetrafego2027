@@ -243,6 +243,85 @@ export function GET() {
   </div>
 </section>
 
+<!-- ============ EQUIPE ============ -->
+<section class="section paper" id="equipe">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">— A equipe</span>
+      <span class="sec-index">Profissionais reais · produção completa</span>
+    </div>
+    <h2 class="h-2 display" data-reveal style="margin-bottom:clamp(36px,5vw,64px)">Quem estará<br>no set.</h2>
+    <div class="crew-grid">
+
+      <div class="crew-card" data-reveal>
+        <div class="crew-photo"><image-slot id="crew1" src="/images/about/angelo-mazzutti.webp" fit="cover" placeholder="Angelo Mazzutti"></image-slot></div>
+        <div class="crew-role">Diretor Criativo</div>
+        <div class="crew-name">Angelo Mazzutti</div>
+      </div>
+
+      <div class="crew-card" data-reveal data-reveal-d="1">
+        <div class="crew-photo"><image-slot id="crew2" fit="cover" placeholder="Fotógrafo de Moda"></image-slot></div>
+        <div class="crew-role">Fotógrafo de Moda</div>
+        <div class="crew-name">A confirmar</div>
+      </div>
+
+      <div class="crew-card" data-reveal data-reveal-d="2">
+        <div class="crew-photo"><image-slot id="crew3" fit="cover" placeholder="Fotógrafo Still"></image-slot></div>
+        <div class="crew-role">Fotógrafo Still</div>
+        <div class="crew-name">A confirmar</div>
+      </div>
+
+      <div class="crew-card" data-reveal>
+        <div class="crew-photo"><image-slot id="crew4" fit="cover" placeholder="Videomaker"></image-slot></div>
+        <div class="crew-role">Videomaker</div>
+        <div class="crew-name">A confirmar</div>
+      </div>
+
+      <div class="crew-card" data-reveal data-reveal-d="1">
+        <div class="crew-photo"><image-slot id="crew5" fit="cover" placeholder="Beauty Artist"></image-slot></div>
+        <div class="crew-role">Beauty Artist</div>
+        <div class="crew-name">A confirmar</div>
+      </div>
+
+      <div class="crew-card" data-reveal data-reveal-d="2">
+        <div class="crew-photo"><image-slot id="crew6" fit="cover" placeholder="Produtor Executivo"></image-slot></div>
+        <div class="crew-role">Produtor Executivo</div>
+        <div class="crew-name">A confirmar</div>
+      </div>
+
+      <div class="crew-card" data-reveal>
+        <div class="crew-photo"><image-slot id="crew7" fit="cover" placeholder="Modelo"></image-slot></div>
+        <div class="crew-role">Modelo · Moda</div>
+        <div class="crew-name">A confirmar</div>
+      </div>
+
+      <div class="crew-card" data-reveal data-reveal-d="1">
+        <div class="crew-photo"><image-slot id="crew8" fit="cover" placeholder="Modelo"></image-slot></div>
+        <div class="crew-role">Modelo · Beauty</div>
+        <div class="crew-name">A confirmar</div>
+      </div>
+
+      <div class="crew-card" data-reveal data-reveal-d="2">
+        <div class="crew-photo crew-photo--staff"><image-slot id="crew9" fit="cover" placeholder="Staff"></image-slot></div>
+        <div class="crew-role">Staff & Produção</div>
+        <div class="crew-name">Equipe HMZT</div>
+      </div>
+
+    </div>
+    <p class="mono" data-reveal style="margin-top:clamp(24px,3vw,40px);color:#888;font-size:.65rem">Equipe sujeita a alteração conforme confirmações. Todas as funções serão preenchidas por profissionais ativos no mercado.</p>
+  </div>
+</section>
+<style>
+.crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.5vw,36px);}
+@media (max-width:760px){.crew-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:420px){.crew-grid{grid-template-columns:1fr 1fr;gap:14px;}}
+.crew-card{display:flex;flex-direction:column;gap:10px;}
+.crew-photo{aspect-ratio:3/4;overflow:hidden;background:var(--line);position:relative;}
+.crew-photo image-slot{width:100%;height:100%;}
+.crew-role{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-top:2px;}
+.crew-name{font-weight:700;font-size:clamp(.9rem,1.2vw,1.05rem);color:var(--ink);letter-spacing:-.01em;}
+</style>
+
 <!-- ============ MENTOR ============ -->
 <section class="section paper" id="mentor">
   <div class="wrap mentor">
