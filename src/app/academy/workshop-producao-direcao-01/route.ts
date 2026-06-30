@@ -77,16 +77,31 @@ export function GET() {
 <header class="hero" id="top">
   <div class="hero-media" id="heroMedia">
     <div class="hero-slide active hero-slide--video">
-      <iframe
-        src="https://www.youtube.com/embed/TYY69q29omc?autoplay=1&mute=1&loop=1&playlist=TYY69q29omc&controls=0&playsinline=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        title="Inside Out · bastidores"
-        style="position:absolute;inset:-10%;width:120%;height:120%;border:none;pointer-events:none;"
-      ></iframe>
+      <!-- desktop: horizontal -->
+      <video
+        class="hero-video hero-video--h"
+        autoplay muted loop playsinline
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;"
+      >
+        <source src="/videos/inside-out-hero-horizontal.mp4" type="video/mp4">
+      </video>
+      <!-- mobile: vertical -->
+      <video
+        class="hero-video hero-video--v"
+        autoplay muted loop playsinline
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;display:none;"
+      >
+        <source src="/videos/inside-out-hero-vertical.mp4" type="video/mp4">
+      </video>
     </div>
-    <span class="slide-cap">House Mazzutti · HMZT Produtora<br>10 anos de direção criativa</span>
+    <span class="slide-cap">Studio Plano · São Paulo<br>Inside Out · Edit 2 · Set 2026</span>
   </div>
+  <style>
+    @media (max-width:640px){
+      .hero-video--h{display:none!important}
+      .hero-video--v{display:block!important}
+    }
+  </style>
 
   <div class="hero-body">
     <div class="hero-top">
