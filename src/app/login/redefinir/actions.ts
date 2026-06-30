@@ -3,27 +3,30 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 
-export async function setNewPassword(formData: FormData): Promise<void> {
+export async function setNewPassword(
+  _prev: { error?: string },
+  formData: FormData,
+): Promise<{ error?: string }> {
   const password = String(formData.get('password') ?? '')
   const confirm = String(formData.get('confirm') ?? '')
 
   if (password.length < 8) {
-    redirect(`/login/redefinir?error=${encodeURIComponent('A senha precisa ter ao menos 8 caracteres.')}`)
+    return { error: 'A senha precisa ter ao menos 8 caracteres.' }
   }
   if (password !== confirm) {
-    redirect(`/login/redefinir?error=${encodeURIComponent('As senhas nao conferem.')}`)
+    return { error: 'As senhas não conferem.' }
   }
 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) {
-    redirect(`/login?error=${encodeURIComponent('Sessao expirada. Solicite novo link de recuperacao.')}`)
+    redirect('/login/recuperar?error=' + encodeURIComponent('Sessão expirada. Solicite um novo link de recuperação.'))
   }
 
   const { error } = await supabase.auth.updateUser({ password })
   if (error) {
-    redirect(`/login/redefinir?error=${encodeURIComponent(error.message)}`)
+    return { error: error.message }
   }
 
-  redirect('/minha-conta?reset=ok')
+  redirect('/crm?reset=ok')
 }

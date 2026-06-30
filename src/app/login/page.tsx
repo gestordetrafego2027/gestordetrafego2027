@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { signInWithPassword } from './actions'
 import RecaptchaField from '@/components/security/RecaptchaField'
+import { PasswordInput } from '@/components/ui/PasswordInput'
 
 export const metadata = { title: 'Login | House Mazzutti CRM' }
 
@@ -38,7 +39,7 @@ export default async function LoginPage({
           />
         </label>
 
-        <label className="block space-y-1">
+        <div className="space-y-1">
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium">Senha</span>
             <Link
@@ -48,14 +49,12 @@ export default async function LoginPage({
               Esqueci minha senha
             </Link>
           </div>
-          <input
+          <PasswordInput
             name="password"
-            type="password"
             required
             autoComplete="current-password"
-            className="w-full rounded border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
           />
-        </label>
+        </div>
 
         {error && (
           <div className="text-sm text-red-700 border border-red-200 bg-red-50 rounded p-3 space-y-1">
