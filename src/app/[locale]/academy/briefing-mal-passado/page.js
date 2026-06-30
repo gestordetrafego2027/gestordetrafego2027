@@ -197,14 +197,14 @@ export default function BriefingMalPassadoPage() {
 
   const css = `
     .bmp-root {
-      --paper: #f1ecdd;
-      --paper-warm: #ece5d2;
-      --paper-edge: #e1d9c2;
-      --ink: #0f0c0a;
-      --ink-soft: #1c1814;
-      --ink-mute: #6a6155;
-      --ink-light: #a39989;
-      --rule-soft: #d8d1bd;
+      --paper: #ffffff;
+      --paper-warm: #f5f5f3;
+      --paper-edge: #ececea;
+      --ink: #0b0b0a;
+      --ink-soft: #1a1a18;
+      --ink-mute: #6a6a6a;
+      --ink-light: #a0a0a0;
+      --rule-soft: #e6e4e0;
       --blood: #8b1f1f;
       --blood-deep: #6e1313;
       --blood-bright: #c92a2a;
@@ -245,7 +245,7 @@ export default function BriefingMalPassadoPage() {
     .bmp-root .masthead-right { justify-self: end; color: var(--ink-mute); }
 
     /* Nav */
-    .bmp-root .nav { position: sticky; top: 0; z-index: 50; background: rgba(241,236,221,0.94); border-bottom: 1px solid var(--rule-soft); backdrop-filter: blur(8px); }
+    .bmp-root .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.94); border-bottom: 1px solid var(--rule-soft); backdrop-filter: blur(8px); }
     .bmp-root .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; max-width: 1440px; margin: 0 auto; }
     .bmp-root .nav-brand { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink); display: flex; align-items: center; gap: 14px; text-decoration: none; }
     .bmp-root .nav-brand .pip { width: 7px; height: 7px; background: var(--blood); display: inline-block; }
@@ -265,15 +265,15 @@ export default function BriefingMalPassadoPage() {
     .bmp-root .hero-headline { font-family: var(--display); font-weight: 400; font-size: clamp(64px, 10vw, 168px); line-height: 0.86; letter-spacing: -0.018em; margin: 28px 0 0; color: var(--paper); text-transform: uppercase; }
     .bmp-root .hero-headline em { font-style: normal; color: var(--paper); opacity: 0.65; font-family: var(--serif); font-weight: 400; font-size: 0.58em; vertical-align: middle; padding: 0 0.05em; }
     .bmp-root .hero-sub { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 1.9vw, 30px); line-height: 1.28; color: var(--paper); max-width: 560px; margin: 40px 0 0; opacity: 0.92; border-left: 2px solid var(--blood-bright); padding-left: 18px; }
-    .bmp-root .hero-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; padding-top: 22px; border-top: 1px solid rgba(241,236,221,0.3); }
+    .bmp-root .hero-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.3); }
     .bmp-root .hero-meta .cell .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--paper); opacity: 0.6; display: block; margin-bottom: 6px; }
     .bmp-root .hero-meta .cell .v { font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.1; color: var(--paper); }
     .bmp-root .hero-right { position: relative; display: flex; align-items: center; justify-content: center; }
     .bmp-root .cover-stack { position: relative; width: 100%; max-width: 460px; aspect-ratio: 1 / 1.5; transform: rotate(-2.2deg); filter: drop-shadow(0 35px 70px rgba(0,0,0,0.5)) drop-shadow(0 10px 20px rgba(0,0,0,0.4)); transition: transform .6s cubic-bezier(.2,.7,.3,1); }
     .bmp-root .cover-stack:hover { transform: rotate(-1deg) translateY(-6px); }
-    .bmp-root .grid-marks { position: absolute; top: 30px; left: 56px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: rgba(241,236,221,0.32); line-height: 1.7; }
-    .bmp-root .grid-marks-r { position: absolute; bottom: 80px; right: 56px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: rgba(241,236,221,0.32); line-height: 1.7; text-align: right; }
-    .bmp-root .hero-foot { border-top: 1px solid rgba(241,236,221,0.18); padding: 18px 56px; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--paper); background: var(--ink); max-width: 1440px; margin: 0 auto; }
+    .bmp-root .grid-marks { position: absolute; top: 30px; left: 56px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: rgba(255,255,255,0.32); line-height: 1.7; }
+    .bmp-root .grid-marks-r { position: absolute; bottom: 80px; right: 56px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: rgba(255,255,255,0.32); line-height: 1.7; text-align: right; }
+    .bmp-root .hero-foot { border-top: 1px solid rgba(255,255,255,0.18); padding: 18px 56px; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--paper); background: var(--ink); max-width: 1440px; margin: 0 auto; }
     .bmp-root .hero-foot .star { color: var(--blood-bright); }
 
     /* Pullband */
@@ -301,7 +301,7 @@ export default function BriefingMalPassadoPage() {
     .bmp-root .promise-cols .col h3::before { content: ""; width: 24px; height: 2px; background: currentColor; }
     .bmp-root .promise-cols ul { list-style: none; padding: 0; margin: 0; }
     .bmp-root .promise-cols ul li { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 22px; line-height: 1.32; padding: 18px 0 18px 36px; position: relative; border-bottom: 1px solid; }
-    .bmp-root .promise-cols .col.is ul li { border-color: rgba(241,236,221,0.16); }
+    .bmp-root .promise-cols .col.is ul li { border-color: rgba(255,255,255,0.16); }
     .bmp-root .promise-cols .col.isnot ul li { border-color: var(--rule-soft); }
     .bmp-root .promise-cols ul li:last-child { border-bottom: 0; }
     .bmp-root .promise-cols .col.is ul li::before { content: "+"; position: absolute; left: 0; top: 16px; font-family: var(--mono); font-style: normal; font-weight: 600; font-size: 16px; color: var(--blood-bright); }
@@ -361,14 +361,14 @@ export default function BriefingMalPassadoPage() {
     .bmp-root .author-card .blood-strip { height: 4px; background: var(--blood); margin-bottom: 32px; }
     .bmp-root .author-avatar-wrap { position: relative; margin: 0 0 28px; padding-left: 8px; }
     .bmp-root .author-avatar-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--blood); z-index: 0; }
-    .bmp-root .author-avatar { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; overflow: hidden; border: 1px solid rgba(241,236,221,0.22); background: var(--ink); }
+    .bmp-root .author-avatar { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; overflow: hidden; border: 1px solid rgba(255,255,255,0.22); background: var(--ink); }
     .bmp-root .author-avatar-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(20%) contrast(1.05); display: block; }
     .bmp-root .author-card .label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--blood-bright); margin-bottom: 14px; }
     .bmp-root .author-card .nm { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 56px; line-height: 0.92; color: var(--paper); margin-bottom: 18px; letter-spacing: -0.018em; }
     .bmp-root .author-card .nm em { font-style: normal; color: var(--blood-bright); display: block; }
     .bmp-root .author-card .role { font-family: var(--serif); font-style: italic; font-size: 15px; line-height: 1.45; color: var(--paper); opacity: 0.8; margin-bottom: 28px; }
-    .bmp-root .author-card .meta-rows { border-top: 1px solid rgba(241,236,221,0.18); }
-    .bmp-root .author-card .meta-rows .row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(241,236,221,0.18); font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; }
+    .bmp-root .author-card .meta-rows { border-top: 1px solid rgba(255,255,255,0.18); }
+    .bmp-root .author-card .meta-rows .row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.18); font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; }
     .bmp-root .author-card .meta-rows .row span:first-child { color: var(--paper); opacity: 0.55; }
     .bmp-root .author-card .meta-rows .row .v { color: var(--paper); font-family: var(--serif); font-style: italic; font-size: 13px; letter-spacing: 0; text-transform: none; }
     .bmp-root .author-body h2 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(40px, 5.2vw, 78px); line-height: 0.94; color: var(--ink); margin: 0 0 32px; letter-spacing: -0.018em; }
@@ -463,7 +463,7 @@ export default function BriefingMalPassadoPage() {
     .bmp-root .btn-primary { background: var(--blood); color: var(--paper); font-family: var(--mono); font-weight: 600; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; padding: 20px 32px; text-decoration: none; transition: background .2s; display: inline-flex; align-items: center; gap: 16px; }
     .bmp-root .btn-primary:hover { background: var(--blood-bright); }
     .bmp-root .btn-primary span { font-family: var(--display); font-size: 22px; letter-spacing: 0; }
-    .bmp-root .btn-secondary { background: transparent; color: var(--paper); font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; padding: 20px 28px; text-decoration: none; border: 1px solid rgba(241,236,221,0.3); transition: border-color .2s; }
+    .bmp-root .btn-secondary { background: transparent; color: var(--paper); font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; padding: 20px 28px; text-decoration: none; border: 1px solid rgba(255,255,255,0.3); transition: border-color .2s; }
     .bmp-root .btn-secondary:hover { border-color: var(--paper); }
 
     /* Footer */
