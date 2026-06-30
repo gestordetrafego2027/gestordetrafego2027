@@ -22,7 +22,8 @@
     "privacidade": "Privacidad",
     "termos": "Términos",
     "cookies_link": "Cookies",
-    "cookies_prefs": "Preferencias de cookies"
+    "cookies_prefs": "Preferencias de cookies",
+    "academy_desc": "Cursos · Libros · Aprendizaje"
   },
   "hero": {
     "slide1": {
@@ -1276,7 +1277,24 @@
     "processo_3_desc": "Desarrollamos el sistema visual completo — logo, paleta, tipografía y tono de voz.",
     "processo_4_num": "04",
     "processo_4_titulo": "Entrega",
-    "processo_4_desc": "Brand book final con todas las reglas de uso y aplicación de la marca."
+    "processo_4_desc": "Brand book final con todas las reglas de uso y aplicación de la marca.",
+    "diferenciais_label": "LA DIFERENCIA",
+    "faq_label": "PREGUNTAS FRECUENTES",
+    "faq_1_q": "¿Cuánto tiempo lleva un proyecto de branding en House Mazzutti?",
+    "faq_1_a": "Entre 35 y 75 días, según el alcance. La inmersión comienza en la primera semana; la entrega final cierra el ciclo.",
+    "faq_2_q": "¿Cuál es la diferencia entre branding e identidad visual?",
+    "faq_2_a": "La identidad visual es cómo aparece la marca. El branding es por qué es reconocida. Lo primero es una parte — lo segundo es el todo.",
+    "faq_3_q": "¿House Mazzutti atiende marcas fuera de São Paulo?",
+    "faq_3_a": "Sí. El proceso es mayormente remoto — inmersión, lectura y aprobaciones ocurren a distancia con la misma precisión.",
+    "faq_4_q": "¿Cómo funciona la inversión en un Branding Project?",
+    "faq_4_a": "Por propuesta. El valor responde al alcance — de la marca completa a una etapa específica. La lectura inicial define el tamaño del proyecto.",
+    "hero_cta_secondary": "VER MARCAS QUE CONSTRUIMOS",
+    "manifesto_desc": "Del concepto a la aplicación — una identidad que se sostiene en cualquier canal.",
+    "processo_5_num": "05",
+    "processo_5_titulo": "Fine Art",
+    "processo_5_desc": "Acabado. Cada detalle listo para el mundo real.",
+    "processo_prazo": "De la inmersión a la entrega: 35 a 75 días, según el alcance.",
+    "services_footer": "El proyecto es modular. Construyes la marca completa o la etapa que falta."
   },
   "studio_cobertura": {
     "hero_label": "COBERTURA EXTERNA · PROPUESTA A MEDIDA",
