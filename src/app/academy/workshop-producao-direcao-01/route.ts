@@ -278,9 +278,9 @@ export function GET() {
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
-        <div class="crew-photo crew-photo--empty"><span>Beauty<br>Artist</span></div>
-        <div class="crew-role">Beauty Artist</div>
-        <div class="crew-name">A confirmar</div>
+        <div class="crew-photo"><img src="/images/academy/crew/rod-frois.webp" alt="Rod Frois" loading="lazy"></div>
+        <div class="crew-role">Maquiador · Beauty Artist</div>
+        <div class="crew-name">Rod Frois</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
@@ -290,9 +290,9 @@ export function GET() {
       </div>
 
       <div class="crew-card" data-reveal>
-        <div class="crew-photo crew-photo--empty"><span>Modelo<br>Moda</span></div>
-        <div class="crew-role">Modelo · Moda</div>
-        <div class="crew-name">A confirmar</div>
+        <div class="crew-photo"><img src="/images/academy/crew/fernanda-olive.webp" alt="Fernanda Olive" loading="lazy"></div>
+        <div class="crew-role">Modelo</div>
+        <div class="crew-name">Fernanda Olive</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
