@@ -151,7 +151,7 @@ export default function AgenciaBrandingPage() {
 
                     {/* CASE 1: House Mazzutti — dado real */}
                     <div className="mb-2 grid grid-cols-1 md:grid-cols-3 gap-2">
-                        <div className="md:col-span-2 aspect-[16/9] overflow-hidden relative group" data-aos="fade-up">
+                        <Link href="/portfolio-agencia/house-mazzutti" className="md:col-span-2 aspect-[16/9] overflow-hidden relative group block" data-aos="fade-up">
                             <Image
                                 src="/images/agencia/house-mazzutti/capa.webp"
                                 alt="Identidade visual House Mazzutti desenvolvida pela House Mazzutti"
@@ -164,9 +164,9 @@ export default function AgenciaBrandingPage() {
                                 <p className="font-headline text-white text-lg leading-snug">House Mazzutti</p>
                                 <p className="font-body text-white/60 text-sm mt-1">A marca que dirige a leitura das outras: sistema brutalista, monocromático, editorial.</p>
                             </div>
-                        </div>
+                        </Link>
                         <div className="flex flex-col gap-2">
-                            <div className="flex-1 min-h-[160px] overflow-hidden relative group" data-aos="fade-up" data-aos-delay="50">
+                            <Link href="/portfolio-agencia/house-mazzutti" className="flex-1 min-h-[160px] overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="50">
                                 <Image
                                     src="/images/agencia/house-mazzutti/1.webp"
                                     alt="Sistema visual House Mazzutti — identidade brutalista e monocromática"
@@ -174,8 +174,8 @@ export default function AgenciaBrandingPage() {
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
-                            </div>
-                            <div className="flex-1 min-h-[160px] overflow-hidden relative group" data-aos="fade-up" data-aos-delay="100">
+                            </Link>
+                            <Link href="/portfolio-agencia/house-mazzutti" className="flex-1 min-h-[160px] overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="100">
                                 <Image
                                     src="/images/agencia/house-mazzutti/2.webp"
                                     alt="Brand book House Mazzutti — manual de identidade visual"
@@ -183,13 +183,13 @@ export default function AgenciaBrandingPage() {
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
-                            </div>
+                            </Link>
                         </div>
                     </div>
 
-                    {/* Grid visual — demais marcas (segmento/resultado pendente de preenchimento) */}
+                    {/* Grid visual — demais marcas */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                        <div className="aspect-square overflow-hidden relative group" data-aos="fade-up">
+                        <Link href="/portfolio-agencia/mabdo" className="aspect-square overflow-hidden relative group block" data-aos="fade-up">
                             <Image
                                 src="/images/agencia/mabdo/1.webp"
                                 alt="Identidade visual Mabdo desenvolvida pela House Mazzutti"
@@ -200,8 +200,8 @@ export default function AgenciaBrandingPage() {
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Mabdo</span>
                             </div>
-                        </div>
-                        <div className="aspect-square overflow-hidden relative group" data-aos="fade-up" data-aos-delay="50">
+                        </Link>
+                        <Link href="/portfolio-agencia/samrat" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="50">
                             <Image
                                 src="/images/agencia/samrat/capa.webp"
                                 alt="Identidade visual Samrat desenvolvida pela House Mazzutti"
@@ -212,8 +212,8 @@ export default function AgenciaBrandingPage() {
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Samrat</span>
                             </div>
-                        </div>
-                        <div className="aspect-square overflow-hidden relative group" data-aos="fade-up" data-aos-delay="100">
+                        </Link>
+                        <Link href="/portfolio-agencia/dra-ariadne-barbosa" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="100">
                             <Image
                                 src="/images/agencia/dra-ariadne-barbosa/dra-ariadne-barbosa-logo-branding-manual-de-marca-identidade-visual-house-mazzutti-agencia-capa.webp"
                                 alt="Identidade visual Dra. Ariadne Barbosa desenvolvida pela House Mazzutti"
@@ -224,8 +224,8 @@ export default function AgenciaBrandingPage() {
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Ariadne</span>
                             </div>
-                        </div>
-                        <div className="aspect-square overflow-hidden relative group" data-aos="fade-up" data-aos-delay="150">
+                        </Link>
+                        <Link href="/portfolio-agencia/knowhol" className="aspect-square overflow-hidden relative group block" data-aos="fade-up" data-aos-delay="150">
                             <Image
                                 src="/images/agencia/knowhol/1.webp"
                                 alt="Identidade visual Knowhol desenvolvida pela House Mazzutti"
@@ -236,7 +236,7 @@ export default function AgenciaBrandingPage() {
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                                 <span className="font-label uppercase tracking-[0.2em] text-[9px] text-white/60">Knowhol</span>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>
