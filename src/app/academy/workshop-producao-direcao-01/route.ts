@@ -259,8 +259,8 @@ export function GET() {
       <div class="plan" data-reveal style="max-width:480px;width:100%">
         <div class="plan-tag"><span>Lote 1</span><span>Esgotado em breve</span></div>
         <div class="plan-name" style="font-size:clamp(28px,4vw,42px)">Inside Out</div>
-        <div class="plan-price" style="margin:20px 0 8px">R$ 1.500<small>Lote 1 — preço de lançamento</small></div>
-        <p style="font-size:12px;color:var(--smoke);margin-bottom:24px;letter-spacing:.04em">Lote 2 · R$ 1.800 — após esgotamento</p>
+        <div class="plan-price" style="margin:20px 0 8px">R$ 1.300<small>Lote 1 — preço de lançamento</small></div>
+        <p style="font-size:12px;color:var(--smoke);margin-bottom:24px;letter-spacing:.04em">Lote 2 · R$ 1.500 — após esgotamento</p>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo com Angelo Mazzutti</li>
@@ -273,7 +273,7 @@ export function GET() {
           <li>Lista curada de fornecedores e parceiros SP</li>
           <li>Certificado oficial House Mazzutti · HMZT</li>
         </ul>
-        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir minha cadeira · R$ 1.500</span><span class="ar">↗</span></button>
+        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir minha cadeira · R$ 1.300</span><span class="ar">↗</span></button>
       </div>
     </div>
 
@@ -385,7 +385,7 @@ export function GET() {
         <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name"><div class="msg">Informe seu nome</div></div>
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
-        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.500</option><option>Lote 2 — R$ 1.800</option></select><div class="msg"></div></div>
+        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.300</option><option>Lote 2 — R$ 1.500</option></select><div class="msg"></div></div>
         <div class="field" style="margin-bottom:18px">
           <label style="margin-bottom:8px;display:block">Forma de pagamento</label>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
