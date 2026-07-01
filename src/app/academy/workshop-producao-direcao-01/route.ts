@@ -154,12 +154,11 @@ export function GET() {
   <div class="wrap concept">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">01 — Conceito</span>
-      <span class="sec-index">Inside Out · Edit 2 · Studio Plano</span>
+      <span class="sec-index">Studio Plano · São Paulo · Set 2026</span>
     </div>
-    <h2 class="big" data-reveal>Você vai estar <em>dentro do set.</em></h2>
+    <h2 class="big" data-reveal>Você vai estar<br><em>dentro do set.</em></h2>
     <div class="concept-foot">
-      <p class="lead" data-reveal>Não é uma aula sobre produção. É uma produção — com modelos, equipe, direção e câmera rodando. Você acompanha, participa e sai com o processo gravado na memória muscular.</p>
-      <p data-reveal data-reveal-d="1" style="color:#54524d;line-height:1.5">No Studio Plano, em São Paulo, Angelo Mazzutti abre o processo que dirige há uma década: do moodboard que define a alma da campanha aos dois sets ao vivo — moda e beauty — que transformam conceito em imagem. <em>Inside Out</em> é a diferença entre quem fala de produção e quem a executa.</p>
+      <p class="lead" data-reveal>Não é uma aula sobre produção.<br>É uma produção — com câmera rodando.</p>
     </div>
   </div>
 </section>
@@ -167,17 +166,13 @@ export function GET() {
 <!-- ============ VIVÊNCIAS ============ -->
 <section class="section paper" id="vivencias" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <span class="eyebrow">02 — O que você vai vivenciar</span>
-      <span class="sec-index">Studio Plano · São Paulo · 05 e 06 Set</span>
-    </div>
     <div class="exp">
-      <div class="exp-item" data-reveal><span class="exp-n">01</span><div><div class="exp-t">Produção pura — do zero ao entregável</div><div class="exp-d">Um dia inteiro de produção real, sem simulação. Brief, conceito, direção, execução. O processo completo, ao vivo, no Studio Plano.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">02</span><div><div class="exp-t">Direção de moodboard</div><div class="exp-d">Como construir a alma visual de uma campanha antes de a câmera ligar. A referência certa vale mais do que qualquer equipamento.</div></div></div>
-      <div class="exp-item" data-reveal><span class="exp-n">03</span><div><div class="exp-t">Set 01 · Moda — still & lookbook</div><div class="exp-d">Direção de campanha em tempo real: decisões de luz, pose, figurino e enquadramento com você dentro do set.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">04</span><div><div class="exp-t">Set 02 · Beauty — segunda atmosfera</div><div class="exp-d">Outro conceito, outra energia, mesma exigência. Dois sets no mesmo dia revelam o quanto a direção muda tudo.</div></div></div>
-      <div class="exp-item" data-reveal><span class="exp-n">05</span><div><div class="exp-t">Pós-produção intensiva — sala fechada</div><div class="exp-d">Manhã do dia 06 no Google Meet, exclusivo para a turma. 4 horas de edição profissional com Angelo Mazzutti. Tela a tela.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">06</span><div><div class="exp-t">Rede · Certificação · Bar Dona Onça</div><div class="exp-d">Lista curada de fornecedores e parceiros de SP. Certificado oficial HMZT. Almoço e happy hour para encerrar — conexões que duram.</div></div></div>
+      <div class="exp-item" data-reveal><span class="exp-n">01</span><div><div class="exp-t">Produção do zero ao entregável</div><div class="exp-d">Brief, conceito, direção, execução. Um dia inteiro de produção real no Studio Plano.</div></div></div>
+      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">02</span><div><div class="exp-t">Direção de moodboard ao vivo</div><div class="exp-d">A alma visual da campanha construída antes de a câmera ligar.</div></div></div>
+      <div class="exp-item" data-reveal><span class="exp-n">03</span><div><div class="exp-t">Set 01 · Moda</div><div class="exp-d">Still, lookbook e campanha. Você dentro do set.</div></div></div>
+      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">04</span><div><div class="exp-t">Set 02 · Beauty</div><div class="exp-d">Outro conceito. Mesma exigência. Dois sets que mudam tudo.</div></div></div>
+      <div class="exp-item" data-reveal><span class="exp-n">05</span><div><div class="exp-t">Pós-produção intensiva</div><div class="exp-d">4h online com Angelo Mazzutti. Edição, cor, entrega. Tela a tela.</div></div></div>
+      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">06</span><div><div class="exp-t">Rede · Certificado · Bar Dona Onça</div><div class="exp-d">Fornecedores SP, certificado HMZT e almoço de encerramento.</div></div></div>
     </div>
   </div>
 </section>
@@ -187,37 +182,30 @@ export function GET() {
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow" style="color:var(--smoke)">03 — Os dois dias</span>
-      <span class="sec-index">De dentro para fora · Studio Plano & Bar Dona Onça</span>
+      <span class="sec-index">Studio Plano → Bar Dona Onça</span>
     </div>
   </div>
   <div class="wrap" style="max-width:var(--maxw)">
     <div class="io">
       <div class="io-col inside" data-reveal>
-        <div class="io-tag"><span class="io-day">05 Set · Dia 01</span><span class="mono">Studio Plano · São Paulo</span></div>
+        <div class="io-tag"><span class="io-day">05 Set · Dia 01</span><span class="mono">Studio Plano · SP</span></div>
         <div class="io-word">Inside</div>
-        <p class="io-sub" style="margin-top:18px;color:var(--smoke)">Presencial · produção real · sets ao vivo</p>
-        <ul class="sched">
-          <li><span class="tm">Manhã</span><span class="ds"><b>Abertura</b>Boas-vindas, entrega de material e briefing do dia no estúdio</span></li>
-          <li><span class="tm">—</span><span class="ds"><b>Direção de moodboard</b>Construção do conceito visual ao vivo, do zero</span></li>
-          <li><span class="tm">—</span><span class="ds"><b>Set 01 · Moda</b>Shooting completo — still, lookbook, direção de campanha em tempo real</span></li>
-          <li><span class="tm">Tarde</span><span class="ds"><b>Set 02 · Beauty</b>Nova produção, nova direção — mesma exigência de set profissional</span></li>
-          <li><span class="tm">Durante</span><span class="ds"><b>Suporte contínuo</b>Angelo Mazzutti disponível para orientação e decisões em tempo real</span></li>
+        <ul class="sched" style="margin-top:24px">
+          <li><span class="tm">Manhã</span><span class="ds"><b>Abertura + Moodboard</b>Briefing e conceito visual ao vivo</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>Set 01 · Moda</b>Still, lookbook, campanha em tempo real</span></li>
+          <li><span class="tm">Tarde</span><span class="ds"><b>Set 02 · Beauty</b>Nova produção, nova direção</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>Orientação contínua</b>Angelo disponível durante todo o dia</span></li>
         </ul>
-        <p style="margin-top:20px;font-size:12px;color:var(--smoke);line-height:1.8;border-top:1px solid rgba(255,255,255,.1);padding-top:16px">Traga câmera, celular, prancheta e notebook.<br><em>O estúdio cuida do resto.</em></p>
-        <p style="margin-top:10px;font-size:11px;color:var(--smoke);opacity:.6;line-height:1.6">Conteúdo de pré-produção enviado via link antes do dia 05 — chegue preparado.</p>
       </div>
       <div class="io-col out" data-reveal data-reveal-d="1">
         <div class="io-tag"><span class="io-day">06 Set · Dia 02</span><span class="mono">Online → Bar Dona Onça</span></div>
         <div class="io-word">Out</div>
-        <p class="io-sub" style="margin-top:18px;color:#6b6862">Pós-produção + encerramento presencial</p>
-        <ul class="sched">
-          <li><span class="tm">08:00</span><span class="ds"><b>Sala fechada · Google Meet</b>Exclusivo para a turma — ninguém de fora entra</span></li>
-          <li><span class="tm">→ 12:00</span><span class="ds"><b>4h de pós-produção intensiva</b>Edição, coloração e entrega final ao vivo com Angelo</span></li>
-          <li><span class="tm">12:00</span><span class="ds"><b>Rede de fornecedores SP</b>Lista curada de parceiros compartilhada no grupo</span></li>
-          <li><span class="tm">14:00</span><span class="ds"><b>Bar Dona Onça · São Paulo</b>Almoço e happy hour — o encerramento que vira memória</span></li>
-          <li><span class="tm">—</span><span class="ds"><b>Certificação oficial HMZT</b>Documento com peso de quem produziu, não de quem assistiu</span></li>
+        <ul class="sched" style="margin-top:24px">
+          <li><span class="tm">08:00</span><span class="ds"><b>Pós-produção</b>4h de edição ao vivo — turma fechada</span></li>
+          <li><span class="tm">12:00</span><span class="ds"><b>Fornecedores SP</b>Lista curada de parceiros</span></li>
+          <li><span class="tm">14:00</span><span class="ds"><b>Bar Dona Onça</b>Almoço e encerramento</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>Certificação HMZT</b>Oficial. Assinado. Merecido.</span></li>
         </ul>
-        <p style="margin-top:20px;font-size:12px;color:#6b6862;line-height:1.8;border-top:1px solid rgba(0,0,0,.08);padding-top:16px"><em>Começa na tela. Termina à mesa.<br>Do set para o mundo real.</em></p>
       </div>
     </div>
   </div>
