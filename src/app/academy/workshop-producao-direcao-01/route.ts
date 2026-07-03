@@ -245,36 +245,36 @@ export function GET() {
         <div class="crew-photo"><img src="/images/academy/crew/neto-lins.webp" alt="Neto Lins" loading="lazy"></div>
         <div class="crew-role">Fotógrafo de Moda</div>
         <div class="crew-name">Neto Lins</div>
+        <div class="crew-bio">Fotografia de moda com direção editorial. Conduz a captação fashion no set do Edit 2.</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="2">
         <div class="crew-photo"><img src="/images/academy/crew/thyago-barriviera.webp" alt="Thyago Barriviera" loading="lazy"></div>
         <div class="crew-role">Fotógrafo · Publicidade Still</div>
         <div class="crew-name">Thyago Barriviera</div>
+        <div class="crew-bio">Still e imagem de produto. Traduz briefing de campanha em foto publicitária.</div>
       </div>
 
       <div class="crew-card" data-reveal>
         <div class="crew-photo"><img src="/images/academy/crew/mateus-sacaem.webp" alt="Mateus Sacaem" loading="lazy"></div>
         <div class="crew-role">Produtor Executivo</div>
         <div class="crew-name">Mateus Sacaem</div>
+        <div class="crew-bio">Comanda a operação: cronograma, equipe e integração da pré ao master.</div>
       </div>
 
       <div class="crew-card" data-reveal data-reveal-d="1">
         <div class="crew-photo"><img src="/images/academy/crew/rod-frois.webp" alt="Rod Frois" loading="lazy"></div>
         <div class="crew-role">Maquiador · Beauty Artist</div>
         <div class="crew-name">Rod Frois</div>
+        <div class="crew-bio">Beauty e maquiagem de campanha — do clean ao editorial.</div>
       </div>
 
-      <div class="crew-card" data-reveal data-reveal-d="2">
-        <div class="crew-photo"><img src="/images/academy/crew/trevizoli.webp" alt="Trevizoli" loading="lazy"></div>
-        <div class="crew-role">Stylist</div>
-        <div class="crew-name">Trevizoli</div>
-      </div>
 
-      <div class="crew-card" data-reveal>
+<div class="crew-card" data-reveal>
         <div class="crew-photo"><img src="/images/academy/crew/fernanda-olive.webp" alt="Fernanda Olive" loading="lazy"></div>
         <div class="crew-role">Modelo</div>
         <div class="crew-name">Fernanda Olive</div>
+        <div class="crew-bio">Modelo. Presença de moda e beauty ao longo dos dois dias de set.</div>
       </div>
 
     </div>
@@ -292,6 +292,7 @@ export function GET() {
 .crew-photo--empty span{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#555;text-align:center;line-height:1.6;}
 .crew-role{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-top:2px;}
 .crew-name{font-weight:700;font-size:clamp(.9rem,1.2vw,1.05rem);color:var(--ink);letter-spacing:-.01em;}
+.crew-bio{font-size:.74rem;line-height:1.5;color:#6a6a66;margin-top:-4px;max-width:34ch;}
 </style>
 
 <!-- ============ DIRETOR ============ -->
