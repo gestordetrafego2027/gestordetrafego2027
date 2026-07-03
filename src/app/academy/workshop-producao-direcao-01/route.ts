@@ -422,7 +422,7 @@ export function GET() {
         <p style="margin-top:20px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)">06 de Setembro · São Paulo · Incluso em todas as inscrições</p>
       </div>
       <div style="aspect-ratio:3/4;background:var(--ink);overflow:hidden;position:relative;">
-        <image-slot id="donaonca" src="/images/academy/studio-plano/studio-plano-3.webp" fit="cover" placeholder="Bar Dona Onça · SP"></image-slot>
+        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;" src="/videos/dona-onca.mp4"></video>
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.6) 0%,transparent 50%);pointer-events:none"></div>
         <span style="position:absolute;bottom:16px;left:16px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:#fff;opacity:.7">Edifício Copan · Centro · São Paulo</span>
       </div>
