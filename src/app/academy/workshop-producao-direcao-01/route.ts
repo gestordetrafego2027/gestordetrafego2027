@@ -146,7 +146,7 @@ body.has-announce{padding-top:40px;}
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
       <div class="hero-rot"><span class="rot" id="rot">Duas campanhas simultâneas · moda e beauty</span></div>
-      <p class="hero-sub">Para profissionais da publicidade e do audiovisual que querem se aperfeiçoar na prática — ao lado de uma equipe de mercado consolidada, em dois sets de campanha reais, simultâneos, em São Paulo. <em>20 vagas.</em></p>
+      <p class="hero-sub">Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas — do pré à produção e à entrega ao cliente. <em>20 vagas.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -186,27 +186,27 @@ body.has-announce{padding-top:40px;}
     <div class="pq-items">
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Fotógrafos e videomakers</b> que querem se aperfeiçoar em sets de publicidade reais, ao lado de profissionais de mercado</span>
+        <span><b>Fotógrafos e videomakers</b> que querem entender a direção criativa por dentro — e elevar o nível do que já entregam</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Produtores e diretores</b> que querem vivenciar o processo de duas campanhas simultâneas — moda e beauty — do briefing à entrega</span>
+        <span><b>Maquiadores e beauty artists</b> que querem ver como a direção pensa o beauty do briefing à entrega final ao cliente</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Profissionais do audiovisual e da publicidade</b> que buscam network qualificado e experiência prática em São Paulo</span>
+        <span><b>Modelos</b> que querem entender o processo completo de produção de campanha e trabalhar melhor com qualquer diretor</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Quem quer gerar conteúdo próprio</b> — foto ou vídeo — dentro de uma mega estrutura cenográfica profissional</span>
+        <span><b>Stylists e produtores de moda</b> que querem aprimorar seu processo criativo dentro de uma campanha real</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Quem aprende fazendo</b> — sem slide, sem teoria. Você está dentro do set, absorvendo na prática com quem faz isso no mercado</span>
+        <span><b>Profissionais de produção executiva</b> que querem vivenciar o pré, a produção e a pós até a entrega ao cliente</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Quem valoriza as pessoas</b> — o maior ativo do Inside Out é o time que você encontra e os profissionais que você leva para a vida</span>
+        <span><b>Quem aprende fazendo</b> — acompanhando de perto cada decisão criativa, técnica e executiva de duas campanhas simultâneas</span>
       </div>
     </div>
   </div>
@@ -238,12 +238,12 @@ body.has-announce{padding-top:40px;}
         <h2 class="conceito-h">Duas<br>campanhas.<br><em>Um dia.<br>Você lá.</em></h2>
       </div>
       <div class="conceito-right" data-reveal data-reveal-d="1">
-        <p class="conceito-p">O Inside Out Edit 2 é um workshop 100% prático para profissionais da publicidade e do audiovisual. Dois sets de campanha simultâneos — moda e beauty — produzidos por uma equipe de mercado consolidada, num espaço mega em São Paulo.</p>
-        <p class="conceito-p">Você se aperfeiçoa na prática: nos cliques, na direção, na cenografia, no figurino, na locação — absorvendo o conhecimento de profissionais que fazem isso em grandes sets. E ainda sai com conteúdo próprio, foto ou vídeo, gerado por você durante a produção.</p>
+        <p class="conceito-p">O Inside Out Edit 2 é voltado para profissionais de produção executiva — maquiadores, modelos, fotógrafos, videomakers e stylists — que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas reais: moda e beauty, simultâneas, num espaço profissional em São Paulo.</p>
+        <p class="conceito-p">Você acompanha cada decisão — do briefing ao moodboard, da montagem do set à produção, da pós-produção à entrega final ao cliente. Não é teoria. É o processo real, por dentro, com quem faz isso no mercado.</p>
         <div class="conceito-line">
-          <span>Conhecimento acima de tudo.</span>
-          <span>As pessoas que você encontra valem tanto quanto o que você aprende.</span>
-          <span>100% prático. São Paulo. Network real.</span>
+          <span>Do pré à entrega ao cliente.</span>
+          <span>Dois sets simultâneos. Uma direção completa.</span>
+          <span>Conhecimento que transforma o que você já faz.</span>
         </div>
       </div>
     </div>
@@ -642,7 +642,7 @@ body.has-announce{padding-top:40px;}
       <span class="sec-index">Tudo o que você precisa saber</span>
     </div>
     <div class="faq" data-reveal>
-      <details open><summary>Para quem é o Inside Out? <span class="pm">+</span></summary><div class="ans">Para fotógrafos, diretores, videomakers, produtores, artistas e profissionais criativos que já trabalham ou querem trabalhar com produção de alto padrão. Não é um evento introdutório — é para quem quer elevar o nível do que já faz. Turma fechada: 20 cadeiras.</div></details>
+      <details open><summary>Para quem é o Inside Out? <span class="pm">+</span></summary><div class="ans">Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas — do pré, passando pela produção, até a entrega ao cliente. É para quem já atua e quer entender o processo por dentro. Turma fechada: 20 cadeiras.</div></details>
       <details><summary>Onde acontece o Dia 01? <span class="pm">+</span></summary><div class="ans">No <strong>Studio Plano</strong>, em São Paulo, no dia <strong>05 de setembro de 2026</strong>. Um estúdio profissional real — não uma sala de aula. O endereço completo é enviado na confirmação da inscrição.</div></details>
       <details><summary>E o Dia 02? <span class="pm">+</span></summary><div class="ans">Começa online: sala fechada no <strong>Google Meet das 8h às 12h</strong>, exclusiva para a turma — 4 horas de pós-produção intensiva com Angelo Mazzutti. Às 14h, o encerramento é presencial no <strong>Bar Dona Onça</strong>, em São Paulo. Almoço e happy hour com a turma.</div></details>
       <details><summary>O que trago para o Dia 01? <span class="pm">+</span></summary><div class="ans">Câmera (qualquer câmera — o importante é você saber o que fará com ela), celular, prancheta, notebook e toda a sua criatividade. O estúdio, a equipe, os modelos e o set são por conta do evento.</div></details>
