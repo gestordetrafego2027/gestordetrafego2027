@@ -149,77 +149,123 @@ export function GET() {
   </div>
 </header>
 
-<!-- ============ CONCEITO ============ -->
-<section class="section paper" id="conceito">
-  <div class="wrap concept">
-    <div class="sec-head" data-reveal>
-      <span class="eyebrow">01 — Conceito</span>
-      <span class="sec-index">Studio Plano · São Paulo · Set 2026</span>
-    </div>
-    <h2 class="big" data-reveal>Em terra de IA,<br><em>quem dirige um set<br>sai na frente.</em></h2>
-    <div class="concept-foot">
-      <p class="lead" data-reveal>IA é acessível — todo mundo usa. Mas quem consegue dirigir uma superprodução cenográfica, dois sets simultâneos, moda e beauty ao vivo?<br>Isso não se delega para algoritmo.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ VIVÊNCIAS ============ -->
-<section class="section paper" id="vivencias" style="padding-top:0">
+<!-- ============ 01 · CONCEITO ============ -->
+<section class="section paper io-conceito" id="conceito">
   <div class="wrap">
-    <div class="exp">
-      <div class="exp-item" data-reveal><span class="exp-n">01</span><div><div class="exp-t">Dois sets simultâneos · um só espaço</div><div class="exp-d">Moda (lookbook, foto e vídeo publicitário) e beauty still — rodando ao mesmo tempo, no mesmo estúdio.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">02</span><div><div class="exp-t">Moodboard e escopo ao vivo</div><div class="exp-d">Toda a direção nasce aqui: referências, mood da marca e plano de campanha antes de a câmera ligar.</div></div></div>
-      <div class="exp-item" data-reveal><span class="exp-n">03</span><div><div class="exp-t">Você acompanha e dirige</div><div class="exp-d">Não é observar de longe. Você está dentro, tomando decisões junto com Angelo Mazzutti.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">04</span><div><div class="exp-t">Briefing Mal Passado · o livro</div><div class="exp-d">Toda a teoria mastigada em livro — para nada do dia ser novidade na hora de executar.</div></div></div>
-      <div class="exp-item" data-reveal><span class="exp-n">05</span><div><div class="exp-t">Pós-produção intensiva</div><div class="exp-d">4h online com Angelo Mazzutti. Edição, cor, entrega. Tela a tela.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">06</span><div><div class="exp-t">Rede · Certificado · Bar Dona Onça</div><div class="exp-d">Fornecedores SP, certificado HMZT e almoço de encerramento.</div></div></div>
+    <div class="conceito-tag" data-reveal>
+      <span class="mono-sm">01 — Conceito</span>
+      <span class="mono-sm">Studio Plano · SP · Set 2026</span>
     </div>
-  </div>
-</section>
-
-<!-- ============ MÉTODO INSIDE / OUT ============ -->
-<section class="section ink" id="metodo">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <span class="eyebrow" style="color:var(--smoke)">03 — Os dois dias</span>
-      <span class="sec-index">Studio Plano → Bar Dona Onça</span>
-    </div>
-  </div>
-  <div class="wrap" style="max-width:var(--maxw)">
-    <div class="io">
-      <div class="io-col inside" data-reveal>
-        <div class="io-tag"><span class="io-day">05 Set · Dia 01</span><span class="mono">Studio Plano · SP</span></div>
-        <div class="io-word">Inside</div>
-        <ul class="sched" style="margin-top:24px">
-          <li><span class="tm">Manhã</span><span class="ds"><b>Abertura + Moodboard</b>Briefing e conceito visual ao vivo</span></li>
-          <li><span class="tm">—</span><span class="ds"><b>Set 01 · Moda</b>Still, lookbook, campanha em tempo real</span></li>
-          <li><span class="tm">Tarde</span><span class="ds"><b>Set 02 · Beauty</b>Nova produção, nova direção</span></li>
-          <li><span class="tm">—</span><span class="ds"><b>Orientação contínua</b>Angelo disponível durante todo o dia</span></li>
-        </ul>
+    <div class="conceito-split">
+      <div class="conceito-left" data-reveal>
+        <h2 class="conceito-h">Em terra de IA,<br>quem dirige<br><em>um set</em><br>sai na frente.</h2>
       </div>
-      <div class="io-col out" data-reveal data-reveal-d="1">
-        <div class="io-tag"><span class="io-day">06 Set · Dia 02</span><span class="mono">Online → Bar Dona Onça</span></div>
-        <div class="io-word">Out</div>
-        <ul class="sched" style="margin-top:24px">
-          <li><span class="tm">08:00</span><span class="ds"><b>Pós-produção</b>Edição ao vivo — turma fechada com Angelo</span></li>
-          <li><span class="tm">—</span><span class="ds"><b>IA aplicada · retouch e entrega</b>Still e moda: ferramentas reais de retoque e finalização com IA</span></li>
-          <li><span class="tm">12:00</span><span class="ds"><b>Fornecedores SP</b>Lista curada de parceiros</span></li>
-          <li><span class="tm">14:00</span><span class="ds"><b>Bar Dona Onça</b>Almoço e encerramento</span></li>
-          <li><span class="tm">—</span><span class="ds"><b>Certificação HMZT</b>Oficial. Assinado. Merecido.</span></li>
-        </ul>
+      <div class="conceito-right" data-reveal data-reveal-d="1">
+        <p class="conceito-p">IA é acessível — todo mundo usa. Mas e quem consegue dirigir uma superprodução cenográfica com dois sets simultâneos, moda e beauty, ao vivo?</p>
+        <p class="conceito-p">Isso não se delega para algoritmo. E é exatamente isso que você vai aprender a fazer aqui.</p>
+        <div class="conceito-line">
+          <span>Você já sabe fotografar e filmar.</span>
+          <span>Mas ainda sofre na hora de cobrar e entregar campanhas.</span>
+          <span>No Inside Out você prepara o processo completo — do briefing à entrega.</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ COMUNIDADE / BASTIDORES ============ -->
-<section class="section ink gallery" id="comunidade">
+<!-- ============ 02 · O QUE VOCÊ FAZ ============ -->
+<section class="section io-faz" id="vivencias">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <span class="eyebrow" style="color:var(--smoke)">— Bastidores · Edit 01</span>
-      <span class="sec-index">A atmosfera de um set profissional real</span>
+    <div class="faz-head" data-reveal>
+      <span class="mono-sm">02 — O que você faz</span>
     </div>
-    <h2 class="h-2 display" data-reveal style="margin-bottom:clamp(30px,4vw,56px)">Dentro<br>do set.</h2>
+    <div class="faz-grid">
+      <div class="faz-item" data-reveal>
+        <div class="faz-n">01</div>
+        <div class="faz-t">Dois sets simultâneos</div>
+        <div class="faz-d">Moda (lookbook, foto e vídeo publicitário) e beauty still rodando ao mesmo tempo, no mesmo estúdio enorme.</div>
+      </div>
+      <div class="faz-item" data-reveal data-reveal-d="1">
+        <div class="faz-n">02</div>
+        <div class="faz-t">Moodboard e escopo ao vivo</div>
+        <div class="faz-d">Referências, mood da marca e plano de campanha — tudo construído antes de a câmera ligar.</div>
+      </div>
+      <div class="faz-item" data-reveal>
+        <div class="faz-n">03</div>
+        <div class="faz-t">Você dirige, não observa</div>
+        <div class="faz-d">Está dentro tomando decisões junto com Angelo Mazzutti. Não é plateia — é produção.</div>
+      </div>
+      <div class="faz-item" data-reveal data-reveal-d="1">
+        <div class="faz-n">04</div>
+        <div class="faz-t">Briefing Mal Passado</div>
+        <div class="faz-d">O livro do Angelo — toda a teoria mastigada para nada do dia de produção ser surpresa.</div>
+      </div>
+      <div class="faz-item" data-reveal>
+        <div class="faz-n">05</div>
+        <div class="faz-t">Pós-produção + IA</div>
+        <div class="faz-d">4h de edição ao vivo, retouch de still e moda com ferramentas reais de IA. Tela a tela.</div>
+      </div>
+      <div class="faz-item" data-reveal data-reveal-d="1">
+        <div class="faz-n">06</div>
+        <div class="faz-t">Rede · Certificado · Encerramento</div>
+        <div class="faz-d">Fornecedores SP, certificado HMZT e almoço de encerramento no Bar Dona Onça.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · OS DOIS DIAS (CALLSHEET) ============ -->
+<section class="section ink io-dias" id="metodo">
+  <div class="wrap">
+    <div class="dias-head" data-reveal>
+      <span class="mono-sm" style="color:var(--smoke)">03 — Os dois dias</span>
+      <span class="mono-sm" style="color:var(--smoke)">Studio Plano → Bar Dona Onça</span>
+    </div>
+    <div class="dias-grid">
+
+      <div class="dia-col" data-reveal>
+        <div class="dia-label">
+          <span class="dia-num">Dia 01</span>
+          <span class="dia-data mono-sm">Sáb 05 Set · Studio Plano · SP</span>
+        </div>
+        <div class="dia-word">Inside</div>
+        <div class="callsheet">
+          <div class="cs-row"><span class="cs-tm">Call</span><span class="cs-ds"><b>Crew call + montagem de set</b></span></div>
+          <div class="cs-row"><span class="cs-tm">Manhã</span><span class="cs-ds"><b>Briefing + moodboard ao vivo</b>Escopo da campanha e direção visual</span></div>
+          <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>Set 01 · Moda</b>Lookbook, foto e vídeo publicitário</span></div>
+          <div class="cs-row"><span class="cs-tm">Tarde</span><span class="cs-ds"><b>Set 02 · Beauty</b>Still publicitário · nova produção</span></div>
+          <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>Wrap + debriefing</b>Angelo disponível o dia inteiro</span></div>
+        </div>
+      </div>
+
+      <div class="dia-divider"></div>
+
+      <div class="dia-col" data-reveal data-reveal-d="1">
+        <div class="dia-label">
+          <span class="dia-num">Dia 02</span>
+          <span class="dia-data mono-sm">Dom 06 Set · Online → Bar Dona Onça</span>
+        </div>
+        <div class="dia-word">Out</div>
+        <div class="callsheet">
+          <div class="cs-row"><span class="cs-tm">08:00</span><span class="cs-ds"><b>Pós-produção</b>Edição ao vivo — turma fechada</span></div>
+          <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>IA aplicada</b>Retouch still e moda com ferramentas reais</span></div>
+          <div class="cs-row"><span class="cs-tm">12:00</span><span class="cs-ds"><b>Fornecedores SP</b>Lista curada de parceiros</span></div>
+          <div class="cs-row"><span class="cs-tm">14:00</span><span class="cs-ds"><b>Bar Dona Onça</b>Almoço e encerramento presencial</span></div>
+          <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>Certificação HMZT</b>Oficial. Assinado. Merecido.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section class="section ink gallery io-gallery" id="galeria">
+  <div class="wrap">
+    <div class="gal-head" data-reveal>
+      <span class="mono-sm" style="color:var(--smoke)">Bastidores · Edit 01</span>
+      <span class="mono-sm" style="color:var(--smoke)">A atmosfera de um set profissional real</span>
+    </div>
     <div class="gallery-grid">
       <div class="gallery-item" data-reveal><img src="/images/academy/studio-plano/studio-plano-1.webp" alt="Studio Plano · Camarim" loading="lazy"></div>
       <div class="gallery-item" data-reveal data-reveal-d="1"><img src="/images/academy/studio-plano/studio-plano-2.webp" alt="Studio Plano · Ciclorama" loading="lazy"></div>
@@ -228,9 +274,49 @@ export function GET() {
       <div class="gallery-item" data-reveal data-reveal-d="1"><img src="/images/academy/edit-01/edit01-model.webp" alt="Edit 01 · Set" loading="lazy"></div>
       <div class="gallery-item" data-reveal data-reveal-d="2"><img src="/images/academy/edit-01/edit01-amanda.webp" alt="Edit 01 · Produção" loading="lazy"></div>
     </div>
-    <p class="mono" data-reveal style="margin-top:clamp(22px,3vw,34px);color:var(--smoke)">Studio Plano · São Paulo — o espaço onde o Edit 2 acontece em setembro de 2026.</p>
   </div>
 </section>
+
+<style>
+/* ── CONCEITO ── */
+.conceito-tag{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:clamp(40px,6vw,80px);}
+.conceito-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:start;}
+@media(max-width:760px){.conceito-split{grid-template-columns:1fr;}}
+.conceito-h{font-family:var(--display);font-weight:900;font-size:clamp(2.4rem,5.5vw,6rem);line-height:.92;letter-spacing:-.02em;text-transform:uppercase;margin:0;}
+.conceito-h em{font-style:italic;font-weight:900;}
+.conceito-p{font-size:clamp(.95rem,1.1vw,1.1rem);line-height:1.65;color:#54524d;margin-bottom:1.2em;max-width:44ch;}
+.conceito-line{margin-top:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:10px;border-left:2px solid var(--ink);padding-left:18px;}
+.conceito-line span{font-size:.82rem;color:#888;line-height:1.5;}
+/* ── O QUE VOCÊ FAZ ── */
+.io-faz{background:#f4f1ea;}
+.faz-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid #ddd6c8;margin-bottom:clamp(36px,5vw,64px);}
+.faz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #ddd6c8;}
+@media(max-width:860px){.faz-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.faz-grid{grid-template-columns:1fr;}}
+.faz-item{padding:clamp(24px,3vw,40px) clamp(16px,2vw,28px);border-right:1px solid #ddd6c8;border-bottom:1px solid #ddd6c8;}
+.faz-item:nth-child(3n){border-right:none;}
+@media(max-width:860px){.faz-item:nth-child(2n){border-right:none;}.faz-item:nth-child(3n){border-right:1px solid #ddd6c8;}}
+.faz-n{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:#bbb;margin-bottom:14px;}
+.faz-t{font-weight:700;font-size:clamp(.9rem,1.1vw,1.05rem);color:var(--ink);margin-bottom:8px;letter-spacing:-.01em;}
+.faz-d{font-size:.8rem;line-height:1.6;color:#6a6a66;}
+/* ── OS DOIS DIAS ── */
+.dias-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line-d);margin-bottom:clamp(40px,6vw,80px);}
+.dias-grid{display:grid;grid-template-columns:1fr 1px 1fr;gap:clamp(32px,5vw,72px);}
+@media(max-width:760px){.dias-grid{grid-template-columns:1fr;}.dia-divider{display:none;}}
+.dia-divider{background:var(--line-d);width:1px;}
+.dia-label{margin-bottom:16px;}
+.dia-num{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke);margin-bottom:4px;}
+.dia-data{color:var(--smoke)!important;}
+.dia-word{font-family:var(--display);font-weight:900;font-size:clamp(4rem,9vw,9rem);line-height:.88;letter-spacing:-.03em;text-transform:uppercase;color:var(--paper);margin:24px 0 32px;}
+.callsheet{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line-d);}
+.cs-row{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line-d);}
+.cs-tm{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:var(--smoke);padding-top:2px;}
+.cs-ds{font-size:.82rem;line-height:1.5;color:#c8c2b6;}
+.cs-ds b{display:block;color:var(--paper);font-weight:600;margin-bottom:2px;}
+/* ── GALERIA ── */
+.gal-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line-d);margin-bottom:clamp(32px,4vw,56px);}
+.mono-sm{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;}
+</style>
 
 
 <!-- ============ DIRETOR ============ -->
