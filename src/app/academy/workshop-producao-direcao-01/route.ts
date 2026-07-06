@@ -378,23 +378,6 @@ body.has-announce{padding-top:40px;}
   </div>
 </section>
 
-<!-- ============ GALERIA ============ -->
-<section class="section ink gallery io-gallery" id="galeria">
-  <div class="wrap">
-    <div class="gal-head" data-reveal>
-      <span class="mono-sm" style="color:var(--smoke)">Bastidores · Edit 01</span>
-      <span class="mono-sm" style="color:var(--smoke)">A atmosfera de um set profissional real</span>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item" data-reveal><img src="/images/academy/studio-plano/studio-plano-1.webp" alt="Studio Plano · Camarim" loading="lazy"></div>
-      <div class="gallery-item" data-reveal data-reveal-d="1"><img src="/images/academy/studio-plano/studio-plano-2.webp" alt="Studio Plano · Ciclorama" loading="lazy"></div>
-      <div class="gallery-item" data-reveal data-reveal-d="2"><img src="/images/academy/studio-plano/studio-plano-3.webp" alt="Studio Plano · Lounge" loading="lazy"></div>
-      <div class="gallery-item" data-reveal><img src="/images/academy/edit-01/edit01-equipe.webp" alt="Edit 01 · Equipe" loading="lazy"></div>
-      <div class="gallery-item" data-reveal data-reveal-d="1"><img src="/images/academy/edit-01/edit01-model.webp" alt="Edit 01 · Set" loading="lazy"></div>
-      <div class="gallery-item" data-reveal data-reveal-d="2"><img src="/images/academy/edit-01/edit01-amanda.webp" alt="Edit 01 · Produção" loading="lazy"></div>
-    </div>
-  </div>
-</section>
 
 <style>
 /* ── CONCEITO ── */
@@ -570,9 +553,15 @@ body.has-announce{padding-top:40px;}
         <p style="margin-top:24px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)">São Paulo · SP · 05 de Setembro de 2026</p>
       </div>
     </div>
+    <!-- fotos do espaço -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.5vw,16px);margin-top:clamp(16px,2.5vw,28px)" data-reveal>
+      <div style="aspect-ratio:4/3;overflow:hidden"><img src="/images/academy/studio-plano/studio-plano-1.webp" alt="Studio Plano · Camarim" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      <div style="aspect-ratio:4/3;overflow:hidden"><img src="/images/academy/studio-plano/studio-plano-2.webp" alt="Studio Plano · Ciclorama" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      <div style="aspect-ratio:4/3;overflow:hidden"><img src="/images/academy/studio-plano/studio-plano-3.webp" alt="Studio Plano · Lounge" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+    </div>
   </div>
 </section>
-<style>@media (max-width:760px){#local .wrap > div{grid-template-columns:1fr!important} #local .wrap > div > div:first-child{order:0!important}}</style>
+<style>@media (max-width:760px){#local .wrap > div:first-child{grid-template-columns:1fr!important} #local .wrap > div:first-child > div:first-child{order:0!important}}</style>
 
 <!-- ============ DEPOIMENTOS ============ -->
 <section class="section paper" id="depoimentos">
