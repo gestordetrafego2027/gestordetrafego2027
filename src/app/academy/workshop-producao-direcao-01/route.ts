@@ -146,7 +146,7 @@ body.has-announce{padding-top:40px;}
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
       <div class="hero-rot"><span class="rot" id="rot">Duas campanhas simultâneas · moda e beauty</span></div>
-      <p class="hero-sub">Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas — do pré à produção e à entrega ao cliente. <em>20 vagas.</em></p>
+      <p class="hero-sub">Acompanhe de perto a direção completa de duas campanhas reais — do briefing à entrega. <em>20 vagas.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -167,12 +167,6 @@ body.has-announce{padding-top:40px;}
         </div>
         <div class="eib-sep"></div>
         <a class="eib-cta" data-reserve href="#planos">Entrar na lista <span>↗</span></a>
-      </div>
-      <div class="countdown" id="countdown">
-        <div class="cd-unit"><span class="cd-num" data-cd="d">00</span><span class="cd-lab">Dias</span></div>
-        <div class="cd-unit"><span class="cd-num" data-cd="h">00</span><span class="cd-lab">Horas</span></div>
-        <div class="cd-unit"><span class="cd-num" data-cd="m">00</span><span class="cd-lab">Min</span></div>
-        <div class="cd-unit"><span class="cd-num" data-cd="s">00</span><span class="cd-lab">Seg</span></div>
       </div>
       <div class="scroll-cue">Role <span class="ln"></span></div>
     </div>
@@ -357,9 +351,8 @@ body.has-announce{padding-top:40px;}
         <div class="dia-word">Inside</div>
         <div class="callsheet">
           <div class="cs-row"><span class="cs-tm">Call</span><span class="cs-ds"><b>Alinhamento de briefing</b>1h com Angelo — escopo, conceito e direção visual da campanha</span></div>
-          <div class="cs-row"><span class="cs-tm">Manhã</span><span class="cs-ds"><b>Moodboard ao vivo + montagem de set</b>Referências, mood e cenografia em tempo real</span></div>
-          <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>Set 01 · Moda</b>Lookbook, foto e vídeo publicitário</span></div>
-          <div class="cs-row"><span class="cs-tm">Tarde</span><span class="cs-ds"><b>Set 02 · Beauty</b>Still publicitário · nova produção</span></div>
+          <div class="cs-row"><span class="cs-tm">Manhã</span><span class="cs-ds"><b>Set 01 · Moda</b>Moodboard, montagem e produção ao vivo — equipe completa, cenografia e modelos</span></div>
+          <div class="cs-row"><span class="cs-tm">Tarde</span><span class="cs-ds"><b>Set 02 · Beauty</b>Produção ao vivo — equipe completa, cenografia e modelos</span></div>
           <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>Wrap + debriefing</b>Angelo disponível o dia inteiro</span></div>
         </div>
       </div>
@@ -495,10 +488,10 @@ body.has-announce{padding-top:40px;}
     <div class="plans plans--lotes" data-reveal>
 
       <div class="plan plan--lote feat">
-        <span class="ribbon">Lote atual</span>
+        <span class="ribbon">Julho</span>
         <div class="plan-tag"><span>Lote 1</span><span>01</span></div>
         <div class="plan-name">R$ 1.410</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 470 · Preço de lançamento</small></div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 470 · Julho</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -509,16 +502,15 @@ body.has-announce{padding-top:40px;}
           <li>Pós-produção intensiva · Dia 02 online</li>
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
-          <li>🏆 <strong>Concorre ao Prêmio Destaque</strong> — ingresso devolvido + vaga no próximo evento</li>
         </ul>
         <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
       </div>
 
       <div class="plan plan--lote">
-        <span class="ribbon" style="background:#2a2a22;color:#efe9da">Abre 10 Jul</span>
+        <span class="ribbon" style="background:#2a2a22;color:#efe9da">Agosto</span>
         <div class="plan-tag"><span>Lote 2</span><span>02</span></div>
         <div class="plan-name">R$ 1.530</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 510 · Abre 10 Jul</small></div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 510 · Abre em Agosto</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -529,15 +521,15 @@ body.has-announce{padding-top:40px;}
           <li>Pós-produção intensiva · Dia 02 online</li>
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
-          <li>🏆 <strong>Concorre ao Prêmio Destaque</strong> — ingresso devolvido + vaga no próximo evento</li>
         </ul>
-        <button class="btn" disabled style="opacity:.5;cursor:not-allowed;border-style:dashed"><span class="lbl">Aguarde · em breve</span></button>
+        <button class="btn" disabled style="opacity:.5;cursor:not-allowed;border-style:dashed"><span class="lbl">Abre em Agosto</span></button>
       </div>
 
       <div class="plan plan--lote">
+        <span class="ribbon" style="background:#2a2a22;color:#efe9da">Setembro</span>
         <div class="plan-tag"><span>Lote 3</span><span>03</span></div>
         <div class="plan-name">R$ 1.700</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>Disponível a partir de 05 Ago</small></div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 567 · Abre em Setembro</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -548,9 +540,8 @@ body.has-announce{padding-top:40px;}
           <li>Pós-produção intensiva · Dia 02 online</li>
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
-          <li>🏆 <strong>Concorre ao Prêmio Destaque</strong> — ingresso devolvido + vaga no próximo evento</li>
         </ul>
-        <button class="btn" data-reserve data-plan="Inside Out — Lote 3" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível 05 Ago</span></button>
+        <button class="btn" disabled style="opacity:.45;cursor:not-allowed;border-style:dashed"><span class="lbl">Abre em Setembro</span></button>
       </div>
 
     </div>
@@ -558,7 +549,7 @@ body.has-announce{padding-top:40px;}
     <div class="scarcity" data-reveal>
       <span class="vagas-txt" id="vagasTxt">14 / 20 cadeiras preenchidas</span>
       <span class="vagas-bar"><i id="vagasBar"></i></span>
-      <span class="vagas-txt" style="color:var(--accent)">● Lote 1 encerrando</span>
+      <span class="vagas-txt" style="color:var(--accent)">● Lote 1 · Julho</span>
     </div>
   </div>
 </section>
