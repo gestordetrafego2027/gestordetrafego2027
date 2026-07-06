@@ -570,6 +570,34 @@ body.has-announce{padding-top:40px;}
       <span class="eyebrow">— Edit 01 · quem esteve lá</span>
       <span class="sec-index">Palavras de quem viveu o processo</span>
     </div>
+
+    <!-- vídeo depoimento -->
+    <div class="dep-video-wrap" data-reveal>
+      <video id="depVideo" src="/videos/depoimentos-inside-out.mp4" playsinline preload="metadata" style="width:100%;display:block;"></video>
+      <button class="dep-play" id="depPlay" aria-label="Play">
+        <svg viewBox="0 0 64 64" width="56" height="56"><circle cx="32" cy="32" r="31" stroke="rgba(239,233,218,.9)" stroke-width="1.5" fill="rgba(10,10,8,.55)"/><polygon points="26,20 48,32 26,44" fill="rgba(239,233,218,.95)"/></svg>
+      </button>
+    </div>
+    <style>
+    .dep-video-wrap{position:relative;background:#0a0a08;aspect-ratio:16/9;overflow:hidden;margin-bottom:clamp(40px,5vw,72px);cursor:pointer;}
+    .dep-video-wrap video{width:100%;height:100%;object-fit:cover;}
+    .dep-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;transition:opacity .2s;}
+    .dep-play:hover{opacity:.8;}
+    .dep-play.hidden{display:none;}
+    </style>
+    <script>
+    (function(){
+      var v=document.getElementById('depVideo');
+      var btn=document.getElementById('depPlay');
+      btn.addEventListener('click',function(){
+        if(v.paused){v.play();btn.classList.add('hidden');}
+      });
+      v.addEventListener('pause',function(){btn.classList.remove('hidden');});
+      v.addEventListener('ended',function(){btn.classList.remove('hidden');});
+    })();
+    </script>
+
+    <!-- depoimentos texto -->
     <div class="tlist">
       <div class="tcard" data-reveal>
         <p class="tquote">Saí com um método, não com inspiração. Ver a campanha sendo construída ao vivo me mostrou o que eu não sabia que não sabia sobre direção.</p>
