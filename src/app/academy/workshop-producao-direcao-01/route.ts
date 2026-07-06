@@ -186,27 +186,19 @@ body.has-announce{padding-top:40px;}
     <div class="pq-items">
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Fotógrafos e videomakers</b> que querem entender a direção criativa por dentro — e elevar o nível do que já entregam</span>
+        <span><b>Fotógrafos e videomakers</b> que querem entender a direção criativa por dentro</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Maquiadores e beauty artists</b> que querem ver como a direção pensa o beauty do briefing à entrega final ao cliente</span>
+        <span><b>Maquiadores e beauty artists</b> que querem ver como a direção pensa o beauty</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Modelos</b> que querem entender o processo completo de produção de campanha e trabalhar melhor com qualquer diretor</span>
+        <span><b>Modelos</b> que querem entender o processo completo de produção de campanha</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Stylists e produtores de moda</b> que querem aprimorar seu processo criativo dentro de uma campanha real</span>
-      </div>
-      <div class="pq-item">
-        <span class="pq-icon">↗</span>
-        <span><b>Profissionais de produção executiva</b> que querem vivenciar o pré, a produção e a pós até a entrega ao cliente</span>
-      </div>
-      <div class="pq-item">
-        <span class="pq-icon">↗</span>
-        <span><b>Quem aprende fazendo</b> — acompanhando de perto cada decisão criativa, técnica e executiva de duas campanhas simultâneas</span>
+        <span><b>Stylists</b> que querem aprimorar seu processo criativo dentro de uma campanha real</span>
       </div>
     </div>
   </div>
@@ -218,7 +210,7 @@ body.has-announce{padding-top:40px;}
 .pq-label{color:var(--smoke);white-space:nowrap;padding-top:4px;}
 .pq-items{display:grid;grid-template-columns:1fr 1fr;gap:0;flex:1;}
 @media(max-width:640px){.pq-items{grid-template-columns:1fr;}}
-.pq-item{display:flex;gap:14px;align-items:flex-start;padding:20px 20px 20px 0;border-bottom:1px solid var(--line-d);}
+.pq-item{display:flex;gap:14px;align-items:flex-start;padding:26px 20px 26px 0;border-bottom:1px solid var(--line-d);}
 .pq-item:nth-child(odd){border-right:1px solid var(--line-d);padding-right:28px;}
 .pq-item:nth-last-child(-n+2){border-bottom:none;}
 @media(max-width:640px){.pq-item:nth-child(odd){border-right:none;}.pq-item:nth-last-child(-n+2){border-bottom:1px solid var(--line-d);}.pq-item:last-child{border-bottom:none;}}
@@ -238,12 +230,10 @@ body.has-announce{padding-top:40px;}
         <h2 class="conceito-h">Duas<br>campanhas.<br><em>Um dia.<br>Você lá.</em></h2>
       </div>
       <div class="conceito-right" data-reveal data-reveal-d="1">
-        <p class="conceito-p">O Inside Out Edit 2 é voltado para profissionais de produção executiva — maquiadores, modelos, fotógrafos, videomakers e stylists — que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas reais: moda e beauty, simultâneas, num espaço profissional em São Paulo.</p>
-        <p class="conceito-p">Você acompanha cada decisão — do briefing ao moodboard, da montagem do set à produção, da pós-produção à entrega final ao cliente. Não é teoria. É o processo real, por dentro, com quem faz isso no mercado.</p>
+        <p class="conceito-p">Duas campanhas reais — moda e beauty — rodando simultâneas num estúdio profissional em São Paulo. Você acompanha cada decisão, do briefing à entrega. Não é teoria. É o processo por dentro.</p>
         <div class="conceito-line">
           <span>Do pré à entrega ao cliente.</span>
-          <span>Dois sets simultâneos. Uma direção completa.</span>
-          <span>Conhecimento que transforma o que você já faz.</span>
+          <span>Dois sets. Uma direção completa.</span>
         </div>
       </div>
     </div>
@@ -260,32 +250,26 @@ body.has-announce{padding-top:40px;}
       <div class="faz-item" data-reveal>
         <div class="faz-n">01</div>
         <div class="faz-t">Duas campanhas simultâneas</div>
-        <div class="faz-d">Moda e beauty rodando ao mesmo tempo, no mesmo espaço. Você acompanha, aprende e produz dentro dos dois sets.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">02</div>
         <div class="faz-t">Equipe de mercado consolidada</div>
-        <div class="faz-d">Diretor criativo, fotógrafos profissionais, stylist, set design, camareira e modelos. Profissionais de grandes sets trabalhando ao seu lado.</div>
       </div>
       <div class="faz-item" data-reveal>
         <div class="faz-n">03</div>
         <div class="faz-t">Aperfeiçoamento na prática</div>
-        <div class="faz-d">Cliques, direção, cenografia, figurino, locação — você absorve o processo completo de quem vive isso no mercado.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">04</div>
         <div class="faz-t">Conteúdo próprio · foto e vídeo</div>
-        <div class="faz-d">Cada participante tem espaço para gerar suas próprias imagens — foto ou vídeo — dentro da estrutura profissional do set.</div>
       </div>
       <div class="faz-item" data-reveal>
         <div class="faz-n">05</div>
         <div class="faz-t">Pós-produção + IA aplicada</div>
-        <div class="faz-d">4h de edição ao vivo com Angelo. Retouch de still e moda com ferramentas reais de IA. Do clique à entrega.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">06</div>
-        <div class="faz-t">Network · São Paulo · Encerramento</div>
-        <div class="faz-d">Conexões reais com profissionais do mercado e lista curada de fornecedores de São Paulo.</div>
+        <div class="faz-t">Network · Encerramento · SP</div>
       </div>
     </div>
   </div>
@@ -306,13 +290,8 @@ body.has-announce{padding-top:40px;}
           <div class="set-title">Moda<br>Lookbook</div>
           <ul class="set-credits">
             <li><span class="sc-role">Diretor Criativo</span><span class="sc-name">Angelo Mazzutti</span></li>
-            <li><span class="sc-role">Fotógrafo</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Videomaker</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Stylist · Figurino</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Modelo</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Set Design · Cenografia</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Equipe completa</span><span class="sc-name">Incluso</span></li>
             <li><span class="sc-role">Locação · Equipamentos</span><span class="sc-name">Studio Plano · SP</span></li>
-            <li><span class="sc-role">Fotógrafo Suporte</span><span class="sc-name">Incluso</span></li>
           </ul>
         </div>
         <div class="set-img">
@@ -329,13 +308,8 @@ body.has-announce{padding-top:40px;}
           <div class="set-title">Beauty<br>Still</div>
           <ul class="set-credits">
             <li><span class="sc-role">Diretor Criativo</span><span class="sc-name">Angelo Mazzutti</span></li>
-            <li><span class="sc-role">Fotógrafo · Vídeo Still</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Maquiador · Beauty Artist</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Modelos</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Set Design · Cenografia</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Equipe completa</span><span class="sc-name">Incluso</span></li>
             <li><span class="sc-role">Locação · Equipamentos</span><span class="sc-name">Studio Plano · SP</span></li>
-            <li><span class="sc-role">Fotógrafo Suporte</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Figurino · Styling</span><span class="sc-name">Incluso</span></li>
           </ul>
         </div>
         <div class="set-img">
