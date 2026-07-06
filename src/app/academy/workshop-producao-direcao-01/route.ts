@@ -286,7 +286,7 @@ export function GET() {
           </ul>
         </div>
         <div class="set-img">
-          <img src="/images/academy/edit-01/edit01-model.webp" alt="Set 01 · Moda · Lookbook" loading="lazy">
+          <video autoplay muted loop playsinline poster="/images/produtora/moda/beatco/capa.webp" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15) contrast(1.05);" src="/videos/beatco-moda.mp4"></video>
           <div class="set-overlay"></div>
           <div class="set-badge mono-sm">Foto · Vídeo · Lookbook · Campanha</div>
         </div>
@@ -309,7 +309,7 @@ export function GET() {
           </ul>
         </div>
         <div class="set-img">
-          <img src="/images/academy/edit-01/edit01-amanda.webp" alt="Set 02 · Beauty Still" loading="lazy">
+          <video autoplay muted loop playsinline poster="/images/produtora/beleza/oceane/capa.webp" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15) contrast(1.05);" src="/videos/beauty-oceane-larissa.mp4"></video>
           <div class="set-overlay"></div>
           <div class="set-badge mono-sm">Still · Beleza · Publicidade</div>
         </div>
