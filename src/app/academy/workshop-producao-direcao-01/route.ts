@@ -620,15 +620,15 @@ body.has-announce{padding-top:40px;}
     <div class="tlist">
       <div class="tcard" data-reveal>
         <p class="tquote">Saí com um método, não com inspiração. Ver a campanha sendo construída ao vivo me mostrou o que eu não sabia que não sabia sobre direção.</p>
-        <div class="tmeta"><image-slot id="t1" shape="circle" placeholder=" "></image-slot><div><div class="nm">Marina A.</div><div class="rl">Fotógrafa · Uberlândia / MG</div></div></div>
+        <div class="tmeta"><image-slot id="t1" shape="circle" placeholder=" "></image-slot><div><div class="nm">Cassio</div><div class="rl">Fotógrafo · São Paulo / SP</div></div></div>
       </div>
       <div class="tcard" data-reveal data-reveal-d="1">
         <p class="tquote">Não é um curso — é uma produção. Você está dentro do set, tomando decisões. Isso muda o nível da sua entrega para sempre.</p>
-        <div class="tmeta"><image-slot id="t2" shape="circle" placeholder=" "></image-slot><div><div class="nm">Bruno C.</div><div class="rl">Diretor de Arte · Ribeirão Preto / SP</div></div></div>
+        <div class="tmeta"><image-slot id="t2" shape="circle" placeholder=" "></image-slot><div><div class="nm">Rebeca</div><div class="rl">Maquiadora · São Paulo / SP</div></div></div>
       </div>
       <div class="tcard" data-reveal data-reveal-d="2">
         <p class="tquote">Dois dias densos, sem enrolação. A direção de moodboard ao vivo valeu sozinha. Voltei para o trabalho com outra cabeça.</p>
-        <div class="tmeta"><image-slot id="t3" shape="circle" placeholder=" "></image-slot><div><div class="nm">Amanda S.</div><div class="rl">Produtora · Uberaba / MG</div></div></div>
+        <div class="tmeta"><image-slot id="t3" shape="circle" placeholder=" "></image-slot><div><div class="nm">Amanda</div><div class="rl">Stylist · São Paulo / SP</div></div></div>
       </div>
     </div>
   </div>

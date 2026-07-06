@@ -130,42 +130,18 @@
   const formWrap = $('#modalForm');
   const success = $('#modalSuccess');
   const form = $('#form');
-  function openModal(plan){
+  function openModal(){
     formWrap.style.display='block'; success.style.display='none';
-    if(plan){
-      const sel = form.plano;
-      [...sel.options].forEach(o=>{ if(o.text.startsWith(plan)) sel.value=o.value; });
-      modalSub.textContent = 'Plano ' + plan + ' · Inside Out Edit 2 — SP';
-    } else {
-      modalSub.textContent = 'Inside Out · Edit 2 — São Paulo';
-    }
+    modalSub.textContent = 'Inside Out · Edit 2 — São Paulo · Set 2026';
     modal.classList.add('open');
     document.body.style.overflow='hidden';
+    setTimeout(()=>{ const f=form.querySelector('input'); if(f) f.focus(); }, 200);
   }
   function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
-  $$('[data-reserve]').forEach(b=> b.addEventListener('click', e=>{ e.preventDefault(); openModal(b.dataset.plan); }));
+  $$('[data-reserve]').forEach(b=> b.addEventListener('click', e=>{ e.preventDefault(); openModal(); }));
   $$('[data-close]').forEach(b=> b.addEventListener('click', closeModal));
 
-  /* ---- método de pagamento ---- */
-  const methodBtns = $$('[data-method]', form.closest('.modal-card'));
-  let selectedMethod = 'card';
-  function setMethodActive(active){
-    methodBtns.forEach(b=>{
-      const on = b===active;
-      b.style.background = on ? '#14140e' : 'transparent';
-      b.style.color = on ? '#efe9da' : '#14140e';
-      b.style.borderColor = on ? '#14140e' : '#ddd6c8';
-    });
-  }
-  setMethodActive(methodBtns[0]);
-  methodBtns.forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      selectedMethod = btn.dataset.method;
-      setMethodActive(btn);
-    });
-  });
-
-  /* ---- form validation + checkout ---- */
+  /* ---- form validation + waitlist ---- */
   const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   function setErr(input, on){ input.closest('.field').classList.toggle('err', on); }
   form.addEventListener('submit', async e=>{
@@ -182,33 +158,28 @@
       return;
     }
 
-    // Determina plano selecionado
-    const planText = form.plano.value; // ex: "Pro — R$ 2.800"
-    const plan = planText.split(' ')[0]; // "Insider" | "Pro" | "Executivo"
-
     const submitBtn = form.querySelector('[type=submit]');
-    if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Aguarde…'; }
+    const lbl = submitBtn?.querySelector('.lbl');
+    if(submitBtn){ submitBtn.disabled = true; if(lbl) lbl.textContent = 'Aguarde…'; }
 
     try {
-      const res = await fetch('/api/workshop/checkout/', {
+      const res = await fetch('/api/workshop/waitlist/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           name: nome.value.trim(),
           email: email.value.trim(),
           phone: digits,
-          plan,
-          method: selectedMethod,
         }),
       });
       const data = await res.json();
-      if(!res.ok || !data.url) throw new Error(data.error || 'Erro ao iniciar pagamento.');
-      window.location.href = data.url;
+      if(!res.ok) throw new Error(data.error || 'Erro ao registrar.');
+      formWrap.style.display='none';
+      success.style.display='block';
     } catch(err){
-      if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = 'Confirmar inscrição'; }
+      if(submitBtn){ submitBtn.disabled = false; if(lbl) lbl.textContent = 'Entrar na lista'; }
       const errEl = form.querySelector('.form-error');
       if(errEl){ errEl.textContent = err.message; errEl.style.display='block'; }
-      else { alert(err.message); }
     }
   });
   form.querySelectorAll('input').forEach(inp=>{
