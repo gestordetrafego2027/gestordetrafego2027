@@ -276,13 +276,13 @@ export function GET() {
           <div class="set-title">Moda<br>Lookbook</div>
           <ul class="set-credits">
             <li><span class="sc-role">Diretor Criativo</span><span class="sc-name">Angelo Mazzutti</span></li>
-            <li><span class="sc-role">Fotógrafo · Dir. de Imagem</span><span class="sc-name">Neto Lins</span></li>
-            <li><span class="sc-role">Videomaker · Dir. de Vídeo</span><span class="sc-name">Lucas Brando</span></li>
-            <li><span class="sc-role">Stylist · Figurino</span><span class="sc-name">A confirmar</span></li>
-            <li><span class="sc-role">Modelo</span><span class="sc-name">Fernanda Olive</span></li>
+            <li><span class="sc-role">Fotógrafo</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Videomaker</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Stylist · Figurino</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Modelo</span><span class="sc-name">Incluso</span></li>
             <li><span class="sc-role">Set Design · Cenografia</span><span class="sc-name">Incluso</span></li>
             <li><span class="sc-role">Locação · Equipamentos</span><span class="sc-name">Studio Plano · SP</span></li>
-            <li><span class="sc-role">Fotógrafo Profissional Suporte</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Fotógrafo Suporte</span><span class="sc-name">Incluso</span></li>
           </ul>
         </div>
         <div class="set-img">
@@ -299,13 +299,13 @@ export function GET() {
           <div class="set-title">Beauty<br>Still</div>
           <ul class="set-credits">
             <li><span class="sc-role">Diretor Criativo</span><span class="sc-name">Angelo Mazzutti</span></li>
-            <li><span class="sc-role">Foto e Vídeo · Still</span><span class="sc-name">Thyago Barriviera</span></li>
-            <li><span class="sc-role">Maquiador · Beauty Artist</span><span class="sc-name">A confirmar</span></li>
-            <li><span class="sc-role">Modelos</span><span class="sc-name">02 · A confirmar</span></li>
+            <li><span class="sc-role">Fotógrafo · Vídeo Still</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Maquiador · Beauty Artist</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Modelos</span><span class="sc-name">Incluso</span></li>
             <li><span class="sc-role">Set Design · Cenografia</span><span class="sc-name">Incluso</span></li>
             <li><span class="sc-role">Locação · Equipamentos</span><span class="sc-name">Studio Plano · SP</span></li>
-            <li><span class="sc-role">Fotógrafo Profissional Suporte</span><span class="sc-name">Incluso</span></li>
-            <li><span class="sc-role">Figurino · Styling</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Fotógrafo Suporte</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Figurino · Styling</span><span class="sc-name">Incluso</span></li>
           </ul>
         </div>
         <div class="set-img">
