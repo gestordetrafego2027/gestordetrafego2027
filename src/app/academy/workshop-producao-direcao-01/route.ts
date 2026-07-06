@@ -49,7 +49,7 @@ export function GET() {
       <a href="#planos">Planos</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="nav-cta" data-reserve href="#planos">Reservar vaga</a>
+    <a class="nav-cta" data-reserve href="#planos">Lista de espera</a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </nav>
@@ -136,7 +136,7 @@ export function GET() {
           <span class="eib-v">20 cadeiras</span>
         </div>
         <div class="eib-sep"></div>
-        <a class="eib-cta" data-reserve href="#planos">Reservar vaga <span>↗</span></a>
+        <a class="eib-cta" data-reserve href="#planos">Entrar na lista <span>↗</span></a>
       </div>
       <div class="countdown" id="countdown">
         <div class="cd-unit"><span class="cd-num" data-cd="d">00</span><span class="cd-lab">Dias</span></div>
@@ -507,7 +507,7 @@ export function GET() {
           <li>Certificado oficial HMZT</li>
           <li>🏆 <strong>Concorre ao Prêmio Destaque</strong> — ingresso devolvido + vaga no próximo evento</li>
         </ul>
-        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir · R$ 1.410</span><span class="ar">↗</span></button>
+        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
       </div>
 
       <div class="plan plan--lote">
@@ -628,7 +628,7 @@ export function GET() {
     <span class="eyebrow" style="color:var(--smoke)" data-reveal>20 cadeiras · Studio Plano · São Paulo</span>
     <h2 class="big" data-reveal>Sua cadeira<br><span class="o">está esperando.</span></h2>
     <p class="lead" data-reveal style="max-width:34ch;color:var(--smoke-lt)">Dois dias. Um estúdio real. Um processo que você leva para o resto da carreira.</p>
-    <button class="btn solid lg" data-reveal data-reserve data-plan="Pro"><span class="lbl">Garantir minha cadeira</span><span class="ar">↗</span></button>
+    <button class="btn solid lg" data-reveal data-reserve data-plan="Lista de espera"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
   </div>
   <div class="marquee">
     <div class="track">
@@ -674,30 +674,23 @@ export function GET() {
   <div class="modal-card">
     <button class="modal-close" data-close aria-label="Fechar">✕</button>
     <div id="modalForm">
-      <h3>Reservar vaga</h3>
-      <div class="sub" id="modalSub">Inside Out · Edit 2 — São Paulo</div>
+      <h3>Lista de espera</h3>
+      <div class="sub" id="modalSub">Inside Out · Edit 2 — São Paulo · Set 2026</div>
+      <p style="color:#54524d;font-size:.85rem;margin:0 0 20px;line-height:1.5">Cadastre-se e seja avisado em primeira mão quando as vagas abrirem. Sem compromisso.</p>
       <form id="form" novalidate>
-        <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name"><div class="msg">Informe seu nome</div></div>
-        <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
-        <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
-        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.410 (3× R$ 470)</option><option disabled>Lote 2 — R$ 1.530 (10 Jul · 3× R$ 510)</option><option disabled>Lote 3 — R$ 1.700 (05 Ago)</option></select><div class="msg"></div></div>
-        <div class="field" style="margin-bottom:18px">
-          <label style="margin-bottom:8px;display:block">Forma de pagamento</label>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <button type="button" data-method="card" class="method-btn active" style="flex:1;min-width:90px;padding:10px 8px;border:2px solid #14140e;background:#14140e;color:#efe9da;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em">💳 Cartão</button>
-            <button type="button" data-method="pix" class="method-btn" style="flex:1;min-width:90px;padding:10px 8px;border:2px solid #ddd6c8;background:transparent;color:#14140e;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em">📱 Pix</button>
-            <button type="button" data-method="boleto" class="method-btn" style="flex:1;min-width:90px;padding:10px 8px;border:2px solid #ddd6c8;background:transparent;color:#14140e;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em">📄 Boleto</button>
-          </div>
-        </div>
+        <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name" placeholder="Seu nome"><div class="msg">Informe seu nome</div></div>
+        <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email" placeholder="seu@email.com"><div class="msg">E-mail inválido</div></div>
+        <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999"><div class="msg">Informe um telefone válido</div></div>
+        <input type="hidden" name="plano" value="Lista de espera — Inside Out Edit 2">
         <div class="form-error" style="display:none;color:#c92a2a;font-size:13px;margin-bottom:12px;text-align:center"></div>
-        <button class="btn solid" type="submit"><span class="lbl">Confirmar inscrição</span><span class="ar">↗</span></button>
+        <button class="btn solid" type="submit"><span class="lbl">Entrar na lista</span><span class="ar">↗</span></button>
       </form>
     </div>
     <div class="modal-success" id="modalSuccess" style="display:none">
       <div class="ok">✓</div>
-      <h3>Vaga reservada</h3>
-      <div class="sub">Enviamos os próximos passos para o seu e-mail.</div>
-      <p style="color:#54524d;max-width:34ch;margin:0 auto">Bem-vindo à jornada Inside Out. Nossa equipe entra em contato em breve para confirmar o pagamento.</p>
+      <h3>Você está na lista</h3>
+      <div class="sub">Avisamos assim que as vagas abrirem.</div>
+      <p style="color:#54524d;max-width:34ch;margin:0 auto">Fique de olho no seu e-mail e WhatsApp. Você vai ser um dos primeiros a saber.</p>
     </div>
   </div>
 </div>
