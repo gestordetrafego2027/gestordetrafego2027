@@ -276,10 +276,10 @@ export function GET() {
           <div class="set-title">Moda<br>Lookbook</div>
           <ul class="set-credits">
             <li><span class="sc-role">Diretor Criativo</span><span class="sc-name">Angelo Mazzutti</span></li>
-            <li><span class="sc-role">Fotógrafo · Dir. de Imagem</span><span class="sc-name">A confirmar</span></li>
-            <li><span class="sc-role">Fotógrafo · Dir. de Vídeo</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Fotógrafo · Dir. de Imagem</span><span class="sc-name">Neto Lins</span></li>
+            <li><span class="sc-role">Videomaker · Dir. de Vídeo</span><span class="sc-name">Lucas Brando</span></li>
             <li><span class="sc-role">Stylist · Figurino</span><span class="sc-name">A confirmar</span></li>
-            <li><span class="sc-role">Modelo</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Modelo</span><span class="sc-name">Fernanda Olive</span></li>
             <li><span class="sc-role">Set Design · Cenografia</span><span class="sc-name">Incluso</span></li>
             <li><span class="sc-role">Locação · Equipamentos</span><span class="sc-name">Studio Plano · SP</span></li>
             <li><span class="sc-role">Fotógrafo Profissional Suporte</span><span class="sc-name">Incluso</span></li>
@@ -299,9 +299,9 @@ export function GET() {
           <div class="set-title">Beauty<br>Still</div>
           <ul class="set-credits">
             <li><span class="sc-role">Diretor Criativo</span><span class="sc-name">Angelo Mazzutti</span></li>
-            <li><span class="sc-role">Fotógrafo · Dir. de Imagem</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Foto e Vídeo · Still</span><span class="sc-name">Thyago Barriviera</span></li>
             <li><span class="sc-role">Maquiador · Beauty Artist</span><span class="sc-name">A confirmar</span></li>
-            <li><span class="sc-role">Modelo</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Modelos</span><span class="sc-name">02 · A confirmar</span></li>
             <li><span class="sc-role">Set Design · Cenografia</span><span class="sc-name">Incluso</span></li>
             <li><span class="sc-role">Locação · Equipamentos</span><span class="sc-name">Studio Plano · SP</span></li>
             <li><span class="sc-role">Fotógrafo Profissional Suporte</span><span class="sc-name">Incluso</span></li>
@@ -493,8 +493,8 @@ export function GET() {
       <div class="plan plan--lote feat">
         <span class="ribbon">Lote atual</span>
         <div class="plan-tag"><span>Lote 1</span><span>01</span></div>
-        <div class="plan-name">R$ 1.350</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>Preço de lançamento</small></div>
+        <div class="plan-name">R$ 1.410</div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 470 · Preço de lançamento</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -507,14 +507,14 @@ export function GET() {
           <li>Certificado oficial HMZT</li>
           <li>🏆 <strong>Concorre ao Prêmio Destaque</strong> — ingresso devolvido + vaga no próximo evento</li>
         </ul>
-        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir · R$ 1.350</span><span class="ar">↗</span></button>
+        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir · R$ 1.410</span><span class="ar">↗</span></button>
       </div>
 
       <div class="plan plan--lote">
         <span class="ribbon" style="background:#2a2a22;color:#efe9da">Abre 10 Jul</span>
         <div class="plan-tag"><span>Lote 2</span><span>02</span></div>
         <div class="plan-name">R$ 1.530</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>Abertura: 10 de Julho de 2026</small></div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 510 · Abre 10 Jul</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -680,7 +680,7 @@ export function GET() {
         <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name"><div class="msg">Informe seu nome</div></div>
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
-        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.350</option><option disabled>Lote 2 — R$ 1.530 (10 Jul)</option><option disabled>Lote 3 — R$ 1.700 (05 Ago)</option></select><div class="msg"></div></div>
+        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.410 (3× R$ 470)</option><option disabled>Lote 2 — R$ 1.530 (10 Jul · 3× R$ 510)</option><option disabled>Lote 3 — R$ 1.700 (05 Ago)</option></select><div class="msg"></div></div>
         <div class="field" style="margin-bottom:18px">
           <label style="margin-bottom:8px;display:block">Forma de pagamento</label>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
