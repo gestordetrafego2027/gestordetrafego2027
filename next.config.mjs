@@ -21,6 +21,8 @@ const nextConfig = {
       // Supabase Storage (prod + dev) — capas de cursos, avatares, produtos digitais
       { protocol: 'https', hostname: 'ohmnzalkfbhdivtttzsa.supabase.co', pathname: '/storage/v1/object/**' },
       { protocol: 'https', hostname: 'urfrxirqkkrosyrvvtdo.supabase.co', pathname: '/storage/v1/object/**' },
+      // Próprio domínio — imagens armazenadas com URL absoluta no banco (legado dev/prod)
+      { protocol: 'https', hostname: 'housemazzutti.com', pathname: '/images/**' },
     ],
     formats: ['image/avif', 'image/webp'],
     qualities: [75, 80, 82, 85, 90],
