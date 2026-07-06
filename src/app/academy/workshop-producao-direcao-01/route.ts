@@ -25,7 +25,7 @@ export function GET() {
 <meta name="twitter:description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas. São Paulo, 2026.">
 <!-- JSON-LD: Event + FAQPage -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias dentro de um estúdio real. Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha, pós-produção e encerramento no Bar Dona Onça. 20 cadeiras.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Studio Plano","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":20},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é a imersão?","acceptedAnswer":{"@type":"Answer","text":"Estudantes e profissionais de Publicidade, Moda, Design, Audiovisual, Fotografia e Marketing que querem dominar o processo completo de uma produção — da ideia à execução. Turma única de 30 pessoas."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. O endereço exato é confirmado na sua inscrição."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"Não. O conteúdo vai do fundamento ao nível profissional. Você sai sabendo, na prática, desenvolver uma produção audiovisual e fotográfica do zero."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial com design profissional, além do Destaque da Imersão — premiação para o participante que mais se destacar ao longo dos dois dias."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias dentro de um estúdio real. Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha, pós-produção e encerramento no Bar Dona Onça. 20 cadeiras.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Studio Plano","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":20},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é o Inside Out?","acceptedAnswer":{"@type":"Answer","text":"Para fotógrafos, diretores, videomakers, produtores e profissionais da publicidade e do audiovisual que querem se aperfeiçoar na prática — participando de duas campanhas simultâneas ao lado de uma equipe de mercado consolidada. Turma fechada: 20 cadeiras."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. Dia 01 no Studio Plano; Dia 02 com pós-produção online e encerramento no Bar Dona Onça."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"O workshop é voltado para quem já atua ou quer atuar com produção de alto padrão. Não é introdutório — é para quem quer elevar o nível do que já faz na prática."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial com design profissional, além do Destaque da Imersão — premiação para o participante que mais se destacar ao longo dos dois dias."}}]}]}
 </script>
 <!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
@@ -110,13 +110,13 @@ export function GET() {
     </div>
 
     <div class="hero-center">
-      <span class="eyebrow">Quer participar de uma mega produção?</span>
+      <span class="eyebrow">Workshop 100% prático · São Paulo · Set 2026</span>
       <h1 class="display hero-title h-hero" style="margin-top:14px">
         <span class="line"><span>Inside</span></span>
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
-      <div class="hero-rot"><span class="rot" id="rot">Seu clique pode entrar na campanha oficial</span></div>
-      <p class="hero-sub">Uma produção publicitária completa — com Angelo Mazzutti, cenografia, equipe profissional e dois sets ao vivo. Câmera na mão. Os melhores takes entram na campanha real. <em>20 vagas.</em></p>
+      <div class="hero-rot"><span class="rot" id="rot">Duas campanhas simultâneas · moda e beauty</span></div>
+      <p class="hero-sub">Para profissionais da publicidade e do audiovisual que querem se aperfeiçoar na prática — ao lado de uma equipe de mercado consolidada, em dois sets de campanha reais, simultâneos, em São Paulo. <em>20 vagas.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -152,31 +152,31 @@ export function GET() {
 <!-- ============ PARA QUEM É ============ -->
 <section class="pq-strip">
   <div class="wrap pq-wrap">
-    <span class="pq-label mono-sm">O que você encontra</span>
+    <span class="pq-label mono-sm">Para quem é</span>
     <div class="pq-items">
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Diretor Criativo</b> — Angelo Mazzutti conduz a produção executiva e a direção da campanha</span>
+        <span><b>Fotógrafos e videomakers</b> que querem se aperfeiçoar em sets de publicidade reais, ao lado de profissionais de mercado</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Fotógrafos profissionais</b> — time de peso para auxiliar, orientar e trabalhar ao seu lado no set</span>
+        <span><b>Produtores e diretores</b> que querem vivenciar o processo de duas campanhas simultâneas — moda e beauty — do briefing à entrega</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Stylist · Set Design · Camareira</b> — equipe completa montando cada detalhe dos dois cenários</span>
+        <span><b>Profissionais do audiovisual e da publicidade</b> que buscam network qualificado e experiência prática em São Paulo</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Modelos e elenco</b> — cast profissional para os sets de moda e beauty</span>
+        <span><b>Quem quer gerar conteúdo próprio</b> — foto ou vídeo — dentro de uma mega estrutura cenográfica profissional</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Dois sets cenográficos</b> — espaço enorme, cenário completo, estrutura de produção publicitária real</span>
+        <span><b>Quem aprende fazendo</b> — sem slide, sem teoria. Você está dentro do set, absorvendo na prática com quem faz isso no mercado</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Você entra como crew</b> — câmera na mão, livre para clicar e filmar o que quiser durante toda a produção</span>
+        <span><b>Quem valoriza as pessoas</b> — o maior ativo do Inside Out é o time que você encontra e os profissionais que você leva para a vida</span>
       </div>
     </div>
   </div>
@@ -205,15 +205,15 @@ export function GET() {
     </div>
     <div class="conceito-split">
       <div class="conceito-left" data-reveal>
-        <h2 class="conceito-h">Uma mega<br>produção.<br><em>Você<br>dentro.</em></h2>
+        <h2 class="conceito-h">Duas<br>campanhas.<br><em>Um dia.<br>Você lá.</em></h2>
       </div>
       <div class="conceito-right" data-reveal data-reveal-d="1">
-        <p class="conceito-p">Imagina entrar numa produção publicitária com cenografia completa, equipe profissional, dois sets simultâneos — e poder fotografar e filmar tudo, do jeito que quiser.</p>
-        <p class="conceito-p">Isso é o Inside Out Edit 2. Angelo Mazzutti dirige. A equipe executa. Você tem câmera na mão e liberdade total dentro do set.</p>
+        <p class="conceito-p">O Inside Out Edit 2 é um workshop 100% prático para profissionais da publicidade e do audiovisual. Dois sets de campanha simultâneos — moda e beauty — produzidos por uma equipe de mercado consolidada, num espaço mega em São Paulo.</p>
+        <p class="conceito-p">Você se aperfeiçoa na prática: nos cliques, na direção, na cenografia, no figurino, na locação — absorvendo o conhecimento de profissionais que fazem isso em grandes sets. E ainda sai com conteúdo próprio, foto ou vídeo, gerado por você durante a produção.</p>
         <div class="conceito-line">
-          <span>Diretor · Fotógrafos · Stylist · Set Design · Camareira · Modelos.</span>
-          <span>Estrutura de produção publicitária real. 100% prático.</span>
-          <span>Os melhores takes entram na campanha oficial.</span>
+          <span>Conhecimento acima de tudo.</span>
+          <span>As pessoas que você encontra valem tanto quanto o que você aprende.</span>
+          <span>100% prático. São Paulo. Network real.</span>
         </div>
       </div>
     </div>
@@ -229,33 +229,33 @@ export function GET() {
     <div class="faz-grid">
       <div class="faz-item" data-reveal>
         <div class="faz-n">01</div>
-        <div class="faz-t">Câmera livre nos dois sets</div>
-        <div class="faz-d">Você clica e capta o que quiser — o quanto puder. Moda e beauty rodando simultaneamente num espaço enorme.</div>
+        <div class="faz-t">Duas campanhas simultâneas</div>
+        <div class="faz-d">Moda e beauty rodando ao mesmo tempo, no mesmo espaço. Você acompanha, aprende e produz dentro dos dois sets.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">02</div>
-        <div class="faz-t">Angelo dirige. Você produz.</div>
-        <div class="faz-d">Angelo faz a produção executiva e direção criativa. Você aplica na prática, dentro do set, em tempo real.</div>
+        <div class="faz-t">Equipe de mercado consolidada</div>
+        <div class="faz-d">Diretor criativo, fotógrafos profissionais, stylist, set design, camareira e modelos. Profissionais de grandes sets trabalhando ao seu lado.</div>
       </div>
       <div class="faz-item" data-reveal>
         <div class="faz-n">03</div>
-        <div class="faz-t">Moodboard e escopo ao vivo</div>
-        <div class="faz-d">Referências, conceito e plano de campanha — construídos antes de a câmera ligar. Você acompanha cada decisão.</div>
+        <div class="faz-t">Aperfeiçoamento na prática</div>
+        <div class="faz-d">Cliques, direção, cenografia, figurino, locação — você absorve o processo completo de quem vive isso no mercado.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">04</div>
-        <div class="faz-t">Seus melhores takes entram na campanha</div>
-        <div class="faz-d">Os melhores cliques e takes são selecionados para a campanha oficial. Seu trabalho pode virar peça publicada.</div>
+        <div class="faz-t">Conteúdo próprio · foto e vídeo</div>
+        <div class="faz-d">Cada participante tem espaço para gerar suas próprias imagens — foto ou vídeo — dentro da estrutura profissional do set.</div>
       </div>
       <div class="faz-item" data-reveal>
         <div class="faz-n">05</div>
         <div class="faz-t">Pós-produção + IA aplicada</div>
-        <div class="faz-d">4h de edição ao vivo. Retouch de still e moda com ferramentas reais de IA. Do clique à entrega final.</div>
+        <div class="faz-d">4h de edição ao vivo com Angelo. Retouch de still e moda com ferramentas reais de IA. Do clique à entrega.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">06</div>
-        <div class="faz-t">Prêmio · Profissional Destaque</div>
-        <div class="faz-d">O melhor do evento recebe o valor do ingresso de volta + vaga confirmada no próximo Inside Out.</div>
+        <div class="faz-t">Network · São Paulo · Encerramento</div>
+        <div class="faz-d">Conexões reais com profissionais do mercado, lista de fornecedores SP e encerramento no Bar Dona Onça.</div>
       </div>
     </div>
   </div>
