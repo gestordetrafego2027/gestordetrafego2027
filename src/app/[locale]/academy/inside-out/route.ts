@@ -292,7 +292,7 @@ export function GET() {
       <a href="#preco">Preço</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="nav-cta" href="#preco">Garantir acesso</a>
+    <a class="nav-cta" href="#preco">Lista de espera</a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </nav>
@@ -510,16 +510,16 @@ export function GET() {
       <div class="ps-right">
         <div>
           <div class="ps-price"><span class="ps-cur">R$</span>197</div>
-          <div class="ps-subprice">à vista · cartão, pix ou boleto</div>
+          <div class="ps-subprice">lançamento em breve</div>
         </div>
         <a class="btn solid lg" href="/checkout/inside-out" style="justify-content:space-between">
-          <span class="lbl">Garantir acesso agora</span>
+          <span class="lbl">Entrar na lista de espera</span>
           <span class="ar">↗</span>
         </a>
         <div class="ps-micro">
-          <span>Pagamento seguro</span>
+          <span>Sem compromisso</span>
+          <span>Avisamos no lançamento</span>
           <span>Acesso vitalício</span>
-          <span>Garantia 7 dias</span>
         </div>
       </div>
     </div>
@@ -576,7 +576,7 @@ export function GET() {
     <span class="eyebrow" style="color:var(--smoke)" data-reveal>Acesso imediato · vitalício</span>
     <h2 class="big" data-reveal>Da ideia à<br><span class="o">campanha.</span></h2>
     <p class="lead" data-reveal style="max-width:32ch;color:var(--smoke-lt)">De dentro para fora: o processo completo que separa quem executa de quem dirige.</p>
-    <a class="btn solid lg" data-reveal href="/checkout/inside-out"><span class="lbl">Garantir acesso agora</span><span class="ar">↗</span></a>
+    <a class="btn solid lg" data-reveal href="/checkout/inside-out"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></a>
   </div>
   <div class="marquee">
     <div class="track">
