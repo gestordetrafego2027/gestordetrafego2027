@@ -60,7 +60,8 @@ body{
   color:var(--paper);
   font-family:var(--body);
   font-size:18px;
-  line-height:1.5;
+  line-height:1.7;
+  letter-spacing:0.012em;
   font-weight:400;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
@@ -117,13 +118,13 @@ button{font-family:inherit;cursor:pointer;}
 }
 
 /* ---------- layout ---------- */
-.section{padding:clamp(72px,11vh,160px) var(--pad);position:relative;}
+.section{padding:clamp(96px,13vh,180px) var(--pad);position:relative;}
 .section.paper{background:var(--paper);color:var(--ink);}
 .section.ink{background:var(--ink);color:var(--paper);}
 .wrap{max-width:var(--maxw);margin:0 auto;width:100%;}
 .grid{display:grid;gap:clamp(24px,4vw,64px);}
 
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,84px);}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:clamp(56px,8vw,110px);}
 .sec-index{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;opacity:.5;}
 
 /* ============================================================
@@ -213,7 +214,7 @@ button{font-family:inherit;cursor:pointer;}
 .hero-out{color:transparent;-webkit-text-stroke:1.4px var(--paper);}
 .hero-rot{margin-top:clamp(18px,2.5vw,30px);height:1.5em;overflow:hidden;}
 .hero-rot .rot{display:block;font-family:var(--mono);font-size:clamp(.8rem,1.5vw,1.05rem);letter-spacing:.12em;text-transform:uppercase;color:var(--paper);transition:transform .6s var(--ease-io),opacity .6s;}
-.hero-sub{max-width:44ch;margin-top:clamp(16px,2vw,24px);color:var(--smoke-lt);font-size:clamp(.98rem,1.2vw,1.15rem);line-height:1.4;}
+.hero-sub{max-width:42ch;margin-top:clamp(20px,2.5vw,32px);color:var(--smoke-lt);font-size:clamp(.98rem,1.2vw,1.15rem);line-height:1.65;letter-spacing:.01em;}
 
 .hero-foot{display:flex;flex-direction:column;align-items:stretch;gap:18px;}
 .event-info-bar{display:flex;align-items:center;gap:0;border:1px solid rgba(255,255,255,.18);border-radius:4px;overflow:hidden;flex-wrap:wrap;}
