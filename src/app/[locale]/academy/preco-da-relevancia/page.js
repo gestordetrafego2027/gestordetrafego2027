@@ -771,10 +771,12 @@ export default function PrecoDaRelevanciaPage() {
             aceita o <span className="blood">preço.</span>
           </p>
           <p className="sub">Esse livro nomeia o acordo silencioso entre o influenciador e o sistema. Antes do próximo contrato, antes do próximo lançamento, antes da próxima decisão de posicionamento.</p>
-          <div className="cta-row">
-            <a href="#comprar" className="btn-primary">Entrar na lista de espera <span>→</span></a>
-            <a href="#sumario" className="btn-secondary">Ver o sumário completo</a>
-          </div>
+          <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--blood-bright)', marginBottom: 20, marginTop: 32 }}>Quero ser avisado no lançamento</p>
+          <WaitlistForm
+            product="preco-da-relevancia"
+            accentColor="var(--blood)"
+            accentTextColor="var(--paper)"
+          />
         </div>
       </section>
 

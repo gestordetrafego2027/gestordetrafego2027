@@ -936,10 +936,12 @@ export default function MarketingParaModelosPage() {
             Quem tem informação <span className="red">sabe quando insistir e quando parar.</span>
           </p>
           <p className="sub">Esse livro existe pra te dar essa informação — antes do próximo book, antes do próximo casting, antes do próximo pix.</p>
-          <div className="cta-row">
-            <a href="#comprar" className="btn-primary">Entrar na lista de espera <span>→</span></a>
-            <a href="#sumario" className="btn-secondary">Ver o sumário completo</a>
-          </div>
+          <p style={{ fontFamily: 'var(--sans)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--mondrian-red)', marginBottom: 20, marginTop: 32 }}>Quero ser avisado no lançamento</p>
+          <WaitlistForm
+            product="marketing-para-modelos"
+            accentColor="var(--ink)"
+            accentTextColor="var(--paper)"
+          />
         </div>
       </section>
 

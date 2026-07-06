@@ -753,10 +753,12 @@ export default function CasosDaProducaoPage() {
             <em>quando o improviso vai embora.</em>
           </p>
           <p className="sub">Sete bastidores reais da House Mazzutti. Como uma operação enxuta pensa, decide e entrega — por quem estava dentro de cada projeto.</p>
-          <div className="cta-row">
-            <a href="#comprar" className="btn-primary">Entrar na lista de espera <span>→</span></a>
-            <a href="#cases" className="btn-secondary">Ver os 7 cases</a>
-          </div>
+          <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--signal)', marginBottom: 20, marginTop: 32 }}>Quero ser avisado no lançamento</p>
+          <WaitlistForm
+            product="casos-da-producao"
+            accentColor="var(--forest)"
+            accentTextColor="var(--paper)"
+          />
         </div>
       </section>
 
