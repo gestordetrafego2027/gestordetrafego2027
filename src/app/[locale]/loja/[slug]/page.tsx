@@ -350,7 +350,7 @@ export default async function ProdutoPage({ params }: Props) {
                   className="font-label text-[9px] uppercase tracking-[0.22em] mb-4"
                   style={{ color: '#aaa' }}
                 >
-                  Disponível em breve · entre na lista
+                  Disponível a partir de 10 de agosto · entre na lista
                 </p>
                 <WaitlistForm product={product.slug} />
               </div>

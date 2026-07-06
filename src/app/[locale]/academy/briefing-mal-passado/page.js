@@ -822,7 +822,7 @@ export default function BriefingMalPassadoPage() {
               <h3>PDF</h3>
               <div className="num"><span className="cur">R$</span>54</div>
               <p className="blurb">PDF de alta resolução, otimizado pra tablet, computador e leitor de e-book. <em>Entrega imediata</em> após pagamento. Licença individual.</p>
-              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>Em breve</span>
+              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>10 de agosto</span>
             </div>
 
             {/* COMBO — destaque */}
@@ -833,7 +833,7 @@ export default function BriefingMalPassadoPage() {
               <div className="num"><span className="cur">R$</span>119</div>
               <div className="strike-line"><s>R$ 149 avulso</s> · 20% off</div>
               <p className="blurb">PDF imediato <em>+</em> livro físico em capa cartonada, despachado em até {PRAZO_IMPRESSO_DIAS} dias úteis. <em>Leia agora, colecione depois.</em></p>
-              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>Em breve</span>
+              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>10 de agosto</span>
             </div>
 
             {/* IMPRESSO */}
@@ -842,12 +842,12 @@ export default function BriefingMalPassadoPage() {
               <h3>Livro físico</h3>
               <div className="num"><span className="cur">R$</span>95</div>
               <p className="blurb">Capa cartonada, miolo offset 90g, formato 16 × 23 cm. <em>Produção House Mazzutti.</em> Envio em até {PRAZO_IMPRESSO_DIAS} dias úteis após pagamento.</p>
-              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>Em breve</span>
+              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>10 de agosto</span>
             </div>
           </div>
 
           <div style={{ marginTop: 48 }}>
-            <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--blood-bright)', marginBottom: 20 }}>Lista de espera — seja avisado no lançamento</p>
+            <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--blood-bright)', marginBottom: 20 }}>Lançamento 10 de agosto — entre na lista de espera</p>
             <WaitlistForm
               product="briefing-mal-passado"
               accentColor="var(--blood)"
@@ -884,10 +884,12 @@ export default function BriefingMalPassadoPage() {
             salva <span className="blood">carreira.</span>
           </p>
           <p className="sub">Esse livro nomeia o monstro silencioso que come cronograma, queima margem e cansa equipe. Antes do próximo briefing, antes da próxima reunião de aceite, antes da próxima virada de prazo.</p>
-          <div className="cta-row">
-            <a href="#comprar" className="btn-primary">Entrar na lista de espera <span>→</span></a>
-            <a href="#sumario" className="btn-secondary">Ver o sumário completo</a>
-          </div>
+          <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--blood-bright)', marginBottom: 20, marginTop: 32 }}>Quero ser avisado — lançamento 10 de agosto</p>
+          <WaitlistForm
+            product="briefing-mal-passado"
+            accentColor="var(--blood)"
+            accentTextColor="var(--paper)"
+          />
         </div>
       </section>
 
