@@ -201,7 +201,8 @@ export function GET() {
         <div class="io-tag"><span class="io-day">06 Set · Dia 02</span><span class="mono">Online → Bar Dona Onça</span></div>
         <div class="io-word">Out</div>
         <ul class="sched" style="margin-top:24px">
-          <li><span class="tm">08:00</span><span class="ds"><b>Pós-produção</b>4h de edição ao vivo — turma fechada</span></li>
+          <li><span class="tm">08:00</span><span class="ds"><b>Pós-produção</b>Edição ao vivo — turma fechada com Angelo</span></li>
+          <li><span class="tm">—</span><span class="ds"><b>IA aplicada · retouch e entrega</b>Still e moda: ferramentas reais de retoque e finalização com IA</span></li>
           <li><span class="tm">12:00</span><span class="ds"><b>Fornecedores SP</b>Lista curada de parceiros</span></li>
           <li><span class="tm">14:00</span><span class="ds"><b>Bar Dona Onça</b>Almoço e encerramento</span></li>
           <li><span class="tm">—</span><span class="ds"><b>Certificação HMZT</b>Oficial. Assinado. Merecido.</span></li>
