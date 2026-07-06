@@ -115,8 +115,8 @@ export function GET() {
         <span class="line"><span>Inside</span></span>
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
-      <div class="hero-rot"><span class="rot" id="rot">Você não aprende produção em sala de aula</span></div>
-      <p class="hero-sub">Você já sabe fotografar e filmar — mas ainda sofre na hora de cobrar e entregar campanhas. Aqui você não só acompanha: você dirige. <em>20 cadeiras. Sem reprise.</em></p>
+      <div class="hero-rot"><span class="rot" id="rot">Seu clique pode entrar na campanha oficial</span></div>
+      <p class="hero-sub">Dois sets cenográficos ao vivo. Câmera na mão. Você fotografa e filma o que quiser — os melhores takes entram na campanha real. <em>20 cadeiras. Sem reprise.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -158,15 +158,15 @@ export function GET() {
     </div>
     <div class="conceito-split">
       <div class="conceito-left" data-reveal>
-        <h2 class="conceito-h">Em terra de IA,<br>quem dirige<br><em>um set</em><br>sai na frente.</h2>
+        <h2 class="conceito-h">Um desafio.<br>Dois sets.<br><em>Câmera<br>na mão.</em></h2>
       </div>
       <div class="conceito-right" data-reveal data-reveal-d="1">
-        <p class="conceito-p">IA é acessível — todo mundo usa. Mas e quem consegue dirigir uma superprodução cenográfica com dois sets simultâneos, moda e beauty, ao vivo?</p>
-        <p class="conceito-p">Isso não se delega para algoritmo. E é exatamente isso que você vai aprender a fazer aqui.</p>
+        <p class="conceito-p">Você já sabe fotografar e filmar. Agora vamos colocar isso à prova.</p>
+        <p class="conceito-p">No Inside Out Edit 2, Angelo Mazzutti faz a produção executiva e a direção criativa. Você fica livre para clicar e captar o que quiser — o quanto puder — dentro de dois sets cenográficos profissionais rodando ao mesmo tempo.</p>
         <div class="conceito-line">
-          <span>Você já sabe fotografar e filmar.</span>
-          <span>Mas ainda sofre na hora de cobrar e entregar campanhas.</span>
-          <span>No Inside Out você prepara o processo completo — do briefing à entrega.</span>
+          <span>100% prático. Sem aula. Sem slide.</span>
+          <span>Os melhores cliques e takes são selecionados para a campanha oficial.</span>
+          <span>Seu trabalho pode sair daqui como peça publicada.</span>
         </div>
       </div>
     </div>
@@ -182,33 +182,33 @@ export function GET() {
     <div class="faz-grid">
       <div class="faz-item" data-reveal>
         <div class="faz-n">01</div>
-        <div class="faz-t">Dois sets simultâneos</div>
-        <div class="faz-d">Moda (lookbook, foto e vídeo publicitário) e beauty still rodando ao mesmo tempo, no mesmo estúdio enorme.</div>
+        <div class="faz-t">Câmera livre nos dois sets</div>
+        <div class="faz-d">Você clica e capta o que quiser — o quanto puder. Moda e beauty rodando simultaneamente num espaço enorme.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">02</div>
-        <div class="faz-t">Moodboard e escopo ao vivo</div>
-        <div class="faz-d">Referências, mood da marca e plano de campanha — tudo construído antes de a câmera ligar.</div>
+        <div class="faz-t">Angelo dirige. Você produz.</div>
+        <div class="faz-d">Angelo faz a produção executiva e direção criativa. Você aplica na prática, dentro do set, em tempo real.</div>
       </div>
       <div class="faz-item" data-reveal>
         <div class="faz-n">03</div>
-        <div class="faz-t">Você dirige, não observa</div>
-        <div class="faz-d">Está dentro tomando decisões junto com Angelo Mazzutti. Não é plateia — é produção.</div>
+        <div class="faz-t">Moodboard e escopo ao vivo</div>
+        <div class="faz-d">Referências, conceito e plano de campanha — construídos antes de a câmera ligar. Você acompanha cada decisão.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">04</div>
-        <div class="faz-t">Briefing Mal Passado</div>
-        <div class="faz-d">O livro do Angelo — toda a teoria mastigada para nada do dia de produção ser surpresa.</div>
+        <div class="faz-t">Seus melhores takes entram na campanha</div>
+        <div class="faz-d">Os melhores cliques e takes são selecionados para a campanha oficial. Seu trabalho pode virar peça publicada.</div>
       </div>
       <div class="faz-item" data-reveal>
         <div class="faz-n">05</div>
-        <div class="faz-t">Pós-produção + IA</div>
-        <div class="faz-d">4h de edição ao vivo, retouch de still e moda com ferramentas reais de IA. Tela a tela.</div>
+        <div class="faz-t">Pós-produção + IA aplicada</div>
+        <div class="faz-d">4h de edição ao vivo. Retouch de still e moda com ferramentas reais de IA. Do clique à entrega final.</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">06</div>
-        <div class="faz-t">Rede · Certificado · Encerramento</div>
-        <div class="faz-d">Fornecedores SP, certificado HMZT e almoço de encerramento no Bar Dona Onça.</div>
+        <div class="faz-t">Briefing Mal Passado · o livro</div>
+        <div class="faz-d">A teoria mastigada em livro — para nada do dia de produção ser surpresa na hora de executar.</div>
       </div>
     </div>
   </div>
@@ -371,7 +371,7 @@ export function GET() {
       <div class="plan plan--lote feat">
         <span class="ribbon">Lote atual</span>
         <div class="plan-tag"><span>Lote 1</span><span>01</span></div>
-        <div class="plan-name">R$ 1.300</div>
+        <div class="plan-name">R$ 1.350</div>
         <div class="plan-price" style="margin:4px 0 20px"><small>Preço de lançamento</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
@@ -384,14 +384,14 @@ export function GET() {
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
         </ul>
-        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir · R$ 1.300</span><span class="ar">↗</span></button>
+        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir · R$ 1.350</span><span class="ar">↗</span></button>
       </div>
 
       <div class="plan plan--lote">
-        <span class="ribbon" style="background:#2a2a22;color:#efe9da">Abre 02 Jul</span>
+        <span class="ribbon" style="background:#2a2a22;color:#efe9da">Abre 10 Jul</span>
         <div class="plan-tag"><span>Lote 2</span><span>02</span></div>
-        <div class="plan-name">R$ 1.500</div>
-        <div class="plan-price" style="margin:4px 0 20px"><small>Abertura: 02 de Julho de 2026</small></div>
+        <div class="plan-name">R$ 1.530</div>
+        <div class="plan-price" style="margin:4px 0 20px"><small>Abertura: 10 de Julho de 2026</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
           <li>Direção de moodboard ao vivo</li>
@@ -555,7 +555,7 @@ export function GET() {
         <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name"><div class="msg">Informe seu nome</div></div>
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel"><div class="msg">Informe um telefone válido</div></div>
-        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.300</option><option disabled>Lote 2 — R$ 1.500 (10 Jul)</option><option disabled>Lote 3 — R$ 1.700 (05 Ago)</option></select><div class="msg"></div></div>
+        <div class="field"><label>Lote</label><select name="plano"><option selected>Lote 1 — R$ 1.350</option><option disabled>Lote 2 — R$ 1.530 (10 Jul)</option><option disabled>Lote 3 — R$ 1.700 (05 Ago)</option></select><div class="msg"></div></div>
         <div class="field" style="margin-bottom:18px">
           <label style="margin-bottom:8px;display:block">Forma de pagamento</label>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
