@@ -493,8 +493,7 @@ body.has-announce{padding-top:40px;}
         <div class="plan-name">R$ 1.410</div>
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 470 · Julho</small></div>
         <ul class="plan-feats">
-          <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
-          <li>Dia 01 presencial · 2 sets ao vivo com equipe completa</li>
+          <li>Dia 01 presencial · <strong>Studio Plano · SP</strong> — 2 sets ao vivo com equipe completa</li>
           <li>Set 01 · Moda — lookbook e campanha</li>
           <li>Set 02 · Beauty — still publicitário</li>
           <li>Pós-produção ao vivo com IA · Dia 02 online</li>
@@ -511,8 +510,7 @@ body.has-announce{padding-top:40px;}
         <div class="plan-name">R$ 1.530</div>
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 510 · Abre em Agosto</small></div>
         <ul class="plan-feats">
-          <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
-          <li>Dia 01 presencial · 2 sets ao vivo com equipe completa</li>
+          <li>Dia 01 presencial · <strong>Studio Plano · SP</strong> — 2 sets ao vivo com equipe completa</li>
           <li>Set 01 · Moda — lookbook e campanha</li>
           <li>Set 02 · Beauty — still publicitário</li>
           <li>Pós-produção ao vivo com IA · Dia 02 online</li>
@@ -529,8 +527,7 @@ body.has-announce{padding-top:40px;}
         <div class="plan-name">R$ 1.700</div>
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 567 · Abre em Setembro</small></div>
         <ul class="plan-feats">
-          <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
-          <li>Dia 01 presencial · 2 sets ao vivo com equipe completa</li>
+          <li>Dia 01 presencial · <strong>Studio Plano · SP</strong> — 2 sets ao vivo com equipe completa</li>
           <li>Set 01 · Moda — lookbook e campanha</li>
           <li>Set 02 · Beauty — still publicitário</li>
           <li>Pós-produção ao vivo com IA · Dia 02 online</li>
@@ -570,7 +567,7 @@ body.has-announce{padding-top:40px;}
           <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Camarim</strong>Camarim completo para equipe e modelos</li>
           <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Lounge</strong>Área de convivência e coffee break</li>
         </ul>
-        <p style="margin-top:24px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)">São Paulo · SP · 05 de Setembro 2026</p>
+        <p style="margin-top:24px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)">São Paulo · SP · 05 de Setembro de 2026</p>
       </div>
     </div>
   </div>
