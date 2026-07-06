@@ -7,7 +7,7 @@ export function GET() {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inside Out · Edit 2 — Workshop HMZT · House Mazzutti</title>
-<meta name="description" content="Dois dias dentro de um estúdio real. Inside Out Edit 2 — Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha, pós-produção e encerramento no Bar Dona Onça. 20 cadeiras.">
+<meta name="description" content="Dois dias dentro de um estúdio real. Inside Out Edit 2 — Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha e pós-produção intensiva. 20 cadeiras.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://housemazzutti.com/academy/workshop-producao-direcao-01/">
 <meta property="og:title" content="Inside Out · Edit 2 — Workshop HMZT">
@@ -25,7 +25,7 @@ export function GET() {
 <meta name="twitter:description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas. São Paulo, 2026.">
 <!-- JSON-LD: Event + FAQPage -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias dentro de um estúdio real. Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha, pós-produção e encerramento no Bar Dona Onça. 20 cadeiras.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Studio Plano","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":20},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é o Inside Out?","acceptedAnswer":{"@type":"Answer","text":"Para fotógrafos, diretores, videomakers, produtores e profissionais da publicidade e do audiovisual que querem se aperfeiçoar na prática — participando de duas campanhas simultâneas ao lado de uma equipe de mercado consolidada. Turma fechada: 20 cadeiras."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. Dia 01 no Studio Plano; Dia 02 com pós-produção online e encerramento no Bar Dona Onça."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"O workshop é voltado para quem já atua ou quer atuar com produção de alto padrão. Não é introdutório — é para quem quer elevar o nível do que já faz na prática."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial com design profissional, além do Destaque da Imersão — premiação para o participante que mais se destacar ao longo dos dois dias."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias dentro de um estúdio real. Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha e pós-produção intensiva. 20 cadeiras.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Studio Plano","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":20},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é o Inside Out?","acceptedAnswer":{"@type":"Answer","text":"Para fotógrafos, diretores, videomakers, produtores e profissionais da publicidade e do audiovisual que querem se aperfeiçoar na prática — participando de duas campanhas simultâneas ao lado de uma equipe de mercado consolidada. Turma fechada: 20 cadeiras."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. Dia 01 no Studio Plano; Dia 02 com pós-produção online e encerramento presencial com a turma."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"O workshop é voltado para quem já atua ou quer atuar com produção de alto padrão. Não é introdutório — é para quem quer elevar o nível do que já faz na prática."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial com design profissional, além do Destaque da Imersão — premiação para o participante que mais se destacar ao longo dos dois dias."}}]}]}
 </script>
 <!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
@@ -285,7 +285,7 @@ body.has-announce{padding-top:40px;}
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">06</div>
         <div class="faz-t">Network · São Paulo · Encerramento</div>
-        <div class="faz-d">Conexões reais com profissionais do mercado, lista de fornecedores SP e encerramento no Bar Dona Onça.</div>
+        <div class="faz-d">Conexões reais com profissionais do mercado e lista curada de fornecedores de São Paulo.</div>
       </div>
     </div>
   </div>
@@ -371,7 +371,7 @@ body.has-announce{padding-top:40px;}
   <div class="wrap">
     <div class="dias-head" data-reveal>
       <span class="mono-sm" style="color:var(--smoke)">03 — Os dois dias</span>
-      <span class="mono-sm" style="color:var(--smoke)">Studio Plano → Bar Dona Onça</span>
+      <span class="mono-sm" style="color:var(--smoke)">Studio Plano · São Paulo</span>
     </div>
     <div class="dias-grid">
 
@@ -395,14 +395,14 @@ body.has-announce{padding-top:40px;}
       <div class="dia-col" data-reveal data-reveal-d="1">
         <div class="dia-label">
           <span class="dia-num">Dia 02</span>
-          <span class="dia-data mono-sm">Dom 06 Set · Online → Bar Dona Onça</span>
+          <span class="dia-data mono-sm">Dom 06 Set · Online · São Paulo</span>
         </div>
         <div class="dia-word">Out</div>
         <div class="callsheet">
           <div class="cs-row"><span class="cs-tm">08:00</span><span class="cs-ds"><b>Pós-produção</b>Edição ao vivo — turma fechada</span></div>
           <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>IA aplicada</b>Retouch still e moda com ferramentas reais</span></div>
           <div class="cs-row"><span class="cs-tm">12:00</span><span class="cs-ds"><b>Fornecedores SP</b>Lista curada de parceiros</span></div>
-          <div class="cs-row"><span class="cs-tm">14:00</span><span class="cs-ds"><b>Bar Dona Onça</b>Almoço e encerramento presencial</span></div>
+          <div class="cs-row"><span class="cs-tm">14:00</span><span class="cs-ds"><b>Encerramento presencial</b>Almoço com a turma · São Paulo</span></div>
           <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>Certificação HMZT</b>Oficial. Assinado. Merecido.</span></div>
         </div>
       </div>
@@ -589,26 +589,31 @@ body.has-announce{padding-top:40px;}
   </div>
 </section>
 
-<!-- ============ BAR DONA ONÇA ============ -->
-<section class="section paper" id="encerramento" style="padding-top:0">
+<!-- ============ STUDIO PLANO ============ -->
+<section class="section paper" id="local" style="padding-top:0">
   <div class="wrap">
     <div style="border:1px solid var(--line);padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:center;" data-reveal>
-      <div>
-        <span class="eyebrow" style="margin-bottom:18px;display:block">— Encerramento · Dia 06</span>
-        <h2 class="display" style="font-size:clamp(2rem,4vw,3.8rem);font-weight:700;text-transform:uppercase;line-height:.95;margin-bottom:clamp(18px,2.5vw,30px)">Bar<br>Dona<br>Onça</h2>
-        <p style="color:#54524d;line-height:1.6;max-width:36ch">Após quatro horas de pós-produção, a turma se encontra à mesa. Almoço e happy hour no Dona Onça — um dos endereços mais queridos de São Paulo, no coração do Edifício Copan.</p>
-        <p style="margin-top:14px;color:#54524d;line-height:1.6;max-width:36ch">Não é só uma refeição. É onde as conexões começam — entre pessoas que passaram dois dias construindo juntas dentro de um estúdio real.</p>
-        <p style="margin-top:20px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)">06 de Setembro · São Paulo · Incluso em todas as inscrições</p>
+      <div style="aspect-ratio:3/4;background:var(--ink);overflow:hidden;position:relative;order:-1">
+        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;" src="/videos/studio-plano.mp4" poster="/images/academy/studio-plano/studio-plano-1.webp"></video>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.55) 0%,transparent 55%);pointer-events:none"></div>
+        <span style="position:absolute;bottom:16px;left:16px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:#fff;opacity:.7">Studio Plano · São Paulo · SP</span>
       </div>
-      <div style="aspect-ratio:3/4;background:var(--ink);overflow:hidden;position:relative;">
-        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;" src="/videos/dona-onca.mp4"></video>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.6) 0%,transparent 50%);pointer-events:none"></div>
-        <span style="position:absolute;bottom:16px;left:16px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:#fff;opacity:.7">Edifício Copan · Centro · São Paulo</span>
+      <div>
+        <span class="eyebrow" style="margin-bottom:18px;display:block">— O Local · Dia 01</span>
+        <h2 class="display" style="font-size:clamp(2rem,4vw,3.8rem);font-weight:700;text-transform:uppercase;line-height:.95;margin-bottom:clamp(18px,2.5vw,30px)">Studio<br>Plano</h2>
+        <p style="color:#54524d;line-height:1.7;max-width:36ch;letter-spacing:.01em">Estúdio profissional real em São Paulo. Não uma sala de aula — o mesmo espaço onde campanhas de marcas são produzidas. Dois cicloramas, camarim completo e lounge.</p>
+        <ul style="margin-top:clamp(20px,3vw,32px);list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;border-left:2px solid var(--ink);padding-left:20px">
+          <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Ciclorama</strong>Dois cicloramas equipados — branco e colorido</li>
+          <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Iluminação</strong>Flash de estúdio, contínua e natureba disponíveis</li>
+          <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Camarim</strong>Camarim completo para equipe e modelos</li>
+          <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Lounge</strong>Área de convivência e coffee break</li>
+        </ul>
+        <p style="margin-top:24px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)">São Paulo · SP · 05 de Setembro 2026</p>
       </div>
     </div>
   </div>
 </section>
-<style>@media (max-width:760px){#encerramento .wrap > div{grid-template-columns:1fr!important}}</style>
+<style>@media (max-width:760px){#local .wrap > div{grid-template-columns:1fr!important} #local .wrap > div > div:first-child{order:0!important}}</style>
 
 <!-- ============ DEPOIMENTOS ============ -->
 <section class="section paper" id="depoimentos">
@@ -644,9 +649,9 @@ body.has-announce{padding-top:40px;}
     <div class="faq" data-reveal>
       <details open><summary>Para quem é o Inside Out? <span class="pm">+</span></summary><div class="ans">Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas — do pré, passando pela produção, até a entrega ao cliente. É para quem já atua e quer entender o processo por dentro. Turma fechada: 20 cadeiras.</div></details>
       <details><summary>Onde acontece o Dia 01? <span class="pm">+</span></summary><div class="ans">No <strong>Studio Plano</strong>, em São Paulo, no dia <strong>05 de setembro de 2026</strong>. Um estúdio profissional real — não uma sala de aula. O endereço completo é enviado na confirmação da inscrição.</div></details>
-      <details><summary>E o Dia 02? <span class="pm">+</span></summary><div class="ans">Começa online: sala fechada no <strong>Google Meet das 8h às 12h</strong>, exclusiva para a turma — 4 horas de pós-produção intensiva com Angelo Mazzutti. Às 14h, o encerramento é presencial no <strong>Bar Dona Onça</strong>, em São Paulo. Almoço e happy hour com a turma.</div></details>
+      <details><summary>E o Dia 02? <span class="pm">+</span></summary><div class="ans">Começa online: sala fechada no <strong>Google Meet das 8h às 12h</strong>, exclusiva para a turma — 4 horas de pós-produção intensiva com Angelo Mazzutti. Às 14h, encerramento presencial com almoço e happy hour com a turma em São Paulo.</div></details>
       <details><summary>O que trago para o Dia 01? <span class="pm">+</span></summary><div class="ans">Câmera (qualquer câmera — o importante é você saber o que fará com ela), celular, prancheta, notebook e toda a sua criatividade. O estúdio, a equipe, os modelos e o set são por conta do evento.</div></details>
-      <details><summary>O que está incluso em todos os planos? <span class="pm">+</span></summary><div class="ans">Material de pré-produção via link (enviado antes do evento), Dia 01 completo no Studio Plano com 2 sets ao vivo, pós-produção intensiva no Dia 02, almoço no Bar Dona Onça, lista curada de fornecedores e parceiros de SP, e certificação oficial HMZT. Planos Pro e Executivo incluem benefícios adicionais.</div></details>
+      <details><summary>O que está incluso em todos os planos? <span class="pm">+</span></summary><div class="ans">Material de pré-produção via link (enviado antes do evento), Dia 01 completo no Studio Plano com 2 sets ao vivo, pós-produção intensiva no Dia 02, encerramento presencial com almoço, lista curada de fornecedores e parceiros de SP, e certificação oficial HMZT. Planos Pro e Executivo incluem benefícios adicionais.</div></details>
       <details><summary>Qual a política de cancelamento? <span class="pm">+</span></summary><div class="ans">Direito de arrependimento em até 7 dias corridos da compra (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso de 50%. Após esse prazo, sem reembolso. Solicitações por contato@mztgrupo.com.</div></details>
     </div>
   </div>
