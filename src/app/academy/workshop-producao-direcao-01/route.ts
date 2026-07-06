@@ -38,6 +38,36 @@ export function GET() {
 </head>
 <body>
 
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="announce-bar" id="announceBar">
+  <span class="announce-dot"></span>
+  <span class="announce-txt">Abertura do <strong>Lote 1</strong> — <strong>quinta-feira, 09 de julho às 14h</strong></span>
+  <a class="announce-cta" data-reserve href="#planos">Entrar na lista ↗</a>
+  <button class="announce-close" id="announceClose" aria-label="Fechar">✕</button>
+</div>
+<style>
+.announce-bar{position:fixed;top:0;left:0;right:0;z-index:200;background:#b85c2a;color:#fff;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 20px;font-size:.78rem;letter-spacing:.04em;}
+.announce-dot{width:7px;height:7px;border-radius:50%;background:#fff;opacity:.8;animation:blink 1.4s ease-in-out infinite;flex-shrink:0;}
+@keyframes blink{0%,100%{opacity:.8}50%{opacity:.25}}
+.announce-txt{flex:1;text-align:center;}
+.announce-txt strong{font-weight:700;}
+.announce-cta{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.55);border-radius:2px;padding:4px 10px;font-size:.72rem;letter-spacing:.08em;white-space:nowrap;transition:background .2s;}
+.announce-cta:hover{background:rgba(255,255,255,.15);}
+.announce-close{background:none;border:none;color:rgba(255,255,255,.7);cursor:pointer;font-size:14px;padding:0 0 0 8px;flex-shrink:0;line-height:1;}
+.announce-close:hover{color:#fff;}
+body.has-announce .nav{top:40px;}
+body.has-announce{padding-top:40px;}
+@media(max-width:600px){.announce-cta{display:none;}.announce-txt{font-size:.72rem;}}
+</style>
+<script>
+(function(){
+  var bar=document.getElementById('announceBar');
+  var close=document.getElementById('announceClose');
+  if(sessionStorage.getItem('ann-closed')){bar.style.display='none';}else{document.body.classList.add('has-announce');}
+  close.addEventListener('click',function(){bar.style.display='none';document.body.classList.remove('has-announce');sessionStorage.setItem('ann-closed','1');});
+})();
+</script>
+
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
   <a class="brand" href="#top"><span class="dot"></span> <span>Inside<b>Out</b></span></a>
