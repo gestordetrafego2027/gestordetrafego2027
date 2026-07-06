@@ -116,7 +116,7 @@ export function GET() {
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
       <div class="hero-rot"><span class="rot" id="rot">Você não aprende produção em sala de aula</span></div>
-      <p class="hero-sub">Dois dias dentro de um estúdio real. Sets ao vivo, direção de campanha, moodboard e pós-produção — com Angelo Mazzutti, do briefing à entrega. <em>20 cadeiras. Sem reprise.</em></p>
+      <p class="hero-sub">Você já sabe fotografar e filmar — mas ainda sofre na hora de cobrar e entregar campanhas. Aqui você não só acompanha: você dirige. <em>20 cadeiras. Sem reprise.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -156,9 +156,9 @@ export function GET() {
       <span class="eyebrow">01 — Conceito</span>
       <span class="sec-index">Studio Plano · São Paulo · Set 2026</span>
     </div>
-    <h2 class="big" data-reveal>Você vai estar<br><em>dentro do set.</em></h2>
+    <h2 class="big" data-reveal>Em terra de IA,<br><em>quem dirige um set<br>sai na frente.</em></h2>
     <div class="concept-foot">
-      <p class="lead" data-reveal>Não é uma aula sobre produção.<br>É uma produção — com câmera rodando.</p>
+      <p class="lead" data-reveal>IA é acessível — todo mundo usa. Mas quem consegue dirigir uma superprodução cenográfica, dois sets simultâneos, moda e beauty ao vivo?<br>Isso não se delega para algoritmo.</p>
     </div>
   </div>
 </section>
@@ -167,10 +167,10 @@ export function GET() {
 <section class="section paper" id="vivencias" style="padding-top:0">
   <div class="wrap">
     <div class="exp">
-      <div class="exp-item" data-reveal><span class="exp-n">01</span><div><div class="exp-t">Produção do zero ao entregável</div><div class="exp-d">Brief, conceito, direção, execução. Um dia inteiro de produção real no Studio Plano.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">02</span><div><div class="exp-t">Direção de moodboard ao vivo</div><div class="exp-d">A alma visual da campanha construída antes de a câmera ligar.</div></div></div>
-      <div class="exp-item" data-reveal><span class="exp-n">03</span><div><div class="exp-t">Set 01 · Moda</div><div class="exp-d">Still, lookbook e campanha. Você dentro do set.</div></div></div>
-      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">04</span><div><div class="exp-t">Set 02 · Beauty</div><div class="exp-d">Outro conceito. Mesma exigência. Dois sets que mudam tudo.</div></div></div>
+      <div class="exp-item" data-reveal><span class="exp-n">01</span><div><div class="exp-t">Dois sets simultâneos · um só espaço</div><div class="exp-d">Moda (lookbook, foto e vídeo publicitário) e beauty still — rodando ao mesmo tempo, no mesmo estúdio.</div></div></div>
+      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">02</span><div><div class="exp-t">Moodboard e escopo ao vivo</div><div class="exp-d">Toda a direção nasce aqui: referências, mood da marca e plano de campanha antes de a câmera ligar.</div></div></div>
+      <div class="exp-item" data-reveal><span class="exp-n">03</span><div><div class="exp-t">Você acompanha e dirige</div><div class="exp-d">Não é observar de longe. Você está dentro, tomando decisões junto com Angelo Mazzutti.</div></div></div>
+      <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">04</span><div><div class="exp-t">Briefing Mal Passado · o livro</div><div class="exp-d">Toda a teoria mastigada em livro — para nada do dia ser novidade na hora de executar.</div></div></div>
       <div class="exp-item" data-reveal><span class="exp-n">05</span><div><div class="exp-t">Pós-produção intensiva</div><div class="exp-d">4h online com Angelo Mazzutti. Edição, cor, entrega. Tela a tela.</div></div></div>
       <div class="exp-item" data-reveal data-reveal-d="1"><span class="exp-n">06</span><div><div class="exp-t">Rede · Certificado · Bar Dona Onça</div><div class="exp-d">Fornecedores SP, certificado HMZT e almoço de encerramento.</div></div></div>
     </div>
