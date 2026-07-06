@@ -177,7 +177,7 @@ export default function Home() {
                     <div className="absolute inset-0 z-0 bg-black">
                         {/* vídeo único de fundo — sem imagem poster, sem slides de imagem */}
                         <video
-                            src="/videos/house-mazzutti-fashion-film-hero.mp4"
+                            src="/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.mp4"
                             poster="/images/hero-poster.webp"
                             autoPlay
                             muted
