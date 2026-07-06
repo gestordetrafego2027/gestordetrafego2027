@@ -110,13 +110,13 @@ export function GET() {
     </div>
 
     <div class="hero-center">
-      <span class="eyebrow">De dentro para fora</span>
+      <span class="eyebrow">Quer participar de uma mega produção?</span>
       <h1 class="display hero-title h-hero" style="margin-top:14px">
         <span class="line"><span>Inside</span></span>
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
       <div class="hero-rot"><span class="rot" id="rot">Seu clique pode entrar na campanha oficial</span></div>
-      <p class="hero-sub">Dois sets cenográficos ao vivo. Câmera na mão. Você fotografa e filma o que quiser — os melhores takes entram na campanha real. <em>20 cadeiras. Sem reprise.</em></p>
+      <p class="hero-sub">Uma produção publicitária completa — com Angelo Mazzutti, cenografia, equipe profissional e dois sets ao vivo. Câmera na mão. Os melhores takes entram na campanha real. <em>20 vagas.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -152,27 +152,31 @@ export function GET() {
 <!-- ============ PARA QUEM É ============ -->
 <section class="pq-strip">
   <div class="wrap pq-wrap">
-    <span class="pq-label mono-sm">Para quem é</span>
+    <span class="pq-label mono-sm">O que você encontra</span>
     <div class="pq-items">
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span>Fotógrafo que já atende clientes e quer chegar em sets maiores sem travar</span>
+        <span><b>Diretor Criativo</b> — Angelo Mazzutti conduz a produção executiva e a direção da campanha</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span>Produtor que domina a execução mas sente falta de um time de peso e estrutura profissional</span>
+        <span><b>Fotógrafos profissionais</b> — time de peso para auxiliar, orientar e trabalhar ao seu lado no set</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span>Videomaker que quer entender como uma campanha é dirigida do briefing ao clique final</span>
+        <span><b>Stylist · Set Design · Camareira</b> — equipe completa montando cada detalhe dos dois cenários</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span>Quem já sabe o técnico e quer aperfeiçoar produção e direção criativa na prática</span>
+        <span><b>Modelos e elenco</b> — cast profissional para os sets de moda e beauty</span>
       </div>
-      <div class="pq-item pq-item--destaque">
+      <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span>Quem quer trabalhar dentro de uma mega estrutura cenográfica profissional — a que você normalmente só vê de fora</span>
+        <span><b>Dois sets cenográficos</b> — espaço enorme, cenário completo, estrutura de produção publicitária real</span>
+      </div>
+      <div class="pq-item">
+        <span class="pq-icon">↗</span>
+        <span><b>Você entra como crew</b> — câmera na mão, livre para clicar e filmar o que quiser durante toda a produção</span>
       </div>
     </div>
   </div>
@@ -201,15 +205,15 @@ export function GET() {
     </div>
     <div class="conceito-split">
       <div class="conceito-left" data-reveal>
-        <h2 class="conceito-h">Um desafio.<br>Dois sets.<br><em>Câmera<br>na mão.</em></h2>
+        <h2 class="conceito-h">Uma mega<br>produção.<br><em>Você<br>dentro.</em></h2>
       </div>
       <div class="conceito-right" data-reveal data-reveal-d="1">
-        <p class="conceito-p">Você já sabe fotografar e filmar. Agora vamos colocar isso à prova.</p>
-        <p class="conceito-p">No Inside Out Edit 2, Angelo Mazzutti faz a produção executiva e a direção criativa. Você fica livre para clicar e captar o que quiser — o quanto puder — dentro de dois sets cenográficos profissionais rodando ao mesmo tempo.</p>
+        <p class="conceito-p">Imagina entrar numa produção publicitária com cenografia completa, equipe profissional, dois sets simultâneos — e poder fotografar e filmar tudo, do jeito que quiser.</p>
+        <p class="conceito-p">Isso é o Inside Out Edit 2. Angelo Mazzutti dirige. A equipe executa. Você tem câmera na mão e liberdade total dentro do set.</p>
         <div class="conceito-line">
-          <span>100% prático. Sem aula. Sem slide.</span>
-          <span>Os melhores cliques e takes são selecionados para a campanha oficial.</span>
-          <span>Seu trabalho pode sair daqui como peça publicada.</span>
+          <span>Diretor · Fotógrafos · Stylist · Set Design · Camareira · Modelos.</span>
+          <span>Estrutura de produção publicitária real. 100% prático.</span>
+          <span>Os melhores takes entram na campanha oficial.</span>
         </div>
       </div>
     </div>
