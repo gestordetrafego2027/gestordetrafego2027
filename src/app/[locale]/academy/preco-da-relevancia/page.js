@@ -680,7 +680,7 @@ export default function PrecoDaRelevanciaPage() {
         <div className="wrap">
           <div className="testi-head">
             <div className="eyebrow">O que estão dizendo</div>
-            <h2>Leitores da pré-venda,<br /><em>em outubro de 2026.</em></h2>
+            <h2>Leitores da pré-venda,<br /><em>10 de agosto de 2026.</em></h2>
           </div>
           <div className="testi-grid">
             {TESTIMONIALS.map((t) => (
@@ -725,7 +725,7 @@ export default function PrecoDaRelevanciaPage() {
                 <span className="pill">Edição de lançamento</span>
               </div>
               <div className="price"><span className="cur">R$</span>46</div>
-              <div className="pix-line"><em>lançamento em breve</em></div>
+              <div className="pix-line"><em>lançamento 10 de agosto</em></div>
               <WaitlistForm
                 product="preco-da-relevancia"
                 accentColor="var(--blood)"

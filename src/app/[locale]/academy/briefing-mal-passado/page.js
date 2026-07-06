@@ -563,7 +563,7 @@ export default function BriefingMalPassadoPage() {
             <a href="#autor">O autor</a>
             <a href="#faq">Perguntas</a>
           </div>
-          <a href="#comprar" className="nav-cta">Comprar →</a>
+          <a href="#comprar" className="nav-cta">Lista de espera →</a>
         </div>
       </nav>
 
@@ -777,7 +777,7 @@ export default function BriefingMalPassadoPage() {
         <div className="wrap">
           <div className="testi-head">
             <div className="eyebrow">O que estão dizendo</div>
-            <h2>Leitores da pré-venda,<br /><em>em outubro de 2026.</em></h2>
+            <h2>Leitores da pré-venda,<br /><em>10 de agosto de 2026.</em></h2>
           </div>
           <div className="testi-grid">
             {TESTIMONIALS.map((t) => (
@@ -815,35 +815,15 @@ export default function BriefingMalPassadoPage() {
             <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 18, color: 'var(--paper)', opacity: 0.8, lineHeight: 1.55 }}>Mesma obra. Mesmo conteúdo. Você escolhe como. O combo entrega os dois e economiza R$ 30.</p>
           </div>
 
-          <div className="price-trio">
-            {/* DIGITAL */}
-            <div className="price-card alt">
-              <div className="ribbon">Versão digital · PDF</div>
-              <h3>PDF</h3>
-              <div className="num"><span className="cur">R$</span>54</div>
-              <p className="blurb">PDF de alta resolução, otimizado pra tablet, computador e leitor de e-book. <em>Entrega imediata</em> após pagamento. Licença individual.</p>
-              <a className="buy" href={CHECKOUT_DIGITAL_URL}>Comprar agora <span className="arrow">→</span></a>
-            </div>
-
-            {/* COMBO — destaque */}
-            <div className="price-card featured">
-              <span className="badge-top">Melhor valor · economiza R$ 30</span>
-              <div className="ribbon">Combo PDF + Impresso</div>
-              <h3>Ler + colecionar</h3>
-              <div className="num"><span className="cur">R$</span>119</div>
-              <div className="strike-line"><s>R$ 149 avulso</s> · 20% off</div>
-              <p className="blurb">PDF imediato <em>+</em> livro físico em capa cartonada, despachado em até {PRAZO_IMPRESSO_DIAS} dias úteis. <em>Leia agora, colecione depois.</em></p>
-              <a className="buy" href={CHECKOUT_COMBO_URL}>Comprar agora <span className="arrow">→</span></a>
-            </div>
-
-            {/* IMPRESSO */}
-            <div className="price-card alt">
-              <div className="ribbon">Versão impressa</div>
-              <h3>Livro físico</h3>
-              <div className="num"><span className="cur">R$</span>95</div>
-              <p className="blurb">Capa cartonada, miolo offset 90g, formato 16 × 23 cm. <em>Produção House Mazzutti.</em> Envio em até {PRAZO_IMPRESSO_DIAS} dias úteis após pagamento.</p>
-              <a className="buy" href={CHECKOUT_IMPRESSO_URL}>Comprar agora <span className="arrow">→</span></a>
-            </div>
+          <div className="price-trio" style={{ display: 'block', maxWidth: 560, margin: '0 auto', textAlign: 'left' }}>
+            <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--blood-bright)', marginBottom: 20 }}>
+              Lançamento · 10 de agosto de 2026
+            </p>
+            <WaitlistForm
+              product="briefing-mal-passado"
+              accentColor="var(--blood)"
+              accentTextColor="var(--paper)"
+            />
           </div>
         </div>
       </section>
@@ -875,7 +855,12 @@ export default function BriefingMalPassadoPage() {
             salva <span className="blood">carreira.</span>
           </p>
           <p className="sub">Esse livro nomeia o monstro silencioso que come cronograma, queima margem e cansa equipe. Antes do próximo briefing, antes da próxima reunião de aceite, antes da próxima virada de prazo.</p>
-          <a href="#comprar" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>Comprar agora <span>→</span></a>
+          <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--blood-bright)', marginBottom: 20, marginTop: 32 }}>Quero ser avisado no lançamento</p>
+          <WaitlistForm
+            product="briefing-mal-passado"
+            accentColor="var(--blood)"
+            accentTextColor="var(--paper)"
+          />
         </div>
       </section>
 

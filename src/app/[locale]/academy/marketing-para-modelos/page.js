@@ -734,7 +734,7 @@ export default function MarketingParaModelosPage() {
             <div>
               <div className="eyebrow">Objeto editorial</div>
               <h2>Um livro <em>pra ter na mão</em> — não pra rolar no feed.</h2>
-              <p style={{marginTop:'14px',fontFamily:'var(--mono,monospace)',fontSize:'.72rem',letterSpacing:'.18em',textTransform:'uppercase',color:'var(--accent,#c1440e)',fontWeight:400}}>⏳ Em Breve · Lançamento agosto de 2026</p>
+              <p style={{marginTop:'14px',fontFamily:'var(--mono,monospace)',fontSize:'.72rem',letterSpacing:'.18em',textTransform:'uppercase',color:'var(--accent,#c1440e)',fontWeight:400}}>📅 Lançamento · 10 de agosto de 2026</p>
             </div>
             <p className="copy">Diagramação editorial, paleta Mondrian sobre lima saturado, capa em peso de revista de moda. Pensado pra ficar visível na estante — e ser aberto antes de cada decisão importante de carreira.</p>
           </div>
@@ -842,7 +842,7 @@ export default function MarketingParaModelosPage() {
           <div className="testi-head">
             <div>
               <div className="eyebrow">O que estão dizendo</div>
-              <h2><span>Leitoras da pré-venda,</span> <em>em outubro de 2026.</em></h2>
+              <h2><span>Leitoras da pré-venda,</span> <em>10 de agosto de 2026.</em></h2>
             </div>
           </div>
           <div className="testi-grid">
@@ -886,7 +886,7 @@ export default function MarketingParaModelosPage() {
                 <span className="pill">Edição de lançamento</span>
               </div>
               <div className="price"><span className="cur">R$</span>49</div>
-              <div className="pix-line"><em>lançamento em breve</em></div>
+              <div className="pix-line"><em>lançamento 10 de agosto</em></div>
               <WaitlistForm
                 product="marketing-para-modelos"
                 accentColor="var(--ink)"

@@ -707,7 +707,7 @@ export default function CasosDaProducaoPage() {
                 <span className="pill">Edição de lançamento</span>
               </div>
               <div className="price"><span className="cur">R$</span>47</div>
-              <div className="pix-line"><em>lançamento em breve</em></div>
+              <div className="pix-line"><em>lançamento 10 de agosto</em></div>
               <WaitlistForm
                 product="casos-da-producao"
                 accentColor="var(--forest)"

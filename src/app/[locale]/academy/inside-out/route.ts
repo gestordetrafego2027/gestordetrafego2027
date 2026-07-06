@@ -488,7 +488,7 @@ export function GET() {
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow" style="color:var(--smoke)">05 — Acesso</span>
-      <span class="sec-index">Masterclass · lançamento 2026</span>
+      <span class="sec-index">Masterclass · 10 de agosto de 2026</span>
     </div>
     <div class="price-single" data-reveal>
       <div class="ps-left">
@@ -510,7 +510,7 @@ export function GET() {
       <div class="ps-right">
         <div>
           <div class="ps-price"><span class="ps-cur">R$</span>197</div>
-          <div class="ps-subprice">lançamento em breve</div>
+          <div class="ps-subprice">lançamento 10 de agosto</div>
         </div>
         <a class="btn solid lg" href="/checkout/inside-out" style="justify-content:space-between">
           <span class="lbl">Entrar na lista de espera</span>
