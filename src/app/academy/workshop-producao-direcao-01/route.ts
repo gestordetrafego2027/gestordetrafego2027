@@ -25,7 +25,7 @@ export function GET() {
 <meta name="twitter:description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas. São Paulo, 2026.">
 <!-- JSON-LD: Event + FAQPage -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias dentro de um estúdio real. Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha e pós-produção intensiva. 15 alunos.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Studio Plano","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":15},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é o Inside Out?","acceptedAnswer":{"@type":"Answer","text":"Para fotógrafos, diretores, videomakers, produtores e profissionais da publicidade e do audiovisual que querem se aperfeiçoar na prática — participando de duas campanhas simultâneas ao lado de uma equipe de mercado consolidada. Turma fechada: 15 alunos."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. Dia 01 no Studio Plano; Dia 02 com pós-produção online e encerramento presencial com a turma."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"O workshop é voltado para quem já atua ou quer atuar com produção de alto padrão. Não é introdutório — é para quem quer elevar o nível do que já faz na prática."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial com design profissional, além do Destaque da Imersão — premiação para o participante que mais se destacar ao longo dos dois dias."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias dentro de um estúdio real. Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha e pós-produção intensiva. 15 alunos.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Studio Plano","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":15},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é o Inside Out?","acceptedAnswer":{"@type":"Answer","text":"Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas reais. Turma vip · máx 15 alunos."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. Dia 01 no Studio Plano; Dia 02 com pós-produção online e encerramento presencial com a turma."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"O workshop é voltado para quem já atua ou quer atuar com produção de alto padrão. Não é introdutório — é para quem quer elevar o nível do que já faz na prática."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial HMZT com design profissional, emitida ao final dos dois dias."}}]}]}
 </script>
 <!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
@@ -146,7 +146,7 @@ body.has-announce{padding-top:40px;}
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
       <div class="hero-rot"><span class="rot" id="rot">Duas campanhas simultâneas · moda e beauty</span></div>
-      <p class="hero-sub">Acompanhe de perto a direção completa de duas campanhas reais — do briefing à entrega. <em>turma vip · máx 15 alunos.</em></p>
+      <p class="hero-sub">Acompanhe de perto a direção completa de duas campanhas reais — do briefing à entrega. <em>Turma vip · máx 15 alunos.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -221,7 +221,7 @@ body.has-announce{padding-top:40px;}
     </div>
     <div class="conceito-split">
       <div class="conceito-left" data-reveal>
-        <h2 class="conceito-h">Duas<br>campanhas.<br><em>Um dia.<br>Você lá.</em></h2>
+        <h2 class="conceito-h">Duas<br>campanhas.<br><em>Dois dias.<br>Você lá.</em></h2>
       </div>
       <div class="conceito-right" data-reveal data-reveal-d="1">
         <p class="conceito-p">Duas campanhas reais — moda e beauty — rodando simultâneas num estúdio profissional em São Paulo. Você acompanha cada decisão, do briefing à entrega. Não é teoria. É o processo por dentro.</p>
@@ -494,14 +494,13 @@ body.has-announce{padding-top:40px;}
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 470 · Julho</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
-          <li>Direção de moodboard ao vivo</li>
-          <li>Set 01 · Moda — still, lookbook, campanha</li>
-          <li>Set 02 · Beauty — ao vivo</li>
-          <li>Suporte e orientação em tempo real</li>
-          <li>Material de pré-produção via link</li>
-          <li>Pós-produção intensiva · Dia 02 online</li>
-          <li>Lista de fornecedores e parceiros SP</li>
-          <li>Certificado oficial HMZT</li>
+          <li>Dia 01 presencial · 2 sets ao vivo com equipe completa</li>
+          <li>Set 01 · Moda — lookbook e campanha</li>
+          <li>Set 02 · Beauty — still publicitário</li>
+          <li>Pós-produção ao vivo com IA · Dia 02 online</li>
+          <li>Material de pré-produção enviado antes do evento</li>
+          <li>Lista curada de fornecedores e parceiros SP</li>
+          <li>Certificação oficial HMZT</li>
         </ul>
         <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
       </div>
@@ -513,14 +512,13 @@ body.has-announce{padding-top:40px;}
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 510 · Abre em Agosto</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
-          <li>Direção de moodboard ao vivo</li>
-          <li>Set 01 · Moda — still, lookbook, campanha</li>
-          <li>Set 02 · Beauty — ao vivo</li>
-          <li>Suporte e orientação em tempo real</li>
-          <li>Material de pré-produção via link</li>
-          <li>Pós-produção intensiva · Dia 02 online</li>
-          <li>Lista de fornecedores e parceiros SP</li>
-          <li>Certificado oficial HMZT</li>
+          <li>Dia 01 presencial · 2 sets ao vivo com equipe completa</li>
+          <li>Set 01 · Moda — lookbook e campanha</li>
+          <li>Set 02 · Beauty — still publicitário</li>
+          <li>Pós-produção ao vivo com IA · Dia 02 online</li>
+          <li>Material de pré-produção enviado antes do evento</li>
+          <li>Lista curada de fornecedores e parceiros SP</li>
+          <li>Certificação oficial HMZT</li>
         </ul>
         <button class="btn" disabled style="opacity:.5;cursor:not-allowed;border-style:dashed"><span class="lbl">Abre em Agosto</span></button>
       </div>
@@ -532,14 +530,13 @@ body.has-announce{padding-top:40px;}
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 567 · Abre em Setembro</small></div>
         <ul class="plan-feats">
           <li>Dia 01 completo no <strong>Studio Plano · SP</strong></li>
-          <li>Direção de moodboard ao vivo</li>
-          <li>Set 01 · Moda — still, lookbook, campanha</li>
-          <li>Set 02 · Beauty — ao vivo</li>
-          <li>Suporte e orientação em tempo real</li>
-          <li>Material de pré-produção via link</li>
-          <li>Pós-produção intensiva · Dia 02 online</li>
-          <li>Lista de fornecedores e parceiros SP</li>
-          <li>Certificado oficial HMZT</li>
+          <li>Dia 01 presencial · 2 sets ao vivo com equipe completa</li>
+          <li>Set 01 · Moda — lookbook e campanha</li>
+          <li>Set 02 · Beauty — still publicitário</li>
+          <li>Pós-produção ao vivo com IA · Dia 02 online</li>
+          <li>Material de pré-produção enviado antes do evento</li>
+          <li>Lista curada de fornecedores e parceiros SP</li>
+          <li>Certificação oficial HMZT</li>
         </ul>
         <button class="btn" disabled style="opacity:.45;cursor:not-allowed;border-style:dashed"><span class="lbl">Abre em Setembro</span></button>
       </div>
@@ -569,7 +566,7 @@ body.has-announce{padding-top:40px;}
         <p style="color:#54524d;line-height:1.7;max-width:36ch;letter-spacing:.01em">Estúdio profissional real em São Paulo. Não uma sala de aula — o mesmo espaço onde campanhas de marcas são produzidas. Dois cicloramas, camarim completo e lounge.</p>
         <ul style="margin-top:clamp(20px,3vw,32px);list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;border-left:2px solid var(--ink);padding-left:20px">
           <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Ciclorama</strong>Dois cicloramas equipados — branco e colorido</li>
-          <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Iluminação</strong>Flash de estúdio, contínua e natureba disponíveis</li>
+          <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Iluminação</strong>Flash de estúdio, luz contínua e luz natural disponíveis</li>
           <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Camarim</strong>Camarim completo para equipe e modelos</li>
           <li style="font-size:.85rem;color:#54524d;line-height:1.6;letter-spacing:.008em"><strong style="color:var(--ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px">Lounge</strong>Área de convivência e coffee break</li>
         </ul>
@@ -612,11 +609,11 @@ body.has-announce{padding-top:40px;}
       <span class="sec-index">Tudo o que você precisa saber</span>
     </div>
     <div class="faq" data-reveal>
-      <details open><summary>Para quem é o Inside Out? <span class="pm">+</span></summary><div class="ans">Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas — do pré, passando pela produção, até a entrega ao cliente. É para quem já atua e quer entender o processo por dentro. Turma fechada: 15 alunos.</div></details>
+      <details open><summary>Para quem é o Inside Out? <span class="pm">+</span></summary><div class="ans">Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando a direção completa de duas campanhas reais — do briefing à entrega ao cliente. É para quem já atua e quer entender o processo por dentro. Turma vip · máx 15 alunos.</div></details>
       <details><summary>Onde acontece o Dia 01? <span class="pm">+</span></summary><div class="ans">No <strong>Studio Plano</strong>, em São Paulo, no dia <strong>05 de setembro de 2026</strong>. Um estúdio profissional real — não uma sala de aula. O endereço completo é enviado na confirmação da inscrição.</div></details>
       <details><summary>E o Dia 02? <span class="pm">+</span></summary><div class="ans">Começa online: sala fechada no <strong>Google Meet das 8h às 12h</strong>, exclusiva para a turma — 4 horas de pós-produção intensiva com Angelo Mazzutti. Às 14h, encerramento presencial com almoço e happy hour com a turma em São Paulo.</div></details>
       <details><summary>O que trago para o Dia 01? <span class="pm">+</span></summary><div class="ans">Câmera (qualquer câmera — o importante é você saber o que fará com ela), celular, prancheta, notebook e toda a sua criatividade. O estúdio, a equipe, os modelos e o set são por conta do evento.</div></details>
-      <details><summary>O que está incluso em todos os planos? <span class="pm">+</span></summary><div class="ans">Material de pré-produção via link (enviado antes do evento), Dia 01 completo no Studio Plano com 2 sets ao vivo, pós-produção intensiva no Dia 02, encerramento presencial com almoço, lista curada de fornecedores e parceiros de SP, e certificação oficial HMZT. Planos Pro e Executivo incluem benefícios adicionais.</div></details>
+      <details><summary>O que está incluso? <span class="pm">+</span></summary><div class="ans">Material de pré-produção enviado antes do evento, Dia 01 completo no Studio Plano com 2 sets ao vivo, pós-produção intensiva no Dia 02, encerramento presencial com almoço, lista curada de fornecedores e parceiros de SP, e certificação oficial HMZT.</div></details>
       <details><summary>Qual a política de cancelamento? <span class="pm">+</span></summary><div class="ans">Direito de arrependimento em até 7 dias corridos da compra (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso de 50%. Após esse prazo, sem reembolso. Solicitações por contato@mztgrupo.com.</div></details>
     </div>
   </div>
