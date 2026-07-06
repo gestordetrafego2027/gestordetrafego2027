@@ -175,7 +175,7 @@ export default function Home() {
                     style={{ height: "105vh" }}
                 >
                     <div className="absolute inset-0 z-0 bg-black">
-                        {/* vídeo único de fundo — sem imagem poster, sem slides de imagem */}
+                        {/* desktop */}
                         <video
                             src="/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.mp4"
                             poster="/images/hero-poster.webp"
@@ -186,7 +186,20 @@ export default function Home() {
                             preload="metadata"
                             width={1920}
                             height={1080}
-                            className="absolute inset-0 w-full h-full object-cover object-top"
+                            className="absolute inset-0 w-full h-full object-cover object-top hidden md:block"
+                        />
+                        {/* mobile — vertical */}
+                        <video
+                            src="/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.vertical.mp4"
+                            poster="/images/hero-poster.webp"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            width={720}
+                            height={1280}
+                            className="absolute inset-0 w-full h-full object-cover object-center block md:hidden"
                         />
                         <div className="absolute inset-0 bg-black/20"></div>
                     </div>
