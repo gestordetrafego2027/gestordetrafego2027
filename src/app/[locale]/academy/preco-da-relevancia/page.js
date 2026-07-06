@@ -6,11 +6,11 @@ import React from 'react'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
+import { WaitlistForm } from '@/components/academy/WaitlistForm'
 
 const SITE_URL = 'https://housemazzutti.com'
 const COVER = '/images/academy/preco-da-relevancia/cover.webp'
 const COVER_ABSOLUTE = `${SITE_URL}${COVER}`
-const CHECKOUT_URL = '/checkout/preco-da-relevancia'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -467,7 +467,7 @@ export default function PrecoDaRelevanciaPage() {
             <a href="#autor">O autor</a>
             <a href="#faq">Perguntas</a>
           </div>
-          <a href="#comprar" className="nav-cta">Comprar ebook →</a>
+          <a href="#comprar" className="nav-cta">Lista de espera →</a>
         </div>
       </nav>
 
@@ -725,15 +725,13 @@ export default function PrecoDaRelevanciaPage() {
                 <span className="pill">Edição de lançamento</span>
               </div>
               <div className="price"><span className="cur">R$</span>46</div>
-              <div className="pix-line"><em>à vista · cartão, pix ou boleto</em></div>
-              <div>
-                <a href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></a>
-              </div>
-              <div className="micro">
-                <span>Pagamento seguro</span>
-                <span>Acesso vitalício</span>
-                <span>Garantia 7 dias</span>
-              </div>
+              <div className="pix-line"><em>lançamento em breve</em></div>
+              <WaitlistForm
+                product="preco-da-relevancia"
+                accentColor="var(--blood)"
+                accentTextColor="var(--paper)"
+                className="mt-6"
+              />
             </div>
           </div>
           <div className="guarantee">
@@ -774,7 +772,7 @@ export default function PrecoDaRelevanciaPage() {
           </p>
           <p className="sub">Esse livro nomeia o acordo silencioso entre o influenciador e o sistema. Antes do próximo contrato, antes do próximo lançamento, antes da próxima decisão de posicionamento.</p>
           <div className="cta-row">
-            <a href="#comprar" className="btn-primary">Garantir meu exemplar <span>→</span></a>
+            <a href="#comprar" className="btn-primary">Entrar na lista de espera <span>→</span></a>
             <a href="#sumario" className="btn-secondary">Ver o sumário completo</a>
           </div>
         </div>

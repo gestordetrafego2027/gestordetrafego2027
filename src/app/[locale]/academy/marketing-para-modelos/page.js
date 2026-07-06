@@ -7,7 +7,8 @@ import React from 'react';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
-import { MpmViewContent, BuyLink } from '@/components/analytics/MpmTracking';
+import { MpmViewContent } from '@/components/analytics/MpmTracking';
+import { WaitlistForm } from '@/components/academy/WaitlistForm';
 
 const SITE_URL = 'https://housemazzutti.com';
 const PAGE_PATH = '/pt/academy/marketing-para-modelos';
@@ -19,7 +20,6 @@ const MOCKUP_CHAIR = '/images/academy/marketing-para-modelos/mockup-chair.webp';
 const COVER_ABSOLUTE = `${SITE_URL}${COVER}`;
 const OG_IMAGE = '/images/academy/marketing-para-modelos/og-image.webp';
 const OG_IMAGE_ABSOLUTE = `${SITE_URL}${OG_IMAGE}`;
-const CHECKOUT_URL = '/pt/checkout/marketing-para-modelos';
 
 const TITLE = 'Marketing para Modelos · Ebook · House Mazzutti Academy Vol. 01';
 const DESCRIPTION =
@@ -606,7 +606,7 @@ export default function MarketingParaModelosPage() {
             <a href="#autor">O autor</a>
             <a href="#faq">Perguntas</a>
           </div>
-          <a href="#comprar" className="nav-cta">Comprar ebook →</a>
+          <a href="#comprar" className="nav-cta">Lista de espera →</a>
         </div>
       </nav>
 
@@ -886,15 +886,13 @@ export default function MarketingParaModelosPage() {
                 <span className="pill">Edição de lançamento</span>
               </div>
               <div className="price"><span className="cur">R$</span>49</div>
-              <div className="pix-line"><em>à vista · cartão, pix ou boleto</em></div>
-              <div className="price-cta">
-                <BuyLink href={CHECKOUT_URL} className="btn-buy">Quero o ebook agora <span className="arrow">→</span></BuyLink>
-              </div>
-              <div className="micro">
-                <span>Pagamento seguro</span>
-                <span>Acesso vitalício</span>
-                <span>Garantia 7 dias</span>
-              </div>
+              <div className="pix-line"><em>lançamento em breve</em></div>
+              <WaitlistForm
+                product="marketing-para-modelos"
+                accentColor="var(--ink)"
+                accentTextColor="var(--paper)"
+                className="mt-6"
+              />
             </div>
           </div>
           <div className="guarantee">
@@ -939,7 +937,7 @@ export default function MarketingParaModelosPage() {
           </p>
           <p className="sub">Esse livro existe pra te dar essa informação — antes do próximo book, antes do próximo casting, antes do próximo pix.</p>
           <div className="cta-row">
-            <a href="#comprar" className="btn-primary">Garantir meu exemplar <span>→</span></a>
+            <a href="#comprar" className="btn-primary">Entrar na lista de espera <span>→</span></a>
             <a href="#sumario" className="btn-secondary">Ver o sumário completo</a>
           </div>
         </div>

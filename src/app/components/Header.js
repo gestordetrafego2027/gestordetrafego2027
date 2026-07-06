@@ -380,11 +380,11 @@ export default function Header({ variant = 'dark' }) {
                       <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
                         color:'#555', marginBottom:'16px'}}>{t('localizacao')}</p>
-                      <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
+                      <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'14px',
                         fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
                         São Paulo, Brasil
                       </p>
-                      <p style={{fontFamily:'Newsreader, serif', fontSize:'14px',
+                      <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'14px',
                         fontStyle:'italic', color:'#aaa', lineHeight:'1.8', margin:0}}>
                         23.5505° S, 46.6333° W
                       </p>

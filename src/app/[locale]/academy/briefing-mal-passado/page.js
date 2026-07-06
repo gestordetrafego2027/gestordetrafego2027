@@ -14,6 +14,7 @@ import SiteFooterLinks from '@/app/components/SiteFooterLinks'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { SampleLeadForm } from '@/components/academy/SampleLeadForm'
+import { WaitlistForm } from '@/components/academy/WaitlistForm'
 
 const SITE_URL = 'https://housemazzutti.com'
 const COVER = '/images/academy/briefing-mal-passado/cover.webp'
@@ -562,7 +563,7 @@ export default function BriefingMalPassadoPage() {
             <a href="#autor">O autor</a>
             <a href="#faq">Perguntas</a>
           </div>
-          <a href="#comprar" className="nav-cta">Quero o livro →</a>
+          <a href="#comprar" className="nav-cta">Lista de espera →</a>
         </div>
       </nav>
 
@@ -821,7 +822,7 @@ export default function BriefingMalPassadoPage() {
               <h3>PDF</h3>
               <div className="num"><span className="cur">R$</span>54</div>
               <p className="blurb">PDF de alta resolução, otimizado pra tablet, computador e leitor de e-book. <em>Entrega imediata</em> após pagamento. Licença individual.</p>
-              <a href={CHECKOUT_DIGITAL_URL} className="buy">Comprar PDF <span className="arrow">→</span></a>
+              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>Em breve</span>
             </div>
 
             {/* COMBO — destaque */}
@@ -832,7 +833,7 @@ export default function BriefingMalPassadoPage() {
               <div className="num"><span className="cur">R$</span>119</div>
               <div className="strike-line"><s>R$ 149 avulso</s> · 20% off</div>
               <p className="blurb">PDF imediato <em>+</em> livro físico em capa cartonada, despachado em até {PRAZO_IMPRESSO_DIAS} dias úteis. <em>Leia agora, colecione depois.</em></p>
-              <a href={CHECKOUT_COMBO_URL} className="buy">Quero o combo <span className="arrow">→</span></a>
+              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>Em breve</span>
             </div>
 
             {/* IMPRESSO */}
@@ -841,16 +842,17 @@ export default function BriefingMalPassadoPage() {
               <h3>Livro físico</h3>
               <div className="num"><span className="cur">R$</span>95</div>
               <p className="blurb">Capa cartonada, miolo offset 90g, formato 16 × 23 cm. <em>Produção House Mazzutti.</em> Envio em até {PRAZO_IMPRESSO_DIAS} dias úteis após pagamento.</p>
-              <a href={CHECKOUT_IMPRESSO_URL} className="buy">Comprar impresso <span className="arrow">→</span></a>
+              <span className="buy" style={{ opacity: 0.45, cursor: 'default', pointerEvents: 'none' }}>Em breve</span>
             </div>
           </div>
 
-          <div className="guarantee">
-            <div className="g-num">7</div>
-            <div className="g-body">
-              <div className="k">Garantia incondicional</div>
-              <div className="v"><em>Sete dias para ler, testar nas suas reuniões e desistir.</em> Se não fizer sentido pra você, devolvemos cem por cento — sem perguntar nada.</div>
-            </div>
+          <div style={{ marginTop: 48 }}>
+            <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--blood-bright)', marginBottom: 20 }}>Lista de espera — seja avisado no lançamento</p>
+            <WaitlistForm
+              product="briefing-mal-passado"
+              accentColor="var(--blood)"
+              accentTextColor="var(--paper)"
+            />
           </div>
         </div>
       </section>
@@ -883,7 +885,7 @@ export default function BriefingMalPassadoPage() {
           </p>
           <p className="sub">Esse livro nomeia o monstro silencioso que come cronograma, queima margem e cansa equipe. Antes do próximo briefing, antes da próxima reunião de aceite, antes da próxima virada de prazo.</p>
           <div className="cta-row">
-            <a href="#comprar" className="btn-primary">Quero o livro <span>→</span></a>
+            <a href="#comprar" className="btn-primary">Entrar na lista de espera <span>→</span></a>
             <a href="#sumario" className="btn-secondary">Ver o sumário completo</a>
           </div>
         </div>
