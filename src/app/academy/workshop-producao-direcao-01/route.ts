@@ -170,6 +170,10 @@ export function GET() {
         <span class="pq-icon">↗</span>
         <span>Quem já sabe o técnico e quer aperfeiçoar produção e direção criativa na prática</span>
       </div>
+      <div class="pq-item pq-item--destaque">
+        <span class="pq-icon">↗</span>
+        <span>Quem quer trabalhar dentro de uma mega estrutura cenográfica profissional — a que você normalmente só vê de fora</span>
+      </div>
     </div>
   </div>
 </section>
