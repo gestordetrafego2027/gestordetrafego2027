@@ -261,6 +261,81 @@ export function GET() {
   </div>
 </section>
 
+<!-- ============ OS DOIS SETS ============ -->
+<section class="section paper sets-section">
+  <div class="wrap">
+    <div class="sets-head" data-reveal>
+      <span class="mono-sm">Os dois sets · Dia 01 · Studio Plano · SP</span>
+    </div>
+    <div class="sets-grid">
+
+      <!-- SET 01 · MODA -->
+      <div class="set-card" data-reveal>
+        <div class="set-card-top">
+          <div class="set-tag mono-sm">Set 01</div>
+          <div class="set-title">Moda<br>Lookbook</div>
+          <ul class="set-credits">
+            <li><span class="sc-role">Diretor Criativo</span><span class="sc-name">Angelo Mazzutti</span></li>
+            <li><span class="sc-role">Fotógrafo · Dir. de Imagem</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Fotógrafo · Dir. de Vídeo</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Stylist · Figurino</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Modelo</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Set Design · Cenografia</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Locação · Equipamentos</span><span class="sc-name">Studio Plano · SP</span></li>
+            <li><span class="sc-role">Fotógrafo Profissional Suporte</span><span class="sc-name">Incluso</span></li>
+          </ul>
+        </div>
+        <div class="set-img">
+          <img src="/images/academy/edit-01/edit01-model.webp" alt="Set 01 · Moda · Lookbook" loading="lazy">
+          <div class="set-overlay"></div>
+          <div class="set-badge mono-sm">Foto · Vídeo · Lookbook · Campanha</div>
+        </div>
+      </div>
+
+      <!-- SET 02 · BEAUTY -->
+      <div class="set-card" data-reveal data-reveal-d="1">
+        <div class="set-card-top">
+          <div class="set-tag mono-sm">Set 02</div>
+          <div class="set-title">Beauty<br>Still</div>
+          <ul class="set-credits">
+            <li><span class="sc-role">Diretor Criativo</span><span class="sc-name">Angelo Mazzutti</span></li>
+            <li><span class="sc-role">Fotógrafo · Dir. de Imagem</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Maquiador · Beauty Artist</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Modelo</span><span class="sc-name">A confirmar</span></li>
+            <li><span class="sc-role">Set Design · Cenografia</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Locação · Equipamentos</span><span class="sc-name">Studio Plano · SP</span></li>
+            <li><span class="sc-role">Fotógrafo Profissional Suporte</span><span class="sc-name">Incluso</span></li>
+            <li><span class="sc-role">Figurino · Styling</span><span class="sc-name">A confirmar</span></li>
+          </ul>
+        </div>
+        <div class="set-img">
+          <img src="/images/academy/edit-01/edit01-amanda.webp" alt="Set 02 · Beauty Still" loading="lazy">
+          <div class="set-overlay"></div>
+          <div class="set-badge mono-sm">Still · Beleza · Publicidade</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+.sets-head{padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:clamp(32px,4vw,56px);}
+.sets-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,32px);}
+@media(max-width:700px){.sets-grid{grid-template-columns:1fr;}}
+.set-card{display:flex;flex-direction:column;border:1px solid var(--line);overflow:hidden;}
+.set-card-top{padding:clamp(20px,2.5vw,36px);background:var(--paper);}
+.set-tag{color:#aaa;margin-bottom:10px;}
+.set-title{font-family:var(--display);font-weight:900;font-size:clamp(2.2rem,4vw,4rem);line-height:.9;letter-spacing:-.02em;text-transform:uppercase;color:var(--ink);margin-bottom:clamp(20px,2.5vw,32px);}
+.set-credits{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);}
+.set-credits li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);}
+.sc-role{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#888;}
+.sc-name{font-size:.78rem;font-weight:600;color:var(--ink);text-align:right;}
+.set-img{position:relative;aspect-ratio:4/3;overflow:hidden;flex-shrink:0;}
+.set-img img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.2) contrast(1.05);}
+.set-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.72) 0%,rgba(10,10,8,.1) 55%,transparent 100%);}
+.set-badge{position:absolute;bottom:16px;left:16px;color:rgba(239,233,218,.7);font-size:.58rem;letter-spacing:.16em;}
+</style>
+
 <!-- ============ 03 · OS DOIS DIAS (CALLSHEET) ============ -->
 <section class="section ink io-dias" id="metodo">
   <div class="wrap">
