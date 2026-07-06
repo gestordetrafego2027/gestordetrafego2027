@@ -149,6 +149,45 @@ export function GET() {
   </div>
 </header>
 
+<!-- ============ PARA QUEM É ============ -->
+<section class="pq-strip">
+  <div class="wrap pq-wrap">
+    <span class="pq-label mono-sm">Para quem é</span>
+    <div class="pq-items">
+      <div class="pq-item">
+        <span class="pq-icon">↗</span>
+        <span>Fotógrafo que já atende clientes e quer chegar em sets maiores sem travar</span>
+      </div>
+      <div class="pq-item">
+        <span class="pq-icon">↗</span>
+        <span>Produtor que domina a execução mas sente falta de um time de peso e estrutura profissional</span>
+      </div>
+      <div class="pq-item">
+        <span class="pq-icon">↗</span>
+        <span>Videomaker que quer entender como uma campanha é dirigida do briefing ao clique final</span>
+      </div>
+      <div class="pq-item">
+        <span class="pq-icon">↗</span>
+        <span>Quem já sabe o técnico e quer aperfeiçoar produção e direção criativa na prática</span>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.pq-strip{background:var(--ink);padding:clamp(28px,4vw,48px) 0;}
+.pq-wrap{display:flex;gap:clamp(24px,4vw,64px);align-items:flex-start;}
+@media(max-width:700px){.pq-wrap{flex-direction:column;gap:20px;}}
+.pq-label{color:var(--smoke);white-space:nowrap;padding-top:4px;}
+.pq-items{display:grid;grid-template-columns:1fr 1fr;gap:0;flex:1;}
+@media(max-width:640px){.pq-items{grid-template-columns:1fr;}}
+.pq-item{display:flex;gap:12px;align-items:flex-start;padding:14px 16px 14px 0;border-bottom:1px solid var(--line-d);}
+.pq-item:nth-child(odd){border-right:1px solid var(--line-d);padding-right:24px;}
+.pq-item:nth-last-child(-n+2){border-bottom:none;}
+@media(max-width:640px){.pq-item:nth-child(odd){border-right:none;}.pq-item:nth-last-child(-n+2){border-bottom:1px solid var(--line-d);}.pq-item:last-child{border-bottom:none;}}
+.pq-icon{color:var(--accent);font-size:.8rem;margin-top:2px;flex-shrink:0;}
+.pq-item span:last-child{font-size:.82rem;line-height:1.55;color:#c8c2b6;}
+</style>
+
 <!-- ============ 01 · CONCEITO ============ -->
 <section class="section paper io-conceito" id="conceito">
   <div class="wrap">
