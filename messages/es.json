@@ -26,6 +26,12 @@
     "academy_desc": "Cursos · Libros · Aprendizaje"
   },
   "hero": {
+    "slide0": {
+      "label": "HOUSE MAZZUTTI — 10 AÑOS",
+      "titulo": "10 años trabajando junto a los grandes lanzamientos.",
+      "texto": "Una década construyendo marcas, campañas e historias que permanecieron.",
+      "cta": "Conoce la House"
+    },
     "slide1": {
       "label": "STUDIO — HMZT",
       "titulo": "Tu imagen, con intención.",

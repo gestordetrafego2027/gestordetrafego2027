@@ -26,6 +26,12 @@
     "cookies_prefs": "Cookie preferences"
   },
   "hero": {
+    "slide0": {
+      "label": "HOUSE MAZZUTTI — 10 YEARS",
+      "titulo": "10 years working alongside the biggest launches.",
+      "texto": "A decade building brands, campaigns and stories that lasted.",
+      "cta": "Meet the House"
+    },
     "slide1": {
       "label": "STUDIO — HMZT",
       "titulo": "Your image, with intention.",

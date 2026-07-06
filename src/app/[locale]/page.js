@@ -25,6 +25,13 @@ export default function Home() {
 
     const heroSlides = [
         {
+            label: t('hero.slide0.label'),
+            titulo: t('hero.slide0.titulo'),
+            texto: t('hero.slide0.texto'),
+            cta: t('hero.slide0.cta'),
+            link: '/'
+        },
+        {
             label: t('hero.slide1.label'),
             titulo: t('hero.slide1.titulo'),
             texto: t('hero.slide1.texto'),
@@ -175,9 +182,9 @@ export default function Home() {
                     style={{ height: "105vh" }}
                 >
                     <div className="absolute inset-0 z-0 bg-black">
-                        {/* desktop */}
+                        {/* vídeo único de fundo — sem imagem poster, sem slides de imagem */}
                         <video
-                            src="/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.mp4"
+                            src="/videos/house-mazzutti-fashion-film-hero.mp4"
                             poster="/images/hero-poster.webp"
                             autoPlay
                             muted
@@ -186,20 +193,7 @@ export default function Home() {
                             preload="metadata"
                             width={1920}
                             height={1080}
-                            className="absolute inset-0 w-full h-full object-cover object-top hidden md:block"
-                        />
-                        {/* mobile — vertical */}
-                        <video
-                            src="/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.vertical.mp4"
-                            poster="/images/hero-poster.webp"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload="metadata"
-                            width={720}
-                            height={1280}
-                            className="absolute inset-0 w-full h-full object-cover object-center block md:hidden"
+                            className="absolute inset-0 w-full h-full object-cover object-top"
                         />
                         <div className="absolute inset-0 bg-black/20"></div>
                     </div>
