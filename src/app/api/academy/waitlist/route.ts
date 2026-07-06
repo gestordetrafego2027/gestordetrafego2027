@@ -1,13 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase/service'
 
-const PRODUCT_LABELS: Record<string, string> = {
-  'marketing-para-modelos': 'Marketing para Modelos — Vol. 01',
-  'preco-da-relevancia': 'O Preço da Relevância — Vol. 02',
-  'casos-da-producao': 'Inside Out — Vol. 03',
-  'briefing-mal-passado': 'Briefing Mal Passado — Vol. 03',
-}
-
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
@@ -16,17 +9,18 @@ export async function POST(req: NextRequest) {
       .trim()
       .toLowerCase()
     const phone = String(body.phone ?? '').replace(/\D/g, '')
-    const product = String(body.product ?? '').trim()
+    const product = String(body.product ?? '')
+      .trim()
+      .slice(0, 120)
 
     if (!name || !email) {
       return NextResponse.json({ error: 'Nome e e-mail são obrigatórios.' }, { status: 400 })
     }
-    if (!PRODUCT_LABELS[product]) {
+    if (!product) {
       return NextResponse.json({ error: 'Produto inválido.' }, { status: 400 })
     }
 
-    const source = `academy-livro-${product}-lista-espera`
-    const label = PRODUCT_LABELS[product]
+    const source = `lista-espera-${product}`
     const supabase = createServiceClient()
 
     const { data: existing } = await supabase
@@ -41,7 +35,7 @@ export async function POST(req: NextRequest) {
       leadId = existing.id
       await supabase
         .from('leads')
-        .update({ source, phone: phone || undefined })
+        .update({ source, ...(phone ? { phone } : {}) })
         .eq('id', leadId)
     } else {
       const { data: lead, error: insertErr } = await supabase
@@ -53,7 +47,7 @@ export async function POST(req: NextRequest) {
           lead_type: 'aluno_curso',
           segment: 'academy',
           source,
-          notes: `Lista de espera — ${label}`,
+          notes: `Lista de espera — ${product}`,
         })
         .select('id')
         .single()
@@ -68,7 +62,7 @@ export async function POST(req: NextRequest) {
     await supabase.from('activities').insert({
       lead_id: leadId,
       type: 'system',
-      title: `Entrou na lista de espera — ${label}`,
+      title: `Lista de espera — ${product}`,
     })
 
     return NextResponse.json({ ok: true })

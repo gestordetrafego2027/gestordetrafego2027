@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import type { Metadata } from 'next'
-import { AddToCartButton } from '@/components/ecommerce/product/AddToCartButton'
+import { WaitlistForm } from '@/components/academy/WaitlistForm'
 
 export const revalidate = 60
 
@@ -344,34 +344,16 @@ export default async function ProdutoPage({ params }: Props) {
                 </ul>
               )}
 
-              {/* CTA */}
-              {mainPrice && (
-                <div>
-                  <AddToCartButton
-                    isQuoteOnly={isQuoteOnly}
-                    item={{
-                      id: mainPrice.id,
-                      stripePriceId: mainPrice.stripe_price_id,
-                      stripeProductId: product.id,
-                      slug: product.slug,
-                      name: product.name,
-                      description: product.description ?? null,
-                      image: mainImage,
-                      unitAmount: mainPrice.unit_amount,
-                      currency: mainPrice.currency ?? 'brl',
-                      productType: product.product_type as
-                        'digital' | 'service' | 'physical' | 'bundle',
-                      quoteOnly: isQuoteOnly,
-                    }}
-                  />
-                  <p
-                    className="font-label text-[8px] uppercase tracking-[0.2em] text-center mt-4"
-                    style={{ color: '#ccc' }}
-                  >
-                    Pagamento seguro via Stripe · Cartão · Pix · Boleto
-                  </p>
-                </div>
-              )}
+              {/* Lista de espera */}
+              <div className="mt-2">
+                <p
+                  className="font-label text-[9px] uppercase tracking-[0.22em] mb-4"
+                  style={{ color: '#aaa' }}
+                >
+                  Disponível em breve · entre na lista
+                </p>
+                <WaitlistForm product={product.slug} />
+              </div>
             </div>
           </div>
         </main>
