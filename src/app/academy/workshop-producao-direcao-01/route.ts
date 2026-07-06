@@ -254,8 +254,8 @@ export function GET() {
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">06</div>
-        <div class="faz-t">Briefing Mal Passado · o livro</div>
-        <div class="faz-d">A teoria mastigada em livro — para nada do dia de produção ser surpresa na hora de executar.</div>
+        <div class="faz-t">Prêmio · Profissional Destaque</div>
+        <div class="faz-d">O melhor do evento recebe o valor do ingresso de volta + vaga confirmada no próximo Inside Out.</div>
       </div>
     </div>
   </div>
@@ -277,8 +277,8 @@ export function GET() {
         </div>
         <div class="dia-word">Inside</div>
         <div class="callsheet">
-          <div class="cs-row"><span class="cs-tm">Call</span><span class="cs-ds"><b>Crew call + montagem de set</b></span></div>
-          <div class="cs-row"><span class="cs-tm">Manhã</span><span class="cs-ds"><b>Briefing + moodboard ao vivo</b>Escopo da campanha e direção visual</span></div>
+          <div class="cs-row"><span class="cs-tm">Call</span><span class="cs-ds"><b>Alinhamento de briefing</b>1h com Angelo — escopo, conceito e direção visual da campanha</span></div>
+          <div class="cs-row"><span class="cs-tm">Manhã</span><span class="cs-ds"><b>Moodboard ao vivo + montagem de set</b>Referências, mood e cenografia em tempo real</span></div>
           <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>Set 01 · Moda</b>Lookbook, foto e vídeo publicitário</span></div>
           <div class="cs-row"><span class="cs-tm">Tarde</span><span class="cs-ds"><b>Set 02 · Beauty</b>Still publicitário · nova produção</span></div>
           <div class="cs-row"><span class="cs-tm">—</span><span class="cs-ds"><b>Wrap + debriefing</b>Angelo disponível o dia inteiro</span></div>
@@ -430,6 +430,7 @@ export function GET() {
           <li>Pós-produção intensiva · Dia 02 online</li>
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
+          <li>🏆 <strong>Concorre ao Prêmio Destaque</strong> — ingresso devolvido + vaga no próximo evento</li>
         </ul>
         <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Garantir · R$ 1.350</span><span class="ar">↗</span></button>
       </div>
@@ -449,6 +450,7 @@ export function GET() {
           <li>Pós-produção intensiva · Dia 02 online</li>
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
+          <li>🏆 <strong>Concorre ao Prêmio Destaque</strong> — ingresso devolvido + vaga no próximo evento</li>
         </ul>
         <button class="btn" disabled style="opacity:.5;cursor:not-allowed;border-style:dashed"><span class="lbl">Aguarde · em breve</span></button>
       </div>
@@ -467,6 +469,7 @@ export function GET() {
           <li>Pós-produção intensiva · Dia 02 online</li>
           <li>Lista de fornecedores e parceiros SP</li>
           <li>Certificado oficial HMZT</li>
+          <li>🏆 <strong>Concorre ao Prêmio Destaque</strong> — ingresso devolvido + vaga no próximo evento</li>
         </ul>
         <button class="btn" data-reserve data-plan="Inside Out — Lote 3" disabled style="opacity:.45;cursor:not-allowed"><span class="lbl">Disponível 05 Ago</span></button>
       </div>
