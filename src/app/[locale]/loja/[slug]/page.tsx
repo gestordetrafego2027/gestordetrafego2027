@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import type { Metadata } from 'next'
 import { WaitlistForm } from '@/components/academy/WaitlistForm'
+import { DirectCheckoutButton } from '@/components/ecommerce/DirectCheckoutButton'
 
 export const revalidate = 60
 
@@ -55,7 +56,7 @@ export default async function ProdutoPage({ params }: Props) {
     .from('store_products')
     .select(
       `id, slug, name, description, product_type, images, features,
-      metadata, seo_title, seo_description, og_image_url, featured,
+      metadata, seo_title, seo_description, og_image_url, featured, status,
       store_prices (id, stripe_price_id, unit_amount, currency, price_type,
         recurring_interval, recurring_interval_count, nickname, active, metadata),
       store_product_categories (store_categories (id, slug, name))`,
@@ -344,15 +345,25 @@ export default async function ProdutoPage({ params }: Props) {
                 </ul>
               )}
 
-              {/* Lista de espera */}
+              {/* CTA */}
               <div className="mt-2">
-                <p
-                  className="font-label text-[9px] uppercase tracking-[0.22em] mb-4"
-                  style={{ color: '#aaa' }}
-                >
-                  Disponível a partir de 10 de agosto · entre na lista
-                </p>
-                <WaitlistForm product={product.slug} />
+                {product.status === 'published' && mainPrice?.stripe_price_id ? (
+                  <DirectCheckoutButton
+                    stripePriceId={mainPrice.stripe_price_id}
+                    label="Comprar agora"
+                    className="w-full"
+                  />
+                ) : (
+                  <>
+                    <p
+                      className="font-label text-[9px] uppercase tracking-[0.22em] mb-4"
+                      style={{ color: '#aaa' }}
+                    >
+                      Disponível a partir de 10 de agosto · entre na lista
+                    </p>
+                    <WaitlistForm product={product.slug} />
+                  </>
+                )}
               </div>
             </div>
           </div>
