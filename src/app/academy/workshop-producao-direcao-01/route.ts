@@ -174,19 +174,19 @@ body.has-announce{padding-top:40px;}
     <div class="pq-items">
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Creators de moda e beauty</b> que querem produzir conteúdo de campanha de verdade para marcas</span>
+        <span><b>Publicitários</b> que querem vivenciar a produção por dentro e sair com material de campanha real no portfólio</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Fotógrafos e videomakers</b> que querem sair com material de campanha real no portfólio</span>
+        <span><b>Diretores criativos</b> que querem dirigir ou assistir uma produção completa — dois sets, equipe e marcas reais</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Maquiadores e stylists</b> que querem trabalhar dentro de uma produção profissional para marca</span>
+        <span><b>Creators</b> que querem produzir conteúdo de campanha de verdade para marcas e elevar o nível do portfólio</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Modelos</b> que querem entender e participar de uma produção de campanha do início ao fim</span>
+        <span><b>Profissionais do audiovisual</b> que querem trabalhar dentro de uma produção de campanha com direção ao vivo</span>
       </div>
     </div>
   </div>
