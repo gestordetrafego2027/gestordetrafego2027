@@ -48,7 +48,10 @@ EXPOSE 3000
 ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
 
-HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-  CMD wget -qO- http://localhost:3000/api/health || exit 1
+# Liveness probe: 127.0.0.1 força IPv4 (o server faz bind em 0.0.0.0, só IPv4;
+# "localhost" resolvia ::1/IPv6 e dava "Connection refused"). Aponta para
+# /api/health/live, que responde 200 sem depender de Supabase/Stripe/Upstash.
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+  CMD wget -qO- http://127.0.0.1:3000/api/health/live || exit 1
 
 CMD ["node", "server.js"]
