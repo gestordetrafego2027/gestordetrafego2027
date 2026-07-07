@@ -5,6 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import { COVER_MAP } from '@/components/ecommerce/product/ProductCoverSVG'
 
 export const revalidate = 60
 
@@ -54,12 +55,15 @@ function ProductCard({ product }: { product: Product }) {
   const price = product.store_prices?.[0]
   const image = product.images?.[0] ?? null
   const quoteOnly = isQuoteOnly(product.store_prices)
+  const InlineCover = COVER_MAP[product.slug] ?? null
 
   return (
     <Link href={`/loja/${product.slug}`} className="group block">
       {/* Image */}
       <div className="relative aspect-[3/4] overflow-hidden bg-[#f0ede8] mb-4">
-        {image ? (
+        {InlineCover ? (
+          <InlineCover className="w-full h-full transition-transform duration-700 group-hover:scale-[1.04]" />
+        ) : image ? (
           <Image
             src={image}
             alt={product.name}
