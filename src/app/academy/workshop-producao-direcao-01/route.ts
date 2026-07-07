@@ -124,7 +124,6 @@ body.has-announce{padding-top:40px;}
         <source src="/videos/inside-out-hero-vertical.mp4" type="video/mp4">
       </video>
     </div>
-    <span class="slide-cap">Studio Plano · São Paulo<br>Inside Out · Edit 2 · Set 2026</span>
   </div>
   <style>
     @media (max-width:640px){
@@ -134,11 +133,6 @@ body.has-announce{padding-top:40px;}
   </style>
 
   <div class="hero-body">
-    <div class="hero-top">
-      <span class="mono">Studio Plano · São Paulo</span>
-      <span class="mono">Edit 02 · 05 & 06 Set 2026</span>
-    </div>
-
     <div class="hero-center">
       <span class="eyebrow">Evento de Creator · São Paulo · Set 2026</span>
       <h1 class="display hero-title h-hero" style="margin-top:14px">
@@ -168,7 +162,7 @@ body.has-announce{padding-top:40px;}
         <div class="eib-sep"></div>
         <a class="eib-cta" data-reserve href="#planos">Entrar na lista <span>↗</span></a>
       </div>
-      <div class="scroll-cue">Role <span class="ln"></span></div>
+      <div class="scroll-cue"><span class="ln"></span></div>
     </div>
   </div>
 </header>
@@ -459,6 +453,34 @@ body.has-announce{padding-top:40px;}
 .diretor-role{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);margin-bottom:clamp(20px,3vw,36px);line-height:1.8;}
 .diretor-text{color:#c8c2b6;line-height:1.7;max-width:48ch;margin-bottom:1em;}
   </style>
+</section>
+
+<!-- ============ COUNTDOWN ============ -->
+<section class="section paper" id="countdown" style="padding:80px 0;border-top:1px solid #e8e3db;">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow" style="display:block;margin-bottom:32px">05 · 06 Set 2026 · Studio Plano · São Paulo</span>
+    <div style="display:flex;justify-content:center;gap:clamp(24px,5vw,64px);align-items:flex-start" data-reveal>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <span style="font-family:var(--display);font-size:clamp(48px,8vw,96px);line-height:1;letter-spacing:-.02em;color:var(--ink)" data-cd="d">00</span>
+        <span style="font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke)">Dias</span>
+      </div>
+      <span style="font-family:var(--display);font-size:clamp(48px,8vw,96px);line-height:1;color:#ccc;align-self:flex-start;padding-top:4px">·</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <span style="font-family:var(--display);font-size:clamp(48px,8vw,96px);line-height:1;letter-spacing:-.02em;color:var(--ink)" data-cd="h">00</span>
+        <span style="font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke)">Horas</span>
+      </div>
+      <span style="font-family:var(--display);font-size:clamp(48px,8vw,96px);line-height:1;color:#ccc;align-self:flex-start;padding-top:4px">·</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <span style="font-family:var(--display);font-size:clamp(48px,8vw,96px);line-height:1;letter-spacing:-.02em;color:var(--ink)" data-cd="m">00</span>
+        <span style="font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke)">Min</span>
+      </div>
+      <span style="font-family:var(--display);font-size:clamp(48px,8vw,96px);line-height:1;color:#ccc;align-self:flex-start;padding-top:4px">·</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <span style="font-family:var(--display);font-size:clamp(48px,8vw,96px);line-height:1;letter-spacing:-.02em;color:var(--ink)" data-cd="s">00</span>
+        <span style="font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke)">Seg</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============ PLANOS ============ -->
