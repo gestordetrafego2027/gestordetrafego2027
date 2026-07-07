@@ -174,19 +174,19 @@ body.has-announce{padding-top:40px;}
     <div class="pq-items">
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Publicitários</b> que querem vivenciar a produção por dentro e sair com material de campanha real no portfólio</span>
+        <div class="pq-body"><strong class="pq-role">Publicitários</strong><span class="pq-desc">Vivenciar a produção por dentro. Sair com campanha real no portfólio.</span></div>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Diretores criativos</b> que querem dirigir ou assistir uma produção completa — dois sets, equipe e marcas reais</span>
+        <div class="pq-body"><strong class="pq-role">Diretores criativos</strong><span class="pq-desc">Dois sets, equipe completa, marcas reais. Dirigir ao vivo.</span></div>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Creators</b> que querem produzir conteúdo de campanha de verdade para marcas e elevar o nível do portfólio</span>
+        <div class="pq-body"><strong class="pq-role">Creators</strong><span class="pq-desc">Produzir conteúdo de campanha de verdade para marcas. Portfólio de nível.</span></div>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Profissionais do audiovisual</b> que querem trabalhar dentro de uma produção de campanha com direção ao vivo</span>
+        <div class="pq-body"><strong class="pq-role">Profissionais do audiovisual</strong><span class="pq-desc">Trabalhar dentro de uma produção de campanha com direção ao vivo.</span></div>
       </div>
     </div>
   </div>
@@ -203,7 +203,9 @@ body.has-announce{padding-top:40px;}
 .pq-item:nth-last-child(-n+2){border-bottom:none;}
 @media(max-width:640px){.pq-item:nth-child(odd){border-right:none;}.pq-item:nth-last-child(-n+2){border-bottom:1px solid var(--line-d);}.pq-item:last-child{border-bottom:none;}}
 .pq-icon{color:var(--accent);font-size:.8rem;margin-top:4px;flex-shrink:0;}
-.pq-item span:last-child{font-size:.85rem;line-height:1.7;color:#c8c2b6;letter-spacing:.01em;}
+.pq-body{display:flex;flex-direction:column;gap:6px;}
+.pq-role{font-family:var(--display);font-size:clamp(1.1rem,2vw,1.4rem);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;color:#fff;line-height:1;}
+.pq-desc{font-size:.8rem;line-height:1.6;color:#8a8474;letter-spacing:.01em;}
 </style>
 
 <!-- ============ 01 · CONCEITO ============ -->
@@ -558,7 +560,17 @@ body.has-announce{padding-top:40px;}
   <div class="wrap">
     <div style="border:1px solid var(--line);padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:center;" data-reveal>
       <div style="aspect-ratio:3/4;background:var(--ink);overflow:hidden;position:relative;order:-1">
-        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;" src="/videos/studio-plano.mp4" poster="/images/academy/studio-plano/studio-plano-1.webp"></video>
+        <video id="spVideo" muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;" src="/videos/studio-plano.mp4" poster="/images/academy/studio-plano/studio-plano-1.webp"></video>
+        <script>
+          (function(){
+            var v=document.getElementById('spVideo');
+            if(!v) return;
+            var io=new IntersectionObserver(function(es){
+              es.forEach(function(e){ e.isIntersecting ? v.play() : v.pause(); });
+            },{threshold:0.15});
+            io.observe(v);
+          })();
+        </script>
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.55) 0%,transparent 55%);pointer-events:none"></div>
         <span style="position:absolute;bottom:16px;left:16px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:#fff;opacity:.7">Studio Plano · São Paulo · SP</span>
       </div>
