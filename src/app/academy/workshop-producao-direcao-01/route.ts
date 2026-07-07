@@ -6,12 +6,12 @@ export function GET() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inside Out · Edit 2 — Workshop HMZT · House Mazzutti</title>
-<meta name="description" content="Dois dias dentro de um estúdio real. Inside Out Edit 2 — Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha e pós-produção intensiva. 15 alunos.">
+<title>Inside Out · Edit 2 — Evento de Creator · House Mazzutti</title>
+<meta name="description" content="Evento de creator em São Paulo — 05 e 06 de setembro de 2026. Produza conteúdo real de campanha para marcas — moda e beauty — dentro de um estúdio profissional. Turma vip · 15 creators.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://housemazzutti.com/academy/workshop-producao-direcao-01/">
-<meta property="og:title" content="Inside Out · Edit 2 — Workshop HMZT">
-<meta property="og:description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas. São Paulo, 2026.">
+<meta property="og:title" content="Inside Out · Edit 2 — Evento de Creator · HMZT">
+<meta property="og:description" content="Produza conteúdo real de campanha para marcas. Dois sets ao vivo — moda e beauty — num estúdio profissional em São Paulo. Turma vip · 15 creators.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://housemazzutti.com/academy/workshop-producao-direcao-01/">
 <meta property="og:locale" content="pt_BR">
@@ -21,11 +21,11 @@ export function GET() {
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp">
-<meta name="twitter:title" content="Inside Out · Edit 2 — Workshop HMZT">
-<meta name="twitter:description" content="Dois dias de imersão em direção criativa e produção executiva de campanhas. São Paulo, 2026.">
+<meta name="twitter:title" content="Inside Out · Edit 2 — Evento de Creator · HMZT">
+<meta name="twitter:description" content="Produza conteúdo real de campanha para marcas. Dois sets ao vivo — moda e beauty — num estúdio profissional em São Paulo.">
 <!-- JSON-LD: Event + FAQPage -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Workshop HMZT","description":"Dois dias dentro de um estúdio real. Studio Plano, São Paulo, 05 e 06 de setembro de 2026. Dois sets ao vivo, direção de campanha e pós-produção intensiva. 15 alunos.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Studio Plano","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":15},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é o Inside Out?","acceptedAnswer":{"@type":"Answer","text":"Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando de perto a direção completa de duas campanhas reais. Turma vip · máx 15 alunos."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026, em dois dias intensivos e presenciais. Dia 01 no Studio Plano; Dia 02 com pós-produção online e encerramento presencial com a turma."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"O workshop é voltado para quem já atua ou quer atuar com produção de alto padrão. Não é introdutório — é para quem quer elevar o nível do que já faz na prática."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Os 2 dias de imersão, materiais de apoio (e-book, templates e documentos), kit do participante, souvenir exclusivo HMZT, coffee breaks, coquetel de networking e certificação oficial — conforme o plano escolhido."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial HMZT com design profissional, emitida ao final dos dois dias."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Event","name":"Inside Out · Edit 2 — Evento de Creator · HMZT","description":"Evento de creator em São Paulo — 05 e 06 de setembro de 2026. Produza conteúdo real de campanha para marcas — moda e beauty — dentro de um estúdio profissional. Turma vip · 15 creators.","startDate":"2026-09-05","endDate":"2026-09-06","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Studio Plano","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}},"organizer":{"@type":"Organization","name":"House Mazzutti","url":"https://housemazzutti.com"},"performer":{"@type":"Person","name":"Ângelo Mazzutti","url":"https://housemazzutti.com/pt/angelo"},"image":"https://housemazzutti.com/images/academy/direcao-criativa/og-image.webp","url":"https://housemazzutti.com/academy/workshop-producao-direcao-01/","maximumAttendeeCapacity":15},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Para quem é o Inside Out?","acceptedAnswer":{"@type":"Answer","text":"Para creators, fotógrafos, videomakers, maquiadores, modelos e stylists que querem produzir conteúdo real de campanha para marcas — dentro de um estúdio profissional, com equipe completa e direção ao vivo. Turma vip · máx 15 creators."}},{"@type":"Question","name":"Onde e quando acontece?","acceptedAnswer":{"@type":"Answer","text":"Edit 2 acontece em São Paulo nos dias 05 e 06 de setembro de 2026. Dia 01 presencial no Studio Plano — dois sets de produção ao vivo. Dia 02 online — pós-produção intensiva com IA e encerramento presencial."}},{"@type":"Question","name":"Preciso de experiência prévia?","acceptedAnswer":{"@type":"Answer","text":"É para quem já produz conteúdo ou quer produzir em nível de campanha para marcas. Não é introdutório — você vai trabalhar dentro de uma produção real ao lado de quem dirige."}},{"@type":"Question","name":"O que está incluso?","acceptedAnswer":{"@type":"Answer","text":"Material de pré-produção, Dia 01 completo no Studio Plano com 2 sets ao vivo, conteúdo de campanha real para o portfólio, pós-produção intensiva no Dia 02, encerramento presencial, lista de fornecedores SP e certificação oficial HMZT."}},{"@type":"Question","name":"Qual a política de cancelamento?","acceptedAnswer":{"@type":"Answer","text":"Direito de arrependimento em até 7 dias (reembolso integral, Art. 49 CDC). Cancelamento até 15 dias antes do evento: reembolso parcial de 50%. A partir de 14 dias antes, sem reembolso."}},{"@type":"Question","name":"Existe certificado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Certificação oficial HMZT com design profissional, emitida ao final dos dois dias."}}]}]}
 </script>
 <!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
@@ -140,13 +140,13 @@ body.has-announce{padding-top:40px;}
     </div>
 
     <div class="hero-center">
-      <span class="eyebrow">Workshop 100% prático · São Paulo · Set 2026</span>
+      <span class="eyebrow">Evento de Creator · São Paulo · Set 2026</span>
       <h1 class="display hero-title h-hero" style="margin-top:14px">
         <span class="line"><span>Inside</span></span>
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
-      <div class="hero-rot"><span class="rot" id="rot">Duas campanhas simultâneas · moda e beauty</span></div>
-      <p class="hero-sub">Acompanhe de perto a direção completa de duas campanhas reais — do briefing à entrega. <em>Turma vip · máx 15 alunos.</em></p>
+      <div class="hero-rot"><span class="rot" id="rot">Produza conteúdo real de campanha · moda e beauty</span></div>
+      <p class="hero-sub">Dois sets ao vivo, equipe completa, marcas reais. Você produz — sai com conteúdo de campanha no portfólio. <em>Turma vip · máx 15 creators.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -180,19 +180,19 @@ body.has-announce{padding-top:40px;}
     <div class="pq-items">
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Fotógrafos e videomakers</b> que querem entender a direção criativa por dentro</span>
+        <span><b>Creators de moda e beauty</b> que querem produzir conteúdo de campanha de verdade para marcas</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Maquiadores e beauty artists</b> que querem ver como a direção pensa o beauty</span>
+        <span><b>Fotógrafos e videomakers</b> que querem sair com material de campanha real no portfólio</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Modelos</b> que querem entender o processo completo de produção de campanha</span>
+        <span><b>Maquiadores e stylists</b> que querem trabalhar dentro de uma produção profissional para marca</span>
       </div>
       <div class="pq-item">
         <span class="pq-icon">↗</span>
-        <span><b>Stylists</b> que querem aprimorar seu processo criativo dentro de uma campanha real</span>
+        <span><b>Modelos</b> que querem entender e participar de uma produção de campanha do início ao fim</span>
       </div>
     </div>
   </div>
@@ -221,13 +221,13 @@ body.has-announce{padding-top:40px;}
     </div>
     <div class="conceito-split">
       <div class="conceito-left" data-reveal>
-        <h2 class="conceito-h">Duas<br>campanhas.<br><em>Dois dias.<br>Você lá.</em></h2>
+        <h2 class="conceito-h">Você<br>produz.<br><em>Marcas<br>reais.</em></h2>
       </div>
       <div class="conceito-right" data-reveal data-reveal-d="1">
-        <p class="conceito-p">Duas campanhas reais — moda e beauty — rodando simultâneas num estúdio profissional em São Paulo. Você acompanha cada decisão, do briefing à entrega. Não é teoria. É o processo por dentro.</p>
+        <p class="conceito-p">Duas campanhas reais — moda e beauty — dentro de um estúdio profissional em São Paulo. Você não assiste. Você produz ao lado de quem dirige. Sai com conteúdo de campanha real no portfólio e com o processo na cabeça.</p>
         <div class="conceito-line">
-          <span>Do pré à entrega ao cliente.</span>
-          <span>Dois sets. Uma direção completa.</span>
+          <span>Conteúdo real. Marcas reais. Portfólio real.</span>
+          <span>Dois sets. Dois dias. Você produz.</span>
         </div>
       </div>
     </div>
@@ -243,27 +243,27 @@ body.has-announce{padding-top:40px;}
     <div class="faz-grid">
       <div class="faz-item" data-reveal>
         <div class="faz-n">01</div>
-        <div class="faz-t">Duas campanhas simultâneas</div>
+        <div class="faz-t">Produz conteúdo de campanha real para marcas</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">02</div>
-        <div class="faz-t">Equipe de mercado consolidada</div>
+        <div class="faz-t">Trabalha ao lado de equipe profissional de mercado</div>
       </div>
       <div class="faz-item" data-reveal>
         <div class="faz-n">03</div>
-        <div class="faz-t">Aperfeiçoamento na prática</div>
+        <div class="faz-t">Sai com material de campanha no portfólio</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">04</div>
-        <div class="faz-t">Conteúdo próprio · foto e vídeo</div>
+        <div class="faz-t">Foto e vídeo · dois sets completos ao vivo</div>
       </div>
       <div class="faz-item" data-reveal>
         <div class="faz-n">05</div>
-        <div class="faz-t">Pós-produção + IA aplicada</div>
+        <div class="faz-t">Pós-produção + IA aplicada ao conteúdo</div>
       </div>
       <div class="faz-item" data-reveal data-reveal-d="1">
         <div class="faz-n">06</div>
-        <div class="faz-t">Network · Encerramento · SP</div>
+        <div class="faz-t">Network · Creators · Encerramento · SP</div>
       </div>
     </div>
   </div>
@@ -436,11 +436,11 @@ body.has-announce{padding-top:40px;}
       <div class="diretor-bio" data-reveal data-reveal-d="1">
         <h2 class="diretor-name">Angelo<br>Mazzutti</h2>
         <p class="diretor-role mono">Diretor Criativo · Fundador<br>House Mazzutti & HMZT Produtora</p>
-        <p class="diretor-text">Dez anos de campanhas reais para marcas de moda, beleza e lifestyle. Angelo não ensina o que leu — ensina o que fez. No Studio Plano, ele abre o processo que conduz seus próprios sets: as decisões de direção criativa, os bastidores da produção executiva, os acertos e os erros que nenhum curso mostra.</p>
-        <p class="diretor-text">Você vai trabalhar ao lado de quem constrói o que você quer construir.</p>
+        <p class="diretor-text">Dez anos produzindo campanhas reais para marcas de moda, beleza e lifestyle. No Inside Out, Angelo abre o set para você trabalhar do lado de dentro — não como plateia, como creator. Você produz junto. O processo, as decisões, os bastidores que nenhum curso coloca na frente de você.</p>
+        <p class="diretor-text">Você vai produzir ao lado de quem entrega o que as marcas pagam para ter.</p>
         <div class="stats" style="margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--line-d);padding-top:24px">
           <div class="stat"><div class="v" style="color:var(--paper)">10</div><div class="l">Anos de carreira</div></div>
-          <div class="stat"><div class="v" style="color:var(--paper)">15</div><div class="l">Alunos · turma vip</div></div>
+          <div class="stat"><div class="v" style="color:var(--paper)">15</div><div class="l">Creators · turma vip</div></div>
           <div class="stat"><div class="v" style="color:var(--paper)">2</div><div class="l">Dias de imersão</div></div>
         </div>
       </div>
@@ -465,8 +465,8 @@ body.has-announce{padding-top:40px;}
 <section class="section ink" id="planos">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="eyebrow" style="color:var(--smoke)">05 — Sua cadeira</span>
-      <span class="sec-index">Turma vip · máx 15 alunos · sem reprise</span>
+      <span class="eyebrow" style="color:var(--smoke)">05 — Sua vaga</span>
+      <span class="sec-index">Turma vip · máx 15 creators · sem reprise</span>
     </div>
     <div class="plans plans--lotes" data-reveal>
 
@@ -477,11 +477,11 @@ body.has-announce{padding-top:40px;}
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 470 · Julho</small></div>
         <ul class="plan-feats">
           <li>Dia 01 presencial · <strong>Studio Plano · SP</strong> — 2 sets ao vivo com equipe completa</li>
+          <li>Você produz conteúdo real de campanha para marcas</li>
           <li>Set 01 · Moda — lookbook e campanha</li>
           <li>Set 02 · Beauty — still publicitário</li>
+          <li>Material de campanha para o seu portfólio</li>
           <li>Pós-produção ao vivo com IA · Dia 02 online</li>
-          <li>Material de pré-produção enviado antes do evento</li>
-          <li>Lista curada de fornecedores e parceiros SP</li>
           <li>Certificação oficial HMZT</li>
         </ul>
         <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
@@ -494,11 +494,11 @@ body.has-announce{padding-top:40px;}
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 510 · Abre em Agosto</small></div>
         <ul class="plan-feats">
           <li>Dia 01 presencial · <strong>Studio Plano · SP</strong> — 2 sets ao vivo com equipe completa</li>
+          <li>Você produz conteúdo real de campanha para marcas</li>
           <li>Set 01 · Moda — lookbook e campanha</li>
           <li>Set 02 · Beauty — still publicitário</li>
+          <li>Material de campanha para o seu portfólio</li>
           <li>Pós-produção ao vivo com IA · Dia 02 online</li>
-          <li>Material de pré-produção enviado antes do evento</li>
-          <li>Lista curada de fornecedores e parceiros SP</li>
           <li>Certificação oficial HMZT</li>
         </ul>
         <button class="btn" disabled style="opacity:.5;cursor:not-allowed;border-style:dashed"><span class="lbl">Abre em Agosto</span></button>
@@ -511,11 +511,11 @@ body.has-announce{padding-top:40px;}
         <div class="plan-price" style="margin:4px 0 20px"><small>3× R$ 567 · Abre em Setembro</small></div>
         <ul class="plan-feats">
           <li>Dia 01 presencial · <strong>Studio Plano · SP</strong> — 2 sets ao vivo com equipe completa</li>
+          <li>Você produz conteúdo real de campanha para marcas</li>
           <li>Set 01 · Moda — lookbook e campanha</li>
           <li>Set 02 · Beauty — still publicitário</li>
+          <li>Material de campanha para o seu portfólio</li>
           <li>Pós-produção ao vivo com IA · Dia 02 online</li>
-          <li>Material de pré-produção enviado antes do evento</li>
-          <li>Lista curada de fornecedores e parceiros SP</li>
           <li>Certificação oficial HMZT</li>
         </ul>
         <button class="btn" disabled style="opacity:.45;cursor:not-allowed;border-style:dashed"><span class="lbl">Abre em Setembro</span></button>
@@ -524,7 +524,7 @@ body.has-announce{padding-top:40px;}
     </div>
 
     <div class="scarcity" data-reveal>
-      <span class="vagas-txt" id="vagasTxt">Turma vip · máx 15 alunos</span>
+      <span class="vagas-txt" id="vagasTxt">Turma vip · máx 15 creators</span>
       <span class="vagas-bar"><i id="vagasBar"></i></span>
       <span class="vagas-txt" style="color:var(--accent)">● Lote 1 · Julho</span>
     </div>
@@ -623,7 +623,7 @@ body.has-announce{padding-top:40px;}
       <span class="sec-index">Tudo o que você precisa saber</span>
     </div>
     <div class="faq" data-reveal>
-      <details open><summary>Para quem é o Inside Out? <span class="pm">+</span></summary><div class="ans">Para maquiadores, modelos, fotógrafos, videomakers e stylists que querem aprimorar seu processo criativo acompanhando a direção completa de duas campanhas reais — do briefing à entrega ao cliente. É para quem já atua e quer entender o processo por dentro. Turma vip · máx 15 alunos.</div></details>
+      <details open><summary>Para quem é o Inside Out? <span class="pm">+</span></summary><div class="ans">Para creators, fotógrafos, videomakers, maquiadores, stylists e modelos que querem produzir conteúdo real de campanha para marcas — dentro de um estúdio profissional, com equipe completa, ao lado de quem dirige. Não é para quem quer assistir. É para quem quer produzir. Turma vip · máx 15 creators.</div></details>
       <details><summary>Onde acontece o Dia 01? <span class="pm">+</span></summary><div class="ans">No <strong>Studio Plano</strong>, em São Paulo, no dia <strong>05 de setembro de 2026</strong>. Um estúdio profissional real — não uma sala de aula. O endereço completo é enviado na confirmação da inscrição.</div></details>
       <details><summary>E o Dia 02? <span class="pm">+</span></summary><div class="ans">Começa online: sala fechada no <strong>Google Meet das 8h às 12h</strong>, exclusiva para a turma — 4 horas de pós-produção intensiva com Angelo Mazzutti. Às 14h, encerramento presencial com almoço e happy hour com a turma em São Paulo.</div></details>
       <details><summary>O que trago para o Dia 01? <span class="pm">+</span></summary><div class="ans">Câmera (qualquer câmera — o importante é você saber o que fará com ela), celular, prancheta, notebook e toda a sua criatividade. O estúdio, a equipe, os modelos e o set são por conta do evento.</div></details>
@@ -636,9 +636,9 @@ body.has-announce{padding-top:40px;}
 <!-- ============ CTA FINAL ============ -->
 <section class="section ink" id="reservar">
   <div class="wrap cta-final">
-    <span class="eyebrow" style="color:var(--smoke)" data-reveal>Turma vip · máx 15 alunos · Studio Plano · São Paulo</span>
-    <h2 class="big" data-reveal>Sua cadeira<br><span class="o">está esperando.</span></h2>
-    <p class="lead" data-reveal style="max-width:34ch;color:var(--smoke-lt)">Dois dias. Um estúdio real. Um processo que você leva para o resto da carreira.</p>
+    <span class="eyebrow" style="color:var(--smoke)" data-reveal>Turma vip · máx 15 creators · Studio Plano · São Paulo</span>
+    <h2 class="big" data-reveal>Sua produção<br><span class="o">começa aqui.</span></h2>
+    <p class="lead" data-reveal style="max-width:34ch;color:var(--smoke-lt)">Dois dias. Um estúdio real. Conteúdo de campanha para o portfólio e o processo que você leva para sempre.</p>
     <button class="btn solid lg" data-reveal data-reserve data-plan="Lista de espera"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
   </div>
   <div class="marquee">
