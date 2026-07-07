@@ -601,8 +601,9 @@ body.has-announce{padding-top:40px;}
       </button>
     </div>
     <style>
-    .dep-video-wrap{position:relative;background:#0a0a08;aspect-ratio:16/9;overflow:hidden;margin-bottom:clamp(40px,5vw,72px);cursor:pointer;}
-    .dep-video-wrap video{width:100%;height:100%;object-fit:cover;}
+    /* Vídeo vertical (9:16, 1440x2560) — quadro retrato centralizado, sem corte. */
+    .dep-video-wrap{position:relative;background:#0a0a08;aspect-ratio:9/16;width:100%;max-width:400px;margin:0 auto clamp(40px,5vw,72px);overflow:hidden;cursor:pointer;}
+    .dep-video-wrap video{width:100%;height:100%;object-fit:cover;display:block;}
     .dep-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;transition:opacity .2s;}
     .dep-play:hover{opacity:.8;}
     .dep-play.hidden{display:none;}
