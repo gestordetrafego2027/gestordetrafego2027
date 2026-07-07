@@ -140,7 +140,7 @@ body.has-announce{padding-top:40px;}
         <span class="line"><span class="hero-out">Out</span></span>
       </h1>
       <div class="hero-rot"><span class="rot" id="rot">Produza conteúdo real de campanha · moda e beauty</span></div>
-      <p class="hero-sub">Você produz. Sai com campanha, portfólio e uma experiência imersiva de dois dias — expertise, conexões reais e uma nova forma de pensar e agir. <em>Turma vip · máx 15 creators.</em></p>
+      <p class="hero-sub">Dois dias dentro de uma produção real. Você sai com campanha no portfólio, expertise de quem já fez e conexões que mudam a trajetória. <em>Turma vip · máx 15 creators.</em></p>
     </div>
 
     <div class="hero-foot">
@@ -220,7 +220,7 @@ body.has-announce{padding-top:40px;}
         <h2 class="conceito-h">Você<br>produz.<br><em>Marcas<br>reais.</em></h2>
       </div>
       <div class="conceito-right" data-reveal data-reveal-d="1">
-        <p class="conceito-p">Duas campanhas reais — moda e beauty — dentro de um estúdio profissional em São Paulo. Você não assiste. Você produz ao lado de quem dirige. Sai com campanha, portfólio, expertise e conexões que mudam sua carreira e sua forma de pensar e agir.</p>
+        <p class="conceito-p">Duas campanhas reais — moda e beauty — dentro de um estúdio profissional em São Paulo. Você não assiste: você produz ao lado de quem dirige. E sai diferente. Com campanha no portfólio, com o processo na cabeça e com pessoas ao redor que elevam o nível do que você faz.</p>
         <div class="conceito-line">
           <span>Conteúdo real. Marcas reais. Portfólio real.</span>
           <span>Dois sets. Dois dias. Você produz.</span>
@@ -673,7 +673,7 @@ body.has-announce{padding-top:40px;}
   <div class="wrap cta-final">
     <span class="eyebrow" style="color:var(--smoke)" data-reveal>Turma vip · máx 15 creators · Studio Plano · São Paulo</span>
     <h2 class="big" data-reveal>Sua produção<br><span class="o">começa aqui.</span></h2>
-    <p class="lead" data-reveal style="max-width:34ch;color:var(--smoke-lt)">Dois dias. Um estúdio real. Campanha, portfólio, expertise e conexões que mudam sua carreira e sua forma de pensar e agir.</p>
+    <p class="lead" data-reveal style="max-width:34ch;color:var(--smoke-lt)">Dois dias que mudam o que você entrega, o que você cobra e as pessoas com quem você trabalha.</p>
     <button class="btn solid lg" data-reveal data-reserve data-plan="Lista de espera"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
   </div>
   <div class="marquee">
