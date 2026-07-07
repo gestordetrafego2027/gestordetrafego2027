@@ -385,8 +385,8 @@ export default function Home() {
 
 
                 {/* ── SOBRE / DIFERENCIAL ────────────────────────────────── */}
-                <section className="min-h-[80vh] flex flex-col md:flex-row-reverse relative">
-                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden h-full min-h-[500px] md:min-h-[80vh]">
+                <section className="min-h-[80vh] flex flex-col md:flex-row-reverse md:items-stretch relative">
+                    <div className="w-full md:w-1/2 bg-[#ececec] relative overflow-hidden min-h-[500px] md:self-stretch">
                         <Image src="/images/about/diferencial-mao.webp" alt="Direção de arte autoral — House Mazzutti" fill sizes="(max-width: 768px) 100vw, 50vw" quality={82} loading="lazy" className="object-cover" />
                     </div>
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5 w-px bg-[#cccccc] z-10"></div>
