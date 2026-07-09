@@ -5,7 +5,7 @@ import { getStripe } from '@/lib/stripe/server'
 const WORKSHOP_PLANS = {
   'Lote 1': {
     stripePriceId: 'price_1TrPOrLcrEu1967nCgrZU24O',
-    asaasUrl: '',
+    asaasUrl: 'https://www.asaas.com/c/p2ii50lbnvjoxbou',
     label: 'Inside Out Edit 02 · Lote 1',
     amount: 141000,
   },

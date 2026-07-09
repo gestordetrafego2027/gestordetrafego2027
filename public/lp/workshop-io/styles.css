@@ -420,6 +420,9 @@ button{font-family:inherit;cursor:pointer;}
 .field .msg{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:6px;height:0;overflow:hidden;transition:height .2s;}
 .field.err .msg{height:1.2em;}
 .modal .btn{width:100%;justify-content:center;margin-top:8px;}
+.method-opt{display:flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--line);cursor:pointer;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s,background .2s;}
+.method-opt:has(input:checked){border-color:var(--ink);background:var(--ink);color:var(--paper);}
+.method-opt input{display:none;}
 .modal-success{text-align:center;padding:20px 0;}
 .modal-success .ok{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 22px;}
 

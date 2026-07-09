@@ -729,6 +729,15 @@ body.has-announce{padding-top:40px;}
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999"><div class="msg">Informe um telefone válido</div></div>
         <input type="hidden" name="plano" id="formPlano" value="Lote 1">
         <input type="hidden" name="mode" id="formMode" value="checkout">
+        <div id="methodWrap" style="display:none;margin-bottom:20px">
+          <label style="display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#888;margin-bottom:10px">Forma de pagamento</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <label class="method-opt"><input type="radio" name="method" value="card" checked><span>Cartão de crédito</span></label>
+            <label class="method-opt"><input type="radio" name="method" value="pix"><span>Pix</span></label>
+            <label class="method-opt"><input type="radio" name="method" value="boleto"><span>Boleto</span></label>
+          </div>
+          <p style="font-size:.72rem;color:#aaa;margin:8px 0 0;line-height:1.5">Pix e Boleto processados via Asaas · Cartão via Stripe (parcelamento disponível)</p>
+        </div>
         <div class="form-error" style="display:none;color:#c92a2a;font-size:13px;margin-bottom:12px;text-align:center"></div>
         <button class="btn solid" type="submit" id="formSubmit"><span class="lbl">Ir para o pagamento</span><span class="ar">↗</span></button>
       </form>

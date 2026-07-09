@@ -136,17 +136,22 @@
   const formMode = $('#formMode');
   const formSubmitBtn = $('#formSubmit');
 
+  const methodWrap = $('#methodWrap');
   function openCheckout(plan){
     formPlano.value = plan;
     formMode.value = 'checkout';
     if(modalTitle) modalTitle.textContent = 'Garantir minha vaga';
     if(modalSub) modalSub.textContent = 'Inside Out · Edit 2 — ' + plan + ' · R$ 1.410';
-    if(modalDesc) modalDesc.textContent = 'Preencha os dados abaixo. Você será direcionado para o pagamento seguro.';
+    if(modalDesc) modalDesc.textContent = 'Preencha os dados e escolha a forma de pagamento.';
     if(formSubmitBtn){ formSubmitBtn.querySelector('.lbl').textContent = 'Ir para o pagamento'; }
+    if(methodWrap) methodWrap.style.display='block';
+    // reset method to card
+    const cardRadio = form.querySelector('input[name="method"][value="card"]');
+    if(cardRadio) cardRadio.checked = true;
     formWrap.style.display='block'; success.style.display='none';
     modal.classList.add('open');
     document.body.style.overflow='hidden';
-    setTimeout(()=>{ const f=form.querySelector('input'); if(f) f.focus(); }, 200);
+    setTimeout(()=>{ const f=form.querySelector('input[name="nome"]'); if(f) f.focus(); }, 200);
   }
   function openWaitlist(){
     formPlano.value = 'Lista de espera — Inside Out Edit 2';
@@ -155,10 +160,11 @@
     if(modalSub) modalSub.textContent = 'Inside Out · Edit 2 — São Paulo · Set 2026';
     if(modalDesc) modalDesc.textContent = 'Cadastre-se e seja avisado em primeira mão quando as vagas abrirem. Sem compromisso.';
     if(formSubmitBtn){ formSubmitBtn.querySelector('.lbl').textContent = 'Entrar na lista'; }
+    if(methodWrap) methodWrap.style.display='none';
     formWrap.style.display='block'; success.style.display='none';
     modal.classList.add('open');
     document.body.style.overflow='hidden';
-    setTimeout(()=>{ const f=form.querySelector('input'); if(f) f.focus(); }, 200);
+    setTimeout(()=>{ const f=form.querySelector('input[name="nome"]'); if(f) f.focus(); }, 200);
   }
   function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
 
@@ -193,6 +199,7 @@
 
     try {
       if(isCheckout){
+        const selectedMethod = (form.querySelector('input[name="method"]:checked') || {}).value || 'card';
         const res = await fetch('/api/workshop/checkout/', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
@@ -201,7 +208,7 @@
             email: email.value.trim(),
             phone: digits,
             plan: formPlano.value,
-            method: 'card',
+            method: selectedMethod,
           }),
         });
         const data = await res.json();
