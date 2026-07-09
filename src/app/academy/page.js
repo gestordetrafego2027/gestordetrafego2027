@@ -96,12 +96,12 @@ const BOOKS = [
 /* ─── produtos ────────────────────────────────────────────────── */
 const PRODUCTS = [
   {
-    id: 'direcao-criativa',
-    typeLabel: 'Workshop · Gravado',
-    title: 'Direção Criativa e Produção Executiva',
-    subtitle: 'Do briefing ao resultado — como pensar, dirigir e executar projetos visuais com consistência de marca.',
-    features: ['Videoaulas gravadas', 'Materiais de acompanhamento', 'Acesso vitalício'],
-    price: 'R$ 249',
+    id: 'inside-out-edit2',
+    typeLabel: 'Evento Presencial · São Paulo · Set 2026',
+    title: 'Inside Out · Edit 2 — São Paulo',
+    subtitle: 'Dois dias dentro de uma produção real. Você sai com campanha, portfólio, expertise e conexões que mudam a trajetória.',
+    features: ['05 e 06 Set 2026 · Studio Plano · SP', 'Dois sets ao vivo — Moda e Beauty', 'Turma vip · máx 15 creators'],
+    price: 'R$ 1.410',
     href: '/academy/workshop-producao-direcao-01',
     cover: '/images/academy/capa-proximo-curso.png',
   },
