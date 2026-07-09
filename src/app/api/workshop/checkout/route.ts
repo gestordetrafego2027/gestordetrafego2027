@@ -3,6 +3,12 @@ import { z } from 'zod'
 import { getStripe } from '@/lib/stripe/server'
 
 const WORKSHOP_PLANS = {
+  'Lote 1': {
+    stripePriceId: 'price_1TrPOrLcrEu1967nCgrZU24O',
+    asaasUrl: '',
+    label: 'Inside Out Edit 02 · Lote 1',
+    amount: 141000,
+  },
   Insider: {
     stripePriceId: 'price_1TgcuPLcrEu1967nNXGh8fzC',
     asaasUrl: 'https://www.asaas.com/c/pj6iif7nbbx1yzyd',
@@ -27,7 +33,7 @@ const Schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   phone: z.string().min(10),
-  plan: z.enum(['Insider', 'Pro', 'Executivo']),
+  plan: z.enum(['Lote 1', 'Insider', 'Pro', 'Executivo']),
   method: z.enum(['card', 'pix', 'boleto']),
 })
 

@@ -126,22 +126,50 @@
 
   /* ---- modal ---- */
   const modal = $('#modal');
+  const modalTitle = $('#modalTitle');
   const modalSub = $('#modalSub');
+  const modalDesc = $('#modalDesc');
   const formWrap = $('#modalForm');
   const success = $('#modalSuccess');
   const form = $('#form');
-  function openModal(){
+  const formPlano = $('#formPlano');
+  const formMode = $('#formMode');
+  const formSubmitBtn = $('#formSubmit');
+
+  function openCheckout(plan){
+    formPlano.value = plan;
+    formMode.value = 'checkout';
+    if(modalTitle) modalTitle.textContent = 'Garantir minha vaga';
+    if(modalSub) modalSub.textContent = 'Inside Out · Edit 2 — ' + plan + ' · R$ 1.410';
+    if(modalDesc) modalDesc.textContent = 'Preencha os dados abaixo. Você será direcionado para o pagamento seguro.';
+    if(formSubmitBtn){ formSubmitBtn.querySelector('.lbl').textContent = 'Ir para o pagamento'; }
     formWrap.style.display='block'; success.style.display='none';
-    modalSub.textContent = 'Inside Out · Edit 2 — São Paulo · Set 2026';
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+    setTimeout(()=>{ const f=form.querySelector('input'); if(f) f.focus(); }, 200);
+  }
+  function openWaitlist(){
+    formPlano.value = 'Lista de espera — Inside Out Edit 2';
+    formMode.value = 'waitlist';
+    if(modalTitle) modalTitle.textContent = 'Lista de espera';
+    if(modalSub) modalSub.textContent = 'Inside Out · Edit 2 — São Paulo · Set 2026';
+    if(modalDesc) modalDesc.textContent = 'Cadastre-se e seja avisado em primeira mão quando as vagas abrirem. Sem compromisso.';
+    if(formSubmitBtn){ formSubmitBtn.querySelector('.lbl').textContent = 'Entrar na lista'; }
+    formWrap.style.display='block'; success.style.display='none';
     modal.classList.add('open');
     document.body.style.overflow='hidden';
     setTimeout(()=>{ const f=form.querySelector('input'); if(f) f.focus(); }, 200);
   }
   function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
-  $$('[data-reserve]').forEach(b=> b.addEventListener('click', e=>{ e.preventDefault(); openModal(); }));
+
+  $$('[data-checkout]').forEach(b=> b.addEventListener('click', e=>{
+    e.preventDefault();
+    openCheckout(b.getAttribute('data-checkout'));
+  }));
+  $$('[data-reserve]').forEach(b=> b.addEventListener('click', e=>{ e.preventDefault(); openWaitlist(); }));
   $$('[data-close]').forEach(b=> b.addEventListener('click', closeModal));
 
-  /* ---- form validation + waitlist ---- */
+  /* ---- form validation + checkout / waitlist ---- */
   const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   function setErr(input, on){ input.closest('.field').classList.toggle('err', on); }
   form.addEventListener('submit', async e=>{
@@ -158,26 +186,44 @@
       return;
     }
 
-    const submitBtn = form.querySelector('[type=submit]');
-    const lbl = submitBtn?.querySelector('.lbl');
-    if(submitBtn){ submitBtn.disabled = true; if(lbl) lbl.textContent = 'Aguarde…'; }
+    const lbl = formSubmitBtn ? formSubmitBtn.querySelector('.lbl') : null;
+    if(formSubmitBtn){ formSubmitBtn.disabled = true; if(lbl) lbl.textContent = 'Aguarde…'; }
+
+    const isCheckout = formMode.value === 'checkout';
 
     try {
-      const res = await fetch('/api/workshop/waitlist/', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          name: nome.value.trim(),
-          email: email.value.trim(),
-          phone: digits,
-        }),
-      });
-      const data = await res.json();
-      if(!res.ok) throw new Error(data.error || 'Erro ao registrar.');
-      formWrap.style.display='none';
-      success.style.display='block';
+      if(isCheckout){
+        const res = await fetch('/api/workshop/checkout/', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            name: nome.value.trim(),
+            email: email.value.trim(),
+            phone: digits,
+            plan: formPlano.value,
+            method: 'card',
+          }),
+        });
+        const data = await res.json();
+        if(!res.ok) throw new Error(data.error || 'Erro ao processar.');
+        window.location.href = data.url;
+      } else {
+        const res = await fetch('/api/workshop/waitlist/', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            name: nome.value.trim(),
+            email: email.value.trim(),
+            phone: digits,
+          }),
+        });
+        const data = await res.json();
+        if(!res.ok) throw new Error(data.error || 'Erro ao registrar.');
+        formWrap.style.display='none';
+        success.style.display='block';
+      }
     } catch(err){
-      if(submitBtn){ submitBtn.disabled = false; if(lbl) lbl.textContent = 'Entrar na lista'; }
+      if(formSubmitBtn){ formSubmitBtn.disabled = false; if(lbl) lbl.textContent = isCheckout ? 'Ir para o pagamento' : 'Entrar na lista'; }
       const errEl = form.querySelector('.form-error');
       if(errEl){ errEl.textContent = err.message; errEl.style.display='block'; }
     }

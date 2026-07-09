@@ -41,8 +41,8 @@ export function GET() {
 <!-- ============ ANNOUNCEMENT BAR ============ -->
 <div class="announce-bar" id="announceBar">
   <span class="announce-dot"></span>
-  <span class="announce-txt">Abertura do <strong>Lote 1</strong> — <strong>quinta-feira, 09 de julho às 14h</strong></span>
-  <a class="announce-cta" data-reserve href="#planos">Entrar na lista ↗</a>
+  <span class="announce-txt"><strong>Lote 1 aberto</strong> — vagas limitadas · Inside Out · Edit 2 · São Paulo · Set 2026</span>
+  <a class="announce-cta" data-checkout="Lote 1" href="#planos">Garantir vaga ↗</a>
   <button class="announce-close" id="announceClose" aria-label="Fechar">✕</button>
 </div>
 <style>
@@ -79,7 +79,7 @@ body.has-announce{padding-top:40px;}
       <a href="#planos">Planos</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="nav-cta" data-reserve href="#planos">Lista de espera</a>
+    <a class="nav-cta" data-checkout="Lote 1" href="#planos">Garantir vaga</a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </nav>
@@ -160,7 +160,7 @@ body.has-announce{padding-top:40px;}
           <span class="eib-v">15 alunos</span>
         </div>
         <div class="eib-sep"></div>
-        <a class="eib-cta" data-reserve href="#planos">Entrar na lista <span>↗</span></a>
+        <a class="eib-cta" data-checkout="Lote 1" href="#planos">Garantir vaga <span>↗</span></a>
       </div>
       <div class="scroll-cue"><span class="ln"></span></div>
     </div>
@@ -508,7 +508,7 @@ body.has-announce{padding-top:40px;}
           <li>Pós-produção ao vivo com IA · Dia 02 online</li>
           <li>Certificação oficial HMZT</li>
         </ul>
-        <button class="btn solid" data-reserve data-plan="Inside Out — Lote 1"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
+        <button class="btn solid" data-checkout="Lote 1"><span class="lbl">Garantir minha vaga</span><span class="ar">↗</span></button>
       </div>
 
       <div class="plan plan--lote">
@@ -674,7 +674,7 @@ body.has-announce{padding-top:40px;}
     <span class="eyebrow" style="color:var(--smoke)" data-reveal>Turma vip · máx 15 creators · Studio Plano · São Paulo</span>
     <h2 class="big" data-reveal>Sua produção<br><span class="o">começa aqui.</span></h2>
     <p class="lead" data-reveal style="max-width:34ch;color:var(--smoke-lt)">Dois dias que mudam o que você entrega, o que você cobra e as pessoas com quem você trabalha.</p>
-    <button class="btn solid lg" data-reveal data-reserve data-plan="Lista de espera"><span class="lbl">Entrar na lista de espera</span><span class="ar">↗</span></button>
+    <button class="btn solid lg" data-reveal data-checkout="Lote 1"><span class="lbl">Garantir minha vaga · Lote 1</span><span class="ar">↗</span></button>
   </div>
   <div class="marquee">
     <div class="track">
@@ -720,23 +720,24 @@ body.has-announce{padding-top:40px;}
   <div class="modal-card">
     <button class="modal-close" data-close aria-label="Fechar">✕</button>
     <div id="modalForm">
-      <h3>Lista de espera</h3>
-      <div class="sub" id="modalSub">Inside Out · Edit 2 — São Paulo · Set 2026</div>
-      <p style="color:#54524d;font-size:.85rem;margin:0 0 20px;line-height:1.5">Cadastre-se e seja avisado em primeira mão quando as vagas abrirem. Sem compromisso.</p>
+      <h3 id="modalTitle">Garantir minha vaga</h3>
+      <div class="sub" id="modalSub">Inside Out · Edit 2 — Lote 1 · R$ 1.410</div>
+      <p id="modalDesc" style="color:#54524d;font-size:.85rem;margin:0 0 20px;line-height:1.5">Preencha os dados abaixo. Você será direcionado para o pagamento seguro.</p>
       <form id="form" novalidate>
         <div class="field"><label>Nome completo</label><input name="nome" type="text" autocomplete="name" placeholder="Seu nome"><div class="msg">Informe seu nome</div></div>
         <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email" placeholder="seu@email.com"><div class="msg">E-mail inválido</div></div>
         <div class="field"><label>WhatsApp</label><input name="fone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999"><div class="msg">Informe um telefone válido</div></div>
-        <input type="hidden" name="plano" value="Lista de espera — Inside Out Edit 2">
+        <input type="hidden" name="plano" id="formPlano" value="Lote 1">
+        <input type="hidden" name="mode" id="formMode" value="checkout">
         <div class="form-error" style="display:none;color:#c92a2a;font-size:13px;margin-bottom:12px;text-align:center"></div>
-        <button class="btn solid" type="submit"><span class="lbl">Entrar na lista</span><span class="ar">↗</span></button>
+        <button class="btn solid" type="submit" id="formSubmit"><span class="lbl">Ir para o pagamento</span><span class="ar">↗</span></button>
       </form>
     </div>
     <div class="modal-success" id="modalSuccess" style="display:none">
       <div class="ok">✓</div>
-      <h3>Você está na lista</h3>
-      <div class="sub">Avisamos assim que as vagas abrirem.</div>
-      <p style="color:#54524d;max-width:34ch;margin:0 auto">Fique de olho no seu e-mail e WhatsApp. Você vai ser um dos primeiros a saber.</p>
+      <h3 id="successTitle">Você está na lista</h3>
+      <div class="sub" id="successSub">Avisamos assim que as vagas abrirem.</div>
+      <p id="successMsg" style="color:#54524d;max-width:34ch;margin:0 auto">Fique de olho no seu e-mail e WhatsApp. Você vai ser um dos primeiros a saber.</p>
     </div>
   </div>
 </div>
