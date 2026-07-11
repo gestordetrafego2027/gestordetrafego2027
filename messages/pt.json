@@ -27,27 +27,27 @@
   },
   "hero": {
     "slide0": {
-      "label": "HOUSE MAZZUTTI — 10 ANOS",
-      "titulo": "10 anos trabalhando ao lado dos grandes lançamentos.",
-      "texto": "Uma década construindo marcas, campanhas e histórias que ficaram.",
+      "label": "HOUSE MAZZUTTI",
+      "titulo": "Leitura antes de execução. Sempre.",
+      "texto": "Uma casa criativa com quatro frentes — Produtora, Agência, Studio e Academy. Uma só conversa para projetos que precisam de direção antes de precisar de câmera.",
       "cta": "Conheça a House"
     },
     "slide1": {
       "label": "STUDIO — HMZT",
-      "titulo": "Produção e direção de alto nível.",
-      "texto": "Foto, vídeo e direção de imagem pessoal em São Paulo.",
+      "titulo": "Direção de imagem para quem cuida da própria presença.",
+      "texto": "Book, ensaio e cobertura com direção completa — para pessoas que sabem que imagem é parte do trabalho.",
       "cta": "Entrar no Studio"
     },
     "slide2": {
       "label": "PRODUTORA — HMZT",
-      "titulo": "Da ideia à reprodução, um time completo ao seu lado.",
-      "texto": "Campanhas de moda, beleza e narrativas institucionais.",
+      "titulo": "Para marcas que precisam mais do que imagens — precisam de escala.",
+      "texto": "Produção executiva completa para campanhas de moda, beleza e publicidade nacional.",
       "cta": "Entrar na Produtora"
     },
     "slide3": {
       "label": "AGÊNCIA — HMZT",
-      "titulo": "Marcas que ocupam espaço.",
-      "texto": "Branding, rebranding e lançamentos com método autoral.",
+      "titulo": "Marca construída antes de ser comunicada.",
+      "texto": "Branding, identidade visual, web e comunicação integrados sob a mesma direção.",
       "cta": "Entrar na Agência"
     }
   },
@@ -56,18 +56,18 @@
     "see_portfolio": "Ver portfólio",
     "learn_more": "Saiba mais",
     "cta_tagline": "Menos tentativa. Mais direção.",
-    "cta_headline": "Se a sua marca pede um novo olhar."
+    "cta_headline": "Se o seu projeto pede uma leitura antes de começar."
   },
   "home": {
     "works_label": "Obras",
     "works_title": "Trabalhos selecionados",
     "services_title": "Tudo na mesma casa, pensado junto.",
     "solutions_label": "Soluções",
-    "solutions_title": "Uma casa. Três frentes.",
+    "solutions_title": "Uma casa. Quatro frentes.",
     "testimonials_label": "O QUE DIZEM",
     "testimonials_title": "Depoimentos",
     "studio_card_title": "HMZT | STUDIO",
-    "studio_card_subtitle": "Foto, vídeo e direção de imagem pessoal.",
+    "studio_card_subtitle": "Direção de imagem para quem leva a própria presença a sério.",
     "studio_card_items": [
       "Book profissional",
       "Ensaio pessoal",
@@ -75,7 +75,7 @@
       "Direção de imagem"
     ],
     "produtora_card_title": "HMZT | PRODUTORA",
-    "produtora_card_subtitle": "Campanhas de moda, beleza e narrativas institucionais.",
+    "produtora_card_subtitle": "Produção executiva de alto padrão para campanhas nacionais.",
     "produtora_card_items": [
       "Editorial de moda",
       "Campanha publicitária",
@@ -83,7 +83,7 @@
       "Produção executiva"
     ],
     "agencia_card_title": "HMZT | AGÊNCIA",
-    "agencia_card_subtitle": "Branding, campanhas e presença digital.",
+    "agencia_card_subtitle": "Sua marca construída antes de ser comunicada.",
     "agencia_card_items": [
       "Projeto de marca",
       "Campanhas",
@@ -98,14 +98,16 @@
     "boutique_studio_subtitle": "Direção de imagem e conteúdo pessoal.",
     "boutique_produtora_title": "PRODUTORA",
     "boutique_produtora_subtitle": "Produção Executiva Para Campanhas.",
-    "boutique_comunidade_title": "COMUNIDADE",
-    "boutique_comunidade_subtitle": "Ambiente de relacionamento e conexões.",
+    "boutique_comunidade_title": "ACADEMY",
+    "boutique_comunidade_subtitle": "O método de quem está em set — para quem quer chegar lá.",
     "frentes_agencia_label": "AGÊNCIA",
     "frentes_agencia_sub": "Branding · Web · Comunicação",
     "frentes_studio_label": "STUDIO",
     "frentes_studio_sub": "Book · Ensaio · Cobertura",
     "frentes_produtora_label": "PRODUTORA",
     "frentes_produtora_sub": "Moda · Beleza · Institucional",
+    "frentes_academy_label": "ACADEMY",
+    "frentes_academy_sub": "Cursos · Workshops · Materiais",
     "frentes_cta": "SAIBA MAIS →",
     "testimonials_ghost": "Depoimentos",
     "testimonials_titulo": "Depoimentos",
@@ -246,13 +248,13 @@
         ]
       },
       {
-        "title": "COMUNIDADE",
-        "subtitle": "Ambiente de relacionamento e conexões.",
+        "title": "ACADEMY",
+        "subtitle": "O método de quem está em set — para quem quer chegar lá.",
         "items": [
-          "Área do cliente",
-          "Central do aluno",
-          "Nossos parceiros",
-          "Casting e vagas"
+          "Cursos e workshops",
+          "E-books e materiais",
+          "Blog editorial",
+          "Formação prática"
         ]
       }
     ],
@@ -263,7 +265,8 @@
       "Traduzimos marca e pessoa em imagem, com a mesma direção do início ao fim.",
       "Direção, criação e produção sob uma única casa. Uma só conversa, do começo ao fim — sem ruído entre etapas."
     ],
-    "cta_titulo": "Imagem é consequência. Posicionamento é direção.",
+    "cta_titulo": "Imagem é consequência. Posicionamento é decisão.",
+    "cta_sub": "Se o seu projeto pede uma leitura antes de começar — esse é o ponto de entrada.",
     "cta_btn": "Iniciar uma conversa",
     "unidades_label": "As unidades da casa",
     "unidades_titulo": "Quatro frentes. Uma só conversa.",
@@ -296,13 +299,13 @@
         ]
       },
       {
-        "title": "COMUNIDADE",
-        "subtitle": "Ambiente de relacionamento e conexões.",
+        "title": "ACADEMY",
+        "subtitle": "O método de quem está em set — para quem quer chegar lá.",
         "items": [
-          "Área do cliente",
-          "Central do aluno",
-          "Nossos parceiros",
-          "Casting e vagas"
+          "Cursos e workshops",
+          "E-books e materiais",
+          "Blog editorial",
+          "Formação prática"
         ]
       }
     ]
@@ -311,16 +314,16 @@
     "hero_label": "10 ANOS — STUDIO HMZT",
     "hero_slides": [
       {
-        "titulo": "Para pessoas que sabem o que valem.",
-        "texto": "Um espaço para quem leva a própria imagem a sério."
+        "titulo": "Para quem quer se ver como sempre se sentiu.",
+        "texto": "Direção de imagem pessoal — com conceito, moodboard e presença em cada clique."
       },
       {
-        "titulo": "Para quem quer se ver diferente.",
-        "texto": "Cada sessão é um recomeço — com direção e resultado que fica."
+        "titulo": "Para quem leva a própria presença a sério.",
+        "texto": "Book, ensaio e cobertura com o olhar que o mercado precisa ver em você."
       },
       {
-        "titulo": "Para talentos que merecem ser vistos.",
-        "texto": "Portfólios, coberturas e ensaios que abrem portas."
+        "titulo": "Para talentos que merecem ser vistos da forma certa.",
+        "texto": "Leitura de perfil, direção no set e curadoria — do conceito ao frame que posiciona."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -333,16 +336,16 @@
     "hero_label": "10 ANOS — PRODUTORA HMZT",
     "hero_slides": [
       {
-        "titulo": "Para quem cria com intenção.",
-        "texto": "Produção audiovisual com propósito — do conceito ao frame final."
+        "titulo": "Produção executiva para quem não aceita menos do que o melhor.",
+        "texto": "Do briefing ao frame final — com o mesmo padrão que marcas nacionais reconhecem em set."
       },
       {
-        "titulo": "Para marcas com algo real a dizer.",
-        "texto": "Imagens que não apenas comunicam. Que conectam e ficam."
+        "titulo": "Para marcas que precisam mais do que imagens — precisam de escala.",
+        "texto": "Moda, beleza, publicidade e narrativa institucional com operação completa sob a mesma direção."
       },
       {
-        "titulo": "Para quem crê no poder de uma história.",
-        "texto": "Câmera onde a narrativa pede — e saindo com algo que importa."
+        "titulo": "Editorial bem construído é infraestrutura de comunicação.",
+        "texto": "Um set. Ativos para todos os canais — lookbook, fashion film, campanha e conteúdo de marca."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -352,7 +355,7 @@
     "structure_label": "Otimize os resultados da sua marca",
     "structure_titulo": "Produção executiva e casting artístico para publicidade e marketing de conteúdo.",
     "learn_more": "Saiba mais",
-    "cta_titulo": "Não é sobre aparecer mais. É sobre aparecer melhor.",
+    "cta_titulo": "Não é sobre aparecer mais. É sobre cada aparição valer.",
     "cta_btn": "Iniciar uma conversa",
     "form_title": "Iniciar projeto",
     "grid_label": "Portfólio Produtora",
@@ -623,13 +626,15 @@
     "srv_4_desc": "Conteúdo de alto padrão para todas as mídias.",
     "estrutura_ghost": "Estrutura",
     "estrutura_label": "Estrutura",
-    "estrutura_title": "Três frentes. Uma visão.",
+    "estrutura_title": "Quatro frentes. Uma visão.",
     "est_1_title": "Agência",
     "est_1_desc": "Estratégia & direção criativa.",
     "est_2_title": "Studio",
     "est_2_desc": "Imagem pessoal & profissional.",
     "est_3_title": "Produtora",
     "est_3_desc": "Execução visual de alto padrão.",
+    "est_4_title": "Academy",
+    "est_4_desc": "Formação prática para o mercado criativo.",
     "valor_title": "De visibilidade a valor duradouro.",
     "valor_deixa_label": "Você deixa de",
     "valor_deixa_1": "Aparecer sem ressoar",
@@ -775,8 +780,8 @@
         "texto": "Conectando marcas às pessoas que já estavam esperando por elas."
       },
       {
-        "titulo": "Para marcas com razão de existir.",
-        "texto": "Não construímos vitrines. Construímos relações."
+        "titulo": "Para quem quer direção antes de investir em visibilidade.",
+        "texto": "Branding, web e comunicação integrados — sem mídia sem posicionamento."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -801,7 +806,7 @@
         "subtitulo": "Digital que funciona"
       }
     ],
-    "manifesto": "Antes de aparecer, posicione. Na HMZT Agência, construímos marcas que comunicam com clareza — do branding estratégico ao desenvolvimento digital e à comunicação integrada para empresas que não querem ser mais uma opção no mercado.",
+    "manifesto": "Antes de aparecer, posicione. Na HMZT Agência, construímos marcas que comunicam com clareza — do branding estratégico ao web development e à comunicação integrada. Marca antes de mídia, sempre.",
     "servicos_label": "O que fazemos",
     "servicos_titulo": "Branding, comunicação e desenvolvimento digital integrados sob a mesma direção.",
     "servicos": [
@@ -928,12 +933,12 @@
   },
   "studio_cobertura": {
     "hero_label": "COBERTURA EXTERNA · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Para quem vive e quer guardar.",
-    "hero_subtexto": "Acompanhamento de imagem em tempo real para quem tem uma agenda que vale ser documentada.",
+    "hero_titulo": "Sua agenda, documentada com o nível que ela merece.",
+    "hero_subtexto": "Acompanhamento de imagem em tempo real — do hotel ao evento. Para quem vive em alta velocidade e quer guardar cada momento com a mesma qualidade do que vive.",
     "hero_cta_btn": "QUERO SER ACOMPANHADA",
     "services_label": "COBERTURA EXTERNA",
-    "services_titulo": "Não é cobertura. É produção de presença.",
-    "services_subtexto": "Cada momento da sua agenda, conduzido com intenção.",
+    "services_titulo": "Você vive. A House transforma em narrativa.",
+    "services_subtexto": "Beauty artist, foto, vídeo e direção — coordenados para que você não precise pensar em nada além da experiência.",
     "servicos": [
       {
         "title": "Acompanhamento Real",
@@ -1046,8 +1051,8 @@
     "team_item_2_desc": "Referência visual alinhada ao seu objetivo.",
     "team_item_3_titulo": "Curadoria High-End",
     "team_item_3_desc": "Só as imagens que realmente posicionam.",
-    "quote_texto": "\"Quem não se comunica em imagem e vídeo, fica de fora.\"",
-    "quote_subtitulo": "O mercado exige presença, fala e movimento.",
+    "quote_texto": "\"Sua imagem já comunica algo — mesmo quando não existe intenção.\"",
+    "quote_subtitulo": "A diferença está em decidir o que ela deve comunicar.",
     "comparative_titulo": "O que muda ter um Book com direção.",
     "comparative_com_label": "COM DIREÇÃO (HOUSE)",
     "comparative_com_1_titulo": "Posicionamento de mercado",
@@ -1149,8 +1154,8 @@
     "servico_2_desc": "Pauta, produção e publicação com consistência editorial e estratégia.",
     "servico_3_title": "Social Media & Performance",
     "servico_3_desc": "Presença digital orientada a resultados e crescimento real de audiência.",
-    "servico_4_title": "Produção Visual",
-    "servico_4_desc": "Fotos e vídeos para campanhas com padrão de mercado premium.",
+    "servico_4_title": "Briefing de Produção",
+    "servico_4_desc": "Curadoria e direção de briefing visual — coordenamos a produção de imagem junto à Produtora HMZT.",
     "servico_5_title": "Mídia Paga",
     "servico_5_desc": "Gestão de tráfego pago com foco em conversão e ROI positivo.",
     "servico_6_title": "Efeito House",
@@ -1496,7 +1501,7 @@
     "footer_nav_contato": "CONTATO",
     "footer_nav_portfolio": "PORTFÓLIO",
     "footer_nav_blog": "BLOG",
-    "footer_copyright": "© 2025 House Mazzutti. Todos os direitos reservados."
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
   },
   "produtora_direcao": {
     "seo_title": "Direção & Criação Estratégica em São Paulo | House Mazzutti",
@@ -1553,7 +1558,7 @@
     "footer_nav_contato": "CONTATO",
     "footer_nav_portfolio": "PORTFÓLIO",
     "footer_nav_blog": "BLOG",
-    "footer_copyright": "© 2025 House Mazzutti. Todos os direitos reservados."
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
   },
   "produtora_educacao": {
     "seo_title": "Produção de Conteúdo Educacional | House Mazzutti Produtora",
@@ -1610,7 +1615,7 @@
     "footer_nav_contato": "CONTATO",
     "footer_nav_portfolio": "PORTFÓLIO",
     "footer_nav_blog": "BLOG",
-    "footer_copyright": "© 2025 House Mazzutti. Todos os direitos reservados."
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
   },
   "produtora_eventos": {
     "seo_title": "Produção e Cobertura de Eventos em São Paulo | House Mazzutti",
@@ -1667,7 +1672,50 @@
     "footer_nav_contato": "CONTATO",
     "footer_nav_portfolio": "PORTFÓLIO",
     "footer_nav_blog": "BLOG",
-    "footer_copyright": "© 2025 House Mazzutti. Todos os direitos reservados."
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
+  },
+  "academy_page": {
+    "seo_title": "Academy House Mazzutti — Cursos, Workshops e Materiais para Profissionais Criativos",
+    "seo_desc": "Formação prática para fotógrafos, videomakers, modelos, diretores e profissionais da indústria criativa. O método de quem está em set. House Mazzutti — São Paulo.",
+    "hero_label": "ACADEMY — HOUSE MAZZUTTI",
+    "hero_titulo": "Formação por quem não parou de trabalhar para dar aula.",
+    "hero_subtitulo": "Cursos, workshops e materiais para profissionais criativos que querem evoluir no ofício com quem vive nele.",
+    "hero_cta": "Explorar o Academy",
+    "manifesto_titulo": "O método de quem está em set — para quem quer chegar lá.",
+    "manifesto_texto": "O Academy é o braço formativo da House Mazzutti — não um desvio do trabalho, mas uma extensão natural dele. O que entra no curso saiu do set, do briefing real, do projeto que funcionou. Quem forma é quem opera. E quem opera nunca perde o contato com o que o mercado exige hoje.",
+    "produtos_label": "O QUE OFERECEMOS",
+    "produtos_titulo": "Formação para quem faz o mercado.",
+    "produto_1_titulo": "Workshops",
+    "produto_1_desc": "Imersões práticas com Angelo Mazzutti — direção de imagem, produção audiovisual e posicionamento de marca.",
+    "produto_2_titulo": "Cursos Online",
+    "produto_2_desc": "Formação estruturada para profissionais criativos que querem metodologia, não apenas inspiração.",
+    "produto_3_titulo": "E-books & Materiais",
+    "produto_3_desc": "Conhecimento de set condensado. Decisões reais sobre briefing, direção e produção — direto ao ponto.",
+    "produto_4_titulo": "Blog Editorial",
+    "produto_4_desc": "Notas e ensaios sobre branding, direção criativa e construção de valor no mercado criativo.",
+    "para_quem_titulo": "Para quem é o Academy.",
+    "perfil_1": "Fotógrafos e videomakers que querem elevar a direção, não apenas a técnica.",
+    "perfil_2": "Modelos que querem entender o mercado antes de entrar nele.",
+    "perfil_3": "Diretores criativos e publicitários em busca de método autoral.",
+    "perfil_4": "Profissionais de beleza que trabalham com imagem e querem se posicionar no mercado.",
+    "perfil_5": "Produtores e gestores de projeto do mercado criativo.",
+    "diferencial_titulo": "Por que o Academy é diferente.",
+    "diferencial_1_titulo": "Formação de quem faz",
+    "diferencial_1_desc": "Angelo Mazzutti ainda está em set. O que você aprende saiu de projetos reais — não de teoria elaborada depois.",
+    "diferencial_2_titulo": "Método aplicável",
+    "diferencial_2_desc": "Cada curso entrega decisão, não conceito. O que mudar amanhã, como aplicar essa semana.",
+    "diferencial_3_titulo": "Padrão da casa",
+    "diferencial_3_desc": "O mesmo critério estético e estratégico que guia a Produtora, Agência e Studio — traduzido para formação.",
+    "cta_titulo": "O próximo passo começa aqui.",
+    "cta_sub": "Cursos, workshops e materiais disponíveis na loja do Academy.",
+    "cta_btn": "Explorar a loja →",
+    "loja_label": "LOJA DO ACADEMY",
+    "loja_titulo": "Conhecimento de set. Preço de livro.",
+    "loja_subtitulo": "E-books e materiais práticos sobre direção de imagem, briefing e produção audiovisual — condensados em formatos que cabem na sua rotina.",
+    "loja_cta": "Ver todos os materiais →",
+    "form_title": "Falar com o Academy",
+    "form_subtitle": "Dúvidas sobre cursos, workshops ou parcerias. Respondemos em até 1 dia útil.",
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
   },
   "produtora_executiva": {
     "seo_title": "Produção Executiva 360° em São Paulo | House Mazzutti",
@@ -1724,6 +1772,6 @@
     "footer_nav_contato": "CONTATO",
     "footer_nav_portfolio": "PORTFÓLIO",
     "footer_nav_blog": "BLOG",
-    "footer_copyright": "© 2025 House Mazzutti. Todos os direitos reservados."
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
   }
 }

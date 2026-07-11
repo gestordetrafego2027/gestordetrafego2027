@@ -7,10 +7,10 @@ import { priceLabelForSlug } from '@/lib/digital-products'
 export const metadata = {
   title: 'Academy — House Mazzutti',
   description:
-    'Cursos, workshops, ebooks e comunidade da House Mazzutti. Conteúdo prático sobre direção criativa, moda e comunicação.',
+    'Formação prática para fotógrafos, videomakers, modelos, diretores e profissionais criativos. O método de quem está em set. House Mazzutti — São Paulo.',
   openGraph: {
     title: 'House Mazzutti Academy',
-    description: 'Aprenda direção criativa, comunicação e moda com quem opera no Brasil real.',
+    description: 'Formação por quem não parou de trabalhar para dar aula. Cursos, workshops e materiais para profissionais da indústria criativa.',
     url: 'https://housemazzutti.com/pt/academy/',
     siteName: 'House Mazzutti Academy',
     type: 'website',
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'House Mazzutti Academy',
-    description: 'Aprenda direção criativa, comunicação e moda com quem opera no Brasil real.',
+    description: 'Formação por quem não parou de trabalhar para dar aula. Cursos, workshops e materiais para profissionais da indústria criativa.',
     images: ['/images/academy/hero-academy.webp'],
   },
 }
@@ -253,15 +253,15 @@ export default function AcademyHomePage() {
           <div className="relative z-20 h-full flex flex-col justify-center px-12 md:pl-48">
             <div className="max-w-4xl">
               <span className="text-caption text-white/60 mb-6 block">
-                House Mazzutti Academy
+                ACADEMY — HOUSE MAZZUTTI
               </span>
               <h1 className="text-h1 text-white mb-8 hmzt-hero-title">
-                Aprenda o que<br />
-                só a experiência<br />
-                ensina.
+                Formação por quem<br />
+                não parou de trabalhar<br />
+                para dar aula.
               </h1>
               <p className="text-body text-white/70 mb-12 measure-editorial">
-                Livros e cursos feitos por quem cria, dirige e executa — para quem quer fazer o mesmo.
+                Cursos, workshops e materiais para profissionais criativos que querem evoluir no ofício com quem vive nele. O que entra no curso saiu do set — não de teoria elaborada depois.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
