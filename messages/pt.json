@@ -491,8 +491,8 @@
         "num": "02",
         "label": "Para quem indica e movimenta",
         "title": "Afiliados.",
-        "desc": "Indicação editorial com retorno. Para profissionais e amigos da casa que apresentam a House a quem busca direção — com transparência, padrão e cuidado em cada repasse.",
-        "cta": "Tornar-se afiliado"
+        "desc": "Indicação editorial com retorno. Para profissionais e amigos da casa que apresentam a House a quem busca direção — com transparência, padrão e cuidado em cada repasse. Programa em estruturação — em breve disponível.",
+        "cta": "Em breve"
       },
       {
         "num": "03",
@@ -894,15 +894,15 @@
     "depoimentos": [
       {
         "text": "Antes de ter site, tinha estratégia. A House Mazzutti entendeu que presença digital sem posicionamento é só ruído. Entregaram marca, site e comunicação alinhados.",
-        "author": "BEATRIZ C. — Fundadora"
+        "author": "LOURINICE BARBOSA — Fundadora"
       },
       {
         "text": "O branding não foi só estética. Foi um sistema. Do naming à paleta, cada decisão tinha razão de ser. Hoje a marca fala por si.",
-        "author": "RODRIGO M. — CEO"
+        "author": "REBECA CABRAL — CEO"
       },
       {
         "text": "Desenvolvimento e identidade no mesmo time. Sem tradução perdida entre designers e devs. O resultado foi exatamente o que imaginamos — só melhor.",
-        "author": "ANA P. — Diretora de Marketing"
+        "author": "TEREZA SCARDUA — Diretora de Marketing"
       }
     ],
     "faq_label": "Perguntas frequentes",
@@ -1675,24 +1675,22 @@
     "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
   },
   "academy_page": {
-    "seo_title": "Academy House Mazzutti — Cursos, Workshops e Materiais para Profissionais Criativos",
+    "seo_title": "Academy House Mazzutti — Workshops e Materiais para Profissionais Criativos",
     "seo_desc": "Formação prática para fotógrafos, videomakers, modelos, diretores e profissionais da indústria criativa. O método de quem está em set. House Mazzutti — São Paulo.",
     "hero_label": "ACADEMY — HOUSE MAZZUTTI",
     "hero_titulo": "Formação por quem não parou de trabalhar para dar aula.",
-    "hero_subtitulo": "Cursos, workshops e materiais para profissionais criativos que querem evoluir no ofício com quem vive nele.",
+    "hero_subtitulo": "Workshops e materiais para profissionais criativos que querem evoluir no ofício com quem vive nele.",
     "hero_cta": "Explorar o Academy",
     "manifesto_titulo": "O método de quem está em set — para quem quer chegar lá.",
     "manifesto_texto": "O Academy é o braço formativo da House Mazzutti — não um desvio do trabalho, mas uma extensão natural dele. O que entra no curso saiu do set, do briefing real, do projeto que funcionou. Quem forma é quem opera. E quem opera nunca perde o contato com o que o mercado exige hoje.",
     "produtos_label": "O QUE OFERECEMOS",
     "produtos_titulo": "Formação para quem faz o mercado.",
     "produto_1_titulo": "Workshops",
-    "produto_1_desc": "Imersões práticas com Angelo Mazzutti — direção de imagem, produção audiovisual e posicionamento de marca.",
-    "produto_2_titulo": "Cursos Online",
-    "produto_2_desc": "Formação estruturada para profissionais criativos que querem metodologia, não apenas inspiração.",
-    "produto_3_titulo": "E-books & Materiais",
-    "produto_3_desc": "Conhecimento de set condensado. Decisões reais sobre briefing, direção e produção — direto ao ponto.",
-    "produto_4_titulo": "Blog Editorial",
-    "produto_4_desc": "Notas e ensaios sobre branding, direção criativa e construção de valor no mercado criativo.",
+    "produto_1_desc": "Imersões práticas com Angelo Mazzutti — direção de imagem e produção audiovisual. Duas turmas ativas: Inside Out Edit 2 e Produção & Direção.",
+    "produto_2_titulo": "E-books & Materiais",
+    "produto_2_desc": "Conhecimento de set condensado. Decisões reais sobre briefing, direção e produção — direto ao ponto.",
+    "produto_3_titulo": "Blog Editorial",
+    "produto_3_desc": "Notas e ensaios sobre branding, direção criativa e construção de valor no mercado criativo.",
     "para_quem_titulo": "Para quem é o Academy.",
     "perfil_1": "Fotógrafos e videomakers que querem elevar a direção, não apenas a técnica.",
     "perfil_2": "Modelos que querem entender o mercado antes de entrar nele.",

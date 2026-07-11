@@ -10,7 +10,7 @@ export const metadata = {
     'Formação prática para fotógrafos, videomakers, modelos, diretores e profissionais criativos. O método de quem está em set. House Mazzutti — São Paulo.',
   openGraph: {
     title: 'House Mazzutti Academy',
-    description: 'Formação por quem não parou de trabalhar para dar aula. Cursos, workshops e materiais para profissionais da indústria criativa.',
+    description: 'Formação por quem não parou de trabalhar para dar aula. Workshops e materiais para profissionais da indústria criativa.',
     url: 'https://housemazzutti.com/pt/academy/',
     siteName: 'House Mazzutti Academy',
     type: 'website',
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'House Mazzutti Academy',
-    description: 'Formação por quem não parou de trabalhar para dar aula. Cursos, workshops e materiais para profissionais da indústria criativa.',
+    description: 'Formação por quem não parou de trabalhar para dar aula. Workshops e materiais para profissionais da indústria criativa.',
     images: ['/images/academy/hero-academy.webp'],
   },
 }
@@ -207,7 +207,7 @@ function buildAcademyJsonLd() {
         name: 'House Mazzutti Academy',
         url: `${SITE_URL}/pt/academy/`,
         description:
-          'Cursos, workshops, ebooks e comunidade da House Mazzutti. Conteúdo prático sobre direção criativa, moda e comunicação.',
+          'Workshops e materiais da House Mazzutti. Formação prática sobre direção criativa, moda e comunicação.',
       },
       ...books,
       ...courses,
@@ -261,7 +261,7 @@ export default function AcademyHomePage() {
                 para dar aula.
               </h1>
               <p className="text-body text-white/70 mb-12 measure-editorial">
-                Cursos, workshops e materiais para profissionais criativos que querem evoluir no ofício com quem vive nele. O que entra no curso saiu do set — não de teoria elaborada depois.
+                Workshops e materiais para profissionais criativos que querem evoluir no ofício com quem vive nele. O que entra no curso saiu do set — não de teoria elaborada depois.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
