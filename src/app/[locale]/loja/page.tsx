@@ -12,6 +12,8 @@ export const revalidate = 60
 export const metadata: Metadata = {
   title: 'Loja — House Mazzutti',
   description: 'Serviços, cursos e produtos digitais da House Mazzutti.',
+  // Canonical próprio: sem isto a página herda a canonical raiz (/pt/) do [locale]/layout,
+  // o que apontava a loja para a home e impedia sua indexação.
   alternates: { canonical: 'https://housemazzutti.com/pt/loja/' },
   openGraph: {
     title: 'Loja — House Mazzutti',
@@ -57,8 +59,8 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <Link href={`/loja/${product.slug}`} className="group block">
-      {/* Cover */}
-      <div className="relative aspect-[3/4] overflow-hidden bg-[#f0ede8] mb-5">
+      {/* Image */}
+      <div className="relative aspect-[3/4] overflow-hidden bg-[#f0ede8] mb-4">
         {image ? (
           <Image
             src={image}
@@ -71,39 +73,38 @@ function ProductCard({ product }: { product: Product }) {
           <InlineCover className="w-full h-full transition-transform duration-700 group-hover:scale-[1.04]" />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
-            <span className="text-[#c8bfb0] text-4xl font-light">✦</span>
+            <span className="text-[#c8bfb0] text-4xl">✦</span>
           </div>
         )}
-
         {product.featured && (
           <div className="absolute top-4 left-4">
-            <span className="text-caption text-white bg-black px-3 py-1.5 tracking-[0.28em] text-[9px]">
+            <span className="font-label uppercase tracking-[0.25em] text-[8px] text-white bg-black px-3 py-1.5">
               DESTAQUE
             </span>
           </div>
         )}
-
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
       </div>
 
       {/* Info */}
-      <div className="flex items-start justify-between gap-3">
-        <h3 className="font-headline text-[15px] text-[#111] tracking-tight leading-snug flex-1 min-w-0 group-hover:text-black transition-colors duration-300">
-          {product.name}
-        </h3>
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-headline text-[15px] text-[#111] tracking-tight leading-snug mb-0.5 group-hover:text-black">
+            {product.name}
+          </h3>
+        </div>
         <div className="shrink-0 text-right">
           {quoteOnly ? (
-            <span className="text-caption text-[9px] text-[#999] tracking-[0.22em]">Consulta</span>
+            <span className="font-label uppercase tracking-[0.15em] text-[8px] text-[#888]">
+              Consulta
+            </span>
           ) : price ? (
-            <span className="font-headline text-[15px] text-[#111] tabular-nums">
+            <span className="font-headline text-[15px] text-[#111]">
               {formatPrice(price.unit_amount, price.currency)}
             </span>
           ) : null}
         </div>
       </div>
-
-      <span className="text-caption text-[9px] text-[#bbb] group-hover:text-black transition-colors duration-500 mt-2 block tracking-[0.28em]">
+      <span className="font-label uppercase tracking-[0.2em] text-[8px] text-[#aaa] group-hover:text-black transition-colors duration-300 mt-1 block">
         VER PRODUTO →
       </span>
     </Link>
@@ -150,20 +151,27 @@ export default async function LojaPage() {
 
   return (
     <div className="min-h-screen bg-[#faf9f7] flex flex-col">
-      {/* ── HEADER ─────────────────────────────────────────────── */}
-      <header className="bg-[#111] text-white">
+      {/* ── TOPO ──────────────────────────────────────────────────── */}
+      <header style={{ background: '#111', color: '#fff' }}>
         {/* Brand bar */}
-        <div className="border-b border-white/5 px-8 md:px-16 h-[60px] flex items-center justify-between">
+        <div
+          style={{
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
+            padding: '20px 64px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
           <Link
             href="/"
             className="hm-logo"
-            style={{ fontSize: '18px', color: 'white', textDecoration: 'none' }}
+            style={{ fontSize: '20px', color: 'white', textDecoration: 'none' }}
           >
             <span className="hm-house">House</span>
             <span className="hm-mazzutti">Mazzutti</span>
           </Link>
-
-          <nav className="hidden md:flex items-center" aria-label="Navegação principal">
+          <nav className="hidden md:flex items-center gap-6" aria-label="Navegação principal">
             {[
               ['Studio', '/studio'],
               ['Agência', '/agencia'],
@@ -173,45 +181,75 @@ export default async function LojaPage() {
               <Link
                 key={l}
                 href={h as string}
-                className="text-caption text-[9px] tracking-[0.28em] text-white/25 hover:text-white/80 transition-colors duration-300 px-5 border-r border-white/[0.06] last:border-r-0"
+                className="font-label uppercase tracking-[0.2em] text-[8px] transition-colors duration-300"
+                style={{ color: 'rgba(255,255,255,0.3)' }}
               >
                 {l}
               </Link>
             ))}
-            <span className="text-caption text-[9px] tracking-[0.22em] text-white/12 pl-6 ml-4 border-l border-white/[0.06]">
+            <span
+              className="font-label uppercase tracking-[0.3em] text-[8px] ml-4"
+              style={{
+                color: 'rgba(255,255,255,0.18)',
+                borderLeft: '1px solid rgba(255,255,255,0.1)',
+                paddingLeft: '24px',
+              }}
+            >
               CHECKOUT SEGURO · STRIPE
             </span>
           </nav>
         </div>
 
-        {/* Hero */}
-        <div className="px-8 md:px-16 pt-16 pb-14 max-w-[1400px]">
-          <p className="text-caption text-[9px] tracking-[0.38em] text-white/25 mb-6">
+        {/* Hero text */}
+        <div style={{ padding: '64px 64px 56px', maxWidth: '1400px' }}>
+          <p
+            className="font-label uppercase tracking-[0.35em] text-[8px] mb-5"
+            style={{ color: 'rgba(255,255,255,0.3)' }}
+          >
             Loja — House Mazzutti
           </p>
-
           <h1
-            className="text-h1 text-white mb-6"
-            style={{ fontSize: 'clamp(56px,8vw,108px)', lineHeight: '0.88' }}
+            className="font-headline tracking-tight"
+            style={{
+              fontSize: 'clamp(48px,7vw,96px)',
+              lineHeight: '0.9',
+              color: '#fff',
+              marginBottom: '20px',
+            }}
           >
             Produtos
             <br />
-            <span style={{ color: 'rgba(255,255,255,0.14)' }}>{'& Serviços'}</span>
+            <span style={{ color: 'rgba(255,255,255,0.18)' }}>&amp; Serviços</span>
           </h1>
-
-          <p className="text-body text-sm text-white/35 max-w-[340px] leading-relaxed">
+          <p
+            className="font-body text-sm"
+            style={{ color: 'rgba(255,255,255,0.38)', maxWidth: '360px', lineHeight: 1.6 }}
+          >
             Educação, serviços criativos e produtos digitais para marcas e profissionais de imagem.
           </p>
 
           {/* Category anchors */}
           {categories.length > 0 && (
-            <div className="flex mt-10 pt-8 border-t border-white/[0.06]">
+            <div
+              style={{
+                display: 'flex',
+                gap: '0',
+                marginTop: '40px',
+                paddingTop: '32px',
+                borderTop: '1px solid rgba(255,255,255,0.06)',
+              }}
+            >
               {categories.map((cat, i) => (
                 <a
                   key={cat}
                   href={`#${cat}`}
-                  className="text-caption text-[9px] tracking-[0.28em] text-white/25 hover:text-white transition-colors duration-300 pr-8 mr-8 border-r border-white/[0.08] last:border-r-0 last:mr-0 last:pr-0"
-                  style={i === categories.length - 1 ? { borderRight: 'none' } : {}}
+                  className="font-label uppercase tracking-[0.25em] text-[8px] text-white/30 hover:text-white transition-colors duration-300"
+                  style={{
+                    paddingRight: '32px',
+                    marginRight: '32px',
+                    borderRight:
+                      i < categories.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+                  }}
                 >
                   {CATEGORY_LABELS[cat] ?? cat}
                 </a>
@@ -221,42 +259,66 @@ export default async function LojaPage() {
         </div>
       </header>
 
-      {/* ── PRODUTOS ──────────────────────────────────────────── */}
-      <main className="flex-1 max-w-[1400px] w-full mx-auto px-8 md:px-16 py-20">
+      {/* ── PRODUTOS ──────────────────────────────────────────────── */}
+      <main
+        className="flex-1"
+        style={{ maxWidth: '1400px', width: '100%', margin: '0 auto', padding: '72px 64px' }}
+      >
         {error && (
-          <p className="text-caption text-[11px] text-red-500 tracking-[0.2em] mb-10">
+          <p className="font-label text-[11px] text-red-500 uppercase tracking-[0.2em] mb-8">
             Erro ao carregar produtos.
           </p>
         )}
 
         {categories.length === 0 && !error && (
-          <div className="text-center py-32">
-            <p className="font-headline text-3xl text-[#ddd]">Em breve.</p>
+          <div style={{ textAlign: 'center', padding: '120px 0' }}>
+            <p className="font-headline text-3xl" style={{ color: '#ddd' }}>
+              Em breve.
+            </p>
           </div>
         )}
 
-        <div className="flex flex-col gap-24">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '80px' }}>
           {categories.map((cat) => (
             <section key={cat} id={cat}>
               {/* Section header */}
-              <div className="flex items-end justify-between mb-10 pb-5 border-b border-[#e8e3db]">
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-end',
+                  justifyContent: 'space-between',
+                  marginBottom: '32px',
+                  paddingBottom: '20px',
+                  borderBottom: '1px solid #e8e3db',
+                }}
+              >
                 <div>
-                  <p className="text-caption text-[9px] tracking-[0.3em] text-[#bbb] mb-2">
+                  <p
+                    className="font-label uppercase tracking-[0.28em] text-[8px] mb-2"
+                    style={{ color: '#bbb' }}
+                  >
                     {CATEGORY_SUBS[cat] ?? ''}
                   </p>
-                  <h2 className="text-h2 text-[#111]" style={{ fontSize: 'clamp(32px,4vw,52px)' }}>
+                  <h2
+                    className="font-headline tracking-tight"
+                    style={{ fontSize: 'clamp(28px,3.5vw,44px)', color: '#111', lineHeight: 1 }}
+                  >
                     {CATEGORY_LABELS[cat] ?? cat}
                   </h2>
                 </div>
-                <span className="text-caption text-[9px] tracking-[0.22em] text-[#ccc] tabular-nums">
+                <span
+                  className="font-label uppercase tracking-[0.2em] text-[8px]"
+                  style={{ color: '#ccc' }}
+                >
                   {grouped[cat].length} {grouped[cat].length === 1 ? 'item' : 'itens'}
                 </span>
               </div>
 
               {/* Grid */}
               <div
-                className="grid gap-x-8 gap-y-12"
                 style={{
+                  display: 'grid',
+                  gap: '40px 32px',
                   gridTemplateColumns:
                     grouped[cat].length === 1
                       ? '280px'
@@ -264,6 +326,7 @@ export default async function LojaPage() {
                         ? 'repeat(2, 1fr)'
                         : 'repeat(3, 1fr)',
                 }}
+                className="md:grid-cols-3"
               >
                 {grouped[cat].map((p) => (
                   <ProductCard key={p.id} product={p} />
@@ -274,18 +337,28 @@ export default async function LojaPage() {
         </div>
       </main>
 
-      {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="bg-[#111] text-white mt-auto">
-        <div className="max-w-[1400px] mx-auto px-8 md:px-16 py-12 flex items-center justify-between border-b border-white/[0.06]">
+      {/* ── RODAPÉ ────────────────────────────────────────────────── */}
+      <footer style={{ background: '#111', color: '#fff', marginTop: 'auto' }}>
+        <div
+          style={{
+            maxWidth: '1400px',
+            margin: '0 auto',
+            padding: '48px 64px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
+          }}
+        >
           <Link
             href="/"
             className="hm-logo"
-            style={{ fontSize: '16px', color: 'white', textDecoration: 'none' }}
+            style={{ fontSize: '18px', color: 'white', textDecoration: 'none' }}
           >
             <span className="hm-house">House</span>
             <span className="hm-mazzutti">Mazzutti</span>
           </Link>
-          <div className="flex gap-8">
+          <div style={{ display: 'flex', gap: '32px' }}>
             {[
               ['Studio', '/studio'],
               ['Agência', '/agencia'],
@@ -295,19 +368,23 @@ export default async function LojaPage() {
               <Link
                 key={l}
                 href={h}
-                className="text-caption text-[9px] tracking-[0.22em] text-white/22 hover:text-white/70 transition-colors duration-300"
+                className="font-label uppercase tracking-[0.2em] text-[8px] transition-colors duration-300"
+                style={{ color: 'rgba(255,255,255,0.25)' }}
               >
                 {l}
               </Link>
             ))}
           </div>
         </div>
-        <div className="max-w-[1400px] mx-auto px-8 md:px-16 py-5">
-          <span className="text-caption text-[9px] tracking-[0.22em] text-white/10">
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '20px 64px' }}>
+          <span
+            className="font-label uppercase tracking-[0.25em] text-[8px]"
+            style={{ color: 'rgba(255,255,255,0.12)' }}
+          >
             © {new Date().getFullYear()} House Mazzutti · Pagamentos processados por Stripe
           </span>
         </div>
-        <div className="mt-4">
+        <div className="mt-6">
           <SiteFooterLinks />
         </div>
       </footer>

@@ -8,8 +8,6 @@ import type { Metadata } from 'next'
 import { WaitlistForm } from '@/components/academy/WaitlistForm'
 import { DirectCheckoutButton } from '@/components/ecommerce/DirectCheckoutButton'
 
-export const revalidate = 60
-
 type ServicePackage = {
   id: string
   name: string
@@ -17,6 +15,8 @@ type ServicePackage = {
   includes: string[] | null
   duration: string | null
 }
+
+export const revalidate = 60
 
 type Props = { params: Promise<{ slug: string; locale: string }> }
 
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: p.seo_title ?? `${p.name} — House Mazzutti`,
     description: p.seo_description,
+    // Canonical próprio: sem isto o produto herda a canonical raiz (/pt/) do [locale]/layout.
     alternates: { canonical },
     openGraph: {
       url: canonical,
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-function formatBRL(cents: number, currency = 'brl') {
+function formatPrice(cents: number, currency = 'brl') {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: currency.toUpperCase(),
@@ -74,7 +75,7 @@ export default async function ProdutoPage({ params }: Props) {
 
   if (!product) notFound()
 
-  // Pacotes do serviço correspondente (mesmo slug)
+  // Fetch service packages if this product maps to a service (same slug)
   let servicePackages: ServicePackage[] = []
   const { data: svc } = await supabase.from('services').select('id').eq('slug', slug).maybeSingle()
   if (svc?.id) {
@@ -118,13 +119,6 @@ export default async function ProdutoPage({ params }: Props) {
       : undefined,
   }
 
-  const descBullets = product.description
-    ? product.description
-        .split('·')
-        .map((s: string) => s.trim())
-        .filter(Boolean)
-    : []
-
   return (
     <>
       <script
@@ -133,57 +127,86 @@ export default async function ProdutoPage({ params }: Props) {
       />
 
       <div className="min-h-screen bg-[#faf9f7] flex flex-col">
-        {/* ── HEADER ──────────────────────────────────────────── */}
-        <header className="bg-[#111] text-white">
-          <div className="px-8 md:px-16 h-[60px] flex items-center justify-between border-b border-white/[0.06]">
+        {/* ── TOPO ────────────────────────────────────────────────── */}
+        <header style={{ background: '#111', color: '#fff' }}>
+          <div
+            style={{
+              padding: '20px 64px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              borderBottom: '1px solid rgba(255,255,255,0.06)',
+            }}
+          >
             <Link
               href="/"
               className="hm-logo"
-              style={{ fontSize: '18px', color: 'white', textDecoration: 'none' }}
+              style={{ fontSize: '20px', color: 'white', textDecoration: 'none' }}
             >
               <span className="hm-house">House</span>
               <span className="hm-mazzutti">Mazzutti</span>
             </Link>
-            <nav className="flex items-center gap-6">
+            <nav style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
               <Link
                 href={`/${locale}/loja`}
-                className="text-caption text-[9px] tracking-[0.28em] text-white/30 hover:text-white/80 transition-colors duration-300"
+                className="font-label uppercase tracking-[0.25em] text-[8px] transition-colors duration-300"
+                style={{ color: 'rgba(255,255,255,0.3)' }}
               >
                 ← Loja
               </Link>
-              {category?.name && (
-                <span className="text-caption text-[9px] tracking-[0.22em] text-white/14 border-l border-white/[0.08] pl-6">
-                  {category.name}
-                </span>
-              )}
+              <span
+                className="font-label uppercase tracking-[0.25em] text-[8px]"
+                style={{ color: 'rgba(255,255,255,0.15)' }}
+              >
+                {category?.name ?? ''}
+              </span>
             </nav>
           </div>
         </header>
 
-        {/* ── PRODUTO ─────────────────────────────────────────── */}
-        <main className="flex-1 max-w-[1400px] w-full mx-auto px-8 md:px-16 py-16">
+        {/* ── PRODUTO ─────────────────────────────────────────────── */}
+        <main
+          className="flex-1"
+          style={{ maxWidth: '1400px', width: '100%', margin: '0 auto', padding: '64px 64px' }}
+        >
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-14">
+          <div style={{ marginBottom: '48px', display: 'flex', gap: '8px', alignItems: 'center' }}>
             <Link
               href={`/${locale}/loja`}
-              className="text-caption text-[9px] tracking-[0.22em] text-[#bbb] hover:text-[#111] transition-colors duration-300"
+              className="font-label uppercase tracking-[0.2em] text-[8px] transition-colors"
+              style={{ color: '#bbb' }}
             >
               Loja
             </Link>
-            <span className="text-caption text-[9px] text-[#ddd]">/</span>
-            <span className="text-caption text-[9px] tracking-[0.22em] text-[#999]">
-              {category?.name ?? ''}
+            <span className="font-label text-[8px]" style={{ color: '#ddd' }}>
+              /
             </span>
-            <span className="text-caption text-[9px] text-[#ddd]">/</span>
-            <span className="text-caption text-[9px] tracking-[0.22em] text-[#555]">
-              {product.name}
+            <span
+              className="font-label uppercase tracking-[0.2em] text-[8px]"
+              style={{ color: '#666' }}
+            >
+              {category?.name ?? ''}
             </span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
-            {/* ── IMAGEM ─────────────────────────────────────── */}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '80px',
+              alignItems: 'start',
+            }}
+          >
+            {/* ── IMAGEM ─────────────────────────────────────────── */}
             <div>
-              <div className="relative aspect-[3/4] overflow-hidden bg-[#ede9e2]">
+              <div
+                style={{
+                  position: 'relative',
+                  aspectRatio: '3/4',
+                  overflow: 'hidden',
+                  background: '#ede9e2',
+                }}
+              >
                 {mainImage ? (
                   <Image
                     src={mainImage}
@@ -194,15 +217,24 @@ export default async function ProdutoPage({ params }: Props) {
                     priority
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-[#c8bfb0] text-5xl" style={{ fontWeight: 300 }}>
-                      ✦
-                    </span>
+                  <div
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <span style={{ color: '#c8bfb0', fontSize: '48px' }}>✦</span>
                   </div>
                 )}
                 {product.featured && (
-                  <div className="absolute top-5 left-5">
-                    <span className="text-caption text-[9px] tracking-[0.28em] text-white bg-black px-3 py-1.5">
+                  <div style={{ position: 'absolute', top: '20px', left: '20px' }}>
+                    <span
+                      className="font-label uppercase tracking-[0.25em] text-[8px] text-white"
+                      style={{ background: '#111', padding: '6px 12px' }}
+                    >
                       DESTAQUE
                     </span>
                   </div>
@@ -210,14 +242,29 @@ export default async function ProdutoPage({ params }: Props) {
               </div>
 
               {galleryImages.length > 1 && (
-                <div className="grid grid-cols-4 gap-1 mt-1">
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(4, 1fr)',
+                    gap: '4px',
+                    marginTop: '4px',
+                  }}
+                >
                   {galleryImages.slice(1, 5).map((img, i) => (
-                    <div key={i} className="relative aspect-square overflow-hidden bg-[#ede9e2]">
+                    <div
+                      key={i}
+                      style={{
+                        position: 'relative',
+                        aspectRatio: '1',
+                        overflow: 'hidden',
+                        background: '#ede9e2',
+                      }}
+                    >
                       <Image
                         src={img}
                         alt={`${product.name} ${i + 2}`}
                         fill
-                        className="object-cover opacity-60 hover:opacity-100 transition-opacity duration-300"
+                        className="object-cover opacity-70 hover:opacity-100 transition-opacity duration-300"
                       />
                     </div>
                   ))}
@@ -225,10 +272,13 @@ export default async function ProdutoPage({ params }: Props) {
               )}
             </div>
 
-            {/* ── INFO ───────────────────────────────────────── */}
-            <div className="flex flex-col pt-1">
-              {/* Tipo */}
-              <p className="text-caption text-[9px] tracking-[0.32em] text-[#aaa] mb-5">
+            {/* ── INFO ───────────────────────────────────────────── */}
+            <div style={{ paddingTop: '8px', display: 'flex', flexDirection: 'column', gap: '0' }}>
+              {/* Categoria */}
+              <p
+                className="font-label uppercase tracking-[0.3em] text-[8px] mb-4"
+                style={{ color: '#aaa' }}
+              >
                 {category?.name ?? ''} ·{' '}
                 {product.product_type === 'digital'
                   ? 'Produto Digital'
@@ -241,11 +291,12 @@ export default async function ProdutoPage({ params }: Props) {
 
               {/* Nome */}
               <h1
-                className="font-headline text-[#111] tracking-tight mb-8"
+                className="font-headline tracking-tight"
                 style={{
-                  fontSize: 'clamp(28px,3.5vw,48px)',
-                  lineHeight: '1.0',
-                  fontWeight: 300,
+                  fontSize: 'clamp(26px,3.5vw,44px)',
+                  color: '#111',
+                  lineHeight: '1',
+                  marginBottom: '32px',
                 }}
               >
                 {product.name}
@@ -253,18 +304,25 @@ export default async function ProdutoPage({ params }: Props) {
 
               {/* Preço */}
               {mainPrice && !isQuoteOnly && (
-                <div className="py-7 border-t border-b border-[#e8e3db] mb-8">
+                <div
+                  style={{
+                    paddingTop: '28px',
+                    paddingBottom: '28px',
+                    borderTop: '1px solid #e8e3db',
+                    borderBottom: '1px solid #e8e3db',
+                    marginBottom: '28px',
+                  }}
+                >
                   <p
-                    className="font-headline text-[#111] tabular-nums"
-                    style={{
-                      fontSize: 'clamp(36px,4vw,56px)',
-                      lineHeight: 1,
-                      fontWeight: 300,
-                    }}
+                    className="font-headline tracking-tight"
+                    style={{ fontSize: 'clamp(36px,4vw,52px)', color: '#111', lineHeight: '1' }}
                   >
-                    {formatBRL(mainPrice.unit_amount, mainPrice.currency)}
+                    {formatPrice(mainPrice.unit_amount, mainPrice.currency)}
                     {mainPrice.price_type === 'recurring' && (
-                      <span className="text-caption text-[10px] tracking-[0.15em] text-[#aaa] ml-2">
+                      <span
+                        className="font-label text-sm ml-2 tracking-[0.1em]"
+                        style={{ color: '#aaa', fontWeight: 'normal', fontSize: '11px' }}
+                      >
                         /{mainPrice.recurring_interval === 'month' ? 'MÊS' : 'ANO'}
                       </span>
                     )}
@@ -272,69 +330,104 @@ export default async function ProdutoPage({ params }: Props) {
                 </div>
               )}
 
-              {isQuoteOnly && (
-                <div className="py-7 border-t border-b border-[#e8e3db] mb-8">
-                  <p className="text-caption text-[10px] tracking-[0.22em] text-[#999]">
-                    Preço sob consulta · orçamento personalizado
-                  </p>
-                </div>
-              )}
-
-              {/* Chips de descrição */}
-              {descBullets.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {descBullets.map((item, i) => (
-                    <span
-                      key={i}
-                      className="text-caption text-[9px] tracking-[0.14em] text-[#666] bg-[#f0ede8] border border-[#e8e3db] px-3 py-1.5"
-                    >
-                      {item}
-                    </span>
-                  ))}
+              {/* Descrição como chips */}
+              {product.description && (
+                <div style={{ marginBottom: '28px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                    {product.description.split('·').map((item: string, i: number) => {
+                      const label = item.trim()
+                      if (!label) return null
+                      return (
+                        <span
+                          key={i}
+                          className="font-label uppercase tracking-[0.12em] text-[9px]"
+                          style={{
+                            padding: '5px 12px',
+                            background: '#f0ede8',
+                            color: '#555',
+                            border: '1px solid #e8e3db',
+                          }}
+                        >
+                          {label}
+                        </span>
+                      )
+                    })}
+                  </div>
                 </div>
               )}
 
               {/* Features */}
               {Array.isArray(product.features) && product.features.length > 0 && (
-                <ul className="flex flex-col gap-2.5 mb-8 pb-8 border-b border-[#e8e3db]">
+                <ul
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '10px',
+                    marginBottom: '32px',
+                    paddingBottom: '32px',
+                    borderBottom: '1px solid #e8e3db',
+                  }}
+                >
                   {(product.features as string[]).map((f, i) => (
                     <li
                       key={i}
-                      className="text-caption text-[10px] tracking-[0.14em] text-[#777] flex items-start gap-3"
+                      className="font-label uppercase tracking-[0.12em] text-[10px]"
+                      style={{
+                        color: '#777',
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: '12px',
+                      }}
                     >
-                      <span className="text-[#ccc] mt-px">—</span>
-                      {f}
+                      <span style={{ color: '#ccc' }}>—</span> {f}
                     </li>
                   ))}
                 </ul>
               )}
 
-              {/* Pacotes */}
+              {/* Pacotes do serviço */}
               {servicePackages.length > 0 && (
-                <div className="mb-8 pb-8 border-b border-[#e8e3db]">
-                  <p className="text-caption text-[9px] tracking-[0.28em] text-[#aaa] mb-4">
+                <div
+                  style={{
+                    marginBottom: '32px',
+                    paddingBottom: '32px',
+                    borderBottom: '1px solid #e8e3db',
+                  }}
+                >
+                  <p
+                    className="font-label uppercase tracking-[0.25em] text-[8px] mb-4"
+                    style={{ color: '#aaa' }}
+                  >
                     Pacotes disponíveis
                   </p>
                   <div
-                    className="grid gap-2"
                     style={{
-                      gridTemplateColumns: `repeat(${Math.min(servicePackages.length, 3)}, 1fr)`,
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+                      gap: '8px',
                     }}
                   >
                     {servicePackages.map((pkg) => (
-                      <div key={pkg.id} className="bg-[#111] p-5 flex flex-col gap-2">
-                        <p className="text-caption text-[8px] tracking-[0.28em] text-white/35">
+                      <div
+                        key={pkg.id}
+                        style={{
+                          background: '#111',
+                          padding: '18px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '8px',
+                        }}
+                      >
+                        <p
+                          className="font-label uppercase tracking-[0.22em] text-[8px]"
+                          style={{ color: 'rgba(255,255,255,0.35)' }}
+                        >
                           {pkg.name}
                         </p>
                         {pkg.price_brl != null ? (
                           <p
-                            className="font-headline tabular-nums"
-                            style={{
-                              fontSize: '19px',
-                              color: '#c4a97a',
-                              fontWeight: 300,
-                              letterSpacing: '-0.01em',
-                            }}
+                            className="font-headline"
+                            style={{ fontSize: '20px', color: '#c4a97a', letterSpacing: '-0.01em' }}
                           >
                             {new Intl.NumberFormat('pt-BR', {
                               style: 'currency',
@@ -342,23 +435,52 @@ export default async function ProdutoPage({ params }: Props) {
                             }).format(pkg.price_brl)}
                           </p>
                         ) : (
-                          <p className="text-caption text-[8px] tracking-[0.22em] text-[#c4a97a]">
+                          <p
+                            className="font-label uppercase tracking-[0.18em] text-[8px]"
+                            style={{ color: '#c4a97a' }}
+                          >
                             Sob consulta
                           </p>
                         )}
                         {pkg.duration && (
-                          <p className="text-caption text-[8px] tracking-[0.18em] text-white/20">
+                          <p
+                            className="font-label uppercase tracking-[0.15em] text-[8px]"
+                            style={{ color: 'rgba(255,255,255,0.2)' }}
+                          >
                             {pkg.duration}
                           </p>
                         )}
                         {Array.isArray(pkg.includes) && pkg.includes.length > 0 && (
-                          <ul className="flex flex-col gap-1 mt-1 pt-3 border-t border-white/[0.06]">
-                            {pkg.includes.map((item: string, idx: number) => (
+                          <ul
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'column',
+                              gap: '3px',
+                              marginTop: '6px',
+                              paddingTop: '10px',
+                              borderTop: '1px solid rgba(255,255,255,0.06)',
+                            }}
+                          >
+                            {pkg.includes.map((item: string, i: number) => (
                               <li
-                                key={idx}
-                                className="text-[9px] text-white/40 pl-3 relative leading-relaxed font-body"
+                                key={i}
+                                className="font-label text-[9px]"
+                                style={{
+                                  color: 'rgba(255,255,255,0.4)',
+                                  paddingLeft: '10px',
+                                  position: 'relative',
+                                  lineHeight: 1.5,
+                                }}
                               >
-                                <span className="absolute left-0 text-[#a88e5c]">·</span>
+                                <span
+                                  style={{
+                                    position: 'absolute',
+                                    left: 0,
+                                    color: '#a88e5c',
+                                  }}
+                                >
+                                  ·
+                                </span>
                                 {item}
                               </li>
                             ))}
@@ -380,7 +502,10 @@ export default async function ProdutoPage({ params }: Props) {
                   />
                 ) : (
                   <>
-                    <p className="text-caption text-[9px] tracking-[0.22em] text-[#aaa] mb-4">
+                    <p
+                      className="font-label text-[9px] uppercase tracking-[0.22em] mb-4"
+                      style={{ color: '#aaa' }}
+                    >
                       Disponível a partir de 10 de agosto · entre na lista
                     </p>
                     <WaitlistForm product={product.slug} />
@@ -391,18 +516,28 @@ export default async function ProdutoPage({ params }: Props) {
           </div>
         </main>
 
-        {/* ── FOOTER ──────────────────────────────────────────── */}
-        <footer className="bg-[#111] text-white mt-20">
-          <div className="max-w-[1400px] mx-auto px-8 md:px-16 py-12 flex items-center justify-between border-b border-white/[0.06]">
+        {/* ── RODAPÉ ──────────────────────────────────────────────── */}
+        <footer style={{ background: '#111', color: '#fff', marginTop: '80px' }}>
+          <div
+            style={{
+              maxWidth: '1400px',
+              margin: '0 auto',
+              padding: '48px 64px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              borderBottom: '1px solid rgba(255,255,255,0.06)',
+            }}
+          >
             <Link
               href="/"
               className="hm-logo"
-              style={{ fontSize: '16px', color: 'white', textDecoration: 'none' }}
+              style={{ fontSize: '18px', color: 'white', textDecoration: 'none' }}
             >
               <span className="hm-house">House</span>
               <span className="hm-mazzutti">Mazzutti</span>
             </Link>
-            <div className="flex gap-8">
+            <div style={{ display: 'flex', gap: '32px' }}>
               {[
                 ['Studio', '/studio'],
                 ['Agência', '/agencia'],
@@ -412,19 +547,23 @@ export default async function ProdutoPage({ params }: Props) {
                 <Link
                   key={l}
                   href={h}
-                  className="text-caption text-[9px] tracking-[0.22em] text-white/22 hover:text-white/70 transition-colors duration-300"
+                  className="font-label uppercase tracking-[0.2em] text-[8px]"
+                  style={{ color: 'rgba(255,255,255,0.25)' }}
                 >
                   {l}
                 </Link>
               ))}
             </div>
           </div>
-          <div className="max-w-[1400px] mx-auto px-8 md:px-16 py-5">
-            <span className="text-caption text-[9px] tracking-[0.22em] text-white/10">
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '20px 64px' }}>
+            <span
+              className="font-label uppercase tracking-[0.25em] text-[8px]"
+              style={{ color: 'rgba(255,255,255,0.12)' }}
+            >
               © {new Date().getFullYear()} House Mazzutti · Pagamentos processados por Stripe
             </span>
           </div>
-          <div className="mt-4">
+          <div className="mt-6">
             <SiteFooterLinks />
           </div>
         </footer>
