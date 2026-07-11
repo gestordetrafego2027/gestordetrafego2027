@@ -43,8 +43,8 @@ export default function Reveal({ children, as: Tag = 'div', className = '', dela
             className={className}
             style={{
                 opacity: shown ? 1 : 0,
-                transform: shown ? 'translateY(0)' : 'translateY(16px)',
-                transition: 'opacity 0.7s ease, transform 0.7s ease',
+                transform: shown ? 'translateY(0)' : 'translateY(10px)',
+                transition: 'opacity 0.45s ease, transform 0.45s ease',
             }}
         >
             {children}

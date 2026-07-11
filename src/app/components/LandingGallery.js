@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { galleryByService, galleryTagByService } from '@/lib/landingsContent';
 
@@ -59,10 +60,12 @@ function Tile({ item, tag, aspect, isWide = false }) {
 
   const inner = (
     <div className={`relative ${aspect} group overflow-hidden bg-black`}>
-      <img
+      <Image
         alt={item.alt}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
         src={item.src}
+        fill
+        sizes="(max-width: 768px) 50vw, 25vw"
         loading="lazy"
       />
       <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">

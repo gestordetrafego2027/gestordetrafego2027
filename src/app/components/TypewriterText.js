@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-export default function TypewriterText({ text, delay = 0, speed = 32, className = '', tag: Tag = 'span' }) {
+export default function TypewriterText({ text, delay = 0, speed = 22, className = '', tag: Tag = 'span' }) {
   const [displayed, setDisplayed] = useState('');
   const [done, setDone] = useState(false);
   const timerRef = useRef(null);

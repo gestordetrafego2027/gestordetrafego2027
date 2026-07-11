@@ -92,7 +92,7 @@ export default function TourMarcaPessoalPage() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
         >
           <source src="/videos/hero-tour-new.mp4" type="video/mp4" />

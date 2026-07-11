@@ -223,7 +223,7 @@ export default function Home() {
                                 className="hero-animate text-h1 text-white mb-8 hmzt-hero-title"
                                 style={{ opacity: 0, transform: 'translateY(30px)', transition: 'opacity 0.5s ease, transform 0.5s ease' }}
                             >
-                                <TypewriterText text={heroSlides[currentHeroSlide].titulo} delay={600} />
+                                <TypewriterText text={heroSlides[currentHeroSlide].titulo} delay={200} />
                             </h1>
                             <p
                                 className="hero-animate text-body text-white/75 mb-12 measure-editorial"

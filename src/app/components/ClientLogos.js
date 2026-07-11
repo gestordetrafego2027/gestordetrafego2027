@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 const logos = [
   { src: '/images/angelo/logos/wepink.webp',        alt: 'Wepink' },
   { src: '/images/angelo/logos/oceane.webp',         alt: 'Océane' },
@@ -46,9 +48,11 @@ export default function ClientLogos() {
             className="shrink-0 flex items-center justify-center px-24"
             style={{ height: '120px' }}
           >
-            <img
+            <Image
               src={logo.src}
               alt={logo.alt}
+              width={120}
+              height={64}
               className="h-16 w-auto object-contain opacity-50 grayscale
                          transition duration-300 hover:opacity-100 hover:grayscale-0"
               loading="lazy"
