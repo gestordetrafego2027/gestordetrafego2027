@@ -4,6 +4,7 @@ import { getStripe } from '@/lib/stripe/server'
 import { logger } from '@/lib/logger'
 import { sendEmail } from '@/lib/email/resend'
 import { digitalDeliveryHTML } from '@/lib/email/templates/digital-delivery'
+import { workshopWelcomeHTML } from '@/lib/email/templates/workshop-welcome'
 import { resolveDigitalProduct, createDownloadUrl } from '@/lib/digital-products'
 import { buildConsentRecord } from '@/lib/legal/consent'
 import { issueNfse } from '@/lib/fiscal/nfeio'
@@ -156,6 +157,49 @@ export async function handleCheckoutCompleted(session: Stripe.Checkout.Session):
       .from('profiles')
       .update({ stripe_customer_id: customerId })
       .eq('id', session.client_reference_id)
+  }
+
+  // ── Workshop: boas-vindas ────────────────────────────────────────
+  if (session.metadata?.workshop === 'inside-out-edit-02') {
+    try {
+      const buyerEmail = session.customer_details?.email ?? session.customer_email
+      const buyerName = session.customer_details?.name ?? session.metadata?.customer_name ?? null
+      const plan = session.metadata?.plan ?? 'Lote 1'
+      const totalFormatted = `R$ ${(totalCents / 100).toLocaleString('pt-BR', { minimumFractionDigits: 0 })}`
+
+      if (buyerEmail) {
+        const html = workshopWelcomeHTML({
+          customerName: buyerName,
+          plan,
+          totalFormatted,
+          orderId: order.id,
+        })
+        const r = await sendEmail({
+          to: buyerEmail,
+          subject: 'Vaga confirmada · Inside Out Edit 2 · Set 2026 · São Paulo',
+          html,
+          replyTo: 'contato@mztgrupo.com',
+          tags: [
+            { name: 'type', value: 'workshop-welcome' },
+            { name: 'workshop', value: 'inside-out-edit-02' },
+          ],
+        })
+        if (!r.ok) {
+          log.error(
+            { err: r.error, order_id: order.id },
+            'falha ao enviar email de boas-vindas do workshop',
+          )
+        } else {
+          log.info({ email_id: r.id, order_id: order.id }, 'email de boas-vindas workshop enviado')
+          await supabase
+            .from('store_orders')
+            .update({ delivery_sent_at: new Date().toISOString(), delivery_email_id: r.id ?? null })
+            .eq('id', order.id)
+        }
+      }
+    } catch (err) {
+      log.error({ err }, 'erro no email de boas-vindas do workshop — pedido OK')
+    }
   }
 
   // ── Entrega digital (email com link de download) ────────────────

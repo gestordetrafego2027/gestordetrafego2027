@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
           customer_name: body.name,
         },
       },
-      success_url: `${siteUrl}/academy/workshop-producao-direcao-01/?inscricao=confirmada&plano=${body.plan.toLowerCase()}`,
+      success_url: `${siteUrl}/academy/workshop-producao-direcao-01/confirmado/`,
       cancel_url: `${siteUrl}/academy/workshop-producao-direcao-01/?inscricao=cancelada`,
     })
     return NextResponse.json({ url: session.url })
