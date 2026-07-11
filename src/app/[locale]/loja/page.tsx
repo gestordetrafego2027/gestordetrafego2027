@@ -61,9 +61,7 @@ function ProductCard({ product }: { product: Product }) {
     <Link href={`/loja/${product.slug}`} className="group block">
       {/* Image */}
       <div className="relative aspect-[3/4] overflow-hidden bg-[#f0ede8] mb-4">
-        {InlineCover ? (
-          <InlineCover className="w-full h-full transition-transform duration-700 group-hover:scale-[1.04]" />
-        ) : image ? (
+        {image ? (
           <Image
             src={image}
             alt={product.name}
@@ -71,6 +69,8 @@ function ProductCard({ product }: { product: Product }) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           />
+        ) : InlineCover ? (
+          <InlineCover className="w-full h-full transition-transform duration-700 group-hover:scale-[1.04]" />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
             <span className="text-[#c8bfb0] text-4xl">✦</span>

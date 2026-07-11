@@ -8,6 +8,14 @@ import type { Metadata } from 'next'
 import { WaitlistForm } from '@/components/academy/WaitlistForm'
 import { DirectCheckoutButton } from '@/components/ecommerce/DirectCheckoutButton'
 
+type ServicePackage = {
+  id: string
+  name: string
+  price_brl: number | null
+  includes: string[] | null
+  duration: string | null
+}
+
 export const revalidate = 60
 
 type Props = { params: Promise<{ slug: string; locale: string }> }
@@ -66,6 +74,19 @@ export default async function ProdutoPage({ params }: Props) {
     .maybeSingle()
 
   if (!product) notFound()
+
+  // Fetch service packages if this product maps to a service (same slug)
+  let servicePackages: ServicePackage[] = []
+  const { data: svc } = await supabase.from('services').select('id').eq('slug', slug).maybeSingle()
+  if (svc?.id) {
+    const { data: pkgs } = await supabase
+      .from('service_packages')
+      .select('id, name, price_brl, includes, duration')
+      .eq('service_id', svc.id)
+      .eq('active', true)
+      .order('price_brl', { ascending: true })
+    servicePackages = (pkgs ?? []) as ServicePackage[]
+  }
 
   const allPrices = Array.isArray(product.store_prices) ? product.store_prices : []
   const mainPrice = allPrices.find((p) => p.active) ?? null
@@ -309,11 +330,30 @@ export default async function ProdutoPage({ params }: Props) {
                 </div>
               )}
 
-              {/* Descrição */}
+              {/* Descrição como chips */}
               {product.description && (
-                <p className="font-body text-sm leading-relaxed mb-8" style={{ color: '#666' }}>
-                  {product.description}
-                </p>
+                <div style={{ marginBottom: '28px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                    {product.description.split('·').map((item: string, i: number) => {
+                      const label = item.trim()
+                      if (!label) return null
+                      return (
+                        <span
+                          key={i}
+                          className="font-label uppercase tracking-[0.12em] text-[9px]"
+                          style={{
+                            padding: '5px 12px',
+                            background: '#f0ede8',
+                            color: '#555',
+                            border: '1px solid #e8e3db',
+                          }}
+                        >
+                          {label}
+                        </span>
+                      )
+                    })}
+                  </div>
+                </div>
               )}
 
               {/* Features */}
@@ -343,6 +383,113 @@ export default async function ProdutoPage({ params }: Props) {
                     </li>
                   ))}
                 </ul>
+              )}
+
+              {/* Pacotes do serviço */}
+              {servicePackages.length > 0 && (
+                <div
+                  style={{
+                    marginBottom: '32px',
+                    paddingBottom: '32px',
+                    borderBottom: '1px solid #e8e3db',
+                  }}
+                >
+                  <p
+                    className="font-label uppercase tracking-[0.25em] text-[8px] mb-4"
+                    style={{ color: '#aaa' }}
+                  >
+                    Pacotes disponíveis
+                  </p>
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+                      gap: '8px',
+                    }}
+                  >
+                    {servicePackages.map((pkg) => (
+                      <div
+                        key={pkg.id}
+                        style={{
+                          background: '#111',
+                          padding: '18px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '8px',
+                        }}
+                      >
+                        <p
+                          className="font-label uppercase tracking-[0.22em] text-[8px]"
+                          style={{ color: 'rgba(255,255,255,0.35)' }}
+                        >
+                          {pkg.name}
+                        </p>
+                        {pkg.price_brl != null ? (
+                          <p
+                            className="font-headline"
+                            style={{ fontSize: '20px', color: '#c4a97a', letterSpacing: '-0.01em' }}
+                          >
+                            {new Intl.NumberFormat('pt-BR', {
+                              style: 'currency',
+                              currency: 'BRL',
+                            }).format(pkg.price_brl)}
+                          </p>
+                        ) : (
+                          <p
+                            className="font-label uppercase tracking-[0.18em] text-[8px]"
+                            style={{ color: '#c4a97a' }}
+                          >
+                            Sob consulta
+                          </p>
+                        )}
+                        {pkg.duration && (
+                          <p
+                            className="font-label uppercase tracking-[0.15em] text-[8px]"
+                            style={{ color: 'rgba(255,255,255,0.2)' }}
+                          >
+                            {pkg.duration}
+                          </p>
+                        )}
+                        {Array.isArray(pkg.includes) && pkg.includes.length > 0 && (
+                          <ul
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'column',
+                              gap: '3px',
+                              marginTop: '6px',
+                              paddingTop: '10px',
+                              borderTop: '1px solid rgba(255,255,255,0.06)',
+                            }}
+                          >
+                            {pkg.includes.map((item: string, i: number) => (
+                              <li
+                                key={i}
+                                className="font-label text-[9px]"
+                                style={{
+                                  color: 'rgba(255,255,255,0.4)',
+                                  paddingLeft: '10px',
+                                  position: 'relative',
+                                  lineHeight: 1.5,
+                                }}
+                              >
+                                <span
+                                  style={{
+                                    position: 'absolute',
+                                    left: 0,
+                                    color: '#a88e5c',
+                                  }}
+                                >
+                                  ·
+                                </span>
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               )}
 
               {/* CTA */}
