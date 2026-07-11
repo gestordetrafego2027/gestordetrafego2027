@@ -1,6 +1,6 @@
 /**
  * E-mail de boas-vindas pós-compra para o workshop Inside Out.
- * Identidade visual House Mazzutti — dark editorial.
+ * Identidade visual House Mazzutti — light/white editorial.
  */
 
 interface WorkshopWelcomeParams {
@@ -24,157 +24,102 @@ export function workshopWelcomeHTML(params: WorkshopWelcomeParams): string {
   <title>Vaga confirmada · Inside Out Edit 2</title>
   <div style="display:none;max-height:0;overflow:hidden;mso-hide:all">Sua vaga no Inside Out Edit 2 está confirmada. Nos vemos em setembro em São Paulo.&nbsp;‌</div>
 </head>
-<body style="margin:0;padding:0;background:#0e0d0c;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased">
+<body style="margin:0;padding:0;background:#f5f5f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased">
 
-  <!-- Wrapper -->
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0e0d0c;padding:48px 16px 64px">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:40px 16px">
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%">
 
-        <!-- Header / Logo -->
+        <!-- Logo -->
         <tr>
-          <td style="padding-bottom:40px;border-bottom:1px solid #2a2825">
-            <table width="100%" cellpadding="0" cellspacing="0">
+          <td align="center" style="padding-bottom:32px">
+            <a href="https://housemazzutti.com" style="text-decoration:none">
+              <span style="font-size:18px;font-weight:700;letter-spacing:0.15em;color:#111;text-transform:uppercase">HOUSE MAZZUTTI</span>
+            </a>
+          </td>
+        </tr>
+
+        <!-- Card -->
+        <tr>
+          <td style="background:#fff;border-radius:16px;padding:40px 40px 32px;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+
+            <!-- Eyebrow -->
+            <p style="margin:0 0 8px;font-size:11px;letter-spacing:0.14em;color:#9ca3af;text-transform:uppercase">Inside Out · Edit 2 · São Paulo</p>
+
+            <!-- Title -->
+            <h1 style="margin:0 0 16px;font-size:28px;font-weight:800;letter-spacing:-0.02em;color:#111;line-height:1.1">Vaga confirmada.</h1>
+
+            <!-- Intro -->
+            <p style="margin:0 0 32px;font-size:15px;color:#4b5563;line-height:1.7">${greeting}. Sua inscrição no Inside Out Edit 2 está confirmada. Em setembro nos vemos no Studio Plano em São Paulo para dois dias dentro de uma produção real.</p>
+
+            <!-- Divider -->
+            <hr style="border:none;border-top:1px solid #f0f0f0;margin:0 0 28px"/>
+
+            <!-- Event details -->
+            <p style="margin:0 0 16px;font-size:11px;letter-spacing:0.12em;color:#9ca3af;text-transform:uppercase">Detalhes do evento</p>
+            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px">
               <tr>
-                <td>
-                  <a href="https://housemazzutti.com" style="text-decoration:none">
-                    <span style="font-size:11px;font-weight:700;letter-spacing:0.18em;color:#a09880;text-transform:uppercase">HOUSE MAZZUTTI</span>
-                  </a>
+                <td style="padding:12px 0;border-bottom:1px solid #f5f5f5;vertical-align:top;width:50%">
+                  <span style="font-size:11px;color:#9ca3af;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em">Data</span>
+                  <span style="font-size:14px;color:#111;font-weight:600">05 e 06 Set 2026</span>
                 </td>
-                <td align="right">
-                  <span style="font-size:10px;letter-spacing:0.12em;color:#54524d;text-transform:uppercase">Academy</span>
+                <td style="padding:12px 0 12px 16px;border-bottom:1px solid #f5f5f5;vertical-align:top">
+                  <span style="font-size:11px;color:#9ca3af;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em">Local</span>
+                  <span style="font-size:14px;color:#111;font-weight:600">Studio Plano · São Paulo</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:12px 0;border-bottom:1px solid #f5f5f5;vertical-align:top">
+                  <span style="font-size:11px;color:#9ca3af;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em">Formato</span>
+                  <span style="font-size:14px;color:#111;font-weight:600">Presencial · 2 sets ao vivo</span>
+                </td>
+                <td style="padding:12px 0 12px 16px;border-bottom:1px solid #f5f5f5;vertical-align:top">
+                  <span style="font-size:11px;color:#9ca3af;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em">Turma</span>
+                  <span style="font-size:14px;color:#111;font-weight:600">Máx 15 creators</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:12px 0;vertical-align:top">
+                  <span style="font-size:11px;color:#9ca3af;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em">Plano</span>
+                  <span style="font-size:14px;color:#111;font-weight:600">${plan}</span>
+                </td>
+                <td style="padding:12px 0 0 16px;vertical-align:top">
+                  <span style="font-size:11px;color:#9ca3af;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em">Valor</span>
+                  <span style="font-size:14px;color:#111;font-weight:600">${totalFormatted}</span>
                 </td>
               </tr>
             </table>
-          </td>
-        </tr>
 
-        <!-- Hero -->
-        <tr>
-          <td style="padding:48px 0 40px">
-            <p style="margin:0 0 16px;font-size:10px;letter-spacing:0.16em;color:#a09880;text-transform:uppercase">Inside Out · Edit 2 · São Paulo</p>
-            <h1 style="margin:0 0 20px;font-size:36px;font-weight:800;letter-spacing:-0.02em;color:#f0ede8;line-height:1.1">Vaga<br/>confirmada.</h1>
-            <p style="margin:0;font-size:15px;color:#8a8474;line-height:1.7">${greeting}. Sua inscrição no Inside Out Edit 2 está confirmada. Em setembro nos vemos no Studio Plano em São Paulo para dois dias dentro de uma produção real.</p>
-          </td>
-        </tr>
+            <!-- Divider -->
+            <hr style="border:none;border-top:1px solid #f0f0f0;margin:0 0 28px"/>
 
-        <!-- Divider -->
-        <tr><td style="border-top:1px solid #2a2825;padding-bottom:40px"></td></tr>
-
-        <!-- Event Details -->
-        <tr>
-          <td style="padding-bottom:40px">
-            <p style="margin:0 0 24px;font-size:10px;letter-spacing:0.16em;color:#a09880;text-transform:uppercase">Detalhes do evento</p>
-
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr>
-                <td style="padding:16px 0;border-bottom:1px solid #1e1c1a;vertical-align:top;width:40%">
-                  <span style="font-size:10px;letter-spacing:0.12em;color:#54524d;text-transform:uppercase;display:block;margin-bottom:6px">Data</span>
-                  <span style="font-size:14px;color:#f0ede8;font-weight:600">05 e 06 de Setembro 2026</span>
-                </td>
-                <td style="padding:16px 0 16px 24px;border-bottom:1px solid #1e1c1a;vertical-align:top">
-                  <span style="font-size:10px;letter-spacing:0.12em;color:#54524d;text-transform:uppercase;display:block;margin-bottom:6px">Local</span>
-                  <span style="font-size:14px;color:#f0ede8;font-weight:600">Studio Plano · São Paulo</span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:16px 0;border-bottom:1px solid #1e1c1a;vertical-align:top">
-                  <span style="font-size:10px;letter-spacing:0.12em;color:#54524d;text-transform:uppercase;display:block;margin-bottom:6px">Formato</span>
-                  <span style="font-size:14px;color:#f0ede8;font-weight:600">Presencial · 2 sets ao vivo</span>
-                </td>
-                <td style="padding:16px 0 16px 24px;border-bottom:1px solid #1e1c1a;vertical-align:top">
-                  <span style="font-size:10px;letter-spacing:0.12em;color:#54524d;text-transform:uppercase;display:block;margin-bottom:6px">Turma</span>
-                  <span style="font-size:14px;color:#f0ede8;font-weight:600">Máximo 15 creators</span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:16px 0;vertical-align:top">
-                  <span style="font-size:10px;letter-spacing:0.12em;color:#54524d;text-transform:uppercase;display:block;margin-bottom:6px">Plano</span>
-                  <span style="font-size:14px;color:#f0ede8;font-weight:600">${plan}</span>
-                </td>
-                <td style="padding:16px 0 0 24px;vertical-align:top">
-                  <span style="font-size:10px;letter-spacing:0.12em;color:#54524d;text-transform:uppercase;display:block;margin-bottom:6px">Valor</span>
-                  <span style="font-size:14px;color:#f0ede8;font-weight:600">${totalFormatted}</span>
-                </td>
-              </tr>
+            <!-- O que você vai viver -->
+            <p style="margin:0 0 16px;font-size:11px;letter-spacing:0.12em;color:#9ca3af;text-transform:uppercase">O que esperar</p>
+            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:32px">
+              <tr><td style="padding:8px 0;border-bottom:1px solid #f5f5f5;font-size:14px;color:#374151;line-height:1.6">→&nbsp;&nbsp;Dois sets completos — moda e beauty — com equipe profissional</td></tr>
+              <tr><td style="padding:8px 0;border-bottom:1px solid #f5f5f5;font-size:14px;color:#374151;line-height:1.6">→&nbsp;&nbsp;Você produz conteúdo de campanha real para marcas</td></tr>
+              <tr><td style="padding:8px 0;border-bottom:1px solid #f5f5f5;font-size:14px;color:#374151;line-height:1.6">→&nbsp;&nbsp;Direção ao vivo com Angelo Mazzutti e equipe House</td></tr>
+              <tr><td style="padding:8px 0;font-size:14px;color:#374151;line-height:1.6">→&nbsp;&nbsp;Você sai com campanha no portfólio + conexões reais</td></tr>
             </table>
+
+            <!-- Próximos passos -->
+            <p style="margin:0 0 12px;font-size:15px;color:#4b5563;line-height:1.7">Nos próximos dias você vai receber um e-mail com todas as informações práticas: endereço exato do Studio Plano, horário de chegada, o que levar, briefing dos sets e acesso ao grupo exclusivo de participantes.</p>
+            <p style="margin:0 0 32px;font-size:15px;color:#4b5563;line-height:1.7">Qualquer dúvida antes disso, responda este e-mail ou fale diretamente com a gente.</p>
+
+            <!-- CTA -->
+            <a href="https://housemazzutti.com/academy/workshop-producao-direcao-01/" style="display:inline-block;background:#111;color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:14px 28px;border-radius:12px">Ver página do evento ↗</a>
+
           </td>
         </tr>
-
-        <!-- O que você vai viver -->
-        <tr>
-          <td style="padding-bottom:40px;background:#181613;padding:32px;border:1px solid #2a2825">
-            <p style="margin:0 0 20px;font-size:10px;letter-spacing:0.16em;color:#a09880;text-transform:uppercase">O que esperar</p>
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr>
-                <td style="padding:10px 0;border-bottom:1px solid #1e1c1a">
-                  <span style="font-size:11px;color:#54524d;margin-right:12px">→</span>
-                  <span style="font-size:13px;color:#c8c2b8;line-height:1.6">Dois sets completos — moda e beauty — com equipe profissional</span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:10px 0;border-bottom:1px solid #1e1c1a">
-                  <span style="font-size:11px;color:#54524d;margin-right:12px">→</span>
-                  <span style="font-size:13px;color:#c8c2b8;line-height:1.6">Você produz conteúdo de campanha real para marcas</span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:10px 0;border-bottom:1px solid #1e1c1a">
-                  <span style="font-size:11px;color:#54524d;margin-right:12px">→</span>
-                  <span style="font-size:13px;color:#c8c2b8;line-height:1.6">Direção ao vivo com Angelo Mazzutti e equipe House</span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:10px 0">
-                  <span style="font-size:11px;color:#54524d;margin-right:12px">→</span>
-                  <span style="font-size:13px;color:#c8c2b8;line-height:1.6">Você sai com campanha no portfólio + conexões reais</span>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <!-- Próximos passos -->
-        <tr>
-          <td style="padding:40px 0">
-            <p style="margin:0 0 20px;font-size:10px;letter-spacing:0.16em;color:#a09880;text-transform:uppercase">Próximos passos</p>
-            <p style="margin:0 0 12px;font-size:14px;color:#8a8474;line-height:1.7">Nos próximos dias você vai receber um e-mail com todas as informações práticas: endereço exato do Studio Plano, horário de chegada, o que levar, briefing dos sets e acesso ao grupo exclusivo de participantes.</p>
-            <p style="margin:0;font-size:14px;color:#8a8474;line-height:1.7">Qualquer dúvida antes disso, responda este e-mail ou fale diretamente com a gente.</p>
-          </td>
-        </tr>
-
-        <!-- CTA -->
-        <tr>
-          <td style="padding-bottom:48px">
-            <a href="https://housemazzutti.com/academy/workshop-producao-direcao-01/" style="display:inline-block;background:#f0ede8;color:#0e0d0c;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:16px 32px">Ver página do evento ↗</a>
-          </td>
-        </tr>
-
-        <!-- Divider -->
-        <tr><td style="border-top:1px solid #2a2825;padding-bottom:32px"></td></tr>
 
         <!-- Footer -->
         <tr>
-          <td>
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr>
-                <td>
-                  <p style="margin:0 0 6px;font-size:11px;color:#54524d;line-height:1.6">
-                    <a href="https://housemazzutti.com" style="color:#a09880;text-decoration:none;font-weight:600">House Mazzutti</a>
-                  </p>
-                  <p style="margin:0;font-size:11px;color:#3a3835;line-height:1.6">
-                    House Mazzutti Produções Ltda · CNPJ 64.448.222/0001-54<br/>
-                    São Paulo · Brasil
-                  </p>
-                </td>
-                <td align="right" style="vertical-align:top">
-                  <p style="margin:0;font-size:11px;color:#3a3835;line-height:1.6">
-                    <a href="mailto:contato@mztgrupo.com" style="color:#54524d;text-decoration:none">contato@mztgrupo.com</a>
-                  </p>
-                  ${orderId ? `<p style="margin:4px 0 0;font-size:10px;color:#2a2825;line-height:1.6">Pedido #${orderId.slice(0, 8).toUpperCase()}</p>` : ''}
-                </td>
-              </tr>
-            </table>
+          <td align="center" style="padding-top:24px">
+            <p style="margin:0;font-size:12px;color:#9ca3af;line-height:1.6">
+              House Mazzutti Produções Ltda &middot; CNPJ 64.448.222/0001-54<br/>
+              <a href="mailto:contato@mztgrupo.com" style="color:#9ca3af">contato@mztgrupo.com</a>
+              ${orderId ? `&nbsp;&middot;&nbsp;Pedido #${orderId.slice(0, 8).toUpperCase()}` : ''}
+            </p>
           </td>
         </tr>
 
