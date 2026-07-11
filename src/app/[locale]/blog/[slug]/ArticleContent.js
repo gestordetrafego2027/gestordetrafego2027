@@ -231,7 +231,7 @@ export default function ArticleContent({ slug }) {
                         <div>
                             <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400 mb-1">AUTOR</div>
                             <div className="text-[18px] font-headline italic text-zinc-900 mb-2">Angelo Mazzutti</div>
-                            <p className="text-[14px] text-zinc-500 font-body leading-[1.7] max-w-md">Diretor Criativo da House Mazzutti. 15+ anos no audiovisual, com direção criativa para marcas premium e personalidades.</p>
+                            <p className="text-[14px] text-zinc-500 font-body leading-[1.7] max-w-md">Diretor Criativo da House Mazzutti. 20 anos de ofício no audiovisual, com direção criativa para marcas premium e personalidades.</p>
                         </div>
                     </div>
                 </article>

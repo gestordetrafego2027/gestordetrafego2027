@@ -92,7 +92,7 @@ export const brand: Brand = {
 // ---------------------------------------------------------------------------
 export const timeline: Timeline = {
   foundedYear: 2016,
-  founderExperience: '15+ anos de audiovisual e direção de imagem',
+  founderExperience: '20 anos de ofício em audiovisual e direção de imagem',
   officialPhrase: 'Casa criativa fundada em 2016 em São Paulo.',
 } as const
 
@@ -176,7 +176,7 @@ export const leadership = {
     name: 'Angelo Mazzutti',
     role: 'Diretor Criativo',
     // TODO 0.8 — substituir pela bio final (Drive: TEXTOS › HOUSE INSTITUCIONAL).
-    bio: 'Diretor criativo da House Mazzutti. 15+ anos de audiovisual e direção de imagem, traduzindo estratégia de marca em direção criativa autoral.',
+    bio: 'Diretor criativo da House Mazzutti. 20 anos de ofício em audiovisual e direção de imagem, traduzindo estratégia de marca em direção criativa autoral.',
   },
   mateus: {
     name: 'Mateus Sacavem',
