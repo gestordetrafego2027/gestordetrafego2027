@@ -445,7 +445,7 @@ export function GET() {
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2025 House Mazzutti Agência Produtora · CNPJ 24.435.135/0001-48</span>
+      <span>© 2026 House Mazzutti Agência Produtora · CNPJ 24.435.135/0001-48</span>
       <span>Inside Out · Edit 01 — Uberlândia · MG</span>
     </div>
   </div>

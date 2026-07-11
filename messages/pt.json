@@ -333,7 +333,7 @@
     "blog_read": "LER →"
   },
   "produtora_page": {
-    "hero_label": "10 ANOS — PRODUTORA HMZT",
+    "hero_label": "10 ANOS DE MARCA · 20 ANOS DE OFÍCIO — PRODUTORA HMZT",
     "hero_slides": [
       {
         "titulo": "Produção executiva para quem não aceita menos do que o melhor.",
@@ -1738,6 +1738,10 @@
     "servico_6_title": "Efeito House",
     "servico_6_desc": "A governança que garante que estratégia, prazo e percepção chegam intactos ao resultado.",
     "team_heading": "O que faz a diferença na House.",
+    "team_lead_label": "OPERAÇÃO EXECUTIVA",
+    "team_lead_name": "Mateus Sacavem",
+    "team_lead_role": "Produtor Executivo",
+    "team_lead_desc": "Mateus Sacavem comanda a operação executiva — coordenação técnica, cronogramas, integração de equipes e set sob controle. Da pré-produção ao master final, cada detalhe com o mesmo padrão da direção criativa.",
     "team_1_title": "Governança Total",
     "team_1_desc": "Uma casa lidera todos os núcleos — sem ruído entre equipes.",
     "team_2_title": "Especialistas Curados",
