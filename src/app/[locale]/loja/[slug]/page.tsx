@@ -291,11 +291,11 @@ export default async function ProdutoPage({ params }: Props) {
 
               {/* Nome */}
               <h1
-                className="font-headline tracking-tight"
+                className="text-h3"
                 style={{
                   fontSize: 'clamp(26px,3.5vw,44px)',
                   color: '#111',
-                  lineHeight: '1',
+                  lineHeight: '1.05',
                   marginBottom: '32px',
                 }}
               >

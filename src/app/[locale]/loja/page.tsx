@@ -209,7 +209,7 @@ export default async function LojaPage() {
             Loja — House Mazzutti
           </p>
           <h1
-            className="font-headline tracking-tight"
+            className="text-h1"
             style={{
               fontSize: 'clamp(48px,7vw,96px)',
               lineHeight: '0.9',
@@ -300,7 +300,7 @@ export default async function LojaPage() {
                     {CATEGORY_SUBS[cat] ?? ''}
                   </p>
                   <h2
-                    className="font-headline tracking-tight"
+                    className="text-h2"
                     style={{ fontSize: 'clamp(28px,3.5vw,44px)', color: '#111', lineHeight: 1 }}
                   >
                     {CATEGORY_LABELS[cat] ?? cat}
