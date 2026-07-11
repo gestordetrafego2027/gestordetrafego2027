@@ -73,7 +73,16 @@ export function ProfileForm({ defaultValues }: Props) {
           disabled
           className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm bg-neutral-50 text-neutral-400 cursor-not-allowed"
         />
-        <p className="text-xs text-neutral-400 mt-1">Para alterar o e-mail, entre em contato.</p>
+        <p className="text-xs text-neutral-400 mt-1">
+          Para alterar o e-mail,{' '}
+          <a
+            href="mailto:contato@mztgrupo.com"
+            className="underline underline-offset-2 hover:text-neutral-600"
+          >
+            entre em contato
+          </a>
+          .
+        </p>
       </div>
 
       {/* Nome completo */}

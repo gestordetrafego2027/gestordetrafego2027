@@ -8,7 +8,13 @@ function formatPrice(cents: number) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100)
 }
 
-export default async function MinhaContaPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function MinhaContaPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ locale: string }>
+  searchParams: Promise<{ welcome?: string }>
+}) {
   const supabase = await createClient()
   const {
     data: { user },
@@ -17,6 +23,8 @@ export default async function MinhaContaPage({ params }: { params: Promise<{ loc
     const { locale } = await params
     redirect(`/login?next=/${locale}/minha-conta`)
   }
+
+  const { welcome } = await searchParams
 
   const { data: profile } = await supabase
     .from('profiles')
@@ -53,6 +61,16 @@ export default async function MinhaContaPage({ params }: { params: Promise<{ loc
 
   return (
     <div className="space-y-6">
+      {/* Banner de boas-vindas para novo cadastro */}
+      {welcome === '1' && (
+        <div className="bg-neutral-900 text-white rounded-2xl p-5">
+          <p className="font-semibold">Bem-vindo(a) à House Mazzutti!</p>
+          <p className="text-sm text-neutral-300 mt-1">
+            Sua conta foi criada. Explore a loja, acesse cursos e personalize seu perfil.
+          </p>
+        </div>
+      )}
+
       {/* Boas-vindas */}
       <div className="bg-white rounded-2xl border border-neutral-100 p-6">
         <p className="text-sm text-neutral-400 mb-1">Olá,</p>
@@ -116,6 +134,20 @@ export default async function MinhaContaPage({ params }: { params: Promise<{ loc
         >
           <p className="text-sm font-semibold text-neutral-900">Dados pessoais</p>
           <p className="text-xs text-neutral-400 mt-1">Nome, telefone, endereço</p>
+        </Link>
+        <Link
+          href="/minha-conta/pedidos"
+          className="bg-white rounded-2xl border border-neutral-100 p-5 hover:border-neutral-300 transition-colors"
+        >
+          <p className="text-sm font-semibold text-neutral-900">Meus pedidos</p>
+          <p className="text-xs text-neutral-400 mt-1">Histórico e status</p>
+        </Link>
+        <Link
+          href="/minha-conta/senha"
+          className="bg-white rounded-2xl border border-neutral-100 p-5 hover:border-neutral-300 transition-colors"
+        >
+          <p className="text-sm font-semibold text-neutral-900">Alterar senha</p>
+          <p className="text-xs text-neutral-400 mt-1">Segurança da conta</p>
         </Link>
         <Link
           href="/minha-conta/lgpd"

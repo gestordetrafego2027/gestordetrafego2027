@@ -1,15 +1,20 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect, useRef } from 'react'
 import { changePassword, type ChangePasswordState } from './actions'
 
 const initial: ChangePasswordState = {}
 
 export function PasswordForm() {
   const [state, formAction, isPending] = useActionState(changePassword, initial)
+  const formRef = useRef<HTMLFormElement>(null)
+
+  useEffect(() => {
+    if (state.success) formRef.current?.reset()
+  }, [state.success])
 
   return (
-    <form action={formAction} className="space-y-5">
+    <form ref={formRef} action={formAction} className="space-y-5">
       {state.success && (
         <div className="bg-green-50 border border-green-200 text-green-700 text-sm rounded-xl px-4 py-3">
           ✓ Senha alterada com sucesso.
@@ -20,6 +25,22 @@ export function PasswordForm() {
           {state.error}
         </div>
       )}
+
+      <div>
+        <label className="block text-xs font-medium text-neutral-500 mb-1.5 uppercase tracking-wide">
+          Senha atual
+        </label>
+        <input
+          name="current_password"
+          type="password"
+          required
+          autoComplete="current-password"
+          className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-neutral-900"
+        />
+        {state.fieldErrors?.current_password && (
+          <p className="text-xs text-red-500 mt-1">{state.fieldErrors.current_password}</p>
+        )}
+      </div>
 
       <div>
         <label className="block text-xs font-medium text-neutral-500 mb-1.5 uppercase tracking-wide">

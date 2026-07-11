@@ -120,9 +120,16 @@ export async function requestAccountDeletion(): Promise<{ ok: boolean; message: 
     // Remove sessões ativas
     await supabase.auth.signOut({ scope: 'global' })
 
-    log.info('LGPD: conta anonimizada com sucesso')
+    // Remove o usuário do auth.users — libera o email para novo cadastro
+    const { error: deleteAuthError } = await service.auth.admin.deleteUser(user.id)
+    if (deleteAuthError) {
+      log.error({ err: deleteAuthError }, 'LGPD: falha ao deletar auth.users')
+      // Não bloqueia: perfil já foi anonimizado; falha silenciosa no log
+    }
+
+    log.info('LGPD: conta removida com sucesso')
   } catch (err) {
-    log.error({ err }, 'LGPD: falha ao anonimizar conta')
+    log.error({ err }, 'LGPD: falha ao remover conta')
     return {
       ok: false,
       message: 'Não foi possível processar. Entre em contato: contato@housemazzutti.com',

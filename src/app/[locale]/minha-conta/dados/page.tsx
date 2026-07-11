@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { redirect } from 'next/navigation'
 import { ProfileForm } from './ProfileForm'
 import { AvatarUpload } from './AvatarUpload'
 
@@ -8,10 +9,12 @@ export default async function DadosPage() {
     data: { user },
   } = await supabase.auth.getUser()
 
+  if (!user) redirect('/login?next=/minha-conta/dados')
+
   const { data: profile } = await supabase
     .from('profiles')
     .select('full_name, display_name, phone, city, state, email, avatar_url')
-    .eq('id', user!.id)
+    .eq('id', user.id)
     .maybeSingle()
 
   const displayName = profile?.display_name ?? profile?.full_name ?? profile?.email ?? 'Membro'
@@ -27,7 +30,7 @@ export default async function DadosPage() {
           phone: profile?.phone ?? null,
           city: profile?.city ?? null,
           state: profile?.state ?? null,
-          email: profile?.email ?? user!.email ?? '',
+          email: profile?.email ?? user.email ?? '',
         }}
       />
     </div>

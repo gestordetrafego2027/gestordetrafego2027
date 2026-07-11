@@ -78,9 +78,16 @@ export async function uploadAvatar(formData: FormData): Promise<{ error?: string
   const file = formData.get('avatar') as File | null
   if (!file || file.size === 0) return { error: 'Nenhum arquivo enviado.' }
   if (file.size > 2 * 1024 * 1024) return { error: 'Tamanho máximo: 2 MB.' }
-  if (!file.type.startsWith('image/')) return { error: 'Tipo de arquivo inválido.' }
+  const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp']
+  if (!ALLOWED_TYPES.includes(file.type))
+    return { error: 'Tipo de arquivo inválido. Use JPG, PNG ou WebP.' }
 
-  const ext = file.name.split('.').pop()?.toLowerCase() ?? 'jpg'
+  const EXT_MAP: Record<string, string> = {
+    'image/jpeg': 'jpg',
+    'image/png': 'png',
+    'image/webp': 'webp',
+  }
+  const ext = EXT_MAP[file.type] ?? 'jpg'
   const path = `${user.id}/avatar.${ext}`
   const bytes = await file.arrayBuffer()
 

@@ -2,9 +2,12 @@
 
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
+import { z } from 'zod'
 import { createClient } from '@/lib/supabase/server'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { verifyRecaptcha } from '@/lib/recaptcha'
+
+const EmailSchema = z.string().email('Informe um e-mail válido.')
 
 export async function signUpAction(formData: FormData): Promise<void> {
   const name = String(formData.get('name') ?? '').trim()
@@ -13,13 +16,14 @@ export async function signUpAction(formData: FormData): Promise<void> {
     .toLowerCase()
   const password = String(formData.get('password') ?? '')
   const confirm = String(formData.get('confirm') ?? '')
+  const terms = formData.get('terms')
   const recaptchaToken = String(formData.get('recaptchaToken') ?? '')
 
   if (!name) {
     redirect('/login/cadastro?error=' + encodeURIComponent('Informe seu nome.'))
   }
-  if (!email || !email.includes('@')) {
-    redirect('/login/cadastro?error=' + encodeURIComponent('Informe um email valido.'))
+  if (!EmailSchema.safeParse(email).success) {
+    redirect('/login/cadastro?error=' + encodeURIComponent('Informe um e-mail válido.'))
   }
   if (password.length < 8) {
     redirect(
@@ -27,7 +31,13 @@ export async function signUpAction(formData: FormData): Promise<void> {
     )
   }
   if (password !== confirm) {
-    redirect('/login/cadastro?error=' + encodeURIComponent('As senhas nao conferem.'))
+    redirect('/login/cadastro?error=' + encodeURIComponent('As senhas não conferem.'))
+  }
+  if (!terms) {
+    redirect(
+      '/login/cadastro?error=' +
+        encodeURIComponent('Você precisa aceitar os Termos de Uso e a Política de Privacidade.'),
+    )
   }
 
   const hdrs = await headers()
@@ -49,8 +59,12 @@ export async function signUpAction(formData: FormData): Promise<void> {
         encodeURIComponent('Falha na verificação de segurança. Tente novamente.'),
     )
   }
+
   const origin =
     process.env.NEXT_PUBLIC_SITE_URL || `https://${hdrs.get('host') ?? 'housemazzutti.com'}`
+
+  // Detecta locale via header ou cookie do next-intl; padrão pt
+  const locale = hdrs.get('x-next-intl-locale') ?? 'pt'
 
   const supabase = await createClient()
   const { data, error } = await supabase.auth.signUp({
@@ -58,7 +72,7 @@ export async function signUpAction(formData: FormData): Promise<void> {
     password,
     options: {
       data: { full_name: name },
-      emailRedirectTo: `${origin}/auth/callback?next=/pt/minha-conta`,
+      emailRedirectTo: `${origin}/auth/callback?next=/${locale}/minha-conta`,
     },
   })
 
@@ -66,11 +80,9 @@ export async function signUpAction(formData: FormData): Promise<void> {
     redirect('/login/cadastro?error=' + encodeURIComponent(error.message))
   }
 
-  // Se confirma email automatica esta desligada, vai vir session=null e
-  // o usuario precisa confirmar pelo email.
   if (!data.session) {
     redirect('/login/sucesso?email=' + encodeURIComponent(email) + '&kind=confirm')
   }
-  // Se ja entrou direto (confirma desligada no Supabase), redireciona para minha conta.
-  redirect('/pt/minha-conta?welcome=1')
+
+  redirect(`/${locale}/minha-conta?welcome=1`)
 }

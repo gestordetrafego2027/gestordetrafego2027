@@ -3,12 +3,17 @@ import { signInWithPassword } from './actions'
 import RecaptchaField from '@/components/security/RecaptchaField'
 import { PasswordInput } from '@/components/ui/PasswordInput'
 
-export const metadata = { title: 'Login | House Mazzutti CRM' }
+export const metadata = { title: 'Entrar | House Mazzutti' }
 
-type SearchParams = Promise<{ error?: string; next?: string }>
+type SearchParams = Promise<{ error?: string; next?: string; lgpd?: string }>
 
 export default async function LoginPage({ searchParams }: { searchParams: SearchParams }) {
-  const { error, next } = await searchParams
+  const { error, next, lgpd } = await searchParams
+
+  // Detecta contexto: CRM (next=/crm ou sem next na rota direta) vs. cliente
+  const isClientArea = next?.includes('/minha-conta') || next === '/minha-conta'
+  const title = isClientArea ? 'House Mazzutti' : 'House Mazzutti CRM'
+  const subtitle = isClientArea ? 'Acesse sua área de membro.' : 'Acesse sua conta para continuar.'
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-neutral-50 p-6">
@@ -17,15 +22,21 @@ export default async function LoginPage({ searchParams }: { searchParams: Search
         className="w-full max-w-sm space-y-4 bg-white border border-neutral-200 rounded-lg p-8 shadow-sm"
       >
         <header className="space-y-1 mb-2">
-          <h1 className="text-xl font-semibold tracking-tight">House Mazzutti CRM</h1>
-          <p className="text-sm text-neutral-500">Acesse sua conta para continuar.</p>
+          <h1 className="text-xl font-semibold tracking-tight">{title}</h1>
+          <p className="text-sm text-neutral-500">{subtitle}</p>
         </header>
 
         <input type="hidden" name="next" value={next ?? '/crm'} />
         <RecaptchaField action="login" />
 
+        {lgpd === 'deleted' && (
+          <div className="text-sm text-neutral-600 border border-neutral-200 bg-neutral-50 rounded p-3">
+            Sua conta foi excluída com sucesso. Obrigado por usar nossos serviços.
+          </div>
+        )}
+
         <label className="block space-y-1">
-          <span className="text-sm font-medium">Email</span>
+          <span className="text-sm font-medium">E-mail</span>
           <input
             name="email"
             type="email"
@@ -53,7 +64,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Search
             <div className="font-medium">
               {error.toLowerCase().includes('invalid') ||
               error.toLowerCase().includes('credentials')
-                ? 'Email ou senha incorretos.'
+                ? 'E-mail ou senha incorretos.'
                 : error}
             </div>
             <div className="text-xs text-red-600">

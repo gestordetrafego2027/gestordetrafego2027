@@ -1,12 +1,22 @@
 'use server'
 
 import { redirect } from 'next/navigation'
+import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 export async function setNewPassword(
   _prev: { error?: string },
   formData: FormData,
 ): Promise<{ error?: string }> {
+  const hdrs = await headers()
+  const ip =
+    hdrs.get('x-real-ip') ?? hdrs.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '127.0.0.1'
+  const rl = await checkRateLimit('auth', ip)
+  if (!rl.allowed) {
+    return { error: 'Muitas tentativas. Aguarde um minuto e tente novamente.' }
+  }
+
   const password = String(formData.get('password') ?? '')
   const confirm = String(formData.get('confirm') ?? '')
 
@@ -33,5 +43,6 @@ export async function setNewPassword(
     return { error: error.message }
   }
 
-  redirect('/crm?reset=ok')
+  const locale = hdrs.get('x-next-intl-locale') ?? 'pt'
+  redirect(`/${locale}/minha-conta?reset=ok`)
 }

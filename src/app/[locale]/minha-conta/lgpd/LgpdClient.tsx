@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useTransition } from 'react'
+import Link from 'next/link'
 import { updateMarketingConsent, requestDataExport, requestAccountDeletion } from './actions'
 
 interface Props {
@@ -12,6 +13,7 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
   const [exportMsg, setExportMsg] = useState('')
   const [deleteConfirm, setDeleteConfirm] = useState(false)
   const [deleteInput, setDeleteInput] = useState('')
+  const [deleteMsg, setDeleteMsg] = useState('')
   const [isPendingConsent, startConsent] = useTransition()
   const [isPendingExport, startExport] = useTransition()
   const [isPendingDelete, startDelete] = useTransition()
@@ -34,12 +36,42 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
   function handleDelete() {
     if (deleteInput !== 'EXCLUIR') return
     startDelete(async () => {
-      await requestAccountDeletion()
+      const res = await requestAccountDeletion()
+      if (!res.ok) {
+        setDeleteMsg(res.message)
+      }
     })
   }
 
   return (
     <div className="space-y-8">
+      {/* Links jurídicos */}
+      <div className="flex flex-wrap gap-4 text-xs text-neutral-400">
+        <Link
+          href="/politicas/privacidade"
+          target="_blank"
+          className="underline hover:text-neutral-700"
+        >
+          Política de Privacidade
+        </Link>
+        <Link
+          href="/politicas/termos-de-uso"
+          target="_blank"
+          className="underline hover:text-neutral-700"
+        >
+          Termos de Uso
+        </Link>
+        <Link
+          href="/politicas/cookies"
+          target="_blank"
+          className="underline hover:text-neutral-700"
+        >
+          Política de Cookies
+        </Link>
+      </div>
+
+      <hr className="border-neutral-100" />
+
       {/* Consentimento de marketing */}
       <section>
         <h3 className="font-semibold text-neutral-900 mb-1">Comunicações de marketing</h3>
@@ -47,22 +79,25 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
           Aceito receber e-mails com novidades, promoções e conteúdos da House Mazzutti. Você pode
           revogar a qualquer momento (Art. 8, §5º LGPD).
         </p>
-        <button
-          onClick={handleConsentToggle}
-          disabled={isPendingConsent}
-          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none disabled:opacity-50 ${
-            consent ? 'bg-neutral-900' : 'bg-neutral-200'
-          }`}
-          role="switch"
-          aria-checked={consent}
-        >
-          <span
-            className={`inline-block h-4 w-4 rounded-full bg-white shadow transition-transform ${
-              consent ? 'translate-x-6' : 'translate-x-1'
+        <div className="flex items-center gap-3">
+          <button
+            onClick={handleConsentToggle}
+            disabled={isPendingConsent}
+            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none disabled:opacity-50 ${
+              consent ? 'bg-neutral-900' : 'bg-neutral-200'
             }`}
-          />
-        </button>
-        <span className="ml-3 text-sm text-neutral-600">{consent ? 'Ativado' : 'Desativado'}</span>
+            role="switch"
+            aria-checked={consent}
+            aria-label="Consentimento de marketing"
+          >
+            <span
+              className={`inline-block h-4 w-4 rounded-full bg-white shadow transition-transform ${
+                consent ? 'translate-x-6' : 'translate-x-1'
+              }`}
+            />
+          </button>
+          <span className="text-sm text-neutral-600">{consent ? 'Ativado' : 'Desativado'}</span>
+        </div>
       </section>
 
       <hr className="border-neutral-100" />
@@ -72,7 +107,7 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
         <h3 className="font-semibold text-neutral-900 mb-1">Exportar meus dados</h3>
         <p className="text-sm text-neutral-500 mb-4">
           Direito de acesso e portabilidade (Art. 18, I e V LGPD). Você receberá um arquivo com
-          todos os seus dados cadastrais e histórico de pedidos.
+          todos os seus dados cadastrais e histórico de pedidos no e-mail cadastrado.
         </p>
         {exportMsg ? (
           <div className="bg-blue-50 border border-blue-200 text-blue-700 text-sm rounded-xl px-4 py-3">
@@ -95,12 +130,18 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
       <section>
         <h3 className="font-semibold text-red-600 mb-1">Excluir minha conta</h3>
         <p className="text-sm text-neutral-500 mb-2">
-          Direito à eliminação (Art. 18, VI LGPD). Seus dados pessoais serão anonimizados. Registros
-          fiscais são mantidos por obrigação legal (Art. 16, II LGPD).
+          Direito à eliminação (Art. 18, VI LGPD). Seus dados pessoais serão permanentemente
+          removidos. Registros fiscais são mantidos por obrigação legal (Art. 16, II LGPD).
         </p>
         <p className="text-xs text-neutral-400 mb-4">
-          ⚠️ Esta ação é irreversível. Acesso à loja e academy será encerrado.
+          ⚠️ Esta ação é irreversível. Acesso à loja e academy será encerrado imediatamente.
         </p>
+
+        {deleteMsg && (
+          <div className="mb-4 bg-red-50 border border-red-200 text-red-700 text-sm rounded-xl px-4 py-3">
+            {deleteMsg}
+          </div>
+        )}
 
         {!deleteConfirm ? (
           <button
@@ -133,6 +174,7 @@ export function LgpdClient({ marketingConsent: initialConsent }: Props) {
                 onClick={() => {
                   setDeleteConfirm(false)
                   setDeleteInput('')
+                  setDeleteMsg('')
                 }}
                 className="px-5 py-2 border border-neutral-200 text-sm font-medium rounded-lg hover:bg-white transition-colors"
               >

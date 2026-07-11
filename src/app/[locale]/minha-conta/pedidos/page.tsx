@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { redirect } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
 
 function formatPrice(cents: number, currency = 'brl') {
@@ -35,6 +36,8 @@ export default async function PedidosPage() {
     data: { user },
   } = await supabase.auth.getUser()
 
+  if (!user) redirect('/login?next=/minha-conta/pedidos')
+
   const { data: orders } = await supabase
     .from('store_orders')
     .select(
@@ -47,7 +50,7 @@ export default async function PedidosPage() {
       )
     `,
     )
-    .eq('user_id', user!.id)
+    .eq('user_id', user.id)
     .order('created_at', { ascending: false })
 
   return (
