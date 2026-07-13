@@ -17,6 +17,7 @@ const NON_I18N = [
   '/lp',
   '/sitemap.xml',
   '/robots.txt',
+  '/catalogo-servico-264',
 ]
 
 // Academy: páginas de CONTEÚDO sem locale → versão /pt canônica (consolidação SEO).
