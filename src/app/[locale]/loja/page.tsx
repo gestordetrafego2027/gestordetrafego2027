@@ -133,18 +133,20 @@ function ProductCard({ product, catSlug }: { product: Product; catSlug: string }
   )
 }
 
-const CATEGORY_ORDER = ['studio', 'produtora', 'academy', 'agencia']
+const CATEGORY_ORDER = ['studio', 'produtora', 'academy', 'agencia', 'avulso']
 const CATEGORY_LABELS: Record<string, string> = {
   agencia: 'Agência',
   studio: 'Studio',
   produtora: 'Produtora',
   academy: 'Academy',
+  avulso: 'Produtos Digitais',
 }
 const CATEGORY_SUBS: Record<string, string> = {
   agencia: 'Branding · Web · Comunicação',
   studio: 'Book · Ensaio · Cobertura',
   produtora: 'Moda · Beleza · Institucional',
-  academy: 'Ebooks · Cursos · Conteúdo',
+  academy: 'Cursos · Formação · Conteúdo',
+  avulso: 'Ebooks · Downloads · Avulsos',
 }
 
 export default async function LojaPage() {
@@ -163,14 +165,20 @@ export default async function LojaPage() {
     .order('name', { ascending: true })
 
   const items = (products ?? []) as Product[]
+
+  // Avulso = produto digital que não é curso (cursos têm slug terminando em -academy)
+  const isAvulso = (p: Product) => p.product_type === 'digital' && !p.slug.endsWith('-academy')
+
   const grouped: Record<string, Product[]> = {}
   for (const p of items) {
-    const catSlug = p.store_product_categories?.[0]?.store_categories?.slug ?? 'outros'
+    const catSlug = isAvulso(p)
+      ? 'avulso'
+      : (p.store_product_categories?.[0]?.store_categories?.slug ?? 'outros')
     if (!grouped[catSlug]) grouped[catSlug] = []
     grouped[catSlug].push(p)
   }
 
-  // Sort each category by price ascending; quote-only and no-price go last
+  // Dentro de cada seção: preço crescente; sem preço vai por último
   const priceOf = (p: Product) => {
     if (isQuoteOnly(p.store_prices) || !p.store_prices?.[0]) return Infinity
     return p.store_prices[0].unit_amount
