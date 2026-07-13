@@ -100,7 +100,7 @@ const HTML = `<!DOCTYPE html>
   .card:hover .card-overlay-cta { opacity: 1; transform: translateY(0); }
   .card-cat { font-size: 7px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
   .card-name { font-size: 15px; font-weight: 400; line-height: 1.3; margin-bottom: 2px; }
-  .card-desc { font-size: 11px; font-weight: 300; color: var(--muted); line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; }
+  .card-desc { font-size: 11px; font-weight: 300; color: var(--muted); line-height: 1.55; margin-bottom: 4px; }
   .card-price { font-size: 15px; font-weight: 400; }
   .card-price.gold { color: var(--gold); }
   .card-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
@@ -202,7 +202,7 @@ const HTML = `<!DOCTYPE html>
           <h3 class="card-name">Book Studio</h3>
           <span class="consulta">Consultar</span>
         </div>
-        <p class="card-desc">Direção de Pose · Tratamento Profissional · SP</p>
+        <p class="card-desc">Direção de Pose e Expressão · Tratamento Profissional · Estúdio Próprio SP · Planos Essencial, Estratégico e Premium</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/ensaio-pessoal" target="_blank">
         <div class="card-img">
@@ -214,7 +214,7 @@ const HTML = `<!DOCTYPE html>
           <h3 class="card-name">Ensaio Pessoal</h3>
           <span class="consulta">Consultar</span>
         </div>
-        <p class="card-desc">Direção Criativa · Beauty Artist · 2–4 Looks</p>
+        <p class="card-desc">Direção Criativa · Moodboard Personalizado · Beauty Artist · Looks de Cena · De 2 a 4 Looks</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/cobertura-concierge-production" target="_blank">
         <div class="card-img">
@@ -226,7 +226,7 @@ const HTML = `<!DOCTYPE html>
           <h3 class="card-name">Cobertura &amp; Concierge Production</h3>
           <span class="consulta">Consultar</span>
         </div>
-        <p class="card-desc">Lifestyle Premium · Equipe Técnica Dedicada</p>
+        <p class="card-desc">Cobertura de Evento · Lifestyle Premium · Equipe Técnica Dedicada · São Paulo · Planos Essencial a Imersivo</p>
       </a>
     </div>
 
@@ -290,7 +290,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Produtora</p>
         <div class="card-meta"><h3 class="card-name">Editorial de Moda</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Lookbook · Fashion Film · Still · E-commerce Editorial</p>
+        <p class="card-desc">Lookbook · Fashion Film · Still de Produtos · Short Vídeos Catálogo · E-commerce Editorial</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/publicidade-campanha" target="_blank">
         <div class="card-img">
@@ -299,7 +299,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Produtora</p>
         <div class="card-meta"><h3 class="card-name">Publicidade &amp; Campanha</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Filme Publicitário · Campanha 360° · Influenciadores</p>
+        <p class="card-desc">Filme Publicitário · Campanha 360° · Influenciadores · Linha Editorial · Produção Executiva</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/direcao-criacao-estrategica" target="_blank">
         <div class="card-img">
@@ -308,7 +308,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Produtora</p>
         <div class="card-meta"><h3 class="card-name">Direção &amp; Criação Estratégica</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Direção de Arte · Fotografia · Videografia · Narrativa</p>
+        <p class="card-desc">Direção de Arte · Fotografia · Videografia · Cenografia · Narrativa Publicitária · Do conceito à entrega</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/producao-corporativa-institucional" target="_blank">
         <div class="card-img">
@@ -317,7 +317,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Produtora</p>
         <div class="card-meta"><h3 class="card-name">Produção Corporativa &amp; Institucional</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Vídeo Institucional · Banco de Imagem · Apps e Site</p>
+        <p class="card-desc">Vídeo Institucional · Posicionamento CEO · Banco de Imagem · Vídeo Explicativo · Apps e Site</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/producao-educacao" target="_blank">
         <div class="card-img">
@@ -326,7 +326,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Produtora</p>
         <div class="card-meta"><h3 class="card-name">Produção de Educação</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Vídeo-aulas · Treinamentos · E-learning Profissional</p>
+        <p class="card-desc">Vídeo-aulas · Treinamentos Corporativos · Cases de Sucesso · E-learning Profissional</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/producao-eventos" target="_blank">
         <div class="card-img">
@@ -335,7 +335,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Produtora</p>
         <div class="card-meta"><h3 class="card-name">Produção de Eventos</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Cobertura ao Vivo · Transmissão Online · Drone · SP</p>
+        <p class="card-desc">Cobertura ao Vivo · Transmissão Online · Drone · Fotografia e Vídeo · São Paulo e Brasil</p>
       </a>
     </div>
   </section>
@@ -357,7 +357,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Academy</p>
         <div class="card-meta"><h3 class="card-name">Marketing de Influência — HMZT Academy</h3><span class="card-price gold">R$ 127,00</span></div>
-        <p class="card-desc">Estratégia · Creators · Multicanal · 6 módulos · 100h</p>
+        <p class="card-desc">Estratégia de Influência · Creators · Multicanal · 6 módulos · 100h de formação</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/direcao-criativa-academy" target="_blank">
         <div class="card-img">
@@ -366,7 +366,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Academy</p>
         <div class="card-meta"><h3 class="card-name">Direção Criativa — HMZT Academy</h3><span class="card-price gold">R$ 147,00</span></div>
-        <p class="card-desc">Conceito · Direção de Arte · Narrativa · 8 módulos · 120h</p>
+        <p class="card-desc">Conceito · Direção de Arte · Narrativa Visual · 8 módulos · 120h de formação</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/casos-da-producao-academy" target="_blank">
         <div class="card-img">
@@ -375,7 +375,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Academy</p>
         <div class="card-meta"><h3 class="card-name">Produção Executiva — HMZT Academy</h3><span class="card-price gold">R$ 197,00</span></div>
-        <p class="card-desc">Planejamento · Operações · Entrega · 10 módulos · 140h</p>
+        <p class="card-desc">Planejamento · Orçamento · Operações · Entrega · 10 módulos · 140h de formação</p>
       </a>
     </div>
   </section>
@@ -397,7 +397,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Agência</p>
         <div class="card-meta"><h3 class="card-name">RP &amp; Marketing Direto</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Assessoria de Imprensa · Reputação</p>
+        <p class="card-desc">Assessoria de Imprensa · Relações com Mídia · Marketing Direto · Gestão de Reputação</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/desenvolvimento-web" target="_blank">
         <div class="card-img">
@@ -406,7 +406,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Agência</p>
         <div class="card-meta"><h3 class="card-name">Desenvolvimento Web</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Design Autoral · SEO · E-commerce · CRM</p>
+        <p class="card-desc">Design Autoral · Performance · SEO · Marca Pessoal · E-commerce · Corporativo · Integrações CRM e Pagamento</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/branding-project" target="_blank">
         <div class="card-img">
@@ -415,7 +415,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Agência</p>
         <div class="card-meta"><h3 class="card-name">Branding Project</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Posicionamento · Identidade Visual · Brand Book</p>
+        <p class="card-desc">Pesquisa Estratégica · Posicionamento · Identidade Visual · Brand Book · Aplicações · 20 a 75 dias</p>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/campanha-lancamento" target="_blank">
         <div class="card-img">
@@ -424,7 +424,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-cat">Agência</p>
         <div class="card-meta"><h3 class="card-name">Campanha de Lançamento</h3><span class="consulta">Consultar</span></div>
-        <p class="card-desc">Hero Film · Reels · Landing Page · Multicanal</p>
+        <p class="card-desc">Hero Film · Reels · Editorial · Landing Page · Storytelling Multicanal · 10 formatos disponíveis</p>
       </a>
     </div>
   </section>
