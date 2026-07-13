@@ -9,6 +9,7 @@ const HTML = `<!DOCTYPE html>
 <title>Catálogo de Serviços — House Mazzutti</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  a { color: inherit; text-decoration: none; }
 
   :root {
     --bg: #faf9f7;
@@ -193,7 +194,7 @@ const HTML = `<!DOCTYPE html>
     <div class="grid">
       <a class="card" href="https://housemazzutti.com/pt/loja/book-studio" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/studio/amanda-oliveira/capa.webp" alt="Book Studio" loading="lazy">
+          <img src="/images/studio/amanda-oliveira/capa.webp" alt="Book Studio" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Studio →</span></div>
         </div>
         <p class="card-cat">Studio</p>
@@ -205,7 +206,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/ensaio-pessoal" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/studio/mileide-mihaile/1.webp" alt="Ensaio Pessoal" loading="lazy">
+          <img src="/images/studio/mileide-mihaile/1.webp" alt="Ensaio Pessoal" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Studio →</span></div>
         </div>
         <p class="card-cat">Studio</p>
@@ -217,7 +218,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/cobertura-concierge-production" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/blog/cobertura-presenca-sp/cobertura-externa-tempo-real-sao-paulo-house-mazzutti.webp" alt="Cobertura" loading="lazy">
+          <img src="/images/blog/cobertura-presenca-sp/cobertura-externa-tempo-real-sao-paulo-house-mazzutti.webp" alt="Cobertura" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Studio →</span></div>
         </div>
         <p class="card-cat">Studio</p>
@@ -284,7 +285,7 @@ const HTML = `<!DOCTYPE html>
     <div class="grid">
       <a class="card" href="https://housemazzutti.com/pt/loja/editorial-de-moda" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/produtora/moda/beatco/capa.webp" alt="Editorial de Moda" loading="lazy">
+          <img src="/images/produtora/moda/beatco/capa.webp" alt="Editorial de Moda" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
         </div>
         <p class="card-cat">Produtora</p>
@@ -293,7 +294,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/publicidade-campanha" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/produtora/beleza/oceane/capa.webp" alt="Publicidade & Campanha" loading="lazy">
+          <img src="/images/produtora/beleza/oceane/capa.webp" alt="Publicidade & Campanha" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
         </div>
         <p class="card-cat">Produtora</p>
@@ -302,7 +303,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/direcao-criacao-estrategica" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/blog/editorial-moda-narrativa/editorial-moda-narrativa-visual-fashion-direction-house-mazzutti.webp" alt="Direção Criativa" loading="lazy">
+          <img src="/images/blog/editorial-moda-narrativa/editorial-moda-narrativa-visual-fashion-direction-house-mazzutti.webp" alt="Direção Criativa" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
         </div>
         <p class="card-cat">Produtora</p>
@@ -311,7 +312,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/producao-corporativa-institucional" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/produtora/institucional/sense-hotel/capa.webp" alt="Produção Corporativa" loading="lazy">
+          <img src="/images/produtora/institucional/sense-hotel/capa.webp" alt="Produção Corporativa" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
         </div>
         <p class="card-cat">Produtora</p>
@@ -320,7 +321,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/producao-educacao" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/academy/inside-out/cover.webp" alt="Produção de Educação" loading="lazy">
+          <img src="/images/academy/inside-out/cover.webp" alt="Produção de Educação" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
         </div>
         <p class="card-cat">Produtora</p>
@@ -329,7 +330,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/producao-eventos" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/blog/cobertura-narrativa-visual/cobertura-narrativa-visual-sao-paulo-house-mazzutti.webp" alt="Produção de Eventos" loading="lazy">
+          <img src="/images/blog/cobertura-narrativa-visual/cobertura-narrativa-visual-sao-paulo-house-mazzutti.webp" alt="Produção de Eventos" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
         </div>
         <p class="card-cat">Produtora</p>
@@ -351,7 +352,7 @@ const HTML = `<!DOCTYPE html>
     <div class="grid">
       <a class="card" href="https://housemazzutti.com/pt/loja/marketing-de-influencia-academy" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/academy/hero-academy.webp" alt="Marketing de Influência" loading="lazy">
+          <img src="/images/academy/hero-academy.webp" alt="Marketing de Influência" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
         </div>
         <p class="card-cat">Academy</p>
@@ -360,7 +361,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/direcao-criativa-academy" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/academy/direcao-criativa/cover.webp" alt="Direção Criativa Academy" loading="lazy">
+          <img src="/images/academy/direcao-criativa/cover.webp" alt="Direção Criativa Academy" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
         </div>
         <p class="card-cat">Academy</p>
@@ -369,7 +370,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/casos-da-producao-academy" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/academy/casos-da-producao/cover.webp" alt="Produção Executiva Academy" loading="lazy">
+          <img src="/images/academy/casos-da-producao/cover.webp" alt="Produção Executiva Academy" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
         </div>
         <p class="card-cat">Academy</p>
@@ -391,7 +392,7 @@ const HTML = `<!DOCTYPE html>
     <div class="grid grid-4">
       <a class="card" href="https://housemazzutti.com/pt/loja/rp-marketing-direto" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/agencia/knowhol/1.webp" alt="RP & Marketing Direto" loading="lazy">
+          <img src="/images/agencia/knowhol/1.webp" alt="RP & Marketing Direto" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Agência →</span></div>
         </div>
         <p class="card-cat">Agência</p>
@@ -400,7 +401,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/desenvolvimento-web" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/agencia/alletto/capa.webp" alt="Desenvolvimento Web" loading="lazy">
+          <img src="/images/agencia/alletto/capa.webp" alt="Desenvolvimento Web" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Agência →</span></div>
         </div>
         <p class="card-cat">Agência</p>
@@ -409,7 +410,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/branding-project" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/agencia/house-mazzutti/1.webp" alt="Branding Project" loading="lazy">
+          <img src="/images/agencia/house-mazzutti/1.webp" alt="Branding Project" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Agência →</span></div>
         </div>
         <p class="card-cat">Agência</p>
@@ -418,7 +419,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="card" href="https://housemazzutti.com/pt/loja/campanha-lancamento" target="_blank">
         <div class="card-img">
-          <img src="https://housemazzutti.com/images/blog/campanha-lancamento/campanha-publicitaria-direcao-criativa-house-mazzutti.webp" alt="Campanha de Lançamento" loading="lazy">
+          <img src="/images/blog/campanha-lancamento/campanha-publicitaria-direcao-criativa-house-mazzutti.webp" alt="Campanha de Lançamento" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Agência →</span></div>
         </div>
         <p class="card-cat">Agência</p>
@@ -440,7 +441,7 @@ const HTML = `<!DOCTYPE html>
     <div class="ebook-grid">
       <a class="ebook-card" href="https://housemazzutti.com/pt/loja/marketing-para-modelos" target="_blank">
         <div class="ebook-cover">
-          <img src="https://housemazzutti.com/images/academy/marketing-para-modelos/cover.webp" alt="Marketing para Modelos" loading="lazy">
+          <img src="/images/academy/marketing-para-modelos/cover.webp" alt="Marketing para Modelos" loading="lazy">
         </div>
         <div class="ebook-info">
           <p class="ebook-cat">Ebook · Academy</p>
@@ -452,7 +453,7 @@ const HTML = `<!DOCTYPE html>
       </a>
       <a class="ebook-card" href="https://housemazzutti.com/pt/loja/preco-da-relevancia" target="_blank">
         <div class="ebook-cover">
-          <img src="https://housemazzutti.com/images/academy/preco-da-relevancia/cover.webp" alt="O Preço da Relevância" loading="lazy">
+          <img src="/images/academy/preco-da-relevancia/cover.webp" alt="O Preço da Relevância" loading="lazy">
         </div>
         <div class="ebook-info">
           <p class="ebook-cat">Ebook · Academy</p>
