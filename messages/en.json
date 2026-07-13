@@ -112,7 +112,9 @@
     "blog_section_label": "EDITORIAL",
     "blog_section_title": "From the Blog",
     "blog_see_all": "SEE ALL →",
-    "blog_read": "READ →"
+    "blog_read": "READ →",
+    "frentes_academy_label": "ACADEMY",
+    "frentes_academy_sub": "Courses · Workshops · Materials"
   },
   "footer": {
     "copyright": "© 2026 House Mazzutti. All rights reserved.",
@@ -649,7 +651,9 @@
     "cta_final_title": "Ready to elevate your brand?",
     "cta_final_btn": "Start a conversation",
     "form_drawer_title": "Conversation with Angelo",
-    "form_drawer_subtitle": "Branding, launch campaign, creative direction or partnership. We respond within 1 business day."
+    "form_drawer_subtitle": "Branding, launch campaign, creative direction or partnership. We respond within 1 business day.",
+    "est_4_title": "Academy",
+    "est_4_desc": "Practical training for the creative market."
   },
   "produtora_publicidade": {
     "page_title": "House Mazzutti — PRODUCTION | Advertising Campaign",
@@ -1725,6 +1729,51 @@
     "footer_nav_contato": "CONTATO",
     "footer_nav_portfolio": "PORTFÓLIO",
     "footer_nav_blog": "BLOG",
-    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados.",
+    "team_lead_label": "EXECUTIVE OPERATION",
+    "team_lead_name": "Mateus Sacavem",
+    "team_lead_role": "Executive Producer",
+    "team_lead_desc": "Mateus Sacavem leads the executive operation — technical coordination, schedules, team integration, and set under control. From pre-production to the final master, every detail held to the same standard as creative direction."
+  },
+  "academy_page": {
+    "seo_title": "Academy House Mazzutti — Workshops & Materials for Creative Professionals",
+    "seo_desc": "Practical training for photographers, videomakers, models, directors, and creative industry professionals. The method of those still on set. House Mazzutti — São Paulo.",
+    "hero_label": "ACADEMY — HOUSE MAZZUTTI",
+    "hero_titulo": "Training by those who never stopped working to teach.",
+    "hero_subtitulo": "Workshops and materials for creative professionals who want to grow in their craft with those who live it.",
+    "hero_cta": "Explore the Academy",
+    "manifesto_titulo": "The method of those on set — for those who want to get there.",
+    "manifesto_texto": "The Academy is House Mazzutti's educational arm — not a detour from the work, but a natural extension of it. What goes into the course came from the set, from a real brief, from the project that worked. Those who teach are those who operate. And those who operate never lose touch with what the market demands today.",
+    "produtos_label": "WHAT WE OFFER",
+    "produtos_titulo": "Training for those who make the market.",
+    "produto_1_titulo": "Workshops",
+    "produto_1_desc": "Practical immersions with Angelo Mazzutti — image direction and audiovisual production. Two active cohorts: Inside Out Edit 2 and Production & Direction.",
+    "produto_2_titulo": "E-books & Materials",
+    "produto_2_desc": "Set knowledge condensed. Real decisions on briefing, direction and production — straight to the point.",
+    "produto_3_titulo": "Editorial Blog",
+    "produto_3_desc": "Notes and essays on branding, creative direction, and building value in the creative market.",
+    "para_quem_titulo": "Who the Academy is for.",
+    "perfil_1": "Photographers and videomakers who want to elevate direction, not just technique.",
+    "perfil_2": "Models who want to understand the market before entering it.",
+    "perfil_3": "Creative directors and advertisers in search of a personal method.",
+    "perfil_4": "Beauty professionals who work with image and want to position themselves in the market.",
+    "perfil_5": "Producers and project managers in the creative market.",
+    "diferencial_titulo": "Why the Academy is different.",
+    "diferencial_1_titulo": "Training from those who do",
+    "diferencial_1_desc": "Angelo Mazzutti is still on set. What you learn came from real projects — not from theory crafted afterward.",
+    "diferencial_2_titulo": "Applicable method",
+    "diferencial_2_desc": "Each course delivers decisions, not concepts. What to change tomorrow, how to apply it this week.",
+    "diferencial_3_titulo": "House standard",
+    "diferencial_3_desc": "The same aesthetic and strategic criteria that guides the Production, Agency and Studio — translated into training.",
+    "cta_titulo": "The next step starts here.",
+    "cta_sub": "Courses, workshops, and materials available in the Academy store.",
+    "cta_btn": "Explore the store →",
+    "loja_label": "ACADEMY STORE",
+    "loja_titulo": "Set knowledge. Book price.",
+    "loja_subtitulo": "E-books and practical materials on image direction, briefing, and audiovisual production — condensed into formats that fit your routine.",
+    "loja_cta": "See all materials →",
+    "form_title": "Talk to the Academy",
+    "form_subtitle": "Questions about courses, workshops, or partnerships. We respond within 1 business day.",
+    "footer_copyright": "© 2026 House Mazzutti. All rights reserved."
   }
 }

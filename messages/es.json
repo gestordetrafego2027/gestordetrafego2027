@@ -112,7 +112,9 @@
     "blog_section_label": "EDITORIAL",
     "blog_section_title": "Del Blog",
     "blog_see_all": "VER TODOS →",
-    "blog_read": "LEER →"
+    "blog_read": "LEER →",
+    "frentes_academy_label": "ACADEMY",
+    "frentes_academy_sub": "Cursos · Talleres · Materiales"
   },
   "footer": {
     "copyright": "© 2026 House Mazzutti. Todos los derechos reservados.",
@@ -649,7 +651,9 @@
     "cta_final_title": "¿Listo para elevar tu marca?",
     "cta_final_btn": "Iniciar una conversación",
     "form_drawer_title": "Conversación con Angelo",
-    "form_drawer_subtitle": "Branding, campaña de lanzamiento, dirección creativa o colaboración. Respondemos en hasta 1 día hábil."
+    "form_drawer_subtitle": "Branding, campaña de lanzamiento, dirección creativa o colaboración. Respondemos en hasta 1 día hábil.",
+    "est_4_title": "Academy",
+    "est_4_desc": "Formación práctica para el mercado creativo."
   },
   "produtora_publicidade": {
     "page_title": "House Mazzutti — PRODUCCIÓN | Campaña Publicitaria",
@@ -1725,6 +1729,51 @@
     "footer_nav_contato": "CONTATO",
     "footer_nav_portfolio": "PORTFÓLIO",
     "footer_nav_blog": "BLOG",
-    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados."
+    "footer_copyright": "© 2026 House Mazzutti. Todos os direitos reservados.",
+    "team_lead_label": "OPERACIÓN EJECUTIVA",
+    "team_lead_name": "Mateus Sacavem",
+    "team_lead_role": "Productor Ejecutivo",
+    "team_lead_desc": "Mateus Sacavem dirige la operación ejecutiva — coordinación técnica, cronogramas, integración de equipos y set bajo control. Desde la preproducción hasta el master final, cada detalle con el mismo estándar que la dirección creativa."
+  },
+  "academy_page": {
+    "seo_title": "Academy House Mazzutti — Talleres y Materiales para Profesionales Creativos",
+    "seo_desc": "Formación práctica para fotógrafos, videomakers, modelos, directores y profesionales de la industria creativa. El método de quienes siguen en set. House Mazzutti — São Paulo.",
+    "hero_label": "ACADEMY — HOUSE MAZZUTTI",
+    "hero_titulo": "Formación por quienes no dejaron de trabajar para dar clases.",
+    "hero_subtitulo": "Talleres y materiales para profesionales creativos que quieren crecer en su oficio con quienes lo viven.",
+    "hero_cta": "Explorar el Academy",
+    "manifesto_titulo": "El método de quienes están en set — para quienes quieren llegar.",
+    "manifesto_texto": "El Academy es el brazo formativo de House Mazzutti — no un desvío del trabajo, sino una extensión natural de él. Lo que entra en el curso salió del set, del brief real, del proyecto que funcionó. Quienes forman son quienes operan. Y quienes operan nunca pierden contacto con lo que el mercado exige hoy.",
+    "produtos_label": "LO QUE OFRECEMOS",
+    "produtos_titulo": "Formación para quienes hacen el mercado.",
+    "produto_1_titulo": "Talleres",
+    "produto_1_desc": "Inmersiones prácticas con Angelo Mazzutti — dirección de imagen y producción audiovisual. Dos cohortes activas: Inside Out Edit 2 y Producción & Dirección.",
+    "produto_2_titulo": "E-books y Materiales",
+    "produto_2_desc": "Conocimiento de set condensado. Decisiones reales sobre brief, dirección y producción — directo al punto.",
+    "produto_3_titulo": "Blog Editorial",
+    "produto_3_desc": "Notas y ensayos sobre branding, dirección creativa y construcción de valor en el mercado creativo.",
+    "para_quem_titulo": "Para quién es el Academy.",
+    "perfil_1": "Fotógrafos y videomakers que quieren elevar la dirección, no solo la técnica.",
+    "perfil_2": "Modelos que quieren entender el mercado antes de entrar en él.",
+    "perfil_3": "Directores creativos y publicistas en busca de un método propio.",
+    "perfil_4": "Profesionales de belleza que trabajan con imagen y quieren posicionarse en el mercado.",
+    "perfil_5": "Productores y gestores de proyecto del mercado creativo.",
+    "diferencial_titulo": "Por qué el Academy es diferente.",
+    "diferencial_1_titulo": "Formación de quienes hacen",
+    "diferencial_1_desc": "Angelo Mazzutti sigue en set. Lo que aprendes salió de proyectos reales — no de teoría elaborada después.",
+    "diferencial_2_titulo": "Método aplicable",
+    "diferencial_2_desc": "Cada curso entrega decisiones, no conceptos. Qué cambiar mañana, cómo aplicarlo esta semana.",
+    "diferencial_3_titulo": "Estándar de la casa",
+    "diferencial_3_desc": "El mismo criterio estético y estratégico que guía la Productora, Agencia y Studio — traducido a formación.",
+    "cta_titulo": "El próximo paso empieza aquí.",
+    "cta_sub": "Cursos, talleres y materiales disponibles en la tienda del Academy.",
+    "cta_btn": "Explorar la tienda →",
+    "loja_label": "TIENDA DEL ACADEMY",
+    "loja_titulo": "Conocimiento de set. Precio de libro.",
+    "loja_subtitulo": "E-books y materiales prácticos sobre dirección de imagen, brief y producción audiovisual — condensados en formatos que caben en tu rutina.",
+    "loja_cta": "Ver todos los materiales →",
+    "form_title": "Hablar con el Academy",
+    "form_subtitle": "Dudas sobre cursos, talleres o alianzas. Respondemos en hasta 1 día hábil.",
+    "footer_copyright": "© 2026 House Mazzutti. Todos los derechos reservados."
   }
 }
