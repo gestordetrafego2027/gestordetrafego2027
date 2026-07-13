@@ -64,7 +64,7 @@ export default async function ProdutoPage({ params }: Props) {
     .from('store_products')
     .select(
       `id, slug, name, description, product_type, images, features,
-      metadata, seo_title, seo_description, og_image_url, featured, status,
+      metadata, seo_title, seo_description, og_image_url, featured,
       store_prices (id, stripe_price_id, unit_amount, currency, price_type,
         recurring_interval, recurring_interval_count, nickname, active, metadata),
       store_product_categories (store_categories (id, slug, name))`,
@@ -494,7 +494,7 @@ export default async function ProdutoPage({ params }: Props) {
 
               {/* CTA */}
               <div className="mt-2">
-                {product.status === 'published' && mainPrice?.stripe_price_id ? (
+                {mainPrice?.stripe_price_id ? (
                   <DirectCheckoutButton
                     stripePriceId={mainPrice.stripe_price_id}
                     label="Comprar agora"
