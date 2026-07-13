@@ -133,7 +133,7 @@ function ProductCard({ product, catSlug }: { product: Product; catSlug: string }
   )
 }
 
-const CATEGORY_ORDER = ['academy', 'studio', 'agencia', 'produtora']
+const CATEGORY_ORDER = ['studio', 'produtora', 'academy', 'agencia']
 const CATEGORY_LABELS: Record<string, string> = {
   agencia: 'Agência',
   studio: 'Studio',
@@ -169,6 +169,16 @@ export default async function LojaPage() {
     if (!grouped[catSlug]) grouped[catSlug] = []
     grouped[catSlug].push(p)
   }
+
+  // Sort each category by price ascending; quote-only and no-price go last
+  const priceOf = (p: Product) => {
+    if (isQuoteOnly(p.store_prices) || !p.store_prices?.[0]) return Infinity
+    return p.store_prices[0].unit_amount
+  }
+  for (const cat of Object.keys(grouped)) {
+    grouped[cat].sort((a, b) => priceOf(a) - priceOf(b))
+  }
+
   const categories = CATEGORY_ORDER.filter((c) => grouped[c]?.length > 0)
 
   return (
