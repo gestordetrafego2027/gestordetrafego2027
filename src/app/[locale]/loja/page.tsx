@@ -51,11 +51,20 @@ function isQuoteOnly(prices: Price[]) {
   return prices?.[0]?.metadata?.quote_only === 'true'
 }
 
-function ProductCard({ product }: { product: Product }) {
+function ProductCard({ product, catSlug }: { product: Product; catSlug: string }) {
   const price = product.store_prices?.[0]
   const image = product.images?.[0] ?? null
   const quoteOnly = isQuoteOnly(product.store_prices)
   const InlineCover = COVER_MAP[product.slug] ?? null
+  const excerpt = product.description
+    ? product.description
+        .replace(/·[^·]*/g, '')
+        .split('·')[0]
+        .trim()
+        .split(/\s+/)
+        .slice(0, 6)
+        .join(' ')
+    : null
 
   return (
     <Link href={`/loja/${product.slug}`} className="group block">
@@ -76,6 +85,14 @@ function ProductCard({ product }: { product: Product }) {
             <span className="text-[#c8bfb0] text-4xl">✦</span>
           </div>
         )}
+
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500 flex items-end pointer-events-none">
+          <span className="font-label uppercase tracking-[0.25em] text-[8px] text-white px-5 py-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
+            VER {CATEGORY_LABELS[catSlug] ?? 'SERVIÇO'} →
+          </span>
+        </div>
+
         {product.featured && (
           <div className="absolute top-4 left-4">
             <span className="font-label uppercase tracking-[0.25em] text-[8px] text-white bg-black px-3 py-1.5">
@@ -86,13 +103,21 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Info */}
-      <div className="flex items-start justify-between gap-2">
+      <div className="flex items-start justify-between gap-2 mb-1">
         <div className="flex-1 min-w-0">
-          <h3 className="font-headline text-[15px] text-[#111] tracking-tight leading-snug mb-0.5 group-hover:text-black">
+          <p className="font-label uppercase tracking-[0.2em] text-[7px] text-[#bbb] mb-1">
+            {CATEGORY_LABELS[catSlug] ?? catSlug}
+          </p>
+          <h3 className="font-headline text-[15px] text-[#111] tracking-tight leading-snug group-hover:text-black">
             {product.name}
           </h3>
+          {excerpt && (
+            <p className="font-body text-[11px] text-[#999] leading-snug mt-0.5 line-clamp-1">
+              {excerpt}
+            </p>
+          )}
         </div>
-        <div className="shrink-0 text-right">
+        <div className="shrink-0 text-right pt-[1.1rem]">
           {quoteOnly ? (
             <span className="font-label uppercase tracking-[0.15em] text-[8px] text-[#888]">
               Consulta
@@ -104,9 +129,6 @@ function ProductCard({ product }: { product: Product }) {
           ) : null}
         </div>
       </div>
-      <span className="font-label uppercase tracking-[0.2em] text-[8px] text-[#aaa] group-hover:text-black transition-colors duration-300 mt-1 block">
-        VER PRODUTO →
-      </span>
     </Link>
   )
 }
@@ -329,7 +351,7 @@ export default async function LojaPage() {
                 className="md:grid-cols-3"
               >
                 {grouped[cat].map((p) => (
-                  <ProductCard key={p.id} product={p} />
+                  <ProductCard key={p.id} product={p} catSlug={cat} />
                 ))}
               </div>
             </section>
