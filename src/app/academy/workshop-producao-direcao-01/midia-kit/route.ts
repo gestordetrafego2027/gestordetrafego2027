@@ -130,6 +130,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .pkg-note{font-family:var(--mono);font-size:7.5px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;display:block;margin-top:14px;text-align:center}
 .pkg.featured .pkg-note{color:#4a4845}
 
+/* ── STUDIO PLANO ── */
+.sp-main{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start;border:1px solid var(--line);padding:clamp(28px,4vw,52px);margin-bottom:clamp(12px,2vw,20px)}
+@media(max-width:640px){.sp-main{grid-template-columns:1fr}}
+.sp-img-col{position:relative}
+.sp-img-col img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sp-img-label{font-family:var(--mono);font-size:8px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;display:block;margin-top:10px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:0;border-left:2px solid var(--ink);padding-left:20px}
+.sp-list li{font-size:.85rem;color:var(--muted);line-height:1.7;padding:14px 0;border-bottom:1px solid var(--line)}
+.sp-list li:last-child{border-bottom:none}
+.sp-list strong{color:var(--ink);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:3px}
+.sp-date{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);margin-top:28px}
+.sp-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(6px,1.2vw,14px)}
+.sp-photos div{aspect-ratio:4/3;overflow:hidden}
+.sp-photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.sp-photos div:hover img{transform:scale(1.03)}
+
+/* ── ANGELO ── */
+.angelo-section{background:var(--ink);color:var(--white)}
+.angelo-section .section-head{border-color:#2a2825}
+.angelo-section .section-label{color:var(--accent)!important}
+.angelo-h2{color:var(--white);font-size:clamp(2.5rem,6vw,5rem);line-height:.9}
+.angelo-role{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;line-height:1.6;margin-bottom:20px}
+.angelo-bio{font-size:clamp(.9rem,1.5vw,1rem);color:#9ca3af;line-height:1.8;max-width:44ch}
+.angelo-stats{display:flex;gap:clamp(24px,4vw,56px);margin-top:clamp(28px,4vw,44px);padding-top:24px;border-top:1px solid #2a2825}
+.angelo-stat-v{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.05em;color:var(--white);display:block;line-height:1;margin-bottom:6px}
+.angelo-stat-l{font-family:var(--mono);font-size:8px;letter-spacing:.12em;color:#4a4845;text-transform:uppercase;line-height:1.5}
+.angelo-foto-wrap{position:relative;margin-top:clamp(40px,6vw,64px);max-width:420px}
+.angelo-foto-wrap img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;filter:grayscale(.12) contrast(1.05)}
+.angelo-foto-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,10,8,.8) 0%,transparent 60%);padding:clamp(16px,3vw,32px);display:flex;align-items:flex-end}
+.angelo-foto-label span{font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;color:rgba(239,233,218,.7)}
+
 /* ── CONTATO ── */
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;padding:clamp(64px,10vw,120px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 @media(max-width:640px){.contact-inner{grid-template-columns:1fr;gap:40px}}
@@ -345,6 +376,89 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       </div>
     </div>
   </section>
+</div>
+
+<!-- STUDIO PLANO -->
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-label">O Local</span>
+        <h2 class="h2">Studio Plano · São Paulo</h2>
+      </div>
+      <p class="section-intro">Estúdio profissional real em São Paulo — o mesmo espaço onde campanhas de marcas são produzidas. Não uma sala de aula. Dois cicloramas, camarim completo e lounge. É onde o editorial acontece.</p>
+    </div>
+
+    <div class="sp-main">
+      <div class="sp-img-col">
+        <img src="/images/academy/studio-plano/studio-plano-1.webp" alt="Studio Plano · São Paulo" loading="lazy"/>
+        <span class="sp-img-label">Studio Plano · São Paulo · SP</span>
+      </div>
+      <div class="sp-text-col">
+        <ul class="sp-list">
+          <li>
+            <strong>Ciclorama</strong>
+            Dois cicloramas equipados — branco e colorido para os dois sets
+          </li>
+          <li>
+            <strong>Iluminação</strong>
+            Flash de estúdio, luz contínua e luz natural disponíveis
+          </li>
+          <li>
+            <strong>Camarim</strong>
+            Camarim completo para equipe, creators e modelos
+          </li>
+          <li>
+            <strong>Lounge</strong>
+            Área de convivência e coffee break durante a produção
+          </li>
+        </ul>
+        <p class="sp-date">05 e 06 Set 2026 · São Paulo · SP</p>
+      </div>
+    </div>
+
+    <div class="sp-photos">
+      <div><img src="/images/academy/studio-plano/studio-plano-1.webp" alt="Studio Plano · Camarim" loading="lazy"/></div>
+      <div><img src="/images/academy/studio-plano/studio-plano-2.webp" alt="Studio Plano · Ciclorama" loading="lazy"/></div>
+      <div><img src="/images/academy/studio-plano/studio-plano-3.webp" alt="Studio Plano · Lounge" loading="lazy"/></div>
+    </div>
+  </section>
+</div>
+
+<!-- ANGELO MAZZUTTI -->
+<div class="angelo-section">
+  <div class="wrap">
+    <section>
+      <div class="section-head">
+        <div>
+          <span class="section-label" style="color:var(--accent)">Direção</span>
+          <h2 class="h2 angelo-h2">Angelo<br/>Mazzutti</h2>
+        </div>
+        <div>
+          <p class="angelo-role">Diretor Criativo · Fundador<br/>House Mazzutti & HMZT Produtora</p>
+          <p class="angelo-bio">Dez anos produzindo campanhas reais para marcas de moda, beleza e lifestyle. Angelo dirige os dois sets ao vivo no Inside Out — a marca entra na produção de quem já entregou o que as marcas pagam para ter.</p>
+          <div class="angelo-stats">
+            <div class="angelo-stat">
+              <span class="angelo-stat-v">10</span>
+              <span class="angelo-stat-l">Anos de carreira</span>
+            </div>
+            <div class="angelo-stat">
+              <span class="angelo-stat-v">15</span>
+              <span class="angelo-stat-l">Creators · turma vip</span>
+            </div>
+            <div class="angelo-stat">
+              <span class="angelo-stat-v">2</span>
+              <span class="angelo-stat-l">Dias de produção</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="angelo-foto-wrap">
+        <img src="/images/academy/crew/angelo-mazzutti-crew.webp" alt="Angelo Mazzutti · Diretor Criativo · House Mazzutti" loading="lazy"/>
+        <div class="angelo-foto-label"><span>ANGELO MAZZUTTI</span></div>
+      </div>
+    </section>
+  </div>
 </div>
 
 <!-- PACOTES -->
