@@ -105,8 +105,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 
 /* ── PACOTES ── */
 .packages-section{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:clamp(40px,6vw,64px)}
-@media(max-width:768px){.packages-grid{grid-template-columns:1fr}}
+.packages-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin-top:clamp(40px,6vw,64px)}
+@media(max-width:640px){.packages-grid{grid-template-columns:1fr}}
 .pkg{background:var(--bg);padding:clamp(32px,4vw,56px) clamp(24px,3vw,40px);display:flex;flex-direction:column}
 .pkg.featured{background:var(--ink)}
 .pkg-tag{font-family:var(--mono);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:20px}
@@ -356,56 +356,41 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           <span class="section-label">Investimento</span>
           <h2 class="h2">Formatos de presença editorial</h2>
         </div>
-        <p class="section-intro">Três formatos de entrada. Cada pacote é exclusivo por categoria — não trabalhamos marcas concorrentes no mesmo evento. As vagas são limitadas.</p>
+        <p class="section-intro">Dois formatos de entrada. Cada pacote é exclusivo por categoria — não trabalhamos marcas concorrentes no mesmo evento. As vagas são limitadas.</p>
       </div>
       <div class="packages-grid">
         <div class="pkg">
-          <span class="pkg-tag">Presença Editorial</span>
-          <h3>Set Partner</h3>
-          <div class="pkg-price">R$ 3.500 <small>/ marca</small></div>
+          <span class="pkg-tag">Editorial de Fotos</span>
+          <h3>Foto</h3>
+          <div class="pkg-price">R$ 4.000 <small>/ marca</small></div>
           <hr class="pkg-divider"/>
           <ul class="pkg-features">
-            <li>Produto integrado em 1 set (moda ou beauty)</li>
-            <li>Conteúdo de 15 creators com menção orgânica</li>
-            <li>Banco de imagens e vídeos do set</li>
+            <li>Produto integrado no set de moda ou beauty</li>
+            <li>Fotos editoriais de campanha com todos os 15 creators</li>
+            <li>Banco de imagens em alta resolução para uso irrestrito</li>
+            <li>Publicação orgânica pelos creators com menção à marca</li>
             <li>Menção nas comunicações do evento</li>
             <li>1 acesso ao set nos dois dias</li>
           </ul>
-          <a href="mailto:contato@mztgrupo.com?subject=Media Kit · Set Partner · Inside Out Edit 2" class="pkg-cta">Solicitar proposta</a>
+          <a href="mailto:contato@mztgrupo.com?subject=Media Kit · Editorial Foto · Inside Out Edit 2" class="pkg-cta">Solicitar proposta</a>
           <span class="pkg-note">Exclusivo por categoria de produto</span>
         </div>
         <div class="pkg featured">
-          <span class="pkg-tag">✦ Marca Principal</span>
-          <h3>Lead Brand</h3>
-          <div class="pkg-price">R$ 7.500 <small>/ marca</small></div>
+          <span class="pkg-tag">✦ Editorial de Fotos e Vídeos</span>
+          <h3>Foto + Vídeo</h3>
+          <div class="pkg-price">R$ 7.000 <small>/ marca</small></div>
           <hr class="pkg-divider"/>
           <ul class="pkg-features">
-            <li>Produto integrado nos 2 sets — moda e beauty</li>
-            <li>Naming em um dos sets — "Set [Marca]"</li>
-            <li>Briefing personalizado com os creators</li>
-            <li>Conteúdo de todos os 15 creators com menção e tag</li>
-            <li>Banco completo de fotos e vídeos em alta</li>
-            <li>Destaque nas comunicações do evento</li>
+            <li>Produto integrado no set de moda ou beauty</li>
+            <li>Fotos editoriais de campanha com todos os 15 creators</li>
+            <li>Vídeos de campanha — reels e conteúdo de bastidor</li>
+            <li>Banco completo de fotos e vídeos em alta para uso irrestrito</li>
+            <li>Publicação orgânica pelos creators com menção e tag</li>
+            <li>Presença destacada nas comunicações do evento</li>
             <li>2 acessos ao set nos dois dias</li>
           </ul>
-          <a href="mailto:contato@mztgrupo.com?subject=Media Kit · Lead Brand · Inside Out Edit 2" class="pkg-cta">Solicitar proposta</a>
+          <a href="mailto:contato@mztgrupo.com?subject=Media Kit · Editorial Foto + Vídeo · Inside Out Edit 2" class="pkg-cta">Solicitar proposta</a>
           <span class="pkg-note">Apenas 1 marca neste formato</span>
-        </div>
-        <div class="pkg">
-          <span class="pkg-tag">Customizado</span>
-          <h3>Branded Set</h3>
-          <div class="pkg-price" style="font-size:1.5rem">Sob consulta</div>
-          <hr class="pkg-divider"/>
-          <ul class="pkg-features">
-            <li>Set temático desenvolvido exclusivamente para a marca</li>
-            <li>Direção criativa alinhada ao branding</li>
-            <li>Cenografia e styling conforme identidade da marca</li>
-            <li>Conteúdo exclusivo — não compartilhado</li>
-            <li>Todos os benefícios do Lead Brand</li>
-            <li>Relatório de alcance e entrega pós-evento</li>
-          </ul>
-          <a href="mailto:contato@mztgrupo.com?subject=Media Kit · Branded Set · Inside Out Edit 2" class="pkg-cta">Solicitar proposta</a>
-          <span class="pkg-note">Produção personalizada · vagas limitadas</span>
         </div>
       </div>
     </section>
