@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {agenciaServiceSchema, agenciaFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {agenciaServiceSchema, agenciaFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
 
 export async function generateMetadata({params}) {
@@ -19,6 +19,7 @@ export default function AgenciaLayout({children}) {
     {name: 'House Mazzutti', url: `${brand.url}/pt/`},
     {name: 'Agência', url: `${brand.url}/pt/agencia/`},
   ])
+  const speakable = speakableSchema(`${brand.url}/pt/agencia/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
 
   return (
     <>
@@ -29,6 +30,10 @@ export default function AgenciaLayout({children}) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{__html: JSON.stringify(agenciaFaqSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}}
       />
       <script
         type="application/ld+json"

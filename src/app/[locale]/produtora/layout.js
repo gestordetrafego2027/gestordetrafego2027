@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {produtoraServiceSchema, produtoraFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {produtoraServiceSchema, produtoraFaqSchema, breadcrumbSchema, speakableSchema, videoObjectBarbaraPorto, videoObjectJequiti, videoObjectOceane} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
 
 export async function generateMetadata({params}) {
@@ -19,6 +19,7 @@ export default function ProdutoraLayout({children}) {
     {name: 'House Mazzutti', url: `${brand.url}/pt/`},
     {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
   ])
+  const speakable = speakableSchema(`${brand.url}/pt/produtora/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
 
   return (
     <>
@@ -29,6 +30,22 @@ export default function ProdutoraLayout({children}) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{__html: JSON.stringify(produtoraFaqSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(videoObjectBarbaraPorto)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(videoObjectJequiti)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(videoObjectOceane)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}}
       />
       <script
         type="application/ld+json"

@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {breadcrumbSchema} from '@/lib/seo/schemas'
+import {breadcrumbSchema, angeloPersonSchema, localBusinessSchema} from '@/lib/seo/schemas'
 import {brand, timeline, leadership} from '@/config/site'
 
 const aboutPageSchema = {
@@ -47,6 +47,14 @@ export default function SobreLayout({children}) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{__html: JSON.stringify(aboutPageSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(angeloPersonSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(localBusinessSchema)}}
       />
       <script
         type="application/ld+json"

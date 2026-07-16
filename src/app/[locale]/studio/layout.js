@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {studioServiceSchema, studioFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {studioServiceSchema, studioFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
 
 export async function generateMetadata({params}) {
@@ -19,6 +19,7 @@ export default function StudioLayout({children}) {
     {name: 'House Mazzutti', url: `${brand.url}/pt/`},
     {name: 'Studio', url: `${brand.url}/pt/studio/`},
   ])
+  const speakable = speakableSchema(`${brand.url}/pt/studio/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
 
   return (
     <>
@@ -29,6 +30,10 @@ export default function StudioLayout({children}) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{__html: JSON.stringify(studioFaqSchema)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}}
       />
       <script
         type="application/ld+json"

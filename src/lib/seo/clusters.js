@@ -19,6 +19,10 @@ export const clusters = {
       'ensaio-pessoal-imagem-lidera-percepcao',
       'cobertura-externa-presenca-alto-valor',
       'cobertura-externa-narrativa-visual',
+      'quanto-custa-book-modelo-sao-paulo',
+      'como-se-preparar-ensaio-fotografico',
+      'diferenca-book-ensaio-fotografico',
+      'book-para-atriz-mercado-audiovisual',
     ],
   },
   agencia: {
@@ -41,6 +45,9 @@ export const clusters = {
       'geo-visibilidade-marca-nas-ias',
       'aeo-como-ser-a-resposta-das-ias',
       'geo-aeo-posicionamento-era-das-ias',
+      'o-que-e-assessoria-de-imprensa',
+      'gestao-redes-sociais-para-empresas',
+      'criacao-site-profissional-sao-paulo',
     ],
   },
   produtora: {
@@ -62,6 +69,9 @@ export const clusters = {
       'campanha-larissa-manoela-jequiti',
       'fashion-film-joias-barbara-porto',
       'fashion-film-emanuely-terres',
+      'quanto-custa-video-institucional-2025',
+      'fashion-film-lancamento-colecao',
+      'campanha-moda-do-brief-ao-set',
     ],
   },
   academy: {
@@ -114,6 +124,19 @@ export const postTitles = {
   'geo-visibilidade-marca-nas-ias': 'GEO: por que sua marca desaparece das IAs',
   'aeo-como-ser-a-resposta-das-ias': 'AEO: como ser citado pelo ChatGPT e Gemini',
   'geo-aeo-posicionamento-era-das-ias': 'GEO + AEO: posicionamento na era das IAs',
+  // Studio — novos artigos planejados
+  'quanto-custa-book-modelo-sao-paulo': 'Quanto custa um book de modelo em SP?',
+  'como-se-preparar-ensaio-fotografico': 'Como se preparar para um ensaio fotográfico',
+  'diferenca-book-ensaio-fotografico': 'Diferença entre book e ensaio fotográfico',
+  'book-para-atriz-mercado-audiovisual': 'Book para Atriz: o que o mercado audiovisual exige',
+  // Agência — novos artigos planejados
+  'o-que-e-assessoria-de-imprensa': 'O que é assessoria de imprensa e para que serve',
+  'gestao-redes-sociais-para-empresas': 'Gestão de Redes Sociais para Empresas',
+  'criacao-site-profissional-sao-paulo': 'Criação de Site Profissional em SP',
+  // Produtora — novos artigos planejados
+  'quanto-custa-video-institucional-2025': 'Quanto custa um vídeo institucional? (2025)',
+  'fashion-film-lancamento-colecao': 'Fashion Film para Lançamento de Coleção',
+  'campanha-moda-do-brief-ao-set': 'Campanha de Moda: do Brief ao Set',
 }
 
 /**
