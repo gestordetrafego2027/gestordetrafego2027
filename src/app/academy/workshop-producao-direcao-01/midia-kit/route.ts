@@ -208,7 +208,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
 <!-- HERO -->
 <div class="wrap">
   <section class="hero">
-    <span class="eyebrow">Media Kit · Inside Out Edit 2 · São Paulo · Set 2026</span>
+    <span class="eyebrow">Workshop · Media Kit · Inside Out Edit 2 · São Paulo · Set 2026</span>
     <h1>Inside<br/><em>Out</em><br/>Edit 2</h1>
     <div class="hero-cols">
       <p class="hero-sub">Um evento de produção em São Paulo onde marcas de moda e beauty entram como parte do editorial — não como patrocinador de banner. Seu produto aparece dentro da imagem, com direção, ao lado de 15 produtores do audiovisual selecionados por curadoria.</p>
