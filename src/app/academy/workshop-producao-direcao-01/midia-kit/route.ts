@@ -142,6 +142,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .pkg.featured .pkg-cta{background:var(--white);color:var(--ink)}
 .pkg-note{font-family:var(--mono);font-size:7.5px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;display:block;margin-top:14px;text-align:center}
 .pkg.featured .pkg-note{color:#4a4845}
+.pkg-crew{margin-bottom:24px}
+.pkg-crew-label{font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:10px}
+.pkg-crew-tags{display:flex;flex-wrap:wrap;gap:6px}
+.pkg-crew-tags span{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line-dark);padding:5px 10px}
+.featured-tags span{color:rgba(255,255,255,.6);border-color:#2a2825}
+.pkg-deliverable{border-left:2px solid var(--line-dark);padding-left:16px;margin-bottom:28px}
+.pkg-deliverable--featured{border-color:#2a2825}
+.pkg-deliverable-label{font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:10px}
+.pkg-deliverable--featured .pkg-deliverable-label{color:var(--accent)}
+.pkg-deliverable ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.pkg-deliverable ul li{font-size:.78rem;color:var(--muted);line-height:1.5;padding-left:12px;position:relative}
+.pkg-deliverable ul li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.7rem}
+.pkg-deliverable--featured ul li{color:#9ca3af}
+.pkg-deliverable--featured ul li::before{color:var(--accent)}
 
 /* ── STUDIO PLANO ── */
 .sp-main{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start;border:1px solid var(--line);padding:clamp(28px,4vw,52px);margin-bottom:clamp(12px,2vw,20px)}
@@ -519,36 +533,68 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
         <p class="section-intro">Dois formatos de entrada. Cada pacote é exclusivo por categoria — não trabalhamos marcas concorrentes no mesmo evento. As vagas são limitadas.</p>
       </div>
       <div class="packages-grid">
+
+        <!-- PKG 01 -->
         <div class="pkg">
-          <span class="pkg-tag">Editorial de Fotos</span>
+          <span class="pkg-tag">Espaço Editorial 01</span>
           <h3>Foto</h3>
-          <div class="pkg-price">R$ 4.000 <small>/ marca</small></div>
+          <div class="pkg-price">R$ 5.000 <small>/ marca</small></div>
           <hr class="pkg-divider"/>
+          <div class="pkg-crew">
+            <span class="pkg-crew-label">Direção e produção completa</span>
+            <div class="pkg-crew-tags">
+              <span>Foto</span><span>Vídeo</span><span>Model</span><span>Beauty</span><span>Styling</span>
+            </div>
+          </div>
           <ul class="pkg-features">
+            <li>Participação da marca dentre os participantes do workshop</li>
             <li>Produto integrado ao set ao lado de 15 produtores do audiovisual</li>
-            <li><strong style="color:var(--ink);font-size:.78rem">Entrega:</strong> campanha com 30 fotos em alta resolução + 1 vídeo oficial de lançamento + 1 vídeo de bastidor</li>
-            <li>Banco de imagens em alta resolução</li>
-            <li>Menção nas comunicações do evento</li>
+            <li>Presença nas comunicações do evento</li>
             <li>1 acesso ao set nos dois dias</li>
           </ul>
-          <a href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse+no+pacote+Foto.+Podemos+conversar%3F" target="_blank" class="pkg-cta">Solicitar proposta</a>
+          <div class="pkg-deliverable">
+            <span class="pkg-deliverable-label">Entrega</span>
+            <ul>
+              <li>30 fotos editoriais em alta resolução</li>
+              <li>1 vídeo oficial de lançamento</li>
+              <li>1 vídeo de bastidor</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse+no+Espa%C3%A7o+Editorial+01.+Podemos+conversar%3F" target="_blank" class="pkg-cta">Solicitar proposta</a>
           <span class="pkg-note">Exclusivo por categoria de produto</span>
         </div>
+
+        <!-- PKG 02 -->
         <div class="pkg featured">
-          <span class="pkg-tag">✦ Editorial de Fotos e Vídeos</span>
+          <span class="pkg-tag">✦ Espaço Editorial 02</span>
           <h3>Foto + Vídeo</h3>
           <div class="pkg-price">R$ 7.000 <small>/ marca</small></div>
           <hr class="pkg-divider"/>
+          <div class="pkg-crew">
+            <span class="pkg-crew-label" style="color:var(--accent)">Direção e produção completa</span>
+            <div class="pkg-crew-tags featured-tags">
+              <span>Foto</span><span>Vídeo</span><span>Model</span><span>Beauty</span><span>Styling</span>
+            </div>
+          </div>
           <ul class="pkg-features">
+            <li>Participação da marca dentre os participantes do workshop</li>
             <li>Produto integrado ao set ao lado de 15 produtores do audiovisual</li>
-            <li><strong style="color:var(--accent);font-size:.78rem">Entrega:</strong> campanha com 30 fotos em alta resolução + 3 vídeos oficiais de lançamento e pré-lançamento + 1 vídeo de bastidor + 1 short video por peça catalogada (máx. 10)</li>
-            <li>Banco completo de fotos e vídeos em alta resolução</li>
             <li>Presença destacada nas comunicações do evento</li>
             <li>2 acessos ao set nos dois dias</li>
           </ul>
-          <a href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse+no+pacote+Foto+%2B+V%C3%ADdeo.+Podemos+conversar%3F" target="_blank" class="pkg-cta">Solicitar proposta</a>
+          <div class="pkg-deliverable pkg-deliverable--featured">
+            <span class="pkg-deliverable-label">Entrega</span>
+            <ul>
+              <li>30 fotos editoriais em alta resolução</li>
+              <li>3 vídeos oficiais de lançamento e pré-lançamento</li>
+              <li>1 vídeo de bastidor</li>
+              <li>1 short video por peça catalogada (máx. 10)</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse+no+Espa%C3%A7o+Editorial+02.+Podemos+conversar%3F" target="_blank" class="pkg-cta">Solicitar proposta</a>
           <span class="pkg-note">Apenas 1 marca neste formato</span>
         </div>
+
       </div>
     </section>
   </div>
