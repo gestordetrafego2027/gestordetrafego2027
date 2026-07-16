@@ -62,6 +62,18 @@ export default async function BlogSlugPage({ params }) {
           })
         : null;
 
+    const articleFaqSchema = article?.faq?.length > 0
+        ? {
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: article.faq.map(({ q, a }) => ({
+                  '@type': 'Question',
+                  name: q,
+                  acceptedAnswer: { '@type': 'Answer', text: a },
+              })),
+          }
+        : null;
+
     return (
         <>
             <script
@@ -72,6 +84,12 @@ export default async function BlogSlugPage({ params }) {
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(posting) }}
+                />
+            )}
+            {articleFaqSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(articleFaqSchema) }}
                 />
             )}
             <ArticleContent slug={slug} />

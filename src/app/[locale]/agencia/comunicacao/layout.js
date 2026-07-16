@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {comunicacaoServiceSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {comunicacaoServiceSchema, comunicacaoFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
 
 export const metadata = pageMetadata({
@@ -18,6 +18,7 @@ export default function Layout({children}) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(comunicacaoServiceSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(comunicacaoFaqSchema)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
       {children}
     </>

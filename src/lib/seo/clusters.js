@@ -38,6 +38,9 @@ export const clusters = {
       'por-que-campanhas-falham',
       'por-que-campanhas-caras-falham',
       'por-que-boas-ideias-nao-garantem-resultados',
+      'geo-visibilidade-marca-nas-ias',
+      'aeo-como-ser-a-resposta-das-ias',
+      'geo-aeo-posicionamento-era-das-ias',
     ],
   },
   produtora: {
@@ -108,6 +111,9 @@ export const postTitles = {
   'producao-executiva-sistema-campanhas': 'Produção Executiva: o sistema por trás das campanhas',
   'editorial-moda-narrativa-visual': 'Editorial de Moda: narrativa visual que posiciona',
   'editorial-moda-performance-vendas': 'Editorial de Moda: da estética à performance',
+  'geo-visibilidade-marca-nas-ias': 'GEO: por que sua marca desaparece das IAs',
+  'aeo-como-ser-a-resposta-das-ias': 'AEO: como ser citado pelo ChatGPT e Gemini',
+  'geo-aeo-posicionamento-era-das-ias': 'GEO + AEO: posicionamento na era das IAs',
 }
 
 /**

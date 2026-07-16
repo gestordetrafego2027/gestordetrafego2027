@@ -177,6 +177,21 @@ export default function ArticleContent({ slug }) {
                         </div>
                     )}
 
+                    {/* FAQ Section — GEO/AEO: perguntas e respostas extraíveis por IAs */}
+                    {article.faq && article.faq.length > 0 && (
+                        <section className="mt-12 mb-12">
+                            <h2 className="font-headline text-2xl md:text-3xl text-zinc-900 mb-8">Perguntas frequentes</h2>
+                            <div className="divide-y divide-zinc-100">
+                                {article.faq.map((item, i) => (
+                                    <div key={i} className="py-6">
+                                        <p className="font-headline text-base md:text-lg text-zinc-900 mb-3">{item.q}</p>
+                                        <p className="text-zinc-600 font-body text-sm md:text-base leading-relaxed">{item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
                     {/* CTA Inline */}
                     <div className="my-16 hairline-t hairline-b py-12 text-center">
                         <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-500 mb-4">Pronto para a próxima decisão?</p>

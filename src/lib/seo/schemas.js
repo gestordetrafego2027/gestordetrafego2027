@@ -401,6 +401,126 @@ export const rpServiceSchema = {
 }
 
 // ---------------------------------------------------------------------------
+// Agência — subpages FAQ schemas
+// ---------------------------------------------------------------------------
+export const comunicacaoFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que é comunicação de marca e por que ela importa?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Comunicação de marca é o conjunto de estratégias e mensagens que constroem a percepção da empresa no mercado. Importa porque posiciona antes do produto chegar — é o que faz uma marca ser reconhecida, lembrada e escolhida. Na House Mazzutti, comunicação é tratada como extensão do branding, não como produção de conteúdo isolada.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti cria estratégia de conteúdo e gerencia redes sociais?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. A agência desenvolve estratégia de conteúdo, calendário editorial, direção de arte para redes e campanhas de comunicação integrada. O ponto de partida é sempre o posicionamento da marca — o conteúdo serve à estratégia, não o contrário.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre comunicação de marca e marketing de conteúdo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Marketing de conteúdo gera tráfego e engajamento. Comunicação de marca constrói percepção e posicionamento. O primeiro foca em volume; o segundo, em relevância e reconhecimento. Na House Mazzutti, integramos os dois: cada peça de conteúdo tem estratégia de marca por trás.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como a House Mazzutti integra comunicação com branding e produção?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sob uma única direção criativa. A Agência (branding e comunicação), o Studio (imagem) e a Produtora (campanhas e vídeo) são unidades da mesma casa — o que elimina o atrito entre briefing, criação e execução. O resultado é comunicação coerente em todos os pontos de contato da marca.',
+      },
+    },
+  ],
+}
+
+export const webFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti cria sites ou apenas os projeta?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A House Mazzutti entrega projetos web completos: do conceito visual ao desenvolvimento e publicação. O processo integra direção criativa e UX — o site é construído para comunicar a marca com precisão e converter visita em decisão.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo leva para criar um site pela House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Um site institucional completo leva entre 4 e 8 semanas, da reunião de briefing ao go-live, dependendo do número de páginas, integrações e funcionalidades. Landing pages focadas em conversão têm prazo mais curto — em geral, 2 a 3 semanas.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Os sites da House Mazzutti são otimizados para SEO e conversão?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. Todos os projetos web são desenvolvidos com foco em SEO técnico (meta, schema, velocidade, Core Web Vitals) e otimização de conversão: hierarquia de informação, CTAs estratégicos e UX alinhado ao posicionamento da marca.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti usa WordPress, Wix ou plataformas customizadas?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A escolha da stack técnica depende do escopo e dos objetivos do projeto. Trabalhamos com plataformas modernas (Next.js, WordPress, webflow) e sistemas customizados conforme o que a marca precisa. O critério não é a ferramenta — é a performance.',
+      },
+    },
+  ],
+}
+
+export const rpFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que é assessoria de imprensa e quando uma marca precisa de uma?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Assessoria de imprensa é o serviço que posiciona a marca nos meios de comunicação certos — editores, jornalistas, influenciadores e veículos formadores de opinião. Uma marca precisa de RP quando quer construir autoridade, crescer com presença orgânica e ser lembrada como referência no seu setor.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti faz RP para marcas de moda e beleza em São Paulo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. A agência tem experiência em RP para marcas de moda, beleza, lifestyle e negócios criativos. Em São Paulo, onde o mercado criativo é o mais competitivo do país, presença consistente nos lugares certos é a diferença entre uma marca conhecida e uma relevante.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre RP e marketing de influência?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'RP constrói credibilidade por meio de veículos jornalísticos e formadores de opinião — a menção tem autoridade editorial. Marketing de influência gera alcance e engajamento por meio de criadores de conteúdo. Ambos constroem presença, mas com mecanismos e públicos diferentes. Na House Mazzutti, integramos os dois quando o objetivo da marca exige os dois frentes.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como funciona o processo de RP na House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Começa com mapeamento de posicionamento da marca e dos veículos e formadores de opinião estratégicos. A seguir, desenvolvemos o material de imprensa (releases, media kit, pitch), construímos o relacionamento com os contatos certos e monitoramos os resultados. O objetivo é presença consistente, não clipping pontual.',
+      },
+    },
+  ],
+}
+
+// ---------------------------------------------------------------------------
 // Studio — subpages de serviço
 // ---------------------------------------------------------------------------
 export const bookServiceSchema = {

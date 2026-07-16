@@ -13,6 +13,18 @@ export async function generateMetadata({params}) {
   })
 }
 
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${brand.url}/pt/portfolio/#collection`,
+  name: 'Portfólio House Mazzutti',
+  description: 'Trabalhos selecionados de book, campanha de moda e beleza e branding dirigidos pela House Mazzutti em São Paulo.',
+  url: `${brand.url}/pt/portfolio/`,
+  about: {'@id': `${brand.url}/#organization`},
+  creator: {'@id': `${brand.url}/#organization`},
+  inLanguage: 'pt-BR',
+}
+
 export default function PortfolioLayout({children}) {
   const crumbs = breadcrumbSchema([
     {name: 'House Mazzutti', url: `${brand.url}/pt/`},
@@ -20,10 +32,8 @@ export default function PortfolioLayout({children}) {
   ])
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(collectionSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
       {children}
     </>
   )

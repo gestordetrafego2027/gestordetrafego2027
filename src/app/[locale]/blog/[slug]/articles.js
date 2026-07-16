@@ -67,6 +67,24 @@ export const articles = {
       }
     ],
     "citacao": "Um book bem construído não é portfólio. É posicionamento. É a diferença entre esperar uma oportunidade e criar uma.",
+        "faq": [
+      {
+        "q": "O que define quem é escolhido no mercado de modelos?",
+        "a": "A direção de imagem. Beleza é pré-requisito; o que decide é como essa beleza é lida pelo mercado. Um book editorial profissional comunica versatilidade, presença e potencial comercial antes de qualquer conversa. No Studio da House Mazzutti, cada book começa com leitura de perfil e conceito, não com câmera."
+      },
+      {
+        "q": "Qual a diferença entre um book editorial e um portfólio de fotos?",
+        "a": "Um portfólio documenta. Um book editorial profissional posiciona. Cada imagem é construída para responder a um leitor específico — a agência, a marca, o diretor de casting — com linguagem visual que comunica versatilidade, controle de câmera e potencial de mercado."
+      },
+      {
+        "q": "Por que contratar o Studio da House Mazzutti para um book?",
+        "a": "Porque no Studio HMZT, o book começa com um briefing estratégico de marca pessoal — leitura de perfil, posicionamento e mercado-alvo — antes da primeira foto. A câmera executa o que a estratégia já decidiu. O resultado não é só uma sessão de fotos: é um instrumento de posicionamento."
+      },
+      {
+        "q": "O book fotográfico precisa ser atualizado? Com que frequência?",
+        "a": "Sim. O mercado lê imagem em tempo real. Em geral, um book precisa ser atualizado quando há mudança de fase — novo posicionamento, novo segmento de agência, mudança visual expressiva. Para modelos ativos, a cada 12 a 18 meses é uma boa régua."
+      }
+    ],
     "conclusao": "Trabalhar com imagem exige mais do que presença. Exige construção. O book é, muitas vezes, o primeiro capítulo dessa construção — e o único capítulo que continua presente quando você não está na sala. Investir em um book editorial premium não é investir em fotografia. É investir na forma como o mercado vai te ler antes mesmo de te conhecer."
   },
   "book-modelo-imagem-trabalha-por-voce": {
@@ -133,6 +151,24 @@ export const articles = {
       }
     ],
     "citacao": "Sua imagem já comunica algo — mesmo quando não existe intenção. A diferença está em decidir o que ela deve comunicar.",
+        "faq": [
+      {
+        "q": "Como um book de modelo vira um ativo de mercado?",
+        "a": "Quando é construído com direção editorial — não apenas com fotos bonitas. Um book que comunica versatilidade, potencial comercial e presença circula entre bookers, marcas e diretores sem que você precise estar na sala. Ele gera convites enquanto você dorme."
+      },
+      {
+        "q": "O que bookers e diretores de casting procuram num book?",
+        "a": "Leitura rápida de versatilidade, aderência comercial e presença cênica. Eles decidem em segundos sobre uma tela. O book não disputa pela beleza — disputa pela legibilidade. Vence quem é mais fácil de aprovar à distância."
+      },
+      {
+        "q": "Quanto tempo depois de um book começa a aparecer resultado?",
+        "a": "Depende do nível de distribuição e circulação, mas um book bem construído começa a gerar respostas desde as primeiras semanas. Marcas e agências que recebem o material novo percebem imediatamente quando a direção de imagem mudou de nível."
+      },
+      {
+        "q": "Book de modelo e ensaio pessoal são a mesma coisa?",
+        "a": "Não. O book de modelo fala para o mercado de agências e castings — prioriza versatilidade editorial e leitura comercial. O ensaio pessoal fala para o mercado de marca pessoal — posiciona o profissional na percepção do seu público. Ambos partem de direção criativa no Studio HMZT, mas com objetivos e entregáveis distintos."
+      }
+    ],
     "conclusao": "O book não nasce para impressionar. Nasce para comunicar com clareza. E quando ele é construído sob direção editorial, com leitura estratégica e acabamento de campanha, ele para de ser uma despesa e começa a operar como um dos ativos mais valiosos da sua carreira."
   },
   "ensaio-pessoal-imagem-autoridade": {
@@ -199,6 +235,24 @@ export const articles = {
       }
     ],
     "citacao": "Em estágios mais avançados de carreira, não basta ser. É necessário ser percebido com precisão.",
+        "faq": [
+      {
+        "q": "O que é um ensaio de imagem de autoridade?",
+        "a": "É uma sessão fotográfica conduzida com direção criativa cujo objetivo é construir a percepção de autoridade do profissional no seu mercado. Não é retrato corporativo nem fotografia de evento: é posicionamento visual — a imagem que fala antes da conversa começar."
+      },
+      {
+        "q": "Para quem é indicado um ensaio pessoal no Studio da House Mazzutti?",
+        "a": "Para empresários, profissionais liberais, executivos, médicos, advogados, consultores, influenciadores e qualquer pessoa cuja imagem pública impacta diretamente sua autoridade e seus negócios. Se sua presença visual ainda não traduz o nível da sua atuação, o ensaio é o próximo passo."
+      },
+      {
+        "q": "O ensaio pessoal serve para redes sociais ou só para sites?",
+        "a": "Para os dois — e para muito mais. As imagens de um ensaio pessoal bem dirigido funcionam em LinkedIn, Instagram, site, mídia, apresentações e imprensa. A boa direção de imagem entrega um acervo que trabalha em múltiplos contextos e canais simultaneamente."
+      },
+      {
+        "q": "Como a House Mazzutti dirige um ensaio pessoal?",
+        "a": "Começa com briefing de marca pessoal: quem você é, onde atua, que percepção quer gerar e em que plataformas as imagens serão usadas. A partir daí, desenvolvemos conceito visual, locação e direção de imagem — tudo alinhado ao posicionamento. A sessão é conduzida com orientação de pose, expressão e narrativa visual em tempo real."
+      }
+    ],
     "conclusao": "O ensaio pessoal não existe para te tornar outra pessoa. Existe para garantir que tudo que você já construiu, em anos de trajetória, possa finalmente ser visto da forma correta. Não é sobre aparecer mais. É sobre aparecer com a clareza que sua atuação merece."
   },
   "ensaio-pessoal-imagem-lidera-percepcao": {
@@ -265,6 +319,24 @@ export const articles = {
       }
     ],
     "citacao": "Quando estética e intenção se encontram, o visual deixa de ser decorativo. A imagem passa a ter peso.",
+        "faq": [
+      {
+        "q": "Quando é hora de refazer ou atualizar seu ensaio pessoal?",
+        "a": "Quando há discrepância entre quem você é hoje e como está sendo visto. Sinais claros: novo posicionamento de negócio, mudança de mercado-alvo, rebranding pessoal ou percepção de que as imagens atuais não traduzem mais sua trajetória. Imagem que fica parada enquanto você avança comunica estagnação."
+      },
+      {
+        "q": "O ensaio pessoal ajuda a cobrar mais pelo meu serviço?",
+        "a": "Indiretamente, sim. Quando a imagem comunica o nível correto de expertise e posicionamento, ela sustenta preços premium sem precisar justificá-los. Percepção de qualidade é antecipada pela imagem — e percepção precede decisão de compra."
+      },
+      {
+        "q": "Quanto tempo dura um ensaio pessoal no Studio HMZT?",
+        "a": "Uma sessão completa dura entre 2 e 4 horas, dependendo do número de looks e locações previstas no briefing. Meia sessão tem duração média de 1h30. O prazo de entrega das imagens editadas é de 7 a 15 dias úteis."
+      },
+      {
+        "q": "Preciso levar meu próprio figurino ou a House Mazzutti orienta?",
+        "a": "Orientamos. Depois do briefing, você recebe um guia de figurino com sugestões de paleta, estilo e looks adequados ao posicionamento definido. A curadoria de figurino é parte do processo de direção de imagem, não um detalhe secundário."
+      }
+    ],
     "conclusao": "Você não precisa se tornar outra pessoa. Mas, em algum momento, precisa atualizar a forma como é vista. Quando isso é feito sob direção criativa premium, sua imagem deixa de ser apenas reflexo. Passa a ser extensão real da sua presença — e instrumento de mercado."
   },
   "cobertura-externa-presenca-alto-valor": {
@@ -331,6 +403,24 @@ export const articles = {
       }
     ],
     "citacao": "Presença de alto nível não acontece por acaso. Ela é construída.",
+        "faq": [
+      {
+        "q": "O que é cobertura externa premium e o que a diferencia?",
+        "a": "Cobertura externa premium não fotografa o que aconteceu — dirige a narrativa visual do evento em tempo real. A diferença está na intenção: enquanto um fotógrafo de evento documenta, a House Mazzutti constrói imagens que posicionam a marca antes de qualquer legenda."
+      },
+      {
+        "q": "Quais tipos de evento a House Mazzutti cobre em São Paulo?",
+        "a": "Lançamentos de produto, ativações de marca, inaugurações, desfiles, eventos corporativos, shows e agenda editorial de influenciadores e empresários. Para cada formato, adaptamos a abordagem de direção de imagem ao contexto e ao público do evento."
+      },
+      {
+        "q": "A cobertura inclui foto e vídeo?",
+        "a": "Sim, quando o escopo inclui os dois. Trabalhamos com foto e vídeo em tempo real — com direção de imagem integrada a ambos. Para eventos com presença em redes sociais, oferecemos também cortes de vídeo para stories e feed no mesmo dia."
+      },
+      {
+        "q": "Como a House Mazzutti trabalha durante o evento?",
+        "a": "Com briefing prévio: roteiro de momentos-chave, lista de presentes e plataformas de destino das imagens. Durante o evento, operamos com autonomia criativa dentro do briefing — identificando os momentos certos sem interromper o fluxo do evento."
+      }
+    ],
     "conclusao": "Existem agendas que passam. E existem agendas que marcam. A diferença entre elas raramente está no evento em si — mas na forma como ele é vivido, organizado e apresentado. Cobertura externa premium não fotografa o seu dia. Estrutura ele."
   },
   "cobertura-externa-narrativa-visual": {
@@ -397,6 +487,24 @@ export const articles = {
       }
     ],
     "citacao": "Quando existe intenção, cuidado e direção, até uma simples passagem pela cidade pode se transformar em algo memorável.",
+        "faq": [
+      {
+        "q": "Por que São Paulo é o melhor cenário para cobertura editorial?",
+        "a": "São Paulo concentra o maior volume de eventos de moda, negócios, gastronomia e cultura do país. A cidade tem arquitetura, luz e movimento que nenhum estúdio replica. Para marcas e personalidades com agenda ativa em SP, a cidade não é pano de fundo — é parte da narrativa."
+      },
+      {
+        "q": "Posso usar as imagens da cobertura no mesmo dia?",
+        "a": "Sim. Para eventos com demanda de presença imediata nas redes, entregamos seleção de imagens tratadas no mesmo dia. Para a entrega completa — curadoria, edição e finalização — o prazo é de 2 a 5 dias úteis após o evento."
+      },
+      {
+        "q": "Quantas imagens são entregues numa cobertura?",
+        "a": "Varia conforme o escopo e a duração do evento. Uma cobertura padrão de 3 horas entrega entre 80 e 150 imagens editadas. Eventos maiores ou com múltiplos momentos-chave têm volume proporcional ao briefing."
+      },
+      {
+        "q": "A House Mazzutti cobre eventos fora de São Paulo?",
+        "a": "Sim, sob consulta de disponibilidade e escopo. Para eventos em outras cidades, o planejamento inclui logística de deslocamento integrada à produção. Entre em contato para verificar agenda."
+      }
+    ],
     "conclusao": "A diferença entre um dia comum e um capítulo da sua narrativa raramente está no que aconteceu. Está em como aquilo foi construído visualmente. E quando essa construção é feita por quem entende de mercado, imagem e direção, a cidade passa a trabalhar para você."
   },
   "branding-project-arquitetura-valor": {
@@ -463,6 +571,24 @@ export const articles = {
       }
     ],
     "citacao": "Branding não é estética. É alavanca de crescimento.",
+        "faq": [
+      {
+        "q": "O que é um branding project e o que ele entrega?",
+        "a": "É o processo completo de construção ou reposicionamento de marca: estratégia, naming, identidade visual, tom de voz e sistema de aplicação. O branding project entrega uma marca reconhecível antes de ser explicada — com posicionamento, linguagem e estética alinhados ao mercado que ela quer ocupar."
+      },
+      {
+        "q": "Qual a diferença entre branding e identidade visual?",
+        "a": "Identidade visual é o sistema gráfico (logo, cores, tipografia). Branding é a arquitetura de valor da marca — posicionamento, estratégia, voz e como tudo se traduz visualmente. Na House Mazzutti, fazemos branding completo, da estratégia à execução do sistema visual."
+      },
+      {
+        "q": "Quanto tempo leva um branding project na House Mazzutti?",
+        "a": "Entre 35 e 75 dias, conforme o escopo. O processo passa por Imersão, Leitura de Mercado, Conceito, Execução e Fine Art antes da entrega final. A imersão começa na semana um; a entrega fecha o ciclo."
+      },
+      {
+        "q": "A House Mazzutti atende marcas em fase de lançamento ou só reposicionamento?",
+        "a": "Os dois. Marcas novas precisam de branding desde o início — sem fundação sólida, o crescimento amplifica mensagens erradas. Marcas consolidadas que querem reposicionamento precisam de branding estratégico que preserve o que construíram e atualize o que deixou de comunicar."
+      }
+    ],
     "conclusao": "Todo negócio começa com uma ideia. Mas só cresce quando essa ideia se torna clara, reconhecível e desejada. O branding project existe exatamente para isso: transformar uma operação em uma marca, e uma marca em um ativo. Não como design. Como posicionamento. Não como camada visual. Como infraestrutura de valor."
   },
   "branding-project-motor-vendas": {
@@ -529,6 +655,24 @@ export const articles = {
       }
     ],
     "citacao": "Crescer não é apenas vender mais — é vender melhor.",
+        "faq": [
+      {
+        "q": "Por que branding vem antes de tráfego pago?",
+        "a": "Porque tráfego amplifica o que já existe. Se a marca não tem posicionamento claro, o anúncio leva o usuário para uma promessa que a marca não entrega — e o custo por conversão sobe enquanto a confiança cai. Branding reduz o custo de vender porque transforma curiosidade em decisão antes do clique."
+      },
+      {
+        "q": "Como o branding afeta o CAC e a margem do negócio?",
+        "a": "Diretamente. Segundo estudo da Lucidpress, marcas com apresentação visual consistente crescem até 23% mais em receita. Isso acontece porque percepção de qualidade sustenta preço premium — e marca forte reduz a necessidade de desconto como argumento de venda."
+      },
+      {
+        "q": "Branding é para empresas grandes ou também para negócios menores?",
+        "a": "Para qualquer negócio que compete por percepção — que hoje é qualquer negócio. O diferencial de branding não é o tamanho da empresa: é a intenção de construir algo que seja reconhecido, não apenas encontrado. Negócios pequenos com branding forte crescem mais rápido do que grandes sem posicionamento claro."
+      },
+      {
+        "q": "Como começar um branding project com a House Mazzutti?",
+        "a": "Com uma conversa de briefing. Nessa etapa, entendemos o negócio, o mercado, o posicionamento desejado e o escopo do projeto. A partir daí, apresentamos a proposta de branding project com cronograma, entregáveis e investimento. Use o formulário de contato para iniciar."
+      }
+    ],
     "conclusao": "O crescimento sustentável começa antes da venda. Começa na construção da marca. O branding project existe exatamente para transformar o negócio em algo claro, confiável, desejado e valorizado — antes que o tráfego pago precise compensar tudo o que a marca deveria estar fazendo sozinha."
   },
   "quanto-investir-em-branding": {
@@ -597,6 +741,24 @@ export const articles = {
       }
     ],
     "citacao": "Quanto investir em branding? O suficiente para não precisar refazer depois.",
+        "faq": [
+      {
+        "q": "Quanto custa um projeto de branding completo?",
+        "a": "O investimento em branding varia conforme o escopo — da marca inteira a uma etapa específica (naming, identidade, reposicionamento). O valor é definido após uma conversa de briefing, quando entendemos o tamanho do projeto. Não há tabela genérica: há uma proposta calibrada ao que a marca precisa."
+      },
+      {
+        "q": "É possível fazer branding com baixo orçamento?",
+        "a": "É possível começar com um escopo reduzido — identidade visual básica, por exemplo. O risco é construir sobre uma fundação que precisará ser refeita mais tarde, com custo maior. O investimento certo não é o mais barato: é o que dispensa a necessidade de refazer."
+      },
+      {
+        "q": "Branding tem retorno mensurável?",
+        "a": "Sim. Os indicadores incluem: aumento de ticket médio (marca percebida como premium sustenta preços maiores), redução de CAC (menos esforço de convencimento quando a marca já posiciona), melhora de taxa de conversão e crescimento de valor percebido da empresa como ativo."
+      },
+      {
+        "q": "O que acontece se eu crescer sem investir em branding?",
+        "a": "A operação cresce, mas a marca não acompanha. Isso gera inconsistência de comunicação, dificuldade de cobrar mais sem justificativa e vulnerabilidade à concorrência por preço. Crescer sem branding é crescer por tráfego — e tráfego sem fundação de marca é o caminho mais caro de chegar no mesmo lugar."
+      }
+    ],
     "conclusao": "Branding não é algo que você faz várias vezes. É algo que você estrutura uma vez bem feito — e que sustenta o crescimento da operação por anos. O investimento certo não é o mais barato. É o que dispensa a necessidade de refazer."
   },
   "campanha-lancamento-arquitetura-invisivel": {
@@ -663,6 +825,24 @@ export const articles = {
       }
     ],
     "citacao": "Comunicação sem estrutura gera visibilidade. Comunicação estruturada gera crescimento.",
+        "faq": [
+      {
+        "q": "O que faz uma campanha de lançamento funcionar de verdade?",
+        "a": "Três camadas trabalhando juntas: conceito (o território da marca), execução (conteúdo, vídeo, foto e copy que sustentam esse território) e distribuição (onde e como a campanha aparece). Quando uma das três falha, as outras não compensam. A maioria das campanhas que não performam erram no conceito — produzem conteúdo sem ideia central."
+      },
+      {
+        "q": "Qual a diferença entre uma campanha de lançamento e posts de produto?",
+        "a": "Posts de produto informam. Campanha de lançamento instala percepção. Uma campanha cria um momento de marca — um antes e depois de como ela é percebida. Posts de produto mantêm presença; campanha de lançamento cria posicionamento."
+      },
+      {
+        "q": "Quanto tempo antes do lançamento a campanha deve começar?",
+        "a": "Em geral, 4 a 6 semanas antes do lançamento oficial — tempo suficiente para construir expectativa, produzir os materiais com qualidade e ativar os canais de forma coordenada. Campanhas de lançamento improvisadas perdem o principal ativo que o lançamento tem: o momento de atenção máxima."
+      },
+      {
+        "q": "A House Mazzutti cria campanhas de lançamento completas?",
+        "a": "Sim. Da estratégia de conceito à produção de foto, vídeo e peças de comunicação, sob uma única direção criativa. A integração entre Agência (estratégia), Studio (imagem) e Produtora (vídeo e campanhas) dentro da mesma casa é o que garante coerência do conceito à execução."
+      }
+    ],
     "conclusao": "Presença não se constrói por acaso. No cenário atual, crescer não depende apenas de aparecer. Depende de como se aparece — e com que consistência. A campanha de lançamento é o que transforma intenção em estrutura. E estrutura em resultado."
   },
   "por-que-campanhas-falham": {
@@ -729,6 +909,24 @@ export const articles = {
       }
     ],
     "citacao": "Campanhas não falham por falta de talento. Falham por falta de estrutura.",
+        "faq": [
+      {
+        "q": "Por que a maioria das campanhas não gera resultado?",
+        "a": "Por erro estrutural: produzem mais conteúdo sem ter uma ideia central forte. No ambiente atual de excesso de informação, mais volume não compensa ausência de conceito. Campanhas que performam têm direção unificada — cada peça reforça o mesmo posicionamento, não concorre com ele."
+      },
+      {
+        "q": "Qual o erro mais comum em campanhas de moda e beleza?",
+        "a": "Tratar conteúdo como produção em série, sem uma narrativa de marca que conecte as peças. O resultado é presença sem identidade — a marca aparece, mas não é reconhecida. Reconhecimento exige consistência de conceito, não apenas volume de publicações."
+      },
+      {
+        "q": "Como saber se minha campanha tem problema de conceito ou de distribuição?",
+        "a": "Se o alcance é alto mas a conversão é baixa, o problema tende a ser conceito ou oferta. Se o alcance é baixo, o problema pode ser distribuição. Se ambos são baixos, o problema é estrutural — marca sem posicionamento claro não performa em nenhum canal."
+      },
+      {
+        "q": "A House Mazzutti corrige campanhas que já estão no ar?",
+        "a": "Sim. A partir de uma auditoria de comunicação, identificamos os pontos de ruptura entre conceito, execução e distribuição. Em seguida, desenvolvemos a estrutura correta — que pode envolver reposicionamento de conceito, nova produção de conteúdo ou ambos."
+      }
+    ],
     "conclusao": "No cenário atual, não vence quem produz mais. Vence quem organiza melhor. Uma campanha não é sobre o que é criado — é sobre como tudo se conecta. E é essa conexão que transforma conteúdo em impacto, e impacto em crescimento real."
   },
   "editorial-moda-narrativa-visual": {
@@ -795,6 +993,24 @@ export const articles = {
       }
     ],
     "citacao": "O editorial é o que traduz. O que conecta. O que sustenta. E, principalmente, o que transforma produto em presença.",
+        "faq": [
+      {
+        "q": "O que é um editorial de moda e para que ele serve?",
+        "a": "Editorial de moda é uma produção fotográfica (e, cada vez mais, audiovisual) que cria uma narrativa visual ao redor de uma coleção, produto ou marca. Ele não mostra o item: constrói o desejo por ele. Serve para posicionar a marca, gerar conteúdo premium e comunicar território antes da oferta."
+      },
+      {
+        "q": "Editorial de moda é só para grandes marcas?",
+        "a": "Não. Marcas emergentes que investem em editorial cedo constroem percepção premium antes de ter o volume de grandes players. O editorial não exige orçamento de moda luxury — exige direção criativa precisa. O que define o resultado é a intenção, não o tamanho da produção."
+      },
+      {
+        "q": "Qual a diferença entre editorial de moda e campanha de produto?",
+        "a": "Campanha de produto foca no item. Editorial de moda foca no território da marca — que universo ela habita, que emoção ela evoca, que tipo de pessoa a usa. O primeiro informa; o segundo instala desejo. Marcas que têm os dois crescem mais rápido porque constroem percepção e conversão simultaneamente."
+      },
+      {
+        "q": "Como a House Mazzutti produz um editorial de moda?",
+        "a": "Começa com leitura da marca e briefing de coleção. A partir daí: conceito visual e moodboard, casting, set design, produção executiva, filmagem ou sessão fotográfica com direção criativa integrada e entrega final. O diferencial é que conceito e execução vivem sob a mesma direção — nenhuma intenção se perde no caminho."
+      }
+    ],
     "conclusao": "Uma coleção pode existir. Nem sempre é percebida. O editorial é a ponte entre o que a marca produz e o que o mercado deseja. Quando bem dirigido, ele deixa de ser conteúdo — e começa a operar como ativo competitivo de longo prazo."
   },
   "editorial-moda-performance-vendas": {
@@ -861,6 +1077,24 @@ export const articles = {
       }
     ],
     "citacao": "Na moda, vender não é apenas oferecer. É conduzir percepção até a decisão.",
+        "faq": [
+      {
+        "q": "Editorial de moda pode gerar conversão direta?",
+        "a": "Sim. Quando a direção criativa integra posicionamento e clareza comercial — o produto é visível, o contexto é desejável e a linguagem é aderente ao público — o editorial performa tanto em brand awareness quanto em intenção de compra. As duas não são excludentes."
+      },
+      {
+        "q": "Qual a diferença entre editorial de moda para redes e para campanhas?",
+        "a": "Para redes sociais, o editorial precisa de cortes verticais, imagens de alta legibilidade em tela pequena e vídeos curtos. Para campanhas (mídia paga, site, PDV), o editorial pode ser mais elaborado, com narrativa mais longa. A House Mazzutti desenvolve editoriais com adaptações para os dois contextos desde o planejamento de set."
+      },
+      {
+        "q": "Como medir o resultado de um editorial de moda?",
+        "a": "Métricas de percepção (salvamentos, compartilhamentos, comentários qualitativos), métricas de conversão (taxa de clique em produtos vinculados, aumento de ticket médio no período) e métricas de marca (crescimento de seguidores qualificados, menções espontâneas). O editorial é ativo de longo prazo — os efeitos compõem ao longo do tempo."
+      },
+      {
+        "q": "Quanto tempo leva a produção de um editorial de moda?",
+        "a": "Do briefing ao master, entre 2 e 5 semanas. Editoriais mais simples (1 dia de set, locação única, equipe enxuta) podem ser entregues em menos tempo. Produções maiores — com múltiplas locações, casting amplo e pós-produção elaborada — demandam prazo maior. O briefing define o cronograma real."
+      }
+    ],
     "conclusao": "O editorial, quando bem construído, não apenas mostra. Direciona. E quando essa direção integra mercado, estética e linguagem premium, a imagem deixa de ser despesa de marketing — e passa a operar como o ativo mais rentável da operação."
   },
   "por-que-boas-ideias-nao-garantem-resultados": {
@@ -927,6 +1161,24 @@ export const articles = {
       }
     ],
     "citacao": "ROI não depende só da mídia. A qualidade da produção impacta diretamente o desempenho da campanha.",
+        "faq": [
+      {
+        "q": "O que é produção executiva e por que ela é tão importante?",
+        "a": "Produção executiva é o sistema que transforma uma ideia em execução real — orçamento, cronograma, equipe, logística, casting, set, entrega. Sem ela, boas ideias morrem no set por falta de estrutura ou chegam ao master com qualidade comprometida. É o que separa intenção de resultado."
+      },
+      {
+        "q": "Qual o custo do retrabalho numa produção sem estrutura executiva?",
+        "a": "Altíssimo. Improviso em set gera: atrasos que encarecem diárias de equipe, tomadas que precisam ser refeitas, conceito que se fragmenta em cada decisão não planejada. Em produções de médio e grande porte, um dia de retrabalho pode custar o equivalente ao orçamento de planejamento que foi economizado."
+      },
+      {
+        "q": "A produção executiva da House Mazzutti cobre quais etapas?",
+        "a": "Orçamento e cronograma, contratação de equipe técnica, casting, scouting e contratação de locações, set design, logística de equipamentos e direção criativa integrada. Da pré-produção ao master, sob uma única gestão — sem intermediários entre a ideia e o set."
+      },
+      {
+        "q": "Produção executiva e direção criativa podem ser a mesma pessoa?",
+        "a": "Na House Mazzutti, sim — e é exatamente esse o diferencial. Quando a mente que criou o conceito também gere a produção, nenhuma intenção se perde no handoff entre departamentos. O resultado é uma campanha onde cada decisão de set reforça o conceito original."
+      }
+    ],
     "conclusao": "Projetos bem estruturados têm menos surpresas, tomam decisões mais rápidas e executam com mais confiança. E isso impacta diretamente o resultado. A House Mazzutti atua reduzindo esse risco — com estrutura que organiza, integra, controla e entrega. Sem excesso. Sem ruído. Com precisão."
   },
   "producao-executiva-sistema-campanhas": {
@@ -993,6 +1245,24 @@ export const articles = {
       }
     ],
     "citacao": "Grandes campanhas não são feitas apenas com talento — são sustentadas por estrutura.",
+        "faq": [
+      {
+        "q": "O que diferencia uma produtora executiva de qualidade?",
+        "a": "Três coisas: começa pelo conceito (não pelo cronograma de set), integra direção criativa e produção sob a mesma gestão, e entende o mercado do cliente além da execução técnica. Uma produtora que começa pelo cronograma executa — uma que começa pelo conceito entrega posicionamento."
+      },
+      {
+        "q": "Por que campanhas bem conceituadas falham na execução?",
+        "a": "Porque conceito e produção operam em silos. A ideia nasce numa reunião criativa, passa por um briefing de produção, chega ao set como uma série de instruções — e cada handoff perde intenção. Quando a direção criativa não está presente no set, o resultado tende ao correto, não ao preciso."
+      },
+      {
+        "q": "A House Mazzutti faz produção executiva para campanhas de terceiros?",
+        "a": "Sim. Para agências e marcas que têm o conceito criativo mas precisam de produção executiva premium para realizá-lo com segurança e qualidade, a Produtora HMZT atua como parceira de execução. O briefing criativo é respeitado; a estrutura de produção é nossa."
+      },
+      {
+        "q": "Como funciona o processo de produção executiva na Produtora HMZT?",
+        "a": "Briefing de campanha → conceito e plano de produção → aprovação do cliente → pré-produção (equipe, casting, locações, set) → dia de set com direção integrada → pós-produção (edição, cor, entrega). O cliente acompanha cada etapa e aprova antes do set."
+      }
+    ],
     "conclusao": "A diferença entre uma campanha boa e uma campanha memorável é estrutural, não criativa. Produção executiva é o sistema invisível que protege o conceito original do briefing inicial até o master final. Quando bem feita, ela some. Quando ausente, ela fica evidente."
   },
   "por-que-campanhas-caras-falham": {
@@ -1059,6 +1329,24 @@ export const articles = {
       }
     ],
     "citacao": "Produção executiva transforma incerteza em previsibilidade.",
+        "faq": [
+      {
+        "q": "Por que alto investimento em campanha não garante resultado?",
+        "a": "Porque dinheiro amplifica estrutura — e sem estrutura criativa e executiva sólida, ele amplifica o problema. Campanhas caras que falham costumam ter excesso de produção e ausência de conceito. O resultado é uma campanha visualmente impressionante que não comunica nada de forma memorável."
+      },
+      {
+        "q": "Onde o orçamento de campanha é desperdiçado com mais frequência?",
+        "a": "Em retrabalho e improviso de set. Decisões não planejadas durante a produção geram atrasos, tomadas descartadas e pós-produção corretiva — que é sempre mais cara do que produção bem planejada. Em seguida: distribuição sem estratégia (gastar em mídia sem posicionamento claro) e produção de volume sem conceito."
+      },
+      {
+        "q": "Como saber se o investimento em campanha está sendo bem aplicado?",
+        "a": "O indicador mais simples: a campanha tem uma ideia central que qualquer pessoa da equipe consegue explicar em uma frase? Se não, o dinheiro está sendo gasto em execução sem direção. Campanhas que performam têm conceito claro, execução coerente e distribuição planejada — nessa ordem."
+      },
+      {
+        "q": "A House Mazzutti faz auditoria de campanhas que não performaram?",
+        "a": "Sim. A partir de uma análise do material produzido e dos resultados obtidos, identificamos onde o gap está — conceito, execução ou distribuição. Em seguida, desenvolvemos o plano de correção, que pode ser um reposicionamento completo ou uma nova produção com estrutura adequada."
+      }
+    ],
     "conclusao": "Investir mais raramente resolve problemas estruturais. Investir melhor sim. A combinação entre orçamento adequado, direção criativa autoral e produção executiva premium é o que separa campanhas que apenas custaram caro daquelas que efetivamente performaram. A House Mazzutti opera nessa combinação — porque é o único lugar onde o investimento se transforma, de fato, em resultado."
   },
   "campanha-larissa-manoela-jequiti": {
@@ -1128,6 +1416,24 @@ export const articles = {
       }
     ],
     "citacao": "O nome abre a porta. O set decide o que se vê quando ela se abre.",
+        "faq": [
+      {
+        "q": "O que é set design numa campanha publicitária?",
+        "a": "Set design é a construção do ambiente visual de set — cenário, mobiliário, objetos de cena, paleta de cores e texturas. Para campanhas de beleza e moda, o set não é o fundo: é o contexto que define como o produto é percebido. Um produto de alto padrão num set impreciso perde posicionamento antes da primeira foto."
+      },
+      {
+        "q": "Por que o set design importa tanto em campanhas com celebridades?",
+        "a": "Porque a celebridade amplia o alcance — mas o set define a marca. A percepção que o público forma sobre o produto é construída pelo ambiente que o envolve, não apenas pelo rosto que o apresenta. Um set sem coerência de marca pode transformar um investimento em celebridade numa presença sem identidade."
+      },
+      {
+        "q": "A House Mazzutti faz set design para marcas de beleza e cosméticos?",
+        "a": "Sim. A Produtora HMZT tem experiência em set design para campanhas de beleza, moda, joalheria e lifestyle — incluindo marcas como Jequiti, WePink, Océane e Natália Beauty. O set é construído para sustentar o posicionamento da marca, não apenas para ser bonito."
+      },
+      {
+        "q": "Direção de arte e set design são a mesma coisa?",
+        "a": "São complementares. Direção de arte define a linguagem visual da campanha — paleta, referências estéticas, hierarquia visual. Set design executa essa linguagem no espaço físico de set. Na House Mazzutti, os dois vivem sob a mesma direção criativa."
+      }
+    ],
     "conclusao": "Vai colocar uma marca no mercado e precisa de um set que responda pela identidade antes do primeiro clique? A House Mazzutti assina set design e direção de arte para produções de beleza, moda e lifestyle. Conheça nossos cases."
   },
   "fashion-film-joias-barbara-porto": {
@@ -1197,6 +1503,24 @@ export const articles = {
       }
     ],
     "citacao": "A joia carrega valor. A imagem decide se esse valor será percebido.",
+        "faq": [
+      {
+        "q": "Como é produzir um fashion film para joalheria?",
+        "a": "Joalheria pede tratamento especial: a peça é pequena, o brilho precisa ser controlado e a narrativa precisa criar desejo pelo objeto antes de mostrá-lo claramente. O fashion film da Bárbara Porto foi construído em torno da ideia de que a joia existe em movimento — não como exibição, mas como presença."
+      },
+      {
+        "q": "Fashion film é adequado para marcas de joias e acessórios?",
+        "a": "Sim — e é um dos formatos mais eficientes para esse segmento. A joalheria vende desejo, não função. O fashion film é o formato audiovisual que mais se aproxima de uma experiência emocional — ideal para instalar o território de uma marca de joias na percepção do seu público."
+      },
+      {
+        "q": "O que define uma boa direção de imagem para joalheria?",
+        "a": "Controle de luz para revelar o brilho sem saturar, composição que valorize o design da peça e narrativa que crie contexto de desejo ao redor do objeto. A técnica serve a uma intenção estética precisa — e essa intenção precisa ser definida antes do set."
+      },
+      {
+        "q": "A Produtora House Mazzutti faz fashion films para marcas menores?",
+        "a": "Sim. O escopo é calibrado ao objetivo e orçamento da marca. O que não muda é o processo: conceito, produção e direção autoral para cada projeto, independentemente do tamanho da marca."
+      }
+    ],
     "conclusao": "Tem uma coleção de joias ou acessórios para apresentar ao mercado? A House Mazzutti cria fashion films e campanhas que transformam design em desejo. Conheça o portfólio e fale com a nossa produção."
   },
   "fashion-film-emanuely-terres": {
@@ -1266,6 +1590,24 @@ export const articles = {
       }
     ],
     "citacao": "Roupa passa de estação. Presença, quando bem construída, permanece.",
+        "faq": [
+      {
+        "q": "O que é presença de marca pessoal e como o fashion film a constrói?",
+        "a": "Presença de marca pessoal é a percepção que o mercado tem de você antes de qualquer conversa. O fashion film a constrói ao criar um registro audiovisual que comunica identidade, intenção e território — não um currículo em vídeo, mas uma narrativa visual de quem você é e onde você existe no mercado."
+      },
+      {
+        "q": "Fashion film é adequado para profissionais e não apenas para marcas?",
+        "a": "Sim. Profissionais liberais, influenciadores, consultores e personalidades com presença pública utilizam fashion films para estabelecer posicionamento em alto nível. O formato é especialmente eficaz para quem quer ser percebido como referência — não apenas conhecido."
+      },
+      {
+        "q": "São Paulo é um bom cenário para fashion films de marca pessoal?",
+        "a": "É o melhor. A cidade tem uma diversidade de arquitetura, luz e textura urbana que nenhuma locação construída replica. Para narrativas de presença e identidade, São Paulo funciona como um personagem — não apenas como pano de fundo."
+      },
+      {
+        "q": "Como a House Mazzutti trabalha a identidade de quem assina o fashion film?",
+        "a": "O processo começa com uma leitura de perfil e posicionamento: quem você é, o que representa e onde quer ser percebido. A partir daí, o conceito visual é construído para expressar essa identidade — não uma versão idealizada, mas a versão mais precisa e posicionada de quem você já é."
+      }
+    ],
     "conclusao": "Quer construir uma presença que o mercado lembra? A House Mazzutti dirige e produz fashion films com identidade, em São Paulo. Conheça o nosso trabalho e vamos criar o seu."
   },
   "workshop-inside-out-ita-mazzutti": {
@@ -1335,6 +1677,24 @@ export const articles = {
       }
     ],
     "citacao": "Produzir é entregar uma imagem. Ensinar é multiplicar a capacidade de criá-las.",
+        "faq": [
+      {
+        "q": "O que é o workshop Inside Out da House Mazzutti Academy?",
+        "a": "Inside Out é o programa de formação prática da House Mazzutti Academy focado em direção de imagem e produção audiovisual. As turmas são reduzidas e presenciais em São Paulo, conduzidas por quem produz para grandes marcas e celebridades no mercado real."
+      },
+      {
+        "q": "Para quem é o Inside Out?",
+        "a": "Para fotógrafos, diretores de fotografia, produtores e profissionais de imagem que querem elevar o nível técnico e criativo da sua atuação. Também para profissionais de comunicação e marketing que querem entender o processo de produção de imagem de alto padrão por dentro."
+      },
+      {
+        "q": "O que diferencia o Inside Out de outros cursos de fotografia?",
+        "a": "O conteúdo é construído a partir de projetos reais — não de exercícios didáticos. O que é ensinado no Inside Out é o que a House Mazzutti aplica em campanhas para WePink, Jequiti, Dumond e outras marcas de grande porte. É formação com mercado real como referência."
+      },
+      {
+        "q": "Como me inscrever no Inside Out?",
+        "a": "As turmas são reduzidas e têm inscrições por interesse. Acesse a página do Inside Out na House Mazzutti Academy, cadastre seu interesse e você será notificado quando a próxima turma estiver disponível."
+      }
+    ],
     "conclusao": "Quer dominar direção de imagem com quem produz para grandes marcas? As turmas do Inside Out são reduzidas e presenciais, em São Paulo. Conheça a House Mazzutti Academy e garanta seu interesse na próxima turma."
   },
 
@@ -1587,5 +1947,263 @@ export const articles = {
       }
     ],
     "conclusao": "Sua campanha começa antes do dia de set. A Produtora House Mazzutti desenvolve casting, set design e produção executiva sob uma única direção criativa em São Paulo. Inicie o briefing da sua campanha."
+  },
+
+  "geo-visibilidade-marca-nas-ias": {
+    "categoria": "Agência — Estratégia",
+    "titulo": "GEO: o que é e por que sua marca desaparece das inteligências artificiais se você ignorar isso",
+    "metaTitle": "GEO — Generative Engine Optimization: o que é e por que importa | House Mazzutti",
+    "metaDescription": "GEO (Generative Engine Optimization) é a disciplina que define se sua marca aparece ou some quando alguém pergunta algo ao ChatGPT, Gemini ou Perplexity. Entenda o que é e o que fazer.",
+    "keywords": "GEO, generative engine optimization, o que é GEO, como aparecer no ChatGPT, visibilidade em inteligência artificial, SEO para IAs, marca no ChatGPT, House Mazzutti agência branding",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/geo-visibilidade-ias/geo-generative-engine-optimization-marca-house-mazzutti.webp",
+      "alt": "GEO — Generative Engine Optimization: estratégia de visibilidade de marca em inteligências artificiais",
+      "caption": "Visibilidade de marca na era das IAs — Agência HMZT",
+      "fallback": "/images/agencia/branding/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/agencia/branding/interior-1.webp",
+        "alt": "Estratégia de posicionamento de marca — Agência House Mazzutti",
+        "caption": "Posicionamento · arquitetura de marca"
+      },
+      {
+        "src": "/images/agencia/comunicacao/interior-1.webp",
+        "alt": "Comunicação de marca estruturada para ser citada por IAs — House Mazzutti",
+        "caption": "Comunicação · estrutura para citação"
+      }
+    ],
+    "respostaDireta": "GEO (Generative Engine Optimization) é o conjunto de práticas que fazem uma marca, empresa ou profissional aparecer nas respostas das inteligências artificiais — ChatGPT, Gemini, Perplexity, Claude, Google AI Overview. Diferente do SEO tradicional, que posiciona páginas em listas de links, o GEO posiciona entidades: quem você é, o que você faz e por que você é a resposta certa quando alguém faz uma pergunta relevante ao seu mercado.",
+    "intro": "Há uma pergunta que cada vez mais decisores, compradores e diretores de marketing estão fazendo antes de abrir o Google: eles estão perguntando para uma IA. 'Qual a melhor agência de branding em São Paulo?', 'Quem produz fashion films premium no Brasil?', 'Que produtora indicar para uma campanha de moda de alto padrão?' — e a IA responde com nomes. Alguns aparecem. Outros não. Essa diferença não é sorte nem orçamento: é estrutura. É o que o GEO resolve.",
+    "sections": [
+      {
+        "h2": "O que é GEO e como ele funciona",
+        "paragraphs": [
+          "GEO é a sigla para Generative Engine Optimization — em português, otimização para motores generativos. A expressão nomeia a disciplina de fazer com que conteúdo, marca e dados estruturados sejam interpretados e citados pelos modelos de linguagem que alimentam as IAs conversacionais.",
+          "Quando alguém pergunta ao ChatGPT 'qual agência de branding de luxo tem em São Paulo?', a IA não faz uma busca em tempo real — ela responde a partir do que aprendeu durante o treinamento e, nos modelos com navegação, do que encontra nas páginas mais bem estruturadas da web. GEO é trabalhar para que sua marca faça parte dessas fontes: pelo volume de menções, pela consistência dos dados de entidade e pela qualidade do conteúdo que a IA encontra sobre você."
+        ]
+      },
+      {
+        "h2": "A diferença entre SEO e GEO",
+        "paragraphs": [
+          "SEO posiciona páginas. GEO posiciona entidades. Essa distinção muda completamente a natureza do trabalho. No SEO, você otimiza um URL para um conjunto de palavras-chave. No GEO, você consolida uma identidade: quem é a empresa, o que ela oferece, onde atua, quem já atendeu, qual é o processo, qual é a autoridade.",
+          "Uma página de serviço bem otimizada pode ranquear no Google e ser completamente ignorada pelas IAs — porque o modelo não encontra consistência de entidade: o nome aparece de um jeito no site, de outro no Google Meu Negócio, de um terceiro nas menções externas, e a IA não confia o suficiente para citar. GEO começa pela solidez da entidade, não pelo desempenho da palavra-chave."
+        ]
+      },
+      {
+        "h2": "Por que as IAs ignoram algumas marcas e citam outras",
+        "paragraphs": [
+          "Os modelos de linguagem aprendem por padrões de co-ocorrência. Uma marca que aparece com frequência em contextos de qualidade — artigos editoriais, portfólios com dados reais, menções em publicações relevantes, schemas estruturados, FAQ bem construído — ganha o que se chama de 'confiança de entidade'. A IA aprende que aquela marca existe, que ela opera em determinado segmento, que ela tem clientes conhecidos, que ela produz conteúdo com substância.",
+          "Marcas que existem apenas como site institucional — sem dados de entidade consistentes, sem conteúdo editorial com profundidade, sem menções externas — simplesmente não entram no modelo. Do ponto de vista da IA, elas não existem. E para o comprador que pergunta para a IA antes de pesquisar, elas também não."
+        ]
+      },
+      {
+        "h2": "Os três pilares do GEO que a House Mazzutti aplica",
+        "paragraphs": [
+          "Na prática da Agência House Mazzutti, o GEO opera sobre três eixos: dados de entidade, conteúdo editorial e estrutura técnica. Dados de entidade significa ter o mesmo nome, endereço, descrição de serviço e clientes citados de forma consistente em todas as superfícies — site, Google Meu Negócio, LinkedIn, portfólios externos, menções de press. IAs buscam consistência: uma entidade que se contradiz gera incerteza e é descartada.",
+          "Conteúdo editorial significa publicar textos que respondam perguntas reais do mercado com profundidade e propriedade — não artigos genéricos com palavras-chave, mas conteúdo que demonstra expertise, cita clientes reais, apresenta dados e usa a linguagem do profissional que sabe do que fala. E estrutura técnica significa usar JSON-LD (dados estruturados em Schema.org) para declarar explicitamente à IA: 'isso aqui é uma empresa de serviço especializado, essa é a área, esses são os serviços, esse é o local'. O schema é o vocabulário que a IA entende sem precisar inferir."
+        ]
+      },
+      {
+        "h2": "O custo de não fazer GEO",
+        "paragraphs": [
+          "O custo de ignorar GEO hoje não é uma queda de tráfego no Analytics — é invisibilidade nas consultas que estão substituindo a busca. Um estudo da Salesforce de 2025 indica que 60% dos compradores B2B já usam IAs como parte do processo de avaliação de fornecedores antes do primeiro contato. No segmento premium — marcas de moda, beleza, comunicação, branding — esse número é ainda maior: o decisor que pesquisa agências de branding de luxo não digita no Google primeiro. Ele pergunta para o Perplexity.",
+          "Para a House Mazzutti, GEO não é um experimento de marketing digital: é estratégia de negócio. É garantir que quando alguém faz a pergunta certa, a resposta que a IA entrega é a nossa marca — não a da concorrência."
+        ]
+      }
+    ],
+    "citacao": "SEO posiciona páginas. GEO posiciona entidades. E entidade, no final, é reputação com estrutura técnica.",
+    "faq": [
+      {
+        "q": "O que é GEO (Generative Engine Optimization)?",
+        "a": "GEO é o conjunto de práticas que fazem uma marca aparecer nas respostas das inteligências artificiais como ChatGPT, Gemini, Perplexity e Google AI Overview. Diferente do SEO, que posiciona páginas em listas de links, o GEO consolida a identidade da empresa como uma entidade confiável para que a IA a cite quando alguém faz uma pergunta relevante ao seu mercado."
+      },
+      {
+        "q": "GEO e SEO são a mesma coisa?",
+        "a": "Não. SEO otimiza páginas para aparecer em listas de links nos buscadores tradicionais. GEO consolida a entidade da marca para que as inteligências artificiais a reconheçam e citem nas respostas conversacionais. As técnicas se complementam, mas os objetivos e mecanismos são diferentes."
+      },
+      {
+        "q": "Como fazer minha marca aparecer no ChatGPT e no Gemini?",
+        "a": "Três pilares fundamentais: consistência de dados de entidade (mesmo nome, serviços e localização em todas as plataformas), conteúdo editorial com profundidade que responda perguntas reais do seu mercado, e dados estruturados em Schema.org (JSON-LD) que declarem explicitamente quem você é e o que faz."
+      },
+      {
+        "q": "A House Mazzutti implementa GEO para outras marcas?",
+        "a": "Sim. A Agência House Mazzutti aplica estratégia GEO/AEO como parte do trabalho de branding e comunicação — desde a consolidação de dados de entidade até a produção de conteúdo editorial e implementação de schemas estruturados. Entre em contato para um diagnóstico."
+      }
+    ],
+    "conclusao": "GEO não é tendência: é a próxima camada do posicionamento de marca. As empresas que estruturarem sua entidade agora — com consistência, conteúdo e schema — vão ocupar o espaço que as que esperaram nunca vão recuperar. A Agência House Mazzutti trabalha essa estrutura. Solicite um diagnóstico."
+  },
+
+  "aeo-como-ser-a-resposta-das-ias": {
+    "categoria": "Agência — Estratégia",
+    "titulo": "AEO: como estruturar sua marca para ser citada pelo ChatGPT, Gemini e Perplexity",
+    "metaTitle": "AEO — Answer Engine Optimization: como ser citado pelas IAs | House Mazzutti",
+    "metaDescription": "AEO (Answer Engine Optimization) é a disciplina de fazer sua marca aparecer como a resposta nas IAs. Entenda como funciona e o que implementar para ser citado pelo ChatGPT, Gemini e Perplexity.",
+    "keywords": "AEO, answer engine optimization, o que é AEO, aparecer no Perplexity, Google AI Overview, como ser citado por IAs, SEO conversacional, visibilidade em IA, House Mazzutti agência",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/aeo-resposta-das-ias/aeo-answer-engine-optimization-marca-house-mazzutti.webp",
+      "alt": "AEO — Answer Engine Optimization: como fazer sua marca ser citada pelas inteligências artificiais",
+      "caption": "Ser a resposta · estratégia AEO — Agência HMZT",
+      "fallback": "/images/agencia/comunicacao/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/agencia/rp/interior-1.webp",
+        "alt": "Estratégia de comunicação e conteúdo para citação em IAs — House Mazzutti",
+        "caption": "Conteúdo · estrutura de resposta"
+      },
+      {
+        "src": "/images/agencia/branding/interior-2.webp",
+        "alt": "Arquitetura de marca para visibilidade em motores de resposta — Agência House Mazzutti",
+        "caption": "Marca · arquitetura de autoridade"
+      }
+    ],
+    "respostaDireta": "AEO (Answer Engine Optimization) é a disciplina de estruturar o conteúdo e a presença de uma marca para que as inteligências artificiais a citem como resposta quando alguém faz uma pergunta relacionada ao seu mercado. O princípio central do AEO é simples: as IAs não entregam listas — entregam respostas. Para estar nessas respostas, sua marca precisa produzir conteúdo que já chegue formatado como resposta direta, completa e confiável.",
+    "intro": "Existe uma distinção que separa dois mundos completamente diferentes de presença digital: aparecer em listas e ser a resposta. O Google tradicional entregava dez links — o usuário escolhia em qual clicar. O ChatGPT, o Gemini, o Perplexity e o Google AI Overview entregam uma resposta. Uma. Às vezes duas ou três fontes citadas. A concorrência por visibilidade deixou de ser pela décima posição no ranking e passou a ser pela primeira frase da resposta. AEO é a disciplina de ocupar esse lugar.",
+    "sections": [
+      {
+        "h2": "O que é AEO e por que ele é diferente do SEO",
+        "paragraphs": [
+          "AEO é a sigla para Answer Engine Optimization — otimização para motores de resposta. O conceito reconhece que as IAs conversacionais são um novo tipo de motor de busca: não organizam links, organizam respostas. E para que sua marca seja citada nessas respostas, o conteúdo precisa ser construído de uma forma específica — começando pela resposta, não pela introdução.",
+          "No SEO tradicional, o padrão de conteúdo era o funil: introdução, desenvolvimento, conclusão. Esse padrão serve para o leitor humano que tem tempo e curiosidade de percorrer o texto. A IA não percorre — ela extrai. O modelo identifica onde está a resposta direta, extrai esse trecho e o inclui na resposta ao usuário. Conteúdo que começa com contexto e chega na resposta depois de três parágrafos é ignorado. Conteúdo que começa pela resposta — e depois aprofunda — é citado."
+        ]
+      },
+      {
+        "h2": "Como as IAs decidem o que citar",
+        "paragraphs": [
+          "Os modelos de linguagem aprendem com enormes volumes de texto e desenvolvem padrões de confiança por entidade e por tipo de conteúdo. Para decidir o que citar, eles combinam três variáveis: relevância semântica (o conteúdo responde de fato à pergunta?), autoridade de entidade (quem está publicando é reconhecido como especialista nesse tema?) e estrutura da resposta (a resposta está clara e diretamente no texto, ou precisa de inferência?).",
+          "É por isso que conteúdo genérico — copiado, superficial, sem posicionamento — nunca é citado. A IA identifica padrão de profundidade: texto que demonstra expertise, usa terminologia precisa, cita contextos reais e estrutura a resposta com clareza indica uma fonte confiável. Texto que parece ter sido escrito para preencher espaço indica o oposto."
+        ]
+      },
+      {
+        "h2": "As três práticas centrais do AEO",
+        "paragraphs": [
+          "Na prática da Agência House Mazzutti, AEO opera sobre três hábitos editoriais. O primeiro é 'Resposta primeiro': cada artigo, cada página de serviço, cada FAQ começa com a resposta direta à pergunta principal — em dois a três parágrafos densos, sem rodeio. O modelo encontra a resposta imediatamente; a marca é citada.",
+          "O segundo é o uso estruturado de perguntas como títulos de seção. Cabeçalhos H2 formulados como perguntas reais que o público faz ('O que é AEO?', 'Como aparecer no ChatGPT?', 'Quanto custa um fashion film?') funcionam como declarações explícitas para a IA: 'este bloco responde a essa pergunta'. O terceiro é o FAQ Schema — blocos de perguntas e respostas marcados com JSON-LD FAQPage, que a IA lê diretamente da estrutura da página sem precisar inferir contexto. É o caminho mais curto entre seu conteúdo e a resposta da IA."
+        ]
+      },
+      {
+        "h2": "AEO para marcas premium: o desafio do tom editorial",
+        "paragraphs": [
+          "Existe uma tensão real no AEO para marcas premium: a linguagem que as IAs preferem citar tende a ser direta, informacional e objetiva. A linguagem que marcas de posicionamento premium cultivam tende a ser editorial, com camadas de subtexto e voz autoral. Resolver essa tensão sem trair nenhuma das duas linguagens é onde mora o verdadeiro trabalho.",
+          "Na House Mazzutti, a solução é a arquitetura de duas camadas: o bloco de resposta direta, escrito para a IA, seguido do desenvolvimento editorial, escrito para o leitor humano. A IA extrai o bloco direto. O leitor consome o desenvolvimento completo. Nenhum dos dois perde qualidade. Essa é a diferença entre produzir conteúdo que apenas soa bem e produzir conteúdo que trabalha."
+        ]
+      },
+      {
+        "h2": "O que implementar agora para ser citado pelas IAs",
+        "paragraphs": [
+          "Para marcas que querem iniciar a implementação de AEO, o caminho tem uma sequência lógica. Primeiro: auditar os dados de entidade — nome, serviços, localização, clientes e processo descritos de forma idêntica em todas as plataformas. Segundo: revisar as páginas de serviço para que cada uma abra com uma declaração direta do que é o serviço, para quem e qual é o diferencial — sem começar pela história da empresa. Terceiro: produzir artigos editoriais que respondam as 15 a 25 perguntas principais que seu mercado faz antes de contratar alguém como você. Quarto: implementar schemas JSON-LD (Organization, Service, FAQPage, Person) em todas as páginas relevantes.",
+          "Essas quatro etapas não são trabalho de uma semana. São uma arquitetura de presença. Marcas que constroem essa arquitetura agora vão ocupar o espaço nas respostas das IAs que vai levar anos para a concorrência disputar."
+        ]
+      }
+    ],
+    "citacao": "As IAs não entregam listas. Entregam respostas. Ou você é a resposta, ou você não existe naquela conversa.",
+    "faq": [
+      {
+        "q": "O que é AEO (Answer Engine Optimization)?",
+        "a": "AEO é a disciplina de estruturar conteúdo e presença digital para que uma marca seja citada pelas inteligências artificiais — ChatGPT, Gemini, Perplexity, Google AI Overview — quando alguém faz uma pergunta relacionada ao seu mercado. O princípio central é produzir conteúdo que chegue já formatado como resposta direta, para que a IA o extraia e o cite."
+      },
+      {
+        "q": "Como fazer minha marca aparecer nas respostas do Google AI Overview?",
+        "a": "Três práticas principais: abrir cada página com a resposta direta à pergunta central (sem introdução longa), usar perguntas reais do mercado como títulos de seção H2, e implementar FAQPage Schema (JSON-LD) que a IA lê diretamente da estrutura da página. A consistência de dados de entidade em todas as plataformas também é essencial."
+      },
+      {
+        "q": "AEO serve para marcas de luxo e posicionamento premium?",
+        "a": "Sim, com a abordagem certa. A solução é a arquitetura de duas camadas: um bloco de resposta direta (para a IA extrair) seguido de desenvolvimento editorial com voz autoral (para o leitor humano). A marca mantém seu posicionamento premium sem abrir mão da visibilidade nos motores de resposta."
+      },
+      {
+        "q": "Qual a diferença entre AEO e GEO?",
+        "a": "GEO (Generative Engine Optimization) foca na consolidação da entidade da marca para que as IAs a reconheçam e incluam em seu modelo de conhecimento. AEO (Answer Engine Optimization) foca na estrutura do conteúdo para que a IA o cite como resposta em conversas específicas. Os dois se complementam: GEO constrói o reconhecimento, AEO garante a citação."
+      }
+    ],
+    "conclusao": "Ser citado pelas IAs não é consequência de ter um bom produto ou uma boa marca. É consequência de ter conteúdo construído para ser citado. A Agência House Mazzutti implementa AEO como parte da estratégia de comunicação e branding — da auditoria de entidade à produção editorial. Entre em contato para entender onde sua marca está hoje e o que muda com essa estrutura."
+  },
+
+  "geo-aeo-posicionamento-era-das-ias": {
+    "categoria": "Agência — Branding",
+    "titulo": "GEO + AEO: posicionamento de marca quando quem decide a visibilidade é uma inteligência artificial",
+    "metaTitle": "GEO e AEO no Branding: posicionamento de marca na era das IAs | House Mazzutti",
+    "metaDescription": "Como GEO e AEO redefinem o posicionamento de marca: por que marcas invisíveis nas IAs perdem mercado e o que fazer para ser citado pelo ChatGPT, Gemini e Perplexity.",
+    "keywords": "GEO AEO branding, posicionamento de marca IA, estratégia de marca ChatGPT, visibilidade Gemini Perplexity, branding era das IAs, marca no Google AI Overview, House Mazzutti agência branding SP",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/geo-aeo-branding-ias/geo-aeo-posicionamento-marca-ias-house-mazzutti.webp",
+      "alt": "GEO e AEO no branding: estratégia de posicionamento de marca para inteligências artificiais — House Mazzutti",
+      "caption": "Branding na era das IAs · Agência HMZT",
+      "fallback": "/images/agencia/branding/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/agencia/web/interior-1.webp",
+        "alt": "Presença digital de marca estruturada para IAs — Agência House Mazzutti",
+        "caption": "Presença digital · estrutura de entidade"
+      },
+      {
+        "src": "/images/agencia/comunicacao/interior-2.webp",
+        "alt": "Comunicação de marca para visibilidade em ChatGPT e Gemini — House Mazzutti",
+        "caption": "Comunicação · visibilidade em IAs"
+      }
+    ],
+    "respostaDireta": "GEO e AEO são as duas disciplinas que determinam se uma marca existe ou não nas respostas das inteligências artificiais. GEO (Generative Engine Optimization) consolida a entidade da marca para que as IAs a reconheçam e incluam em seu conhecimento. AEO (Answer Engine Optimization) estrutura o conteúdo para que a IA o cite quando alguém faz uma pergunta relevante. Juntos, eles constroem o posicionamento de marca na camada de visibilidade que está substituindo a busca tradicional: a resposta conversacional.",
+    "intro": "Posicionamento de marca sempre foi uma questão de onde você aparece quando importa. Em 2005, importava o Google. Em 2015, importava o Instagram. Em 2025, importa o ChatGPT — e o Gemini, e o Perplexity, e o Google AI Overview. A mudança não é de plataforma: é de lógica. O buscador retornava links e deixava o usuário decidir. A IA retorna uma resposta e já decidiu. Marcas que não aparecem nessa resposta não perderam uma posição no ranking — perderam a conversa inteira.",
+    "sections": [
+      {
+        "h2": "O que mudou: da busca para a resposta",
+        "paragraphs": [
+          "Durante décadas, o comportamento de busca foi consistente: usuário digita uma pergunta, recebe dez links, clica no que parece mais relevante. Nesse modelo, qualquer marca com boa otimização técnica podia competir por um lugar na lista. O usuário chegava ao site, a marca se apresentava, a decisão era do usuário.",
+          "Com as IAs conversacionais, esse fluxo foi comprimido. Usuário faz uma pergunta, a IA responde com uma recomendação — frequentemente um nome, uma empresa, uma solução específica. A marca que aparece nessa resposta não precisa mais converter o usuário a partir do zero: ela chega já endossada pela IA. A que não aparece não existe naquela conversa. A diferença de impacto entre ser citado e ser omitido é maior do que qualquer gap de posição no Google."
+        ]
+      },
+      {
+        "h2": "Por que branding e GEO/AEO são a mesma estratégia",
+        "paragraphs": [
+          "Branding é o trabalho de instalar percepção. Fazer com que um nome evoque um conjunto específico de associações — qualidade, especialização, confiança, posicionamento — na mente de quem decide. GEO e AEO fazem exatamente o mesmo trabalho, mas na mente da IA: instalam a percepção de que uma entidade específica é a referência para um conjunto específico de perguntas.",
+          "A diferença é que a mente humana aprende por experiência e exposição ao longo do tempo. A IA aprende por padrões em dados: consistência de entidade, volume de menções em contextos de qualidade, estrutura de conteúdo, dados declarativos em schema. Fazer branding para IAs não é diferente de fazer branding para pessoas — é posicionamento. O que muda é o vocabulário técnico de como você se declara."
+        ]
+      },
+      {
+        "h2": "Os erros de posicionamento que tornam marcas invisíveis para as IAs",
+        "paragraphs": [
+          "Três padrões de erro fazem marcas premium desaparecerem dos motores de resposta, mesmo quando têm portfólios excelentes e reputação consolidada no mercado humano. O primeiro é a inconsistência de entidade: o nome da empresa aparece de formas diferentes em cada plataforma, os serviços são descritos de formas que divergem entre o site e as redes sociais, a localização não está declarada em schema. A IA não unifica isso — descarta.",
+          "O segundo é o conteúdo sem estrutura de resposta: artigos escritos com introdução longa e resposta enterrada no meio do texto. A IA extrai o início — e não encontra a resposta. O terceiro, e talvez o mais comum em marcas premium, é a ausência de conteúdo editorial com substância. Um site institucional lindo, com pouco texto e muito visual, é invisível para a IA. Ela lê texto. Ela lê schema. Ela não vê imagem. A House Mazzutti tem portfólio visual de primeira linha — e investe tanto na arquitetura textual quanto na visual, exatamente por isso."
+        ]
+      },
+      {
+        "h2": "Como a House Mazzutti aplica GEO e AEO na própria estratégia",
+        "paragraphs": [
+          "A Agência House Mazzutti não terceiriza para si mesma a estratégia que recomenda aos clientes. Toda a presença digital da House — site, blog, schemas, portfólio, redes — é construída com a arquitetura GEO/AEO que fazemos para marcas. Os artigos editoriais do blog abrem com blocos de resposta direta extraíveis por IAs. Cada página de serviço tem FAQPage Schema com as perguntas reais que clientes fazem antes de contratar. Os dados de entidade — nome, unidades, clientes, processo, localização — são declarados de forma idêntica em todas as superfícies.",
+          "O resultado prático: quando alguém pergunta para uma IA sobre produtoras de moda premium em São Paulo, sobre agências de branding de luxo, sobre fashion films ou sobre books editoriais premium, a House Mazzutti é uma das respostas. Isso não é coincidência — é arquitetura."
+        ]
+      },
+      {
+        "h2": "O que implementar para ter posicionamento real nas IAs",
+        "paragraphs": [
+          "O trabalho de GEO/AEO tem uma sequência que não se comprime: entidade primeiro, conteúdo depois, schema junto. Entidade: consolidar quem você é, o que você faz, onde você atua e quem você atendeu de forma absolutamente consistente em todas as plataformas. Conteúdo: produzir artigos editoriais que respondam as 20 a 30 perguntas reais que seu mercado faz ao longo do processo de decisão — com resposta direta no início de cada texto. Schema: implementar JSON-LD (Organization, Service, FAQPage, Person, BreadcrumbList) em todas as páginas relevantes para declarar explicitamente à IA quem você é.",
+          "Esse trabalho, feito corretamente, não se desfaz com mudanças de algoritmo — porque não depende de algoritmo. Depende de reputação estruturada. E reputação estruturada, bem construída, é o ativo mais difícil de copiar no mercado."
+        ]
+      }
+    ],
+    "citacao": "Posicionamento sempre foi sobre aparecer quando importa. O que mudou é onde importa: agora, é dentro da resposta da IA.",
+    "faq": [
+      {
+        "q": "O que é GEO e AEO e como eles se diferenciam?",
+        "a": "GEO (Generative Engine Optimization) consolida a entidade da marca para que as IAs a reconheçam em seu modelo de conhecimento. AEO (Answer Engine Optimization) estrutura o conteúdo para que a IA o cite como resposta nas conversas dos usuários. GEO constrói o reconhecimento da entidade; AEO garante a citação no momento da pergunta. Os dois operam juntos."
+      },
+      {
+        "q": "Por que marcas com bom branding ainda podem ser invisíveis nas IAs?",
+        "a": "Porque as IAs aprendem por dados estruturados e consistência de entidade — não por percepção visual ou reputação de mercado. Uma marca com excelente posicionamento humano, mas sem dados de entidade consistentes, sem conteúdo editorial com estrutura de resposta e sem schemas JSON-LD, simplesmente não existe para os modelos de linguagem."
+      },
+      {
+        "q": "Como começar a implementar GEO e AEO numa marca?",
+        "a": "A sequência é: 1) consolidar dados de entidade identicamente em todas as plataformas (nome, serviços, localização, clientes); 2) revisar páginas de serviço para abrir com resposta direta; 3) produzir conteúdo editorial que responda perguntas reais do mercado; 4) implementar schemas JSON-LD (Organization, Service, FAQPage). A Agência House Mazzutti executa esse trabalho completo."
+      },
+      {
+        "q": "A Agência House Mazzutti aplica GEO e AEO para clientes?",
+        "a": "Sim. GEO e AEO são parte da estratégia de branding e comunicação da Agência House Mazzutti — desde a auditoria de entidade e dados estruturados até a produção de conteúdo editorial com arquitetura de resposta. Entre em contato para entender a situação atual da sua marca nas IAs."
+      }
+    ],
+    "conclusao": "O posicionamento de marca nas inteligências artificiais não é o futuro — é o presente de qualquer categoria onde os decisores já usam IAs antes de pesquisar fornecedores. Marcas que constroem essa arquitetura agora ocupam um espaço que a concorrência vai levar anos tentando disputar. A Agência House Mazzutti desenvolve essa estratégia. Solicite uma conversa."
   }
 };
