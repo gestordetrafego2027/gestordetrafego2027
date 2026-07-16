@@ -30,6 +30,9 @@ type ServicePackage = {
 }
 
 export const revalidate = 60
+// Next.js 15: fetch padrão é no-store. force-cache faz todos os fetches
+// do segmento usarem cache — revalidate=60 controla o intervalo de ISR.
+export const fetchCache = 'force-cache'
 
 type Props = { params: Promise<{ slug: string; locale: string }> }
 
