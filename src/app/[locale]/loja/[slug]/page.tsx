@@ -36,6 +36,19 @@ export const fetchCache = 'force-cache'
 
 type Props = { params: Promise<{ slug: string; locale: string }> }
 
+// Pré-gera as combinações locale×slug em build time → activa ISR real no Next.js 15.
+// Sem isto o Next.js trata a rota como SSR puro (no-store) mesmo com revalidate=60.
+export async function generateStaticParams() {
+  if (!featureFlags.isStoreEnabled()) return []
+  const { data: products } = await supabasePublic
+    .from('store_products')
+    .select('slug')
+    .eq('active', true)
+  if (!products?.length) return []
+  const locales = ['pt', 'en', 'es']
+  return locales.flatMap((locale) => products.map((p) => ({ locale, slug: p.slug })))
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!featureFlags.isStoreEnabled()) return {}
   const { slug } = await params
