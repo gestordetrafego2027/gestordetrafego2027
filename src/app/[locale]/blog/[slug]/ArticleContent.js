@@ -55,7 +55,7 @@ export default function ArticleContent({ slug }) {
                 .hairline-all { border: 0.5px solid #e0e0e0; }
                 .fine-line { border-bottom: 0.5px solid #f0f0f0; }
                 .article-h2 {
-                    font-family: 'Newsreader', serif;
+                    font-family: 'RocGrotesk', sans-serif;
                     font-style: italic;
                     font-size: 1.75rem;
                     line-height: 1.25;

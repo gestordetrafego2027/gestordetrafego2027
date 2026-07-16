@@ -101,19 +101,19 @@ export default function ContatoPage() {
                         href="https://maps.google.com/maps?q=Rua+General+Chagas+Santos,+1058+Bosque+da+Sa%C3%BAde+S%C3%A3o+Paulo"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="absolute bottom-3 right-3 font-['Raleway'] uppercase tracking-[0.15em] text-[9px] bg-white/90 text-neutral-700 px-3 py-2 hover:bg-white transition-colors"
+                        className="absolute bottom-3 right-3 font-label uppercase tracking-[0.15em] text-[9px] bg-white/90 text-neutral-700 px-3 py-2 hover:bg-white transition-colors"
                     >
                         Ver no Google Maps ↗
                     </a>
                 </div>
                 {/* Col 2: Info */}
                 <div className="w-full md:w-[40%] bg-white p-12 md:p-24 flex flex-col justify-center pt-12 md:pt-0 pb-0 px-0">
-                    <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-400 mb-2">{t('location_label')}</p>
-                    <h2 className="font-['Newsreader'] text-4xl text-neutral-900 mb-6 font-medium">{t('location_title')}</h2>
+                    <p className="text-caption text-neutral-400 mb-2">{t('location_label')}</p>
+                    <h2 className="text-h2 text-neutral-900 mb-6">{t('location_title')}</h2>
                     <div className="h-[0.5px] bg-neutral-200 w-full mb-8"></div>
                     <div className="space-y-8 mb-12">
                         <div>
-                            <p className="font-['Inter'] font-light text-neutral-600 text-lg leading-relaxed">
+                            <p className="font-body font-light text-neutral-600 text-lg leading-relaxed">
                                 {nap.street}<br />
                                 {nap.neighborhood}, {nap.city} — {nap.region}<br />
                                 Brasil
@@ -126,18 +126,18 @@ export default function ContatoPage() {
                                 className="flex items-center gap-3 group text-left"
                             >
                                 <span className="material-symbols-outlined text-neutral-400 group-hover:text-black transition-colors">chat_bubble</span>
-                                <span className="font-['Inter'] text-zinc-400">{contact.phone}</span>
+                                <span className="font-body text-zinc-400">{contact.phone}</span>
                             </button>
                             <a className="flex items-center gap-3 group" href="mailto:contato@housemazzutti.com">
                                 <span className="material-symbols-outlined text-neutral-400 group-hover:text-black transition-colors">mail</span>
-                                <span className="font-['Inter'] text-zinc-400">contato@housemazzutti.com</span>
+                                <span className="font-body text-zinc-400">contato@housemazzutti.com</span>
                             </a>
                         </div>
                     </div>
                     <button
                         type="button"
                         onClick={() => trackAndOpenWhatsApp({ location: 'contato_schedule_cta', message: 'Olá, quero dar andamento na minha produção com a House Mazzutti.' })}
-                        className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-['Raleway'] uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center"
+                        className="inline-block border-[0.5px] border-neutral-900 px-8 py-4 font-label uppercase tracking-[0.1em] text-[12px] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 text-center"
                     >
                         {t('schedule_cta')}
                     </button>
@@ -148,9 +148,9 @@ export default function ContatoPage() {
             <section className="bg-[#0f0f0f] py-[60px] px-8 md:px-16 flex justify-center border-t-[0.5px] border-white/5">
                 <div className="max-w-[700px] w-full">
                     <div className="text-center mb-16">
-                        <p className="font-['Raleway'] uppercase tracking-[0.15em] text-[11px] text-neutral-500 mb-3">{t('form_label')}</p>
-                        <h3 className="font-['Newsreader'] text-white text-4xl md:text-5xl uppercase tracking-tight mb-4">{t('form_title')}</h3>
-                        <p className="font-['Newsreader'] italic text-white/70 text-lg">{t('form_tagline')}</p>
+                        <p className="font-label uppercase tracking-[0.15em] text-[11px] text-neutral-500 mb-3">{t('form_label')}</p>
+                        <h3 className="font-headline text-white text-4xl md:text-5xl uppercase tracking-tight mb-4">{t('form_title')}</h3>
+                        <p className="font-headline italic text-white/70 text-lg">{t('form_tagline')}</p>
                     </div>
                     <FormContatoGeral sourceUrl="/contato" />
                 </div>

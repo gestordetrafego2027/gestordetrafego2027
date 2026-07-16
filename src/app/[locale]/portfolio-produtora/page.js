@@ -9,9 +9,9 @@ export default async function PortfolioProdutoraPage() {
     return (
         <div className="bg-white text-on-surface selection:bg-black selection:text-white min-h-screen">
             <style dangerouslySetInnerHTML={{ __html: `
-                .font-newsreader { font-family: 'Newsreader', serif; font-style: italic; }
-                .font-raleway { font-family: 'Raleway', sans-serif; }
-                .font-manrope { font-family: 'Manrope', sans-serif; }
+                .font-newsreader { font-family: 'RocGrotesk', sans-serif; font-weight: 300; font-style: italic; }
+                .font-raleway { font-family: 'RocGrotesk', sans-serif; }
+                .font-manrope { font-family: 'RocGrotesk', sans-serif; }
                 .gallery-item {
                     min-height: 200px;
                     aspect-ratio: 1 / 1;

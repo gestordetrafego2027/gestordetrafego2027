@@ -375,7 +375,7 @@ export default function Header({ variant = 'dark' }) {
                     </div>
 
                     <div style={{marginBottom:'48px'}}>
-                      <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                      <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
                         color:'#555', marginBottom:'16px'}}>{t('localizacao')}</p>
                       <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'14px',
@@ -392,7 +392,7 @@ export default function Header({ variant = 'dark' }) {
                       background:'#222', marginBottom:'48px'}}/>
 
                     <div>
-                      <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                      <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'9px',
                         letterSpacing:'0.2em', textTransform:'uppercase',
                         color:'#555', marginBottom:'16px'}}>{t('follow')}</p>
                       <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
@@ -412,7 +412,7 @@ export default function Header({ variant = 'dark' }) {
                     </div>
                   </div>
 
-                  <p style={{fontFamily:'Raleway, sans-serif', fontSize:'9px',
+                  <p style={{fontFamily:'RocGrotesk, sans-serif', fontSize:'9px',
                     letterSpacing:'0.2em', textTransform:'uppercase',
                     color:'#333', margin:0}}>{t('footer_copy') || '© 2026 HOUSE MAZZUTTI'}</p>
                 </div>

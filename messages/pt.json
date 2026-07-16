@@ -27,27 +27,27 @@
   },
   "hero": {
     "slide0": {
-      "label": "HOUSE MAZZUTTI",
-      "titulo": "Leitura antes de execução. Sempre.",
-      "texto": "Uma casa criativa com quatro frentes — Produtora, Agência, Studio e Academy. Uma só conversa para projetos que precisam de direção antes de precisar de câmera.",
+      "label": "HOUSE MAZZUTTI — 10 ANOS",
+      "titulo": "10 anos trabalhando ao lado dos grandes lançamentos.",
+      "texto": "Uma década construindo marcas, campanhas e histórias que ficaram.",
       "cta": "Conheça a House"
     },
     "slide1": {
       "label": "STUDIO — HMZT",
-      "titulo": "Direção de imagem para quem cuida da própria presença.",
-      "texto": "Book, ensaio e cobertura com direção completa — para pessoas que sabem que imagem é parte do trabalho.",
+      "titulo": "Produção e direção de alto nível.",
+      "texto": "Foto, vídeo e direção de imagem pessoal em São Paulo.",
       "cta": "Entrar no Studio"
     },
     "slide2": {
       "label": "PRODUTORA — HMZT",
-      "titulo": "Para marcas que precisam mais do que imagens — precisam de escala.",
-      "texto": "Produção executiva completa para campanhas de moda, beleza e publicidade nacional.",
+      "titulo": "Da ideia à reprodução, um time completo ao seu lado.",
+      "texto": "Campanhas de moda, beleza e narrativas institucionais.",
       "cta": "Entrar na Produtora"
     },
     "slide3": {
       "label": "AGÊNCIA — HMZT",
-      "titulo": "Marca construída antes de ser comunicada.",
-      "texto": "Branding, identidade visual, web e comunicação integrados sob a mesma direção.",
+      "titulo": "Marcas que ocupam espaço.",
+      "texto": "Branding, rebranding e lançamentos com método autoral.",
       "cta": "Entrar na Agência"
     }
   },
@@ -56,7 +56,7 @@
     "see_portfolio": "Ver portfólio",
     "learn_more": "Saiba mais",
     "cta_tagline": "Menos tentativa. Mais direção.",
-    "cta_headline": "Se o seu projeto pede uma leitura antes de começar."
+    "cta_headline": "Se a sua marca pede um novo olhar."
   },
   "home": {
     "works_label": "Obras",
@@ -67,7 +67,7 @@
     "testimonials_label": "O QUE DIZEM",
     "testimonials_title": "Depoimentos",
     "studio_card_title": "HMZT | STUDIO",
-    "studio_card_subtitle": "Direção de imagem para quem leva a própria presença a sério.",
+    "studio_card_subtitle": "Foto, vídeo e direção de imagem pessoal.",
     "studio_card_items": [
       "Book profissional",
       "Ensaio pessoal",
@@ -75,7 +75,7 @@
       "Direção de imagem"
     ],
     "produtora_card_title": "HMZT | PRODUTORA",
-    "produtora_card_subtitle": "Produção executiva de alto padrão para campanhas nacionais.",
+    "produtora_card_subtitle": "Campanhas de moda, beleza e narrativas institucionais.",
     "produtora_card_items": [
       "Editorial de moda",
       "Campanha publicitária",
@@ -83,7 +83,7 @@
       "Produção executiva"
     ],
     "agencia_card_title": "HMZT | AGÊNCIA",
-    "agencia_card_subtitle": "Sua marca construída antes de ser comunicada.",
+    "agencia_card_subtitle": "Branding, campanhas e presença digital.",
     "agencia_card_items": [
       "Projeto de marca",
       "Campanhas",
@@ -265,8 +265,7 @@
       "Traduzimos marca e pessoa em imagem, com a mesma direção do início ao fim.",
       "Direção, criação e produção sob uma única casa. Uma só conversa, do começo ao fim — sem ruído entre etapas."
     ],
-    "cta_titulo": "Imagem é consequência. Posicionamento é decisão.",
-    "cta_sub": "Se o seu projeto pede uma leitura antes de começar — esse é o ponto de entrada.",
+    "cta_titulo": "Imagem é consequência. Posicionamento é direção.",
     "cta_btn": "Iniciar uma conversa",
     "unidades_label": "As unidades da casa",
     "unidades_titulo": "Quatro frentes. Uma só conversa.",
@@ -314,16 +313,16 @@
     "hero_label": "10 ANOS — STUDIO HMZT",
     "hero_slides": [
       {
-        "titulo": "Para quem quer se ver como sempre se sentiu.",
-        "texto": "Direção de imagem pessoal — com conceito, moodboard e presença em cada clique."
+        "titulo": "Para pessoas que sabem o que valem.",
+        "texto": "Um espaço para quem leva a própria imagem a sério."
       },
       {
-        "titulo": "Para quem leva a própria presença a sério.",
-        "texto": "Book, ensaio e cobertura com o olhar que o mercado precisa ver em você."
+        "titulo": "Para quem quer se ver diferente.",
+        "texto": "Cada sessão é um recomeço — com direção e resultado que fica."
       },
       {
-        "titulo": "Para talentos que merecem ser vistos da forma certa.",
-        "texto": "Leitura de perfil, direção no set e curadoria — do conceito ao frame que posiciona."
+        "titulo": "Para talentos que merecem ser vistos.",
+        "texto": "Portfólios, coberturas e ensaios que abrem portas."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -336,16 +335,16 @@
     "hero_label": "10 ANOS DE MARCA · 20 ANOS DE OFÍCIO — PRODUTORA HMZT",
     "hero_slides": [
       {
-        "titulo": "Produção executiva para quem não aceita menos do que o melhor.",
-        "texto": "Do briefing ao frame final — com o mesmo padrão que marcas nacionais reconhecem em set."
+        "titulo": "Para quem cria com intenção.",
+        "texto": "Produção audiovisual com propósito — do conceito ao frame final."
       },
       {
-        "titulo": "Para marcas que precisam mais do que imagens — precisam de escala.",
-        "texto": "Moda, beleza, publicidade e narrativa institucional com operação completa sob a mesma direção."
+        "titulo": "Para marcas com algo real a dizer.",
+        "texto": "Imagens que não apenas comunicam. Que conectam e ficam."
       },
       {
-        "titulo": "Editorial bem construído é infraestrutura de comunicação.",
-        "texto": "Um set. Ativos para todos os canais — lookbook, fashion film, campanha e conteúdo de marca."
+        "titulo": "Para quem crê no poder de uma história.",
+        "texto": "Câmera onde a narrativa pede — e saindo com algo que importa."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -355,7 +354,7 @@
     "structure_label": "Otimize os resultados da sua marca",
     "structure_titulo": "Produção executiva e casting artístico para publicidade e marketing de conteúdo.",
     "learn_more": "Saiba mais",
-    "cta_titulo": "Não é sobre aparecer mais. É sobre cada aparição valer.",
+    "cta_titulo": "Não é sobre aparecer mais. É sobre aparecer melhor.",
     "cta_btn": "Iniciar uma conversa",
     "form_title": "Iniciar projeto",
     "grid_label": "Portfólio Produtora",
@@ -780,8 +779,8 @@
         "texto": "Conectando marcas às pessoas que já estavam esperando por elas."
       },
       {
-        "titulo": "Para quem quer direção antes de investir em visibilidade.",
-        "texto": "Branding, web e comunicação integrados — sem mídia sem posicionamento."
+        "titulo": "Para marcas com razão de existir.",
+        "texto": "Não construímos vitrines. Construímos relações."
       }
     ],
     "hero_cta": "Iniciar projeto",
@@ -806,7 +805,7 @@
         "subtitulo": "Digital que funciona"
       }
     ],
-    "manifesto": "Antes de aparecer, posicione. Na HMZT Agência, construímos marcas que comunicam com clareza — do branding estratégico ao web development e à comunicação integrada. Marca antes de mídia, sempre.",
+    "manifesto": "Antes de aparecer, posicione. Na HMZT Agência, construímos marcas que comunicam com clareza — do branding estratégico ao desenvolvimento digital e à comunicação integrada para empresas que não querem ser mais uma opção no mercado.",
     "servicos_label": "O que fazemos",
     "servicos_titulo": "Branding, comunicação e desenvolvimento digital integrados sob a mesma direção.",
     "servicos": [
@@ -933,12 +932,12 @@
   },
   "studio_cobertura": {
     "hero_label": "COBERTURA EXTERNA · PROPOSTA SOB MEDIDA",
-    "hero_titulo": "Sua agenda, documentada com o nível que ela merece.",
-    "hero_subtexto": "Acompanhamento de imagem em tempo real — do hotel ao evento. Para quem vive em alta velocidade e quer guardar cada momento com a mesma qualidade do que vive.",
+    "hero_titulo": "Para quem vive e quer guardar.",
+    "hero_subtexto": "Acompanhamento de imagem em tempo real para quem tem uma agenda que vale ser documentada.",
     "hero_cta_btn": "QUERO SER ACOMPANHADA",
     "services_label": "COBERTURA EXTERNA",
-    "services_titulo": "Você vive. A House transforma em narrativa.",
-    "services_subtexto": "Beauty artist, foto, vídeo e direção — coordenados para que você não precise pensar em nada além da experiência.",
+    "services_titulo": "Não é cobertura. É produção de presença.",
+    "services_subtexto": "Cada momento da sua agenda, conduzido com intenção.",
     "servicos": [
       {
         "title": "Acompanhamento Real",
@@ -1051,8 +1050,8 @@
     "team_item_2_desc": "Referência visual alinhada ao seu objetivo.",
     "team_item_3_titulo": "Curadoria High-End",
     "team_item_3_desc": "Só as imagens que realmente posicionam.",
-    "quote_texto": "\"Sua imagem já comunica algo — mesmo quando não existe intenção.\"",
-    "quote_subtitulo": "A diferença está em decidir o que ela deve comunicar.",
+    "quote_texto": "\"Quem não se comunica em imagem e vídeo, fica de fora.\"",
+    "quote_subtitulo": "O mercado exige presença, fala e movimento.",
     "comparative_titulo": "O que muda ter um Book com direção.",
     "comparative_com_label": "COM DIREÇÃO (HOUSE)",
     "comparative_com_1_titulo": "Posicionamento de mercado",
@@ -1154,8 +1153,8 @@
     "servico_2_desc": "Pauta, produção e publicação com consistência editorial e estratégia.",
     "servico_3_title": "Social Media & Performance",
     "servico_3_desc": "Presença digital orientada a resultados e crescimento real de audiência.",
-    "servico_4_title": "Briefing de Produção",
-    "servico_4_desc": "Curadoria e direção de briefing visual — coordenamos a produção de imagem junto à Produtora HMZT.",
+    "servico_4_title": "Produção Visual",
+    "servico_4_desc": "Fotos e vídeos para campanhas com padrão de mercado premium.",
     "servico_5_title": "Mídia Paga",
     "servico_5_desc": "Gestão de tráfego pago com foco em conversão e ROI positivo.",
     "servico_6_title": "Efeito House",

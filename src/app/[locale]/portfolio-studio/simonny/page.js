@@ -90,9 +90,9 @@ export default function SimonnyPage() {
     return (
         <div className="bg-surface text-on-surface antialiased">
             <style dangerouslySetInnerHTML={{__html: `
-                body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
-                .font-newsreader { font-family: 'Newsreader', serif; }
-                .font-inter { font-family: 'Inter', sans-serif; }
+                body { font-family: 'RocGrotesk', sans-serif; background-color: #f9f9f9; }
+                .font-newsreader { font-family: 'RocGrotesk', sans-serif; font-weight: 300; }
+                .font-inter { font-family: 'RocGrotesk', sans-serif; font-weight: 400; }
                 .info-col-anim { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
                 .info-col-anim.visible { opacity: 1; transform: translateY(0); }
                 

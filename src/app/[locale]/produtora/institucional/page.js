@@ -25,9 +25,6 @@ export default function ProdutoraInstitucionalPage() {
 
     return (
         <div className="bg-surface text-on-surface font-body antialiased">
-            <title>House Mazzutti — PRODUTORA | Conteúdo Institucional</title>
-            <meta name="description" content="Produção audiovisual institucional para empresas e profissionais que buscam projetar autoridade, confiança e excelência. Proposta sob medida." />
-
             <style dangerouslySetInnerHTML={{ __html: `
                 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
                 .no-scrollbar::-webkit-scrollbar { display: none; }

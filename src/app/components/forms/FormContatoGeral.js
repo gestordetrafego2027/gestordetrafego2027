@@ -161,7 +161,7 @@ export default function FormContatoGeral({ sourceUrl = '/contato' }) {
         />
       </div>
       {error ? (
-        <p className="font-['Inter'] text-sm text-red-400" role="alert">
+        <p className="font-body text-sm text-red-400" role="alert">
           {error}
         </p>
       ) : null}
@@ -169,14 +169,14 @@ export default function FormContatoGeral({ sourceUrl = '/contato' }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full md:w-auto min-w-[280px] border-[0.5px] border-white px-10 py-5 font-['Raleway'] uppercase tracking-[0.2em] text-[12px] text-white hover:bg-white hover:text-black transition-all duration-300 ${
+          className={`w-full md:w-auto min-w-[280px] border-[0.5px] border-white px-10 py-5 font-label uppercase tracking-[0.2em] text-[12px] text-white hover:bg-white hover:text-black transition-all duration-300 ${
             isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
           }`}
         >
           {isSubmitting ? 'ENVIANDO...' : 'ENVIAR MENSAGEM'}
         </button>
         <div className="text-center">
-          <p className="font-['Raleway'] uppercase tracking-[0.3em] text-[9px] text-white/40">Discrição. Cuidado. Direção.</p>
+          <p className="font-label uppercase tracking-[0.3em] text-[9px] text-white/40">Discrição. Cuidado. Direção.</p>
         </div>
       </div>
     </form>

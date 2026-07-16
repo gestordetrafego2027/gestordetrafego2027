@@ -179,18 +179,18 @@ export default function BlogPage() {
         <div className="bg-white">
             <style dangerouslySetInnerHTML={{ __html: `
                 body {
-                    font-family: 'Inter', sans-serif;
+                    font-family: 'RocGrotesk', sans-serif;
                     background-color: #ffffff;
                     color: #000000;
                 }
                 
                 h1, .hero-title, .quote-text {
-                    font-family: 'Newsreader', serif;
+                    font-family: 'RocGrotesk', sans-serif;
                     font-style: italic;
                 }
 
                 .article-title {
-                    font-family: 'Newsreader', serif;
+                    font-family: 'RocGrotesk', sans-serif;
                     font-size: 1.6rem;
                     letter-spacing: 0.15em;
                     text-transform: uppercase;
@@ -198,14 +198,14 @@ export default function BlogPage() {
                 }
 
                 .category-label {
-                    font-family: 'Raleway', sans-serif;
+                    font-family: 'RocGrotesk', sans-serif;
                     text-transform: uppercase;
                     letter-spacing: 0.2em;
                     font-size: 0.7rem;
                 }
 
                 .label-text {
-                    font-family: 'Raleway', sans-serif;
+                    font-family: 'RocGrotesk', sans-serif;
                     text-transform: uppercase;
                     letter-spacing: 0.1em;
                     font-size: 0.75rem;
@@ -225,7 +225,7 @@ export default function BlogPage() {
                 .btn-outline {
                     border: 1px solid currentColor;
                     padding: 10px 28px;
-                    font-family: 'Raleway', sans-serif;
+                    font-family: 'RocGrotesk', sans-serif;
                     text-transform: uppercase;
                     font-size: 0.75rem;
                     letter-spacing: 0.1em;
@@ -323,7 +323,7 @@ export default function BlogPage() {
                         key={cat}
                         onClick={() => setActiveCategory(cat)}
                         style={{ 
-                            fontFamily: "'Raleway', sans-serif", 
+                            fontFamily: "'RocGrotesk', sans-serif", 
                             fontSize: '10px', 
                             letterSpacing: '0.2em',
                             textTransform: 'uppercase',
