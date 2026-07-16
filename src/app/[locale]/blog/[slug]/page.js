@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import ArticleContent from './ArticleContent';
 import { articles } from './articles';
 import { buildAlternates } from '@/lib/seo/metadata';
-import { blogPostingSchema, breadcrumbSchema } from '@/lib/seo/schemas';
+import { blogPostingSchema, breadcrumbSchema, howToEnsaioSchema, howToBookModeloSchema } from '@/lib/seo/schemas';
 import { brand } from '@/config/site';
 
 export function generateStaticParams() {
@@ -74,6 +74,12 @@ export default async function BlogSlugPage({ params }) {
           }
         : null;
 
+    const howToSchemas = {
+      'como-se-preparar-ensaio-fotografico': howToEnsaioSchema,
+      'quanto-custa-book-modelo-sao-paulo': howToBookModeloSchema,
+    };
+    const articleHowToSchema = howToSchemas[slug] ?? null;
+
     return (
         <>
             <script
@@ -90,6 +96,12 @@ export default async function BlogSlugPage({ params }) {
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(articleFaqSchema) }}
+                />
+            )}
+            {articleHowToSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(articleHowToSchema) }}
                 />
             )}
             <ArticleContent slug={slug} />

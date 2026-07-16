@@ -2205,5 +2205,273 @@ export const articles = {
       }
     ],
     "conclusao": "O posicionamento de marca nas inteligências artificiais não é o futuro — é o presente de qualquer categoria onde os decisores já usam IAs antes de pesquisar fornecedores. Marcas que constroem essa arquitetura agora ocupam um espaço que a concorrência vai levar anos tentando disputar. A Agência House Mazzutti desenvolve essa estratégia. Solicite uma conversa."
+  },
+
+  "quanto-custa-book-modelo-sao-paulo": {
+    "categoria": "Studio — Book",
+    "titulo": "Quanto custa um book de modelo em São Paulo? O guia completo de investimento",
+    "metaTitle": "Quanto Custa um Book de Modelo em São Paulo? | House Mazzutti",
+    "metaDescription": "Quanto custa um book fotográfico profissional em São Paulo? Veja as faixas de investimento, o que está incluso e o que define o valor final de um book de modelo.",
+    "keywords": "quanto custa book de modelo, preço book fotográfico São Paulo, book profissional valor, investimento book modelo, book editorial SP, House Mazzutti Studio",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/quanto-custa-book/book-modelo-investimento-sao-paulo-house-mazzutti.webp",
+      "alt": "Book fotográfico profissional para modelo em São Paulo — investimento e direção de imagem House Mazzutti",
+      "caption": "Book editorial · Studio HMZT São Paulo"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/quanto-custa-book/book-editorial-direcao-imagem-sao-paulo-house-mazzutti.webp",
+        "alt": "Sessão de book com direção criativa no Studio HMZT — retrato editorial de modelo profissional",
+        "caption": "Direção de imagem · sessão editorial"
+      },
+      {
+        "src": "/images/blog/quanto-custa-book/book-fotografico-resultado-premium-house-mazzutti.webp",
+        "alt": "Resultado final de book fotográfico profissional com direção criativa House Mazzutti São Paulo",
+        "caption": "Entrega editorial · acabamento fine art"
+      }
+    ],
+    "respostaDireta": "Um book de modelo profissional em São Paulo custa entre R$ 1.200 e R$ 6.000+, dependendo do escopo: tempo de sessão, número de looks, locação, inclusão de vídeo e nível de direção criativa. No Studio da House Mazzutti, o valor é definido após briefing — porque book não é produto de prateleira, é instrumento de posicionamento. O que mais define o preço não é a câmera: é a profundidade da direção.",
+    "intro": "A primeira pergunta de quem quer fazer um book raramente é a mais importante. \"Quanto custa?\" é a pergunta certa — mas a resposta que realmente importa não é um número isolado. É entender o que está sendo comprado. Porque um book pode custar R$ 300 e ser um conjunto de fotos. Pode custar R$ 3.000 e ser um instrumento de mercado. A diferença entre esses dois não está no preço — está no que acontece dentro da sessão.",
+    "sections": [
+      {
+        "h2": "O que determina o preço de um book em São Paulo",
+        "paragraphs": [
+          "Quatro variáveis definem o investimento em um book fotográfico profissional: o tempo de sessão (meia sessão ou sessão completa), o número de looks e locações previstas, a inclusão ou não de vídeo, e o nível de direção criativa envolvida. É a combinação dessas variáveis — não cada uma isolada — que define o valor final.",
+          "Uma sessão básica com fotógrafo, sem direção editorial, pode custar entre R$ 300 e R$ 800. Um book com direção de imagem, briefing estratégico, múltiplos looks e entrega profissional começa a partir de R$ 1.200 e pode ultrapassar R$ 6.000 em escopos mais amplos. A diferença de preço é real — a diferença de resultado, ainda maior."
+        ]
+      },
+      {
+        "h2": "As faixas de investimento e o que cada uma entrega",
+        "paragraphs": [
+          "Faixa básica (R$ 300 a R$ 1.000): sessão com fotógrafo, sem briefing estratégico, sem direção de imagem estruturada. Resultado: fotos de qualidade técnica variável, sem narrativa editorial, sem posicionamento. Adequado para registros pontuais — não para book de agência ou casting.",
+          "Faixa intermediária (R$ 1.200 a R$ 3.000): sessão com direção de imagem, briefing de perfil, 2 a 3 looks, locação planejada. Entrega editorial com curadoria e edição profissional. Indicado para modelos em início ou reposicionamento de carreira.",
+          "Faixa premium (R$ 3.000 a R$ 6.000+): book completo com briefing estratégico de marca pessoal, moodboard, múltiplos looks e locações, produção integrada, inclusão de vídeo e entrega fine art. Para modelos e talentos que querem material de alto padrão editorial — o tipo de book que circula entre agências de alto escalão."
+        ]
+      },
+      {
+        "h2": "Por que o mercado de São Paulo exige mais do book",
+        "paragraphs": [
+          "São Paulo concentra o maior polo criativo do Brasil. Segundo o Mapeamento da Indústria Criativa da Firjan, a capital paulista responde por 5,3% do PIB criativo nacional — o que significa mais agências, mais marcas e mais concorrência pelo mesmo casting. Nesse cenário, um book fraco não é apenas insuficiente: é um argumento contra a contratação.",
+          "Diretores de casting em São Paulo recebem dezenas de books por semana. Decidem em segundos. O material que não comunica versatilidade editorial e presença comercial imediatamente é arquivado. Investir em um book que não performa nesse nível não é economizar — é pagar para ser descartado mais rápido."
+        ]
+      },
+      {
+        "h2": "Direção de imagem: onde o preço se converte em retorno",
+        "paragraphs": [
+          "A diferença entre um book de R$ 500 e um de R$ 3.000 não está na câmera. Está na direção. Direção é o que decide qual percepção precisa ser instalada em quem vai ler o material — e como cada imagem, locação, look e postura contribui para isso.",
+          "No Studio da House Mazzutti, o book começa com um briefing de marca pessoal: quem é o talento, em que mercado quer atuar, que tipo de casting ou marca quer atrair. A câmera entra depois disso — executando o que a estratégia já definiu. É essa sequência que transforma um gasto em investimento."
+        ]
+      },
+      {
+        "h2": "O verdadeiro custo de adiar o book",
+        "paragraphs": [
+          "Cada mês com um book fraco é um mês em que o mercado forma a percepção errada. Um modelo com imagem abaixo do nível da sua capacidade perde castings que nunca chegam a ser comunicados — porque o material não gerou a pergunta certa nos lugares certos.",
+          "O book não é um gasto pontual. É o ativo que trabalha por você em todos os castings e reuniões onde você não está presente. O retorno não é calculado por sessão — é calculado por temporada, pelos convites que o material provoca ao longo do tempo."
+        ]
+      }
+    ],
+    "citacao": "Um book não serve para mostrar que você é bonito. Serve para mostrar que o mercado pode confiar em você antes de te conhecer.",
+    "faq": [
+      {
+        "q": "Quanto custa um book de modelo profissional em São Paulo?",
+        "a": "O investimento varia entre R$ 1.200 e R$ 6.000+, conforme o escopo: tempo de sessão, número de looks, locações, inclusão de vídeo e nível de direção criativa. No Studio da House Mazzutti, o valor é definido após um briefing — porque o que determina o preço é o que a sua carreira precisa, não um pacote genérico."
+      },
+      {
+        "q": "O que está incluso em um book profissional no Studio HMZT?",
+        "a": "Briefing estratégico de marca pessoal, moodboard de conceito, direção de imagem durante toda a sessão, curadoria das melhores imagens, edição e finalização profissional, entrega em alta resolução. Escopos mais amplos incluem também locação planejada, vídeo e entrega fine art."
+      },
+      {
+        "q": "Qual a diferença entre uma sessão de fotos e um book com direção de imagem?",
+        "a": "Uma sessão captura. Um book com direção constrói. A direção de imagem define qual percepção precisa ser instalada em quem lê o material — e executa isso em cada look, postura, enquadramento e locação. É o que transforma fotos em instrumento de posicionamento de mercado."
+      },
+      {
+        "q": "Vale a pena investir mais em um book com direção editorial?",
+        "a": "Sim — se o objetivo é mercado. Um book fraco gera descarte silencioso em castings. Um book com direção editorial gera convites. O retorno não é calculado por sessão: é calculado pela temporada inteira de oportunidades que o material provoca ao circular pelos lugares certos."
+      },
+      {
+        "q": "Como agendar um book no Studio da House Mazzutti?",
+        "a": "Pelo formulário de contato ou WhatsApp. O processo começa com uma conversa de briefing — posicionamento, mercado-alvo, estilo e objetivos — antes de qualquer data de sessão ser definida. Entre em contato para dar o primeiro passo."
+      }
+    ],
+    "conclusao": "Book não é fotografia. É infraestrutura de carreira. O investimento certo não é o mais barato — é o que dispensa a necessidade de refazer em seis meses porque o material não gerou resultado. No Studio da House Mazzutti, cada book começa com a pergunta certa: o que esse material precisa comunicar para o mercado certo? O número vem depois — como consequência de uma resposta honesta."
+  },
+
+  "como-se-preparar-ensaio-fotografico": {
+    "categoria": "Studio — Ensaio",
+    "titulo": "Como se preparar para um ensaio fotográfico: o guia completo da sessão à entrega",
+    "metaTitle": "Como se Preparar para um Ensaio Fotográfico | House Mazzutti Studio",
+    "metaDescription": "Como se preparar para um ensaio fotográfico profissional: figurino, cabelo, pele, briefing e o que esperar no dia da sessão. Guia completo do Studio House Mazzutti.",
+    "keywords": "como se preparar ensaio fotográfico, preparação para sessão de fotos, o que levar ensaio, figurino ensaio fotográfico, dicas para ensaio fotográfico, House Mazzutti Studio São Paulo",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/preparar-ensaio/como-se-preparar-ensaio-fotografico-house-mazzutti.webp",
+      "alt": "Preparação para ensaio fotográfico profissional no Studio House Mazzutti São Paulo",
+      "caption": "Preparação e direção · Studio HMZT"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/preparar-ensaio/figurino-ensaio-pessoal-direcao-imagem-house-mazzutti.webp",
+        "alt": "Curadoria de figurino para ensaio pessoal com direção de imagem — Studio House Mazzutti",
+        "caption": "Curadoria de figurino · direção de looks"
+      },
+      {
+        "src": "/images/blog/preparar-ensaio/resultado-ensaio-autoridade-house-mazzutti.webp",
+        "alt": "Resultado de ensaio fotográfico de autoridade com direção criativa House Mazzutti São Paulo",
+        "caption": "Resultado final · ensaio premium"
+      }
+    ],
+    "respostaDireta": "Para se preparar para um ensaio fotográfico profissional: defina o objetivo (autoridade, book, portfólio), faça o briefing com o fotógrafo, separe 2 a 4 looks com variação de estilo, cuide da pele nos dias anteriores, durma bem na véspera e chegue no horário. O preparo mais importante, porém, não é externo: é interno — confiar na direção. As melhores fotos surgem quando se para de pensar em posar.",
+    "intro": "Existe uma crença comum antes de qualquer ensaio fotográfico: a de que a preparação perfeita é sinônimo de resultado perfeito. Figurino impecável, maquiagem profissional, rotina de skincare rigorosa. Tudo isso contribui — mas nenhum detalhe externo substitui o elemento que realmente determina a qualidade de um ensaio: a disponibilidade para ser dirigido. A câmera captura o que você sente, não só o que você veste.",
+    "sections": [
+      {
+        "h2": "Antes da sessão: o briefing que define tudo",
+        "paragraphs": [
+          "O preparo mais estratégico de um ensaio acontece antes da sessão — na conversa de briefing com o fotógrafo. É nesse momento que se define o que o material precisa comunicar: para qual público, em quais plataformas as imagens vão aparecer e qual percepção precisa ser instalada em quem as vê.",
+          "Sem briefing, a sessão produz fotos bonitas. Com briefing, produz um sistema visual coerente com o seu posicionamento. A diferença é sutil na câmera e enorme nos resultados — porque uma imagem que responde a um briefing claro chega ao lugar certo e provoca a resposta certa."
+        ]
+      },
+      {
+        "h2": "Figurino: como escolher e o que evitar",
+        "paragraphs": [
+          "A regra de ouro do figurino para ensaio: prefira peças que você já usou e se sente bem. Nada muito novo, muito apertado ou muito diferente do que você usa normalmente. A roupa comunica — mas não pode comunicar desconforto.",
+          "Separe de 2 a 4 looks com variação: ao menos um mais neutro (fundos lisos, cores sólidas), um mais profissional ou editorial e, se o briefing indicar, um casual com personalidade. Evite listras finas (criam efeito moiré na foto), logos grandes (distraem do rosto) e cores em neon puro (difíceis de equilibrar na edição). No Studio HMZT, o briefing inclui orientação de figurino com base no conceito visual definido."
+        ]
+      },
+      {
+        "h2": "Pele, cabelo e maquiagem: o que fazer nos dias anteriores",
+        "paragraphs": [
+          "A câmera amplifica tudo — hidratação, cansaço, brilho, textura. Nos 3 dias anteriores ao ensaio, hidrate bem a pele: use o hidratante de sempre, beba água e evite exposição solar intensa. Na véspera, nada de procedimentos novos — não é hora de experimentar peeling, depilação no rosto ou qualquer técnica que possa gerar vermelhidão.",
+          "Para o cabelo: hidratação 2 dias antes funciona bem. Cortes ou colorações devem ser feitos com no mínimo 1 semana de antecedência — cabelo recém-cortado ou colorido tem comportamento imprevisível. Maquiagem deve ser calibrada ao conceito: ensaio de autoridade pede maquiagem mais limpa e estruturada; book editorial pode abrir espaço para linguagem mais autoral."
+        ]
+      },
+      {
+        "h2": "Na véspera: o que fazer (e o que não fazer)",
+        "paragraphs": [
+          "A véspera de um ensaio tem uma variável que vale mais do que qualquer produto: o sono. Uma boa noite de descanso resolve inchaço, melhora a textura da pele, aclara o olhar e — o que mais importa — melhora a disponibilidade emocional para ser dirigido. Cansaço aparece na câmera antes de qualquer outra coisa.",
+          "Evite bebidas alcoólicas na véspera (aumentam inchaço e vermelhidão), alimentação muito salgada (mesmo efeito) e qualquer atividade que gere estresse intenso. O objetivo é chegar descansado, centrado e com energia para a sessão."
+        ]
+      },
+      {
+        "h2": "No dia: confiança é a técnica mais subestimada",
+        "paragraphs": [
+          "Chegar no horário é o mínimo — mas chegar no estado certo é o que define a qualidade da sessão. Um ensaio bem dirigido tem um ritmo: aquecimento, experimentação, consolidação. Interromper esse ritmo com atraso comprime exatamente a fase mais importante, que é o começo.",
+          "O erro mais comum durante a sessão é tentar controlar a pose. A pose controlada aparece na foto exatamente como controle: tensa, calculada, pouco natural. O que a câmera quer é presença — e presença vem de quem parou de pensar em como está ficando e começou a confiar na direção. Essa é a habilidade que o fotógrafo tem e que precisa de parceria para funcionar."
+        ]
+      }
+    ],
+    "citacao": "As melhores fotos não surgem quando você está tentando parecer bem. Surgem quando você para de tentar.",
+    "faq": [
+      {
+        "q": "Como se preparar para um ensaio fotográfico profissional?",
+        "a": "Faça o briefing com o fotógrafo antes da sessão, separe 2 a 4 looks com variação de estilo, cuide da pele com hidratação nos dias anteriores, faça hidratação de cabelo 2 dias antes, durma bem na véspera e chegue no horário. O preparo mais importante é confiar na direção — as melhores fotos surgem de disponibilidade, não de controle."
+      },
+      {
+        "q": "Quantos looks devo levar para um ensaio?",
+        "a": "De 2 a 4 looks, dependendo do escopo da sessão. Varie entre neutro (peças lisas, cores sólidas), profissional ou editorial, e casual com personalidade. Prefira peças que já usa e se sente confortável — roupa nova e desconfortável aparece na expressão."
+      },
+      {
+        "q": "O que não devo fazer antes de um ensaio fotográfico?",
+        "a": "Evite: procedimentos estéticos novos na véspera (depilação facial, peeling), cortes de cabelo ou coloração com menos de 1 semana de antecedência, bebidas alcoólicas e alimentação muito salgada (causam inchaço), e exposição solar intensa nos dias anteriores."
+      },
+      {
+        "q": "Preciso contratar maquiadora para o ensaio?",
+        "a": "Depende do briefing. Para ensaios de autoridade e books editoriais, maquiagem profissional é recomendada — ela é calibrada ao conceito e ao tipo de iluminação da sessão. No Studio HMZT, orientamos sobre a necessidade de maquiadora conforme o escopo de cada ensaio."
+      },
+      {
+        "q": "Como é o processo de ensaio no Studio da House Mazzutti?",
+        "a": "Começa com briefing de marca pessoal: quem você é, onde atua e que percepção quer gerar. A partir daí: moodboard de conceito, orientação de figurino, sessão com direção de imagem em tempo real, curadoria, edição e entrega em alta resolução. O prazo de entrega é de 7 a 15 dias úteis após a sessão."
+      }
+    ],
+    "conclusao": "Preparar-se para um ensaio fotográfico não é uma checklist de produtos e roupas. É um processo de alinhamento — entre o que você quer comunicar, o que o mercado precisa ler e o que a câmera consegue capturar quando há direção. Os detalhes externos importam. Mas o que determina a qualidade de um ensaio é a qualidade da presença que você traz para dentro do frame."
+  },
+
+  "o-que-e-assessoria-de-imprensa": {
+    "categoria": "Agência — RP",
+    "titulo": "O que é assessoria de imprensa e quando uma marca realmente precisa de uma",
+    "metaTitle": "O que é Assessoria de Imprensa e Quando Contratar | House Mazzutti",
+    "metaDescription": "O que é assessoria de imprensa, o que ela faz na prática, quando uma marca precisa contratar e qual a diferença entre RP e marketing de influência.",
+    "keywords": "o que é assessoria de imprensa, assessoria de imprensa para que serve, diferença RP e marketing influência, contratar assessoria de imprensa, agência de RP São Paulo, House Mazzutti",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/assessoria-imprensa/o-que-e-assessoria-de-imprensa-house-mazzutti.webp",
+      "alt": "Assessoria de imprensa e relações públicas para marcas — Agência House Mazzutti São Paulo",
+      "caption": "RP e presença editorial · Agência HMZT"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/assessoria-imprensa/assessoria-imprensa-marca-posicionamento-house-mazzutti.webp",
+        "alt": "Estratégia de assessoria de imprensa para posicionamento de marca — House Mazzutti Agência",
+        "caption": "Presença nos veículos certos · RP estratégica"
+      },
+      {
+        "src": "/images/blog/assessoria-imprensa/rp-reputacao-marca-sao-paulo-house-mazzutti.webp",
+        "alt": "Construção de reputação de marca por meio de assessoria de imprensa em São Paulo",
+        "caption": "Reputação como estratégia · Agência HMZT"
+      }
+    ],
+    "respostaDireta": "Assessoria de imprensa é o serviço que posiciona uma marca, empresa ou profissional nos meios de comunicação certos — jornalistas, editores, podcasters e veículos formadores de opinião — de forma editorial, não publicitária. Diferente do anúncio, a menção de imprensa tem autoridade: alguém de fora escolheu falar sobre você. Uma marca precisa de assessoria quando quer construir autoridade, crescer por presença orgânica e ser lembrada como referência — não apenas encontrada por quem já a busca.",
+    "intro": "Existe um tipo de reconhecimento que o anúncio não compra: aquele em que alguém de fora — um editor, um jornalista, um podcaster — escolhe falar sobre você sem ser pago para isso. Essa menção tem um peso que nenhum formato publicitário reproduz. Ela diz, em silêncio, que a marca merece atenção. Que é relevante o suficiente para ser citada. Que vale ser lida, ouvida, seguida. É exatamente isso que a assessoria de imprensa constrói — de forma consistente, ao longo do tempo.",
+    "sections": [
+      {
+        "h2": "O que é assessoria de imprensa na prática",
+        "paragraphs": [
+          "Assessoria de imprensa é o trabalho de construir e manter o relacionamento entre uma marca e os meios de comunicação. Na prática, isso inclui: desenvolver o material de imprensa da marca (releases, media kit, pitch editorial), identificar e cultivar relacionamentos com jornalistas, editores e criadores de conteúdo estratégicos, posicionar a marca como fonte de autoridade no seu segmento e monitorar as oportunidades de aparição nos veículos certos.",
+          "O resultado não é um anúncio: é uma menção editorial — com o peso de credibilidade que só a imprensa confere. Quando uma revista especializada, um podcast de nicho ou uma newsletter setorial cita sua marca como referência, esse clipping tem um impacto que nenhuma mídia paga replica."
+        ]
+      },
+      {
+        "h2": "A diferença entre assessoria de imprensa e marketing de influência",
+        "paragraphs": [
+          "As duas estratégias constroem presença — mas por mecanismos muito diferentes. Assessoria de imprensa trabalha com veículos jornalísticos e formadores de opinião: a menção tem autoridade editorial, é percebida como escolha do veículo, não do anunciante. O impacto é mais lento e mais duradouro.",
+          "Marketing de influência trabalha com criadores de conteúdo: o alcance é imediato, o engajamento é mensurável, mas o público sabe que há uma parceria comercial envolvida. A percepção é diferente — não melhor nem pior, apenas com uma lógica distinta. Marcas que integram os dois de forma estratégica têm presença tanto em alcance quanto em autoridade. As que escolhem um único caminho dependem demais de uma só frequência."
+        ]
+      },
+      {
+        "h2": "Quando uma marca precisa de assessoria de imprensa",
+        "paragraphs": [
+          "A pergunta certa não é \"quando contratar assessoria de imprensa\" — é \"quando a minha marca está pronta para ter presença editorial\". E a resposta tem sinais claros: quando a marca tem um posicionamento definido, quando há histórias reais para contar (lançamentos, cases, resultados, visão de mercado), quando o mercado-alvo consome imprensa setorial e quando o objetivo é construir reputação de longo prazo, não apenas gerar tráfego.",
+          "Assessoria de imprensa para uma marca sem posicionamento claro é dinheiro desperdiçado. O trabalho de RP amplifica o que já existe — se o que existe é frágil, a amplificação expõe a fragilidade. A sequência correta é: branding primeiro, narrativa depois, imprensa por fim."
+        ]
+      },
+      {
+        "h2": "O que define uma boa assessoria de imprensa",
+        "paragraphs": [
+          "Uma boa assessoria não entrega volume de clippings — entrega presença nos lugares que movem o ponteiro da marca. Isso exige três coisas: conhecer profundamente o mercado-alvo e onde seu público consome informação, ter relacionamentos reais com os jornalistas e editores certos, e dominar a arte do pitch editorial — apresentar a marca de um jeito que seja relevante para o veículo, não apenas para a própria marca.",
+          "O erro mais comum na contratação de assessoria é avaliar resultados por volume (quantas menções conseguimos?) em vez de qualidade (as menções certas estão chegando?). Uma aparição no veículo certo, lida pelo público certo, vale mais do que dez clippings irrelevantes."
+        ]
+      },
+      {
+        "h2": "RP e SEO: o ativo duplo que a maioria ignora",
+        "paragraphs": [
+          "Menções editoriais têm um benefício secundário que o mercado subestima: backlinks de autoridade. Quando um veículo de alta relevância cita sua marca e linka para o seu site, esse link carrega peso de domínio que nenhuma estratégia de link building artificial replica. RP bem feita é, portanto, SEO de alta qualidade como subproduto.",
+          "No contexto de GEO (Generative Engine Optimization), menções em veículos indexados também alimentam o conhecimento dos modelos de linguagem sobre quem você é — o que aumenta a probabilidade de ser citado por ChatGPT, Perplexity e Google AI Overview quando alguém faz uma pergunta relevante ao seu mercado."
+        ]
+      }
+    ],
+    "citacao": "Publicidade diz que você é ótimo. RP faz com que os outros digam isso por você. A diferença é toda.",
+    "faq": [
+      {
+        "q": "O que é assessoria de imprensa e o que ela faz?",
+        "a": "Assessoria de imprensa é o serviço que posiciona uma marca nos meios de comunicação certos — jornalistas, editores e formadores de opinião — de forma editorial. Na prática: desenvolve material de imprensa, constrói relacionamentos com veículos estratégicos, posiciona a marca como fonte de autoridade e monitora oportunidades de aparição nos lugares que movem o mercado-alvo."
+      },
+      {
+        "q": "Qual a diferença entre assessoria de imprensa e marketing de influência?",
+        "a": "RP constrói credibilidade por meio de veículos jornalísticos — a menção tem autoridade editorial e é percebida como escolha do veículo. Marketing de influência gera alcance e engajamento por meio de criadores de conteúdo, com declaração de parceria comercial. Ambos constroem presença, mas com mecanismos e públicos distintos."
+      },
+      {
+        "q": "Quando uma empresa deve contratar assessoria de imprensa?",
+        "a": "Quando tem posicionamento claro, histórias reais para contar, um mercado-alvo que consome imprensa setorial e objetivo de construir reputação de longo prazo. Assessoria de imprensa amplifica o que já existe — o branding precisa estar sólido antes de investir em RP."
+      },
+      {
+        "q": "Assessoria de imprensa ajuda no SEO?",
+        "a": "Sim, indiretamente. Menções editoriais em veículos de alta autoridade geram backlinks de qualidade que melhoram o domínio do site. No contexto de GEO, menções em fontes indexadas alimentam o conhecimento das IAs sobre a marca — aumentando a probabilidade de citação em respostas do ChatGPT, Perplexity e Google AI Overview."
+      },
+      {
+        "q": "A House Mazzutti faz assessoria de imprensa para marcas de moda e beleza em São Paulo?",
+        "a": "Sim. A Agência House Mazzutti tem experiência em RP para marcas de moda, beleza, lifestyle e negócios criativos. O trabalho integra posicionamento editorial, desenvolvimento de material de imprensa e relacionamento com veículos formadores de opinião no segmento."
+      }
+    ],
+    "conclusao": "Assessoria de imprensa não é sobre aparecer mais. É sobre aparecer onde importa, com o peso de quem foi escolhido — não comprado. Marcas que constroem presença editorial consistente ao longo do tempo acumulam um ativo que a mídia paga não replica: reputação com autoridade de terceiros. Esse é o tipo de credibilidade que encurta o ciclo de vendas, justifica preços premium e resiste a crises — porque não depende de orçamento de mídia para existir."
   }
 };
