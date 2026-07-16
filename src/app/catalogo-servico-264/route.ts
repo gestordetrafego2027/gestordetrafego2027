@@ -147,6 +147,24 @@ const HTML = `<!DOCTYPE html>
   .tour-price { font-size: 26px; font-weight: 900; letter-spacing: -0.02em; color: var(--gold); margin-top: 4px; }
   .tour-note { font-size: 8px; font-weight: 400; color: var(--muted); letter-spacing: 0.1em; }
 
+  /* ── EQUIPE ── */
+  .equipe-section { background: var(--dark); color: #fff; padding: 80px 64px; }
+  .equipe-intro { margin-bottom: 48px; }
+  .equipe-title { font-size: clamp(30px, 4vw, 48px); font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; line-height: 1; margin-bottom: 12px; }
+  .equipe-sub { font-size: 8px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 8px; }
+  .equipe-desc { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.38); max-width: 520px; line-height: 1.65; margin-top: 16px; }
+  .dept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.07); }
+  @media (max-width: 900px) { .dept-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .dept-grid { grid-template-columns: 1fr; } .equipe-section { padding: 48px 24px; } }
+  .dept { background: #1a1a17; padding: 28px; }
+  .dept-name { font-size: 8px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .role-table { width: 100%; border-collapse: collapse; }
+  .role-table tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .role-table tr:last-child { border-bottom: none; }
+  .role-table td { font-size: 11px; color: rgba(255,255,255,0.55); padding: 8px 0; line-height: 1.4; vertical-align: top; }
+  .role-table td.price { text-align: right; color: var(--gold); font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 16px; font-size: 12px; }
+  .equipe-note { font-size: 10px; font-weight: 400; color: rgba(255,255,255,0.2); margin-top: 24px; letter-spacing: 0.15em; text-transform: uppercase; }
+
   /* ── FOOTER ── */
   footer { background: var(--dark); color: rgba(255,255,255,0.25); padding: 40px 64px; display: flex; align-items: center; justify-content: space-between; }
   .footer-note { font-size: 8px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; }
@@ -163,6 +181,7 @@ const HTML = `<!DOCTYPE html>
       <a href="#academy">Academy</a>
       <a href="#agencia">Agência</a>
       <a href="#digitais">Digitais</a>
+      <a href="#equipe">Equipe</a>
     </nav>
   </div>
   <div class="hero-content">
@@ -176,6 +195,7 @@ const HTML = `<!DOCTYPE html>
       <a href="#agencia">Agência</a>
       <a href="#digitais">Produtos Digitais</a>
       <a href="#tour">Tour Canoinhas</a>
+      <a href="#equipe">Equipe à la Carte</a>
     </div>
   </div>
 </header>
@@ -501,6 +521,102 @@ const HTML = `<!DOCTYPE html>
   </section>
 
 </main>
+
+<!-- EQUIPE À LA CARTE -->
+<section id="equipe" class="equipe-section">
+  <div class="equipe-intro">
+    <p class="equipe-sub">Produção Executiva · Profissionais por Função</p>
+    <h2 class="equipe-title">Equipe à la Carte</h2>
+    <p class="equipe-desc">Monte sua equipe de produção por função e diária. Todos os profissionais são coordenados pela Produção Executiva da House Mazzutti — pré-produção, contratos, logística e entrega.</p>
+  </div>
+
+  <div class="dept-grid">
+
+    <div class="dept">
+      <p class="dept-name">Criação &amp; Direção</p>
+      <table class="role-table">
+        <tr><td>Diretor Criativo</td><td class="price">R$ 3.500/dia</td></tr>
+        <tr><td>Diretor de Arte</td><td class="price">R$ 2.200/dia</td></tr>
+        <tr><td>Roteirista</td><td class="price">R$ 1.800/dia</td></tr>
+        <tr><td>Produtor Criativo</td><td class="price">R$ 1.600/dia</td></tr>
+        <tr><td>Assistente de Arte</td><td class="price">R$ 800/dia</td></tr>
+      </table>
+    </div>
+
+    <div class="dept">
+      <p class="dept-name">Câmera &amp; Fotografia</p>
+      <table class="role-table">
+        <tr><td>Diretor de Fotografia</td><td class="price">R$ 3.000/dia</td></tr>
+        <tr><td>Operador de Câmera A</td><td class="price">R$ 1.800/dia</td></tr>
+        <tr><td>Operador de Câmera B</td><td class="price">R$ 1.200/dia</td></tr>
+        <tr><td>Fotógrafo</td><td class="price">R$ 2.200/dia</td></tr>
+        <tr><td>Ass. de Câmera / Foco</td><td class="price">R$ 700/dia</td></tr>
+        <tr><td>Drone / Piloto</td><td class="price">R$ 1.800/dia</td></tr>
+      </table>
+    </div>
+
+    <div class="dept">
+      <p class="dept-name">Pós-Produção</p>
+      <table class="role-table">
+        <tr><td>Editor de Vídeo Sênior</td><td class="price">R$ 2.500/dia</td></tr>
+        <tr><td>Editor de Vídeo Pleno</td><td class="price">R$ 1.400/dia</td></tr>
+        <tr><td>Motion Designer</td><td class="price">R$ 1.800/dia</td></tr>
+        <tr><td>Colorista</td><td class="price">R$ 2.000/dia</td></tr>
+        <tr><td>Sound Designer</td><td class="price">R$ 1.600/dia</td></tr>
+        <tr><td>Retocador Fotográfico</td><td class="price">R$ 1.200/dia</td></tr>
+        <tr><td>VFX Artist</td><td class="price">R$ 2.200/dia</td></tr>
+      </table>
+    </div>
+
+    <div class="dept">
+      <p class="dept-name">Styling &amp; Beleza</p>
+      <table class="role-table">
+        <tr><td>Stylist Sênior</td><td class="price">R$ 2.000/dia</td></tr>
+        <tr><td>Stylist Pleno</td><td class="price">R$ 1.200/dia</td></tr>
+        <tr><td>Ass. de Styling</td><td class="price">R$ 600/dia</td></tr>
+        <tr><td>Make Up Artist Sênior</td><td class="price">R$ 1.800/dia</td></tr>
+        <tr><td>Make Up Artist Pleno</td><td class="price">R$ 1.000/dia</td></tr>
+        <tr><td>Cabelereiro</td><td class="price">R$ 1.200/dia</td></tr>
+      </table>
+    </div>
+
+    <div class="dept">
+      <p class="dept-name">Talentos</p>
+      <table class="role-table">
+        <tr><td>Modelo Editorial (cachê base)</td><td class="price">R$ 1.500/dia</td></tr>
+        <tr><td>Modelo Comercial</td><td class="price">R$ 800/dia</td></tr>
+        <tr><td>Ator / Apresentador</td><td class="price">R$ 2.500/dia</td></tr>
+        <tr><td>Digital Influencer (micro)</td><td class="price">A partir R$ 3.000</td></tr>
+        <tr><td>Digital Influencer (macro)</td><td class="price">Sob consulta</td></tr>
+      </table>
+    </div>
+
+    <div class="dept">
+      <p class="dept-name">Set &amp; Cenário</p>
+      <table class="role-table">
+        <tr><td>Cenógrafo Sênior</td><td class="price">R$ 2.500/dia</td></tr>
+        <tr><td>Assistente de Cenografia</td><td class="price">R$ 800/dia</td></tr>
+        <tr><td>Set Dresser</td><td class="price">R$ 1.200/dia</td></tr>
+        <tr><td>Props Master</td><td class="price">R$ 1.000/dia</td></tr>
+      </table>
+    </div>
+
+    <div class="dept">
+      <p class="dept-name">Técnico &amp; Infraestrutura</p>
+      <table class="role-table">
+        <tr><td>Gaffer / Iluminação</td><td class="price">R$ 1.800/dia</td></tr>
+        <tr><td>Eletricista de Set</td><td class="price">R$ 900/dia</td></tr>
+        <tr><td>Técnico de Som</td><td class="price">R$ 1.500/dia</td></tr>
+        <tr><td>Operador de Teleprompter</td><td class="price">R$ 600/dia</td></tr>
+        <tr><td>Runner / Produção</td><td class="price">R$ 450/dia</td></tr>
+        <tr><td>Produtor Executivo</td><td class="price">R$ 3.000/dia</td></tr>
+      </table>
+    </div>
+
+  </div>
+
+  <p class="equipe-note">* Valores por diária de 8h em São Paulo · Deslocamentos externos sob consulta · Taxa de coordenação executiva não inclusa</p>
+</section>
 
 <footer>
   <a class="logo" href="https://housemazzutti.com" target="_blank">House <span>Mazzutti</span></a>
