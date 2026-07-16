@@ -49,23 +49,41 @@ export default async function BlogSlugPage({ params }) {
     const article = articles[slug];
     if (!article) notFound();
 
+    // Compute navigation server-side (not sent to client bundle)
+    const slugList = Object.keys(articles);
+    const currentIdx = slugList.indexOf(slug);
+    const prevSlug = currentIdx > 0 ? slugList[currentIdx - 1] : null;
+    const nextSlug = currentIdx < slugList.length - 1 ? slugList[currentIdx + 1] : null;
+    const prevArticle = prevSlug ? { titulo: articles[prevSlug].titulo } : null;
+    const nextArticle = nextSlug ? { titulo: articles[nextSlug].titulo } : null;
+
+    // Sidebar data computed server-side
+    const categoryCounts = Object.values(articles).reduce((acc, a) => {
+        const cat = a.categoria || 'Outros'; acc[cat] = (acc[cat] || 0) + 1; return acc;
+    }, {});
+    const topCounts = Object.entries(categoryCounts).reduce((acc, [cat, count]) => {
+        const top = cat.split(' — ')[0]; acc[top] = (acc[top] || 0) + count; return acc;
+    }, {});
+    const recentPosts = slugList
+        .filter(k => k !== slug)
+        .slice(0, 3)
+        .map(k => ({ slug: k, titulo: articles[k].titulo, data: articles[k].data, cover: articles[k].cover }));
+
     const crumbs = breadcrumbSchema([
         { name: 'House Mazzutti', url: `${brand.url}/pt/` },
         { name: 'Blog', url: `${brand.url}/pt/blog/` },
-        { name: article?.titulo ?? slug, url: `${brand.url}/pt/blog/${slug}/` },
+        { name: article.titulo, url: `${brand.url}/pt/blog/${slug}/` },
     ]);
 
-    const posting = article
-        ? blogPostingSchema({
-              slug,
-              titulo: article.titulo,
-              metaDescription: article.metaDescription,
-              data: article.data,
-              cover: article.cover,
-          })
-        : null;
+    const posting = blogPostingSchema({
+        slug,
+        titulo: article.titulo,
+        metaDescription: article.metaDescription,
+        data: article.data,
+        cover: article.cover,
+    });
 
-    const articleFaqSchema = article?.faq?.length > 0
+    const articleFaqSchema = article.faq?.length > 0
         ? {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
@@ -78,36 +96,31 @@ export default async function BlogSlugPage({ params }) {
         : null;
 
     const howToSchemas = {
-      'como-se-preparar-ensaio-fotografico': howToEnsaioSchema,
-      'quanto-custa-book-modelo-sao-paulo': howToBookModeloSchema,
+        'como-se-preparar-ensaio-fotografico': howToEnsaioSchema,
+        'quanto-custa-book-modelo-sao-paulo': howToBookModeloSchema,
     };
     const articleHowToSchema = howToSchemas[slug] ?? null;
 
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
-            />
-            {posting && (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(posting) }}
-                />
-            )}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(posting) }} />
             {articleFaqSchema && (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(articleFaqSchema) }}
-                />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleFaqSchema) }} />
             )}
             {articleHowToSchema && (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(articleHowToSchema) }}
-                />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleHowToSchema) }} />
             )}
-            <ArticleContent slug={slug} />
+            <ArticleContent
+                slug={slug}
+                article={article}
+                prevSlug={prevSlug}
+                nextSlug={nextSlug}
+                prevArticle={prevArticle}
+                nextArticle={nextArticle}
+                topCounts={topCounts}
+                recentPosts={recentPosts}
+            />
         </>
     );
 }

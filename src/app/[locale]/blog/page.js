@@ -235,8 +235,8 @@ export default function BlogPage() {
                         <span className="font-newsreader text-3xl uppercase tracking-widest font-medium">House Mazzutti</span>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-8 mb-12">
-                        <Link className="label-text hover:text-gray-400" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</Link>
-                        <Link className="label-text hover:text-gray-400" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">Linkedin</Link>
+                        <Link className="label-text hover:text-gray-400" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener noreferrer">Instagram</Link>
+                        <Link className="label-text hover:text-gray-400" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener noreferrer">Linkedin</Link>
                     </nav>
                     <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-16">
                         <Link className="label-text text-xs text-gray-400" href="/">{t('footer_home')}</Link>

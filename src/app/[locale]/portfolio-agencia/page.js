@@ -168,8 +168,8 @@ export default async function PortfolioAgenciaPage() {
                     </span>
                 </div>
                 <div className="flex gap-8 items-center">
-                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</Link>
-                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</Link>
+                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener noreferrer">INSTAGRAM</Link>
+                    <Link className="font-manrope text-[10px] uppercase tracking-wider text-[#333] hover:text-white transition-colors duration-300" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener noreferrer">LINKEDIN</Link>
                 </div>
                 <div className="font-manrope text-[10px] uppercase tracking-wider text-[#333]">{tFooter('copyright')}</div>
               <div className="mt-6"><SiteFooterLinks /></div>

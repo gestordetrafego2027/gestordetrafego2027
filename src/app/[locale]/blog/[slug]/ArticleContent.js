@@ -5,7 +5,6 @@ import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { Link } from '@/i18n/navigation';
 import NextImage from 'next/image';
 import Header from '@/app/components/Header';
-import { articles } from './articles';
 import { getRelatedLinks } from '@/lib/seo/clusters';
 
 // Image with automatic fallback (uses portfolio image if dedicated blog image is missing)
@@ -31,20 +30,6 @@ function ArticleImage({ data, className = '', sizes = '', priority = false }) {
     );
 }
 
-// Derive sidebar category counts dynamically
-const categoryCounts = Object.values(articles).reduce((acc, a) => {
-    const cat = a.categoria || 'Outros';
-    acc[cat] = (acc[cat] || 0) + 1;
-    return acc;
-}, {});
-
-// Group by top-level category (before "—")
-const topCounts = Object.entries(categoryCounts).reduce((acc, [cat, count]) => {
-    const top = cat.split(' — ')[0];
-    acc[top] = (acc[top] || 0) + count;
-    return acc;
-}, {});
-
 // Reading time estimator
 function readingTime(article) {
     const text = [
@@ -56,16 +41,8 @@ function readingTime(article) {
     return Math.max(1, Math.round(words / 200));
 }
 
-export default function ArticleContent({ slug }) {
-    const article = articles[slug] || articles['book-para-modelos-quem-e-escolhido'];
+export default function ArticleContent({ slug, article, prevSlug, nextSlug, prevArticle, nextArticle, topCounts, recentPosts }) {
     const [shareMsg, setShareMsg] = useState('');
-
-    const slugList = Object.keys(articles);
-    const currentIdx = slugList.indexOf(slug);
-    const prevSlug = currentIdx > 0 ? slugList[currentIdx - 1] : null;
-    const nextSlug = currentIdx >= 0 && currentIdx < slugList.length - 1 ? slugList[currentIdx + 1] : null;
-    const prevArticle = prevSlug ? articles[prevSlug] : null;
-    const nextArticle = nextSlug ? articles[nextSlug] : null;
     const minutes = readingTime(article);
 
     const handleShare = useCallback(async () => {
@@ -346,8 +323,8 @@ export default function ArticleContent({ slug }) {
                     <div className="mb-12">
                         <h4 className="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-zinc-900 mb-8 pt-8 hairline-t">EDITORIAIS RECENTES</h4>
                         <div className="space-y-8 pb-8 hairline-b">
-                            {Object.entries(articles).filter(([k]) => k !== slug).slice(0, 3).map(([key, post]) => (
-                                <Link key={key} href={`/blog/${key}`} className="flex gap-4 group cursor-pointer">
+                            {(recentPosts || []).map((post) => (
+                                <Link key={post.slug} href={`/blog/${post.slug}`} className="flex gap-4 group cursor-pointer">
                                     <div className="w-[70px] h-[70px] bg-zinc-100 flex-shrink-0 overflow-hidden">
                                         <ArticleImage
                                             data={post.cover}
@@ -396,8 +373,8 @@ export default function ArticleContent({ slug }) {
                 <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="text-xl font-headline italic text-zinc-900">HOUSE MAZZUTTI</div>
                     <div className="flex gap-12">
-                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-600 hover:text-white transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</a>
-                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-600 hover:text-white transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</a>
+                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-600 hover:text-zinc-900 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-600 hover:text-zinc-900 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
                     </div>
                     <div className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-500">
                         © {new Date().getFullYear()} HOUSE MAZZUTTI · São Paulo / Global

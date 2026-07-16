@@ -475,8 +475,8 @@ export default function AgenciaPage() {
                         </span>
                     </div>
                     <div className="flex space-x-10 mb-16">
-                        <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">Instagram</a>
-                        <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LinkedIn</a>
+                        <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-20">
                         <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/">Home</Link>
@@ -496,7 +496,7 @@ export default function AgenciaPage() {
                 <FormDrawer isOpen={formOpen} onClose={closeForm} title={t('form_title')} subtitle={t('form_subtitle')}>
                     <div className="p-8 text-on-surface">
                         <p className="text-body text-on-surface-variant mb-6">{t('form_contact_text')}</p>
-                        <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener" className="block w-full text-center px-8 py-4 bg-black text-white text-button hover:bg-zinc-800 transition-colors mb-4">
+                        <a href="https://instagram.com/housemazzutti" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-8 py-4 bg-black text-white text-button hover:bg-zinc-800 transition-colors mb-4">
                             Instagram @housemazzutti
                         </a>
                         <button

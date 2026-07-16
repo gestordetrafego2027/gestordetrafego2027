@@ -98,12 +98,24 @@ export default async function sitemap() {
     priority,
   }))
 
-  const blogPosts = Object.keys(blogArticles).map((slug) => ({
-    url: `${BASE}${L}/blog/${slug}/`,
-    lastModified: now,
-    changeFrequency: 'monthly',
-    priority: 0.6,
-  }))
+  const MONTH_MAP = {
+    Janeiro: '01', Fevereiro: '02', Março: '03', Abril: '04',
+    Maio: '05', Junho: '06', Julho: '07', Agosto: '08',
+    Setembro: '09', Outubro: '10', Novembro: '11', Dezembro: '12',
+  }
+  const blogPosts = Object.entries(blogArticles).map(([slug, a]) => {
+    let lastModified = now
+    if (a.data) {
+      const [mes, ano] = a.data.split(' ')
+      if (MONTH_MAP[mes] && ano) lastModified = new Date(`${ano}-${MONTH_MAP[mes]}-01`)
+    }
+    return {
+      url: `${BASE}${L}/blog/${slug}/`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    }
+  })
 
   const portfolioPages = ['studio', 'agencia', 'produtora'].flatMap((unit) =>
     listPortfolioSlugs(unit).map((slug) => ({
