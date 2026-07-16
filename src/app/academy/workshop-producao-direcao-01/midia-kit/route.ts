@@ -211,7 +211,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
     <span class="eyebrow">Media Kit · Inside Out Edit 2 · São Paulo · Set 2026</span>
     <h1>Inside<br/><em>Out</em><br/>Edit 2</h1>
     <div class="hero-cols">
-      <p class="hero-sub">Um evento de produção em São Paulo onde marcas de moda e beauty entram como parte do editorial — não como patrocinador de banner. Seu produto aparece dentro da imagem, com direção, com 15 creators selecionados.</p>
+      <p class="hero-sub">Um evento de produção em São Paulo onde marcas de moda e beauty entram como parte do editorial — não como patrocinador de banner. Seu produto aparece dentro da imagem, com direção, ao lado de 15 produtores do audiovisual selecionados por curadoria.</p>
       <div class="hero-meta">
         <div class="meta-row">
           <span class="meta-label">Data</span>
@@ -242,7 +242,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
 <div class="statement">
   <div class="wrap">
     <div class="statement-inner">
-      <p>O Inside Out é uma produção editorial real. Dois sets ao vivo — moda e beauty — com equipe técnica completa, direção criativa e 15 creators produzindo conteúdo de campanha. <strong>Marcas entram como parte da produção.</strong> O produto não está ao lado do conteúdo: ele está dentro.</p>
+      <p>O Inside Out é uma produção editorial real. Dois sets ao vivo — moda e beauty — com equipe técnica completa, direção criativa e 15 produtores do audiovisual selecionados por curadoria. <strong>Marcas entram como parte da produção.</strong> O produto não está ao lado do conteúdo: ele está dentro.</p>
     </div>
   </div>
 </div>
@@ -281,23 +281,23 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
         <span class="section-label">Editorial</span>
         <h2 class="h2">O que é produzido dentro do evento</h2>
       </div>
-      <p class="section-intro">Dois sets ao vivo com equipe técnica completa — direção, fotografia, vídeo, make e styling. A marca é integrada ao cenário, ao look ou ao produto em uso pelos creators. O resultado é conteúdo editorial assinado.</p>
+      <p class="section-intro">Dois sets ao vivo com equipe técnica completa — direção, fotografia, vídeo, make e styling. A marca é integrada ao cenário, ao look ou ao produto dentro da produção, ao lado de 15 produtores do audiovisual.</p>
     </div>
     <div class="sets-grid">
       <div class="set-card">
         <span class="set-card-label">Set 01 · Moda</span>
         <h3>Editorial de Moda</h3>
-        <p>Lookbook e campanha de moda com direção completa. Styling profissional, modelos e equipe técnica. Os creators produzem fotos e vídeos de campanha dentro do set — a marca aparece integrada ao cenário e ao look.</p>
+        <p>Lookbook e campanha de moda com direção completa. Styling profissional, modelos e equipe técnica. 15 produtores do audiovisual atuam no set — a marca aparece integrada ao cenário e ao look.</p>
       </div>
       <div class="set-card">
         <span class="set-card-label">Set 02 · Beauty</span>
         <h3>Editorial de Beauty</h3>
-        <p>Set de beauty com make artístico, iluminação editorial e direção criativa. Conteúdo para marcas de cosméticos, skincare e lifestyle. Os creators produzem reels, fotos e tutoriais com o produto em uso real.</p>
+        <p>Set de beauty com make artístico, iluminação editorial e direção criativa. Voltado para marcas de cosméticos, skincare e lifestyle. O produto é parte ativa da produção, com 15 produtores do audiovisual no set.</p>
       </div>
       <div class="set-card">
-        <span class="set-card-label">Entrega por creator</span>
-        <h3>O que cada creator produz</h3>
-        <p>No mínimo 1 foto editorial, 1 vídeo de campanha e conteúdo de bastidor. Todo o material é autoral — não é UGC genérico, é editorial com direção profissional que a marca pode usar nos próprios canais.</p>
+        <span class="set-card-label">Os produtores</span>
+        <h3>15 produtores do audiovisual</h3>
+        <p>Selecionados por curadoria — não é inscrição aberta. Todos têm produção ativa em moda, beauty ou lifestyle e atuam como fotógrafos, videomakers ou diretores de conteúdo. A marca entra na produção de quem já produz.</p>
       </div>
       <div class="set-card">
         <span class="set-card-label">Direção</span>
@@ -314,10 +314,10 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
     <section>
       <div class="section-head">
         <div>
-          <span class="section-label">Perfil dos creators</span>
-          <h2 class="h2">Quem produz o conteúdo</h2>
+          <span class="section-label">Os produtores</span>
+          <h2 class="h2">Quem está no set</h2>
         </div>
-        <p class="section-intro">Selecionados por curadoria — não é inscrição aberta. Todos têm produção ativa, audiência engajada e atuação em moda, beauty ou lifestyle. São creators que vendem e influenciam decisão de compra.</p>
+        <p class="section-intro">15 produtores do audiovisual selecionados por curadoria — não é inscrição aberta. Fotógrafos, videomakers e diretores de conteúdo com atuação ativa em moda, beauty e lifestyle.</p>
       </div>
       <div class="audience-grid">
         <div class="audience-card">
@@ -353,7 +353,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
         <span class="section-label">Benefícios</span>
         <h2 class="h2">O que a marca recebe</h2>
       </div>
-      <p class="section-intro">Presença editorial real — não patrocínio de logo. A marca sai do evento com conteúdo de campanha, banco de imagens e alcance orgânico através dos 15 creators.</p>
+      <p class="section-intro">Presença editorial real — não patrocínio de logo. A marca entra na produção com equipe técnica completa, direção criativa e 15 produtores do audiovisual no set.</p>
     </div>
     <div class="benefits-grid">
       <div class="benefit-item">
@@ -363,13 +363,13 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       </div>
       <div class="benefit-item">
         <span class="benefit-num">02</span>
-        <h4>Conteúdo para uso irrestrito</h4>
-        <p>Todo o conteúdo produzido pelos creators no set da marca pode ser usado pela própria marca em seus canais.</p>
+        <h4>Conteúdo gerado no set</h4>
+        <p>A produção acontece com equipe técnica da House Mazzutti. O material gerado durante o evento fica disponível para a marca conforme acordado.</p>
       </div>
       <div class="benefit-item">
         <span class="benefit-num">03</span>
-        <h4>Publicação orgânica pelos creators</h4>
-        <p>Cada creator publica nas suas redes com menção à marca — alcance real, sem formato de anúncio pago.</p>
+        <h4>Exposição orgânica</h4>
+        <p>A marca está presente em uma produção real ao lado de 15 produtores do audiovisual ativos no mercado de moda e beauty.</p>
       </div>
       <div class="benefit-item">
         <span class="benefit-num">04</span>
@@ -523,10 +523,9 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           <hr class="pkg-divider"/>
           <ul class="pkg-features">
             <li>Produto integrado no set de moda ou beauty</li>
-            <li>Fotos editoriais de campanha com todos os 15 creators</li>
+            <li>Produto integrado ao set ao lado de 15 produtores do audiovisual</li>
             <li><strong style="color:var(--ink);font-size:.78rem">Entrega:</strong> campanha com 30 fotos em alta resolução + 1 vídeo oficial de lançamento + 1 vídeo de bastidor</li>
-            <li>Banco de imagens em alta resolução para uso irrestrito</li>
-            <li>Publicação orgânica pelos creators com menção à marca</li>
+            <li>Banco de imagens em alta resolução</li>
             <li>Menção nas comunicações do evento</li>
             <li>1 acesso ao set nos dois dias</li>
           </ul>
@@ -540,10 +539,9 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           <hr class="pkg-divider"/>
           <ul class="pkg-features">
             <li>Produto integrado no set de moda ou beauty</li>
-            <li>Fotos editoriais de campanha com todos os 15 creators</li>
+            <li>Produto integrado ao set ao lado de 15 produtores do audiovisual</li>
             <li><strong style="color:var(--accent);font-size:.78rem">Entrega:</strong> campanha com 30 fotos em alta resolução + 3 vídeos oficiais de lançamento e pré-lançamento + 1 vídeo de bastidor + 1 short video por peça catalogada (máx. 10)</li>
-            <li>Banco completo de fotos e vídeos em alta para uso irrestrito</li>
-            <li>Publicação orgânica pelos creators com menção e tag</li>
+            <li>Banco completo de fotos e vídeos em alta resolução</li>
             <li>Presença destacada nas comunicações do evento</li>
             <li>2 acessos ao set nos dois dias</li>
           </ul>
