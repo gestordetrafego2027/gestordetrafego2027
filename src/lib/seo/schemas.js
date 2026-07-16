@@ -1060,7 +1060,7 @@ export const videoObjectBarbaraPorto = {
   embedUrl: 'https://youtube.com/shorts/YbQQLxWJf_s',
   uploadDate: '2025-01-01',
   publisher: {'@id': ORG_ID},
-  director: {'@id': `${SITE}/pt/angelo/#angelo`},
+  director: {'@id': `${SITE}/pt/sobre/#angelo`},
   inLanguage: 'pt-BR',
   keywords: 'fashion film, joias, Bárbara Porto, produtora de moda São Paulo, House Mazzutti',
 }
@@ -1076,7 +1076,7 @@ export const videoObjectJequiti = {
   embedUrl: 'https://youtube.com/shorts/K5hS892LVY0',
   uploadDate: '2025-01-01',
   publisher: {'@id': ORG_ID},
-  director: {'@id': `${SITE}/pt/angelo/#angelo`},
+  director: {'@id': `${SITE}/pt/sobre/#angelo`},
   inLanguage: 'pt-BR',
   keywords: 'campanha publicitária, Jequiti, produtora de publicidade São Paulo, House Mazzutti',
 }
@@ -1092,7 +1092,7 @@ export const videoObjectOceane = {
   embedUrl: 'https://youtube.com/shorts/JqCwqv7dn7c',
   uploadDate: '2025-01-01',
   publisher: {'@id': ORG_ID},
-  director: {'@id': `${SITE}/pt/angelo/#angelo`},
+  director: {'@id': `${SITE}/pt/sobre/#angelo`},
   inLanguage: 'pt-BR',
   keywords: 'fashion film, Océane, produtora de moda São Paulo, House Mazzutti',
 }
@@ -1113,7 +1113,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-10-01',
     inLanguage: 'pt-BR',
     keywords: 'fashion film, joias, Bárbara Porto, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'elyah': {
@@ -1126,7 +1126,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-11-01',
     inLanguage: 'pt-BR',
     keywords: 'fashion film, acessórios, Elyah, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'we-pink-01': {
@@ -1139,7 +1139,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-09-01',
     inLanguage: 'pt-BR',
     keywords: 'WePink, campanha beleza, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'we-pink-ze-felipe': {
@@ -1152,7 +1152,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-12-01',
     inLanguage: 'pt-BR',
     keywords: 'WePink, Zé Felipe, campanha beleza, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'natalia-beauty': {
@@ -1165,7 +1165,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-02-01',
     inLanguage: 'pt-BR',
     keywords: 'Natália Beauty, campanha beleza, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'jequiti-galisteu': {
@@ -1178,7 +1178,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-08-01',
     inLanguage: 'pt-BR',
     keywords: 'Jequiti, Adriane Galisteu, campanha publicitária, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'jequiti-ana-castela': {
@@ -1191,7 +1191,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-06-01',
     inLanguage: 'pt-BR',
     keywords: 'Jequiti, Ana Castela, campanha publicitária, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'jequiti-sense': {
@@ -1204,7 +1204,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-07-01',
     inLanguage: 'pt-BR',
     keywords: 'Jequiti Sense, campanha publicitária, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'oceane': {
@@ -1217,7 +1217,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-05-01',
     inLanguage: 'pt-BR',
     keywords: 'Océane, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'signus': {
@@ -1230,7 +1230,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-04-01',
     inLanguage: 'pt-BR',
     keywords: 'Signus, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'signus-fiamma': {
@@ -1243,7 +1243,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-03-01',
     inLanguage: 'pt-BR',
     keywords: 'Signus Fiamma, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'signus-jean-pierre': {
@@ -1256,7 +1256,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-03-01',
     inLanguage: 'pt-BR',
     keywords: 'Signus Jean Pierre, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'signus-lavorato': {
@@ -1269,7 +1269,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-02-01',
     inLanguage: 'pt-BR',
     keywords: 'Signus Lavorato, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'signus-versolato01': {
@@ -1282,7 +1282,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-01-01',
     inLanguage: 'pt-BR',
     keywords: 'Signus Versolato, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'signus-versolato02': {
@@ -1295,7 +1295,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-01-01',
     inLanguage: 'pt-BR',
     keywords: 'Signus Versolato, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'signus-vertz': {
@@ -1308,7 +1308,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2023-12-01',
     inLanguage: 'pt-BR',
     keywords: 'Signus Vertz, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'camila-scarpa': {
@@ -1321,7 +1321,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-01-01',
     inLanguage: 'pt-BR',
     keywords: 'Camila Scarpa, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'poema-paris': {
@@ -1334,7 +1334,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-10-01',
     inLanguage: 'pt-BR',
     keywords: 'Poéma Paris, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'pous': {
@@ -1347,7 +1347,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-09-01',
     inLanguage: 'pt-BR',
     keywords: 'Pous, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'unique-chic': {
@@ -1360,7 +1360,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-08-01',
     inLanguage: 'pt-BR',
     keywords: 'Unique Chic, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'beatco': {
@@ -1373,7 +1373,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-07-01',
     inLanguage: 'pt-BR',
     keywords: 'Beatco, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'beatco-2': {
@@ -1386,7 +1386,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-07-01',
     inLanguage: 'pt-BR',
     keywords: 'Beatco, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'idrissi': {
@@ -1399,7 +1399,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-03-01',
     inLanguage: 'pt-BR',
     keywords: 'Idrissi, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'monica-costa-jewerly': {
@@ -1412,7 +1412,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-02-01',
     inLanguage: 'pt-BR',
     keywords: 'Monica Costa Jewerly, joias, fashion film, produtora São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'festiva': {
@@ -1425,7 +1425,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-01-01',
     inLanguage: 'pt-BR',
     keywords: 'Festiva, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'alletto-still': {
@@ -1438,7 +1438,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-04-01',
     inLanguage: 'pt-BR',
     keywords: 'Alletto, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'splash-boutique': {
@@ -1451,7 +1451,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2024-11-01',
     inLanguage: 'pt-BR',
     keywords: 'Splash Boutique, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'toli': {
@@ -1464,7 +1464,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-05-01',
     inLanguage: 'pt-BR',
     keywords: 'Toli, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'tf': {
@@ -1477,7 +1477,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-04-01',
     inLanguage: 'pt-BR',
     keywords: 'TF, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
   'superbia': {
@@ -1490,7 +1490,7 @@ export const portfolioVideoSchemas = {
     uploadDate: '2025-03-01',
     inLanguage: 'pt-BR',
     keywords: 'Superbia, fashion film, produtora de moda São Paulo, House Mazzutti',
-    director: {'@id': `${SITE}/pt/angelo/#angelo`},
+    director: {'@id': `${SITE}/pt/sobre/#angelo`},
     publisher: {'@id': ORG_ID},
   },
 }
@@ -1718,7 +1718,7 @@ export const academyServiceSchema = {
     'Cursos, workshops e livros de branding, direção de imagem e fotografia de moda com a House Mazzutti em São Paulo.',
   url: `${SITE}/pt/academy/`,
   parentOrganization: {'@id': `${SITE}/#organization`},
-  founder: {'@id': `${SITE}/pt/angelo/#angelo`},
+  founder: {'@id': `${SITE}/pt/sobre/#angelo`},
   areaServed: {'@type': 'City', name: 'São Paulo'},
   knowsAbout: [
     'Fotografia de Moda',
@@ -1739,7 +1739,7 @@ export const academyCourseSchema = {
     'Imersão prática em fotografia de moda e direção de imagem com Angelo Mazzutti e Ita Mazzutti. Metodologia autoral da House Mazzutti, turmas limitadas em São Paulo.',
   url: `${SITE}/pt/academy/`,
   provider: {'@id': `${SITE}/pt/academy/#educationorg`},
-  instructor: {'@id': `${SITE}/pt/angelo/#angelo`},
+  instructor: {'@id': `${SITE}/pt/sobre/#angelo`},
   courseMode: 'onsite',
   inLanguage: 'pt-BR',
   offers: {
@@ -1830,17 +1830,15 @@ export function blogPostingSchema({slug, titulo, metaDescription, data, cover}) 
     ...(dateISO && {datePublished: dateISO, dateModified: dateISO}),
     author: {
       '@type': 'Person',
-      '@id': `${SITE}/pt/angelo/#angelo`,
+      '@id': `${SITE}/pt/sobre/#angelo`,
       name: leadership.angelo.name,
     },
     publisher: {'@id': ORG_ID},
-    ...(cover && {
-      image: {
-        '@type': 'ImageObject',
-        url: `${SITE}${cover.src}`,
-        description: cover.alt,
-      },
-    }),
+    image: {
+      '@type': 'ImageObject',
+      url: cover ? `${SITE}${cover.src}` : `${SITE}/images/og-default.webp`,
+      description: cover?.alt ?? titulo,
+    },
     inLanguage: 'pt-BR',
     mainEntityOfPage: url,
   }

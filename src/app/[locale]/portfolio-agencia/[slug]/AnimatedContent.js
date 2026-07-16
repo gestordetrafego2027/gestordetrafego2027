@@ -106,7 +106,7 @@ export default function AnimatedContent() {
                     <div className="lg:w-2/3">
                         <div className="images-grid">
                             <div className="relative overflow-hidden group">
-                                <img fetchpriority="high" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/1.webp"/>
+                                <img fetchPriority="high" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/1.webp"/>
                             </div>
                             <div className="relative overflow-hidden group">
                                 <img loading="lazy" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/2.webp"/>

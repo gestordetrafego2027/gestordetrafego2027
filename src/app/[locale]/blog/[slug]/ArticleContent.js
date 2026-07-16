@@ -9,7 +9,7 @@ import { articles } from './articles';
 import { getRelatedLinks } from '@/lib/seo/clusters';
 
 // Image with automatic fallback (uses portfolio image if dedicated blog image is missing)
-function ArticleImage({ data, className = '', sizes = '' }) {
+function ArticleImage({ data, className = '', sizes = '', priority = false }) {
     const [src, setSrc] = useState(data.src);
     const handleError = () => {
         if (data.fallback && src !== data.fallback) {
@@ -21,8 +21,9 @@ function ArticleImage({ data, className = '', sizes = '' }) {
             src={src}
             alt={data.alt}
             title={data.alt}
-            loading="lazy"
-            decoding="async"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : undefined}
+            decoding={priority ? 'sync' : 'async'}
             onError={handleError}
             className={className}
             sizes={sizes}
@@ -133,10 +134,11 @@ export default function ArticleContent({ slug }) {
                                 data={article.cover}
                                 className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700"
                                 sizes="(max-width: 1024px) 100vw, 860px"
+                                priority
                             />
                         </div>
                         {article.cover.caption && (
-                            <figcaption className="text-[10px] uppercase tracking-[0.25em] text-zinc-400 font-label mt-3 text-right">
+                            <figcaption className="text-[10px] uppercase tracking-[0.25em] text-zinc-600 font-label mt-3 text-right">
                                 {article.cover.caption}
                             </figcaption>
                         )}
@@ -156,7 +158,7 @@ export default function ArticleContent({ slug }) {
                     {/* Resposta Direta — bloco GEO/AEO extraível por IAs */}
                     {article.respostaDireta && (
                         <div className="border-l-2 border-zinc-900 pl-6 mb-10 bg-zinc-50 py-5 pr-6">
-                            <p className="text-[10px] font-label uppercase tracking-[0.2em] text-zinc-400 mb-2">Resposta rápida</p>
+                            <p className="text-[10px] font-label uppercase tracking-[0.2em] text-zinc-600 mb-2">Resposta rápida</p>
                             <p className="text-zinc-900 text-base md:text-lg leading-relaxed font-body">{article.respostaDireta}</p>
                         </div>
                     )}
@@ -194,7 +196,7 @@ export default function ArticleContent({ slug }) {
                                             />
                                         </div>
                                     </div>
-                                    <figcaption className="text-[10px] uppercase tracking-[0.25em] text-zinc-400 font-label mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <figcaption className="text-[10px] uppercase tracking-[0.25em] text-zinc-600 font-label mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <span>{article.interior[0].caption}</span>
                                         <span>{article.interior[1].caption}</span>
                                     </figcaption>
@@ -277,10 +279,10 @@ export default function ArticleContent({ slug }) {
 
                     {/* Article Footer */}
                     <footer className="pt-8 hairline-t flex justify-between items-center mb-16">
-                        <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400">{article.data}</div>
+                        <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-600">{article.data}</div>
                         <button
                             onClick={handleShare}
-                            className="flex items-center gap-2 text-zinc-400 hover:text-zinc-900 transition-colors bg-transparent border-none cursor-pointer p-0"
+                            className="flex items-center gap-2 text-zinc-600 hover:text-zinc-900 transition-colors bg-transparent border-none cursor-pointer p-0"
                         >
                             <span className="text-[10px] font-label font-bold uppercase tracking-widest">
                                 {shareMsg || 'Compartilhar'}
@@ -294,13 +296,13 @@ export default function ArticleContent({ slug }) {
                         <nav className="grid grid-cols-2 gap-4 mb-12 hairline-t pt-8">
                             {prevArticle ? (
                                 <Link href={`/blog/${prevSlug}`} className="group flex flex-col gap-1">
-                                    <span className="text-[9px] font-label uppercase tracking-[0.25em] text-zinc-400">← Anterior</span>
+                                    <span className="text-[9px] font-label uppercase tracking-[0.25em] text-zinc-600">← Anterior</span>
                                     <span className="text-[13px] font-body text-zinc-700 group-hover:text-zinc-900 leading-snug transition-colors line-clamp-2">{prevArticle.titulo}</span>
                                 </Link>
                             ) : <div />}
                             {nextArticle ? (
                                 <Link href={`/blog/${nextSlug}`} className="group flex flex-col gap-1 text-right">
-                                    <span className="text-[9px] font-label uppercase tracking-[0.25em] text-zinc-400">Próximo →</span>
+                                    <span className="text-[9px] font-label uppercase tracking-[0.25em] text-zinc-600">Próximo →</span>
                                     <span className="text-[13px] font-body text-zinc-700 group-hover:text-zinc-900 leading-snug transition-colors line-clamp-2">{nextArticle.titulo}</span>
                                 </Link>
                             ) : <div />}
@@ -318,7 +320,7 @@ export default function ArticleContent({ slug }) {
                     <div className="flex items-center gap-8 p-8 hairline-t border-b-[0.5px] border-zinc-100 mb-20">
                         <NextImage alt="Angelo Mazzutti" className="w-20 h-20 rounded-full object-cover grayscale" src="/images/angelo/angelo-portrait.webp" width={80} height={80} />
                         <div>
-                            <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400 mb-1">AUTOR</div>
+                            <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-600 mb-1">AUTOR</div>
                             <div className="text-[18px] font-headline italic text-zinc-900 mb-2">Angelo Mazzutti</div>
                             <p className="text-[14px] text-zinc-500 font-body leading-[1.7] max-w-md">Diretor Criativo da House Mazzutti. 20 anos de ofício no audiovisual, com direção criativa para marcas premium e personalidades.</p>
                         </div>
@@ -353,7 +355,7 @@ export default function ArticleContent({ slug }) {
                                         />
                                     </div>
                                     <div>
-                                        <div className="text-[11px] font-label font-bold uppercase text-zinc-400 mb-1">{post.data}</div>
+                                        <div className="text-[11px] font-label font-bold uppercase text-zinc-600 mb-1">{post.data}</div>
                                         <h5 className="text-[13px] font-body font-medium text-zinc-800 leading-snug group-hover:underline">{post.titulo}</h5>
                                     </div>
                                 </Link>
@@ -394,8 +396,8 @@ export default function ArticleContent({ slug }) {
                 <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="text-xl font-headline italic text-zinc-900">HOUSE MAZZUTTI</div>
                     <div className="flex gap-12">
-                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-400 hover:text-white transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</a>
-                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-400 hover:text-white transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</a>
+                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-600 hover:text-white transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</a>
+                        <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-600 hover:text-white transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</a>
                     </div>
                     <div className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-500">
                         © {new Date().getFullYear()} HOUSE MAZZUTTI · São Paulo / Global

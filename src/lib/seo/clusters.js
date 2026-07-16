@@ -165,8 +165,15 @@ export function getRelatedLinks(currentSlug) {
   if (!clusterName) return null
 
   const cluster = clusters[clusterName]
-  const siblings = cluster.posts
-    .filter((s) => s !== currentSlug)
+  const allPosts = cluster.posts
+  const idx = allPosts.indexOf(currentSlug)
+  const others = allPosts.filter((s) => s !== currentSlug)
+  // Start from the position after currentSlug, wrap circularly, take 3
+  const startIdx = idx === -1 ? 0 : idx % others.length
+  const siblings = [
+    ...others.slice(startIdx),
+    ...others.slice(0, startIdx),
+  ]
     .slice(0, 3)
     .map((slug) => ({slug, title: postTitles[slug]}))
 

@@ -1,11 +1,12 @@
 export default function robots() {
   // AI crawlers explicitamente permitidos para indexação GEO/AEO.
   // GPTBot (OpenAI), Google-Extended (Gemini/SGE), CCBot (Common Crawl / Anthropic),
-  // PerplexityBot, meta-externalagent (Meta AI), Applebot-Extended (Apple AI).
+  // ClaudeBot (Anthropic), PerplexityBot, meta-externalagent (Meta AI), Applebot-Extended (Apple AI).
   const aiCrawlerRules = [
     'GPTBot',
     'Google-Extended',
     'CCBot',
+    'ClaudeBot',
     'PerplexityBot',
     'meta-externalagent',
     'Applebot-Extended',

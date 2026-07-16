@@ -11,10 +11,12 @@ export function buildAlternates(path = '', locale = DEFAULT_LOCALE) {
   const withSlash = clean.endsWith('/') || clean === '/' ? clean : `${clean}/`
   const seg = withSlash === '/' ? '' : withSlash
   return {
-    canonical: `${SITE_URL}/${locale}${seg}` || `${SITE_URL}/${locale}/`,
+    canonical: `${SITE_URL}/${locale}${seg}`,
     languages: {
-      'pt-BR': `${SITE_URL}/pt${seg}` || `${SITE_URL}/pt/`,
-      'x-default': `${SITE_URL}/pt${seg}` || `${SITE_URL}/pt/`,
+      'pt-BR': `${SITE_URL}/pt${seg}`,
+      'en': `${SITE_URL}/en${seg}`,
+      'es': `${SITE_URL}/es${seg}`,
+      'x-default': `${SITE_URL}/pt${seg}`,
     },
   }
 }

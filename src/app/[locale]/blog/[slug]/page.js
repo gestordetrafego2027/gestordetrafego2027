@@ -37,6 +37,9 @@ export async function generateMetadata({ params }) {
             card: 'summary_large_image',
             title: article.metaTitle,
             description: article.metaDescription,
+            images: article.cover
+                ? [{ url: `${brand.url}${article.cover.src}`, alt: article.cover.alt }]
+                : [{ url: `${brand.url}/images/og-default.webp` }],
         },
     };
 }
