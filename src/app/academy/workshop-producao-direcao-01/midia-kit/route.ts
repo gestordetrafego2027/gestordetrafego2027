@@ -34,7 +34,7 @@ section{padding:clamp(72px,10vw,128px) 0}
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 clamp(24px,5vw,64px)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
-.nav-logo{height:28px;width:auto;display:block}
+.nav-logo{height:40px;width:auto;display:block}
 .nav-brand{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--ink);text-transform:uppercase;text-decoration:none}
 .nav-label{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
 .nav-cta{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:10px 22px;text-decoration:none;transition:opacity .2s}
@@ -254,7 +254,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
   <div class="numbers-grid">
     <div class="num-card">
       <span class="num-value">15</span>
-      <span class="num-label">Creators<br/>selecionados</span>
+      <span class="num-label">Produtores do<br/>audiovisual</span>
     </div>
     <div class="num-card">
       <span class="num-value">2</span>
@@ -266,11 +266,11 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
     </div>
     <div class="num-card">
       <span class="num-value accent">30+</span>
-      <span class="num-label">Conteúdos de<br/>campanha gerados</span>
+      <span class="num-label">Fotos e vídeos<br/>produzidos no set</span>
     </div>
     <div class="num-card">
       <span class="num-value accent">100%</span>
-      <span class="num-label">Conteúdo orgânico<br/>e autoral</span>
+      <span class="num-label">Produção editorial<br/>profissional</span>
     </div>
   </div>
 </div>
@@ -325,22 +325,22 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
         <div class="audience-card">
           <span class="audience-pct">40%</span>
           <h3>Moda</h3>
-          <p>Styling, tendências e editorial. Audiência com alto engajamento em vestuário e acessórios.</p>
+          <p>Fotógrafos e videomakers especializados em lookbook, editorial e campanha de moda.</p>
         </div>
         <div class="audience-card">
           <span class="audience-pct">30%</span>
           <h3>Beauty</h3>
-          <p>Skincare, make e rotina. Comunidade fidelizada com forte influência de compra em cosméticos.</p>
+          <p>Produtores focados em skincare, make e lifestyle — conteúdo técnico e editorial de beauty.</p>
         </div>
         <div class="audience-card">
           <span class="audience-pct">20%</span>
-          <h3>Criativos</h3>
-          <p>Diretores e produtores de conteúdo. Decisores e multiplicadores de referência no mercado.</p>
+          <h3>Direção</h3>
+          <p>Diretores criativos e diretores de arte com experiência em produção executiva de campanhas.</p>
         </div>
         <div class="audience-card">
           <span class="audience-pct">10%</span>
           <h3>Lifestyle</h3>
-          <p>Profissionais do mercado que produzem campanha e consomem referências editoriais.</p>
+          <p>Produtores de conteúdo lifestyle com atuação ativa em marcas e projetos editoriais.</p>
         </div>
       </div>
     </section>
@@ -361,7 +361,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <div class="benefit-item">
         <span class="benefit-num">01</span>
         <h4>Produto integrado ao set</h4>
-        <p>O produto entra no cenário, no styling ou em uso pelos creators — parte natural do editorial, não merchandising.</p>
+        <p>O produto entra no cenário, no styling ou na produção — parte natural do editorial, não merchandising.</p>
       </div>
       <div class="benefit-item">
         <span class="benefit-num">02</span>
@@ -386,7 +386,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <div class="benefit-item">
         <span class="benefit-num">06</span>
         <h4>Acesso ao evento</h4>
-        <p>Um representante acompanha a produção nos dois dias — presença no set e conexão direta com os creators.</p>
+        <p>Um representante acompanha a produção nos dois dias — presença no set ao lado da equipe e dos produtores do audiovisual.</p>
       </div>
     </div>
   </section>
@@ -525,7 +525,6 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           <div class="pkg-price">R$ 4.000 <small>/ marca</small></div>
           <hr class="pkg-divider"/>
           <ul class="pkg-features">
-            <li>Produto integrado no set de moda ou beauty</li>
             <li>Produto integrado ao set ao lado de 15 produtores do audiovisual</li>
             <li><strong style="color:var(--ink);font-size:.78rem">Entrega:</strong> campanha com 30 fotos em alta resolução + 1 vídeo oficial de lançamento + 1 vídeo de bastidor</li>
             <li>Banco de imagens em alta resolução</li>
@@ -541,7 +540,6 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           <div class="pkg-price">R$ 7.000 <small>/ marca</small></div>
           <hr class="pkg-divider"/>
           <ul class="pkg-features">
-            <li>Produto integrado no set de moda ou beauty</li>
             <li>Produto integrado ao set ao lado de 15 produtores do audiovisual</li>
             <li><strong style="color:var(--accent);font-size:.78rem">Entrega:</strong> campanha com 30 fotos em alta resolução + 3 vídeos oficiais de lançamento e pré-lançamento + 1 vídeo de bastidor + 1 short video por peça catalogada (máx. 10)</li>
             <li>Banco completo de fotos e vídeos em alta resolução</li>
