@@ -34,24 +34,116 @@ const HTML = `<!DOCTYPE html>
   }
   @media (prefers-color-scheme: dark) { body { color: #f0ede8; } }
 
-  /* ── HERO ── */
-  .hero { background: var(--dark); color: #fff; padding: 28px 64px 0; }
-  .hero-bar {
+  /* ── SITE HEADER (fixed, site-standard) ── */
+  .site-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding-bottom: 20px; margin-bottom: 56px;
+    padding: 28px 48px;
+    background: transparent;
+    transition: background 0.3s ease, transform 0.4s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease;
   }
-  .logo { font-size: 18px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; text-decoration: none; }
-  .logo span { font-weight: 700; }
-  .hero-nav { display: flex; gap: 0; }
-  .hero-nav a {
-    font-size: 8px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase;
-    color: rgba(255,255,255,0.3); text-decoration: none;
-    padding-right: 28px; margin-right: 28px;
-    border-right: 1px solid rgba(255,255,255,0.08); transition: color .25s;
+  .site-header.scrolled {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 0.5px solid #e0e0e0;
   }
-  .hero-nav a:last-child { border-right: none; }
-  .hero-nav a:hover { color: rgba(255,255,255,0.9); }
+  .site-header.hidden { transform: translateY(-100%); }
+
+  .site-logo {
+    font-size: 18px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
+    color: #fff; text-decoration: none; display: inline-flex; align-items: baseline; gap: 0.3em;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .site-logo .hm-house { font-weight: 400; }
+  .site-logo .hm-mazzutti { font-weight: 700; }
+  .site-header.scrolled .site-logo { color: #000; }
+
+  .site-nav { display: flex; align-items: center; gap: 0; margin: 0 auto 0 48px; }
+  .site-nav a {
+    font-size: 10px; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7); text-decoration: none;
+    padding: 0 20px; transition: opacity 0.3s;
+  }
+  .site-nav a:hover { color: #fff; opacity: 0.7; }
+  .site-header.scrolled .site-nav a { color: #000; }
+  .site-header.scrolled .site-nav a:hover { opacity: 0.6; }
+
+  .site-hamburger {
+    background: none; border: none; cursor: pointer;
+    display: flex; flex-direction: column; justify-content: center;
+    width: 44px; height: 44px; position: relative; padding: 0;
+  }
+  .hbr-line {
+    display: block; width: 28px; height: 1px;
+    background: #fff; position: absolute; left: 8px;
+    transition: all 0.3s ease;
+  }
+  .hbr-line:nth-child(1) { top: 14px; }
+  .hbr-line:nth-child(2) { top: 22px; }
+  .hbr-line:nth-child(3) { top: 30px; }
+  .site-header.scrolled .hbr-line { background: #000; }
+  .site-hamburger.open .hbr-line:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+  .site-hamburger.open .hbr-line:nth-child(2) { opacity: 0; }
+  .site-hamburger.open .hbr-line:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
+
+  /* side menu overlay */
+  .side-overlay {
+    display: none; position: fixed; inset: 0; z-index: 99998;
+    background: rgba(0,0,0,0.3);
+  }
+  .side-overlay.open { display: block; }
+  .side-menu {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: 25vw; min-width: 320px;
+    background: #0a0a0a; z-index: 99999;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 60px 48px;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+  .side-menu.open { transform: translateX(0); }
+  .side-menu-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
+  .side-menu-logo { font-size: 20px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; display: inline-flex; gap: 0.3em; }
+  .side-menu-logo .hm-mazzutti { font-weight: 700; }
+  .side-close {
+    background: none; border: none; cursor: pointer;
+    position: relative; width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .side-close::before, .side-close::after {
+    content: ''; display: block; width: 24px; height: 1px;
+    background: #fff; position: absolute;
+  }
+  .side-close::before { transform: rotate(45deg); }
+  .side-close::after { transform: rotate(-45deg); }
+  .side-nav { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+  .side-nav a {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #aaa; text-decoration: none; transition: color 0.3s;
+  }
+  .side-nav a:hover { color: #fff; }
+  .side-section-label {
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #444; margin-bottom: 16px;
+  }
+  .side-section-links { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+  .side-section-links a {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #666; text-decoration: none; transition: color 0.3s;
+  }
+  .side-section-links a:hover { color: #fff; }
+  .side-location { margin-bottom: 48px; }
+  .side-location p { font-size: 14px; font-style: italic; color: #aaa; line-height: 1.8; }
+  .side-divider { width: 100%; height: 0.5px; background: #222; margin-bottom: 48px; }
+  .side-follow-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #555; margin-bottom: 16px; }
+  .side-social { display: flex; flex-direction: column; gap: 12px; }
+  .side-social a { font-size: 14px; font-style: italic; color: #aaa; text-decoration: none; transition: color 0.3s; }
+  .side-social a:hover { color: #fff; }
+  .side-copy { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #333; margin: 0; }
+
+  /* ── HERO ── */
+  .hero { background: var(--dark); color: #fff; padding: 120px 64px 0; }
   .hero-content { padding-bottom: 52px; }
   .hero-eyebrow { font-size: 8px; font-weight: 500; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 16px; }
   .hero-h1 { font-size: clamp(52px, 8vw, 108px); font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; color: #fff; margin-bottom: 8px; }
@@ -84,9 +176,10 @@ const HTML = `<!DOCTYPE html>
   @media (max-width: 900px) { .grid, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) {
     main { padding: 48px 24px 80px; }
-    .hero { padding: 20px 24px 0; }
+    .hero { padding: 100px 24px 0; }
     .grid, .grid-2, .grid-4 { grid-template-columns: 1fr; }
-    .hero-nav { display: none; }
+    .site-nav { display: none; }
+    .site-header { padding: 20px 24px; }
   }
 
   /* ── CARD ── */
@@ -165,25 +258,96 @@ const HTML = `<!DOCTYPE html>
   .role-table td.price { text-align: right; color: var(--gold); font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 16px; font-size: 12px; }
   .equipe-note { font-size: 10px; font-weight: 400; color: rgba(255,255,255,0.2); margin-top: 24px; letter-spacing: 0.15em; text-transform: uppercase; }
 
-  /* ── FOOTER ── */
-  footer { background: var(--dark); color: rgba(255,255,255,0.25); padding: 40px 64px; display: flex; align-items: center; justify-content: space-between; }
-  .footer-note { font-size: 8px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; }
+  /* ── FOOTER (site-standard) ── */
+  .site-footer {
+    background: #fff; border-top: 1px solid #e4e4e7;
+    padding: 32px 48px;
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+  }
+  .footer-logo {
+    font-size: 20px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
+    color: #000; text-decoration: none; display: inline-flex; align-items: baseline; gap: 0.3em;
+  }
+  .footer-logo .hm-mazzutti { font-weight: 700; }
+  .footer-social { display: flex; gap: 32px; }
+  .footer-social a {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #000; text-decoration: none; transition: opacity 0.3s;
+  }
+  .footer-social a:hover { opacity: 0.5; }
+  .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 24px; }
+  .footer-links a {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #000; opacity: 0.5; text-decoration: none; transition: opacity 0.3s;
+  }
+  .footer-links a:hover { opacity: 0.9; }
+  .footer-copy { font-size: 10px; letter-spacing: 0.1em; color: #a1a1aa; }
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-bar">
-    <a class="logo" href="https://housemazzutti.com" target="_blank">House <span>Mazzutti</span></a>
-    <nav class="hero-nav">
-      <a href="#studio">Studio</a>
-      <a href="#produtora">Produtora</a>
-      <a href="#academy">Academy</a>
-      <a href="#agencia">Agência</a>
-      <a href="#digitais">Digitais</a>
-      <a href="#equipe">Equipe</a>
+<!-- SITE HEADER -->
+<header class="site-header" id="siteHeader">
+  <a class="site-logo" href="https://housemazzutti.com" target="_blank">
+    <span class="hm-house">House</span><span class="hm-mazzutti">Mazzutti</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#studio">Studio</a>
+    <a href="#produtora">Produtora</a>
+    <a href="#academy">Academy</a>
+    <a href="#agencia">Agência</a>
+    <a href="#digitais">Digitais</a>
+    <a href="#tour">Tour</a>
+    <a href="#equipe">Equipe</a>
+  </nav>
+  <button class="site-hamburger" id="hamburger" aria-label="Abrir menu">
+    <span class="hbr-line"></span>
+    <span class="hbr-line"></span>
+    <span class="hbr-line"></span>
+  </button>
+</header>
+
+<!-- SIDE MENU -->
+<div class="side-overlay" id="sideOverlay" onclick="closeMenu()"></div>
+<div class="side-menu" id="sideMenu">
+  <div>
+    <div class="side-menu-top">
+      <span class="side-menu-logo">
+        <span class="hm-house">House</span><span class="hm-mazzutti">Mazzutti</span>
+      </span>
+      <button class="side-close" aria-label="Fechar menu" onclick="closeMenu()"></button>
+    </div>
+    <nav class="side-nav">
+      <a href="#studio" onclick="closeMenu()">Studio</a>
+      <a href="#produtora" onclick="closeMenu()">Produtora</a>
+      <a href="#academy" onclick="closeMenu()">Academy</a>
+      <a href="#agencia" onclick="Agência">Agência</a>
+      <a href="#digitais" onclick="closeMenu()">Produtos Digitais</a>
+      <a href="#tour" onclick="closeMenu()">Tour Canoinhas</a>
+      <a href="#equipe" onclick="closeMenu()">Equipe à la Carte</a>
     </nav>
+    <p class="side-section-label">Site Oficial</p>
+    <div class="side-section-links">
+      <a href="https://housemazzutti.com" target="_blank">Home</a>
+      <a href="https://housemazzutti.com/pt/portfolio" target="_blank">Portfólio</a>
+      <a href="https://housemazzutti.com/pt/contato" target="_blank">Contato</a>
+      <a href="https://housemazzutti.com/pt/loja" target="_blank">Loja</a>
+    </div>
+    <div class="side-location">
+      <p>São Paulo, Brasil</p>
+      <p>23.5505° S, 46.6333° W</p>
+    </div>
+    <div class="side-divider"></div>
+    <p class="side-follow-label">Follow</p>
+    <div class="side-social">
+      <a href="https://instagram.com/housemazzutti" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/company/house-mazzutti" target="_blank">LinkedIn</a>
+    </div>
   </div>
+  <p class="side-copy">© 2026 HOUSE MAZZUTTI</p>
+</div>
+
+<section class="hero">
   <div class="hero-content">
     <p class="hero-eyebrow">Catálogo de Serviços · House Mazzutti</p>
     <h1 class="hero-h1">Serviços<br><span class="dim">&amp; Produtos</span></h1>
@@ -198,7 +362,7 @@ const HTML = `<!DOCTYPE html>
       <a href="#equipe">Equipe à la Carte</a>
     </div>
   </div>
-</header>
+</section>
 
 <main>
 
@@ -618,10 +782,61 @@ const HTML = `<!DOCTYPE html>
   <p class="equipe-note">* Valores por diária de 8h em São Paulo · Deslocamentos externos sob consulta · Taxa de coordenação executiva não inclusa</p>
 </section>
 
-<footer>
-  <a class="logo" href="https://housemazzutti.com" target="_blank">House <span>Mazzutti</span></a>
-  <p class="footer-note">housemazzutti.com · São Paulo · Brasil</p>
+<footer class="site-footer">
+  <a class="footer-logo" href="https://housemazzutti.com" target="_blank">
+    <span class="hm-house">House</span><span class="hm-mazzutti">Mazzutti</span>
+  </a>
+  <div class="footer-social">
+    <a href="https://instagram.com/housemazzutti" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/company/house-mazzutti" target="_blank">LinkedIn</a>
+  </div>
+  <div class="footer-links">
+    <a href="https://housemazzutti.com/pt/politicas/privacidade" target="_blank">Privacidade</a>
+    <a href="https://housemazzutti.com/pt/politicas/termos-de-uso" target="_blank">Termos de Uso</a>
+    <a href="https://housemazzutti.com/pt/politicas/cookies" target="_blank">Cookies</a>
+    <a href="https://housemazzutti.com/pt/politicas" target="_blank">Central de Privacidade →</a>
+  </div>
+  <p class="footer-copy">© 2026 House Mazzutti · São Paulo · Brasil</p>
 </footer>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  const hamburger = document.getElementById('hamburger');
+  const sideMenu = document.getElementById('sideMenu');
+  const overlay = document.getElementById('sideOverlay');
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    if (current <= 60) {
+      header.classList.remove('scrolled', 'hidden');
+    } else {
+      header.classList.add('scrolled');
+      if (current > lastScroll && current > window.innerHeight) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+    }
+    lastScroll = current;
+  }, { passive: true });
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.add('open');
+    sideMenu.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    sideMenu.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+</script>
 
 </body>
 </html>`
