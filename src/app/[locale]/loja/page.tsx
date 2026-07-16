@@ -49,7 +49,8 @@ function formatPrice(cents: number, currency = 'brl') {
   }).format(cents / 100)
 }
 function isQuoteOnly(prices: Price[]) {
-  return prices?.[0]?.metadata?.quote_only === 'true'
+  const v = prices?.[0]?.metadata?.quote_only
+  return v === 'true' || v === true
 }
 
 function ProductCard({ product, catSlug }: { product: Product; catSlug: string }) {
@@ -153,9 +154,18 @@ const CATEGORY_SUBS: Record<string, string> = {
 export default async function LojaPage() {
   if (!featureFlags.isStoreEnabled()) notFound()
 
+  // next: { revalidate: 60 } propagado para o fetch interno do Supabase.
+  // Sem isso, Next.js 15 trata todo fetch sem opção explícita como no-store,
+  // derrubando o ISR mesmo com export const revalidate = 60.
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      global: {
+        fetch: (url: RequestInfo | URL, options: RequestInit = {}) =>
+          fetch(url, { ...options, next: { revalidate: 60 } } as RequestInit),
+      },
+    },
   )
   const { data: products, error } = await supabase
     .from('store_products')
