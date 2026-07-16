@@ -218,8 +218,8 @@ export default function StudioPage() {
                     z-index: 10;
                 }
                 .gallery-column:hover .project-overlay { transform: translateY(0); }
-                .project-overlay h4 { color: white; font-family: 'Newsreader', serif; font-size: 18px; margin: 0; }
-                .project-overlay span { color: white; font-family: 'Raleway', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
+                .project-overlay h4 { color: white; font-family: 'RocGrotesk', sans-serif; font-size: 18px; margin: 0; }
+                .project-overlay span { color: white; font-family: 'RocGrotesk', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; }
             `}} />
 
 
