@@ -1098,88 +1098,100 @@ export const articles = {
     "conclusao": "O editorial, quando bem construído, não apenas mostra. Direciona. E quando essa direção integra mercado, estética e linguagem premium, a imagem deixa de ser despesa de marketing — e passa a operar como o ativo mais rentável da operação."
   },
   "por-que-boas-ideias-nao-garantem-resultados": {
-    "categoria": "Produtora — Produção Executiva",
-    "titulo": "Por que boas ideias não garantem bons resultados: o papel da produção executiva",
+    "categoria": "Agência — Branding",
+    "titulo": "Por que boas ideias não garantem resultados: o que separa criatividade de posicionamento",
     "metaTitle": "Por que boas ideias não garantem resultados",
-    "metaDescription": "Ideias fortes morrem em execuções fracas. O papel da produção executiva premium em transformar conceito em resultado real e mensurável.",
-    "keywords": "execução de campanha publicitária, produção executiva premium, governança criativa, conceito e execução, ROI de campanha, direção autoral, House Mazzutti",
-    "data": "Fevereiro 2026",
+    "metaDescription": "Uma ideia criativa forte não é sinônimo de posicionamento. Por que marcas com conceitos brilhantes falham — e o que a estratégia de branding resolve.",
+    "keywords": ["branding estratégico", "posicionamento de marca", "identidade visual", "agência de branding São Paulo", "estratégia criativa", "House Mazzutti", "identidade de marca", "brand strategy"],
+    "data": "Setembro 2026",
     "cover": {
-      "src": "/images/blog/ideia-vs-resultado/producao-executiva-gestao-campanha-house-mazzutti.webp",
-      "alt": "Produção executiva premium — por que boas ideias precisam de estrutura House Mazzutti",
-      "caption": "Produção executiva · Produtora HMZT"
+      "src": "/images/blog/boas-ideias-resultados/branding-estrategia-posicionamento-house-mazzutti.webp",
+      "fallback": "/images/agencia/house-mazzutti/agencia-branding-estrategia.webp",
+      "alt": "Estratégia de branding além da criatividade — Agência House Mazzutti",
+      "caption": "Branding estratégico — Agência HMZT"
     },
     "interior": [
       {
-        "src": "/images/blog/ideia-vs-resultado/set-campanha-coordenacao-house-mazzutti.webp",
-        "alt": "Set de campanha com gestão executiva e direção criativa unificada House Mazzutti",
-        "caption": "Set integrado · gestão executiva"
+        "src": "/images/blog/boas-ideias-resultados/identidade-visual-posicionamento-house-mazzutti.webp",
+        "fallback": "/images/agencia/house-mazzutti/identidade-visual.webp",
+        "alt": "Identidade visual construída sobre estratégia de posicionamento de marca",
+        "caption": "Identidade · posicionamento visual"
       },
       {
-        "src": "/images/blog/ideia-vs-resultado/governanca-criativa-roi-campanha-house-mazzutti.webp",
-        "alt": "Cronograma e governança criativa em campanha de moda premium em São Paulo",
-        "caption": "Governança criativa · entrega protegida"
+        "src": "/images/blog/boas-ideias-resultados/brand-strategy-marca-mercado-house-mazzutti.webp",
+        "fallback": "/images/agencia/house-mazzutti/brand-strategy.webp",
+        "alt": "Estratégia de marca aplicada ao mercado criativo em São Paulo",
+        "caption": "Brand strategy · presença de mercado"
       }
     ],
-    "respostaDireta": "Boas ideias não garantem bons resultados — execução estruturada sim. A produção executiva é o sistema que transforma um conceito criativo em campanha entregue: orçamento, cronograma, equipe, set, aprovações e master final. Sem esse sistema, até o melhor conceito chega ao cliente fragmentado, atrasado ou abaixo do potencial.",
-    "intro": "Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade, se dilui, se adapta demais e perde identidade. Projetos com múltiplos stakeholders têm até 50% mais chance de atraso quando não possuem gestão executiva estruturada. E o custo invisível dessa desorganização raramente aparece na planilha — aparece no resultado final.",
+    "respostaDireta": "Boas ideias não garantem resultados de branding porque criatividade e posicionamento são operações distintas. Uma ideia pode ser original, visualmente impactante e ainda assim não instalar percepção duradoura sobre uma marca. O que garante resultado é o que a Agência House Mazzutti chama de arquitetura de marca: estratégia, hierarquia visual, consistência de linguagem e direção editorial aplicada a cada ponto de contato.",
+    "intro": "Existe uma crença muito difundida no mercado criativo: que a qualidade da ideia determina o resultado da marca. É uma crença atraente — e parcialmente verdadeira. Mas parcialmente não é suficiente. A história do branding está cheia de ideias brilhantes que não converteram em percepção duradoura. E está igualmente cheia de marcas com conceitos modestos que, por consistência e estratégia, dominam seus mercados. A diferença não está na ideia. Está no que sustenta a ideia.",
     "sections": [
       {
-        "h2": "O custo invisível da execução desorganizada",
+        "h2": "Criatividade é matéria-prima, não produto final",
         "paragraphs": [
-          "Toda campanha que falha em entrega tem um padrão: tempo perdido em decisões refeitas, energia da equipe drenada em retrabalho, qualidade comprometida por correções de última hora, custo extra para compensar prazos perdidos.",
-          "Esse custo raramente é debatido em contrato — mas é exatamente ele que separa o ROI esperado do ROI real. Produção executiva fraca não é apenas problema operacional. É problema financeiro."
+          "Uma ideia criativa forte é o ponto de partida correto. Ela captura atenção, gera interesse inicial e abre espaço para a marca ser percebida. Mas atenção não é posicionamento. Interesse inicial não é lealdade de marca. E abertura de espaço não garante ocupação duradoura.",
+          "A criatividade é matéria-prima. O que transforma matéria-prima em produto — em percepção real instalada no mercado — é a estratégia. É a arquitetura que define onde a marca existe, com que linguagem fala, para quem se dirige e o que promete a cada interação.",
+          "Marcas que pulam da ideia para a execução sem passar pela estratégia produzem peças bonitas sem direção. Campanhas que surpreendem mas não acumulam. Imagem que impressiona uma vez e não se fixa."
         ]
       },
       {
-        "h2": "Os três níveis de atuação da produção executiva",
+        "h2": "O problema da inconsistência de linguagem",
         "paragraphs": [
-          "Produção executiva premium opera em três níveis simultâneos: controle (cronograma, orçamento, fluxo de aprovações), integração (equipes técnicas, fornecedores, decisões criativas em tempo real) e proteção (qualidade, conceito original, entrega final).",
-          "Sem o nível de controle, o projeto se dilui em prazos. Sem integração, fragmenta-se em silos. Sem proteção, o conceito original chega ao master irreconhecível. Os três níveis precisam operar simultaneamente."
+          "O maior inimigo do branding não é a falta de criatividade. É a inconsistência. Uma marca que comunica de formas diferentes em cada ponto de contato não acumula percepção — ela reseta. Cada peça começa do zero, e o público nunca constrói uma leitura consolidada sobre o que aquela marca representa.",
+          "Inconsistência não é necessariamente visual. Ela aparece no tom de voz que muda entre canais, na hierarquia de mensagens que se inverte dependendo da plataforma, no conceito que se adapta ao contexto a ponto de perder identidade. É sutil, mas é o que separa marcas que acumulam autoridade daquelas que parecem sempre novas — e nunca conhecidas.",
+          "No trabalho da Agência House Mazzutti, o primeiro entregável de qualquer projeto é o mapa de linguagem: o conjunto de regras visuais e editoriais que garante que a marca fale com a mesma voz independentemente do formato, do canal ou de quem está operando a comunicação."
         ]
       },
       {
-        "h2": "O que muda com produção executiva sob direção autoral",
+        "h2": "Posicionamento não é o que você diz — é o que o mercado entende",
         "paragraphs": [
-          "No método HMZT, produção executiva e direção criativa não são áreas separadas — são duas mãos da mesma decisão. A mesma cabeça que assina o conceito acompanha a execução, mantendo coerência entre intenção e entrega.",
-          "O resultado é mensurável: menos retrabalho, decisões mais rápidas, equipe operando com mais confiança. E, principalmente, conceito que chega íntegro do briefing ao master final."
+          "Existe uma confusão recorrente entre proposta de valor e posicionamento. A proposta de valor é o que a marca quer comunicar. O posicionamento é o que o mercado efetivamente percebe. A distância entre os dois é onde o branding falha — ou onde ele resolve.",
+          "Marcas que definem seu posicionamento a partir do que acham que são correm o risco de comunicar irrelevância. Marcas que definem posicionamento a partir do que o mercado precisa — e do espaço que ainda não está ocupado — criam vantagem competitiva real. É a diferença entre falar de dentro para fora e falar de dentro de um problema real do cliente.",
+          "O método da Agência HMZT começa pelo diagnóstico de mercado: onde a marca está posicionada hoje, onde ela quer estar, o que o mercado percebe e o que ainda não está sendo comunicado. Só depois disso a criatividade entra — para resolver um problema definido, não para gerar conteúdo."
         ]
       },
       {
-        "h2": "A ideia é o ponto de partida, não a garantia",
+        "h2": "Velocidade sem estratégia queima capital de marca",
         "paragraphs": [
-          "Toda campanha nasce de uma ideia, mas o resultado mora na execução. Num mercado em que o vídeo domina o tráfego e a atenção é disputada take a take, conceito sem estrutura se dilui antes de chegar ao público.",
-          "Boas ideias falham por falta de governança, não de criatividade. O que falta quase sempre é o sistema que protege a ideia até a entrega."
+          "Num mercado onde tudo é urgente, existe uma pressão constante para lançar, postar, publicar antes de terminar de pensar. O resultado é marca que comunica muito e diz pouco. Que produz conteúdo em ritmo alto e não acumula percepção. Que gera visibilidade momentânea sem construir posição.",
+          "Velocidade é um recurso valioso — quando aplicada sobre uma estratégia sólida. Sem estratégia, velocidade é apenas ruído produzido com eficiência. E ruído, por mais bem produzido que seja, não instala posicionamento.",
+          "A Agência House Mazzutti trabalha com o conceito de cadência editorial: o ritmo certo de comunicação, com a densidade certa de conteúdo, nos canais certos para o público correto. Não é sobre menos — é sobre mais eficiência por peça produzida."
         ]
       },
       {
-        "h2": "A velocidade que só a estrutura entrega",
+        "h2": "O que garante que a ideia vira resultado",
         "paragraphs": [
-          "Ideias morrem na lentidão tanto quanto na desorganização. Em produção, cada decisão renegociada custa tempo — e tempo, em set, é orçamento queimado.",
-          "Estrutura é o que permite decidir uma vez e seguir. É a diferença entre uma ideia que chega íntegra ao público e uma que se dilui no caminho."
+          "A ideia vira resultado quando está apoiada em quatro pilares: propósito claro, arquitetura de linguagem, consistência de execução e presença editorial sustentada ao longo do tempo. Retirado qualquer um dos quatro, a ideia perde potência antes de chegar ao mercado.",
+          "Propósito diz por que a marca existe. Arquitetura define como ela fala. Consistência garante que essa fala seja reconhecida. E presença sustentada é o que transforma reconhecimento em autoridade — o ativo de marca que realmente gera vantagem competitiva.",
+          "A Agência House Mazzutti atua nessa estrutura completa — do diagnóstico de marca ao sistema de identidade, da estratégia editorial à direção criativa de campanhas. Porque resultado de branding não é uma peça entregue. É uma percepção instalada."
         ]
       }
     ],
-    "citacao": "ROI não depende só da mídia. A qualidade da produção impacta diretamente o desempenho da campanha.",
-        "faq": [
+    "citacao": "Criatividade captura atenção. Estratégia instala percepção. Resultado de marca exige as duas — na ordem certa.",
+    "faq": [
       {
-        "q": "O que é produção executiva e por que ela é tão importante?",
-        "a": "Produção executiva é o sistema que transforma uma ideia em execução real — orçamento, cronograma, equipe, logística, casting, set, entrega. Sem ela, boas ideias morrem no set por falta de estrutura ou chegam ao master com qualidade comprometida. É o que separa intenção de resultado."
+        "q": "Por que uma boa ideia criativa não garante resultado de branding?",
+        "a": "Porque criatividade e posicionamento são operações diferentes. Uma ideia original captura atenção — mas sem estratégia de marca, arquitetura de linguagem e consistência de execução, ela não acumula percepção duradoura. O mercado vê, passa e não retém. Resultado de branding depende do que sustenta a ideia, não apenas da ideia."
       },
       {
-        "q": "Qual o custo do retrabalho numa produção sem estrutura executiva?",
-        "a": "Altíssimo. Improviso em set gera: atrasos que encarecem diárias de equipe, tomadas que precisam ser refeitas, conceito que se fragmenta em cada decisão não planejada. Em produções de médio e grande porte, um dia de retrabalho pode custar o equivalente ao orçamento de planejamento que foi economizado."
+        "q": "O que é arquitetura de marca e por que ela é necessária?",
+        "a": "Arquitetura de marca é o sistema que organiza como a marca existe no mercado: hierarquia de mensagens, sistema de identidade visual, tom de voz, direção editorial e regras de aplicação por canal. Sem ela, cada peça de comunicação começa do zero — e o público nunca consolida uma leitura coerente sobre o que a marca representa."
       },
       {
-        "q": "A produção executiva da House Mazzutti cobre quais etapas?",
-        "a": "Orçamento e cronograma, contratação de equipe técnica, casting, scouting e contratação de locações, set design, logística de equipamentos e direção criativa integrada. Da pré-produção ao master, sob uma única gestão — sem intermediários entre a ideia e o set."
+        "q": "Qual a diferença entre posicionamento e proposta de valor?",
+        "a": "Proposta de valor é o que a marca quer comunicar. Posicionamento é o que o mercado efetivamente percebe. A distância entre os dois é onde o branding falha. Uma marca pode ter uma proposta de valor excelente e, por falta de estratégia e consistência, o mercado perceber outra coisa. Trabalhar posicionamento é reduzir essa distância."
       },
       {
-        "q": "Produção executiva e direção criativa podem ser a mesma pessoa?",
-        "a": "Na House Mazzutti, sim — e é exatamente esse o diferencial. Quando a mente que criou o conceito também gere a produção, nenhuma intenção se perde no handoff entre departamentos. O resultado é uma campanha onde cada decisão de set reforça o conceito original."
+        "q": "O que a Agência House Mazzutti entrega num projeto de branding?",
+        "a": "Do diagnóstico de marca e análise de mercado ao sistema de identidade visual completo, passando por estratégia editorial, direção de linguagem e campanha de posicionamento. O processo começa sempre pela estratégia — não pela estética — porque resultado de branding é percepção instalada, não peça entregue."
+      },
+      {
+        "q": "Como saber se minha marca precisa de reposicionamento?",
+        "a": "Quando o mercado não consegue descrever o que sua marca representa em uma frase simples, quando você compete por preço em vez de por percepção de valor, ou quando sua comunicação é inconsistente entre canais — esses são os sinais de que a arquitetura de marca precisa ser revisada."
       }
     ],
-    "conclusao": "Projetos bem estruturados têm menos surpresas, tomam decisões mais rápidas e executam com mais confiança. E isso impacta diretamente o resultado. A House Mazzutti atua reduzindo esse risco — com estrutura que organiza, integra, controla e entrega. Sem excesso. Sem ruído. Com precisão."
+    "conclusao": "Boas ideias são necessárias. Mas não são suficientes. O que transforma uma ideia em resultado é o sistema que a sustenta: estratégia, consistência, presença editorial e arquitetura de marca. A Agência House Mazzutti atua nessa camada invisível que separa marcas que impressionam uma vez daquelas que o mercado não esquece."
   },
   "producao-executiva-sistema-campanhas": {
     "categoria": "Produtora — Produção Executiva",
@@ -1350,91 +1362,100 @@ export const articles = {
     "conclusao": "Investir mais raramente resolve problemas estruturais. Investir melhor sim. A combinação entre orçamento adequado, direção criativa autoral e produção executiva premium é o que separa campanhas que apenas custaram caro daquelas que efetivamente performaram. A House Mazzutti opera nessa combinação — porque é o único lugar onde o investimento se transforma, de fato, em resultado."
   },
   "campanha-larissa-manoela-jequiti": {
-    "categoria": "Produtora — Set Design",
-    "titulo": "Larissa Manoela e a Jequiti: o set que sustenta a estrela",
-    "metaTitle": "Set Design: direção de arte para Jequiti com Larissa Manoela",
-    "metaDescription": "Como o set design e a direção de arte da House Mazzutti construíram o ambiente visual que sustentou a presença de Larissa Manoela na campanha da linha Splash, da Jequiti.",
-    "keywords": "set design para campanha de beleza, direção de arte, cenografia publicitária, Larissa Manoela, Jequiti, House Mazzutti, produção audiovisual beleza",
-    "data": "Junho 2026",
+    "categoria": "Produtora — Publicidade",
+    "titulo": "Campanha Jequiti com Larissa Manoela: publicidade que entende o peso de uma celebridade",
+    "metaTitle": "Campanha Jequiti com Larissa Manoela — House Mazzutti",
+    "metaDescription": "Como a House Mazzutti dirigiu a campanha da linha Splash da Jequiti com Larissa Manoela — do conceito ao set, do frame ao resultado.",
+    "keywords": ["campanha publicitária de beleza", "Larissa Manoela", "Jequiti Splash", "publicidade com celebridade", "produtora audiovisual São Paulo", "direção criativa de campanha", "House Mazzutti", "campanha de moda e beleza"],
+    "data": "Setembro 2026",
     "cover": {
       "src": "/images/blog/campanha-larissa-manoela-jequiti/cover.webp",
       "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/capa.webp",
-      "alt": "Set design e direção de arte para a Jequiti com Larissa Manoela — House Mazzutti",
-      "caption": "Set design · direção de arte · House Mazzutti"
+      "alt": "Campanha publicitária Jequiti Splash com Larissa Manoela — House Mazzutti",
+      "caption": "Campanha Jequiti Splash · direção criativa House Mazzutti"
     },
     "interior": [
       {
         "src": "/images/blog/campanha-larissa-manoela-jequiti/01.webp",
         "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/1.webp",
-        "alt": "Set design e cenografia da House Mazzutti para a campanha Jequiti",
-        "caption": "Set design · direção de arte"
+        "alt": "Produção audiovisual e set design da House Mazzutti para campanha Jequiti",
+        "caption": "Set · direção de arte"
       },
       {
         "src": "/images/blog/campanha-larissa-manoela-jequiti/02.webp",
         "fallback": "/images/produtora/beleza/jequiti-larissa-manoela/2.webp",
-        "alt": "Foto e vídeo da campanha Jequiti com Larissa Manoela",
+        "alt": "Frame da campanha publicitária Jequiti com Larissa Manoela",
         "caption": "Foto e vídeo: Bruno Fonze / Monteiro Produtora"
       }
     ],
-    "respostaDireta": "Quando Larissa Manoela entrou no frame da campanha Jequiti, o ambiente já estava comunicando pela marca. A House Mazzutti direcionou o set para que cada elemento — luz, cenário, direção de pose — amplificasse a presença da estrela sem competir com ela. O resultado é quando o ambiente sustenta quem está à frente.",
-    "intro": "Uma celebridade entrega audiência. O set entrega percepção. Quando Larissa Manoela entrou no frame, o ambiente já estava respondendo pela marca — e foi aí que a House Mazzutti trabalhou.",
+    "respostaDireta": "A campanha da linha Splash da Jequiti com Larissa Manoela foi produzida com a Produtora House Mazzutti responsável pela direção criativa e set design. Quando uma marca aposta numa celebridade desse porte, o set precisa sustentar a presença — não competir com ela. Cada elemento visual foi construído para amplificar Larissa, proteger o posicionamento da Jequiti e entregar campanha com leitura clara de beleza e leveza.",
+    "intro": "Publicidade com celebridade não é sobre colocar um rosto famoso na frente da câmera. É sobre criar o ambiente visual certo para que aquele rosto entregue o que a marca precisa. Quando a Jequiti trouxe Larissa Manoela para a linha Splash, a pergunta não foi quem vamos escalar — foi como garantimos que cada frame entregue a percepção correta de produto, marca e presença. Foi exatamente aí que a Produtora House Mazzutti entrou.",
     "sections": [
       {
-        "h2": "O tamanho do jogo",
+        "h2": "O que muda quando a estrela é grande",
         "paragraphs": [
-          "Para a linha Splash, da Jequiti, a House Mazzutti assinou o set design e a direção de arte do ambiente onde a atriz Larissa Manoela foi fotografada e filmada. Um set construído do conceito à cenografia, pensado para que cada imagem comunicasse a marca antes mesmo da legenda.",
-          "O contexto explica o cuidado. O Brasil é o terceiro maior mercado de beleza e cuidados pessoais do mundo, segundo a Euromonitor, e movimentou R$ 242,3 bilhões em 2025 — alta de 11,2% sobre o ano anterior, de acordo com a ABIHPEC. Nesse porte, a imagem não é detalhe estético: é disputa direta por percepção e venda."
+          "Larissa Manoela tem uma presença de mídia que precede qualquer set. Quando ela entra no frame, o público já carrega expectativas — sobre estética, sobre energia, sobre o que ela representa. O trabalho criativo não começa na câmera: começa em entender como aquela presença se conecta ao universo da Jequiti Splash.",
+          "Splash é uma linha de beleza com posicionamento de frescor, leveza e verão. Larissa carrega uma imagem pública que conversa diretamente com esses atributos. Mas congruência de perfil não garante campanha eficiente. Ela reduz o risco — o trabalho ainda precisa ser feito.",
+          "A tarefa da direção criativa foi definir como os dois universos — a presença de Larissa e o DNA da Jequiti Splash — seriam integrados em cada decisão de set: luz, cenário, direção de poses, paleta, movimento de câmera. Cada elemento, uma intenção. Nada por acidente."
         ]
       },
       {
-        "h2": "O que a direção de arte resolve",
+        "h2": "Set design como narrativa de produto",
         "paragraphs": [
-          "Quando um grande nome chega ao set, o ambiente já precisa estar respondendo pela marca. Set design, paleta, textura e luz não são escolhas estéticas — são decisões de posicionamento que acontecem antes de qualquer clique.",
-          "É esse trabalho anterior ao frame que permite ao talento entregar presença, não logística. A câmera captura o que a direção de arte construiu."
+          "Em campanhas de beleza, o set não é apenas cenário. É parte do argumento da marca. Quando o produto é leveza e frescor, o ambiente precisa respirar o mesmo. Cores frias, luz natural ou naturalizada, texturas que evocam brisa e verão — o set comunica antes do produto aparecer na tela.",
+          "Para a linha Splash, a direção de arte da House Mazzutti construiu um ambiente que falasse o mesmo idioma do produto: paleta limpa, profundidade de campo que criava sensação de espaço, movimentos de câmera que acompanhavam o ritmo da linha e não a pressionavam.",
+          "A regra que guiou cada decisão foi simples: o set sustenta a estrela, a estrela sustenta o produto, o produto sustenta a marca. Quando essa cadeia funciona, o resultado é uma campanha onde tudo parece natural — porque foi dirigido com precisão."
         ]
       },
       {
-        "h2": "Por que isso decide o resultado",
+        "h2": "Publicidade que não sufoca o talento",
         "paragraphs": [
-          "Produções com grandes nomes falham quando a estrela carrega sozinha o peso visual da peça. Acertam quando o set a sustenta.",
-          "A diferença entre uma foto bonita e uma imagem que posiciona a marca mora exatamente aí: na direção que ninguém vê, mas todos sentem."
+          "Um erro recorrente em campanhas com celebridade é sobrecarregar o set de brand cues a ponto de sufocar a naturalidade do talento. A marca quer marcar presença. O criativo quer entregar a campanha. E o talento perde espaço para ser quem é — que é exatamente o que foi contratado.",
+          "A direção da House Mazzutti operou na lógica inversa: quanto mais espaço Larissa tinha para habitar o ambiente, mais genuína ficava a leitura. A performance não foi forçada — foi facilitada. A câmera esperou. A luz preparou. O set estava pronto antes que ela entrasse.",
+          "O resultado dessa escolha aparece no material final: frames onde Larissa existe no ambiente da Jequiti sem parecer posada, sem parecer encenada. Publicidade que funciona porque parece verdadeira."
         ]
       },
       {
-        "h2": "Celebridade amplia — o set define",
+        "h2": "A lógica da campanha de beleza premium",
         "paragraphs": [
-          "Um grande nome multiplica o alcance, mas não garante a leitura da marca. Sem direção de arte, a imagem vende a estrela. Com um set bem construído, vende o produto através dela.",
-          "A narrativa começa no ambiente — quem controla o set controla a percepção."
+          "Campanhas de beleza têm uma gramática própria: o produto precisa aparecer como extensão natural do talento, não como objeto externo que ele está segurando. Isso exige direção de gestos, timing de produto em cena, angulação que valorize tanto o talento quanto o packaging.",
+          "Para Splash, isso significou trabalhar cada transição de cena com cuidado: quando o produto entra no frame, como entra, com que luz e em que momento da narrativa. Não basta ter produto bonito e talento carismático — é preciso que os dois se encontrem no momento certo da cena.",
+          "É essa direção de detalhe — invisível para o espectador, mas decisiva para o resultado — que separa uma campanha de beleza que performa de uma que apenas existe."
         ]
       },
       {
-        "h2": "Set design é estratégia, não cenário",
+        "h2": "O que este projeto representa como referência",
         "paragraphs": [
-          "O ambiente de uma produção de beleza não é decoração — é argumento de venda. Cor, textura e luz comunicam o posicionamento do produto antes de qualquer claim.",
-          "Por isso o set se constrói a partir do conceito, não do improviso: cada elemento sustenta a marca dentro do frame."
+          "A campanha Jequiti com Larissa Manoela é uma referência de como direção criativa e produção executiva integradas produzem resultados mais sólidos. Não houve separação entre quem pensou o set e quem operou o set — a intenção criativa esteve presente do briefing ao frame final.",
+          "Para marcas de beleza e consumo que buscam campanhas com celebridades, o projeto demonstra que o valor não está apenas em quem aparece na câmera. Está em quem dirige o que acontece antes e depois da câmera ligar.",
+          "A House Mazzutti entrega essa camada de direção criativa integrada à produção executiva — porque é a única forma de garantir que o investimento em talento se converta em campanha que performa."
         ]
       }
     ],
-    "citacao": "O nome abre a porta. O set decide o que se vê quando ela se abre.",
-        "faq": [
+    "citacao": "Quando a estrela é grande, o set precisa ser maior do que ela — sem aparecer.",
+    "faq": [
       {
-        "q": "O que é set design numa campanha publicitária?",
-        "a": "Set design é a construção do ambiente visual de set — cenário, mobiliário, objetos de cena, paleta de cores e texturas. Para campanhas de beleza e moda, o set não é o fundo: é o contexto que define como o produto é percebido. Um produto de alto padrão num set impreciso perde posicionamento antes da primeira foto."
+        "q": "Como foi a produção da campanha Jequiti com Larissa Manoela?",
+        "a": "A House Mazzutti foi responsável pela direção criativa e set design da campanha da linha Splash. O set foi construído para sustentar a presença de Larissa enquanto entregava os atributos de produto da Jequiti: frescor, leveza e verão. Cada decisão de luz, paleta e composição foi calculada para que os dois universos — talento e marca — se integrassem com naturalidade."
       },
       {
-        "q": "Por que o set design importa tanto em campanhas com celebridades?",
-        "a": "Porque a celebridade amplia o alcance — mas o set define a marca. A percepção que o público forma sobre o produto é construída pelo ambiente que o envolve, não apenas pelo rosto que o apresenta. Um set sem coerência de marca pode transformar um investimento em celebridade numa presença sem identidade."
+        "q": "O que diferencia uma campanha com celebridade bem dirigida?",
+        "a": "A diferença está em quem cria o ambiente para o talento — não apenas quem posiciona o produto. Uma campanha com celebridade bem dirigida tem o set como argumento: cada elemento visual comunica a marca antes mesmo do produto aparecer. Quando isso funciona, o talento existe no ambiente da marca com naturalidade, não como objeto inserido numa cena."
       },
       {
-        "q": "A House Mazzutti faz set design para marcas de beleza e cosméticos?",
-        "a": "Sim. A Produtora HMZT tem experiência em set design para campanhas de beleza, moda, joalheria e lifestyle — incluindo marcas como Jequiti, WePink, Océane e Natália Beauty. O set é construído para sustentar o posicionamento da marca, não apenas para ser bonito."
+        "q": "A Produtora House Mazzutti faz campanhas de beleza e cosméticos?",
+        "a": "Sim. A Produtora HMZT tem experiência em campanhas de beleza, cosméticos e moda — segmentos que exigem gramática visual específica: luz que valorize produto e talento ao mesmo tempo, direção de gestos e timing de produto em cena. O portfólio inclui trabalhos para Jequiti, WePink e outras marcas do setor."
       },
       {
-        "q": "Direção de arte e set design são a mesma coisa?",
-        "a": "São complementares. Direção de arte define a linguagem visual da campanha — paleta, referências estéticas, hierarquia visual. Set design executa essa linguagem no espaço físico de set. Na House Mazzutti, os dois vivem sob a mesma direção criativa."
+        "q": "Como funciona a direção criativa integrada à produção na House Mazzutti?",
+        "a": "Na HMZT, quem pensa o conceito acompanha o set. Não há separação entre direção criativa e produção executiva — a intenção criativa está presente do briefing ao frame final. Isso reduz retrabalho, protege o conceito original e garante que o master entregue a mesma temperatura do briefing."
+      },
+      {
+        "q": "Qual o diferencial da Produtora HMZT em campanhas publicitárias?",
+        "a": "Direção criativa autoral com produção executiva integrada. Não atuamos apenas como estrutura de set — atuamos como parceiro de posicionamento da marca dentro do projeto. O resultado é uma campanha onde tudo está alinhado: conceito, set, talento, produto e narrativa."
       }
     ],
-    "conclusao": "Vai colocar uma marca no mercado e precisa de um set que responda pela identidade antes do primeiro clique? A House Mazzutti assina set design e direção de arte para produções de beleza, moda e lifestyle. Conheça nossos cases."
+    "conclusao": "Publicidade de alto impacto não é sobre orçamento — é sobre direção. Quando o ambiente é construído com precisão, o talento entrega com naturalidade e o produto emerge com força. Foi exatamente isso que a House Mazzutti entregou na campanha Jequiti com Larissa Manoela. Um set que sustentou a estrela sem aparecer."
   },
   "fashion-film-joias-barbara-porto": {
     "categoria": "Produtora — Editorial",
@@ -1611,91 +1632,100 @@ export const articles = {
     "conclusao": "Quer construir uma presença que o mercado lembra? A House Mazzutti dirige e produz fashion films com identidade, em São Paulo. Conheça o nosso trabalho e vamos criar o seu."
   },
   "workshop-inside-out-ita-mazzutti": {
-    "categoria": "Studio — Academy",
-    "titulo": "Inside Out: a House também forma o olhar",
-    "metaTitle": "Workshop Inside Out de Ita Mazzutti",
-    "metaDescription": "O workshop Inside Out, de Ita Mazzutti e da House Mazzutti, ensina direção e fotografia do conceito à entrega para novos profissionais em São Paulo.",
-    "keywords": "workshop de fotografia e direção em São Paulo, formação audiovisual, direção criativa, Academy, mentoria de imagem, Ita Mazzutti, House Mazzutti",
-    "data": "Junho 2026",
+    "categoria": "Academy — Workshop",
+    "titulo": "Workshop Inside Out: o que você aprende quando a produtora abre as portas",
+    "metaTitle": "Workshop Inside Out — House Mazzutti Academy",
+    "metaDescription": "O Inside Out é o workshop presencial da House Mazzutti Academy: formação em direção de imagem conduzida por Ita Mazzutti para profissionais criativos.",
+    "keywords": ["workshop de fotografia São Paulo", "formação em direção de imagem", "Inside Out workshop", "House Mazzutti Academy", "Ita Mazzutti", "curso de direção criativa", "formação audiovisual presencial", "workshop moda e fotografia"],
+    "data": "Setembro 2026",
     "cover": {
       "src": "/images/blog/workshop-inside-out-ita-mazzutti/cover.webp",
       "fallback": "/images/academy/direcao-criativa/cover.webp",
-      "alt": "Workshop Inside Out conduzido por Ita Mazzutti na House Mazzutti",
+      "alt": "Workshop Inside Out conduzido por Ita Mazzutti — House Mazzutti Academy São Paulo",
       "caption": "Workshop Inside Out · House Mazzutti Academy"
     },
     "interior": [
       {
         "src": "/images/blog/workshop-inside-out-ita-mazzutti/01.webp",
         "fallback": "/images/academy/edit-01/edit01-equipe.webp",
-        "alt": "Turma reduzida em workshop presencial da House Mazzutti em São Paulo",
-        "caption": "Turma reduzida · formação presencial"
+        "alt": "Turma presencial do workshop Inside Out na House Mazzutti em São Paulo",
+        "caption": "Turma presencial · formato intensivo"
       },
       {
         "src": "/images/blog/workshop-inside-out-ita-mazzutti/02.webp",
         "fallback": "/images/academy/edit-01/edit01-quadro.webp",
-        "alt": "Aula prática de direção e fotografia no workshop da House Mazzutti",
+        "alt": "Prática de direção e fotografia no workshop Inside Out da House Mazzutti",
         "caption": "Prática · do conceito à entrega"
       }
     ],
-    "respostaDireta": "O Inside Out é o programa de formação da House Mazzutti: não ensina técnica fotográfica, ensina direção de olhar. A diferença entre quem executa e quem dirige é o que separa um prestador de serviço de um criativo com posicionamento. A House também forma — porque dominar a direção é o que sustenta uma carreira criativa longa.",
-    "intro": "Toda casa criativa sabe produzir. Poucas sabem ensinar a produzir. Quem domina a técnica entrega um trabalho; quem domina a direção forma outros olhares. Foi para essa diferença que nasceu o Inside Out.",
+    "respostaDireta": "O Inside Out é o workshop presencial da House Mazzutti Academy, conduzido por Ita Mazzutti em São Paulo. Não é um curso de técnica fotográfica — é formação de direção de olhar. Os participantes aprendem como a House constrói imagem do conceito à entrega: o processo criativo, as decisões de set e a leitura de mercado que transforma um fotógrafo em diretor. Turmas reduzidas, formato intensivo, conteúdo extraído de produções reais.",
+    "intro": "Existe uma distância entre quem executa uma imagem e quem a dirige. Não é técnica — é leitura. É a capacidade de olhar para um ambiente e decidir o que ele precisa comunicar antes de qualquer clique. Foi para cruzar essa distância que nasceu o Inside Out: o programa de formação da House Mazzutti Academy que abre o processo criativo da casa para quem quer mais do que aprender a operar uma câmera.",
     "sections": [
       {
-        "h2": "O que se aprende",
+        "h2": "O que Inside Out significa",
         "paragraphs": [
-          "O workshop presencial conduzido por Ita Mazzutti — e ampliado na edição Inside Out — abre a produtora para turmas reduzidas e mostra o que normalmente fica nos bastidores: como se constrói uma imagem do conceito à entrega.",
-          "Não é um curso de equipamento. É uma formação de leitura — como enxergar uma cena, dirigir uma produção e tomar as decisões criativas que separam um registro de uma peça. A técnica entra a serviço da direção, nunca o contrário."
+          "Inside Out é literalmente de dentro para fora — e é exatamente esse o formato do workshop. A House Mazzutti abre sua estrutura criativa: o processo, o método, os critérios de decisão em set. O que normalmente fica restrito aos bastidores de uma produtora se torna conteúdo de formação.",
+          "Não é um currículo teórico sobre fotografia. É o método aplicado por quem produz para grandes marcas e celebridades no mercado real de São Paulo. Cada módulo é construído a partir de projetos reais — não de exercícios didáticos criados para o contexto de ensino.",
+          "O nome carrega a proposta: aprender a ver e a dirigir de dentro de uma estrutura que já funciona, com quem já entrega resultados. A transferência de conhecimento acontece no mesmo ambiente onde o conhecimento é praticado."
         ]
       },
       {
-        "h2": "Por que a House ensina",
+        "h2": "O que você aprende — e o que não aprende",
         "paragraphs": [
-          "Formar olhar é coerente com a tese da casa: imagem é estratégia, não acessório. Num mercado em que a carreira de criador se profissionaliza e a demanda por imagem de alto padrão só cresce, dominar direção virou diferencial competitivo real.",
-          "Ao abrir o método para novos profissionais, a House amplia o próprio território — de produtora a referência de formação no mercado criativo de São Paulo."
+          "O Inside Out não ensina como operar câmera. Esse conhecimento é pré-requisito, não tema. O que o workshop ensina é o que acontece antes e depois do clique: como se lê uma cena, como se decide uma luz, como se dirige um talento, como se constrói um moodboard que vira referência de set.",
+          "O participante aprende a transformar intenção em imagem — não apenas a capturar imagem com técnica. Aprende a fazer as perguntas certas antes de montar um set, a identificar o que uma marca ou cliente precisa comunicar e a tomar decisões criativas em tempo real durante uma produção.",
+          "A diferença entre um fotógrafo técnico e um diretor de imagem é exatamente isso: o diretor resolve problemas criativos que ainda não existem na frente da câmera. O Inside Out forma essa capacidade."
         ]
       },
       {
-        "h2": "Para quem é",
+        "h2": "Para quem é o Inside Out",
         "paragraphs": [
-          "Você quer aprender a fotografar melhor ou a dirigir a imagem que o mercado valoriza? O Inside Out responde à segunda pergunta — e é por isso que reúne fotógrafos, criadores e profissionais de marca em um mesmo set.",
-          "Turmas reduzidas, formato presencial, método aplicado em produções reais para grandes marcas."
+          "O workshop é para fotógrafos, diretores de fotografia, produtores de conteúdo e profissionais de imagem que já têm base técnica e querem elevar o nível de sua atuação no mercado criativo. Também é adequado para profissionais de comunicação e marketing que querem entender o processo de produção de imagem por dentro.",
+          "A turma reduzida é uma decisão metodológica: formação de olhar exige atenção individual. Num grupo pequeno, cada participante tem contato real com o processo — não assiste a uma demonstração. Participa de decisões, recebe devolutiva individualizada e sai com mais clareza sobre onde está e onde quer chegar.",
+          "O Inside Out reúne perfis diferentes em torno de um mesmo objetivo: aprender a dirigir imagem com o rigor e a intenção que o mercado premium exige. Não é sobre fotografia em geral — é sobre a linguagem visual específica que a House Mazzutti aplica e ensina."
         ]
       },
       {
-        "h2": "Formar olhar num mercado em alta",
+        "h2": "Por que aprender com quem produz para o mercado",
         "paragraphs": [
-          "O setor criativo emprega 1,26 milhão de pessoas no Brasil e cresce mais rápido que a média da economia — 6,1% em 2023, segundo a Firjan. A demanda por quem domina direção de imagem só aumenta.",
-          "Dominar a câmera virou commodity. Dominar a direção virou diferencial competitivo real."
+          "A diferença de um workshop conduzido por quem trabalha no mercado real está no repertório: casos concretos, decisões que precisaram ser tomadas em set com prazo correndo, erros que ensinaram mais do que os acertos. É um tipo de conhecimento que não existe em apostila.",
+          "Ita Mazzutti carrega esse repertório — formado em produções para marcas como WePink, Jequiti, Dumond e outras referências do mercado de moda e beleza brasileiro. O Inside Out é o canal por onde esse repertório é transferido de forma estruturada para quem está construindo sua própria trajetória.",
+          "Num setor criativo que emprega mais de 1,26 milhão de pessoas no Brasil e cresce acima da média da economia, dominar direção de imagem é vantagem competitiva real. O mercado não precisa de mais fotógrafos técnicos — precisa de quem sabe dirigir."
         ]
       },
       {
-        "h2": "Aprender com quem entrega para o mercado",
+        "h2": "Formato, inscrições e próxima turma",
         "paragraphs": [
-          "A diferença de um workshop conduzido por quem produz para grandes marcas está no repertório real — casos, erros e decisões que só existem em set, não em apostila.",
-          "Não é teoria sobre o mercado: é o mercado mostrando como decide."
+          "O Inside Out acontece presencialmente em São Paulo, em formato intensivo com turmas reduzidas. O conteúdo é distribuído em módulos que cobrem leitura de cena e moodboard, direção de talento, tomada de decisão em set e análise de material produzido com devolutiva personalizada.",
+          "As inscrições são por interesse — não há turmas abertas com inscrição contínua. Quando uma nova turma está sendo formada, os inscritos no formulário de interesse são notificados com antecedência e têm prioridade de vaga.",
+          "Se você quer aprender a dirigir imagem com quem produz para o mercado — não em teoria, mas em prática real — o Inside Out é o passo que separa técnica de autoria."
         ]
       }
     ],
-    "citacao": "Produzir é entregar uma imagem. Ensinar é multiplicar a capacidade de criá-las.",
-        "faq": [
+    "citacao": "Operar câmera é técnica. Dirigir imagem é decisão. O Inside Out forma quem decide.",
+    "faq": [
       {
         "q": "O que é o workshop Inside Out da House Mazzutti Academy?",
-        "a": "Inside Out é o programa de formação prática da House Mazzutti Academy focado em direção de imagem e produção audiovisual. As turmas são reduzidas e presenciais em São Paulo, conduzidas por quem produz para grandes marcas e celebridades no mercado real."
+        "a": "Inside Out é o programa de formação presencial da House Mazzutti Academy, conduzido por Ita Mazzutti em São Paulo. O workshop abre o processo criativo da House para turmas reduzidas — ensinando direção de imagem do conceito ao set a partir de produções reais para marcas do mercado premium brasileiro."
       },
       {
-        "q": "Para quem é o Inside Out?",
-        "a": "Para fotógrafos, diretores de fotografia, produtores e profissionais de imagem que querem elevar o nível técnico e criativo da sua atuação. Também para profissionais de comunicação e marketing que querem entender o processo de produção de imagem de alto padrão por dentro."
+        "q": "O Inside Out é adequado para quem está começando em fotografia?",
+        "a": "Não. O Inside Out pressupõe base técnica. É para fotógrafos, produtores e profissionais de imagem que já dominam o equipamento e querem desenvolver a camada de direção — como ler uma cena, dirigir um talento, tomar decisões criativas em set e construir narrativa visual com intenção."
       },
       {
-        "q": "O que diferencia o Inside Out de outros cursos de fotografia?",
-        "a": "O conteúdo é construído a partir de projetos reais — não de exercícios didáticos. O que é ensinado no Inside Out é o que a House Mazzutti aplica em campanhas para WePink, Jequiti, Dumond e outras marcas de grande porte. É formação com mercado real como referência."
+        "q": "Qual o diferencial do Inside Out em relação a outros cursos de fotografia?",
+        "a": "O conteúdo é construído a partir de projetos reais — não de exercícios didáticos. O que é ensinado é o método que a House Mazzutti aplica em campanhas para marcas como Jequiti, WePink e Dumond. Além disso, turmas reduzidas garantem devolutiva individualizada e contato real com o processo criativo, não apenas observação."
       },
       {
-        "q": "Como me inscrever no Inside Out?",
-        "a": "As turmas são reduzidas e têm inscrições por interesse. Acesse a página do Inside Out na House Mazzutti Academy, cadastre seu interesse e você será notificado quando a próxima turma estiver disponível."
+        "q": "Como me inscrever no próximo Inside Out?",
+        "a": "As turmas são formadas por interesse. Ao se cadastrar no formulário da House Mazzutti Academy, você entra na lista de prioridade para a próxima turma e recebe notificação quando as vagas são abertas. As turmas são reduzidas por decisão metodológica — o que garante qualidade de formação, mas exige antecedência na inscrição."
+      },
+      {
+        "q": "Ita Mazzutti é a instrutora do Inside Out?",
+        "a": "Sim. Ita Mazzutti conduz o Inside Out com base em sua trajetória em produções para grandes marcas e celebridades no mercado de moda e beleza brasileiro. O workshop é, em essência, a abertura do processo criativo dela — o método que usa em cada set, agora estruturado como formação."
       }
     ],
-    "conclusao": "Quer dominar direção de imagem com quem produz para grandes marcas? As turmas do Inside Out são reduzidas e presenciais, em São Paulo. Conheça a House Mazzutti Academy e garanta seu interesse na próxima turma."
+    "conclusao": "Dominar técnica é o mínimo que o mercado exige. Dominar direção é o que diferencia quem trabalha por demanda de quem é chamado por referência. O Inside Out é o programa da House Mazzutti Academy para quem quer cruzar essa distância — com método, prática real e devolutiva de quem produz para o mercado todos os dias."
   },
 
   "fashion-film-o-que-e-quanto-custa": {
