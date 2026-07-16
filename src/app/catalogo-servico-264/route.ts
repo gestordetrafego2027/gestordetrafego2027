@@ -294,10 +294,10 @@ const HTML = `<!DOCTYPE html>
   <nav class="site-nav">
     <a href="#studio">Studio</a>
     <a href="#produtora">Produtora</a>
-    <a href="#academy">Academy</a>
     <a href="#agencia">Agência</a>
     <a href="#digitais">Digitais</a>
     <a href="#tour">Tour</a>
+    <a href="#academy">Academy</a>
     <a href="#equipe">Equipe</a>
   </nav>
   <button class="site-hamburger" id="hamburger" aria-label="Abrir menu">
@@ -320,10 +320,10 @@ const HTML = `<!DOCTYPE html>
     <nav class="side-nav">
       <a href="#studio" onclick="closeMenu()">Studio</a>
       <a href="#produtora" onclick="closeMenu()">Produtora</a>
-      <a href="#academy" onclick="closeMenu()">Academy</a>
-      <a href="#agencia" onclick="Agência">Agência</a>
+      <a href="#agencia" onclick="closeMenu()">Agência</a>
       <a href="#digitais" onclick="closeMenu()">Produtos Digitais</a>
       <a href="#tour" onclick="closeMenu()">Tour Canoinhas</a>
+      <a href="#academy" onclick="closeMenu()">Academy</a>
       <a href="#equipe" onclick="closeMenu()">Equipe à la Carte</a>
     </nav>
     <p class="side-section-label">Site Oficial</p>
@@ -355,10 +355,10 @@ const HTML = `<!DOCTYPE html>
     <div class="anchors">
       <a href="#studio">Studio</a>
       <a href="#produtora">Produtora</a>
-      <a href="#academy">Academy</a>
       <a href="#agencia">Agência</a>
       <a href="#digitais">Produtos Digitais</a>
       <a href="#tour">Tour Canoinhas</a>
+      <a href="#academy">Academy</a>
       <a href="#equipe">Equipe à la Carte</a>
     </div>
   </div>
@@ -525,45 +525,6 @@ const HTML = `<!DOCTYPE html>
   </section>
 
   <!-- ACADEMY -->
-  <section class="section" id="academy">
-    <div class="section-head">
-      <div>
-        <p class="section-eyebrow">Cursos · Formação · Conteúdo</p>
-        <h2 class="section-h2">Academy</h2>
-      </div>
-      <span class="section-count">3 cursos</span>
-    </div>
-    <div class="grid">
-      <a class="card" href="https://housemazzutti.com/pt/loja/marketing-de-influencia-academy" target="_blank">
-        <div class="card-img">
-          <img src="/images/academy/hero-academy.webp" alt="Marketing de Influência" loading="lazy">
-          <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
-        </div>
-        <p class="card-cat">Academy</p>
-        <div class="card-meta"><h3 class="card-name">Marketing de Influência — HMZT Academy</h3><span class="card-price gold">R$ 127,00</span></div>
-        <p class="card-desc">Estratégia de Influência · Creators · Multicanal · 6 módulos · 100h de formação</p>
-      </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/direcao-criativa-academy" target="_blank">
-        <div class="card-img">
-          <img src="/images/academy/direcao-criativa/cover.webp" alt="Direção Criativa Academy" loading="lazy">
-          <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
-        </div>
-        <p class="card-cat">Academy</p>
-        <div class="card-meta"><h3 class="card-name">Direção Criativa — HMZT Academy</h3><span class="card-price gold">R$ 147,00</span></div>
-        <p class="card-desc">Conceito · Direção de Arte · Narrativa Visual · 8 módulos · 120h de formação</p>
-      </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/casos-da-producao-academy" target="_blank">
-        <div class="card-img">
-          <img src="/images/academy/casos-da-producao/cover.webp" alt="Produção Executiva Academy" loading="lazy">
-          <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
-        </div>
-        <p class="card-cat">Academy</p>
-        <div class="card-meta"><h3 class="card-name">Produção Executiva — HMZT Academy</h3><span class="card-price gold">R$ 197,00</span></div>
-        <p class="card-desc">Planejamento · Orçamento · Operações · Entrega · 10 módulos · 140h de formação</p>
-      </a>
-    </div>
-  </section>
-
   <!-- AGÊNCIA -->
   <section class="section" id="agencia">
     <div class="section-head">
@@ -681,6 +642,46 @@ const HTML = `<!DOCTYPE html>
         <p class="tour-price">R$ 3.200</p>
         <p class="tour-note">3× sem juros</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ACADEMY -->
+  <section class="section" id="academy">
+    <div class="section-head">
+      <div>
+        <p class="section-eyebrow">Cursos · Formação · Conteúdo</p>
+        <h2 class="section-h2">Academy</h2>
+      </div>
+      <span class="section-count">3 cursos</span>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://housemazzutti.com/pt/loja/marketing-de-influencia-academy" target="_blank">
+        <div class="card-img">
+          <img src="/images/academy/hero-academy.webp" alt="Marketing de Influência" loading="lazy">
+          <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
+        </div>
+        <p class="card-cat">Academy</p>
+        <div class="card-meta"><h3 class="card-name">Marketing de Influência — HMZT Academy</h3><span class="card-price gold">R$ 127,00</span></div>
+        <p class="card-desc">Estratégia de Influência · Creators · Multicanal · 6 módulos · 100h de formação</p>
+      </a>
+      <a class="card" href="https://housemazzutti.com/pt/loja/direcao-criativa-academy" target="_blank">
+        <div class="card-img">
+          <img src="/images/academy/direcao-criativa/cover.webp" alt="Direção Criativa Academy" loading="lazy">
+          <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
+        </div>
+        <p class="card-cat">Academy</p>
+        <div class="card-meta"><h3 class="card-name">Direção Criativa — HMZT Academy</h3><span class="card-price gold">R$ 147,00</span></div>
+        <p class="card-desc">Conceito · Direção de Arte · Narrativa Visual · 8 módulos · 120h de formação</p>
+      </a>
+      <a class="card" href="https://housemazzutti.com/pt/loja/casos-da-producao-academy" target="_blank">
+        <div class="card-img">
+          <img src="/images/academy/casos-da-producao/cover.webp" alt="Produção Executiva Academy" loading="lazy">
+          <div class="card-overlay"><span class="card-overlay-cta">Ver Academy →</span></div>
+        </div>
+        <p class="card-cat">Academy</p>
+        <div class="card-meta"><h3 class="card-name">Produção Executiva — HMZT Academy</h3><span class="card-price gold">R$ 197,00</span></div>
+        <p class="card-desc">Planejamento · Orçamento · Operações · Entrega · 10 módulos · 140h de formação</p>
+      </a>
     </div>
   </section>
 
