@@ -10,9 +10,10 @@ import Tracking from '@/components/analytics/Tracking';
 import WhatsAppFloatingButton from '@/app/components/WhatsAppFloatingButton';
 import TypewriterInit from '@/app/components/TypewriterInit';
 
-// Necessário: páginas com useEffect/window (agencia, portfolio, etc.) falham
-// na pré-renderização estática. force-dynamic garante SSR seguro em todo [locale].
-export const dynamic = 'force-dynamic';
+// ISR: layout cacheável por 1h. Páginas 'use client' com useEffect/window são
+// seguras no SSR pois efeitos rodam apenas no cliente — force-dynamic não é
+// necessário aqui e causava cache-control:no-store em todo o site.
+export const revalidate = 3600;
 
 export async function generateMetadata({params}) {
   const {locale} = await params;

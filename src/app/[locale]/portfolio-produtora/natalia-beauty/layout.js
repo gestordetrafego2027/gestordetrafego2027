@@ -1,3 +1,5 @@
+import {portfolioVideoSchemas, breadcrumbSchema} from '@/lib/seo/schemas'
+import {brand} from '@/config/site'
 import {pageMetadata} from '@/lib/seo/metadata'
 
 export async function generateMetadata({params}) {
@@ -21,5 +23,17 @@ export async function generateMetadata({params}) {
 }
 
 export default function Layout({children}) {
-  return children
+  const video = portfolioVideoSchemas['natalia-beauty']
+  const crumbs = breadcrumbSchema([
+    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
+    {name: 'Portfólio', url: `${brand.url}/pt/portfolio-produtora/`},
+    {name: 'natalia-beauty', url: `${brand.url}/pt/portfolio-produtora/natalia-beauty/`},
+  ])
+  return (
+    <>
+      {video && <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(video)}} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
+      {children}
+    </>
+  )
 }

@@ -101,6 +101,16 @@ const nextConfig = {
           },
         ],
       },
+      {
+        // HTML pages: ISR cache (s-maxage para CDN, stale-while-revalidate para warmup)
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=3600, stale-while-revalidate=86400',
+          },
+        ],
+      },
     ];
   },
 

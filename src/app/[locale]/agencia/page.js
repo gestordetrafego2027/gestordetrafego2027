@@ -12,8 +12,6 @@ import FormDrawer from '@/app/components/FormDrawer'
 import BlogSection from '@/app/components/BlogSection'
 import TypewriterText from '@/app/components/TypewriterText'
 
-export const dynamic = 'force-dynamic'
-
 export default function AgenciaPage() {
     const t = useTranslations('agencia')
     const tFooter = useTranslations('footer')
