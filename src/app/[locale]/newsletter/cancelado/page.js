@@ -23,7 +23,7 @@ export default function NewsletterCancelado() {
           Se quiser voltar, a inscrição está sempre disponível no blog.
         </p>
         <Link
-          href="/pt/blog"
+          href="/blog"
           style={{
             display: 'inline-block',
             background: '#0a0a0a',

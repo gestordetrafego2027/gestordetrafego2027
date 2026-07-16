@@ -6,7 +6,7 @@ export const articles = {
   "book-para-modelos-quem-e-escolhido": {
     "categoria": "Studio — Book",
     "titulo": "Book para modelos: o que realmente define quem é escolhido no mercado",
-    "metaTitle": "Book para Modelos: o que define quem é escolhido | House Mazzutti",
+    "metaTitle": "Book para Modelos: o que define quem é escolhido",
     "metaDescription": "Por que um book editorial é mais do que portfólio: como direção de imagem, curadoria e posicionamento definem quem o mercado escolhe em São Paulo e fora dele.",
     "keywords": "book para modelos, book editorial, book fotográfico profissional, agência de modelos São Paulo, marca pessoal, direção de imagem, casting, House Mazzutti, hub criativo",
     "data": "Abril 2026",
@@ -90,7 +90,7 @@ export const articles = {
   "book-modelo-imagem-trabalha-por-voce": {
     "categoria": "Studio — Book",
     "titulo": "Book de modelo: quando sua imagem começa a trabalhar por você",
-    "metaTitle": "Book de Modelo: quando a imagem trabalha por você | House Mazzutti",
+    "metaTitle": "Book de Modelo: quando a imagem trabalha por você",
     "metaDescription": "Como um book editorial transforma sua imagem em ativo de mercado — gerando convites, casting e oportunidades sem que você precise insistir.",
     "keywords": "book de modelo, book editorial premium, marca pessoal, ativo de mercado, agência de modelos, casting São Paulo, direção criativa, House Mazzutti Studio",
     "data": "Abril 2026",
@@ -174,7 +174,7 @@ export const articles = {
   "ensaio-pessoal-imagem-autoridade": {
     "categoria": "Studio — Ensaio",
     "titulo": "Ensaio pessoal: o que realmente constrói uma imagem de autoridade",
-    "metaTitle": "Ensaio Pessoal: como construir imagem de autoridade | House Mazzutti",
+    "metaTitle": "Ensaio Pessoal: como construir imagem de autoridade",
     "metaDescription": "Em estágios avançados de carreira, autoridade não basta — precisa ser percebida com precisão. O papel do ensaio pessoal premium na construção de marca pessoal.",
     "keywords": "ensaio pessoal, ensaio fotográfico premium, marca pessoal, retrato corporativo, autoridade visual, branding pessoal, posicionamento de imagem, executivos, médicos, advogados",
     "data": "Março 2026",
@@ -258,7 +258,7 @@ export const articles = {
   "ensaio-pessoal-imagem-lidera-percepcao": {
     "categoria": "Studio — Ensaio",
     "titulo": "Ensaio pessoal: quando sua imagem deixa de acompanhar sua trajetória — e passa a liderá-la",
-    "metaTitle": "Ensaio Pessoal: quando a imagem lidera sua percepção | House Mazzutti",
+    "metaTitle": "Ensaio Pessoal: quando a imagem lidera sua percepção",
     "metaDescription": "Reposicionamento de imagem: quando sua marca pessoal precisa liderar a percepção, não apenas acompanhar sua trajetória. Ensaio premium sob direção.",
     "keywords": "reposicionamento de marca pessoal, ensaio pessoal premium, direção de imagem, branding pessoal, retrato editorial, executivas, fundadoras, House Mazzutti Studio",
     "data": "Março 2026",
@@ -342,7 +342,7 @@ export const articles = {
   "cobertura-externa-presenca-alto-valor": {
     "categoria": "Studio — Cobertura",
     "titulo": "Cobertura externa em tempo real: o que define uma presença de alto valor em São Paulo",
-    "metaTitle": "Cobertura Externa em Tempo Real | Presença de Alto Valor SP | House Mazzutti",
+    "metaTitle": "Cobertura Externa em Tempo Real | Presença de Alto Valor SP",
     "metaDescription": "Como cobertura editorial em São Paulo transforma agendas, eventos e experiências em narrativa visual de alto valor para executivas, fundadoras e personalidades.",
     "keywords": "cobertura externa São Paulo, cobertura editorial, marca pessoal, presença de alto valor, executivas, fundadoras, influenciadoras, direção de imagem, House Mazzutti",
     "data": "Fevereiro 2026",
@@ -426,7 +426,7 @@ export const articles = {
   "cobertura-externa-narrativa-visual": {
     "categoria": "Studio — Cobertura",
     "titulo": "Cobertura externa em tempo real: quando São Paulo se transforma em narrativa visual",
-    "metaTitle": "Cobertura Externa em SP como Narrativa Visual | House Mazzutti",
+    "metaTitle": "Cobertura Externa em SP como Narrativa Visual",
     "metaDescription": "Cobertura editorial premium em São Paulo: quando a cidade vira cenário e cada agenda se transforma em narrativa visual de marca pessoal.",
     "keywords": "narrativa visual São Paulo, cobertura editorial premium, fotografia editorial, marca pessoal, experiência de marca, conteúdo premium, House Mazzutti Studio",
     "data": "Fevereiro 2026",
@@ -510,7 +510,7 @@ export const articles = {
   "branding-project-arquitetura-valor": {
     "categoria": "Agência — Branding",
     "titulo": "Branding project como arquitetura de valor: a base que separa marca de empresa",
-    "metaTitle": "Branding Project como Arquitetura de Valor | House Mazzutti",
+    "metaTitle": "Branding Project como Arquitetura de Valor",
     "metaDescription": "Por que branding estratégico é alavanca de crescimento, não estética. Como um branding project bem construído transforma percepção em receita real.",
     "keywords": "branding project, branding estratégico, arquitetura de marca, posicionamento, identidade visual, brand book, agência de branding São Paulo, House Mazzutti",
     "data": "Abril 2026",
@@ -594,7 +594,7 @@ export const articles = {
   "branding-project-motor-vendas": {
     "categoria": "Agência — Branding",
     "titulo": "Branding project como motor de vendas: por que marca vem antes de tráfego",
-    "metaTitle": "Branding Project como Motor de Vendas | House Mazzutti",
+    "metaTitle": "Branding Project como Motor de Vendas",
     "metaDescription": "Empresas com branding consistente convertem mais e gastam menos em mídia. Como branding estratégico vira motor de vendas, não despesa de comunicação.",
     "keywords": "branding e vendas, conversão, branding estratégico, marketing performance, branding project, agência de branding, redução de CAC, House Mazzutti",
     "data": "Março 2026",
@@ -678,7 +678,7 @@ export const articles = {
   "quanto-investir-em-branding": {
     "categoria": "Agência — Branding",
     "titulo": "Quanto investir em branding: o guia estratégico para empresas premium",
-    "metaTitle": "Quanto Investir em Branding: Guia Estratégico | House Mazzutti",
+    "metaTitle": "Quanto Investir em Branding: Guia Estratégico",
     "metaDescription": "Quanto custa fazer branding? Mais do que números, o guia estratégico de investimento em marca para negócios que cobram valor diferenciado.",
     "keywords": "quanto custa branding, investimento em branding, preço de branding, branding project, branding premium, ROI de marca, agência de branding, House Mazzutti",
     "data": "Março 2026",
@@ -764,7 +764,7 @@ export const articles = {
   "campanha-lancamento-arquitetura-invisivel": {
     "categoria": "Agência — Campanhas",
     "titulo": "Campanha de lançamento: a arquitetura invisível das marcas que dominam atenção",
-    "metaTitle": "Campanha de Lançamento: Arquitetura Invisível | House Mazzutti",
+    "metaTitle": "Campanha de Lançamento: Arquitetura Invisível",
     "metaDescription": "Por que algumas campanhas constroem presença e outras apenas comunicam. A arquitetura estratégica por trás dos lançamentos que dominam atenção.",
     "keywords": "campanha de lançamento, lançamento de marca, campanha publicitária, narrativa de marca, agência de campanha, arquitetura de campanha, House Mazzutti",
     "data": "Fevereiro 2026",
@@ -848,7 +848,7 @@ export const articles = {
   "por-que-campanhas-falham": {
     "categoria": "Agência — Campanhas",
     "titulo": "Por que a maioria das campanhas falha: a economia da atenção e o erro estrutural",
-    "metaTitle": "Por que a maioria das campanhas falha | House Mazzutti",
+    "metaTitle": "Por que a maioria das campanhas falha",
     "metaDescription": "Mais conteúdo, menos impacto. Por que campanhas falham por falta de estrutura — e o que separa quem produz de quem performa.",
     "keywords": "por que campanhas falham, estrutura de campanha, direção criativa, consistência de marca, governança criativa, marketing de performance, House Mazzutti",
     "data": "Janeiro 2026",
@@ -932,7 +932,7 @@ export const articles = {
   "editorial-moda-narrativa-visual": {
     "categoria": "Produtora — Editorial",
     "titulo": "Editorial de moda como narrativa visual: do produto ao desejo",
-    "metaTitle": "Editorial de Moda como Narrativa Visual | House Mazzutti",
+    "metaTitle": "Editorial de Moda como Narrativa Visual",
     "metaDescription": "Como um editorial de moda transforma coleção em narrativa, produto em desejo e marca em referência. Direção criativa premium para marcas de moda.",
     "keywords": "editorial de moda, fashion film, lookbook, campanha de moda, direção de arte, produtora audiovisual, fashion direction, House Mazzutti Produtora",
     "data": "Abril 2026",
@@ -1016,7 +1016,7 @@ export const articles = {
   "editorial-moda-performance-vendas": {
     "categoria": "Produtora — Editorial",
     "titulo": "Editorial de moda orientado à performance: quando imagem passa a vender",
-    "metaTitle": "Editorial de Moda + Performance | House Mazzutti",
+    "metaTitle": "Editorial de Moda + Performance",
     "metaDescription": "Editorial de moda orientado à performance: imagem premium que conduz da percepção à compra, sem perder linguagem editorial — para e-commerce e campanhas.",
     "keywords": "editorial de moda performance, fotografia de moda que vende, imagem para e-commerce de moda, direção de imagem, conversão em moda, branding de moda, House Mazzutti Produtora",
     "data": "Março 2026",
@@ -1100,7 +1100,7 @@ export const articles = {
   "por-que-boas-ideias-nao-garantem-resultados": {
     "categoria": "Produtora — Produção Executiva",
     "titulo": "Por que boas ideias não garantem bons resultados: o papel da produção executiva",
-    "metaTitle": "Por que boas ideias não garantem resultados | House Mazzutti",
+    "metaTitle": "Por que boas ideias não garantem resultados",
     "metaDescription": "Ideias fortes morrem em execuções fracas. O papel da produção executiva premium em transformar conceito em resultado real e mensurável.",
     "keywords": "execução de campanha publicitária, produção executiva premium, governança criativa, conceito e execução, ROI de campanha, direção autoral, House Mazzutti",
     "data": "Fevereiro 2026",
@@ -1184,7 +1184,7 @@ export const articles = {
   "producao-executiva-sistema-campanhas": {
     "categoria": "Produtora — Produção Executiva",
     "titulo": "Produção executiva: o sistema invisível que transforma ideias em campanhas de alto impacto",
-    "metaTitle": "Produção Executiva: o sistema invisível das campanhas | House Mazzutti",
+    "metaTitle": "Produção Executiva: o sistema invisível das campanhas",
     "metaDescription": "Produção executiva não é produção — é governança. Como o sistema invisível por trás das campanhas premium decide entre boas ideias e bons resultados.",
     "keywords": "produção executiva, governança criativa, gestão de campanha, fashion film, filme publicitário, brand content, produtora audiovisual São Paulo, House Mazzutti",
     "data": "Fevereiro 2026",
@@ -1268,7 +1268,7 @@ export const articles = {
   "por-que-campanhas-caras-falham": {
     "categoria": "Produtora — Produção Executiva",
     "titulo": "Por que campanhas com alto investimento falham: a economia invisível do retrabalho",
-    "metaTitle": "Por que Campanhas Caras Falham | House Mazzutti",
+    "metaTitle": "Por que Campanhas Caras Falham",
     "metaDescription": "Orçamento alto não garante resultado. Por que campanhas premium falham e como produção executiva transforma incerteza em previsibilidade.",
     "keywords": "campanha publicitária cara, orçamento de campanha, produção executiva premium, governança criativa, ROI de campanha, previsibilidade, House Mazzutti",
     "data": "Janeiro 2026",
@@ -1352,7 +1352,7 @@ export const articles = {
   "campanha-larissa-manoela-jequiti": {
     "categoria": "Produtora — Set Design",
     "titulo": "Larissa Manoela e a Jequiti: o set que sustenta a estrela",
-    "metaTitle": "Set design e direção de arte para Jequiti com Larissa Manoela | House Mazzutti",
+    "metaTitle": "Set Design: direção de arte para Jequiti com Larissa Manoela",
     "metaDescription": "Como o set design e a direção de arte da House Mazzutti construíram o ambiente visual que sustentou a presença de Larissa Manoela na campanha da linha Splash, da Jequiti.",
     "keywords": "set design para campanha de beleza, direção de arte, cenografia publicitária, Larissa Manoela, Jequiti, House Mazzutti, produção audiovisual beleza",
     "data": "Junho 2026",
@@ -1439,7 +1439,7 @@ export const articles = {
   "fashion-film-joias-barbara-porto": {
     "categoria": "Produtora — Editorial",
     "titulo": "Bárbara Porto: a joia em movimento",
-    "metaTitle": "Fashion Film de Joias — Bárbara Porto | House Mazzutti",
+    "metaTitle": "Fashion Film de Joias — Bárbara Porto",
     "metaDescription": "Case do fashion film de joias da House Mazzutti para Bárbara Porto: conceito, direção de arte e a imagem que transforma a peça em desejo.",
     "keywords": "fashion film de joias, direção de arte, vídeo para joalheria, produção audiovisual, design, Bárbara Porto, House Mazzutti",
     "data": "Junho 2026",
@@ -1526,7 +1526,7 @@ export const articles = {
   "fashion-film-emanuely-terres": {
     "categoria": "Produtora — Editorial",
     "titulo": "Emanuely Terres: um fashion film sobre presença",
-    "metaTitle": "Fashion Film Emanuely Terres | House Mazzutti Produtora",
+    "metaTitle": "Fashion Film Emanuely Terres",
     "metaDescription": "Case do fashion film de Emanuely Terres pela House Mazzutti em São Paulo: direção criativa, linguagem audiovisual e construção de presença.",
     "keywords": "produtora de fashion film em São Paulo, fashion film, direção criativa, audiovisual de moda, presença, Emanuely Terres, House Mazzutti",
     "data": "Junho 2026",
@@ -1613,7 +1613,7 @@ export const articles = {
   "workshop-inside-out-ita-mazzutti": {
     "categoria": "Studio — Academy",
     "titulo": "Inside Out: a House também forma o olhar",
-    "metaTitle": "Workshop Inside Out de Ita Mazzutti | House Mazzutti Academy",
+    "metaTitle": "Workshop Inside Out de Ita Mazzutti",
     "metaDescription": "O workshop Inside Out, de Ita Mazzutti e da House Mazzutti, ensina direção e fotografia do conceito à entrega para novos profissionais em São Paulo.",
     "keywords": "workshop de fotografia e direção em São Paulo, formação audiovisual, direção criativa, Academy, mentoria de imagem, Ita Mazzutti, House Mazzutti",
     "data": "Junho 2026",
@@ -1701,7 +1701,7 @@ export const articles = {
   "fashion-film-o-que-e-quanto-custa": {
     "categoria": "Produtora — Editorial",
     "titulo": "Fashion film: o que é, quanto custa e quando sua marca precisa de um — guia 2026",
-    "metaTitle": "Fashion Film: o que é e quanto custa? Guia 2026 | House Mazzutti",
+    "metaTitle": "Fashion Film: o que é e quanto custa? Guia 2026",
     "metaDescription": "Entenda o que é fashion film, quando sua marca precisa de um e o que define o investimento. Produtora de moda em São Paulo — House Mazzutti. Atualizado em julho/2026.",
     "keywords": "fashion film, o que é fashion film, quanto custa fashion film, produtora de moda São Paulo, vídeo de moda, fashion film Brasil, House Mazzutti produtora, film de moda conceitual",
     "data": "Julho 2026",
@@ -1787,7 +1787,7 @@ export const articles = {
   "video-institucional-sao-paulo-como-produzir": {
     "categoria": "Produtora — Institucional",
     "titulo": "Vídeo institucional em São Paulo: o que é, quanto custa e como contratar uma produtora — guia 2026",
-    "metaTitle": "Vídeo Institucional em São Paulo: quanto custa e como produzir | House Mazzutti",
+    "metaTitle": "Vídeo Institucional SP: quanto custa e como produzir",
     "metaDescription": "Entenda o que define um bom vídeo institucional, quanto custa em São Paulo e como escolher uma produtora. House Mazzutti — produção com direção criativa desde o briefing. Julho/2026.",
     "keywords": "vídeo institucional São Paulo, quanto custa vídeo institucional, produtora vídeo institucional SP, como fazer vídeo institucional empresa, vídeo corporativo São Paulo, House Mazzutti produtora",
     "data": "Julho 2026",
@@ -1873,7 +1873,7 @@ export const articles = {
   "casting-set-design-campanha-moda": {
     "categoria": "Produtora — Moda",
     "titulo": "Casting e set design numa campanha de moda: o que uma produtora faz antes do set",
-    "metaTitle": "Casting e Set Design em Campanha de Moda | House Mazzutti Produtora SP",
+    "metaTitle": "Casting e Set Design em Campanha de Moda",
     "metaDescription": "O que uma produtora de moda faz antes do set: casting estratégico, set design e produção executiva que protege o conceito da criação à entrega. House Mazzutti, São Paulo.",
     "keywords": "casting campanha de moda, set design moda São Paulo, produtora de moda SP, produção executiva campanha, casting modelo São Paulo, House Mazzutti produtora moda, produção de fashion film",
     "data": "Julho 2026",
@@ -1952,7 +1952,7 @@ export const articles = {
   "geo-visibilidade-marca-nas-ias": {
     "categoria": "Agência — Estratégia",
     "titulo": "GEO: o que é e por que sua marca desaparece das inteligências artificiais se você ignorar isso",
-    "metaTitle": "GEO — Generative Engine Optimization: o que é e por que importa | House Mazzutti",
+    "metaTitle": "GEO — Generative Engine Optimization: por que importa",
     "metaDescription": "GEO (Generative Engine Optimization) é a disciplina que define se sua marca aparece ou some quando alguém pergunta algo ao ChatGPT, Gemini ou Perplexity. Entenda o que é e o que fazer.",
     "keywords": "GEO, generative engine optimization, o que é GEO, como aparecer no ChatGPT, visibilidade em inteligência artificial, SEO para IAs, marca no ChatGPT, House Mazzutti agência branding",
     "data": "Julho 2026",
@@ -2038,7 +2038,7 @@ export const articles = {
   "aeo-como-ser-a-resposta-das-ias": {
     "categoria": "Agência — Estratégia",
     "titulo": "AEO: como estruturar sua marca para ser citada pelo ChatGPT, Gemini e Perplexity",
-    "metaTitle": "AEO — Answer Engine Optimization: como ser citado pelas IAs | House Mazzutti",
+    "metaTitle": "AEO — Answer Engine Optimization: como ser citado pelas IAs",
     "metaDescription": "AEO (Answer Engine Optimization) é a disciplina de fazer sua marca aparecer como a resposta nas IAs. Entenda como funciona e o que implementar para ser citado pelo ChatGPT, Gemini e Perplexity.",
     "keywords": "AEO, answer engine optimization, o que é AEO, aparecer no Perplexity, Google AI Overview, como ser citado por IAs, SEO conversacional, visibilidade em IA, House Mazzutti agência",
     "data": "Julho 2026",
@@ -2124,7 +2124,7 @@ export const articles = {
   "geo-aeo-posicionamento-era-das-ias": {
     "categoria": "Agência — Branding",
     "titulo": "GEO + AEO: posicionamento de marca quando quem decide a visibilidade é uma inteligência artificial",
-    "metaTitle": "GEO e AEO no Branding: posicionamento de marca na era das IAs | House Mazzutti",
+    "metaTitle": "GEO e AEO no Branding: marca posicionada na era das IAs",
     "metaDescription": "Como GEO e AEO redefinem o posicionamento de marca: por que marcas invisíveis nas IAs perdem mercado e o que fazer para ser citado pelo ChatGPT, Gemini e Perplexity.",
     "keywords": "GEO AEO branding, posicionamento de marca IA, estratégia de marca ChatGPT, visibilidade Gemini Perplexity, branding era das IAs, marca no Google AI Overview, House Mazzutti agência branding SP",
     "data": "Julho 2026",
@@ -2210,7 +2210,7 @@ export const articles = {
   "quanto-custa-book-modelo-sao-paulo": {
     "categoria": "Studio — Book",
     "titulo": "Quanto custa um book de modelo em São Paulo? O guia completo de investimento",
-    "metaTitle": "Quanto Custa um Book de Modelo em São Paulo? | House Mazzutti",
+    "metaTitle": "Quanto Custa um Book de Modelo em São Paulo?",
     "metaDescription": "Quanto custa um book fotográfico profissional em São Paulo? Veja as faixas de investimento, o que está incluso e o que define o valor final de um book de modelo.",
     "keywords": "quanto custa book de modelo, preço book fotográfico São Paulo, book profissional valor, investimento book modelo, book editorial SP, House Mazzutti Studio",
     "data": "Julho 2026",
@@ -2303,7 +2303,7 @@ export const articles = {
   "como-se-preparar-ensaio-fotografico": {
     "categoria": "Studio — Ensaio",
     "titulo": "Como se preparar para um ensaio fotográfico: o guia completo da sessão à entrega",
-    "metaTitle": "Como se Preparar para um Ensaio Fotográfico | House Mazzutti Studio",
+    "metaTitle": "Como se Preparar para um Ensaio Fotográfico",
     "metaDescription": "Como se preparar para um ensaio fotográfico profissional: figurino, cabelo, pele, briefing e o que esperar no dia da sessão. Guia completo do Studio House Mazzutti.",
     "keywords": "como se preparar ensaio fotográfico, preparação para sessão de fotos, o que levar ensaio, figurino ensaio fotográfico, dicas para ensaio fotográfico, House Mazzutti Studio São Paulo",
     "data": "Julho 2026",
@@ -2395,7 +2395,7 @@ export const articles = {
   "o-que-e-assessoria-de-imprensa": {
     "categoria": "Agência — RP",
     "titulo": "O que é assessoria de imprensa e quando uma marca realmente precisa de uma",
-    "metaTitle": "O que é Assessoria de Imprensa e Quando Contratar | House Mazzutti",
+    "metaTitle": "O que é Assessoria de Imprensa e Quando Contratar",
     "metaDescription": "O que é assessoria de imprensa, o que ela faz na prática, quando uma marca precisa contratar e qual a diferença entre RP e marketing de influência.",
     "keywords": "o que é assessoria de imprensa, assessoria de imprensa para que serve, diferença RP e marketing influência, contratar assessoria de imprensa, agência de RP São Paulo, House Mazzutti",
     "data": "Julho 2026",
@@ -2488,7 +2488,7 @@ export const articles = {
   "fotografia-de-moda-o-que-e-como-aprender": {
     "categoria": "Academy — Formação",
     "titulo": "Fotografia de moda: o que é e como aprender de verdade",
-    "metaTitle": "Fotografia de Moda: o que é e como aprender | House Mazzutti Academy",
+    "metaTitle": "Fotografia de Moda: o que é e como aprender",
     "metaDescription": "Fotografia de moda não é fotografar roupa. É direção. Entenda o que separa a imagem de moda da fotografia comum, seus pilares técnicos e onde aprender em São Paulo.",
     "keywords": "fotografia de moda o que é, como aprender fotografia de moda, curso fotografia de moda SP, direção de imagem, fotografia editorial, House Mazzutti Academy, workshop fotografia São Paulo",
     "data": "Julho 2026",
@@ -2553,7 +2553,7 @@ export const articles = {
   "direcao-de-imagem-o-que-faz-um-diretor": {
     "categoria": "Academy — Formação",
     "titulo": "Direção de imagem: o que faz um diretor e por que toda produção precisa de um",
-    "metaTitle": "Direção de Imagem: o que faz um diretor de imagem | House Mazzutti Academy",
+    "metaTitle": "Direção de Imagem: o que faz um diretor de imagem",
     "metaDescription": "Diretor de imagem não é fotógrafo com outro nome. Entenda o que é direção de imagem, por que toda produção precisa dela e como Angelo Mazzutti define o processo.",
     "keywords": "o que faz um diretor de imagem, direção de imagem o que é, diretor criativo fotografia, direção criativa, Angelo Mazzutti, House Mazzutti Academy, formação diretor de imagem",
     "data": "Julho 2026",
@@ -2618,7 +2618,7 @@ export const articles = {
   "workshop-fotografia-moda-sao-paulo-vale-a-pena": {
     "categoria": "Academy — Workshop",
     "titulo": "Workshop de fotografia de moda em São Paulo: vale a pena?",
-    "metaTitle": "Workshop de Fotografia de Moda em São Paulo: vale a pena? | House Mazzutti",
+    "metaTitle": "Workshop de Fotografia de Moda em São Paulo: vale a pena?",
     "metaDescription": "O que um workshop de fotografia de moda ensina que um curso online não ensina. Critérios para escolher, o que esperar e o que a Inside Out da House Mazzutti oferece.",
     "keywords": "workshop fotografia moda São Paulo, vale a pena fazer workshop fotografia, workshop direção de imagem SP, Inside Out House Mazzutti, formação fotografia de moda, House Mazzutti Academy",
     "data": "Julho 2026",
@@ -2683,7 +2683,7 @@ export const articles = {
   "inside-out-workshop-house-mazzutti-o-que-e": {
     "categoria": "Academy — Inside Out",
     "titulo": "Inside Out: o workshop de imersão em direção de imagem da House Mazzutti",
-    "metaTitle": "Inside Out House Mazzutti: o workshop de direção de imagem | Academy",
+    "metaTitle": "Inside Out: o workshop de direção de imagem | Academy",
     "metaDescription": "Inside Out é o workshop de imersão da House Mazzutti em direção de imagem e fotografia de moda, com Angelo e Ita Mazzutti. Entenda o formato, o que se aprende e para quem é.",
     "keywords": "Inside Out House Mazzutti, workshop Inside Out, Inside Out Ita Mazzutti, Angelo Mazzutti workshop, imersão direção de imagem, fotografia de moda São Paulo, House Mazzutti Academy",
     "data": "Julho 2026",
@@ -2748,7 +2748,7 @@ export const articles = {
   "agencia-de-branding-ou-freelancer-quando-contratar-cada-um": {
     "categoria": "Agência — Decisão",
     "titulo": "Agência de branding ou freelancer: quando contratar cada um",
-    "metaTitle": "Agência de Branding ou Freelancer: quando contratar cada um | House Mazzutti",
+    "metaTitle": "Agência de Branding ou Freelancer: quando contratar cada um",
     "metaDescription": "Freelancer resolve tarefa; agência de branding constrói posicionamento. Entenda o custo real de cada opção e como saber se sua marca está pronta para uma agência.",
     "keywords": "agência de branding ou freelancer, quando contratar agência de branding, diferença agência e freelancer, posicionamento de marca, branding estratégico São Paulo, House Mazzutti",
     "data": "Julho 2026",
@@ -2813,7 +2813,7 @@ export const articles = {
   "quando-contratar-uma-produtora-de-moda-guia-para-marcas": {
     "categoria": "Agência — Decisão",
     "titulo": "Quando contratar uma produtora de moda: guia para marcas",
-    "metaTitle": "Quando Contratar uma Produtora de Moda: guia para marcas | House Mazzutti",
+    "metaTitle": "Quando Contratar uma Produtora de Moda: guia para marcas",
     "metaDescription": "Fotógrafo solo ou produtora de moda? Entenda o que uma produtora entrega além da foto, os sinais de que sua marca precisa de produção executiva e como avaliar uma proposta.",
     "keywords": "quando contratar produtora de moda, produtora de moda ou fotógrafo, como escolher produtora São Paulo, produção executiva de moda, direção de imagem, House Mazzutti Produtora",
     "data": "Julho 2026",
@@ -2878,7 +2878,7 @@ export const articles = {
   "identidade-visual-o-que-e-quando-refazer-a-sua": {
     "categoria": "Agência — Branding",
     "titulo": "Identidade visual: o que é e quando refazer a sua",
-    "metaTitle": "Identidade Visual: o que é e quando refazer a sua | House Mazzutti",
+    "metaTitle": "Identidade Visual: o que é e quando refazer a sua",
     "metaDescription": "Identidade visual é muito mais que o logo. Entenda o que ela realmente inclui, os sinais de que a sua está errada e quando um reposicionamento visual se justifica.",
     "keywords": "o que é identidade visual, quando refazer identidade visual, identidade visual São Paulo agência, rebranding, posicionamento de marca, branding estratégico, House Mazzutti",
     "data": "Julho 2026",
@@ -2944,7 +2944,7 @@ export const articles = {
   "diferenca-book-ensaio-fotografico": {
     "categoria": "Studio — Book",
     "titulo": "Diferença entre book e ensaio fotográfico: quando usar cada um",
-    "metaTitle": "Diferença entre Book e Ensaio Fotográfico | House Mazzutti Studio",
+    "metaTitle": "Diferença entre Book e Ensaio Fotográfico",
     "metaDescription": "Qual a diferença entre book e ensaio fotográfico? Entenda quando cada um é o instrumento certo para o seu objetivo — e por que confundir os dois sai caro.",
     "keywords": "diferença book ensaio fotográfico, book vs ensaio, quando fazer book, quando fazer ensaio, book modelo vs ensaio pessoal, House Mazzutti Studio",
     "data": "Agosto 2026",
@@ -3032,7 +3032,7 @@ export const articles = {
   "gestao-redes-sociais-para-empresas": {
     "categoria": "Agência — Digital",
     "titulo": "Gestão de redes sociais para empresas: o que separa presença de resultado",
-    "metaTitle": "Gestão de Redes Sociais para Empresas em São Paulo | House Mazzutti",
+    "metaTitle": "Gestão de Redes Sociais para Empresas em São Paulo",
     "metaDescription": "O que é gestão de redes sociais para empresas, o que está incluso, quando contratar e como identificar uma gestão que gera resultado — não só conteúdo.",
     "keywords": "gestão redes sociais para empresas, social media para empresas São Paulo, agência social media SP, gestão instagram empresa, House Mazzutti agência",
     "data": "Agosto 2026",
@@ -3113,7 +3113,7 @@ export const articles = {
   "quanto-custa-video-institucional-2025": {
     "categoria": "Produtora — Institucional",
     "titulo": "Quanto custa um vídeo institucional em 2025? Guia completo de investimento",
-    "metaTitle": "Quanto Custa um Vídeo Institucional em 2025? | House Mazzutti",
+    "metaTitle": "Quanto Custa um Vídeo Institucional em 2025?",
     "metaDescription": "Quanto custa um vídeo institucional profissional em São Paulo? Faixas de investimento, o que está incluso e o que define o preço de um vídeo institucional.",
     "keywords": "quanto custa vídeo institucional, preço vídeo institucional São Paulo, vídeo corporativo valor, produção audiovisual empresa SP, House Mazzutti produtora",
     "data": "Agosto 2026",
@@ -3195,7 +3195,7 @@ export const articles = {
   "fashion-film-lancamento-colecao": {
     "categoria": "Produtora — Moda",
     "titulo": "Fashion film para lançamento de coleção: o que é, quanto custa e quando usar",
-    "metaTitle": "Fashion Film para Lançamento de Coleção | House Mazzutti Produtora",
+    "metaTitle": "Fashion Film para Lançamento de Coleção",
     "metaDescription": "O que é um fashion film para lançamento de coleção, quanto custa, como é produzido e quando é o instrumento certo para uma marca de moda.",
     "keywords": "fashion film lançamento coleção, vídeo moda São Paulo, fashion film marca moda, produtora fashion film SP, House Mazzutti produtora moda",
     "data": "Agosto 2026",

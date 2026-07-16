@@ -29,7 +29,7 @@ export default function TourConfirmacaoPage() {
         </a>
         <div className="mt-8">
           <Link
-            href="/pt/canoinhas"
+            href="/canoinhas"
             className="font-label uppercase tracking-[0.3em] text-[8px] text-white/20 hover:text-white/40 transition-colors"
           >
             ← Voltar à página do Tour

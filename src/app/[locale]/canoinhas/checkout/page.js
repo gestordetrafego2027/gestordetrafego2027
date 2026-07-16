@@ -251,7 +251,7 @@ export default function TourCheckoutPage() {
         {/* Header */}
         <div className="mb-12">
           <Link
-            href="/pt/canoinhas"
+            href="/canoinhas"
             className="font-label uppercase tracking-[0.35em] text-[8px] text-white/25 hover:text-white/50 transition-colors mb-8 block"
           >
             ← Tour Marca Pessoal

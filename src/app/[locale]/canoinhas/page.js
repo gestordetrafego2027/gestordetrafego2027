@@ -493,7 +493,7 @@ export default function TourMarcaPessoalPage() {
           </p>
           <div data-aos="fade-in" data-aos-delay="360">
             <a
-              href="/pt/canoinhas/checkout"
+              href="/canoinhas/checkout"
               className="inline-block border border-white text-white px-14 py-[18px] font-label uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-colors duration-300"
             >
               Garantir minha agenda

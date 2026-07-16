@@ -22,7 +22,6 @@ export const clusters = {
       'quanto-custa-book-modelo-sao-paulo',
       'como-se-preparar-ensaio-fotografico',
       'diferenca-book-ensaio-fotografico',
-      'book-para-atriz-mercado-audiovisual',
     ],
   },
   agencia: {
@@ -47,7 +46,6 @@ export const clusters = {
       'geo-aeo-posicionamento-era-das-ias',
       'o-que-e-assessoria-de-imprensa',
       'gestao-redes-sociais-para-empresas',
-      'criacao-site-profissional-sao-paulo',
       'agencia-de-branding-ou-freelancer-quando-contratar-cada-um',
       'quando-contratar-uma-produtora-de-moda-guia-para-marcas',
       'identidade-visual-o-que-e-quando-refazer-a-sua',
@@ -74,7 +72,6 @@ export const clusters = {
       'fashion-film-emanuely-terres',
       'quanto-custa-video-institucional-2025',
       'fashion-film-lancamento-colecao',
-      'campanha-moda-do-brief-ao-set',
     ],
   },
   academy: {
@@ -135,15 +132,12 @@ export const postTitles = {
   'quanto-custa-book-modelo-sao-paulo': 'Quanto custa um book de modelo em SP?',
   'como-se-preparar-ensaio-fotografico': 'Como se preparar para um ensaio fotográfico',
   'diferenca-book-ensaio-fotografico': 'Diferença entre book e ensaio fotográfico',
-  'book-para-atriz-mercado-audiovisual': 'Book para Atriz: o que o mercado audiovisual exige',
   // Agência — novos artigos planejados
   'o-que-e-assessoria-de-imprensa': 'O que é assessoria de imprensa e para que serve',
   'gestao-redes-sociais-para-empresas': 'Gestão de Redes Sociais para Empresas',
-  'criacao-site-profissional-sao-paulo': 'Criação de Site Profissional em SP',
   // Produtora — novos artigos planejados
   'quanto-custa-video-institucional-2025': 'Quanto custa um vídeo institucional? (2025)',
   'fashion-film-lancamento-colecao': 'Fashion Film para Lançamento de Coleção',
-  'campanha-moda-do-brief-ao-set': 'Campanha de Moda: do Brief ao Set',
   // Academy — novos artigos
   'fotografia-de-moda-o-que-e-como-aprender': 'Fotografia de Moda: o que é e como aprender',
   'direcao-de-imagem-o-que-faz-um-diretor': 'Direção de Imagem: o que faz um diretor',
