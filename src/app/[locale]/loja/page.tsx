@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks'
 import Header from '@/app/components/Header'
 import { featureFlags } from '@/lib/feature-flags'
-import { createClient } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
 import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import type { Metadata } from 'next'
@@ -153,7 +153,10 @@ const CATEGORY_SUBS: Record<string, string> = {
 export default async function LojaPage() {
   if (!featureFlags.isStoreEnabled()) notFound()
 
-  const supabase = await createClient()
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  )
   const { data: products, error } = await supabase
     .from('store_products')
     .select(
@@ -165,7 +168,7 @@ export default async function LojaPage() {
     .order('featured', { ascending: false })
     .order('name', { ascending: true })
 
-  const items = (products ?? []) as Product[]
+  const items = (products ?? []) as unknown as Product[]
 
   // Avulso = produto digital que não é curso (cursos têm slug terminando em -academy)
   const isAvulso = (p: Product) => p.product_type === 'digital' && !p.slug.endsWith('-academy')
