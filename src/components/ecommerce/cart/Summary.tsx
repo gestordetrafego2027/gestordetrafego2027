@@ -139,7 +139,11 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
             Cupom de desconto
           </p>
           <div className="flex gap-2">
+            <label htmlFor="cart-coupon" className="sr-only">
+              Código de cupom
+            </label>
             <input
+              id="cart-coupon"
               type="text"
               value={couponInput}
               onChange={(e) => {
@@ -218,7 +222,11 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
           </div>
           {(method === 'pix' || method === 'boleto') && (
             <div className="space-y-2">
+              <label htmlFor="cart-buyer-email" className="sr-only">
+                Email
+              </label>
               <input
+                id="cart-buyer-email"
                 type="email"
                 placeholder="Email *"
                 value={buyerEmail}
@@ -260,14 +268,22 @@ export function CartSummary({ onClose }: { onClose?: () => void }) {
                   ?
                 </p>
               )}
+              <label htmlFor="cart-buyer-name" className="sr-only">
+                Nome completo
+              </label>
               <input
+                id="cart-buyer-name"
                 type="text"
                 placeholder="Nome completo"
                 value={buyerName}
                 onChange={(e) => setBuyerName(e.target.value)}
                 className="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-neutral-900"
               />
+              <label htmlFor="cart-buyer-cpf" className="sr-only">
+                CPF ou CNPJ
+              </label>
               <input
+                id="cart-buyer-cpf"
                 type="text"
                 placeholder="CPF/CNPJ (recomendado)"
                 value={buyerCpf}

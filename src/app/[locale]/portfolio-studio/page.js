@@ -5,6 +5,7 @@ import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import { getTranslations } from 'next-intl/server';
+import BlogSection from '@/app/components/BlogSection';
 
 export default async function PortfolioStudioPage() {
     const tFooter = await getTranslations('footer');
@@ -412,6 +413,18 @@ export default async function PortfolioStudioPage() {
                     </div>
                 </section>
             </main>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'book-para-modelos-quem-e-escolhido',
+                    'ensaio-pessoal-imagem-autoridade',
+                    'quanto-custa-book-modelo-sao-paulo',
+                    'diferenca-book-ensaio-fotografico',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* 4. FOOTER */}
             <footer className="bg-white border-t border-zinc-200 w-full flex justify-between items-center px-[48px] py-[32px] text-white">

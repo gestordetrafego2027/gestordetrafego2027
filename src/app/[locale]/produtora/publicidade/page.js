@@ -11,6 +11,7 @@ import FormProdutora from '@/app/components/forms/FormProdutora';
 import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
+import BlogSection from '@/app/components/BlogSection';
 import {useTranslations} from 'next-intl';
 
 export default function ProdutoraPublicidadePage() {
@@ -170,6 +171,18 @@ export default function ProdutoraPublicidadePage() {
                         {t('cta_final_btn')}
                     </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'campanha-lancamento-arquitetura-invisivel',
+                    'por-que-campanhas-falham',
+                    'por-que-campanhas-caras-falham',
+                    'producao-executiva-sistema-campanhas',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

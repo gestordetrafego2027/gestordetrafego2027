@@ -12,6 +12,7 @@ import FormStudio from '@/app/components/forms/FormStudio';
 import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function StudioEnsaioPage() {
     const t = useTranslations('studio_ensaio');
@@ -156,6 +157,18 @@ export default function StudioEnsaioPage() {
                         {t('cta_final_btn')}
                     </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'ensaio-pessoal-imagem-autoridade',
+                    'ensaio-pessoal-imagem-lidera-percepcao',
+                    'como-se-preparar-ensaio-fotografico',
+                    'diferenca-book-ensaio-fotografico',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

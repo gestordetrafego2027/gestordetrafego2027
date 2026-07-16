@@ -9,6 +9,7 @@ import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import FormAgenciaB2B from '@/app/components/forms/FormAgenciaB2B';
 import LandingTeam from '@/app/components/LandingTeam';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function AgenciaRpPage() {
     const t = useTranslations('agencia_rp');
@@ -149,6 +150,18 @@ export default function AgenciaRpPage() {
                     {t('cta_btn')}
                 </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'o-que-e-assessoria-de-imprensa',
+                    'geo-visibilidade-marca-nas-ias',
+                    'aeo-como-ser-a-resposta-das-ias',
+                    'campanha-lancamento-arquitetura-invisivel',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

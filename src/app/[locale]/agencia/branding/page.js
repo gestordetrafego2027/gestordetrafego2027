@@ -10,6 +10,7 @@ import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import FormBranding from '@/app/components/forms/FormBranding';
 import LandingTeam from '@/app/components/LandingTeam';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function AgenciaBrandingPage() {
     const t = useTranslations('agencia_branding');
@@ -356,6 +357,18 @@ export default function AgenciaBrandingPage() {
                     {t('cta_final_btn')}
                 </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'branding-project-arquitetura-valor',
+                    'branding-project-motor-vendas',
+                    'quanto-investir-em-branding',
+                    'identidade-visual-o-que-e-quando-refazer-a-sua',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

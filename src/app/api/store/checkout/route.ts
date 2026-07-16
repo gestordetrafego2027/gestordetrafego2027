@@ -82,9 +82,10 @@ export async function POST(req: NextRequest) {
   }
 
   // Bloqueia quote_only no checkout direto
-  const quoteOnlyItem = prices.find(
-    (p) => (p.metadata as { quote_only?: string } | null)?.quote_only === 'true',
-  )
+  const quoteOnlyItem = prices.find((p) => {
+    const v = (p.metadata as { quote_only?: string | boolean } | null)?.quote_only
+    return v === 'true' || v === true
+  })
   if (quoteOnlyItem) {
     return NextResponse.json(
       { error: 'Este item exige orçamento — use o formulário de contato.' },

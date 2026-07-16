@@ -12,6 +12,7 @@ import FormStudio from '@/app/components/forms/FormStudio';
 import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function StudioCoberturaPage() {
     const t = useTranslations('studio_cobertura');
@@ -148,6 +149,18 @@ export default function StudioCoberturaPage() {
                         {t('cta_final_btn')}
                     </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'cobertura-externa-presenca-alto-valor',
+                    'cobertura-externa-narrativa-visual',
+                    'ensaio-pessoal-imagem-autoridade',
+                    'book-para-modelos-quem-e-escolhido',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

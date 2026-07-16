@@ -27,7 +27,7 @@ type Price = {
   unit_amount: number
   currency: string
   price_type: string
-  metadata: { quote_only?: string }
+  metadata: { quote_only?: string | boolean }
 }
 type Category = { slug: string; name: string }
 type Product = {
@@ -206,6 +206,7 @@ export default async function LojaPage() {
   return (
     <div className="min-h-screen bg-[#faf9f7] flex flex-col">
       {/* ── HEADER GLOBAL (P-LOJ1: mesmo header do site principal) ── */}
+      {/* @ts-expect-error Header.js é JS sem tipagem */}
       <Header variant="dark" />
 
       {/* ── HERO DA LOJA ─────────────────────────────────────────── */}

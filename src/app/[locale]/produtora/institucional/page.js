@@ -12,6 +12,7 @@ import FormProdutora from '@/app/components/forms/FormProdutora';
 import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function ProdutoraInstitucionalPage() {
     const t = useTranslations('produtora_institucional');
@@ -165,6 +166,18 @@ export default function ProdutoraInstitucionalPage() {
                         {t('cta_final_btn')}
                     </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'video-institucional-sao-paulo-como-produzir',
+                    'quanto-custa-video-institucional-2025',
+                    'producao-executiva-sistema-campanhas',
+                    'por-que-boas-ideias-nao-garantem-resultados',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

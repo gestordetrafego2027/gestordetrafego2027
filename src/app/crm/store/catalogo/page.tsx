@@ -90,7 +90,8 @@ export default async function CatalogoAdminPage() {
           products.map((product) => {
             const prices = (product.store_prices as any[]) ?? []
             const mainPrice = prices.find((p: any) => p.active) ?? prices[0]
-            const isQuoteOnly = mainPrice?.metadata?.quote_only === 'true'
+            const _qov2 = mainPrice?.metadata?.quote_only
+            const isQuoteOnly = _qov2 === 'true' || _qov2 === true
             const cats =
               (product.store_product_categories as any[])
                 ?.map((pc: any) => pc.store_categories?.name)

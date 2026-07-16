@@ -1,5 +1,6 @@
 import { Link } from '@/i18n/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
+import BlogSection from '@/app/components/BlogSection';
 import Header from '@/app/components/Header'
 import {getTranslations} from 'next-intl/server'
 
@@ -173,6 +174,18 @@ export default async function SobrePage() {
           </div>
         </section>
       </main>
+
+      {/* BLOG */}
+      <BlogSection
+        slugs={[
+          'branding-project-arquitetura-valor',
+          'direcao-de-imagem-o-que-faz-um-diretor',
+          'geo-aeo-posicionamento-era-das-ias',
+          'quando-contratar-uma-produtora-de-moda-guia-para-marcas',
+        ]}
+        allLabel="Ver todos →"
+        readLabel="Ler →"
+      />
 
       {/* FOOTER */}
       <footer className="bg-white text-zinc-900 py-24 px-8 border-t border-zinc-200">

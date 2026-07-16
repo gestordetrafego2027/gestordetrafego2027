@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import LandingTeam from '@/app/components/LandingTeam';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function AgenciaComunicacaoPage() {
     const t = useTranslations('agencia_comunicacao');
@@ -164,6 +165,18 @@ export default function AgenciaComunicacaoPage() {
                     {t('cta_final_btn')}
                 </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'gestao-redes-sociais-para-empresas',
+                    'campanha-lancamento-arquitetura-invisivel',
+                    'por-que-campanhas-falham',
+                    'geo-aeo-posicionamento-era-das-ias',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

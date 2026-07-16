@@ -9,6 +9,7 @@ import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import FormProdutora from '@/app/components/forms/FormProdutora';
 import LandingTeam from '@/app/components/LandingTeam';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function ProdutoraDirecaoPage() {
     const t = useTranslations('produtora_direcao');
@@ -157,6 +158,18 @@ export default function ProdutoraDirecaoPage() {
                     {t('cta_btn')}
                 </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'editorial-moda-narrativa-visual',
+                    'fashion-film-o-que-e-quanto-custa',
+                    'direcao-de-imagem-o-que-faz-um-diretor',
+                    'casting-set-design-campanha-moda',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

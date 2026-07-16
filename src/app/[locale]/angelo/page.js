@@ -9,6 +9,7 @@ import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 import FormDrawer from "@/app/components/FormDrawer";
 import FormAngelo from "@/app/components/forms/FormAngelo";
+import BlogSection from "@/app/components/BlogSection";
 
 export default function AngeloPage() {
     const t = useTranslations("angelo_page");
@@ -330,6 +331,18 @@ export default function AngeloPage() {
                     </div>
                 </section>
             </main>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'direcao-de-imagem-o-que-faz-um-diretor',
+                    'branding-project-arquitetura-valor',
+                    'geo-aeo-posicionamento-era-das-ias',
+                    'agencia-de-branding-ou-freelancer-quando-contratar-cada-um',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-8 border-t border-zinc-200">

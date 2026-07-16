@@ -9,6 +9,7 @@ import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import FormProdutora from '@/app/components/forms/FormProdutora';
 import LandingTeam from '@/app/components/LandingTeam';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function ProdutoraEducacaoPage() {
     const t = useTranslations('produtora_educacao');
@@ -157,6 +158,18 @@ export default function ProdutoraEducacaoPage() {
                     {t('cta_btn')}
                 </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'fotografia-de-moda-o-que-e-como-aprender',
+                    'direcao-de-imagem-o-que-faz-um-diretor',
+                    'workshop-fotografia-moda-sao-paulo-vale-a-pena',
+                    'inside-out-workshop-house-mazzutti-o-que-e',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

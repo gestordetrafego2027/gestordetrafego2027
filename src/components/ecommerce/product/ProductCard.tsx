@@ -24,7 +24,8 @@ export type ProductCardProduct = {
 }
 
 export function isQuoteOnly(prices: ProductCardPrice[] | undefined): boolean {
-  return prices?.[0]?.metadata?.quote_only === 'true'
+  const v = prices?.[0]?.metadata?.quote_only
+  return v === 'true' || (v as unknown) === true
 }
 
 /**

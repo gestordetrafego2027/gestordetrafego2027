@@ -141,7 +141,7 @@ export default function BlogPage() {
 
             {/* Filter Bar */}
             <div className="flex justify-center items-center py-12 gap-8 flex-wrap px-4">
-                {['todos', 'studio', 'agencia', 'produtora'].map(cat => (
+                {['todos', 'studio', 'agencia', 'produtora', 'academy'].map(cat => (
                     <button
                         key={cat}
                         onClick={() => setActiveCategory(cat)}
@@ -162,7 +162,8 @@ export default function BlogPage() {
                         {cat === 'todos' ? t('filter_todos').toUpperCase()
                             : cat === 'studio' ? t('filter_studio').toUpperCase()
                             : cat === 'agencia' ? t('filter_agencia').toUpperCase()
-                            : t('filter_produtora').toUpperCase()}
+                            : cat === 'produtora' ? t('filter_produtora').toUpperCase()
+                            : 'ACADEMY'}
                     </button>
                 ))}
                 <span style={{ fontSize: '10px', letterSpacing: '0.2em', color: '#bbb', fontFamily: "'RocGrotesk', sans-serif" }}>

@@ -9,6 +9,7 @@ import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import FormProdutora from '@/app/components/forms/FormProdutora';
 import LandingTeam from '@/app/components/LandingTeam';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function ProdutoraExecutivaPage() {
     const t = useTranslations('produtora_executiva');
@@ -159,6 +160,18 @@ export default function ProdutoraExecutivaPage() {
                     {t('cta_btn')}
                 </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'producao-executiva-sistema-campanhas',
+                    'por-que-boas-ideias-nao-garantem-resultados',
+                    'por-que-campanhas-caras-falham',
+                    'campanha-lancamento-arquitetura-invisivel',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

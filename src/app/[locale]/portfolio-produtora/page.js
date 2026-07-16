@@ -4,6 +4,7 @@ import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import { getTranslations } from 'next-intl/server';
+import BlogSection from '@/app/components/BlogSection';
 export default async function PortfolioProdutoraPage() {
     const tFooter = await getTranslations('footer');
     return (
@@ -291,6 +292,19 @@ export default async function PortfolioProdutoraPage() {
                     </div>
                 </section>
             </main>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'editorial-moda-narrativa-visual',
+                    'fashion-film-o-que-e-quanto-custa',
+                    'casting-set-design-campanha-moda',
+                    'video-institucional-sao-paulo-como-produzir',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
+
             <footer className="bg-white border-t border-zinc-200 w-full flex justify-between items-center px-[48px] py-[32px] text-zinc-900">
                 <div className="font-newsreader italic text-lg text-zinc-900">HOUSE MAZZUTTI</div>
                 <div className="flex gap-8 items-center">

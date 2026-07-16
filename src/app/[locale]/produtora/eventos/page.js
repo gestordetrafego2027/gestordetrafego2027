@@ -9,6 +9,7 @@ import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
 import FormProdutora from '@/app/components/forms/FormProdutora';
 import LandingTeam from '@/app/components/LandingTeam';
+import BlogSection from '@/app/components/BlogSection';
 
 export default function ProdutoraEventosPage() {
     const t = useTranslations('produtora_eventos');
@@ -157,6 +158,18 @@ export default function ProdutoraEventosPage() {
                     {t('cta_btn')}
                 </button>
             </section>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'cobertura-externa-presenca-alto-valor',
+                    'cobertura-externa-narrativa-visual',
+                    'editorial-moda-narrativa-visual',
+                    'producao-executiva-sistema-campanhas',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* FOOTER */}
             <footer className="bg-white text-zinc-900 py-24 px-12 border-t-[0.5px] border-zinc-200 flex flex-col items-center w-full text-center space-y-8">

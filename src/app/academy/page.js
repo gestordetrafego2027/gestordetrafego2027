@@ -352,7 +352,18 @@ export default function AcademyHomePage() {
         </section>
 
         {/* ── BLOG ─────────────────────────────────────────────── */}
-        <BlogSection />
+        <BlogSection
+          slugs={[
+            'fotografia-de-moda-o-que-e-como-aprender',
+            'direcao-de-imagem-o-que-faz-um-diretor',
+            'workshop-fotografia-moda-sao-paulo-vale-a-pena',
+            'inside-out-workshop-house-mazzutti-o-que-e',
+          ]}
+          eyebrow="Editorial"
+          title="Do Blog"
+          allLabel="Ver todos →"
+          readLabel="Ler →"
+        />
 
         {/* ── CTA FINAL ────────────────────────────────────────── */}
         <section className="bg-black">

@@ -5,6 +5,7 @@ import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import Image from "next/image";
 import Header from '@/app/components/Header';
 import { getTranslations } from 'next-intl/server';
+import BlogSection from '@/app/components/BlogSection';
 
 export default async function PortfolioAgenciaPage() {
     const tFooter = await getTranslations('footer');
@@ -145,6 +146,18 @@ export default async function PortfolioAgenciaPage() {
                     </div>
                 </section>
             </main>
+
+            {/* BLOG */}
+            <BlogSection
+                slugs={[
+                    'branding-project-arquitetura-valor',
+                    'identidade-visual-o-que-e-quando-refazer-a-sua',
+                    'quanto-investir-em-branding',
+                    'agencia-de-branding-ou-freelancer-quando-contratar-cada-um',
+                ]}
+                allLabel="Ver todos →"
+                readLabel="Ler →"
+            />
 
             {/* 4. FOOTER */}
             <footer className="bg-white border-t border-zinc-200 w-full flex justify-between items-center px-[48px] py-[32px] text-white">

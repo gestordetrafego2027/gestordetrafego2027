@@ -380,6 +380,11 @@ export default function Home() {
                             </Link>
                         ))}
                     </div>
+                    <div className="flex justify-center mt-12 pb-8">
+                        <Link className="group relative px-12 py-4 border-[0.5px] border-black/30 text-black text-button hover:bg-black hover:text-white transition-all duration-500" href="/portfolio">
+                            {t('home.works_see_all')}
+                        </Link>
+                    </div>
                 </section>
 
 
