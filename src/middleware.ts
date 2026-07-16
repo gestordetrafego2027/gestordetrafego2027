@@ -77,12 +77,22 @@ export async function middleware(request: NextRequest) {
   // Redirect/rewrite do intl (ex: / → /pt/) — retorna direto
   if (intlResponse && intlResponse.status !== 200) return intlResponse
 
-  // Para respostas 200: roda o Supabase E preserva as headers de locale
-  // que o next-intl definiu (x-next-intl-locale, etc.)
+  // Rotas [locale] que precisam da sessão Supabase (auth + refresh de token).
+  // Páginas públicas NÃO entram aqui → evita getUser() em toda req pública
+  // (getUser() lê cookies → Next.js força Cache-Control:no-store em tudo).
+  const NEEDS_SESSION = ['/minha-conta', '/carrinho', '/checkout', '/p/']
+  const needsSession = NEEDS_SESSION.some((s) => pathname.includes(s))
+
+  if (!needsSession) {
+    // Página pública: retorna intlResponse direto, sem overhead de auth.
+    // locale vem de params via generateStaticParams + setRequestLocale,
+    // então o header x-next-intl-locale do intlResponse é suficiente.
+    return intlResponse || NextResponse.next()
+  }
+
+  // Rota autenticada: roda Supabase E preserva headers de locale
   const supabaseResponse = await updateSession(request)
 
-  // Copia headers do intlResponse para o supabaseResponse
-  // sem isso, requestLocale em request.ts nunca recebe o locale correto
   if (intlResponse) {
     intlResponse.headers.forEach((value, key) => {
       supabaseResponse.headers.set(key, value)
