@@ -837,6 +837,478 @@ export const institucionalFaqSchema = {
 }
 
 // ---------------------------------------------------------------------------
+// Angelo Mazzutti — Person entity (GEO / AEO / Knowledge Panel)
+// sameAs lista todos os perfis públicos para desambiguação de entidade.
+// ---------------------------------------------------------------------------
+export const angeloPersonSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${SITE}/pt/sobre/#angelo`,
+  name: leadership.angelo.name,
+  jobTitle: leadership.angelo.role,
+  description: leadership.angelo.bio,
+  url: `${SITE}/pt/sobre/`,
+  image: {
+    '@type': 'ImageObject',
+    url: `${SITE}/images/sobre/angelo-mazzutti.webp`,
+    description: 'Angelo Mazzutti — Diretor Criativo da House Mazzutti em São Paulo',
+  },
+  worksFor: {'@id': ORG_ID},
+  knowsAbout: [
+    'Direção Criativa',
+    'Branding',
+    'Direção de Imagem',
+    'Produção Audiovisual',
+    'Fotografia Editorial',
+    'Fashion Film',
+    'Identidade Visual',
+    'Posicionamento de Marca',
+    'Produção de Moda',
+  ],
+  sameAs: [
+    social.instagram.url,
+    social.linkedin.url,
+    social.youtube.url,
+    social.facebook.url,
+  ],
+}
+
+// ---------------------------------------------------------------------------
+// LocalBusiness — NAP completo (Local SEO + Google Business Profile)
+// Importante: @id reusa ORG_ID para unificar a entidade em todos os schemas.
+// ---------------------------------------------------------------------------
+export const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'ProfessionalService'],
+  '@id': ORG_ID,
+  name: brand.name,
+  alternateName: [...brand.alternateNames],
+  url: SITE,
+  logo: {
+    '@type': 'ImageObject',
+    url: brand.logo,
+    description: 'Logotipo House Mazzutti',
+  },
+  description: brand.tagline,
+  telephone: contact.phone,
+  email: contact.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: nap.street,
+    addressLocality: nap.city,
+    addressRegion: nap.region,
+    postalCode: nap.postalCode,
+    addressCountry: nap.country,
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -23.615,
+    longitude: -46.633,
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'São Paulo',
+    '@id': 'https://www.wikidata.org/wiki/Q174',
+  },
+  priceRange: '$$$$',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
+  founder: {'@id': `${SITE}/pt/sobre/#angelo`},
+  foundingDate: String(timeline.foundedYear),
+  sameAs: [
+    social.instagram.url,
+    social.linkedin.url,
+    social.youtube.url,
+    social.facebook.url,
+  ],
+}
+
+// ---------------------------------------------------------------------------
+// SpeakableSpecification helper
+// Gera um WebPage schema com speakable — sinaliza parágrafos-chave para IAs.
+// cssSelectors: lista de seletores CSS que marcam o conteúdo falável.
+// ---------------------------------------------------------------------------
+export function speakableSchema(url, cssSelectors = ['h1', '.speakable', '[data-speakable]']) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': url,
+    url,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: cssSelectors,
+    },
+  }
+}
+
+// ---------------------------------------------------------------------------
+// HowTo schemas — capturam featured snippet e respostas diretas em SGE / Perplexity
+// ---------------------------------------------------------------------------
+export const howToEnsaioSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Como se preparar para um ensaio fotográfico',
+  description:
+    'Guia completo para se preparar para um ensaio pessoal ou book fotográfico profissional — do briefing ao dia da sessão no Studio HMZT.',
+  totalTime: 'P2H',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Defina o objetivo do ensaio',
+      text: 'Antes da sessão, tenha clareza sobre o propósito: book para agências, ensaio de imagem de autoridade para redes profissionais ou atualização de portfólio? O objetivo define toda a direção criativa.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Faça o briefing com o fotógrafo',
+      text: 'Compartilhe referências visuais, o público-alvo das imagens e onde elas serão usadas (Instagram, LinkedIn, site, imprensa). Quanto mais contexto, mais assertiva é a direção.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Cuide do figurino com antecedência',
+      text: 'Separe de 2 a 4 looks — varie entre casual, profissional e editorial. Prefira roupas que já usou e se sente confortável. Evite listras finas e logos grandes, que distraem na foto.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Cuide da pele e do cabelo',
+      text: 'Hidrate bem nos dias anteriores. Para o cabelo, faça hidratação 2 dias antes — evite cortes ou colorações novas na véspera. A maquiagem deve ser compatível com o conceito do ensaio.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Durma bem na véspera',
+      text: 'A câmera capta cansaço. Uma boa noite de sono é o melhor preparo técnico — mais eficaz do que qualquer produto ou técnica de última hora.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 6,
+      name: 'Chegue no horário e confie na direção',
+      text: 'Chegar pontual preserva o tempo de aquecimento da sessão. Confie na direção do fotógrafo: as melhores fotos surgem quando se para de pensar em posar e se começa a sentir a cena.',
+    },
+  ],
+}
+
+export const howToBookModeloSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Como fazer um book de modelo profissional',
+  description:
+    'Passo a passo para produzir um book fotográfico de modelo que comunica versatilidade editorial e potencial comercial para agências e castings.',
+  totalTime: 'P3H',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Defina o mercado-alvo do book',
+      text: 'Identifique para onde o book vai trabalhar: alta moda, moda comercial, publicidade ou entretenimento. Cada mercado exige linguagem visual e variações distintas no material.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Escolha o fotógrafo pela direção, não pela câmera',
+      text: 'O que diferencia um book profissional é a direção de imagem — como o fotógrafo lê o talento, orienta pose e expressão. Avalie o portfólio pela direção criativa, não pela resolução das fotos.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Planeje os looks e locações',
+      text: 'Um book equilibrado tem pelo menos 3 tipos de look: comercial (limpo, legível), editorial (autoral, com mood) e neutro (rosto, expressão). As locações devem reforçar o mood sem competir com o talento.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Esteja aberto à direção na sessão',
+      text: 'Na sessão, abertura para receber direção vale mais do que segurança técnica. Os melhores quadros surgem quando o modelo para de controlar e começa a confiar na orientação do fotógrafo.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Faça a curadoria com critério comercial',
+      text: 'Selecione as imagens com base no que o mercado compra, não no que você mais gostou. Cada foto do book deve responder a um tipo de casting ou marca — não a uma preferência pessoal.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 6,
+      name: 'Distribua nos canais certos',
+      text: 'Envie para agências, diretores de casting e marcas relevantes. Atualize o perfil digital com as melhores imagens. Um book só funciona quando está em movimento — circulando pelos lugares certos.',
+    },
+  ],
+}
+
+// ---------------------------------------------------------------------------
+// VideoObject schemas — fashion films e vídeos institucionais (Rich Results)
+// Cada schema usa o short do YouTube como embedUrl e a primeira imagem do portfólio
+// como thumbnailUrl.
+// ---------------------------------------------------------------------------
+export const videoObjectBarbaraPorto = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  '@id': `${SITE}/pt/produtora/moda/#video-barbara-porto`,
+  name: 'Fashion Film — Bárbara Porto Joias | House Mazzutti',
+  description:
+    'Fashion film para Bárbara Porto Joias — House Mazzutti Produtora, São Paulo. Direção criativa Angelo Mazzutti.',
+  thumbnailUrl: `${SITE}/images/produtora/acessorios/barbara-porto/1.webp`,
+  embedUrl: 'https://youtube.com/shorts/YbQQLxWJf_s',
+  uploadDate: '2025-01-01',
+  publisher: {'@id': ORG_ID},
+  director: {'@id': `${SITE}/pt/angelo/#angelo`},
+  inLanguage: 'pt-BR',
+  keywords: 'fashion film, joias, Bárbara Porto, produtora de moda São Paulo, House Mazzutti',
+}
+
+export const videoObjectJequiti = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  '@id': `${SITE}/pt/produtora/publicidade/#video-jequiti`,
+  name: 'Campanha Jequiti — House Mazzutti Produtora',
+  description:
+    'Produção audiovisual de campanha Jequiti — House Mazzutti Produtora, São Paulo. Direção criativa Angelo Mazzutti.',
+  thumbnailUrl: `${SITE}/images/produtora/beleza/jequiti-galisteu/1.webp`,
+  embedUrl: 'https://youtube.com/shorts/K5hS892LVY0',
+  uploadDate: '2025-01-01',
+  publisher: {'@id': ORG_ID},
+  director: {'@id': `${SITE}/pt/angelo/#angelo`},
+  inLanguage: 'pt-BR',
+  keywords: 'campanha publicitária, Jequiti, produtora de publicidade São Paulo, House Mazzutti',
+}
+
+export const videoObjectOceane = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  '@id': `${SITE}/pt/produtora/moda/#video-oceane`,
+  name: 'Fashion Film — Océane | House Mazzutti Produtora',
+  description:
+    'Fashion film para Océane — House Mazzutti Produtora, São Paulo. Direção criativa Angelo Mazzutti.',
+  thumbnailUrl: `${SITE}/images/produtora/moda/hero.webp`,
+  embedUrl: 'https://youtube.com/shorts/JqCwqv7dn7c',
+  uploadDate: '2025-01-01',
+  publisher: {'@id': ORG_ID},
+  director: {'@id': `${SITE}/pt/angelo/#angelo`},
+  inLanguage: 'pt-BR',
+  keywords: 'fashion film, Océane, produtora de moda São Paulo, House Mazzutti',
+}
+
+// ---------------------------------------------------------------------------
+// Produtora — subpages sem schema (direcao, executiva, eventos, educacao)
+// ---------------------------------------------------------------------------
+export const direcaoServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/produtora/direcao/#service`,
+  name: 'Direção Criativa e Estratégica',
+  serviceType: 'Direção Criativa e Produção Audiovisual',
+  url: `${SITE}/pt/produtora/direcao/`,
+  description:
+    'Liderança criativa, videografia e fotografia para projetos onde o conceito precisa chegar intacto ao resultado. Produtora House Mazzutti — São Paulo.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const direcaoFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que faz um diretor criativo numa produção audiovisual?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O diretor criativo define a linguagem visual, o conceito da peça e garante que a intenção de marca chegue intacta ao resultado final. Na House Mazzutti, a direção criativa está presente em todas as etapas — do briefing ao master — evitando que o conceito se perca em handoffs entre equipes.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quando uma marca precisa de direção criativa numa campanha?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sempre que o projeto precisar de coerência entre conceito, imagem e entrega. Isso inclui campanhas de lançamento, editoriais de moda, fashion films, vídeos institucionais e qualquer produção onde a identidade visual da marca precisa ser traduzida com precisão para o audiovisual.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti atende marcas de quais segmentos na direção criativa?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Moda, beleza, joalheria, lifestyle, gastronomia e marcas pessoais premium. Clientes como WePink, Océane, Elyah, Jequiti, Signus e Dumond já passaram pela direção criativa da Produtora HMZT em campanhas de alto padrão.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Direção criativa e produção executiva são o mesmo serviço?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não, mas na House Mazzutti os dois operam sob a mesma liderança. A direção criativa define o que será realizado e como. A produção executiva garante que isso aconteça dentro do prazo, orçamento e com a equipe certa. Integrar os dois sob uma única visão é o que diferencia uma campanha executada de uma campanha bem executada.',
+      },
+    },
+  ],
+}
+
+export const executivaServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/produtora/executiva/#service`,
+  name: 'Produção Executiva 360°',
+  serviceType: 'Produção Executiva de Campanhas e Projetos Audiovisuais',
+  url: `${SITE}/pt/produtora/executiva/`,
+  description:
+    'Inteligência operacional para campanhas complexas — orçamento, cronograma, equipe técnica, casting, locações e entrega. Produtora House Mazzutti — São Paulo.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const executivaFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que é produção executiva e por que ela é essencial numa campanha?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Produção executiva é o sistema que garante que o conceito criativo chegue ao resultado final intacto, no prazo e dentro do orçamento. Envolve planejamento de cronograma, contratação de equipe técnica, logística de locações, casting, montagem de set e entrega do master. Sem produção executiva, campanhas ambiciosas perdem coerência e estouram orçamento.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quanto custa uma produção executiva em São Paulo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O custo de uma produção executiva varia conforme o escopo: número de dias de set, tamanho da equipe, complexidade do casting, locações e tipo de entrega. Na House Mazzutti, trabalhamos com projetos de médio e alto padrão — entre R$15.000 e R$200.000+ dependendo da campanha. Solicite um briefing para receber uma proposta detalhada.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti faz produção executiva de eventos e campanhas ao mesmo tempo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. A Produtora HMZT opera cinco núcleos integrados: Direção & Criação, Audiovisual, Moda & Beleza, Casting & Influência e Produção & Estrutura. Isso permite gerenciar campanhas complexas com múltiplas frentes simultâneas sob uma única coordenação.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como funciona o processo de produção executiva da House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Começa com o briefing de campanha — objetivo, produto, público e prazo. A equipe HMZT desenvolve o plano de produção: conceito criativo, casting, locações, cronograma e orçamento detalhado. O cliente aprova cada etapa antes do set. No dia de filmagem ou fotografia, toda a estrutura já está operando. Após o set, entregamos o master no formato e prazo acordados.',
+      },
+    },
+  ],
+}
+
+export const eventosServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/produtora/eventos/#service`,
+  name: 'Produção e Cobertura de Eventos',
+  serviceType: 'Produção Audiovisual e Cobertura de Eventos',
+  url: `${SITE}/pt/produtora/eventos/`,
+  description:
+    'Cobertura fotográfica, videográfica e transmissão ao vivo para eventos, ativações e lançamentos com direção editorial. House Mazzutti — São Paulo.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const eventosFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que inclui o serviço de cobertura de eventos da House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A cobertura HMZT inclui briefing prévio do evento, presença de fotógrafo e/ou cinegrafista com direção criativa durante o evento, curadoria e edição das imagens, e entrega em alta resolução no prazo acordado. Para grandes eventos, também oferecemos vídeo de cobertura, highlight e transmissão ao vivo.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quais tipos de eventos a House Mazzutti cobre em São Paulo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Lançamentos de marca, ativações de produto, eventos corporativos, desfiles de moda, inaugurações, shows e experiências de marca. Atendemos tanto eventos íntimos quanto produções de grande escala, sempre com direção de imagem — não apenas registro.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre cobertura fotográfica e produção de evento?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cobertura é o registro do evento em tempo real — foto, vídeo, highlight. Produção de evento envolve conceber e executar toda a estrutura do evento: cenografia, ativações, roteiro, equipe técnica e logística. A Produtora HMZT oferece os dois serviços, integrados ou separados conforme a necessidade.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti atende eventos fora de São Paulo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim, mediante consulta de disponibilidade e planejamento logístico. Já realizamos coberturas e produções em outras cidades do Brasil. Entre em contato com antecedência de pelo menos 3 semanas para projetos fora de São Paulo.',
+      },
+    },
+  ],
+}
+
+export const educacaoServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/produtora/educacao/#service`,
+  name: 'Produção de Conteúdo Educacional',
+  serviceType: 'Produção Audiovisual para Educação e Treinamento',
+  url: `${SITE}/pt/produtora/educacao/`,
+  description:
+    'Videoaulas, treinamentos corporativos e cases com direção editorial. Conteúdo educacional bem produzido que muda percepção. House Mazzutti — São Paulo.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const educacaoFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que é produção de conteúdo educacional e quando contratar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Produção de conteúdo educacional é a criação audiovisual de videoaulas, módulos de treinamento, onboarding corporativo, masterclasses e cases de sucesso. Contratar quando a empresa quer escalar conhecimento interno, lançar um curso online, criar treinamentos de equipe ou produzir conteúdo de autoridade para o mercado.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre videoaula corporativa e vídeo institucional?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O vídeo institucional apresenta a empresa ao mercado — quem ela é e o que oferece. A videoaula corporativa transmite conhecimento para um público específico: colaboradores, alunos ou clientes. Na House Mazzutti, os dois partem do mesmo princípio: conteúdo com direção editorial, não apenas câmera ligada.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti produz conteúdo para plataformas EAD?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. Entregamos os módulos nos formatos compatíveis com as principais plataformas EAD (MP4, H.264) e podemos adaptar o projeto para os padrões técnicos exigidos pela plataforma do cliente. Incluímos legendas, vinhetas de abertura e identidade visual alinhada ao branding da empresa.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo leva para produzir um curso ou treinamento corporativo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Um módulo de treinamento simples (até 10 vídeos de 5-10 min) leva entre 3 e 5 semanas, da reunião de briefing à entrega dos arquivos finais. Cursos completos com múltiplos módulos, animações e material complementar podem levar de 6 a 12 semanas. O prazo é definido após o mapeamento de conteúdo.',
+      },
+    },
+  ],
+}
+
+// ---------------------------------------------------------------------------
 // BlogPosting schema helper
 // ---------------------------------------------------------------------------
 export function blogPostingSchema({slug, titulo, metaDescription, data, cover}) {
