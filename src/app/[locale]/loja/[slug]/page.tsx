@@ -1,7 +1,20 @@
 import { notFound } from 'next/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks'
 import { featureFlags } from '@/lib/feature-flags'
-import { createClient } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
+
+// fetch customizado com next:{revalidate:60} — evita que o Next.js 15 trate
+// os fetches do Supabase como no-store (comportamento padrão no Next 15).
+const supabasePublic = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  {
+    global: {
+      fetch: (url: RequestInfo | URL, options: RequestInit = {}) =>
+        fetch(url, { ...options, next: { revalidate: 60 } } as RequestInit),
+    },
+  },
+)
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import type { Metadata } from 'next'
@@ -23,7 +36,7 @@ type Props = { params: Promise<{ slug: string; locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!featureFlags.isStoreEnabled()) return {}
   const { slug } = await params
-  const supabase = await createClient()
+  const supabase = supabasePublic
   const { data: p } = await supabase
     .from('store_products')
     .select('name, seo_title, seo_description, og_image_url, images')
@@ -58,7 +71,7 @@ function formatPrice(cents: number, currency = 'brl') {
 export default async function ProdutoPage({ params }: Props) {
   if (!featureFlags.isStoreEnabled()) notFound()
   const { slug, locale } = await params
-  const supabase = await createClient()
+  const supabase = supabasePublic
 
   const { data: product } = await supabase
     .from('store_products')
@@ -90,7 +103,8 @@ export default async function ProdutoPage({ params }: Props) {
 
   const allPrices = Array.isArray(product.store_prices) ? product.store_prices : []
   const mainPrice = allPrices.find((p) => p.active) ?? null
-  const isQuoteOnly = (mainPrice?.metadata as { quote_only?: string } | null)?.quote_only === 'true'
+  const _qov = (mainPrice?.metadata as { quote_only?: string | boolean } | null)?.quote_only
+  const isQuoteOnly = _qov === 'true' || _qov === true
   const rawImages = Array.isArray(product.images) ? (product.images as string[]) : []
   const mainImage = product.og_image_url ?? rawImages[0] ?? null
   const galleryImages = rawImages
