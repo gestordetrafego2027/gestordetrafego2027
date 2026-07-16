@@ -2,9 +2,15 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Fix: múltiplos package-lock.json na máquina — força o root correto
+  outputFileTracingRoot: __dirname,
 
   // Fix: next-intl v4 + Next.js 15 edge runtime re-export issue no dev server
   transpilePackages: ['next-intl'],
@@ -98,16 +104,6 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        // HTML pages: ISR cache (s-maxage para CDN, stale-while-revalidate para warmup)
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, s-maxage=3600, stale-while-revalidate=86400',
           },
         ],
       },
