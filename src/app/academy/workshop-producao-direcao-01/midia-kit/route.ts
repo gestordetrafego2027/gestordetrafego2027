@@ -65,9 +65,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 @media(max-width:768px){.numbers-grid{grid-template-columns:repeat(2,1fr) repeat(1,1fr);}}
 @media(max-width:480px){.numbers-grid{grid-template-columns:1fr 1fr}}
 .num-card{padding:clamp(28px,4vw,48px) clamp(16px,2.5vw,32px);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.num-value{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;letter-spacing:-.05em;color:var(--ink);display:block;line-height:1;margin-bottom:10px}
+.num-value{font-size:clamp(2.8rem,6vw,4.8rem);font-weight:800;letter-spacing:-.05em;color:var(--ink);display:block;line-height:1;margin-bottom:14px}
 .num-value.accent{color:var(--accent)}
-.num-label{font-family:var(--mono);font-size:8px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;line-height:1.6}
+.num-label{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;line-height:1.7}
 
 /* ── SECTION HEADING ── */
 .section-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start;margin-bottom:clamp(40px,6vw,64px)}
