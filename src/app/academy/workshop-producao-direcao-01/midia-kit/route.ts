@@ -481,6 +481,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           <ul class="pkg-features">
             <li>Produto integrado no set de moda ou beauty</li>
             <li>Fotos editoriais de campanha com todos os 15 creators</li>
+            <li><strong style="color:var(--ink);font-size:.78rem">Entrega:</strong> campanha com 30 fotos em alta resolução + 1 vídeo oficial de lançamento + 1 vídeo de bastidor</li>
             <li>Banco de imagens em alta resolução para uso irrestrito</li>
             <li>Publicação orgânica pelos creators com menção à marca</li>
             <li>Menção nas comunicações do evento</li>
@@ -497,7 +498,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           <ul class="pkg-features">
             <li>Produto integrado no set de moda ou beauty</li>
             <li>Fotos editoriais de campanha com todos os 15 creators</li>
-            <li>Vídeos de campanha — reels e conteúdo de bastidor</li>
+            <li><strong style="color:var(--accent);font-size:.78rem">Entrega:</strong> campanha com 30 fotos em alta resolução + 3 vídeos oficiais de lançamento e pré-lançamento + 1 vídeo de bastidor + 1 short video por peça catalogada (máx. 10)</li>
             <li>Banco completo de fotos e vídeos em alta para uso irrestrito</li>
             <li>Publicação orgânica pelos creators com menção e tag</li>
             <li>Presença destacada nas comunicações do evento</li>
