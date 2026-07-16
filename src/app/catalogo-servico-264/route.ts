@@ -376,7 +376,7 @@ const HTML = `<!DOCTYPE html>
       <span class="section-count">3 serviços</span>
     </div>
     <div class="grid">
-      <a class="card" href="https://housemazzutti.com/pt/loja/book-studio" target="_blank">
+      <a class="card" href="/catalogo-servico-264/book-studio">
         <div class="card-img">
           <img src="/images/studio/amanda-oliveira/capa.webp" alt="Book Studio" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Studio →</span></div>
@@ -388,7 +388,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-desc">Direção de Pose e Expressão · Tratamento Profissional · Estúdio Próprio SP · Planos Essencial, Estratégico e Premium</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/ensaio-pessoal" target="_blank">
+      <a class="card" href="/catalogo-servico-264/ensaio-pessoal">
         <div class="card-img">
           <img src="/images/studio/mileide-mihaile/1.webp" alt="Ensaio Pessoal" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Studio →</span></div>
@@ -400,7 +400,7 @@ const HTML = `<!DOCTYPE html>
         </div>
         <p class="card-desc">Direção Criativa · Moodboard Personalizado · Beauty Artist · Looks de Cena · De 2 a 4 Looks</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/cobertura-concierge-production" target="_blank">
+      <a class="card" href="/catalogo-servico-264/cobertura">
         <div class="card-img">
           <img src="/images/blog/cobertura-presenca-sp/cobertura-externa-tempo-real-sao-paulo-house-mazzutti.webp" alt="Cobertura" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Studio →</span></div>
@@ -467,7 +467,7 @@ const HTML = `<!DOCTYPE html>
       <span class="section-count">6 serviços</span>
     </div>
     <div class="grid">
-      <a class="card" href="https://housemazzutti.com/pt/loja/editorial-de-moda" target="_blank">
+      <a class="card" href="/catalogo-servico-264/editorial-moda">
         <div class="card-img">
           <img src="/images/produtora/moda/beatco/capa.webp" alt="Editorial de Moda" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
@@ -476,7 +476,7 @@ const HTML = `<!DOCTYPE html>
         <div class="card-meta"><h3 class="card-name">Editorial de Moda</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Lookbook · Fashion Film · Still de Produtos · Short Vídeos Catálogo · E-commerce Editorial</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/publicidade-campanha" target="_blank">
+      <a class="card" href="/catalogo-servico-264/publicidade-campanha">
         <div class="card-img">
           <img src="/images/produtora/beleza/oceane/capa.webp" alt="Publicidade & Campanha" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
@@ -485,7 +485,7 @@ const HTML = `<!DOCTYPE html>
         <div class="card-meta"><h3 class="card-name">Publicidade &amp; Campanha</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Filme Publicitário · Campanha 360° · Influenciadores · Linha Editorial · Produção Executiva</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/direcao-criacao-estrategica" target="_blank">
+      <a class="card" href="/catalogo-servico-264/direcao-criativa">
         <div class="card-img">
           <img src="/images/blog/editorial-moda-narrativa/editorial-moda-narrativa-visual-fashion-direction-house-mazzutti.webp" alt="Direção Criativa" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
@@ -494,7 +494,7 @@ const HTML = `<!DOCTYPE html>
         <div class="card-meta"><h3 class="card-name">Direção &amp; Criação Estratégica</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Direção de Arte · Fotografia · Videografia · Cenografia · Narrativa Publicitária · Do conceito à entrega</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/producao-corporativa-institucional" target="_blank">
+      <a class="card" href="/catalogo-servico-264/producao-corporativa">
         <div class="card-img">
           <img src="/images/produtora/institucional/sense-hotel/capa.webp" alt="Produção Corporativa" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
@@ -503,7 +503,7 @@ const HTML = `<!DOCTYPE html>
         <div class="card-meta"><h3 class="card-name">Produção Corporativa &amp; Institucional</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Vídeo Institucional · Posicionamento CEO · Banco de Imagem · Vídeo Explicativo · Apps e Site</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/producao-educacao" target="_blank">
+      <a class="card" href="/catalogo-servico-264/producao-educacao">
         <div class="card-img">
           <img src="/images/academy/inside-out/cover.webp" alt="Produção de Educação" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
@@ -512,7 +512,7 @@ const HTML = `<!DOCTYPE html>
         <div class="card-meta"><h3 class="card-name">Produção de Educação</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Vídeo-aulas · Treinamentos Corporativos · Cases de Sucesso · E-learning Profissional</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/producao-eventos" target="_blank">
+      <a class="card" href="/catalogo-servico-264/producao-eventos">
         <div class="card-img">
           <img src="/images/blog/cobertura-narrativa-visual/cobertura-narrativa-visual-sao-paulo-house-mazzutti.webp" alt="Produção de Eventos" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Produtora →</span></div>
@@ -574,7 +574,7 @@ const HTML = `<!DOCTYPE html>
       <span class="section-count">4 serviços</span>
     </div>
     <div class="grid grid-4">
-      <a class="card" href="https://housemazzutti.com/pt/loja/rp-marketing-direto" target="_blank">
+      <a class="card" href="/catalogo-servico-264/rp-mkt-direto">
         <div class="card-img">
           <img src="/images/agencia/knowhol/1.webp" alt="RP & Marketing Direto" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Agência →</span></div>
@@ -583,7 +583,7 @@ const HTML = `<!DOCTYPE html>
         <div class="card-meta"><h3 class="card-name">RP &amp; Marketing Direto</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Assessoria de Imprensa · Relações com Mídia · Marketing Direto · Gestão de Reputação</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/desenvolvimento-web" target="_blank">
+      <a class="card" href="/catalogo-servico-264/desenvolvimento-web">
         <div class="card-img">
           <img src="/images/agencia/alletto/capa.webp" alt="Desenvolvimento Web" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Agência →</span></div>
@@ -592,7 +592,7 @@ const HTML = `<!DOCTYPE html>
         <div class="card-meta"><h3 class="card-name">Desenvolvimento Web</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Design Autoral · Performance · SEO · Marca Pessoal · E-commerce · Corporativo · Integrações CRM e Pagamento</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/branding-project" target="_blank">
+      <a class="card" href="/catalogo-servico-264/branding-project">
         <div class="card-img">
           <img src="/images/agencia/house-mazzutti/1.webp" alt="Branding Project" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Agência →</span></div>
@@ -601,7 +601,7 @@ const HTML = `<!DOCTYPE html>
         <div class="card-meta"><h3 class="card-name">Branding Project</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Pesquisa Estratégica · Posicionamento · Identidade Visual · Brand Book · Aplicações · 20 a 75 dias</p>
       </a>
-      <a class="card" href="https://housemazzutti.com/pt/loja/campanha-lancamento" target="_blank">
+      <a class="card" href="/catalogo-servico-264/campanha-lancamento">
         <div class="card-img">
           <img src="/images/blog/campanha-lancamento/campanha-publicitaria-direcao-criativa-house-mazzutti.webp" alt="Campanha de Lançamento" loading="lazy">
           <div class="card-overlay"><span class="card-overlay-cta">Ver Agência →</span></div>
