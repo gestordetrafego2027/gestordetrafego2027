@@ -61,6 +61,41 @@
   }
 }
 
+/* ── G9: Diacríticos (Ç/Ã/Õ) nunca cortam ─────────────────────────────── */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.08;
+  padding-bottom: 0.06em;
+  overflow-wrap: anywhere;
+}
+
+/* ── Camada 1: prefers-reduced-motion GLOBAL ────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Garante que elementos com opacity:0 aparecem imediatamente */
+  [style*='opacity: 0'],
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Foco visível consistente (a11y) ────────────────────────────────────── */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* Custom Components */
 .line-divider {
   height: 0.5px;

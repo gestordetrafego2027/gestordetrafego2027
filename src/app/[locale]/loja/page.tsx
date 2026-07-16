@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks'
+import Header from '@/app/components/Header'
 import { featureFlags } from '@/lib/feature-flags'
 import { createClient } from '@/lib/supabase/server'
 import { Link } from '@/i18n/navigation'
@@ -191,57 +192,13 @@ export default async function LojaPage() {
 
   return (
     <div className="min-h-screen bg-[#faf9f7] flex flex-col">
-      {/* ── TOPO ──────────────────────────────────────────────────── */}
-      <header style={{ background: '#111', color: '#fff' }}>
-        {/* Brand bar */}
-        <div
-          style={{
-            borderBottom: '1px solid rgba(255,255,255,0.06)',
-            padding: '20px 64px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <Link
-            href="/"
-            className="hm-logo"
-            style={{ fontSize: '20px', color: 'white', textDecoration: 'none' }}
-          >
-            <span className="hm-house">House</span>
-            <span className="hm-mazzutti">Mazzutti</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6" aria-label="Navegação principal">
-            {[
-              ['Studio', '/studio'],
-              ['Agência', '/agencia'],
-              ['Produtora', '/produtora'],
-              ['Academy', '/academy'],
-            ].map(([l, h]) => (
-              <Link
-                key={l}
-                href={h as string}
-                className="font-label uppercase tracking-[0.2em] text-[8px] transition-colors duration-300"
-                style={{ color: 'rgba(255,255,255,0.3)' }}
-              >
-                {l}
-              </Link>
-            ))}
-            <span
-              className="font-label uppercase tracking-[0.3em] text-[8px] ml-4"
-              style={{
-                color: 'rgba(255,255,255,0.18)',
-                borderLeft: '1px solid rgba(255,255,255,0.1)',
-                paddingLeft: '24px',
-              }}
-            >
-              CHECKOUT SEGURO · STRIPE
-            </span>
-          </nav>
-        </div>
+      {/* ── HEADER GLOBAL (P-LOJ1: mesmo header do site principal) ── */}
+      <Header variant="dark" />
 
+      {/* ── HERO DA LOJA ─────────────────────────────────────────── */}
+      <header style={{ background: '#111', color: '#fff', paddingTop: '90px' }}>
         {/* Hero text */}
-        <div style={{ padding: '64px 64px 56px', maxWidth: '1400px' }}>
+        <div style={{ padding: '48px 64px 56px', maxWidth: '1400px' }}>
           <p
             className="font-label uppercase tracking-[0.35em] text-[8px] mb-5"
             style={{ color: 'rgba(255,255,255,0.3)' }}

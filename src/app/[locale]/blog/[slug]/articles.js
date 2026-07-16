@@ -2216,17 +2216,20 @@ export const articles = {
     "data": "Julho 2026",
     "cover": {
       "src": "/images/blog/quanto-custa-book/book-modelo-investimento-sao-paulo-house-mazzutti.webp",
+      "fallback": "/images/blog/book-para-modelos/book-editorial-modelos-direcao-imagem-house-mazzutti.webp",
       "alt": "Book fotográfico profissional para modelo em São Paulo — investimento e direção de imagem House Mazzutti",
       "caption": "Book editorial · Studio HMZT São Paulo"
     },
     "interior": [
       {
         "src": "/images/blog/quanto-custa-book/book-editorial-direcao-imagem-sao-paulo-house-mazzutti.webp",
+        "fallback": "/images/blog/book-para-modelos/book-fotografico-profissional-mood-editorial-house-mazzutti.webp",
         "alt": "Sessão de book com direção criativa no Studio HMZT — retrato editorial de modelo profissional",
         "caption": "Direção de imagem · sessão editorial"
       },
       {
         "src": "/images/blog/quanto-custa-book/book-fotografico-resultado-premium-house-mazzutti.webp",
+        "fallback": "/images/blog/book-para-modelos/portfolio-modelo-agencia-sao-paulo-house-mazzutti.webp",
         "alt": "Resultado final de book fotográfico profissional com direção criativa House Mazzutti São Paulo",
         "caption": "Entrega editorial · acabamento fine art"
       }
@@ -2306,17 +2309,20 @@ export const articles = {
     "data": "Julho 2026",
     "cover": {
       "src": "/images/blog/preparar-ensaio/como-se-preparar-ensaio-fotografico-house-mazzutti.webp",
+      "fallback": "/images/blog/ensaio-autoridade/ensaio-pessoal-premium-autoridade-executiva-house-mazzutti.webp",
       "alt": "Preparação para ensaio fotográfico profissional no Studio House Mazzutti São Paulo",
       "caption": "Preparação e direção · Studio HMZT"
     },
     "interior": [
       {
         "src": "/images/blog/preparar-ensaio/figurino-ensaio-pessoal-direcao-imagem-house-mazzutti.webp",
+        "fallback": "/images/blog/ensaio-autoridade/retrato-corporativo-direcao-imagem-house-mazzutti.webp",
         "alt": "Curadoria de figurino para ensaio pessoal com direção de imagem — Studio House Mazzutti",
         "caption": "Curadoria de figurino · direção de looks"
       },
       {
         "src": "/images/blog/preparar-ensaio/resultado-ensaio-autoridade-house-mazzutti.webp",
+        "fallback": "/images/blog/ensaio-autoridade/ensaio-fotografico-marca-pessoal-house-mazzutti.webp",
         "alt": "Resultado de ensaio fotográfico de autoridade com direção criativa House Mazzutti São Paulo",
         "caption": "Resultado final · ensaio premium"
       }
@@ -2395,17 +2401,20 @@ export const articles = {
     "data": "Julho 2026",
     "cover": {
       "src": "/images/blog/assessoria-imprensa/o-que-e-assessoria-de-imprensa-house-mazzutti.webp",
+      "fallback": "/images/agencia/house-mazzutti/capa.webp",
       "alt": "Assessoria de imprensa e relações públicas para marcas — Agência House Mazzutti São Paulo",
       "caption": "RP e presença editorial · Agência HMZT"
     },
     "interior": [
       {
         "src": "/images/blog/assessoria-imprensa/assessoria-imprensa-marca-posicionamento-house-mazzutti.webp",
+        "fallback": "/images/agencia/house-mazzutti/4.webp",
         "alt": "Estratégia de assessoria de imprensa para posicionamento de marca — House Mazzutti Agência",
         "caption": "Presença nos veículos certos · RP estratégica"
       },
       {
         "src": "/images/blog/assessoria-imprensa/rp-reputacao-marca-sao-paulo-house-mazzutti.webp",
+        "fallback": "/images/agencia/house-mazzutti/6.webp",
         "alt": "Construção de reputação de marca por meio de assessoria de imprensa em São Paulo",
         "caption": "Reputação como estratégia · Agência HMZT"
       }
@@ -2473,5 +2482,798 @@ export const articles = {
       }
     ],
     "conclusao": "Assessoria de imprensa não é sobre aparecer mais. É sobre aparecer onde importa, com o peso de quem foi escolhido — não comprado. Marcas que constroem presença editorial consistente ao longo do tempo acumulam um ativo que a mídia paga não replica: reputação com autoridade de terceiros. Esse é o tipo de credibilidade que encurta o ciclo de vendas, justifica preços premium e resiste a crises — porque não depende de orçamento de mídia para existir."
+  }
+,
+
+  "fotografia-de-moda-o-que-e-como-aprender": {
+    "categoria": "Academy — Formação",
+    "titulo": "Fotografia de moda: o que é e como aprender de verdade",
+    "metaTitle": "Fotografia de Moda: o que é e como aprender | House Mazzutti Academy",
+    "metaDescription": "Fotografia de moda não é fotografar roupa. É direção. Entenda o que separa a imagem de moda da fotografia comum, seus pilares técnicos e onde aprender em São Paulo.",
+    "keywords": "fotografia de moda o que é, como aprender fotografia de moda, curso fotografia de moda SP, direção de imagem, fotografia editorial, House Mazzutti Academy, workshop fotografia São Paulo",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/fotografia-de-moda/fotografia-de-moda-o-que-e-house-mazzutti-academy.webp",
+      "alt": "Set de fotografia de moda com direção de imagem House Mazzutti Academy em São Paulo",
+      "caption": "Direção de imagem em set — House Mazzutti Academy",
+      "fallback": "/images/produtora/acessorios/elyah/capa.webp"
+    },
+    "interior": [
+      {"src": "/images/blog/fotografia-de-moda/pilares-tecnicos-fotografia-moda-house-mazzutti.webp", "alt": "Controle de luz e enquadramento editorial em ensaio de fotografia de moda", "caption": "Luz e enquadramento · linguagem editorial"},
+      {"src": "/images/blog/fotografia-de-moda/aprender-fotografia-de-moda-sao-paulo-house-mazzutti.webp", "alt": "Aluno em formação de fotografia de moda sob direção criativa em São Paulo", "caption": "Formação de olhar · Academy HMZT"}
+    ],
+    "respostaDireta": "Fotografia de moda é a construção de uma imagem que comunica desejo, posicionamento e conceito — não o simples registro de uma roupa. Ela se distingue da fotografia comum pela direção: luz, pose, casting e cenário existem para sustentar uma ideia de marca. Na House Mazzutti Academy, em São Paulo, aprende-se fotografia de moda a partir da direção de imagem, não apenas do equipamento.",
+    "intro": "Todo dia milhões de fotos de roupa são publicadas. Quase nenhuma é fotografia de moda. A diferença não está na câmera nem na peça. Está na intenção. Fotografia de moda existe para vender um mundo, não um produto. Quem confunde as duas coisas fotografa vitrine. Quem entende a diferença constrói desejo.",
+    "sections": [
+      {
+        "h2": "O que separa fotografia de moda da fotografia comum?",
+        "paragraphs": [
+          "Fotografia comum documenta. Fotografia de moda constrói. Uma registra o que existe; a outra decide o que a imagem precisa fazer o espectador sentir. A roupa é o pretexto. O objeto real é o desejo — e desejo não se captura por acaso, se dirige.",
+          "É por isso que a mesma peça, na mão de quem sabe, vira editorial, e na mão de quem não sabe, vira catálogo de e-commerce. A câmera é idêntica. O que muda é a leitura. Marcas como Elyah, Poéma Paris e Signus não pagam por foto de roupa. Pagam por imagem que posiciona a roupa."
+        ]
+      },
+      {
+        "h2": "Quais são os pilares técnicos da fotografia de moda?",
+        "paragraphs": [
+          "Há uma base técnica inegociável: controle de luz, domínio de lente e enquadramento, leitura de cor e direção de pose. Sem isso, não há moda — há tentativa. A luz define o volume da roupa e o clima da cena. A lente decide a distância emocional. O enquadramento hierarquiza o que importa.",
+          "Mas técnica isolada produz imagem correta e vazia. Os pilares só funcionam quando servem a um conceito. Um fotógrafo de moda não pergunta primeiro qual abertura usar. Pergunta o que a imagem precisa dizer. A resposta técnica vem depois — e vem para obedecer à ideia, não para substituí-la."
+        ]
+      },
+      {
+        "h2": "Por que a direção faz mais diferença que o equipamento?",
+        "paragraphs": [
+          "O mercado vende a fantasia do equipamento: a câmera certa, a lente certa, o flash certo. É a parte fácil de comprar e a parte que menos decide. Duas pessoas com a mesma câmera produzem imagens incomparáveis. A variável não é o corpo da máquina. É o olhar por trás dela.",
+          "Direção é o que organiza casting, styling, cenário, luz e pose em torno de uma única intenção. É a camada invisível que faz uma foto parecer inevitável. Na House Mazzutti, a estética nunca vem antes da estratégia. A imagem responde a um objetivo de marca — e é isso que se ensina antes de qualquer botão."
+        ]
+      },
+      {
+        "h2": "Quanto tempo leva para aprender fotografia de moda?",
+        "paragraphs": [
+          "A técnica se aprende em meses. O olhar leva anos — e nunca termina. Essa é a resposta honesta que poucos dão. Dominar exposição, luz e enquadramento é questão de prática deliberada. Construir repertório visual, entender referência e desenvolver assinatura é um processo longo, feito de erro dirigido.",
+          "O atalho não é pular etapas. É encurtar o tempo de erro solitário. Quem aprende ao lado de quem já dirige set profissional avança em meses o que sozinho levaria anos. Não porque recebe fórmula — porque recebe correção no momento certo, sobre a imagem certa."
+        ]
+      },
+      {
+        "h2": "Onde aprender fotografia de moda em São Paulo?",
+        "paragraphs": [
+          "São Paulo concentra o maior polo de moda e imagem do país. É onde estão as marcas, os castings e os sets. Aprender aqui é aprender perto de onde o mercado acontece — e distância do mercado é a maior desvantagem de qualquer formação.",
+          "A House Mazzutti Academy é o braço de formação da House — a mesma estrutura que dirige imagem para marcas de beleza e moda todos os dias. Ensina-se a partir do set real, com a direção que sustenta trabalhos de clientes, não com teoria descolada da prática. Formação de olhar, não venda de equipamento."
+        ]
+      }
+    ],
+    "citacao": "Câmera boa fotografa qualquer um. Olhar treinado enxerga o que ninguém apontou. Eu ensino a segunda coisa.",
+    "faq": [
+      {"q": "Fotografia de moda é diferente de fotografia de produto?", "a": "Sim. Fotografia de produto descreve o objeto com fidelidade. Fotografia de moda constrói desejo em torno dele — usa casting, cenário, luz e direção para vender um mundo, não apenas a peça. Uma informa; a outra posiciona."},
+      {"q": "Preciso de equipamento caro para começar em fotografia de moda?", "a": "Não. Equipamento é a variável menos decisiva. Direção, leitura de luz e repertório visual definem a imagem muito mais que o corpo da câmera. Comece com o que tem e invista primeiro no olhar."},
+      {"q": "Quanto tempo leva para aprender fotografia de moda?", "a": "A base técnica se domina em meses com prática deliberada. O olhar e a assinatura levam anos e nunca terminam de se formar. Aprender ao lado de quem dirige set profissional encurta drasticamente o tempo de erro solitário."},
+      {"q": "Onde aprender fotografia de moda em São Paulo?", "a": "Escolha uma formação ligada à prática de mercado, não apenas à teoria. A House Mazzutti Academy ensina a partir dos sets reais que dirige para marcas, em São Paulo, com foco em direção de imagem e formação de olhar."}
+    ],
+    "conclusao": "Fotografia de moda não se resume a apertar o botão no momento certo. É decidir o que a imagem precisa fazer antes de existir. Quem aprende isso para de fotografar roupa e começa a construir marca. Se você quer formar esse olhar ao lado de quem dirige imagem no mercado, garanta seu interesse na próxima turma da House Mazzutti Academy."
+  },
+  "direcao-de-imagem-o-que-faz-um-diretor": {
+    "categoria": "Academy — Formação",
+    "titulo": "Direção de imagem: o que faz um diretor e por que toda produção precisa de um",
+    "metaTitle": "Direção de Imagem: o que faz um diretor de imagem | House Mazzutti Academy",
+    "metaDescription": "Diretor de imagem não é fotógrafo com outro nome. Entenda o que é direção de imagem, por que toda produção precisa dela e como Angelo Mazzutti define o processo.",
+    "keywords": "o que faz um diretor de imagem, direção de imagem o que é, diretor criativo fotografia, direção criativa, Angelo Mazzutti, House Mazzutti Academy, formação diretor de imagem",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/direcao-de-imagem/direcao-de-imagem-o-que-faz-um-diretor-house-mazzutti.webp",
+      "alt": "Diretor de imagem conduzindo set de produção de moda na House Mazzutti em São Paulo",
+      "caption": "Direção de imagem em set — House Mazzutti",
+      "fallback": "/images/about/angelo-mazzutti.webp"
+    },
+    "interior": [
+      {"src": "/images/blog/direcao-de-imagem/diretor-de-imagem-vs-fotografo-house-mazzutti.webp", "alt": "Diretor de imagem definindo conceito antes da captação em ensaio editorial", "caption": "Conceito antes da câmera · processo HMZT"},
+      {"src": "/images/blog/direcao-de-imagem/formacao-diretor-de-imagem-academy-house-mazzutti.webp", "alt": "Formação de diretor de imagem na House Mazzutti Academy em São Paulo", "caption": "Formação de direção · Academy HMZT"}
+    ],
+    "respostaDireta": "Um diretor de imagem é quem define a intenção de uma produção antes de qualquer foto ser feita: conceito, referência, casting, styling, luz e narrativa visual. Ele não substitui o fotógrafo — orquestra todas as decisões para que a imagem sirva a um objetivo de marca. Na House Mazzutti, em São Paulo, a direção de imagem é o passo que antecede a câmera, conduzido por Angelo Mazzutti.",
+    "intro": "Toda imagem que parece inevitável foi decidida. A pose que funcionou, a luz que criou o clima, o casting que fez sentido — nada disso é sorte. É direção. O diretor de imagem é a pessoa que existe para que a imagem não dependa do acaso. E é justamente por trabalhar antes da foto que seu papel costuma ser invisível para quem só olha o resultado.",
+    "sections": [
+      {
+        "h2": "Qual a diferença entre diretor de imagem e fotógrafo?",
+        "paragraphs": [
+          "O fotógrafo captura. O diretor de imagem decide o que deve ser capturado e por quê. Um domina a técnica da imagem; o outro domina a intenção dela. Em produções pequenas, a mesma pessoa acumula os dois papéis. Em produções de marca, separá-los é o que garante consistência.",
+          "A confusão é comum porque ambos trabalham com imagem. Mas o diretor de imagem opera na camada da estratégia: define o conceito, a referência, o mood e a narrativa antes que o fotógrafo levante a câmera. Quando o set começa, as decisões difíceis já foram tomadas. O fotógrafo executa dentro de um mapa."
+        ]
+      },
+      {
+        "h2": "O que é direção de imagem, na prática?",
+        "paragraphs": [
+          "Direção de imagem é a disciplina de transformar um objetivo de marca em decisões visuais coerentes. É escolher casting que comunica o posicionamento, styling que reforça a mensagem, cenário que sustenta o clima e luz que cria a emoção certa. Cada escolha responde a uma pergunta: isso aproxima ou afasta a imagem do que a marca precisa dizer?",
+          "Na prática, é a camada que impede que uma produção vire uma soma de boas fotos sem direção comum. Cinco imagens bonitas e desconexas não são uma campanha. Direção de imagem é o que costura essas cinco imagens numa só ideia — e é isso que uma marca compra quando contrata a House."
+        ]
+      },
+      {
+        "h2": "Por que toda produção precisa de direção?",
+        "paragraphs": [
+          "Sem direção, a produção fica refém do improviso do dia. A luz muda, o modelo cansa, o cliente hesita — e sem uma intenção definida, cada imprevisto vira uma decisão tomada às pressas. O resultado é técnico e sem alma: correto, mas sem posição.",
+          "Direção reduz tentativa. É a diferença entre torcer para dar certo e saber por que vai dar certo. Uma produção dirigida gasta menos tempo, aproveita melhor o set e entrega um conjunto coerente. A frase que resume isso na House é simples: menos tentativa, mais direção. Não é slogan — é método de trabalho."
+        ]
+      },
+      {
+        "h2": "Como Angelo Mazzutti define o processo de direção?",
+        "paragraphs": [
+          "O processo da House segue cinco movimentos: imersão, leitura, conceito, execução e fine art. A imersão entende a marca e o mercado. A leitura interpreta o que a imagem precisa resolver. O conceito define a ideia central. A execução coloca tudo em set. O fine art acaba a imagem com o rigor de quem assina.",
+          "O ponto central é a ordem: estratégia antes de estética. A estética é consequência de uma decisão de mercado, nunca ponto de partida. Angelo Mazzutti carrega cerca de quinze anos de set ao lado de grandes nomes — e é essa experiência que sustenta cada leitura. Direção não é gosto pessoal. É decisão fundamentada."
+        ]
+      },
+      {
+        "h2": "Onde se forma um diretor de imagem?",
+        "paragraphs": [
+          "Não existe diploma de diretor de imagem. A formação acontece no set, na repetição dirigida e na convivência com quem já toma essas decisões sob pressão real. Cursos ensinam vocabulário. Set ensina julgamento. Os dois juntos formam olhar.",
+          "A House Mazzutti Academy foi criada para encurtar esse caminho: formar direção de imagem a partir da prática que a House sustenta com marcas todos os dias. Não é teoria de sala. É o processo real de quem dirige, aberto para quem quer aprender a decidir — não apenas a fotografar."
+        ]
+      }
+    ],
+    "citacao": "O fotógrafo pergunta como fazer a foto. O diretor pergunta por que essa foto precisa existir. Eu vivo na segunda pergunta.",
+    "faq": [
+      {"q": "Diretor de imagem e diretor de arte são a mesma coisa?", "a": "Não. O diretor de arte cuida da composição estética e dos elementos visuais de uma peça. O diretor de imagem responde pela intenção e narrativa da imagem como um todo, conectando conceito, casting, luz e styling a um objetivo de marca. Há sobreposição, mas o escopo é diferente."},
+      {"q": "Uma produção pequena precisa de diretor de imagem?", "a": "Precisa de direção, mesmo que uma só pessoa acumule os papéis. O que não pode faltar é a decisão de intenção antes da captação. Sem isso, qualquer produção fica refém do improviso do dia e entrega imagens sem posição."},
+      {"q": "O que é direção de imagem na House Mazzutti?", "a": "É a disciplina que antecede a câmera: transformar um objetivo de marca em decisões visuais coerentes através do processo imersão, leitura, conceito, execução e fine art. Estratégia antes de estética, conduzida por Angelo Mazzutti em São Paulo."},
+      {"q": "Como me tornar diretor de imagem?", "a": "Combine base técnica de imagem com experiência real de set e formação de julgamento visual. Não existe diploma; forma-se no acúmulo dirigido de decisões. A House Mazzutti Academy oferece essa formação a partir da prática de mercado da House."}
+    ],
+    "conclusao": "Direção de imagem é a diferença entre uma foto que acontece e uma imagem que decide. É o trabalho invisível que sustenta tudo o que se vê. Quem entende isso para de perseguir a foto perfeita e começa a construir intenção. Para aprender a dirigir imagem ao lado de quem faz isso pelo mercado, garanta seu interesse na próxima turma da House Mazzutti Academy."
+  },
+  "workshop-fotografia-moda-sao-paulo-vale-a-pena": {
+    "categoria": "Academy — Workshop",
+    "titulo": "Workshop de fotografia de moda em São Paulo: vale a pena?",
+    "metaTitle": "Workshop de Fotografia de Moda em São Paulo: vale a pena? | House Mazzutti",
+    "metaDescription": "O que um workshop de fotografia de moda ensina que um curso online não ensina. Critérios para escolher, o que esperar e o que a Inside Out da House Mazzutti oferece.",
+    "keywords": "workshop fotografia moda São Paulo, vale a pena fazer workshop fotografia, workshop direção de imagem SP, Inside Out House Mazzutti, formação fotografia de moda, House Mazzutti Academy",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/workshop-fotografia-moda/workshop-fotografia-moda-sao-paulo-house-mazzutti.webp",
+      "alt": "Workshop de fotografia de moda em set real na House Mazzutti em São Paulo",
+      "caption": "Workshop em set real — House Mazzutti Academy",
+      "fallback": "/images/produtora/acessorios/poema-paris/capa.webp"
+    },
+    "interior": [
+      {"src": "/images/blog/workshop-fotografia-moda/workshop-vs-curso-online-fotografia-house-mazzutti.webp", "alt": "Participantes de workshop de fotografia recebendo direção ao vivo em set", "caption": "Direção ao vivo · o que o online não entrega"},
+      {"src": "/images/blog/workshop-fotografia-moda/inside-out-workshop-direcao-imagem-house-mazzutti.webp", "alt": "Imersão em direção de imagem no workshop Inside Out da House Mazzutti", "caption": "Inside Out · imersão em direção de imagem"}
+    ],
+    "respostaDireta": "Um bom workshop de fotografia de moda vale a pena quando entrega o que nenhum curso online entrega: set real, direção ao vivo e correção imediata sobre a sua imagem. Em São Paulo, isso significa aprender perto do mercado que emprega. A Inside Out, workshop de imersão da House Mazzutti, foca em direção de imagem e fotografia de moda a partir da prática que a House sustenta com marcas.",
+    "intro": "Existe mais conteúdo gratuito de fotografia disponível hoje do que qualquer pessoa conseguiria assistir numa vida. E mesmo assim, a maioria de quem consome esse material continua fotografando igual. O problema não é falta de informação. É falta de correção. Um workshop de verdade não vende informação — vende o olho de quem já dirige, apontado para o seu trabalho.",
+    "sections": [
+      {
+        "h2": "O que um workshop ensina que um curso online não ensina?",
+        "paragraphs": [
+          "Curso online entrega informação em escala. É ótimo para aprender vocabulário, referência e fundamento técnico no seu tempo. Mas informação não corrige erro — e é o erro não visto que trava a evolução de quem fotografa. Você repete o mesmo equívoco por meses sem saber que ele existe.",
+          "O workshop entrega o que a tela não consegue: presença. Alguém que olha a sua imagem no momento em que ela é feita e diz o que está errado antes que vire hábito. É a diferença entre estudar a teoria da luz e ter a luz corrigida na sua mão, no set, na hora. Uma informa. A outra forma."
+        ]
+      },
+      {
+        "h2": "Quais critérios usar para escolher um workshop?",
+        "paragraphs": [
+          "Primeiro critério: quem ensina realmente trabalha com isso? Muita formação é dada por quem ensina há mais tempo do que produz. Procure quem dirige set profissional agora, para marcas reais. O repertório de quem ensina vira o teto do que você vai aprender.",
+          "Segundo critério: há set real ou só slide? Fotografia de moda se aprende fotografando moda, com casting, styling e luz de verdade. Terceiro: qual o tamanho da turma? Correção individual só existe em grupos pequenos. Um workshop lotado vira palestra — e palestra você assiste de graça na internet."
+        ]
+      },
+      {
+        "h2": "Por que fazer um workshop em São Paulo?",
+        "paragraphs": [
+          "São Paulo é onde a moda brasileira acontece. As marcas, as agências, os castings e os melhores sets estão aqui. Fazer um workshop na cidade é aprender dentro do ecossistema que você quer profissionalmente — e proximidade de mercado é vantagem que nenhum curso remoto oferece.",
+          "Há também o valor da rede. Um workshop presencial em São Paulo coloca você na mesma sala que outros profissionais, produtores e diretores da cidade. Parte do que se aprende não está no conteúdo — está em quem você conhece e no acesso que aquele ambiente abre depois que o workshop acaba."
+        ]
+      },
+      {
+        "h2": "O que a Inside Out da House Mazzutti oferece?",
+        "paragraphs": [
+          "A Inside Out é o workshop de imersão da House Mazzutti Academy, dedicado à direção de imagem e à fotografia de moda. Não parte de teoria descolada: parte do processo real que a House usa para dirigir imagem de marcas de beleza e moda todos os dias. Você entra no método, não apenas na técnica.",
+          "A imersão é conduzida por quem assina o trabalho da casa — Angelo Mazzutti e Ita Mazzutti. O foco é formar olhar e capacidade de decisão em set, não distribuir fórmulas. É a estrutura de uma Strategic House aberta para quem quer aprender a dirigir, e não apenas a apertar o botão."
+        ]
+      },
+      {
+        "h2": "O que esperar de um workshop que vale a pena?",
+        "paragraphs": [
+          "Espere desconforto produtivo. Um bom workshop não confirma o que você já faz — expõe o que você ainda não vê. Se sair de lá com a sensação de que tudo estava certo, o workshop falhou. O valor está exatamente no que dói: a correção que reorganiza o seu olhar.",
+          "Espere também sair com método, não com truque. Truque resolve uma foto. Método resolve as próximas mil. O que um workshop sério entrega é uma forma de pensar imagem que continua trabalhando por você muito depois do último dia. Esse é o retorno real do investimento."
+        ]
+      }
+    ],
+    "citacao": "Informação você acha de graça. O que se paga num workshop é o olho de quem já errou tudo, apontado para o seu trabalho antes que você erre também.",
+    "faq": [
+      {"q": "Vale a pena fazer workshop de fotografia se já faço curso online?", "a": "Sim, porque cumprem funções diferentes. O curso online entrega informação; o workshop entrega correção ao vivo, set real e direção sobre a sua imagem. É a presença que forma olhar — algo que nenhuma videoaula substitui."},
+      {"q": "Preciso já saber fotografar para fazer um workshop de moda?", "a": "Depende do workshop. Alguns exigem base técnica; outros formam desde o olhar. A Inside Out da House Mazzutti foca em direção de imagem e é indicada para quem quer aprender a decidir a imagem, não apenas a operar a câmera."},
+      {"q": "O que diferencia um workshop bom de um workshop fraco?", "a": "Três coisas: quem ensina realmente dirige set de mercado, há prática em set real e não só slide, e a turma é pequena o suficiente para correção individual. Sem esses três, é uma palestra cara."},
+      {"q": "O que é a Inside Out da House Mazzutti?", "a": "É o workshop de imersão da House Mazzutti Academy em direção de imagem e fotografia de moda, conduzido por Angelo Mazzutti e Ita Mazzutti em São Paulo, a partir do processo real que a House usa com marcas."}
+    ],
+    "conclusao": "Um workshop de fotografia de moda vale a pena quando entrega o que a tela não entrega: correção, set e método. Escolha por quem ensina, não por quanto promete. Se você quer aprender direção de imagem dentro da estrutura que dirige marcas de verdade, garanta seu interesse na próxima turma da Inside Out, na House Mazzutti Academy."
+  },
+  "inside-out-workshop-house-mazzutti-o-que-e": {
+    "categoria": "Academy — Inside Out",
+    "titulo": "Inside Out: o workshop de imersão em direção de imagem da House Mazzutti",
+    "metaTitle": "Inside Out House Mazzutti: o workshop de direção de imagem | Academy",
+    "metaDescription": "Inside Out é o workshop de imersão da House Mazzutti em direção de imagem e fotografia de moda, com Angelo e Ita Mazzutti. Entenda o formato, o que se aprende e para quem é.",
+    "keywords": "Inside Out House Mazzutti, workshop Inside Out, Inside Out Ita Mazzutti, Angelo Mazzutti workshop, imersão direção de imagem, fotografia de moda São Paulo, House Mazzutti Academy",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/inside-out/inside-out-workshop-house-mazzutti-o-que-e.webp",
+      "alt": "Imersão Inside Out de direção de imagem da House Mazzutti em São Paulo",
+      "caption": "Inside Out — imersão House Mazzutti Academy",
+      "fallback": "/images/about/banner--04-imagem-3nsaio-house-mazzutti.webp"
+    },
+    "interior": [
+      {"src": "/images/blog/inside-out/inside-out-angelo-ita-mazzutti-direcao-imagem.webp", "alt": "Angelo e Ita Mazzutti conduzindo imersão de direção de imagem Inside Out", "caption": "Direção conduzida por Angelo e Ita Mazzutti"},
+      {"src": "/images/blog/inside-out/inside-out-formato-imersao-fotografia-moda-house-mazzutti.webp", "alt": "Participantes da imersão Inside Out em set real de fotografia de moda", "caption": "Set real · formato de imersão"}
+    ],
+    "respostaDireta": "Inside Out é o workshop de imersão da House Mazzutti Academy em direção de imagem e fotografia de moda, conduzido por Angelo Mazzutti e Ita Mazzutti em São Paulo. O formato leva o participante para dentro do processo real da House — imersão, leitura, conceito, execução e fine art — para formar olhar e capacidade de decisão em set, não apenas técnica de câmera.",
+    "intro": "A maior parte da formação em fotografia mostra o resultado e esconde o processo. Você vê a imagem pronta, mas nunca a decisão que a fez existir. A Inside Out inverte isso. O nome é literal: virar a House do avesso e mostrar como a imagem é decidida por dentro. É a diferença entre admirar o resultado e entender a mão que o construiu.",
+    "sections": [
+      {
+        "h2": "O que é a Inside Out?",
+        "paragraphs": [
+          "A Inside Out é o workshop de imersão da House Mazzutti Academy — o braço de formação da House. O foco é direção de imagem e fotografia de moda, tratadas não como assuntos separados, mas como uma mesma disciplina: pensar a imagem antes de fazê-la. É uma imersão no método da casa, não um curso genérico.",
+          "O diferencial é a origem. A Inside Out não foi criada por uma escola que também produz. Nasceu de uma casa criativa que dirige imagem para marcas todos os dias e decidiu abrir esse processo. O que se ensina é o mesmo que sustenta os trabalhos de clientes — sem versão didática diluída."
+        ]
+      },
+      {
+        "h2": "Quem conduz a imersão?",
+        "paragraphs": [
+          "A Inside Out é conduzida por Angelo Mazzutti e Ita Mazzutti. Angelo é Head of Creative & Brand Strategy da House, com cerca de quinze anos de audiovisual e fotografia e set ao lado de grandes nomes do Brasil. É a assinatura autoral e a prova de experiência da casa.",
+          "Não é uma imersão com professor terceirizado repetindo material de terceiros. Quem ensina é quem decide a imagem no mercado real. Isso muda a natureza da correção: você recebe a leitura de quem responde por resultado de marca, não a opinião de quem só ensina teoria de imagem."
+        ]
+      },
+      {
+        "h2": "Como é o formato do workshop?",
+        "paragraphs": [
+          "A Inside Out é uma imersão presencial em São Paulo, estruturada em torno de set real. Você não assiste à direção — participa dela. O formato segue o processo proprietário da House: imersão, leitura, conceito, execução e fine art. Cada etapa é vivida, não descrita.",
+          "A imersão privilegia grupos que permitam correção próxima. O objetivo não é encher uma sala, e sim formar decisão. Por isso o formato prioriza intensidade sobre volume: menos participantes, mais tempo de direção individual, mais confronto real com as próprias escolhas visuais."
+        ]
+      },
+      {
+        "h2": "O que os participantes realmente aprendem?",
+        "paragraphs": [
+          "Aprendem a decidir. A maior parte de quem chega já sabe operar câmera; o que falta é o julgamento de quando uma imagem está certa e por quê. A Inside Out treina esse julgamento — leitura de referência, construção de conceito, direção de casting, luz a serviço da ideia e finalização com rigor.",
+          "Mais que técnica, os participantes saem com um método de pensar imagem. É a mudança de quem fotografa por tentativa para quem dirige por intenção. Menos tentativa, mais direção — a filosofia da House aplicada ao próprio olhar de cada participante. Esse é o entregável real da imersão."
+        ]
+      },
+      {
+        "h2": "Para quem é a Inside Out?",
+        "paragraphs": [
+          "É para quem já fotografa e sente que atingiu um teto — quem produz imagens tecnicamente corretas mas sem posição, e entende que o próximo passo não é equipamento, é direção. Também é para profissionais de áreas próximas, como produção e styling, que querem dominar a linguagem da imagem.",
+          "Não é para quem procura fórmula rápida ou truque de rede social. A Inside Out exige disposição para ter o próprio olhar confrontado. Quem entra disposto a isso sai com repertório e critério. Quem procura atalho vazio vai encontrar desconforto — e é exatamente esse desconforto que forma."
+        ]
+      }
+    ],
+    "citacao": "Inside Out é virar a casa do avesso. Mostrar a decisão, não só a imagem. Porque a imagem qualquer um copia — a decisão, não.",
+    "faq": [
+      {"q": "O que é a Inside Out da House Mazzutti?", "a": "É o workshop de imersão da House Mazzutti Academy em direção de imagem e fotografia de moda, conduzido por Angelo Mazzutti e Ita Mazzutti em São Paulo. Leva o participante para dentro do processo real da House, do conceito ao fine art."},
+      {"q": "Quem dá aula na Inside Out?", "a": "Angelo Mazzutti, Head of Creative & Brand Strategy da House, com cerca de quinze anos de set, e Ita Mazzutti. Quem ensina é quem dirige imagem para marcas no mercado real, não professores terceirizados."},
+      {"q": "Preciso ser fotógrafo profissional para participar da Inside Out?", "a": "Não necessariamente. A Inside Out é indicada para quem já fotografa e quer evoluir da técnica para a direção, e também para profissionais de produção e styling que querem dominar a linguagem da imagem. O foco é formar decisão e olhar."},
+      {"q": "A Inside Out é presencial em São Paulo?", "a": "Sim. É uma imersão presencial estruturada em torno de set real, em São Paulo, com formato que prioriza grupos menores para garantir direção individual. O participante vive cada etapa do processo, não apenas assiste."}
+    ],
+    "conclusao": "A Inside Out não vende a promessa de uma foto melhor. Vende o entendimento de como a imagem é decidida por dentro — o processo que separa quem fotografa de quem dirige. É a estrutura de uma casa criativa aberta para formar olhar. Se você quer viver esse método ao lado de quem o criou, garanta seu interesse na próxima turma da Inside Out, na House Mazzutti Academy."
+  },
+  "agencia-de-branding-ou-freelancer-quando-contratar-cada-um": {
+    "categoria": "Agência — Decisão",
+    "titulo": "Agência de branding ou freelancer: quando contratar cada um",
+    "metaTitle": "Agência de Branding ou Freelancer: quando contratar cada um | House Mazzutti",
+    "metaDescription": "Freelancer resolve tarefa; agência de branding constrói posicionamento. Entenda o custo real de cada opção e como saber se sua marca está pronta para uma agência.",
+    "keywords": "agência de branding ou freelancer, quando contratar agência de branding, diferença agência e freelancer, posicionamento de marca, branding estratégico São Paulo, House Mazzutti",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/agencia-ou-freelancer/agencia-de-branding-ou-freelancer-quando-contratar-house-mazzutti.webp",
+      "alt": "Reunião de estratégia de branding na agência House Mazzutti em São Paulo",
+      "caption": "Estratégia de marca — Agência House Mazzutti",
+      "fallback": "/images/agencia/house-mazzutti/capa.webp"
+    },
+    "interior": [
+      {"src": "/images/blog/agencia-ou-freelancer/quando-contratar-agencia-branding-house-mazzutti.webp", "alt": "Time de branding construindo posicionamento de marca em São Paulo", "caption": "Posicionamento · trabalho de agência"},
+      {"src": "/images/blog/agencia-ou-freelancer/freelancer-vs-agencia-custo-real-house-mazzutti.webp", "alt": "Comparação entre entrega de freelancer e agência de branding", "caption": "Tarefa x sistema · o custo real"}
+    ],
+    "respostaDireta": "Um freelancer é a escolha certa quando você tem um problema pontual e bem definido — um logo, um site, uma peça. Uma agência de branding é necessária quando o problema é posicionamento: quando a marca precisa de estratégia, coerência entre pontos de contato e continuidade. A House Mazzutti, em São Paulo, opera no segundo caso: estratégia antes de estética, com execução sob a mesma direção.",
+    "intro": "A pergunta parece de orçamento, mas é de diagnóstico. Quem escolhe entre freelancer e agência olhando só o preço está respondendo à pergunta errada. As duas opções não competem — resolvem problemas diferentes. Contratar agência para tarefa é desperdício. Contratar freelancer para posicionamento é economia que sai cara depois.",
+    "sections": [
+      {
+        "h2": "Quando um freelancer resolve o seu problema?",
+        "paragraphs": [
+          "Freelancer resolve escopo fechado. Você sabe exatamente o que precisa, o problema é isolado e não depende de uma estratégia maior para fazer sentido. Um logo para um projeto pontual, uma landing page, um ensaio específico. Nesses casos, contratar uma agência é pagar por estrutura que você não vai usar.",
+          "O bom freelancer é rápido, especializado e direto. A limitação não é a competência — é o escopo. Ele executa bem a peça que você pediu, mas não responde pela coerência entre essa peça e todas as outras. Quando o seu problema cabe numa entrega, o freelancer é a resposta mais eficiente."
+        ]
+      },
+      {
+        "h2": "Quando a agência se torna necessária?",
+        "paragraphs": [
+          "A agência entra quando o problema deixa de ser uma tarefa e vira um sistema. Quando você não precisa de um site, mas de uma marca que se sustente no site, no ponto de venda, na embalagem, na campanha e na comunicação — tudo dizendo a mesma coisa. Coerência entre pontos de contato não se contrata por peça.",
+          "Marcas como WePink, Océane e Jequiti não têm um problema de foto ou de logo. Têm um problema de posicionamento contínuo, que exige estratégia, direção e execução alinhadas ao longo do tempo. É isso que uma agência de branding sustenta e um freelancer, por definição de escopo, não sustenta."
+        ]
+      },
+      {
+        "h2": "Qual o custo real de cada opção?",
+        "paragraphs": [
+          "O freelancer parece mais barato porque o preço é visível. Mas o custo real inclui o que você não vê: a gestão de várias contratações soltas, o retrabalho quando as peças não conversam entre si e a incoerência que confunde o mercado. Cinco freelancers ótimos podem produzir cinco marcas diferentes para a mesma empresa.",
+          "A agência tem preço maior e custo total menor quando o problema é de posicionamento. Você paga por integração: uma direção, um conceito, uma coerência. O que parece mais caro na entrada evita o desperdício silencioso de reconstruir a marca a cada seis meses porque nada se sustentava."
+        ]
+      },
+      {
+        "h2": "O que uma agência de branding faz que um freelancer não faz?",
+        "paragraphs": [
+          "Uma agência de branding faz estratégia antes de estética. Antes de qualquer entrega visual, ela lê o mercado, define o posicionamento e decide o que a marca precisa comunicar — e só então executa. O freelancer normalmente começa pela peça; a agência começa pela pergunta que a peça deveria responder.",
+          "A agência também garante continuidade. Estratégia e execução vivem na mesma mente, ao longo do tempo, com uma direção que mantém a marca coerente mesmo quando os formatos mudam. É a diferença entre encomendar peças e construir um sistema que se sustenta sozinho depois de pronto."
+        ]
+      },
+      {
+        "h2": "Como saber se sua marca está pronta para uma agência?",
+        "paragraphs": [
+          "Sua marca está pronta quando você percebe que resolver peças isoladas parou de funcionar. Quando cada nova contratação melhora um detalhe e piora a coerência do todo. Quando o mercado não entende com clareza o que você é, apesar de cada material, individualmente, estar bem feito. Esse é o sintoma de um problema de posicionamento.",
+          "Também está pronta quando há algo em jogo maior que a próxima peça: uma expansão, um reposicionamento, uma nova fase. Nesses momentos, o custo de errar a direção é alto demais para deixar ao acaso de contratações soltas. É quando faz sentido conversar com uma agência de branding — antes de gastar em execução sem estratégia."
+        ]
+      }
+    ],
+    "citacao": "Freelancer entrega a peça que você pediu. Agência entrega a marca que você ainda não sabia que precisava. A conta muda quando o problema é posicionamento.",
+    "faq": [
+      {"q": "Qual a diferença entre agência de branding e freelancer?", "a": "O freelancer executa escopos fechados e pontuais com eficiência. A agência de branding constrói posicionamento: estratégia, coerência entre pontos de contato e continuidade ao longo do tempo. Um resolve tarefa; a outra sustenta um sistema de marca."},
+      {"q": "Quando devo contratar uma agência de branding em vez de um freelancer?", "a": "Quando o problema deixa de ser uma peça e vira posicionamento — quando você precisa de coerência entre site, embalagem, campanha e comunicação, ou está diante de uma expansão ou reposicionamento. Nesses casos, estratégia integrada vale mais que entregas soltas."},
+      {"q": "Agência de branding é sempre mais cara que freelancer?", "a": "O preço de entrada é maior, mas o custo total pode ser menor quando o problema é de posicionamento. Contratações soltas geram retrabalho e incoerência que saem caros. A agência entrega integração e continuidade, evitando reconstruções constantes."},
+      {"q": "Minha marca ainda é pequena, preciso de agência?", "a": "Depende do problema, não do tamanho. Se você tem demandas pontuais, o freelancer resolve. Se resolver peças isoladas parou de funcionar e o mercado não entende com clareza o que você é, é sinal de que o problema é posicionamento — e aí uma agência faz sentido."}
+    ],
+    "conclusao": "A escolha entre freelancer e agência não é sobre orçamento. É sobre a natureza do seu problema. Tarefa pede freelancer. Posicionamento pede agência. Errar esse diagnóstico é o que faz marcas gastarem muito construindo pouco. Se o seu problema virou coerência e direção, fale com a agência da House Mazzutti."
+  },
+  "quando-contratar-uma-produtora-de-moda-guia-para-marcas": {
+    "categoria": "Agência — Decisão",
+    "titulo": "Quando contratar uma produtora de moda: guia para marcas",
+    "metaTitle": "Quando Contratar uma Produtora de Moda: guia para marcas | House Mazzutti",
+    "metaDescription": "Fotógrafo solo ou produtora de moda? Entenda o que uma produtora entrega além da foto, os sinais de que sua marca precisa de produção executiva e como avaliar uma proposta.",
+    "keywords": "quando contratar produtora de moda, produtora de moda ou fotógrafo, como escolher produtora São Paulo, produção executiva de moda, direção de imagem, House Mazzutti Produtora",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/produtora-de-moda/quando-contratar-produtora-de-moda-house-mazzutti.webp",
+      "alt": "Produção de moda executiva em set completo da House Mazzutti em São Paulo",
+      "caption": "Produção executiva de moda — House Mazzutti",
+      "fallback": "/images/produtora/acessorios/monica-costa-jewerly/capa.webp"
+    },
+    "interior": [
+      {"src": "/images/blog/produtora-de-moda/fotografo-solo-vs-produtora-de-moda-house-mazzutti.webp", "alt": "Diferença entre fotógrafo solo e produtora de moda em set profissional", "caption": "Foto x produção · escopo diferente"},
+      {"src": "/images/blog/produtora-de-moda/produtora-de-moda-sao-paulo-direcao-arte-house-mazzutti.webp", "alt": "Direção de arte e produção de moda para marca de beleza em São Paulo", "caption": "Direção de arte · produtora HMZT"}
+    ],
+    "respostaDireta": "Contrate uma produtora de moda quando o volume, a complexidade e a consistência da imagem ultrapassam o que um fotógrafo solo entrega. A produtora responde por direção de arte, casting, styling, locação, logística e coerência de todo o material — não apenas pela captação. A House Mazzutti, em São Paulo, atua como produtora de moda, beleza e publicidade com direção de imagem própria.",
+    "intro": "Um fotógrafo entrega fotos. Uma produtora entrega a produção inteira que faz aquelas fotos existirem com consistência. A maioria das marcas descobre a diferença tarde — no dia em que uma campanha importante depende de vinte imagens coerentes e o fotógrafo solo, por melhor que seja, não tem estrutura para garantir isso. Esse é o ponto onde a conversa muda.",
+    "sections": [
+      {
+        "h2": "Qual a diferença entre fotógrafo solo e produtora?",
+        "paragraphs": [
+          "O fotógrafo solo domina a captação. Ele resolve a imagem quando a produção já está pronta na frente dele: casting definido, styling montado, locação garantida. O que está fora do quadro — tudo o que precisa acontecer para o quadro existir — em geral não é responsabilidade dele.",
+          "A produtora responde pelo fora do quadro. Direção de arte, casting, styling, locação, cronograma, equipe, logística e coerência entre todas as imagens. O fotógrafo é uma peça dentro dessa engrenagem, não a engrenagem inteira. Quando a marca precisa da engrenagem, contratar só a peça deixa o resto no improviso."
+        ]
+      },
+      {
+        "h2": "O que uma produtora entrega que um fotógrafo não entrega?",
+        "paragraphs": [
+          "Uma produtora entrega previsibilidade em escala. Vinte imagens que conversam entre si, produzidas em dias diferentes, com a mesma direção e o mesmo padrão. Isso não é resultado de um bom fotógrafo — é resultado de produção executiva que controla cada variável do início ao fim.",
+          "Entrega também direção de imagem: a decisão de conceito que antecede a foto e amarra tudo. Marcas como Elyah, Poéma Paris, Signus e Dumond não compram sessões avulsas. Compram produção com direção — material coerente, no volume que a marca precisa, sem depender da sorte de cada dia de set."
+        ]
+      },
+      {
+        "h2": "Quando o volume e a complexidade exigem produção executiva?",
+        "paragraphs": [
+          "O ponto de virada é quando a demanda deixa de caber num set simples. Uma coleção inteira, uma campanha com vários formatos, um cronograma com prazos de mercado, um material que precisa servir e-commerce, social e publicidade ao mesmo tempo. Complexidade assim não se gerencia no improviso.",
+          "Produção executiva existe para transformar essa complexidade em processo. Ela orquestra pessoas, prazos e recursos para que o resultado seja previsível, não uma aposta. Quando o custo de um dia de set mal aproveitado é alto e há muita coisa dependendo do resultado, produção deixa de ser luxo e vira controle de risco."
+        ]
+      },
+      {
+        "h2": "Quais os sinais de que sua marca precisa de uma produtora?",
+        "paragraphs": [
+          "Primeiro sinal: suas imagens não conversam entre si. Cada ensaio parece de uma marca diferente porque cada um foi feito solto, sem direção comum. Segundo sinal: o volume cresceu e a captação virou gargalo — você produz menos do que precisa e sempre correndo.",
+          "Terceiro sinal: os imprevistos de set estão custando caro. Locação que caiu, styling que não chegou, casting que não funcionou. Isso não é azar recorrente — é ausência de produção. Quando esses sinais aparecem juntos, a marca já ultrapassou o que um fotógrafo solo consegue sustentar. É hora de uma produtora."
+        ]
+      },
+      {
+        "h2": "Como avaliar uma proposta de produtora?",
+        "paragraphs": [
+          "Olhe primeiro se há direção de imagem na proposta, ou só logística. Produtora boa não vende apenas equipe e diária — vende conceito, leitura de marca e coerência. Se a proposta fala só de quantas fotos e quantas horas, você está contratando operação, não direção.",
+          "Avalie também o processo. Uma produtora séria tem método: como entende a marca, como constrói o conceito, como garante consistência. Na House Mazzutti, isso segue cinco movimentos — imersão, leitura, conceito, execução e fine art. Pergunte pelo processo. Quem tem processo entrega previsibilidade; quem não tem, entrega torcida."
+        ]
+      }
+    ],
+    "citacao": "Fotógrafo resolve o que está dentro do quadro. Produtora responde por tudo que faz o quadro existir. Quando o que está em jogo é grande, o fora do quadro é que decide.",
+    "faq": [
+      {"q": "Qual a diferença entre contratar um fotógrafo e uma produtora de moda?", "a": "O fotógrafo domina a captação — resolve a imagem quando a produção já está pronta. A produtora responde por direção de arte, casting, styling, locação, logística e coerência de todo o material. Uma entrega fotos; a outra entrega a produção inteira que as sustenta."},
+      {"q": "Quando minha marca precisa de uma produtora em vez de um fotógrafo?", "a": "Quando volume, complexidade e consistência ultrapassam um set simples: uma coleção inteira, uma campanha multiformato, imagens que precisam conversar entre si em escala. Se seus ensaios parecem de marcas diferentes e a captação virou gargalo, é hora de uma produtora."},
+      {"q": "O que devo avaliar numa proposta de produtora de moda?", "a": "Verifique se há direção de imagem e conceito, não apenas logística e diárias. Pergunte pelo processo: como a produtora entende a marca e garante consistência. Quem tem método entrega previsibilidade; quem vende só operação entrega torcida."},
+      {"q": "A House Mazzutti atua como produtora de moda em São Paulo?", "a": "Sim. A House Mazzutti é uma casa criativa de São Paulo com unidade de Produtora dedicada a moda, beleza, institucional e publicidade, com direção de imagem própria e o processo imersão, leitura, conceito, execução e fine art."}
+    ],
+    "conclusao": "Contratar uma produtora não é gastar mais com imagem — é parar de deixar a imagem ao acaso quando há muito em jogo. O fotógrafo resolve a foto. A produtora garante que todas as fotos digam a mesma coisa, no volume que a marca precisa. Se sua marca ultrapassou o set solo, fale com a produtora da House Mazzutti."
+  },
+  "identidade-visual-o-que-e-quando-refazer-a-sua": {
+    "categoria": "Agência — Branding",
+    "titulo": "Identidade visual: o que é e quando refazer a sua",
+    "metaTitle": "Identidade Visual: o que é e quando refazer a sua | House Mazzutti",
+    "metaDescription": "Identidade visual é muito mais que o logo. Entenda o que ela realmente inclui, os sinais de que a sua está errada e quando um reposicionamento visual se justifica.",
+    "keywords": "o que é identidade visual, quando refazer identidade visual, identidade visual São Paulo agência, rebranding, posicionamento de marca, branding estratégico, House Mazzutti",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/identidade-visual/identidade-visual-o-que-e-quando-refazer-house-mazzutti.webp",
+      "alt": "Projeto de identidade visual de marca na agência House Mazzutti em São Paulo",
+      "caption": "Identidade visual de marca — Agência House Mazzutti",
+      "fallback": "/images/agencia/mabdo/capa.webp"
+    },
+    "interior": [
+      {"src": "/images/blog/identidade-visual/identidade-visual-alem-do-logo-house-mazzutti.webp", "alt": "Sistema de identidade visual completo além do logo em São Paulo", "caption": "Além do logo · sistema de marca"},
+      {"src": "/images/blog/identidade-visual/quando-refazer-identidade-visual-house-mazzutti.webp", "alt": "Processo de reconstrução de identidade visual na House Mazzutti", "caption": "Reposicionamento visual · processo HMZT"}
+    ],
+    "respostaDireta": "Identidade visual é o sistema completo pelo qual uma marca é reconhecida — logo, cores, tipografia, linguagem de imagem, aplicações e o comportamento visual em cada ponto de contato. Ela precisa ser refeita quando deixa de representar o que a marca é hoje ou confunde o mercado. A House Mazzutti, em São Paulo, constrói identidade visual a partir do posicionamento, não do gosto.",
+    "intro": "Quase todo mundo chama identidade visual de logo. É como chamar uma casa de porta. O logo é a entrada mais visível, mas sozinho não sustenta nada. Identidade visual é o sistema inteiro que faz uma marca ser reconhecida antes de ser lida. E é justamente por ser confundida com o logo que tanta identidade é refeita pelo motivo errado — ou não é refeita quando deveria.",
+    "sections": [
+      {
+        "h2": "O que é identidade visual, além do logo?",
+        "paragraphs": [
+          "Identidade visual é o conjunto coordenado de elementos que fazem uma marca reconhecível: logo, paleta de cores, tipografia, linguagem de imagem, grafismos, hierarquia e o modo como tudo isso se comporta em cada aplicação. O logo é uma peça. A identidade é o sistema que dá sentido a essa peça em todo lugar.",
+          "O teste é simples: uma marca com identidade forte é reconhecível mesmo com o logo coberto. A cor, o tipo de foto, a tipografia e o clima já dizem quem ela é. Quando só o logo identifica, não há identidade visual — há um símbolo isolado carregando um peso que não deveria carregar sozinho."
+        ]
+      },
+      {
+        "h2": "Quando a identidade visual precisa ser refeita?",
+        "paragraphs": [
+          "A identidade precisa ser refeita quando deixa de representar o que a marca é hoje. Marcas crescem, mudam de posicionamento, sobem de nível e passam a falar com outro público. Quando a imagem ficou para trás do negócio, ela vira um freio: comunica um estágio que a marca já superou.",
+          "O gatilho certo é estratégico, não estético. Não se refaz identidade porque cansou do logo — refaz-se porque o mercado leu errado, porque a marca amadureceu, porque houve uma expansão ou reposicionamento. Refazer por tédio é desperdício. Refazer por descompasso entre imagem e negócio é necessidade."
+        ]
+      },
+      {
+        "h2": "Quais os sinais de que a identidade visual está errada?",
+        "paragraphs": [
+          "Primeiro sinal: incoerência. A marca parece diferente no site, no Instagram e na embalagem. Cada ponto de contato conta uma história visual distinta, e o mercado não consegue formar uma imagem única. Segundo sinal: a imagem não corresponde ao nível do produto — uma marca premium com identidade que comunica genérico.",
+          "Terceiro sinal: você precisa explicar quem é. Quando a identidade funciona, ela comunica o posicionamento sem legenda. Se a cada material você sente que a imagem não diz sozinha o que a marca é, o sistema visual está falhando. Esses sinais raramente aparecem sozinhos — quando se somam, a identidade está trabalhando contra o negócio."
+        ]
+      },
+      {
+        "h2": "O que um projeto de identidade visual inclui e quanto tempo leva?",
+        "paragraphs": [
+          "Um projeto sério começa por estratégia: leitura de mercado, posicionamento e o que a marca precisa comunicar. Só então vêm os elementos — conceito, logo, sistema de cores, tipografia, linguagem de imagem, grafismos e as regras de aplicação que garantem coerência em todo ponto de contato. Entrega-se um sistema, não um arquivo de logo.",
+          "O tempo varia com a complexidade, mas identidade não é serviço de dias. É um processo de semanas que envolve imersão, construção e refinamento, porque cada decisão precisa se sustentar em muitas aplicações ao longo de anos. Pressa em identidade é o caminho mais curto para refazer tudo de novo em pouco tempo."
+        ]
+      },
+      {
+        "h2": "O que a House Mazzutti faz diferente em identidade visual?",
+        "paragraphs": [
+          "A House parte do posicionamento, nunca do gosto. Antes de qualquer decisão estética, ela lê o mercado e define o que a marca precisa ser para vencer nele. A estética é consequência dessa leitura — estratégia antes de estética, sempre nessa ordem. Identidade bonita que não posiciona é decoração cara.",
+          "O outro diferencial é a integração: estratégia e execução na mesma mente. A mesma direção que define o posicionamento constrói a imagem e a mantém coerente nos pontos de contato. Marcas como WePink, Océane e Signus não recebem um manual e ficam sozinhas — recebem um sistema pensado para sustentar a marca no mercado real."
+        ]
+      }
+    ],
+    "citacao": "Identidade visual não é o que a marca mostra. É o que o mercado reconhece antes de ler. Se precisa do logo para ser identificada, ela ainda não existe.",
+    "faq": [
+      {"q": "Identidade visual é a mesma coisa que logo?", "a": "Não. O logo é uma peça da identidade visual. A identidade é o sistema completo — cores, tipografia, linguagem de imagem, grafismos e regras de aplicação — que torna a marca reconhecível em todos os pontos de contato, mesmo com o logo coberto."},
+      {"q": "Quando devo refazer a identidade visual da minha marca?", "a": "Quando ela deixa de representar o que a marca é hoje: após uma expansão, um reposicionamento ou um salto de nível, ou quando o mercado lê a marca de forma errada. O gatilho deve ser estratégico, não estético — refazer por tédio é desperdício."},
+      {"q": "Quais sinais indicam que minha identidade visual está errada?", "a": "Incoerência entre pontos de contato, imagem que não corresponde ao nível do produto e a necessidade constante de explicar quem a marca é. Quando esses sinais se somam, a identidade está trabalhando contra o negócio e precisa ser revista."},
+      {"q": "Quanto tempo leva um projeto de identidade visual?", "a": "Não é serviço de dias. É um processo de semanas que envolve estratégia, imersão, construção e refinamento, porque cada decisão precisa se sustentar em muitas aplicações por anos. Na House Mazzutti, tudo parte do posicionamento antes da estética."}
+    ],
+    "conclusao": "Identidade visual não é maquiagem da marca. É a forma como o mercado a reconhece e a lê antes de qualquer palavra. Refazê-la é decisão estratégica, não capricho estético — e feita na ordem certa, começa sempre pelo posicionamento. Se a sua imagem já não diz quem a sua marca se tornou, fale com a agência da House Mazzutti."
+  },
+
+  "diferenca-book-ensaio-fotografico": {
+    "categoria": "Studio — Book",
+    "titulo": "Diferença entre book e ensaio fotográfico: quando usar cada um",
+    "metaTitle": "Diferença entre Book e Ensaio Fotográfico | House Mazzutti Studio",
+    "metaDescription": "Qual a diferença entre book e ensaio fotográfico? Entenda quando cada um é o instrumento certo para o seu objetivo — e por que confundir os dois sai caro.",
+    "keywords": "diferença book ensaio fotográfico, book vs ensaio, quando fazer book, quando fazer ensaio, book modelo vs ensaio pessoal, House Mazzutti Studio",
+    "data": "Agosto 2026",
+    "cover": {
+      "src": "/images/blog/diferenca-book-ensaio/diferenca-book-ensaio-fotografico-house-mazzutti.webp",
+      "fallback": "/images/blog/book-modelo-ativo/book-modelo-imagem-ativo-mercado-house-mazzutti.webp",
+      "alt": "Diferença entre book fotográfico e ensaio pessoal — Studio House Mazzutti São Paulo",
+      "caption": "Book vs Ensaio · Studio HMZT"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/diferenca-book-ensaio/book-editorial-versus-ensaio-autoridade-house-mazzutti.webp",
+        "fallback": "/images/blog/ensaio-lidera-percepcao/ensaio-pessoal-reposicionamento-marca-pessoal-house-mazzutti.webp",
+        "alt": "Book editorial para modelos e ensaio de autoridade para profissionais — Studio House Mazzutti",
+        "caption": "Dois instrumentos · dois objetivos"
+      },
+      {
+        "src": "/images/blog/diferenca-book-ensaio/direcao-imagem-resultado-house-mazzutti.webp",
+        "fallback": "/images/blog/ensaio-lidera-percepcao/retrato-premium-fine-art-house-mazzutti.webp",
+        "alt": "Resultado de direção de imagem em book e ensaio fotográfico no Studio HMZT",
+        "caption": "Direção de imagem · resultado final"
+      }
+    ],
+    "respostaDireta": "Book é um portfólio comercial — serve para circular pelo mercado, chegar a agências, castings e marcas. Ensaio fotográfico é um instrumento de posicionamento pessoal — serve para construir percepção de autoridade, nutrir presença digital e comunicar marca pessoal. A diferença não está no número de fotos nem no tempo de sessão. Está na função: book circula por você; ensaio fala por você.",
+    "intro": "Existe uma confusão frequente — e cara — no mercado de imagem. Muitas pessoas chegam ao estúdio pedindo um 'ensaio' quando precisam de um book. Outras investem em book quando o que vai mover o ponteiro da carreira é um ensaio. Os dois instrumentos compartilham um mesmo ambiente — a câmera, a luz, a direção — mas servem a funções completamente distintas. Confundi-los não é apenas uma questão semântica: é investir no instrumento errado.",
+    "sections": [
+      {
+        "h2": "O que é um book fotográfico",
+        "paragraphs": [
+          "Book é um portfólio comercial. Seu objetivo é circular pelo mercado — chegar às mãos de diretores de casting, agências, marcas, produtores — e comunicar em segundos que aquele talento tem versatilidade, presença e potencial comercial. É lido por terceiros, na ausência do talento. Precisa funcionar sem explicação.",
+          "Por isso, o book tem estrutura própria: múltiplos looks, variação de estilo (editorial, comercial, esportivo, formal), cobertura de diferentes âmbitos do mercado-alvo. Cada imagem é uma resposta a uma pergunta que o mercado faz antes mesmo de conhecer o talento: 'esse rosto e essa presença funcionam para o tipo de trabalho que eu preciso?'"
+        ]
+      },
+      {
+        "h2": "O que é um ensaio fotográfico",
+        "paragraphs": [
+          "Ensaio fotográfico — especialmente o ensaio pessoal ou ensaio de autoridade — é um instrumento de posicionamento de marca pessoal. Seu objetivo não é circular por agências: é comunicar quem você é, qual o seu universo e qual a percepção que o mercado deve ter de você. É o material que vai para o LinkedIn, site, press kit, apresentações e redes sociais.",
+          "O ensaio tem um briefing de narrativa, não de mercado. A pergunta que dirige a sessão é: 'que percepção precisa ser instalada em quem vê esse material?' Não há uma grade de looks para atender mercados diferentes — há uma identidade visual coerente a ser construída. O resultado é menos variação e mais profundidade."
+        ]
+      },
+      {
+        "h2": "A diferença prática: para quem é cada um",
+        "paragraphs": [
+          "Book é para quem quer trabalhar com imagem — modelos, atores, influenciadores, apresentadores, artistas. A função do book é ser uma ferramenta de candidatura: você envia, o mercado avalia, a contratação acontece (ou não). Sem book, o talento não chega ao mercado. Com um book fraco, chega e é descartado.",
+          "Ensaio é para quem quer ser percebido com autoridade no seu campo — fundadoras, líderes, profissionais liberais, especialistas, empreendedoras. A função do ensaio é construir presença — no mundo digital e presencial — de forma consistente com o posicionamento. Sem ensaio, a imagem pública é aleatória. Com um ensaio bem dirigido, ela é estratégica."
+        ]
+      },
+      {
+        "h2": "Podem andar juntos?",
+        "paragraphs": [
+          "Sim — e em muitos casos, devem. Um modelo que também constrói marca pessoal (criador de conteúdo, influenciador, artista) precisa dos dois: o book circula pelo mercado profissional; o ensaio alimenta a presença digital com coerência de imagem. Um profissional liberal que eventualmente aparece em editoriais também pode precisar dos dois.",
+          "A sessão pode integrar os dois momentos — mas com briefings distintos. Não dá para fazer book e ensaio com a mesma linguagem e o mesmo conceito. A direção de imagem para book é orientada à versatilidade comercial. A direção para ensaio é orientada à identidade narrativa. Confundir as duas linguagens na mesma sessão é o erro mais caro que se pode cometer no estúdio."
+        ]
+      },
+      {
+        "h2": "Como escolher o que fazer",
+        "paragraphs": [
+          "Uma pergunta resolve: qual é o objetivo do material? Se a resposta for 'quero que alguém me contrate a partir desse material', você precisa de um book. Se a resposta for 'quero que as pessoas certas me percebam da forma certa', você precisa de um ensaio.",
+          "No Studio da House Mazzutti, o processo começa com essa pergunta — e a sessão só é formatada depois que a resposta está clara. Porque a câmera é a mesma. O que muda é tudo o que acontece antes de ela entrar no quadro."
+        ]
+      }
+    ],
+    "citacao": "Book não é ensaio. Ensaio não é book. Usar o instrumento errado é como tentar abrir uma porta com a chave da casa ao lado.",
+    "faq": [
+      {
+        "q": "Qual a diferença entre book e ensaio fotográfico?",
+        "a": "Book é um portfólio comercial que circula pelo mercado (agências, castings, marcas). Ensaio fotográfico é um instrumento de posicionamento de marca pessoal que constrói percepção de autoridade. A diferença está na função: book candidata você ao mercado; ensaio define como o mercado te enxerga."
+      },
+      {
+        "q": "Quando devo fazer um book fotográfico?",
+        "a": "Quando seu objetivo é trabalhar com imagem profissionalmente — como modelo, ator, apresentador ou criador de conteúdo — e precisa de material para chegar a agências, castings e marcas. O book precisa mostrar versatilidade comercial e funcionar na sua ausência."
+      },
+      {
+        "q": "Quando devo fazer um ensaio fotográfico?",
+        "a": "Quando seu objetivo é construir presença e autoridade de marca pessoal — para LinkedIn, site, press kit, redes sociais. Se você é fundadora, profissional liberal, especialista ou líder e quer controlar como o mercado te percebe, o ensaio é o instrumento certo."
+      },
+      {
+        "q": "É possível fazer book e ensaio na mesma sessão?",
+        "a": "Sim, mas com briefings distintos. Book exige linguagem de versatilidade comercial; ensaio exige linguagem de identidade narrativa. Misturar as duas na mesma direção compromete os dois resultados. No Studio HMZT, quando há os dois objetivos, a sessão é estruturada em blocos com conceitos separados."
+      }
+    ],
+    "conclusao": "A escolha entre book e ensaio não é sobre gosto ou orçamento. É sobre função. O instrumento certo no momento certo é o que gera resultado. O instrumento errado gera despesa e frustração — porque o material não funciona, mesmo que as fotos sejam bonitas."
+  },
+
+  "gestao-redes-sociais-para-empresas": {
+    "categoria": "Agência — Digital",
+    "titulo": "Gestão de redes sociais para empresas: o que separa presença de resultado",
+    "metaTitle": "Gestão de Redes Sociais para Empresas em São Paulo | House Mazzutti",
+    "metaDescription": "O que é gestão de redes sociais para empresas, o que está incluso, quando contratar e como identificar uma gestão que gera resultado — não só conteúdo.",
+    "keywords": "gestão redes sociais para empresas, social media para empresas São Paulo, agência social media SP, gestão instagram empresa, House Mazzutti agência",
+    "data": "Agosto 2026",
+    "cover": {
+      "src": "/images/blog/gestao-redes-sociais/gestao-redes-sociais-empresas-house-mazzutti.webp",
+      "fallback": "/images/agencia/house-mazzutti/capa.webp",
+      "alt": "Gestão de redes sociais para empresas — Agência House Mazzutti São Paulo",
+      "caption": "Social media estratégico · Agência HMZT"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/gestao-redes-sociais/social-media-estrategia-marca-house-mazzutti.webp",
+        "fallback": "/images/agencia/house-mazzutti/4.webp",
+        "alt": "Estratégia de social media para posicionamento de marca — House Mazzutti Agência São Paulo",
+        "caption": "Estratégia · posicionamento digital"
+      },
+      {
+        "src": "/images/blog/gestao-redes-sociais/conteudo-digital-premium-empresa-house-mazzutti.webp",
+        "fallback": "/images/agencia/house-mazzutti/6.webp",
+        "alt": "Produção de conteúdo digital premium para empresas — House Mazzutti São Paulo",
+        "caption": "Conteúdo com intenção · resultado mensurável"
+      }
+    ],
+    "respostaDireta": "Gestão de redes sociais para empresas é o serviço que planeja, produz, publica e analisa o conteúdo digital de uma marca de forma estratégica e contínua. Inclui planejamento editorial, criação de conteúdo, gestão de comunidade e análise de performance. A diferença entre uma gestão que gera resultado e uma que apenas mantém presença está no alinhamento com posicionamento de marca, nos objetivos de negócio e na consistência de linguagem ao longo do tempo.",
+    "intro": "Existem dois tipos de gestão de redes sociais. O primeiro mantém as redes ativas — posta regularmente, responde comentários, acompanha tendências de formato. O segundo constrói algo: uma percepção de marca, um volume crescente de audiência qualificada, uma fonte de leads e oportunidades. Esses dois tipos custam o mesmo. O resultado, não.",
+    "sections": [
+      {
+        "h2": "O que está incluso em uma gestão de redes sociais",
+        "paragraphs": [
+          "Uma gestão completa envolve quatro frentes: planejamento editorial (calendário, pautas, formatos por plataforma e objetivo), criação de conteúdo (copy, arte ou produção audiovisual), publicação e gestão de comunidade (respostas, DMs, moderação), e análise de performance (métricas relevantes para o objetivo de negócio, não só curtidas).",
+          "O que diferencia gestores e agências é a profundidade em cada frente. Muitos entregam execução — postam o que foi definido. Poucos entregam estratégia — definem o que precisa ser postado para mover o ponteiro da marca. A primeira é uma ferramenta; a segunda, um ativo."
+        ]
+      },
+      {
+        "h2": "Instagram, LinkedIn, TikTok: qual plataforma priorizar",
+        "paragraphs": [
+          "A resposta depende de onde está o decisor do seu mercado. Não da plataforma com mais usuários. Instagram é obrigatório para marcas de moda, beleza, gastronomia, lifestyle e serviços B2C com componente visual forte. LinkedIn é essencial para serviços B2B, profissionais liberais, consultorias e líderes que querem construir autoridade entre pares e tomadores de decisão.",
+          "TikTok tem crescimento exponencial — mas exige volume de produção e consistência de formato que muitas marcas subestimam. É o canal certo quando o produto tem potencial viral ou quando o público é predominantemente jovem. Não é o canal certo para marcas que não têm capacidade de produzir vídeo com regularidade. Uma rede gerida mal é pior do que uma rede inexistente — porque fala de abandono, não de presença."
+        ]
+      },
+      {
+        "h2": "Quando uma empresa precisa de gestão de redes sociais",
+        "paragraphs": [
+          "Quando a rede está desatualizada ou inconsistente — o problema não é visibilidade, é sinal negativo. Quando o time interno não tem capacidade de produção e estratégia ao mesmo tempo. Quando as redes estão ativas mas não geram leads, seguidores qualificados nem oportunidades. E quando a empresa está em fase de crescimento e precisa que a presença digital escale junto.",
+          "O erro mais comum é contratar gestão de redes como solução para baixas vendas — sem verificar se o problema é de produto, precificação ou funil. Redes sociais amplificam o que já existe. Se a proposta de valor não está clara, a gestão vai amplificar confusão."
+        ]
+      },
+      {
+        "h2": "O que separa uma boa gestão de uma gestão que apenas posta",
+        "paragraphs": [
+          "Três critérios separam os dois: (1) A gestão começa com posicionamento ou começa com pauta? Quem começa com pauta posta conteúdo. Quem começa com posicionamento constrói marca. (2) Os KPIs estão alinhados ao negócio ou às plataformas? Seguidores e impressões são métricas de vaidade se não correspondem a clientes ou oportunidades. (3) A linguagem visual e verbal é consistente com o restante da comunicação da marca ou improvisa por tendência?",
+          "Uma gestão que gera resultado não é aquela que posta mais — é aquela que posta o que certo público precisa ver para tomar a decisão certa. O volume é consequência do processo, não o objetivo."
+        ]
+      }
+    ],
+    "citacao": "Postar sem posicionamento é falar sem ter nada a dizer. As redes amplificam o que já existe — para o bem ou para o mal.",
+    "faq": [
+      {
+        "q": "O que está incluso em gestão de redes sociais para empresas?",
+        "a": "Planejamento editorial (calendário, pautas, formatos), criação de conteúdo (copy, arte ou vídeo), publicação e gestão de comunidade (respostas e DMs), e análise de performance com métricas alinhadas ao objetivo de negócio. A profundidade em cada frente é o que diferencia gestores."
+      },
+      {
+        "q": "Quanto custa gestão de redes sociais para empresas em São Paulo?",
+        "a": "O investimento varia entre R$ 1.500 e R$ 8.000+ mensais, dependendo do número de plataformas, volume de conteúdo, inclusão de produção audiovisual e nível estratégico do serviço. A Agência House Mazzutti define o escopo após briefing — o investimento é proporcional ao objetivo."
+      },
+      {
+        "q": "Qual rede social é mais importante para empresas?",
+        "a": "Depende do mercado e do decisor. Instagram é essencial para B2C com componente visual. LinkedIn é prioritário para B2B e autoridade profissional. TikTok é estratégico para marcas com capacidade de produção de vídeo consistente e público jovem. Não existe 'a melhor rede' — existe a rede onde está o seu cliente."
+      },
+      {
+        "q": "A House Mazzutti faz gestão de redes sociais para empresas?",
+        "a": "Sim. A Agência House Mazzutti integra estratégia de marca, criação de conteúdo e gestão de redes sociais para empresas de moda, beleza, lifestyle e negócios criativos em São Paulo. O trabalho começa com posicionamento — não com pauta."
+      }
+    ],
+    "conclusao": "Gestão de redes sociais não é operação de conteúdo — é construção de marca em tempo real. Quando bem feita, cada post é um tijolo na percepção que o mercado tem da empresa. Quando mal feita, é ruído. A diferença entre os dois não está no número de posts por semana. Está em saber o que dizer, para quem dizer, em que tom e com que imagem — antes de abrir qualquer plataforma."
+  },
+
+  "quanto-custa-video-institucional-2025": {
+    "categoria": "Produtora — Institucional",
+    "titulo": "Quanto custa um vídeo institucional em 2025? Guia completo de investimento",
+    "metaTitle": "Quanto Custa um Vídeo Institucional em 2025? | House Mazzutti",
+    "metaDescription": "Quanto custa um vídeo institucional profissional em São Paulo? Faixas de investimento, o que está incluso e o que define o preço de um vídeo institucional.",
+    "keywords": "quanto custa vídeo institucional, preço vídeo institucional São Paulo, vídeo corporativo valor, produção audiovisual empresa SP, House Mazzutti produtora",
+    "data": "Agosto 2026",
+    "cover": {
+      "src": "/images/blog/quanto-custa-video/quanto-custa-video-institucional-2025-house-mazzutti.webp",
+      "fallback": "/images/blog/editorial-moda-narrativa/fashion-film-marca-moda-house-mazzutti.webp",
+      "alt": "Vídeo institucional profissional em São Paulo — custo e investimento 2025 House Mazzutti",
+      "caption": "Produção audiovisual institucional · HMZT"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/quanto-custa-video/set-producao-video-institucional-house-mazzutti.webp",
+        "fallback": "/images/blog/editorial-moda-narrativa/lookbook-editorial-direcao-arte-house-mazzutti.webp",
+        "alt": "Set de produção de vídeo institucional profissional — Produtora House Mazzutti São Paulo",
+        "caption": "Set de produção · equipe técnica HMZT"
+      },
+      {
+        "src": "/images/blog/quanto-custa-video/resultado-video-institucional-premium-house-mazzutti.webp",
+        "fallback": "/images/blog/editorial-performance/imagem-ecommerce-premium-conversao-house-mazzutti.webp",
+        "alt": "Resultado de vídeo institucional com direção criativa — House Mazzutti Produtora São Paulo",
+        "caption": "Entrega final · vídeo institucional premium"
+      }
+    ],
+    "respostaDireta": "Um vídeo institucional profissional em São Paulo custa entre R$ 8.000 e R$ 80.000+, dependendo do escopo: duração, número de diárias de filmagem, equipe técnica, locações, atores/talentos, animação e pós-produção. O que mais define o preço não é a câmera nem o número de horas de edição — é a profundidade da concepção criativa e a qualidade da execução em cada fase.",
+    "intro": "A pergunta sobre preço de vídeo institucional parece simples — mas a resposta honesta começa com uma contrapergunta: o que você precisa que esse vídeo faça? Um vídeo que apresenta a empresa para novos clientes tem um escopo. Um vídeo que precisa gerar leads qualificados tem outro. Um filme que vai representar a marca por três a cinco anos em feiras, site e redes tem outro ainda. O preço segue o objetivo — não o contrário.",
+    "sections": [
+      {
+        "h2": "As faixas de investimento e o que cada uma entrega",
+        "paragraphs": [
+          "Faixa básica (R$ 8.000 a R$ 20.000): vídeo de 1 a 2 minutos, uma diária de filmagem, equipe enxuta (diretor, câmera, áudio), locação da própria empresa, edição com trilha e legenda. Adequado para apresentação institucional simples, sem necessidade de alto impacto criativo.",
+          "Faixa intermediária (R$ 20.000 a R$ 50.000): vídeo de 2 a 4 minutos, duas a três diárias, equipe completa (diretor, DoP, gaffer, assistentes), locações externas, talentos selecionados, trilha original ou licenciada, colorização profissional. O padrão da maioria dos vídeos corporativos premium.",
+          "Faixa avançada (R$ 50.000 a R$ 80.000+): produção de alto padrão com conceito criativo original, múltiplas locações, equipe técnica especializada, elenco profissional, animação ou motion graphics, pós-produção avançada e versões derivadas para múltiplas plataformas. Para marcas que querem um ativo audiovisual de longo prazo."
+        ]
+      },
+      {
+        "h2": "O que determina o preço de um vídeo institucional",
+        "paragraphs": [
+          "Seis variáveis definem o custo: (1) Número de diárias de filmagem — cada diária tem custo de equipe, equipamento e logística. (2) Complexidade da equipe — câmera, som, direção de arte, figurino, maquiagem, diretor, produtor. (3) Locações — locações externas ou exclusivas têm custos de autorização e produção. (4) Talentos e elenco — atores profissionais têm cachet; funcionários da empresa, não. (5) Pós-produção — edição, colorização, motion, voice-over, trilha e legenda. (6) Conceito criativo — um roteiro original desenvolvido pela produtora custa mais que um briefing executado.",
+          "O erro mais comum: cortar no roteiro e no conceito para 'economizar', e depois descobrir que o vídeo não comunica o que precisava. O conceito criativo é o ativo mais importante de uma produção — é ele que define se o vídeo vai funcionar ou não, independentemente do orçamento de execução."
+        ]
+      },
+      {
+        "h2": "Vídeo institucional ou fashion film: quando usar cada um",
+        "paragraphs": [
+          "Vídeo institucional apresenta a empresa — seus valores, equipe, processo e diferenciais. A linguagem é assertiva e informativa. O objetivo é gerar confiança em quem ainda não conhece a marca.",
+          "Fashion film é uma peça audiovisual de marca com linguagem mais autoral — narrativa visual, ritmo editorial, estética intencional. Serve para marcas de moda, lifestyle, beleza e luxo que querem construir desejo, não apenas apresentar. O custo pode ser similar ao institucional — a diferença está na intenção criativa e no público."
+        ]
+      },
+      {
+        "h2": "Quanto tempo dura um vídeo institucional bem feito",
+        "paragraphs": [
+          "A regra de ouro: o tempo certo é o menor possível para cumprir o objetivo. Para site e redes sociais, de 60 a 90 segundos é o ideal — o espectador decide em 8 segundos se vai continuar assistindo. Para feiras e apresentações presenciais, 2 a 3 minutos funcionam. Para vídeos de produto ou processo, pode chegar a 4 a 5 minutos.",
+          "Vídeos longos não são mais ricos — são mais caros e menos assistidos. Cada segundo a mais precisa justificar sua existência. Na Produtora da House Mazzutti, o briefing define a duração como consequência do objetivo — nunca o contrário."
+        ]
+      }
+    ],
+    "citacao": "Um vídeo institucional não é uma apresentação filmada. É um ativo de marca com prazo de validade de três a cinco anos. O investimento precisa ser pensado nesse horizonte.",
+    "faq": [
+      {
+        "q": "Quanto custa um vídeo institucional profissional em São Paulo?",
+        "a": "Entre R$ 8.000 e R$ 80.000+, dependendo do escopo: diárias de filmagem, equipe técnica, locações, elenco, pós-produção e complexidade do conceito criativo. A Produtora House Mazzutti define o orçamento após briefing detalhado."
+      },
+      {
+        "q": "O que está incluso no preço de um vídeo institucional?",
+        "a": "Desenvolvimento de conceito e roteiro, pré-produção (casting, locações, logística), diárias de filmagem com equipe técnica, edição, colorização, trilha, voice-over e entrega em múltiplos formatos. O escopo exato depende do objetivo e do orçamento aprovado."
+      },
+      {
+        "q": "Qual o prazo de entrega de um vídeo institucional?",
+        "a": "O prazo padrão é de 3 a 6 semanas após a aprovação do roteiro e assinatura de contrato: 1 semana de pré-produção, 1 a 2 diárias de filmagem e 2 a 3 semanas de pós-produção. Prazos mais curtos são possíveis com prioridade, sujeitos a disponibilidade."
+      },
+      {
+        "q": "Vale a pena investir em vídeo institucional para uma empresa pequena?",
+        "a": "Sim — quando o objetivo é claro. Um vídeo institucional bem feito justifica premium de preço, encurta o ciclo de vendas e funciona como vendedor 24h. O investimento precisa ser proporcional ao ticket médio do serviço ou produto e ao volume de clientes que o vídeo vai impactar."
+      }
+    ],
+    "conclusao": "O custo de um vídeo institucional não é uma variável isolada. É uma equação: quanto custa produzir / quantos clientes esse vídeo vai influenciar / qual o valor médio de cada cliente. Quando essa conta fecha — e ela fecha para a maioria das empresas que vendem serviços ou produtos de alto valor — o vídeo deixa de ser gasto e vira investimento. O erro não é investir. É investir sem briefing claro e sem conceito criativo sólido."
+  },
+
+  "fashion-film-lancamento-colecao": {
+    "categoria": "Produtora — Moda",
+    "titulo": "Fashion film para lançamento de coleção: o que é, quanto custa e quando usar",
+    "metaTitle": "Fashion Film para Lançamento de Coleção | House Mazzutti Produtora",
+    "metaDescription": "O que é um fashion film para lançamento de coleção, quanto custa, como é produzido e quando é o instrumento certo para uma marca de moda.",
+    "keywords": "fashion film lançamento coleção, vídeo moda São Paulo, fashion film marca moda, produtora fashion film SP, House Mazzutti produtora moda",
+    "data": "Agosto 2026",
+    "cover": {
+      "src": "/images/blog/fashion-film-colecao/fashion-film-lancamento-colecao-house-mazzutti.webp",
+      "fallback": "/images/blog/editorial-moda-narrativa/editorial-moda-narrativa-visual-fashion-direction-house-mazzutti.webp",
+      "alt": "Fashion film para lançamento de coleção de moda — Produtora House Mazzutti São Paulo",
+      "caption": "Fashion film · lançamento de coleção"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/fashion-film-colecao/producao-fashion-film-moda-set-house-mazzutti.webp",
+        "fallback": "/images/blog/editorial-moda-narrativa/lookbook-editorial-direcao-arte-house-mazzutti.webp",
+        "alt": "Produção de fashion film no set — direção criativa e elenco selecionado House Mazzutti",
+        "caption": "Set de fashion film · direção criativa"
+      },
+      {
+        "src": "/images/blog/fashion-film-colecao/fashion-film-resultado-editorial-house-mazzutti.webp",
+        "fallback": "/images/blog/editorial-moda-narrativa/fashion-film-marca-moda-house-mazzutti.webp",
+        "alt": "Resultado de fashion film para coleção de moda — House Mazzutti Produtora São Paulo",
+        "caption": "Entrega final · fashion film de coleção"
+      }
+    ],
+    "respostaDireta": "Fashion film para lançamento de coleção é uma peça audiovisual que traduz a identidade e o conceito de uma coleção em narrativa visual. Não é um vídeo de produto — é uma experiência de marca. O custo varia entre R$ 15.000 e R$ 80.000+, dependendo da duração, equipe, locações, elenco e complexidade criativa. É o instrumento certo quando a marca quer gerar desejo, construir universo de marca e chegar ao varejo e ao público com uma proposta de mundo, não apenas de peça.",
+    "intro": "Existe um momento na trajetória de uma marca de moda em que o lookbook deixa de ser suficiente. As imagens estáticas comunicam — mas não criam experiência. Não transmitem o ritmo da coleção, a textura do universo que ela propõe, o sentimento que as peças devem provocar. É nesse momento que o fashion film entra. Não como alternativa ao lookbook — como complemento que leva a narrativa da coleção para onde nenhuma foto consegue chegar.",
+    "sections": [
+      {
+        "h2": "O que é um fashion film e para que serve",
+        "paragraphs": [
+          "Fashion film é uma produção audiovisual que combina elementos de moda, cinema e narrativa de marca. Diferente de um vídeo comercial ou institucional, o fashion film não explica — ele provoca. Constrói um universo sensorial em torno de uma coleção ou de uma identidade de marca.",
+          "A função do fashion film numa estratégia de lançamento é múltipla: gera desejo antes das peças chegarem ao ponto de venda, nutre redes sociais com conteúdo de alto valor estético, posiciona a marca no imaginário do consumidor e abre portas para cobertura editorial — porque é o tipo de conteúdo que editores e formadores de opinião escolhem replicar."
+        ]
+      },
+      {
+        "h2": "A diferença entre fashion film e vídeo de produto",
+        "paragraphs": [
+          "Vídeo de produto mostra as peças — ângulos, tecidos, modelagem, detalhes. É objetivo e informativo. Seu papel é no ponto de compra: converte quem já está interessado. É necessário, mas não é suficiente para construir marca.",
+          "Fashion film cria desejo antes da decisão de compra. Transporta o espectador para o universo da coleção — o tempo, o espaço, o estado emocional que as peças habitam. A peça quase nunca é o centro do quadro: é o contexto ao redor dela que cria o valor. Esse contexto — bem construído — é o que justifica preço premium e fidelidade de marca."
+        ]
+      },
+      {
+        "h2": "Quando produzir um fashion film para lançamento",
+        "paragraphs": [
+          "O fashion film tem mais impacto quando produzido para coleções com conceito visual claro, quando a marca quer expandir presença em mercados além do cliente imediato (atacado, imprensa, varejo multimarca), e quando o lançamento precisa de material que circule organicamente — não apenas em mídia paga.",
+          "O timing ideal é parte integrante da estratégia: o fashion film precisa circular antes das peças chegarem ao ponto de venda — cria antecipação, não apenas apresentação. Na Produtora da House Mazzutti, o planejamento do film começa junto com o desenvolvimento da coleção, não depois."
+        ]
+      },
+      {
+        "h2": "Como é produzido um fashion film profissional",
+        "paragraphs": [
+          "O processo tem cinco fases: (1) Conceito criativo — desenvolvimento do universo visual, referências, moodboard, roteiro e storyboard em alinhamento com o DNA da coleção. (2) Pré-produção — seleção de locações, casting de elenco, produção de figurino e acessórios, planejamento técnico. (3) Filmagem — execução com equipe especializada em moda (DoP com experiência em fashion, direção de arte, figurinista, make artist). (4) Pós-produção — edição de ritmo, colorização com grade de cor específica para a coleção, trilha sonora licenciada ou original, motion e sound design. (5) Entregas — versão principal mais derivações por formato (Reels, Stories, horizontal para site).",
+          "A entrega mais ignorada — e mais valiosa — são as derivações. Um fashion film de 2 minutos, bem planejado, gera 8 a 12 peças de conteúdo para redes sociais sem custo adicional de produção. A estrutura modular precisa ser prevista no roteiro, não resolvida na edição."
+        ]
+      }
+    ],
+    "citacao": "Fashion film não vende peça. Vende o mundo que a peça habita. Esse mundo é o produto mais valioso de uma marca de moda.",
+    "faq": [
+      {
+        "q": "O que é fashion film e para que serve?",
+        "a": "Fashion film é uma produção audiovisual que traduz o conceito e o universo de uma coleção em narrativa visual. Serve para gerar desejo, construir marca, alcançar imprensa e varejo multimarca, e criar conteúdo de alto valor estético para redes sociais — antes e durante o lançamento."
+      },
+      {
+        "q": "Quanto custa um fashion film para lançamento de coleção?",
+        "a": "Entre R$ 15.000 e R$ 80.000+, dependendo da duração, equipe técnica, locações, elenco e complexidade do conceito criativo. A Produtora House Mazzutti define o orçamento após briefing criativo detalhado."
+      },
+      {
+        "q": "Qual a diferença entre fashion film e vídeo de produto?",
+        "a": "Vídeo de produto mostra as peças — ângulos, detalhes, modelagem. Fashion film cria o universo em torno das peças — o contexto emocional que gera desejo e justifica o preço. Os dois têm funções complementares na estratégia de lançamento."
+      },
+      {
+        "q": "Quando no ciclo de lançamento deve ser produzido o fashion film?",
+        "a": "O planejamento deve começar junto com o desenvolvimento da coleção — não após a peça estar pronta. O fashion film circula antes do ponto de venda para criar antecipação. Produzido com atraso, perde o momento de maior impacto."
+      },
+      {
+        "q": "A House Mazzutti produz fashion films para lançamento de coleção?",
+        "a": "Sim. A Produtora HMZT tem experiência em fashion films para marcas de moda, beleza e lifestyle em São Paulo. O trabalho integra conceito criativo, pré-produção, filmagem e pós-produção — da ideia à entrega multiplataforma."
+      }
+    ],
+    "conclusao": "Fashion film não é um upgrade do lookbook. É um instrumento diferente, com uma função diferente — criar o universo de uma coleção antes que ela precise se explicar sozinha no ponto de venda. Marcas que entendem isso não produzem fashion film como opcional: produzem como parte da estratégia de lançamento, com o mesmo rigor que dedicam ao desenvolvimento das peças."
   }
 };

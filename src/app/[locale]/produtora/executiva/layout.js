@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {executivaServiceSchema, executivaFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {executivaServiceSchema, executivaFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
 
 export const metadata = pageMetadata({
@@ -15,10 +15,12 @@ export default function Layout({children}) {
     {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
     {name: 'Produção Executiva', url: `${brand.url}/pt/produtora/executiva/`},
   ])
+  const speakable = speakableSchema(`${brand.url}/pt/produtora/executiva/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(executivaServiceSchema)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(executivaFaqSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
       {children}
     </>

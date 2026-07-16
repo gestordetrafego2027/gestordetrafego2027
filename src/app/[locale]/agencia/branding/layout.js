@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {brandingServiceSchema, brandingFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {brandingServiceSchema, brandingFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
 
 export const metadata = pageMetadata({
@@ -15,6 +15,7 @@ export default function BrandingLayout({children}) {
     {name: 'Agência', url: `${brand.url}/pt/agencia/`},
     {name: 'Branding', url: `${brand.url}/pt/agencia/branding/`},
   ])
+  const speakable = speakableSchema(`${brand.url}/pt/agencia/branding/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
 
   return (
     <>

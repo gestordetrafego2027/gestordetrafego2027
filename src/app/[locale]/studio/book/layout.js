@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {bookServiceSchema, bookFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {bookServiceSchema, bookFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
 
 export const metadata = pageMetadata({
@@ -15,10 +15,12 @@ export default function Layout({children}) {
     {name: 'Studio', url: `${brand.url}/pt/studio/`},
     {name: 'Book', url: `${brand.url}/pt/studio/book/`},
   ])
+  const speakable = speakableSchema(`${brand.url}/pt/studio/book/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(bookServiceSchema)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(bookFaqSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
       {children}
     </>

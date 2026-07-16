@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { Link } from '@/i18n/navigation';
 import NextImage from 'next/image';
 import Header from '@/app/components/Header';
 import { articles } from './articles';
-import { getRelatedLinks, postTitles } from '@/lib/seo/clusters';
+import { getRelatedLinks } from '@/lib/seo/clusters';
 
 // Image with automatic fallback (uses portfolio image if dedicated blog image is missing)
 function ArticleImage({ data, className = '', sizes = '' }) {
@@ -30,14 +30,55 @@ function ArticleImage({ data, className = '', sizes = '' }) {
     );
 }
 
+// Derive sidebar category counts dynamically
+const categoryCounts = Object.values(articles).reduce((acc, a) => {
+    const cat = a.categoria || 'Outros';
+    acc[cat] = (acc[cat] || 0) + 1;
+    return acc;
+}, {});
+
+// Group by top-level category (before "—")
+const topCounts = Object.entries(categoryCounts).reduce((acc, [cat, count]) => {
+    const top = cat.split(' — ')[0];
+    acc[top] = (acc[top] || 0) + count;
+    return acc;
+}, {});
+
+// Reading time estimator
+function readingTime(article) {
+    const text = [
+        article.intro,
+        ...(article.sections || []).flatMap(s => s.paragraphs),
+        article.conclusao,
+    ].filter(Boolean).join(' ');
+    const words = text.split(/\s+/).length;
+    return Math.max(1, Math.round(words / 200));
+}
+
 export default function ArticleContent({ slug }) {
     const article = articles[slug] || articles['book-para-modelos-quem-e-escolhido'];
+    const [shareMsg, setShareMsg] = useState('');
+
     const slugList = Object.keys(articles);
     const currentIdx = slugList.indexOf(slug);
     const prevSlug = currentIdx > 0 ? slugList[currentIdx - 1] : null;
     const nextSlug = currentIdx >= 0 && currentIdx < slugList.length - 1 ? slugList[currentIdx + 1] : null;
     const prevArticle = prevSlug ? articles[prevSlug] : null;
     const nextArticle = nextSlug ? articles[nextSlug] : null;
+    const minutes = readingTime(article);
+
+    const handleShare = useCallback(async () => {
+        const url = typeof window !== 'undefined' ? window.location.href : '';
+        try {
+            if (navigator.share) {
+                await navigator.share({ title: article.titulo, url });
+            } else {
+                await navigator.clipboard.writeText(url);
+                setShareMsg('Link copiado!');
+                setTimeout(() => setShareMsg(''), 2500);
+            }
+        } catch (_) {}
+    }, [article.titulo]);
 
     return (
         <div className="bg-white text-zinc-800 m-0 p-0 antialiased font-sans">
@@ -103,7 +144,9 @@ export default function ArticleContent({ slug }) {
 
                     {/* Metadata & Title */}
                     <header className="mb-12 text-center md:text-left">
-                        <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-500 mb-4">{article.categoria} · {article.data}</div>
+                        <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-500 mb-4">
+                            {article.categoria} · {article.data} · {minutes} min de leitura
+                        </div>
                         <h1 className="text-2xl md:text-4xl font-headline italic leading-tight text-zinc-900 mb-6">
                             {article.titulo}
                         </h1>
@@ -235,11 +278,34 @@ export default function ArticleContent({ slug }) {
                     {/* Article Footer */}
                     <footer className="pt-8 hairline-t flex justify-between items-center mb-16">
                         <div className="text-[10px] font-label font-bold uppercase tracking-widest text-zinc-400">{article.data}</div>
-                        <div className="flex items-center gap-2 text-zinc-400 cursor-pointer hover:text-zinc-900 transition-colors">
-                            <span className="text-[10px] font-label font-bold uppercase tracking-widest">Compartilhar</span>
+                        <button
+                            onClick={handleShare}
+                            className="flex items-center gap-2 text-zinc-400 hover:text-zinc-900 transition-colors bg-transparent border-none cursor-pointer p-0"
+                        >
+                            <span className="text-[10px] font-label font-bold uppercase tracking-widest">
+                                {shareMsg || 'Compartilhar'}
+                            </span>
                             <span className="material-symbols-outlined">share</span>
-                        </div>
+                        </button>
                     </footer>
+
+                    {/* Prev / Next Navigation */}
+                    {(prevArticle || nextArticle) && (
+                        <nav className="grid grid-cols-2 gap-4 mb-12 hairline-t pt-8">
+                            {prevArticle ? (
+                                <Link href={`/blog/${prevSlug}`} className="group flex flex-col gap-1">
+                                    <span className="text-[9px] font-label uppercase tracking-[0.25em] text-zinc-400">← Anterior</span>
+                                    <span className="text-[13px] font-body text-zinc-700 group-hover:text-zinc-900 leading-snug transition-colors line-clamp-2">{prevArticle.titulo}</span>
+                                </Link>
+                            ) : <div />}
+                            {nextArticle ? (
+                                <Link href={`/blog/${nextSlug}`} className="group flex flex-col gap-1 text-right">
+                                    <span className="text-[9px] font-label uppercase tracking-[0.25em] text-zinc-400">Próximo →</span>
+                                    <span className="text-[13px] font-body text-zinc-700 group-hover:text-zinc-900 leading-snug transition-colors line-clamp-2">{nextArticle.titulo}</span>
+                                </Link>
+                            ) : <div />}
+                        </nav>
+                    )}
 
                     {/* Return Link */}
                     <div className="mb-20">
@@ -295,13 +361,16 @@ export default function ArticleContent({ slug }) {
                         </div>
                     </div>
 
-                    {/* Categories */}
+                    {/* Categories — dynamic */}
                     <div className="mb-12">
                         <h4 className="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-zinc-900 mb-6">CATEGORIAS</h4>
                         <ul className="space-y-3">
-                            <li className="flex justify-between text-[11px] font-label uppercase tracking-tighter text-zinc-500 hover:text-zinc-900 cursor-pointer"><span>Studio · Marca pessoal</span> <span>06</span></li>
-                            <li className="flex justify-between text-[11px] font-label uppercase tracking-tighter text-zinc-500 hover:text-zinc-900 cursor-pointer"><span>Agência · Branding</span> <span>05</span></li>
-                            <li className="flex justify-between text-[11px] font-label uppercase tracking-tighter text-zinc-500 hover:text-zinc-900 cursor-pointer"><span>Produtora · Editorial</span> <span>05</span></li>
+                            {Object.entries(topCounts).sort((a,b) => b[1]-a[1]).map(([cat, count]) => (
+                                <li key={cat} className="flex justify-between text-[11px] font-label uppercase tracking-tighter text-zinc-500 hover:text-zinc-900 transition-colors">
+                                    <span>{cat}</span>
+                                    <span>{String(count).padStart(2, '0')}</span>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -323,7 +392,7 @@ export default function ArticleContent({ slug }) {
             {/* Footer */}
             <footer className="bg-white border-t border-zinc-200 py-12 px-8">
                 <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-                    <div className="text-xl font-headline italic text-white">HOUSE MAZZUTTI</div>
+                    <div className="text-xl font-headline italic text-zinc-900">HOUSE MAZZUTTI</div>
                     <div className="flex gap-12">
                         <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-400 hover:text-white transition-colors" href="https://instagram.com/housemazzutti" target="_blank" rel="noopener">INSTAGRAM</a>
                         <a className="text-[10px] tracking-[0.2em] uppercase font-label text-zinc-400 hover:text-white transition-colors" href="https://www.linkedin.com/company/house-mazzutti" target="_blank" rel="noopener">LINKEDIN</a>

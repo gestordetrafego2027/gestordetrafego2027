@@ -1707,6 +1707,103 @@ export const educacaoFaqSchema = {
 }
 
 // ---------------------------------------------------------------------------
+// Academy — EducationOrganization + Course schemas
+// ---------------------------------------------------------------------------
+export const academyServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationOrganization',
+  '@id': `${SITE}/pt/academy/#educationorg`,
+  name: 'House Mazzutti Academy',
+  description:
+    'Cursos, workshops e livros de branding, direção de imagem e fotografia de moda com a House Mazzutti em São Paulo.',
+  url: `${SITE}/pt/academy/`,
+  parentOrganization: {'@id': `${SITE}/#organization`},
+  founder: {'@id': `${SITE}/pt/angelo/#angelo`},
+  areaServed: {'@type': 'City', name: 'São Paulo'},
+  knowsAbout: [
+    'Fotografia de Moda',
+    'Direção de Imagem',
+    'Branding',
+    'Direção Criativa',
+    'Workshop de Fotografia',
+  ],
+  sameAs: [`${SITE}/pt/academy/`],
+}
+
+export const academyCourseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  '@id': `${SITE}/pt/academy/#course-inside-out`,
+  name: 'Inside Out — Workshop de Fotografia de Moda',
+  description:
+    'Imersão prática em fotografia de moda e direção de imagem com Angelo Mazzutti e Ita Mazzutti. Metodologia autoral da House Mazzutti, turmas limitadas em São Paulo.',
+  url: `${SITE}/pt/academy/`,
+  provider: {'@id': `${SITE}/pt/academy/#educationorg`},
+  instructor: {'@id': `${SITE}/pt/angelo/#angelo`},
+  courseMode: 'onsite',
+  inLanguage: 'pt-BR',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/LimitedAvailability',
+    priceCurrency: 'BRL',
+    url: `${SITE}/pt/contato/`,
+  },
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'onsite',
+    location: {
+      '@type': 'Place',
+      name: 'House Mazzutti Studio',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'São Paulo',
+        addressRegion: 'SP',
+        addressCountry: 'BR',
+      },
+    },
+  },
+}
+
+export const academyFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que é a House Mazzutti Academy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'É o braço educacional da House Mazzutti: cursos, workshops e livros de branding, fotografia de moda e direção de imagem com metodologia desenvolvida por Angelo Mazzutti ao longo de 15 anos de mercado.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quais cursos e workshops a Academy oferece?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O carro-chefe é o Inside Out, imersão prática em fotografia de moda e direção de imagem. A Academy também oferece workshops temáticos de direção criativa, branding e editorial de moda, além de livros e materiais formativos.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'O workshop Inside Out é presencial?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. O Inside Out acontece presencialmente em São Paulo, com turmas intencionalmente pequenas para garantir atenção individualizada. As datas e vagas são divulgadas pelo Instagram @housemazzutti.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como me inscrevo nos cursos da House Mazzutti Academy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Acesse a página de Contato ou acompanhe o Instagram @housemazzutti para saber quando as inscrições abrem. As turmas têm vagas limitadas e costumam fechar antes da divulgação oficial.',
+      },
+    },
+  ],
+}
+
+// ---------------------------------------------------------------------------
 // BlogPosting schema helper
 // ---------------------------------------------------------------------------
 export function blogPostingSchema({slug, titulo, metaDescription, data, cover}) {

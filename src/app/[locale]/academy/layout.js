@@ -1,5 +1,5 @@
 import {pageMetadata} from '@/lib/seo/metadata'
-import {breadcrumbSchema} from '@/lib/seo/schemas'
+import {breadcrumbSchema, speakableSchema, academyServiceSchema, academyCourseSchema, academyFaqSchema} from '@/lib/seo/schemas'
 import {brand} from '@/config/site'
 
 export async function generateMetadata({params}) {
@@ -18,12 +18,14 @@ export default function AcademyLayout({children}) {
     {name: 'House Mazzutti', url: `${brand.url}/pt/`},
     {name: 'Academy', url: `${brand.url}/pt/academy/`},
   ])
+  const speakable = speakableSchema(`${brand.url}/pt/academy/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(academyServiceSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(academyCourseSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(academyFaqSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
       {children}
     </>
   )

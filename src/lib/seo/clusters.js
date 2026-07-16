@@ -48,6 +48,9 @@ export const clusters = {
       'o-que-e-assessoria-de-imprensa',
       'gestao-redes-sociais-para-empresas',
       'criacao-site-profissional-sao-paulo',
+      'agencia-de-branding-ou-freelancer-quando-contratar-cada-um',
+      'quando-contratar-uma-produtora-de-moda-guia-para-marcas',
+      'identidade-visual-o-que-e-quando-refazer-a-sua',
     ],
   },
   produtora: {
@@ -85,6 +88,10 @@ export const clusters = {
     },
     posts: [
       'workshop-inside-out-ita-mazzutti',
+      'fotografia-de-moda-o-que-e-como-aprender',
+      'direcao-de-imagem-o-que-faz-um-diretor',
+      'workshop-fotografia-moda-sao-paulo-vale-a-pena',
+      'inside-out-workshop-house-mazzutti-o-que-e',
     ],
   },
 }
@@ -137,6 +144,15 @@ export const postTitles = {
   'quanto-custa-video-institucional-2025': 'Quanto custa um vídeo institucional? (2025)',
   'fashion-film-lancamento-colecao': 'Fashion Film para Lançamento de Coleção',
   'campanha-moda-do-brief-ao-set': 'Campanha de Moda: do Brief ao Set',
+  // Academy — novos artigos
+  'fotografia-de-moda-o-que-e-como-aprender': 'Fotografia de Moda: o que é e como aprender',
+  'direcao-de-imagem-o-que-faz-um-diretor': 'Direção de Imagem: o que faz um diretor',
+  'workshop-fotografia-moda-sao-paulo-vale-a-pena': 'Workshop de Fotografia de Moda em SP: vale a pena?',
+  'inside-out-workshop-house-mazzutti-o-que-e': 'Inside Out: o que é o workshop da House Mazzutti',
+  // Agência — artigos de decisão
+  'agencia-de-branding-ou-freelancer-quando-contratar-cada-um': 'Agência de Branding ou Freelancer: quando contratar cada um',
+  'quando-contratar-uma-produtora-de-moda-guia-para-marcas': 'Quando Contratar uma Produtora de Moda: guia para marcas',
+  'identidade-visual-o-que-e-quando-refazer-a-sua': 'Identidade Visual: o que é e quando refazer a sua',
 }
 
 /**
