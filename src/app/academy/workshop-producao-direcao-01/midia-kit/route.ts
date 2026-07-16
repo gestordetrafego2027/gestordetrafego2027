@@ -189,7 +189,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
   <div class="nav-inner">
     <a class="nav-brand" href="https://housemazzutti.com">House Mazzutti</a>
     <span class="nav-label">Media Kit · Inside Out Edit 2</span>
-    <a class="nav-cta" href="#contato">Falar com a gente</a>
+    <a class="nav-cta" href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse." target="_blank">Falar com a gente</a>
   </div>
 </nav>
 
@@ -486,7 +486,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
             <li>Menção nas comunicações do evento</li>
             <li>1 acesso ao set nos dois dias</li>
           </ul>
-          <a href="mailto:contato@mztgrupo.com?subject=Media Kit · Editorial Foto · Inside Out Edit 2" class="pkg-cta">Solicitar proposta</a>
+          <a href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse+no+pacote+Foto.+Podemos+conversar%3F" target="_blank" class="pkg-cta">Solicitar proposta</a>
           <span class="pkg-note">Exclusivo por categoria de produto</span>
         </div>
         <div class="pkg featured">
@@ -503,7 +503,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
             <li>Presença destacada nas comunicações do evento</li>
             <li>2 acessos ao set nos dois dias</li>
           </ul>
-          <a href="mailto:contato@mztgrupo.com?subject=Media Kit · Editorial Foto + Vídeo · Inside Out Edit 2" class="pkg-cta">Solicitar proposta</a>
+          <a href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse+no+pacote+Foto+%2B+V%C3%ADdeo.+Podemos+conversar%3F" target="_blank" class="pkg-cta">Solicitar proposta</a>
           <span class="pkg-note">Apenas 1 marca neste formato</span>
         </div>
       </div>
@@ -518,14 +518,14 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <span class="section-label">Fale com a House</span>
       <h2>Sua marca dentro<br/>do editorial.</h2>
       <p>Respondemos em até 24h. As vagas são exclusivas por categoria — quando um formato fecha, fecha. Melhor conversar antes.</p>
-      <a class="contact-cta" href="mailto:contato@mztgrupo.com?subject=Media Kit · Inside Out Edit 2 — Interesse de marca">Enviar interesse ↗</a>
+      <a class="contact-cta" href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse+em+levar+minha+marca+para+o+editorial.+Podemos+conversar%3F" target="_blank">Enviar interesse ↗</a>
     </div>
     <div class="contact-links">
       <a class="contact-link" href="mailto:contato@mztgrupo.com">
         <span>contato@mztgrupo.com</span>
         <span class="contact-link-arrow">↗</span>
       </a>
-      <a class="contact-link" href="https://wa.me/5548999999999" target="_blank">
+      <a class="contact-link" href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+gostaria+de+saber+mais." target="_blank">
         <span>WhatsApp direto</span>
         <span class="contact-link-arrow">↗</span>
       </a>
