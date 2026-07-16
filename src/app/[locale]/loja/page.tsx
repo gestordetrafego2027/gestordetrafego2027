@@ -327,17 +327,14 @@ export default async function LojaPage() {
 
               {/* Grid */}
               <div
-                style={{
-                  display: 'grid',
-                  gap: '40px 32px',
-                  gridTemplateColumns:
-                    grouped[cat].length === 1
-                      ? '280px'
-                      : grouped[cat].length === 2
-                        ? 'repeat(2, 1fr)'
-                        : 'repeat(3, 1fr)',
-                }}
-                className="md:grid-cols-3"
+                style={{ display: 'grid', gap: '40px 16px' }}
+                className={
+                  grouped[cat].length === 1
+                    ? 'grid-cols-1 max-w-[280px]'
+                    : grouped[cat].length === 2
+                      ? 'grid-cols-2'
+                      : 'grid-cols-2 md:grid-cols-3'
+                }
               >
                 {grouped[cat].map((p) => (
                   <ProductCard key={p.id} product={p} catSlug={cat} />
