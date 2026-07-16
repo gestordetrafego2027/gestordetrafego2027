@@ -34,6 +34,7 @@ section{padding:clamp(72px,10vw,128px) 0}
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 clamp(24px,5vw,64px)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{height:28px;width:auto;display:block}
 .nav-brand{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--ink);text-transform:uppercase;text-decoration:none}
 .nav-label{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
 .nav-cta{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:10px 22px;text-decoration:none;transition:opacity .2s}
@@ -168,6 +169,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .angelo-stats{display:flex;gap:clamp(24px,4vw,56px);margin-top:clamp(28px,4vw,44px);padding-top:24px;border-top:1px solid #2a2825}
 .angelo-stat-v{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.05em;color:var(--white);display:block;line-height:1;margin-bottom:6px}
 .angelo-stat-l{font-family:var(--mono);font-size:8px;letter-spacing:.12em;color:#4a4845;text-transform:uppercase;line-height:1.5}
+.angelo-logo{height:36px;width:auto;display:block;margin-bottom:clamp(32px,5vw,56px);opacity:.85}
 .angelo-foto-wrap{position:relative;margin-top:clamp(40px,6vw,64px);max-width:420px}
 .angelo-foto-wrap img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;filter:grayscale(.12) contrast(1.05)}
 .angelo-foto-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,10,8,.8) 0%,transparent 60%);padding:clamp(16px,3vw,32px);display:flex;align-items:flex-end}
@@ -200,7 +202,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
 <nav>
   <div class="nav-inner">
     <a class="nav-brand" href="https://housemazzutti.com">House Mazzutti</a>
-    <span class="nav-label">Media Kit · Inside Out Edit 2</span>
+    <img src="/images/academy/inside-out-logo-black.png" alt="Inside Out Workshop" class="nav-logo"/>
     <a class="nav-cta" href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse." target="_blank">Falar com a gente</a>
   </div>
 </nav>
@@ -465,6 +467,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           </div>
         </div>
       </div>
+      <img src="/images/academy/inside-out-logo-white.png" alt="Inside Out Workshop" class="angelo-logo"/>
       <div class="angelo-foto-wrap">
         <img src="/images/academy/crew/angelo-mazzutti-crew.webp" alt="Angelo Mazzutti · Diretor Criativo · House Mazzutti" loading="lazy"/>
         <div class="angelo-foto-label"><span>ANGELO MAZZUTTI</span></div>
