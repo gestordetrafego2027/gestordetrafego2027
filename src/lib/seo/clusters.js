@@ -53,6 +53,25 @@ export const clusters = {
       'producao-executiva-sistema-campanhas',
       'editorial-moda-narrativa-visual',
       'editorial-moda-performance-vendas',
+      'fashion-film-o-que-e-quanto-custa',
+      'video-institucional-sao-paulo-como-produzir',
+      'casting-set-design-campanha-moda',
+      'campanha-larissa-manoela-jequiti',
+      'fashion-film-joias-barbara-porto',
+      'fashion-film-emanuely-terres',
+    ],
+  },
+  academy: {
+    pillar: {
+      url: '/academy',
+      label: 'conheça a House Mazzutti Academy',
+    },
+    cta: {
+      url: '/contato',
+      label: 'garanta seu interesse na próxima turma',
+    },
+    posts: [
+      'workshop-inside-out-ita-mazzutti',
     ],
   },
 }
@@ -66,6 +85,13 @@ export const slugToCluster = Object.fromEntries(
 
 // Títulos curtos por slug (para os links de "Leia também")
 export const postTitles = {
+  'fashion-film-o-que-e-quanto-custa': 'Fashion Film: o que é e quanto custa?',
+  'video-institucional-sao-paulo-como-produzir': 'Vídeo Institucional em SP: o guia completo',
+  'casting-set-design-campanha-moda': 'Casting e Set Design numa Campanha de Moda',
+  'campanha-larissa-manoela-jequiti': 'Campanha Larissa Manoela × Jequiti',
+  'fashion-film-joias-barbara-porto': 'Fashion Film: Bárbara Porto Joias',
+  'fashion-film-emanuely-terres': 'Fashion Film: Emanuely Terres',
+  'workshop-inside-out-ita-mazzutti': 'Inside Out: a House também forma o olhar',
   'book-para-modelos-quem-e-escolhido': 'Book para Modelos: o que define quem é escolhido',
   'book-modelo-imagem-trabalha-por-voce': 'Book de Modelo: a imagem que trabalha por você',
   'ensaio-pessoal-imagem-autoridade': 'Ensaio Pessoal: imagem que constrói autoridade',

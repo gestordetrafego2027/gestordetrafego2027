@@ -1,4 +1,20 @@
 export default function robots() {
+  // AI crawlers explicitamente permitidos para indexação GEO/AEO.
+  // GPTBot (OpenAI), Google-Extended (Gemini/SGE), CCBot (Common Crawl / Anthropic),
+  // PerplexityBot, meta-externalagent (Meta AI), Applebot-Extended (Apple AI).
+  const aiCrawlerRules = [
+    'GPTBot',
+    'Google-Extended',
+    'CCBot',
+    'PerplexityBot',
+    'meta-externalagent',
+    'Applebot-Extended',
+  ].map((userAgent) => ({
+    userAgent,
+    allow: '/',
+    disallow: ['/crm/', '/api/', '/academy/comunidade/', '/academy/dashboard/', '/academy/certificado/', '/academy/curso/'],
+  }))
+
   return {
     rules: [
       {
@@ -38,6 +54,7 @@ export default function robots() {
           '/pt/p/',
         ],
       },
+      ...aiCrawlerRules,
     ],
     sitemap: 'https://housemazzutti.com/sitemap.xml',
   }

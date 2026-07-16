@@ -1,4 +1,6 @@
 import {pageMetadata} from '@/lib/seo/metadata'
+import {modaServiceSchema, modaFaqSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {brand} from '@/config/site'
 
 export const metadata = pageMetadata({
   path: '/produtora/moda',
@@ -8,5 +10,17 @@ export const metadata = pageMetadata({
 })
 
 export default function Layout({children}) {
-  return children
+  const crumbs = breadcrumbSchema([
+    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
+    {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
+    {name: 'Moda', url: `${brand.url}/pt/produtora/moda/`},
+  ])
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(modaServiceSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(modaFaqSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
+      {children}
+    </>
+  )
 }

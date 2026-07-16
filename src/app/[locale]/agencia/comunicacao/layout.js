@@ -1,4 +1,6 @@
 import {pageMetadata} from '@/lib/seo/metadata'
+import {comunicacaoServiceSchema, breadcrumbSchema} from '@/lib/seo/schemas'
+import {brand} from '@/config/site'
 
 export const metadata = pageMetadata({
   path: '/agencia/comunicacao',
@@ -8,5 +10,16 @@ export const metadata = pageMetadata({
 })
 
 export default function Layout({children}) {
-  return children
+  const crumbs = breadcrumbSchema([
+    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
+    {name: 'Agência', url: `${brand.url}/pt/agencia/`},
+    {name: 'Comunicação', url: `${brand.url}/pt/agencia/comunicacao/`},
+  ])
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(comunicacaoServiceSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
+      {children}
+    </>
+  )
 }

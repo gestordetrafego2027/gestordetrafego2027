@@ -110,6 +110,14 @@ export default function ArticleContent({ slug }) {
                         <p className="text-[14px] uppercase tracking-[0.18em] text-zinc-500 font-label">por Angelo Mazzutti · Diretor Criativo</p>
                     </header>
 
+                    {/* Resposta Direta — bloco GEO/AEO extraível por IAs */}
+                    {article.respostaDireta && (
+                        <div className="border-l-2 border-zinc-900 pl-6 mb-10 bg-zinc-50 py-5 pr-6">
+                            <p className="text-[10px] font-label uppercase tracking-[0.2em] text-zinc-400 mb-2">Resposta rápida</p>
+                            <p className="text-zinc-900 text-base md:text-lg leading-relaxed font-body">{article.respostaDireta}</p>
+                        </div>
+                    )}
+
                     {/* Intro Lead */}
                     <div className="article-body text-zinc-800 text-base md:text-lg leading-[1.85] font-body mb-12">
                         <p className="text-lg md:text-xl text-zinc-900 leading-[1.7] font-light first-letter:text-5xl first-letter:font-headline first-letter:italic first-letter:float-left first-letter:mr-2 first-letter:mt-1 first-letter:leading-none">

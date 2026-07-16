@@ -359,6 +359,364 @@ export const produtoraFaqSchema = {
 }
 
 // ---------------------------------------------------------------------------
+// Agência — subpages de serviço
+// ---------------------------------------------------------------------------
+export const comunicacaoServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/agencia/comunicacao/#service`,
+  name: 'Comunicação de Marca',
+  serviceType: 'Comunicação e Conteúdo Estratégico',
+  url: `${SITE}/pt/agencia/comunicacao/`,
+  description:
+    'Estratégia e comunicação de marca em São Paulo: conteúdo, social e campanhas com direção criativa autoral da House Mazzutti.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const webServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/agencia/web/#service`,
+  name: 'Sites e Web Design',
+  serviceType: 'Desenvolvimento Web',
+  url: `${SITE}/pt/agencia/web/`,
+  description:
+    'Desenvolvimento web e landing pages orientados à conversão em São Paulo. Sites que carregam a marca com precisão, sob direção criativa da House Mazzutti.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const rpServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/agencia/rp/#service`,
+  name: 'RP e Marketing Direto',
+  serviceType: 'Relações Públicas',
+  url: `${SITE}/pt/agencia/rp/`,
+  description:
+    'Assessoria de imprensa, relações públicas e marketing direto para marcas que constroem reputação. House Mazzutti — São Paulo.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+// ---------------------------------------------------------------------------
+// Studio — subpages de serviço
+// ---------------------------------------------------------------------------
+export const bookServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/studio/book/#service`,
+  name: 'Book Fotográfico Profissional',
+  serviceType: 'Fotografia de Moda e Imagem Pessoal',
+  url: `${SITE}/pt/studio/book/`,
+  description:
+    'Book fotográfico profissional para modelos e talentos em São Paulo. Direção de imagem editorial que define quem o mercado escolhe.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const ensaioServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/studio/ensaio/#service`,
+  name: 'Ensaio de Imagem Pessoal',
+  serviceType: 'Fotografia de Imagem de Autoridade',
+  url: `${SITE}/pt/studio/ensaio/`,
+  description:
+    'Ensaio pessoal e de imagem de autoridade em São Paulo. Presença que posiciona antes da conversa começar. Studio House Mazzutti.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const coberturaServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/studio/cobertura/#service`,
+  name: 'Cobertura Fotográfica de Eventos',
+  serviceType: 'Cobertura Fotográfica e de Vídeo',
+  url: `${SITE}/pt/studio/cobertura/`,
+  description:
+    'Cobertura externa de eventos, ativações e lançamentos em São Paulo. Foto e vídeo em tempo real com direção de imagem. Studio House Mazzutti.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+// ---------------------------------------------------------------------------
+// Produtora — subpages de serviço
+// ---------------------------------------------------------------------------
+export const modaServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/produtora/moda/#service`,
+  name: 'Produtora de Moda',
+  serviceType: 'Produção de Campanhas de Moda',
+  url: `${SITE}/pt/produtora/moda/`,
+  description:
+    'Produtora de moda e fashion films em São Paulo: campanhas, editoriais e direção de arte da concepção ao master final. House Mazzutti.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const institucionalServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/produtora/institucional/#service`,
+  name: 'Produção Institucional',
+  serviceType: 'Vídeo Institucional e Corporativo',
+  url: `${SITE}/pt/produtora/institucional/`,
+  description:
+    'Produção de vídeos institucionais e corporativos em São Paulo. Conceito, direção e entrega final pela Produtora House Mazzutti.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+export const publicidadeServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE}/pt/produtora/publicidade/#service`,
+  name: 'Produção Publicitária',
+  serviceType: 'Produção de Filmes Publicitários',
+  url: `${SITE}/pt/produtora/publicidade/`,
+  description:
+    'Produção executiva de filmes e peças publicitárias em São Paulo. Equipe completa, direção criativa integrada. Produtora House Mazzutti.',
+  areaServed: {'@type': 'City', name: 'São Paulo', '@id': 'https://www.wikidata.org/wiki/Q174'},
+  provider: {'@id': ORG_ID},
+}
+
+// ---------------------------------------------------------------------------
+// Studio — subpages FAQ schemas
+// ---------------------------------------------------------------------------
+export const bookFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Quanto custa um book profissional em São Paulo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O investimento em um book fotográfico profissional no Studio da House Mazzutti varia conforme o escopo: modelo, empresária ou executiva; meia sessão ou sessão completa; somente foto ou foto + vídeo. O valor final responde ao briefing, à locação e ao nível de direção criativa envolvido. Entre em contato para receber a tabela de pacotes e uma proposta personalizada.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como funciona o processo de um book no Studio da House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O processo começa com um briefing estratégico: leitura de perfil, posicionamento desejado no mercado e mercado-alvo. A partir daí, desenvolvemos o moodboard, selecionamos locações e realizamos a sessão com direção de imagem editorial. As imagens passam por curadoria, edição e finalização profissional antes da entrega em alta resolução.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre um book para modelo e um ensaio pessoal?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O book para modelo é construído para o mercado de agências e castings — prioriza versatilidade editorial, variação de linguagem e leitura de produto. O ensaio pessoal é construído para imagem de autoridade — posiciona o profissional, empresário ou influenciador na percepção do seu público. Ambos passam pelo mesmo processo de direção criativa no Studio HMZT, mas com narrativa e entregáveis distintos.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Preciso ter experiência fotográfica para fazer um book?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não. A direção de imagem é o que distingue um book do Studio HMZT. Você não precisa saber posar — é exatamente aí que entra a direção: orientação de expressão, pose e movimento em tempo real durante toda a sessão.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo leva para receber as fotos depois do book?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O prazo de entrega varia conforme o pacote escolhido, mas em geral as imagens editadas e finalizadas são entregues entre 7 e 15 dias úteis após a sessão. O processo inclui curadoria, retoque e exportação em alta resolução.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'O Studio da House Mazzutti atende clientes fora de São Paulo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. Realizamos sessões com clientes de outras cidades mediante agendamento em São Paulo. A maioria dos clientes de fora agenda briefing e moodboard remotamente e vem para SP na data da sessão. Entre em contato para verificar disponibilidade.',
+      },
+    },
+  ],
+}
+
+export const ensaioFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Para quem é o ensaio pessoal do Studio da House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O ensaio pessoal é para empresários, profissionais liberais, influenciadores e executivos que querem uma imagem que posicione antes da conversa começar. Não é um retrato corporativo — é uma leitura visual de quem você é e onde você quer ser percebido.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre ensaio pessoal e book profissional?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O ensaio pessoal foca em imagem de autoridade e presença de marca pessoal, com aplicação em redes sociais, site e mídia. O book profissional é voltado ao mercado de agências, castings e marcas — tem linguagem mais editorial e busca versatilidade comercial. Ambos partem de uma direção criativa no Studio HMZT.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como a House Mazzutti dirige um ensaio pessoal?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O processo começa com um briefing de marca pessoal: quem você é, onde atua, que percepção quer gerar e em que plataformas as imagens serão usadas. A partir daí, desenvolvemos conceito visual, locação e direção de imagem — tudo alinhado ao posicionamento. O ensaio é conduzido com orientação de pose, expressão e narrativa visual em tempo real.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo dura uma sessão de ensaio pessoal?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Uma sessão completa de ensaio pessoal dura entre 2 e 4 horas, dependendo do número de looks e locações previstas no briefing. Meia sessão tem duração média de 1h30. O tempo de entrega das imagens editadas é de 7 a 15 dias úteis.',
+      },
+    },
+  ],
+}
+
+export const coberturaFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que está incluído em uma cobertura fotográfica de evento?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A cobertura do Studio HMZT inclui briefing prévio do evento, presença de fotógrafo e/ou cinegrafista com direção criativa durante o evento, curadoria e edição das imagens e entrega em alta resolução no prazo acordado. Para grandes eventos, oferecemos também vídeo de cobertura e highlight.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre cobertura de evento e fotógrafo de evento convencional?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A cobertura convencional registra o que acontece. A cobertura do Studio HMZT dirige a narrativa visual do evento: sabe qual momento capturar, como enquadrar para redes e mídia, e entrega imagens que posicionam a marca — não apenas documentam a ocasião.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Vocês fazem cobertura de eventos corporativos e de moda em São Paulo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. A House Mazzutti realiza cobertura de lançamentos, ativações de marca, eventos corporativos, shows, desfiles e inaugurações em São Paulo. Para eventos em outras cidades, consulte disponibilidade.',
+      },
+    },
+  ],
+}
+
+// ---------------------------------------------------------------------------
+// Produtora — subpages FAQ schemas
+// ---------------------------------------------------------------------------
+export const modaFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que é um fashion film e para que serve?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Um fashion film é um vídeo autoral que combina estética de moda com narrativa cinematográfica. Serve para campanhas de lançamento, identidade de coleção, conteúdo premium para redes sociais e posicionamento de marca no mercado de moda e beleza. Na Produtora HMZT, o fashion film nasce de um conceito — não de uma tendência.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como funciona uma produção de campanha de moda na House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O processo começa com briefing de marca e objetivo de campanha. A seguir: conceito criativo, definição de casting, locações e set design, produção executiva (cronograma, equipe técnica, orçamento), dia de set com direção de arte e filmagem ou fotografia, e entrega do master final. Tudo sob uma única direção criativa — da ideia ao arquivo.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A produtora de moda da House Mazzutti cuida de casting e set design?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. A Produtora HMZT cobre casting (seleção de modelos e talentos alinhados ao conceito), set design (criação e montagem do ambiente de set) e toda a coordenação de produção. Não tercerizamos a direção criativa: tudo passa pela mesma mente que criou o conceito.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quais marcas de moda e beleza já trabalharam com a House Mazzutti?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A Produtora HMZT já realizou campanhas para WePink, Océane, Elyah, Jequiti, Natália Beauty, Dumond, Unique Chic, Poéma Paris, Signus e Camilla Scarpa, entre outras marcas de moda, beleza, joias e acessórios.',
+      },
+    },
+  ],
+}
+
+export const publicidadeFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que faz uma produtora de publicidade?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Uma produtora publicitária executa a produção de filmes, peças e campanhas: direção criativa, casting, locações, set design, filmagem, edição e entrega do master final. Na House Mazzutti, a produção é integrada à direção criativa desde o conceito — não existe separação entre quem pensa e quem executa.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como a House Mazzutti produz um filme publicitário?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O processo começa com o briefing da marca: objetivo de campanha, produto, público e referências. A partir daí: conceito, roteiro, planejamento de set, dia de filmagem com direção, edição e finalização. O prazo e o investimento são definidos conforme o escopo do filme e a complexidade de produção.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti produz campanhas para marcas pequenas e médias?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. A produtora atende desde campanhas de marcas emergentes até grandes marcas nacionais. O escopo e o investimento são adequados ao objetivo — o nível de direção criativa e qualidade de execução são os mesmos, independentemente do tamanho da marca.',
+      },
+    },
+  ],
+}
+
+export const institucionalFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O que é um vídeo institucional e quando uma empresa precisa de um?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Um vídeo institucional é a apresentação audiovisual da empresa — quem ela é, o que faz, por que importa e para quem. É necessário quando a marca está crescendo, reestruturando comunicação, lançando um site novo, captando investimento ou consolidando sua presença no mercado. Na House Mazzutti, o institucional é tratado como peça de posicionamento, não como relatório em vídeo.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo leva para produzir um vídeo institucional?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Um vídeo institucional completo leva entre 3 e 6 semanas, da reunião de briefing à entrega do master. O prazo depende da complexidade de produção: número de locações, entrevistas, animações e revisões previstas. Projetos com urgência podem ser acelerados mediante planejamento específico.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A House Mazzutti produz vídeos institucionais para empresas de quais setores?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A Produtora HMZT atende empresas de moda, beleza, saúde, gastronomia, educação, serviços e varejo. O que une todos os projetos é a direção criativa autoral: cada institucional nasce de uma leitura da marca, não de um template.',
+      },
+    },
+  ],
+}
+
+// ---------------------------------------------------------------------------
 // BlogPosting schema helper
 // ---------------------------------------------------------------------------
 export function blogPostingSchema({slug, titulo, metaDescription, data, cover}) {

@@ -27,6 +27,7 @@ export const articles = {
         "caption": "Direção de pose · linguagem editorial"
       }
     ],
+    "respostaDireta": "O que define quem é escolhido no mercado de modelo não é só a beleza — é a direção de imagem. Um book editorial profissional é um instrumento de posicionamento: ele comunica versatilidade, presença e potencial comercial antes de qualquer conversa. No Studio da House Mazzutti, em São Paulo, cada book começa com leitura de perfil e conceito, não com câmera.",
     "intro": "Existe um momento silencioso na trajetória de quem trabalha com imagem: aquele em que o talento percebe que talvez não esteja sendo visto da forma certa. Não é uma questão de beleza, nem de potencial. É uma questão de leitura. De como tudo isso está sendo apresentado ao mercado. E é exatamente nesse ponto — invisível para o público, decisivo para os bookers — que o book deixa de ser um pacote de fotos e começa a operar como instrumento de posicionamento.",
     "sections": [
       {
@@ -92,6 +93,7 @@ export const articles = {
         "caption": "Editorial · mood autoral"
       }
     ],
+    "respostaDireta": "Um book de modelo bem dirigido não precisa de apresentação: ele trabalha por você em todos os casting, briefings e reuniões onde você não está. A imagem que posiciona é aquela construída com estratégia de marca pessoal — não apenas capturada com boa câmera. O Studio da House Mazzutti dirige esse processo do moodboard ao arquivo entregue.",
     "intro": "Existe uma virada sutil — mas decisiva — no momento em que alguém deixa de ver o próprio rosto como rosto e passa a vê-lo como instrumento de mercado. A forma de se apresentar muda. A forma de aceitar uma direção muda. O que antes era \"tirar fotos\" passa a ser construção de imagem. E é nesse ponto que um book deixa de ser opcional e começa a trabalhar por você — em silêncio, em paralelo, em todas as mesas onde você não está.",
     "sections": [
       {
@@ -157,6 +159,7 @@ export const articles = {
         "caption": "Direção de presença · acabamento fine art"
       }
     ],
+    "respostaDireta": "Uma imagem de autoridade não é vaidade — é gestão de percepção. O ensaio pessoal do Studio da House Mazzutti é construído a partir de um briefing de marca pessoal: quem você é, onde atua e como quer ser percebido. O resultado é uma narrativa visual que antecede qualquer apresentação verbal e posiciona antes da conversa começar.",
     "intro": "Existe um ponto na trajetória profissional em que o crescimento deixa de depender apenas de competência. E passa a depender de percepção. Você pode acumular experiência, repertório e resultados — mas se sua imagem não traduz isso com precisão, o mercado não acessa essa informação. No cenário atual, em que decisões executivas são tomadas em segundos e à distância, a imagem deixou de acompanhar a carreira. Passou a mediá-la.",
     "sections": [
       {
@@ -222,6 +225,7 @@ export const articles = {
         "caption": "Tratamento fine art · linguagem premium"
       }
     ],
+    "respostaDireta": "Quando sua imagem não acompanha mais o nível da sua atuação, ela passa a liderar a percepção errada. O ensaio pessoal existe para corrigir esse descompasso: ele não documenta — ele dirige. No Studio da House Mazzutti, o ensaio nasce de um conceito visual alinhado ao posicionamento do profissional, não de um template de fotografia.",
     "intro": "Existe uma transição silenciosa na vida profissional. Ela não acontece quando você conquista algo novo. Acontece quando você percebe que já não pode mais se apresentar da mesma forma. A imagem que antes funcionava — o registro institucional padrão, a foto de evento, o retrato de portfólio — deixa de sustentar o nível atual da sua atuação. Não é vaidade. É coerência.",
     "sections": [
       {
@@ -287,6 +291,7 @@ export const articles = {
         "caption": "Captação editorial · narrativa visual"
       }
     ],
+    "respostaDireta": "Cobertura externa em tempo real é mais do que registro fotográfico — é gestão da sua narrativa visual em São Paulo. Diferente da cobertura convencional, o Studio da House Mazzutti dirige a presença no evento: sabe qual momento capturar, como enquadrar para redes e mídia, e entrega imagens que posicionam — não apenas documentam.",
     "intro": "São Paulo é uma cidade que exige presença. Mas, na prática, poucas pessoas constroem essa presença com intenção. Entre compromissos, eventos, deslocamentos e agendas densas, o que deveria ser uma experiência marcante muitas vezes se dissolve em registros aleatórios — fotos sem direção, takes sem propósito, momentos vividos mas não construídos. A cobertura externa em tempo real não nasce como serviço de fotografia. Nasce como estrutura de acompanhamento estratégico de presença.",
     "sections": [
       {
@@ -352,6 +357,7 @@ export const articles = {
         "caption": "Experiência convertida em ativo"
       }
     ],
+    "respostaDireta": "São Paulo oferece o cenário. A cobertura da House Mazzutti transforma esse cenário em narrativa visual intencional. Com direção de imagem em tempo real, cada registro deixa de ser apenas memória e passa a ser conteúdo que posiciona — em redes, em mídia, na percepção de quem vê.",
     "intro": "Algumas experiências merecem mais do que serem vividas. Merecem ser construídas. São Paulo oferece o cenário — restaurantes, hotéis, ruas, ateliês, encontros, lançamentos. Mas a forma como você ocupa esse cenário é o que define se aquela passagem será apenas um dia na agenda ou um capítulo na sua narrativa visual.",
     "sections": [
       {
@@ -417,6 +423,7 @@ export const articles = {
         "caption": "Brand book · governança visual"
       }
     ],
+    "respostaDireta": "Branding é a arquitetura de valor que determina por que sua marca é lembrada, desejada e escolhida — antes de qualquer argumento de venda. Não é logo, não é paleta de cores: é o sistema que organiza percepção e gera preferência. Na Agência House Mazzutti, um branding project começa por imersão e leitura de mercado antes de qualquer execução visual.",
     "intro": "Existe um ponto silencioso — mas decisivo — dentro de qualquer negócio. Não é o produto. Não é o serviço. Não é nem mesmo o preço. É a forma como tudo isso é percebido. Duas empresas podem entregar exatamente a mesma solução. Apenas uma será lembrada. Apenas uma será desejada. Apenas uma será escolhida com facilidade. Esse ponto de diferença raramente está no que a empresa faz — está em como ela construiu sua presença.",
     "sections": [
       {
@@ -482,6 +489,7 @@ export const articles = {
         "caption": "Valor percebido · margem sustentada"
       }
     ],
+    "respostaDireta": "Antes de investir em tráfego, uma marca precisa responder à pergunta que o consumidor faz em silêncio: essa empresa parece sólida o suficiente para receber meu dinheiro? Essa percepção é construída pelo branding — não pelo anúncio. Uma marca bem posicionada converte melhor, paga menos por clique e fecha mais rápido. O branding é o motor; o tráfego, o combustível.",
     "intro": "A maioria das empresas comete o mesmo erro — e ele custa caro. Investe primeiro em tráfego. Depois em conteúdo. E só percebe que algo não funciona quando o resultado começa a ficar abaixo da expectativa. O problema raramente está no marketing. Está na base. Está na marca. Porque antes de alguém comprar, existe uma pergunta silenciosa: essa empresa me parece confiável, sólida e valiosa o suficiente para receber o meu dinheiro?",
     "sections": [
       {
@@ -547,6 +555,7 @@ export const articles = {
         "caption": "Aplicações premium · consistência editorial"
       }
     ],
+    "respostaDireta": "O investimento em branding varia conforme o escopo — de uma marca nova a um reposicionamento completo. Mas a pergunta mais estratégica não é quanto custa: é quanto custa não ter. Marcas com identidade consistente crescem até 20% mais rápido e cobram mais pelo mesmo produto. Um branding project completo na Agência House Mazzutti inclui imersão, conceito, execução e fine art, com prazo entre 35 e 75 dias.",
     "intro": "A pergunta mais comum sobre branding é direta: quanto custa? Mas a pergunta mais inteligente é outra: quanto vale construir uma marca que sustenta o crescimento do meu negócio? Branding não é gasto isolado. É decisão estrutural. Inconsistência de marca pode custar até 23% da receita anual — em ineficiência de mídia, perda de margem e ciclos de venda mais longos. Economizar no branding raramente é economia. É adiamento de custo.",
     "sections": [
       {
@@ -614,6 +623,7 @@ export const articles = {
         "caption": "Sequência editorial · ritmo de campanha"
       }
     ],
+    "respostaDireta": "Uma campanha de lançamento bem executada não é uma sequência de posts — é uma arquitetura estratégica: narrativa central, múltiplos pontos de contato e timing calculado. Sem essa estrutura, o lançamento gera barulho, não construção de presença. A House Mazzutti desenvolve campanhas de lançamento integrando conceito criativo, produção e comunicação sob uma única direção.",
     "intro": "Existe uma diferença silenciosa entre marcas que lançam e marcas que crescem. As primeiras comunicam. As segundas constroem presença. E presença, no cenário atual, não é resultado de mais conteúdo — é resultado de melhor estrutura. Uma campanha de lançamento bem construída é uma arquitetura estratégica que organiza múltiplos pontos de contato em torno de uma narrativa central, com começo, meio e fim editorial.",
     "sections": [
       {
@@ -679,6 +689,7 @@ export const articles = {
         "caption": "Governança criativa · execução integrada"
       }
     ],
+    "respostaDireta": "A maioria das campanhas falha não por falta de conteúdo, mas por falta de direção. Produzir sem arquitetura estratégica gera volume sem impacto. O erro estrutural mais comum: investir em mídia antes de ter clareza de posicionamento, mensagem e narrativa. O resultado é tráfego que não converte e conteúdo que não é lembrado.",
     "intro": "Vivemos a era do excesso. Mais vídeos. Mais fotos. Mais posts. Mais campanhas. E, paradoxalmente, menos impacto. A maior parte das marcas não sofre por falta de conteúdo — sofre por falta de direção. Produzir não é o problema. O problema é produzir sem estrutura. Mais de 70% dos conteúdos publicados por marcas hoje não geram engajamento consistente. Não porque sejam ruins. Porque foram feitos sem arquitetura.",
     "sections": [
       {
@@ -744,6 +755,7 @@ export const articles = {
         "caption": "Direção de arte · território de marca"
       }
     ],
+    "respostaDireta": "Um editorial de moda é uma narrativa visual que transforma produto em desejo. Não é fotografia de catálogo: é construção de linguagem — onde postura, cenário, luz e direção se combinam para comunicar um território de marca. A Produtora House Mazzutti, em São Paulo, desenvolve editoriais de moda do conceito à entrega do master final.",
     "intro": "Existe um momento sutil em que a moda deixa de ser apenas matéria. E passa a ser percepção. É quando o tecido já não comunica apenas textura, mas intenção. Quando a pose não mostra apenas uma roupa, mas sugere uma história. Quando o cenário não é cenário — é tom. O editorial de moda nasce exatamente nesse ponto. Não como ensaio. Como construção de linguagem.",
     "sections": [
       {
@@ -809,6 +821,7 @@ export const articles = {
         "caption": "Hierarquia visual · conversão guiada"
       }
     ],
+    "respostaDireta": "Editorial de moda não é só estética — é performance de vendas. A imagem certa, no canal certo, com a direção certa, reduz o tempo de decisão do consumidor e aumenta a percepção de valor do produto antes mesmo de qualquer copy. Marcas que investem em editorial estruturado vendem mais e precisam competir menos por preço.",
     "intro": "Existe um momento silencioso entre ver e desejar. E outro, ainda mais decisivo, entre desejar e comprar. A maior parte das marcas acredita que esse processo acontece naturalmente. Não acontece. Ele é conduzido. E, no cenário atual, essa condução é profundamente visual. Antes do preço, antes da descrição, antes do botão de compra — a imagem já decidiu o caminho.",
     "sections": [
       {
@@ -874,6 +887,7 @@ export const articles = {
         "caption": "Governança criativa · entrega protegida"
       }
     ],
+    "respostaDireta": "Boas ideias não garantem bons resultados — execução estruturada sim. A produção executiva é o sistema que transforma um conceito criativo em campanha entregue: orçamento, cronograma, equipe, set, aprovações e master final. Sem esse sistema, até o melhor conceito chega ao cliente fragmentado, atrasado ou abaixo do potencial.",
     "intro": "Uma ideia forte é apenas o ponto de partida. Sem execução estruturada, ela perde intensidade, se dilui, se adapta demais e perde identidade. Projetos com múltiplos stakeholders têm até 50% mais chance de atraso quando não possuem gestão executiva estruturada. E o custo invisível dessa desorganização raramente aparece na planilha — aparece no resultado final.",
     "sections": [
       {
@@ -939,6 +953,7 @@ export const articles = {
         "caption": "Mesma autoria · do conceito à entrega"
       }
     ],
+    "respostaDireta": "Produção executiva é o sistema invisível que define se uma campanha chega ao resultado ou se perde entre o briefing e o set. Ela cobre orçamento, casting, locação, set design, equipe técnica e coordenação de entrega — tudo integrado à direção criativa. Na Produtora House Mazzutti, conceito e execução vivem na mesma mente: não existe separação entre quem pensa e quem produz.",
     "intro": "Ideias não falham. Execuções falham. Uma campanha pode nascer forte no conceito e ainda assim perder potência na prática — não por falta de talento, mas por falta de estrutura. O imaginário comum sugere que campanhas são feitas de ideias brilhantes. E são. O que raramente se discute é que entre a ideia brilhante e o master final existe um campo minado chamado execução. E a maioria das ideias não sobrevive a ele.",
     "sections": [
       {
@@ -1004,6 +1019,7 @@ export const articles = {
         "caption": "Previsibilidade · ROI protegido"
       }
     ],
+    "respostaDireta": "Alto investimento em campanha não garante resultado — governança criativa sim. O que destrói campanhas caras é o retrabalho: decisões tomadas tarde, alinhamento frágil entre agência e cliente, e execução sem controle de qualidade. A raiz do problema raramente é o orçamento: é a ausência de um sistema de produção que proteja o conceito da criação à entrega.",
     "intro": "Existe uma expectativa implícita no mercado: quanto maior o investimento, maior o resultado. Mas, na prática, o que determina o resultado não é o valor investido. É a forma como esse investimento é organizado. Campanhas com orçamento elevado também enfrentam desalinhamento, retrabalho, perda de eficiência e queda de qualidade. O dinheiro acelera o processo — mas não corrige decisões mal tomadas.",
     "sections": [
       {
@@ -1072,6 +1088,7 @@ export const articles = {
         "caption": "Foto e vídeo: Bruno Fonze / Monteiro Produtora"
       }
     ],
+    "respostaDireta": "Quando Larissa Manoela entrou no frame da campanha Jequiti, o ambiente já estava comunicando pela marca. A House Mazzutti direcionou o set para que cada elemento — luz, cenário, direção de pose — amplificasse a presença da estrela sem competir com ela. O resultado é quando o ambiente sustenta quem está à frente.",
     "intro": "Uma celebridade entrega audiência. O set entrega percepção. Quando Larissa Manoela entrou no frame, o ambiente já estava respondendo pela marca — e foi aí que a House Mazzutti trabalhou.",
     "sections": [
       {
@@ -1140,6 +1157,7 @@ export const articles = {
         "caption": "Captação · objeto de desejo"
       }
     ],
+    "respostaDireta": "Um fashion film de joalheria não vende peças — constrói o desejo pela peça. Para a Bárbara Porto, a House Mazzutti escolheu movimento como linguagem: cada gesto, cada enquadramento, cada corte transforma a joia em personagem da narrativa. Isso é o que separa um catálogo de um film que encanta.",
     "intro": "Joia parada é catálogo. Joia em movimento é desejo. Uma peça de joalheria fotografada bem informa; filmada com direção, encanta. A House escolheu o segundo caminho para a Bárbara Porto.",
     "sections": [
       {
@@ -1208,6 +1226,7 @@ export const articles = {
         "caption": "Direção criativa · atmosfera"
       }
     ],
+    "respostaDireta": "Um fashion film é a forma mais sofisticada de uma marca de moda se apresentar. Não documenta — revela. Para Emanuely Terres, a House Mazzutti dirigiu um film sobre presença: não sobre a roupa, mas sobre quem a habita. Esse é o ponto de inflexão entre moda boa e marca que fica na memória.",
     "intro": "Um fashion film não vende roupa. Constrói presença. E presença é o ativo mais difícil de fabricar. Moda boa veste o corpo; direção boa revela quem o habita. Foi essa a aposta da House no filme de Emanuely Terres.",
     "sections": [
       {
@@ -1276,6 +1295,7 @@ export const articles = {
         "caption": "Prática · do conceito à entrega"
       }
     ],
+    "respostaDireta": "O Inside Out é o programa de formação da House Mazzutti: não ensina técnica fotográfica, ensina direção de olhar. A diferença entre quem executa e quem dirige é o que separa um prestador de serviço de um criativo com posicionamento. A House também forma — porque dominar a direção é o que sustenta uma carreira criativa longa.",
     "intro": "Toda casa criativa sabe produzir. Poucas sabem ensinar a produzir. Quem domina a técnica entrega um trabalho; quem domina a direção forma outros olhares. Foi para essa diferença que nasceu o Inside Out.",
     "sections": [
       {
@@ -1316,5 +1336,256 @@ export const articles = {
     ],
     "citacao": "Produzir é entregar uma imagem. Ensinar é multiplicar a capacidade de criá-las.",
     "conclusao": "Quer dominar direção de imagem com quem produz para grandes marcas? As turmas do Inside Out são reduzidas e presenciais, em São Paulo. Conheça a House Mazzutti Academy e garanta seu interesse na próxima turma."
+  },
+
+  "fashion-film-o-que-e-quanto-custa": {
+    "categoria": "Produtora — Editorial",
+    "titulo": "Fashion film: o que é, quanto custa e quando sua marca precisa de um — guia 2026",
+    "metaTitle": "Fashion Film: o que é e quanto custa? Guia 2026 | House Mazzutti",
+    "metaDescription": "Entenda o que é fashion film, quando sua marca precisa de um e o que define o investimento. Produtora de moda em São Paulo — House Mazzutti. Atualizado em julho/2026.",
+    "keywords": "fashion film, o que é fashion film, quanto custa fashion film, produtora de moda São Paulo, vídeo de moda, fashion film Brasil, House Mazzutti produtora, film de moda conceitual",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/fashion-film/fashion-film-producao-moda-house-mazzutti.webp",
+      "alt": "Fashion film produzido pela House Mazzutti — produtora de moda em São Paulo",
+      "caption": "Produção de moda — Produtora HMZT, São Paulo",
+      "fallback": "/images/produtora/moda/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/produtora/barbara-porto/capa.webp",
+        "alt": "Fashion film de joalheria Bárbara Porto — direção e produção House Mazzutti",
+        "caption": "Bárbara Porto · fashion film de joias"
+      },
+      {
+        "src": "/images/produtora/emanuely-terres/capa.webp",
+        "alt": "Fashion film Emanuely Terres — direção autoral House Mazzutti Produtora",
+        "caption": "Emanuely Terres · film sobre presença"
+      }
+    ],
+    "respostaDireta": "Fashion film é um vídeo autoral que combina estética de moda com narrativa cinematográfica — não é clip, não é lookbook em movimento: é uma peça que constrói o território emocional de uma marca. O investimento varia conforme escopo (equipe, locações, dias de set, pós-produção), mas a decisão de fazer um fashion film é sempre estratégica: uma marca o faz quando quer ser percebida, não apenas vista. A Produtora House Mazzutti, em São Paulo, desenvolve fashion films do conceito ao master final.",
+    "intro": "Existe uma pergunta que as marcas de moda fazem cedo ou tarde: quando uma campanha de foto já não é suficiente? A resposta costuma aparecer no momento em que a marca percebe que precisa não de mais imagens — mas de uma narrativa. É nesse ponto que o fashion film entra. Não como tendência. Como necessidade estratégica.",
+    "sections": [
+      {
+        "h2": "O que é um fashion film?",
+        "paragraphs": [
+          "Um fashion film é uma peça audiovisual que usa linguagem cinematográfica para construir o universo de uma marca de moda, beleza ou lifestyle. É diferente de um vídeo de produto: ele não mostra o item — ele instala a percepção de quem usa aquele item, em que mundo ele existe, que valores carrega.",
+          "O resultado pode ser de 30 segundos ou 3 minutos. O que define o fashion film não é a duração — é a intenção. Cada corte, cada trilha, cada direção de pose existe para gerar um estado emocional específico no espectador. Não informação: experiência."
+        ]
+      },
+      {
+        "h2": "Qual a diferença entre fashion film e campanha de moda convencional?",
+        "paragraphs": [
+          "Uma campanha convencional mostra o produto: ângulos, cores, tabela de medidas. Um fashion film posiciona a marca: qual é o seu território, que tipo de pessoa habita esse universo, que desejo ela representa.",
+          "A comparação prática: uma boa campanha faz a marca ser conhecida. Um bom fashion film faz a marca ser desejada. São intenções distintas — e resultados distintos. Marcas como WePink, Jequiti e Poéma Paris, que já passaram pela Produtora HMZT, entendem que imagem de alto padrão constrói margem — e fashion film é a expressão mais concentrada disso."
+        ]
+      },
+      {
+        "h2": "Quando uma marca precisa de um fashion film?",
+        "paragraphs": [
+          "O sinal mais claro é quando a marca percebe que as fotos de produto já não traduzem o nível de posicionamento que ela quer ocupar. Outros momentos estratégicos: lançamento de coleção ou linha nova, reposicionamento de marca, entrada em novo segmento de mercado, produção de conteúdo premium para redes e mídia paga.",
+          "Marcas que estão construindo presença — não apenas vendendo produto — são as que mais se beneficiam do fashion film. O film funciona como âncora narrativa: tudo que vem depois (foto, copy, store) soa mais coerente quando existe um film que estabelece o território."
+        ]
+      },
+      {
+        "h2": "O que define o custo de um fashion film?",
+        "paragraphs": [
+          "O investimento em um fashion film é definido por quatro variáveis principais: complexidade de conceito e roteiro, número de dias de set, tamanho da equipe técnica (direção, fotografia, direção de arte, figurino, make, som) e escopo de pós-produção (edição, colorização, trilha, mixagem, motion).",
+          "Um film de 60 segundos com locação única, equipe enxuta e pós-produção padrão tem um custo muito diferente de um film com múltiplas locações, casting profissional, set design elaborado e trilha original. Na Produtora HMZT, o investimento começa pelo briefing — a complexidade do conceito define o escopo, e o escopo define o custo. Não há tabela genérica: há uma proposta calibrada ao objetivo da marca."
+        ]
+      },
+      {
+        "h2": "Como a Produtora House Mazzutti produz um fashion film?",
+        "paragraphs": [
+          "O processo começa com um briefing de marca: qual é o objetivo do film, que percepção precisa ser instalada, em quais canais vai circular, qual o público. A partir daí: conceito criativo e moodboard, definição de casting, locações e set design, planejamento de set (cronograma, equipe, logística), dia(s) de filmagem com direção criativa integrada, edição, colorização e entrega do master.",
+          "O diferencial da House Mazzutti é que conceito e produção vivem na mesma mente. Angelo Mazzutti dirige e produz — não há intermediação entre a ideia e o set. Isso elimina perda de intenção entre briefing e entrega, o que é a principal causa de frustração em produções de moda com fornecedores segmentados."
+        ]
+      }
+    ],
+    "citacao": "Moda boa veste o corpo. Direção boa revela quem o habita.",
+    "faq": [
+      {
+        "q": "Fashion film é o mesmo que vídeo de produto?",
+        "a": "Não. Vídeo de produto mostra o item. Fashion film constrói o universo da marca que criou esse item. O primeiro informa; o segundo instala percepção e desejo."
+      },
+      {
+        "q": "Qual a duração ideal de um fashion film?",
+        "a": "Não existe uma duração padrão. Fashion films eficientes variam de 30 segundos a 4 minutos, dependendo do canal e do objetivo. Para redes sociais, cortes mais curtos. Para landing pages e campanhas de marca, peças mais longas funcionam melhor."
+      },
+      {
+        "q": "A Produtora House Mazzutti faz fashion film para marcas pequenas?",
+        "a": "Sim. O escopo é calibrado ao objetivo e ao orçamento da marca. O que não muda é o nível de direção criativa: cada film passa pelo mesmo processo de conceito, produção e direção autoral."
+      },
+      {
+        "q": "Quanto tempo leva para produzir um fashion film?",
+        "a": "Do briefing à entrega do master, o prazo típico é de 3 a 6 semanas. Varia conforme a complexidade de conceito, disponibilidade de casting e locações, e número de rounds de revisão."
+      }
+    ],
+    "conclusao": "Sua marca está pronta para ser percebida, não apenas vista? A Produtora House Mazzutti desenvolve fashion films do conceito ao master final em São Paulo. Fale com a produtora e inicie seu projeto."
+  },
+
+  "video-institucional-sao-paulo-como-produzir": {
+    "categoria": "Produtora — Institucional",
+    "titulo": "Vídeo institucional em São Paulo: o que é, quanto custa e como contratar uma produtora — guia 2026",
+    "metaTitle": "Vídeo Institucional em São Paulo: quanto custa e como produzir | House Mazzutti",
+    "metaDescription": "Entenda o que define um bom vídeo institucional, quanto custa em São Paulo e como escolher uma produtora. House Mazzutti — produção com direção criativa desde o briefing. Julho/2026.",
+    "keywords": "vídeo institucional São Paulo, quanto custa vídeo institucional, produtora vídeo institucional SP, como fazer vídeo institucional empresa, vídeo corporativo São Paulo, House Mazzutti produtora",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/video-institucional/video-institucional-producao-sao-paulo-house-mazzutti.webp",
+      "alt": "Produção de vídeo institucional em São Paulo — Produtora House Mazzutti",
+      "caption": "Produção institucional — Produtora HMZT, São Paulo",
+      "fallback": "/images/produtora/institucional/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/produtora/jequiti-larissa-manoela/capa.webp",
+        "alt": "Produção audiovisual com direção criativa — Produtora House Mazzutti em set de campanha",
+        "caption": "Set de produção · direção integrada"
+      },
+      {
+        "src": "/images/produtora/natalia-beauty/capa.webp",
+        "alt": "Campanha institucional de beleza produzida pela House Mazzutti em São Paulo",
+        "caption": "Natalia Beauty · institucional de marca"
+      }
+    ],
+    "respostaDireta": "Um vídeo institucional em São Paulo custa entre R$ 8.000 e R$ 80.000+, dependendo da complexidade de produção: número de locações, tamanho da equipe, presença de entrevistas ou atores, pós-produção e duração final. O que define o valor não é a duração do vídeo — é o escopo de produção. Na Produtora House Mazzutti, o custo é definido após um briefing de marca: objetivo, público, canais e nível de acabamento desejado.",
+    "intro": "Toda empresa chega a um momento em que precisa se apresentar de forma mais sofisticada do que um texto no site consegue fazer. O produto é bom, o serviço entrega — mas como comunicar isso com a clareza e o impacto que a empresa merece? É nesse ponto que o vídeo institucional deixa de ser um item de comunicação e passa a ser um instrumento de posicionamento.",
+    "sections": [
+      {
+        "h2": "O que é um vídeo institucional?",
+        "paragraphs": [
+          "Um vídeo institucional é a apresentação audiovisual da empresa: quem ela é, o que faz, por que importa e para quem. É diferente de um vídeo de produto (que mostra o item) e de um filme publicitário (que vende uma oferta específica). O institucional posiciona a empresa inteira — sua cultura, seus diferenciais e a percepção que ela quer gerar no mercado.",
+          "Bem produzido, um institucional funciona como cartão de visita em movimento: é o vídeo que fica no topo do site, que é usado em apresentações comerciais, captação de investimento, processos seletivos e relacionamento com parceiros. É a peça que representa a empresa antes de qualquer reunião."
+        ]
+      },
+      {
+        "h2": "Quanto custa um vídeo institucional em São Paulo?",
+        "paragraphs": [
+          "O investimento em um vídeo institucional em São Paulo varia conforme o escopo de produção. Produções mais simples — uma locação, entrevista com executivo, edição limpa — ficam entre R$ 8.000 e R$ 20.000. Produções com múltiplas locações, equipe técnica ampliada, roteiro dramatizado, motion graphics e trilha original chegam a R$ 50.000–80.000 ou mais.",
+          "O erro mais comum é buscar o menor preço sem definir o objetivo. Um institucional barato que não posiciona a empresa custa mais do que um investimento bem calibrado — porque precisa ser refeito. Na Produtora HMZT, o briefing define o escopo antes de qualquer orçamento: não existe proposta genérica."
+        ]
+      },
+      {
+        "h2": "O que diferencia uma produtora de vídeo institucional de qualidade?",
+        "paragraphs": [
+          "Três variáveis separam uma produtora que entrega arquivo de uma que entrega posicionamento: primeiro, se ela começa pelo conceito ou pelo cronograma de set. Segundo, se a direção criativa e a produção executiva vivem na mesma equipe ou são compartimentos separados. Terceiro, se ela entende o mercado do cliente ou apenas executa o roteiro fornecido.",
+          "Na House Mazzutti, o vídeo institucional nasce de uma leitura de marca — não de um template. Cada empresa tem uma posição que ela quer ocupar; o institucional é construído para comunicar exatamente essa posição, com precisão de linguagem visual e narrativa."
+        ]
+      },
+      {
+        "h2": "Quanto tempo leva para produzir um vídeo institucional?",
+        "paragraphs": [
+          "O prazo médio de um vídeo institucional completo, do briefing à entrega do master, é de 3 a 6 semanas. O processo passa por: reunião de briefing e leitura de marca, roteiro e conceito visual, planejamento de set (locações, equipe, agenda), dia(s) de filmagem, edição, revisão e entrega final.",
+          "Produções com entrevistas, depoimentos de clientes ou cenas dramatizadas em múltiplas locações tendem a pedir prazos mais longos. É possível acelerar o processo em projetos com urgência — mas comprimir o tempo de briefing quase sempre reduz a qualidade do resultado."
+        ]
+      },
+      {
+        "h2": "Como contratar uma produtora de vídeo institucional em São Paulo?",
+        "paragraphs": [
+          "O primeiro passo é ter clareza sobre o objetivo do vídeo: ele vai para o site, para apresentações comerciais, para captação de investimento, para redes sociais? O destino define o tom, a duração e o nível de produção adequado.",
+          "Depois, avalie o portfólio da produtora — não apenas pela qualidade visual, mas pela coerência entre o conceito e a marca do cliente. Uma produtora que entende posicionamento entrega um institucional diferente de uma que apenas filma bem. Finalmente, peça uma conversa de briefing antes de solicitar orçamento: produtoras sérias querem entender seu negócio antes de apresentar números."
+        ]
+      }
+    ],
+    "citacao": "Um vídeo institucional não conta o que a empresa faz. Revela por que ela importa.",
+    "faq": [
+      {
+        "q": "Qual a duração ideal de um vídeo institucional?",
+        "a": "Entre 1'30'' e 3 minutos para a versão principal. Para redes sociais, cortes de 30 a 60 segundos. A duração ideal depende do canal de distribuição — mas o erro mais comum é fazer vídeos longos demais para o contexto onde serão consumidos."
+      },
+      {
+        "q": "A House Mazzutti faz vídeo institucional para empresas de quais setores?",
+        "a": "A Produtora HMZT atende empresas de moda, beleza, saúde, gastronomia, serviços profissionais, educação e varejo. O processo de direção criativa é o mesmo para todos: começa pela leitura da marca, não pelo setor."
+      },
+      {
+        "q": "Preciso ter um roteiro pronto para contratar a produtora?",
+        "a": "Não. Na House Mazzutti, o roteiro e o conceito visual são desenvolvidos pela produtora a partir do briefing. Você traz o objetivo, o público e as referências; a House traz a estrutura narrativa e a direção."
+      },
+      {
+        "q": "É possível fazer um vídeo institucional sem atores contratados?",
+        "a": "Sim. A maioria dos institucionais usa os próprios colaboradores e líderes da empresa — o que, aliás, gera maior autenticidade. A Produtora HMZT dirige essas aparições para que elas soem naturais e posicionadas."
+      }
+    ],
+    "conclusao": "Sua empresa merece um vídeo que posicione, não apenas apresente. A Produtora House Mazzutti produz vídeos institucionais em São Paulo do conceito à entrega do master. Solicite um briefing e receba uma proposta."
+  },
+
+  "casting-set-design-campanha-moda": {
+    "categoria": "Produtora — Moda",
+    "titulo": "Casting e set design numa campanha de moda: o que uma produtora faz antes do set",
+    "metaTitle": "Casting e Set Design em Campanha de Moda | House Mazzutti Produtora SP",
+    "metaDescription": "O que uma produtora de moda faz antes do set: casting estratégico, set design e produção executiva que protege o conceito da criação à entrega. House Mazzutti, São Paulo.",
+    "keywords": "casting campanha de moda, set design moda São Paulo, produtora de moda SP, produção executiva campanha, casting modelo São Paulo, House Mazzutti produtora moda, produção de fashion film",
+    "data": "Julho 2026",
+    "cover": {
+      "src": "/images/blog/casting-set-design/casting-set-design-producao-moda-house-mazzutti.webp",
+      "alt": "Casting e set design de campanha de moda — Produtora House Mazzutti São Paulo",
+      "caption": "Pré-produção de campanha · Produtora HMZT",
+      "fallback": "/images/produtora/elyah/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/produtora/oceane/capa.webp",
+        "alt": "Campanha de moda com casting e set design — Océane produzida pela House Mazzutti",
+        "caption": "Océane · campanha com direção integrada"
+      },
+      {
+        "src": "/images/produtora/unique-chic/capa.webp",
+        "alt": "Produção de moda com set design e casting profissional — Unique Chic House Mazzutti",
+        "caption": "Unique Chic · set design autoral"
+      }
+    ],
+    "respostaDireta": "Casting e set design são dois dos pilares invisíveis de uma campanha de moda bem-sucedida. O casting define quem comunica o produto; o set design define onde e como esse produto existe no imaginário da marca. Na Produtora House Mazzutti, esses dois elementos são tratados como decisões estratégicas — não logísticas — e são desenvolvidos sob a mesma direção criativa do conceito ao set.",
+    "intro": "Existe uma distância enorme entre uma campanha pensada e uma campanha realizada. Essa distância tem nome: produção. E dentro da produção, os dois elementos que mais definem o resultado final — antes mesmo de ligar uma câmera — são o casting e o set design. Quando esses dois elementos estão errados, nenhuma câmera e nenhuma edição corrige o problema.",
+    "sections": [
+      {
+        "h2": "O que é casting estratégico numa campanha de moda?",
+        "paragraphs": [
+          "Casting não é escalar o modelo mais bonito disponível na data. É escolher quem comunica o produto para o público certo, com a linguagem certa. Um modelo com presença editorial forte pode ser a escolha errada para uma campanha de marca popular. Um rosto com forte identidade digital pode ser ideal para redes e desastroso para um editorial de moda luxury.",
+          "Na Produtora HMZT, o casting começa depois do conceito — não antes. Primeiro, define-se o território da campanha: que tipo de pessoa habita esse universo de marca? Depois, o casting é feito para encontrar quem representa esse perfil com autenticidade, não apenas quem tem as medidas certas."
+        ]
+      },
+      {
+        "h2": "O que é set design e por que ele define o resultado final?",
+        "paragraphs": [
+          "Set design é a construção do ambiente de set: cenário, mobiliário, objetos de cena, paleta de cores, texturas e proporções. Para uma campanha de moda, o set não é o fundo — é o contexto que dá sentido ao produto. Uma peça de joalheria em frente a uma parede branca comunica uma coisa. A mesma peça num cenário arquitetônico preciso comunica outra inteiramente.",
+          "O set design bem executado faz o produto ser percebido como ele deve ser — não como ele é. Isso não é ilusão: é direção de percepção. Marcas como Signus, Dumond e Poéma Paris, clientes da Produtora HMZT, entendem que o ambiente de set é tão parte da identidade da campanha quanto o produto fotografado."
+        ]
+      },
+      {
+        "h2": "O que faz uma produtora executiva antes do dia de set?",
+        "paragraphs": [
+          "A produção executiva é o sistema que garante que o conceito criativo chegue ao set intacto e que o set entregue o master no prazo. Antes do dia de filmagem, a produtora HMZT cuida de: orçamento e cronograma de produção, contratação de equipe técnica (fotógrafo/diretor de fotografia, direção de arte, make e hair, figurino), scouting e contratação de locações, briefing de casting e convocação, construção e montagem de set design, logística de equipamentos.",
+          "Cada uma dessas etapas tem decisões criativas dentro dela — não apenas operacionais. Por isso, na House Mazzutti, produção executiva e direção criativa não são departamentos separados: são a mesma mente, do briefing ao master."
+        ]
+      },
+      {
+        "h2": "Por que unir casting, set design e direção criativa sob uma única direção?",
+        "paragraphs": [
+          "Quando casting, set design e direção criativa são terceirizados para fornecedores diferentes, o conceito original se fragmenta em cada handoff. O modelo escolhido pelo casting talvez não dialogue com o ambiente criado pelo set design. O set design talvez não reflita a intenção do conceito. A câmera capta o que está na frente — não o que estava na ideia original.",
+          "Na Produtora HMZT, esses três elementos são decididos e executados sob a mesma direção. Isso não elimina colaboração — existe equipe técnica especializada em cada área. O que elimina é a perda de intenção entre etapas. O resultado é uma campanha onde cada elemento reforça o outro, porque nasceram da mesma leitura de marca."
+        ]
+      }
+    ],
+    "citacao": "Antes da câmera ligar, a campanha já foi ganha ou perdida na produção.",
+    "faq": [
+      {
+        "q": "A House Mazzutti contrata modelos e atores para as campanhas?",
+        "a": "Sim. A Produtora HMZT realiza o casting completo — da definição do perfil à convocação e briefing dos talentos no dia de set. Trabalhamos com modelos, atores e talentos específicos para cada tipo de campanha."
+      },
+      {
+        "q": "Vocês fazem set design próprio ou usam locações externas?",
+        "a": "As duas abordagens. Para campanhas que pedem construção de set, desenvolvemos o set design e montamos em estúdio ou locação. Para campanhas que se beneficiam de locação real (arquitetura, natureza, urbano), fazemos scouting e adaptação criativa do espaço."
+      },
+      {
+        "q": "Como funciona o processo de produção executiva na Produtora HMZT?",
+        "a": "Começa com o briefing de campanha: objetivo, produto, público, referências e prazo. A partir daí, desenvolvemos o conceito, o plano de casting e set design, e o cronograma de produção. O cliente acompanha cada etapa e aprova antes do set."
+      },
+      {
+        "q": "A House Mazzutti produz campanhas para marcas de quais segmentos?",
+        "a": "Moda, beleza, joalheria, acessórios e lifestyle são os segmentos principais. Temos experiência com marcas como WePink, Océane, Dumond, Signus, Unique Chic, Poéma Paris e Natália Beauty, entre outras."
+      }
+    ],
+    "conclusao": "Sua campanha começa antes do dia de set. A Produtora House Mazzutti desenvolve casting, set design e produção executiva sob uma única direção criativa em São Paulo. Inicie o briefing da sua campanha."
   }
 };
