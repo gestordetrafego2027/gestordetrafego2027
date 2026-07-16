@@ -224,7 +224,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           <span class="meta-value">Studio Plano · São Paulo</span>
         </div>
         <div class="meta-row">
-          <span class="meta-label">Creators</span>
+          <span class="meta-label">Produtores</span>
           <span class="meta-value">15 selecionados por curadoria</span>
         </div>
         <div class="meta-row">
