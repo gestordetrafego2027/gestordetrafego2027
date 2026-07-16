@@ -142,8 +142,6 @@ const FAQ_SCHEMA = {
 };
 
 const CSS = `
-@import url('https://api.fontshare.com/v2/css?f[]=rock-grotesque@300,400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,300;1,8..60,400;1,8..60,500&display=swap');
 
 .mpm-root {
   --paper:      #efe9da;
@@ -554,6 +552,19 @@ export default function MarketingParaModelosPage() {
   return (
     <div className="mpm-root">
       <MpmViewContent />
+      {/* Preconnects + fontes como <link> separados — preload scanner descobre em paralelo.
+          @import dentro de <style> é encadeado (CSS → fetch → discover → fetch), bloqueando render. */}
+      <link rel="preconnect" href="https://api.fontshare.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link
+        rel="stylesheet"
+        href="https://api.fontshare.com/v2/css?f[]=rock-grotesque@300,400,500,700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,300;1,8..60,400;1,8..60,500&display=swap"
+      />
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <script
         type="application/ld+json"
@@ -971,8 +982,8 @@ export default function MarketingParaModelosPage() {
             <div className="col">
               <h4>Catálogo</h4>
               <a href="#sumario">Vol. 01 · Marketing para Modelos</a>
-              <Link href="/pt/academy/preco-da-relevancia">Vol. 02 · O Preço da Relevância</Link>
-              <Link href="/pt/academy/briefing-mal-passado">Vol. 03 · Briefing Mal Passado</Link>
+              <Link href="/academy/preco-da-relevancia">Vol. 02 · O Preço da Relevância</Link>
+              <Link href="/academy/briefing-mal-passado">Vol. 03 · Briefing Mal Passado</Link>
             </div>
             <div className="col">
               <h4>House Mazzutti</h4>

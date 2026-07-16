@@ -53,11 +53,15 @@ gtag('consent', 'default', {
   wait_for_update: 500
 });`}
         </Script>
+        {/* dns-prefetch para domínios de analytics — resolve DNS antes do lazyOnload */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-gtag" strategy="afterInteractive">
+        <Script id="google-gtag" strategy="lazyOnload">
           {`gtag('js', new Date());
 gtag('config', 'G-R61KK25PBK', { send_page_view: false });
 gtag('config', 'AW-10839122958');`}
