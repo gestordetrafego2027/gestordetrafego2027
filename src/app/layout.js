@@ -60,7 +60,7 @@ gtag('consent', 'default', {
         <Script id="google-gtag" strategy="afterInteractive">
           {`gtag('js', new Date());
 gtag('config', 'G-R61KK25PBK', { send_page_view: false });
-gtag('config', 'AW-16938050518');`}
+gtag('config', 'AW-10839122958');`}
         </Script>
       </head>
       <body className="font-body">

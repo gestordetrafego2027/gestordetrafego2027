@@ -19,7 +19,7 @@ import { useConsent } from '@/components/consent/ConsentProvider'
 
 const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-const GADS_ID = 'AW-16938050518'
+const GADS_ID = 'AW-10839122958'
 const GADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GADS_LEAD_LABEL ?? ''
 const GADS_PURCHASE_LABEL = process.env.NEXT_PUBLIC_GADS_PURCHASE_LABEL ?? ''
 
