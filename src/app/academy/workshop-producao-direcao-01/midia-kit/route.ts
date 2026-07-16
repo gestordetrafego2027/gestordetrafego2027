@@ -103,6 +103,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .benefit-item h4{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-.01em}
 .benefit-item p{font-size:.8rem;color:var(--muted);line-height:1.75}
 
+/* ── GALERIA EDIT 01 ── */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:clamp(6px,1vw,12px);margin-bottom:clamp(12px,2vw,20px)}
+@media(max-width:640px){.gallery-grid{grid-template-columns:1fr 1fr}}
+.gallery-item{overflow:hidden;aspect-ratio:4/3}
+.gallery-item--tall{grid-row:span 2;aspect-ratio:auto}
+.gallery-item img,.gallery-item--tall img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gallery-item:hover img{transform:scale(1.04)}
+.gallery-video{position:relative;overflow:hidden;background:var(--ink);margin-top:clamp(12px,2vw,20px)}
+.gallery-video video{width:100%;display:block;max-height:600px;object-fit:cover}
+.gallery-video-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,10,8,.7) 0%,transparent 70%);padding:clamp(16px,3vw,32px)}
+.gallery-video-tag{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(239,233,218,.7)}
+
 /* ── PACOTES ── */
 .packages-section{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .packages-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin-top:clamp(40px,6vw,64px)}
@@ -459,6 +471,37 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       </div>
     </section>
   </div>
+</div>
+
+<!-- GALERIA EDIT 01 -->
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-label">Última edição</span>
+        <h2 class="h2">Inside Out · Edit 1</h2>
+      </div>
+      <p class="section-intro">Imagens e vídeo reais do primeiro Inside Out — produção com equipe completa, dois sets ao vivo e creators no centro de tudo. É o que a sua marca entra.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-item--tall"><img src="/images/academy/edit-01/edit01-model.webp" alt="Inside Out Edit 1 · Model" loading="lazy"/></div>
+      <div class="gallery-item"><img src="/images/academy/edit-01/edit01-amanda.webp" alt="Inside Out Edit 1 · Amanda" loading="lazy"/></div>
+      <div class="gallery-item"><img src="/images/academy/edit-01/edit01-equipe.webp" alt="Inside Out Edit 1 · Equipe" loading="lazy"/></div>
+      <div class="gallery-item"><img src="/images/academy/edit-01/edit01-scarpin.webp" alt="Inside Out Edit 1 · Produto" loading="lazy"/></div>
+      <div class="gallery-item"><img src="/images/academy/edit-01/edit01-quadro.webp" alt="Inside Out Edit 1 · Set" loading="lazy"/></div>
+      <div class="gallery-item"><img src="/images/academy/edit-01/edit01-modelo-scouting.webp" alt="Inside Out Edit 1 · Scouting" loading="lazy"/></div>
+    </div>
+
+    <div class="gallery-video">
+      <video autoplay muted loop playsinline poster="/images/academy/inside-out/cover.webp">
+        <source src="/videos/inside-out-hero-horizontal.mp4" type="video/mp4"/>
+      </video>
+      <div class="gallery-video-label">
+        <span class="gallery-video-tag">Inside Out · Edit 1 · Vídeo oficial</span>
+      </div>
+    </div>
+  </section>
 </div>
 
 <!-- PACOTES -->
