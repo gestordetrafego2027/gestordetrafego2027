@@ -224,14 +224,14 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
 <!-- HERO -->
 <div class="wrap">
   <section class="hero">
-    <span class="eyebrow">Workshop · Media Kit · Inside Out Edit 2 · São Paulo · Set 2026</span>
+    <span class="eyebrow">Workshop · Media Kit · Inside Out Edit 2 · São Paulo · Out 2026</span>
     <h1>Inside<br/><em>Out</em><br/>Edit 2</h1>
     <div class="hero-cols">
       <p class="hero-sub">Um evento de produção em São Paulo onde marcas de moda e beauty entram como parte do editorial — não como patrocinador de banner. Seu produto aparece dentro da imagem, com direção, ao lado de 15 produtores do audiovisual selecionados por curadoria.</p>
       <div class="hero-meta">
         <div class="meta-row">
           <span class="meta-label">Data</span>
-          <span class="meta-value">05 e 06 Set 2026</span>
+          <span class="meta-value">03 e 04 Out 2026</span>
         </div>
         <div class="meta-row">
           <span class="meta-label">Local</span>
@@ -441,7 +441,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
             Área de convivência e coffee break durante a produção
           </li>
         </ul>
-        <p class="sp-date">05 e 06 Set 2026 · São Paulo · SP</p>
+        <p class="sp-date">03 e 04 Out 2026 · São Paulo · SP</p>
       </div>
     </div>
 
@@ -632,7 +632,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
     <div class="footer-inner">
       <span class="footer-brand">House Mazzutti</span>
       <div class="footer-info">
-        Inside Out · Edit 2 · São Paulo · Set 2026<br/>
+        Inside Out · Edit 2 · São Paulo · Out 2026<br/>
         contato@mztgrupo.com · CNPJ 64.448.222/0001-54
       </div>
     </div>
