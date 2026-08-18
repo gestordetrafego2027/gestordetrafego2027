@@ -263,7 +263,7 @@ export default function TourCheckoutPage() {
             Reservar agenda
           </h1>
           <p className="font-body text-white/40 text-sm mt-2">
-            20, 21 e 22 de Julho · Vagas limitadas
+            1 ao 7 de Outubro · Vagas limitadas
           </p>
         </div>
 

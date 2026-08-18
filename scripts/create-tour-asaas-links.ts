@@ -39,19 +39,19 @@ const PLANS = [
   {
     envKey: 'ASAAS_LINK_ENSAIO_01',
     name: 'Tour Canoinhas · Ensaio 01',
-    description: '3 produções · 10 fotos tratadas · Making of · 20-22 de Julho · Canoinhas, SC',
+    description: '3 produções · 10 fotos tratadas · Making of · 1 ao 7 de Outubro · Canoinhas, SC',
     value: 1900.00,
   },
   {
     envKey: 'ASAAS_LINK_ENSAIO_02',
     name: 'Tour Canoinhas · Ensaio 02',
-    description: '4 produções · 15 fotos tratadas · 1 Backstage 20" · 20-22 de Julho · Canoinhas, SC',
+    description: '4 produções · 15 fotos tratadas · 1 Backstage 20" · 1 ao 7 de Outubro · Canoinhas, SC',
     value: 2600.00,
   },
   {
     envKey: 'ASAAS_LINK_ENSAIO_03',
     name: 'Tour Canoinhas · Ensaio 03',
-    description: '5 produções · 20 fotos tratadas · Backstage + Fashion Film 20" · 20-22 de Julho · Canoinhas, SC',
+    description: '5 produções · 20 fotos tratadas · Backstage + Fashion Film 20" · 1 ao 7 de Outubro · Canoinhas, SC',
     value: 3200.00,
   },
 ]

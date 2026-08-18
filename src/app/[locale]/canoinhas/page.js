@@ -81,7 +81,7 @@ export default function TourMarcaPessoalPage() {
         .marquee-house:hover { animation-play-state: paused; }
       `}</style>
 
-      <h1 className="sr-only">Tour Marca Pessoal — House Mazzutti · Canoinhas, SC · 20, 21 e 22 de Julho</h1>
+      <h1 className="sr-only">Tour Marca Pessoal — House Mazzutti · Canoinhas, SC · 1 ao 7 de Outubro</h1>
       <Header variant="dark" />
 
       {/* ── HERO ───────────────────────────────────────────────────── */}
@@ -131,7 +131,7 @@ export default function TourMarcaPessoalPage() {
           <div className="flex items-center gap-4 mb-6" data-aos="fade-in" data-aos-delay="200">
             <div className="hmzt-line w-6" />
             <span className="font-label uppercase tracking-[0.4em] text-[12px] text-white/65">
-              20 · 21 · 22 de Julho · <strong className="font-bold text-white">Canoinhas, SC</strong>
+              1 ao 7 de Outubro · <strong className="font-bold text-white">Canoinhas, SC</strong>
             </span>
             <div className="hmzt-line w-6" />
           </div>
@@ -388,7 +388,7 @@ export default function TourMarcaPessoalPage() {
               <em>Cada nível foi pensado para um momento diferente.</em>
             </h2>
             <p className="font-label uppercase tracking-[0.25em] text-[9px] text-black/30 mt-4" data-aos="fade-in" data-aos-delay="200">
-              Vagas limitadas · 20, 21 e 22 de Julho · Canoinhas, SC
+              Vagas limitadas · 1 ao 7 de Outubro · Canoinhas, SC
             </p>
           </div>
 
@@ -477,7 +477,7 @@ export default function TourMarcaPessoalPage() {
             className="font-label uppercase tracking-[0.4em] text-[9px] text-white/35 mb-7 block"
             data-aos="fade-in"
           >
-            20 · 21 · 22 de Julho · Canoinhas, SC
+            1 ao 7 de Outubro · Canoinhas, SC
           </span>
           <h2
             className="font-headline font-light text-[1.9rem] md:text-[3rem] text-white leading-tight tracking-normal mb-8"
@@ -489,7 +489,7 @@ export default function TourMarcaPessoalPage() {
             className="font-body text-white/50 text-base leading-relaxed max-w-[500px] mx-auto mb-3"
             data-aos="fade-in" data-aos-delay="200"
           >
-            Em julho, em Canoinhas, a House Mazzutti abre portas para mulheres que estão prontas para aparecer de verdade. São vagas contadas — e cada uma delas tem um nome.
+            Em outubro, em Canoinhas, a House Mazzutti abre portas para mulheres que estão prontas para aparecer de verdade. São vagas contadas — e cada uma delas tem um nome.
           </p>
           <div data-aos="fade-in" data-aos-delay="360">
             <a
@@ -584,7 +584,7 @@ export default function TourMarcaPessoalPage() {
             ? `${formCta.packageSelected}`
             : 'Garantir minha agenda'
         }
-        subtitle="Vagas limitadas · 20, 21 e 22 de Julho · Canoinhas, SC"
+        subtitle="Vagas limitadas · 1 ao 7 de Outubro · Canoinhas, SC"
       >
         <FormCanoinhas
           onClose={closeForm}
