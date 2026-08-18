@@ -1044,6 +1044,129 @@ export const howToBookModeloSchema = {
   ],
 }
 
+export const howToBrandingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Como contratar uma agência de branding premium em São Paulo',
+  description:
+    'Guia passo a passo para escolher e contratar uma agência de branding de alto nível — do briefing à proposta — sem desperdiçar tempo nem orçamento.',
+  totalTime: 'P5D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Defina o problema, não a solução',
+      text: 'Antes de falar com qualquer agência, nomeie o problema real: "somos vistos como genéricos", "perdemos clientes para concorrentes mais caros" ou "ninguém entende o que fazemos". O problema, não a lista de peças desejadas, é o briefing que uma agência de branding sério vai querer responder.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Avalie portfólio pela consistência, não pelo volume',
+      text: 'Portfolio de branding deve mostrar o antes e o depois de percepção de marca — não apenas belas logomarcas. Procure coerência entre posicionamento declarado e resultado visual. Uma agência que não consegue articular por que fez cada escolha provavelmente seguiu referência, não estratégia.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Exija processo antes de proposta',
+      text: 'Qualquer agência séria tem um processo documentado: como faz imersão, como define território de marca, como valida conceito. Se a primeira reunião já vem com proposta e preço, sem perguntas sobre o negócio, é sinal de que o processo é cosmético.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Alinhe escopo e expectativa de prazo',
+      text: 'Branding real leva tempo. Uma identidade bem construída exige de 4 a 8 semanas de processo estratégico antes de qualquer entrega visual. Propostas que prometem identidade completa em 1 semana entregam execução sem estratégia.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Avalie quem vai trabalhar no projeto',
+      text: 'Em agências premium, o sócio que apresenta não é necessariamente quem executa. Pergunte diretamente quem vai conduzir o seu projeto e solicite ver trabalhos dessa pessoa especificamente. Na House Mazzutti, Angelo Mazzutti dirige pessoalmente cada projeto de branding.',
+    },
+  ],
+}
+
+export const howToFashionFilmSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Como produzir um fashion film para lançamento de coleção',
+  description:
+    'Passo a passo para planejar e executar um fashion film que posiciona a marca, serve ao algoritmo e dura além do lançamento.',
+  totalTime: 'P14D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Defina o objetivo antes do conceito',
+      text: 'Um fashion film pode servir a objetivos distintos: apresentar uma coleção, consolidar o território visual da marca, marcar uma virada de posicionamento ou criar conteúdo de arquivo. O objetivo define a linguagem, o ritmo de corte e onde o filme vai circular.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Construa o conceito criativo com o diretor',
+      text: 'O conceito é a frase que governa cada decisão de produção — casting, locação, figurino, trilha e corte. Um fashion film sem conceito vira "imagens bonitas de roupa". Com conceito, cada quadro comunica território de marca mesmo sem legenda.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Defina casting e locação pelo conceito, não pelo orçamento',
+      text: 'Casting e locação são as primeiras decisões a comunicar posicionamento. Um elenco que destoa do território visual da marca ou uma locação genérica comprometem o resultado independentemente de qualidade técnica de câmera e iluminação.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Planeje os formatos de entrega antes das filmagens',
+      text: 'Defina antes de gravar quais formatos serão necessários: longa (1-3 min para site e YouTube), corte para Reels/TikTok (15-30s), stills extraídos das cenas. Gravar para reformatar depois gera desperdício de material e cortes que não funcionam.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Reserve orçamento para trilha e colorização',
+      text: 'Trilha e colorização são as etapas que mais transformam material bom em material memorável — e as mais cortadas em orçamento reduzido. Um fashion film com imagem competente e trilha genérica perde 60% do impacto emocional.',
+    },
+  ],
+}
+
+export const howToDirecaoCriativaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Como contratar direção criativa para campanhas de marca',
+  description:
+    'Guia objetivo para marcas que querem contratar um diretor criativo — o que avaliar, o que perguntar e o que evitar no processo de seleção.',
+  totalTime: 'P7D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Entenda o que direção criativa realmente entrega',
+      text: 'Direção criativa não é sobre execução visual — é sobre a decisão estratégica que vem antes de qualquer produção. Um diretor criativo define o conceito, o território de percepção e o critério que governa cada escolha de casting, locação, iluminação e corte.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Avalie portfólio pela consistência de decisão',
+      text: 'Em um portfólio de direção criativa, o que importa não é a beleza das peças — é a coerência entre o problema de marca e a solução visual. Pergunte ao diretor: "qual era o problema que esse projeto precisava resolver?". A qualidade da resposta é mais reveladora do que a imagem.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Exija processo documentado de briefing',
+      text: 'Um diretor criativo sério tem um processo de imersão: como lê a marca, como mapeia o mercado, como valida conceito antes de abrir produção. Processo é a diferença entre decisão e chute — e entre um projeto com convicção e um projeto com versões.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Verifique experiência com o território da sua marca',
+      text: 'Direção criativa em moda exige leitura diferente de direção em B2B ou gastronomia. A linguagem visual, o ritmo, o casting e os referentes são categorias distintas. Confirme que o diretor tem trabalho concreto no território em que sua marca compete.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Alinhe quem decide o quê antes de começar',
+      text: 'Direção criativa funciona quando o diretor tem autonomia para defender o conceito. Define antes o processo de aprovação: quem vota, em que momento, com base em que critério. Um processo onde qualquer stakeholder pode alterar qualquer peça sem critério vai invalidar a direção.',
+    },
+  ],
+}
+
 // ---------------------------------------------------------------------------
 // VideoObject schemas — fashion films e vídeos institucionais (Rich Results)
 // Cada schema usa o short do YouTube como embedUrl e a primeira imagem do portfólio

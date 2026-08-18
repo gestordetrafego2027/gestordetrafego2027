@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import ArticleContent from './ArticleContent';
 import { articles } from './articles';
 import { buildAlternates } from '@/lib/seo/metadata';
-import { blogPostingSchema, newsArticleSchema, breadcrumbSchema, howToEnsaioSchema, howToBookModeloSchema } from '@/lib/seo/schemas';
+import { blogPostingSchema, newsArticleSchema, breadcrumbSchema, howToEnsaioSchema, howToBookModeloSchema, howToBrandingSchema, howToFashionFilmSchema, howToDirecaoCriativaSchema } from '@/lib/seo/schemas';
 import { brand } from '@/config/site';
 import { slugToCluster } from '@/lib/seo/clusters';
 
@@ -99,6 +99,9 @@ export default async function BlogSlugPage({ params }) {
     const howToSchemas = {
         'como-se-preparar-ensaio-fotografico': howToEnsaioSchema,
         'quanto-custa-book-modelo-sao-paulo': howToBookModeloSchema,
+        'agencia-branding-premium-sao-paulo': howToBrandingSchema,
+        'produtora-fashion-film-sao-paulo': howToFashionFilmSchema,
+        'direcao-criativa-o-que-e': howToDirecaoCriativaSchema,
     };
     const articleHowToSchema = howToSchemas[slug] ?? null;
 
