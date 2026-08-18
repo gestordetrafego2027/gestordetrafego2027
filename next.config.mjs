@@ -175,6 +175,10 @@ const nextConfig = {
       { source: '/:locale/portfolio/on-take',            destination: '/:locale/portfolio-agencia/on-take/',              permanent: true },
       { source: '/:locale/portfolio/samrat',             destination: '/:locale/portfolio-agencia/samrat/',               permanent: true },
 
+      // ── Blog: slugs alternativos / renomeados (301 para o slug canônico) ──
+      { source: '/:locale/blog/gestao-redes-sociais-resultado', destination: '/:locale/blog/gestao-redes-sociais-para-empresas/', permanent: true },
+      { source: '/:locale/blog/gestao-redes-sociais-resultado/', destination: '/:locale/blog/gestao-redes-sociais-para-empresas/', permanent: true },
+
       // ── WordPress legacy (URLs indexadas / linkadas externamente) ──
       { source: '/wp-content/:path*',  destination: '/',         permanent: true },
       { source: '/wp-admin/:path*',    destination: '/',         permanent: true },

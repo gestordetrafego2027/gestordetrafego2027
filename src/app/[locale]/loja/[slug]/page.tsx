@@ -55,15 +55,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const supabase = supabasePublic
   const { data: p } = await supabase
     .from('store_products')
-    .select('name, seo_title, seo_description, og_image_url, images')
+    .select('name, description, seo_title, seo_description, og_image_url, images')
     .eq('slug', slug)
     .eq('active', true)
     .maybeSingle()
   if (!p) return { title: 'Produto não encontrado' }
   const canonical = `https://housemazzutti.com/pt/loja/${slug}/`
+  const metaDescription = p.seo_description || (p.description ? p.description.slice(0, 160) : null)
   return {
     title: p.seo_title ?? `${p.name} — House Mazzutti`,
-    description: p.seo_description,
+    description: metaDescription,
     // Canonical próprio: sem isto o produto herda a canonical raiz (/pt/) do [locale]/layout.
     alternates: { canonical },
     openGraph: {
