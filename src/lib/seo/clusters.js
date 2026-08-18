@@ -169,6 +169,17 @@ export const postTitles = {
   'agencia-de-branding-ou-freelancer-quando-contratar-cada-um': 'Agência de Branding ou Freelancer: quando contratar cada um',
   'quando-contratar-uma-produtora-de-moda-guia-para-marcas': 'Quando Contratar uma Produtora de Moda: guia para marcas',
   'identidade-visual-o-que-e-quando-refazer-a-sua': 'Identidade Visual: o que é e quando refazer a sua',
+  // Cluster Mercado Criativo — análises, tendências e voz autoral
+  'campanha-reserva-spfw-branding-moda': 'O que a campanha da Reserva no SPFW ensina sobre branding de moda',
+  'ai-producao-audiovisual-o-que-mudou': 'AI na produção audiovisual: o que mudou para quem contrata produtoras',
+  'semana-moda-milao-2026-tendencias-brasil': 'Semana de Moda de Milão 2026: os movimentos visuais que chegam ao Brasil',
+  'sabrina-sato-marca-pessoal-posicionamento': 'Como Sabrina Sato constrói marca pessoal: análise de posicionamento',
+  'fashion-film-vs-reels-quando-usar': 'Fashion Film vs. Reels: quando cada formato ganha para a sua marca',
+  'marcas-brasileiras-ponto-de-vista-proprio': 'Por que as marcas brasileiras ainda têm medo de ter ponto de vista',
+  'como-house-mazzutti-estrutura-campanha-moda': 'Do brief ao master: como a House estrutura uma campanha de moda',
+  'sao-paulo-epicentro-criativo-brasil': 'O que São Paulo tem que nenhum outro mercado criativo do Brasil tem',
+  'dupes-masstige-o-que-editorial-moda-espera': 'Dupes e marcas masstige: o que a nova consumidora de moda espera',
+  'direcao-criativa-nao-e-estetica-e-resultado': 'Direção criativa não é estética — é resultado',
 }
 
 /**
