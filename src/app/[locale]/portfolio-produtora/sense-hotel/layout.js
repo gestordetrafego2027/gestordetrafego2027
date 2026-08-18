@@ -1,3 +1,4 @@
+import {portfolioVideoSchemas} from '@/lib/seo/schemas'
 import {pageMetadata} from '@/lib/seo/metadata'
 
 export async function generateMetadata({params}) {
@@ -21,5 +22,11 @@ export async function generateMetadata({params}) {
 }
 
 export default function Layout({children}) {
-  return children
+  const video = portfolioVideoSchemas['sense-hotel']
+  return (
+    <>
+      {video && <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(video)}} />}
+      {children}
+    </>
+  )
 }

@@ -4072,4 +4072,355 @@ export const articles = {
     ],
     "conclusao": "O fenômeno dos genuinfluencers não é uma correção de rota do marketing de influência. É a devolução da influência ao seu significado original: alguém em quem se confia dizendo algo que sustenta. Marcas que leem isso como oportunidade de economia vão contratar mais gente por menos dinheiro e obter menos resultado. Marcas que leem como mudança de processo vão rever briefing, produção e régua de medição — e descobrir que autenticidade é a coisa mais direcionável que existe, desde que a direção venha antes e não depois.\n\nÉ esse elo que a House Mazzutti ocupa: traduzir posicionamento em liberdade criativa orientada, para que o criador continue soando como ele mesmo e a marca continue reconhecível dentro disso. Estratégia antes de estética. Sempre. Porque autenticidade não é o que você deixa acontecer — é o que você teve clareza suficiente para não atrapalhar."
   }
+
+  'direcao-criativa-nao-e-estetica-e-resultado': {
+    slug: 'direcao-criativa-nao-e-estetica-e-resultado',
+    titulo: 'Direção criativa não é estética — é resultado',
+    metaTitle: 'Direção criativa não é estética — é resultado | House Mazzutti',
+    metaDescription: 'Angelo Mazzutti explica por que direção criativa é processo e intenção, não gosto visual — e o que separa uma campanha bem-feita de uma que funciona.',
+    data: 'Agosto 2026',
+    categoria: 'Agência — Branding',
+    keywords: [
+      'direção criativa',
+      'o que é direção criativa',
+      'direção criativa e resultado',
+      'estratégia antes de estética',
+      'campanha de marca',
+      'posicionamento de marca',
+      'diretor criativo',
+      'House Mazzutti',
+    ],
+    cover: null,
+    interior: [],
+    citacao: 'Estética é o que a marca mostra. Direção é o que a marca decidiu antes de mostrar.',
+    intro: 'Toda semana chega aqui uma marca com o mesmo diagnóstico na boca: "nossa comunicação está bonita, mas não está vendendo". Quase sempre está certa na primeira metade da frase. A campanha é bonita. O feed é limpo. As fotos têm boa luz. E, ainda assim, nada se move. Isso acontece porque o mercado passou a chamar de direção criativa aquilo que é apenas acabamento. Direção criativa não é o resultado visual. É a decisão que existe antes dele — e é essa decisão que produz, ou não, resultado.',
+    sections: [
+      {
+        h2: 'O que o mercado chama de direção criativa',
+        paragraphs: [
+          'No uso corrente, direção criativa virou sinônimo de bom gosto. Escolher a paleta. Definir a referência. Aprovar a foto. Dizer se está bonito ou não está. É um papel de curadoria estética exercido no fim da linha, quando tudo já foi decidido por outra pessoa — normalmente por ninguém.',
+          'Direção criativa é outra coisa. É a autoria da decisão. É quem responde por qual percepção a marca precisa construir, em quanto tempo, contra quem, para quem, e o que precisa ser dito primeiro. A imagem vem depois. Vem como consequência de um raciocínio, não como ponto de partida.',
+          'Quando a direção está no lugar certo, ela chega antes do briefing de produção. Quando está no lugar errado, ela chega junto com a arte pronta — e aí só sobra opinião.',
+        ],
+      },
+      {
+        h2: 'Estética sem estratégia é decoração',
+        paragraphs: [
+          'Uma campanha bonita e uma campanha que funciona não são o mesmo objeto. A primeira agrada quem já conhece a marca. A segunda muda a percepção de quem ainda não conhece. São públicos diferentes e problemas diferentes.',
+          'Estética sem estratégia é decoração: melhora a superfície e deixa a estrutura intacta. O sintoma é sempre o mesmo — a marca troca de visual todo semestre e nunca troca de lugar na cabeça do cliente. Movimento sem deslocamento.',
+          'Não é um argumento contra o cuidado visual. É o contrário. Cuidado visual custa caro demais para ser gasto sem direção. Quando existe intenção por trás, a mesma foto passa a carregar posicionamento. Sem intenção, ela carrega apenas gosto.',
+        ],
+      },
+      {
+        h2: 'Como pensamos uma campanha antes de fazer uma',
+        paragraphs: [
+          'Na House Mazzutti nenhuma peça começa por uma referência visual. Começa por uma leitura. Imersão, Leitura, Conceito, Execução e Fine Art — nessa ordem, sempre nessa ordem. A ordem é o método.',
+          'Na imersão, a gente escuta o que a marca diz sobre si e observa o que o mercado diz de volta. Quase nunca são a mesma coisa, e é justamente nessa distância que mora o trabalho. A leitura transforma essa distância em um problema nomeável: não "precisamos de conteúdo", mas "esta marca é vista como cara e não é vista como especial".',
+          'O conceito é a resposta a esse problema em uma frase que aguenta ser levada a sério. Se o conceito não sobrevive a essa frase, ele não sobrevive a uma campanha inteira. Só quando ele se sustenta é que abrimos produção — porque aí cada decisão de luz, casting, corte e ritmo tem um critério para ser julgada. Deixa de ser "eu gosto" e vira "isto serve, aquilo não serve".',
+        ],
+      },
+      {
+        h2: 'O que muda quando existe um diretor de verdade no projeto',
+        paragraphs: [
+          'A diferença mais visível é a quantidade de tentativas. Projeto sem direção vive de versões: três caminhos, cinco variações, uma reunião para desempatar. Projeto com direção tem menos opções e mais convicção. Não porque alguém seja teimoso, mas porque o critério foi definido antes e não precisa ser reinventado a cada entrega.',
+          'A segunda diferença é a coerência ao longo do tempo. Uma peça isolada qualquer estúdio entrega. O que exige direção é a décima peça ainda parecer da mesma marca, ainda dizer a mesma coisa, com outra roupa. Percepção não se constrói em um pico — se constrói em repetição consistente.',
+          'A terceira é a capacidade de dizer não. Um diretor de verdade recusa ideias boas que não cabem no posicionamento. Essa é a parte impopular do trabalho, e também a mais valiosa. Marca forte é feita tanto do que ela publica quanto do que ela decidiu não publicar.',
+        ],
+      },
+      {
+        h2: 'Por que resultado precisa de método — não de inspiração',
+        paragraphs: [
+          'Inspiração não é escalável e não é auditável. Ela produz um bom trabalho de vez em quando e não explica por quê. Método produz um bom trabalho com regularidade e, mais importante, permite corrigir quando algo não funciona — porque existe uma cadeia de decisões para revisitar.',
+          'Isso também muda a conversa com o cliente. Sem método, a discussão sobre uma campanha vira uma disputa de gosto entre pessoas que não têm como provar nada. Com método, a discussão volta para o único terreno que interessa: o objetivo de mercado que a peça foi construída para atender.',
+          'Resultado, aqui, não é só venda imediata. É a marca ser entendida sem precisar se explicar. Quando o posicionamento está certo, o comercial fica mais curto, a objeção de preço diminui e a marca deixa de competir por atenção para competir por preferência.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'O que é direção criativa, na prática?',
+        a: 'É a autoria das decisões que definem o que uma marca comunica, para quem, em que ordem e com qual intenção. Envolve leitura de mercado, definição de conceito e critério de execução. O resultado visual é a consequência dessas decisões, não o ponto de partida.',
+      },
+      {
+        q: 'Qual a diferença entre direção criativa e direção de arte?',
+        a: 'Direção criativa define o quê e o porquê: o conceito, o território de percepção e o critério que governa o projeto. Direção de arte define o como visual: composição, paleta, referência, acabamento. As duas são necessárias, mas a direção criativa vem antes e determina o que a direção de arte deve resolver.',
+      },
+      {
+        q: 'Uma campanha bonita não é suficiente para vender?',
+        a: 'Não. Beleza melhora a recepção de quem já conhece a marca, mas não altera percepção de quem ainda não conhece. Sem um conceito que responda a um problema de mercado real, a campanha agrada e não desloca. O que converte é intenção — clareza de posicionamento sustentada com consistência.',
+      },
+      {
+        q: 'Como saber se minha marca precisa de direção criativa?',
+        a: 'Alguns sinais são bem confiáveis: a marca troca de identidade visual com frequência, cada peça parece de uma empresa diferente, as decisões de comunicação são resolvidas por gosto em reunião, e o discurso comercial precisa explicar demais o que a marca é. Todos apontam para ausência de direção, não para falta de produção.',
+      },
+    ],
+    conclusao: 'Não existe estética que compense a ausência de decisão. Uma marca pode contratar o melhor fotógrafo, o melhor editor e a melhor produção e, ainda assim, entregar um material que não muda nada — porque ninguém definiu o que precisava mudar. Direção criativa é esse trabalho anterior, invisível na peça pronta e decisivo no resultado dela. É por isso que aqui a ordem nunca se inverte: estratégia antes de estética. Menos tentativa. Mais direção.',
+  },
+  'quem-dirige-campanhas-wepink-jequiti-sp': {
+    categoria: 'Produtora — Cases',
+    titulo: 'Quem dirige campanhas para WePink e Jequiti em São Paulo',
+    metaTitle: 'Produtora de campanhas WePink e Jequiti em SP | House Mazzutti',
+    metaDescription:
+      'A House Mazzutti é a produtora por trás das campanhas de beleza WePink e Jequiti em São Paulo. Conheça o processo de direção criativa de Angelo Mazzutti.',
+    keywords: ['WePink produtora', 'Jequiti campanha SP', 'produtora beleza São Paulo', 'House Mazzutti cases', 'Angelo Mazzutti'],
+    data: 'Agosto 2026',
+    cover: {
+      src: '/images/blog/wepink-jequiti-sp/campanha-beleza-wepink-jequiti-house-mazzutti.webp',
+      alt: 'Direção criativa de campanha de beleza em São Paulo pela House Mazzutti',
+      caption: 'Direção criativa de campanha — Produtora HMZT',
+    },
+    interior: [
+      {
+        src: '/images/blog/wepink-jequiti-sp/producao-campanha-celebridade-house-mazzutti-sp.webp',
+        alt: 'Set de produção de campanha com celebridade dirigida pela House Mazzutti em São Paulo',
+        caption: 'Set de produção · campanha beleza SP',
+      },
+      {
+        src: '/images/blog/wepink-jequiti-sp/direcao-criativa-moda-beleza-angelo-mazzutti.webp',
+        alt: 'Angelo Mazzutti na direção criativa de campanha de moda e beleza',
+        caption: 'Angelo Mazzutti · direção criativa',
+      },
+    ],
+    respostaDireta:
+      'A House Mazzutti, dirigida por Angelo Mazzutti, é a produtora executiva e de direção criativa por trás das campanhas de beleza WePink e Jequiti em São Paulo. Do briefing ao master, sob uma única direção.',
+    intro:
+      'No mercado de beleza, a produção de uma campanha com celebridade exige mais do que equipe e orçamento. Exige uma direção que entenda a linguagem da marca, o peso da personalidade envolvida e a precisão técnica necessária para transformar tudo isso em imagens que vendem. É nesse território que a House Mazzutti opera há anos — e onde cases como WePink e Jequiti se tornaram referência no portfólio da produtora.',
+    sections: [
+      {
+        h2: 'Como a House Mazzutti entrou nos grandes cases de beleza',
+        paragraphs: [
+          'A entrada da House Mazzutti no segmento de beleza não aconteceu por acaso. Marcas como WePink e Jequiti buscam produtoras que consigam traduzir posicionamento de marca em imagem com precisão comercial — sem perder a energia que define a personalidade de cada campanha.',
+          'O histórico de Angelo Mazzutti em direção criativa para moda e beleza, construído ao longo de duas décadas em São Paulo, criou o terreno para esses projetos. A produtora reúne numa única estrutura o que essas campanhas precisam: direção de imagem, produção executiva e gestão criativa do briefing ao entregável final.',
+        ],
+      },
+      {
+        h2: 'O processo de direção criativa em campanhas de celebridade',
+        paragraphs: [
+          'Campanhas com celebridades têm um nível de complexidade específico: a imagem da marca precisa conviver com a imagem pública da personalidade, sem que uma apague a outra. Angelo Mazzutti conduz esse processo a partir do conceito — definindo o território visual da campanha antes que qualquer câmera entre no set.',
+          'O briefing é a peça mais estratégica do processo. É nele que se define o que a campanha precisa comunicar, como o produto se conecta à narrativa da celebridade e quais elementos visuais sustentam essa conexão. O set executa o que o conceito já decidiu. Isso elimina improvisos, reduz retrabalho e garante que o resultado entregue o que a marca precisa — não apenas o que ficou bonito no dia.',
+        ],
+      },
+      {
+        h2: 'O que diferencia a produção da House Mazzutti',
+        paragraphs: [
+          'A House Mazzutti opera como produtora de direção única. Isso significa que Angelo Mazzutti está presente em todas as fases — do alinhamento de briefing com a marca à aprovação do master final. Não há intermediário entre a visão criativa e a execução técnica.',
+          'Esse modelo tem uma consequência direta na qualidade das entregas: a consistência visual é preservada em todos os frames, porque quem tomou as decisões criativas no início é o mesmo que assina o corte final. Para marcas como WePink e Jequiti, essa consistência não é opcional — é o que diferencia uma campanha de um conjunto de boas fotos.',
+        ],
+      },
+      {
+        h2: 'Outros cases de beleza e moda em São Paulo',
+        paragraphs: [
+          'Além de WePink e Jequiti, o portfólio da House Mazzutti inclui campanhas para marcas como Dumond e Océane — projetos que cobrem desde fashion film até editorial de produto, sempre com a mesma metodologia de direção criativa integrada.',
+          'São Paulo concentra o maior volume de produção de campanha do país. Segundo dados do setor, a capital paulista responde por mais de 60% dos investimentos em produção audiovisual publicitária no Brasil. Estar posicionada nesse mercado, com cases de referência, coloca a House Mazzutti no radar das marcas que precisam de produção de alto nível sem perder eficiência operacional.',
+        ],
+      },
+      {
+        h2: 'Uma direção do briefing ao master',
+        paragraphs: [
+          'O diferencial mais tangível da House Mazzutti está na cobertura completa do projeto. Muitas produtoras entram na fase de execução — set, câmeras, pós-produção. A House Mazzutti entra na fase de conceito: antes de qualquer produção, há uma etapa de alinhamento estratégico com a marca, definição de linguagem visual e construção do conceito criativo.',
+          'Para a marca, isso representa menos risco criativo e mais previsibilidade de resultado. Para a campanha, representa coerência do primeiro frame ao último. É o modelo que define como WePink, Jequiti e os demais cases do portfólio foram construídos — e é o modelo que a House Mazzutti replica em cada novo projeto.',
+        ],
+      },
+    ],
+    citacao:
+      'Uma campanha bem dirigida não é o que ficou bonito no set. É o que a marca precisava comunicar, traduzido em imagem com precisão.',
+    faq: [
+      {
+        q: 'Como contratar a House Mazzutti para uma campanha de beleza?',
+        a: 'O processo começa com um briefing: a House Mazzutti analisa o projeto, o posicionamento da marca e o escopo da campanha antes de qualquer proposta. O contato pode ser feito pelo site housemazzutti.com/contato ou pelo WhatsApp. Marcas com campanhas recorrentes costumam entrar em contato diretamente com a produção para alinhar calendário e escopo anual.',
+      },
+      {
+        q: 'A House Mazzutti trabalha com campanhas de celebridade?',
+        a: 'Sim. Cases como WePink e Jequiti envolvem personalidades com imagem pública consolidada. O processo de direção criativa da House Mazzutti é construído justamente para gerenciar a convivência entre a imagem da marca e a da celebridade — garantindo que a campanha comunique o produto sem perder a identidade de nenhuma das duas partes.',
+      },
+      {
+        q: 'Quais marcas já trabalharam com a House Mazzutti?',
+        a: 'O portfólio inclui WePink, Jequiti, Dumond e Océane, entre outros projetos de moda e beleza em São Paulo. A lista completa de cases pode ser consultada em housemazzutti.com/produtora.',
+      },
+      {
+        q: 'A House Mazzutti faz só vídeo ou também fotografia de campanha?',
+        a: 'A House Mazzutti produz campanhas audiovisuais completas — fashion film, vídeo institucional e publicidade — e também fotografia editorial de produto e moda. Em muitos projetos, as duas linguagens são produzidas no mesmo set, sob a mesma direção criativa, garantindo consistência entre os materiais.',
+      },
+    ],
+    conclusao:
+      'Campanhas de beleza com celebridade exigem uma produtora que entenda os dois lados da equação: a estratégia de marca e a complexidade de um set com personalidades de alto perfil. A House Mazzutti ocupa esse lugar em São Paulo — com casos que comprovam a metodologia e uma estrutura que garante resultado do briefing ao master. Para marcas que precisam de produção de referência no segmento de beleza e moda, o caminho começa pelo mesmo lugar que WePink e Jequiti começaram: um briefing.',
+  },
+  'formacao-profissional-imagem-sao-paulo': {
+    categoria: 'Academy — Inside Out',
+    titulo: 'Formação profissional em imagem e produção em São Paulo',
+    metaTitle: 'Curso de direção de imagem e produção em SP | House Mazzutti Academy',
+    metaDescription:
+      'O Inside Out da House Mazzutti Academy é o programa presencial de formação em direção de imagem e produção audiovisual para profissionais do mercado criativo em São Paulo.',
+    keywords: ['curso direção de imagem SP', 'formação produção audiovisual São Paulo', 'Inside Out House Mazzutti', 'curso fotografia profissional SP'],
+    data: 'Agosto 2026',
+    cover: {
+      src: '/images/blog/formacao-imagem-sp/inside-out-house-mazzutti-academy-sao-paulo.webp',
+      alt: 'Formação presencial em direção de imagem e produção audiovisual na House Mazzutti Academy em São Paulo',
+      caption: 'Inside Out — House Mazzutti Academy',
+    },
+    interior: [
+      {
+        src: '/images/blog/formacao-imagem-sp/curso-direcao-imagem-profissional-sao-paulo.webp',
+        alt: 'Aula prática de direção de imagem com Angelo Mazzutti na House Mazzutti Academy',
+        caption: 'Aula prática · direção de imagem',
+      },
+      {
+        src: '/images/blog/formacao-imagem-sp/producao-audiovisual-formacao-mercado-criativo-sp.webp',
+        alt: 'Turma do Inside Out em set de produção audiovisual na House Mazzutti Academy São Paulo',
+        caption: 'Set real · formação aplicada',
+      },
+    ],
+    respostaDireta:
+      'O Inside Out, da House Mazzutti Academy, é o programa presencial de formação em direção de imagem e produção audiovisual em São Paulo. Turmas reduzidas, conteúdo construído a partir de projetos reais, conduzido por Angelo Mazzutti.',
+    intro:
+      'Existe uma lacuna no mercado criativo que cursos online não fecham: a distância entre saber usar o equipamento e saber tomar decisões de direção num set real. O Inside Out foi criado para fechar essa lacuna. Não é um curso de técnica — é um programa de formação em direção de imagem para profissionais que já atuam no mercado e precisam subir um degrau específico: o da direção.',
+    sections: [
+      {
+        h2: 'Por que a formação em imagem importa mais do que nunca',
+        paragraphs: [
+          'O mercado criativo em São Paulo cresceu. As ferramentas democratizaram o acesso à produção — qualquer pessoa com um bom smartphone produz conteúdo visual. O problema é que democratizar o acesso ao equipamento não democratizou o domínio da direção. O resultado é um mercado saturado de produtores técnicos e escasso de diretores de imagem.',
+          'Marcas que entenderam isso passaram a buscar, com mais critério, profissionais que conseguem tomar decisões criativas sob pressão de set — não apenas operar câmera. Essa distinção define quem é chamado para projetos de alto nível e quem permanece na fila de freelancers intercambiáveis. A formação em direção de imagem é o que abre essa outra fila.',
+        ],
+      },
+      {
+        h2: 'O modelo Inside Out — por que é diferente',
+        paragraphs: [
+          'O Inside Out não é um curso com módulos gravados ou apostilas de técnica de câmera. É um programa presencial, em turmas reduzidas, conduzido por Angelo Mazzutti — diretor criativo com 20 anos de projetos no mercado de moda, beleza e publicidade em São Paulo.',
+          'O modelo foi construído a partir de uma premissa simples: profissional de imagem aprende dirigindo, não assistindo. Por isso, cada encontro do programa é estruturado em torno de situações reais — briefings de marca, definição de conceito, decisões de set, edição com intenção criativa. O conteúdo não vem de apostila. Vem de projeto.',
+        ],
+      },
+      {
+        h2: 'Para quem é o Inside Out',
+        paragraphs: [
+          'O Inside Out é desenhado para fotógrafos, videomakers e diretores de arte que já têm domínio técnico básico e querem desenvolver repertório de direção. Não é um curso introdutório. O pré-requisito não é um diploma — é já ter produzido alguma coisa e entender o próprio limite.',
+          'O programa também é indicado para profissionais de marketing e branding que precisam entender a linguagem de imagem para se comunicar com mais precisão com equipes criativas e produtoras. Entender como uma imagem é construída transforma radicalmente a qualidade do briefing — e do resultado final.',
+        ],
+      },
+      {
+        h2: 'O que você vai dominar ao final',
+        paragraphs: [
+          'Ao concluir o Inside Out, os participantes saem com repertório de direção aplicado: como construir um conceito visual a partir de um briefing de marca, como tomar decisões de luz e enquadramento com intenção, como conduzir um set com clareza criativa e como editar com olho de diretor — não de operador.',
+          'Mais do que técnica, o programa entrega um modo de pensar imagem. Profissionais que passaram pelo Inside Out relatam que o que mudou não foi o equipamento — foi a capacidade de argumentar a própria visão e de tomar decisões criativas sem depender de aprovação externa. Isso é o que separa um diretor de um executor.',
+        ],
+      },
+      {
+        h2: 'Uma formação construída dentro do mercado, não sobre ele',
+        paragraphs: [
+          'O conteúdo do Inside Out não vem de pesquisa bibliográfica. Vem de projetos reais que Angelo Mazzutti e a House Mazzutti produziram para marcas como WePink, Jequiti, Dumond e Océane. Cada aula é construída a partir de uma situação que aconteceu — um briefing que evoluiu, uma decisão de set que definiu a campanha, uma escolha de edição que mudou o sentido da imagem.',
+          'Essa é a diferença entre aprender sobre direção e aprender a partir dela. O Inside Out coloca o aluno dentro das decisões que definem um projeto de alto nível — não como observador, mas como participante ativo do processo de construção criativa.',
+        ],
+      },
+    ],
+    citacao:
+      'Direção não se aprende assistindo. Se aprende decidindo. O Inside Out existe para colocar você dentro das decisões que definem um projeto.',
+    faq: [
+      {
+        q: 'Como me inscrever no Inside Out da House Mazzutti Academy?',
+        a: 'As inscrições são abertas por turma, com vagas limitadas. O processo começa por um formulário de interesse em housemazzutti.com/academy, seguido de uma conversa com a equipe para verificar alinhamento de perfil e expectativas. Não há seleção por portfólio — há verificação de fit com o nível e a proposta do programa.',
+      },
+      {
+        q: 'Qual o nível necessário para participar do Inside Out?',
+        a: 'O programa exige domínio técnico básico — câmera, luz, composição — e alguma experiência com produção, mesmo que em projetos pessoais. Não é um curso introdutório. O Inside Out começa onde a técnica já foi absorvida e o desafio passa a ser direção, conceito e tomada de decisão criativa sob pressão de set.',
+      },
+      {
+        q: 'Qual a carga horária e o formato do programa?',
+        a: 'O Inside Out é um programa presencial em São Paulo, com encontros semanais e carga horária total variável por módulo. Os detalhes de formato, calendário e carga horária de cada turma são disponibilizados no momento da abertura de inscrições. As turmas são intencionalmente reduzidas para garantir atenção individualizada.',
+      },
+      {
+        q: 'O Inside Out emite certificado?',
+        a: 'Sim. Ao concluir o programa, os participantes recebem certificado de conclusão da House Mazzutti Academy. O peso desse certificado no mercado está diretamente ligado ao portfólio produzido durante o programa — que é o que as marcas e produtoras efetivamente avaliam.',
+      },
+    ],
+    conclusao:
+      'Formação em imagem no nível do Inside Out é rara em São Paulo — porque exige um formador que esteja, ao mesmo tempo, ativo no mercado e disposto a abrir o processo criativo para outros. Angelo Mazzutti construiu o programa a partir dessa disposição. O resultado é um programa que não ensina sobre o mercado criativo: coloca você dentro dele, nas mesmas situações de decisão que definem um projeto de referência. Para profissionais que já sabem produzir e precisam aprender a dirigir, o Inside Out é o próximo passo.',
+  },
+  'diretores-criativos-moda-sao-paulo': {
+    categoria: 'Agência — Mercado',
+    titulo: 'Diretores criativos de moda em São Paulo — o que define o nível',
+    metaTitle: 'Diretores criativos de moda em São Paulo | House Mazzutti',
+    metaDescription:
+      'O que separa um diretor criativo de moda de alto nível dos demais em São Paulo? Entenda os critérios que definem referência no mercado criativo.',
+    keywords: ['diretor criativo moda São Paulo', 'angelo mazzutti diretor criativo', 'mercado criativo SP', 'direção criativa moda brasil'],
+    data: 'Agosto 2026',
+    cover: {
+      src: '/images/blog/diretores-criativos-moda-sp/diretor-criativo-moda-sao-paulo-house-mazzutti.webp',
+      alt: 'Diretor criativo de moda em São Paulo — Angelo Mazzutti da House Mazzutti',
+      caption: 'Direção criativa de moda — House Mazzutti SP',
+    },
+    interior: [
+      {
+        src: '/images/blog/diretores-criativos-moda-sp/set-direcao-criativa-campanha-moda-sao-paulo.webp',
+        alt: 'Set de campanha de moda com direção criativa em São Paulo pela House Mazzutti',
+        caption: 'Set de campanha · direção criativa moda',
+      },
+      {
+        src: '/images/blog/diretores-criativos-moda-sp/portfolio-direcao-criativa-marcas-moda-brasil.webp',
+        alt: 'Portfólio de direção criativa para marcas de moda no Brasil — House Mazzutti',
+        caption: 'Portfólio · marcas de moda Brasil',
+      },
+    ],
+    respostaDireta:
+      'Em São Paulo, os diretores criativos de moda de referência se distinguem por quem os contrata, não por quem eles afirmam ser. Angelo Mazzutti, da House Mazzutti, é reconhecido por campanhas para WePink, Jequiti, Dumond e Océane.',
+    intro:
+      'São Paulo tem diretores criativos. Tem muitos. O que o mercado tem em menor quantidade são diretores criativos de moda de nível de referência — aqueles que uma marca de beleza ou vestuário procura quando o projeto não pode falhar. Entender o que define esse nível não é exercício teórico: é o que separa quem é chamado dos que esperam.',
+    sections: [
+      {
+        h2: 'O que é direção criativa de moda na prática',
+        paragraphs: [
+          'Direção criativa de moda não é estética. É decisão. Um diretor criativo define o que uma campanha precisa comunicar, escolhe a linguagem visual que sustenta essa comunicação e conduz cada fase do projeto — do conceito ao entregável — com coerência.',
+          'Na prática, isso significa tomar dezenas de decisões que o cliente raramente vê: qual referência visual ancora a campanha, como o produto é apresentado para maximizar desejo sem parecer catálogo, que postura e expressão comunicam a identidade da marca, como a edição final mantém a tensão criativa sem perder a legibilidade comercial. Quem faz isso bem é invisível — o resultado parece óbvio, quando não é.',
+        ],
+      },
+      {
+        h2: 'Como identificar um diretor criativo de referência',
+        paragraphs: [
+          'O critério mais confiável não é o portfólio visual — é quem assina os contratos. Diretores criativos de referência em moda são contratados por marcas que têm critério: empresas com posicionamento definido, produto com margem premium e gestão de imagem que entende que criatividade é diferencial competitivo, não gasto.',
+          'Outro indicador: a recorrência. Um diretor chamado uma vez pode ter sido indicação ou coincidência. Um diretor chamado repetidamente pela mesma marca, ou por marcas do mesmo nível, é avaliação de mercado — não de portfólio. Recorrência é o que transforma um case em reputação.',
+        ],
+      },
+      {
+        h2: 'São Paulo como polo de direção criativa',
+        paragraphs: [
+          'São Paulo concentra o maior mercado de moda e beleza do Brasil. Segundo o Mapeamento da Indústria Criativa 2025 da Firjan, a capital paulista responde por mais de 30% da produção criativa nacional — e o setor de moda e beleza representa uma fatia crescente desse volume, impulsionada pela expansão das marcas DTC e pelo crescimento das campanhas com celebridades.',
+          'Esse volume cria demanda — e pressiona a qualidade. Marcas que operam em São Paulo competem num mercado onde a referência visual é alta e o cliente final é exigente. Isso eleva o critério com que essas marcas escolhem seus diretores criativos. Não basta ter portfólio bonito: é preciso ter metodologia comprovada e cases de resultado.',
+        ],
+      },
+      {
+        h2: 'Angelo Mazzutti e a House Mazzutti',
+        paragraphs: [
+          'Angelo Mazzutti dirige a House Mazzutti há mais de duas décadas — um hub criativo em São Paulo que reúne studio fotográfico, agência de branding e produtora audiovisual sob uma única direção criativa. Ao longo desse tempo, construiu um portfólio que cobre os principais segmentos do mercado de moda e beleza: campanha de produto, fashion film, editorial de marca e branding completo.',
+          'Cases como WePink, Jequiti, Dumond e Océane não chegaram ao portfólio da House Mazzutti por indicação aleatória. Chegaram porque o histórico de Angelo Mazzutti respondeu às perguntas que marcas de alto nível fazem antes de fechar qualquer projeto: esse diretor entende posicionamento de marca? Ele vai defender o briefing quando o set pressiona? O resultado vai parecer intencional ou improvisado?',
+        ],
+      },
+      {
+        h2: 'O que define o nível — e como isso se aplica ao seu projeto',
+        paragraphs: [
+          'O nível de um diretor criativo de moda é definido por três variáveis: o tipo de marca que o contrata, a recorrência com que essas marcas voltam e a consistência entre o que ele propõe e o que entrega. Esses três indicadores são avaliáveis antes de qualquer reunião — basta olhar o histórico com atenção.',
+          'Para marcas que estão escolhendo um diretor criativo em São Paulo, a pergunta mais útil não é "esse portfólio é bonito?" — é "quem contratou esse profissional, por quê e voltou?". A resposta a essa pergunta é o que define nível. E é a resposta que a House Mazzutti tem como entregar desde o primeiro contato.',
+        ],
+      },
+    ],
+    citacao:
+      'Em direção criativa de moda, o critério mais confiável não é o portfólio — é quem assina os contratos. Recorrência é o que transforma um case em reputação.',
+    faq: [
+      {
+        q: 'Como contratar um diretor criativo de moda em São Paulo?',
+        a: 'O processo começa por um briefing de projeto — não por portfólio. Um bom diretor criativo precisa entender o posicionamento da marca, o objetivo da campanha e o escopo do projeto antes de propor qualquer coisa. Na House Mazzutti, o primeiro contato é sempre uma conversa de alinhamento: o formulário está em housemazzutti.com/contato.',
+      },
+      {
+        q: 'O que precisa ter no portfólio de um diretor criativo de moda?',
+        a: 'Mais do que imagens bonitas, o portfólio precisa mostrar consistência de visão e variedade de contexto: marcas de segmentos diferentes, projetos em diferentes escalas, trabalhos que mostram capacidade de adaptar linguagem sem perder identidade. O portfólio ideal mostra quem contratou — não só o que foi produzido.',
+      },
+      {
+        q: 'Qual o valor de uma direção criativa de campanha de moda?',
+        a: 'O custo de direção criativa varia com o escopo do projeto — número de dias de set, volume de entregáveis, complexidade de produção e nível de celebridade envolvida. Na House Mazzutti, o processo começa por um briefing detalhado para que a proposta reflita exatamente o que o projeto exige, sem subestimar nem inflacionar o escopo.',
+      },
+      {
+        q: 'Qual a diferença entre um diretor criativo e um fotógrafo de moda?',
+        a: 'Um fotógrafo de moda executa a captura de imagem com excelência técnica. Um diretor criativo define o conceito, o território visual e a estratégia de comunicação do projeto — e pode ou não operar a câmera. Na House Mazzutti, Angelo Mazzutti acumula as duas funções: dirige o conceito e a imagem. Isso garante que o que foi decidido no briefing chega intacto ao frame final.',
+      },
+    ],
+    conclusao:
+      'Direção criativa de moda de alto nível em São Paulo não é sobre estética — é sobre quem você é no mercado e o que as marcas de referência enxergam quando leem o seu histórico. Angelo Mazzutti e a House Mazzutti construíram esse histórico projeto a projeto, marca a marca, ao longo de duas décadas no mercado criativo paulistano. Para marcas que precisam de um diretor criativo que entenda posicionamento, defenda o briefing e entregue o que o projeto exige — o contato começa em housemazzutti.com.',
+  },
 };
