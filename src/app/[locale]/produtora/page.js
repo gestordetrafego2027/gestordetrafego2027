@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { track } from '@/components/analytics/Tracking'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
@@ -15,7 +16,10 @@ import TypewriterText from '@/app/components/TypewriterText'
 export default function ProdutoraPage() {
     const t = useTranslations('produtora_page')
     const [formCta, setFormCta] = useState(null)
-    const openForm = (ctaLocation) => setFormCta({ ctaLocation })
+    const openForm = (ctaLocation) => {
+        track('Lead', { lead_type: 'produtora', content_name: `Produtora Form — ${ctaLocation}` })
+        setFormCta({ ctaLocation })
+    }
     const closeForm = () => setFormCta(null)
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentBannerSlide, setCurrentBannerSlide] = useState(0)

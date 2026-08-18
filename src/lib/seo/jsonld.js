@@ -79,6 +79,52 @@ export const globalJsonLd = {
       sameAs,
     },
     {
+      '@type': 'FAQPage',
+      '@id': `${brand.url}/pt/#faq`,
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'O que é a House Mazzutti?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A House Mazzutti é um hub criativo em São Paulo que reúne studio fotográfico, agência de branding e produtora audiovisual sob uma mesma direção criativa, com Angelo Mazzutti.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quais serviços a House Mazzutti oferece?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Branding, identidade visual, gestão de redes sociais, produção audiovisual (fashion film, vídeo institucional, publicidade), fotografia editorial e de moda, books fotográficos e ensaios artísticos.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Onde fica o studio da House Mazzutti em São Paulo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'O studio está localizado na Rua Oswaldo Aranha, no bairro Saúde, em São Paulo/SP, com atendimento a marcas em todo o Brasil e no exterior.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Como contratar a House Mazzutti?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Pelo formulário em housemazzutti.com/contato ou pelo WhatsApp. O processo começa com um briefing para entender o projeto antes de qualquer proposta.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quanto custa um book fotográfico na House Mazzutti?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Os pacotes de book no Studio da House Mazzutti variam conforme o escopo — número de looks, locação e direção criativa. Consulte os pacotes em housemazzutti.com/studio/book/ para valores detalhados.',
+          },
+        },
+      ],
+    },
+    {
       '@type': 'Person',
       '@id': `${brand.url}/pt/angelo/#angelo`,
       name: leadership.angelo.name,

@@ -6,6 +6,38 @@ import { Link } from '@/i18n/navigation';
 import NextImage from 'next/image';
 import Header from '@/app/components/Header';
 import { getRelatedLinks } from '@/lib/seo/clusters';
+import { track } from '@/components/analytics/Tracking';
+
+const CATEGORY_CTA = {
+  'Studio': {
+    eyebrow: 'Pronto para o seu próximo book ou ensaio?',
+    headline: 'Direção criativa, luz e posicionamento em um único set.',
+    label: 'VER PACOTES DO STUDIO',
+    href: '/studio/',
+    lead_type: 'studio',
+  },
+  'Agência': {
+    eyebrow: 'Pronto para posicionar sua marca?',
+    headline: 'Branding e estratégia que constroem autoridade real.',
+    label: 'CONHECER A AGÊNCIA',
+    href: '/agencia/',
+    lead_type: 'agencia',
+  },
+  'Produtora': {
+    eyebrow: 'Pronto para a próxima produção?',
+    headline: 'Da pré-produção ao arquivo final — direção e execução.',
+    label: 'VER A PRODUTORA',
+    href: '/produtora/',
+    lead_type: 'produtora',
+  },
+  'Academy': {
+    eyebrow: 'Pronto para o próximo nível?',
+    headline: 'Formação e workshops com Angelo Mazzutti.',
+    label: 'VER A ACADEMY',
+    href: '/pt/academy/',
+    lead_type: 'academy',
+  },
+};
 
 // Image with automatic fallback (uses portfolio image if dedicated blog image is missing)
 function ArticleImage({ data, className = '', sizes = '', priority = false }) {
@@ -132,9 +164,9 @@ export default function ArticleContent({ slug, article, prevSlug, nextSlug, prev
                         <p className="text-[14px] uppercase tracking-[0.18em] text-zinc-500 font-label">por Angelo Mazzutti · Diretor Criativo</p>
                     </header>
 
-                    {/* Resposta Direta — bloco GEO/AEO extraível por IAs */}
+                    {/* Resposta Direta — bloco GEO/AEO extraível por IAs e SpeakableSpecification */}
                     {article.respostaDireta && (
-                        <div className="border-l-2 border-zinc-900 pl-6 mb-10 bg-zinc-50 py-5 pr-6">
+                        <div id="article-speakable" className="border-l-2 border-zinc-900 pl-6 mb-10 bg-zinc-50 py-5 pr-6">
                             <p className="text-[10px] font-label uppercase tracking-[0.2em] text-zinc-600 mb-2">Resposta rápida</p>
                             <p className="text-zinc-900 text-base md:text-lg leading-relaxed font-body">{article.respostaDireta}</p>
                         </div>
@@ -214,14 +246,30 @@ export default function ArticleContent({ slug, article, prevSlug, nextSlug, prev
                         </section>
                     )}
 
-                    {/* CTA Inline */}
-                    <div className="my-16 hairline-t hairline-b py-12 text-center">
-                        <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-500 mb-4">Pronto para a próxima decisão?</p>
-                        <h3 className="font-headline italic text-2xl text-zinc-900 mb-8">Da visão à materialização.</h3>
-                        <Link href="/contato" className="inline-block px-12 py-4 bg-black text-white font-label uppercase tracking-[0.3em] text-[11px] hover:bg-zinc-800 transition-colors">
-                            INICIAR CONVERSA
-                        </Link>
-                    </div>
+                    {/* CTA Contextual — mapeado por categoria do artigo */}
+                    {(() => {
+                        const prefix = (article.categoria || '').split(' — ')[0];
+                        const cta = CATEGORY_CTA[prefix] || {
+                            eyebrow: 'Pronto para a próxima decisão?',
+                            headline: 'Da visão à materialização.',
+                            label: 'INICIAR CONVERSA',
+                            href: '/contato',
+                            lead_type: 'blog_generico',
+                        };
+                        return (
+                            <div className="my-16 hairline-t hairline-b py-12 text-center">
+                                <p className="font-label uppercase tracking-[0.25em] text-[11px] text-zinc-500 mb-4">{cta.eyebrow}</p>
+                                <h3 className="font-headline italic text-2xl text-zinc-900 mb-8">{cta.headline}</h3>
+                                <Link
+                                    href={cta.href}
+                                    onClick={() => track('Lead', { lead_type: cta.lead_type, content_name: article.titulo })}
+                                    className="inline-block px-12 py-4 bg-black text-white font-label uppercase tracking-[0.3em] text-[11px] hover:bg-zinc-800 transition-colors"
+                                >
+                                    {cta.label}
+                                </Link>
+                            </div>
+                        );
+                    })()}
 
                     {/* Leia também — internal linking por cluster */}
                     {(() => {

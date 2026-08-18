@@ -91,6 +91,28 @@ export const clusters = {
       'inside-out-workshop-house-mazzutti-o-que-e',
     ],
   },
+  mercado: {
+    pillar: {
+      url: '/blog',
+      label: 'veja todos os artigos do blog',
+    },
+    cta: {
+      url: '/contato',
+      label: 'fale com a House Mazzutti',
+    },
+    posts: [
+      'campanha-reserva-spfw-branding-moda',
+      'ai-producao-audiovisual-o-que-mudou',
+      'semana-moda-milao-2026-tendencias-brasil',
+      'sabrina-sato-marca-pessoal-posicionamento',
+      'fashion-film-vs-reels-quando-usar',
+      'marcas-brasileiras-ponto-de-vista-proprio',
+      'como-house-mazzutti-estrutura-campanha-moda',
+      'sao-paulo-epicentro-criativo-brasil',
+      'dupes-masstige-o-que-editorial-moda-espera',
+      'direcao-criativa-nao-e-estetica-e-resultado',
+    ],
+  },
 }
 
 // Mapa slug → cluster

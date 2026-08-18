@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick'
+import { track } from '@/components/analytics/Tracking'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
@@ -20,7 +21,10 @@ export default function AgenciaPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentBannerSlide, setCurrentBannerSlide] = useState(0)
 
-    const openForm = () => setFormOpen(true)
+    const openForm = () => {
+        track('Lead', { lead_type: 'agencia', content_name: 'Agência Form' })
+        setFormOpen(true)
+    }
     const closeForm = () => setFormOpen(false)
 
     const testimonials = t.raw('depoimentos')

@@ -11,6 +11,7 @@ import FormStudio from '@/app/components/forms/FormStudio'
 import BlogSection from '@/app/components/BlogSection'
 import TypewriterText from '@/app/components/TypewriterText'
 import {useTranslations} from 'next-intl'
+import { track } from '@/components/analytics/Tracking'
 
 export default function StudioPage() {
     const t = useTranslations('studio')
@@ -251,7 +252,7 @@ export default function StudioPage() {
                                     <p className="hero-animate text-body text-white/80 mb-12 measure-editorial" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {heroSlides[currentBannerSlide].texto}
                                     </p>
-                                    <button type="button" onClick={() => setIsStudioFormOpen(true)} className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+                                    <button type="button" onClick={() => { track('Lead', { lead_type: 'studio', content_name: 'Studio Form' }); setIsStudioFormOpen(true); }} className="hero-animate group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500" style={{ opacity: 0, transform: 'translateY(30px)' }}>
                                         {t('hero_cta')}
                                     </button>
                                 </div>
@@ -588,7 +589,7 @@ export default function StudioPage() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-10">
-                            <button type="button" onClick={() => setIsStudioFormOpen(true)} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
+                            <button type="button" onClick={() => { track('Lead', { lead_type: 'studio', content_name: 'Studio Form' }); setIsStudioFormOpen(true); }} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 Iniciar uma conversa
                             </button>
                             <p className="text-caption text-zinc-500">Menos tentativa. Mais direção.</p>

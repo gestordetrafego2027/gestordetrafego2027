@@ -101,10 +101,22 @@ export default async function BlogSlugPage({ params }) {
     };
     const articleHowToSchema = howToSchemas[slug] ?? null;
 
+    const speakableSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: article.titulo,
+        url: `${brand.url}/pt/blog/${slug}/`,
+        speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#article-speakable'],
+        },
+    };
+
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(posting) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
             {articleFaqSchema && (
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleFaqSchema) }} />
             )}
