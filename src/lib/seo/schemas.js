@@ -1806,6 +1806,51 @@ export const academyFaqSchema = {
 // ---------------------------------------------------------------------------
 // BlogPosting schema helper
 // ---------------------------------------------------------------------------
+export function newsArticleSchema({slug, titulo, metaDescription, data, cover, categoria}) {
+  const url = `${SITE}/pt/blog/${slug}/`
+  const months = {
+    Janeiro: '01', Fevereiro: '02', Março: '03', Abril: '04',
+    Maio: '05', Junho: '06', Julho: '07', Agosto: '08',
+    Setembro: '09', Outubro: '10', Novembro: '11', Dezembro: '12',
+  }
+  let dateISO = ''
+  if (data) {
+    const [mes, ano] = data.split(' ')
+    dateISO = months[mes] ? `${ano}-${months[mes]}-01` : ''
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    '@id': `${url}#news`,
+    headline: titulo,
+    description: metaDescription,
+    url,
+    ...(dateISO && {datePublished: dateISO, dateModified: dateISO}),
+    author: {
+      '@type': 'Person',
+      '@id': `${SITE}/pt/sobre/#angelo`,
+      name: leadership.angelo.name,
+    },
+    publisher: {'@id': ORG_ID},
+    image: {
+      '@type': 'ImageObject',
+      url: cover ? `${SITE}${cover.src}` : `${SITE}/images/og-default.webp`,
+      description: cover?.alt ?? titulo,
+    },
+    inLanguage: 'pt-BR',
+    mainEntityOfPage: url,
+    ...(categoria && {
+      about: {
+        '@type': 'Thing',
+        name: categoria,
+      },
+    }),
+    articleSection: 'Mercado Criativo',
+    isAccessibleForFree: true,
+  }
+}
+
 export function blogPostingSchema({slug, titulo, metaDescription, data, cover}) {
   const url = `${SITE}/pt/blog/${slug}/`
   // Converte data "Abril 2026" → formato ISO aproximado

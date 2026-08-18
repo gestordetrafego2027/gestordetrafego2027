@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation';
 import ArticleContent from './ArticleContent';
 import { articles } from './articles';
 import { buildAlternates } from '@/lib/seo/metadata';
-import { blogPostingSchema, breadcrumbSchema, howToEnsaioSchema, howToBookModeloSchema } from '@/lib/seo/schemas';
+import { blogPostingSchema, newsArticleSchema, breadcrumbSchema, howToEnsaioSchema, howToBookModeloSchema } from '@/lib/seo/schemas';
 import { brand } from '@/config/site';
+import { slugToCluster } from '@/lib/seo/clusters';
 
 export function generateStaticParams() {
     return Object.keys(articles).map((slug) => ({ slug }));
@@ -101,6 +102,18 @@ export default async function BlogSlugPage({ params }) {
     };
     const articleHowToSchema = howToSchemas[slug] ?? null;
 
+    const isNewsCluster = slugToCluster[slug] === 'mercado';
+    const articleNewsSchema = isNewsCluster
+        ? newsArticleSchema({
+              slug,
+              titulo: article.titulo,
+              metaDescription: article.metaDescription,
+              data: article.data,
+              cover: article.cover,
+              categoria: article.categoria,
+          })
+        : null;
+
     const speakableSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -122,6 +135,9 @@ export default async function BlogSlugPage({ params }) {
             )}
             {articleHowToSchema && (
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleHowToSchema) }} />
+            )}
+            {articleNewsSchema && (
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleNewsSchema) }} />
             )}
             <ArticleContent
                 slug={slug}
