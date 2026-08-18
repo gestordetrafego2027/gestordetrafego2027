@@ -101,6 +101,12 @@ export const clusters = {
       label: 'fale com a House Mazzutti',
     },
     posts: [
+      // publicados
+      'subway-graduacao-sanduiche-newsjacking-com-intencao',
+      'live-commerce-beleza-producao-audiovisual-performance',
+      'manu-gavassi-99compras-co-criacao-direcao-criativa',
+      'genuinfluencers-autenticidade-estrategia-de-marca',
+      // planejados
       'campanha-reserva-spfw-branding-moda',
       'ai-producao-audiovisual-o-que-mudou',
       'semana-moda-milao-2026-tendencias-brasil',
