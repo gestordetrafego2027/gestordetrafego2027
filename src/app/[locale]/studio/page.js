@@ -592,7 +592,13 @@ export default function StudioPage() {
                             <button type="button" onClick={() => { track('Lead', { lead_type: 'studio', content_name: 'Studio Form' }); setIsStudioFormOpen(true); }} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 Iniciar uma conversa
                             </button>
-                            <p className="text-caption text-zinc-500">Menos tentativa. Mais direção.</p>
+                            <div className="flex flex-col items-center gap-2">
+                                <div className="flex items-center gap-2 text-[11px] font-label">
+                                    <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
+                                    <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>
+                                </div>
+                                <p className="text-caption text-zinc-500">Menos tentativa. Mais direção.</p>
+                            </div>
                         </div>
                     </div>
                 </section>

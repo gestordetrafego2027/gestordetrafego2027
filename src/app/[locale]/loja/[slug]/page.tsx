@@ -20,6 +20,7 @@ import { Link } from '@/i18n/navigation'
 import type { Metadata } from 'next'
 import { WaitlistForm } from '@/components/academy/WaitlistForm'
 import { DirectCheckoutButton } from '@/components/ecommerce/DirectCheckoutButton'
+import { ProductViewTracker } from '@/components/ecommerce/ProductViewTracker'
 
 type ServicePackage = {
   id: string
@@ -155,6 +156,11 @@ export default async function ProdutoPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ProductViewTracker
+        slug={product.slug}
+        name={product.name}
+        price={mainPrice ? mainPrice.unit_amount / 100 : undefined}
       />
 
       <div className="min-h-screen bg-[#faf9f7] flex flex-col">
