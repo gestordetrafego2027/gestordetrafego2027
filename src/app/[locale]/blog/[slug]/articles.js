@@ -4423,4 +4423,88 @@ export const articles = {
     conclusao:
       'Direção criativa de moda de alto nível em São Paulo não é sobre estética — é sobre quem você é no mercado e o que as marcas de referência enxergam quando leem o seu histórico. Angelo Mazzutti e a House Mazzutti construíram esse histórico projeto a projeto, marca a marca, ao longo de duas décadas no mercado criativo paulistano. Para marcas que precisam de um diretor criativo que entenda posicionamento, defenda o briefing e entregue o que o projeto exige — o contato começa em housemazzutti.com.',
   },
+
+  'direcao-criativa-nao-e-estetica-e-resultado': {
+    slug: 'direcao-criativa-nao-e-estetica-e-resultado',
+    titulo: 'Direção criativa não é estética — é resultado',
+    metaTitle: 'Direção criativa não é estética — é resultado | House Mazzutti',
+    metaDescription: 'Angelo Mazzutti explica por que direção criativa é processo e intenção, não gosto visual — e o que separa uma campanha bem-feita de uma que funciona.',
+    data: 'Agosto 2026',
+    categoria: 'Agência — Branding',
+    keywords: [
+      'direção criativa',
+      'o que é direção criativa',
+      'direção criativa e resultado',
+      'estratégia antes de estética',
+      'campanha de marca',
+      'posicionamento de marca',
+      'diretor criativo',
+      'House Mazzutti',
+    ],
+    cover: null,
+    interior: [],
+    citacao: 'Estética é o que a marca mostra. Direção é o que a marca decidiu antes de mostrar.',
+    intro: 'Toda semana chega aqui uma marca com o mesmo diagnóstico na boca: "nossa comunicação está bonita, mas não está vendendo". Quase sempre está certa na primeira metade da frase. A campanha é bonita. O feed é limpo. As fotos têm boa luz. E, ainda assim, nada se move. Isso acontece porque o mercado passou a chamar de direção criativa aquilo que é apenas acabamento. Direção criativa não é o resultado visual. É a decisão que existe antes dele — e é essa decisão que produz, ou não, resultado.',
+    sections: [
+      {
+        h2: 'O que o mercado chama de direção criativa',
+        paragraphs: [
+          'No uso corrente, direção criativa virou sinônimo de bom gosto. Escolher a paleta. Definir a referência. Aprovar a foto. Dizer se está bonito ou não está. É um papel de curadoria estética exercido no fim da linha, quando tudo já foi decidido por outra pessoa — normalmente por ninguém.',
+          'Direção criativa é outra coisa. É a autoria da decisão. É quem responde por qual percepção a marca precisa construir, em quanto tempo, contra quem, para quem, e o que precisa ser dito primeiro. A imagem vem depois. Vem como consequência de um raciocínio, não como ponto de partida.',
+          'Quando a direção está no lugar certo, ela chega antes do briefing de produção. Quando está no lugar errado, ela chega junto com a arte pronta — e aí só sobra opinião.',
+        ],
+      },
+      {
+        h2: 'Estética sem estratégia é decoração',
+        paragraphs: [
+          'Uma campanha bonita e uma campanha que funciona não são o mesmo objeto. A primeira agrada quem já conhece a marca. A segunda muda a percepção de quem ainda não conhece. São públicos diferentes e problemas diferentes.',
+          'Estética sem estratégia é decoração: melhora a superfície e deixa a estrutura intacta. O sintoma é sempre o mesmo — a marca troca de visual todo semestre e nunca troca de lugar na cabeça do cliente. Movimento sem deslocamento.',
+          'Não é um argumento contra o cuidado visual. É o contrário. Cuidado visual custa caro demais para ser gasto sem direção. Quando existe intenção por trás, a mesma foto passa a carregar posicionamento. Sem intenção, ela carrega apenas gosto.',
+        ],
+      },
+      {
+        h2: 'Como pensamos uma campanha antes de fazer uma',
+        paragraphs: [
+          'Na House Mazzutti nenhuma peça começa por uma referência visual. Começa por uma leitura. Imersão, Leitura, Conceito, Execução e Fine Art — nessa ordem, sempre nessa ordem. A ordem é o método.',
+          'Na imersão, a gente escuta o que a marca diz sobre si e observa o que o mercado diz de volta. Quase nunca são a mesma coisa, e é justamente nessa distância que mora o trabalho. A leitura transforma essa distância em um problema nomeável: não "precisamos de conteúdo", mas "esta marca é vista como cara e não é vista como especial".',
+          'O conceito é a resposta a esse problema em uma frase que aguenta ser levada a sério. Se o conceito não sobrevive a essa frase, ele não sobrevive a uma campanha inteira. Só quando ele se sustenta é que abrimos produção — porque aí cada decisão de luz, casting, corte e ritmo tem um critério para ser julgada. Deixa de ser "eu gosto" e vira "isto serve, aquilo não serve".',
+        ],
+      },
+      {
+        h2: 'O que muda quando existe um diretor de verdade no projeto',
+        paragraphs: [
+          'A diferença mais visível é a quantidade de tentativas. Projeto sem direção vive de versões: três caminhos, cinco variações, uma reunião para desempatar. Projeto com direção tem menos opções e mais convicção. Não porque alguém seja teimoso, mas porque o critério foi definido antes e não precisa ser reinventado a cada entrega.',
+          'A segunda diferença é a coerência ao longo do tempo. Uma peça isolada qualquer estúdio entrega. O que exige direção é a décima peça ainda parecer da mesma marca, ainda dizer a mesma coisa, com outra roupa. Percepção não se constrói em um pico — se constrói em repetição consistente.',
+          'A terceira é a capacidade de dizer não. Um diretor de verdade recusa ideias boas que não cabem no posicionamento. Essa é a parte impopular do trabalho, e também a mais valiosa. Marca forte é feita tanto do que ela publica quanto do que ela decidiu não publicar.',
+        ],
+      },
+      {
+        h2: 'Por que resultado precisa de método — não de inspiração',
+        paragraphs: [
+          'Inspiração não é escalável e não é auditável. Ela produz um bom trabalho de vez em quando e não explica por quê. Método produz um bom trabalho com regularidade e, mais importante, permite corrigir quando algo não funciona — porque existe uma cadeia de decisões para revisitar.',
+          'Isso também muda a conversa com o cliente. Sem método, a discussão sobre uma campanha vira uma disputa de gosto entre pessoas que não têm como provar nada. Com método, a discussão volta para o único terreno que interessa: o objetivo de mercado que a peça foi construída para atender.',
+          'Resultado, aqui, não é só venda imediata. É a marca ser entendida sem precisar se explicar. Quando o posicionamento está certo, o comercial fica mais curto, a objeção de preço diminui e a marca deixa de competir por atenção para competir por preferência.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'O que é direção criativa, na prática?',
+        a: 'É a autoria das decisões que definem o que uma marca comunica, para quem, em que ordem e com qual intenção. Envolve leitura de mercado, definição de conceito e critério de execução. O resultado visual é a consequência dessas decisões, não o ponto de partida.',
+      },
+      {
+        q: 'Qual a diferença entre direção criativa e direção de arte?',
+        a: 'Direção criativa define o quê e o porquê: o conceito, o território de percepção e o critério que governa o projeto. Direção de arte define o como visual: composição, paleta, referência, acabamento. As duas são necessárias, mas a direção criativa vem antes e determina o que a direção de arte deve resolver.',
+      },
+      {
+        q: 'Uma campanha bonita não é suficiente para vender?',
+        a: 'Não. Beleza melhora a recepção de quem já conhece a marca, mas não altera percepção de quem ainda não conhece. Sem um conceito que responda a um problema de mercado real, a campanha agrada e não desloca. O que converte é intenção — clareza de posicionamento sustentada com consistência.',
+      },
+      {
+        q: 'Como saber se minha marca precisa de direção criativa?',
+        a: 'Alguns sinais são bem confiáveis: a marca troca de identidade visual com frequência, cada peça parece de uma empresa diferente, as decisões de comunicação são resolvidas por gosto em reunião, e o discurso comercial precisa explicar demais o que a marca é. Todos apontam para ausência de direção, não para falta de produção.',
+      },
+    ],
+    conclusao: 'Não existe estética que compense a ausência de decisão. Uma marca pode contratar o melhor fotógrafo, o melhor editor e a melhor produção e, ainda assim, entregar um material que não muda nada — porque ninguém definiu o que precisava mudar. Direção criativa é esse trabalho anterior, invisível na peça pronta e decisivo no resultado dela. É por isso que aqui a ordem nunca se inverte: estratégia antes de estética. Menos tentativa. Mais direção.',
+  },
 };
