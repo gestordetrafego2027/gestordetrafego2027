@@ -1,4 +1,5 @@
 'use client';
+import { track } from '@/components/analytics/Tracking';
 import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
@@ -14,6 +15,7 @@ import BlogSection from '@/app/components/BlogSection';
 export default function AgenciaRpPage() {
     const t = useTranslations('agencia_rp');
     const [formOpen, setFormOpen] = useState(false);
+    const openForm = () => { track('Lead', { lead_type: 'agencia_rp', content_name: 'RP Form' }); setFormOpen(true); };
 
     useEffect(() => {
         const cleanup = initAosNative(); return cleanup;
@@ -41,7 +43,7 @@ export default function AgenciaRpPage() {
                         <h2 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h2>
                         <p className="text-body text-white/80 mb-12 measure-editorial" data-aos="fade-up" data-aos-delay="300">{t('hero_texto')}</p>
                         <div data-aos="fade-up" data-aos-delay="400">
-                            <button type="button" onClick={() => setFormOpen(true)} className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
+                            <button type="button" onClick={() => openForm()} className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 {t('hero_cta')}
                             </button>
                         </div>
@@ -143,7 +145,7 @@ export default function AgenciaRpPage() {
                 <p className="font-body text-white/60 text-lg mb-12 max-w-xl" data-aos="fade-up" data-aos-delay="100">{t('cta_subtitulo')}</p>
                 <button
                     type="button"
-                    onClick={() => setFormOpen(true)}
+                    onClick={() => openForm()}
                     className="bg-white text-black font-label uppercase tracking-[0.2em] text-sm px-10 py-4 hover:bg-neutral-100 transition-colors"
                     data-aos="fade-up" data-aos-delay="200"
                 >

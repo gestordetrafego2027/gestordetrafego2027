@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
+import { track } from '@/components/analytics/Tracking';
 
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useState, useEffect } from 'react';
@@ -17,7 +18,10 @@ import BlogSection from '@/app/components/BlogSection';
 export default function StudioBookPage() {
     const t = useTranslations('studio_book');
     const [formCta, setFormCta] = useState(null);
-    const openForm = (ctaLocation, packageSelected = null) => setFormCta({ ctaLocation, packageSelected });
+    const openForm = (ctaLocation, packageSelected = null) => {
+        track('Lead', { lead_type: 'studio_book', content_name: `Book Form — ${ctaLocation}` });
+        setFormCta({ ctaLocation, packageSelected });
+    };
     const closeForm = () => setFormCta(null);
 
     useEffect(() => {

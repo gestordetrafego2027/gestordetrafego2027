@@ -122,6 +122,46 @@ export const globalJsonLd = {
             text: 'Os pacotes de book no Studio da House Mazzutti variam conforme o escopo — número de looks, locação e direção criativa. Consulte os pacotes em housemazzutti.com/studio/book/ para valores detalhados.',
           },
         },
+        {
+          '@type': 'Question',
+          name: 'Quem é o fundador da House Mazzutti?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A House Mazzutti foi fundada por Angelo Mazzutti, diretor criativo com 20 anos de ofício em audiovisual e direção de imagem. Angelo dirige cada projeto pessoalmente, da estratégia ao set.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'A House Mazzutti faz fashion film?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sim. A Produtora House Mazzutti realiza fashion films para marcas de moda, beleza e joalheria em São Paulo. Cada produção começa com conceito criativo e é dirigida por Angelo Mazzutti do briefing ao master final.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'A House Mazzutti atende marcas de outros estados?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sim. Embora baseada em São Paulo, a House Mazzutti atende marcas e projetos em todo o Brasil. A base operacional é SP, mas produções externas são avaliadas por agenda e escopo.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Qual a diferença entre o Studio, a Agência e a Produtora da House Mazzutti?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'O Studio cuida de fotografia editorial — books, ensaios pessoais e coberturas. A Agência cuida de branding, identidade visual e comunicação de marca. A Produtora cuida de campanhas audiovisuais — fashion film, vídeo institucional e publicidade. As três unidades operam sob uma mesma direção criativa.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'House Mazzutti tem escola ou academia?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sim. A House Mazzutti Academy oferece o Inside Out, um programa presencial de formação em direção de imagem e produção audiovisual para fotógrafos e profissionais do mercado criativo em São Paulo.',
+          },
+        },
       ],
     },
     {

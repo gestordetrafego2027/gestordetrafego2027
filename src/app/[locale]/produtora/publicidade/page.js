@@ -1,4 +1,5 @@
 'use client';
+import { track } from '@/components/analytics/Tracking';
 import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
 
@@ -17,7 +18,7 @@ import {useTranslations} from 'next-intl';
 export default function ProdutoraPublicidadePage() {
     const t = useTranslations('produtora_publicidade');
     const [formCta, setFormCta] = useState(null);
-    const openForm = (ctaLocation, packageSelected = null) => setFormCta({ ctaLocation, packageSelected });
+    const openForm = (ctaLocation, packageSelected = null) => { track('Lead', { lead_type: 'produtora_publicidade', content_name: `produtora_publicidade Form — ${ctaLocation}` }); setFormCta({ ctaLocation, packageSelected }); };
     const closeForm = () => setFormCta(null);
 
     useEffect(() => {

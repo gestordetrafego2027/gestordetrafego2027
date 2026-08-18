@@ -22,6 +22,7 @@ export function GET() {
 <meta name="twitter:description" content="A imersão completa em vídeo. Direção criativa do processo interno à entrega final — assista no seu ritmo.">
 <meta name="twitter:image" content="https://housemazzutti.com/images/academy/inside-out/og-image.webp">
 <link rel="canonical" href="https://housemazzutti.com/pt/academy/inside-out/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","@id":"https://housemazzutti.com/pt/academy/inside-out/#course","name":"Inside Out — Direção de Imagem e Produção","description":"Programa presencial de formação em direção de imagem e produção audiovisual para fotógrafos e profissionais do mercado criativo. Conduzido por Angelo Mazzutti em São Paulo.","url":"https://housemazzutti.com/pt/academy/inside-out/","provider":{"@id":"https://housemazzutti.com/#organization"},"instructor":{"@type":"Person","@id":"https://housemazzutti.com/pt/angelo/#angelo","name":"Angelo Mazzutti"},"courseMode":"onsite","inLanguage":"pt-BR","locationCreated":{"@type":"City","name":"São Paulo"},"educationalLevel":"Profissional"}</script>
 <!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R61KK25PBK"></script>

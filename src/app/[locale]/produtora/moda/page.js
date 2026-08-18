@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
+import { track } from '@/components/analytics/Tracking';
 
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { useState, useEffect } from 'react';
@@ -17,7 +18,10 @@ import {useTranslations} from 'next-intl';
 export default function ProdutoraModaPage() {
     const t = useTranslations('produtora_moda');
     const [formCta, setFormCta] = useState(null);
-    const openForm = (ctaLocation, packageSelected = null) => setFormCta({ ctaLocation, packageSelected });
+    const openForm = (ctaLocation, packageSelected = null) => {
+        track('Lead', { lead_type: 'produtora_moda', content_name: `Moda Form — ${ctaLocation}` });
+        setFormCta({ ctaLocation, packageSelected });
+    };
     const closeForm = () => setFormCta(null);
 
     useEffect(() => {

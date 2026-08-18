@@ -13,14 +13,26 @@ const personSchema = {
   url: `${brand.url}/pt/angelo/`,
   image: `${brand.url}/images/angelo/angelo-mazzutti.webp`,
   knowsAbout: [
-    'Branding',
     'Direção Criativa',
-    'Fotografia',
+    'Branding',
+    'Direção de Imagem',
     'Produção Audiovisual',
-    'Direção de Arte',
+    'Fotografia Editorial',
+    'Fashion Film',
     'Identidade Visual',
+    'Posicionamento de Marca',
+    'Produção de Moda',
+    'Set Design',
+    'Direção de Arte',
+    'Casting',
   ],
-  sameAs: [social.instagram.url, social.linkedin.url],
+  sameAs: [social.instagram.url, social.linkedin.url, social.youtube.url, social.facebook.url],
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Diretor Criativo',
+    occupationLocation: {'@type': 'City', name: 'São Paulo'},
+  },
+  founderOf: {'@id': `${brand.url}/#organization`},
 }
 
 export async function generateMetadata({params}) {
@@ -30,7 +42,7 @@ export async function generateMetadata({params}) {
     locale,
     title: 'Angelo Mazzutti — Diretor Criativo e de Imagem | HMZT',
     description:
-      '15 anos de audiovisual e direção de imagem para grandes marcas e celebridades. Conheça o diretor por trás da House Mazzutti.',
+      '20 anos de audiovisual e direção de imagem para grandes marcas e celebridades. Conheça o diretor por trás da House Mazzutti.',
   })
 }
 

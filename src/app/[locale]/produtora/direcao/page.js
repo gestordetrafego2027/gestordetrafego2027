@@ -1,4 +1,5 @@
 'use client';
+import { track } from '@/components/analytics/Tracking';
 import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
@@ -14,7 +15,7 @@ import BlogSection from '@/app/components/BlogSection';
 export default function ProdutoraDirecaoPage() {
     const t = useTranslations('produtora_direcao');
     const [formCta, setFormCta] = useState(null);
-    const openForm = (ctaLocation) => setFormCta({ ctaLocation });
+    const openForm = (ctaLocation) => { track('Lead', { lead_type: 'produtora_direcao', content_name: `produtora_direcao Form — ${ctaLocation}` }); setFormCta({ ctaLocation }); };
     const closeForm = () => setFormCta(null);
 
     useEffect(() => {

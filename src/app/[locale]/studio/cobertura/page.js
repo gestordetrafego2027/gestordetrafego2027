@@ -1,4 +1,5 @@
 'use client';
+import { track } from '@/components/analytics/Tracking';
 import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
 
@@ -17,7 +18,7 @@ import BlogSection from '@/app/components/BlogSection';
 export default function StudioCoberturaPage() {
     const t = useTranslations('studio_cobertura');
     const [formCta, setFormCta] = useState(null);
-    const openForm = (ctaLocation, packageSelected = null) => setFormCta({ ctaLocation, packageSelected });
+    const openForm = (ctaLocation, packageSelected = null) => { track('Lead', { lead_type: 'studio_cobertura', content_name: `studio_cobertura Form — ${ctaLocation}` }); setFormCta({ ctaLocation, packageSelected }); };
     const closeForm = () => setFormCta(null);
 
     useEffect(() => {

@@ -1,4 +1,5 @@
 'use client';
+import { track } from '@/components/analytics/Tracking';
 import { initAosNative } from '@/lib/aosNative';
 import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
@@ -14,6 +15,7 @@ import BlogSection from '@/app/components/BlogSection';
 export default function AgenciaComunicacaoPage() {
     const t = useTranslations('agencia_comunicacao');
     const [formOpen, setFormOpen] = useState(false);
+    const openForm = () => { track('Lead', { lead_type: 'agencia_comunicacao', content_name: 'Comunicação Form' }); setFormOpen(true); };
 
     useEffect(() => {
         const cleanup = initAosNative(); return cleanup;
@@ -39,7 +41,7 @@ export default function AgenciaComunicacaoPage() {
                         <h1 className="text-h1 text-white mb-8 hmzt-hero-title" data-aos="fade-up" data-aos-delay="200">{t('hero_titulo')}</h1>
                         <p className="text-body text-white/80 mb-12 measure-editorial" data-aos="fade-up" data-aos-delay="300">{t('hero_subtitulo')}</p>
                         <div data-aos="fade-up" data-aos-delay="400">
-                            <button type="button" onClick={() => setFormOpen(true)} className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
+                            <button type="button" onClick={() => openForm()} className="group relative px-12 py-4 border-[0.5px] border-white/40 text-white text-button hover:bg-white hover:text-black transition-all duration-500">
                                 {t('hero_cta')}
                             </button>
                         </div>
@@ -161,7 +163,7 @@ export default function AgenciaComunicacaoPage() {
             {/* FINAL CTA */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
                 <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up">{t('cta_final_titulo')}</h2>
-                <button type="button" onClick={() => setFormOpen(true)} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="100">
+                <button type="button" onClick={() => openForm()} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="100">
                     {t('cta_final_btn')}
                 </button>
             </section>
