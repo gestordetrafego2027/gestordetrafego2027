@@ -19,6 +19,18 @@ vi.mock('next/link', () => ({
   ),
 }))
 
+// Mock @/i18n/navigation — é o Link locale-aware que o ProductCard usa de fato.
+// Sem isso a cadeia puxa next-intl -> next/navigation, que o pool vmForks do
+// vitest não resolve (stub CJS sem extensão dentro do contexto de VM).
+vi.mock('@/i18n/navigation', () => ({
+  Link: ({ href, children, ...rest }: { href: string; children: React.ReactNode }) => (
+    <a href={href} {...rest}>{children}</a>
+  ),
+  useRouter: () => ({ push: vi.fn(), replace: vi.fn(), refresh: vi.fn() }),
+  usePathname: () => '/',
+  redirect: vi.fn(),
+}))
+
 function makeProduct(over: Partial<ProductCardProduct> = {}): ProductCardProduct {
   return {
     id: 'p1',

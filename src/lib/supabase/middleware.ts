@@ -44,6 +44,9 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   const { pathname } = request.nextUrl
+  // O projeto roda com `trailingSlash: true`, então o middleware recebe
+  // "/login/", não "/login" — comparar por igualdade sem normalizar nunca casa.
+  const normalizedPath = pathname.replace(/\/+$/, '') || '/'
 
   // Rota protegida sem usuário → manda para login com ?next=
   if (pathname.startsWith(PROTECTED_PREFIX) && !user) {
@@ -53,8 +56,10 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(u)
   }
 
-  // Já autenticado tentando ver /login → manda para /crm
-  if (pathname === AUTH_PAGE && user) {
+  // Já autenticado tentando ver /login → manda para /crm.
+  // Igualdade exata de propósito: /login/redefinir também tem sessão (o link de
+  // recuperação acabou de criar uma) e NÃO pode ser desviado daqui.
+  if (normalizedPath === AUTH_PAGE && user) {
     const u = request.nextUrl.clone()
     u.pathname = '/crm'
     u.search = ''
