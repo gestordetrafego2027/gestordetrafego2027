@@ -926,6 +926,7 @@ export const localBusinessSchema = {
     social.linkedin.url,
     social.youtube.url,
     social.facebook.url,
+    'https://www.wikidata.org/wiki/Q141168351',
   ],
 }
 

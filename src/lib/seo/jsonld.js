@@ -5,7 +5,7 @@
 
 import {brand, contact, nap, social, leadership, timeline, cnpj} from '@/config/site'
 
-const sameAs = Object.values(social).map((c) => c.url)
+const sameAs = [...Object.values(social).map((c) => c.url), 'https://www.wikidata.org/wiki/Q141168351']
 const streetAddress = `${nap.street} - ${nap.neighborhood}`
 
 export const globalJsonLd = {
@@ -190,6 +190,23 @@ export const globalJsonLd = {
         occupationLocation: {'@type': 'City', name: 'São Paulo'},
       },
       founderOf: {'@id': `${brand.url}/#organization`},
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${brand.url}/#website`,
+      url: `${brand.url}/pt/`,
+      name: brand.name,
+      description: brand.tagline,
+      publisher: {'@id': `${brand.url}/#organization`},
+      inLanguage: ['pt-BR', 'en', 'es'],
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${brand.url}/pt/blog?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
     },
   ],
 }
