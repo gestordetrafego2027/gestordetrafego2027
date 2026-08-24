@@ -9,13 +9,14 @@ import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 import FormDrawer from "@/app/components/FormDrawer";
 import FormAngelo from "@/app/components/forms/FormAngelo";
+import { track } from '@/components/analytics/Tracking';
 import BlogSection from "@/app/components/BlogSection";
 
 export default function AngeloPage() {
     const t = useTranslations("angelo_page");
     const tFooter = useTranslations('footer');
     const [formCta, setFormCta] = useState(null);
-    const openForm = (ctaLocation) => setFormCta({ ctaLocation });
+    const openForm = (ctaLocation) => { track('Lead', { lead_type: 'angelo', content_name: `Angelo Form — ${ctaLocation}` }); setFormCta({ ctaLocation }); };
     const closeForm = () => setFormCta(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 

@@ -11,6 +11,7 @@ import BlogSection from "@/app/components/BlogSection";
 import FormDrawer from "@/app/components/FormDrawer";
 import FormGeral from "@/app/components/forms/FormGeral";
 import TypewriterText from '@/app/components/TypewriterText';
+import { track } from '@/components/analytics/Tracking';
 
 /**
  * HOME PAGE - HOUSE MAZZUTTI
@@ -22,6 +23,7 @@ export default function Home() {
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
     const [isHeroPaused, setIsHeroPaused] = useState(false);
     const [isHomeFormOpen, setIsHomeFormOpen] = useState(false);
+    const openHomeForm = () => { track('Lead', { lead_type: 'home', content_name: 'Home Form' }); setIsHomeFormOpen(true); };
 
     const heroSlides = [
         {
@@ -653,7 +655,7 @@ export default function Home() {
                         <div className="flex flex-col items-center space-y-10">
                             <button
                                 type="button"
-                                onClick={() => setIsHomeFormOpen(true)}
+                                onClick={() => openHomeForm()}
                                 className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500"
                             >
                                 {t('cta.start_project')}

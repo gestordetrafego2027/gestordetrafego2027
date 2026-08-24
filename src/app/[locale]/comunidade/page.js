@@ -8,6 +8,7 @@ import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 import FormDrawer from "@/app/components/FormDrawer";
 import FormModelo from "@/app/components/forms/FormModelo";
+import { track } from '@/components/analytics/Tracking';
 import BlogSection from "@/app/components/BlogSection";
 import {useTranslations} from 'next-intl';
 
@@ -17,7 +18,7 @@ export default function ComunidadePage() {
     const tFooter = useTranslations('footer');
     const [currentSlide, setCurrentSlide] = useState(0);
     const [talentsForm, setTalentsForm] = useState(null); // { ctaLocation }
-    const openTalentsForm = (ctaLocation) => setTalentsForm({ ctaLocation });
+    const openTalentsForm = (ctaLocation) => { track('Lead', { lead_type: 'comunidade', content_name: `Comunidade Form — ${ctaLocation}` }); setTalentsForm({ ctaLocation }); };
     const closeTalentsForm = () => setTalentsForm(null);
 
 
