@@ -82,6 +82,8 @@ export default async function BlogSlugPage({ params }) {
         metaDescription: article.metaDescription,
         data: article.data,
         cover: article.cover,
+        respostaDireta: article.respostaDireta,
+        keywords: article.keywords,
     });
 
     const articleFaqSchema = article.faq?.length > 0

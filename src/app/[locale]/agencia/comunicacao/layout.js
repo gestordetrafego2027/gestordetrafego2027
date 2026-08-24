@@ -12,5 +12,20 @@ export async function generateMetadata({ params }) {
 }
 
 export default function ComunicacaoLayout({ children }) {
-  return children
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'O que é uma campanha de comunicação integrada?', acceptedAnswer: { '@type': 'Answer', text: 'É uma campanha que alinha mensagem, visual e tom em todos os canais — redes sociais, imprensa, e-mail, eventos e mídia paga — para criar uma percepção consistente da marca.' } },
+      { '@type': 'Question', name: 'A House Mazzutti faz gestão de redes sociais?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A Agência House Mazzutti oferece gestão de comunicação digital com produção de conteúdo, calendário editorial e direção de imagem alinhada à identidade da marca.' } },
+      { '@type': 'Question', name: 'Como funciona uma campanha de lançamento com a House Mazzutti?', acceptedAnswer: { '@type': 'Answer', text: 'Começa com briefing de posicionamento, seguido de conceito criativo, produção do material (foto, vídeo, copy) e distribuição coordenada nos canais relevantes para o público da marca.' } },
+      { '@type': 'Question', name: 'A House Mazzutti produz o material visual das campanhas?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A Agência trabalha em conjunto com o Studio e a Produtora House Mazzutti para entregar conteúdo fotográfico e audiovisual de alto padrão integrado à estratégia de comunicação.' } },
+    ],
+  }
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {children}
+    </>
+  )
 }
