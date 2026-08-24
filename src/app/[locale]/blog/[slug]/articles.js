@@ -5538,4 +5538,302 @@ export const articles = {
     ],
     "conclusao": "Reposicionar é uma decisão de negócio que se manifesta em forma, cor e palavra — nunca o contrário. Feito com diagnóstico, o processo devolve à marca a capacidade de cobrar o que ela vale; feito por impulso estético, ele apenas troca o problema de roupa. Na Agência House Mazzutti, todo reposicionamento começa por auditoria e só chega ao desenho depois que a direção está definida. Se sua marca chegou a essa conversa, veja como conduzimos o processo em /agencia/branding/."
   },
+
+  'o-que-e-fashion-film-e-como-ele-vende-sem-parecer-propaganda': {
+    slug: 'o-que-e-fashion-film-e-como-ele-vende-sem-parecer-propaganda',
+    categoria: 'Produtora — Moda',
+    titulo: 'O que é fashion film e como ele vende sem parecer propaganda',
+    metaTitle: 'O que é fashion film e como ele vende sem parecer propaganda',
+    metaDescription: 'Fashion film é a peça audiovisual que constrói desejo sem pedir a venda. Entenda a definição, a estrutura narrativa e quando sua marca está pronta para produzir.',
+    keywords: [
+      'fashion film', 'o que é fashion film', 'fashion film para marcas de moda',
+      'produtora de fashion film São Paulo', 'vídeo de moda para marcas',
+      'campanha audiovisual de moda', 'direção criativa de moda',
+      'narrativa de marca em vídeo', 'produtora audiovisual de moda',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Fashion film é uma peça audiovisual de curta duração que usa gramática de cinema — narrativa, direção de fotografia, montagem com tempo dramático — para construir o território simbólico de uma marca de moda, em vez de descrever produto. Ele vende sem parecer propaganda porque não faz pedido: cria desejo por associação, não por argumento. Na Produtora da House Mazzutti, todo fashion film nasce de uma tese de marca antes de virar roteiro.',
+    intro: 'Existe um tipo de peça que o público assiste até o fim sem perceber que está diante de uma campanha. Não porque foi enganado — porque não foi interrompido. Fashion film é isso: um filme que não pede nada e, exatamente por não pedir, consegue algo que nenhum anúncio consegue. Ele instala uma percepção. E percepção instalada dura mais que qualquer clique. O problema é que o formato virou moda antes de virar método: muita marca produz um vídeo bonito de roupa, chama de fashion film e se pergunta por que nada aconteceu depois. A diferença entre uma coisa e outra não está no orçamento. Está na tese.',
+    sections: [
+      {
+        h2: 'O que é fashion film, de verdade',
+        paragraphs: [
+          'Fashion film é uma peça audiovisual curta — normalmente entre trinta segundos e cinco minutos — construída para estabelecer o universo simbólico de uma marca de moda. Ele não apresenta a coleção item a item. Ele apresenta o mundo de onde aquela coleção vem.',
+          'A definição técnica ajuda, mas a definição funcional é mais útil: fashion film é a peça que responde à pergunta "de que território isso vem", enquanto o vídeo de produto responde a "o que é isso e quanto custa". As duas perguntas são legítimas. Só não são a mesma.',
+          'O formato nasceu no encontro entre moda e cinema autoral e se consolidou como linguagem própria — com festivais dedicados, curadoria e um repertório de referência que qualquer direção séria precisa conhecer antes de escrever a primeira cena.',
+          'O marcador mais confiável para saber se você tem um fashion film nas mãos é o teste da sobrevivência fora da plataforma. Se a peça funciona projetada em um evento, aberta no site, exibida numa apresentação para investidor ou para um comprador internacional, é fashion film. Se ela só faz sentido dentro do feed, é outra coisa — e não há problema nenhum nisso, desde que a marca saiba o que comprou.',
+        ],
+      },
+      {
+        h2: 'A diferença para o comercial convencional',
+        paragraphs: [
+          'O comercial convencional opera por argumento. Ele apresenta um problema, oferece uma solução, entrega um chamado para ação e mede o resultado por resposta imediata. Sua estrutura é retórica: convence.',
+          'O fashion film opera por associação. Ele não constrói um raciocínio — constrói um estado. O espectador não sai pensando "faz sentido"; sai sentindo que quer pertencer àquilo. Sua estrutura é poética: seduz.',
+          'Isso muda tudo na produção. No comercial, o produto precisa aparecer com clareza, iluminado para leitura, no tempo certo. No fashion film, o produto habita a cena — às vezes de costas, às vezes em movimento, às vezes fora de foco. Ele é parte do mundo, não o assunto do mundo.',
+          'Muda também a métrica. Cobrar conversão direta de fashion film é usar a régua errada e concluir, equivocadamente, que o formato não funciona. O que o fashion film move é a disposição de pagar mais, a lembrança espontânea, a qualidade do público que chega. São efeitos de médio prazo — e são justamente os efeitos que sustentam margem.',
+          'Há um terceiro caminho que muita marca escolhe sem perceber: o híbrido. Um filme com pretensão autoral que, nos últimos oito segundos, se rende e vira anúncio. O resultado costuma ser o pior dos dois mundos — não tem a densidade do filme nem a clareza do comercial.',
+        ],
+      },
+      {
+        h2: 'A estrutura narrativa de um fashion film que funciona',
+        paragraphs: [
+          'Fashion film não tem enredo no sentido convencional, mas tem arquitetura. E ela é reconhecível em praticamente toda peça que sobrevive ao tempo.',
+          'Começa por uma premissa — uma frase única que o filme inteiro defende. Não é slogan nem conceito de campanha: é uma afirmação sobre o mundo que a marca acredita ser verdadeira. Sem isso, o filme vira sequência de planos bonitos sem centro de gravidade.',
+          'Depois vem o território: onde essa premissa acontece. Locação, luz, temperatura de cor, tipo de corpo, tipo de gesto. O território é a parte mais copiada e menos compreendida do formato — marcas replicam a estética de referências internacionais sem replicar a lógica que fez aquela estética significar alguma coisa naquele contexto.',
+          'Em seguida, a tensão. Todo filme que prende tem alguma força em oposição: repouso contra movimento, público contra privado, controle contra abandono. Sem tensão, a peça é bonita e esquecível — o espectador assiste sem respirar diferente em nenhum momento.',
+          'Por fim, a resolução simbólica. Não é um desfecho de história; é um plano, um som, um corte que fecha o estado emocional. É o momento em que o espectador entende, sem que ninguém explique, o que aquela marca defende.',
+          'A assinatura vem depois, discreta. Logotipo no final, sem locução, sem oferta. Quem se interessou vai procurar. Quem não se interessou não seria convertido por um chamado agressivo de qualquer forma.',
+        ],
+      },
+      {
+        h2: 'Referências que vale estudar antes de produzir',
+        paragraphs: [
+          'A referência mais instrutiva do formato é o repertório das grandes maisons europeias, que há décadas tratam o filme como extensão da alta-costura: peças assinadas por diretores de cinema, com orçamento e liberdade de linguagem que o varejo raramente concede. Estudar essas peças não serve para copiar produção — serve para entender o grau de convicção necessário.',
+          'O segundo bloco de referência são os festivais dedicados ao formato, que reúnem produção independente do mundo inteiro. Ali fica evidente que fashion film de impacto não depende de orçamento alto: depende de uma ideia que se sustenta em imagem.',
+          'O terceiro bloco, o mais negligenciado, é o cinema. Direção de fotografia, montagem e desenho de som de longa-metragem ensinam mais sobre ritmo do que qualquer compilação de campanhas. Marca que só se inspira em outras marcas produz derivada de derivada.',
+          'No Brasil, o repertório mais interessante costuma estar fora do circuito óbvio — em documentário, em videoarte, em produção autoral regional. Existe um vocabulário visual brasileiro pouco explorado por marcas de moda que insistem em parecer europeias em um país que tem luz, corpo e paisagem próprios.',
+          'A regra de uso das referências é simples: elas servem para definir padrão de rigor, não para definir plano a plano. Moodboard que vira decalque produz filme sem identidade — bem executado e completamente substituível.',
+        ],
+      },
+      {
+        h2: 'Quando o fashion film é indicado — e quando não é',
+        paragraphs: [
+          'É indicado quando a marca vai mudar de patamar: subir de faixa de preço, entrar em um canal de maior exigência simbólica, disputar um público que ainda não a considera. Nessas horas, o filme é o instrumento mais eficiente para reposicionar percepção rapidamente.',
+          'É indicado quando existe uma coleção que carrega virada de conceito. Não toda coleção pede filme — pede aquela que representa uma mudança de linguagem, um novo capítulo estético.',
+          'É indicado quando a marca precisa de um ativo institucional durável: apresentação a investidor, negociação com comprador internacional, candidatura a espaço editorial, abertura de flagship. Peça curta de rede social não cumpre essa função.',
+          'E é indicado quando a marca acumulou meses de comunicação fragmentada. O filme funciona como recalibragem: define de novo como a marca ilumina, enquadra e se move, e passa a servir de referência para tudo que vier depois.',
+          'Não é indicado quando a marca ainda não sabe o que afirma. Filme não descobre posicionamento — expressa posicionamento já decidido. Também não é indicado quando a necessidade real é vender estoque em trinta dias: para isso existe peça de conversão, mais barata e mais honesta com o objetivo.',
+        ],
+      },
+      {
+        h2: 'O que uma marca precisa ter antes de produzir',
+        paragraphs: [
+          'Primeiro, uma tese. Uma frase que a marca defende sobre o mundo e que não seja intercambiável com a de qualquer concorrente. Se a frase serve para outras cinco marcas do mesmo segmento, ela ainda não é tese.',
+          'Segundo, um produto à altura. Fashion film amplifica percepção — inclusive percepção negativa. Marca que constrói território simbólico acima do que entrega cria expectativa que o produto frustra, e frustração de expectativa é mais cara que ausência de expectativa.',
+          'Terceiro, um plano de derivação. Uma diária bem decupada não produz uma peça: produz um sistema. Antes da câmera, a direção precisa saber quais planos servirão a versões verticais, quais cenas geram cortes autônomos, quais momentos rendem still de campanha. Derivação planejada é o que torna o investimento defensável.',
+          'Quarto, prazo real. Um fashion film com direção autoral pede algo entre sessenta e cento e vinte dias entre a primeira conversa e a entrega — conceito, roteiro, casting, locação, captação, montagem, cor, som. O que se produz em duas semanas não é direção criativa; é cobertura apressada com filtro bonito.',
+          'Quinto, disposição para não explicar. Este é o ponto que mais derruba projeto no meio do caminho. Em algum momento alguém da marca vai pedir para colocar o preço, o nome da coleção ou uma locução explicando o conceito. Ceder aí transforma o filme em anúncio comum. A coragem de manter o silêncio é parte do investimento.',
+          'Na Produtora da House Mazzutti, essas cinco condições são verificadas antes do orçamento. Quando alguma delas não existe, a conversa muda de direção — às vezes o que a marca precisa não é filme, e dizer isso faz parte do trabalho. Você pode ver como conduzimos projetos de moda em /produtora/moda/.',
+        ],
+      },
+    ],
+    citacao: 'Fashion film não convence ninguém. Ele faz algo mais difícil e mais durável: faz a pessoa querer pertencer àquele mundo antes de saber o preço.',
+    faq: [
+      {
+        q: 'O que é fashion film em poucas palavras?',
+        a: 'É uma peça audiovisual curta que usa linguagem de cinema para construir o universo simbólico de uma marca de moda, em vez de descrever produto. Ele não apresenta a coleção item a item: apresenta o território de onde a coleção vem. O teste prático é a sobrevivência fora da plataforma — se o filme funciona projetado em um evento ou em uma apresentação institucional, é fashion film.',
+      },
+      {
+        q: 'Qual a diferença entre fashion film e comercial de moda?',
+        a: 'O comercial opera por argumento: apresenta produto, entrega chamado para ação e mede resposta imediata. O fashion film opera por associação: constrói um estado emocional e deixa o desejo trabalhar. Isso muda a produção, o papel do produto em cena e, principalmente, a métrica. Cobrar conversão direta de fashion film é usar a régua errada.',
+      },
+      {
+        q: 'Quanto tempo leva para produzir um fashion film?',
+        a: 'Entre sessenta e cento e vinte dias para uma peça com direção autoral, contando conceito, roteiro, casting, locação, captação, montagem, correção de cor e desenho de som. Prazos menores comprimem justamente a etapa estratégica, que é a que separa filme de vídeo bonito. Projetos com escopo reduzido podem operar em janelas mais curtas, desde que a tese já esteja definida.',
+      },
+      {
+        q: 'Minha marca é pequena. Faz sentido investir em fashion film?',
+        a: 'Faz, se existir tese clara e produto à altura. Tamanho de marca não é o critério — maturidade de posicionamento é. Marca pequena com ponto de vista definido extrai mais de um filme que marca grande sem posição. Se o posicionamento ainda está em construção, o caminho mais eficiente é consolidar linguagem em peças curtas por alguns meses e produzir a matriz depois, com repertório testado.',
+      },
+    ],
+    conclusao: 'Fashion film vende sem parecer propaganda porque abre mão do pedido para conquistar algo maior: o direito de ocupar o imaginário de quem assiste. Não é um formato para toda marca nem para todo momento — é um instrumento de patamar, que se justifica quando existe algo a afirmar que não cabe em explicação. Na Produtora da House Mazzutti, cada filme começa por leitura de posicionamento e só depois vira roteiro, decupagem e diária. Se sua marca chegou nesse ponto da conversa, conheça o processo em /produtora/moda/.',
+    cta: { label: 'Conheça a Produtora de Moda da House Mazzutti', href: '/produtora/moda/', lead_type: 'produtora_moda' },
+  },
+
+  'como-fazer-editorial-de-moda-guia-para-marcas': {
+    slug: 'como-fazer-editorial-de-moda-guia-para-marcas',
+    categoria: 'Produtora — Moda',
+    titulo: 'Como fazer um editorial de moda: guia para marcas que querem sair do lugar-comum',
+    metaTitle: 'Como fazer um editorial de moda: guia completo para marcas',
+    metaDescription: 'Guia completo de editorial de moda para marcas: diferença para catálogo, equipe necessária, pré-produção, condução de set e entrega final.',
+    keywords: [
+      'editorial de moda', 'como fazer editorial de moda', 'produção de editorial de moda',
+      'ensaio editorial para marcas', 'produtora de moda São Paulo', 'styling de moda',
+      'direção de arte de moda', 'campanha de moda', 'pré-produção de ensaio de moda',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Editorial de moda é um ensaio fotográfico narrativo, construído a partir de um conceito, que existe para posicionar a marca — diferente do catálogo, que existe para descrever produto. Fazer um editorial exige quatro etapas: definição de conceito, pré-produção (moodboard, casting, locação, styling), condução de set e pós-produção com entrega organizada. A Produtora da House Mazzutti conduz editoriais de moda do conceito à entrega final.',
+    intro: 'Quase toda marca de moda já produziu o mesmo ensaio. Fundo neutro, modelo de frente, modelo de lado, modelo olhando para o horizonte com expressão indefinida. As fotos ficam boas. E são absolutamente intercambiáveis com as de qualquer concorrente. O problema não foi o fotógrafo, nem a modelo, nem a roupa. O problema é que ninguém decidiu o que aquele ensaio precisava dizer antes de marcar a data. Editorial de moda não é uma sessão de fotos com produção maior. É um formato narrativo com regras próprias — e quando a marca entende essas regras, o mesmo orçamento produz um resultado que não podia ter sido feito por mais ninguém.',
+    sections: [
+      {
+        h2: 'O que é editorial de moda e por que ele existe',
+        paragraphs: [
+          'Editorial de moda é um conjunto de imagens organizado em torno de um conceito, com progressão narrativa entre as fotos. O nome vem das revistas: era o espaço em que a publicação exercia ponto de vista sobre a temporada, com liberdade autoral, em oposição às páginas de anúncio.',
+          'Essa origem explica a natureza do formato. Editorial tem opinião. Ele não pergunta o que a roupa é — pergunta o que a roupa significa quando colocada naquele corpo, naquele lugar, sob aquela luz.',
+          'Para uma marca, o editorial cumpre uma função específica: construir percepção de valor. É o material que faz uma peça de preço médio parecer desejável, que dá contexto cultural ao produto, que posiciona a marca em um território estético reconhecível.',
+          'Existe uma consequência prática nisso. Editorial não precisa mostrar toda a coleção. Precisa mostrar a coleção certa, do jeito certo. Uma marca que tenta enfiar quarenta peças em um editorial não produziu editorial — produziu catálogo com iluminação melhor.',
+        ],
+      },
+      {
+        h2: 'Editorial ou catálogo: as duas peças que toda marca precisa',
+        paragraphs: [
+          'O catálogo existe para vender com clareza. Nele, o produto precisa ser lido sem ambiguidade: cor fiel, caimento visível, detalhe de acabamento, textura. Fundo limpo, luz uniforme, enquadramento previsível. Tudo isso é acerto, não limitação — o catálogo é otimizado para decisão de compra.',
+          'O editorial existe para gerar desejo antes da decisão. Nele, a roupa pode estar em movimento, parcialmente fora de quadro, em sombra. O que se comunica não é a especificação do produto: é o mundo que ele habita.',
+          'O erro mais comum e mais caro é pedir que uma única produção cumpra as duas funções. O resultado costuma ser um material que não tem clareza suficiente para converter no e-commerce nem densidade suficiente para posicionar em campanha.',
+          'A solução operacional é planejar as duas camadas na mesma janela, com diárias e equipes distintas ou blocos separados dentro da mesma diária. Custa menos que duas produções isoladas e evita o híbrido que não serve a ninguém.',
+          'A régua de decisão é simples: se a imagem precisa responder "como isso fica em mim", é catálogo. Se precisa responder "quem eu sou usando isso", é editorial.',
+        ],
+      },
+      {
+        h2: 'A equipe: quem faz o quê em um editorial de moda',
+        paragraphs: [
+          'O diretor criativo ou diretor de arte é quem define o conceito e responde pela coerência do conjunto. É a função mais frequentemente cortada por marcas que querem economizar — e a que mais determina se o editorial vai sair do lugar-comum. Sem direção, cada profissional em set otimiza a própria parte e ninguém responde pelo todo.',
+          'O fotógrafo traduz o conceito em linguagem de imagem: escolha de lente, tratamento de luz, decisão de enquadramento. Contratar fotógrafo pelo portfólio é correto; contratar esperando que ele também dirija o conceito é transferir uma responsabilidade que não é dele.',
+          'O stylist monta os looks, define combinações, ajusta caimento e resolve o que a foto não perdoa: uma barra torta, uma gola que não assenta, uma proporção que não funciona em imagem. Bom styling é o que separa roupa fotografada de roupa dirigida.',
+          'Maquiagem e cabelo constroem o rosto dentro do conceito. Não é embelezamento genérico: é decisão estética. Uma pele com brilho controlado e um cabelo com aparência de não trabalhado comunicam coisas diferentes de uma pele mate e um penteado estruturado — e essa diferença é parte da tese do editorial.',
+          'O casting define quem habita a imagem. É a decisão de maior impacto e a menos técnica de todas: um perfil errado inviabiliza o conceito mesmo com produção impecável em todo o resto.',
+          'Somam-se, conforme o porte: produtor executivo, assistentes de fotografia e de styling, e o profissional de tratamento de imagem que fecha o material no fim.',
+        ],
+      },
+      {
+        h2: 'Pré-produção: onde o editorial é realmente feito',
+        paragraphs: [
+          'Um editorial bem-sucedido está oitenta por cento decidido antes de alguém ligar uma câmera. A pré-produção começa pelo conceito: uma frase que define o que o ensaio defende. Não é tema nem paleta — é posição.',
+          'Do conceito nasce o moodboard, que não é uma coleção de imagens bonitas do Pinterest. É um documento de decisão: referência de luz, de paleta, de gesto, de enquadramento, de tratamento de cor. Cada imagem escolhida precisa responder por que está ali. Moodboard sem critério gera set sem direção.',
+          'Em paralelo, roda o casting. Definir o perfil antes de olhar candidatos é o que impede a escolha por simpatia ou por número de seguidores. O perfil vem do conceito, não do gosto pessoal de quem aprova.',
+          'A locação é decisão conceitual, não logística. Estúdio dá controle e neutralidade; locação real dá contexto e imprevisto. A escolha depende do que o conceito precisa, e não do que estava disponível na data.',
+          'O último documento da pré é a decupagem: a lista de imagens a produzir, com look, cenário, tipo de plano e ordem de execução. Ela existe para que ninguém descubra no fim do dia que faltou a foto que sustentava a campanha inteira.',
+          'Fecha a etapa a lista de produção — cronograma da diária, autorizações de locação, contratos de imagem, alimentação, transporte de peças. Editorial que atrasa raramente atrasa por criação. Atrasa por logística que ninguém escreveu.',
+        ],
+      },
+      {
+        h2: 'No set: como conduzir a diária sem perder o conceito',
+        paragraphs: [
+          'A primeira hora do set define o dia. É quando se testa luz, se confere o primeiro look em câmera e se calibra o que o moodboard prometia contra o que a realidade entrega. Marca que começa a diária já correndo atrás do cronograma vai fechar o dia com imagens salvas por edição.',
+          'A ordem de execução deve ir do mais complexo para o mais simples. Energia da equipe e da modelo cai ao longo do dia — a imagem mais difícil não pode ficar para as últimas horas.',
+          'Alguém precisa acompanhar o monitor com a decupagem em mãos e marcar o que já está garantido. Sem isso, a equipe fotografa muito da mesma coisa e volta sem duas ou três imagens essenciais.',
+          'Direção de modelo é trabalho ativo. Pedir naturalidade não é direção. Direção é dar uma ação concreta: para onde olhar, o que fazer com as mãos, que ritmo seguir. Modelo bem dirigida entrega em vinte minutos o que modelo sem direção não entrega em duas horas.',
+          'E é preciso deixar espaço para o acidente. As melhores imagens de um editorial costumam acontecer entre as fotos planejadas — no ajuste do cabelo, na risada entre um look e outro. Isso só é capturado se a produção reservou fôlego para não estar sempre atrasada.',
+        ],
+      },
+      {
+        h2: 'Pós-produção e entrega: onde muita marca perde o material',
+        paragraphs: [
+          'A seleção vem primeiro e é a etapa mais subestimada. Um editorial de doze imagens costuma nascer de oitocentos arquivos. Selecionar é editar: escolher as fotos que sustentam a narrativa, não as em que a modelo está mais bonita.',
+          'O tratamento define o acabamento do território. Correção de cor, pele com textura preservada, contraste coerente entre todas as imagens do conjunto. O erro mais frequente é tratar cada foto isoladamente — o editorial precisa ler como um bloco, não como doze imagens de doze ensaios.',
+          'A entrega deve prever os formatos de uso desde o começo: versões em proporções verticais e horizontais, arquivos em alta para impressão, versões otimizadas para web, cortes específicos para peças de rede social. Reenquadrar depois, sem planejamento, corta cabeça e destrói composição.',
+          'Vale entregar também o material de apoio: bastidor, still de processo, vídeo curto de set. É a camada que dá vida ao editorial nos meses seguintes, quando as imagens principais já circularam.',
+          'Por fim, organização de arquivo. Nomeação clara, pastas por uso, backup redundante e registro dos direitos de imagem com prazo de vigência. Editorial que a marca não encontra dois anos depois é investimento que expirou antes da hora. Na Produtora da House Mazzutti, esse fechamento faz parte do escopo — veja como trabalhamos em /produtora/moda/.',
+        ],
+      },
+    ],
+    citacao: 'Catálogo mostra a roupa. Editorial mostra quem a pessoa se torna vestindo aquela roupa. A diferença de preço entre as duas coisas é decidida na segunda.',
+    faq: [
+      {
+        q: 'Qual a diferença entre editorial de moda e catálogo?',
+        a: 'O catálogo existe para vender com clareza: cor fiel, caimento visível, fundo limpo, luz uniforme. O editorial existe para gerar desejo: tem conceito, narrativa entre as imagens e liberdade estética. Tentar resolver as duas funções em uma única produção costuma gerar material sem clareza para converter e sem densidade para posicionar. O ideal é planejar as duas camadas na mesma janela, em blocos separados.',
+      },
+      {
+        q: 'Quantas pessoas são necessárias para produzir um editorial de moda?',
+        a: 'Uma equipe mínima viável tem diretor criativo, fotógrafo, stylist, profissional de beleza e a modelo. Conforme o porte, somam-se produtor executivo, assistentes de fotografia e de styling e tratamento de imagem. A função mais cortada por economia é a direção criativa, e é justamente a que determina se o editorial terá ponto de vista ou será mais um ensaio intercambiável.',
+      },
+      {
+        q: 'Quanto tempo de pré-produção um editorial de moda exige?',
+        a: 'De trinta a quarenta e cinco dias para um editorial de marca com escopo completo. Esse prazo cobre conceito, moodboard, casting, definição de locação, aprovação de looks, decupagem e logística de diária. Projetos menores rodam em janelas mais curtas, mas nunca abaixo de duas semanas sem sacrificar a etapa conceitual, que é a que diferencia o resultado.',
+      },
+      {
+        q: 'Quantas imagens um editorial de moda deve entregar?',
+        a: 'Entre oito e vinte imagens finais para a maior parte dos projetos de marca, mais os cortes derivados para os diferentes formatos de uso. O número importa menos que a coerência: um conjunto de dez imagens que lê como um bloco vale mais que trinta imagens sem relação entre si. Vale prever também material de bastidor, que sustenta a circulação do editorial nos meses seguintes.',
+      },
+    ],
+    conclusao: 'Editorial de moda sai do lugar-comum quando alguém decide, antes da data da diária, o que aquelas imagens precisam defender. Todo o resto — equipe, locação, luz, tratamento — é execução de uma decisão que foi tomada no papel. Marcas que invertem essa ordem produzem ensaios bonitos e substituíveis; marcas que respeitam a ordem produzem material que nenhum concorrente poderia ter feito. Na Produtora da House Mazzutti, todo editorial começa por leitura de posicionamento e termina com arquivo organizado e direitos registrados. Conheça o processo completo em /produtora/moda/.',
+    cta: { label: 'Produza seu editorial com a House Mazzutti', href: '/produtora/moda/', lead_type: 'produtora_moda' },
+  },
+
+  'casting-para-moda-o-que-marcas-precisam-saber': {
+    slug: 'casting-para-moda-o-que-marcas-precisam-saber',
+    categoria: 'Produtora — Moda',
+    titulo: 'Casting para moda: o que marcas precisam saber antes de contratar modelos',
+    metaTitle: 'Casting para moda: guia para marcas antes de contratar modelos',
+    metaDescription: 'Casting para moda explicado: tipos de modelo, como avaliar um teste, erros comuns de marcas e o processo que a House Mazzutti usa em campanhas.',
+    keywords: [
+      'casting para moda', 'como fazer casting de modelos', 'contratar modelo para campanha',
+      'tipos de modelo de moda', 'casting de campanha de moda', 'produtora de moda São Paulo',
+      'direção de casting', 'modelo editorial e comercial', 'agência de modelos São Paulo',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Casting para moda é o processo de definir o perfil, testar candidatos e escolher quem vai representar a marca em uma campanha ou editorial. Ele começa pelo perfil derivado do conceito — nunca pela lista de nomes disponíveis. Os tipos principais são modelo editorial, modelo comercial e modelo de fitting, com funções distintas. A Produtora da House Mazzutti conduz casting dirigido, com teste em câmera e critério declarado antes da escolha.',
+    intro: 'A decisão mais cara de uma campanha de moda raramente é a locação ou o equipamento. É a escolha de quem vai aparecer. Um casting errado não se conserta com iluminação, styling ou tratamento — ele contamina cada imagem produzida e obriga a marca a conviver por uma temporada inteira com um rosto que não representa o que ela é. E, ainda assim, o casting continua sendo a etapa que mais marcas resolvem por conveniência: quem estava disponível, quem já trabalhou com a gente antes, quem tem mais seguidores. Casting é direção. Quando tratado como logística, cobra o preço depois.',
+    sections: [
+      {
+        h2: 'O que é casting e por que ele não é uma etapa administrativa',
+        paragraphs: [
+          'Casting é o processo de definir o perfil de quem vai representar a marca, testar candidatos contra esse perfil e escolher com critério declarado. São três movimentos, e o primeiro é o único que não pode ser pulado.',
+          'A confusão começa quando a marca trata casting como uma busca por pessoas bonitas. Beleza é abundante e, isoladamente, não decide nada. O que decide é adequação: se aquele rosto, aquele corpo e aquela presença sustentam o conceito que a campanha vai defender.',
+          'Existe um teste rápido para saber se o casting foi bem-feito. Olhe a campanha finalizada e pergunte: essa pessoa poderia estar em qualquer campanha do segmento? Se a resposta é sim, o casting foi administrativo. Se a resposta é não — se aquele rosto pertence àquele mundo especificamente — houve direção.',
+          'Isso importa porque o corpo em cena é o principal veículo de significado de uma imagem de moda. Antes de o espectador ler a roupa, ele lê a pessoa. Postura, olhar, idade aparente, gesto: tudo isso comunica território de marca em uma fração de segundo.',
+        ],
+      },
+      {
+        h2: 'Tipos de modelo: editorial, comercial e fitting',
+        paragraphs: [
+          'A modelo editorial trabalha com presença e capacidade de transformação. Costuma ter traços marcantes, não convencionais, que fotografam com força em linguagem autoral. É o perfil que sustenta conceito e território estético — e o que pede direção mais sofisticada em set, porque a força dela aparece em nuance, não em sorriso.',
+          'A modelo comercial trabalha com identificação e clareza. Traços harmônicos, expressividade aberta, capacidade de comunicar acessibilidade e confiança. É o perfil de campanha de varejo, de peça de conversão, de material que precisa ser lido rapidamente por um público amplo.',
+          'A modelo de fitting trabalha com medida e caimento. É contratada para provas de modelagem e desenvolvimento de produto, com corpo dentro do padrão de grade da marca. Não aparece em campanha, mas define a qualidade do que a campanha vai fotografar depois.',
+          'Existem ainda perfis específicos que vêm ganhando espaço no mercado brasileiro: modelos de casting real, escolhidos por história e não por profissão; modelos sênior; modelos com corpos fora do padrão tradicional de grade. Não são tendência decorativa — são decisões de posicionamento, e só funcionam quando a marca sustenta a escolha no produto e no discurso.',
+          'A pergunta que organiza tudo isso: essa imagem precisa que o público se identifique ou que o público deseje? Identificação pede comercial. Desejo por distância pede editorial. Muitas campanhas precisam das duas coisas em momentos diferentes — e por isso trabalham com mais de um perfil.',
+        ],
+      },
+      {
+        h2: 'Como avaliar um casting: o que olhar de verdade',
+        paragraphs: [
+          'Comece pelo teste em câmera, não pelo book. Book é material dirigido, tratado e selecionado — ele mostra o melhor cenário possível. O teste em câmera, feito na hora, com luz simples, mostra como aquela pessoa se comporta sob direção real.',
+          'Observe a resposta à direção. Peça uma ação concreta e veja o que acontece: a modelo entende e ajusta, ou repete o que já sabe fazer? Capacidade de ajuste vale mais que repertório fixo, porque em set o conceito sempre exige algo que não estava no book.',
+          'Observe a variação. Peça três estados diferentes em um minuto. Modelo que entrega três variações reais tem alcance; modelo que entrega a mesma expressão em três intensidades vai limitar a campanha a um único registro.',
+          'Observe o corpo em movimento, não só o rosto parado. Como a pessoa anda, como para, o que faz com as mãos quando ninguém pediu nada. Isso define metade das imagens úteis de uma diária.',
+          'E observe a conduta profissional: pontualidade, preparo, disposição. Uma diária de moda é longa e exigente. Perfil tecnicamente perfeito com conduta instável custa horas de produção que ninguém orçou.',
+          'Registre o critério por escrito antes de olhar candidatos e pontue cada teste contra ele. É o que impede a decisão de virar debate de gosto na sala de aprovação.',
+        ],
+      },
+      {
+        h2: 'Os erros que marcas cometem — e o que eles custam',
+        paragraphs: [
+          'O erro mais comum é escolher pelo número de seguidores. Audiência de criador não é adequação de imagem. São coisas distintas, com objetivos distintos, e misturá-las produz campanha que não posiciona a marca nem aproveita bem o alcance da pessoa. Se o objetivo é alcance, isso se chama parceria de mídia e tem outro tipo de contrato, outro briefing e outra métrica.',
+          'O segundo erro é não definir o perfil antes. Sem critério escrito, a escolha acontece por simpatia de reunião, e ninguém consegue explicar depois por que aquela pessoa foi escolhida. Perfil indefinido também desperdiça o tempo dos candidatos e a credibilidade da marca no mercado.',
+          'O terceiro erro é escolher pelo book e ignorar o teste. Book é o melhor dia daquela modelo, editado por um profissional. Ele diz o que ela já fez; não diz como ela responde à direção que a sua campanha vai exigir.',
+          'O quarto erro é castear sem envolver a direção criativa. Quando o casting é decidido apenas por produção ou por marketing, a escolha otimiza disponibilidade e custo, e o conceito descobre tarde demais que o rosto não sustenta a tese.',
+          'O quinto erro é contratar sem clareza contratual. Prazo de uso da imagem, territórios, mídias autorizadas, exclusividade de categoria e renovação precisam estar definidos antes da diária. Campanha que performa bem e não pode ser renovada por falta de contrato é prejuízo silencioso.',
+          'O sexto erro é o mais discreto: escolher sempre o mesmo tipo. Marca que roda cinco campanhas com o mesmo perfil vira previsível; marca que muda de perfil a cada campanha vira irreconhecível. O equilíbrio é ter uma faixa de perfil coerente com variação dentro dela.',
+        ],
+      },
+      {
+        h2: 'Como a House Mazzutti conduz um casting',
+        paragraphs: [
+          'O processo começa pelo documento de perfil, escrito depois do conceito e antes de qualquer nome ser cogitado. Ele descreve o que a pessoa precisa comunicar — não em adjetivos vagos, mas em atributos observáveis: tipo de presença, faixa etária aparente, registro de expressão, tipo de gesto, relação com a câmera.',
+          'Em seguida vem a captação de candidatos, combinando agências parceiras de São Paulo, banco próprio e, quando o conceito pede, casting de rua. A origem varia; o critério não.',
+          'O teste é feito em câmera, com luz simples e direção real. Cada candidato recebe as mesmas três direções, para que a comparação seja legítima. O material é registrado e arquivado, o que permite reaproveitar candidatos fortes em projetos futuros.',
+          'A decisão é tomada em conjunto por direção criativa e produção, com o documento de perfil em mãos. Quando há divergência, ela se resolve contra o critério escrito — não contra preferência pessoal.',
+          'Fechada a escolha, entra a etapa contratual: uso de imagem com prazo e território definidos, mídias autorizadas, exclusividade quando aplicável, e todos os direitos registrados antes da diária.',
+          'Por fim, a preparação. A modelo escolhida recebe o conceito, as referências e a decupagem antes do dia da captação. Modelo que chega ao set conhecendo o mundo que vai habitar entrega em menos tempo e com mais precisão. Esse é o processo que aplicamos em cada campanha de moda — você pode conhecê-lo em /produtora/moda/.',
+        ],
+      },
+    ],
+    citacao: 'Antes de o público ler a roupa, ele lê a pessoa. Casting não é a etapa que antecede a campanha: é a primeira frase que a campanha diz.',
+    faq: [
+      {
+        q: 'Qual a diferença entre modelo editorial e modelo comercial?',
+        a: 'A modelo editorial trabalha com presença e transformação, costuma ter traços marcantes e sustenta conceito e território estético. A modelo comercial trabalha com identificação e clareza, com expressividade aberta, e serve a campanhas de varejo e peças de conversão. A escolha depende do objetivo da imagem: identificação pede comercial, desejo por distância pede editorial.',
+      },
+      {
+        q: 'Devo escolher uma modelo pelo número de seguidores?',
+        a: 'Não, se o objetivo é campanha de imagem. Audiência de criador e adequação visual são critérios diferentes, e misturá-los produz material que não posiciona a marca nem aproveita bem o alcance da pessoa. Quando o objetivo é alcance, o correto é tratar como parceria de mídia, com briefing, contrato e métrica próprios — separada da decisão de casting.',
+      },
+      {
+        q: 'O que avaliar em um teste de casting para moda?',
+        a: 'Resposta à direção, variação de registro, comportamento do corpo em movimento e conduta profissional. O teste deve ser feito em câmera, com luz simples, dando as mesmas direções a todos os candidatos para que a comparação seja legítima. Avaliar apenas pelo book é insuficiente: o book mostra o melhor cenário já editado, não como a pessoa responde ao que a sua campanha vai exigir.',
+      },
+      {
+        q: 'O que precisa estar no contrato de uma modelo de campanha?',
+        a: 'Prazo de uso da imagem, territórios de veiculação, mídias autorizadas, exclusividade de categoria quando aplicável, condições de renovação e valor de cachê com diárias e horas extras definidas. Tudo isso precisa estar acordado antes da captação. Campanha que performa bem e não pode ser renovada por ausência de cláusula é um prejuízo silencioso e evitável.',
+      },
+    ],
+    conclusao: 'Casting não é a etapa logística que antecede a diária. É a primeira decisão de direção da campanha — e a única que não se corrige depois. Marcas que definem perfil antes de olhar nomes, testam em câmera com direção real e fecham contrato com clareza economizam duas coisas caras: retrabalho de produção e ruído de percepção. Na Produtora da House Mazzutti, o casting é conduzido com critério escrito, teste registrado e preparação da modelo antes do set. Conheça o processo em /produtora/moda/.',
+    cta: { label: 'Fale com a Produtora de Moda da House Mazzutti', href: '/produtora/moda/', lead_type: 'produtora_moda' },
+  },
 };
