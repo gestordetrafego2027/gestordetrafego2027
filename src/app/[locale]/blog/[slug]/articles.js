@@ -5836,4 +5836,282 @@ export const articles = {
     conclusao: 'Casting não é a etapa logística que antecede a diária. É a primeira decisão de direção da campanha — e a única que não se corrige depois. Marcas que definem perfil antes de olhar nomes, testam em câmera com direção real e fecham contrato com clareza economizam duas coisas caras: retrabalho de produção e ruído de percepção. Na Produtora da House Mazzutti, o casting é conduzido com critério escrito, teste registrado e preparação da modelo antes do set. Conheça o processo em /produtora/moda/.',
     cta: { label: 'Fale com a Produtora de Moda da House Mazzutti', href: '/produtora/moda/', lead_type: 'produtora_moda' },
   },
+  'video-institucional-vs-filme-publicitario-qual-a-diferenca': {
+    slug: 'video-institucional-vs-filme-publicitario-qual-a-diferenca',
+    categoria: 'Produtora — Institucional',
+    titulo: 'Vídeo institucional vs. filme publicitário: qual a diferença e quando usar cada um',
+    metaTitle: 'Vídeo institucional vs. filme publicitário: qual a diferença',
+    metaDescription: 'Vídeo institucional constrói percepção; filme publicitário busca conversão. Entenda objetivo, duração, distribuição e quando usar cada formato.',
+    keywords: [
+      'vídeo institucional', 'diferença entre vídeo institucional e filme publicitário',
+      'filme publicitário', 'vídeo institucional para empresas', 'produtora de vídeo institucional São Paulo',
+      'quando fazer vídeo institucional', 'vídeo corporativo', 'produção audiovisual para marcas',
+      'vídeo institucional para LinkedIn',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Vídeo institucional é a peça que explica quem a empresa é, no que ela acredita e como trabalha — serve à construção de percepção, dura de 1 a 3 minutos e vive no site, no LinkedIn e em apresentações comerciais. Filme publicitário é a peça que promove uma oferta, produto ou campanha — serve à conversão, dura de 15 a 60 segundos e vive em mídia paga, TV e redes sociais. A diferença central não é estética: é objetivo. A Produtora da House Mazzutti define o formato a partir da decisão de negócio, não do briefing genérico.',
+    intro: 'Toda semana uma empresa nos procura pedindo "um vídeo institucional" e descrevendo, na frase seguinte, um filme publicitário. O contrário também acontece: pedem uma campanha de 30 segundos para resolver um problema que é de reputação, não de venda. Os dois formatos usam câmera, luz e roteiro, e por isso parecem intercambiáveis. Não são. Escolher errado não produz um vídeo ruim — produz um vídeo bem-feito que não faz o trabalho que precisava ser feito. E esse é o desperdício mais caro do audiovisual corporativo, porque ele passa despercebido.',
+    sections: [
+      {
+        h2: 'O que é um vídeo institucional',
+        paragraphs: [
+          'Vídeo institucional é a peça que apresenta a empresa: quem ela é, o que faz, no que acredita, como opera e por que existe. Não vende um produto específico. Vende compreensão.',
+          'Ele costuma reunir três camadas: a tese da companhia — o problema que ela decidiu resolver —, a evidência concreta dessa tese em operação, e as pessoas que sustentam o processo. Depoimentos de liderança, imagens de bastidor, planos de fábrica, ateliê ou escritório, e uma narração ou fio condutor que organiza tudo isso em argumento.',
+          'A promessa do institucional é durabilidade. Ele é escrito para permanecer relevante por dois ou três anos, não para acompanhar um ciclo de campanha. Por isso evita referências datadas, números que envelhecem rápido e linguagem de oferta.',
+          'E o critério de sucesso dele é diferente do de uma campanha. Um bom institucional é aquele que, depois de assistido, faz alguém dizer: agora eu entendi essa empresa. Não há clique que meça isso diretamente — o que não significa que não haja retorno.',
+        ],
+      },
+      {
+        h2: 'O que é um filme publicitário',
+        paragraphs: [
+          'Filme publicitário é a peça construída para provocar uma ação. Ele promove um produto, um lançamento, uma temporada ou uma oferta, e é desenhado desde o roteiro para caber em um espaço de mídia comprado.',
+          'A estrutura é outra. Onde o institucional tem tempo para desenvolver argumento, o publicitário precisa estabelecer contexto, tensão e resolução em poucos segundos. Ele trabalha com um único conceito, uma única promessa e uma chamada explícita.',
+          'A produção também muda de natureza. Filme publicitário costuma exigir direção de arte mais controlada, casting dirigido, trilha licenciada e, com frequência, versões em múltiplos formatos — 16:9 para TV e YouTube, 9:16 para stories e Reels, 1:1 para feed, além de cortes de 6, 15 e 30 segundos.',
+          'A validade dele é curta por desenho. Um filme publicitário que ainda está no ar dois anos depois provavelmente virou institucional por acidente — e raramente cumpre bem esse novo papel.',
+        ],
+      },
+      {
+        h2: 'Objetivos diferentes: percepção versus conversão',
+        paragraphs: [
+          'Aqui está a distinção que resolve quase todas as dúvidas. O institucional trabalha percepção: ele reduz a distância entre o que a empresa é e o que o mercado entende que ela é. O publicitário trabalha conversão: ele encurta a distância entre o interesse e a decisão de compra.',
+          'São funções complementares, não concorrentes. Uma empresa com percepção mal construída paga mais caro por cada conversão, porque cada campanha precisa explicar do zero por que ela merece atenção. Uma empresa com percepção sólida e sem peças de conversão acumula admiração sem transformar em receita.',
+          'A consequência prática é que os dois têm indicadores distintos. Institucional se mede por qualidade de lead, tempo de ciclo comercial, resposta em processos seletivos, aceitação em rodadas de investimento e reconhecimento em apresentação de proposta. Publicitário se mede por custo por aquisição, taxa de clique, retenção nos primeiros segundos e volume de venda atribuída.',
+          'Cobrar do institucional a métrica do publicitário é o erro mais comum que vemos em reunião de resultado. É como cobrar de um catálogo o desempenho de uma vitrine.',
+        ],
+      },
+      {
+        h2: 'Duração e distribuição: onde cada peça vive',
+        paragraphs: [
+          'Vídeo institucional trabalha bem entre 1 e 3 minutos. Abaixo de um minuto, não há espaço para desenvolver a tese; acima de três, a atenção se dispersa mesmo em público qualificado. Quando a empresa é complexa, o caminho não é esticar — é produzir uma peça-mãe de 2 minutos e derivar cortes temáticos de 40 segundos.',
+          'A distribuição do institucional é qualificada, não massiva. Ele vive na home do site, na página institucional, no LinkedIn da companhia e da liderança, em apresentações comerciais, em processos de RH, em rodadas com investidores e em eventos do setor. Público pequeno, contexto alto.',
+          'Filme publicitário trabalha entre 15 e 60 segundos, com cortes específicos por canal. A distribuição é comprada: TV, streaming, YouTube, Meta, TikTok, mídia programática e out of home digital. Público amplo, contexto baixo — o que obriga a peça a se explicar sozinha nos primeiros três segundos.',
+          'Essa diferença de contexto explica escolhas técnicas que parecem arbitrárias. Institucional pode se dar ao luxo de abrir com silêncio e um plano longo. Publicitário quase nunca pode, porque disputa atenção com um dedo em movimento de rolagem.',
+        ],
+      },
+      {
+        h2: 'Quando escolher um ou outro',
+        paragraphs: [
+          'Escolha institucional quando o problema for de entendimento. Se o time comercial precisa explicar demais antes de negociar, se a empresa mudou de posicionamento, se cresceu e o mercado ainda a vê pelo tamanho antigo, se disputa talento com marcas maiores ou se vai entrar em uma conversa de investimento — o que falta é percepção.',
+          'Escolha filme publicitário quando o problema for de ação. Lançamento de produto, entrada em nova praça, temporada de venda, disputa direta de participação, campanha sazonal. Existe interesse latente e o que falta é o empurrão.',
+          'Quando o orçamento comporta apenas uma peça, a pergunta é: as pessoas já sabem quem somos? Se a resposta é não, comece pelo institucional. Campanha rodada sobre percepção inexistente costuma comprar atenção sem construir memória.',
+          'E existe o cenário mais eficiente, que é planejar as duas em uma mesma janela de produção. Compartilhar diária, locação, equipe e casting entre a peça institucional e o filme publicitário reduz custo de forma significativa — desde que os roteiros sejam escritos juntos, e não adaptados um do outro depois. É assim que estruturamos os projetos em /produtora/institucional/.',
+        ],
+      },
+      {
+        h2: 'Por que tantas empresas confundem os dois',
+        paragraphs: [
+          'A primeira razão é linguística. "Vídeo institucional" virou termo guarda-chuva no mercado brasileiro para qualquer vídeo que uma empresa produza. Quando o nome perde precisão, o briefing perde também.',
+          'A segunda razão é que a semelhança de produção esconde a diferença de estratégia. Os dois formatos usam o mesmo tipo de equipe e de equipamento. É fácil concluir que são a mesma coisa com durações diferentes. Não são: divergem na primeira pergunta do roteiro.',
+          'A terceira razão é a pressão por resultado imediato. Institucional dá retorno em ciclo longo, e ciclo longo é difícil de defender em reunião trimestral. Muita empresa pede institucional e, no meio do processo, tenta transformá-lo em peça de venda para justificar o investimento. O resultado é um híbrido que não constrói percepção nem converte.',
+          'A quarta razão é ausência de leitura estratégica antes da produção. Quando o projeto começa pela pergunta "que vídeo vamos fazer?" em vez de "que decisão de negócio esse vídeo precisa destravar?", o formato vira preferência estética. E preferência estética é o critério mais caro que existe em audiovisual corporativo.',
+        ],
+      },
+    ],
+    citacao: 'Vídeo institucional não compete com filme publicitário. Um constrói o terreno; o outro colhe. Confundir os dois é plantar e colher no mesmo dia.',
+    faq: [
+      {
+        q: 'Qual a diferença entre vídeo institucional e filme publicitário?',
+        a: 'Vídeo institucional apresenta a empresa — quem ela é, no que acredita e como opera — e serve à construção de percepção, com duração de 1 a 3 minutos e distribuição em site, LinkedIn e apresentações comerciais. Filme publicitário promove um produto, oferta ou campanha e serve à conversão, com duração de 15 a 60 segundos e distribuição em mídia paga. A diferença central é de objetivo, não de estética.',
+      },
+      {
+        q: 'Quanto tempo deve durar um vídeo institucional?',
+        a: 'Entre 1 e 3 minutos na versão principal. Abaixo de um minuto não há espaço para desenvolver a tese da empresa; acima de três, a atenção se dispersa mesmo em público qualificado. Quando o negócio é complexo, o caminho recomendado é produzir uma peça-mãe de cerca de 2 minutos e derivar cortes temáticos de 40 segundos para canais específicos.',
+      },
+      {
+        q: 'Minha empresa precisa dos dois formatos?',
+        a: 'Idealmente sim, mas em momentos diferentes. Se o mercado ainda não entende bem o que a empresa faz, o institucional vem primeiro — campanha rodada sobre percepção inexistente compra atenção sem construir memória. Se a percepção já está estabelecida e o objetivo é vender um produto ou entrar em nova praça, o filme publicitário resolve melhor. Produzir os dois na mesma janela reduz custo de forma relevante.',
+      },
+      {
+        q: 'Como medir o retorno de um vídeo institucional?',
+        a: 'Por indicadores de percepção e de ciclo comercial, não por custo por clique. Os mais úteis são qualidade dos leads que chegam, redução do tempo de ciclo de venda, taxa de aceitação em apresentação de proposta, resposta em processos seletivos e recepção em conversas com investidores. Cobrar do institucional a métrica de conversão de um filme publicitário leva a conclusões erradas sobre o investimento.',
+      },
+    ],
+    conclusao: 'A escolha entre vídeo institucional e filme publicitário não é uma questão de formato, orçamento ou preferência estética. É uma questão de diagnóstico: o que está faltando é entendimento ou é ação? Empresas que respondem a essa pergunta antes de abrir o briefing produzem menos peças e obtêm mais resultado, porque cada vídeo carrega uma função clara. Na Produtora da House Mazzutti, todo projeto começa por essa leitura — o formato é consequência dela. Conheça o processo em /produtora/institucional/.',
+    cta: { label: 'Fale com a Produtora Institucional da House Mazzutti', href: '/produtora/institucional/', lead_type: 'produtora_institucional' },
+  },
+  'quanto-custa-produzir-video-para-empresa': {
+    slug: 'quanto-custa-produzir-video-para-empresa',
+    categoria: 'Produtora — Institucional',
+    titulo: 'Quanto custa produzir um vídeo para empresa? Tudo que influencia o preço',
+    metaTitle: 'Quanto custa um vídeo institucional para empresa em 2026',
+    metaDescription: 'Quanto custa vídeo institucional: variáveis de preço, faixas de investimento por tipo de projeto e como briefar para receber um orçamento justo.',
+    keywords: [
+      'quanto custa vídeo institucional', 'preço de vídeo institucional', 'quanto custa produzir um vídeo para empresa',
+      'orçamento de produção de vídeo', 'valor de vídeo corporativo', 'produtora de vídeo São Paulo preço',
+      'como orçar vídeo institucional', 'custo de produção audiovisual', 'briefing para orçamento de vídeo',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'O custo de um vídeo institucional é determinado por cinco variáveis: escopo e complexidade do roteiro, duração e número de versões, locação e diárias de captação, tamanho da equipe e da lista de equipamentos, e profundidade da pós-produção. No mercado brasileiro, projetos corporativos simples partem da faixa de R$ 15 mil a R$ 30 mil; projetos institucionais com direção e captação em múltiplas locações trabalham entre R$ 40 mil e R$ 120 mil; filmes de marca com elenco, cenografia e mídia nacional ultrapassam essa faixa. Comparar orçamentos sem briefing alinhado é a principal causa de decisões erradas.',
+    intro: 'Não existe pergunta mais frequente e mais mal formulada no audiovisual corporativo do que "quanto custa um vídeo". É o equivalente a perguntar quanto custa uma obra sem dizer se é um banheiro ou um edifício. A pergunta, no entanto, é legítima: quem decide precisa de referência para planejar. O que falta não é a resposta — é o mapa das variáveis que produzem a resposta. Este texto entrega esse mapa, com faixas reais de mercado e, mais importante, com o método para você briefar de um jeito que o orçamento que chegar seja comparável, justo e defensável internamente.',
+    sections: [
+      {
+        h2: 'As cinco variáveis que definem o preço',
+        paragraphs: [
+          'A primeira é escopo e complexidade narrativa. Um vídeo que registra um evento tem escopo de captação. Um vídeo que constrói uma tese sobre a empresa tem escopo de direção: exige leitura estratégica, roteiro, decupagem e aprovação de conceito antes de qualquer câmera ligar. Essa etapa não aparece na tela, mas responde por parte relevante do investimento — e por quase todo o resultado.',
+          'A segunda é duração e número de entregas. O custo não cresce proporcionalmente ao tempo final: cresce com a quantidade de material distinto que precisa ser captado e finalizado. Uma peça de 2 minutos com cinco versões de corte e três formatos de proporção custa mais que uma peça única de 4 minutos.',
+          'A terceira é locação e diárias. Cada dia de captação carrega equipe, equipamento, deslocamento, alimentação e seguro. Locação cedida pela empresa reduz custo; locação alugada, cenografada ou com necessidade de autorização pública aumenta. Captação fora da cidade adiciona transporte e hospedagem para toda a equipe.',
+          'A quarta é o tamanho da equipe e a lista técnica. Uma diária com direção, direção de fotografia, assistente de câmera, técnico de som, elétrica, produção de set e maquiagem é uma estrutura; uma diária com operador e assistente é outra. Ambas são legítimas — atendem a necessidades diferentes. O que não é legítimo é orçar a segunda e esperar o resultado da primeira.',
+          'A quinta é a pós-produção. Montagem, correção de cor, tratamento de som, trilha licenciada ou original, motion graphics, legendagem e versões por idioma. Em projetos com muito grafismo ou animação, a pós pode representar mais da metade do orçamento total.',
+        ],
+      },
+      {
+        h2: 'Faixas de investimento por tipo de projeto',
+        paragraphs: [
+          'Registro e cobertura corporativa — captação de evento, depoimento simples, conteúdo para canal interno. Estrutura enxuta, uma diária, pós direta. Faixa aproximada: R$ 8 mil a R$ 25 mil, dependendo de duração do evento e número de entregas.',
+          'Vídeo institucional de porte médio — roteiro dirigido, uma a duas diárias, uma ou duas locações, equipe completa, depoimentos de liderança, cor e som tratados. É o formato mais procurado por empresas em fase de reposicionamento. Faixa aproximada: R$ 25 mil a R$ 60 mil.',
+          'Institucional de alta direção — múltiplas locações, captação em unidades diferentes, direção de arte, casting de figuração, trilha original, versões por praça ou idioma. Faixa aproximada: R$ 60 mil a R$ 150 mil.',
+          'Filme publicitário com veiculação — conceito de campanha, elenco profissional, cenografia, direção de fotografia com estrutura de cinema, licenciamento de trilha, direitos de imagem por território e prazo. A partir de R$ 100 mil, com projetos de mídia nacional ultrapassando com folga essa marca.',
+          'Séries e conteúdo recorrente — pacotes mensais ou trimestrais com identidade visual única e produção em lote. O custo por peça cai de forma expressiva quando várias entregas compartilham diária, locação e equipe. É o modelo mais eficiente para quem precisa de volume com consistência.',
+          'Essas faixas são referência de mercado em São Paulo, atualizadas para 2026. Elas servem para planejar ordem de grandeza — não substituem orçamento, que só existe depois do escopo definido.',
+        ],
+      },
+      {
+        h2: 'Por que comparar orçamentos sem briefing alinhado leva a erro',
+        paragraphs: [
+          'Quando uma empresa envia um pedido vago para quatro produtoras, recebe quatro respostas que parecem comparáveis e não são. Uma orçou uma diária, outra duas. Uma incluiu trilha licenciada, outra não. Uma previu três rodadas de ajuste, outra uma. A diferença de 40% no preço não é margem: é escopo.',
+          'O efeito prático é que a decisão por menor preço frequentemente contrata o menor escopo — e o custo reaparece depois, em aditivo, em retrabalho ou, pior, em uma peça que não cumpre a função e precisa ser refeita.',
+          'Existe um sinal claro de orçamento mal construído: ausência de discriminação. Proposta que apresenta apenas um valor global não permite avaliação. A proposta útil separa pré-produção, captação, pós-produção, direitos e impostos, e declara o que está fora do escopo.',
+          'Outro sinal é a ausência de perguntas. Produtora que orça sem entender o objetivo de negócio está precificando um produto genérico. Preço só é justo quando alguém entendeu o problema antes de calcular.',
+          'E vale dizer o que ninguém diz em proposta comercial: o valor mais alto nem sempre é o certo. Existe superdimensionamento — estrutura de cinema para um vídeo que vai viver em um card de LinkedIn. O critério não é caro ou barato; é adequado ao que a peça precisa fazer.',
+        ],
+      },
+      {
+        h2: 'Como briefar para receber um orçamento justo',
+        paragraphs: [
+          'Comece pela decisão de negócio, não pelo vídeo. Escreva em uma frase o que precisa mudar depois que a peça existir: reduzir o tempo de explicação do time comercial, apresentar a empresa em uma rodada, sustentar o lançamento de uma linha. Essa frase organiza todo o resto.',
+          'Declare o público e o canal. Um vídeo para investidor, um para candidato e um para consumidor final não compartilham roteiro nem tom, mesmo com o mesmo conteúdo. E o canal define proporção, duração e nível de exigência técnica.',
+          'Informe restrições reais: prazo de entrega, janela de disponibilidade das pessoas que vão aparecer, locações disponíveis, materiais de marca existentes e, sim, a ordem de grandeza do orçamento. Omitir orçamento não gera proposta melhor — gera proposta desalinhada e uma segunda rodada de trabalho para todo mundo.',
+          'Especifique as entregas esperadas: quantas peças, quais durações, quais proporções, quais idiomas, quantas rodadas de ajuste. Ajuste é onde os projetos mais estouram prazo e custo quando não está delimitado em contrato.',
+          'E envie o mesmo briefing para todos os fornecedores. É a única forma de as propostas serem comparáveis. Um briefing de uma página bem escrita economiza semanas de conversa e melhora a qualidade de todas as respostas que você vai receber.',
+        ],
+      },
+      {
+        h2: 'O retorno de um vídeo bem produzido',
+        paragraphs: [
+          'A conta de retorno do audiovisual corporativo raramente é feita, e é ela que resolve a discussão de preço. Um vídeo institucional tem vida útil de dois a três anos e é usado em todas as apresentações comerciais, no site, no LinkedIn, em processos seletivos e em conversas de investimento. Dividido por uso, o custo por exposição qualificada é baixo.',
+          'O retorno mais mensurável aparece no ciclo comercial. Quando a peça explica bem, o time comercial gasta menos tempo educando e entra mais rápido na conversa de proposta. Encurtar o ciclo em poucos dias, em uma operação com volume relevante, paga a produção em um trimestre.',
+          'Existe também o retorno defensivo, que é o mais subestimado. Uma peça mal produzida não é neutra: ela comunica descuido. Em mercados onde a decisão envolve confiança — serviços, saúde, educação, luxo, B2B de ticket alto — parecer amador custa negócios que ninguém contabiliza porque eles simplesmente não acontecem.',
+          'E há o retorno de reaproveitamento. Um projeto bem planejado gera material bruto que alimenta cortes, redes, apresentações e campanhas por meses. Produtora que entrega apenas o arquivo final, sem estrutura de derivação, está entregando menos do que o projeto poderia render.',
+          'Por isso a pergunta mais útil não é quanto custa, e sim: quanto custa não ter. É essa leitura que conduzimos antes de qualquer orçamento em /produtora/institucional/.',
+        ],
+      },
+    ],
+    citacao: 'Preço de vídeo não é uma tabela. É o resultado de decisões — e cada decisão que ninguém tomou no briefing vira custo depois.',
+    faq: [
+      {
+        q: 'Quanto custa um vídeo institucional para empresa?',
+        a: 'No mercado de São Paulo em 2026, um vídeo institucional de porte médio — roteiro dirigido, uma a duas diárias, equipe completa, depoimentos e pós-produção tratada — trabalha na faixa de R$ 25 mil a R$ 60 mil. Projetos de alta direção, com múltiplas locações e trilha original, vão de R$ 60 mil a R$ 150 mil. Registros corporativos simples partem de R$ 8 mil. A faixa exata depende de escopo, diárias, equipe e profundidade de pós.',
+      },
+      {
+        q: 'Por que orçamentos de produtoras variam tanto de preço?',
+        a: 'Porque a variação quase sempre é de escopo, não de margem. Uma produtora orça duas diárias e outra uma; uma inclui trilha licenciada, direitos de imagem e três rodadas de ajuste, outra não. Sem um briefing único enviado a todos os fornecedores, as propostas não são comparáveis. A diferença de preço costuma reaparecer depois em aditivo ou retrabalho.',
+      },
+      {
+        q: 'O que precisa estar em um briefing para orçamento de vídeo?',
+        a: 'A decisão de negócio que a peça precisa destravar, o público e o canal de veiculação, o prazo de entrega, as locações e pessoas disponíveis, as entregas esperadas com durações e proporções, o número de rodadas de ajuste e a ordem de grandeza do orçamento. Informar o orçamento não encarece a proposta: evita desalinhamento e uma segunda rodada de trabalho para todos os envolvidos.',
+      },
+      {
+        q: 'Vale mais a pena um vídeo caro ou vários vídeos simples?',
+        a: 'Depende da função. Se o objetivo é construir percepção institucional, uma peça bem dirigida com vida útil de dois a três anos rende mais que várias peças descartáveis. Se o objetivo é presença recorrente em canais, produzir em lote — várias entregas compartilhando diária, locação e equipe — reduz muito o custo por peça e mantém consistência visual. O erro é usar orçamento de volume esperando resultado de direção.',
+      },
+    ],
+    conclusao: 'Quanto custa produzir um vídeo é uma pergunta que só tem resposta depois de outra: o que esse vídeo precisa resolver. Escopo, diárias, equipe, locação e pós-produção são as alavancas — e todas elas se movem conforme o objetivo declarado. Empresas que briefam com clareza recebem propostas comparáveis, decidem melhor e evitam o custo invisível de refazer. Na Produtora da House Mazzutti, o orçamento vem depois da leitura estratégica, nunca antes. Comece a conversa em /produtora/institucional/.',
+    cta: { label: 'Peça um orçamento à Produtora da House Mazzutti', href: '/produtora/institucional/', lead_type: 'produtora_institucional' },
+  },
+  'pre-producao-de-video-o-que-acontece-antes-das-cameras-ligarem': {
+    slug: 'pre-producao-de-video-o-que-acontece-antes-das-cameras-ligarem',
+    categoria: 'Produtora — Publicidade',
+    titulo: 'Pré-produção de vídeo: o que acontece antes das câmeras ligarem',
+    metaTitle: 'Pré-produção de vídeo: as etapas antes das câmeras ligarem',
+    metaDescription: 'Pré-produção de vídeo explicada: briefing, roteiro, decupagem, locação, casting, equipe e logística — e por que ela define o resultado final.',
+    keywords: [
+      'pré-produção de vídeo', 'o que é pré-produção', 'etapas da produção audiovisual',
+      'decupagem de roteiro', 'planejamento de produção de vídeo', 'briefing de produção audiovisual',
+      'produtora de publicidade São Paulo', 'como planejar uma filmagem', 'roteiro e decupagem para campanha',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Pré-produção de vídeo é a fase de planejamento que antecede a captação e define tudo que vai acontecer no set. Ela reúne sete etapas: briefing estratégico, roteiro, decupagem, definição de locação, casting, montagem de equipe e logística de diária. É a fase que determina a maior parte do resultado final, porque erro cometido na pré-produção custa dez vezes mais para corrigir em set e cem vezes mais na pós. A Produtora da House Mazzutti não liga câmera sem decupagem aprovada.',
+    intro: 'O set de filmagem é o lugar mais caro para se pensar. Cada hora com equipe parada, elenco esperando e locação alugada consome orçamento em velocidade que nenhum projeto suporta por muito tempo. Ainda assim, é comum ver produções chegarem ao dia da captação com decisões pendentes — o roteiro sem versão final, a locação vista só por foto, o elenco confirmado na véspera. O resultado nunca é uma catástrofe visível. É algo pior: um material medíocre, entregue no prazo, que ninguém consegue explicar por que não funcionou. A explicação está semanas antes, na fase que ninguém filma.',
+    sections: [
+      {
+        h2: 'O que é pré-produção e onde ela começa',
+        paragraphs: [
+          'Pré-produção é a fase em que todas as decisões do projeto são tomadas e registradas antes que qualquer recurso caro seja mobilizado. Ela transforma uma intenção — "queremos um filme sobre a nova linha" — em um plano executável, com cada plano previsto, cada pessoa alocada e cada risco endereçado.',
+          'Ela começa antes do que a maioria imagina: não no roteiro, mas na leitura estratégica. Antes de escrever a primeira cena, é preciso responder o que o filme precisa fazer acontecer, para quem, em que canal e contra qual percepção existente. Roteiro escrito sem essa resposta é literatura, não peça de comunicação.',
+          'A entrega da pré-produção é um conjunto de documentos: roteiro aprovado, decupagem, plano de locação, mapa de casting, lista técnica, cronograma de diária e ordem do dia. São documentos chatos, e é exatamente essa a intenção. Documento chato no papel é o que evita improviso caro no set.',
+          'Uma boa medida de maturidade: se qualquer pessoa da equipe puder ler a ordem do dia e entender o que acontece às 11h da manhã de quinta, a pré-produção está pronta. Se a resposta depende de perguntar ao diretor, não está.',
+        ],
+      },
+      {
+        h2: 'As sete etapas, na ordem em que devem acontecer',
+        paragraphs: [
+          'Briefing estratégico. Define objetivo de negócio, público, canal, percepção atual e percepção desejada, restrições de prazo, orçamento e marca. É o documento que todos os outros vão obedecer. Sem ele, cada etapa seguinte decide sozinha — e decidem coisas diferentes.',
+          'Roteiro. Traduz a estratégia em narrativa: estrutura, arco, falas, tom, ritmo. É aqui que se define o que o filme diz. Roteiro aprovado significa aprovado por quem tem autoridade final — aprovação parcial é a origem de metade das mudanças de última hora.',
+          'Decupagem. Traduz o roteiro em planos: enquadramento, movimento de câmera, lente, ordem de captação, duração estimada. É o documento mais técnico e o mais subestimado. Decupagem feita é o que permite calcular com precisão quantas horas a diária vai levar.',
+          'Locação. Definição, visita técnica presencial, autorizações, energia, ruído ambiente, condições de luz nos horários previstos, acesso para equipamento, área de apoio e plano B. Locação escolhida por foto é aposta, não decisão.',
+          'Casting. Definição do perfil derivado do conceito, teste em câmera com direção real, escolha contra critério escrito e contratação com uso de imagem, território e prazo definidos antes da diária.',
+          'Equipe. Montagem da lista técnica adequada ao escopo: direção, fotografia, som, elétrica, arte, produção de set, maquiagem, figurino. Cada função ausente vira uma tarefa distribuída entre quem sobrou — e alguma coisa deixa de ser bem-feita.',
+          'Logística. Cronograma hora a hora, transporte, alimentação, equipamento conferido e testado, contingência de clima, seguro e ordem do dia distribuída com antecedência. É a etapa que ninguém elogia quando dá certo.',
+        ],
+      },
+      {
+        h2: 'Por que a pré-produção determina a maior parte do resultado',
+        paragraphs: [
+          'A razão é econômica antes de ser criativa. Um problema identificado na pré-produção custa uma conversa. O mesmo problema descoberto em set custa a hora de toda a equipe parada. Descoberto na pós, custa uma nova diária — ou, mais comum, a aceitação silenciosa de um resultado inferior.',
+          'A segunda razão é que a pós-produção não cria o que não foi captado. Correção de cor melhora o que existe; não inventa luz que não foi acesa. Montagem organiza o material; não gera o plano que ninguém filmou. Toda solução de pós parte de material bruto — e material bruto é decidido semanas antes.',
+          'A terceira razão é o tempo de set. Uma diária tem entre dez e doze horas úteis, e boa parte delas é consumida por montagem, mudança de luz e deslocamento. O tempo efetivo de câmera rodando é menor do que parece. Chegar com decupagem pronta pode significar dobrar a quantidade de material aproveitável no mesmo dia.',
+          'A quarta razão é humana. Equipe que recebe ordem do dia clara trabalha com confiança e ritmo. Equipe que descobre o plano durante a manhã trabalha reagindo — e reação, em set, produz escolhas seguras e previsíveis, nunca as melhores.',
+        ],
+      },
+      {
+        h2: 'Os erros mais comuns de pré-produção',
+        paragraphs: [
+          'Pular a decupagem. É o erro mais frequente e o mais caro. Sem decupagem, a diária vira captação exploratória: filma-se muito, aproveita-se pouco, e a montagem tenta construir na ilha uma estrutura que deveria existir no papel.',
+          'Briefing vago. "Queremos algo moderno e que emocione" não é briefing — é preferência. Briefing útil declara objetivo mensurável, público específico, canal e o que não fazer. A ausência de restrições declaradas é o que gera as reprovações tardias, quando o cliente vê a peça e descobre que ela contraria algo que nunca foi dito.',
+          'Locação de última hora. Espaço escolhido sem visita técnica traz surpresas caras: tomada insuficiente, ruído de rua, luz que muda no meio da tarde, acesso que não comporta equipamento. Nenhuma dessas descobertas cabe no cronograma do dia.',
+          'Aprovação difusa. Quando não está claro quem aprova o quê, o roteiro é revisado por muita gente e decidido por ninguém. A consequência aparece em set, na forma de mudança pedida por alguém que só viu o material naquele momento.',
+          'Cronograma otimista. Prever seis cenas complexas em uma diária de oito horas não é ambição, é erro de cálculo. Cronograma sem folga significa cortar as últimas cenas do dia — que costumam ser as mais importantes, porque foram deixadas para o fim.',
+          'Elenco e equipe confirmados por mensagem. Sem contrato assinado, com escopo, valor e uso de imagem definidos, o projeto está exposto. É o tipo de risco que só aparece quando dá errado, e aí já não há tempo de resolver.',
+        ],
+      },
+      {
+        h2: 'Como a House Mazzutti conduz a pré-produção',
+        paragraphs: [
+          'O projeto começa por uma sessão de leitura estratégica com o cliente, antes de qualquer proposta criativa. Saímos dela com o problema declarado em uma frase e com os critérios de sucesso escritos. É esse documento que arbitra qualquer divergência nas semanas seguintes.',
+          'Em seguida vem o roteiro, apresentado com a justificativa da escolha narrativa — por que essa estrutura, e não outra. O cliente aprova o argumento, não apenas o texto. Aprovação com raciocínio explicado é aprovação que se sustenta na terceira semana.',
+          'A decupagem é feita plano a plano, com estimativa de tempo por bloco. Ela é o que transforma o cronograma de intenção em cálculo. Quando a decupagem mostra que o dia não cabe, a decisão é tomada ali — reduzindo escopo ou adicionando diária — e não às 17h do dia da captação.',
+          'A visita técnica de locação é obrigatória e documentada com registro de luz nos horários previstos, medição de ruído, checagem de energia e mapeamento de área de apoio. Toda locação tem plano B definido.',
+          'A ordem do dia é distribuída com antecedência a toda a equipe e ao cliente. Ninguém chega ao set descobrindo o que vai acontecer. Quando a câmera liga, a discussão já aconteceu — e o que resta é dirigir.',
+          'É esse método que aplicamos em cada campanha publicitária que produzimos. Você pode conhecê-lo em /produtora/publicidade/.',
+        ],
+      },
+    ],
+    citacao: 'O set é o lugar mais caro para se pensar. Tudo que puder ser decidido antes deve ser decidido antes — o que sobra para o dia da captação é direção, não dúvida.',
+    faq: [
+      {
+        q: 'O que é pré-produção de vídeo?',
+        a: 'É a fase de planejamento que antecede a captação e define tudo que vai acontecer no set. Reúne briefing estratégico, roteiro, decupagem, definição e visita técnica de locação, casting, montagem de equipe e logística de diária. A entrega da pré-produção é um conjunto de documentos aprovados — roteiro, decupagem, plano de locação, lista técnica, cronograma e ordem do dia — que tornam a filmagem executável sem improviso.',
+      },
+      {
+        q: 'Quanto tempo leva a pré-produção de um vídeo?',
+        a: 'Para um vídeo institucional de porte médio, entre duas e quatro semanas. Para uma campanha publicitária com elenco, cenografia e múltiplas locações, entre quatro e oito semanas. O prazo depende principalmente do ciclo de aprovação do cliente e da complexidade de casting e locação. Comprimir essa fase raramente acelera o projeto: costuma transferir o custo para o set e para a pós-produção.',
+      },
+      {
+        q: 'O que é decupagem e por que ela é importante?',
+        a: 'Decupagem é a tradução do roteiro em planos — enquadramento, movimento de câmera, lente, ordem de captação e duração estimada de cada bloco. Ela é o que permite calcular com precisão quantas horas a diária vai levar e o que precisa ser captado. Sem decupagem, a filmagem vira exploratória: capta-se muito, aproveita-se pouco, e a montagem tenta construir na ilha uma estrutura que deveria existir no papel.',
+      },
+      {
+        q: 'Dá para economizar cortando a pré-produção?',
+        a: 'Não. A economia é aparente e o custo reaparece multiplicado. Um problema resolvido na pré-produção custa uma conversa; o mesmo problema em set custa a hora de toda a equipe parada; na pós-produção, custa uma nova diária ou a aceitação de um resultado inferior. Além disso, pós-produção não cria o que não foi captado — correção de cor melhora o que existe, mas não inventa luz que ninguém acendeu.',
+      },
+    ],
+    conclusao: 'Pré-produção é a parte do trabalho que nunca aparece na tela e decide quase tudo que aparece nela. Briefing claro, roteiro aprovado com raciocínio, decupagem plano a plano, locação visitada, casting testado, equipe dimensionada e logística fechada: sete etapas que separam uma diária dirigida de uma diária reativa. Empresas que investem nessa fase gastam menos no total e recebem material que rende por muito mais tempo. Na Produtora da House Mazzutti, a câmera só liga com decupagem aprovada. Conheça o processo em /produtora/publicidade/.',
+    cta: { label: 'Fale com a Produtora de Publicidade da House Mazzutti', href: '/produtora/publicidade/', lead_type: 'produtora_publicidade' },
+  },
 };
