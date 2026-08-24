@@ -115,7 +115,13 @@
     "blog_see_all": "VER TODOS →",
     "blog_read": "LEER →",
     "frentes_academy_label": "ACADEMY",
-    "frentes_academy_sub": "Cursos · Talleres · Materiales"
+    "frentes_academy_sub": "Cursos · Talleres · Materiales",
+    "comunidade_label": "House Mazzutti Academy",
+    "comunidade_titulo": "Comunidad.",
+    "comunidade_desc": "Espacios de intercambio entre alumnos, talentos y profesionales. Operación al mismo estándar de la casa.",
+    "comunidade_cta": "Entrar a la comunidad →",
+    "comunidade_cta2_titulo": "Sé parte de la comunidad House Mazzutti.",
+    "comunidade_cta2_sub": "Acceso exclusivo a contenido, detrás de escena y conexiones del mercado creativo."
   },
   "footer": {
     "copyright": "© 2026 House Mazzutti. Todos los derechos reservados.",
@@ -510,7 +516,11 @@
     "servico_7_subtitle": "Onde operação e resultado se conectam.",
     "servico_7_item_1": "Cinco núcleos coordenados",
     "servico_7_item_2": "Especialistas curados",
-    "servico_7_item_3": "Do time enxuto ao set completo"
+    "servico_7_item_3": "Do time enxuto ao set completo",
+    "portfolio_label_publicidade": "Publicidad",
+    "portfolio_label_content": "Content MKT",
+    "portfolio_label_set_design": "Set Design",
+    "portfolio_label_direcao": "Dirección Creativa"
   },
   "comunidade_page": {
     "hero_label": "Comunidad — HMZT",
@@ -948,7 +958,15 @@
     "form_subtitle": "Cuéntanos sobre tu proyecto. Respondemos en hasta 1 día hábil.",
     "form_contact_text": "Contáctanos en Instagram o WhatsApp para iniciar tu proyecto:",
     "blog_see_all": "VER TODOS →",
-    "blog_read": "LEER →"
+    "blog_read": "LEER →",
+    "pf_branding_identidade": "Branding & Identidad",
+    "pf_branding_project": "Branding Project",
+    "pf_web_development": "Desarrollo Web",
+    "pf_comunicacao": "Comunicación",
+    "pf_branding_digital": "Branding & Digital",
+    "pf_comunicacao_publicidade": "Comunicación & Publicidad",
+    "pf_manual_de_marca": "Branding & Manual de Marca",
+    "pf_branding_consultoria": "Branding & Consultoría"
   },
   "studio_book": {
     "seo_h1": "Book Profesional para Modelos | Portafolio con Dirección de Imagen House Mazzutti",

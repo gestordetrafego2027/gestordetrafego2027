@@ -568,17 +568,17 @@ export default function Home() {
                     <div className="max-w-[1440px] mx-auto">
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
                             <div>
-                                <span className="text-caption text-white/40 uppercase tracking-widest block mb-4">House Mazzutti Academy</span>
-                                <h2 className="text-h2 text-white leading-tight">Comunidade.</h2>
+                                <span className="text-caption text-white/40 uppercase tracking-widest block mb-4">{t('home.comunidade_label')}</span>
+                                <h2 className="text-h2 text-white leading-tight">{t('home.comunidade_titulo')}</h2>
                                 <p className="text-body text-white/50 mt-4 max-w-md">
-                                    Espaços de troca entre alunos, talentos e profissionais. Operação no mesmo padrão da casa.
+                                    {t('home.comunidade_desc')}
                                 </p>
                             </div>
                             <Link
                                 href="/comunidade"
                                 className="shrink-0 px-8 py-3 border border-white/20 text-white text-caption uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
                             >
-                                Entrar na comunidade →
+                                {t('home.comunidade_cta')}
                             </Link>
                         </div>
 
@@ -615,14 +615,14 @@ export default function Home() {
                         {/* CTA pós-grid */}
                         <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-white/10 pt-10">
                             <div>
-                                <p className="text-white text-base font-medium leading-snug">Faça parte da comunidade House Mazzutti.</p>
-                                <p className="text-white/40 text-sm mt-1">Acesso exclusivo a conteúdo, bastidores e conexões do mercado criativo.</p>
+                                <p className="text-white text-base font-medium leading-snug">{t('home.comunidade_cta2_titulo')}</p>
+                                <p className="text-white/40 text-sm mt-1">{t('home.comunidade_cta2_sub')}</p>
                             </div>
                             <Link
                                 href="/comunidade"
                                 className="shrink-0 px-10 py-4 bg-white text-black text-xs font-semibold uppercase tracking-widest hover:bg-neutral-100 transition-colors duration-300"
                             >
-                                Entrar na comunidade →
+                                {t('home.comunidade_cta')}
                             </Link>
                         </div>
                     </div>

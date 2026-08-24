@@ -16,6 +16,7 @@ import TypewriterText from '@/app/components/TypewriterText'
 
 export default function ProdutoraPage() {
     const t = useTranslations('produtora_page')
+    const tFooter = useTranslations('footer')
     const [formCta, setFormCta] = useState(null)
     const openForm = (ctaLocation) => {
         track('Lead', { lead_type: 'produtora', content_name: `Produtora Form — ${ctaLocation}` })
@@ -242,28 +243,28 @@ export default function ProdutoraPage() {
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/elyah">
                             <Image alt="Elyah" src="/images/produtora/acessorios/elyah/1.webp" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
-                                <span>Publicidade</span>
+                                <span>{t('portfolio_label_publicidade')}</span>
                                 <h4>Elyah</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/oceane">
                             <Image alt="Oceane" src="/images/produtora/beleza/oceane/1.webp" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
-                                <span>Content MKT</span>
+                                <span>{t('portfolio_label_content')}</span>
                                 <h4>Oceane</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/alletto-still">
                             <Image alt="Alletto Still" src="/images/produtora/beleza/alletto-still/1.webp" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
-                                <span>Set Design</span>
+                                <span>{t('portfolio_label_set_design')}</span>
                                 <h4>Alletto Still</h4>
                             </div>
                         </Link>
                         <Link className="gallery-column project-item group" href="/portfolio-produtora/signus-versolato02">
                             <Image alt="Signus - Versolato 02" src="/images/produtora/acessorios/signus-versolato02/1.webp" fill sizes="(max-width: 768px) 100vw, 25vw" quality={80} loading="lazy" className="object-cover" />
                             <div className="project-overlay">
-                                <span>Direção Criativa</span>
+                                <span>{t('portfolio_label_direcao')}</span>
                                 <h4>Signus - Versolato 02</h4>
                             </div>
                         </Link>
@@ -544,7 +545,7 @@ export default function ProdutoraPage() {
                         <Link className="text-caption text-zinc-500 hover:text-zinc-900 transition-colors" href="/contato">Contato</Link>
                     </nav>
                     <div className="text-caption text-zinc-400">
-                        {t('footer_copyright')}
+                        {tFooter('copyright')}
                     </div>
                 </div>
               <div className="mt-6"><SiteFooterLinks /></div>

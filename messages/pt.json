@@ -115,7 +115,13 @@
     "blog_section_label": "EDITORIAL",
     "blog_section_title": "Do Blog",
     "blog_see_all": "VER TODOS →",
-    "blog_read": "LER →"
+    "blog_read": "LER →",
+    "comunidade_label": "House Mazzutti Academy",
+    "comunidade_titulo": "Comunidade.",
+    "comunidade_desc": "Espaços de troca entre alunos, talentos e profissionais. Operação no mesmo padrão da casa.",
+    "comunidade_cta": "Entrar na comunidade →",
+    "comunidade_cta2_titulo": "Faça parte da comunidade House Mazzutti.",
+    "comunidade_cta2_sub": "Acesso exclusivo a conteúdo, bastidores e conexões do mercado criativo."
   },
   "footer": {
     "copyright": "© 2026 House Mazzutti. Todos os direitos reservados.",
@@ -510,7 +516,11 @@
     "servico_7_subtitle": "Onde operação e resultado se conectam.",
     "servico_7_item_1": "Cinco núcleos coordenados",
     "servico_7_item_2": "Especialistas curados",
-    "servico_7_item_3": "Do time enxuto ao set completo"
+    "servico_7_item_3": "Do time enxuto ao set completo",
+    "portfolio_label_publicidade": "Publicidade",
+    "portfolio_label_content": "Content MKT",
+    "portfolio_label_set_design": "Set Design",
+    "portfolio_label_direcao": "Direção Criativa"
   },
   "comunidade_page": {
     "hero_label": "Comunidade — HMZT",
@@ -1003,7 +1013,15 @@
     "form_subtitle": "Conte-nos sobre seu projeto. Respondemos em até 1 dia útil.",
     "form_contact_text": "Entre em contato pelo Instagram ou WhatsApp para iniciar seu projeto:",
     "blog_see_all": "VER TODOS →",
-    "blog_read": "LER →"
+    "blog_read": "LER →",
+    "pf_branding_identidade": "Branding & Identidade",
+    "pf_branding_project": "Branding Project",
+    "pf_web_development": "Web Development",
+    "pf_comunicacao": "Comunicação",
+    "pf_branding_digital": "Branding & Digital",
+    "pf_comunicacao_publicidade": "Comunicação & Publicidade",
+    "pf_manual_de_marca": "Branding & Manual de Marca",
+    "pf_branding_consultoria": "Branding & Consultoria"
   },
   "studio_cobertura": {
     "hero_label": "COBERTURA EXTERNA · PROPOSTA SOB MEDIDA",
