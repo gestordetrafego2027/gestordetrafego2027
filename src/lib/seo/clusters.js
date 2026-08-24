@@ -49,6 +49,7 @@ export const clusters = {
       'agencia-de-branding-ou-freelancer-quando-contratar-cada-um',
       'quando-contratar-uma-produtora-de-moda-guia-para-marcas',
       'identidade-visual-o-que-e-quando-refazer-a-sua',
+      'assessoria-de-comunicacao-para-marcas-premium-sao-paulo',
     ],
   },
   branding: {
@@ -88,6 +89,8 @@ export const clusters = {
       'fashion-film-emanuely-terres',
       'quanto-custa-video-institucional-2025',
       'fashion-film-lancamento-colecao',
+      'fashion-film-sao-paulo-guia-de-producao',
+      'o-que-e-fashion-film-e-como-ele-vende-sem-parecer-propaganda',
     ],
   },
   academy: {
@@ -189,6 +192,7 @@ export const postTitles = {
   // Agência — novos artigos planejados
   'o-que-e-assessoria-de-imprensa': 'O que é assessoria de imprensa e para que serve',
   'gestao-redes-sociais-para-empresas': 'Gestão de Redes Sociais para Empresas',
+  'assessoria-de-comunicacao-para-marcas-premium-sao-paulo': 'Assessoria de comunicação para marcas premium em SP',
   // Produtora — novos artigos planejados
   'quanto-custa-video-institucional-2025': 'Quanto custa um vídeo institucional? (2025)',
   'fashion-film-lancamento-colecao': 'Fashion Film para Lançamento de Coleção',
@@ -226,6 +230,9 @@ export const postTitles = {
   'eventos-publicidade-marketing-2027-guia-completo': 'Publicidade e marketing em 2027: guia de eventos',
   'eventos-arte-design-criatividade-2027-sao-paulo-mundo': 'Arte, design e criatividade em 2027: eventos',
   'eventos-audiovisual-tech-criativo-2027-guia-produtoras': 'Audiovisual e tech criativo em 2027: guia produtoras',
+  // Produtora — pillar geo-localizada
+  'fashion-film-sao-paulo-guia-de-producao': 'Fashion Film em São Paulo: guia completo de produção',
+  'o-que-e-fashion-film-e-como-ele-vende-sem-parecer-propaganda': 'O que é fashion film e como ele vende sem parecer propaganda',
 }
 
 /**
