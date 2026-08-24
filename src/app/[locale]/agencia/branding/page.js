@@ -1,4 +1,5 @@
 'use client';
+import { pageMetadata } from '@/lib/seo/metadata';
 import { track } from '@/components/analytics/Tracking';
 import { initAosNative } from '@/lib/aosNative';
 import Image from 'next/image';
@@ -12,6 +13,15 @@ import FormDrawer from '@/app/components/FormDrawer';
 import FormBranding from '@/app/components/forms/FormBranding';
 import LandingTeam from '@/app/components/LandingTeam';
 import BlogSection from '@/app/components/BlogSection';
+
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/agencia/branding/',
+    title: 'Branding e Identidade Visual para Marcas — House Mazzutti Agência',
+    description: 'Branding estratégico com direção criativa de Angelo Mazzutti. Identidade visual, nomenclatura, brandbook e voz de marca para empresas em São Paulo.',
+    image: { src: '/images/agencia/knowhol/capa.webp', alt: 'Projeto de branding — House Mazzutti Agência', width: 1200, height: 630 },
+  });
+}
 
 export default function AgenciaBrandingPage() {
     const t = useTranslations('agencia_branding');
@@ -354,6 +364,10 @@ export default function AgenciaBrandingPage() {
 
             {/* CTA FINAL */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+                <div className="flex items-center justify-center gap-2 text-[11px] font-label mb-6">
+                  <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
+                  <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>
+                </div>
                 <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up">{t('cta_final_titulo')}</h2>
                 <button type="button" onClick={() => openForm()} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="100">
                     {t('cta_final_btn')}

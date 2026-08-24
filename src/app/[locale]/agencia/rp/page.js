@@ -1,4 +1,5 @@
 'use client';
+import { pageMetadata } from '@/lib/seo/metadata';
 import { track } from '@/components/analytics/Tracking';
 import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
@@ -11,6 +12,15 @@ import FormDrawer from '@/app/components/FormDrawer';
 import FormAgenciaB2B from '@/app/components/forms/FormAgenciaB2B';
 import LandingTeam from '@/app/components/LandingTeam';
 import BlogSection from '@/app/components/BlogSection';
+
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/agencia/rp/',
+    title: 'RP e Marketing Direto para Marcas — House Mazzutti Agência',
+    description: 'Relações públicas, assessoria de imprensa e marketing direto para marcas de luxo e lifestyle em São Paulo. House Mazzutti Agência.',
+    image: { src: '/images/agencia/banners/banner-2.webp', alt: 'RP e Marketing Direto — House Mazzutti', width: 1200, height: 630 },
+  });
+}
 
 export default function AgenciaRpPage() {
     const t = useTranslations('agencia_rp');
@@ -141,6 +151,10 @@ export default function AgenciaRpPage() {
 
             {/* FINAL CTA */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+                <div className="flex items-center justify-center gap-2 text-[11px] font-label mb-6">
+                  <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
+                  <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>
+                </div>
                 <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug" data-aos="fade-up">{t('cta_titulo')}</h2>
                 <p className="font-body text-white/60 text-lg mb-12 max-w-xl" data-aos="fade-up" data-aos-delay="100">{t('cta_subtitulo')}</p>
                 <button

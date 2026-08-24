@@ -14,6 +14,16 @@ import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
 import BlogSection from '@/app/components/BlogSection';
+import { pageMetadata } from '@/lib/seo/metadata';
+
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/studio/ensaio/',
+    title: 'Ensaio Fotográfico Artístico em São Paulo — House Mazzutti Studio',
+    description: 'Ensaios pessoais e artísticos com direção criativa de imagem. Studio exclusivo em São Paulo, styling, lighting e retoque high-end.',
+    image: { src: '/images/studio/marjorie-rossi/capa.webp', alt: 'Ensaio fotográfico — House Mazzutti Studio', width: 1200, height: 630 },
+  })
+}
 
 export default function StudioEnsaioPage() {
     const t = useTranslations('studio_ensaio');
@@ -156,6 +166,10 @@ export default function StudioEnsaioPage() {
 
             {/* FINAL CTA */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+                    <div className="flex items-center justify-center gap-2 text-[11px] font-label mb-6">
+                      <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
+                      <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>
+                    </div>
                     <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up" data-aos-delay="100">{t('cta_final_titulo')}</h2>
                     <button type="button" onClick={() => openForm('final')} className="border border-white text-white px-16 py-6 font-label uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all" data-aos="fade-up" data-aos-delay="200">
                         {t('cta_final_btn')}

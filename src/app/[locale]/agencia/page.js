@@ -1,5 +1,6 @@
 'use client'
 
+import { pageMetadata } from '@/lib/seo/metadata'
 import { useState, useEffect } from 'react'
 import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick'
 import { track } from '@/components/analytics/Tracking'
@@ -12,6 +13,15 @@ import ClientLogos from '@/app/components/ClientLogos'
 import FormDrawer from '@/app/components/FormDrawer'
 import BlogSection from '@/app/components/BlogSection'
 import TypewriterText from '@/app/components/TypewriterText'
+
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/agencia/',
+    title: 'Agência de Branding e Comunicação em São Paulo — House Mazzutti',
+    description: 'Agência criativa com direção de Angelo Mazzutti. Branding, identidade visual, comunicação integrada, RP e web para marcas em São Paulo.',
+    image: { src: '/images/agencia/knowhol/capa.webp', alt: 'Agência de branding — House Mazzutti', width: 1200, height: 630 },
+  })
+}
 
 export default function AgenciaPage() {
     const t = useTranslations('agencia')
