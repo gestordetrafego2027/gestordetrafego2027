@@ -6114,4 +6114,288 @@ export const articles = {
     conclusao: 'Pré-produção é a parte do trabalho que nunca aparece na tela e decide quase tudo que aparece nela. Briefing claro, roteiro aprovado com raciocínio, decupagem plano a plano, locação visitada, casting testado, equipe dimensionada e logística fechada: sete etapas que separam uma diária dirigida de uma diária reativa. Empresas que investem nessa fase gastam menos no total e recebem material que rende por muito mais tempo. Na Produtora da House Mazzutti, a câmera só liga com decupagem aprovada. Conheça o processo em /produtora/publicidade/.',
     cta: { label: 'Fale com a Produtora de Publicidade da House Mazzutti', href: '/produtora/publicidade/', lead_type: 'produtora_publicidade' },
   },
+  'como-se-preparar-para-um-book-fotografico-profissional': {
+    slug: 'como-se-preparar-para-um-book-fotografico-profissional',
+    categoria: 'Studio — Book',
+    titulo: 'Como se preparar para um book fotográfico profissional: guia completo',
+    metaTitle: 'Como se preparar para um book fotográfico profissional',
+    metaDescription: 'Guia completo de preparação para book fotográfico: objetivo, escolha de looks, cuidados com pele e cabelo, o que levar no dia e como funciona a direção.',
+    keywords: [
+      'como se preparar para book fotográfico', 'preparação para book fotográfico', 'book fotográfico profissional',
+      'o que levar no dia do book', 'quantos looks levar no book', 'cuidados antes do book fotográfico',
+      'book fotográfico São Paulo', 'book de modelo', 'direção de fotografia para book',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Preparar-se para um book fotográfico profissional envolve seis frentes: definir o objetivo do book e o mercado que ele precisa atender, montar de três a cinco looks com variação de silhueta e paleta, cuidar de pele e cabelo na semana anterior (sem procedimentos novos), dormir bem e chegar hidratado, levar um kit de apoio com peças extras e documentos, e entender que a direção durante a sessão conduz pose, olhar e ritmo. A seleção e o retoque vêm depois, com curadoria feita a quatro mãos.',
+    intro: 'Quase todo book que não funciona falha antes da primeira foto. Não por falta de câmera, luz ou talento diante da lente, mas por falta de decisão: ninguém definiu para que aquele material existe. Um book é uma peça de comunicação — tem destinatário, contexto de leitura e objetivo. Quando isso está claro, a sessão vira execução tranquila. Quando não está, o dia inteiro é gasto tentando descobrir no set o que deveria ter sido resolvido numa conversa de vinte minutos. Este guia percorre tudo que precisa acontecer antes, durante e depois da sua sessão.',
+    sections: [
+      {
+        h2: 'O que definir antes: objetivo, mercado e referências',
+        paragraphs: [
+          'A primeira pergunta não é estética, é funcional: quem vai ver esse book e qual decisão essa pessoa precisa tomar depois de ver? Um book de modelo comercial é lido por bookers e clientes que precisam enxergar versatilidade e naturalidade. Um book de ator é lido por diretores de elenco que buscam verdade e alcance emocional. Um book de marca pessoal é lido por clientes, imprensa e parceiros que precisam entender autoridade. São três materiais diferentes — e nenhum deles é a soma dos outros.',
+          'Definido o destinatário, define-se o perfil de mercado. Moda comercial pede luz limpa, expressão acessível e leitura rápida do corpo. Moda editorial pede conceito, atitude e liberdade de composição. Corporativo pede sobriedade, enquadramento fechado e coerência com o setor. Tentar cobrir os três no mesmo dia normalmente entrega um material morno nos três.',
+          'As referências entram por último e servem para alinhar linguagem, não para copiar imagens. Reúna de oito a doze fotos que traduzam o que você quer transmitir e escreva ao lado de cada uma o motivo — a luz, a pose, o clima, o recorte. Referência sem justificativa vira imitação; referência com justificativa vira direção.',
+          'Traga também o que você não quer. Saber que você rejeita poses excessivamente sensuais, ou fundos coloridos, ou sorriso aberto, encurta o caminho mais do que qualquer painel de inspiração. Restrição declarada é informação útil.',
+        ],
+      },
+      {
+        h2: 'Escolha de looks: número, variação e paleta',
+        paragraphs: [
+          'Para um book de meio período, de três a quatro looks é o número que funciona. Para um book completo, quatro a cinco. Acima disso, a sessão vira desfile: o tempo de troca come o tempo de direção, e o material fica raso em todos os blocos em vez de forte em alguns.',
+          'A variação deve ser de silhueta e registro, não apenas de cor. Um look estruturado (alfaiataria, camisa, peças de linha reta), um look casual de leitura direta (camiseta, jeans, malha), um look de pele e forma para trabalhar o corpo e a linha do rosto, e um look de personalidade — aquela peça que só você usaria. Essa combinação cobre praticamente todos os usos de um book.',
+          'Sobre paleta: neutros e tons sólidos fotografam melhor e envelhecem melhor. Estampas pequenas e listras finas criam ruído digital, e logotipos datam a imagem em um ano. Prefira peças que dialoguem entre si, para que o book tenha unidade cromática mesmo com trocas — isso é o que faz um conjunto de fotos parecer um material, e não uma pasta de arquivos.',
+          'Caimento vale mais que marca. Roupa larga demais apaga a linha do corpo; roupa apertada marca onde não deveria. Prove tudo antes, de pé e sentada, e leve as peças passadas, em cabide, separadas por look. Detalhe pequeno que economiza quarenta minutos de sessão.',
+        ],
+      },
+      {
+        h2: 'Cuidados com pele e cabelo na semana anterior',
+        paragraphs: [
+          'A regra que resolve a maior parte dos problemas: nada novo na semana da sessão. Nenhum procedimento estético inédito, nenhuma coloração diferente, nenhum ácido que você nunca usou, nenhuma sobrancelha desenhada por outra pessoa. Reação de pele é imprevisível, e retoque digital não devolve textura perdida.',
+          'Corte de cabelo, quando necessário, deve acontecer de sete a dez dias antes — tempo suficiente para o fio assentar e para o corte perder o aspecto recém-feito. Coloração ou retoque de raiz, entre cinco e sete dias antes. Se você usa barba, apare no formato definitivo com três dias de antecedência.',
+          'Pele pede consistência, não intensidade: limpeza, hidratação e protetor solar diários. Se você faz limpeza de pele profunda, agende de dez a quinze dias antes, nunca na véspera. Nas últimas 48 horas, reduza sal e álcool — retenção de líquido aparece no rosto com uma clareza que surpreende.',
+          'Sono é o item mais subestimado da lista. Duas noites bem dormidas antes da sessão fazem mais pelo olhar do que qualquer produto. E unhas: mãos aparecem em quase todo book. Feitas, limpas, em tom neutro ou naturais.',
+        ],
+      },
+      {
+        h2: 'O que levar no dia da sessão',
+        paragraphs: [
+          'Os looks escolhidos, passados e organizados em cabides individuais, com os acessórios de cada um já separados. Isso evita a cena clássica do brinco que sumiu no meio da segunda troca.',
+          'Roupa íntima adequada a cada peça: nude e sem costura visível para tecidos leves e claros, alças removíveis para decotes e ombros. É um detalhe invisível que aparece em todas as fotos quando está errado.',
+          'Calçados variados — um social, um casual, um de salto se fizer parte da proposta. Sapato muda postura, e postura muda a foto inteira.',
+          'Kit de apoio: escova, elásticos e grampos, hidratante labial, lenço de papel, papel absorvente para oleosidade, sua base e batom para retoque, água e um lanche leve. Sessão de book dura horas, e queda de energia aparece no rosto.',
+          'Documento com foto, se o material tiver uso comercial e envolver termo de imagem, e a lista de referências impressa ou no celular. Chegue de quinze a vinte minutos antes: começar apressado custa os primeiros trinta minutos de foto.',
+        ],
+      },
+      {
+        h2: 'Como funciona a direção durante a sessão',
+        paragraphs: [
+          'Direção existe porque ninguém precisa saber posar. Essa é a inversão mais importante para quem nunca fez um book: o resultado não depende da sua experiência diante da câmera, depende de quem está conduzindo. Uma boa direção dá comando concreto — para onde olhar, o que fazer com o peso do corpo, em que momento respirar, o que pensar antes do clique — em vez de pedir que você "fique à vontade".',
+          'A sessão costuma abrir com um bloco de aquecimento, geralmente com o look mais confortável. As primeiras imagens raramente entram na seleção final e não deveriam mesmo: elas existem para calibrar luz, ajustar ritmo e dissolver a tensão inicial. A partir do segundo bloco, o corpo já entendeu o jogo.',
+          'Cada look funciona como um bloco com intenção própria — expressão, enquadramento, energia. Você verá imagens ao longo do caminho para entender o que está sendo construído, sem que isso vire uma revisão foto a foto, que quebra o fluxo e derruba a confiança.',
+          'Pausa faz parte do método. Cinco minutos entre blocos para beber água, retocar e reorganizar o olhar valem mais que trinta minutos de insistência. E se algo não estiver confortável, diga na hora: direção se ajusta, e sessão feita em desconforto aparece na imagem.',
+          'É assim que conduzimos cada sessão no Studio da House Mazzutti — com direção presente do primeiro ao último clique. Conheça o processo em /studio/book/.',
+        ],
+      },
+      {
+        h2: 'Pós-sessão: seleção, retoque e entrega',
+        paragraphs: [
+          'A seleção é a etapa que define o book. De centenas de imagens captadas, um book forte vive entre quinze e trinta fotos. Mais que isso dilui: quem recebe seu material olha as primeiras imagens e forma um juízo. Curadoria é generosidade com o leitor.',
+          'O critério de corte é funcional. Cada foto selecionada deve responder a uma pergunta diferente sobre você — o rosto em detalhe, o corpo inteiro, a expressão séria, a expressão aberta, o registro de personalidade. Duas fotos que dizem a mesma coisa disputam espaço entre si.',
+          'Retoque profissional preserva identidade. Ele ajusta luz, cor, contraste e elimina o que é temporário — uma espinha, um fio fora do lugar, uma marca de alça. O que é permanente e seu não se apaga: sinais, cicatrizes, textura de pele, linhas de expressão. Book irreconhecível quebra a confiança de quem contrata você.',
+          'A entrega deve incluir arquivos em alta resolução para impressão e versões otimizadas para uso digital, com proporções adequadas a portfólio e redes. Combine antes o prazo, o número de imagens tratadas e como funcionam eventuais ajustes — clareza contratual evita frustração na etapa mais delicada do processo.',
+        ],
+      },
+    ],
+    citacao: 'Ninguém precisa saber posar. Precisa ser dirigido. A diferença entre um book comum e um book que abre portas está em quem conduz, não em quem está diante da lente.',
+    faq: [
+      {
+        q: 'Quantos looks devo levar para um book fotográfico?',
+        a: 'De três a quatro looks para um book de meio período e de quatro a cinco para um book completo. O critério é variação de silhueta e registro, não quantidade: um look estruturado, um casual, um que trabalhe linha de corpo e rosto, e um de personalidade. Acima de cinco, o tempo de troca consome o tempo de direção e o material fica raso em todos os blocos.',
+      },
+      {
+        q: 'O que não fazer na semana antes do book fotográfico?',
+        a: 'Nada novo. Sem procedimentos estéticos inéditos, sem coloração diferente, sem ácidos que você nunca usou, sem sobrancelha feita por outro profissional. Corte de cabelo deve acontecer de sete a dez dias antes, coloração de cinco a sete dias, e limpeza de pele profunda de dez a quinze dias. Nas últimas 48 horas, reduza sal e álcool e priorize sono — retenção de líquido e cansaço aparecem no rosto.',
+      },
+      {
+        q: 'Preciso saber posar para fazer um book?',
+        a: 'Não. Posar é responsabilidade da direção, não sua. Uma sessão bem conduzida oferece comando concreto — para onde olhar, o que fazer com o peso do corpo, quando respirar — em vez de pedir que você fique à vontade. A sessão costuma abrir com um bloco de aquecimento cujas imagens servem para calibrar luz e dissolver a tensão inicial. A partir do segundo bloco, o corpo já entendeu o ritmo.',
+      },
+      {
+        q: 'Quantas fotos um book profissional deve ter?',
+        a: 'Entre quinze e trinta imagens finais. De centenas de fotos captadas, a curadoria é o que define a força do material: cada imagem selecionada deve responder a uma pergunta diferente sobre você — rosto em detalhe, corpo inteiro, expressão séria, expressão aberta, registro de personalidade. Duas fotos que comunicam a mesma coisa disputam espaço entre si e enfraquecem o conjunto.',
+      },
+    ],
+    conclusao: 'Um book profissional se decide antes da sessão. Objetivo declarado, mercado definido, referências justificadas, looks escolhidos por silhueta e paleta, pele e cabelo cuidados com antecedência e um kit de apoio bem montado transformam o dia da foto em execução tranquila. O resto é direção — e direção é o que separa um arquivo de fotos de um material que abre portas. No Studio da House Mazzutti, cada book começa por uma conversa sobre para que ele existe. Conheça o processo em /studio/book/.',
+    cta: { label: 'Agende seu book no Studio da House Mazzutti', href: '/studio/book/', lead_type: 'studio_book' },
+  },
+  'ensaio-fotografico-feminino-o-que-esperar-da-sessao': {
+    slug: 'ensaio-fotografico-feminino-o-que-esperar-da-sessao',
+    categoria: 'Studio — Ensaio',
+    titulo: 'Ensaio fotográfico feminino: o que esperar da sessão e como aproveitar ao máximo',
+    metaTitle: 'Ensaio fotográfico feminino: o que esperar da sessão',
+    metaDescription: 'Ensaio fotográfico feminino explicado: diferença para o book, tipos de ensaio, direção criativa, preparação, o que acontece na sessão e entrega das fotos.',
+    keywords: [
+      'ensaio fotográfico feminino', 'o que esperar de um ensaio fotográfico', 'tipos de ensaio fotográfico',
+      'ensaio fotográfico gestante', 'ensaio fotográfico sensual', 'ensaio artístico feminino',
+      'ensaio fotográfico São Paulo', 'direção criativa em ensaio', 'como se preparar para um ensaio',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Um ensaio fotográfico feminino é uma sessão de propósito expressivo — existe para registrar um momento, uma fase ou uma forma de se ver — enquanto o book tem função profissional e de mercado. Os formatos mais procurados são o artístico, o sensual, o de gestante e o de debutante. A sessão dura em média de duas a quatro horas, começa por uma conversa de intenção, é conduzida por direção ativa em blocos de look, e termina com curadoria e retoque que preservam identidade. A entrega costuma reunir de vinte a quarenta imagens tratadas.',
+    intro: 'Existe um momento na maior parte dos ensaios em que a mulher diante da câmera para de checar se está bonita e começa a se ver. Costuma acontecer entre o segundo e o terceiro bloco de fotos, depois que o corpo entendeu o ritmo e antes que o cansaço chegue. Todo o resto do trabalho — luz, roupa, locação, direção — existe para que esse momento aconteça e seja registrado. Este texto explica o que acontece antes, durante e depois de um ensaio feminino, para que você chegue sabendo o que esperar e possa usar o tempo da sessão no que ele tem de melhor.',
+    sections: [
+      {
+        h2: 'O que é um ensaio feminino e como ele difere de um book',
+        paragraphs: [
+          'A diferença não é técnica, é de finalidade. Um book existe para o mercado: é lido por bookers, diretores de elenco, clientes e recrutadores, e precisa comunicar versatilidade, tipo físico e alcance de expressão de forma rápida e funcional. Um ensaio existe para você: registra uma fase, uma decisão, um corpo, uma forma de se enxergar num determinado momento da vida.',
+          'Essa diferença muda tudo na construção. O book pede variação ampla e leitura direta, porque quem olha precisa avaliar possibilidades. O ensaio pede coerência e profundidade, porque quem olha precisa sentir alguma coisa. Um privilegia amplitude; o outro, densidade.',
+          'A consequência prática aparece na conversa inicial. No book, a pergunta é "para que mercado". No ensaio, é "o que você quer que essa imagem diga sobre você daqui a dez anos". A segunda é mais difícil de responder e mais determinante para o resultado.',
+          'Vale dizer o que um ensaio não é: não é uma sessão de fotos bonitas sem contexto. Ensaio sem intenção declarada produz imagens agradáveis e esquecíveis. A intenção é a matéria-prima — o resto é ofício.',
+        ],
+      },
+      {
+        h2: 'Os tipos de ensaio e o que cada um pede',
+        paragraphs: [
+          'Ensaio artístico. Trabalha forma, luz, sombra e composição. É o formato mais livre e o que mais depende de conceito prévio: pode explorar silhueta, textura, movimento ou abstração. Pede pouca roupa em termos de informação visual e muita clareza em termos de ideia. É o ensaio que mais se aproxima da linguagem editorial.',
+          'Ensaio sensual. É sobre potência e presença, não sobre exposição. A régua é sempre da mulher fotografada: o nível de exposição é definido por ela, por escrito, antes da sessão, e pode ser reduzido a qualquer momento. Luz direcional, cenografia contida e direção que trabalha olhar e respiração fazem mais por esse formato do que qualquer figurino.',
+          'Ensaio gestante. A janela ideal é entre a 30ª e a 36ª semana — barriga já definida e conforto ainda preservado. Pede sessão mais curta, com pausas frequentes, poses que não exijam sustentação prolongada e tecidos fluidos que trabalhem volume e luz. É um dos poucos ensaios com prazo biológico: agendar tarde demais limita o que é possível.',
+          'Ensaio de debutante. Marca uma passagem, e a construção costuma equilibrar dois registros: o formal, com vestido e cenário de celebração, e o contemporâneo, mais próximo de como a menina realmente se veste e se comporta. O erro comum é fazer só o primeiro — e entregar um material que não se parece com ela.',
+          'Há ainda formatos híbridos: ensaio de marca pessoal com linguagem editorial, ensaio de casal, ensaio de aniversário significativo. O que define não é o rótulo, é a intenção declarada no início.',
+        ],
+      },
+      {
+        h2: 'Como a direção criativa transforma o resultado',
+        paragraphs: [
+          'Direção criativa é o que decide antes: conceito, paleta, tipo de luz, referência de composição, escolha de locação, figurino e a curva emocional da sessão. Ela transforma "vamos fazer um ensaio" em um plano com começo, meio e fim — e é a razão pela qual dois ensaios feitos com o mesmo equipamento produzem resultados incomparáveis.',
+          'Sem direção, a sessão vira uma sequência de tentativas. Fotografa-se muito, escolhe-se pouco, e a seleção final é um conjunto de imagens simpáticas sem relação entre si. Com direção, cada bloco tem propósito declarado, e a curadoria depois é uma consequência natural, não um resgate.',
+          'A direção também opera no momento do clique. Pedir "relaxa" não produz relaxamento; pedir que a pessoa solte o ar devagar e olhe para um ponto específico, sim. Comando concreto substitui esforço de interpretação — e é o que permite a alguém sem nenhuma experiência diante da câmera entregar imagens com verdade.',
+          'Existe ainda a dimensão de segurança emocional. Uma direção atenta lê desconforto antes que ele apareça na imagem, propõe pausa, muda de bloco, ajusta o plano. Ensaio conduzido com pressa produz rigidez, e rigidez é a única coisa que retoque nenhum resolve.',
+          'É esse trabalho de concepção e condução que fazemos em cada sessão do Studio da House Mazzutti. Conheça a proposta em /studio/ensaio/.',
+        ],
+      },
+      {
+        h2: 'Preparação: roupa, acessórios e beleza',
+        paragraphs: [
+          'Roupa. De três a cinco peças ou conjuntos, escolhidos pelo caimento e pela coerência com o conceito. Tecidos com movimento — seda, tricô leve, malha, tule — fotografam melhor que peças rígidas, porque respondem ao corpo e à luz. Cores sólidas e neutras sustentam mais tempo que estampas, que competem com o rosto.',
+          'Acessórios devem ser poucos e intencionais. Uma peça marcante vale mais que cinco discretas. Evite acessórios que exijam ajuste constante: eles consomem tempo de direção e criam continuidade inconsistente entre fotos do mesmo bloco.',
+          'Beleza. Maquiagem de ensaio é mais construída que a do dia a dia, porque a luz de estúdio apaga relevo, mas o princípio é o mesmo: realçar traço, não substituí-lo. Se possível, trabalhe com profissional presente na sessão, para retoques ao longo das horas. Cabelo com pelo menos duas variações — solto e preso — dobra a leitura visual do mesmo look.',
+          'Antecedência. Corte de sete a dez dias antes, coloração de cinco a sete, nada de procedimento novo na semana. Unhas feitas, pele hidratada, duas noites de sono decente. E no dia: chegue com tempo, sem pressa, sem compromisso logo depois. Ensaio com hora para acabar termina antes do melhor bloco.',
+        ],
+      },
+      {
+        h2: 'O que acontece durante a sessão',
+        paragraphs: [
+          'A sessão abre com conversa, não com foto. De dez a quinze minutos para revisar a intenção, alinhar limites e combinar a ordem dos blocos. Esse tempo parece perdido e é o que faz a próxima hora render.',
+          'Vem então o bloco de aquecimento, quase sempre com o look mais confortável. As primeiras imagens servem para calibrar luz e dissolver tensão — não se preocupe com elas. É normal se sentir estranha nos primeiros minutos; é assim para praticamente todo mundo, inclusive para quem trabalha com imagem.',
+          'A partir do segundo bloco, a sessão entra em ritmo. Cada look tem uma intenção — expressão, enquadramento, energia — e a direção conduz com comandos concretos, mostrando imagens de referência ao longo do caminho para você entender o que está sendo construído, sem revisão foto a foto.',
+          'Uma sessão típica dura de duas a quatro horas, com pausas de cinco a dez minutos entre blocos. Água, retoque, respiro. Ensaio bom respeita curva de energia: os melhores registros costumam sair entre a primeira e a terceira hora, e insistir depois disso raramente melhora o material.',
+          'Se algo não estiver confortável em qualquer momento, diga. Pose, roupa, nível de exposição, temperatura da sala. Tudo se ajusta, e nada que é feito em desconforto sobrevive à seleção final.',
+        ],
+      },
+      {
+        h2: 'Entrega, uso das fotos e direitos de imagem',
+        paragraphs: [
+          'A entrega padrão de um ensaio reúne de vinte a quarenta imagens tratadas, escolhidas em curadoria conjunta a partir do material captado. O número exato importa menos que o critério: cada imagem selecionada deve acrescentar algo que as outras não dizem.',
+          'O retoque preserva identidade. Ajusta luz, cor e contraste, remove o que é temporário — uma marca, um fio, um brilho de oleosidade — e mantém o que é permanente e seu. Textura de pele, sinais, linhas de expressão e formato de corpo permanecem. Imagem irreconhecível não registra momento nenhum.',
+          'Os arquivos devem chegar em alta resolução, prontos para impressão, e em versões otimizadas para uso digital com proporções adequadas a redes e portfólio. Guarde os originais em dois lugares diferentes: entrega digital não é arquivo eterno.',
+          'Sobre direitos: as imagens são suas para uso pessoal. Uso comercial, publicação por terceiros e cessão para marcas devem ser combinados por escrito antes da sessão, com escopo, prazo e território definidos. Ensaios sensuais merecem atenção extra nesse ponto — deixe registrado o que pode e o que não pode ser publicado, inclusive pelo fotógrafo em portfólio. Clareza contratual é parte do cuidado, não burocracia.',
+        ],
+      },
+    ],
+    citacao: 'Todo ensaio tem um momento em que a pessoa para de checar se está bonita e começa a se ver. Luz, roupa e direção existem para que esse momento aconteça — e seja registrado.',
+    faq: [
+      {
+        q: 'Qual a diferença entre ensaio fotográfico e book?',
+        a: 'A finalidade. O book existe para o mercado: é lido por bookers, diretores de elenco e clientes, e precisa comunicar versatilidade e alcance de expressão de forma funcional. O ensaio existe para você: registra uma fase, um corpo, uma forma de se enxergar num momento específico. O book privilegia amplitude e leitura rápida; o ensaio privilegia coerência e densidade emocional.',
+      },
+      {
+        q: 'Quanto tempo dura um ensaio fotográfico feminino?',
+        a: 'Entre duas e quatro horas, incluindo a conversa inicial de alinhamento, o bloco de aquecimento, as trocas de look e as pausas de cinco a dez minutos entre blocos. Ensaios de gestante costumam ser mais curtos, com pausas mais frequentes. Os melhores registros normalmente saem entre a primeira e a terceira hora — insistir muito além disso raramente melhora o material.',
+      },
+      {
+        q: 'Preciso ter experiência para fazer um ensaio?',
+        a: 'Não. A condução é responsabilidade da direção. Uma boa direção substitui pedidos vagos como "relaxa" por comandos concretos — soltar o ar devagar, olhar para um ponto específico, transferir o peso do corpo — e é isso que permite a alguém sem nenhuma experiência entregar imagens com verdade. É normal se sentir estranha nos primeiros minutos: o bloco de aquecimento existe justamente para dissolver essa tensão.',
+      },
+      {
+        q: 'Qual a melhor fase da gravidez para fazer um ensaio gestante?',
+        a: 'Entre a 30ª e a 36ª semana. Nessa janela a barriga já está bem definida e o conforto ainda permite uma sessão fluida. Antes disso o volume pode não aparecer o suficiente; depois, o cansaço e o desconforto limitam poses e duração. O ensaio gestante pede sessão mais curta, pausas frequentes e tecidos fluidos que trabalhem volume e luz.',
+      },
+    ],
+    conclusao: 'Um ensaio feminino bem-feito não começa na câmera: começa na pergunta sobre o que você quer que aquela imagem diga sobre você daqui a dez anos. A partir daí, tudo é ofício — conceito, luz, figurino, direção que conduz com comando concreto, curadoria que respeita identidade e entrega que sustenta o registro no tempo. Nenhuma etapa disso exige experiência sua diante da lente. Exige método de quem conduz. No Studio da House Mazzutti, cada ensaio nasce de uma conversa sobre intenção. Conheça a proposta em /studio/ensaio/.',
+    cta: { label: 'Agende seu ensaio no Studio da House Mazzutti', href: '/studio/ensaio/', lead_type: 'studio_ensaio' },
+  },
+  'quanto-custa-book-fotografico-profissional-sao-paulo': {
+    slug: 'quanto-custa-book-fotografico-profissional-sao-paulo',
+    categoria: 'Studio — Book',
+    titulo: 'Quanto custa um book fotográfico profissional em São Paulo?',
+    metaTitle: 'Quanto custa um book fotográfico profissional em São Paulo',
+    metaDescription: 'Quanto custa um book fotográfico em São Paulo: variáveis de preço, faixas por tipo de book, por que book barato sai caro e como avaliar um orçamento.',
+    keywords: [
+      'quanto custa book fotográfico São Paulo', 'preço de book fotográfico', 'valor de book profissional',
+      'book fotográfico preço SP', 'quanto custa book de modelo', 'orçamento de book fotográfico',
+      'book empresarial preço', 'book de ator São Paulo', 'fotógrafo de book São Paulo',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Em São Paulo, um book fotográfico profissional custa entre R$ 900 e R$ 8.000, dependendo do escopo. Books de entrada com dois a três looks e poucas imagens tratadas ficam entre R$ 900 e R$ 2.000; books de modelo e de ator com direção completa, entre R$ 2.000 e R$ 4.500; books de marca pessoal e empresariais com conceito, locação e produção de beleza, entre R$ 3.500 e R$ 8.000. As variáveis que mais pesam são número de looks, locação, presença de direção, volume de retoque e formato de entrega.',
+    intro: 'Perguntar quanto custa um book é como perguntar quanto custa um carro: a resposta honesta depende do que precisa ser entregue. Mas existe uma resposta útil, e ela passa por entender o que compõe o preço — porque quase todo orçamento de book cobra pelas mesmas cinco coisas, apenas em proporções diferentes. Quem entende essas cinco variáveis consegue comparar propostas de verdade, em vez de comparar números soltos em uma planilha. É isso que este texto oferece: faixas reais de mercado em São Paulo e o critério para ler qualquer orçamento.',
+    sections: [
+      {
+        h2: 'As cinco variáveis que definem o preço de um book',
+        paragraphs: [
+          'Número de looks e duração da sessão. Cada look adiciona tempo de troca, ajuste de luz e nova construção de direção. Um book de três looks ocupa meio período; um de cinco ocupa um dia inteiro, com equipe alocada por mais horas. É a variável mais direta e a que mais gente subestima ao comparar propostas.',
+          'Locação. Estúdio próprio já embutido no valor é a opção mais previsível. Estúdio alugado por hora, locação externa com autorização, ou produção em ambiente cenográfico adicionam custo real e logística. Externa em rua ou espaço público exige produção de apoio e plano B de clima — isso aparece no orçamento.',
+          'Direção. É a variável menos visível e a que mais muda o resultado. Direção significa conceito prévio, definição de referências, condução ativa durante a sessão e curadoria depois. Fotógrafo que apenas aperta o botão cobra menos porque entrega menos trabalho — e o resultado reflete essa diferença com precisão.',
+          'Retoque. O volume de imagens tratadas e a profundidade do tratamento pesam bastante. Ajuste básico de luz e cor é rápido; tratamento de pele, correção de figurino e limpeza de fundo consomem entre quarenta minutos e duas horas por imagem quando bem-feitos. Orçamento que promete cinquenta fotos tratadas por um valor baixo está falando de outra coisa.',
+          'Produção e entrega. Maquiagem e cabelo presentes na sessão, styling, assistente de set, e o formato final — arquivos digitais, versões otimizadas para redes, impressão, book físico — compõem o restante. Equipe de beleza sozinha costuma representar de R$ 400 a R$ 1.200 em São Paulo.',
+        ],
+      },
+      {
+        h2: 'Faixas de investimento por tipo de book em São Paulo',
+        paragraphs: [
+          'Book de entrada. De R$ 900 a R$ 2.000. Sessão de meio período, dois a três looks, estúdio, de oito a quinze imagens tratadas, sem equipe de beleza. Atende quem precisa de material inicial para portfólio ou primeiro contato com agências. É um ponto de partida legítimo, desde que a expectativa esteja calibrada.',
+          'Book de modelo. De R$ 2.000 a R$ 4.500. Sessão completa, quatro a cinco looks, direção com conceito definido, beleza incluída, de vinte a trinta imagens tratadas, entrega em formatos adequados a envio para agências. É a faixa em que a maioria dos books com finalidade profissional real acontece.',
+          'Book de ator. De R$ 1.800 a R$ 4.000. Escopo mais concentrado — headshots com alcance de expressão, variação de registro emocional, dois a três looks —, mas com exigência alta de direção. O valor está menos em produção e mais em condução: um bom book de ator depende de quem consegue extrair verdade em close.',
+          'Book de marca pessoal. De R$ 3.500 a R$ 8.000. Conceito construído a partir do posicionamento, locação alinhada ao território da marca, styling, beleza, e entrega ampla para uso em site, redes, imprensa e materiais comerciais. Aqui o book é ativo de negócio, e o orçamento reflete isso.',
+          'Book empresarial e corporativo. De R$ 2.500 a R$ 12.000, quase sempre cotado por volume de pessoas. Sessões de equipe com padrão visual unificado, feitas no escritório ou em estúdio, com direção que garante que trinta retratos diferentes pareçam parte do mesmo sistema. O preço por pessoa cai conforme o volume sobe.',
+        ],
+      },
+      {
+        h2: 'Por que books baratos costumam sair caros',
+        paragraphs: [
+          'O primeiro custo escondido é o retrabalho. Book que não funciona precisa ser refeito, e refazer significa pagar duas vezes — a primeira sessão, mais a segunda. Quem economiza R$ 1.200 na primeira e gasta R$ 3.000 na segunda pagou R$ 4.200 por um book de R$ 3.000, com meses de atraso no meio.',
+          'O segundo é a qualidade técnica da imagem. Arquivo de baixa resolução, ruído digital, luz mal resolvida e cor inconsistente limitam o uso do material: não imprime bem, não aguenta corte, não sustenta uma capa ou um material impresso. Você descobre isso no momento em que mais precisa.',
+          'O terceiro, e o mais determinante, é a ausência de direção. Sem alguém conduzindo, as fotos saem tecnicamente corretas e expressivamente vazias — postura travada, olhar sem intenção, quinze imagens que dizem a mesma coisa. Nenhum equipamento compensa isso, e nenhum retoque corrige.',
+          'O quarto é o custo de oportunidade, que ninguém coloca na planilha e é o maior de todos. Um book fraco enviado a uma agência, a um diretor de elenco ou a um cliente potencial não gera uma segunda chance. A porta que não abriu não avisa que não abriu.',
+          'Isso não significa que o mais caro é o melhor. Significa que o critério de escolha não pode ser preço isolado — tem que ser preço contra escopo entregue e contra o uso que o material precisa suportar.',
+        ],
+      },
+      {
+        h2: 'Como avaliar um orçamento de book',
+        paragraphs: [
+          'Exija o escopo por escrito. Duração da sessão, número de looks, se há locação inclusa, quantas imagens serão entregues tratadas, prazo de entrega, formatos dos arquivos e política de ajustes. Orçamento que cabe em uma linha de mensagem não é orçamento, é um número.',
+          'Pergunte quem dirige a sessão e como. A resposta separa proposta séria de proposta genérica. Um profissional com método explica o processo antes de falar de preço: conversa de intenção, definição de conceito, referências, blocos de sessão, curadoria conjunta.',
+          'Veja o portfólio inteiro, não as três melhores fotos. O que importa é consistência: o profissional entrega o mesmo nível com pessoas de biotipos, idades e níveis de experiência diferentes? Ou só funciona com quem já sabe posar?',
+          'Confirme direitos de uso. Onde as imagens podem ser publicadas, por quanto tempo, se há restrição comercial, e se o fotógrafo vai usá-las em portfólio. Isso deve estar no contrato antes da sessão, não descoberto depois.',
+          'Desconfie de valor muito abaixo da faixa. Sessão de estúdio bem-feita tem custos irredutíveis: horas de trabalho, equipamento, espaço, tratamento. Preço que ignora esses custos está cortando alguma etapa — normalmente direção ou retoque, justamente as que mais importam.',
+        ],
+      },
+      {
+        h2: 'O que está incluso no book do Studio da House Mazzutti',
+        paragraphs: [
+          'Conversa de intenção antes da sessão. Definimos para que o book existe, quem vai lê-lo e que decisão essa pessoa precisa tomar depois de vê-lo. Esse alinhamento é o que arbitra toda escolha estética adiante — e é a razão pela qual não vendemos pacote antes de entender o objetivo.',
+          'Direção de imagem do início ao fim. Conceito, referências justificadas, orientação de figurino e paleta antes do dia, e condução ativa durante a sessão, com comando concreto de pose, olhar e ritmo. Ninguém precisa saber posar no nosso estúdio.',
+          'Sessão em blocos por look, com pausas planejadas e revisão de referência ao longo do caminho, para que você entenda o que está sendo construído sem quebrar o fluxo da sessão.',
+          'Curadoria conjunta e retoque que preserva identidade. Selecionamos por critério funcional — cada imagem responde a uma pergunta diferente — e tratamos removendo o que é temporário, mantendo o que é permanente e seu.',
+          'Entrega em alta resolução para impressão e em versões otimizadas para uso digital, com prazo e escopo definidos em contrato desde o início. Sem surpresa na etapa final.',
+          'Escopo, faixa de investimento e formatos disponíveis estão detalhados em /studio/book/.',
+        ],
+      },
+    ],
+    citacao: 'O custo mais alto de um book barato não está na segunda sessão que você vai precisar fazer. Está na porta que não abriu — e que não avisa que não abriu.',
+    faq: [
+      {
+        q: 'Quanto custa um book fotográfico em São Paulo?',
+        a: 'Entre R$ 900 e R$ 8.000, dependendo do escopo. Books de entrada com dois a três looks e de oito a quinze imagens tratadas ficam entre R$ 900 e R$ 2.000. Books de modelo e de ator com direção completa e beleza inclusa, entre R$ 1.800 e R$ 4.500. Books de marca pessoal com conceito, locação e styling, entre R$ 3.500 e R$ 8.000. Books empresariais são cotados por volume de pessoas.',
+      },
+      {
+        q: 'O que faz o preço de um book variar tanto?',
+        a: 'Cinco variáveis: número de looks e duração da sessão, locação (estúdio próprio, alugado ou externa), presença de direção de imagem, volume e profundidade do retoque, e produção e formato de entrega. A direção é a variável menos visível e a que mais muda o resultado — ela inclui conceito prévio, condução ativa na sessão e curadoria depois. Fotógrafo que apenas capta cobra menos porque entrega menos trabalho.',
+      },
+      {
+        q: 'Vale a pena fazer um book barato?',
+        a: 'Depende do uso. Para um primeiro contato com agências, um book de entrada bem-feito cumpre a função. O problema é quando o preço baixo significa ausência de direção ou de retoque: o resultado sai tecnicamente correto e expressivamente vazio, o material não sustenta impressão nem corte, e frequentemente exige uma nova sessão meses depois — pagando duas vezes por um book só.',
+      },
+      {
+        q: 'Como avaliar se um orçamento de book é justo?',
+        a: 'Peça o escopo por escrito: duração, número de looks, locação inclusa, quantidade de imagens tratadas, prazo, formatos de arquivo e política de ajustes. Pergunte quem dirige a sessão e como. Veja o portfólio inteiro para checar consistência com biotipos e níveis de experiência diferentes, não apenas as três melhores fotos. E confirme os direitos de uso em contrato antes da sessão.',
+      },
+    ],
+    conclusao: 'Preço de book não é um número, é a soma de cinco decisões: quantos looks, onde, com quanta direção, com quanto retoque e com que entrega. Em São Paulo, a faixa vai de R$ 900 a R$ 8.000, e o valor justo é aquele em que o escopo contratado suporta o uso que o material precisa cumprir. Comparar propostas por preço isolado é o caminho mais rápido para pagar duas vezes. No Studio da House Mazzutti, todo book começa por uma conversa sobre objetivo antes de qualquer valor. Veja o escopo completo em /studio/book/.',
+    cta: { label: 'Peça um orçamento de book na House Mazzutti', href: '/studio/book/', lead_type: 'studio_book' },
+  },
 };
