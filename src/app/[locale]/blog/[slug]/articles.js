@@ -6398,4 +6398,285 @@ export const articles = {
     conclusao: 'Preço de book não é um número, é a soma de cinco decisões: quantos looks, onde, com quanta direção, com quanto retoque e com que entrega. Em São Paulo, a faixa vai de R$ 900 a R$ 8.000, e o valor justo é aquele em que o escopo contratado suporta o uso que o material precisa cumprir. Comparar propostas por preço isolado é o caminho mais rápido para pagar duas vezes. No Studio da House Mazzutti, todo book começa por uma conversa sobre objetivo antes de qualquer valor. Veja o escopo completo em /studio/book/.',
     cta: { label: 'Peça um orçamento de book na House Mazzutti', href: '/studio/book/', lead_type: 'studio_book' },
   },
+  'o-que-e-assessoria-de-imprensa-e-para-que-serve': {
+    slug: 'o-que-e-assessoria-de-imprensa-e-para-que-serve',
+    categoria: 'Agência — RP',
+    titulo: 'O que é assessoria de imprensa e para que serve uma agência de RP',
+    metaTitle: 'O que é assessoria de imprensa e para que serve uma agência de RP',
+    metaDescription: 'O que é assessoria de imprensa, o que uma agência de RP faz no dia a dia, a diferença entre RP e mídia paga e quando faz sentido contratar.',
+    keywords: [
+      'assessoria de imprensa', 'o que é assessoria de imprensa', 'para que serve assessoria de imprensa',
+      'agência de RP', 'relações públicas para marcas', 'assessoria de imprensa para marcas de luxo',
+      'assessoria de imprensa São Paulo', 'quanto custa assessoria de imprensa', 'RP para founders',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Assessoria de imprensa é o trabalho de construir e administrar a relação entre uma marca e a imprensa, para que ela apareça em veículos jornalísticos por mérito editorial, não por compra de espaço. Na prática, uma agência de RP constrói narrativa, produz releases, sugere pautas a jornalistas, articula entrevistas e presença em eventos, prepara porta-vozes e gerencia crise. O resultado não é alcance imediato: é autoridade, prova social verificável, presença em buscas e percepção de marca que a mídia paga não consegue comprar.',
+    intro: 'Existe uma diferença silenciosa entre uma marca que aparece e uma marca que é citada. A primeira paga por espaço, controla a mensagem e some quando o orçamento acaba. A segunda é procurada por um jornalista porque tem algo a dizer, e aquilo que ela diz fica registrado, indexado e disponível para quem pesquisar o nome dela daqui a três anos. Assessoria de imprensa é o ofício de fazer a segunda coisa acontecer com método, não por sorte. Vale entender o que ela é de fato, o que ela faz no dia a dia e em que momento contratar deixa de ser vaidade e passa a ser decisão de negócio.',
+    sections: [
+      {
+        h2: 'O que é assessoria de imprensa, sem rodeio',
+        paragraphs: [
+          'Assessoria de imprensa é a gestão profissional do relacionamento entre uma organização e os veículos jornalísticos. O objetivo é conquistar espaço editorial — matéria, entrevista, citação, menção — a partir de relevância real, e não de compra de mídia. O espaço editorial tem uma característica que nenhum anúncio tem: ele vem com a chancela de um terceiro. Quem afirma que a marca é relevante não é a marca, é o veículo.',
+          'Dentro do guarda-chuva maior de relações públicas, a assessoria é a frente voltada à imprensa. RP cobre também relacionamento com comunidades, instituições, parceiros e público interno. Na prática de mercado brasileiro, os dois termos convivem, e uma agência de RP séria opera as duas camadas — reputação e imprensa — como um sistema único.',
+          'O insumo dessa operação é narrativa. Nenhum assessor consegue pautar uma marca que não tem o que dizer. Antes de escrever o primeiro release, o trabalho é encontrar o ângulo: o que essa marca sabe que o mercado ainda não formulou, que dado ela tem, que ponto de vista ela sustenta, que história de origem justifica sua existência. Sem isso, sobra press release genérico — e jornalista reconhece isso na primeira linha.',
+        ],
+      },
+      {
+        h2: 'O que uma agência de RP faz no dia a dia',
+        paragraphs: [
+          'Constrói e mantém o repertório de narrativa. Documento vivo com posicionamento, pontos de vista, dados proprietários, história de origem, biografia dos porta-vozes e temas que a marca tem legitimidade para comentar. É a base de tudo que sai depois.',
+          'Produz releases e materiais para imprensa. Release de lançamento, nota de posicionamento, press kit com imagens em alta e ficha técnica correta, factsheet da marca. Material que o jornalista consegue usar sem precisar refazer o trabalho.',
+          'Sugere pautas de forma dirigida. Pitching não é disparo em massa. É saber que aquele repórter cobre aquele assunto naquele veículo, e oferecer o ângulo que serve à editoria dele — não o que serve ao calendário comercial da marca.',
+          'Articula entrevistas e prepara porta-vozes. Agendamento, briefing prévio, antecipação de perguntas difíceis, treinamento de mensagem-chave. Uma entrevista mal preparada custa mais caro que entrevista nenhuma.',
+          'Coordena presença em eventos e ações com imprensa. Convite, credenciamento, encontros dirigidos, envio de produto com contexto, articulação de presença em premiações, painéis e podcasts.',
+          'Monitora, mede e administra crise. Clipping, análise de tom das menções, relatório periódico e protocolo de resposta para quando algo sai do previsto — porque uma hora sai.',
+        ],
+      },
+      {
+        h2: 'RP e publicidade paga não são a mesma coisa',
+        paragraphs: [
+          'Em mídia paga, a marca controla a mensagem, escolhe o formato, define exatamente onde aparece e sabe quanto vai custar. Em assessoria de imprensa, a marca não controla nada disso. O jornalista decide se a pauta interessa, com que ângulo e em que espaço. Essa perda de controle é justamente a fonte da credibilidade.',
+          'A diferença de custo também é estrutural. Anúncio é aluguel: enquanto a verba corre, a marca aparece; quando para, some. Espaço editorial é patrimônio: a matéria continua publicada, indexada e citável indefinidamente, e passa a alimentar buscas no Google e respostas em assistentes de inteligência artificial que se apoiam em fontes jornalísticas.',
+          'Também mudam a velocidade e a previsibilidade. Campanha paga entrega números na mesma semana. RP trabalha em ciclos mais longos: construir relação com um jornalista, encontrar o gancho certo, esperar a janela editorial. Quem contrata assessoria esperando métrica de campanha vai avaliar a coisa errada com a régua errada.',
+          'Não são frentes concorrentes. São camadas complementares. Publicidade dá alcance a uma mensagem; assessoria dá legitimidade a uma marca. A verba que ignora a segunda camada compra atenção para uma marca sobre a qual ninguém sabe nada — e atenção sem contexto é a mais cara de todas.',
+        ],
+      },
+      {
+        h2: 'Para quem a assessoria de imprensa é indicada',
+        paragraphs: [
+          'Marcas de lifestyle e consumo com estética própria. Moda, beleza, design, decoração, gastronomia e hospitalidade vivem em editorias que se alimentam de novidade bem produzida. Uma marca desse universo com identidade visual consistente e imagem de qualidade tem um caminho aberto na imprensa que a maioria dos setores não tem.',
+          'Founders que precisam existir como autoridade. Em negócios de serviço, consultoria, tecnologia e criação, a percepção do fundador antecede a percepção da empresa. Presença em entrevistas, painéis, podcasts e artigos assinados constrói um repertório público que sustenta vendas complexas e atrai talento.',
+          'Produtos de luxo e ticket alto. Quanto mais caro o produto, maior o peso da validação de terceiros na decisão de compra. Ninguém compra alto confiando apenas no que a própria marca diz sobre si.',
+          'Marcas em transição de posicionamento. Reposicionamento, expansão para nova categoria, entrada em outro mercado ou mudança de identidade pedem que a narrativa nova seja explicada por alguém de fora, não apenas anunciada de dentro.',
+          'Negócios em rodada de captação ou em busca de parceria institucional. Investidor, varejista e parceiro pesquisam o nome antes da reunião. O que aparece nessa busca é parte da negociação, mesmo que ninguém comente.',
+        ],
+      },
+      {
+        h2: 'Que resultado concreto a assessoria entrega',
+        paragraphs: [
+          'Autoridade verificável. Deixa de ser necessário afirmar que a marca é referência quando existem veículos que a trataram como tal. Isso encurta ciclo de venda, sustenta preço e reduz o esforço de convencimento em toda reunião comercial.',
+          'Presença orgânica em buscas e em respostas de inteligência artificial. Matérias em veículos com autoridade de domínio alimentam o resultado do Google para o nome da marca e do fundador, e são exatamente o tipo de fonte que sistemas de resposta automática citam quando alguém pergunta quem é referência em determinado assunto.',
+          'Ativos reutilizáveis. Cada publicação vira material para site, redes, apresentação comercial, proposta e material de captação. Um selo de imprensa bem colocado faz trabalho por anos.',
+          'Percepção de marca no lugar certo. Aparecer no veículo certo posiciona; aparecer no veículo errado desposiciona. Curadoria de onde não estar é tão parte do trabalho quanto a conquista de espaço.',
+          'Preparo para o dia ruim. Marca com relacionamento construído atravessa crise de outro jeito. Quem só liga para o jornalista quando precisa de favor já perdeu.',
+        ],
+      },
+      {
+        h2: 'Quando contratar — e como a House Mazzutti conduz',
+        paragraphs: [
+          'O momento certo raramente é o do lançamento. É antes. Marca que procura assessoria na véspera de lançar chega sem narrativa construída, sem relacionamento e sem material — e pede que se faça em duas semanas o que leva meses. O ideal é começar de sessenta a noventa dias antes de um marco relevante.',
+          'Também é hora de contratar quando a marca já cresceu no boca a boca mas ninguém sabe explicar o que ela é; quando a busca pelo nome do fundador não retorna nada de substancial; quando concorrentes menores aparecem mais; ou quando existe algo genuinamente novo a dizer e não há a quem dizer.',
+          'Não é hora quando não existe substância. Assessoria não inventa relevância — ela revela e organiza a que já existe. Marca sem produto pronto, sem ponto de vista e sem imagem de qualidade deve resolver isso primeiro; do contrário, paga para amplificar um vazio.',
+          'Na House Mazzutti, RP não começa por lista de contatos. Começa por leitura: o que essa marca tem legitimidade para dizer, para quem isso importa e por que agora. Só depois vêm narrativa, materiais, imagem e articulação com imprensa — e a imagem é feita em casa, o que evita o problema mais comum do setor, que é uma boa pauta morrer por falta de foto publicável.',
+          'O escopo completo da frente de relações públicas e assessoria de imprensa está em /agencia/rp/.',
+        ],
+      },
+    ],
+    citacao: 'Publicidade compra atenção para uma mensagem. Assessoria de imprensa constrói legitimidade para uma marca. Quem só faz a primeira paga caro por atenção sobre a qual ninguém sabe nada.',
+    faq: [
+      {
+        q: 'O que é assessoria de imprensa?',
+        a: 'É a gestão profissional do relacionamento entre uma marca e os veículos jornalísticos, com o objetivo de conquistar espaço editorial por relevância — matéria, entrevista, citação — em vez de comprar espaço publicitário. O trabalho envolve construir a narrativa da marca, produzir releases e press kits, sugerir pautas dirigidas a jornalistas, articular entrevistas, preparar porta-vozes e monitorar as menções.',
+      },
+      {
+        q: 'Qual a diferença entre assessoria de imprensa e publicidade paga?',
+        a: 'Em publicidade paga a marca controla a mensagem, o formato e onde aparece, mas a presença acaba quando a verba acaba. Em assessoria de imprensa quem decide é o jornalista, e essa perda de controle é a fonte da credibilidade: a validação vem de um terceiro. Além disso, o espaço editorial permanece publicado e indexado por anos, alimentando buscas e respostas de assistentes de IA.',
+      },
+      {
+        q: 'Para que tipo de marca a assessoria de imprensa faz sentido?',
+        a: 'Marcas de lifestyle e consumo com estética própria (moda, beleza, design, gastronomia, hospitalidade), founders que precisam existir como autoridade pública, produtos de luxo e de ticket alto que dependem de validação de terceiros, marcas em transição de posicionamento e negócios em rodada de captação ou negociação institucional, onde o que aparece na busca pelo nome pesa na mesa.',
+      },
+      {
+        q: 'Quando é o momento certo de contratar uma agência de RP?',
+        a: 'Idealmente de sessenta a noventa dias antes de um marco relevante, não na véspera do lançamento — narrativa, materiais e relacionamento com imprensa levam tempo para maturar. Também é hora quando a busca pelo nome da marca ou do fundador não retorna nada substancial, ou quando concorrentes menores aparecem mais. Não é hora quando não há produto pronto nem ponto de vista: RP revela relevância, não inventa.',
+      },
+    ],
+    conclusao: 'Assessoria de imprensa não é um atalho para aparecer. É a construção paciente de um patrimônio de percepção: o que dizem sobre a marca quando ela não está na sala. Esse patrimônio não se compra por impulso, se constrói por narrativa consistente e relacionamento cultivado antes de ser necessário. Marcas que entendem isso param de precisar convencer — passam a ser entendidas. Na House Mazzutti, a frente de RP começa por leitura estratégica e caminha com imagem produzida em casa, porque pauta boa sem foto publicável morre na redação. Conheça o escopo completo em /agencia/rp/.',
+    cta: { label: 'Fale com a House Mazzutti sobre assessoria de imprensa', href: '/agencia/rp/', lead_type: 'agencia_rp' },
+  },
+  'como-fazer-campanha-de-lancamento-de-produto': {
+    slug: 'como-fazer-campanha-de-lancamento-de-produto',
+    categoria: 'Agência — Comunicação',
+    titulo: 'Como fazer uma campanha de lançamento de produto que gera resultado real',
+    metaTitle: 'Como fazer uma campanha de lançamento de produto que funciona',
+    metaDescription: 'As etapas de uma campanha de lançamento de produto, por que a maioria falha, o papel da imagem e as métricas que realmente importam.',
+    keywords: [
+      'campanha de lançamento de produto', 'como fazer campanha de lançamento', 'estratégia de lançamento de produto',
+      'lançamento de produto marketing', 'agência de campanha de lançamento', 'etapas de uma campanha de lançamento',
+      'campanha de lançamento São Paulo', 'go to market para marcas', 'conceito criativo de campanha',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Uma campanha de lançamento de produto é o conjunto coordenado de decisões de posicionamento, conceito criativo, produção de material, distribuição e ativação que apresenta um produto novo ao mercado dentro de uma janela definida. Ela se estrutura em cinco etapas nessa ordem: definir posicionamento e público, construir o conceito criativo, produzir imagem e material, distribuir por canais próprios, ganhos e pagos, e ativar com imprensa, parceiros e ponto de venda. A maioria das campanhas falha porque inverte a ordem — começa pela execução, sem posicionamento definido.',
+    intro: 'Quase toda campanha de lançamento que dá errado tem a mesma certidão de óbito: começou pela peça. Alguém definiu a data, contratou a produção, aprovou a arte e só então perguntou o que exatamente aquele produto significa para quem vai comprá-lo. A campanha até sai bonita — e não move nada, porque bonito sem posicionamento é decoração cara. Este texto descreve a ordem correta das decisões, o motivo pelo qual ela quase nunca é respeitada e o que separar uma campanha de lançamento que constrói marca de uma que apenas consome verba.',
+    sections: [
+      {
+        h2: 'O que define uma campanha de lançamento',
+        paragraphs: [
+          'Uma campanha de lançamento não é um pacote de peças. É uma tese sobre o mercado, executada em várias superfícies ao mesmo tempo, dentro de uma janela de tempo em que a atenção pode ser concentrada. Sem tese, o que existe é um calendário de publicações com data de estreia.',
+          'Três coisas a distinguem da comunicação corrente. A primeira é a janela: começo, pico e desdobramento definidos. A segunda é a concentração: todos os canais dizendo a mesma coisa, com sotaques diferentes, no mesmo período. A terceira é o objetivo de percepção: um lançamento não existe só para vender no mês; existe para instalar um significado que sustenta o produto pelos anos seguintes.',
+          'Isso também define o que uma campanha de lançamento não é. Não é anúncio isolado, não é o post de estreia no Instagram, não é o envio de amostras a criadores de conteúdo. Esses são componentes possíveis. A campanha é a arquitetura que decide se eles existem e o que cada um carrega.',
+        ],
+      },
+      {
+        h2: 'As cinco etapas, na ordem que funciona',
+        paragraphs: [
+          'Posicionamento. Antes de qualquer criação, é preciso responder quatro perguntas com frases curtas: que problema esse produto resolve, para quem exatamente, contra quem ele compete na cabeça do comprador, e por que ele merece o preço que pede. Sem essas quatro respostas escritas, tudo o que vier depois é chute com bom acabamento.',
+          'Conceito criativo. É a tradução do posicionamento em uma ideia que pode ser vista, ouvida e repetida. Conceito não é slogan: é o eixo que decide o que a campanha mostra, o que ela deliberadamente não mostra, que tom usa e que território estético ocupa. Um bom conceito cabe em uma frase e sobrevive a doze formatos diferentes sem virar outra coisa.',
+          'Produção de material. Aqui entram imagem, filme, texto e design. É a etapa mais visível e a mais confundida com a campanha inteira. Ela deve ser dimensionada pelo conceito e pelos canais definidos — não pelo que é possível produzir com a agenda disponível.',
+          'Distribuição. Canais próprios (site, base de e-mail, perfis, ponto de venda), ganhos (imprensa, criadores, parceiros) e pagos (mídia). Cada camada exige um recorte diferente do mesmo material, e a sequência entre elas importa: normalmente imprensa e canais próprios abrem, mídia paga amplifica depois que a narrativa já está no ar.',
+          'Ativação. É o que faz a campanha acontecer no mundo físico e nas conversas: evento de apresentação, encontro com imprensa, experiência em ponto de venda, ação com parceiros. É a etapa que mais gera imagem nova e mais alimenta as semanas seguintes ao pico.',
+        ],
+      },
+      {
+        h2: 'Por que a maioria das campanhas falha',
+        paragraphs: [
+          'Lançamento sem posicionamento. É o erro mais comum e o mais caro. A marca sabe descrever o produto — material, funcionalidade, ficha técnica — mas não sabe dizer o que ele significa. Aí a campanha comunica atributo, e atributo é a única coisa que o concorrente copia em uma semana.',
+          'Execução antes de estratégia. A data do lançamento é definida primeiro, e todo o resto passa a ser corrida contra o calendário. Sob pressão de prazo, ninguém pergunta se a ideia é boa: pergunta-se se dá tempo. Campanha construída assim entrega peças no prazo e resultado nenhum.',
+          'Dispersão de mensagem. Cada canal com um recado diferente, porque cada canal foi resolvido por uma pessoa diferente em uma reunião diferente. O público que vê três superfícies da mesma marca em uma semana não soma as mensagens: ele desconta a confiança.',
+          'Confundir volume com presença. Publicar muito não é estar presente. Uma campanha com trinta peças fracas ocupa menos espaço na memória do que uma com seis peças precisas. Quantidade é a resposta preferida de quem não tem uma tese.',
+          'Ausência de desdobramento. Toda a energia vai para o dia da estreia, e depois o silêncio. Lançamento não é dia, é ciclo. As quatro a seis semanas seguintes ao pico são justamente quando a curiosidade gerada pode virar decisão de compra.',
+        ],
+      },
+      {
+        h2: 'O papel da imagem numa campanha de lançamento',
+        paragraphs: [
+          'A imagem é o primeiro argumento. Antes de qualquer texto ser lido, ela já comunicou faixa de preço, categoria, público e nível de ambição da marca. Um produto premium fotografado com padrão amador não é lido como premium com desconto: é lido como outro produto.',
+          'Imagem também é o que determina se a campanha existe fora dos canais próprios. Editor de veículo, comprador de varejo e parceiro só reproduzem material que sustenta a página deles. Boa pauta com foto ruim morre na redação — e esse é o gargalo silencioso da maioria dos lançamentos.',
+          'Um sistema visual bem construído entrega mais do que peças: entrega repetibilidade. Mesma luz, mesma paleta, mesmo tratamento, mesmo enquadramento em todas as superfícies. É essa repetição que faz o público reconhecer a marca antes de ler o nome dela.',
+          'Por isso a produção de imagem deve ser desenhada junto com o conceito, e não contratada depois como serviço de acabamento. Quando imagem e conceito nascem separados, a campanha fica com dois donos e nenhuma coerência.',
+        ],
+      },
+      {
+        h2: 'Que métricas realmente importam',
+        paragraphs: [
+          'Métricas de percepção. Volume e qualidade das menções espontâneas, crescimento de busca pelo nome do produto e da marca, presença em veículos com autoridade, e sentimento das conversas. É onde se lê se a tese pegou.',
+          'Métricas de intenção. Tráfego direto e orgânico para a página do produto, tempo de permanência, cadastros, pedidos de orçamento, visitas ao ponto de venda. Ficam entre a atenção e a venda, e antecipam o que vem depois.',
+          'Métricas de conversão. Vendas no período, ticket médio, taxa de conversão da página e custo de aquisição. Importam, mas isoladas mentem: uma campanha pode vender bem por desconto e destruir posicionamento no mesmo movimento.',
+          'Métricas de sustentação. O que acontece nos noventa dias após o pico. Recompra, venda recorrente sem apoio de mídia, busca continuada pelo nome. É aqui que se distingue lançamento que construiu marca de lançamento que apenas antecipou demanda.',
+          'O que não deveria orientar decisão: curtidas, impressões brutas e alcance sem contexto. São números que sobem quando se gasta mais e não dizem nada sobre percepção instalada.',
+        ],
+      },
+      {
+        h2: 'Como a House Mazzutti conduz um lançamento',
+        paragraphs: [
+          'Começamos por leitura, não por briefing de peças. Antes de qualquer criação existe um diagnóstico do produto, do território competitivo e do que a marca pode legitimamente reivindicar. Se as quatro perguntas de posicionamento não têm resposta, o trabalho começa por elas.',
+          'O conceito é aprovado antes da produção, em uma frase e em um território visual. Só depois se decide o que produzir, em que volume e para quais superfícies. Essa ordem é inegociável porque é ela que impede a campanha de virar coleção de peças.',
+          'Imagem, filme e texto são produzidos dentro da casa, com a mesma direção. Isso elimina o intervalo de tradução entre quem pensou e quem executou — o ponto exato em que a maioria das campanhas perde coerência.',
+          'A distribuição é planejada em camadas, com imprensa e canais próprios abrindo e mídia amplificando depois que a narrativa já está no ar. E o desdobramento pós-pico é desenhado desde o início, não improvisado quando o silêncio chega.',
+          'O escopo completo da frente de comunicação e campanhas está em /agencia/comunicacao/.',
+        ],
+      },
+    ],
+    citacao: 'Campanha de lançamento não é um pacote de peças com data de estreia. É uma tese sobre o mercado, executada em várias superfícies ao mesmo tempo — e sem tese, o que sobra é decoração cara.',
+    faq: [
+      {
+        q: 'Quais são as etapas de uma campanha de lançamento de produto?',
+        a: 'Cinco, nesta ordem: posicionamento (que problema o produto resolve, para quem, contra quem compete e por que merece o preço), conceito criativo (a tradução do posicionamento em uma ideia visível e repetível), produção de material (imagem, filme, texto e design), distribuição (canais próprios, ganhos e pagos) e ativação (evento, imprensa, ponto de venda, parceiros). Inverter essa ordem é a causa mais comum de fracasso.',
+      },
+      {
+        q: 'Por que a maioria das campanhas de lançamento não gera resultado?',
+        a: 'Porque começa pela execução. A data é definida primeiro e todo o resto vira corrida contra o calendário, sem que ninguém tenha respondido o que o produto significa para quem vai comprá-lo. Os outros erros recorrentes são dispersão de mensagem entre canais, confundir volume de publicações com presença real e concentrar toda a energia no dia da estreia, sem desdobramento nas semanas seguintes.',
+      },
+      {
+        q: 'Qual o papel da imagem em uma campanha de lançamento?',
+        a: 'A imagem é o primeiro argumento: antes de qualquer texto ser lido, ela já comunicou faixa de preço, categoria e nível de ambição da marca. Também é o que determina se a campanha existe fora dos canais próprios, porque veículos, varejistas e parceiros só reproduzem material que sustenta a página deles. Por isso a produção de imagem precisa ser desenhada junto com o conceito, não contratada depois como acabamento.',
+      },
+      {
+        q: 'Que métricas usar para avaliar um lançamento?',
+        a: 'Quatro camadas: percepção (menções espontâneas, crescimento de busca pelo nome, presença em veículos com autoridade), intenção (tráfego para a página do produto, cadastros, pedidos de orçamento, visitas ao ponto de venda), conversão (vendas, ticket médio, custo de aquisição) e sustentação nos noventa dias após o pico. Curtidas, impressões brutas e alcance sem contexto não deveriam orientar decisão.',
+      },
+    ],
+    conclusao: 'Uma campanha de lançamento funciona quando a ordem das decisões é respeitada: posicionamento antes de conceito, conceito antes de produção, produção antes de distribuição. Invertida, ela produz material bonito que não instala significado nenhum — e significado é a única coisa que o concorrente não copia em uma semana. Se a marca sabe dizer o que o produto é mas ainda não sabe dizer o que ele significa, o trabalho começa aí, não na arte. Na House Mazzutti, todo lançamento começa por leitura e é produzido sob uma única direção. Veja o escopo completo em /agencia/comunicacao/.',
+    cta: { label: 'Fale com a House Mazzutti sobre sua campanha de lançamento', href: '/agencia/comunicacao/', lead_type: 'agencia_comunicacao' },
+  },
+  'rp-vs-trafego-pago-qual-usar-primeiro': {
+    slug: 'rp-vs-trafego-pago-qual-usar-primeiro',
+    categoria: 'Agência — RP',
+    titulo: 'RP ou tráfego pago: qual investir primeiro para crescer sua marca',
+    metaTitle: 'RP ou tráfego pago: qual investir primeiro na sua marca',
+    metaDescription: 'RP vs tráfego pago: o que cada um entrega, velocidade de resultado, custo a longo prazo e como decidir onde investir primeiro.',
+    keywords: [
+      'RP vs tráfego pago', 'relações públicas ou mídia paga', 'investir em RP ou anúncios',
+      'assessoria de imprensa ou tráfego pago', 'o que é melhor RP ou mídia paga', 'como dividir verba de marketing',
+      'estratégia de marketing para marcas de luxo', 'autoridade de marca', 'custo de aquisição de cliente',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Não existe resposta única: RP e tráfego pago resolvem problemas diferentes. Tráfego pago entrega alcance imediato, previsível e mensurável, e faz sentido quando a marca já tem oferta clara, página que converte e algo verificável a dizer sobre si. RP entrega autoridade, validação de terceiros e presença duradoura em buscas, e faz sentido quando a marca é desconhecida, vende ticket alto ou depende de percepção para sustentar preço. Na prática, marcas de ticket alto começam por RP e depois amplificam com mídia; marcas de conversão direta e ticket baixo fazem o inverso.',
+    intro: 'A pergunta chega quase sempre no mesmo formato: tenho uma verba limitada, coloco em anúncio ou em assessoria de imprensa? Quem responde rápido está vendendo alguma coisa. A resposta honesta depende de três variáveis — o estágio da marca, o ticket do que ela vende e o quanto a decisão de compra depende de confiança. Vale entender o que cada frente realmente entrega, por que os prazos delas são incompatíveis por natureza e como decidir sem apostar tudo no lado errado.',
+    sections: [
+      {
+        h2: 'O que cada um entrega, de fato',
+        paragraphs: [
+          'Tráfego pago entrega alcance controlado. A marca escolhe quem vê, com que frequência, com que mensagem, e sabe quanto custou cada clique. É a ferramenta mais precisa que existe para colocar uma oferta na frente de um público específico em um prazo curto. O que ela não faz é convencer alguém de que a marca é boa — ela apenas garante que a mensagem chegue.',
+          'RP entrega autoridade. O ganho não está no número de pessoas alcançadas, mas em quem afirma. Quando um veículo respeitado trata a marca como relevante, a afirmação vale mais do que mil impressões de um anúncio dizendo a mesma coisa, porque não parte da própria marca.',
+          'A diferença essencial é essa: mídia paga resolve visibilidade, RP resolve credibilidade. Marca visível e não confiável gera clique e não gera venda. Marca confiável e invisível gera admiração de quem já a conhece e não cresce. As duas carências são reais, e são carências distintas.',
+        ],
+      },
+      {
+        h2: 'Velocidade: por que os prazos são incompatíveis',
+        paragraphs: [
+          'Mídia paga entrega dados em dias. Campanha ativada hoje produz números amanhã, e é possível corrigir criativo, público e verba dentro da mesma semana. Essa velocidade é uma vantagem operacional enorme — e é também a razão pela qual ela vicia.',
+          'RP trabalha em ciclos de meses. Construir relacionamento com jornalistas, encontrar o gancho certo, esperar a janela editorial e ver a matéria sair leva tempo que não se comprime com dinheiro. Uma primeira publicação relevante costuma acontecer entre trinta e noventa dias após o início do trabalho, e o efeito acumulado aparece depois disso.',
+          'O problema prático é que essa diferença de ritmo distorce a avaliação. Como a mídia paga mostra resultado antes, ela ganha a discussão de verba todo mês — mesmo quando o gargalo real do negócio é de percepção, não de alcance. Quem mede as duas frentes com a mesma régua sempre conclui que a lenta não funciona.',
+          'Vale lembrar também que a velocidade da mídia paga é reversível. Desligou, acabou. A lentidão da RP é a contrapartida de algo que não se desliga: a matéria continua publicada e continua sendo encontrada.',
+        ],
+      },
+      {
+        h2: 'Custo ao longo do tempo',
+        paragraphs: [
+          'Mídia paga tem custo linear e crescente. Para manter o mesmo volume de resultado é preciso manter — normalmente aumentar — o investimento, porque leilão fica mais caro, criativo fatiga e público satura. É aluguel de atenção, com reajuste embutido.',
+          'RP tem custo com efeito acumulado. O investimento de um trimestre continua produzindo depois que acaba: matérias indexadas alimentam a busca pelo nome da marca, sustentam apresentações comerciais e são citadas por assistentes de inteligência artificial que se apoiam em fontes jornalísticas. É construção de patrimônio, não aluguel.',
+          'Existe ainda um efeito cruzado que quase ninguém contabiliza: autoridade barateia mídia. Quando a marca é reconhecida, o mesmo anúncio converte mais, o custo de aquisição cai e o ciclo de venda encurta. Investir em percepção melhora o desempenho da verba de mídia — o inverso não é verdadeiro.',
+          'Por isso a comparação de custo puro engana. Não se trata de qual entrega mais por real gasto neste mês, mas de qual reduz o custo do próximo ano.',
+        ],
+      },
+      {
+        h2: 'Quando cada um faz sentido no estágio da marca',
+        paragraphs: [
+          'Marca nova, ticket alto, decisão de compra baseada em confiança. Comece por RP e por imagem. Anunciar um produto caro de uma marca sobre a qual não existe informação pública é pagar para levar gente a um lugar onde ela não vai comprar. Primeiro construa razões para acreditar, depois compre alcance.',
+          'Marca com oferta validada, ticket baixo e conversão direta. Comece por mídia paga. Se o produto já vende, a página converte e a proposta é autoexplicativa, alcance resolve. RP entra depois, para sustentar preço e reduzir dependência de leilão.',
+          'Marca em reposicionamento. RP primeiro, sem hesitação. Mudança de percepção é explicada por terceiros, não anunciada pela própria marca. Anunciar posicionamento novo sem validação externa soa a discurso institucional e não muda a leitura de ninguém.',
+          'Marca que já gasta bem em mídia e vê o custo de aquisição subir todo trimestre. O gargalo não é de alcance, é de percepção. Mais verba no mesmo lugar apenas acelera o problema. É o momento clássico de abrir a frente de autoridade.',
+          'Negócio em captação, expansão ou negociação com varejo e parceiros institucionais. RP tem peso desproporcional, porque a pesquisa pelo nome antecede a reunião e faz parte da negociação mesmo quando ninguém comenta.',
+        ],
+      },
+      {
+        h2: 'A combinação ideal e os erros de quem escolhe só um lado',
+        paragraphs: [
+          'A arquitetura que funciona é sequencial, não simultânea em partes iguais. Primeiro instala-se percepção — narrativa, imagem, presença editorial. Depois amplifica-se com mídia, aproveitando um terreno onde a marca já significa alguma coisa. A mídia então trabalha sobre reconhecimento, e não contra o desconhecimento.',
+          'Erro de quem só faz mídia paga: constrói um negócio dependente de leilão. No dia em que a verba cai ou o custo sobe, a demanda desaparece, porque nunca houve marca — houve distribuição paga. É crescimento alugado, e o contrato pode ser rescindido pelo mercado a qualquer momento.',
+          'Erro de quem só faz RP: constrói reputação sem canal de conversão. A marca é elogiada, citada, admirada — e vende pouco, porque ninguém desenhou o caminho entre a admiração e a compra. Autoridade sem distribuição é prestígio improdutivo.',
+          'Erro dos dois lados: medir com a régua errada. Cobrar de RP um custo por aquisição semanal é tão equivocado quanto cobrar de uma campanha de mídia a construção de reputação. Cada frente responde por uma pergunta diferente e deve ser avaliada por ela.',
+          'Na House Mazzutti, a decisão entre as duas frentes começa por leitura de estágio: o que falta a essa marca, alcance ou razão para acreditar. O escopo da frente de relações públicas e assessoria de imprensa está em /agencia/rp/.',
+        ],
+      },
+    ],
+    citacao: 'Mídia paga é aluguel de atenção, com reajuste embutido. RP é construção de patrimônio. Quem só aluga descobre no pior momento que nunca teve marca — teve distribuição.',
+    faq: [
+      {
+        q: 'O que investir primeiro: RP ou tráfego pago?',
+        a: 'Depende do estágio, do ticket e do peso da confiança na decisão de compra. Marca nova de ticket alto deve começar por RP e imagem, porque anunciar um produto caro de uma marca desconhecida é pagar para levar gente a um lugar onde ela não vai comprar. Marca com oferta validada, ticket baixo e conversão direta deve começar por mídia paga, e trazer RP depois para sustentar preço e reduzir dependência de leilão.',
+      },
+      {
+        q: 'Por que RP demora mais que tráfego pago?',
+        a: 'Porque depende de relacionamento com jornalistas, do gancho certo e da janela editorial de cada veículo — variáveis que não se comprimem com dinheiro. Uma primeira publicação relevante costuma acontecer entre trinta e noventa dias após o início do trabalho. Em contrapartida, o resultado não se desliga: a matéria continua publicada e indexada, enquanto a mídia paga acaba no momento em que a verba para.',
+      },
+      {
+        q: 'RP reduz o custo do tráfego pago?',
+        a: 'Sim, e esse é o efeito cruzado que quase ninguém contabiliza. Quando a marca é reconhecida e validada por terceiros, o mesmo anúncio converte mais, o custo de aquisição cai e o ciclo de venda encurta. Investir em percepção melhora o desempenho da verba de mídia. O inverso não acontece: aumentar o investimento em anúncios não constrói autoridade.',
+      },
+      {
+        q: 'Qual o erro de usar apenas uma das duas frentes?',
+        a: 'Quem só faz mídia paga constrói um negócio dependente de leilão: quando a verba cai ou o custo sobe, a demanda desaparece, porque houve distribuição e não marca. Quem só faz RP constrói reputação sem canal de conversão — a marca é admirada e vende pouco, porque ninguém desenhou o caminho entre admiração e compra. O terceiro erro é medir as duas com a mesma régua.',
+      },
+    ],
+    conclusao: 'RP e tráfego pago não competem por verba: competem por atenção de quem decide, e essa é uma disputa que a frente mais rápida sempre vence no curto prazo. Antes de escolher, vale responder uma pergunta simples: o que falta a esta marca — alcance ou razão para acreditar? Se falta razão, comprar alcance apenas acelera a exposição de um problema não resolvido. A ordem que funciona é instalar percepção e depois amplificar. Na House Mazzutti, essa decisão começa por leitura de estágio, não por pacote de serviço. Conheça a frente de relações públicas em /agencia/rp/.',
+    cta: { label: 'Converse com a House Mazzutti sobre sua estratégia de marca', href: '/agencia/rp/', lead_type: 'agencia_rp' },
+  },
 };
