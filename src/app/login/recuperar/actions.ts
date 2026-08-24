@@ -5,6 +5,7 @@ import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { verifyRecaptcha } from '@/lib/recaptcha'
+import { resolveSiteOrigin } from '@/lib/auth/site-url'
 
 export async function requestPasswordReset(formData: FormData): Promise<void> {
   const email = String(formData.get('email') ?? '')
@@ -32,15 +33,18 @@ export async function requestPasswordReset(formData: FormData): Promise<void> {
       `/login/recuperar?error=${encodeURIComponent('Falha na verificação de segurança. Tente novamente.')}`,
     )
   }
-  const origin =
-    process.env.NEXT_PUBLIC_SITE_URL || `https://${hdrs.get('host') ?? 'housemazzutti.com'}`
+  const origin = resolveSiteOrigin(hdrs)
 
   const supabase = await createClient()
+  // redirectTo cobre o template legado ({{ .ConfirmationURL }}); o template
+  // atual usa token_hash e cai direto em /auth/confirm.
   const { error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `${origin}/auth/callback?next=${encodeURIComponent('/login/redefinir')}`,
+    redirectTo: `${origin}/auth/callback/?next=${encodeURIComponent('/login/redefinir/')}`,
   })
 
-  if (error) {
+  // Não revelamos se o e-mail existe na base: enumeração de usuário é vetor
+  // conhecido. Só erro real de infraestrutura volta pra tela.
+  if (error && !/not found/i.test(error.message)) {
     redirect(`/login/recuperar?error=${encodeURIComponent(error.message)}`)
   }
   redirect(`/login/sucesso?kind=recover&email=${encodeURIComponent(email)}`)

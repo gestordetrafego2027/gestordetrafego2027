@@ -6,6 +6,7 @@ import { z } from 'zod'
 import { createClient } from '@/lib/supabase/server'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { verifyRecaptcha } from '@/lib/recaptcha'
+import { resolveSiteOrigin } from '@/lib/auth/site-url'
 
 const EmailSchema = z.string().email('Informe um e-mail válido.')
 
@@ -60,8 +61,7 @@ export async function signUpAction(formData: FormData): Promise<void> {
     )
   }
 
-  const origin =
-    process.env.NEXT_PUBLIC_SITE_URL || `https://${hdrs.get('host') ?? 'housemazzutti.com'}`
+  const origin = resolveSiteOrigin(hdrs)
 
   // Detecta locale via header ou cookie do next-intl; padrão pt
   const locale = hdrs.get('x-next-intl-locale') ?? 'pt'
@@ -72,7 +72,7 @@ export async function signUpAction(formData: FormData): Promise<void> {
     password,
     options: {
       data: { full_name: name },
-      emailRedirectTo: `${origin}/auth/callback?next=/${locale}/minha-conta`,
+      emailRedirectTo: `${origin}/auth/callback/?next=/${locale}/minha-conta/`,
     },
   })
 
