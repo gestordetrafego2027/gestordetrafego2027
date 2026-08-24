@@ -51,6 +51,22 @@ export const clusters = {
       'identidade-visual-o-que-e-quando-refazer-a-sua',
     ],
   },
+  branding: {
+    pillar: {
+      url: '/agencia/branding/',
+      label: 'conheça o Branding da House Mazzutti',
+    },
+    cta: {
+      url: '/agencia/branding/',
+      label: 'fale com a agência sobre sua marca',
+    },
+    posts: [
+      'o-que-e-brandbook-e-por-que-sua-marca-precisa',
+      'naming-de-marca-como-escolher-um-nome-que-vende',
+      'reposicionamento-de-marca-quando-e-como-mudar-identidade-visual',
+      'identidade-visual-o-que-e-quando-refazer-a-sua',
+    ],
+  },
   produtora: {
     pillar: {
       url: '/produtora',
@@ -185,6 +201,10 @@ export const postTitles = {
   'agencia-de-branding-ou-freelancer-quando-contratar-cada-um': 'Agência de Branding ou Freelancer: quando contratar cada um',
   'quando-contratar-uma-produtora-de-moda-guia-para-marcas': 'Quando Contratar uma Produtora de Moda: guia para marcas',
   'identidade-visual-o-que-e-quando-refazer-a-sua': 'Identidade Visual: o que é e quando refazer a sua',
+  // Cluster Branding & Identidade
+  'o-que-e-brandbook-e-por-que-sua-marca-precisa': 'O que é brandbook e por que sua marca precisa de um',
+  'naming-de-marca-como-escolher-um-nome-que-vende': 'Naming de marca: como escolher um nome que vende',
+  'reposicionamento-de-marca-quando-e-como-mudar-identidade-visual': 'Reposicionamento de marca: quando mudar a identidade visual',
   // Cluster Mercado Criativo — análises, tendências e voz autoral
   'campanha-reserva-spfw-branding-moda': 'O que a campanha da Reserva no SPFW ensina sobre branding de moda',
   'ai-producao-audiovisual-o-que-mudou': 'AI na produção audiovisual: o que mudou para quem contrata produtoras',

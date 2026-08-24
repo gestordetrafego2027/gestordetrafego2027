@@ -251,7 +251,7 @@ export default function ArticleContent({ slug, article, prevSlug, nextSlug, prev
                     {/* CTA Contextual — mapeado por categoria do artigo */}
                     {(() => {
                         const prefix = (article.categoria || '').split(' — ')[0];
-                        const cta = CATEGORY_CTA[prefix] || {
+                        const cta = article.cta || CATEGORY_CTA[prefix] || {
                             eyebrow: 'Pronto para a próxima decisão?',
                             headline: 'Da visão à materialização.',
                             label: 'INICIAR CONVERSA',

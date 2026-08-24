@@ -4802,7 +4802,6 @@ export const articles = {
     ],
     conclusao: 'O calendário de 2027 não é uma agenda de viagem. É um mapa de decisões. CES e NAB dizem o que será possível. SXSW e Cannes Lions dizem o que será relevante. Adobe MAX diz com que ferramentas. CCXP e The Game Awards dizem em que linguagem. Entre esses pontos existe uma escolha que nenhuma feira toma pela marca: produzir vídeo para ocupar o trimestre ou produzir para construir acervo. A Produtora da House Mazzutti trabalha no segundo caso. Começamos pela leitura — território, público, posição, o que a marca pode dizer com autoridade. Só então definimos a matriz visual e as derivações. Não porque o processo seja mais elegante, mas porque é o único que produz material que ainda funciona quando a campanha termina.',
   },
-,
 
   'semana-moda-milao-2026-tendencias-brasil': {
     slug: 'semana-moda-milao-2026-tendencias-brasil',
@@ -4836,7 +4835,7 @@ export const articles = {
           'A temporada abre com a Prada em 22 de setembro, no primeiro CNMI Fashion Hub, no Palazzo Morando. No mesmo dia, o Vogue World desembarca em Milão com o tema "O toque humano na era da tecnologia". Não é coincidência de calendário. É posicionamento coletivo: a cidade decidiu que sua resposta à saturação de imagem sintética será o gesto humano documentado.',
           'Em 25 de setembro, Demna apresenta sua segunda coleção de prêt-à-porter para a Gucci. Segundas coleções são mais reveladoras que estreias. A estreia é declaração de intenção — feita para render manchete. A segunda é onde o diretor criativo mostra o que pretende sustentar, o que já abandonou e quais códigos da casa decidiu preservar. Quem quer entender uma direção criativa observa o segundo movimento, não o primeiro.',
           'A semana também traz Loris Messina e Simone Rizzo assumindo a Moschino em 25 de setembro. Dupla vinda de uma marca independente italiana, agora responsável por um arquivo construído sobre ironia e excesso. A leitura interessante não é se eles vão manter o humor da casa — é como uma sensibilidade formada fora do sistema de grandes grupos reescreve um código herdado. Esse é exatamente o problema que a maior parte das marcas brasileiras enfrenta ao trocar de agência ou de direção.',
-          'Somam-se a isso duas estreias portuguesas no calendário oficial, em 27 de setembro: Marques'Almeida e Miguel Vieira. Milão abrindo espaço para marcas ibéricas de porte médio é sinal de um calendário que precisa de renovação e sabe disso. Para o Brasil, é um dado concreto: a barreira de entrada no calendário europeu está mais permeável do que a narrativa de inacessibilidade sugere.',
+          'Somam-se a isso duas estreias portuguesas no calendário oficial, em 27 de setembro: Marques’Almeida e Miguel Vieira. Milão abrindo espaço para marcas ibéricas de porte médio é sinal de um calendário que precisa de renovação e sabe disso. Para o Brasil, é um dado concreto: a barreira de entrada no calendário europeu está mais permeável do que a narrativa de inacessibilidade sugere.',
         ],
       },
       {
@@ -5227,10 +5226,316 @@ export const articles = {
         a: 'É o contrário. Marca pequena precisa mais, porque não tem verba para comprar lembrança. Posição clara é o instrumento mais barato de diferenciação: não exige mídia, exige decisão.',
       },
     ],
-    conclusao: 'Não acredito que falte talento, produto ou capacidade técnica às marcas brasileiras. Falta autorização interna para pensar em voz alta. A gente aprendeu a executar bem e a se posicionar mal — e chamou isso de prudência.
+    conclusao: 'Não acredito que falte talento, produto ou capacidade técnica às marcas brasileiras. Falta autorização interna para pensar em voz alta. A gente aprendeu a executar bem e a se posicionar mal — e chamou isso de prudência. A prudência tem um preço, e ele é cobrado devagar: margem que encolhe, comunicação que só funciona enquanto há verba, time que não sabe decidir sem aprovação. Na Agência House Mazzutti, esse é o ponto de partida de qualquer trabalho. Antes de discutir imagem, campanha ou calendário, a gente senta para descobrir o que a marca pensa — e o que ela está disposta a recusar por causa disso. Estratégia antes de estética, sempre. Marca que não tem opinião não é neutra. É apenas mais uma esperando a próxima onda para ter o que dizer.',
+  },
 
-A prudência tem um preço, e ele é cobrado devagar: margem que encolhe, comunicação que só funciona enquanto há verba, time que não sabe decidir sem aprovação. Na Agência House Mazzutti, esse é o ponto de partida de qualquer trabalho. Antes de discutir imagem, campanha ou calendário, a gente senta para descobrir o que a marca pensa — e o que ela está disposta a recusar por causa disso. Estratégia antes de estética, sempre. Conheça o portfólio da House em housemazzutti.com.
+  "o-que-e-brandbook-e-por-que-sua-marca-precisa": {
+    "categoria": "Agência — Branding & Identidade",
+    "titulo": "O que é brandbook e por que sua marca precisa de um",
+    "metaTitle": "O que é Brandbook e por que sua marca precisa",
+    "metaDescription": "Brandbook é o documento que fixa como sua marca se apresenta: logo, paleta, tipografia, tom de voz e aplicações. Entenda o que contém e quando contratar.",
+    "keywords": "brandbook, o que é brandbook, manual de marca, guia de identidade visual, brand guidelines, tom de voz de marca, agência de branding São Paulo, House Mazzutti",
+    "data": "Agosto 2026",
+    "autor": "Angelo Mazzutti",
+    "tags": ["brandbook", "identidade visual", "manual de marca", "branding"],
+    "cta": {
+      "eyebrow": "Sua marca já tem um brandbook de verdade?",
+      "headline": "Identidade construída para durar — não para agradar.",
+      "label": "CONHECER O BRANDING DA HOUSE",
+      "href": "/agencia/branding/",
+      "lead_type": "agencia_branding"
+    },
+    "cover": {
+      "src": "/images/blog/brandbook/brandbook-manual-de-marca-house-mazzutti.webp",
+      "alt": "Brandbook impresso com paleta, tipografia e aplicações de identidade visual — House Mazzutti",
+      "caption": "Manual de marca — Agência HMZT",
+      "fallback": "/images/agencia/branding/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/brandbook/paleta-tipografia-identidade-visual-house-mazzutti.webp",
+        "alt": "Páginas de brandbook com paleta cromática e escala tipográfica de identidade visual",
+        "caption": "Paleta · escala tipográfica",
+        "fallback": "/images/agencia/branding/interior-1.webp"
+      },
+      {
+        "src": "/images/blog/brandbook/aplicacoes-marca-brandbook-house-mazzutti.webp",
+        "alt": "Aplicações de marca em papelaria, embalagem e digital documentadas em brandbook",
+        "caption": "Aplicações · consistência de marca",
+        "fallback": "/images/agencia/branding/interior-2.webp"
+      }
+    ],
+    "respostaDireta": "Brandbook é o documento que define como uma marca se apresenta ao mundo: construção e usos do logo, paleta cromática, sistema tipográfico, linguagem fotográfica, tom de voz e aplicações em cada superfície. Ele existe para que a marca continue reconhecível quando muitas mãos passam a executá-la — time interno, agências, fornecedores, parceiros. Sem brandbook, cada peça vira uma interpretação; com brandbook, cada peça reforça a mesma percepção.",
+    "intro": "Toda marca chega, cedo ou tarde, no mesmo ponto: o dono deixa de ser a única pessoa que decide como ela aparece. Entra um social media, um gráfico, uma agência, um fornecedor de embalagem — e cada um faz uma leitura razoável, mas ligeiramente diferente, do que a marca é. Seis meses depois, ninguém sabe apontar o erro exato, mas a marca já não parece a mesma em dois lugares. O brandbook é o documento que impede esse desvio de acontecer — não por burocracia, mas porque consistência é o que transforma reconhecimento em confiança.",
+    "sections": [
+      {
+        "h2": "O que é um brandbook, afinal",
+        "paragraphs": [
+          "Brandbook é o manual que codifica a identidade de uma marca e define as regras da sua aplicação. Ele não é um arquivo bonito para apresentar ao cliente no fim do projeto: é uma ferramenta de trabalho, consultada toda semana por quem produz qualquer coisa em nome da marca.",
+          "A confusão mais comum é tratá-lo como sinônimo de logotipo. Logo é um elemento; brandbook é o sistema que dá sentido a esse elemento e a todos os outros. Quem entrega apenas um logo entrega uma peça solta. Quem entrega um brandbook entrega um método de decisão: diante de uma dúvida nova — uma embalagem, um convite, uma vitrine —, existe um documento que responde antes de a discussão virar gosto pessoal."
+        ]
+      },
+      {
+        "h2": "O que um brandbook precisa conter",
+        "paragraphs": [
+          "Um brandbook sério começa pela camada invisível: essência, promessa, valores, território de atuação e posicionamento. É o capítulo que a maioria pula e que sustenta todo o resto — porque cor, forma e palavra são consequências de uma decisão de posicionamento, não escolhas estéticas independentes.",
+          "Sobre essa base entram os sistemas visuais: construção do logo, versões, área de respiro, reduções mínimas e usos proibidos; paleta cromática com códigos exatos para impressão e tela; sistema tipográfico com hierarquia e escala definidas; grafismos e elementos de apoio; e direção fotográfica — que tipo de imagem pertence à marca e que tipo, ainda que boa, não pertence.",
+          "Depois vem a camada verbal: tom de voz, vocabulário preferido, palavras a evitar, tratamento com o cliente, régua de assinatura. E, por fim, as aplicações — papelaria, embalagem, uniforme, sinalização, apresentação comercial, feed, anúncio, site. É nesse último capítulo que o brandbook prova seu valor: ele mostra a marca resolvida em contextos reais, não flutuando sobre fundo branco."
+        ]
+      },
+      {
+        "h2": "Por que marcas sem brandbook perdem consistência",
+        "paragraphs": [
+          "A inconsistência raramente aparece de uma vez. Ela se acumula em pequenos desvios tolerados: um azul um pouco mais claro porque a impressora sugeriu, uma fonte substituída porque a original não estava instalada, uma legenda com um tom mais informal porque naquele dia pareceu simpático. Nenhum desvio isolado é grave. O conjunto deles é.",
+          "O custo dessa erosão é de percepção e de tempo. De percepção porque reconhecimento depende de repetição — uma marca que muda de aparência a cada trimestre obriga o público a recomeçar o aprendizado, e público que precisa reaprender não desenvolve familiaridade. De tempo porque, sem regra escrita, toda peça vira negociação: três rodadas de ajuste para chegar onde um documento resolveria em cinco minutos.",
+          "Há ainda um efeito silencioso no valor percebido. Marcas premium são lidas como premium, entre outras coisas, porque são impecavelmente consistentes. Descuido visual comunica improviso — e improviso derruba preço."
+        ]
+      },
+      {
+        "h2": "Brandbook não é engessamento",
+        "paragraphs": [
+          "Existe uma resistência legítima ao manual de marca: o receio de que ele mate a criatividade e transforme a comunicação em repetição burocrática. Na prática acontece o oposto, desde que o documento seja bem construído. Um brandbook define os limites do território — e é justamente por saber onde estão as bordas que se pode explorar o interior com liberdade.",
+          "O brandbook que engessa é aquele feito de proibições sem princípio: uma lista de nãos que ninguém entende. O brandbook que liberta explica o porquê de cada regra. Quando o time compreende a intenção por trás da escolha tipográfica ou do recorte fotográfico, ele consegue resolver situações que o documento nunca previu — sem trair a marca. Regra decorada limita; princípio compreendido multiplica."
+        ]
+      },
+      {
+        "h2": "Quando contratar um brandbook",
+        "paragraphs": [
+          "Há quatro momentos em que o brandbook deixa de ser desejável e passa a ser urgente. O primeiro é o crescimento do time: quando mais de duas pessoas produzem material da marca, a interpretação individual vira risco estrutural. O segundo é a entrada em novos canais ou pontos de venda — cada nova superfície é uma chance de a marca aparecer diferente de si mesma.",
+          "O terceiro é a terceirização: agências, freelancers e fornecedores executam bem o que está documentado e adivinham o que não está. O quarto é a preparação para captação, franquia ou expansão — investidor e franqueado leem o brandbook como evidência de maturidade operacional, não como peça de design.",
+          "O contraponto honesto: brandbook feito cedo demais, antes de a marca ter clareza de posicionamento, documenta uma dúvida. Nesse caso o trabalho correto começa por estratégia de marca e só depois desce para o sistema visual. Estratégia antes de estética — nessa ordem, sempre."
+        ]
+      }
+    ],
+    "citacao": "Brandbook não é o documento que descreve como a marca é bonita. É o documento que garante que ela continue sendo a mesma quando você não estiver na sala.",
+    "faq": [
+      {
+        "q": "O que é um brandbook?",
+        "a": "É o manual que define a identidade de uma marca e as regras de sua aplicação: posicionamento, construção e usos do logo, paleta cromática, sistema tipográfico, direção fotográfica, tom de voz e aplicações em cada superfície. Serve para que a marca permaneça reconhecível independentemente de quem a executa."
+      },
+      {
+        "q": "Qual a diferença entre brandbook e manual de identidade visual?",
+        "a": "O manual de identidade visual cobre a camada gráfica — logo, cores, tipografia e aplicações. O brandbook é mais amplo: inclui a camada estratégica (posicionamento, promessa, valores) e a camada verbal (tom de voz, vocabulário), além do sistema visual. Todo brandbook contém um manual de identidade visual; o inverso não é verdadeiro."
+      },
+      {
+        "q": "Quando minha empresa deve investir em um brandbook?",
+        "a": "Quando mais de uma pessoa passa a produzir material em nome da marca, quando há terceirização para agências e fornecedores, quando a marca entra em novos canais ou pontos de venda, ou quando se prepara para expansão, franquia ou captação. Antes disso, o esforço deve ir para clareza de posicionamento."
+      },
+      {
+        "q": "Um brandbook engessa a criatividade da marca?",
+        "a": "Não, quando é bem construído. Um brandbook que apenas lista proibições limita; um que explica o princípio por trás de cada regra permite que o time resolva situações não previstas sem trair a identidade. O documento define o território — a liberdade acontece dentro dele."
+      }
+    ],
+    "conclusao": "Marca consistente não é marca rígida: é marca que o mercado consegue reconhecer sem esforço. O brandbook é o instrumento que sustenta esse reconhecimento quando a operação cresce e o fundador deixa de aprovar peça por peça. Na Agência House Mazzutti, o brandbook nunca começa pelo desenho — começa pela decisão de posicionamento que o desenho vai defender. Se sua marca já chegou nesse ponto, veja como conduzimos branding em /agencia/branding/."
+  },
 
-Marca que não tem opinião não é neutra. É apenas mais uma esperando a próxima onda para ter o que dizer.',
+  "naming-de-marca-como-escolher-um-nome-que-vende": {
+    "categoria": "Agência — Branding & Identidade",
+    "titulo": "Naming de marca: como escolher um nome que posiciona e vende",
+    "metaTitle": "Naming de Marca: como escolher um nome que vende",
+    "metaDescription": "Naming de marca não é criatividade solta: é método. Tipos de nome, erros comuns e os critérios de fonética, disponibilidade e escalabilidade que definem a escolha.",
+    "keywords": "naming de marca, como escolher nome de marca, criação de nome de empresa, tipos de naming, registro de marca INPI, branding, agência de naming São Paulo, House Mazzutti",
+    "data": "Agosto 2026",
+    "autor": "Angelo Mazzutti",
+    "tags": ["naming", "nome de marca", "posicionamento", "branding"],
+    "cta": {
+      "eyebrow": "Precisa nomear — ou renomear — uma marca?",
+      "headline": "Nome é decisão de posicionamento, não exercício criativo.",
+      "label": "CONHECER O BRANDING DA HOUSE",
+      "href": "/agencia/branding/",
+      "lead_type": "agencia_branding"
+    },
+    "cover": {
+      "src": "/images/blog/naming-de-marca/naming-de-marca-nome-que-posiciona-house-mazzutti.webp",
+      "alt": "Processo de naming de marca com estudo tipográfico de nomes — House Mazzutti",
+      "caption": "Naming e posicionamento — Agência HMZT",
+      "fallback": "/images/agencia/branding/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/naming-de-marca/tipos-de-naming-descritivo-evocativo-house-mazzutti.webp",
+        "alt": "Estudo de tipos de naming — descritivo, evocativo, arbitrário e acrônimo",
+        "caption": "Tipologias · territórios de nome",
+        "fallback": "/images/agencia/branding/interior-1.webp"
+      },
+      {
+        "src": "/images/blog/naming-de-marca/criterios-escolha-nome-marca-house-mazzutti.webp",
+        "alt": "Critérios de escolha de nome de marca: fonética, disponibilidade e escalabilidade",
+        "caption": "Critérios · fonética e escala",
+        "fallback": "/images/agencia/branding/interior-2.webp"
+      }
+    ],
+    "respostaDireta": "Naming de marca é o processo estratégico de criar o nome de uma empresa, produto ou serviço. Um bom nome não precisa explicar o negócio: precisa ser pronunciável, memorável, registrável no INPI, disponível em domínio e redes, e escalável o suficiente para acompanhar a marca quando ela mudar de categoria. A escolha é sempre uma decisão de posicionamento — o nome define o território que a marca vai ocupar na cabeça do cliente.",
+    "intro": "Nome de marca é a decisão mais barata de tomar e a mais cara de corrigir. Ela costuma acontecer no pior momento possível: cedo demais, com pressa, entre sócios animados e uma planilha aberta de domínios livres. Meses depois, quando a marca cresce, aparecem os sintomas — o nome que ninguém escreve certo na primeira tentativa, o nome que já pertence a outra empresa no INPI, o nome que descreve tão bem o primeiro produto que aprisiona todos os próximos. Naming não é um exercício criativo. É uma decisão de posicionamento com consequências jurídicas, comerciais e sonoras.",
+    "sections": [
+      {
+        "h2": "O que é naming e o que ele decide",
+        "paragraphs": [
+          "Naming é o processo estruturado de criação do nome de uma marca, produto, linha ou serviço. Ele parte do posicionamento — quem é o público, qual território a marca quer ocupar, contra quem ela concorre, qual percepção precisa instalar — e só depois abre para geração de alternativas.",
+          "O nome é o único elemento da identidade que sobrevive a todas as reformulações. Logo se redesenha, paleta se atualiza, site se refaz. O nome permanece, é dito em voz alta, é digitado, é indicado por terceiros e vira o endereço da marca na memória de quem compra. Por isso ele deve ser tratado como infraestrutura, não como acabamento."
+        ]
+      },
+      {
+        "h2": "Os quatro territórios de nome",
+        "paragraphs": [
+          "Nomes descritivos dizem o que a empresa faz — Casa do Pão de Queijo, Localiza. Vantagem: comunicam de imediato e reduzem o custo de explicação. Desvantagem: são difíceis de registrar com exclusividade, se confundem com os concorrentes e limitam a expansão para fora da categoria descrita.",
+          "Nomes evocativos sugerem um atributo sem descrevê-lo — Nubank, Amazon, Natura. São o território mais fértil para marcas que querem construir percepção: carregam sentido, mas deixam espaço para a marca preenchê-lo. Exigem construção, e é exatamente aí que branding cria valor.",
+          "Nomes arbitrários ou abstratos não têm relação prévia com o negócio — Apple, Kodak, Havaianas. Oferecem máxima liberdade de significado e a melhor proteção jurídica, ao custo de investimento em construção de sentido: o nome não trabalha sozinho no começo.",
+          "Acrônimos e nomes patronímicos fecham o mapa. Siglas como IBM ou BMW funcionam depois de décadas de repetição, quase nunca antes — sigla nova é geralmente um atalho para o esquecimento. Já o nome próprio, como House Mazzutti, funciona quando há uma autoria real por trás: ele transfere para a marca a reputação de uma pessoa e cria uma barreira de imitação que nenhum concorrente consegue atravessar."
+        ]
+      },
+      {
+        "h2": "Os erros que aparecem tarde demais",
+        "paragraphs": [
+          "O primeiro erro é o nome que exige explicação. Se toda apresentação começa com 'o nome vem de uma palavra em finlandês que significa…', o nome está cobrando um pedágio em cada conversa. Nome bom se sustenta sozinho e ganha profundidade depois, quando alguém pergunta.",
+          "O segundo é a descrição precoce. Uma marca chamada com o nome do primeiro produto vira refém dele. Quando o portfólio cresce ou o mercado muda, o nome passa a contradizer a oferta — e a empresa se vê explicando por que a marca de sucos agora vende cosméticos.",
+          "O terceiro é o teste que ninguém faz: dizer o nome ao telefone. Se o interlocutor precisa pedir para soletrar, o nome tem um atrito permanente na indicação boca a boca — que é o canal mais valioso e o menos controlável.",
+          "O quarto é ignorar a viabilidade jurídica até o fim. Escolher o nome, desenhar a identidade, imprimir material e só então descobrir uma anterioridade no INPI é o cenário mais caro do processo. Busca de disponibilidade não é etapa final: é filtro que roda em paralelo à criação."
+        ]
+      },
+      {
+        "h2": "Os critérios que separam nome bom de nome perigoso",
+        "paragraphs": [
+          "Fonética vem primeiro. O nome deve ser fácil de pronunciar em português e razoavelmente estável em outros idiomas se houver ambição internacional. Poucas sílabas, ritmo limpo, sem cachos de consoantes e sem ambiguidade entre s/z, ss/ç, i/y. Nome se ouve antes de se ler.",
+          "Disponibilidade vem em seguida, e em três frentes: registro de marca no INPI dentro das classes de atuação, domínio .com.br ou .com em condições aceitáveis, e handles coerentes nas redes relevantes. Domínio livre não significa marca registrável — são verificações independentes.",
+          "Escalabilidade é o critério mais negligenciado: o nome ainda funciona se a empresa dobrar de tamanho, entrar em outra categoria ou vender para outro público? Nomes que descrevem demais reprovam nesse teste.",
+          "Fecham a lista distinção e carga de significado. Distinção é a capacidade de não ser confundido com os concorrentes — se o nome poderia estar no site de outra empresa do setor sem ninguém notar, ele não posiciona. E carga de significado é o que o nome sugere antes de qualquer campanha: sofisticação, velocidade, cuidado, autoridade. Todo nome comunica algo. A escolha é comunicar por decisão ou por acaso."
+        ]
+      },
+      {
+        "h2": "Como conduzir um processo de naming",
+        "paragraphs": [
+          "Um processo maduro segue quatro tempos. Primeiro, briefing de posicionamento: território, público, concorrência, percepção desejada e o que a marca recusa ser. Segundo, geração ampla — centenas de alternativas por rotas distintas, sem julgamento na fase de produção, porque avaliar cedo mata o repertório.",
+          "Terceiro, filtragem em camadas: fonética e legibilidade, depois distinção competitiva, depois viabilidade jurídica e digital. O funil é agressivo por natureza — de centenas restam poucas dezenas, e destas restam três ou quatro finalistas defensáveis.",
+          "Quarto, validação e defesa. Cada finalista é apresentado com sua justificativa de posicionamento, testado em voz alta, escrito à mão, aplicado em um cartão, em uma fachada e em uma tela de celular. Nome se decide vendo o nome funcionar, não lendo o nome numa lista.",
+          "Uma advertência sobre método: naming não se resolve por votação. Consenso interno produz nomes medianos, porque a opção que ninguém rejeita costuma ser a que ninguém defende. O papel da direção criativa é sustentar a escolha que posiciona — e explicar por que ela é melhor do que a que agrada."
+        ]
+      }
+    ],
+    "citacao": "Nome bom não explica o negócio. Ele abre espaço para o negócio ser explicado do jeito certo.",
+    "faq": [
+      {
+        "q": "O que é naming de marca?",
+        "a": "É o processo estratégico de criação do nome de uma empresa, produto ou serviço, conduzido a partir do posicionamento. Envolve briefing, geração ampla de alternativas, filtragem por fonética, distinção e viabilidade jurídica, e validação dos finalistas em aplicações reais."
+      },
+      {
+        "q": "Quais são os tipos de nome de marca?",
+        "a": "Descritivos, que dizem o que a empresa faz; evocativos, que sugerem um atributo sem descrevê-lo; arbitrários ou abstratos, sem relação prévia com o negócio; e acrônimos ou patronímicos, formados por siglas ou nome próprio. Cada tipo troca clareza imediata por liberdade de construção e proteção jurídica."
+      },
+      {
+        "q": "Como saber se um nome de marca está disponível?",
+        "a": "É preciso verificar três frentes independentes: busca de anterioridade no INPI nas classes de atuação, disponibilidade de domínio (.com.br ou .com) e handles nas redes sociais relevantes. Domínio livre não significa que a marca seja registrável — a verificação jurídica é obrigatória e deve rodar em paralelo à criação."
+      },
+      {
+        "q": "Um nome descritivo é ruim para a marca?",
+        "a": "Não é ruim, é limitante. Nomes descritivos reduzem o custo de explicação no início, mas dificultam o registro exclusivo, se confundem com os concorrentes e aprisionam a marca à categoria descrita. Para negócios com ambição de expansão, nomes evocativos ou abstratos costumam sustentar melhor o crescimento."
+      }
+    ],
+    "conclusao": "Um nome não vende sozinho — mas um nome errado encarece cada venda, cada indicação e cada campanha pelos anos seguintes. Escolher bem é uma questão de método: posicionamento antes de criatividade, viabilidade antes de paixão, defesa antes de consenso. Na Agência House Mazzutti, naming entra como parte da construção de marca, não como serviço avulso. Se você está prestes a nomear ou renomear um negócio, comece por /agencia/branding/."
+  },
+
+  "reposicionamento-de-marca-quando-e-como-mudar-identidade-visual": {
+    "categoria": "Agência — Branding & Identidade",
+    "titulo": "Reposicionamento de marca: quando e como mudar sua identidade visual",
+    "metaTitle": "Reposicionamento de Marca: quando mudar a identidade",
+    "metaDescription": "Refresh ou rebranding? Os sinais de que chegou a hora de mudar, o processo de auditoria a rollout e os erros que destroem valor num reposicionamento de marca.",
+    "keywords": "reposicionamento de marca, rebranding, brand refresh, mudar identidade visual, redesign de marca, quando fazer rebranding, agência de branding São Paulo, House Mazzutti",
+    "data": "Agosto 2026",
+    "autor": "Angelo Mazzutti",
+    "tags": ["reposicionamento", "rebranding", "identidade visual", "branding"],
+    "cta": {
+      "eyebrow": "Sua marca envelheceu ou só está mal apresentada?",
+      "headline": "Reposicionamento começa por diagnóstico — não por redesign.",
+      "label": "CONHECER O BRANDING DA HOUSE",
+      "href": "/agencia/branding/",
+      "lead_type": "agencia_branding"
+    },
+    "cover": {
+      "src": "/images/blog/reposicionamento-de-marca/reposicionamento-de-marca-identidade-visual-house-mazzutti.webp",
+      "alt": "Reposicionamento de marca e mudança de identidade visual conduzido pela House Mazzutti",
+      "caption": "Reposicionamento de marca — Agência HMZT",
+      "fallback": "/images/agencia/branding/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/reposicionamento-de-marca/auditoria-marca-rebranding-house-mazzutti.webp",
+        "alt": "Auditoria de marca e diagnóstico de percepção antes de um rebranding",
+        "caption": "Auditoria · diagnóstico de percepção",
+        "fallback": "/images/agencia/branding/interior-1.webp"
+      },
+      {
+        "src": "/images/blog/reposicionamento-de-marca/rollout-nova-identidade-visual-house-mazzutti.webp",
+        "alt": "Rollout de nova identidade visual aplicada em pontos de contato da marca",
+        "caption": "Rollout · pontos de contato",
+        "fallback": "/images/agencia/branding/interior-2.webp"
+      }
+    ],
+    "respostaDireta": "Reposicionamento de marca é a mudança deliberada do lugar que a marca ocupa na percepção do público — e a identidade visual é a consequência dessa decisão, não o seu ponto de partida. Um refresh atualiza a expressão visual mantendo o posicionamento; um rebranding altera o próprio significado da marca. O processo correto vai de auditoria a conceito e só então a rollout, com migração planejada dos ativos de reconhecimento já construídos.",
+    "intro": "Quase todo pedido de rebranding chega com a mesma frase: 'nossa marca está datada'. Às vezes é verdade. Com frequência, o que está datado é o posicionamento — e a identidade visual apenas denuncia isso com honestidade. A diferença entre os dois diagnósticos vale muito dinheiro, porque redesenhar uma marca que não sabe o que quer significar produz uma versão mais bonita do mesmo problema. Antes de discutir traço, cor ou tipografia, é preciso responder a uma pergunta menos confortável: o que exatamente mudou — o mercado, o público, a oferta, ou só o nosso gosto?",
+    "sections": [
+      {
+        "h2": "Refresh e rebranding não são a mesma decisão",
+        "paragraphs": [
+          "Refresh é atualização de expressão. O posicionamento permanece; o que muda é a forma como ele se apresenta — ajuste de tipografia, limpeza do símbolo, recalibragem da paleta, nova direção fotográfica. É um movimento de manutenção, feito para acompanhar o tempo sem romper o reconhecimento. Bem executado, o mercado percebe que algo melhorou sem saber apontar o quê.",
+          "Rebranding é mudança de significado. Altera-se o que a marca quer dizer, para quem e por quê. Pode envolver nome, arquitetura de marca, portfólio, preço e discurso — a identidade visual é apenas a superfície mais visível de uma decisão que começou no negócio.",
+          "Confundir os dois é o erro estrutural mais caro do processo: empresas que precisavam de refresh queimam capital de reconhecimento fazendo rebranding, e empresas que precisavam de rebranding gastam com refresh e permanecem no mesmo lugar, agora com fontes melhores."
+        ]
+      },
+      {
+        "h2": "Os sinais de que chegou a hora",
+        "paragraphs": [
+          "O sinal mais confiável é a distância entre o que a empresa se tornou e o que a marca ainda comunica. Isso aparece quando a operação sobe de patamar — qualidade, preço, público — e a identidade continua falando com o mercado antigo. O time comercial sente primeiro: precisa desmentir a própria marca na reunião para justificar o valor.",
+          "O segundo sinal é a mudança de público ou de modelo de negócio: nova faixa de renda, nova geografia, mudança de B2C para B2B, entrada em varejo físico ou em canal digital. Marca construída para outro contexto não se adapta por esforço de mídia.",
+          "O terceiro é a fragmentação: submarcas, unidades e linhas que cresceram sem governança e passaram a parecer empresas diferentes. Aqui o problema é de arquitetura de marca, e nenhum redesenho isolado resolve.",
+          "O quarto é competitivo: quando o setor inteiro se moderniza e a marca vira a mais antiga da prateleira, o preço começa a ser questionado antes do produto. E o quinto é a fusão ou mudança societária, que impõe uma decisão consciente sobre qual reputação sobrevive.",
+          "Existe também o sinal falso, e vale nomeá-lo: cansaço interno. Quem convive com a marca todos os dias se enjoa dela muito antes do público, que a vê poucas vezes por mês. Tédio de sócio não é diagnóstico de mercado."
+        ]
+      },
+      {
+        "h2": "O processo: auditoria, conceito, rollout",
+        "paragraphs": [
+          "A auditoria abre o trabalho e é a etapa que ninguém quer pagar — e a única que impede um erro caro. Ela mapeia percepção real (clientes, ex-clientes, time comercial, mercado), inventaria todos os pontos de contato, avalia ativos de reconhecimento que precisam ser preservados, revisa a situação jurídica da marca e lê o território competitivo. O produto dessa fase não é um relatório: é um diagnóstico com uma decisão — refresh ou rebranding, e por quê.",
+          "O conceito traduz o diagnóstico em direção. Define o novo posicionamento em uma frase defensável, o território de significado, o tom de voz e o princípio visual que vai guiar o desenho. Só depois disso o sistema visual é construído — símbolo, tipografia, paleta, grafismos, direção fotográfica — e testado nas aplicações mais críticas do negócio, não nas mais bonitas de apresentar.",
+          "O rollout é onde a maioria dos reposicionamentos falha. Ele exige sequência e calendário: o que muda no dia um, o que migra ao longo de meses, o que só troca quando o estoque acabar. Exige treinamento do time — comercial e atendimento precisam saber explicar a mudança antes do público perguntar — e exige uma narrativa pública que trate a mudança como consequência de algo real na empresa, não como novidade estética.",
+          "Fecha o processo a governança: brandbook atualizado, responsáveis definidos e um ponto de checagem periódico. Reposicionamento sem governança dura dois trimestres."
+        ]
+      },
+      {
+        "h2": "Os erros fatais de um rebranding",
+        "paragraphs": [
+          "Jogar fora ativos de reconhecimento é o primeiro. Uma cor, uma forma, um detalhe tipográfico podem carregar anos de memória do público. Reposicionar não obriga a apagar tudo — obriga a decidir conscientemente o que se preserva. Descarte por descuido é destruição de patrimônio.",
+          "Redesenhar sem mudar o negócio é o segundo. Se a promessa nova não é sustentada por produto, atendimento e preço, o reposicionamento vira propaganda enganosa com boa direção de arte — e o mercado percebe rápido.",
+          "Anunciar antes de estar pronto é o terceiro. Marca nova no perfil e marca antiga na embalagem, no contrato e na assinatura de e-mail comunica desorganização exatamente no momento em que a empresa pede para ser levada mais a sério.",
+          "Decidir por comitê é o quarto. Reposicionamento é decisão de direção, informada por pesquisa, e não a média dos gostos internos. E o quinto é tratar o lançamento como fim do projeto: identidade nova sem manual, sem treinamento e sem gestão volta a se desfazer em um ano — só que agora com o custo já pago."
+        ]
+      },
+      {
+        "h2": "Como medir se o reposicionamento funcionou",
+        "paragraphs": [
+          "Aplauso interno não é métrica. O que interessa é o comportamento do mercado nos meses seguintes: qualificação dos leads que chegam, tempo de negociação, número de vezes que o preço precisa ser defendido, e a linguagem que os clientes usam espontaneamente para descrever a marca. Reposicionamento eficaz muda o vocabulário de quem fala sobre você.",
+          "Vale medir também a facilidade de execução interna — quantas rodadas de aprovação uma peça exige agora em comparação a antes — e a consistência entre pontos de contato ao longo do tempo. Marca reposicionada com método fica mais barata de operar. Se ficou mais cara e mais confusa, o que se fez foi um redesenho, não um reposicionamento."
+        ]
+      }
+    ],
+    "citacao": "Marca datada raramente é problema de desenho. É posicionamento antigo aparecendo com clareza.",
+    "faq": [
+      {
+        "q": "Qual a diferença entre brand refresh e rebranding?",
+        "a": "O refresh atualiza a expressão visual mantendo o posicionamento — ajustes de tipografia, símbolo, paleta e direção fotográfica, sem romper o reconhecimento. O rebranding muda o significado da marca: público, promessa, discurso e, às vezes, o próprio nome. O primeiro é manutenção; o segundo é decisão de negócio."
+      },
+      {
+        "q": "Quando devo mudar a identidade visual da minha empresa?",
+        "a": "Quando existe distância real entre o que a empresa se tornou e o que a marca comunica: mudança de público, de faixa de preço ou de modelo de negócio; fragmentação de submarcas sem governança; defasagem competitiva evidente; ou fusão societária. Cansaço interno com a marca, isoladamente, não é motivo suficiente."
+      },
+      {
+        "q": "Quais são as etapas de um reposicionamento de marca?",
+        "a": "Auditoria (percepção real, pontos de contato, ativos de reconhecimento, situação jurídica e território competitivo), conceito (novo posicionamento, tom de voz e princípio visual), construção do sistema visual, rollout faseado com treinamento do time e narrativa pública, e governança com brandbook atualizado."
+      },
+      {
+        "q": "Rebranding pode fazer a marca perder clientes?",
+        "a": "Pode, quando se descartam ativos de reconhecimento sem critério, quando a promessa nova não é sustentada pelo produto e pelo atendimento, ou quando o rollout é anunciado antes de estar pronto e a marca aparece dividida entre versões. Com auditoria e migração planejada, o risco é administrável."
+      }
+    ],
+    "conclusao": "Reposicionar é uma decisão de negócio que se manifesta em forma, cor e palavra — nunca o contrário. Feito com diagnóstico, o processo devolve à marca a capacidade de cobrar o que ela vale; feito por impulso estético, ele apenas troca o problema de roupa. Na Agência House Mazzutti, todo reposicionamento começa por auditoria e só chega ao desenho depois que a direção está definida. Se sua marca chegou a essa conversa, veja como conduzimos o processo em /agencia/branding/."
   },
 };
