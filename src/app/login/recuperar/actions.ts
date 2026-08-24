@@ -2,10 +2,10 @@
 
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
-import { createClient } from '@/lib/supabase/server'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { verifyRecaptcha } from '@/lib/recaptcha'
 import { resolveSiteOrigin } from '@/lib/auth/site-url'
+import { recoveryEmailClient } from '@/lib/auth/recovery-client'
 
 export async function requestPasswordReset(formData: FormData): Promise<void> {
   const email = String(formData.get('email') ?? '')
@@ -35,12 +35,12 @@ export async function requestPasswordReset(formData: FormData): Promise<void> {
   }
   const origin = resolveSiteOrigin(hdrs)
 
-  const supabase = await createClient()
-  // redirectTo cobre o template legado ({{ .ConfirmationURL }}); o template
-  // atual usa token_hash e cai direto em /auth/confirm.
+  // Fluxo implícito de propósito — ver recovery-client.ts. redirectTo cobre o
+  // template legado ({{ .ConfirmationURL }}); o template atual usa token_hash e
+  // cai direto em /auth/confirm.
   // Mantido SEM barra final: é a forma que já consta na allow-list de Redirect
   // URLs do projeto. O 308 de trailingSlash normaliza e preserva a query.
-  const { error } = await supabase.auth.resetPasswordForEmail(email, {
+  const { error } = await recoveryEmailClient().auth.resetPasswordForEmail(email, {
     redirectTo: `${origin}/auth/callback?next=${encodeURIComponent('/login/redefinir')}`,
   })
 

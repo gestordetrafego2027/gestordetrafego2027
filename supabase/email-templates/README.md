@@ -52,7 +52,16 @@ dispositivo. A rota que valida é [`/auth/confirm`](../../src/app/auth/confirm/r
 > `change-email` precisa de dois tokens (`{{ .TokenHash }}` e `{{ .TokenHashNew }}`)
 > e continua no fluxo legado — atendido pelo `/auth/callback` de compatibilidade.
 
-## Configuração obrigatória no Dashboard
+## O código não depende deste passo para funcionar
+
+O pedido de recuperação é disparado no **fluxo implícito**
+(`src/lib/auth/recovery-client.ts`), então mesmo com o template antigo o link
+volta com `#access_token=` no hash e a ponte em `/auth/callback` converte em
+sessão — funciona em qualquer dispositivo.
+
+Atualizar o template ainda é melhor: um salto a menos e nenhum token na URL.
+
+## Configuração recomendada no Dashboard
 
 **Authentication → URL Configuration**
 
@@ -67,7 +76,8 @@ Redirect URLs:
 ```
 
 Se a **Site URL** tiver barra no final, o link do e-mail vira
-`https://housemazzutti.com//auth/confirm/` e quebra.
+`https://housemazzutti.com//auth/confirm/` e quebra. Isso só importa depois de
+colar os templates de `token_hash`.
 
 ## Variáveis Supabase suportadas em cada template
 

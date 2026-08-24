@@ -6,6 +6,7 @@ import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { createClient as createSbClient } from '@supabase/supabase-js'
 import { resolveSiteOrigin } from '@/lib/auth/site-url'
+import { recoveryEmailClient } from '@/lib/auth/recovery-client'
 
 // Garante que so admin chega aqui
 async function requireAdmin() {
@@ -16,15 +17,6 @@ async function requireAdmin() {
   const role = (user?.app_metadata as { role?: string } | undefined)?.role
   if (role !== 'admin') redirect('/crm?error=acesso_negado')
   return user!
-}
-
-// Cliente anônimo sem persistência — dispara e-mail transacional sem encostar
-// nos cookies de sessão do admin que está operando o painel.
-function anonClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  if (!url || !key) throw new Error('Supabase env vars ausentes (URL / ANON_KEY)')
-  return createSbClient(url, key, { auth: { persistSession: false } })
 }
 
 // Cliente admin (service_role) — usa SUPABASE_SERVICE_ROLE_KEY do servidor
@@ -112,7 +104,7 @@ export async function sendRecoveryLinkAction(formData: FormData): Promise<void> 
   // admin.generateLink() apenas GERA o link — não envia e-mail nenhum. O admin
   // via "enviado" e o usuário nunca recebia nada. resetPasswordForEmail dispara
   // o template de recuperação de fato.
-  const { error } = await anonClient().auth.resetPasswordForEmail(email, {
+  const { error } = await recoveryEmailClient().auth.resetPasswordForEmail(email, {
     redirectTo: `${origin}/auth/callback?next=/login/redefinir`,
   })
   if (error) {

@@ -87,3 +87,13 @@ describe('failurePath', () => {
     expect(failurePath(null)).toBe('/login/')
   })
 })
+
+describe('recoveryEmailClient', () => {
+  it('usa fluxo implícito — PKCE quebra quando o e-mail é aberto em outro dispositivo', async () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://ohmnzalkfbhdivtttzsa.supabase.co'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'anon-key-de-teste'
+    const { recoveryEmailClient } = await import('@/lib/auth/recovery-client')
+    const client = recoveryEmailClient() as unknown as { auth: { flowType: string } }
+    expect(client.auth.flowType).toBe('implicit')
+  })
+})
