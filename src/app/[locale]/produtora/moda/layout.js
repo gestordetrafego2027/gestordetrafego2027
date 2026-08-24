@@ -20,9 +20,36 @@ export default function ModaLayout({ children }) {
       { '@type': 'Question', name: 'A House Mazzutti produz fashion film para lançamento de coleção?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A Produtora realiza fashion films com conceito e roteiro próprios. O filme de moda é dirigido por Angelo Mazzutti do briefing ao master final.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Editorial de Moda e Fashion Film em São Paulo',
+    'description': 'Produção editorial de moda para marcas, designers e campanhas. Direção criativa de Angelo Mazzutti em São Paulo — casting, styling, fotografia e vídeo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Editorial de Moda e Fashion Film'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Produtora', 'item': 'https://housemazzutti.com/produtora' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Moda', 'item': 'https://housemazzutti.com/produtora/moda' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

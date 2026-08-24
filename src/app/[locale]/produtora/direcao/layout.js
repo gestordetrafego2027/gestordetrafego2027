@@ -20,9 +20,36 @@ export default function DirecaoLayout({ children }) {
       { '@type': 'Question', name: 'Angelo Mazzutti dirige todas as produções pessoalmente?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A House Mazzutti não terceiriza a direção criativa. Angelo Mazzutti está presente em cada projeto, do briefing ao set e à aprovação final.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Direção Criativa e de Imagem em São Paulo',
+    'description': 'Direção criativa e de imagem por Angelo Mazzutti para marcas, campanhas e produções audiovisuais premium em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Direção Criativa e de Imagem'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Produtora', 'item': 'https://housemazzutti.com/produtora' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Direção', 'item': 'https://housemazzutti.com/produtora/direcao' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

@@ -20,9 +20,36 @@ export default function InstitucionalLayout({ children }) {
       { '@type': 'Question', name: 'Qual é o processo de produção de um vídeo institucional na House Mazzutti?', acceptedAnswer: { '@type': 'Answer', text: 'Briefing → roteiro e conceito → pré-produção (locação, elenco, equipe) → gravação → edição e pós-produção → entrega dos masters. Angelo Mazzutti dirige cada etapa.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Vídeo Institucional em São Paulo',
+    'description': 'Produção de vídeo institucional para empresas com narrativa de alto impacto. House Mazzutti Produtora em São Paulo — roteiro, captação e entrega final.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Vídeo Institucional'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Produtora', 'item': 'https://housemazzutti.com/produtora' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Vídeo Institucional', 'item': 'https://housemazzutti.com/produtora/institucional' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

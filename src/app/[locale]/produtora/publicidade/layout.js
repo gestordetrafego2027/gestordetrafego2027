@@ -20,9 +20,36 @@ export default function PublicidadeLayout({ children }) {
       { '@type': 'Question', name: 'Quanto tempo leva a produção de um filme publicitário?', acceptedAnswer: { '@type': 'Answer', text: 'De 3 a 8 semanas dependendo da complexidade — do briefing à entrega do master. Projetos urgentes podem ter cronograma acelerado mediante avaliação.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Produção de Campanhas Publicitárias em São Paulo',
+    'description': 'Produção de campanhas de publicidade com direção criativa de Angelo Mazzutti. Conceito, captação e entrega de campanhas premium para marcas em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Produção Publicitária'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Produtora', 'item': 'https://housemazzutti.com/produtora' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Publicidade', 'item': 'https://housemazzutti.com/produtora/publicidade' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

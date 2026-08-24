@@ -22,9 +22,36 @@ export default function BrandingLayout({ children }) {
       { '@type': 'Question', name: 'O projeto de branding inclui manual de marca?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Todo projeto entregue pela House Mazzutti Agência inclui brandbook com diretrizes de uso, aplicações e especificações técnicas para garantir consistência da marca.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Branding e Identidade Visual em São Paulo',
+    'description': 'Branding estratégico com direção criativa de Angelo Mazzutti. Identidade visual, naming, brandbook e voz de marca para empresas em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Branding'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Agência', 'item': 'https://housemazzutti.com/agencia' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Branding', 'item': 'https://housemazzutti.com/agencia/branding' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

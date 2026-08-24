@@ -20,9 +20,36 @@ export default function EventosLayout({ children }) {
       { '@type': 'Question', name: 'A House Mazzutti cobre eventos fora de São Paulo?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, mediante avaliação de agenda e escopo. Eventos em outras cidades são atendidos com equipe da House Mazzutti ou com parceiros locais supervisionados pela direção criativa.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Produção e Cobertura de Eventos em São Paulo',
+    'description': 'Cobertura fotográfica e audiovisual de eventos corporativos, desfiles e lançamentos. House Mazzutti Produtora em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Produção e Cobertura de Eventos'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Produtora', 'item': 'https://housemazzutti.com/produtora' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Eventos', 'item': 'https://housemazzutti.com/produtora/eventos' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

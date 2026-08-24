@@ -20,9 +20,36 @@ export default function ExecutivaLayout({ children }) {
       { '@type': 'Question', name: 'Como funciona o briefing de produção executiva?', acceptedAnswer: { '@type': 'Answer', text: 'Começa com o levantamento do escopo: locações, equipe, dias de gravação, prazos e orçamento. A House Mazzutti apresenta plano de produção e cronograma antes de qualquer contratação.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Produção Executiva Audiovisual em São Paulo',
+    'description': 'Gestão de produção audiovisual de ponta a ponta — orçamento, equipe, locações e cronograma. House Mazzutti Produtora em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Produção Executiva'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Produtora', 'item': 'https://housemazzutti.com/produtora' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Produção Executiva', 'item': 'https://housemazzutti.com/produtora/executiva' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

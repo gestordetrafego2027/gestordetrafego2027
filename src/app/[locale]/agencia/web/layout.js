@@ -22,9 +22,36 @@ export default function WebLayout({ children }) {
       { '@type': 'Question', name: 'A House Mazzutti cuida da manutenção do site após a entrega?', acceptedAnswer: { '@type': 'Answer', text: 'Dependendo do contrato, sim. Há planos de manutenção e suporte técnico pós-lançamento. O escopo é definido no briefing inicial.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Criação de Sites e Estratégia Digital em São Paulo',
+    'description': 'Desenvolvimento de sites institucionais e e-commerce com posicionamento estratégico. House Mazzutti Agência em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Web Design e Estratégia Digital'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Agência', 'item': 'https://housemazzutti.com/agencia' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Web', 'item': 'https://housemazzutti.com/agencia/web' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

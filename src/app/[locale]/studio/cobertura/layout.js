@@ -38,12 +38,39 @@ export default function CoberturaLayout({ children }) {
       },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Cobertura Fotográfica de Eventos em São Paulo',
+    'description': 'Cobertura fotográfica de eventos corporativos, lançamentos e desfiles com curadoria visual de alto nível. House Mazzutti Studio em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Cobertura Fotográfica de Eventos'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Studio', 'item': 'https://housemazzutti.com/studio' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Cobertura', 'item': 'https://housemazzutti.com/studio/cobertura' },
+    ]
+  }
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

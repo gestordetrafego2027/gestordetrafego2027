@@ -38,12 +38,39 @@ export default function EnsaioLayout({ children }) {
       },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Ensaio Fotográfico Pessoal em São Paulo',
+    'description': 'Ensaio fotográfico para executivos, empreendedores e criadores que querem construir autoridade visual. Direção criativa de Angelo Mazzutti em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Ensaio Fotográfico Pessoal'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Studio', 'item': 'https://housemazzutti.com/studio' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Ensaio', 'item': 'https://housemazzutti.com/studio/ensaio' },
+    ]
+  }
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

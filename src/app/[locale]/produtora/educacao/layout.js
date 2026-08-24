@@ -20,9 +20,36 @@ export default function EducacaoLayout({ children }) {
       { '@type': 'Question', name: 'Quantos vídeos posso gravar em um dia de produção?', acceptedAnswer: { '@type': 'Answer', text: 'Depende do formato e do roteiro. Em uma jornada de set, é possível gravar de 5 a 15 vídeos curtos ou 2 a 4 aulas longas. O planejamento é feito no briefing de pré-produção.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Workshop de Fotografia de Moda em São Paulo',
+    'description': 'Workshops e formação em fotografia de moda, direção de imagem e produção visual com Angelo Mazzutti em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Educação em Fotografia e Direção de Imagem'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Produtora', 'item': 'https://housemazzutti.com/produtora' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Educação', 'item': 'https://housemazzutti.com/produtora/educacao' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

@@ -22,9 +22,36 @@ export default function RpLayout({ children }) {
       { '@type': 'Question', name: 'Como a House Mazzutti mede os resultados de RP?', acceptedAnswer: { '@type': 'Answer', text: 'Por publicações conquistadas, alcance estimado, qualidade dos veículos e impacto na percepção de marca — métricas alinhadas ao briefing estratégico definido no início do projeto.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Assessoria de Imprensa e Relações Públicas em São Paulo',
+    'description': 'RP estratégico para marcas e executivos. Cobertura em mídia premium, posicionamento de CEO e presença editorial com House Mazzutti Agência em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Relações Públicas e Assessoria de Imprensa'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Agência', 'item': 'https://housemazzutti.com/agencia' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Relações Públicas', 'item': 'https://housemazzutti.com/agencia/rp' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )

@@ -22,9 +22,36 @@ export default function ComunicacaoLayout({ children }) {
       { '@type': 'Question', name: 'A House Mazzutti produz o material visual das campanhas?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A Agência trabalha em conjunto com o Studio e a Produtora House Mazzutti para entregar conteúdo fotográfico e audiovisual de alto padrão integrado à estratégia de comunicação.' } },
     ],
   }
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Gestão de Redes Sociais e Comunicação Digital em São Paulo',
+    'description': 'Gestão de redes sociais e comunicação digital para marcas com posicionamento premium. Conteúdo estratégico e campanhas de lançamento com House Mazzutti Agência em São Paulo.',
+    'provider': {
+      '@type': 'LocalBusiness',
+      'name': 'House Mazzutti',
+      'url': 'https://housemazzutti.com'
+    },
+    'areaServed': {
+      '@type': 'City',
+      'name': 'São Paulo'
+    },
+    'serviceType': 'Social Media e Comunicação Digital'
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://housemazzutti.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Agência', 'item': 'https://housemazzutti.com/agencia' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Comunicação Digital', 'item': 'https://housemazzutti.com/agencia/comunicacao' },
+    ]
+  }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>
   )
