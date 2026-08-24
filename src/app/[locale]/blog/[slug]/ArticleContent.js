@@ -137,6 +137,7 @@ export default function ArticleContent({ slug, article, prevSlug, nextSlug, prev
                 {/* Article Content */}
                 <article className="flex-1 max-w-[860px]">
                     {/* Hero Cover */}
+                    {article.cover && (
                     <figure className="mb-12">
                         <div className="relative aspect-video bg-zinc-100 group overflow-hidden">
                             <ArticleImage
@@ -152,6 +153,7 @@ export default function ArticleContent({ slug, article, prevSlug, nextSlug, prev
                             </figcaption>
                         )}
                     </figure>
+                    )}
 
                     {/* Metadata & Title */}
                     <header className="mb-12 text-center md:text-left">
