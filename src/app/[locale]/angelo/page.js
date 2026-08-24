@@ -341,8 +341,8 @@ export default function AngeloPage() {
                     'geo-aeo-posicionamento-era-das-ias',
                     'agencia-de-branding-ou-freelancer-quando-contratar-cada-um',
                 ]}
-                allLabel="Ver todos →"
-                readLabel="Ler →"
+                allLabel={t('blog_see_all')}
+                readLabel={t('blog_read')}
             />
 
             {/* FOOTER */}

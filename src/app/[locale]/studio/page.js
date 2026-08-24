@@ -28,18 +28,9 @@ export default function StudioPage() {
     const prevGallerySlide = () => setCurrentGallerySlide(prev => (prev - 1 + 11) % 11)
 
     const testimonials = [
-        {
-            text: "Cheguei querendo um book. Saí com uma nova forma de me apresentar. A imagem deixou de só aparecer — passou a sustentar quem eu sou.",
-            author: "TALITA D."
-        },
-        {
-            text: "Cada frame foi pensado. Cada gesto, direcionado. Vi minha presença ganhar peso pela primeira vez.",
-            author: "PATRICIA M."
-        },
-        {
-            text: "Discrição total, direção firme em set e acabamento de revista. Saí com material editorial — não com um pacote de fotos.",
-            author: "ANA R."
-        }
+        { text: t('dep_1_text'), author: t('dep_1_author') },
+        { text: t('dep_2_text'), author: t('dep_2_author') },
+        { text: t('dep_3_text'), author: t('dep_3_author') },
     ]
 
     const nextSlide = () => {
@@ -279,8 +270,8 @@ export default function StudioPage() {
                 </section>
                 <section className="bg-white pt-24 pb-0 w-full mx-auto">
                     <div className="mb-20 text-center flex flex-col items-center">
-                        <span className="text-caption text-zinc-500 block mb-6">Portfólio</span>
-                        <h2 className="text-h2 text-black">Books. Ensaios. Coberturas.</h2>
+                        <span className="text-caption text-zinc-500 block mb-6">{t('portfolio_label')}</span>
+                        <h2 className="text-h2 text-black">{t('portfolio_titulo')}</h2>
                         <div className="line-divider mt-8 text-black"></div>
                     </div>
                     <div className="relative w-full group overflow-hidden" style={{ height: '80vh' }}>
@@ -361,7 +352,7 @@ export default function StudioPage() {
                     </div>
                     <div className="flex justify-center mt-12">
                         <Link className="group relative px-12 py-4 border-[0.5px] border-black/30 text-black text-button hover:bg-black hover:text-white transition-all duration-500" href="/portfolio-studio">
-                            Ver todo o portfólio
+                            {t('portfolio_cta')}
                         </Link>
                     </div>
                 </section>
@@ -377,28 +368,25 @@ export default function StudioPage() {
                             <div className="grid grid-cols-1 gap-y-16">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                                     <div className="text-left">
-                                        <h3 className="text-h3 text-black mb-3">Luz.</h3>
-                                        <p className="text-caption text-zinc-500">Direcionamento</p>
+                                        <h3 className="text-h3 text-black mb-3">{t('concept_1_title')}</h3>
+                                        <p className="text-caption text-zinc-500">{t('concept_1_sub')}</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="text-h3 text-black mb-3">Composição.</h3>
-                                        <p className="text-caption text-zinc-500">Equilíbrio</p>
+                                        <h3 className="text-h3 text-black mb-3">{t('concept_2_title')}</h3>
+                                        <p className="text-caption text-zinc-500">{t('concept_2_sub')}</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="text-h3 text-black mb-3">Movimento.</h3>
-                                        <p className="text-caption text-zinc-500">Dinâmica</p>
+                                        <h3 className="text-h3 text-black mb-3">{t('concept_3_title')}</h3>
+                                        <p className="text-caption text-zinc-500">{t('concept_3_sub')}</p>
                                     </div>
                                     <div className="text-left">
-                                        <h3 className="text-h3 text-black mb-3">Expressão.</h3>
-                                        <p className="text-caption text-zinc-500">Intenção</p>
+                                        <h3 className="text-h3 text-black mb-3">{t('concept_4_title')}</h3>
+                                        <p className="text-caption text-zinc-500">{t('concept_4_sub')}</p>
                                     </div>
                                 </div>
                                 <div className="max-w-3xl text-left border-t border-zinc-200 pt-10">
-                                    <p className="text-h4 text-zinc-800">
-                                        Antes de qualquer produção, definimos:<br />
-                                        — qual percepção precisa ser construída<br />
-                                        — qual presença deve ser reforçada<br />
-                                        — qual linguagem visual sustenta isso.
+                                    <p className="text-h4 text-zinc-800" style={{whiteSpace: 'pre-line'}}>
+                                        {t('concept_text')}
                                     </p>
                                 </div>
                             </div>
@@ -408,42 +396,42 @@ export default function StudioPage() {
                 <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center">
                         <div className="mb-24">
-                            <span className="text-caption text-zinc-400 block mb-6">Método</span>
-                            <h2 className="text-h2 text-black mb-4">A maioria começa na produção.</h2>
-                            <p className="text-h4 text-zinc-500">Nós começamos no entendimento.</p>
+                            <span className="text-caption text-zinc-400 block mb-6">{t('metodo_label')}</span>
+                            <h2 className="text-h2 text-black mb-4">{t('metodo_h2')}</h2>
+                            <p className="text-h4 text-zinc-500">{t('metodo_sub')}</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                             <div className="flex flex-col items-center space-y-8">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="architecture">architecture</span>
-                                <h3 className="font-headline font-light text-xl">Pré-produção</h3>
+                                <h3 className="font-headline font-light text-xl">{t('fase_1_title')}</h3>
                                 <div className="text-body text-secondary measure-tight space-y-2 text-left">
-                                    <p>— Reunião de briefing</p>
-                                    <p>— Análise de perfil</p>
-                                    <p>— Conceito e staff</p>
-                                    <p>— Mood board</p>
-                                    <p>— Manual de poses</p>
+                                    <p>— {t('fase_1_i1')}</p>
+                                    <p>— {t('fase_1_i2')}</p>
+                                    <p>— {t('fase_1_i3')}</p>
+                                    <p>— {t('fase_1_i4')}</p>
+                                    <p>— {t('fase_1_i5')}</p>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-8">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="design_services">design_services</span>
-                                <h3 className="font-headline font-light text-xl">Execução</h3>
+                                <h3 className="font-headline font-light text-xl">{t('fase_2_title')}</h3>
                                 <div className="text-body text-secondary measure-tight space-y-2 text-left">
-                                    <p>— Call sheet e preparação</p>
-                                    <p>— Roteiros visuais e trilhas</p>
-                                    <p>— Locações e cenografia</p>
-                                    <p>— Direção de cena e poses</p>
-                                    <p>— Equipe multiartística</p>
+                                    <p>— {t('fase_2_i1')}</p>
+                                    <p>— {t('fase_2_i2')}</p>
+                                    <p>— {t('fase_2_i3')}</p>
+                                    <p>— {t('fase_2_i4')}</p>
+                                    <p>— {t('fase_2_i5')}</p>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-8">
                                 <span className="material-symbols-outlined font-extralight" style={{fontSize:'64px'}} data-icon="brush">brush</span>
-                                <h3 className="font-headline font-light text-xl">Pós-produção</h3>
+                                <h3 className="font-headline font-light text-xl">{t('fase_3_title')}</h3>
                                 <div className="text-body text-secondary measure-tight space-y-2 text-left">
-                                    <p>— Aprovação e escolha</p>
-                                    <p>— Edições finais</p>
-                                    <p>— Ajustes de fechamento</p>
-                                    <p>— Arquivos em nuvem privada</p>
-                                    <p>— Personalização e sigilo</p>
+                                    <p>— {t('fase_3_i1')}</p>
+                                    <p>— {t('fase_3_i2')}</p>
+                                    <p>— {t('fase_3_i3')}</p>
+                                    <p>— {t('fase_3_i4')}</p>
+                                    <p>— {t('fase_3_i5')}</p>
                                 </div>
                             </div>
                         </div>
@@ -451,7 +439,7 @@ export default function StudioPage() {
                 </section>
                 <section className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center min-h-[500px] py-[131px]">
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden">
-                        <span className="font-body font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40">Depoimentos</span>
+                        <span className="font-body font-bold text-[18vw] tracking-[-0.05em] text-[#3a3a3a] leading-none translate-y-[40%] opacity-40">{t('dep_ghost')}</span>
                     </div>
                     <div className="absolute left-16 inset-y-0 flex items-center z-20">
                         <button className="custom-nav-btn group flex items-center opacity-40 hover:opacity-100 transition-all duration-300" onClick={prevSlide}>
@@ -471,8 +459,8 @@ export default function StudioPage() {
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center">
                         <div className="mb-12">
-                            <span className="text-caption text-zinc-500 block mb-4">O que dizem</span>
-                            <h2 className="text-h2 text-white">Depoimentos</h2>
+                            <span className="text-caption text-zinc-500 block mb-4">{t('dep_label')}</span>
+                            <h2 className="text-h2 text-white">{t('dep_titulo')}</h2>
                         </div>
                         <div className="flex flex-col items-center">
                             <div className="relative w-full overflow-hidden mb-1">
@@ -517,21 +505,21 @@ export default function StudioPage() {
                             {
                                 title: "BOOK",
                                 link: "/studio/book",
-                                tag: "Book profissional · Direção de imagem · Ensaio editorial",
+                                tag: t('structure_book_tag'),
                                 image: '/images/studio/ana-rockenbach/capa.webp',
                                 pos: 'object-top'
                             },
                             {
                                 title: "ENSAIO",
                                 link: "/studio/ensaio",
-                                tag: "Ensaio pessoal · Direção de imagem · Linguagem visual",
+                                tag: t('structure_ensaio_tag'),
                                 image: '/images/studio/emanuelly-terres/1.webp',
                                 pos: 'object-top'
                             },
                             {
                                 title: "COBERTURA",
                                 link: "/studio/cobertura",
-                                tag: "Acompanhamento real · Captação dedicada · Direção de presença",
+                                tag: t('structure_cobertura_tag'),
                                 image: '/images/studio/marjorie-rossi/1.webp',
                                 pos: 'object-top'
                             }
@@ -557,7 +545,7 @@ export default function StudioPage() {
                                     <p className="font-label uppercase tracking-[0.45em] text-[9px] text-white/40 mb-3">{card.tag}</p>
                                     <h3 className="font-headline font-light text-white text-2xl mb-4">{card.title}</h3>
                                     <span className="text-caption text-white/80 flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
-                                        Saiba mais →
+                                        {t('structure_saiba_mais')}
                                     </span>
                                 </div>
                             </Link>
@@ -571,34 +559,34 @@ export default function StudioPage() {
                     <div className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510312305653-8ed496efbe75?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-10 scale-110"></div>
                     <div className="relative z-10 max-w-5xl mx-auto space-y-20">
                         <h2 className="text-h1 text-white hmzt-hero-title">
-                            Sua imagem deixa de apenas aparecer. Passa a ser lembrada.
+                            {t('cta_h2')}
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto border-y border-white/10 py-16">
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Deixe de</p>
+                                <p className="text-caption text-zinc-500">{t('cta_leave_label')}</p>
                                 <ul className="text-body text-white space-y-3">
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Imagem genérica</span></li>
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>Produção sem direção</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>{t('cta_leave_1')}</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white/40"></span> <span>{t('cta_leave_2')}</span></li>
                                 </ul>
                             </div>
                             <div className="space-y-6">
-                                <p className="text-caption text-zinc-500">Passe a</p>
+                                <p className="text-caption text-zinc-500">{t('cta_gain_label')}</p>
                                 <ul className="text-body text-white space-y-3">
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Consistência visual</span></li>
-                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>Mais valor percebido</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>{t('cta_gain_1')}</span></li>
+                                    <li className="flex items-center space-x-3"><span className="w-3 h-[1px] bg-white"></span> <span>{t('cta_gain_2')}</span></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="flex flex-col items-center space-y-10">
                             <button type="button" onClick={() => { track('Lead', { lead_type: 'studio', content_name: 'Studio Form' }); setIsStudioFormOpen(true); }} className="inline-block px-16 py-6 border-[0.5px] border-white text-white text-button hover:bg-white hover:text-black transition-all duration-500">
-                                Iniciar uma conversa
+                                {t('cta_btn')}
                             </button>
                             <div className="flex flex-col items-center gap-2">
                                 <div className="flex items-center gap-2 text-[11px] font-label">
                                     <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
-                                    <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>
+                                    <span className="text-zinc-400">{t('cta_rating')}</span>
                                 </div>
-                                <p className="text-caption text-zinc-500">Menos tentativa. Mais direção.</p>
+                                <p className="text-caption text-zinc-500">{t('cta_tagline')}</p>
                             </div>
                         </div>
                     </div>
@@ -608,26 +596,14 @@ export default function StudioPage() {
             {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
             <section className="bg-white py-24 px-8 border-t border-zinc-100">
                 <div className="max-w-3xl mx-auto">
-                    <p className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-400 mb-6">Perguntas frequentes</p>
-                    <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">O que você precisa saber antes de começar</h2>
+                    <p className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-400 mb-6">{t('faq_label')}</p>
+                    <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">{t('faq_titulo')}</h2>
                     <div className="space-y-0">
                         {[
-                            {
-                                q: 'Como funciona um book no Studio da House Mazzutti?',
-                                a: 'O processo começa com uma conversa de briefing para entender seu objetivo — modelo, empresária, influenciadora ou executiva. A partir daí, desenvolvemos o conceito visual, selecionamos locações e realizamos a sessão com direção de imagem editorial. As imagens passam por edição e finalização profissional antes da entrega.'
-                            },
-                            {
-                                q: 'O que está incluso em um ensaio pessoal?',
-                                a: 'O ensaio pessoal inclui briefing de conceito, direção de imagem, locação planejada, sessão fotográfica e/ou de vídeo, edição e entrega das imagens selecionadas em alta resolução. A quantidade de imagens e o tempo de sessão variam conforme o pacote escolhido.'
-                            },
-                            {
-                                q: 'Vocês fazem cobertura de eventos em São Paulo?',
-                                a: 'Sim. A House Mazzutti realiza cobertura externa de eventos, ativações de marca, inaugurações e lançamentos. Trabalhamos com foto e vídeo em tempo real, com direção e curadoria de imagem no próprio evento.'
-                            },
-                            {
-                                q: 'Quanto custa um book profissional?',
-                                a: 'O investimento varia de acordo com o escopo — modelo, empresária ou executiva; meia sessão ou sessão completa; foto ou foto + vídeo. Entre em contato para receber a tabela de pacotes e uma proposta personalizada.'
-                            }
+                            { q: t('faq_1_q'), a: t('faq_1_a') },
+                            { q: t('faq_2_q'), a: t('faq_2_a') },
+                            { q: t('faq_3_q'), a: t('faq_3_a') },
+                            { q: t('faq_4_q'), a: t('faq_4_a') },
                         ].map(({q, a}, i) => (
                             <details key={i} className="group border-t border-zinc-100 py-6 cursor-pointer">
                                 <summary className="flex justify-between items-center list-none font-headline italic text-lg text-zinc-900 gap-4">
@@ -670,8 +646,8 @@ export default function StudioPage() {
             <FormDrawer
                 isOpen={isStudioFormOpen}
                 onClose={() => setIsStudioFormOpen(false)}
-                title="Iniciar projeto"
-                subtitle="Conte-nos sobre seu ensaio. Respondemos em até 1 dia útil."
+                title={t('form_title')}
+                subtitle={t('form_subtitle')}
             >
                 <FormStudio
                     onClose={() => setIsStudioFormOpen(false)}

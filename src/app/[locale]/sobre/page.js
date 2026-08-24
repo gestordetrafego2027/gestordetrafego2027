@@ -183,8 +183,8 @@ export default async function SobrePage() {
           'geo-aeo-posicionamento-era-das-ias',
           'quando-contratar-uma-produtora-de-moda-guia-para-marcas',
         ]}
-        allLabel="Ver todos →"
-        readLabel="Ler →"
+        allLabel={t('blog_see_all')}
+        readLabel={t('blog_read')}
       />
 
       {/* FOOTER */}
