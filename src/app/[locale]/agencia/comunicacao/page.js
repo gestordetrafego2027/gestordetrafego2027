@@ -33,7 +33,7 @@ export default function AgenciaComunicacaoPage() {
                         {/* HERO */}
             <section className="relative w-full overflow-hidden bg-black m-0 p-0 border-0" style={{ height: "105vh" }}>
                 <div className="absolute inset-0 z-0">
-                    <Image src="/images/agencia/on-take/capa.webp" alt="Campanha de Lançamento — House Mazzutti" fill priority className="object-cover object-center" sizes="100vw" />
+                    <Image src="/images/agencia/on-take/capa.webp" alt="Campanha de lançamento em São Paulo — House Mazzutti Agência" fill priority className="object-cover object-center" sizes="100vw" />
                     <div className="absolute inset-0 bg-black/50"></div>
                 </div>
                 <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
@@ -110,7 +110,7 @@ export default function AgenciaComunicacaoPage() {
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden">
-                <Image src="/images/agencia/pous/capa.webp" alt="Comunicação — House Mazzutti" fill className="object-cover object-center" sizes="100vw" />
+                <Image src="/images/agencia/pous/capa.webp" alt="Comunicação digital em São Paulo — House Mazzutti Agência" fill className="object-cover object-center" sizes="100vw" />
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 text-center px-8">
                     <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6">{t('quote_titulo')}</h2>

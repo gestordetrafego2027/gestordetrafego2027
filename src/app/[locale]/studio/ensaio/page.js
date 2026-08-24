@@ -45,7 +45,7 @@ export default function StudioEnsaioPage() {
                         {/* HERO */}
             <section className="relative w-full overflow-hidden bg-black m-0 p-0 border-0" style={{ height: "105vh" }}>
                 <div className="absolute inset-0 z-0">
-                    <Image src="/images/studio/marjorie-rossi/capa.webp" alt="Ensaio fotográfico — House Mazzutti" fill priority className="object-cover object-center" sizes="100vw" />
+                    <Image src="/images/studio/marjorie-rossi/capa.webp" alt="Ensaio fotográfico pessoal em São Paulo — House Mazzutti Studio" fill priority className="object-cover object-center" sizes="100vw" />
                     <div className="absolute inset-0 bg-black/50"></div>
                 </div>
                 <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
@@ -100,7 +100,7 @@ export default function StudioEnsaioPage() {
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                    <Image src="/images/studio/marjorie-rossi/capa.webp" alt="Ensaio editorial — House Mazzutti" fill className="object-cover opacity-80" sizes="100vw" />
+                    <Image src="/images/studio/marjorie-rossi/capa.webp" alt="Ensaio editorial em São Paulo — House Mazzutti Studio" fill className="object-cover opacity-80" sizes="100vw" />
                     <div className="relative z-10 text-center px-8">
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>

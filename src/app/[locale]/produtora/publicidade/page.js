@@ -110,7 +110,7 @@ export default function ProdutoraPublicidadePage() {
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                    <Image src="/images/produtora/beleza/jequiti-larissa-manoela/capa.webp" alt="Produção de campanha — House Mazzutti" fill priority className="object-cover opacity-80" sizes="100vw" />
+                    <Image src="/images/produtora/beleza/jequiti-larissa-manoela/capa.webp" alt="Produção de campanha publicitária em São Paulo — House Mazzutti Produtora" fill priority className="object-cover opacity-80" sizes="100vw" />
                     <div className="relative z-10 text-center px-8">
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>

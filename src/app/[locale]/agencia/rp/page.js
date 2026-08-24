@@ -35,7 +35,7 @@ export default function AgenciaRpPage() {
                         {/* HERO */}
             <section className="relative w-full overflow-hidden bg-black m-0 p-0 border-0" style={{ height: "105vh" }}>
                 <div className="absolute inset-0 z-0">
-                    <Image src="/images/agencia/banners/banner-2.webp" alt="RP & Marketing Direto — House Mazzutti" fill priority className="object-cover object-center" sizes="100vw" />
+                    <Image src="/images/agencia/banners/banner-2.webp" alt="Assessoria de imprensa em São Paulo — House Mazzutti Agência" fill priority className="object-cover object-center" sizes="100vw" />
                     <div className="absolute inset-0 bg-black/50"></div>
                 </div>
                 <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
@@ -89,7 +89,7 @@ export default function AgenciaRpPage() {
 
             {/* QUOTE */}
             <section className="relative py-40 w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                <Image src="/images/agencia/banners/banner-2.webp" alt="Reputação e autoridade de marca — House Mazzutti" fill className="object-cover opacity-40" sizes="100vw" />
+                <Image src="/images/agencia/banners/banner-2.webp" alt="Reputação e autoridade de marca em São Paulo — House Mazzutti Agência" fill className="object-cover opacity-40" sizes="100vw" />
                 <div className="relative z-10 text-center px-8 max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6" data-aos="fade-up">{t('quote_texto')}</h2>
                     <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60" data-aos="fade-up" data-aos-delay="100">{t('quote_subtitulo')}</p>

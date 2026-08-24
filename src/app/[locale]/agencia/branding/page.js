@@ -257,7 +257,7 @@ export default function AgenciaBrandingPage() {
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden">
                 <Image
                     src="/images/agencia/mabdo/capa.webp"
-                    alt="Branding — House Mazzutti"
+                    alt="Branding em São Paulo — House Mazzutti Agência"
                     fill
                     sizes="100vw"
                     className="object-cover object-center"

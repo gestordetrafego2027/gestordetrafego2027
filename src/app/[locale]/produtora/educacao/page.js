@@ -37,7 +37,7 @@ export default function ProdutoraEducacaoPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/produtora/institucional/sense-hotel/capa.webp"
-                        alt="Produção de conteúdo educacional — House Mazzutti"
+                        alt="Workshop de fotografia de moda em São Paulo — House Mazzutti"
                         fill priority
                         className="object-cover object-center"
                         sizes="100vw"
@@ -95,7 +95,7 @@ export default function ProdutoraEducacaoPage() {
 
             {/* QUOTE */}
             <section className="relative py-40 w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                <Image src="/images/produtora/banners/banner-3.webp" alt="Produção educacional — House Mazzutti" fill className="object-cover opacity-40" sizes="100vw" />
+                <Image src="/images/produtora/banners/banner-3.webp" alt="Educação em fotografia em São Paulo — House Mazzutti" fill className="object-cover opacity-40" sizes="100vw" />
                 <div className="relative z-10 text-center px-8 max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6" data-aos="fade-up">{t('quote_texto')}</h2>
                     <p className="font-label uppercase tracking-[0.3em] text-[10px] md:text-xs text-white/60" data-aos="fade-up" data-aos-delay="100">{t('quote_subtitulo')}</p>

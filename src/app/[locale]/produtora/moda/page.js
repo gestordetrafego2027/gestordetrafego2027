@@ -46,7 +46,7 @@ export default function ProdutoraModaPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/produtora/moda/hero.webp"
-                        alt="Shooting de moda — direção criativa House Mazzutti"
+                        alt="Editorial de moda em São Paulo — House Mazzutti Produtora"
                         fill
                         priority
                         className="object-cover object-center"
@@ -108,7 +108,7 @@ export default function ProdutoraModaPage() {
 
             {/* QUOTE */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                    <Image src="/images/produtora/moda/hero.webp" alt="Fashion film — House Mazzutti" fill priority className="object-cover opacity-80" sizes="100vw" />
+                    <Image src="/images/produtora/moda/hero.webp" alt="Fashion film em São Paulo — House Mazzutti Produtora" fill priority className="object-cover opacity-80" sizes="100vw" />
                     <div className="relative z-10 text-center px-8">
                         <button type="button" className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>

@@ -48,7 +48,7 @@ export default function StudioBookPage() {
                         {/* HERO */}
             <section className="relative w-full overflow-hidden bg-black m-0 p-0 border-0" style={{ height: "105vh" }}>
                 <div className="absolute inset-0 z-0">
-                    <Image src="/images/studio/marina-machado/capa.webp" alt="Book profissional — House Mazzutti" fill priority className="object-cover object-center" sizes="100vw" />
+                    <Image src="/images/studio/marina-machado/capa.webp" alt="Book fotográfico profissional em São Paulo — House Mazzutti Studio" fill priority className="object-cover object-center" sizes="100vw" />
                     <div className="absolute inset-0 bg-black/50"></div>
                 </div>
                 <div className="relative z-10 h-full flex flex-col justify-center px-12 md:pl-48">
@@ -106,7 +106,7 @@ export default function StudioBookPage() {
 
             {/* 6. QUOTE + VIDEO */}
             <section className="relative h-[769px] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-                    <Image src="/images/studio/marina-machado/capa.webp" alt="Reel House Mazzutti" fill className="object-cover opacity-80" sizes="100vw" />
+                    <Image src="/images/studio/marina-machado/capa.webp" alt="Reel House Mazzutti Studio São Paulo" fill className="object-cover opacity-80" sizes="100vw" />
                     <div className="relative z-10 text-center px-8">
                         <button className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center mb-12 mx-auto hover:bg-white/10 transition-colors group" type="button">
                             <span className="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform" data-icon="play_arrow">play_arrow</span>
