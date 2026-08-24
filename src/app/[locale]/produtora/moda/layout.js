@@ -1,28 +1,14 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {modaServiceSchema, modaFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/produtora/moda',
-  title: 'Produtora de Moda em São Paulo | House Mazzutti',
-  description:
-    'Produtora de moda e fashion films em São Paulo: campanhas, editoriais e direção de arte. Da concepção ao master final, com produção sob controle.',
-})
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/produtora/moda/',
+    title: 'Editorial de Moda Profissional para Marcas — House Mazzutti Produtora',
+    description: 'Produção editorial de moda para marcas, designers e campanhas. Direção criativa de Angelo Mazzutti em São Paulo — casting, styling, fotografia e vídeo.',
+    image: { src: '/images/produtora/moda/hero.webp', alt: 'Editorial de moda — House Mazzutti Produtora', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
-    {name: 'Moda', url: `${brand.url}/pt/produtora/moda/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/produtora/moda/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(modaServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(modaFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function ModaLayout({ children }) {
+  return children
 }

@@ -1,28 +1,16 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {bookServiceSchema, bookFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/studio/book',
-  title: 'Book Fotográfico em São Paulo | House Mazzutti',
-  description:
-    'Book fotográfico profissional para modelos e talentos em São Paulo. Direção de imagem editorial que define quem o mercado escolhe. Agende seu book.',
-})
+export async function generateMetadata({ params }) {
+  const { locale } = await params
+  return pageMetadata({
+    path: '/studio/book/',
+    locale,
+    title: 'Book Fotográfico Profissional em São Paulo — House Mazzutti Studio',
+    description: 'Book para modelos e artistas com direção criativa de Angelo Mazzutti. Studio próprio em São Paulo, curadoria de looks e entrega high-end.',
+    image: { src: '/images/studio/marina-machado/capa.webp', alt: 'Book fotográfico — House Mazzutti Studio', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Studio', url: `${brand.url}/pt/studio/`},
-    {name: 'Book', url: `${brand.url}/pt/studio/book/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/studio/book/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(bookServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(bookFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function BookLayout({ children }) {
+  return children
 }

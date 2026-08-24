@@ -1,28 +1,14 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {eventosServiceSchema, eventosFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/produtora/eventos',
-  title: 'Produção e Cobertura de Eventos em São Paulo | House Mazzutti',
-  description:
-    'Cobertura fotográfica, videográfica, transmissão ao vivo e captação aérea para eventos com direção editorial. Três formatos. House Mazzutti — São Paulo.',
-})
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/produtora/eventos/',
+    title: 'Cobertura Audiovisual de Eventos em São Paulo — House Mazzutti Produtora',
+    description: 'Cobertura audiovisual de desfiles, lançamentos e eventos corporativos em São Paulo. Equipe da House Mazzutti Produtora com direção de Angelo Mazzutti.',
+    image: { src: '/images/produtora/banners/banner-3.webp', alt: 'Cobertura de eventos — House Mazzutti', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
-    {name: 'Eventos', url: `${brand.url}/pt/produtora/eventos/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/produtora/eventos/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(eventosServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(eventosFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function EventosLayout({ children }) {
+  return children
 }

@@ -14,16 +14,7 @@ import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
 import BlogSection from '@/app/components/BlogSection';
-import { pageMetadata } from '@/lib/seo/metadata';
 
-export function generateMetadata() {
-  return pageMetadata({
-    path: '/studio/ensaio/',
-    title: 'Ensaio Fotográfico Artístico em São Paulo — House Mazzutti Studio',
-    description: 'Ensaios pessoais e artísticos com direção criativa de imagem. Studio exclusivo em São Paulo, styling, lighting e retoque high-end.',
-    image: { src: '/images/studio/marjorie-rossi/capa.webp', alt: 'Ensaio fotográfico — House Mazzutti Studio', width: 1200, height: 630 },
-  })
-}
 
 export default function StudioEnsaioPage() {
     const t = useTranslations('studio_ensaio');

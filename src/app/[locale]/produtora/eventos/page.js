@@ -148,6 +148,10 @@ export default function ProdutoraEventosPage() {
 
             {/* FINAL CTA */}
             <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+                <div className="flex items-center justify-center gap-2 text-[11px] font-label mb-6">
+                  <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
+                  <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>
+                </div>
                 <h2 className="font-headline text-3xl md:text-5xl text-white mb-12 max-w-3xl leading-snug hmzt-hero-title" data-aos="fade-up">{t('cta_titulo')}</h2>
                 <p className="font-body text-white/60 text-lg mb-12 max-w-xl" data-aos="fade-up" data-aos-delay="100">{t('cta_subtitulo')}</p>
                 <button

@@ -1,28 +1,16 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {coberturaServiceSchema, coberturaFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/studio/cobertura',
-  title: 'Cobertura Fotográfica em São Paulo | House Mazzutti',
-  description:
-    'Cobertura fotográfica e audiovisual de eventos em São Paulo com direção de imagem da House Mazzutti. Registro editorial, não só foto de evento.',
-})
+export async function generateMetadata({ params }) {
+  const { locale } = await params
+  return pageMetadata({
+    path: '/studio/cobertura/',
+    locale,
+    title: 'Cobertura Fotográfica de Eventos em São Paulo — House Mazzutti Studio',
+    description: 'Cobertura fotográfica editorial de desfiles, lançamentos e eventos de moda em São Paulo. Direção de Angelo Mazzutti, entrega curada.',
+    image: { src: '/images/studio/ana-laura-saar/1.webp', alt: 'Cobertura fotográfica editorial — House Mazzutti Studio', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Studio', url: `${brand.url}/pt/studio/`},
-    {name: 'Cobertura', url: `${brand.url}/pt/studio/cobertura/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/studio/cobertura/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(coberturaServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(coberturaFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function CoberturaLayout({ children }) {
+  return children
 }

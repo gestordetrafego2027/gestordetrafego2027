@@ -1,5 +1,4 @@
 'use client';
-import { pageMetadata } from '@/lib/seo/metadata';
 import { track } from '@/components/analytics/Tracking';
 import { initAosNative } from '@/lib/aosNative';
 import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick';
@@ -13,14 +12,6 @@ import FormDrawer from '@/app/components/FormDrawer';
 import LandingTeam from '@/app/components/LandingTeam';
 import BlogSection from '@/app/components/BlogSection';
 
-export function generateMetadata() {
-  return pageMetadata({
-    path: '/agencia/comunicacao/',
-    title: 'Comunicação e Publicidade para Marcas — House Mazzutti Agência',
-    description: 'Campanhas de lançamento, conteúdo editorial e gestão de comunicação para marcas em São Paulo. House Mazzutti Agência.',
-    image: { src: '/images/agencia/on-take/capa.webp', alt: 'Comunicação e publicidade — House Mazzutti', width: 1200, height: 630 },
-  });
-}
 
 export default function AgenciaComunicacaoPage() {
     const t = useTranslations('agencia_comunicacao');

@@ -1,28 +1,14 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {publicidadeServiceSchema, publicidadeFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/produtora/publicidade',
-  title: 'Produção Publicitária em São Paulo | House Mazzutti',
-  description:
-    'Produtora de publicidade em São Paulo: campanhas e filmes com governança criativa do briefing à entrega. Conceito que performa, produção sob controle.',
-})
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/produtora/publicidade/',
+    title: 'Produção Publicitária para Marcas — House Mazzutti Produtora',
+    description: 'Comerciais e filmes publicitários com conceito criativo e execução de alto nível em São Paulo. House Mazzutti Produtora, direção de Angelo Mazzutti.',
+    image: { src: '/images/produtora/beleza/jequiti-larissa-manoela/capa.webp', alt: 'Produção publicitária — House Mazzutti', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
-    {name: 'Publicidade', url: `${brand.url}/pt/produtora/publicidade/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/produtora/publicidade/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(publicidadeServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(publicidadeFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function PublicidadeLayout({ children }) {
+  return children
 }

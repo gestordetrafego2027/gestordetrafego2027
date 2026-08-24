@@ -1,5 +1,4 @@
 'use client';
-import { pageMetadata } from '@/lib/seo/metadata';
 import { track } from '@/components/analytics/Tracking';
 import { initAosNative } from '@/lib/aosNative';
 import Image from 'next/image';
@@ -14,14 +13,6 @@ import FormBranding from '@/app/components/forms/FormBranding';
 import LandingTeam from '@/app/components/LandingTeam';
 import BlogSection from '@/app/components/BlogSection';
 
-export function generateMetadata() {
-  return pageMetadata({
-    path: '/agencia/branding/',
-    title: 'Branding e Identidade Visual para Marcas — House Mazzutti Agência',
-    description: 'Branding estratégico com direção criativa de Angelo Mazzutti. Identidade visual, nomenclatura, brandbook e voz de marca para empresas em São Paulo.',
-    image: { src: '/images/agencia/knowhol/capa.webp', alt: 'Projeto de branding — House Mazzutti Agência', width: 1200, height: 630 },
-  });
-}
 
 export default function AgenciaBrandingPage() {
     const t = useTranslations('agencia_branding');

@@ -1,6 +1,5 @@
 'use client'
 
-import { pageMetadata } from '@/lib/seo/metadata'
 import { useState, useEffect } from 'react'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { Link } from '@/i18n/navigation'
@@ -14,14 +13,6 @@ import TypewriterText from '@/app/components/TypewriterText'
 import {useTranslations} from 'next-intl'
 import { track } from '@/components/analytics/Tracking'
 
-export function generateMetadata() {
-  return pageMetadata({
-    path: '/studio/',
-    title: 'Studio Fotográfico Profissional em São Paulo — House Mazzutti',
-    description: 'Studio fotográfico com direção criativa de Angelo Mazzutti em São Paulo. Books, ensaios artísticos e coberturas editoriais com entrega high-end.',
-    image: { src: '/images/studio/marina-machado/capa.webp', alt: 'Studio fotográfico — House Mazzutti', width: 1200, height: 630 },
-  })
-}
 
 export default function StudioPage() {
     const t = useTranslations('studio')

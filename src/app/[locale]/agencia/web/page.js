@@ -1,5 +1,4 @@
 'use client';
-import { pageMetadata } from '@/lib/seo/metadata';
 import { track } from '@/components/analytics/Tracking';
 import { initAosNative } from '@/lib/aosNative';
 import { trackAndOpenWhatsApp } from '@/lib/trackWhatsAppClick';
@@ -13,14 +12,6 @@ import LandingTeam from '@/app/components/LandingTeam';
 import { useTranslations } from 'next-intl';
 import BlogSection from '@/app/components/BlogSection';
 
-export function generateMetadata() {
-  return pageMetadata({
-    path: '/agencia/web/',
-    title: 'Desenvolvimento Web e Digital para Marcas — House Mazzutti Agência',
-    description: 'Sites, plataformas digitais e e-commerce para marcas com identidade. House Mazzutti Agência em São Paulo.',
-    image: { src: '/images/agencia/house-mazzutti/capa.webp', alt: 'Web e digital — House Mazzutti', width: 1200, height: 630 },
-  });
-}
 
 export default function AgenciaWebPage() {
     const t = useTranslations('agencia_web');

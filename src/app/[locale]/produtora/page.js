@@ -1,6 +1,5 @@
 'use client'
 
-import { pageMetadata } from '@/lib/seo/metadata'
 import { useState, useEffect } from 'react'
 import { track } from '@/components/analytics/Tracking'
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
@@ -14,14 +13,6 @@ import FormProdutora from '@/app/components/forms/FormProdutora'
 import BlogSection from '@/app/components/BlogSection'
 import TypewriterText from '@/app/components/TypewriterText'
 
-export function generateMetadata() {
-  return pageMetadata({
-    path: '/produtora/',
-    title: 'Produtora Audiovisual em São Paulo — House Mazzutti',
-    description: 'Produtora audiovisual com direção criativa de Angelo Mazzutti. Fashion film, vídeo institucional, publicidade e editorial de moda para marcas em São Paulo.',
-    image: { src: '/images/produtora/moda/hero.webp', alt: 'Produtora audiovisual — House Mazzutti', width: 1200, height: 630 },
-  })
-}
 
 export default function ProdutoraPage() {
     const t = useTranslations('produtora_page')

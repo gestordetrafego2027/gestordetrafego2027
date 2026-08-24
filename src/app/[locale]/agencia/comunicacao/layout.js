@@ -1,28 +1,16 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {comunicacaoServiceSchema, comunicacaoFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/agencia/comunicacao',
-  title: 'Comunicação de Marca em São Paulo | House Mazzutti',
-  description:
-    'Estratégia e comunicação de marca em São Paulo: conteúdo, social e campanhas com direção criativa. Presença que posiciona, não só aparece.',
-})
+export async function generateMetadata({ params }) {
+  const { locale } = await params
+  return pageMetadata({
+    path: '/agencia/comunicacao/',
+    locale,
+    title: 'Comunicação e Publicidade para Marcas — House Mazzutti Agência',
+    description: 'Campanhas de lançamento, conteúdo editorial e gestão de comunicação para marcas em São Paulo. House Mazzutti Agência.',
+    image: { src: '/images/agencia/on-take/capa.webp', alt: 'Comunicação e publicidade — House Mazzutti', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Agência', url: `${brand.url}/pt/agencia/`},
-    {name: 'Comunicação', url: `${brand.url}/pt/agencia/comunicacao/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/agencia/comunicacao/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(comunicacaoServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(comunicacaoFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function ComunicacaoLayout({ children }) {
+  return children
 }

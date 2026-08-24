@@ -1,28 +1,14 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {executivaServiceSchema, executivaFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/produtora/executiva',
-  title: 'Produção Executiva 360° em São Paulo | House Mazzutti',
-  description:
-    'Inteligência operacional para campanhas complexas — cinco núcleos curados: Direção & Criação, Audiovisual, Moda & Beleza, Casting & Influência, Produção & Estrutura. House Mazzutti.',
-})
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/produtora/executiva/',
+    title: 'Produção Executiva Audiovisual em São Paulo — House Mazzutti Produtora',
+    description: 'Produção executiva completa para campanhas audiovisuais — logística, casting, equipe técnica e pós-produção. House Mazzutti Produtora em São Paulo.',
+    image: { src: '/images/produtora/banners/banner-1.webp', alt: 'Produção executiva — House Mazzutti', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
-    {name: 'Produção Executiva', url: `${brand.url}/pt/produtora/executiva/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/produtora/executiva/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(executivaServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(executivaFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function ExecutivaLayout({ children }) {
+  return children
 }

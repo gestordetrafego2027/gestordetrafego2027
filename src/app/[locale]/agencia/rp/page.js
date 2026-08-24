@@ -1,5 +1,4 @@
 'use client';
-import { pageMetadata } from '@/lib/seo/metadata';
 import { track } from '@/components/analytics/Tracking';
 import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
@@ -13,14 +12,6 @@ import FormAgenciaB2B from '@/app/components/forms/FormAgenciaB2B';
 import LandingTeam from '@/app/components/LandingTeam';
 import BlogSection from '@/app/components/BlogSection';
 
-export function generateMetadata() {
-  return pageMetadata({
-    path: '/agencia/rp/',
-    title: 'RP e Marketing Direto para Marcas — House Mazzutti Agência',
-    description: 'Relações públicas, assessoria de imprensa e marketing direto para marcas de luxo e lifestyle em São Paulo. House Mazzutti Agência.',
-    image: { src: '/images/agencia/banners/banner-2.webp', alt: 'RP e Marketing Direto — House Mazzutti', width: 1200, height: 630 },
-  });
-}
 
 export default function AgenciaRpPage() {
     const t = useTranslations('agencia_rp');

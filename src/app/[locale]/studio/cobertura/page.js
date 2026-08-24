@@ -14,16 +14,7 @@ import LandingGallery from '@/app/components/LandingGallery';
 import LandingTeam from '@/app/components/LandingTeam';
 import LandingPricing from '@/app/components/LandingPricing';
 import BlogSection from '@/app/components/BlogSection';
-import { pageMetadata } from '@/lib/seo/metadata';
 
-export function generateMetadata() {
-  return pageMetadata({
-    path: '/studio/cobertura/',
-    title: 'Cobertura Fotográfica de Eventos em São Paulo — House Mazzutti Studio',
-    description: 'Cobertura fotográfica editorial de desfiles, lançamentos e eventos de moda em São Paulo. Direção de Angelo Mazzutti, entrega curada.',
-    image: { src: '/images/studio/cobertura/capa.webp', alt: 'Cobertura fotográfica — House Mazzutti Studio', width: 1200, height: 630 },
-  })
-}
 
 export default function StudioCoberturaPage() {
     const t = useTranslations('studio_cobertura');

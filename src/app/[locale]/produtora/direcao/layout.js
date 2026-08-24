@@ -1,28 +1,14 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {direcaoServiceSchema, direcaoFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/produtora/direcao',
-  title: 'Direção & Criação Estratégica em São Paulo | House Mazzutti',
-  description:
-    'Liderança criativa, videografia, fotografia e narrativa publicitária para projetos onde o conceito precisa chegar intacto ao resultado. House Mazzutti Produtora — São Paulo.',
-})
+export function generateMetadata() {
+  return pageMetadata({
+    path: '/produtora/direcao/',
+    title: 'Direção Criativa de Imagem para Marcas — House Mazzutti Produtora',
+    description: 'Direção criativa de imagem para fotografia e vídeo. Angelo Mazzutti dirige cada projeto — do conceito ao resultado final — para marcas em São Paulo.',
+    image: { src: '/images/produtora/banners/banner-2.webp', alt: 'Direção criativa — House Mazzutti', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Produtora', url: `${brand.url}/pt/produtora/`},
-    {name: 'Direção & Criação', url: `${brand.url}/pt/produtora/direcao/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/produtora/direcao/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(direcaoServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(direcaoFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function DirecaoLayout({ children }) {
+  return children
 }

@@ -1,28 +1,16 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {rpServiceSchema, rpFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/agencia/rp',
-  title: 'RP & Marketing Direto em São Paulo | House Mazzutti',
-  description:
-    'Assessoria de imprensa, relações públicas e marketing direto para marcas que constroem reputação com presença consistente nos lugares certos. House Mazzutti — São Paulo.',
-})
+export async function generateMetadata({ params }) {
+  const { locale } = await params
+  return pageMetadata({
+    path: '/agencia/rp/',
+    locale,
+    title: 'RP e Marketing Direto para Marcas — House Mazzutti Agência',
+    description: 'Relações públicas, assessoria de imprensa e marketing direto para marcas de luxo e lifestyle em São Paulo. House Mazzutti Agência.',
+    image: { src: '/images/agencia/banners/banner-2.webp', alt: 'RP e Marketing Direto — House Mazzutti', width: 1200, height: 630 },
+  })
+}
 
-export default function Layout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Agência', url: `${brand.url}/pt/agencia/`},
-    {name: 'RP', url: `${brand.url}/pt/agencia/rp/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/agencia/rp/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(rpServiceSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(rpFaqSchema)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(speakable)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}} />
-      {children}
-    </>
-  )
+export default function RpLayout({ children }) {
+  return children
 }

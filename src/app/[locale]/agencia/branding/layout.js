@@ -1,37 +1,16 @@
-import {pageMetadata} from '@/lib/seo/metadata'
-import {brandingServiceSchema, brandingFaqSchema, breadcrumbSchema, speakableSchema} from '@/lib/seo/schemas'
-import {brand} from '@/config/site'
+import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({
-  path: '/agencia/branding',
-  title: 'Branding & Identidade de Marca em São Paulo | House Mazzutti',
-  description:
-    'Naming, identidade visual e posicionamento para marcas que precisam ser reconhecidas antes de serem explicadas. Da imersão ao fine art — House Mazzutti, São Paulo.',
-})
+export async function generateMetadata({ params }) {
+  const { locale } = await params
+  return pageMetadata({
+    path: '/agencia/branding/',
+    locale,
+    title: 'Branding e Identidade Visual para Marcas — House Mazzutti Agência',
+    description: 'Branding estratégico com direção criativa de Angelo Mazzutti. Identidade visual, nomenclatura, brandbook e voz de marca para empresas em São Paulo.',
+    image: { src: '/images/agencia/knowhol/capa.webp', alt: 'Projeto de branding — House Mazzutti Agência', width: 1200, height: 630 },
+  })
+}
 
-export default function BrandingLayout({children}) {
-  const crumbs = breadcrumbSchema([
-    {name: 'House Mazzutti', url: `${brand.url}/pt/`},
-    {name: 'Agência', url: `${brand.url}/pt/agencia/`},
-    {name: 'Branding', url: `${brand.url}/pt/agencia/branding/`},
-  ])
-  const speakable = speakableSchema(`${brand.url}/pt/agencia/branding/`, ['h1', '.hero-title', '.hero-description', '.speakable'])
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{__html: JSON.stringify(brandingServiceSchema)}}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{__html: JSON.stringify(brandingFaqSchema)}}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{__html: JSON.stringify(crumbs)}}
-      />
-      {children}
-    </>
-  )
+export default function BrandingLayout({ children }) {
+  return children
 }
