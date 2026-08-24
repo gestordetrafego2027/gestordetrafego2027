@@ -117,6 +117,11 @@ export const clusters = {
       'sao-paulo-epicentro-criativo-brasil',
       'dupes-masstige-o-que-editorial-moda-espera',
       'direcao-criativa-nao-e-estetica-e-resultado',
+      // setembro 2026
+      'semana-moda-milao-2026-tendencias-brasil',
+      'ai-producao-audiovisual-o-que-mudou',
+      'fashion-film-vs-reels-quando-usar',
+      'marcas-brasileiras-ponto-de-vista-proprio',
       // 2027 — calendário setorial
       'eventos-moda-2027-calendario-branding-marcas',
       'eventos-publicidade-marketing-2027-guia-completo',
@@ -191,6 +196,11 @@ export const postTitles = {
   'sao-paulo-epicentro-criativo-brasil': 'O que São Paulo tem que nenhum outro mercado criativo do Brasil tem',
   'dupes-masstige-o-que-editorial-moda-espera': 'Dupes e marcas masstige: o que a nova consumidora de moda espera',
   'direcao-criativa-nao-e-estetica-e-resultado': 'Direção criativa não é estética — é resultado',
+  // setembro 2026
+  'semana-moda-milao-2026-tendencias-brasil': 'Milão SS27: o que o Brasil vai copiar tarde demais',
+  'ai-producao-audiovisual-o-que-mudou': 'IA na produção audiovisual: o que realmente mudou',
+  'fashion-film-vs-reels-quando-usar': 'Fashion film ou Reels: quando usar cada um',
+  'marcas-brasileiras-ponto-de-vista-proprio': 'Marcas brasileiras precisam de ponto de vista',
   // 2027 — calendário setorial
   'eventos-moda-2027-calendario-branding-marcas': 'Moda 2027: o calendário completo para marcas',
   'eventos-publicidade-marketing-2027-guia-completo': 'Publicidade e marketing em 2027: guia de eventos',
