@@ -4071,7 +4071,7 @@ export const articles = {
       }
     ],
     "conclusao": "O fenômeno dos genuinfluencers não é uma correção de rota do marketing de influência. É a devolução da influência ao seu significado original: alguém em quem se confia dizendo algo que sustenta. Marcas que leem isso como oportunidade de economia vão contratar mais gente por menos dinheiro e obter menos resultado. Marcas que leem como mudança de processo vão rever briefing, produção e régua de medição — e descobrir que autenticidade é a coisa mais direcionável que existe, desde que a direção venha antes e não depois.\n\nÉ esse elo que a House Mazzutti ocupa: traduzir posicionamento em liberdade criativa orientada, para que o criador continue soando como ele mesmo e a marca continue reconhecível dentro disso. Estratégia antes de estética. Sempre. Porque autenticidade não é o que você deixa acontecer — é o que você teve clareza suficiente para não atrapalhar."
-  }
+  },
 
   'direcao-criativa-nao-e-estetica-e-resultado': {
     slug: 'direcao-criativa-nao-e-estetica-e-resultado',
@@ -4422,5 +4422,384 @@ export const articles = {
     ],
     conclusao:
       'Direção criativa de moda de alto nível em São Paulo não é sobre estética — é sobre quem você é no mercado e o que as marcas de referência enxergam quando leem o seu histórico. Angelo Mazzutti e a House Mazzutti construíram esse histórico projeto a projeto, marca a marca, ao longo de duas décadas no mercado criativo paulistano. Para marcas que precisam de um diretor criativo que entenda posicionamento, defenda o briefing e entregue o que o projeto exige — o contato começa em housemazzutti.com.',
+  },
+
+  'eventos-moda-2027-calendario-branding-marcas': {
+    slug: 'eventos-moda-2027-calendario-branding-marcas',
+    titulo: 'Moda 2027: o calendário completo e o que cada evento significa para sua marca',
+    metaTitle: 'Calendário da Moda 2027: eventos globais e branding de marcas',
+    metaDescription: 'O calendário completo da moda em 2027 — de Copenhague a São Paulo — e a leitura estratégica de cada evento para marcas, agências e produtoras.',
+    data: 'Setembro 2026',
+    categoria: 'Agência — Branding',
+    keywords: [
+      'calendário da moda 2027', 'eventos de moda 2027', 'branding estratégico',
+      'posicionamento de marca', 'São Paulo Fashion Week 2027', 'Copenhagen Fashion Week',
+      'Paris Haute Couture', 'Cannes Lions 2027', 'direção criativa de moda',
+      'produção de campanha de moda',
+    ],
+    cover: null,
+    interior: [],
+    citacao: 'Semana de moda não é vitrine — é calendário de reputação. Quem entra sem tese sai com fotos. Quem entra com posição sai com território.',
+    intro: 'O calendário da moda deixou de ser uma agenda de desfiles. Virou uma infraestrutura de atenção — quatro semanas por ano em que o mercado inteiro olha para o mesmo lugar, ao mesmo tempo, com o mesmo apetite por narrativa. E 2027 chega em um momento raro: o sistema global se reorganiza por dentro — direções criativas trocadas nas maisons, regulação de sustentabilidade saindo do discurso e entrando no contrato, e um calendário brasileiro redesenhado, com São Paulo dividindo protagonismo com o Rio. Para marcas, agências e produtoras, isso significa uma coisa. As datas continuam previsíveis; o significado delas, não. Este é o mapa do ano — e a leitura estratégica de cada parada. Não o que acontece. O que cada evento permite que a sua marca diga.',
+    sections: [
+      {
+        h2: 'Janeiro: Copenhague e Pitti Uomo — onde o ano é definido antes de começar',
+        paragraphs: [
+          'Copenhague abre o calendário no fim de janeiro e há anos ocupa uma posição que nenhuma das quatro capitais consegue reivindicar: a de casa das regras. A semana dinamarquesa condiciona a participação no calendário oficial a critérios verificados por terceiros — materiais, destino de estoque não vendido, cenografia de resíduo zero. Enquanto boa parte do mercado global recua no discurso ambiental, Copenhague segue endurecendo o próprio.',
+          'O que importa aqui não é o mérito ecológico. É o mecanismo. Copenhague transformou compliance em posicionamento — e provou que restrição pública constrói autoridade mais rápido que campanha. Marcas indie escandinavas ganham escala internacional porque a semana entrega a elas algo que dinheiro de mídia não compra: credibilidade auditada.',
+          'Para marca brasileira, a leitura é direta. O Brasil tem cadeia têxtil, matéria-prima e mão de obra artesanal com história real — e comunica isso como adjetivo, não como evidência. Copenhague ensina que a diferença entre discurso e reputação é documentação.',
+          'Na mesma janela, Florença recebe Pitti Uomo. Menos desfile, mais feira — e é exatamente por isso que interessa. É o evento mais subestimado do calendário por marcas brasileiras de menswear, e o de melhor relação entre custo de presença e retorno de percepção.',
+        ],
+      },
+      {
+        h2: 'Fevereiro: as quatro capitais e a temporada de inverno',
+        paragraphs: [
+          'Fevereiro concentra Nova York, Londres, Milão e Paris em pouco mais de quatro semanas, apresentando as coleções de inverno 2027/28. É o bloco mais denso do ano — e o mais mal aproveitado por quem observa de fora sem tese.',
+          'Nova York é comércio. A semana americana opera sob pressão de varejo e retorno direto — o melhor laboratório de leitura sobre como marca se traduz em venda. Londres é risco: ainda protege o experimento, o designer emergente, a escola. Quem quer entender qual estética vai chegar ao mainstream em três anos assiste Londres, não Paris.',
+          'Milão é ofício. Couro, malha, corte, indústria. A semana italiana é a defesa organizada do saber-fazer como valor de marca. Marca brasileira que fabrica e não conta como fabrica está deixando o ativo mais defensável fora da narrativa.',
+          'Paris é hierarquia. É onde o sistema decide o que é relevante. A semana parisiense não apresenta roupa; apresenta poder simbólico — e o ciclo recente de trocas de direção criativa nas grandes maisons transformou cada temporada em um teste público de tese.',
+          'Oportunidade de narrativa: em vez do resumo de tendências que todo mundo publica, uma análise de uma única estreia de direção criativa — o que foi mantido, o que foi rompido, o que isso revela sobre gestão de ativo simbólico.',
+        ],
+      },
+      {
+        h2: 'Março e o novo desenho do calendário brasileiro',
+        paragraphs: [
+          'O calendário nacional está em reorganização, e 2027 será o ano em que a nova configuração se estabiliza. Com o Rio entrando no circuito, o Brasil passa a operar com duas praças e uma disputa de significado — São Paulo como capital de mercado e indústria, Rio como projeto de exportação de imagem do país.',
+          'A escolha da praça é uma decisão de posicionamento — não de logística. O erro mais comum é tratar semana de moda como despesa de visibilidade. Um desfile custa o que custa uma campanha de meio ano. Se a marca não sabe qual frase quer que sobre depois, o investimento não é campanha. É evento social.',
+          'Para marcas que não desfilam — a maioria — a janela continua valendo. As semanas brasileiras concentram imprensa, criadores e produção de imagem em uma cidade por sete dias. Presença editorial, ativação paralela, produção de ensaio: tudo isso custa uma fração do desfile e entrega parte relevante do capital de percepção.',
+        ],
+      },
+      {
+        h2: 'Junho: Cannes Lions, ou moda vista pela régua da criatividade',
+        paragraphs: [
+          'Cannes Lions não é evento de moda — e é justamente por isso que a moda deveria olhar para lá com mais atenção. É em Cannes que campanhas de marcas de moda e beleza são julgadas pela mesma régua que campanhas de banco, automóvel e tecnologia: ideia, execução, resultado.',
+          'O que o festival revela todo ano é desconfortável. As campanhas de moda que ganham raramente vencem por beleza. Vencem por tese — por terem encontrado uma verdade cultural e construído em cima dela. Estética é pré-requisito, não diferencial. Num mercado onde qualquer marca acessa boa fotografia, a imagem deixou de separar. O que separa é o que a imagem defende.',
+          'Oportunidade de narrativa: uma leitura das peças premiadas com foco em estrutura estratégica — qual insight cultural sustenta cada uma. Publicado na semana seguinte ao festival, quando a curiosidade do mercado está aberta e a análise ainda não foi feita por ninguém.',
+        ],
+      },
+      {
+        h2: 'Julho: Alta-Costura em Paris — o teto da direção criativa',
+        paragraphs: [
+          'A Alta-Costura de julho é o evento economicamente menos relevante e simbolicamente mais poderoso do calendário. Poucas dezenas de clientes reais no mundo. Peças que levam centenas de horas de ateliê. Nenhuma pretensão de escala.',
+          'É exatamente essa desproporção que a torna instrutiva. A Couture existe para provar capacidade — é a demonstração pública do teto criativo de uma casa. Tudo o que a marca vende no varejo é sustentado pelo capital simbólico produzido nesses desfiles.',
+          'A lição para qualquer marca, de qualquer tamanho: toda marca precisa de uma peça que não se justifica pelo retorno imediato. Um projeto que existe para demonstrar do que a marca é capaz quando não está tentando vender. Isso não é vaidade. É construção de autoridade — o ativo que permite cobrar mais pelo resto do portfólio.',
+          'O mercado brasileiro raramente reserva orçamento para isso. Reserva para performance, para varejo, para sazonalidade. E depois se pergunta por que compete por preço.',
+        ],
+      },
+      {
+        h2: 'Como transformar calendário em estratégia — e não em agenda',
+        paragraphs: [
+          'Um calendário de moda só vira ativo quando deixa de ser lista de datas e vira grade de narrativa. Isso exige três decisões tomadas com antecedência.',
+          'A primeira é escolher. Nenhuma marca precisa estar presente em nove eventos. Precisa ter posição declarada em dois ou três — aqueles onde tem o que dizer de verdade. Presença dispersa não constrói percepção; dilui.',
+          'A segunda é definir a tese antes da data. A pergunta correta nunca é o que vamos publicar durante a temporada. É qual leitura da nossa marca sobre este mercado queremos que fique.',
+          'A terceira é preparar a produção com antecedência real. Campanha de moda bem-feita não nasce na semana do evento. Nasce três meses antes — conceito, direção de arte, elenco, locação, cronograma de captação. O que se faz em cima da hora não é direção criativa. É cobertura.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Vale a pena para uma marca média investir em desfile na semana de moda?',
+        a: 'Depende do que a marca quer que sobre depois. Um desfile custa o equivalente a uma campanha de médio porte e entrega, sobretudo, capital simbólico e cobertura de imprensa. Se a marca não tem uma tese clara para defender no formato, o retorno tende a ser social e não estratégico. Para a maior parte das marcas médias, presença editorial e produção de campanha própria durante a janela do evento entregam mais percepção por real investido.',
+      },
+      {
+        q: 'Quais eventos de moda em 2027 realmente importam para uma marca brasileira?',
+        a: 'Três blocos concentram o valor. Copenhague, em janeiro e agosto, para quem constrói posição em sustentabilidade com evidência. São Paulo e Rio, na temporada nacional, para quem disputa mercado e imaginário brasileiro. E Paris, em fevereiro, julho e setembro, como referência de direção criativa. Cannes Lions, em junho, importa para agências e produtoras que medem padrão criativo.',
+      },
+      {
+        q: 'Com quanta antecedência começar a planejar uma campanha de moda ligada ao calendário?',
+        a: 'De 90 a 120 dias para uma campanha completa. Esse prazo cobre construção de conceito, direção de arte, definição de elenco e locação, captação, pós-produção e desdobramento em peças de distribuição. Prazos menores comprimem justamente a etapa estratégica.',
+      },
+      {
+        q: 'Como produzir narrativa sobre moda sem estar presente fisicamente nos eventos?',
+        a: 'Com leitura, não com cobertura. Cobertura é commodity e chega tarde. Leitura é análise — o que aquela estreia de direção criativa revela sobre gestão de marca, o que o critério dinamarquês expõe sobre o discurso brasileiro. Uma análise densa publicada na semana certa constrói mais autoridade que trinta posts de bastidor.',
+      },
+    ],
+    conclusao: 'O calendário de 2027 está publicado. As datas todo mundo tem. O que quase ninguém tem é uma posição definida sobre cada uma delas. Na House Mazzutti, campanha de moda começa por leitura — o que a marca representa neste mercado, o que ela pode legitimamente defender, e em qual janela essa defesa encontra a maior atenção disponível. Depois disso, e só depois, vem a produção: conceito, direção de arte, elenco, captação, filme. Moda é o setor onde a distância entre parecer relevante e ser relevante é mais curta — e mais visível. Um ano inteiro de eventos não constrói marca nenhuma. Uma posição sustentada por um ano inteiro constrói.',
+  },
+
+  'eventos-publicidade-marketing-2027-guia-completo': {
+    slug: 'eventos-publicidade-marketing-2027-guia-completo',
+    titulo: 'Publicidade e marketing em 2027: o guia completo dos eventos que vão mover o mercado',
+    metaTitle: 'Eventos de publicidade e marketing em 2027 | Guia House Mazzutti',
+    metaDescription: 'Guia completo dos eventos de publicidade e marketing digital em 2027 — Super Bowl LXI, Cannes Lions, Digitalks, RD Summit — com leitura estratégica de posicionamento de marca.',
+    data: 'Setembro 2026',
+    categoria: 'Agência — Branding',
+    keywords: [
+      'eventos de publicidade 2027', 'eventos de marketing digital 2027', 'Cannes Lions 2027',
+      'Super Bowl LXI publicidade', 'RD Summit 2027', 'branding estratégico',
+      'posicionamento de marca', 'calendário de marketing 2027', 'direção criativa', 'narrativa de marca',
+    ],
+    cover: null,
+    interior: [],
+    citacao: 'Calendário não é agenda — é mapa de atenção. Quem lê o mapa antes chega no lugar quando ainda há espaço.',
+    intro: 'Todo ano o mercado publica a mesma lista de eventos. Quase ninguém publica a leitura por trás dela. A diferença entre uma marca que aparece em 2027 e uma que apenas assiste não está em quem compra ingresso — está em quem entende, com doze meses de antecedência, onde a atenção do mercado vai se concentrar e o que fazer com isso. 2027 é o ano em que publicidade e branding param de disputar orçamento e passam a operar como a mesma coisa: a performance ficou barata demais para ser diferencial, e a marca voltou a ser o único ativo que não pode ser copiado em uma semana. Os eventos abaixo são os pontos de pressão desse ano. Cada um deles abre uma janela de relevância — e cada janela dura poucos dias.',
+    sections: [
+      {
+        h2: 'Fevereiro: Super Bowl LXI e o retorno do gesto grande',
+        paragraphs: [
+          'Em 14 de fevereiro de 2027, a Disney transmite pelo ESPN e ABC o primeiro Super Bowl da história do canal esportivo. Os trinta segundos foram vendidos entre US$ 8,5 e US$ 9 milhões — e esgotaram em agosto de 2026, seis meses antes do apito inicial.',
+          'Esse esgotamento antecipado é o dado que importa. Ele diz que, num mercado treinado para comprar mídia por leilão e otimizar no dia seguinte, as marcas mais capitalizadas do mundo voltaram a pagar antecipadamente por um espaço que não permite ajuste, teste A/B ou arrependimento. É a reabilitação do gesto grande.',
+          'O Super Bowl não é um evento de mídia. É a única auditoria pública anual de direção criativa em escala planetária. O que uma marca brasileira extrai não é o formato — é a estrutura de decisão. Observe quantas peças abrem mão da piada e escolhem afirmação de posicionamento. Esse placar, ano a ano, é o melhor termômetro sobre onde está a confiança do mercado.',
+          'Oportunidade editorial: análise reativa nas 48h seguintes — não o ranking de melhores comerciais. A leitura de qual tese de marca venceu.',
+        ],
+      },
+      {
+        h2: 'Maio a junho: Digitalks e a maturidade do mercado brasileiro',
+        paragraphs: [
+          'O Expo Fórum Digitalks é o maior encontro de marketing digital do Brasil e, historicamente, o mais honesto sobre o estado real da operação nacional — mídia paga, busca, dados, e-commerce, IA aplicada. Não é um palco de premiação. É um palco de prática.',
+          'Por isso vale mais do que parece. Cannes mostra o que o mercado gostaria de ser; Digitalks mostra o que o mercado é. Um estrategista precisa dos dois recortes para calibrar recomendação.',
+          'A leitura que interessa em 2027: quantas apresentações ainda tratam performance como disciplina autônoma e quantas já a tratam como consequência de posicionamento. Essa proporção mudou de forma consistente nos últimos ciclos.',
+          'Oportunidade editorial: cobertura analítica com recorte de uma única tese por dia. Densidade vence volume.',
+        ],
+      },
+      {
+        h2: 'Junho: Cannes Lions e a régua global de criatividade',
+        paragraphs: [
+          'De 21 a 25 de junho de 2027, cerca de 15 mil delegados de 90 países ocupam o Palais des Festivals. Cannes Lions é o maior festival de criatividade do mundo e, para efeitos práticos, a régua com que a indústria mede a si mesma.',
+          'Existe um erro comum na leitura brasileira de Cannes: tratar o festival como concurso. Cannes é um censo. O conjunto de peças premiadas é a fotografia mais precisa disponível sobre o que a indústria global considera eficaz naquele momento.',
+          'O Brasil é presença histórica consistente em Cannes — e esse é um ativo estratégico mal explorado. Marcas brasileiras compram criatividade de fora quando a régua internacional já validou repetidamente a leitura cultural produzida aqui.',
+          'Para quem dirige uma marca, três perguntas bastam ao ler o palmarès: qual problema de negócio a peça resolveu, qual verdade cultural ela usou, e quanto tempo ela levaria para ser copiada. A terceira pergunta é a que separa campanha de posicionamento.',
+        ],
+      },
+      {
+        h2: 'Spikes Asia e Dubai Lynx: as réguas que o Brasil não lê',
+        paragraphs: [
+          'Spikes Asia e Dubai Lynx pertencem à mesma família de Cannes e operam como os festivais de referência da Ásia-Pacífico e do Oriente Médio. Quase nenhuma agência brasileira acompanha os dois. Esse é exatamente o motivo para acompanhar.',
+          'Mercados asiáticos e do Golfo trabalham com uma relação entre marca, comércio e plataforma que a Europa e os Estados Unidos ainda estão aprendendo. Comércio dentro de vídeo, integração entre mensagem e transação, construção de marca em ecossistemas fechados — tudo isso amadureceu lá primeiro.',
+          'Para uma marca brasileira que opera comércio digital, esses dois festivais entregam soluções aplicáveis com dois a três anos de antecedência sobre o que vai chegar traduzido pelas consultorias.',
+        ],
+      },
+      {
+        h2: 'Segundo semestre: Social Media Week, RD Summit e Adobe MAX',
+        paragraphs: [
+          'Setembro traz a Social Media Week São Paulo — o encontro brasileiro mais direto sobre plataformas sociais e criadores. O valor está na leitura de qual formato de relação com criadores está sendo praticado: remuneração, exclusividade, co-criação. É ali que se antecipa o custo do talento no ano seguinte.',
+          'Outubro traz o retorno do RD Summit. O maior encontro de marketing e vendas da América Latina parou em 2026 e retorna em 2027 reformulado. Essa pausa é significativa: o evento está redesenhando a própria proposta num momento em que o funil clássico perdeu poder explicativo.',
+          'Adobe MAX segue como o palco onde ferramentas de IA deixam de ser demonstração e viram fluxo de trabalho. A questão relevante não é o que a ferramenta faz — é o que ela torna barato. Tudo que fica barato deixa de ser diferencial no trimestre seguinte.',
+          'Oportunidade editorial: uma peça de posicionamento por evento, publicada na véspera. Chegar antes do evento posiciona quem escreve como referência; chegar depois posiciona como espectador.',
+        ],
+      },
+      {
+        h2: 'Ano todo: os relatórios valem mais que os palcos',
+        paragraphs: [
+          'Três documentos estruturam o ano melhor do que qualquer conferência. O Edelman Trust Barometer, publicado em janeiro, mede confiança institucional em escala global — a fonte mais robusta sobre reputação executiva. O Global CMO Survey acompanha para onde o orçamento está migrando. O relatório anual da Hootsuite mapeia comportamento em plataformas com profundidade de amostra.',
+          'Relatórios não têm bilheteria, não têm palco e não geram foto. Por isso são subutilizados — e por isso rendem mais. Uma leitura densa de um relatório publicado há três dias posiciona uma marca com mais força do que a cobertura genérica de um festival com dez mil coberturas concorrentes.',
+          'A regra prática: eventos entregam repertório, relatórios entregam argumento. Uma reunião de posicionamento se sustenta com argumento. Cada relatório rende três peças — a leitura imediata, o recorte setorial e a aplicação prática.',
+        ],
+      },
+      {
+        h2: 'Como transformar calendário em posicionamento',
+        paragraphs: [
+          'Nenhum desses eventos importa isoladamente. O que importa é o desenho: doze meses em que a atenção do mercado se concentra em datas previsíveis, e uma marca que decide, com antecedência, em quais dessas datas quer ter voz.',
+          'A escolha certa não é estar em todas. É estar em três — com densidade real, leitura própria e material publicado antes de todo mundo. Presença dispersa em dez momentos vale menos que autoridade construída em três.',
+          'E há o movimento que quase ninguém faz: preparar a peça antes do evento. Quem publica no dia seguinte disputa com mil vozes. Quem publica na véspera, com tese formada, define o enquadramento com que os outros vão falar.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Quais são os principais eventos de publicidade e marketing digital em 2027?',
+        a: 'O calendário se organiza em quatro blocos. Fevereiro: Super Bowl LXI, no SoFi Stadium, transmitido por ESPN e ABC. Maio e junho: Digitalks no Brasil, e Cannes Lions International Festival, de 21 a 25 de junho. Segundo semestre: Social Media Week SP em setembro, retorno do RD Summit em outubro e Adobe MAX. Ao longo do ano: Spikes Asia, Dubai Lynx e os relatórios Edelman Trust Barometer, Global CMO Survey e Hootsuite.',
+      },
+      {
+        q: 'Como usar o calendário de eventos no planejamento de campanha?',
+        a: 'O calendário funciona como mapa de atenção, não como agenda de viagem. O planejamento eficaz seleciona três momentos nos quais a marca tem tese própria a defender e concentra produção editorial e de campanha nessas janelas — com material preparado antes do evento. Presença dispersa em muitos momentos dilui percepção; densidade em poucos constrói autoridade.',
+      },
+      {
+        q: 'Vale a pena acompanhar Cannes Lions sendo uma marca brasileira?',
+        a: 'Vale pela leitura, não necessariamente pela presença física. O palmarès está publicamente disponível. Uma marca brasileira extrai valor real ao analisar quais problemas de negócio as peças premiadas resolveram e quais verdades culturais usaram — repertório que se converte diretamente em qualidade de briefing e direção criativa.',
+      },
+      {
+        q: 'Qual a diferença entre cobrir um evento e construir autoridade a partir dele?',
+        a: 'Cobertura relata o que aconteceu e concorre com centenas de vozes publicando o mesmo recorte. Autoridade se constrói com interpretação — uma tese própria sobre o que aquele evento revela do mercado, publicada na véspera ou com sete a dez dias de distância, quando o ruído baixou e a leitura ainda é útil. A primeira gera alcance momentâneo; a segunda gera reputação sustentada.',
+      },
+    ],
+    conclusao: 'Existe uma diferença estrutural entre agências que produzem campanha e casas que produzem leitura. A primeira reage ao briefing. A segunda escreve o briefing. A House Mazzutti opera na segunda categoria — estratégia antes de estética, leitura antes de execução, posicionamento antes de peça. O calendário de 2027 já está desenhado e disponível para qualquer um. O que não está disponível é a interpretação: saber quais três dessas janelas pertencem à sua marca, e chegar nelas com algo verdadeiro a dizer. Essa decisão se toma agora, com doze meses de folga — não na semana do evento.',
+  },
+
+  'eventos-arte-design-criatividade-2027-sao-paulo-mundo': {
+    slug: 'eventos-arte-design-criatividade-2027-sao-paulo-mundo',
+    titulo: 'Arte, design e criatividade em 2027: os eventos que todo profissional criativo precisa acompanhar',
+    metaTitle: 'Eventos de arte, design e criatividade em 2027 | House Mazzutti',
+    metaDescription: 'SP-Arte, Bienal, Design Weekend, Adobe MAX, Milan e Miami: o calendário criativo de 2027 lido como formação, repertório e posicionamento de marca.',
+    data: 'Setembro 2026',
+    categoria: 'Academy — Formação',
+    keywords: [
+      'eventos de arte e design 2027', 'SP-Arte 2027', 'Bienal de São Paulo 2027',
+      'Design Weekend São Paulo', 'direção criativa', 'formação em fotografia São Paulo',
+      'repertório visual', 'posicionamento de marca', 'narrativa de marca', 'mercado criativo paulistano',
+    ],
+    cover: null,
+    interior: [],
+    citacao: 'Repertório não se compra em curso rápido. Se constrói em sala escura, em corredor de feira, em conversa que você não entendeu na hora — e entendeu três anos depois.',
+    intro: 'Há uma diferença entre estar no mercado criativo e estar dentro dele. A primeira condição se resolve com equipamento e portfólio. A segunda se resolve com repertório — e repertório tem endereço, data e hora. São Paulo concentra, em um raio de poucos quilômetros, o Pavilhão da Bienal, o MASP, a Pinacoteca, o IMS e o eixo Consolação–Jardins que se converte em vitrine de design uma vez por ano. Nenhuma outra cidade da América Latina oferece esse acúmulo. O calendário de 2027 volta a comprovar isso, com um detalhe que muda o peso do ano: a Bienal retorna, e ela reorganiza a agenda inteira ao redor de si. Este é um mapa de leitura — não uma lista de eventos. Para cada data, o que ela significa para quem trabalha com imagem, o que se extrai dela e como transformar presença em posicionamento.',
+    sections: [
+      {
+        h2: 'Abril: SP-Arte e a educação do olho para o mercado de arte',
+        paragraphs: [
+          'A SP-Arte ocupa o Pavilhão Ciccillo Matarazzo, no Ibirapuera, em abril — a 23ª edição está prevista para os primeiros dias do mês. É a maior feira de arte da América Latina e, para quem trabalha com imagem, é menos uma exposição e mais um laboratório de precificação simbólica.',
+          'O que se vê ali não é apenas obra. É como uma galeria constrói o valor de um artista. Como um stand decide o que fica na parede da frente. Como a curadoria de um espaço de vinte metros quadrados sustenta uma narrativa coerente. Essa é exatamente a disciplina de quem edita um ensaio fotográfico ou fecha um portfólio.',
+          'Para o fotógrafo, a SP-Arte devolve a noção de série. Obras não circulam soltas — circulam em corpos de trabalho com tese. Para o estudante, a regra prática é percorrer a feira duas vezes: a primeira registrando o que faz o corpo parar, a segunda anotando por que parou. A diferença entre as duas listas é o seu repertório real.',
+          'Para a marca, a SP-Arte é território de associação legítima. Patrocínio de arte não compra afeto imediato — constrói percepção de longo prazo. Uma marca presente consistentemente nesse ambiente durante cinco anos ganha uma camada de autoridade cultural que nenhuma campanha de mídia paga entrega no mesmo prazo.',
+        ],
+      },
+      {
+        h2: 'Setembro: a Bienal reorganiza o ano criativo de São Paulo',
+        paragraphs: [
+          'A 37ª Bienal Internacional de São Paulo deve abrir em setembro de 2027, no Pavilhão do Ibirapuera. É a segunda mais antiga bienal do mundo, atrás apenas de Veneza, e a maior manifestação de arte contemporânea do hemisfério sul.',
+          'A Bienal não é feira. Não há preço, não há venda. Há uma tese curatorial ocupando mais de trinta mil metros quadrados de um edifício de Niemeyer. Quem visita com a mentalidade de feira sai frustrado; quem visita com a mentalidade de leitura sai com dois anos de repertório.',
+          'Para o profissional de imagem, o valor está no que a Bienal ensina sobre escala e espaço. Como uma obra dialoga com a rampa. Como o percurso constrói ritmo — tensão, respiro, tensão. Direção criativa é exatamente isso: administrar a atenção de alguém ao longo do tempo.',
+          'Para o estudante, a Bienal é gratuita e dura quatro meses — o que permite a visita repetida. Voltar cinco vezes ao mesmo pavilhão faz mais pelo seu olhar do que assistir a cinquenta aulas.',
+        ],
+      },
+      {
+        h2: 'Setembro e outubro: Social Media Week, Design Weekend e o eixo digital-material',
+        paragraphs: [
+          'Setembro traz a Social Media Week São Paulo. Para quem trabalha com imagem, a utilidade está na leitura de como plataformas estão reorganizando o consumo visual e os formatos que os clientes vão pedir nos doze meses seguintes. O corredor da SMW paulistana é onde estão os diretores de marketing que contratam produção.',
+          'Outubro pertence ao Design Weekend São Paulo — o maior evento de design do país, distribuído entre Consolação, Jardins e Vila Madalena em formato de circuito aberto. Showrooms, escritórios de arquitetura, galerias e marcas abrem as portas simultaneamente. A cidade vira exposição.',
+          'Para o fotógrafo e o diretor de imagem, o DW é a oportunidade mais direta do calendário: dezenas de espaços recém-montados, iluminação cuidada, objetos com autoria — e marcas que precisam de registro qualificado com prazo curto. É trabalho e repertório no mesmo movimento.',
+          'Para quem constrói negócio criativo, o DW ensina a lógica do circuito: o evento não tem sede. Ele acontece porque muitos atores decidiram acontecer juntos, na mesma semana. É uma aula prática de como densidade cria relevância.',
+        ],
+      },
+      {
+        h2: 'Outubro: Adobe MAX e a discussão que ninguém pode terceirizar',
+        paragraphs: [
+          'O Adobe MAX acontece em outubro, nos Estados Unidos, com transmissão aberta de grande parte da programação. É onde a Adobe apresenta o que entrou nas ferramentas — e nos últimos ciclos isso significa essencialmente uma coisa: até onde a IA generativa avançou dentro do fluxo de trabalho de quem produz imagem.',
+          'A leitura útil do MAX não é a lista de recursos. É a direção. Cada edição recente empurrou uma fatia maior da execução técnica para dentro do software. O que sobra do lado humano se desloca continuamente para cima: critério, direção, decisão.',
+          'Para o estudante, o recado é menos confortável e mais libertador: dominar ferramenta deixou de ser diferencial competitivo e voltou a ser pré-requisito básico. O diferencial migrou para o repertório — que é justamente o que a Bienal, a SP-Arte e o MASP constroem e nenhum software entrega.',
+        ],
+      },
+      {
+        h2: 'Novembro e a agenda permanente: MIMO, MASP, IMS e Pinacoteca',
+        paragraphs: [
+          'O MIMO Festival percorre cidades brasileiras ao longo do ano, articulando música, imagem e patrimônio arquitetônico. Para quem dirige imagem, é o exercício mais exigente de luz disponível no calendário nacional: pouca luz, fonte mista, movimento constante, nenhum controle. Quem fotografa MIMO aprende a antecipar.',
+          'Mas o verdadeiro ativo criativo de São Paulo não é sazonal. É a agenda permanente. MASP, IMS e Pinacoteca operam doze meses por ano com programação que rivaliza com instituições europeias. O IMS é a instituição de fotografia mais séria do país. O MASP mantém ciclos temáticos de longo prazo que ensinam algo raro: como sustentar uma tese curatorial por anos.',
+          'A recomendação prática é de método: escolha uma instituição e frequente-a mensalmente durante um ano inteiro. A repetição do mesmo espaço com acervos rotativos treina comparação — e comparação é a base de todo julgamento estético.',
+        ],
+      },
+      {
+        h2: 'O circuito internacional: Milão, Londres e Miami como calibragem',
+        paragraphs: [
+          'Três datas internacionais fecham o mapa. Milan Design Week, em abril, é o maior evento de design do mundo. London Design Festival, em setembro, opera com viés mais conceitual. Design Miami, em dezembro, é onde design vira mercado de colecionador.',
+          'Milão é o calibrador de paleta e material. O que aparece no Fuorisalone em abril costuma chegar à publicidade brasileira com dois a três anos de defasagem. Acompanhar Milão não é copiar — é ganhar tempo de leitura sobre o que vai virar linguagem corrente.',
+          'Londres é o calibrador conceitual: onde se testa a ideia antes de ela virar produto. Miami é o calibrador de valor: onde se aprende quanto o mercado está disposto a pagar por autoria assumida. Juntos, os três ensinam o ciclo completo — ideia, linguagem, preço.',
+        ],
+      },
+      {
+        h2: 'Como transformar calendário em posicionamento',
+        paragraphs: [
+          'Frequentar eventos não constrói carreira. O que constrói é o que você faz com o que viu — e a maioria não faz nada. O método tem três movimentos. Primeiro: registre com critério, não com volume. Cinco imagens editadas com intenção comunicam mais que duzentas de arquivo.',
+          'Segundo: escreva. Uma leitura de quinhentas palavras sobre uma exposição obriga você a formar opinião — e opinião formada é o que separa técnico de diretor. Terceiro: publique com consistência. Um profissional que publica leituras qualificadas sobre o circuito criativo durante dois anos deixa de ser fornecedor e passa a ser referência consultada.',
+          'O calendário de 2027 é generoso. Bienal, SP-Arte, Design Weekend e a agenda permanente colocam São Paulo em condição de igualdade com qualquer capital criativa do mundo. O que falta, quase sempre, não é acesso. É método de leitura.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Estou começando na fotografia e tenho pouco orçamento. Por onde começo em São Paulo?',
+        a: 'Pela agenda permanente e gratuita. A Bienal tem entrada franca e dura quatro meses. MASP, IMS e Pinacoteca têm dias de gratuidade semanais. Escolha uma instituição, vá todos os meses durante um ano e escreva sobre o que viu. Isso custa transporte e disciplina — e forma mais olhar que a maioria dos cursos técnicos.',
+      },
+      {
+        q: 'Vale mais investir em equipamento ou em repertório?',
+        a: 'Em repertório, com folga. A barreira técnica caiu — câmeras e ferramentas com IA estão acessíveis e continuarão barateando. O que não barateia é critério: saber o que fotografar, por que essa luz, qual série sustenta uma tese. Equipamento resolve execução. Repertório define direção — e direção é o que o cliente paga acima da média do mercado.',
+      },
+      {
+        q: 'Como uso a presença nesses eventos para conquistar clientes sem parecer oportunista?',
+        a: 'Trocando registro por leitura. Publicar cinquenta fotos de corredor não posiciona ninguém. Publicar uma análise de três obras, com opinião assumida e edição rigorosa, posiciona. O cliente não contrata quem esteve no evento — contrata quem demonstrou critério.',
+      },
+      {
+        q: 'Faz sentido uma marca pequena patrocinar circuito de arte e design?',
+        a: 'Faz, se houver tese. Associação cultural constrói percepção no prazo de anos, não de campanha — e exige consistência. Uma marca pequena presente no mesmo circuito por cinco edições seguidas constrói mais reputação que uma marca grande em ativação isolada. Sem continuidade e sem coerência entre o ambiente e o que a marca defende, é despesa com boa fotografia.',
+      },
+    ],
+    conclusao: 'O calendário de 2027 já está definido. As datas vão acontecer com ou sem você. O que não acontece sozinho é a leitura — a capacidade de atravessar um pavilhão e sair com uma tese em vez de um álbum. Isso se treina, e treina-se acompanhado. A House Mazzutti Academy foi construída sobre essa premissa: formação em imagem e direção criativa não é lista de técnicas, é construção de critério. Quem quiser percorrer 2027 com método — e não apenas com ingresso — tem uma casa em São Paulo para fazer isso.',
+  },
+
+  'eventos-audiovisual-tech-criativo-2027-guia-produtoras': {
+    slug: 'eventos-audiovisual-tech-criativo-2027-guia-produtoras',
+    titulo: 'Audiovisual e tech criativo em 2027: o guia para produtoras e marcas que investem em vídeo',
+    metaTitle: 'Audiovisual e Tech Criativo 2027 | Guia para Produtoras e Marcas',
+    metaDescription: 'CES, SXSW, NAB, Cannes Lions, Adobe MAX, CCXP e The Game Awards: o calendário de 2027 lido por quem dirige produção audiovisual de marca.',
+    data: 'Setembro 2026',
+    categoria: 'Produtora — Publicidade',
+    keywords: [
+      'produção audiovisual para marcas', 'produtora de vídeo São Paulo', 'direção criativa audiovisual',
+      'IA na produção de vídeo', 'NAB Show 2027', 'Cannes Lions 2027',
+      'fashion film de marca', 'vídeo vertical para marcas', 'live commerce', 'narrativa de marca em vídeo',
+    ],
+    cover: null,
+    interior: [],
+    citacao: 'Vídeo virou o formato mais barato de se produzir e o mais caro de se produzir mal. A diferença entre os dois nunca esteve no equipamento — está na direção.',
+    intro: 'Em 2027 nenhuma marca vai discutir se deve produzir vídeo. A pergunta muda de lugar: o que ela está construindo quando produz. Durante uma década, produção audiovisual de marca foi tratada como linha de despesa — verba alocada por campanha, consumida na veiculação, zerada no trimestre seguinte. Esse modelo acabou. O que a barreira técnica derrubada pela inteligência artificial fez não foi baratear o vídeo; foi retirar dele qualquer valor de escassez. Quando todo mundo consegue entregar imagem limpa, imagem limpa deixa de ser entrega. Sobra o que sempre foi difícil de copiar: direção, repertório, consistência de linguagem e um acervo que continua rendendo depois que a campanha sai do ar.',
+    sections: [
+      {
+        h2: 'Janeiro e março: CES e SXSW definem a régua técnica e narrativa do ano',
+        paragraphs: [
+          'A CES acontece em Las Vegas na primeira semana de janeiro e abre o calendário com o inventário técnico do ano. Para quem contrata produção, ela raramente é sobre o gadget exibido no estande — é sobre o que se torna padrão em 18 meses. Cada lançamento redefine, silenciosamente, o que um cliente vai considerar aceitável no corte que recebe.',
+          'O efeito prático é de compressão de custo. Tarefas que ocupavam a pós-produção — rotoscopia, limpeza de plano, correção de continuidade — migram para software rodando em máquina local. O custo não desaparece: ele se desloca da hora de finalização para a etapa de decisão criativa, que passa a ocupar proporcionalmente mais do orçamento.',
+          'SXSW, em Austin, entre 15 e 21 de março de 2027, faz o movimento oposto e complementar. Não é uma feira de equipamento — é o lugar onde tecnologia, entretenimento e narrativa de marca se testam no mesmo corredor. CES informa o que você vai conseguir fazer. SXSW informa o que vai valer a pena fazer.',
+        ],
+      },
+      {
+        h2: 'Abril: NAB Show e a reengenharia do fluxo de produção',
+        paragraphs: [
+          'O NAB Show acontece em Las Vegas de 4 a 7 de abril de 2027 e é o encontro mais consequente do calendário para quem produz audiovisual profissionalmente. Não porque seja o maior — porque é onde o fluxo de trabalho é redesenhado. O que aparece no NAB em abril está no orçamento de produção brasileiro no verão seguinte.',
+          'Três frentes concentram a atenção em 2027. A produção virtual em escala menor: painéis de LED e ambientes volumétricos deixaram de ser exclusividade de longa-metragem. O pipeline remoto — edição, cor e aprovação rodando em nuvem. E a IA integrada ao software de edição, não como recurso à parte, mas como comportamento padrão da linha do tempo.',
+          'O impacto no custo é o mais mal compreendido do setor. Produção virtual não é mais barata por natureza — ela transfere custo da diária para a pré-produção. Você paga antes, em previsualização e arte digital, para economizar depois em deslocamento e refação. Marca que aprova esse tipo de fluxo com mentalidade de orçamento tradicional paga duas vezes.',
+          'No padrão de entrega, o NAB estabelece uma expectativa nova: entregáveis multiformato saindo da mesma captação. Não se contrata mais um filme e depois se pede cortes. Contrata-se um sistema visual do qual se extrai o filme, o vertical, o teaser, o still e o material de canal proprietário.',
+        ],
+      },
+      {
+        h2: 'Junho: Cannes Lions e o que o Film Grand Prix está dizendo',
+        paragraphs: [
+          'Cannes Lions acontece em junho e concentra o julgamento mais qualificado do mercado publicitário mundial. Para produtoras e marcas, as categorias que importam são Film e Entertainment — porque revelam o que a elite do setor considera direção defensável naquele momento.',
+          'O padrão consolidado nos últimos ciclos é claro e desconfortável: filme premiado quase nunca é filme bonito. É filme com tese. A execução impecável virou pré-requisito silencioso, não diferencial. O que separa o shortlist do Grand Prix é a existência de um argumento — uma posição que a marca assume e que o filme sustenta sem explicar.',
+          'A categoria Entertainment amplia essa leitura. Ela premia marcas que deixaram de interromper narrativa alheia para construir a própria. A métrica implícita não é alcance; é permanência. O filme de marca que continua sendo assistido dois anos depois vale mais que o que dominou três semanas.',
+        ],
+      },
+      {
+        h2: 'Novembro: Adobe MAX e a IA generativa no fluxo de pós-produção',
+        paragraphs: [
+          'Adobe MAX é o encontro onde as ferramentas que a maior parte do mercado usa todos os dias são reescritas. A edição de 2027 dita o que estará instalado nas máquinas de qualquer produtora relevante no ano seguinte: geração e extensão de plano, retiming automático, versionamento em massa a partir de um único master.',
+          'O ganho é de velocidade e de escala de versionamento. Uma campanha que exigia quinze finalizações manuais passa a exigir uma direção clara e um processo de derivação. Isso comprime prazo e aumenta drasticamente o volume entregue por projeto — o que muda a lógica de precificação por entregável.',
+          'O risco é de convergência estética. Ferramentas iguais, presets iguais e referências iguais produzem um mercado inteiro com a mesma aparência. A defesa não é técnica — é editorial. Marca com sistema visual proprietário, paleta definida e critério de casting sustenta identidade mesmo usando as mesmas ferramentas que todo mundo.',
+        ],
+      },
+      {
+        h2: 'Dezembro: CCXP e The Game Awards — narrativa como universo',
+        paragraphs: [
+          'A CCXP acontece em São Paulo em dezembro e é o maior encontro de cultura pop do mundo em público pagante. Para marcas, deixou de ser feira de exposição e virou o teste mais duro de narrativa que existe no país: um público que reconhece imediatamente quando a marca entende o universo em que está entrando e quando apenas alugou um espaço.',
+          'Ativações que funcionam ali não são anúncios — são ambientes com regra interna, personagem, trilha e continuidade. E geram material audiovisual de qualidade documental que alimenta canais proprietários pelos doze meses seguintes. O custo se justifica no acervo, não no fim de semana.',
+          'The Game Awards, também em dezembro, opera na mesma direção por outro caminho. É a vitrine anual da narrativa interativa e do formato que mais influencia a linguagem visual de quem tem menos de 30 anos. Marcas que produzem vídeo para público jovem sem repertório de jogo produzem vídeo datado — e não percebem.',
+        ],
+      },
+      {
+        h2: 'As correntes contínuas: live commerce, vertical, fashion film e IA',
+        paragraphs: [
+          'Fora do calendário, quatro movimentos correm o ano inteiro. O live commerce no Brasil deixou de ser experimento e virou operação. Transmissão ao vivo com padrão editorial exige direção, roteiro, luz e cenografia — não uma câmera apontada para um vendedor. Marca que trata live como custo operacional entrega amadorismo em horário nobre.',
+          'O vídeo vertical já não é adaptação; é formato de origem. Captar pensando em 9:16 muda decupagem, escala de plano e desenho de som. Filme horizontal recortado para vertical entrega o rosto no lugar errado e a informação fora do quadro.',
+          'A tensão entre fashion film e peça curta: são funções distintas, não concorrentes. O fashion film constrói percepção e sustenta preço. A peça curta distribui essa percepção em volume. A direção correta é tratar a peça longa como matriz e a curta como derivação — com a mesma gramática visual.',
+          'A IA já resolve pré-visualização, storyboard, decupagem, legendagem e localização com qualidade profissional. O que ela não resolve é escolha. Modelo generativo não decide o que a marca deve dizer, nem em que ordem, nem com que silêncio. Essa continua sendo a parte cara — e é exatamente a parte que virou ativo.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Vale mais investir em uma produção de alto acabamento ou em volume de peças curtas?',
+        a: 'Depende do repertório visual que a marca já construiu. Marca sem gramática visual própria deve começar pela peça matriz — o filme que define paleta, ritmo, tipo de enquadramento e tom. Sem essa matriz, o volume só multiplica ruído. Com ela, cada peça curta reforça uma percepção já estabelecida. O erro caro é produzir volume antes de definir direção.',
+      },
+      {
+        q: 'A inteligência artificial reduz de fato o custo de produção audiovisual para marcas?',
+        a: 'Reduz o custo de execução e desloca o custo para a decisão criativa. Tarefas de pós — limpeza, versionamento, legendagem, localização — caem de forma expressiva. Já a etapa de direção, roteiro e definição de sistema visual passa a ocupar proporção maior do orçamento. O orçamento total tende a se manter; a distribuição interna muda por completo.',
+      },
+      {
+        q: 'Como saber se uma produtora está preparada para o padrão de 2027?',
+        a: 'Três perguntas resolvem. Ela entrega um sistema visual documentado ou apenas arquivos finalizados? Ela capta pensando em multiformato desde a decupagem ou adapta depois? Ela responde por escrito sobre procedência de material gerado por IA e direitos de talento? Produtora que hesita em qualquer uma das três está vendendo execução, não direção.',
+      },
+      {
+        q: 'Quanto tempo um filme de marca deve continuar sendo usado?',
+        a: 'Se a peça foi construída sobre tese e não sobre calendário, ela sustenta de dois a quatro anos de uso, com derivações ao longo do período. Filme atrelado a data comemorativa ou linguagem passageira morre em semanas. A régua prática: se o filme precisa ser explicado fora do contexto em que nasceu, ele não é ativo — foi despesa.',
+      },
+    ],
+    conclusao: 'O calendário de 2027 não é uma agenda de viagem. É um mapa de decisões. CES e NAB dizem o que será possível. SXSW e Cannes Lions dizem o que será relevante. Adobe MAX diz com que ferramentas. CCXP e The Game Awards dizem em que linguagem. Entre esses pontos existe uma escolha que nenhuma feira toma pela marca: produzir vídeo para ocupar o trimestre ou produzir para construir acervo. A Produtora da House Mazzutti trabalha no segundo caso. Começamos pela leitura — território, público, posição, o que a marca pode dizer com autoridade. Só então definimos a matriz visual e as derivações. Não porque o processo seja mais elegante, mas porque é o único que produz material que ainda funciona quando a campanha termina.',
   },
 };

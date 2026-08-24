@@ -117,6 +117,11 @@ export const clusters = {
       'sao-paulo-epicentro-criativo-brasil',
       'dupes-masstige-o-que-editorial-moda-espera',
       'direcao-criativa-nao-e-estetica-e-resultado',
+      // 2027 — calendário setorial
+      'eventos-moda-2027-calendario-branding-marcas',
+      'eventos-publicidade-marketing-2027-guia-completo',
+      'eventos-arte-design-criatividade-2027-sao-paulo-mundo',
+      'eventos-audiovisual-tech-criativo-2027-guia-produtoras',
     ],
   },
 }
@@ -186,6 +191,11 @@ export const postTitles = {
   'sao-paulo-epicentro-criativo-brasil': 'O que São Paulo tem que nenhum outro mercado criativo do Brasil tem',
   'dupes-masstige-o-que-editorial-moda-espera': 'Dupes e marcas masstige: o que a nova consumidora de moda espera',
   'direcao-criativa-nao-e-estetica-e-resultado': 'Direção criativa não é estética — é resultado',
+  // 2027 — calendário setorial
+  'eventos-moda-2027-calendario-branding-marcas': 'Moda 2027: o calendário completo para marcas',
+  'eventos-publicidade-marketing-2027-guia-completo': 'Publicidade e marketing em 2027: guia de eventos',
+  'eventos-arte-design-criatividade-2027-sao-paulo-mundo': 'Arte, design e criatividade em 2027: eventos',
+  'eventos-audiovisual-tech-criativo-2027-guia-produtoras': 'Audiovisual e tech criativo em 2027: guia produtoras',
 }
 
 /**
