@@ -56,7 +56,7 @@ export async function inviteUserAction(formData: FormData): Promise<void> {
   const sb = adminClient()
   const { error } = await sb.auth.admin.inviteUserByEmail(email, {
     data: { invited_by: 'admin', unit, role },
-    redirectTo: `${origin}/auth/callback/?next=/login/redefinir/`,
+    redirectTo: `${origin}/auth/callback?next=/login/redefinir`,
   })
   if (error) {
     redirect('/crm/admin/users?error=' + encodeURIComponent(error.message))
@@ -113,7 +113,7 @@ export async function sendRecoveryLinkAction(formData: FormData): Promise<void> 
   // via "enviado" e o usuário nunca recebia nada. resetPasswordForEmail dispara
   // o template de recuperação de fato.
   const { error } = await anonClient().auth.resetPasswordForEmail(email, {
-    redirectTo: `${origin}/auth/callback/?next=/login/redefinir/`,
+    redirectTo: `${origin}/auth/callback?next=/login/redefinir`,
   })
   if (error) {
     redirect('/crm/admin/users?error=' + encodeURIComponent(error.message))

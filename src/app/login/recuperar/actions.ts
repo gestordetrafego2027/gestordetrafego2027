@@ -38,8 +38,10 @@ export async function requestPasswordReset(formData: FormData): Promise<void> {
   const supabase = await createClient()
   // redirectTo cobre o template legado ({{ .ConfirmationURL }}); o template
   // atual usa token_hash e cai direto em /auth/confirm.
+  // Mantido SEM barra final: é a forma que já consta na allow-list de Redirect
+  // URLs do projeto. O 308 de trailingSlash normaliza e preserva a query.
   const { error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `${origin}/auth/callback/?next=${encodeURIComponent('/login/redefinir/')}`,
+    redirectTo: `${origin}/auth/callback?next=${encodeURIComponent('/login/redefinir')}`,
   })
 
   // Não revelamos se o e-mail existe na base: enumeração de usuário é vetor

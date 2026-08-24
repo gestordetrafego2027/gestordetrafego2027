@@ -72,7 +72,7 @@ export async function signUpAction(formData: FormData): Promise<void> {
     password,
     options: {
       data: { full_name: name },
-      emailRedirectTo: `${origin}/auth/callback/?next=/${locale}/minha-conta/`,
+      emailRedirectTo: `${origin}/auth/callback?next=/${locale}/minha-conta`,
     },
   })
 
