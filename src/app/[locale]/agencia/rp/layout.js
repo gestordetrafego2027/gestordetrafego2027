@@ -7,7 +7,7 @@ export async function generateMetadata({ params }) {
     locale,
     title: 'RP e Marketing Direto para Marcas — House Mazzutti Agência',
     description: 'Relações públicas, assessoria de imprensa e marketing direto para marcas de luxo e lifestyle em São Paulo. House Mazzutti Agência.',
-    image: { src: '/images/agencia/banners/banner-2.webp', alt: 'RP e Marketing Direto — House Mazzutti', width: 1200, height: 630 },
+    image: { src: `/opengraph-image?title=${encodeURIComponent('RP e Marketing Direto para Marcas')}&unit=${encodeURIComponent('Agência')}`, alt: 'RP e Marketing Direto — House Mazzutti', width: 1200, height: 630 },
   })
 }
 

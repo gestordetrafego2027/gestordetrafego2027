@@ -7,7 +7,7 @@ export async function generateMetadata({ params }) {
     locale,
     title: 'Ensaio Fotográfico Artístico em São Paulo — House Mazzutti Studio',
     description: 'Ensaios pessoais e artísticos com direção criativa de imagem. Studio exclusivo em São Paulo, styling, lighting e retoque high-end.',
-    image: { src: '/images/studio/marjorie-rossi/capa.webp', alt: 'Ensaio fotográfico artístico — House Mazzutti Studio', width: 1200, height: 630 },
+    image: { src: `/opengraph-image?title=${encodeURIComponent('Ensaio Fotográfico Artístico em São Paulo')}&unit=${encodeURIComponent('Studio')}`, alt: 'Ensaio fotográfico artístico — House Mazzutti Studio', width: 1200, height: 630 },
   })
 }
 

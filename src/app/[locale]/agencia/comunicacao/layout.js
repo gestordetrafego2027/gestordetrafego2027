@@ -7,7 +7,7 @@ export async function generateMetadata({ params }) {
     locale,
     title: 'Comunicação e Publicidade para Marcas — House Mazzutti Agência',
     description: 'Campanhas de lançamento, conteúdo editorial e gestão de comunicação para marcas em São Paulo. House Mazzutti Agência.',
-    image: { src: '/images/agencia/on-take/capa.webp', alt: 'Comunicação e publicidade — House Mazzutti', width: 1200, height: 630 },
+    image: { src: `/opengraph-image?title=${encodeURIComponent('Comunicação e Publicidade para Marcas')}&unit=${encodeURIComponent('Agência')}`, alt: 'Comunicação e publicidade — House Mazzutti', width: 1200, height: 630 },
   })
 }
 
