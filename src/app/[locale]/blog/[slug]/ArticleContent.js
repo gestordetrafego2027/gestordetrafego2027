@@ -62,6 +62,23 @@ function ArticleImage({ data, className = '', sizes = '', priority = false }) {
     );
 }
 
+// Render a paragraph string, converting [text](/path/) markdown links to <a> elements
+function renderParagraph(text) {
+    const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+    if (parts.length === 1) return text;
+    return parts.map((part, i) => {
+        const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (match) {
+            return (
+                <Link key={i} href={match[2]} className="underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-900 transition-all">
+                    {match[1]}
+                </Link>
+            );
+        }
+        return part;
+    });
+}
+
 // Reading time estimator
 function readingTime(article) {
     const text = [
@@ -186,7 +203,7 @@ export default function ArticleContent({ slug, article, prevSlug, nextSlug, prev
                         <section key={idx} className="article-body text-zinc-700 text-sm md:text-base leading-[1.9] font-body mb-12">
                             <h2 className="article-h2">{section.h2}</h2>
                             {section.paragraphs.map((para, pIdx) => (
-                                <p key={pIdx}>{para}</p>
+                                <p key={pIdx}>{renderParagraph(para)}</p>
                             ))}
                             {/* Editorial image break after second section */}
                             {idx === 1 && article.interior && article.interior.length >= 2 && (

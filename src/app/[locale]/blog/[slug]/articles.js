@@ -5303,7 +5303,7 @@ export const articles = {
         "paragraphs": [
           "Há quatro momentos em que o brandbook deixa de ser desejável e passa a ser urgente. O primeiro é o crescimento do time: quando mais de duas pessoas produzem material da marca, a interpretação individual vira risco estrutural. O segundo é a entrada em novos canais ou pontos de venda — cada nova superfície é uma chance de a marca aparecer diferente de si mesma.",
           "O terceiro é a terceirização: agências, freelancers e fornecedores executam bem o que está documentado e adivinham o que não está. O quarto é a preparação para captação, franquia ou expansão — investidor e franqueado leem o brandbook como evidência de maturidade operacional, não como peça de design.",
-          "O contraponto honesto: brandbook feito cedo demais, antes de a marca ter clareza de posicionamento, documenta uma dúvida. Nesse caso o trabalho correto começa por estratégia de marca e só depois desce para o sistema visual. Estratégia antes de estética — nessa ordem, sempre."
+          "O contraponto honesto: brandbook feito cedo demais, antes de a marca ter clareza de posicionamento, documenta uma dúvida. Nesse caso o trabalho correto começa por estratégia de marca e só depois desce para o sistema visual. Estratégia antes de estética — nessa ordem, sempre. Isso inclui o naming: o nome precisa estar resolvido antes de o brandbook ser construído — [veja como conduzir um processo de naming de marca](/blog/naming-de-marca-como-escolher-um-nome-que-vende/)."
         ]
       }
     ],
@@ -5408,7 +5408,7 @@ export const articles = {
           "Um processo maduro segue quatro tempos. Primeiro, briefing de posicionamento: território, público, concorrência, percepção desejada e o que a marca recusa ser. Segundo, geração ampla — centenas de alternativas por rotas distintas, sem julgamento na fase de produção, porque avaliar cedo mata o repertório.",
           "Terceiro, filtragem em camadas: fonética e legibilidade, depois distinção competitiva, depois viabilidade jurídica e digital. O funil é agressivo por natureza — de centenas restam poucas dezenas, e destas restam três ou quatro finalistas defensáveis.",
           "Quarto, validação e defesa. Cada finalista é apresentado com sua justificativa de posicionamento, testado em voz alta, escrito à mão, aplicado em um cartão, em uma fachada e em uma tela de celular. Nome se decide vendo o nome funcionar, não lendo o nome numa lista.",
-          "Uma advertência sobre método: naming não se resolve por votação. Consenso interno produz nomes medianos, porque a opção que ninguém rejeita costuma ser a que ninguém defende. O papel da direção criativa é sustentar a escolha que posiciona — e explicar por que ela é melhor do que a que agrada."
+          "Uma advertência sobre método: naming não se resolve por votação. Consenso interno produz nomes medianos, porque a opção que ninguém rejeita costuma ser a que ninguém defende. O papel da direção criativa é sustentar a escolha que posiciona — e explicar por que ela é melhor do que a que agrada. Com o nome escolhido, o passo seguinte é documentar a identidade completa — [veja o que um brandbook precisa conter e quando contratar um](/blog/o-que-e-brandbook-e-por-que-sua-marca-precisa/)."
         ]
       }
     ],
@@ -5497,7 +5497,7 @@ export const articles = {
           "A auditoria abre o trabalho e é a etapa que ninguém quer pagar — e a única que impede um erro caro. Ela mapeia percepção real (clientes, ex-clientes, time comercial, mercado), inventaria todos os pontos de contato, avalia ativos de reconhecimento que precisam ser preservados, revisa a situação jurídica da marca e lê o território competitivo. O produto dessa fase não é um relatório: é um diagnóstico com uma decisão — refresh ou rebranding, e por quê.",
           "O conceito traduz o diagnóstico em direção. Define o novo posicionamento em uma frase defensável, o território de significado, o tom de voz e o princípio visual que vai guiar o desenho. Só depois disso o sistema visual é construído — símbolo, tipografia, paleta, grafismos, direção fotográfica — e testado nas aplicações mais críticas do negócio, não nas mais bonitas de apresentar.",
           "O rollout é onde a maioria dos reposicionamentos falha. Ele exige sequência e calendário: o que muda no dia um, o que migra ao longo de meses, o que só troca quando o estoque acabar. Exige treinamento do time — comercial e atendimento precisam saber explicar a mudança antes do público perguntar — e exige uma narrativa pública que trate a mudança como consequência de algo real na empresa, não como novidade estética.",
-          "Fecha o processo a governança: brandbook atualizado, responsáveis definidos e um ponto de checagem periódico. Reposicionamento sem governança dura dois trimestres."
+          "Fecha o processo a governança: [brandbook atualizado](/blog/o-que-e-brandbook-e-por-que-sua-marca-precisa/), responsáveis definidos e um ponto de checagem periódico. Reposicionamento sem governança dura dois trimestres."
         ]
       },
       {
@@ -5951,7 +5951,7 @@ export const articles = {
       {
         h2: 'As cinco variáveis que definem o preço',
         paragraphs: [
-          'A primeira é escopo e complexidade narrativa. Um vídeo que registra um evento tem escopo de captação. Um vídeo que constrói uma tese sobre a empresa tem escopo de direção: exige leitura estratégica, roteiro, decupagem e aprovação de conceito antes de qualquer câmera ligar. Essa etapa não aparece na tela, mas responde por parte relevante do investimento — e por quase todo o resultado.',
+          'A primeira é escopo e complexidade narrativa. Um vídeo que registra um evento tem escopo de captação. Um vídeo que constrói uma tese sobre a empresa tem escopo de direção: exige leitura estratégica, roteiro, decupagem e aprovação de conceito antes de qualquer câmera ligar. Essa etapa não aparece na tela, mas responde por parte relevante do investimento — e por quase todo o resultado. É a pré-produção o maior fator de custo e de resultado: [entenda o que acontece antes das câmeras ligarem](/blog/pre-producao-de-video-o-que-acontece-antes-das-cameras-ligarem/).',
           'A segunda é duração e número de entregas. O custo não cresce proporcionalmente ao tempo final: cresce com a quantidade de material distinto que precisa ser captado e finalizado. Uma peça de 2 minutos com cinco versões de corte e três formatos de proporção custa mais que uma peça única de 4 minutos.',
           'A terceira é locação e diárias. Cada dia de captação carrega equipe, equipamento, deslocamento, alimentação e seguro. Locação cedida pela empresa reduz custo; locação alugada, cenografada ou com necessidade de autorização pública aumenta. Captação fora da cidade adiciona transporte e hospedagem para toda a equipe.',
           'A quarta é o tamanho da equipe e a lista técnica. Uma diária com direção, direção de fotografia, assistente de câmera, técnico de som, elétrica, produção de set e maquiagem é uma estrutura; uma diária com operador e assistente é outra. Ambas são legítimas — atendem a necessidades diferentes. O que não é legítimo é orçar a segunda e esperar o resultado da primeira.',
@@ -6063,7 +6063,7 @@ export const articles = {
       {
         h2: 'Por que a pré-produção determina a maior parte do resultado',
         paragraphs: [
-          'A razão é econômica antes de ser criativa. Um problema identificado na pré-produção custa uma conversa. O mesmo problema descoberto em set custa a hora de toda a equipe parada. Descoberto na pós, custa uma nova diária — ou, mais comum, a aceitação silenciosa de um resultado inferior.',
+          'A razão é econômica antes de ser criativa. Um problema identificado na pré-produção custa uma conversa. O mesmo problema descoberto em set custa a hora de toda a equipe parada. Descoberto na pós, custa uma nova diária — ou, mais comum, a aceitação silenciosa de um resultado inferior. Entender essa lógica é o que permite planejar orçamento com realismo — [veja o que define o custo de um vídeo para empresa](/blog/quanto-custa-produzir-video-para-empresa/).',
           'A segunda razão é que a pós-produção não cria o que não foi captado. Correção de cor melhora o que existe; não inventa luz que não foi acesa. Montagem organiza o material; não gera o plano que ninguém filmou. Toda solução de pós parte de material bruto — e material bruto é decidido semanas antes.',
           'A terceira razão é o tempo de set. Uma diária tem entre dez e doze horas úteis, e boa parte delas é consumida por montagem, mudança de luz e deslocamento. O tempo efetivo de câmera rodando é menor do que parece. Chegar com decupagem pronta pode significar dobrar a quantidade de material aproveitável no mesmo dia.',
           'A quarta razão é humana. Equipe que recebe ordem do dia clara trabalha com confiança e ritmo. Equipe que descobre o plano durante a manhã trabalha reagindo — e reação, em set, produz escolhas seguras e previsíveis, nunca as melhores.',
@@ -6137,7 +6137,7 @@ export const articles = {
           'A primeira pergunta não é estética, é funcional: quem vai ver esse book e qual decisão essa pessoa precisa tomar depois de ver? Um book de modelo comercial é lido por bookers e clientes que precisam enxergar versatilidade e naturalidade. Um book de ator é lido por diretores de elenco que buscam verdade e alcance emocional. Um book de marca pessoal é lido por clientes, imprensa e parceiros que precisam entender autoridade. São três materiais diferentes — e nenhum deles é a soma dos outros.',
           'Definido o destinatário, define-se o perfil de mercado. Moda comercial pede luz limpa, expressão acessível e leitura rápida do corpo. Moda editorial pede conceito, atitude e liberdade de composição. Corporativo pede sobriedade, enquadramento fechado e coerência com o setor. Tentar cobrir os três no mesmo dia normalmente entrega um material morno nos três.',
           'As referências entram por último e servem para alinhar linguagem, não para copiar imagens. Reúna de oito a doze fotos que traduzam o que você quer transmitir e escreva ao lado de cada uma o motivo — a luz, a pose, o clima, o recorte. Referência sem justificativa vira imitação; referência com justificativa vira direção.',
-          'Traga também o que você não quer. Saber que você rejeita poses excessivamente sensuais, ou fundos coloridos, ou sorriso aberto, encurta o caminho mais do que qualquer painel de inspiração. Restrição declarada é informação útil.',
+          'Traga também o que você não quer. Saber que você rejeita poses excessivamente sensuais, ou fundos coloridos, ou sorriso aberto, encurta o caminho mais do que qualquer painel de inspiração. Restrição declarada é informação útil. Parte da preparação é entender também o investimento envolvido — [veja os valores reais de um book fotográfico profissional em São Paulo](/blog/quanto-custa-book-fotografico-profissional-sao-paulo/).',
         ],
       },
       {
@@ -6816,8 +6816,26 @@ export const articles = {
       'quanto tempo leva um fashion film', 'House Mazzutti produtora',
     ],
     data: 'Agosto 2026',
-    cover: null,
-    interior: null,
+    cover: {
+      src: '/images/blog/fashion-film-sao-paulo-guia-de-producao/cover.webp',
+      alt: 'Produção de fashion film em São Paulo — set com equipe e câmera profissional',
+      caption: 'Fashion film em São Paulo — House Mazzutti Produtora',
+      fallback: '/images/produtora/moda/hero.webp',
+    },
+    interior: [
+      {
+        src: '/images/blog/fashion-film-sao-paulo-guia-de-producao/interior-1.webp',
+        alt: 'Direção criativa no set de fashion film — moda e beleza em São Paulo',
+        caption: 'Set de fashion film · São Paulo',
+        fallback: '/images/produtora/moda/1.webp',
+      },
+      {
+        src: '/images/blog/fashion-film-sao-paulo-guia-de-producao/interior-2.webp',
+        alt: 'Pós-produção e finalização de fashion film para marca de moda brasileira',
+        caption: 'Conceito à finalização · House Mazzutti',
+        fallback: '/images/produtora/moda/2.webp',
+      },
+    ],
     respostaDireta: 'Fashion film em São Paulo é produzido em três blocos: pré-produção (tese de marca, roteiro, casting, locação, decupagem), captação (um a três dias de set com direção criativa presente) e pós-produção (montagem, cor, som, derivação de formatos). O ciclo completo leva entre sessenta e cento e vinte dias, e São Paulo concentra a única infraestrutura do país capaz de fechar esse ciclo inteiro dentro de um raio de poucos quilômetros — equipe técnica, agências de casting, locações, rental de câmera e finalização. A Produtora da House Mazzutti, em São Paulo, dirige e produz fashion films para marcas de moda, beleza e luxo, do conceito ao master final.',
     intro: 'Toda marca de moda que cresce chega ao mesmo impasse: a foto já não sustenta o que ela quer significar. É nesse ponto que o fashion film aparece — e é também nesse ponto que a maior parte das marcas contrata errado, porque confunde um filme bonito com uma peça que reposiciona. São Paulo é o único mercado brasileiro onde as duas coisas são possíveis com o mesmo grau de excelência. Escolher entre elas é decisão de direção, não de orçamento. Este é o guia de como um fashion film se produz aqui, etapa por etapa.',
     sections: [
