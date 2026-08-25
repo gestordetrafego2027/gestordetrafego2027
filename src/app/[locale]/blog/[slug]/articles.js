@@ -6959,4 +6959,278 @@ export const articles = {
     conclusao: 'Fashion film não é um item de calendário. É a decisão de afirmar alguma coisa em imagem e sustentar essa afirmação em cada plano, cada corte e cada silêncio. São Paulo oferece a infraestrutura para fazer isso no padrão que o mercado internacional reconhece — o que ainda falta, na maior parte dos projetos, é a tese que justifica ligar a câmera. Se a sua marca já sabe o que quer afirmar, o próximo passo é uma conversa de leitura, não um orçamento. Conheça a Produtora de Moda da House Mazzutti em /produtora/moda/.',
     cta: { label: 'Converse com Angelo sobre o fashion film da sua marca', href: '/produtora/moda/', lead_type: 'produtora_moda' },
   },
+
+  'site-institucional-ou-landing-page-qual-escolher': {
+    slug: 'site-institucional-ou-landing-page-qual-escolher',
+    categoria: 'Agência — Web',
+    titulo: 'Site institucional ou landing page: qual escolher para sua marca',
+    metaTitle: 'Site institucional ou landing page: qual escolher',
+    metaDescription: 'Site institucional ou landing page: o que cada um resolve, quando usar, o erro de ter só landing page e como decidir a estrutura da sua marca.',
+    keywords: [
+      'site institucional ou landing page', 'diferença entre site e landing page', 'quando usar landing page',
+      'site institucional para marca', 'estrutura de site para empresa', 'landing page de conversão',
+      'criação de site profissional', 'autoridade de marca no digital', 'arquitetura de site',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Site institucional e landing page resolvem problemas diferentes. O site institucional é a casa da marca: sustenta autoridade, organiza serviços, alimenta busca orgânica e responde a quem pesquisa o nome da empresa antes de decidir. A landing page é uma página única, sem distração, desenhada para uma conversão específica dentro de uma campanha com prazo. Marca que vende ticket alto ou depende de percepção precisa de site institucional como base e usa landing pages como extensões táticas. Ter apenas landing page funciona no começo e vira teto quando a marca cresce.',
+    intro: 'A pergunta aparece quase sempre no momento errado: a campanha já foi aprovada, a verba de mídia já está reservada e alguém pergunta se vale fazer um site inteiro ou só uma página de conversão. A escolha, nesse ponto, já não é técnica — é a consequência de uma decisão de posicionamento que ninguém tomou antes. Vale entender o que cada estrutura faz, o que ela não faz e por que a maioria das marcas descobre a diferença tarde demais.',
+    sections: [
+      {
+        h2: 'O que é cada um, sem jargão',
+        paragraphs: [
+          'Site institucional é a estrutura permanente da marca na internet. Ele tem várias páginas — home, sobre, serviços, cases, blog, contato — e existe para responder a uma pergunta que o mercado faz o tempo todo: quem é essa empresa e por que eu deveria levá-la a sério. É o lugar onde a marca se explica no seu próprio ritmo, sem depender de campanha ativa.',
+          'Landing page é uma página única, construída em torno de uma ação. Sem menu, sem caminhos alternativos, sem convite a explorar. Ela recebe tráfego de um anúncio, de um e-mail ou de um link específico e conduz o visitante a um único destino: preencher um formulário, agendar uma conversa, comprar um produto, se inscrever em um evento.',
+          'A diferença estrutural é essa: o site institucional oferece caminhos, a landing page elimina caminhos. Um constrói entendimento, o outro força decisão. Comparar os dois é como comparar a loja e o balcão de atendimento — não são concorrentes, são funções distintas do mesmo negócio.',
+        ],
+      },
+      {
+        h2: 'Objetivos diferentes: autoridade contra conversão pontual',
+        paragraphs: [
+          'O objetivo do site institucional é acumulação. Cada página bem construída aumenta a superfície da marca na busca, cada artigo publicado responde a uma dúvida real do mercado, cada case documentado vira argumento comercial. O retorno não aparece em uma semana — aparece na conversa em que o cliente diz que leu tudo antes de ligar.',
+          'O objetivo da landing page é extração. Ela mede uma coisa só: quantas pessoas que chegaram fizeram o que a página pediu. É a estrutura mais eficiente que existe para converter tráfego pago, porque não desperdiça atenção. Também é a mais frágil: quando a campanha para, ela deixa de existir na prática.',
+          'Há um efeito cruzado que quase ninguém contabiliza. Landing page de marca conhecida converte mais do que landing page idêntica de marca desconhecida — mesmo texto, mesmo design, mesmo público. A autoridade construída no site institucional aparece no desempenho da página de conversão. O inverso não acontece: nenhuma landing page constrói reputação.',
+        ],
+      },
+      {
+        h2: 'Quando cada um faz sentido no ciclo da marca',
+        paragraphs: [
+          'Marca em validação, com uma oferta única e verba curta. Landing page resolve. Não faz sentido investir em arquitetura completa antes de saber se o produto vende e para quem. Nesse estágio, velocidade vale mais que profundidade.',
+          'Marca com mais de um serviço, ticket alto ou ciclo de decisão longo. Site institucional, sem hesitação. Quando a compra envolve reunião, proposta e comparação com concorrentes, o comprador vai pesquisar o nome da empresa. O que ele encontra nessa pesquisa é parte da negociação, mesmo quando ninguém comenta.',
+          'Marca que depende de busca orgânica para gerar demanda. Só o site institucional sustenta isso. Landing page isolada não constrói repertório de conteúdo, não acumula autoridade de domínio e não responde às perguntas que antecedem a compra.',
+          'Campanha com prazo, lançamento sazonal, evento ou produto específico. Landing page — mas conectada a um site que já existe. A página tática funciona melhor quando o visitante desconfiado consegue verificar a marca com um clique.',
+        ],
+      },
+      {
+        h2: 'O erro de ter só landing page',
+        paragraphs: [
+          'A marca que opera apenas com landing pages constrói um negócio que só existe enquanto a verba de mídia está ativa. Desligou a campanha, sumiu o tráfego, sumiu a demanda. Não porque o produto piorou, mas porque nunca houve estrutura própria — houve distribuição alugada.',
+          'O segundo sintoma é a pesquisa pelo nome. Alguém vê o anúncio, fica interessado, e busca a marca no Google antes de preencher qualquer formulário. Se o que aparece é uma página solta sem contexto, sem histórico, sem prova de existência, a desconfiança venceu antes da conversa começar.',
+          'O terceiro é o custo. Sem autoridade acumulada, cada nova campanha começa do zero e paga o preço integral do leilão. O custo de aquisição sobe todo trimestre e a resposta usual — mais verba no mesmo lugar — apenas acelera o problema.',
+          'E há um custo silencioso: a marca perde a capacidade de contar a própria história. Landing page é discurso comprimido, feito para converter em segundos. Não sobra espaço para posicionamento, para ponto de vista, para nada que diferencie de fato.',
+        ],
+      },
+      {
+        h2: 'O que acontece quando a marca cresce sem site',
+        paragraphs: [
+          'A primeira coisa que trava é a venda consultiva. O comercial passa a explicar por telefone o que a estrutura deveria explicar sozinha, o ciclo alonga e a taxa de fechamento cai. Cada reunião recomeça a apresentação da empresa do zero.',
+          'A segunda é a parceria. Varejo, imprensa, investidor e parceiro institucional pesquisam antes de responder. Marca sem presença própria verificável é lida como marca pequena, independentemente do faturamento real.',
+          'A terceira é a busca por inteligência artificial. Assistentes que respondem perguntas de mercado se apoiam em fontes estruturadas e verificáveis. Uma landing page de campanha raramente é lida como fonte. Um site com conteúdo consistente e marcação semântica correta é.',
+          'A quarta é o preço. Sustentar ticket alto exige percepção, e percepção precisa de superfície. Marca que só aparece em página de conversão é obrigada a competir por preço, porque não construiu razões para valer mais.',
+        ],
+      },
+      {
+        h2: 'Como a House Mazzutti decide a estrutura de cada cliente',
+        paragraphs: [
+          'A decisão nunca começa por catálogo de serviço. Começa por leitura: o que essa marca precisa que o mercado passe a acreditar, e qual é a distância entre a percepção atual e essa afirmação. Só depois vem a arquitetura.',
+          'Três perguntas orientam a escolha. Quanto tempo dura a decisão de compra? Quantas ofertas diferentes a marca precisa sustentar? A demanda hoje vem de mídia paga, de indicação ou de busca? As respostas definem se o projeto nasce como site completo, como landing page ou como um núcleo institucional enxuto que cresce por camadas.',
+          'Na prática, a estrutura mais frequente é híbrida: um site institucional que sustenta autoridade e busca orgânica, com landing pages táticas conectadas a ele para cada campanha. A marca ganha a permanência de um e a eficiência do outro.',
+          'A construção segue o mesmo princípio das outras unidades da casa: narrativa antes de layout, estrutura semântica antes de decoração, performance como parte do design e não como ajuste posterior. O escopo completo da frente de desenvolvimento web está em /agencia/web/.',
+        ],
+      },
+    ],
+    citacao: 'Landing page converte tráfego. Site institucional constrói a razão pela qual esse tráfego converte. Quem só tem a primeira aluga demanda e chama isso de crescimento.',
+    faq: [
+      {
+        q: 'Qual a diferença entre site institucional e landing page?',
+        a: 'O site institucional é a estrutura permanente da marca: várias páginas, navegação, conteúdo que acumula autoridade e alimenta busca orgânica. A landing page é uma página única sem menu, construída para uma única conversão dentro de uma campanha com prazo. Um oferece caminhos e constrói entendimento; o outro elimina caminhos e força decisão.',
+      },
+      {
+        q: 'Posso ter só uma landing page no começo?',
+        a: 'Sim, e em muitos casos é a decisão certa. Marca em validação, com uma oferta única e verba curta, ganha mais com velocidade do que com profundidade. O problema não é começar por landing page — é permanecer nela depois que a marca passa a ter mais de um serviço, ticket alto ou ciclo de decisão longo.',
+      },
+      {
+        q: 'Landing page ajuda no Google?',
+        a: 'Muito pouco de forma isolada. Ela pode ranquear para um termo específico, mas não acumula autoridade de domínio, não responde às dúvidas que antecedem a compra e não cria repertório de conteúdo. Marcas que dependem de busca orgânica para gerar demanda precisam de site institucional como base — a landing page entra como extensão tática.',
+      },
+      {
+        q: 'Quando vale a pena migrar de landing page para site institucional?',
+        a: 'Quando aparecem os sinais: o custo de aquisição sobe a cada trimestre, o comercial precisa explicar por telefone o que a estrutura deveria explicar sozinha, parceiros e imprensa pesquisam a marca e não encontram nada verificável, ou a empresa passa a sustentar mais de uma oferta. Todos são sintomas de teto de estrutura, não de campanha ruim.',
+      },
+    ],
+    conclusao: 'Site institucional e landing page não competem: competem por verba quando a marca não decidiu qual problema está resolvendo. Antes de escolher, vale responder o que falta — conversão de um tráfego que já chega, ou razão para que esse tráfego confie. Se falta razão, otimizar a página de conversão apenas expõe mais rápido um problema que não é de página. A estrutura que sustenta crescimento é a que acumula, e acumulação exige permanência. Conheça a frente de desenvolvimento web da House Mazzutti em /agencia/web/.',
+    cta: { label: 'Converse com a House Mazzutti sobre a estrutura do seu site', href: '/agencia/web/', lead_type: 'agencia_web' },
+  },
+
+  'por-que-seu-site-nao-aparece-no-google': {
+    slug: 'por-que-seu-site-nao-aparece-no-google',
+    categoria: 'Agência — Web',
+    titulo: 'Por que seu site não aparece no Google: as causas mais comuns e como resolver',
+    metaTitle: 'Por que seu site não aparece no Google e como resolver',
+    metaDescription: 'Por que site não aparece no Google: indexação, velocidade, mobile, conteúdo ralo, meta tags e schema. O passo a passo do que verificar primeiro.',
+    keywords: [
+      'por que site não aparece no Google', 'site não indexado Google', 'como aparecer no Google',
+      'problemas de indexação', 'Core Web Vitals', 'mobile first Google',
+      'meta description SEO', 'schema markup', 'Search Console indexação',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Um site não aparece no Google por seis causas principais: não foi indexado (o Google não encontrou ou foi bloqueado por robots.txt ou noindex), carrega devagar demais e falha em Core Web Vitals, não funciona bem no celular, tem conteúdo raso ou duplicado, não recebe nenhum link externo, ou está sem meta tags e dados estruturados. O primeiro passo é sempre verificar a indexação no Google Search Console: sem indexação, nenhuma otimização de conteúdo produz efeito.',
+    intro: 'A frase chega quase sempre no mesmo tom de indignação: o site ficou pronto há três meses e não aparece em lugar nenhum. Na maioria dos casos, o problema não é de conteúdo nem de concorrência — é que o Google literalmente nunca leu aquele site, ou leu e concluiu que não havia nada que valesse mostrar. As causas são poucas, conhecidas e quase todas verificáveis em uma tarde. O que costuma faltar é ordem de diagnóstico.',
+    sections: [
+      {
+        h2: 'Indexação: o Google precisa encontrar o site antes de qualquer coisa',
+        paragraphs: [
+          'Existe uma diferença que confunde muita gente: estar no ar e estar indexado são coisas distintas. O site pode carregar perfeitamente no navegador e não constar no índice do Google. Nesse cenário, nenhuma palavra-chave, nenhum texto e nenhuma otimização produz efeito, porque não há o que ranquear.',
+          'As causas mais comuns são triviais e por isso passam despercebidas. Uma tag noindex esquecida no ambiente de desenvolvimento e publicada junto com o site. Um arquivo robots.txt que bloqueia o rastreamento inteiro. Um sitemap que nunca foi enviado. Um domínio novo que ainda não foi descoberto porque nenhuma página em lugar algum aponta para ele.',
+          'A verificação leva dois minutos. Busque site:seudominio.com.br no Google. Se aparecerem páginas, o site está indexado — ao menos em parte. Se não aparecer nada, o problema é anterior a qualquer discussão de conteúdo, e é ali que o trabalho começa.',
+          'Vale lembrar também que indexação não é instantânea nem garantida. O Google decide o que vale a pena manter no índice. Páginas que ele considera de baixo valor são rastreadas e descartadas — a mensagem "Rastreada, mas não indexada no momento" no Search Console significa exatamente isso.',
+        ],
+      },
+      {
+        h2: 'Velocidade e Core Web Vitals',
+        paragraphs: [
+          'Velocidade deixou de ser conforto e virou critério. O Google mede três indicadores de experiência real — tempo até o maior elemento visível aparecer, estabilidade do layout durante o carregamento e resposta à primeira interação — e usa esses dados como sinal de classificação.',
+          'O impacto prático é duplo. Site lento perde posição e perde visitante: boa parte das pessoas abandona antes do carregamento terminar, o que produz um sinal de comportamento ruim que realimenta a queda.',
+          'As causas quase sempre se repetem. Imagens pesadas publicadas no tamanho original da câmera. Plugins acumulados que carregam scripts em toda página. Hospedagem barata com tempo de resposta alto. Fontes e bibliotecas carregadas de fora sem necessidade. Nenhum desses problemas é sofisticado, e todos são caros de conviver.',
+        ],
+      },
+      {
+        h2: 'Mobile-first, conteúdo ralo e conteúdo duplicado',
+        paragraphs: [
+          'O Google avalia a versão móvel do site como versão principal. Se o conteúdo do celular for reduzido, se o texto exigir zoom, se botões ficarem colados ou se algum bloco importante só existir no desktop, é a experiência ruim que vale para o ranqueamento — não a boa.',
+          'Conteúdo ralo é a segunda causa recorrente. Páginas com três parágrafos genéricos que poderiam pertencer a qualquer empresa do setor não respondem a pergunta nenhuma. O Google não precisa de mais uma página dizendo que a empresa é comprometida com a qualidade. Ele precisa de páginas que resolvam dúvidas específicas de quem busca.',
+          'Conteúdo duplicado divide força. Duas páginas quase idênticas competindo pelo mesmo termo fazem o buscador escolher uma e desprezar a outra — muitas vezes escolhendo a errada. O mesmo vale para texto copiado do fabricante, de outro site do grupo ou de uma versão antiga do próprio domínio.',
+          'A régua útil é simples: uma página merece existir quando responde a uma pergunta que alguém realmente faz, com informação que a marca tem e os concorrentes não repetem.',
+        ],
+      },
+      {
+        h2: 'Links externos, meta tags e dados estruturados',
+        paragraphs: [
+          'Link externo continua sendo voto de confiança. Site que nenhuma outra página do mundo cita tem pouca razão para ser considerado relevante. Isso não significa comprar links — significa existir em lugares verificáveis: imprensa, associações do setor, parceiros, diretórios legítimos, perfis oficiais.',
+          'Meta tags mal escritas custam clique mesmo quando a posição é boa. Título genérico, repetido em todas as páginas ou cortado no meio da frase reduz a taxa de clique, e taxa de clique baixa devolve a página para trás. A meta description não ranqueia diretamente, mas é o argumento de venda do resultado — ela decide entre o seu link e o de baixo.',
+          'Dados estruturados são a tradução do site para máquina. Marcação de organização, serviço, artigo, avaliação e perguntas frequentes permite que o buscador entenda o que cada bloco significa. Isso habilita resultados enriquecidos e, cada vez mais, define se a página é usada como fonte por assistentes de inteligência artificial que respondem antes de qualquer clique acontecer.',
+        ],
+      },
+      {
+        h2: 'O que verificar primeiro: passo a passo',
+        paragraphs: [
+          'Primeiro, confirme a indexação. Busque site:seudominio.com.br e abra o Google Search Console. Se a propriedade ainda não existe, crie e envie o sitemap. Sem esse passo, todo o resto é especulação.',
+          'Segundo, verifique bloqueios. Abra seudominio.com.br/robots.txt e procure por regras de bloqueio amplas. No código das páginas principais, procure por meta robots com noindex. É a causa mais comum de site inteiro invisível.',
+          'Terceiro, meça velocidade e experiência móvel nas páginas que importam — home, principais serviços, artigos com mais tráfego. Corrija primeiro imagens e scripts, que costumam responder pela maior parte do ganho.',
+          'Quarto, audite conteúdo. Liste as páginas e marque quais respondem a uma pergunta real e quais apenas ocupam espaço. Elimine duplicidade, reescreva o que for genérico, e defina qual página é a oficial para cada tema.',
+          'Quinto, revise títulos e descrições página a página. Cada uma precisa de um título próprio, específico, com o termo que ela disputa. Descrição em até cento e sessenta caracteres, escrita como argumento e não como resumo.',
+          'Sexto, implemente dados estruturados e busque presença externa. São os dois trabalhos que continuam rendendo depois de prontos.',
+        ],
+      },
+      {
+        h2: 'Quando contratar um especialista',
+        paragraphs: [
+          'Quando o diagnóstico básico já foi feito e o site continua invisível, o problema costuma ser estrutural: arquitetura de informação confusa, canibalização entre páginas, histórico de penalidade, migração mal feita que perdeu redirecionamentos, ou uma plataforma que impede correções técnicas.',
+          'Também vale acionar ajuda quando o site é grande. A partir de algumas dezenas de páginas, decisões de canonical, paginação, hierarquia e orçamento de rastreamento passam a ter efeito real, e erro nesse nível é caro de reverter.',
+          'E vale acionar quando o buscador não é o único destino. Aparecer nas respostas de assistentes de inteligência artificial depende de conteúdo estruturado, entidade de marca bem definida e presença externa verificável — um trabalho que não se resolve ajustando plugin.',
+          'Na House Mazzutti, esse diagnóstico começa por leitura de estrutura, não por lista de ajustes. O escopo da frente de desenvolvimento web está em /agencia/web/. Se a dúvida ainda é de arquitetura, vale antes entender [a diferença entre site institucional e landing page](/blog/site-institucional-ou-landing-page-qual-escolher/).',
+        ],
+      },
+    ],
+    citacao: 'Antes de discutir palavra-chave, confirme que o Google leu o site. A maior parte dos projetos invisíveis não perdeu a disputa — nunca entrou nela.',
+    faq: [
+      {
+        q: 'Quanto tempo demora para um site novo aparecer no Google?',
+        a: 'Um site novo costuma ser indexado entre alguns dias e algumas semanas depois que o sitemap é enviado no Search Console e recebe os primeiros links externos. Aparecer no índice é rápido; conquistar posição para termos disputados leva meses e depende de conteúdo consistente, velocidade adequada e presença externa verificável.',
+      },
+      {
+        q: 'Como saber se meu site está indexado?',
+        a: 'Busque site:seudominio.com.br no Google. Se aparecerem páginas, o site está no índice ao menos parcialmente. Para o diagnóstico completo, use o Google Search Console: o relatório de páginas mostra quantas foram indexadas, quantas foram rastreadas e descartadas, e o motivo de cada exclusão.',
+      },
+      {
+        q: 'Velocidade do site influencia no ranqueamento?',
+        a: 'Sim. O Google usa os Core Web Vitals como sinal de classificação, e o efeito é duplo: site lento perde posição e perde visitante antes do carregamento terminar. Na maioria dos casos, imagens pesadas e excesso de scripts respondem pela maior parte do problema, e corrigir esses dois pontos já produz ganho mensurável.',
+      },
+      {
+        q: 'Preciso de schema markup para aparecer no Google?',
+        a: 'Não é obrigatório para indexar, mas faz diferença crescente. Dados estruturados dizem à máquina o que cada bloco significa, habilitam resultados enriquecidos e aumentam a chance de a página ser usada como fonte por assistentes de inteligência artificial. Em mercados disputados, é uma das poucas vantagens técnicas ainda subutilizadas.',
+      },
+    ],
+    conclusao: 'Site invisível raramente é um mistério: é uma sequência de causas conhecidas que ninguém verificou na ordem certa. Comece pela indexação, elimine bloqueios, corrija velocidade e experiência móvel, e só então discuta conteúdo e palavra-chave. Otimizar texto de uma página que o Google nunca leu é trabalho perdido com aparência de esforço. Quando o básico está resolvido e a invisibilidade persiste, o problema é de estrutura — e estrutura se corrige com projeto, não com ajuste. Conheça a frente de desenvolvimento web da House Mazzutti em /agencia/web/.',
+    cta: { label: 'Peça um diagnóstico do seu site com a House Mazzutti', href: '/agencia/web/', lead_type: 'agencia_web' },
+  },
+
+  'o-que-e-next-js-e-por-que-marcas-modernas-escolhem': {
+    slug: 'o-que-e-next-js-e-por-que-marcas-modernas-escolhem',
+    categoria: 'Agência — Web',
+    titulo: 'O que é Next.js e por que marcas modernas estão migrando para ele',
+    metaTitle: 'O que é Next.js e por que marcas estão migrando',
+    metaDescription: 'O que é Next.js explicado sem jargão: por que supera WordPress em velocidade e SEO, o que muda na prática e quando ele faz sentido.',
+    keywords: [
+      'o que é Next.js', 'Next.js ou WordPress', 'vantagens do Next.js',
+      'site rápido Next.js', 'Next.js SEO', 'migrar de WordPress para Next.js',
+      'desenvolvimento web moderno', 'React para sites institucionais', 'performance de site',
+    ],
+    data: 'Agosto 2026',
+    cover: null,
+    interior: null,
+    respostaDireta: 'Next.js é uma tecnologia de construção de sites que entrega páginas já prontas ao navegador, em vez de montá-las no dispositivo do visitante. Na prática, isso significa carregamento mais rápido, melhor leitura pelo Google e capacidade de escalar sem travar. Supera plataformas tradicionais como WordPress em velocidade, segurança e controle técnico, mas exige equipe de desenvolvimento — não é editável por arrastar blocos. Faz sentido para marcas que dependem de performance, busca orgânica ou de uma experiência sob medida.',
+    intro: 'Toda vez que uma marca pede um site novo, alguém menciona Next.js — em geral com um entusiasmo técnico que não explica nada a quem vai pagar a conta. A pergunta legítima do dono da marca não é como a tecnologia funciona por dentro, mas o que ela muda: o site carrega mais rápido, aparece melhor no Google, custa mais para manter? Vale responder isso em português, sem vocabulário de bastidor.',
+    sections: [
+      {
+        h2: 'O que é Next.js, em linguagem de quem decide',
+        paragraphs: [
+          'Sites tradicionais funcionam como um restaurante que só começa a cozinhar quando o cliente senta. O visitante abre a página, o servidor consulta o banco de dados, monta tudo na hora e só então entrega. Cada visita repete o processo inteiro, e o tempo de espera é o prato ficando pronto.',
+          'Next.js funciona como uma cozinha que prepara antes. As páginas são geradas com antecedência e ficam prontas para servir no instante em que alguém pede. O que precisa ser atualizado em tempo real continua sendo — mas apenas o que precisa, e não a página inteira a cada acesso.',
+          'Tecnicamente, é uma estrutura de desenvolvimento construída sobre React que permite decidir, página por página, o que é gerado antes e o que é gerado na hora. Para quem decide, o resumo é este: mais controle sobre velocidade, sobre o que o Google lê e sobre como a experiência se comporta.',
+        ],
+      },
+      {
+        h2: 'Por que supera WordPress e sites tradicionais',
+        paragraphs: [
+          'Velocidade é a diferença mais visível. Um site em WordPress médio carrega uma quantidade grande de scripts de plugins acumulados ao longo dos anos, consulta banco de dados a cada acesso e depende do desempenho da hospedagem. Um site em Next.js entrega arquivos já prontos, muitas vezes distribuídos em servidores próximos ao visitante. A diferença aparece nos Core Web Vitals, que são sinal de classificação do Google.',
+          'Busca é a segunda. Como o conteúdo já vem montado no HTML entregue, o buscador lê a página inteira sem depender de executar código. Controle fino de títulos, descrições, dados estruturados e sitemap deixa de ser função de plugin e passa a ser parte do projeto — o que importa cada vez mais para aparecer também nas respostas de assistentes de inteligência artificial.',
+          'Segurança e manutenção vêm em seguida. Boa parte das invasões em sites tradicionais entra por plugin desatualizado. Quando não existe uma coleção de extensões de terceiros com acesso ao banco, essa superfície de ataque desaparece. O trabalho de manutenção deixa de ser atualizar dezenas de componentes e passa a ser evoluir o que foi construído.',
+          'Escala fecha a lista. Página pronta suporta pico de tráfego sem derrubar o servidor. Lançamento, matéria na imprensa ou campanha agressiva não viram risco de queda no pior momento possível.',
+        ],
+      },
+      {
+        h2: 'O que muda na prática para o dono da marca',
+        paragraphs: [
+          'O visitante espera menos. Em compras, cadastros e formulários, cada segundo de espera custa conversão — e essa é a métrica que aparece primeiro no caixa, antes de qualquer discussão sobre posicionamento no buscador.',
+          'O Google lê melhor. Estrutura semântica correta, metadados controlados e dados estruturados nativos aumentam a chance de a página ser indexada como merece e de ser usada como fonte em respostas geradas por inteligência artificial.',
+          'A manutenção muda de natureza. Não há mais rotina de atualizar plugins nem risco de uma atualização quebrar o layout. Em compensação, alterar estrutura exige desenvolvedor. Conteúdo de blog, produto e página comum continua editável quando o projeto é integrado a um painel de conteúdo — e essa integração precisa estar prevista desde o início.',
+          'O custo se desloca. Costuma custar mais para construir e menos para conviver: menos incidente, menos correção emergencial, menos verba de mídia desperdiçada em página lenta.',
+        ],
+      },
+      {
+        h2: 'Quando Next.js faz sentido e quando não faz',
+        paragraphs: [
+          'Faz sentido quando a marca depende de busca orgânica para gerar demanda, quando velocidade tem efeito direto em conversão, quando o site precisa de funcionalidades próprias — área logada, catálogo, integração com sistemas — ou quando a experiência é parte do posicionamento e não pode parecer um modelo pronto.',
+          'Faz sentido também quando a marca cresce. Site que vai ganhar idiomas, unidades, linhas de produto e centenas de páginas precisa de arquitetura pensada. Plataforma que resolve o começo costuma virar teto no meio do caminho.',
+          'Não faz sentido para quem precisa de uma página simples, publicada esta semana, com verba mínima e sem equipe técnica por perto. Nesse cenário, construtor visual resolve melhor, e insistir em tecnologia sofisticada é gastar em complexidade que não vai ser usada.',
+          'Também não faz sentido quando a operação depende de editar estrutura todo dia sem qualquer apoio técnico, ou quando o negócio inteiro está montado sobre um ecossistema específico de plugins que não tem equivalente. Tecnologia deve servir ao negócio — não o contrário.',
+          'A decisão anterior a essa continua sendo de arquitetura, e não de linguagem: [entender se a marca precisa de site institucional ou landing page](/blog/site-institucional-ou-landing-page-qual-escolher/) vem antes de escolher com o que construir.',
+        ],
+      },
+      {
+        h2: 'Por que a House Mazzutti usa Next.js',
+        paragraphs: [
+          'Porque a casa trabalha com marcas que dependem de percepção. Quando o posicionamento sustenta preço, um site lento ou genérico contradiz em três segundos tudo o que a campanha levou meses para construir. Velocidade e acabamento não são detalhe técnico — são parte do argumento.',
+          'Porque a mesma leitura que orienta a narrativa orienta a estrutura. Hierarquia de títulos, dados estruturados e arquitetura de conteúdo são decisões editoriais tanto quanto de código, e Next.js dá controle total sobre elas em vez de terceirizá-las a um plugin.',
+          'Porque busca deixou de ser só Google. Aparecer em respostas geradas por assistentes de inteligência artificial exige conteúdo estruturado e entidade de marca bem definida — trabalho que depende de controle sobre o que é entregue ao rastreador.',
+          'E porque projeto entregue precisa continuar de pé. Site que aguenta pico de tráfego no dia do lançamento e não exige manutenção emergencial é o que permite à marca investir atenção onde ela rende. O escopo completo da frente de desenvolvimento está em /agencia/web/.',
+        ],
+      },
+    ],
+    citacao: 'Tecnologia de site não é assunto de bastidor. Um carregamento lento contradiz, em três segundos, o posicionamento que a marca levou meses para construir.',
+    faq: [
+      {
+        q: 'O que é Next.js em palavras simples?',
+        a: 'É uma tecnologia de construção de sites que prepara as páginas com antecedência, em vez de montá-las no momento em que o visitante acessa. O resultado prático é carregamento mais rápido, leitura mais confiável pelo Google e capacidade de suportar picos de tráfego sem cair. Foi construída sobre React e é usada por boa parte das marcas que dependem de performance.',
+      },
+      {
+        q: 'Next.js é melhor que WordPress?',
+        a: 'É melhor em velocidade, segurança, controle técnico e escala. Não é melhor em facilidade de edição sem equipe técnica nem em custo inicial. A escolha depende do negócio: marca que depende de busca orgânica, de conversão sensível a velocidade ou de funcionalidades próprias ganha com Next.js; quem precisa de uma página simples publicada esta semana ganha com um construtor visual.',
+      },
+      {
+        q: 'Consigo editar meu site em Next.js sem programador?',
+        a: 'Conteúdo sim, estrutura não. Quando o projeto é integrado a um painel de conteúdo desde o início, textos, artigos, produtos e imagens são editados normalmente por quem não programa. Mudanças de estrutura, novas seções e alterações de layout exigem desenvolvedor — por isso a integração de conteúdo precisa estar prevista no escopo, e não improvisada depois.',
+      },
+      {
+        q: 'Vale a pena migrar meu site atual para Next.js?',
+        a: 'Vale quando existem sintomas concretos: site lento apesar das otimizações, quedas em picos de tráfego, limitações de plataforma que impedem correções técnicas, ou dependência crescente de busca orgânica. Não vale migrar por moda. E toda migração exige plano de redirecionamentos, sob risco de perder posições já conquistadas.',
+      },
+    ],
+    conclusao: 'Next.js não é uma preferência de desenvolvedor: é uma decisão de negócio sobre velocidade, busca e durabilidade. Marca que depende de percepção não pode se dar ao luxo de um site que contradiz o próprio posicionamento no primeiro carregamento. Isso dito, tecnologia sozinha não resolve — site rápido com conteúdo genérico continua invisível. A ordem que funciona é decidir o que a marca precisa afirmar, desenhar a estrutura que sustenta essa afirmação e só então escolher com o que construir. Conheça a frente de desenvolvimento web da House Mazzutti em /agencia/web/.',
+    cta: { label: 'Converse com a House Mazzutti sobre o site da sua marca', href: '/agencia/web/', lead_type: 'agencia_web' },
+  },
 };
