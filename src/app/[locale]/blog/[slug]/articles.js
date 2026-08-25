@@ -6351,7 +6351,7 @@ export const articles = {
           'O segundo é a qualidade técnica da imagem. Arquivo de baixa resolução, ruído digital, luz mal resolvida e cor inconsistente limitam o uso do material: não imprime bem, não aguenta corte, não sustenta uma capa ou um material impresso. Você descobre isso no momento em que mais precisa.',
           'O terceiro, e o mais determinante, é a ausência de direção. Sem alguém conduzindo, as fotos saem tecnicamente corretas e expressivamente vazias — postura travada, olhar sem intenção, quinze imagens que dizem a mesma coisa. Nenhum equipamento compensa isso, e nenhum retoque corrige.',
           'O quarto é o custo de oportunidade, que ninguém coloca na planilha e é o maior de todos. Um book fraco enviado a uma agência, a um diretor de elenco ou a um cliente potencial não gera uma segunda chance. A porta que não abriu não avisa que não abriu.',
-          'Isso não significa que o mais caro é o melhor. Significa que o critério de escolha não pode ser preço isolado — tem que ser preço contra escopo entregue e contra o uso que o material precisa suportar.',
+          'Isso não significa que o mais caro é o melhor. Significa que o critério de escolha não pode ser preço isolado — tem que ser preço contra escopo entregue e contra o uso que o material precisa suportar. Saber se preparar para a sessão maximiza o retorno sobre qualquer investimento — [veja o guia completo de como se preparar para um book fotográfico profissional](/blog/como-se-preparar-para-um-book-fotografico-profissional/).',
         ],
       },
       {
@@ -6449,7 +6449,7 @@ export const articles = {
           'Marcas de lifestyle e consumo com estética própria. Moda, beleza, design, decoração, gastronomia e hospitalidade vivem em editorias que se alimentam de novidade bem produzida. Uma marca desse universo com identidade visual consistente e imagem de qualidade tem um caminho aberto na imprensa que a maioria dos setores não tem.',
           'Founders que precisam existir como autoridade. Em negócios de serviço, consultoria, tecnologia e criação, a percepção do fundador antecede a percepção da empresa. Presença em entrevistas, painéis, podcasts e artigos assinados constrói um repertório público que sustenta vendas complexas e atrai talento.',
           'Produtos de luxo e ticket alto. Quanto mais caro o produto, maior o peso da validação de terceiros na decisão de compra. Ninguém compra alto confiando apenas no que a própria marca diz sobre si.',
-          'Marcas em transição de posicionamento. Reposicionamento, expansão para nova categoria, entrada em outro mercado ou mudança de identidade pedem que a narrativa nova seja explicada por alguém de fora, não apenas anunciada de dentro.',
+          'Marcas em transição de posicionamento. Reposicionamento, expansão para nova categoria, entrada em outro mercado ou mudança de identidade pedem que a narrativa nova seja explicada por alguém de fora, não apenas anunciada de dentro. Nesses casos, a assessoria de imprensa integra naturalmente a campanha de lançamento — [veja como estruturar uma campanha de lançamento de produto que gera resultado real](/blog/como-fazer-campanha-de-lancamento-de-produto/).',
           'Negócios em rodada de captação ou em busca de parceria institucional. Investidor, varejista e parceiro pesquisam o nome antes da reunião. O que aparece nessa busca é parte da negociação, mesmo que ninguém comente.',
         ],
       },
@@ -6649,7 +6649,7 @@ export const articles = {
       {
         h2: 'A combinação ideal e os erros de quem escolhe só um lado',
         paragraphs: [
-          'A arquitetura que funciona é sequencial, não simultânea em partes iguais. Primeiro instala-se percepção — narrativa, imagem, presença editorial. Depois amplifica-se com mídia, aproveitando um terreno onde a marca já significa alguma coisa. A mídia então trabalha sobre reconhecimento, e não contra o desconhecimento.',
+          'A arquitetura que funciona é sequencial, não simultânea em partes iguais. Primeiro instala-se percepção — narrativa, imagem, presença editorial. Depois amplifica-se com mídia, aproveitando um terreno onde a marca já significa alguma coisa. A mídia então trabalha sobre reconhecimento, e não contra o desconhecimento. Em campanhas de lançamento, RP e mídia paga se complementam com papéis distintos — [veja como estruturar uma campanha de lançamento de produto que funciona](/blog/como-fazer-campanha-de-lancamento-de-produto/).',
           'Erro de quem só faz mídia paga: constrói um negócio dependente de leilão. No dia em que a verba cai ou o custo sobe, a demanda desaparece, porque nunca houve marca — houve distribuição paga. É crescimento alugado, e o contrato pode ser rescindido pelo mercado a qualquer momento.',
           'Erro de quem só faz RP: constrói reputação sem canal de conversão. A marca é elogiada, citada, admirada — e vende pouco, porque ninguém desenhou o caminho entre a admiração e a compra. Autoridade sem distribuição é prestígio improdutivo.',
           'Erro dos dois lados: medir com a régua errada. Cobrar de RP um custo por aquisição semanal é tão equivocado quanto cobrar de uma campanha de mídia a construção de reputação. Cada frente responde por uma pergunta diferente e deve ser avaliada por ela.',
