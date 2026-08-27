@@ -464,7 +464,7 @@ const HTML = `<!DOCTYPE html>
         <p class="section-eyebrow">Moda · Beleza · Institucional</p>
         <h2 class="section-h2">Produtora</h2>
       </div>
-      <span class="section-count">6 serviços</span>
+      <span class="section-count">7 serviços</span>
     </div>
     <div class="grid">
       <a class="card" href="/catalogo-servico-264/editorial-moda">
@@ -520,6 +520,15 @@ const HTML = `<!DOCTYPE html>
         <p class="card-cat">Produtora</p>
         <div class="card-meta"><h3 class="card-name">Produção de Eventos</h3><span class="consulta">Consultar</span></div>
         <p class="card-desc">Cobertura ao Vivo · Transmissão Online · Drone · Fotografia e Vídeo · São Paulo e Brasil</p>
+      </a>
+      <a class="card" href="/catalogo-servico-264/banco-imagem">
+        <div class="card-img">
+          <img src="/images/produtora/institucional/sense-hotel/capa.webp" alt="Banco de Imagem Institucional" loading="lazy">
+          <div class="card-overlay"><span class="card-overlay-cta">Ver Banco →</span></div>
+        </div>
+        <p class="card-cat">Produtora</p>
+        <div class="card-meta"><h3 class="card-name">Banco de Imagem Institucional</h3><span class="consulta">Consultar</span></div>
+        <p class="card-desc">Direção Publicitária · Foto + Vídeo · Stylist · CEO · Equipe · Espaço · São Paulo e Brasil</p>
       </a>
     </div>
   </section>
