@@ -355,22 +355,22 @@ const SERVICES: Record<string, Service> = {
     packages: [
       {
         name: 'Banco Essencial',
-        price: 4900,
+        price: 5900,
         desc: 'Time de 2 pessoas (fotógrafo + diretor de arte) · 4h no seu espaço · 5 cenários curados · 60 fotos tratadas high-end · Acervo pronto para site, LinkedIn e apresentações corporativas. Entrega em 7 dias.',
       },
       {
         name: 'Banco Estratégico',
-        price: 9500,
+        price: 9700,
         desc: 'Time de 3 pessoas (fotógrafo + videomaker + diretor de arte) · 8h · 10 cenários · 120 fotos tratadas + 3 vídeos curtos · CEO, equipe, espaço e produto. Acervo completo para mídia digital, imprensa e documentos. Entrega em 10 dias.',
       },
       {
         name: 'Banco Premium',
-        price: 18000,
+        price: 17400,
         desc: 'Produção de 2 dias com equipe completa (fotógrafo, videomaker, stylist, diretor de arte, assistente) · Direção de arte full · Retrato de autoridade do CEO · Campanha institucional · 200+ fotos + 6 vídeos. Para marcas que precisam de imagem incompatível com o mercado. Entrega em 15 dias.',
       },
       {
         name: 'Banco Master',
-        price: 28000,
+        price: 25300,
         desc: 'O nível das grandes celebridades aplicado à sua empresa. 3 dias de produção · Equipe completa de estúdio · Direção publicitária · Identidade visual em imagem · Foto + Vídeo institucional + Reels + Making of · Acervo anual completo. Entrega em 20 dias.',
       },
     ],
