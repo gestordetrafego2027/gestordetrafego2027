@@ -81,7 +81,7 @@ export default function TourMarcaPessoalPage() {
         .marquee-house:hover { animation-play-state: paused; }
       `}</style>
 
-      <h1 className="sr-only">Tour Marca Pessoal — House Mazzutti · Canoinhas, SC · 1 ao 7 de Outubro</h1>
+      <h1 className="sr-only">Tour Marca Pessoal — House Mazzutti · Canoinhas, SC · 01 a 07 de Outubro</h1>
       <Header variant="dark" />
 
       {/* ── HERO ───────────────────────────────────────────────────── */}
@@ -131,7 +131,7 @@ export default function TourMarcaPessoalPage() {
           <div className="flex items-center gap-4 mb-6" data-aos="fade-in" data-aos-delay="200">
             <div className="hmzt-line w-6" />
             <span className="font-label uppercase tracking-[0.4em] text-[12px] text-white/65">
-              1 ao 7 de Outubro · <strong className="font-bold text-white">Canoinhas, SC</strong>
+              01 a 07 de Outubro · <strong className="font-bold text-white">Canoinhas, SC</strong>
             </span>
             <div className="hmzt-line w-6" />
           </div>
@@ -165,12 +165,6 @@ export default function TourMarcaPessoalPage() {
       {/* ── PROMESSA ───────────────────────────────────────────────── */}
       <section className="bg-white py-20 md:py-28 px-6 text-center">
         <div className="max-w-[860px] mx-auto">
-          <span
-            className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-300 mb-8 block"
-            data-aos="fade-in"
-          >
-            House Mazzutti · Canoinhas, SC
-          </span>
           <h2
             className="font-headline font-light text-black text-[2.2rem] md:text-[3.6rem] lg:text-[4.4rem] leading-[1.05] tracking-normal mb-8"
             data-aos="slide-title" data-aos-delay="80"
@@ -181,7 +175,7 @@ export default function TourMarcaPessoalPage() {
             className="font-body text-zinc-500 text-base md:text-lg leading-relaxed max-w-[560px] mx-auto mb-8"
             data-aos="fade-in" data-aos-delay="200"
           >
-            O Tour Marca Pessoal não é apenas uma sessão de fotos. É uma experiência completa de direção de imagem — com styling, produção editorial e audiovisual — que acontece em três dias inesquecíveis em Canoinhas, SC.
+            O Tour Marca Pessoal não é apenas uma sessão de fotos. É uma experiência completa de direção de imagem — com styling, produção editorial e audiovisual — que acontece em sete dias inesquecíveis em Canoinhas, SC.
           </p>
           <p
             className="font-headline text-[1.6rem] md:text-[2.2rem] italic text-zinc-300 tracking-tight"
@@ -388,7 +382,7 @@ export default function TourMarcaPessoalPage() {
               <em>Cada nível foi pensado para um momento diferente.</em>
             </h2>
             <p className="font-label uppercase tracking-[0.25em] text-[9px] text-black/30 mt-4" data-aos="fade-in" data-aos-delay="200">
-              Vagas limitadas · 1 ao 7 de Outubro · Canoinhas, SC
+              Vagas limitadas · 01 a 07 de Outubro · Canoinhas, SC
             </p>
           </div>
 
@@ -477,7 +471,7 @@ export default function TourMarcaPessoalPage() {
             className="font-label uppercase tracking-[0.4em] text-[9px] text-white/35 mb-7 block"
             data-aos="fade-in"
           >
-            1 ao 7 de Outubro · Canoinhas, SC
+            01 a 07 de Outubro · Canoinhas, SC
           </span>
           <h2
             className="font-headline font-light text-[1.9rem] md:text-[3rem] text-white leading-tight tracking-normal mb-8"
@@ -584,7 +578,7 @@ export default function TourMarcaPessoalPage() {
             ? `${formCta.packageSelected}`
             : 'Garantir minha agenda'
         }
-        subtitle="Vagas limitadas · 1 ao 7 de Outubro · Canoinhas, SC"
+        subtitle="Vagas limitadas · 01 a 07 de Outubro · Canoinhas, SC"
       >
         <FormCanoinhas
           onClose={closeForm}
