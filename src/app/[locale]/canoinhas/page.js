@@ -79,6 +79,11 @@ export default function TourMarcaPessoalPage() {
         @keyframes marquee-house { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         .marquee-house { display: flex; width: max-content; animation: marquee-house 28s linear infinite; will-change: transform; backface-visibility: hidden; }
         .marquee-house:hover { animation-play-state: paused; }
+        @keyframes blink-cta {
+          0%, 49% { background: #16a34a; color: #000; border-color: #16a34a; }
+          50%, 100% { background: #000; color: #fff; border-color: #fff; }
+        }
+        .cta-blink { animation: blink-cta 0.7s step-end infinite; }
       `}</style>
 
       <h1 className="sr-only">Tour Marca Pessoal — House Mazzutti · Canoinhas, SC · 01 a 07 de Outubro</h1>
@@ -183,6 +188,15 @@ export default function TourMarcaPessoalPage() {
           >
             Você está pronta?
           </p>
+
+          {/* CTA piscante */}
+          <a
+            href="/pt/canoinhas/checkout?plano=ensaio-01"
+            className="cta-blink inline-block mt-10 px-10 py-5 border-2 font-headline text-[1.4rem] md:text-[2rem] uppercase tracking-[0.12em] font-bold"
+            data-aos="fade-in" data-aos-delay="400"
+          >
+            GARANTA AGORA SUA AGENDA!
+          </a>
         </div>
       </section>
 
