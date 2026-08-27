@@ -189,10 +189,10 @@ export default function TourMarcaPessoalPage() {
             Você está pronta?
           </p>
 
-          {/* CTA piscante */}
+          {/* CTA piscante — topo */}
           <a
             href="/pt/canoinhas/checkout?plano=ensaio-01"
-            className="cta-blink inline-block mt-10 px-10 py-5 border-2 font-headline text-[1.4rem] md:text-[2rem] uppercase tracking-[0.12em] font-bold"
+            className="cta-blink inline-block mt-10 px-14 py-7 border-4 font-headline text-[2rem] md:text-[3rem] lg:text-[3.8rem] uppercase tracking-[0.1em] font-black"
             data-aos="fade-in" data-aos-delay="400"
           >
             GARANTA AGORA SUA AGENDA!
@@ -383,6 +383,17 @@ export default function TourMarcaPessoalPage() {
         </div>
       </section>
 
+      {/* ── CTA MEIO ───────────────────────────────────────────────── */}
+      <section className="bg-black py-16 px-6 text-center">
+        <a
+          href="/pt/canoinhas/checkout?plano=ensaio-01"
+          className="cta-blink inline-block px-14 py-7 border-4 font-headline text-[2rem] md:text-[3rem] lg:text-[3.8rem] uppercase tracking-[0.1em] font-black"
+          data-aos="fade-in"
+        >
+          GARANTA AGORA SUA AGENDA!
+        </a>
+      </section>
+
       {/* ── PLANOS ─────────────────────────────────────────────────── */}
       <section id="planos" className="bg-white px-6 md:px-[40px] py-20 md:py-28">
         <div className="max-w-[1100px] mx-auto">
@@ -570,6 +581,17 @@ export default function TourMarcaPessoalPage() {
             <source src="/videos/hero-tour-new.mp4" type="video/mp4" />
           </video>
         </div>
+      </section>
+
+      {/* ── CTA FINAL ──────────────────────────────────────────────── */}
+      <section className="bg-black py-20 px-6 text-center">
+        <a
+          href="/pt/canoinhas/checkout?plano=ensaio-01"
+          className="cta-blink inline-block px-14 py-7 border-4 font-headline text-[2rem] md:text-[3rem] lg:text-[3.8rem] uppercase tracking-[0.1em] font-black"
+          data-aos="fade-in"
+        >
+          GARANTA AGORA SUA AGENDA!
+        </a>
       </section>
 
       {/* ── RODAPÉ MÍNIMO ──────────────────────────────────────────── */}
