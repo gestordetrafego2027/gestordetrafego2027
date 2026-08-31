@@ -3,6 +3,314 @@
 // Dados de mercado atribuídos (Firjan, ABIHPEC/Euromonitor, Lucidpress, Edelman/LinkedIn, vídeo marketing).
 
 export const articles = {
+  "produtora-de-moda-sp": {
+    "slug": "produtora-de-moda-sp",
+    "categoria": "Produtora — Moda",
+    "pilar": "Pilar 3",
+    "cluster": "produtora",
+    "titulo": "Produtora de Moda em SP: o que faz, quanto custa e como escolher",
+    "subtitulo": "Uma produtora de moda não contrata fornecedores. Ela garante que a imagem final corresponda à decisão criativa tomada antes do primeiro orçamento.",
+    "metaTitle": "Produtora de Moda em SP: o que faz e quanto custa",
+    "metaDescription": "O que faz uma produtora de moda em São Paulo, como são estruturados os custos de uma produção e os critérios reais para escolher — sem improviso.",
+    "keywords": "produtora de moda São Paulo, produtora de moda SP, produção de moda SP, produtora executiva moda, produção de campanha de moda, editorial de moda São Paulo, produtora audiovisual moda, House Mazzutti",
+    "data": "Setembro 2026",
+    "cover": {
+      "src": "/images/blog/produtora-de-moda-sp/cover.webp",
+      "alt": "Set de produção de moda em São Paulo com equipe de direção e styling em operação",
+      "caption": "Produção de moda — Produtora HMZT",
+      "fallback": "/images/agencia/house-mazzutti/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/produtora-de-moda-sp/interior-1.webp",
+        "alt": "Arara de looks organizada por bloco de cena em produção de moda em São Paulo",
+        "caption": "Styling · organização por bloco de cena",
+        "fallback": "/images/agencia/house-mazzutti/capa.webp"
+      },
+      {
+        "src": "/images/blog/produtora-de-moda-sp/interior-2.webp",
+        "alt": "Monitor de referência e planilha de decupagem em set de campanha de moda",
+        "caption": "Produção executiva · decupagem e controle de set",
+        "fallback": "/images/agencia/house-mazzutti/capa.webp"
+      }
+    ],
+    "respostaDireta": "Uma produtora de moda em São Paulo é responsável por transformar um conceito criativo em imagem executada: define equipe, styling, locação, casting, cronograma e orçamento, e responde pelo set no dia. Os custos variam conforme escopo — de projetos de lookbook a campanhas com direção e audiovisual. Escolher bem significa avaliar direção criativa, previsibilidade orçamentária e portfólio coerente, não menor preço.",
+    "intro": "Existe uma confusão persistente no mercado entre produzir moda e organizar uma produção. Organizar é logística: agenda, fornecedor, nota fiscal, transporte. Produzir é decisão — sobre o que a marca precisa mostrar, com quem, em que lugar e sob qual luz. São Paulo concentra o maior volume de produção de moda do país, e é justamente por isso que a diferença entre as duas coisas fica cara quando é ignorada. Este texto é um mapa direto: o que uma produtora de moda faz de fato, como os custos se organizam e quais critérios separam uma boa escolha de um problema que só aparece no dia da gravação.",
+    "sections": [
+      {
+        "h2": "O que uma produtora de moda realmente faz",
+        "paragraphs": [
+          "A função de uma produtora de moda começa antes do set e termina depois dele. Antes: leitura do briefing, tradução do conceito em plano de produção, definição de equipe, casting, styling, locação, cronograma e orçamento. Durante: comando do set, controle de tempo, garantia de que cada bloco previsto foi efetivamente capturado. Depois: seleção, acompanhamento de pós-produção e entrega nos formatos que a marca vai usar.",
+          "Na prática, isso significa que a produtora responde por três perguntas que ninguém mais responde sozinho: o que precisa existir ao final, quanto custa fazer existir e quem garante que aconteça no dia marcado. Fotógrafo responde pela imagem. Stylist responde pelo look. A produtora responde pelo conjunto.",
+          "Há ainda uma camada menos visível e mais decisiva: a curadoria de equipe. Quem fotografa, quem faz beleza, quem dirige, quem assiste. Uma produção de moda é uma soma de repertórios. Escolher errado um único nome muda o resultado inteiro — e nenhuma correção de pós-produção recupera direção mal escolhida."
+        ]
+      },
+      {
+        "h2": "Produção de moda, produção executiva e direção criativa não são a mesma coisa",
+        "paragraphs": [
+          "Produção executiva de moda é a camada de viabilização: orçamento, contratos, cronograma, autorizações de locação, seguro, equipe, transporte, alimentação. É a engenharia que sustenta o dia.",
+          "Produção de moda — no sentido de styling e set — é a construção material da cena: looks, adereços, cenografia, coerência visual entre blocos.",
+          "Direção criativa é a camada anterior a ambas: decide o que a marca está dizendo e por quê. É de onde saem o conceito, a referência visual, o tom e o critério que orienta cada escolha depois.",
+          "Marcas que contratam só a segunda camada acabam com imagens bonitas que não conversam com o posicionamento. Marcas que contratam só a primeira acabam com um dia bem organizado e um resultado genérico. Na Produtora da House Mazzutti, as três operam juntas por decisão de método: o plano de produção nasce do conceito, não o contrário."
+        ]
+      },
+      {
+        "h2": "Quanto custa uma produtora de moda em SP",
+        "paragraphs": [
+          "Não existe tabela única — e desconfie de quem apresenta uma sem perguntar nada antes. O custo de uma produção de moda em São Paulo é a soma de variáveis concretas, e é assim que ele deve ser apresentado no orçamento.",
+          "As variáveis que mais movem o número: número de diárias de set; tamanho e senioridade da equipe (direção, fotografia, assistência, beleza, styling); casting e o tipo de cessão de imagem contratada; locação (estúdio, casa, externa com autorização); volume e complexidade de looks; se há captação de vídeo além de still; e o escopo de pós-produção — tratamento de imagem, edição, versões por formato.",
+          "Três faixas de escopo ajudam a calibrar expectativa. Lookbook de coleção: equipe enxuta, uma diária, estúdio, entrega de still tratado. Campanha de marca: direção criativa, equipe completa, locação escolhida por conceito, still e movimento, múltiplos formatos de entrega. Campanha com desdobramento audiovisual: soma-se roteiro, direção de cena, som, edição e finalização — e a produção passa a ser planejada em blocos, não em horas.",
+          "Um ponto que economiza dinheiro de verdade: cessão de imagem. Prazo, território e mídias de veiculação alteram significativamente o custo de casting. Definir isso no briefing, e não na véspera, evita renegociação em condição desfavorável.",
+          "O erro orçamentário mais comum não é gastar demais. É subdimensionar o dia — contratar uma diária para um volume que exigia duas. O resultado é sempre o mesmo: os últimos blocos são capturados com pressa, e são justamente esses que costumavam sustentar a campanha."
+        ]
+      },
+      {
+        "h2": "Como escolher uma produtora de moda",
+        "paragraphs": [
+          "O portfólio é o primeiro filtro, mas não pelo motivo que se imagina. Não olhe se as imagens são bonitas — quase todas são. Olhe se existe consistência de critério entre projetos diferentes. Consistência indica método. Variação sem eixo indica execução sob demanda.",
+          "O segundo filtro é o briefing de volta. Uma boa produtora devolve perguntas antes de devolver preço: qual o objetivo comercial, onde a imagem será usada, qual percepção precisa ser instalada, o que já foi feito antes e não funcionou. Orçamento que chega rápido demais quase sempre chega incompleto.",
+          "O terceiro é a previsibilidade orçamentária. Peça o orçamento aberto por rubrica e pergunte explicitamente o que não está incluso. Produção de moda tem custos que aparecem no meio do caminho quando não foram nomeados no início — hora extra de equipe, extensão de locação, tratamento adicional de imagem.",
+          "O quarto é a resposta a imprevisto. Pergunte o que acontece se chover na externa, se o casting cancelar na véspera, se a coleção atrasar. A resposta revela se existe plano B estruturado ou improviso ensaiado.",
+          "E o último, que vale por todos: quem dirige. Peça para falar com a pessoa que vai comandar o set, não apenas com quem vende o projeto. Produção de moda é uma atividade de comando. Você está contratando um critério, e critério tem nome."
+        ]
+      },
+      {
+        "h2": "O que muda quando a produção nasce da estratégia",
+        "paragraphs": [
+          "Uma campanha bem produzida e mal dirigida gera imagens que a marca usa por uma temporada e descarta. Uma campanha dirigida a partir do posicionamento gera um banco de imagem que sustenta site, ponto de venda, mídia paga, imprensa e redes por muito mais tempo — porque cada peça foi pensada para um destino.",
+          "É por isso que, na House Mazzutti, produção não é um serviço isolado. O conceito vem da Agência, a imagem nasce no Studio, a execução acontece na Produtora. A marca não precisa costurar três fornecedores nem traduzir a mesma intenção três vezes.",
+          "A economia real de uma produção bem conduzida não está no valor da diária. Está em quantos meses aquela imagem continua trabalhando depois que o set foi desmontado."
+        ]
+      }
+    ],
+    "citacao": "Produção de moda não é logística com boa luz. É uma decisão criativa executada com disciplina — e quem não decide antes, paga a decisão no dia.",
+    "faq": [
+      {
+        "q": "O que faz uma produtora de moda?",
+        "a": "Uma produtora de moda transforma um conceito criativo em imagem executada. Ela define equipe, casting, styling, locação, cronograma e orçamento, comanda o set no dia da produção e acompanha a pós-produção até a entrega nos formatos que a marca vai usar. Responde pelo conjunto — não apenas por uma etapa."
+      },
+      {
+        "q": "Quanto custa contratar uma produtora de moda em São Paulo?",
+        "a": "O custo depende do escopo: número de diárias, senioridade da equipe, casting e cessão de imagem, locação, volume de looks, captação de vídeo e pós-produção. Um lookbook de coleção com equipe enxuta e uma diária opera em outra ordem de grandeza que uma campanha com direção criativa, locação e desdobramento audiovisual. Orçamento sério vem aberto por rubrica e com o que não está incluso declarado."
+      },
+      {
+        "q": "Qual a diferença entre produção de moda e produção executiva?",
+        "a": "Produção de moda é a construção material da cena — looks, adereços, cenografia, coerência visual. Produção executiva é a camada de viabilização — orçamento, contratos, cronograma, locação, equipe e logística. As duas são distintas da direção criativa, que decide o que a marca está dizendo antes de qualquer execução."
+      },
+      {
+        "q": "Como escolher uma boa produtora de moda em SP?",
+        "a": "Avalie consistência de critério no portfólio, não só beleza das imagens. Observe se a produtora devolve perguntas antes de devolver preço. Exija orçamento aberto por rubrica com o que não está incluso declarado. Pergunte como respondem a imprevistos. E converse com quem vai comandar o set, não apenas com quem vende o projeto."
+      }
+    ],
+    "conclusao": "Contratar uma produtora de moda em São Paulo é, no fundo, contratar um critério de decisão. O set é sempre o mesmo: pouco tempo, muita gente, escolhas irreversíveis. O que muda é se existe alguém que sabe por que cada escolha está sendo feita. Quando essa pessoa existe, a produção deixa de ser um custo de calendário e passa a ser um investimento em percepção — o tipo de investimento que continua rendendo depois que a luz é desligada."
+  },
+  "naming-de-marca": {
+    "slug": "naming-de-marca",
+    "categoria": "Agência — Branding",
+    "pilar": "Pilar 2",
+    "cluster": "branding",
+    "titulo": "Naming de Marca: o que é, como funciona e por que importa antes do logo",
+    "subtitulo": "O nome é a primeira decisão estratégica de uma marca — e a única que ela vai repetir milhões de vezes sem poder corrigir depois.",
+    "metaTitle": "Naming de Marca: o que é e como funciona o processo",
+    "metaDescription": "O que é naming de marca, como funciona o processo, quanto tempo leva e por que o nome precisa ser decidido antes do logo. Guia direto da House Mazzutti.",
+    "keywords": "naming de marca, naming branding, criação de nome de marca, naming São Paulo, processo de naming, registro de marca INPI, identidade verbal, posicionamento de marca, House Mazzutti",
+    "data": "Setembro 2026",
+    "cover": {
+      "src": "/images/blog/naming-de-marca/cover.webp",
+      "alt": "Mesa de trabalho com estudos de naming e territórios verbais de marca",
+      "caption": "Identidade verbal — Agência HMZT",
+      "fallback": "/images/agencia/house-mazzutti/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/naming-de-marca/interior-1.webp",
+        "alt": "Painel com territórios semânticos e rotas de naming em processo de branding",
+        "caption": "Territórios semânticos · rotas de nome",
+        "fallback": "/images/agencia/house-mazzutti/capa.webp"
+      },
+      {
+        "src": "/images/blog/naming-de-marca/interior-2.webp",
+        "alt": "Estudo tipográfico de nome de marca aplicado em suportes físicos e digitais",
+        "caption": "Nome em uso · teste de aplicação",
+        "fallback": "/images/agencia/house-mazzutti/capa.webp"
+      }
+    ],
+    "respostaDireta": "Naming de marca é o processo estratégico de criação do nome de uma empresa, produto ou linha. Envolve leitura de posicionamento, definição de territórios semânticos, geração e filtragem de rotas, teste linguístico e verificação de viabilidade jurídica e digital. Leva de três a seis semanas e antecede o logo — porque a identidade visual é construída para sustentar o nome, nunca o contrário.",
+    "intro": "Todo projeto de marca chega com a mesma pressa: quando começa o logo. É compreensível — o logo é a parte visível, a que se mostra para o sócio, a que dá sensação de que algo aconteceu. Mas há uma decisão anterior que carrega mais peso e permite menos correção: o nome. Um logo pode ser redesenhado em cinco anos sem trauma. Um nome, não. Ele já estará no contrato, no domínio, no INPI, na boca do cliente e na memória do mercado. Naming não é a etapa criativa que abre o projeto. É a etapa estratégica que decide o que o resto vai ter que sustentar.",
+    "sections": [
+      {
+        "h2": "O que é naming de marca",
+        "paragraphs": [
+          "Naming é o processo de criação do nome de uma marca, produto, linha ou serviço a partir de uma estratégia de posicionamento. A diferença entre naming e \"pensar em nomes\" é a mesma que existe entre direção e improviso: o naming parte de um critério declarado e chega a uma escolha defensável.",
+          "Um nome bem construído faz três coisas ao mesmo tempo. Sinaliza território — comunica em que campo a marca joga antes de qualquer explicação. Cria distinção — separa a marca de um mercado que fala parecido. E resiste ao uso — é pronunciável, memorizável, escrevível ao telefone e registrável no INPI.",
+          "O que um nome não precisa fazer: descrever o produto. Nomes descritivos parecem seguros e são, na prática, os mais frágeis — porque são difíceis de registrar, fáceis de imitar e limitam a marca quando o negócio expande. O nome não precisa explicar. Precisa poder ser preenchido de significado ao longo do tempo."
+        ]
+      },
+      {
+        "h2": "Por que o nome vem antes do logo",
+        "paragraphs": [
+          "A identidade visual é uma resposta. A pergunta é o nome. A quantidade de letras, o ritmo das sílabas, a presença ou ausência de descritor, o tom — tudo isso determina decisões tipográficas, de lockup, de assinatura e de aplicação. Desenhar o logo antes é construir a resposta antes de conhecer a pergunta.",
+          "Há também um custo silencioso na inversão. Quando o logo já existe e o nome ainda está em discussão, o nome começa a ser escolhido pelo que cabe no desenho. É uma inversão de hierarquia: a estratégia passa a servir à execução.",
+          "E há o risco jurídico, que é o mais caro de todos. Investir em identidade visual sobre um nome que não passa na busca do INPI significa refazer tudo. Verificação de viabilidade não é burocracia de final de projeto — é filtro que roda junto com a criação."
+        ]
+      },
+      {
+        "h2": "Como funciona o processo de naming",
+        "paragraphs": [
+          "O processo tem cinco etapas, e nenhuma delas é opcional.",
+          "Imersão e posicionamento. Antes de qualquer nome, é preciso saber o que a marca defende, para quem fala, contra quem compete e que percepção precisa instalar. Naming sem posicionamento definido produz lista de nomes bonitos sem critério de escolha — e o cliente acaba decidindo por gosto pessoal.",
+          "Territórios semânticos. A partir do posicionamento, definem-se rotas de sentido: caminhos conceituais distintos que o nome pode percorrer. Um território pode ser evocativo, outro abstrato, outro patronímico, outro construído. O objetivo é garantir que as opções finais representem escolhas estratégicas diferentes, não variações da mesma ideia.",
+          "Geração e filtragem. Cada território gera dezenas de candidatos. A filtragem elimina por sonoridade, extensão, ambiguidade indesejada, dificuldade de grafia e leitura em outros idiomas quando há intenção internacional.",
+          "Verificação de viabilidade. Busca de anterioridade no INPI na classe de atuação, checagem de domínio, disponibilidade de arrobas e varredura de significados problemáticos. Nomes que não passam saem da lista antes de chegar à apresentação — não depois.",
+          "Apresentação e defesa. Poucas rotas finais, cada uma com justificativa estratégica, teste de aplicação e leitura de risco. A entrega inclui a recomendação da casa. Naming não é cardápio: é decisão apresentada com argumento."
+        ]
+      },
+      {
+        "h2": "Quanto tempo leva e o que está incluso",
+        "paragraphs": [
+          "Um projeto de naming bem conduzido leva de três a seis semanas. Menos que isso normalmente significa que a etapa de posicionamento foi pulada. Mais que isso costuma indicar ausência de critério de decisão do lado do cliente.",
+          "O escopo padrão inclui imersão estratégica, definição de territórios, geração e filtragem de rotas, busca de anterioridade no INPI na classe pertinente, checagem de domínio e redes, apresentação com defesa das rotas finais e uma rodada de ajuste. Em projetos com identidade verbal completa, soma-se assinatura, tom de voz e diretrizes de uso do nome.",
+          "O que normalmente não está incluso e deve ser combinado: o depósito do registro no INPI, feito por profissional de propriedade industrial, e a compra do domínio. A produtora do nome verifica viabilidade; o registro é ato jurídico separado — e deve ser feito rápido, assim que a decisão é tomada."
+        ]
+      },
+      {
+        "h2": "Os erros que custam caro depois",
+        "paragraphs": [
+          "Escolher por gosto e não por critério. O nome não precisa agradar o fundador. Precisa funcionar no mercado onde a marca compete. Gosto pessoal é o pior filtro disponível, porque é o único que ninguém consegue contestar com argumento.",
+          "Testar com amigos. Perguntar \"o que você acha desse nome?\" para o entorno produz ruído, não informação. A pessoa responde sobre o som, sem contexto de uso, de categoria ou de concorrência.",
+          "Ignorar a classe do INPI. Um nome pode estar disponível em uma classe e bloqueado em outra. Verificar na classe errada é não verificar.",
+          "Contratar naming como entrega isolada. O nome só se sustenta com posicionamento, identidade visual e tom de voz coerentes. Nome forte com marca frouxa vira apenas uma palavra bonita.",
+          "Na House Mazzutti, naming é tratado como etapa de branding — não como serviço avulso. O nome sai da mesma leitura estratégica que orienta identidade, narrativa e presença. É o que garante que ele não precise ser explicado toda vez que for dito."
+        ]
+      }
+    ],
+    "citacao": "O logo você troca. O nome você carrega. É a única decisão de marca que o mercado repete por você — e a única que você não pode corrigir sem começar de novo.",
+    "faq": [
+      {
+        "q": "O que é naming de marca?",
+        "a": "Naming de marca é o processo estratégico de criação do nome de uma empresa, produto ou linha, a partir do posicionamento definido. Envolve imersão, definição de territórios semânticos, geração e filtragem de rotas, verificação de viabilidade jurídica e digital, e apresentação das opções finais com defesa estratégica."
+      },
+      {
+        "q": "Quanto tempo leva um projeto de naming?",
+        "a": "Entre três e seis semanas. Prazos menores costumam indicar que a etapa de posicionamento foi pulada — o que transforma o naming em lista de nomes sem critério de escolha."
+      },
+      {
+        "q": "Por que o naming precisa vir antes do logo?",
+        "a": "Porque a identidade visual é construída para sustentar o nome. Extensão, ritmo, sonoridade e presença de descritor determinam decisões tipográficas e de assinatura. Desenhar o logo antes também gera risco jurídico: se o nome não passar na busca do INPI, toda a identidade precisa ser refeita."
+      },
+      {
+        "q": "O registro no INPI está incluso no naming?",
+        "a": "A busca de anterioridade na classe de atuação faz parte do processo de naming. O depósito do registro é ato jurídico separado, feito por profissional de propriedade industrial, e deve ser providenciado assim que a decisão do nome é tomada."
+      }
+    ],
+    "conclusao": "Um bom nome não é o que soa melhor na sala de reunião. É o que continua funcionando cinco anos depois, quando a marca expandiu, mudou de categoria, ganhou concorrente e precisou ser dita ao telefone por alguém apressado. Chegar até esse nome exige processo, critério e disposição para descartar boas ideias que não servem à estratégia. É trabalho anterior ao desenho — e é ele que determina se o desenho terá o que sustentar."
+  },
+  "custo-de-branding": {
+    "slug": "custo-de-branding",
+    "categoria": "Agência — Branding",
+    "pilar": "Pilar 2",
+    "cluster": "branding",
+    "titulo": "Custo de Branding: quanto custa um projeto de marca em 2026",
+    "subtitulo": "Preço de branding não se compara por número. Compara-se por escopo — e é aí que quase toda decisão de contratação erra.",
+    "metaTitle": "Custo de Branding: quanto custa um projeto de marca",
+    "metaDescription": "Quanto custa um projeto de branding em 2026, o que compõe o preço, o que está incluso em cada faixa de escopo e como avaliar proposta sem comparar só o número.",
+    "keywords": "custo de branding, quanto custa branding, investimento em branding, preço branding SP, projeto de identidade visual preço, orçamento de branding, rebranding custo, House Mazzutti",
+    "data": "Setembro 2026",
+    "cover": {
+      "src": "/images/blog/custo-de-branding/cover.webp",
+      "alt": "Materiais de um projeto de branding completo dispostos sobre mesa de trabalho",
+      "caption": "Projeto de marca — Agência HMZT",
+      "fallback": "/images/agencia/house-mazzutti/capa.webp"
+    },
+    "interior": [
+      {
+        "src": "/images/blog/custo-de-branding/interior-1.webp",
+        "alt": "Manual de marca aberto mostrando diretrizes de aplicação de identidade visual",
+        "caption": "Manual de marca · diretrizes de uso",
+        "fallback": "/images/agencia/house-mazzutti/capa.webp"
+      },
+      {
+        "src": "/images/blog/custo-de-branding/interior-2.webp",
+        "alt": "Aplicações de identidade visual em papelaria, embalagem e suporte digital",
+        "caption": "Aplicações · identidade em uso real",
+        "fallback": "/images/agencia/house-mazzutti/capa.webp"
+      }
+    ],
+    "respostaDireta": "O custo de um projeto de branding em 2026 varia conforme escopo, maturidade da marca e profundidade estratégica. Projetos de identidade visual essencial partem de faixas mais baixas; projetos completos — com posicionamento, naming, identidade, narrativa e sistema de aplicação — operam em ordem de grandeza superior. O que define o preço não é a quantidade de peças entregues, mas a profundidade da estratégia que as sustenta.",
+    "intro": "A pergunta chega sempre da mesma forma: quanto custa fazer o branding da minha marca. E a resposta honesta é desconfortável, porque depende. Não depende no sentido evasivo — depende no sentido técnico. Branding não é um produto com especificação fixa. É um escopo que se define a partir do estágio da marca, do problema que precisa ser resolvido e do nível de decisão estratégica que o projeto vai carregar. Quem responde com um número antes de perguntar qualquer coisa está vendendo entregável, não projeto. Este texto abre a estrutura de custo para que a comparação entre propostas seja possível.",
+    "sections": [
+      {
+        "h2": "O que compõe o custo de um projeto de branding",
+        "paragraphs": [
+          "Um orçamento de branding é a soma de camadas, e cada camada tem custo próprio. Entender essas camadas é o que permite ler duas propostas com valores muito diferentes e descobrir que elas não estavam falando da mesma coisa.",
+          "Estratégia e posicionamento. Imersão, pesquisa de mercado e concorrência, definição de território, público, proposta de valor, arquitetura de marca. É a camada menos visível e a que determina a qualidade de tudo depois.",
+          "Identidade verbal. Naming quando aplicável, assinatura, tom de voz, narrativa institucional, mensagens-chave.",
+          "Identidade visual. Símbolo, logotipo, sistema tipográfico, paleta, grafismos, direção fotográfica, sistema de composição.",
+          "Sistema de aplicação. Papelaria, embalagem, sinalização, apresentação institucional, templates de redes, aplicação digital, materiais de ponto de venda.",
+          "Governança. Manual de marca, diretrizes de uso, treinamento de equipe interna, entrega organizada de arquivos.",
+          "Um projeto que entrega só a terceira camada custa menos e resolve menos. Isso não é problema em si — é problema quando é vendido como se fosse a coisa toda."
+        ]
+      },
+      {
+        "h2": "As faixas de escopo em 2026",
+        "paragraphs": [
+          "Três configurações cobrem a maior parte da demanda real do mercado brasileiro.",
+          "Identidade essencial. Para negócios em início de operação, com posicionamento já claro na cabeça do fundador e necessidade de existir visualmente com consistência. Inclui identidade visual, aplicações básicas e manual enxuto. Prazo típico: quatro a seis semanas. É a faixa de menor investimento e serve bem quando o problema é mesmo de aparência, não de definição.",
+          "Marca estruturada. Para negócios em operação que já têm receita e precisam de coerência entre o que fazem e como são percebidos. Inclui estratégia de posicionamento, identidade verbal e visual, sistema de aplicação e manual completo. Prazo típico: oito a doze semanas. É a faixa em que a maior parte das empresas de médio porte deveria estar e raramente está.",
+          "Marca completa ou rebranding. Para marcas com histórico, portfólio de produtos, múltiplas unidades ou necessidade de reposicionamento. Inclui pesquisa, arquitetura de marca, naming ou renaming, narrativa, identidade completa, sistema extenso de aplicação, governança e acompanhamento de implementação. Prazo típico: doze a vinte semanas.",
+          "A distância entre a primeira e a terceira faixa não é de capricho. É de risco. Rebranding mal conduzido custa mais do que o projeto — custa a base de clientes que deixou de reconhecer a marca."
+        ]
+      },
+      {
+        "h2": "Por que duas propostas têm preços tão diferentes",
+        "paragraphs": [
+          "Escopo declarado. A diferença mais comum é simplesmente que uma proposta inclui estratégia e a outra não. Compare a lista de entregáveis linha a linha antes de comparar o valor final.",
+          "Senioridade de quem executa. Um projeto conduzido por quem já reposicionou marcas custa mais do que um executado por equipe júnior com supervisão eventual. É a mesma diferença que existe em qualquer serviço profissional.",
+          "Profundidade de pesquisa. Pesquisa de mercado, entrevistas com clientes e análise competitiva consomem horas reais. Propostas sem essa camada são naturalmente mais baratas — e naturalmente mais frágeis quando o mercado reage.",
+          "Rodadas de revisão. Duas rodadas ou revisões ilimitadas mudam o custo de forma significativa. Verifique quantas estão incluídas e o que acontece depois delas.",
+          "Cessão de direitos. Quem detém os direitos sobre os arquivos e a marca criada precisa estar explícito em contrato. Esse item é ignorado com frequência e aparece como problema anos depois.",
+          "Preço baixo raramente é economia em branding. É antecipação de custo: a marca refaz o projeto em dois anos, e paga duas vezes."
+        ]
+      },
+      {
+        "h2": "Como avaliar se o investimento se justifica",
+        "paragraphs": [
+          "A pergunta certa não é quanto custa. É quanto custa não fazer. Marca sem posicionamento definido compete por preço, porque não oferece nenhum outro critério de escolha ao cliente. Cada ponto percentual de desconto concedido por falta de percepção é custo de branding pago em silêncio, todo mês.",
+          "Há três sinais concretos de que o investimento se paga. Primeiro: a equipe comercial usa argumentos diferentes entre si para explicar o mesmo negócio. Segundo: o cliente pergunta o preço antes de perguntar qualquer outra coisa. Terceiro: a marca precisa se explicar em toda apresentação — o material não sustenta a conversa sozinho.",
+          "Quando esses três sinais aparecem juntos, o problema não é de vendas nem de mídia. É de percepção. E percepção não se corrige com mais anúncio: corrige-se com posicionamento.",
+          "O horizonte de retorno também importa na conta. Um projeto de branding bem conduzido tem vida útil de cinco a dez anos. Distribuído nesse período, o investimento costuma ser menor que a verba mensal de mídia da mesma empresa — com a diferença de que a mídia para de trabalhar no dia em que o cartão é desligado, e a marca não."
+        ]
+      },
+      {
+        "h2": "Como pedir e ler um orçamento de branding",
+        "paragraphs": [
+          "Peça o orçamento aberto por etapa, com prazo e entregável declarado em cada uma. Pergunte quantas rodadas de revisão estão incluídas e qual o custo da rodada adicional. Confirme quem executa e com que senioridade. Verifique a cessão de direitos em contrato. E pergunte o que acontece se o projeto precisar ser pausado.",
+          "Desconfie de três coisas: preço fechado dado antes de qualquer diagnóstico, escopo descrito só por quantidade de peças e promessa de prazo muito curto para escopo amplo.",
+          "Na House Mazzutti, todo projeto começa por um diagnóstico antes da proposta. Não por formalidade — porque orçar branding sem entender o problema é orçar a coisa errada com precisão."
+        ]
+      }
+    ],
+    "citacao": "Marca sem posicionamento compete por preço. O desconto que ela dá todo mês para ser escolhida é o custo de branding que ela achou que não estava pagando.",
+    "faq": [
+      {
+        "q": "Quanto custa um projeto de branding em 2026?",
+        "a": "Depende do escopo. Projetos de identidade essencial — identidade visual, aplicações básicas e manual enxuto — ficam na faixa de menor investimento. Projetos de marca estruturada, com posicionamento, identidade verbal e visual e sistema completo, operam em ordem de grandeza superior. Rebranding de marcas com histórico e portfólio é a faixa mais alta. O que define o preço é a profundidade estratégica, não a quantidade de peças."
+      },
+      {
+        "q": "O que está incluso em um projeto de branding completo?",
+        "a": "Estratégia e posicionamento, identidade verbal (naming, assinatura, tom de voz, narrativa), identidade visual (símbolo, tipografia, paleta, direção fotográfica), sistema de aplicação (papelaria, embalagem, digital, ponto de venda) e governança (manual de marca, diretrizes e entrega organizada de arquivos)."
+      },
+      {
+        "q": "Por que duas agências cobram valores tão diferentes por branding?",
+        "a": "Porque raramente estão propondo o mesmo escopo. As diferenças mais comuns são a presença ou ausência de estratégia, a profundidade de pesquisa, a senioridade de quem executa, o número de rodadas de revisão incluídas e as condições de cessão de direitos. Compare a lista de entregáveis linha a linha antes de comparar o valor."
+      },
+      {
+        "q": "Quanto tempo dura um projeto de branding?",
+        "a": "Identidade essencial leva de quatro a seis semanas. Marca estruturada, de oito a doze semanas. Rebranding completo, de doze a vinte semanas. Um projeto bem conduzido tem vida útil de cinco a dez anos."
+      }
+    ],
+    "conclusao": "O custo de branding só parece alto quando é comparado com nada. Comparado com a verba de mídia de doze meses, com o desconto concedido por falta de percepção ou com o preço de refazer o projeto em dois anos, a conta muda de sinal. A decisão inteligente não é procurar o orçamento mais baixo — é entender qual escopo o negócio precisa agora e contratar exatamente esse, com clareza do que está dentro e do que não está. Quando o posicionamento está certo, a marca deixa de precisar convencer. Ela é entendida."
+  },
   "book-para-modelos-quem-e-escolhido": {
     "categoria": "Studio — Book",
     "titulo": "Book para modelos: o que realmente define quem é escolhido no mercado",
@@ -7278,7 +7586,7 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     ],
     conclusao: 'Next.js não é uma preferência de desenvolvedor: é uma decisão de negócio sobre velocidade, busca e durabilidade. Marca que depende de percepção não pode se dar ao luxo de um site que contradiz o próprio posicionamento no primeiro carregamento. Isso dito, tecnologia sozinha não resolve — site rápido com conteúdo genérico continua invisível. A ordem que funciona é decidir o que a marca precisa afirmar, desenhar a estrutura que sustenta essa afirmação e só então escolher com o que construir. Conheça a frente de desenvolvimento web da House Mazzutti em /agencia/web/.',
     cta: { label: 'Converse com a House Mazzutti sobre o site da sua marca', href: '/agencia/web/', lead_type: 'agencia_web' },
-  },,
+  },
 
   'campanha-reserva-spfw-branding-moda': {
   slug: 'campanha-reserva-spfw-branding-moda',
@@ -8331,7 +8639,7 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     }
   ],
   conclusao: 'Refazer identidade visual é uma decisão de negócio disfarçada de decisão estética — e é justamente esse disfarce que faz tanta gente errar. A pergunta certa nunca foi se a marca está bonita. É se ela está dizendo, sem palavras, exatamente aquilo que a empresa precisa que seja entendido antes de qualquer conversa começar. Quando a resposta é não, refazer é investimento. Quando a resposta é sim e o incômodo é só cansaço interno, refazer é destruir patrimônio com boa intenção. Se você chegou até aqui sem conseguir nomear qual decisão de negócio a nova identidade destravaria, esse é o trabalho a fazer primeiro. O resto é consequência.'
-}
+},
   'diferenca-book-ensaio-fotografico': {
   slug: 'diferenca-book-ensaio-fotografico',
   titulo: 'Book e Ensaio Fotográfico: Entenda a Diferença',
