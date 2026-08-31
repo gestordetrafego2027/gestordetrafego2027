@@ -865,11 +865,13 @@ export const angeloPersonSchema = {
     'Posicionamento de Marca',
     'Produção de Moda',
   ],
+  foundedOrganization: {'@id': ORG_ID},
   sameAs: [
     social.instagram.url,
     social.linkedin.url,
     social.youtube.url,
     social.facebook.url,
+    'https://www.wikidata.org/wiki/Q141169082',
   ],
 }
 

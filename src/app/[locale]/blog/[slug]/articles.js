@@ -4931,6 +4931,7 @@ export const articles = {
     cover: null,
     interior: [],
     citacao: 'A IA não tornou a produção mais barata. Ela tornou a mediocridade mais rápida — e a direção, mais cara.',
+    respostaDireta: 'A inteligência artificial na produção audiovisual deslocou o custo, não reduziu: tarefas técnicas de alta repetição ficaram acessíveis, mas a direção criativa ficou mais cara porque virou o único lugar onde ainda existe diferença entre uma marca e outra. Ferramentas de IA cobrem pré-produção assistida, rotoscopia, finalização básica e geração de referência visual — mas não substituem a decisão sobre o que filmar, para quem e com qual tese. A Produtora House Mazzutti usa IA como acelerador de operação, nunca como substituto de direção.',
     intro: 'Existe uma frase que se repete em quase toda reunião de orçamento desde o ano passado: "com IA isso deveria custar menos". A frase parece razoável e está errada por um motivo simples — ela confunde o preço da ferramenta com o preço da decisão. A inteligência artificial não barateou a produção audiovisual. Ela deslocou o custo. Tudo que era execução técnica ficou acessível, rápido e reproduzível. Tudo que era direção ficou mais caro, porque virou o único lugar onde ainda existe diferença entre uma marca e outra. Quem lê essa mudança como desconto vai descobrir, tarde, que o problema nunca foi o preço da câmera.',
     sections: [
       {
@@ -5032,6 +5033,7 @@ export const articles = {
     cover: null,
     interior: [],
     citacao: 'Fashion film define quem a marca é. Reel define com que frequência ela é lembrada. Trocar as funções é o erro mais caro do audiovisual de marca.',
+    respostaDireta: 'Fashion film e Reels não competem — são camadas distintas de uma mesma arquitetura de marca. Fashion film constrói território simbólico: usa gramática de cinema, dura minutos, sobrevive fora da plataforma e posiciona o universo da marca. Reel de marca é unidade de presença: ocupa espaço mental com frequência, dura segundos e serve à circulação. A decisão entre os dois não é de orçamento — é de objetivo. Marca que quer posicionar precisa de fashion film primeiro; marca que quer frequência, de Reels. A maioria precisa dos dois, em proporções diferentes por fase.',
     intro: 'A pergunta chega quase sempre no mesmo formato: fashion film ou Reels? A resposta honesta é que a pergunta está mal construída. Não são alternativas concorrentes — são camadas distintas de uma mesma arquitetura. Confundir as duas não é um erro de formato. É um erro de estratégia, e ele custa caro nos dois sentidos: marca que trata fashion film como Reel longo desperdiça produção; marca que trata Reel como substituto de fashion film dissolve identidade.',
     sections: [
       {
@@ -5138,6 +5140,7 @@ export const articles = {
     cover: null,
     interior: [],
     citacao: 'Marca sem opinião não é neutra. É invisível com boa apresentação.',
+    respostaDireta: 'Ponto de vista de marca é a resposta que ela dá a uma pergunta não dita: como as coisas deveriam ser no seu território? Não é slogan nem missão — é uma posição sobre o mundo, sustentada por decisões visíveis de produto, comunicação e parceria. Marcas brasileiras que não têm ponto de vista dependem de padrão externo para existir; quando esse padrão muda, elas somem. Ter opinião não é ser polêmico: é ser coerente o suficiente para que metade das decisões de marca se resolvam sozinhas, sem reunião.',
     intro: 'Passo boa parte das minhas semanas sentado à frente de empresários que querem discutir verba, distribuição e calendário. Quase nenhum quer discutir o que a marca pensa. E é exatamente aí que o problema mora. O maior obstáculo das marcas brasileiras não é orçamento, não é canal, não é qualidade de produto — é a recusa de ter uma posição própria. Marca que não tem ponto de vista precisa de um padrão externo para existir. E quando esse padrão passa, ela passa junto.',
     sections: [
       {
