@@ -8,7 +8,6 @@ import {useTranslations} from 'next-intl';
 import Header from "@/app/components/Header";
 import ClientLogos from "@/app/components/ClientLogos";
 import BlogSection from "@/app/components/BlogSection";
-import InstagramSection from "@/app/components/InstagramSection";
 import FormDrawer from "@/app/components/FormDrawer";
 import FormGeral from "@/app/components/forms/FormGeral";
 import TypewriterText from '@/app/components/TypewriterText';
@@ -641,16 +640,6 @@ export default function Home() {
                     title={t('home.blog_section_title')}
                     allLabel={t('home.blog_see_all')}
                     readLabel={t('home.blog_read')}
-                />
-
-                {/* INSTAGRAM SECTION */}
-                <InstagramSection
-                    limit={3}
-                    eyebrow={t('home.instagram_label')}
-                    title={t('home.instagram_titulo')}
-                    description={t('home.instagram_desc')}
-                    allLabel={t('home.instagram_see_all')}
-                    emptyLabel={t('home.instagram_cta')}
                 />
 
                 {/* CTA CONTACT SECTION */}
