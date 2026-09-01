@@ -16,7 +16,7 @@ Medido em 2026-09-01, direto no servidor:
 |---|---|---|---|
 | `housemazzutti.com` | 31.97.17.85 | Let's Encrypt, SAN = `housemazzutti.com` | 307 → `/pt/` ✅ |
 | `www.housemazzutti.com` | 31.97.17.85 | `CN=TRAEFIK DEFAULT CERT` (autoassinado) | 503 |
-| `app.housemazzutti.com` | sem registro | — | — |
+| `app.housemazzutti.com` | sem registro (correto, ver nota) | — | — |
 
 O DNS do `www` aponta certo. O que falta é o Traefik do Coolify não ter router
 para esse host: devolve o certificado padrão (`NET::ERR_CERT_AUTHORITY_INVALID`)
@@ -44,8 +44,9 @@ Deve responder `HTTP/2 308` (o redirect para o apex), não erro de certificado.
 O redirect `www` → apex já está em `next.config.mjs` e entra em ação sozinho
 assim que o certificado existir. Antes disso ele é inerte.
 
-Confirme também se `app.housemazzutti.com` deveria existir — hoje não tem
-registro DNS nenhum.
+`app.housemazzutti.com` aparecia no enunciado da auditoria, mas **não deve
+existir** — confirmado com o Angelo. Não tem registro DNS e não é referenciado em
+nenhum lugar do código, env ou config. Nada a fazer.
 
 ---
 

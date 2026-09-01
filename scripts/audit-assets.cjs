@@ -744,7 +744,7 @@ out += `Evidência coletada em 2026-09-01:\n\n`;
 out += `| Host | DNS | Certificado servido | HTTP |\n|---|---|---|---|\n`;
 out += `| \`housemazzutti.com\` | 31.97.17.85 | Let's Encrypt, SAN = \`housemazzutti.com\` | 307 → \`/pt/\` (ok) |\n`;
 out += `| \`www.housemazzutti.com\` | 31.97.17.85 | **\`CN=TRAEFIK DEFAULT CERT\` (autoassinado)** | **503** |\n`;
-out += `| \`app.housemazzutti.com\` | **sem registro** | — | — |\n\n`;
+out += `| \`app.housemazzutti.com\` | sem registro — correto, não deve existir | — | — |\n\n`;
 out += `O DNS do \`www\` aponta certo, mas o Traefik do Coolify não tem router para\n`;
 out += `esse host: devolve o certificado padrão (daí o \`NET::ERR_CERT_AUTHORITY_INVALID\`\n`;
 out += `no navegador) e, ignorando o TLS, um 503. Causa: o domínio cadastrado na\n`;

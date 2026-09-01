@@ -39,7 +39,7 @@ Evidência coletada em 2026-09-01:
 |---|---|---|---|
 | `housemazzutti.com` | 31.97.17.85 | Let's Encrypt, SAN = `housemazzutti.com` | 307 → `/pt/` (ok) |
 | `www.housemazzutti.com` | 31.97.17.85 | **`CN=TRAEFIK DEFAULT CERT` (autoassinado)** | **503** |
-| `app.housemazzutti.com` | **sem registro** | — | — |
+| `app.housemazzutti.com` | sem registro — correto, não deve existir | — | — |
 
 O DNS do `www` aponta certo, mas o Traefik do Coolify não tem router para
 esse host: devolve o certificado padrão (daí o `NET::ERR_CERT_AUTHORITY_INVALID`
