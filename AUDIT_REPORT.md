@@ -6,24 +6,24 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 
 | Métrica | Valor |
 |---|---:|
-| Total de referências de mídia | 1655 |
-| — estáticas (inclui `${SITE_URL}` + caminho fixo) | 1609 |
+| Total de referências de mídia | 1660 |
+| — estáticas (inclui `${SITE_URL}` + caminho fixo) | 1614 |
 | — dinâmicas de verdade (slug/índice variável) | 46 |
-| Imagens OK | 1513 |
+| Imagens OK | 1518 |
 | Case mismatch (correção automática) | 0 |
 | Extensão mismatch (correção automática) | 0 |
 | Fuzzy match (correção sugerida) | 1 |
 | **BROKEN irrecuperáveis** | **95** |
 | Referências ignoradas (relativas/import) | 0 |
 | Arquivos em /public | 1686 |
-| Imagens órfãs em /public | 674 (161.1 MB) |
+| Imagens órfãs em /public | 672 (160.9 MB) |
 | Links internos quebrados | 0 |
 | Links externos (revisão manual) | 146 |
-| Tags `<img>` cruas (a migrar) | 62 |
+| Tags `<img>` cruas (a migrar) | 55 |
 | Tags `<Image>` (next/image) já usadas | 577 |
-| Imagens SEM atributo alt | 14 |
+| Imagens SEM atributo alt | 7 |
 | Imagens com alt="" | 9 |
-| Tags `<video>` | 15 |
+| Tags `<video>` | 14 |
 | Peso total de /public | 707.4 MB |
 
 ---
@@ -256,34 +256,29 @@ _Nenhuma ocorrência._
 
 _Nenhuma ocorrência._
 
-## Vídeos — 15
+## Vídeos — 14
 
 | Arquivo:linha | src | arquivo | poster | arquivo do poster | preload | playsInline |
 |---|---|:--:|---|:--:|:--:|:--:|
-| `src/app/[locale]/canoinhas/page.js:96` | — | — | **sem poster** | — | metadata | sim |
-| `src/app/[locale]/canoinhas/page.js:606` | — | — | **sem poster** | — | none | sim |
+| `src/app/[locale]/canoinhas/page.js:96` | — | — | `/images/studio/canoinhas-hero/mobile.webp` | ok | metadata | sim |
+| `src/app/[locale]/canoinhas/page.js:607` | — | — | `/images/studio/canoinhas-hero/mobile.webp` | ok | none | sim |
 | `src/app/[locale]/page.js:189` | `/videos/house-mazzutti-fashion-film-hero.mp4` | ok | `/images/hero-poster.webp` | ok | metadata | sim |
 | `src/app/[locale]/page.js:202` | `/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.vertical.mp4` | ok | `/images/hero-poster.webp` | ok | metadata | sim |
 | `src/app/[locale]/produtora/publicidade/page.js:44` | `/videos/house-mazzutti-fashion-film-hero.mp4` | ok | `/images/produtora/beleza/we-pink-ze-felipe/capa.webp` | ok | metadata | sim |
-| `src/app/academy/curso/[slug]/aula/[lessonId]/VideoPlayer.tsx:6` | — | — | **sem poster** | — | **ausente** | **não** |
-| `src/app/academy/curso/[slug]/aula/[lessonId]/VideoPlayer.tsx:102` | — | — | **sem poster** | — | metadata | **não** |
-| `src/app/academy/workshop-producao-direcao-01/midia-kit/route.ts:514` | — | — | `/images/academy/inside-out/cover.webp` | ok | **ausente** | **não** |
-| `src/app/academy/workshop-producao-direcao-01/route.ts:111` | — | — | **sem poster** | — | **ausente** | **não** |
-| `src/app/academy/workshop-producao-direcao-01/route.ts:119` | — | — | **sem poster** | — | **ausente** | **não** |
-| `src/app/academy/workshop-producao-direcao-01/route.ts:288` | `/videos/beatco-moda.mp4` | ok | `/images/produtora/moda/beatco/capa.webp` | ok | **ausente** | **não** |
-| `src/app/academy/workshop-producao-direcao-01/route.ts:306` | `/videos/beauty-oceane-larissa.mp4` | ok | `/images/produtora/beleza/oceane/capa.webp` | ok | **ausente** | **não** |
-| `src/app/academy/workshop-producao-direcao-01/route.ts:563` | `/videos/studio-plano.mp4` | ok | `/images/academy/studio-plano/studio-plano-1.webp` | ok | auto | **não** |
-| `src/app/academy/workshop-producao-direcao-01/route.ts:610` | `/videos/depoimentos-inside-out.mp4` | ok | **sem poster** | — | metadata | **não** |
+| `src/app/academy/curso/[slug]/aula/[lessonId]/VideoPlayer.tsx:102` | — | — | **sem poster** | — | metadata | sim |
+| `src/app/academy/workshop-producao-direcao-01/midia-kit/route.ts:514` | — | — | `/images/academy/inside-out/cover.webp` | ok | metadata | sim |
+| `src/app/academy/workshop-producao-direcao-01/route.ts:111` | — | — | `/images/academy/banner-workshop-edit02-sp.webp` | ok | metadata | sim |
+| `src/app/academy/workshop-producao-direcao-01/route.ts:120` | — | — | `/images/academy/inside-out/cover.webp` | ok | metadata | sim |
+| `src/app/academy/workshop-producao-direcao-01/route.ts:290` | `/videos/beatco-moda.mp4` | ok | `/images/produtora/moda/beatco/capa.webp` | ok | metadata | sim |
+| `src/app/academy/workshop-producao-direcao-01/route.ts:308` | `/videos/beauty-oceane-larissa.mp4` | ok | `/images/produtora/beleza/oceane/capa.webp` | ok | metadata | sim |
+| `src/app/academy/workshop-producao-direcao-01/route.ts:565` | `/videos/studio-plano.mp4` | ok | `/images/academy/studio-plano/studio-plano-1.webp` | ok | metadata | sim |
+| `src/app/academy/workshop-producao-direcao-01/route.ts:612` | `/videos/depoimentos-inside-out.mp4` | ok | `/images/academy/inside-out/cover.webp` | ok | metadata | sim |
 | `src/app/components/PortfolioVideo.js:47` | — | — | **sem poster** | — | metadata | sim |
 
-## Imagens sem atributo alt — 14
+## Imagens sem atributo alt — 7
 
 | Arquivo:linha | Tag | Trecho |
 |---|---|---|
-| `src/app/[locale]/blog/page.js:49` | `<img>` | `<img>` |
-| `src/app/[locale]/canoinhas/checkout/page.js:48` | `<img>` | `<img>` |
-| `src/app/[locale]/canoinhas/page.js:109` | `<img>` | `<img>` |
-| `src/app/[locale]/checkout/pix-pendente/[orderId]/PixPendenteClient.tsx:102` | `<img>` | `<img>` |
 | `src/app/[locale]/portfolio-produtora/bia/page.js:130` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
 | `src/app/[locale]/portfolio-produtora/festiva/page.js:133` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
 | `src/app/[locale]/portfolio-produtora/idrissi/page.js:145` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
@@ -291,17 +286,14 @@ _Nenhuma ocorrência._
 | `src/app/[locale]/portfolio-produtora/simony-marca/page.js:131` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
 | `src/app/[locale]/portfolio-produtora/superbia/page.js:129` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
 | `src/app/[locale]/portfolio-produtora/tf/page.js:133` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
-| `src/app/academy/[type]/[slug]/page.js:93` | `<img>` | `<img>` |
-| `src/app/academy/checkout/page.js:137` | `<img>` | `<img>` |
-| `src/app/academy/comunidade/[spaceSlug]/page.js:96` | `<img>` | `<img>` |
 
 ## Imagens com alt="" (verificar se decorativas) — 9
 
 | Arquivo:linha | Tag |
 |---|---|
 | `src/app/[locale]/agencia/page.js:165` | `<Image>` |
-| `src/app/[locale]/canoinhas/page.js:442` | `<Image>` |
-| `src/app/[locale]/canoinhas/page.js:508` | `<Image>` |
+| `src/app/[locale]/canoinhas/page.js:443` | `<Image>` |
+| `src/app/[locale]/canoinhas/page.js:509` | `<Image>` |
 | `src/app/[locale]/page.js:368` | `<Image>` |
 | `src/app/[locale]/produtora/page.js:196` | `<Image>` |
 | `src/app/[locale]/studio/page.js:226` | `<Image>` |
@@ -309,19 +301,11 @@ _Nenhuma ocorrência._
 | `src/app/academy/comunidade/[spaceSlug]/page.js:100` | `<img>` |
 | `src/components/analytics/Tracking.tsx:145` | `<img>` |
 
-## Tags <img> que PODEM migrar para next/image (JSX) — 11
+## Tags <img> que PODEM migrar para next/image (JSX) — 0
 
-| Arquivo | Ocorrências |
-|---|---:|
-| `src/app/[locale]/canoinhas/page.js` | 2 |
-| `src/app/academy/[type]/[slug]/page.js` | 2 |
-| `src/app/academy/checkout/page.js` | 2 |
-| `src/app/academy/comunidade/[spaceSlug]/page.js` | 2 |
-| `src/app/[locale]/blog/page.js` | 1 |
-| `src/app/[locale]/canoinhas/checkout/page.js` | 1 |
-| `src/app/[locale]/checkout/pix-pendente/[orderId]/PixPendenteClient.tsx` | 1 |
+_Nenhuma ocorrência._
 
-## Tags <img> que NÃO podem migrar (impossibilidade técnica) — 51
+## Tags <img> que NÃO podem migrar (impossibilidade técnica) — 55
 
 `next/image` exige JSX e um loader do Next. Os casos abaixo não atendem
 esse pré-requisito — migrá-los quebraria a página.
@@ -333,7 +317,11 @@ esse pré-requisito — migrá-los quebraria a página.
 | `src/app/academy/workshop-inside-out-edit-01/route.ts` | 12 | HTML em string dentro de route handler — sem JSX |
 | `src/app/academy/workshop-producao-direcao-01/route.ts` | 4 | HTML em string dentro de route handler — sem JSX |
 | `src/app/[locale]/canoinhas/checkout/page.js` | 1 | data: URI (QR code) — next/image não aplica |
+| `src/app/[locale]/canoinhas/page.js` | 1 | mantido por decisão documentada no código (ver comentário acima da tag) |
 | `src/app/[locale]/checkout/pix-pendente/[orderId]/PixPendenteClient.tsx` | 1 | data: URI (QR code) — next/image não aplica |
+| `src/app/academy/[type]/[slug]/page.js` | 1 | mantido por decisão documentada no código (ver comentário acima da tag) |
+| `src/app/academy/checkout/page.js` | 1 | mantido por decisão documentada no código (ver comentário acima da tag) |
+| `src/app/academy/comunidade/[spaceSlug]/page.js` | 1 | mantido por decisão documentada no código (ver comentário acima da tag) |
 | `src/components/analytics/Tracking.tsx` | 1 | pixel de tracking / URL externa |
 
 ## Saúde das imagens dos artigos do blog
@@ -392,9 +380,9 @@ também está quebrado. O OG/Twitter/JSON-LD, porém, usa `cover.src` direto
 | `quanto-custa-book-fotografico-profissional` | 1 |
 | `casa-criativa-sao-paulo` | 1 |
 
-## Imagens órfãs em /public (NÃO deletadas) — 674
+## Imagens órfãs em /public (NÃO deletadas) — 672
 
-Total: 161.1 MB. Nada foi removido — lista apenas para revisão.
+Total: 160.9 MB. Nada foi removido — lista apenas para revisão.
 
 | Arquivo | KB |
 |---|---:|
@@ -725,7 +713,6 @@ Total: 161.1 MB. Nada foi removido — lista apenas para revisão.
 | `/images-backup/studio/gab-cruz/4.jpg` | 143 |
 | `/images-backup/studio/rebeca-cabral/3.jpg` | 143 |
 | `/images-backup/studio/jessica-bittelbrun/capa.jpg` | 142 |
-| `/images/studio/canoinhas-hero/mobile.webp` | 142 |
 | `/images-backup/studio/vitoria-boidt/3.jpg` | 142 |
 | `/images-backup/studio/rebeca-cabral/1.jpg` | 140 |
 | `/images-backup/studio/emanuelly-terres/2.jpg` | 139 |
@@ -946,7 +933,6 @@ Total: 161.1 MB. Nada foi removido — lista apenas para revisão.
 | `/images-backup/agencia/mabdo/1.jpg` | 55 |
 | `/images-backup/studio/mileide-mihaile/capa.jpg` | 54 |
 | `/images-backup/studio/simonny/6.jpg` | 54 |
-| `/images/academy/banner-workshop-edit02-sp.webp` | 54 |
 | `/images-backup/agencia/knowhol/4.jpg` | 54 |
 | `/images-backup/produtora/beleza/jequiti-galisteu/3.jpg` | 53 |
 | `/images-backup/studio/simonny/2.jpg` | 53 |

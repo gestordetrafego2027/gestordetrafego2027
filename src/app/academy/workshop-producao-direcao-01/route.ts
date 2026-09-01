@@ -110,7 +110,8 @@ body.has-announce{padding-top:40px;}
       <!-- desktop: horizontal -->
       <video
         class="hero-video hero-video--h"
-        autoplay muted loop playsinline
+        autoplay muted loop playsinline preload="metadata"
+        poster="/images/academy/banner-workshop-edit02-sp.webp"
         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;"
       >
         <source src="/videos/inside-out-hero-horizontal.mp4" type="video/mp4">
@@ -118,7 +119,8 @@ body.has-announce{padding-top:40px;}
       <!-- mobile: vertical -->
       <video
         class="hero-video hero-video--v"
-        autoplay muted loop playsinline
+        autoplay muted loop playsinline preload="metadata"
+        poster="/images/academy/inside-out/cover.webp"
         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;display:none;"
       >
         <source src="/videos/inside-out-hero-vertical.mp4" type="video/mp4">
@@ -285,7 +287,7 @@ body.has-announce{padding-top:40px;}
           </ul>
         </div>
         <div class="set-img">
-          <video autoplay muted loop playsinline poster="/images/produtora/moda/beatco/capa.webp" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15) contrast(1.05);" src="/videos/beatco-moda.mp4"></video>
+          <video autoplay muted loop playsinline preload="metadata" poster="/images/produtora/moda/beatco/capa.webp" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15) contrast(1.05);" src="/videos/beatco-moda.mp4"></video>
           <div class="set-overlay"></div>
           <div class="set-badge mono-sm">Foto · Vídeo · Lookbook · Campanha</div>
         </div>
@@ -303,7 +305,7 @@ body.has-announce{padding-top:40px;}
           </ul>
         </div>
         <div class="set-img">
-          <video autoplay muted loop playsinline poster="/images/produtora/beleza/oceane/capa.webp" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15) contrast(1.05);" src="/videos/beauty-oceane-larissa.mp4"></video>
+          <video autoplay muted loop playsinline preload="metadata" poster="/images/produtora/beleza/oceane/capa.webp" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15) contrast(1.05);" src="/videos/beauty-oceane-larissa.mp4"></video>
           <div class="set-overlay"></div>
           <div class="set-badge mono-sm">Still · Beleza · Publicidade</div>
         </div>
@@ -560,7 +562,7 @@ body.has-announce{padding-top:40px;}
   <div class="wrap">
     <div style="border:1px solid var(--line);padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:center;" data-reveal>
       <div style="aspect-ratio:3/4;background:var(--ink);overflow:hidden;position:relative;order:-1">
-        <video id="spVideo" muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;" src="/videos/studio-plano.mp4" poster="/images/academy/studio-plano/studio-plano-1.webp"></video>
+        <video id="spVideo" muted loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;" src="/videos/studio-plano.mp4" poster="/images/academy/studio-plano/studio-plano-1.webp"></video>
         <script>
           (function(){
             var v=document.getElementById('spVideo');
@@ -607,7 +609,7 @@ body.has-announce{padding-top:40px;}
 
     <!-- vídeo depoimento -->
     <div class="dep-video-wrap" data-reveal>
-      <video id="depVideo" src="/videos/depoimentos-inside-out.mp4" playsinline preload="metadata" style="width:100%;display:block;"></video>
+      <video id="depVideo" src="/videos/depoimentos-inside-out.mp4" playsinline preload="metadata" poster="/images/academy/inside-out/cover.webp" style="width:100%;display:block;"></video>
       <button class="dep-play" id="depPlay" aria-label="Play">
         <svg viewBox="0 0 64 64" width="56" height="56"><circle cx="32" cy="32" r="31" stroke="rgba(239,233,218,.9)" stroke-width="1.5" fill="rgba(10,10,8,.55)"/><polygon points="26,20 48,32 26,44" fill="rgba(239,233,218,.95)"/></svg>
       </button>

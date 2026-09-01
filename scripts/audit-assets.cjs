@@ -239,7 +239,9 @@ for (const abs of codeFiles) {
   });
 
   // ── tags <img> / <Image> (multi-linha)
-  const tagRe = /<(img|Image)\b([\s\S]*?)\/?>/g;
+  // Exige espaço depois do nome: uma tag real sempre tem atributos, e sem isso a
+  // própria prosa dos comentários ("mantido como <img>") entra na contagem.
+  const tagRe = /<(img|Image)\s([\s\S]*?)\/?>/g;
   let t;
   while ((t = tagRe.exec(content))) {
     const before = content.slice(0, t.index);
@@ -254,6 +256,11 @@ for (const abs of codeFiles) {
     // `route.ts`/`route.js` devolvem HTML como string (new Response(html)).
     // Ali não existe JSX — next/image é tecnicamente impossível.
     const isRawHtml = /[/\\]route\.(ts|js|tsx|jsx)$/.test(rel);
+    // `eslint-disable-next-line @next/next/no-img-element` logo acima marca uma
+    // decisão explícita de manter <img>. Sem reconhecer isso, o relatório fica
+    // pedindo para sempre a migração de tags que já foram avaliadas e recusadas.
+    const linhasAcima = content.slice(0, t.index).split('\n').slice(-4).join('\n');
+    const isOptedOut = /no-img-element/.test(linhasAcima);
     const isPixel = srcAttr != null && /^https?:\/\//i.test(srcAttr);
     const isDataUri = srcAttr != null && /^data:/i.test(srcAttr);
     imgTags.push({
@@ -263,20 +270,23 @@ for (const abs of codeFiles) {
       hasAlt,
       emptyAlt,
       src: srcAttr,
-      migratable: t[1] === 'img' && !isRawHtml && !isPixel && !isDataUri,
+      migratable: t[1] === 'img' && !isRawHtml && !isPixel && !isDataUri && !isOptedOut,
       reason: isRawHtml
         ? 'HTML em string dentro de route handler — sem JSX'
         : isPixel
           ? 'pixel de tracking / URL externa'
           : isDataUri
             ? 'data: URI (QR code) — next/image não aplica'
-            : null,
+            : isOptedOut
+              ? 'mantido por decisão documentada no código (ver comentário acima da tag)'
+              : null,
       snippet: t[0].replace(/\s+/g, ' ').slice(0, 200),
     });
   }
 
   // ── tags <video>
-  const vidRe = /<video\b([\s\S]*?)>/g;
+  // Exige atributo — `<video>` citado em JSDoc não é uma tag real.
+  const vidRe = /<video\s([\s\S]*?)>/g;
   while ((t = vidRe.exec(content))) {
     const before = content.slice(0, t.index);
     const lineNo = before.split('\n').length;
@@ -298,7 +308,7 @@ for (const abs of codeFiles) {
       snippet: t[0].replace(/\s+/g, ' ').slice(0, 300),
       hasPoster: /\bposter\s*=/.test(attrs),
       preload: (attrs.match(/\bpreload\s*=\s*["']?([a-z]+)/) || [])[1] || null,
-      playsInline: /\bplaysInline\b/.test(attrs),
+      playsInline: /\bplays[Ii]nline\b/.test(attrs),
     });
   }
 

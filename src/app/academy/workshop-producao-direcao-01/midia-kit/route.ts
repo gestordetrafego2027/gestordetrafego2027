@@ -511,7 +511,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
     </div>
 
     <div class="gallery-video">
-      <video autoplay muted loop playsinline poster="/images/academy/inside-out/cover.webp">
+      <video autoplay muted loop playsinline preload="metadata" poster="/images/academy/inside-out/cover.webp">
         <source src="/videos/inside-out-hero-horizontal.mp4" type="video/mp4"/>
       </video>
       <div class="gallery-video-label">

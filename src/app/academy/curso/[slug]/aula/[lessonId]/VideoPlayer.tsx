@@ -103,6 +103,7 @@ export default function VideoPlayer({
         ref={videoRef}
         src={videoUrl}
         controls
+        playsInline
         preload="metadata"
         className="w-full h-full"
         onError={() => setError('Não foi possível carregar o vídeo.')}

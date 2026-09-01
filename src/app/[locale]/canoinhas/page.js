@@ -99,6 +99,7 @@ export default function TourMarcaPessoalPage() {
           loop
           playsInline
           preload="metadata"
+          poster="/images/studio/canoinhas-hero/mobile.webp"
           className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
         >
           <source src="/videos/hero-tour-new.mp4" type="video/mp4" />
@@ -609,6 +610,7 @@ export default function TourMarcaPessoalPage() {
             loop
             playsInline
             preload="none"
+            poster="/images/studio/canoinhas-hero/mobile.webp"
             className="w-full h-full object-cover"
           >
             <source src="/videos/hero-tour-new.mp4" type="video/mp4" />
