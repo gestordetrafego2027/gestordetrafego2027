@@ -9,13 +9,13 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Total de referências de mídia | 1660 |
 | — estáticas (inclui `${SITE_URL}` + caminho fixo) | 1614 |
 | — dinâmicas de verdade (slug/índice variável) | 46 |
-| Imagens OK | 1518 |
+| Imagens OK | 1525 |
 | Case mismatch (correção automática) | 0 |
 | Extensão mismatch (correção automática) | 0 |
-| Fuzzy match (correção sugerida) | 1 |
-| **BROKEN irrecuperáveis** | **95** |
+| Fuzzy match (correção sugerida) | 0 |
+| **BROKEN irrecuperáveis** | **89** |
 | Referências ignoradas (relativas/import) | 0 |
-| Arquivos em /public | 1686 |
+| Arquivos em /public | 1693 |
 | Imagens órfãs em /public | 672 (160.9 MB) |
 | Links internos quebrados | 0 |
 | Links externos (revisão manual) | 146 |
@@ -24,7 +24,7 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Imagens SEM atributo alt | 0 |
 | Imagens com alt="" | 9 |
 | Tags `<video>` | 14 |
-| Peso total de /public | 707.4 MB |
+| Peso total de /public | 707.6 MB |
 
 ---
 
@@ -88,22 +88,14 @@ _Nenhuma ocorrência._
 
 _Nenhuma ocorrência._
 
-## FUZZY_MATCH (sugestão — precisa de decisão) — 1
+## FUZZY_MATCH (sugestão — precisa de decisão) — 0
 
-| Arquivo:linha | Referência | Sugestão | Distância | Nota |
-|---|---|---|---:|---|
-| `src/app/[locale]/blog/[slug]/articles.js:37` | `/images/blog/produtora-de-moda-sp/interior-2.webp` | `/images/blog/produtora-de-moda-sp/interior-1.webp` | 1 |  |
+_Nenhuma ocorrência._
 
-## BROKEN — irrecuperáveis — 95
+## BROKEN — irrecuperáveis — 89
 
 | Arquivo:linha | Referência |
 |---|---|
-| `src/app/[locale]/blog/[slug]/articles.js:125` | `/images/blog/naming-de-marca/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:132` | `/images/blog/naming-de-marca/interior-1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:138` | `/images/blog/naming-de-marca/interior-2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:226` | `/images/blog/custo-de-branding/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:233` | `/images/blog/custo-de-branding/interior-1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:239` | `/images/blog/custo-de-branding/interior-2.webp` |
 | `src/app/[locale]/blog/[slug]/articles.js:1422` | `/images/blog/boas-ideias-resultados/branding-estrategia-posicionamento-house-mazzutti.webp` |
 | `src/app/[locale]/blog/[slug]/articles.js:1429` | `/images/blog/boas-ideias-resultados/identidade-visual-posicionamento-house-mazzutti.webp` |
 | `src/app/[locale]/blog/[slug]/articles.js:1435` | `/images/blog/boas-ideias-resultados/brand-strategy-marca-mercado-house-mazzutti.webp` |
@@ -325,8 +317,8 @@ também está quebrado. O OG/Twitter/JSON-LD, porém, usa `cover.src` direto
 
 | Situação | Entradas |
 |---|---:|
-| `src` existe | 64 |
-| `src` quebrado, `fallback` salva a tela (mas OG quebra) | 80 |
+| `src` existe | 71 |
+| `src` quebrado, `fallback` salva a tela (mas OG quebra) | 73 |
 | **`src` E `fallback` quebrados — buraco visível na página** | **0** |
 
 ### Artigos com imagem visivelmente quebrada
@@ -338,8 +330,6 @@ também está quebrado. O OG/Twitter/JSON-LD, porém, usa `cover.src` direto
 
 | Artigo (slug) | Imagens ausentes |
 |---|---:|
-| `naming-de-marca` | 3 |
-| `custo-de-branding` | 3 |
 | `por-que-boas-ideias-nao-garantem-resultados` | 3 |
 | `geo-visibilidade-marca-nas-ias` | 3 |
 | `aeo-como-ser-a-resposta-das-ias` | 3 |
@@ -362,7 +352,6 @@ também está quebrado. O OG/Twitter/JSON-LD, porém, usa `cover.src` direto
 | `naming-de-marca-como-escolher-um-nome-que-vende` | 3 |
 | `reposicionamento-de-marca-quando-e-como-mudar-identidade-visual` | 3 |
 | `fashion-film-o-que-e-quanto-custa` | 2 |
-| `produtora-de-moda-sp` | 1 |
 | `video-institucional-sao-paulo-como-produzir` | 1 |
 | `casting-set-design-campanha-moda` | 1 |
 | `onde-fazer-book-fotografico-sao-paulo` | 1 |
@@ -1077,11 +1066,11 @@ Números medidos por esta mesma auditoria, rodando sobre o código já corrigido
 
 | | |
 |---|---:|
-| Referências de mídia resolvidas | 1518 |
+| Referências de mídia resolvidas | 1525 |
 | Case mismatch pendente | 0 |
 | Extensão mismatch pendente | 0 |
-| Fuzzy aguardando decisão | 1 |
-| **BROKEN — arquivo não existe** | **95** |
+| Fuzzy aguardando decisão | 0 |
+| **BROKEN — arquivo não existe** | **89** |
 | Links internos quebrados | 0 |
 | `<img>` restantes (todos com motivo documentado) | 55 |
 | — ainda migráveis para next/image | 0 |
@@ -1095,7 +1084,7 @@ Números medidos por esta mesma auditoria, rodando sobre o código já corrigido
 
 ### O que sobrou para decisão humana
 
-1. **95 imagens que não existem** — quase todas são o set editorial
+1. **89 imagens que não existem** — quase todas são o set editorial
    de artigos de blog que nunca foi produzido. O `fallback` já cobre a tela; o que
    continua quebrado é o Open Graph, que usa `cover.src` direto. Lista por artigo
    em `BROKEN_IMAGES_TODO.md`.

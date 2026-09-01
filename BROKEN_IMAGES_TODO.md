@@ -11,16 +11,7 @@ para o caminho original — a ação é sua.
 
 ---
 
-# FUZZY — sugestão disponível (1)
-
-## src/app/[locale]/blog/[slug]/articles.js:37
-- Referência: `/images/blog/produtora-de-moda-sp/interior-2.webp`
-- Sugestão: `/images/blog/produtora-de-moda-sp/interior-1.webp` (distância: 1)
-- Ação: [ ] aceitar sugestão  [ ] indicar caminho correto  [ ] produzir a imagem
-
----
-
-# BROKEN — imagens de artigo que precisam ser produzidas (93)
+# BROKEN — imagens de artigo que precisam ser produzidas (87)
 
 Todas em `src/app/[locale]/blog/[slug]/articles.js`. Não é caminho errado: o arquivo não existe.
 O `fallback` de cada entrada já aponta para uma imagem real, então a página
@@ -49,18 +40,6 @@ Fluxo sugerido: `foto-artigo-blog <slug>` por artigo.
 - [ ] L5831 `/images/blog/reposicionamento-de-marca/auditoria-marca-rebranding-house-mazzutti.webp`
 - [ ] L5837 `/images/blog/reposicionamento-de-marca/rollout-nova-identidade-visual-house-mazzutti.webp`
 - [ ] L5840 `/images/agencia/branding/interior-2.webp`
-
-## `naming-de-marca` — 3 imagem(ns)
-
-- [ ] L125 `/images/blog/naming-de-marca/cover.webp`
-- [ ] L132 `/images/blog/naming-de-marca/interior-1.webp`
-- [ ] L138 `/images/blog/naming-de-marca/interior-2.webp`
-
-## `custo-de-branding` — 3 imagem(ns)
-
-- [ ] L226 `/images/blog/custo-de-branding/cover.webp`
-- [ ] L233 `/images/blog/custo-de-branding/interior-1.webp`
-- [ ] L239 `/images/blog/custo-de-branding/interior-2.webp`
 
 ## `por-que-boas-ideias-nao-garantem-resultados` — 3 imagem(ns)
 
