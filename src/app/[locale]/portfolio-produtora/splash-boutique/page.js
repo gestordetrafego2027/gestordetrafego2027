@@ -71,6 +71,9 @@ export default function SplashBoutiquePage() {
         };
     }, []);
 
+    // TODO-BROKEN-IMAGE: /images/produtora/moda/splash-boutique/*.webp — nenhuma das 6
+    // imagens existe em /public, esta galeria renderiza vazia em produção.
+    // Ver BROKEN_IMAGES_TODO.md
     const images = Array.from({length: 6}, (_, i) => `/images/produtora/moda/splash-boutique/${i+1}.webp`);
 
     return (

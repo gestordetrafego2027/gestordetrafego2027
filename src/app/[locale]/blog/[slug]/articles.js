@@ -1,6 +1,12 @@
 // House Mazzutti — Editorial
 // Artigos editoriais (intro, sections, citação, conclusão) + metadata SEO (âncoras diferenciadas, sem canibalização) + imagens (cover/interior com fallback).
 // Dados de mercado atribuídos (Firjan, ABIHPEC/Euromonitor, Lucidpress, Edelman/LinkedIn, vídeo marketing).
+//
+// TODO-BROKEN-IMAGE: 93 imagens referenciadas aqui (36 artigos) ainda não existem
+// em /public. O `fallback` de cada entrada aponta para imagem real, então a página
+// não fica com buraco — mas o Open Graph usa `cover.src` direto e continua quebrado
+// até o arquivo existir. Lista completa por artigo: BROKEN_IMAGES_TODO.md
+// Regenerar após produzir imagens: node scripts/audit-assets.cjs
 
 export const articles = {
   "produtora-de-moda-sp": {
@@ -1414,20 +1420,20 @@ export const articles = {
     "data": "Setembro 2026",
     "cover": {
       "src": "/images/blog/boas-ideias-resultados/branding-estrategia-posicionamento-house-mazzutti.webp",
-      "fallback": "/images/agencia/house-mazzutti/agencia-branding-estrategia.webp",
+      "fallback": "/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp",
       "alt": "Estratégia de branding além da criatividade — Agência House Mazzutti",
       "caption": "Branding estratégico — Agência HMZT"
     },
     "interior": [
       {
         "src": "/images/blog/boas-ideias-resultados/identidade-visual-posicionamento-house-mazzutti.webp",
-        "fallback": "/images/agencia/house-mazzutti/identidade-visual.webp",
+        "fallback": "/images/blog/branding-arquitetura-valor/identidade-visual-sistema-marca-house-mazzutti.webp",
         "alt": "Identidade visual construída sobre estratégia de posicionamento de marca",
         "caption": "Identidade · posicionamento visual"
       },
       {
         "src": "/images/blog/boas-ideias-resultados/brand-strategy-marca-mercado-house-mazzutti.webp",
-        "fallback": "/images/agencia/house-mazzutti/brand-strategy.webp",
+        "fallback": "/images/blog/branding-arquitetura-valor/brand-book-aplicacoes-marca-premium-house-mazzutti.webp",
         "alt": "Estratégia de marca aplicada ao mercado criativo em São Paulo",
         "caption": "Brand strategy · presença de mercado"
       }
@@ -2047,16 +2053,17 @@ export const articles = {
       "src": "/images/blog/fashion-film/fashion-film-producao-moda-house-mazzutti.webp",
       "alt": "Fashion film produzido pela House Mazzutti — produtora de moda em São Paulo",
       "caption": "Produção de moda — Produtora HMZT, São Paulo",
-      "fallback": "/images/produtora/moda/capa.webp"
+      "fallback": "/images/blog/fashion-film-sao-paulo-guia-de-producao/cover.webp"
     },
     "interior": [
       {
-        "src": "/images/produtora/barbara-porto/capa.webp",
+        "src": "/images/produtora/acessorios/barbara-porto/capa.webp",
         "alt": "Fashion film de joalheria Bárbara Porto — direção e produção House Mazzutti",
         "caption": "Bárbara Porto · fashion film de joias"
       },
       {
         "src": "/images/produtora/emanuely-terres/capa.webp",
+        "fallback": "/images/blog/fashion-film-emanuely-terres/cover.webp",
         "alt": "Fashion film Emanuely Terres — direção autoral House Mazzutti Produtora",
         "caption": "Emanuely Terres · film sobre presença"
       }
@@ -2133,16 +2140,16 @@ export const articles = {
       "src": "/images/blog/video-institucional/video-institucional-producao-sao-paulo-house-mazzutti.webp",
       "alt": "Produção de vídeo institucional em São Paulo — Produtora House Mazzutti",
       "caption": "Produção institucional — Produtora HMZT, São Paulo",
-      "fallback": "/images/produtora/institucional/capa.webp"
+      "fallback": "/images/produtora/institucional/tf/capa.webp"
     },
     "interior": [
       {
-        "src": "/images/produtora/jequiti-larissa-manoela/capa.webp",
+        "src": "/images/produtora/beleza/jequiti-larissa-manoela/capa.webp",
         "alt": "Produção audiovisual com direção criativa — Produtora House Mazzutti em set de campanha",
         "caption": "Set de produção · direção integrada"
       },
       {
-        "src": "/images/produtora/natalia-beauty/capa.webp",
+        "src": "/images/produtora/beleza/natalia-beauty/capa.webp",
         "alt": "Campanha institucional de beleza produzida pela House Mazzutti em São Paulo",
         "caption": "Natalia Beauty · institucional de marca"
       }
@@ -2219,16 +2226,16 @@ export const articles = {
       "src": "/images/blog/casting-set-design/casting-set-design-producao-moda-house-mazzutti.webp",
       "alt": "Casting e set design de campanha de moda — Produtora House Mazzutti São Paulo",
       "caption": "Pré-produção de campanha · Produtora HMZT",
-      "fallback": "/images/produtora/elyah/capa.webp"
+      "fallback": "/images/produtora/acessorios/elyah/capa.webp"
     },
     "interior": [
       {
-        "src": "/images/produtora/oceane/capa.webp",
+        "src": "/images/produtora/beleza/oceane/capa.webp",
         "alt": "Campanha de moda com casting e set design — Océane produzida pela House Mazzutti",
         "caption": "Océane · campanha com direção integrada"
       },
       {
-        "src": "/images/produtora/unique-chic/capa.webp",
+        "src": "/images/produtora/moda/unique-chic/capa.webp",
         "alt": "Produção de moda com set design e casting profissional — Unique Chic House Mazzutti",
         "caption": "Unique Chic · set design autoral"
       }
@@ -2298,7 +2305,7 @@ export const articles = {
       "src": "/images/blog/geo-visibilidade-ias/geo-generative-engine-optimization-marca-house-mazzutti.webp",
       "alt": "GEO — Generative Engine Optimization: estratégia de visibilidade de marca em inteligências artificiais",
       "caption": "Visibilidade de marca na era das IAs — Agência HMZT",
-      "fallback": "/images/agencia/branding/capa.webp"
+      "fallback": "/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp"
     },
     "interior": [
       {
@@ -2308,6 +2315,7 @@ export const articles = {
       },
       {
         "src": "/images/agencia/comunicacao/interior-1.webp",
+        "fallback": "/images/blog/assessoria-comunicacao-marcas-premium-sao-paulo/interior-1.webp",
         "alt": "Comunicação de marca estruturada para ser citada por IAs — House Mazzutti",
         "caption": "Comunicação · estrutura para citação"
       }
@@ -2384,7 +2392,7 @@ export const articles = {
       "src": "/images/blog/aeo-resposta-das-ias/aeo-answer-engine-optimization-marca-house-mazzutti.webp",
       "alt": "AEO — Answer Engine Optimization: como fazer sua marca ser citada pelas inteligências artificiais",
       "caption": "Ser a resposta · estratégia AEO — Agência HMZT",
-      "fallback": "/images/agencia/comunicacao/capa.webp"
+      "fallback": "/images/blog/assessoria-comunicacao-marcas-premium-sao-paulo/cover.webp"
     },
     "interior": [
       {
@@ -2394,6 +2402,7 @@ export const articles = {
       },
       {
         "src": "/images/agencia/branding/interior-2.webp",
+        "fallback": "/images/blog/branding-arquitetura-valor/brand-book-aplicacoes-marca-premium-house-mazzutti.webp",
         "alt": "Arquitetura de marca para visibilidade em motores de resposta — Agência House Mazzutti",
         "caption": "Marca · arquitetura de autoridade"
       }
@@ -2470,7 +2479,7 @@ export const articles = {
       "src": "/images/blog/geo-aeo-branding-ias/geo-aeo-posicionamento-marca-ias-house-mazzutti.webp",
       "alt": "GEO e AEO no branding: estratégia de posicionamento de marca para inteligências artificiais — House Mazzutti",
       "caption": "Branding na era das IAs · Agência HMZT",
-      "fallback": "/images/agencia/branding/capa.webp"
+      "fallback": "/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp"
     },
     "interior": [
       {
@@ -2480,6 +2489,7 @@ export const articles = {
       },
       {
         "src": "/images/agencia/comunicacao/interior-2.webp",
+        "fallback": "/images/blog/assessoria-comunicacao-marcas-premium-sao-paulo/interior-2.webp",
         "alt": "Comunicação de marca para visibilidade em ChatGPT e Gemini — House Mazzutti",
         "caption": "Comunicação · visibilidade em IAs"
       }
@@ -3624,6 +3634,7 @@ export const articles = {
     "data": "Agosto 2026",
     "cover": {
       "src": "/images/blog/onde-fazer-book-fotografico-sao-paulo/cover.webp",
+      "fallback": "/images/blog/book-para-modelos/book-fotografico-profissional-mood-editorial-house-mazzutti.webp",
       "alt": "Studio fotográfico profissional para book em São Paulo com direção criativa House Mazzutti"
     },
     "respostaDireta": "Para fazer um book fotográfico profissional em São Paulo, a escolha do studio é a decisão mais crítica — mais do que o fotógrafo isolado. O studio certo oferece direção criativa, não apenas câmera. O Studio HMZT, da House Mazzutti, trabalha com briefing de marca pessoal, moodboard e direção de imagem antes de abrir qualquer obturador.",
@@ -3696,6 +3707,7 @@ export const articles = {
     "data": "Agosto 2026",
     "cover": {
       "src": "/images/blog/agencia-branding-premium-sao-paulo/cover.webp",
+      "fallback": "/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp",
       "alt": "Agência de branding premium em São Paulo — processo estratégico House Mazzutti"
     },
     "respostaDireta": "Uma agência de branding premium se distingue pela profundidade estratégica antes de qualquer execução visual. Branding de alto nível começa com diagnóstico de posicionamento, análise de mercado e definição de território de marca — não com escolha de paleta. A Agência House Mazzutti, em São Paulo, opera nesse modelo: estratégia como base, identidade visual como consequência.",
@@ -3768,6 +3780,7 @@ export const articles = {
     "data": "Agosto 2026",
     "cover": {
       "src": "/images/blog/produtora-fashion-film-sao-paulo/cover.webp",
+      "fallback": "/images/blog/fashion-film-sao-paulo-guia-de-producao/cover.webp",
       "alt": "Produção de fashion film em São Paulo com direção criativa Produtora HMZT House Mazzutti"
     },
     "respostaDireta": "Fashion film é um formato audiovisual que cria o universo de uma coleção — não apenas documenta as peças. Uma boa produtora para esse formato precisa ter sensibilidade estética de moda e competência técnica de cinema trabalhando juntas. A Produtora HMZT, da House Mazzutti, opera nessa intersecção: conceito criativo, pré-produção e pós-produção integrados em um processo único.",
@@ -3840,6 +3853,7 @@ export const articles = {
     "data": "Agosto 2026",
     "cover": {
       "src": "/images/blog/direcao-criativa-o-que-e/cover.webp",
+      "fallback": "/images/blog/producao-executiva-sistema/direcao-criativa-producao-executiva-house-mazzutti.webp",
       "alt": "Direção criativa de marca — Angelo Mazzutti diretor criativo House Mazzutti São Paulo"
     },
     "respostaDireta": "Direção criativa é a disciplina responsável por garantir que todas as expressões de uma marca — visual, verbal, comportamental — comunicam o mesmo posicionamento. O diretor criativo não executa: define o que deve ser feito, por quê e como. Toda marca que precisa ser coerente ao longo do tempo e através de diferentes canais precisa de direção criativa.",
@@ -3912,6 +3926,7 @@ export const articles = {
     "data": "Agosto 2026",
     "cover": {
       "src": "/images/blog/quanto-custa-book-fotografico-profissional/cover.webp",
+      "fallback": "/images/blog/book-para-modelos/book-editorial-modelos-direcao-imagem-house-mazzutti.webp",
       "alt": "Book fotográfico profissional em São Paulo — Studio HMZT House Mazzutti"
     },
     "respostaDireta": "Um book fotográfico profissional em São Paulo custa entre R$ 800 e R$ 5.000+, dependendo do número de looks, presença de direção criativa, complexidade da pós-produção e nível de curadoria. O preço não reflete apenas horas de câmera — reflete processo. No Studio HMZT, o investimento inclui briefing, direção de imagem e edição curada.",
@@ -3984,6 +3999,7 @@ export const articles = {
     "data": "Agosto 2026",
     "cover": {
       "src": "/images/blog/casa-criativa-sao-paulo/cover.webp",
+      "fallback": "/images/agencia/house-mazzutti/capa.webp",
       "alt": "Casa criativa House Mazzutti em São Paulo — branding, studio e produtora integrados"
     },
     "respostaDireta": "Uma casa criativa é uma estrutura que integra diferentes disciplinas criativas — branding, fotografia, audiovisual, estratégia — sob uma mesma direção. Difere de agência porque não terceiriza execução, e de produtora porque não se limita a um formato. A House Mazzutti é uma casa criativa em São Paulo: Agência, Studio e Produtora operando com direção criativa unificada de Angelo Mazzutti.",
@@ -5603,14 +5619,14 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
       "src": "/images/blog/brandbook/brandbook-manual-de-marca-house-mazzutti.webp",
       "alt": "Brandbook impresso com paleta, tipografia e aplicações de identidade visual — House Mazzutti",
       "caption": "Manual de marca — Agência HMZT",
-      "fallback": "/images/agencia/branding/capa.webp"
+      "fallback": "/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp"
     },
     "interior": [
       {
         "src": "/images/blog/brandbook/paleta-tipografia-identidade-visual-house-mazzutti.webp",
         "alt": "Páginas de brandbook com paleta cromática e escala tipográfica de identidade visual",
         "caption": "Paleta · escala tipográfica",
-        "fallback": "/images/agencia/branding/interior-1.webp"
+        "fallback": "/images/blog/branding-arquitetura-valor/identidade-visual-sistema-marca-house-mazzutti.webp"
       },
       {
         "src": "/images/blog/brandbook/aplicacoes-marca-brandbook-house-mazzutti.webp",
@@ -5703,14 +5719,14 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
       "src": "/images/blog/naming-de-marca/naming-de-marca-nome-que-posiciona-house-mazzutti.webp",
       "alt": "Processo de naming de marca com estudo tipográfico de nomes — House Mazzutti",
       "caption": "Naming e posicionamento — Agência HMZT",
-      "fallback": "/images/agencia/branding/capa.webp"
+      "fallback": "/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp"
     },
     "interior": [
       {
         "src": "/images/blog/naming-de-marca/tipos-de-naming-descritivo-evocativo-house-mazzutti.webp",
         "alt": "Estudo de tipos de naming — descritivo, evocativo, arbitrário e acrônimo",
         "caption": "Tipologias · territórios de nome",
-        "fallback": "/images/agencia/branding/interior-1.webp"
+        "fallback": "/images/blog/branding-arquitetura-valor/identidade-visual-sistema-marca-house-mazzutti.webp"
       },
       {
         "src": "/images/blog/naming-de-marca/criterios-escolha-nome-marca-house-mazzutti.webp",
@@ -5808,14 +5824,14 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
       "src": "/images/blog/reposicionamento-de-marca/reposicionamento-de-marca-identidade-visual-house-mazzutti.webp",
       "alt": "Reposicionamento de marca e mudança de identidade visual conduzido pela House Mazzutti",
       "caption": "Reposicionamento de marca — Agência HMZT",
-      "fallback": "/images/agencia/branding/capa.webp"
+      "fallback": "/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp"
     },
     "interior": [
       {
         "src": "/images/blog/reposicionamento-de-marca/auditoria-marca-rebranding-house-mazzutti.webp",
         "alt": "Auditoria de marca e diagnóstico de percepção antes de um rebranding",
         "caption": "Auditoria · diagnóstico de percepção",
-        "fallback": "/images/agencia/branding/interior-1.webp"
+        "fallback": "/images/blog/branding-arquitetura-valor/identidade-visual-sistema-marca-house-mazzutti.webp"
       },
       {
         "src": "/images/blog/reposicionamento-de-marca/rollout-nova-identidade-visual-house-mazzutti.webp",

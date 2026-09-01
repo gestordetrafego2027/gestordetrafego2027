@@ -11,7 +11,7 @@ const personSchema = {
   description: leadership.angelo.bio,
   worksFor: {'@id': `${brand.url}/#organization`},
   url: `${brand.url}/pt/angelo/`,
-  image: `${brand.url}/images/angelo/angelo-mazzutti.webp`,
+  image: `${brand.url}/images/about/angelo-mazzutti.webp`,
   knowsAbout: [
     'Direção Criativa',
     'Branding',

@@ -124,6 +124,38 @@ function oneSegmentOff(p) {
   return hits;
 }
 
+
+/**
+ * Procura arquivos cujo caminho seja o referenciado com UM segmento de diretório
+ * a mais (nível de categoria omitido) ou a menos (nível de categoria a mais).
+ * Pega o padrão real do projeto: /images/produtora/<slug>/capa.webp quando o
+ * arquivo mora em /images/produtora/<categoria>/<slug>/capa.webp.
+ */
+function oneSegmentInsertedOrRemoved(p) {
+  const a = p.toLowerCase().split('/');
+  const hits = [];
+  for (const f of publicFiles) {
+    const b = f.rel.toLowerCase().split('/');
+    if (b[b.length - 1] !== a[a.length - 1]) continue;
+    let longer, shorter, kind;
+    if (b.length === a.length + 1) { longer = b; shorter = a; kind = 'faltava'; }
+    else if (b.length === a.length - 1) { longer = a; shorter = b; kind = 'sobrava'; }
+    else continue;
+    // longer precisa ser shorter com exatamente 1 segmento inserido
+    let i = 0, j = 0, skipped = -1;
+    while (i < shorter.length && j < longer.length) {
+      if (shorter[i] === longer[j]) { i++; j++; }
+      else if (skipped === -1) { skipped = j; j++; }
+      else break;
+    }
+    if (i === shorter.length && (skipped !== -1 || longer.length - j === 1)) {
+      const seg = longer[skipped === -1 ? longer.length - 1 : skipped];
+      hits.push({ file: f, kind, seg });
+    }
+  }
+  return hits;
+}
+
 // ─────────────────────────────────────────── 1.1 referências no código
 
 const codeFiles = walk(SRC_DIR)
@@ -353,6 +385,27 @@ function classify(p, r) {
     });
     return;
   }
+  // d3) nível de categoria omitido/sobrando no caminho
+  const insHits = oneSegmentInsertedOrRemoved(p);
+  if (insHits.length === 1) {
+    const h = insHits[0];
+    results.FUZZY_MATCH.push({
+      ...r,
+      suggestion: h.file.rel,
+      distance: 1,
+      note: `nível de categoria ${h.kind}: \`${h.seg}\``,
+    });
+    return;
+  }
+  if (insHits.length > 1) {
+    results.BROKEN.push({
+      ...r,
+      resolved: p,
+      note: `${insHits.length} candidatos ao inserir/remover um nível: ${insHits.map((h) => '`' + h.file.rel + '`').join(', ')} — ambíguo`,
+    });
+    return;
+  }
+
   // e) fuzzy no caminho inteiro
   let bestPath = null;
   for (const f of publicFiles) {
@@ -813,7 +866,7 @@ if (fs.existsSync(artAbs)) {
     const fb = (win.match(/"fallback":\s*"([^"]+)"/) || [])[1] || null;
     let slug = '?';
     for (let i = lineNo - 1; i >= 0; i--) {
-      const km = ls[i].match(/^\s{2}"([a-z0-9-]+)":\s*\{/);
+      const km = ls[i].match(/^\s{2}['"]?([a-z0-9-]+)['"]?:\s*\{/);
       if (km) { slug = km[1]; break; }
     }
     const rec = { lineNo, src: mm[1], fb, slug };
@@ -871,6 +924,87 @@ section('Links externos (revisão manual — sem requests HTTP)', (() => {
   for (const [host, list] of items) s += `| \`${esc(host)}\` | ${list.length} | \`${list[0].file}:${list[0].line}\` |\n`;
   return s;
 });
+
+
+// ─────────────────────────────────────────── BROKEN_IMAGES_TODO.md
+
+let todo = '';
+todo += `# Imagens quebradas — pendentes de decisão manual\n`;
+todo += `Gerado por \`node scripts/audit-assets.cjs\` em ${now}. Regenere após qualquer correção.\n\n`;
+todo += `Nenhuma referência foi removida do código. Cada item abaixo continua apontando\n`;
+todo += `para o caminho original — a ação é sua.\n\n`;
+
+todo += `## Como ler\n\n`;
+todo += `- **FUZZY** — existe um arquivo parecido em \`/public\`. Aceitar a sugestão ou indicar o certo.\n`;
+todo += `- **BROKEN** — não existe nada equivalente. O arquivo precisa ser produzido.\n\n`;
+
+if (results.FUZZY_MATCH.length) {
+  todo += `---\n\n# FUZZY — sugestão disponível (${results.FUZZY_MATCH.length})\n\n`;
+  for (const i of results.FUZZY_MATCH) {
+    todo += `## ${i.file}:${i.line}\n`;
+    todo += `- Referência: \`${i.raw}\`\n`;
+    todo += `- Sugestão: \`${i.suggestion}\` (distância: ${i.distance})${i.note ? ` — ${i.note}` : ''}\n`;
+    todo += `- Ação: [ ] aceitar sugestão  [ ] indicar caminho correto  [ ] produzir a imagem\n\n`;
+  }
+}
+
+// BROKEN agrupado: os artigos de blog dominam e cada um precisa de um set de imagens,
+// não de uma correção de caminho. Agrupar por artigo torna a lista acionável.
+const ARTF = 'src/app/[locale]/blog/[slug]/articles.js';
+const artBroken = results.BROKEN.filter((b) => b.file === ARTF);
+const otherBroken = results.BROKEN.filter((b) => b.file !== ARTF);
+
+if (artBroken.length) {
+  const artAbs2 = path.join(ROOT, ARTF);
+  const ls2 = fs.readFileSync(artAbs2, 'utf8').split('\n');
+  const slugOf = (line) => {
+    for (let i = line - 1; i >= 0; i--) {
+      const km = ls2[i].match(/^\s{2}['"]?([a-z0-9-]+)['"]?:\s*\{/);
+      if (km) return km[1];
+    }
+    return '?';
+  };
+  const bySlug = new Map();
+  for (const b of artBroken) {
+    const sl = slugOf(b.line);
+    if (!bySlug.has(sl)) bySlug.set(sl, []);
+    bySlug.get(sl).push(b);
+  }
+  todo += `---\n\n# BROKEN — imagens de artigo que precisam ser produzidas (${artBroken.length})\n\n`;
+  todo += `Todas em \`${ARTF}\`. Não é caminho errado: o arquivo não existe.\n`;
+  todo += `O \`fallback\` de cada entrada já aponta para uma imagem real, então a página\n`;
+  todo += `não fica com buraco — mas mostra uma imagem genérica no lugar da própria, e o\n`;
+  todo += `Open Graph (que usa \`cover.src\` direto) continua quebrado até o arquivo existir.\n\n`;
+  todo += `Fluxo sugerido: \`foto-artigo-blog <slug>\` por artigo.\n\n`;
+  for (const [sl, list] of [...bySlug.entries()].sort((a, b) => b[1].length - a[1].length)) {
+    todo += `## \`${sl}\` — ${list.length} imagem(ns)\n\n`;
+    for (const b of list) todo += `- [ ] L${b.line} \`${b.raw}\`\n`;
+    todo += `\n`;
+  }
+}
+
+if (otherBroken.length) {
+  todo += `---\n\n# BROKEN — fora dos artigos (${otherBroken.length})\n\n`;
+  for (const b of otherBroken) {
+    todo += `## ${b.file}:${b.line}\n`;
+    todo += `- Referência: \`${b.raw}\`\n`;
+    if (b.note) todo += `- Nota: ${b.note}\n`;
+    todo += `- Ação: [ ] produzir a imagem  [ ] indicar caminho correto  [ ] remover a referência\n\n`;
+  }
+}
+
+const dynZero = dynamicReport.filter((d) => d.matchCount === 0);
+if (dynZero.length) {
+  todo += `---\n\n# Padrões dinâmicos sem nenhum arquivo (${dynZero.length})\n\n`;
+  todo += `Um padrão com zero correspondências significa galeria inteira vazia em produção.\n\n`;
+  for (const d of dynZero) {
+    todo += `## ${d.file}:${d.line}\n`;
+    todo += `- Padrão: \`${d.raw}\`\n`;
+    todo += `- Ação: [ ] produzir as imagens  [ ] corrigir o caminho  [ ] despublicar a página\n\n`;
+  }
+}
+
+fs.writeFileSync(path.join(ROOT, 'BROKEN_IMAGES_TODO.md'), todo);
 
 fs.writeFileSync(path.join(ROOT, 'AUDIT_REPORT.md'), out);
 
