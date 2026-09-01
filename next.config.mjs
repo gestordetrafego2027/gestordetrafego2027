@@ -36,8 +36,11 @@ const nextConfig = {
     ],
     formats: ['image/avif', 'image/webp'],
     qualities: [75, 80, 82, 85, 90],
-    deviceSizes: [640, 828, 1080, 1280, 1920],
-    imageSizes: [64, 128, 256, 384],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    // A ponta pequena (16..96) importa aqui: há miniaturas de 70px no blog e
+    // avatares de 36px. Sem esses degraus o menor candidato do srcset era 64,
+    // e em tela 2x o browser subia direto para 256.
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 2592000,
     dangerouslyAllowSVG: false,
     contentDispositionType: 'attachment',
@@ -103,12 +106,36 @@ const nextConfig = {
         headers: securityHeaders,
       },
       {
+        // Assets de /public. `immutable` só é seguro porque estes caminhos são
+        // fixos e o conteúdo é trocado por arquivo novo, não por sobrescrita.
         source: '/:all*(svg|jpg|jpeg|png|gif|ico|webp|avif|mp4|webm|woff|woff2|ttf|otf)',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          // Cloudflare/Traefik leem este antes do Cache-Control, então dá para
+          // afinar a borda sem mexer no cache do navegador.
+          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000' },
+        ],
+      },
+      {
+        // Build output do Next: hash no nome, pode ser imutável com folga.
+        source: '/_next/static/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        // Imagens otimizadas. Não é immutable: a URL carrega só url+w+q, então o
+        // mesmo endereço passa a servir outro conteúdo se o arquivo de origem for
+        // substituído. `must-revalidate` evita servir a versão antiga para sempre.
+        //
+        // Medido com `next start`: o Next monta o Cache-Control desta rota a partir
+        // do header do arquivo de origem, então o max-age que chega ao navegador é
+        // o 31536000 da regra de /public acima, não o 2592000 daqui — só o
+        // `must-revalidate` é respeitado. O CDN-Cache-Control passa intacto, e é ele
+        // que governa a borda (Cloudflare). Se algum dia o TTL do navegador precisar
+        // cair, o lugar de mexer é o max-age dos assets de /public.
+        source: '/_next/image(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=2592000, must-revalidate' },
+          { key: 'CDN-Cache-Control', value: 'public, max-age=2592000' },
         ],
       },
     ];
