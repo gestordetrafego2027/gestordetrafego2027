@@ -99,6 +99,9 @@ export function PixPendenteClient(props: Props) {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center gap-4">
+            {/* Mantido como <img>: QR Code chega como data: URI base64 gerado por
+                pedido. Não há arquivo para o otimizador do Next processar. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`data:image/png;base64,${props.encodedImage}`}
               alt="QR Code Pix"

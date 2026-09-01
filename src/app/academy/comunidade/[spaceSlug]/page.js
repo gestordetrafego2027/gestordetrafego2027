@@ -93,6 +93,10 @@ function PostCard({ post }) {
     <article className="rounded-2xl border border-neutral-200 bg-white p-5">
       <header className="mb-3 flex items-center gap-3">
         {post.author?.avatar_url ? (
+          /* Mantido como <img>: avatar de membro pode vir de qualquer provedor de
+             login. Otimizar 36px não paga o risco de derrubar o feed da comunidade
+             quando aparecer um host não cadastrado em `images.remotePatterns`. */
+          /* eslint-disable-next-line @next/next/no-img-element */
           <img src={post.author.avatar_url} alt="" className="h-9 w-9 rounded-full object-cover" />
         ) : (
           <div className="h-9 w-9 rounded-full bg-neutral-200" />

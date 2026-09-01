@@ -39,8 +39,13 @@ const CATEGORY_CTA = {
   },
 };
 
-// Image with automatic fallback (uses portfolio image if dedicated blog image is missing)
-function ArticleImage({ data, className = '', sizes = '', priority = false }) {
+// Imagem de artigo com fallback automático: várias imagens de blog ainda não foram
+// produzidas (ver BROKEN_IMAGES_TODO.md) e o `fallback` de cada entrada aponta para
+// uma imagem real. O onError continua funcionando com next/image — quando o arquivo
+// não existe, /_next/image responde erro e o handler troca a origem.
+// Usa `fill`: os call sites já envolvem o componente num container com proporção
+// definida e overflow-hidden, e a fonte vem de dados (sem width/height conhecidos).
+function ArticleImage({ data, className = '', sizes = '100vw', priority = false }) {
     const [src, setSrc] = useState(data.src);
     const handleError = () => {
         if (data.fallback && src !== data.fallback) {
@@ -48,16 +53,17 @@ function ArticleImage({ data, className = '', sizes = '', priority = false }) {
         }
     };
     return (
-        <img
+        <NextImage
             src={src}
             alt={data.alt}
             title={data.alt}
-            loading={priority ? 'eager' : 'lazy'}
-            fetchPriority={priority ? 'high' : undefined}
-            decoding={priority ? 'sync' : 'async'}
+            fill
+            sizes={sizes}
+            quality={priority ? 85 : 80}
+            priority={priority}
+            loading={priority ? undefined : 'lazy'}
             onError={handleError}
             className={className}
-            sizes={sizes}
         />
     );
 }
@@ -209,14 +215,14 @@ export default function ArticleContent({ slug, article, prevSlug, nextSlug, prev
                             {idx === 1 && article.interior && article.interior.length >= 2 && (
                                 <figure className="my-12">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <div className="aspect-[3/4] md:aspect-[2/3] bg-zinc-100 overflow-hidden">
+                                        <div className="relative aspect-[3/4] md:aspect-[2/3] bg-zinc-100 overflow-hidden">
                                             <ArticleImage
                                                 data={article.interior[0]}
                                                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
                                                 sizes="(max-width: 768px) 100vw, 50vw"
                                             />
                                         </div>
-                                        <div className="aspect-[3/4] md:aspect-[2/3] bg-zinc-100 overflow-hidden">
+                                        <div className="relative aspect-[3/4] md:aspect-[2/3] bg-zinc-100 overflow-hidden">
                                             <ArticleImage
                                                 data={article.interior[1]}
                                                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
@@ -392,9 +398,10 @@ export default function ArticleContent({ slug, article, prevSlug, nextSlug, prev
                         <div className="space-y-8 pb-8 hairline-b">
                             {(recentPosts || []).map((post) => (
                                 <Link key={post.slug} href={`/blog/${post.slug}`} className="flex gap-4 group cursor-pointer">
-                                    <div className="w-[70px] h-[70px] bg-zinc-100 flex-shrink-0 overflow-hidden">
+                                    <div className="relative w-[70px] h-[70px] bg-zinc-100 flex-shrink-0 overflow-hidden">
                                         <ArticleImage
                                             data={post.cover}
+                                            sizes="70px"
                                             className="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform"
                                         />
                                     </div>

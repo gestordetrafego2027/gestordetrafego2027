@@ -45,6 +45,9 @@ function PixResult({ data, planNome }) {
       <p className="font-headline font-light text-2xl text-white mb-2">Escaneie o QR Code</p>
       <p className="font-body text-white/45 text-sm mb-8">ou copie o código PIX abaixo</p>
       {data.encodedImage && (
+        /* Mantido como <img>: QR Code é data: URI base64 por pedido — nada para o
+           otimizador do Next processar. */
+        /* eslint-disable-next-line @next/next/no-img-element */
         <img
           src={`data:image/png;base64,${data.encodedImage}`}
           alt="QR Code PIX"

@@ -643,8 +643,15 @@ export default function MarketingParaModelosPage() {
           </div>
           <div className="hero-right">
             <div className="cover-stack">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={COVER} alt="Capa do livro Marketing para Modelos" />
+              <Image
+                src={COVER}
+                alt="Capa do livro Marketing para Modelos"
+                width={1696}
+                height={2528}
+                sizes="(max-width: 980px) 320px, 460px"
+                quality={85}
+                priority
+              />
             </div>
           </div>
         </div>
@@ -753,24 +760,45 @@ export default function MarketingParaModelosPage() {
           <div className="gallery-grid">
             <figure>
               <div className="ph">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={MOCKUP_CHAIR} alt="Marketing para Modelos · House Mazzutti Vol. 01 sobre cadeira de aço" loading="lazy" />
+                <Image
+                  src={MOCKUP_CHAIR}
+                  alt="Marketing para Modelos · House Mazzutti Vol. 01 sobre cadeira de aço"
+                  width={2000}
+                  height={1500}
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                  quality={80}
+                  loading="lazy"
+                />
               </div>
               <figcaption><span>01 · Editorial</span><strong>Vol. 01 · 2026</strong></figcaption>
             </figure>
 
             <figure className="tall">
               <div className="ph">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={MOCKUP_HANDS} alt="Mãos segurando o livro Marketing para Modelos · House Mazzutti" loading="lazy" />
+                <Image
+                  src={MOCKUP_HANDS}
+                  alt="Mãos segurando o livro Marketing para Modelos · House Mazzutti"
+                  width={666}
+                  height={1000}
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                  quality={80}
+                  loading="lazy"
+                />
               </div>
               <figcaption><span>02 · Escala real</span><strong>15 × 22 cm</strong></figcaption>
             </figure>
 
             <figure>
               <div className="ph">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={MOCKUP_FRONT} alt="Capa frontal · Marketing para Modelos · da passarela física ao império digital" loading="lazy" />
+                <Image
+                  src={MOCKUP_FRONT}
+                  alt="Capa frontal · Marketing para Modelos · da passarela física ao império digital"
+                  width={2000}
+                  height={1333}
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                  quality={80}
+                  loading="lazy"
+                />
               </div>
               <figcaption><span>03 · Capa</span><strong>House Mazzutti Edições</strong></figcaption>
             </figure>

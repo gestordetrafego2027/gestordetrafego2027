@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import SiteFooterLinks from '@/app/components/SiteFooterLinks';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
@@ -42,6 +43,37 @@ const articleList = Object.entries(articleData)
             : a.respostaDireta,
     }))
     .sort((a, b) => parseDate(b.data) - parseDate(a.data));
+
+
+/**
+ * Capa do card de artigo. Reproduz o comportamento que existia no <img> cru:
+ * tenta `src`, cai para `fallback`, e some se os dois falharem. A troca precisa
+ * ser por estado — next/image reescreve o src a cada render, então mutar
+ * `e.currentTarget.src` no onError não se sustenta.
+ */
+function CoverImage({ cover }) {
+    const [src, setSrc] = useState(cover.src);
+    const [hidden, setHidden] = useState(false);
+    if (hidden) return <div className="image-placeholder" />;
+    return (
+        <Image
+            src={src}
+            alt={cover.alt}
+            title={cover.alt}
+            width={1200}
+            height={900}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            quality={80}
+            loading="lazy"
+            className="w-full h-auto object-cover"
+            style={{ aspectRatio: '4 / 3' }}
+            onError={() => {
+                if (cover.fallback && src !== cover.fallback) setSrc(cover.fallback);
+                else setHidden(true);
+            }}
+        />
+    );
+}
 
 export default function BlogPage() {
     const t = useTranslations('blog_page');
@@ -177,20 +209,7 @@ export default function BlogPage() {
                     <article key={article.slug} className="article-card">
                         <Link href={`/blog/${article.slug}`} className="block mb-10 overflow-hidden">
                             {article.cover ? (
-                                <img
-                                    src={article.cover.src}
-                                    alt={article.cover.alt}
-                                    title={article.cover.alt}
-                                    loading="lazy"
-                                    decoding="async"
-                                    className="w-full h-auto object-cover"
-                                    style={{ aspectRatio: '4 / 3' }}
-                                    onError={e => {
-                                        const fb = article.cover.fallback;
-                                        if (fb && e.currentTarget.src !== fb) e.currentTarget.src = fb;
-                                        else e.currentTarget.style.display = 'none';
-                                    }}
-                                />
+                                <CoverImage cover={article.cover} />
                             ) : (
                                 <div className="image-placeholder" />
                             )}

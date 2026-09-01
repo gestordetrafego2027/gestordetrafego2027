@@ -90,6 +90,11 @@ export default async function ProductPage({ params }) {
             {/* CARD DE COMPRA */}
             <aside className="rounded-2xl bg-white p-6 text-neutral-900 shadow-xl">
               {product.cover_url && (
+                /* Mantido como <img>: `cover_url` é coluna livre no banco e pode
+                   apontar para qualquer host. next/image falha em runtime com
+                   hostname fora de `images.remotePatterns` — aqui isso derrubaria
+                   a página de produto por causa de uma linha mal preenchida. */
+                /* eslint-disable-next-line @next/next/no-img-element */
                 <img
                   src={product.cover_url}
                   alt={product.title}

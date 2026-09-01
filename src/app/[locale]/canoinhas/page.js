@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { initAosNative } from '@/lib/aosNative';
 import Header from '@/app/components/Header';
 import FormDrawer from '@/app/components/FormDrawer';
@@ -105,6 +106,10 @@ export default function TourMarcaPessoalPage() {
         {/* Desktop: foto */}
         <picture className="hidden md:block">
           <source media="(min-width: 768px)" srcSet="/images/studio/canoinhas-hero/desktop.webp" />
+          {/* Mantido como <img>: art direction via <picture>. O <source> desktop usa
+              um corte paisagem (desktop.webp 1920x1080) e este fallback é o retrato
+              (hero.webp 1900x2851). next/image não compõe com <source>. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             fetchPriority="high"
             src="/images/studio/canoinhas-hero/hero.webp"
@@ -202,12 +207,16 @@ export default function TourMarcaPessoalPage() {
 
       {/* ── GRID PORTFOLIO — imagem colagem ───────────────────────── */}
       <section className="bg-black">
-        <img
+        <Image
           src="/images/hmzt-tour-canoinhas-winter-2026.webp"
           alt="Tour Marca Pessoal — House Mazzutti · Canoinhas Winter 2026"
+          width={1414}
+          height={2000}
+          sizes="100vw"
+          quality={82}
           loading="lazy"
           data-aos="fade-photo"
-          className="w-full block"
+          className="w-full h-auto block"
         />
       </section>
 
@@ -247,12 +256,15 @@ export default function TourMarcaPessoalPage() {
       <section className="bg-black">
         <div className="grid grid-cols-2 gap-[2px]">
           {PORTFOLIO.map((img, i) => (
-            <div key={i} className="aspect-[2/3] overflow-hidden group" data-aos="fade-photo" data-aos-delay={i * 80}>
-              <img
+            <div className="relative aspect-[2/3] overflow-hidden group" data-aos="fade-photo" data-aos-delay={i * 80} key={i}>
+              <Image
                 src={img.src}
                 alt={img.alt}
+                fill
+                sizes="50vw"
+                quality={80}
                 loading="lazy"
-                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           ))}
@@ -299,9 +311,13 @@ export default function TourMarcaPessoalPage() {
           {/* Foto em moldura */}
           <div className="w-full md:w-[42%] flex items-center justify-center py-16 md:py-24 px-10 md:px-16" data-aos="fade-photo">
             <div className="border border-black/15 p-3 w-full max-w-[260px] md:max-w-[300px]">
-              <img
+              <Image
                 src="/images/angelo/angelo-portrait.webp"
                 alt="Angelo Mazzutti — Diretor Criativo"
+                width={1080}
+                height={1080}
+                sizes="(max-width: 768px) 260px, 300px"
+                quality={80}
                 loading="lazy"
                 className="w-full aspect-[3/4] object-cover object-top"
               />
@@ -347,13 +363,16 @@ export default function TourMarcaPessoalPage() {
             ].map((src, i) => (
               <div
                 key={`${loop}-${i}`}
-                className="shrink-0 w-[280px] md:w-[360px] h-[420px] md:h-[500px] mx-[3px] overflow-hidden"
+                className="relative shrink-0 w-[280px] md:w-[360px] h-[420px] md:h-[500px] mx-[3px] overflow-hidden"
               >
-                <img
+                <Image
                   src={src}
                   alt="Local do ensaio — Canoinhas"
+                  fill
+                  sizes="(max-width: 768px) 280px, 360px"
+                  quality={75}
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  className="object-cover"
                 />
               </div>
             ))
@@ -420,12 +439,15 @@ export default function TourMarcaPessoalPage() {
                 data-aos-delay={(idx + 1) * 80}
               >
                 {/* Foto de fundo */}
-                <img
+                <Image
                   src={plano.bg}
                   alt=""
                   aria-hidden
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={75}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Overlay gradiente — escurece do topo para base */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
@@ -483,12 +505,15 @@ export default function TourMarcaPessoalPage() {
 
       {/* ── CTA FINAL ──────────────────────────────────────────────── */}
       <section className="relative py-36 px-6 overflow-hidden">
-        <img
-          loading="lazy"
+        <Image
           src="/images/studio/francielle-reis/4.webp"
           alt=""
+          fill
+          sizes="100vw"
+          quality={75}
+          loading="lazy"
           data-aos="fade-photo"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/72" />
         <div className="relative z-10 max-w-[700px] mx-auto text-center">
@@ -559,8 +584,16 @@ export default function TourMarcaPessoalPage() {
                 '/images/comunidade/grid-5.webp',
                 '/images/comunidade/grid-6.webp',
               ].map((src, i) => (
-                <div key={`${loop}-${i}`} className="shrink-0 w-[280px] md:w-[360px] h-[420px] md:h-[500px] mx-[3px] overflow-hidden">
-                  <img src={src} loading="lazy" className="w-full h-full object-cover" alt="House Mazzutti" />
+                <div key={`${loop}-${i}`} className="relative shrink-0 w-[280px] md:w-[360px] h-[420px] md:h-[500px] mx-[3px] overflow-hidden">
+                  <Image
+                    src={src}
+                    alt="House Mazzutti"
+                    fill
+                    sizes="(max-width: 768px) 280px, 360px"
+                    quality={75}
+                    loading="lazy"
+                    className="object-cover"
+                  />
                 </div>
               ))
             ))}

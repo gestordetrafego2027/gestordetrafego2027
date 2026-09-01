@@ -134,6 +134,9 @@ function CheckoutRedirect({ product, order, checkoutUrl }) {
           <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-6">
             <div className="flex items-center gap-4">
               {product.cover_url && (
+                /* Mantido como <img>: `cover_url` vem do banco sem restrição de host.
+                   Um hostname fora de `images.remotePatterns` quebraria o checkout. */
+                /* eslint-disable-next-line @next/next/no-img-element */
                 <img src={product.cover_url} alt="" className="h-20 w-32 rounded-lg object-cover" />
               )}
               <div className="flex-1">

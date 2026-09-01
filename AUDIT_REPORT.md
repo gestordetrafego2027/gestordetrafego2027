@@ -19,9 +19,9 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Imagens órfãs em /public | 674 (161.1 MB) |
 | Links internos quebrados | 0 |
 | Links externos (revisão manual) | 146 |
-| Tags `<img>` cruas (a migrar) | 72 |
-| Tags `<Image>` (next/image) já usadas | 561 |
-| Imagens SEM atributo alt | 7 |
+| Tags `<img>` cruas (a migrar) | 62 |
+| Tags `<Image>` (next/image) já usadas | 577 |
+| Imagens SEM atributo alt | 14 |
 | Imagens com alt="" | 9 |
 | Tags `<video>` | 15 |
 | Peso total de /public | 707.4 MB |
@@ -260,8 +260,8 @@ _Nenhuma ocorrência._
 
 | Arquivo:linha | src | arquivo | poster | arquivo do poster | preload | playsInline |
 |---|---|:--:|---|:--:|:--:|:--:|
-| `src/app/[locale]/canoinhas/page.js:95` | — | — | **sem poster** | — | metadata | sim |
-| `src/app/[locale]/canoinhas/page.js:573` | — | — | **sem poster** | — | none | sim |
+| `src/app/[locale]/canoinhas/page.js:96` | — | — | **sem poster** | — | metadata | sim |
+| `src/app/[locale]/canoinhas/page.js:606` | — | — | **sem poster** | — | none | sim |
 | `src/app/[locale]/page.js:189` | `/videos/house-mazzutti-fashion-film-hero.mp4` | ok | `/images/hero-poster.webp` | ok | metadata | sim |
 | `src/app/[locale]/page.js:202` | `/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.vertical.mp4` | ok | `/images/hero-poster.webp` | ok | metadata | sim |
 | `src/app/[locale]/produtora/publicidade/page.js:44` | `/videos/house-mazzutti-fashion-film-hero.mp4` | ok | `/images/produtora/beleza/we-pink-ze-felipe/capa.webp` | ok | metadata | sim |
@@ -276,10 +276,14 @@ _Nenhuma ocorrência._
 | `src/app/academy/workshop-producao-direcao-01/route.ts:610` | `/videos/depoimentos-inside-out.mp4` | ok | **sem poster** | — | metadata | **não** |
 | `src/app/components/PortfolioVideo.js:47` | — | — | **sem poster** | — | metadata | sim |
 
-## Imagens sem atributo alt — 7
+## Imagens sem atributo alt — 14
 
 | Arquivo:linha | Tag | Trecho |
 |---|---|---|
+| `src/app/[locale]/blog/page.js:49` | `<img>` | `<img>` |
+| `src/app/[locale]/canoinhas/checkout/page.js:48` | `<img>` | `<img>` |
+| `src/app/[locale]/canoinhas/page.js:109` | `<img>` | `<img>` |
+| `src/app/[locale]/checkout/pix-pendente/[orderId]/PixPendenteClient.tsx:102` | `<img>` | `<img>` |
 | `src/app/[locale]/portfolio-produtora/bia/page.js:130` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
 | `src/app/[locale]/portfolio-produtora/festiva/page.js:133` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
 | `src/app/[locale]/portfolio-produtora/idrissi/page.js:145` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
@@ -287,33 +291,35 @@ _Nenhuma ocorrência._
 | `src/app/[locale]/portfolio-produtora/simony-marca/page.js:131` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
 | `src/app/[locale]/portfolio-produtora/superbia/page.js:129` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
 | `src/app/[locale]/portfolio-produtora/tf/page.js:133` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
+| `src/app/academy/[type]/[slug]/page.js:93` | `<img>` | `<img>` |
+| `src/app/academy/checkout/page.js:137` | `<img>` | `<img>` |
+| `src/app/academy/comunidade/[spaceSlug]/page.js:96` | `<img>` | `<img>` |
 
 ## Imagens com alt="" (verificar se decorativas) — 9
 
 | Arquivo:linha | Tag |
 |---|---|
 | `src/app/[locale]/agencia/page.js:165` | `<Image>` |
-| `src/app/[locale]/canoinhas/page.js:423` | `<img>` |
-| `src/app/[locale]/canoinhas/page.js:486` | `<img>` |
+| `src/app/[locale]/canoinhas/page.js:442` | `<Image>` |
+| `src/app/[locale]/canoinhas/page.js:508` | `<Image>` |
 | `src/app/[locale]/page.js:368` | `<Image>` |
 | `src/app/[locale]/produtora/page.js:196` | `<Image>` |
 | `src/app/[locale]/studio/page.js:226` | `<Image>` |
-| `src/app/academy/checkout/page.js:137` | `<img>` |
-| `src/app/academy/comunidade/[spaceSlug]/page.js:96` | `<img>` |
+| `src/app/academy/checkout/page.js:140` | `<img>` |
+| `src/app/academy/comunidade/[spaceSlug]/page.js:100` | `<img>` |
 | `src/components/analytics/Tracking.tsx:145` | `<img>` |
 
-## Tags <img> que PODEM migrar para next/image (JSX) — 21
+## Tags <img> que PODEM migrar para next/image (JSX) — 11
 
 | Arquivo | Ocorrências |
 |---|---:|
-| `src/app/[locale]/canoinhas/page.js` | 8 |
-| `src/app/[locale]/academy/marketing-para-modelos/page.js` | 4 |
-| `src/app/[locale]/portfolio-agencia/[slug]/AnimatedContent.js` | 4 |
-| `src/app/[locale]/blog/[slug]/ArticleContent.js` | 1 |
+| `src/app/[locale]/canoinhas/page.js` | 2 |
+| `src/app/academy/[type]/[slug]/page.js` | 2 |
+| `src/app/academy/checkout/page.js` | 2 |
+| `src/app/academy/comunidade/[spaceSlug]/page.js` | 2 |
 | `src/app/[locale]/blog/page.js` | 1 |
-| `src/app/academy/[type]/[slug]/page.js` | 1 |
-| `src/app/academy/checkout/page.js` | 1 |
-| `src/app/academy/comunidade/[spaceSlug]/page.js` | 1 |
+| `src/app/[locale]/canoinhas/checkout/page.js` | 1 |
+| `src/app/[locale]/checkout/pix-pendente/[orderId]/PixPendenteClient.tsx` | 1 |
 
 ## Tags <img> que NÃO podem migrar (impossibilidade técnica) — 51
 

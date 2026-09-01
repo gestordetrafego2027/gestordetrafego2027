@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import SiteFooter from '@/app/components/SiteFooter';
 import { Link } from '@/i18n/navigation';
 import Header from '@/app/components/Header';
@@ -106,16 +107,52 @@ export default function AnimatedContent() {
                     <div className="lg:w-2/3">
                         <div className="images-grid">
                             <div className="relative overflow-hidden group">
-                                <img fetchPriority="high" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/1.webp"/>
+                                <Image
+                                    src="/images/agencia/house-mazzutti/1.webp"
+                                    alt="House Mazzutti — Agência"
+                                    width={1200}
+                                    height={1599}
+                                    sizes="(max-width: 1024px) 60vw, 40vw"
+                                    quality={85}
+                                    priority
+                                    className="transition-all duration-700"
+                                />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img loading="lazy" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/2.webp"/>
+                                <Image
+                                    src="/images/agencia/house-mazzutti/2.webp"
+                                    alt="House Mazzutti — Agência"
+                                    width={1200}
+                                    height={675}
+                                    sizes="(max-width: 1024px) 60vw, 40vw"
+                                    quality={80}
+                                    loading="lazy"
+                                    className="transition-all duration-700"
+                                />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img loading="lazy" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/3.webp"/>
+                                <Image
+                                    src="/images/agencia/house-mazzutti/3.webp"
+                                    alt="House Mazzutti — Agência"
+                                    width={1200}
+                                    height={675}
+                                    sizes="(max-width: 1024px) 60vw, 40vw"
+                                    quality={80}
+                                    loading="lazy"
+                                    className="transition-all duration-700"
+                                />
                             </div>
                             <div className="relative overflow-hidden group">
-                                <img loading="lazy" alt="House Mazzutti — Agência" className="transition-all duration-700" src="/images/agencia/house-mazzutti/4.webp"/>
+                                <Image
+                                    src="/images/agencia/house-mazzutti/4.webp"
+                                    alt="House Mazzutti — Agência"
+                                    width={1080}
+                                    height={1662}
+                                    sizes="(max-width: 1024px) 60vw, 40vw"
+                                    quality={80}
+                                    loading="lazy"
+                                    className="transition-all duration-700"
+                                />
                             </div>
                         </div>
                     </div>
