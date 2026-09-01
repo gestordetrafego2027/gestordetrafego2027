@@ -37,3 +37,6 @@ OPTIMIZATION_REPORT.md
 SETUP_UX_UI_HOUSE_MAZZUTTI.md
 PROMPT_EXECUCAO_CLAUDE_CODE.md
 atualizacao ux ui hmzt/
+
+# Dados intermediários da auditoria de assets (regeráveis via scripts/audit-assets.cjs)
+.audit-data.json
