@@ -142,7 +142,7 @@ export default function IdrissiPage() {
             <SiteFooter />
             {selectedImg && (
               <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center" onClick={closeImg}>
-                <Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
+                <Image src={selectedImg} alt={`Idrissi — House Mazzutti, imagem ampliada`} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-contain" />
               </div>
             )}
         </div>

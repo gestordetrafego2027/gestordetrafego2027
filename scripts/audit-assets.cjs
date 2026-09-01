@@ -955,6 +955,47 @@ section('Links externos (revisão manual — sem requests HTTP)', (() => {
 });
 
 
+// ── Resultado final ────────────────────────────────────────────────────────
+
+const rawImgs = imgTags.filter((t) => t.component === 'img');
+const semPoster = videoTags.filter((v) => !v.hasPoster).length;
+const semPreload = videoTags.filter((v) => !v.preload).length;
+const preloadAuto = videoTags.filter((v) => v.preload === 'auto').length;
+const semPlaysInline = videoTags.filter((v) => !v.playsInline).length;
+
+out += `---\n\n## Resultado Final\n\n`;
+out += `Números medidos por esta mesma auditoria, rodando sobre o código já corrigido.\n\n`;
+out += `| | |\n|---|---:|\n`;
+out += `| Referências de mídia resolvidas | ${results.OK.length} |\n`;
+out += `| Case mismatch pendente | ${results.CASE_MISMATCH.length} |\n`;
+out += `| Extensão mismatch pendente | ${results.EXT_MISMATCH.length} |\n`;
+out += `| Fuzzy aguardando decisão | ${results.FUZZY_MATCH.length} |\n`;
+out += `| **BROKEN — arquivo não existe** | **${results.BROKEN.length}** |\n`;
+out += `| Links internos quebrados | ${brokenLinks.length} |\n`;
+out += `| \`<img>\` restantes (todos com motivo documentado) | ${rawImgs.length} |\n`;
+out += `| — ainda migráveis para next/image | ${rawImgs.filter((t) => t.migratable).length} |\n`;
+out += `| \`<Image>\` em uso | ${imgTags.length - rawImgs.length} |\n`;
+out += `| Vídeos sem \`preload\` | ${semPreload} |\n`;
+out += `| Vídeos com \`preload="auto"\` | ${preloadAuto} |\n`;
+out += `| Vídeos sem \`playsInline\` | ${semPlaysInline} |\n`;
+out += `| Vídeos sem poster | ${semPoster} |\n`;
+out += `| Imagens sem alt | ${noAlt.length} |\n`;
+out += `| Órfãos em /public (nada removido) | ${orphans.length} · ${(orphanBytes / 1048576).toFixed(1)} MB |\n\n`;
+
+out += `### O que sobrou para decisão humana\n\n`;
+out += `1. **${results.BROKEN.length} imagens que não existem** — quase todas são o set editorial\n`;
+out += `   de artigos de blog que nunca foi produzido. O \`fallback\` já cobre a tela; o que\n`;
+out += `   continua quebrado é o Open Graph, que usa \`cover.src\` direto. Lista por artigo\n`;
+out += `   em \`BROKEN_IMAGES_TODO.md\`.\n`;
+out += `2. **\`www.housemazzutti.com\` sem certificado** — o bloqueio de acesso descrito no\n`;
+out += `   topo deste relatório. Correção no painel do Coolify, não no código.\n`;
+out += `3. **${orphans.length} arquivos órfãos, ${(orphanBytes / 1048576).toFixed(1)} MB** — listados, nenhum removido.\n`;
+out += `4. **Vídeos**: \`scripts/optimize-videos.js\` está pronto e não foi executado.\n`;
+out += `5. **\`npm run lint\` não roda** neste checkout — \`node_modules/object.values\` está\n`;
+out += `   sem \`index.js\` e derruba o plugin react do eslint-config-next. Falha idêntica\n`;
+out += `   no commit anterior a esta auditoria, então é anterior a ela; resolve com\n`;
+out += `   reinstalação das dependências.\n\n`;
+
 // ─────────────────────────────────────────── BROKEN_IMAGES_TODO.md
 
 let todo = '';

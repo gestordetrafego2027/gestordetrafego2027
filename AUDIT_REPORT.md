@@ -21,7 +21,7 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Links externos (revisão manual) | 146 |
 | Tags `<img>` cruas (a migrar) | 55 |
 | Tags `<Image>` (next/image) já usadas | 577 |
-| Imagens SEM atributo alt | 7 |
+| Imagens SEM atributo alt | 0 |
 | Imagens com alt="" | 9 |
 | Tags `<video>` | 14 |
 | Peso total de /public | 707.4 MB |
@@ -275,17 +275,9 @@ _Nenhuma ocorrência._
 | `src/app/academy/workshop-producao-direcao-01/route.ts:612` | `/videos/depoimentos-inside-out.mp4` | ok | `/images/academy/inside-out/cover.webp` | ok | metadata | sim |
 | `src/app/components/PortfolioVideo.js:47` | — | — | **sem poster** | — | metadata | sim |
 
-## Imagens sem atributo alt — 7
+## Imagens sem atributo alt — 0
 
-| Arquivo:linha | Tag | Trecho |
-|---|---|---|
-| `src/app/[locale]/portfolio-produtora/bia/page.js:130` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
-| `src/app/[locale]/portfolio-produtora/festiva/page.js:133` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
-| `src/app/[locale]/portfolio-produtora/idrissi/page.js:145` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
-| `src/app/[locale]/portfolio-produtora/jequiti-ana-castela/page.js:133` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
-| `src/app/[locale]/portfolio-produtora/simony-marca/page.js:131` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
-| `src/app/[locale]/portfolio-produtora/superbia/page.js:129` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
-| `src/app/[locale]/portfolio-produtora/tf/page.js:133` | `<Image>` | `<Image src={selectedImg} fill sizes="100vw" quality={80} loading="lazy" className="max-h-screen max-w-screen object-cont` |
+_Nenhuma ocorrência._
 
 ## Imagens com alt="" (verificar se decorativas) — 9
 
@@ -1076,4 +1068,43 @@ Total: 160.9 MB. Nada foi removido — lista apenas para revisão.
 | `www.googletagmanager.com` | 1 | `src/app/layout.js:57` |
 | `www.google-analytics.com` | 1 | `src/app/layout.js:58` |
 | `connect.facebook.net` | 1 | `src/app/layout.js:59` |
+
+---
+
+## Resultado Final
+
+Números medidos por esta mesma auditoria, rodando sobre o código já corrigido.
+
+| | |
+|---|---:|
+| Referências de mídia resolvidas | 1518 |
+| Case mismatch pendente | 0 |
+| Extensão mismatch pendente | 0 |
+| Fuzzy aguardando decisão | 1 |
+| **BROKEN — arquivo não existe** | **95** |
+| Links internos quebrados | 0 |
+| `<img>` restantes (todos com motivo documentado) | 55 |
+| — ainda migráveis para next/image | 0 |
+| `<Image>` em uso | 577 |
+| Vídeos sem `preload` | 0 |
+| Vídeos com `preload="auto"` | 0 |
+| Vídeos sem `playsInline` | 0 |
+| Vídeos sem poster | 1 |
+| Imagens sem alt | 0 |
+| Órfãos em /public (nada removido) | 672 · 160.9 MB |
+
+### O que sobrou para decisão humana
+
+1. **95 imagens que não existem** — quase todas são o set editorial
+   de artigos de blog que nunca foi produzido. O `fallback` já cobre a tela; o que
+   continua quebrado é o Open Graph, que usa `cover.src` direto. Lista por artigo
+   em `BROKEN_IMAGES_TODO.md`.
+2. **`www.housemazzutti.com` sem certificado** — o bloqueio de acesso descrito no
+   topo deste relatório. Correção no painel do Coolify, não no código.
+3. **672 arquivos órfãos, 160.9 MB** — listados, nenhum removido.
+4. **Vídeos**: `scripts/optimize-videos.js` está pronto e não foi executado.
+5. **`npm run lint` não roda** neste checkout — `node_modules/object.values` está
+   sem `index.js` e derruba o plugin react do eslint-config-next. Falha idêntica
+   no commit anterior a esta auditoria, então é anterior a ela; resolve com
+   reinstalação das dependências.
 
