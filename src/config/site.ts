@@ -83,7 +83,7 @@ export const brand: Brand = {
   alternateNames: ['HouseMazzutti', 'HMZT'],
   domain: 'housemazzutti.com',
   url: 'https://housemazzutti.com',
-  logo: 'https://housemazzutti.com/LOGO.webp',
+  logo: 'https://housemazzutti.com/images/angelo/hmzt-logo.webp',
   tagline: 'Casa criativa de direção criativa, branding e produção de imagem em São Paulo.',
 } as const
 

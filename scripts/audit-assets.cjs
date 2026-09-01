@@ -191,7 +191,26 @@ for (const abs of codeFiles) {
       const val = m[2];
       const mediaRe = new RegExp(`\\.(${MEDIA_EXT.join('|')})(\\?|#|$)`, 'i');
       if (!mediaRe.test(val)) continue;
-      if (/^(https?:)?\/\//i.test(val)) continue; // externo
+      // URL absoluta do próprio domínio é referência interna disfarçada — descartá-la
+      // como "externa" deixaria passar OG image e logo do schema, que são exatamente
+      // as que mais doem quando quebram.
+      const selfAbs = val.match(/^https?:\/\/(?:www\.)?housemazzutti\.com(\/.*)$/i);
+      if (selfAbs) {
+        const mediaReSelf = new RegExp(`\\.(${MEDIA_EXT.join('|')})(\\?|#|$)`, 'i');
+        if (mediaReSelf.test(selfAbs[1])) {
+          refs.push({
+            file: rel,
+            line: lineNo,
+            raw: selfAbs[1],
+            original: val,
+            kind: 'static',
+            absoluteSelf: true,
+            ext: (selfAbs[1].match(mediaReSelf) || [])[1]?.toLowerCase(),
+          });
+        }
+        continue;
+      }
+      if (/^(https?:)?\/\//i.test(val)) continue; // externo de verdade
       if (/^data:/i.test(val)) continue;
       const dynamic = quote === '`' && /\$\{/.test(val);
       refs.push({

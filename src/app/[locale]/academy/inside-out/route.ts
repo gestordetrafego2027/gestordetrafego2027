@@ -10,7 +10,7 @@ export function GET() {
 <meta name="description" content="A imersão completa do Inside Out agora em vídeo on-demand. Direção criativa e produção executiva de campanhas — do processo interno à entrega final. Por Ângelo Mazzutti.">
 <meta property="og:title" content="Inside Out · Masterclass On-demand">
 <meta property="og:description" content="A imersão completa em vídeo. Direção criativa do processo interno à entrega final — assista no seu ritmo.">
-<meta property="og:image" content="https://housemazzutti.com/images/academy/inside-out/og-image.webp">
+<meta property="og:image" content="https://housemazzutti.com/images/academy/inside-out/cover.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
@@ -20,7 +20,7 @@ export function GET() {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Inside Out · Masterclass On-demand">
 <meta name="twitter:description" content="A imersão completa em vídeo. Direção criativa do processo interno à entrega final — assista no seu ritmo.">
-<meta name="twitter:image" content="https://housemazzutti.com/images/academy/inside-out/og-image.webp">
+<meta name="twitter:image" content="https://housemazzutti.com/images/academy/inside-out/cover.webp">
 <link rel="canonical" href="https://housemazzutti.com/pt/academy/inside-out/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","@id":"https://housemazzutti.com/pt/academy/inside-out/#course","name":"Inside Out — Direção de Imagem e Produção","description":"Programa presencial de formação em direção de imagem e produção audiovisual para fotógrafos e profissionais do mercado criativo. Conduzido por Angelo Mazzutti em São Paulo.","url":"https://housemazzutti.com/pt/academy/inside-out/","provider":{"@id":"https://housemazzutti.com/#organization"},"instructor":{"@type":"Person","@id":"https://housemazzutti.com/pt/angelo/#angelo","name":"Angelo Mazzutti"},"courseMode":"onsite","inLanguage":"pt-BR","locationCreated":{"@type":"City","name":"São Paulo"},"educationalLevel":"Profissional"}</script>
 <!-- Google tag — Consent Mode v2 (LGPD: defaults negados até consentimento) -->

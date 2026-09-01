@@ -6,14 +6,14 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 
 | Métrica | Valor |
 |---|---:|
-| Total de referências de mídia | 1517 |
-| — estáticas (inclui `${SITE_URL}` + caminho fixo) | 1471 |
+| Total de referências de mídia | 1655 |
+| — estáticas (inclui `${SITE_URL}` + caminho fixo) | 1609 |
 | — dinâmicas de verdade (slug/índice variável) | 46 |
-| Imagens OK | 1376 |
+| Imagens OK | 1513 |
 | Case mismatch (correção automática) | 0 |
 | Extensão mismatch (correção automática) | 0 |
 | Fuzzy match (correção sugerida) | 1 |
-| **BROKEN irrecuperáveis** | **94** |
+| **BROKEN irrecuperáveis** | **95** |
 | Referências ignoradas (relativas/import) | 0 |
 | Arquivos em /public | 1686 |
 | Imagens órfãs em /public | 674 (161.1 MB) |
@@ -92,112 +92,113 @@ _Nenhuma ocorrência._
 
 | Arquivo:linha | Referência | Sugestão | Distância | Nota |
 |---|---|---|---:|---|
-| `src/app/[locale]/blog/[slug]/articles.js:31` | `/images/blog/produtora-de-moda-sp/interior-2.webp` | `/images/blog/produtora-de-moda-sp/interior-1.webp` | 1 |  |
+| `src/app/[locale]/blog/[slug]/articles.js:37` | `/images/blog/produtora-de-moda-sp/interior-2.webp` | `/images/blog/produtora-de-moda-sp/interior-1.webp` | 1 |  |
 
-## BROKEN — irrecuperáveis — 94
+## BROKEN — irrecuperáveis — 95
 
 | Arquivo:linha | Referência |
 |---|---|
-| `src/app/[locale]/blog/[slug]/articles.js:119` | `/images/blog/naming-de-marca/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:126` | `/images/blog/naming-de-marca/interior-1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:132` | `/images/blog/naming-de-marca/interior-2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:220` | `/images/blog/custo-de-branding/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:227` | `/images/blog/custo-de-branding/interior-1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:233` | `/images/blog/custo-de-branding/interior-2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:1416` | `/images/blog/boas-ideias-resultados/branding-estrategia-posicionamento-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:1423` | `/images/blog/boas-ideias-resultados/identidade-visual-posicionamento-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:1429` | `/images/blog/boas-ideias-resultados/brand-strategy-marca-mercado-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2047` | `/images/blog/fashion-film/fashion-film-producao-moda-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2059` | `/images/produtora/emanuely-terres/capa.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2134` | `/images/blog/video-institucional/video-institucional-producao-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2220` | `/images/blog/casting-set-design/casting-set-design-producao-moda-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2299` | `/images/blog/geo-visibilidade-ias/geo-generative-engine-optimization-marca-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2306` | `/images/agencia/branding/interior-1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2311` | `/images/agencia/comunicacao/interior-1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2386` | `/images/blog/aeo-resposta-das-ias/aeo-answer-engine-optimization-marca-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2393` | `/images/agencia/rp/interior-1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2398` | `/images/agencia/branding/interior-2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2473` | `/images/blog/geo-aeo-branding-ias/geo-aeo-posicionamento-marca-ias-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2480` | `/images/agencia/web/interior-1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2485` | `/images/agencia/comunicacao/interior-2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2560` | `/images/blog/quanto-custa-book/book-modelo-investimento-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2567` | `/images/blog/quanto-custa-book/book-editorial-direcao-imagem-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2573` | `/images/blog/quanto-custa-book/book-fotografico-resultado-premium-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2653` | `/images/blog/preparar-ensaio/como-se-preparar-ensaio-fotografico-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2660` | `/images/blog/preparar-ensaio/figurino-ensaio-pessoal-direcao-imagem-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2666` | `/images/blog/preparar-ensaio/resultado-ensaio-autoridade-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2745` | `/images/blog/assessoria-imprensa/o-que-e-assessoria-de-imprensa-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2752` | `/images/blog/assessoria-imprensa/assessoria-imprensa-marca-posicionamento-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2758` | `/images/blog/assessoria-imprensa/rp-reputacao-marca-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2838` | `/images/blog/fotografia-de-moda/fotografia-de-moda-o-que-e-house-mazzutti-academy.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2844` | `/images/blog/fotografia-de-moda/pilares-tecnicos-fotografia-moda-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2845` | `/images/blog/fotografia-de-moda/aprender-fotografia-de-moda-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2903` | `/images/blog/direcao-de-imagem/direcao-de-imagem-o-que-faz-um-diretor-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2909` | `/images/blog/direcao-de-imagem/diretor-de-imagem-vs-fotografo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2910` | `/images/blog/direcao-de-imagem/formacao-diretor-de-imagem-academy-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2968` | `/images/blog/workshop-fotografia-moda/workshop-fotografia-moda-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2974` | `/images/blog/workshop-fotografia-moda/workshop-vs-curso-online-fotografia-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2975` | `/images/blog/workshop-fotografia-moda/inside-out-workshop-direcao-imagem-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3033` | `/images/blog/inside-out/inside-out-workshop-house-mazzutti-o-que-e.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3039` | `/images/blog/inside-out/inside-out-angelo-ita-mazzutti-direcao-imagem.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3040` | `/images/blog/inside-out/inside-out-formato-imersao-fotografia-moda-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3098` | `/images/blog/agencia-ou-freelancer/agencia-de-branding-ou-freelancer-quando-contratar-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3104` | `/images/blog/agencia-ou-freelancer/quando-contratar-agencia-branding-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3105` | `/images/blog/agencia-ou-freelancer/freelancer-vs-agencia-custo-real-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3163` | `/images/blog/produtora-de-moda/quando-contratar-produtora-de-moda-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3169` | `/images/blog/produtora-de-moda/fotografo-solo-vs-produtora-de-moda-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3170` | `/images/blog/produtora-de-moda/produtora-de-moda-sao-paulo-direcao-arte-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3228` | `/images/blog/identidade-visual/identidade-visual-o-que-e-quando-refazer-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3234` | `/images/blog/identidade-visual/identidade-visual-alem-do-logo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3235` | `/images/blog/identidade-visual/quando-refazer-identidade-visual-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3294` | `/images/blog/diferenca-book-ensaio/diferenca-book-ensaio-fotografico-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3301` | `/images/blog/diferenca-book-ensaio/book-editorial-versus-ensaio-autoridade-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3307` | `/images/blog/diferenca-book-ensaio/direcao-imagem-resultado-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3382` | `/images/blog/gestao-redes-sociais/gestao-redes-sociais-empresas-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3389` | `/images/blog/gestao-redes-sociais/social-media-estrategia-marca-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3395` | `/images/blog/gestao-redes-sociais/conteudo-digital-premium-empresa-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3463` | `/images/blog/quanto-custa-video/quanto-custa-video-institucional-2025-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3470` | `/images/blog/quanto-custa-video/set-producao-video-institucional-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3476` | `/images/blog/quanto-custa-video/resultado-video-institucional-premium-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3545` | `/images/blog/fashion-film-colecao/fashion-film-lancamento-colecao-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3552` | `/images/blog/fashion-film-colecao/producao-fashion-film-moda-set-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3558` | `/images/blog/fashion-film-colecao/fashion-film-resultado-editorial-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3630` | `/images/blog/onde-fazer-book-fotografico-sao-paulo/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3703` | `/images/blog/agencia-branding-premium-sao-paulo/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3776` | `/images/blog/produtora-fashion-film-sao-paulo/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3849` | `/images/blog/direcao-criativa-o-que-e/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3922` | `/images/blog/quanto-custa-book-fotografico-profissional/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3995` | `/images/blog/casa-criativa-sao-paulo/cover.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4529` | `/images/blog/wepink-jequiti-sp/campanha-beleza-wepink-jequiti-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4535` | `/images/blog/wepink-jequiti-sp/producao-campanha-celebridade-house-mazzutti-sp.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4540` | `/images/blog/wepink-jequiti-sp/direcao-criativa-moda-beleza-angelo-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4618` | `/images/blog/formacao-imagem-sp/inside-out-house-mazzutti-academy-sao-paulo.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4624` | `/images/blog/formacao-imagem-sp/curso-direcao-imagem-profissional-sao-paulo.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4629` | `/images/blog/formacao-imagem-sp/producao-audiovisual-formacao-mercado-criativo-sp.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4707` | `/images/blog/diretores-criativos-moda-sp/diretor-criativo-moda-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4713` | `/images/blog/diretores-criativos-moda-sp/set-direcao-criativa-campanha-moda-sao-paulo.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:4718` | `/images/blog/diretores-criativos-moda-sp/portfolio-direcao-criativa-marcas-moda-brasil.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5613` | `/images/blog/brandbook/brandbook-manual-de-marca-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5620` | `/images/blog/brandbook/paleta-tipografia-identidade-visual-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5626` | `/images/blog/brandbook/aplicacoes-marca-brandbook-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5629` | `/images/agencia/branding/interior-2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5713` | `/images/blog/naming-de-marca/naming-de-marca-nome-que-posiciona-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5720` | `/images/blog/naming-de-marca/tipos-de-naming-descritivo-evocativo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5726` | `/images/blog/naming-de-marca/criterios-escolha-nome-marca-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5729` | `/images/agencia/branding/interior-2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5818` | `/images/blog/reposicionamento-de-marca/reposicionamento-de-marca-identidade-visual-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5825` | `/images/blog/reposicionamento-de-marca/auditoria-marca-rebranding-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5831` | `/images/blog/reposicionamento-de-marca/rollout-nova-identidade-visual-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:5834` | `/images/agencia/branding/interior-2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:7194` | `/images/produtora/moda/1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:7200` | `/images/produtora/moda/2.webp` |
-| `src/lib/seo/schemas.js:1575` | `${SITE}/images/produtora/moda/splash-boutique/1.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:125` | `/images/blog/naming-de-marca/cover.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:132` | `/images/blog/naming-de-marca/interior-1.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:138` | `/images/blog/naming-de-marca/interior-2.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:226` | `/images/blog/custo-de-branding/cover.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:233` | `/images/blog/custo-de-branding/interior-1.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:239` | `/images/blog/custo-de-branding/interior-2.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:1422` | `/images/blog/boas-ideias-resultados/branding-estrategia-posicionamento-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:1429` | `/images/blog/boas-ideias-resultados/identidade-visual-posicionamento-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:1435` | `/images/blog/boas-ideias-resultados/brand-strategy-marca-mercado-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2053` | `/images/blog/fashion-film/fashion-film-producao-moda-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2065` | `/images/produtora/emanuely-terres/capa.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2140` | `/images/blog/video-institucional/video-institucional-producao-sao-paulo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2226` | `/images/blog/casting-set-design/casting-set-design-producao-moda-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2305` | `/images/blog/geo-visibilidade-ias/geo-generative-engine-optimization-marca-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2312` | `/images/agencia/branding/interior-1.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2317` | `/images/agencia/comunicacao/interior-1.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2392` | `/images/blog/aeo-resposta-das-ias/aeo-answer-engine-optimization-marca-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2399` | `/images/agencia/rp/interior-1.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2404` | `/images/agencia/branding/interior-2.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2479` | `/images/blog/geo-aeo-branding-ias/geo-aeo-posicionamento-marca-ias-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2486` | `/images/agencia/web/interior-1.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2491` | `/images/agencia/comunicacao/interior-2.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2566` | `/images/blog/quanto-custa-book/book-modelo-investimento-sao-paulo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2573` | `/images/blog/quanto-custa-book/book-editorial-direcao-imagem-sao-paulo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2579` | `/images/blog/quanto-custa-book/book-fotografico-resultado-premium-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2659` | `/images/blog/preparar-ensaio/como-se-preparar-ensaio-fotografico-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2666` | `/images/blog/preparar-ensaio/figurino-ensaio-pessoal-direcao-imagem-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2672` | `/images/blog/preparar-ensaio/resultado-ensaio-autoridade-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2751` | `/images/blog/assessoria-imprensa/o-que-e-assessoria-de-imprensa-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2758` | `/images/blog/assessoria-imprensa/assessoria-imprensa-marca-posicionamento-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2764` | `/images/blog/assessoria-imprensa/rp-reputacao-marca-sao-paulo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2844` | `/images/blog/fotografia-de-moda/fotografia-de-moda-o-que-e-house-mazzutti-academy.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2850` | `/images/blog/fotografia-de-moda/pilares-tecnicos-fotografia-moda-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2851` | `/images/blog/fotografia-de-moda/aprender-fotografia-de-moda-sao-paulo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2909` | `/images/blog/direcao-de-imagem/direcao-de-imagem-o-que-faz-um-diretor-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2915` | `/images/blog/direcao-de-imagem/diretor-de-imagem-vs-fotografo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2916` | `/images/blog/direcao-de-imagem/formacao-diretor-de-imagem-academy-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2974` | `/images/blog/workshop-fotografia-moda/workshop-fotografia-moda-sao-paulo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2980` | `/images/blog/workshop-fotografia-moda/workshop-vs-curso-online-fotografia-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:2981` | `/images/blog/workshop-fotografia-moda/inside-out-workshop-direcao-imagem-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3039` | `/images/blog/inside-out/inside-out-workshop-house-mazzutti-o-que-e.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3045` | `/images/blog/inside-out/inside-out-angelo-ita-mazzutti-direcao-imagem.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3046` | `/images/blog/inside-out/inside-out-formato-imersao-fotografia-moda-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3104` | `/images/blog/agencia-ou-freelancer/agencia-de-branding-ou-freelancer-quando-contratar-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3110` | `/images/blog/agencia-ou-freelancer/quando-contratar-agencia-branding-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3111` | `/images/blog/agencia-ou-freelancer/freelancer-vs-agencia-custo-real-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3169` | `/images/blog/produtora-de-moda/quando-contratar-produtora-de-moda-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3175` | `/images/blog/produtora-de-moda/fotografo-solo-vs-produtora-de-moda-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3176` | `/images/blog/produtora-de-moda/produtora-de-moda-sao-paulo-direcao-arte-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3234` | `/images/blog/identidade-visual/identidade-visual-o-que-e-quando-refazer-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3240` | `/images/blog/identidade-visual/identidade-visual-alem-do-logo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3241` | `/images/blog/identidade-visual/quando-refazer-identidade-visual-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3300` | `/images/blog/diferenca-book-ensaio/diferenca-book-ensaio-fotografico-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3307` | `/images/blog/diferenca-book-ensaio/book-editorial-versus-ensaio-autoridade-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3313` | `/images/blog/diferenca-book-ensaio/direcao-imagem-resultado-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3388` | `/images/blog/gestao-redes-sociais/gestao-redes-sociais-empresas-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3395` | `/images/blog/gestao-redes-sociais/social-media-estrategia-marca-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3401` | `/images/blog/gestao-redes-sociais/conteudo-digital-premium-empresa-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3469` | `/images/blog/quanto-custa-video/quanto-custa-video-institucional-2025-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3476` | `/images/blog/quanto-custa-video/set-producao-video-institucional-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3482` | `/images/blog/quanto-custa-video/resultado-video-institucional-premium-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3551` | `/images/blog/fashion-film-colecao/fashion-film-lancamento-colecao-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3558` | `/images/blog/fashion-film-colecao/producao-fashion-film-moda-set-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3564` | `/images/blog/fashion-film-colecao/fashion-film-resultado-editorial-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3636` | `/images/blog/onde-fazer-book-fotografico-sao-paulo/cover.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3709` | `/images/blog/agencia-branding-premium-sao-paulo/cover.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3782` | `/images/blog/produtora-fashion-film-sao-paulo/cover.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3855` | `/images/blog/direcao-criativa-o-que-e/cover.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:3928` | `/images/blog/quanto-custa-book-fotografico-profissional/cover.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4001` | `/images/blog/casa-criativa-sao-paulo/cover.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4535` | `/images/blog/wepink-jequiti-sp/campanha-beleza-wepink-jequiti-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4541` | `/images/blog/wepink-jequiti-sp/producao-campanha-celebridade-house-mazzutti-sp.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4546` | `/images/blog/wepink-jequiti-sp/direcao-criativa-moda-beleza-angelo-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4624` | `/images/blog/formacao-imagem-sp/inside-out-house-mazzutti-academy-sao-paulo.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4630` | `/images/blog/formacao-imagem-sp/curso-direcao-imagem-profissional-sao-paulo.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4635` | `/images/blog/formacao-imagem-sp/producao-audiovisual-formacao-mercado-criativo-sp.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4713` | `/images/blog/diretores-criativos-moda-sp/diretor-criativo-moda-sao-paulo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4719` | `/images/blog/diretores-criativos-moda-sp/set-direcao-criativa-campanha-moda-sao-paulo.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:4724` | `/images/blog/diretores-criativos-moda-sp/portfolio-direcao-criativa-marcas-moda-brasil.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5619` | `/images/blog/brandbook/brandbook-manual-de-marca-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5626` | `/images/blog/brandbook/paleta-tipografia-identidade-visual-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5632` | `/images/blog/brandbook/aplicacoes-marca-brandbook-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5635` | `/images/agencia/branding/interior-2.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5719` | `/images/blog/naming-de-marca/naming-de-marca-nome-que-posiciona-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5726` | `/images/blog/naming-de-marca/tipos-de-naming-descritivo-evocativo-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5732` | `/images/blog/naming-de-marca/criterios-escolha-nome-marca-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5735` | `/images/agencia/branding/interior-2.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5824` | `/images/blog/reposicionamento-de-marca/reposicionamento-de-marca-identidade-visual-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5831` | `/images/blog/reposicionamento-de-marca/auditoria-marca-rebranding-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5837` | `/images/blog/reposicionamento-de-marca/rollout-nova-identidade-visual-house-mazzutti.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:5840` | `/images/agencia/branding/interior-2.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:7200` | `/images/produtora/moda/1.webp` |
+| `src/app/[locale]/blog/[slug]/articles.js:7206` | `/images/produtora/moda/2.webp` |
+| `src/app/[locale]/portfolio-produtora/splash-boutique/layout.js:15` | `/images/produtora/moda/splash-boutique/1.webp` |
+| `src/lib/seo/schemas.js:1577` | `${SITE}/images/produtora/moda/splash-boutique/1.webp` |
 
 ## Referências DINÂMICAS com ZERO arquivos correspondentes (quebradas) — 2
 
 | Arquivo:linha | Padrão |
 |---|---|
-| `src/app/[locale]/portfolio-produtora/splash-boutique/page.js:74` | `/images/produtora/moda/splash-boutique/${i+1}.webp` |
+| `src/app/[locale]/portfolio-produtora/splash-boutique/page.js:77` | `/images/produtora/moda/splash-boutique/${i+1}.webp` |
 | `src/app/components/PortfolioVideo.js:22` | `/videos/${unit}/${slug}/projeto.mp4` |
 
 ## Referências DINÂMICAS (template literals) — 46
@@ -240,7 +241,7 @@ _Nenhuma ocorrência._
 | `src/app/[locale]/portfolio-produtora/signus-versolato02/page.js:51` | `/images/produtora/acessorios/signus-versolato02/${i+1}.webp` | 7 | `/images/produtora/acessorios/signus-versolato02/1.webp`<br>`/images/produtora/acessorios/signus-versolato02/2.webp`<br>`/images/produtora/acessorios/signus-versolato02/3.webp` |
 | `src/app/[locale]/portfolio-produtora/signus-vertz/page.js:73` | `/images/produtora/acessorios/signus-vertz/${i+1}.webp` | 6 | `/images/produtora/acessorios/signus-vertz/1.webp`<br>`/images/produtora/acessorios/signus-vertz/2.webp`<br>`/images/produtora/acessorios/signus-vertz/3.webp` |
 | `src/app/[locale]/portfolio-produtora/simony-marca/page.js:73` | `/images/produtora/beleza/simony-marca/${i+1}.webp` | 4 | `/images/produtora/beleza/simony-marca/1.webp`<br>`/images/produtora/beleza/simony-marca/2.webp`<br>`/images/produtora/beleza/simony-marca/3.webp` |
-| `src/app/[locale]/portfolio-produtora/splash-boutique/page.js:74` | `/images/produtora/moda/splash-boutique/${i+1}.webp` | **0** |  |
+| `src/app/[locale]/portfolio-produtora/splash-boutique/page.js:77` | `/images/produtora/moda/splash-boutique/${i+1}.webp` | **0** |  |
 | `src/app/[locale]/portfolio-produtora/superbia/page.js:71` | `/images/produtora/beleza/superbia/${i+1}.webp` | 8 | `/images/produtora/beleza/superbia/1.webp`<br>`/images/produtora/beleza/superbia/2.webp`<br>`/images/produtora/beleza/superbia/3.webp` |
 | `src/app/[locale]/portfolio-produtora/tf/page.js:73` | `/images/produtora/institucional/tf/${i+1}.webp` | 13 | `/images/produtora/institucional/tf/1.webp`<br>`/images/produtora/institucional/tf/10.webp`<br>`/images/produtora/institucional/tf/11.webp` |
 | `src/app/[locale]/portfolio-produtora/toli/page.js:51` | `/images/produtora/moda/toli/${i+1}.webp` | 11 | `/images/produtora/moda/toli/1.webp`<br>`/images/produtora/moda/toli/10.webp`<br>`/images/produtora/moda/toli/2.webp` |
