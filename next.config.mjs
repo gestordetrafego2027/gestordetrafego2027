@@ -29,6 +29,10 @@ const nextConfig = {
       { protocol: 'https', hostname: 'urfrxirqkkrosyrvvtdo.supabase.co', pathname: '/storage/v1/object/**' },
       // Próprio domínio — imagens armazenadas com URL absoluta no banco (legado dev/prod)
       { protocol: 'https', hostname: 'housemazzutti.com', pathname: '/images/**' },
+      // Instagram — CDN das mídias devolvidas pela Graph API (seção "Últimos conteúdos").
+      // URLs são assinadas e rotativas; o cache de 1h do feed mantém elas válidas.
+      { protocol: 'https', hostname: '**.cdninstagram.com' },
+      { protocol: 'https', hostname: '**.fbcdn.net' },
     ],
     formats: ['image/avif', 'image/webp'],
     qualities: [75, 80, 82, 85, 90],
