@@ -1,15 +1,39 @@
 {
   "_README": [
     "Fallback curado dos ultimos posts do Instagram (@housemazzutti).",
-    "So e usado quando INSTAGRAM_ACCESS_TOKEN nao esta setado ou a Graph API falha.",
-    "Preencher 'posts' com posts REAIS, do mais recente para o mais antigo:",
-    "  id           - identificador livre e unico (ex.: '2026-08-fashion-film')",
-    "  permalink    - URL real do post (https://www.instagram.com/p/... ou /reel/...)",
-    "  media_url    - imagem em /public (ex.: '/images/instagram/post-1.webp')",
-    "  media_type   - 'IMAGE' | 'VIDEO' | 'CAROUSEL_ALBUM'",
-    "  caption      - legenda (cortada em 140 caracteres na renderizacao)",
-    "  timestamp    - ISO 8601, opcional",
+    "So e usado quando a Graph API nao responde (token ausente, expirado ou revogado).",
+    "Os posts abaixo sao REAIS, capturados da Graph API em 2026-09-02 (IG Business 17841401964362540).",
+    "Para atualizar: rodar a query /17841401964362540/media no Explorador da Graph API,",
+    "baixar as imagens (media_url para foto/carrossel, thumbnail_url para video),",
+    "converter para webp 1080x1080 e substituir os arquivos em /public/images/instagram/.",
     "Nunca preencher com post inventado: card sem post real engana o visitante."
   ],
-  "posts": []
+  "posts": [
+    {
+      "id": "18114558472787374",
+      "permalink": "https://www.instagram.com/reel/Dcn-XxdOHIh/",
+      "media_url": "/images/instagram/post-1.webp",
+      "media_type": "VIDEO",
+      "thumbnail_url": "/images/instagram/post-1.webp",
+      "caption": "BTS @epauzer #fashionfilm #ensaiofotográfico #housemazzutti",
+      "timestamp": "2026-08-29T12:51:34+0000"
+    },
+    {
+      "id": "18022808222888476",
+      "permalink": "https://www.instagram.com/p/Db_s7WyEVdF/",
+      "media_url": "/images/instagram/post-2.webp",
+      "media_type": "CAROUSEL_ALBUM",
+      "caption": "Produção Executiva e Direção Criativa para campanha @jeanpierreoculos #producaoexecutiva #direcaocriativa #photoshoot",
+      "timestamp": "2026-08-13T21:27:04+0000"
+    },
+    {
+      "id": "18107367556863971",
+      "permalink": "https://www.instagram.com/reel/Db85vq-huMT/",
+      "media_url": "/images/instagram/post-3.webp",
+      "media_type": "VIDEO",
+      "thumbnail_url": "/images/instagram/post-3.webp",
+      "caption": "Fashion Film @brendakmatos #fashionfilm #shootingday #bookmodel #produçãoexecutiva #missecobrasil",
+      "timestamp": "2026-08-12T19:24:50+0000"
+    }
+  ]
 }
