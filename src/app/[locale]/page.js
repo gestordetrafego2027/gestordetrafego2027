@@ -24,6 +24,11 @@ export default function Home() {
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
     const [isHeroPaused, setIsHeroPaused] = useState(false);
     const [isHomeFormOpen, setIsHomeFormOpen] = useState(false);
+    // Hero: só o vídeo do viewport atual recebe `src`. Os dois <video> continuam no
+    // DOM (o Tailwind segue controlando a visibilidade), mas sem `src` o navegador
+    // não baixa nada. Sem isso, o `autoPlay` fazia o desktop puxar também o vídeo
+    // vertical de 72 MB escondido em `display:none` — medido: 11,2s já bufferizados.
+    const [isMobileHero, setIsMobileHero] = useState(null);
     const openHomeForm = () => { track('Lead', { lead_type: 'home', content_name: 'Home Form' }); setIsHomeFormOpen(true); };
 
     const heroSlides = [
@@ -64,6 +69,14 @@ export default function Home() {
     const prevHeroSlide = () => {
         setCurrentHeroSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     };
+
+    useEffect(() => {
+        const mq = window.matchMedia('(max-width: 767px)');
+        const apply = () => setIsMobileHero(mq.matches);
+        apply();
+        mq.addEventListener('change', apply);
+        return () => mq.removeEventListener('change', apply);
+    }, []);
 
     useEffect(() => {
         const reduce = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -187,7 +200,7 @@ export default function Home() {
                     <div className="absolute inset-0 z-0 bg-black">
                         {/* desktop */}
                         <video
-                            src="/videos/house-mazzutti-fashion-film-hero.mp4"
+                            src={isMobileHero === false ? "/videos/house-mazzutti-fashion-film-hero.mp4" : undefined}
                             poster="/images/hero-poster.webp"
                             autoPlay
                             muted
@@ -200,7 +213,7 @@ export default function Home() {
                         />
                         {/* mobile — vertical 10 anos */}
                         <video
-                            src="/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.vertical.mp4"
+                            src={isMobileHero === true ? "/videos/house-mazzutti-10-anos-branding-house-criativa-estrategic-house-branding-marketing-publicidade-rp-midia-digital-conect-influencia-moda-beauty-mazzutti-angelo-dir.vertical.mp4" : undefined}
                             poster="/images/hero-poster.webp"
                             autoPlay
                             muted
