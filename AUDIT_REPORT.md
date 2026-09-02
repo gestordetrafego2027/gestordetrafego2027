@@ -13,7 +13,7 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Case mismatch (correção automática) | 0 |
 | Extensão mismatch (correção automática) | 0 |
 | Fuzzy match (correção sugerida) | 0 |
-| **BROKEN irrecuperáveis** | **4** |
+| **BROKEN irrecuperáveis** | **2** (2 resolvidos em 2026-09-02) |
 | Referências ignoradas (relativas/import) | 0 |
 | Arquivos em /public | 1778 |
 | Imagens órfãs em /public | 668 (158.9 MB) |
@@ -92,14 +92,14 @@ _Nenhuma ocorrência._
 
 _Nenhuma ocorrência._
 
-## BROKEN — irrecuperáveis — 4
+## BROKEN — irrecuperáveis — 2 (2 resolvidos em 2026-09-02)
 
-| Arquivo:linha | Referência |
-|---|---|
-| `src/app/[locale]/blog/[slug]/articles.js:7212` | `/images/produtora/moda/1.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:7218` | `/images/produtora/moda/2.webp` |
-| `src/app/[locale]/portfolio-produtora/splash-boutique/layout.js:15` | `/images/produtora/moda/splash-boutique/1.webp` |
-| `src/lib/seo/schemas.js:1577` | `${SITE}/images/produtora/moda/splash-boutique/1.webp` |
+| Arquivo:linha | Referência | Status |
+|---|---|---|
+| `src/app/[locale]/blog/[slug]/articles.js:7212` | `/images/produtora/moda/1.webp` | ✅ gerado 2026-09-02 |
+| `src/app/[locale]/blog/[slug]/articles.js:7218` | `/images/produtora/moda/2.webp` | ✅ gerado 2026-09-02 |
+| `src/app/[locale]/portfolio-produtora/splash-boutique/layout.js:15` | `/images/produtora/moda/splash-boutique/1.webp` | ⛔ pendente |
+| `src/lib/seo/schemas.js:1577` | `${SITE}/images/produtora/moda/splash-boutique/1.webp` | ⛔ pendente |
 
 ## Referências DINÂMICAS com ZERO arquivos correspondentes (quebradas) — 2
 

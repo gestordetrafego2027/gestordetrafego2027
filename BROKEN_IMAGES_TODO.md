@@ -22,8 +22,8 @@ Fluxo sugerido: `foto-artigo-blog <slug>` por artigo.
 
 ## `fashion-film-sao-paulo-guia-de-producao` — 2 imagem(ns)
 
-- [ ] L7212 `/images/produtora/moda/1.webp`
-- [ ] L7218 `/images/produtora/moda/2.webp`
+- [x] L7212 `/images/produtora/moda/1.webp` — gerado 2026-09-02 (Seedream 5 Pro ∞)
+- [x] L7218 `/images/produtora/moda/2.webp` — gerado 2026-09-02 (Seedream 5 Pro ∞)
 
 ---
 
