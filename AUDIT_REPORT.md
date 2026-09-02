@@ -9,13 +9,13 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Total de referências de mídia | 1735 |
 | — estáticas (inclui `${SITE_URL}` + caminho fixo) | 1689 |
 | — dinâmicas de verdade (slug/índice variável) | 46 |
-| Imagens OK | 1637 |
+| Imagens OK | 1685 |
 | Case mismatch (correção automática) | 0 |
 | Extensão mismatch (correção automática) | 0 |
 | Fuzzy match (correção sugerida) | 0 |
-| **BROKEN irrecuperáveis** | **52** |
+| **BROKEN irrecuperáveis** | **4** |
 | Referências ignoradas (relativas/import) | 0 |
-| Arquivos em /public | 1754 |
+| Arquivos em /public | 1778 |
 | Imagens órfãs em /public | 668 (158.9 MB) |
 | Links internos quebrados | 0 |
 | Links externos (revisão manual) | 146 |
@@ -24,7 +24,7 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Imagens SEM atributo alt | 0 |
 | Imagens com alt="" | 9 |
 | Tags `<video>` | 14 |
-| Peso total de /public | 714.8 MB |
+| Peso total de /public | 718.4 MB |
 
 ---
 
@@ -92,60 +92,12 @@ _Nenhuma ocorrência._
 
 _Nenhuma ocorrência._
 
-## BROKEN — irrecuperáveis — 52
+## BROKEN — irrecuperáveis — 4
 
 | Arquivo:linha | Referência |
 |---|---|
-| `src/app/[locale]/blog/[slug]/articles.js:2569` | `/images/blog/quanto-custa-book/book-modelo-investimento-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2576` | `/images/blog/quanto-custa-book/book-editorial-direcao-imagem-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2582` | `/images/blog/quanto-custa-book/book-fotografico-resultado-premium-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2662` | `/images/blog/preparar-ensaio/como-se-preparar-ensaio-fotografico-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2669` | `/images/blog/preparar-ensaio/figurino-ensaio-pessoal-direcao-imagem-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2675` | `/images/blog/preparar-ensaio/resultado-ensaio-autoridade-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2754` | `/images/blog/assessoria-imprensa/o-que-e-assessoria-de-imprensa-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2761` | `/images/blog/assessoria-imprensa/assessoria-imprensa-marca-posicionamento-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:2767` | `/images/blog/assessoria-imprensa/rp-reputacao-marca-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3237` | `/images/blog/identidade-visual/identidade-visual-o-que-e-quando-refazer-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3243` | `/images/blog/identidade-visual/identidade-visual-alem-do-logo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3244` | `/images/blog/identidade-visual/quando-refazer-identidade-visual-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3303` | `/images/blog/diferenca-book-ensaio/diferenca-book-ensaio-fotografico-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3310` | `/images/blog/diferenca-book-ensaio/book-editorial-versus-ensaio-autoridade-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3316` | `/images/blog/diferenca-book-ensaio/direcao-imagem-resultado-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3391` | `/images/blog/gestao-redes-sociais/gestao-redes-sociais-empresas-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3398` | `/images/blog/gestao-redes-sociais/social-media-estrategia-marca-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3404` | `/images/blog/gestao-redes-sociais/conteudo-digital-premium-empresa-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3472` | `/images/blog/quanto-custa-video/quanto-custa-video-institucional-2025-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3479` | `/images/blog/quanto-custa-video/set-producao-video-institucional-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3485` | `/images/blog/quanto-custa-video/resultado-video-institucional-premium-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3554` | `/images/blog/fashion-film-colecao/fashion-film-lancamento-colecao-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3561` | `/images/blog/fashion-film-colecao/producao-fashion-film-moda-set-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:3567` | `/images/blog/fashion-film-colecao/fashion-film-resultado-editorial-house-mazzutti.webp` |
 | `src/app/[locale]/blog/[slug]/articles.js:7212` | `/images/produtora/moda/1.webp` |
 | `src/app/[locale]/blog/[slug]/articles.js:7218` | `/images/produtora/moda/2.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8284` | `/images/blog/assessoria-imprensa/o-que-e-assessoria-de-imprensa-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8291` | `/images/blog/assessoria-imprensa/assessoria-imprensa-marca-posicionamento-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8297` | `/images/blog/assessoria-imprensa/rp-reputacao-marca-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8440` | `/images/blog/gestao-redes-sociais/gestao-redes-sociais-empresas-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8447` | `/images/blog/gestao-redes-sociais/social-media-estrategia-marca-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8453` | `/images/blog/gestao-redes-sociais/conteudo-digital-premium-empresa-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8605` | `/images/blog/identidade-visual/identidade-visual-o-que-e-quando-refazer-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8612` | `/images/blog/identidade-visual/identidade-visual-alem-do-logo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8617` | `/images/blog/identidade-visual/quando-refazer-identidade-visual-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8744` | `/images/blog/diferenca-book-ensaio/diferenca-book-ensaio-fotografico-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8751` | `/images/blog/diferenca-book-ensaio/book-editorial-versus-ensaio-autoridade-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8757` | `/images/blog/diferenca-book-ensaio/direcao-imagem-resultado-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8849` | `/images/blog/quanto-custa-book/book-modelo-investimento-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8856` | `/images/blog/quanto-custa-book/book-editorial-direcao-imagem-sao-paulo-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8862` | `/images/blog/quanto-custa-book/book-fotografico-resultado-premium-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8971` | `/images/blog/preparar-ensaio/como-se-preparar-ensaio-fotografico-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8978` | `/images/blog/preparar-ensaio/figurino-ensaio-pessoal-direcao-imagem-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:8984` | `/images/blog/preparar-ensaio/resultado-ensaio-autoridade-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:9093` | `/images/blog/quanto-custa-video/quanto-custa-video-institucional-2025-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:9100` | `/images/blog/quanto-custa-video/set-producao-video-institucional-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:9106` | `/images/blog/quanto-custa-video/resultado-video-institucional-premium-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:9249` | `/images/blog/fashion-film-colecao/fashion-film-lancamento-colecao-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:9256` | `/images/blog/fashion-film-colecao/producao-fashion-film-moda-set-house-mazzutti.webp` |
-| `src/app/[locale]/blog/[slug]/articles.js:9262` | `/images/blog/fashion-film-colecao/fashion-film-resultado-editorial-house-mazzutti.webp` |
 | `src/app/[locale]/portfolio-produtora/splash-boutique/layout.js:15` | `/images/produtora/moda/splash-boutique/1.webp` |
 | `src/lib/seo/schemas.js:1577` | `${SITE}/images/produtora/moda/splash-boutique/1.webp` |
 
@@ -280,28 +232,19 @@ também está quebrado. O OG/Twitter/JSON-LD, porém, usa `cover.src` direto
 
 | Situação | Entradas |
 |---|---:|
-| `src` existe | 135 |
-| `src` quebrado, `fallback` salva a tela (mas OG quebra) | 22 |
-| **`src` E `fallback` quebrados — buraco visível na página** | **2** |
+| `src` existe | 159 |
+| `src` quebrado, `fallback` salva a tela (mas OG quebra) | 0 |
+| **`src` E `fallback` quebrados — buraco visível na página** | **0** |
 
 ### Artigos com imagem visivelmente quebrada
 
 | Artigo (slug) | Imagens quebradas |
 |---|---:|
-| `identidade-visual-o-que-e-quando-refazer-a-sua` | 2 |
 
 ### Artigos que dependem do fallback (imagem genérica no lugar da própria)
 
 | Artigo (slug) | Imagens ausentes |
 |---|---:|
-| `quanto-custa-book-modelo-sao-paulo` | 3 |
-| `como-se-preparar-ensaio-fotografico` | 3 |
-| `o-que-e-assessoria-de-imprensa` | 3 |
-| `diferenca-book-ensaio-fotografico` | 3 |
-| `gestao-redes-sociais-para-empresas` | 3 |
-| `quanto-custa-video-institucional-2025` | 3 |
-| `fashion-film-lancamento-colecao` | 3 |
-| `identidade-visual-o-que-e-quando-refazer-a-sua` | 1 |
 
 ## Imagens órfãs em /public (NÃO deletadas) — 668
 
@@ -1004,11 +947,11 @@ Números medidos por esta mesma auditoria, rodando sobre o código já corrigido
 
 | | |
 |---|---:|
-| Referências de mídia resolvidas | 1637 |
+| Referências de mídia resolvidas | 1685 |
 | Case mismatch pendente | 0 |
 | Extensão mismatch pendente | 0 |
 | Fuzzy aguardando decisão | 0 |
-| **BROKEN — arquivo não existe** | **52** |
+| **BROKEN — arquivo não existe** | **4** |
 | Links internos quebrados | 0 |
 | `<img>` restantes (todos com motivo documentado) | 55 |
 | — ainda migráveis para next/image | 0 |
@@ -1022,7 +965,7 @@ Números medidos por esta mesma auditoria, rodando sobre o código já corrigido
 
 ### O que sobrou para decisão humana
 
-1. **52 imagens que não existem** — quase todas são o set editorial
+1. **4 imagens que não existem** — quase todas são o set editorial
    de artigos de blog que nunca foi produzido. O `fallback` já cobre a tela; o que
    continua quebrado é o Open Graph, que usa `cover.src` direto. Lista por artigo
    em `BROKEN_IMAGES_TODO.md`.
