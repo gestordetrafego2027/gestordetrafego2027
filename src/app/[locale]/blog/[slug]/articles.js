@@ -8280,9 +8280,28 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     'assessoria de imprensa para empresas',
     'branding estratégico'
   ],
-  cover: null,
-  interior: [],
+  cover: {
+    "src": "/images/blog/assessoria-imprensa/o-que-e-assessoria-de-imprensa-house-mazzutti.webp",
+    "fallback": "/images/agencia/house-mazzutti/capa.webp",
+    "alt": "Assessoria de imprensa e relações públicas para marcas — Agência House Mazzutti São Paulo",
+    "caption": "RP e presença editorial · Agência HMZT"
+  },
+  interior: [
+    {
+      "src": "/images/blog/assessoria-imprensa/assessoria-imprensa-marca-posicionamento-house-mazzutti.webp",
+      "fallback": "/images/agencia/house-mazzutti/4.webp",
+      "alt": "Estratégia de assessoria de imprensa para posicionamento de marca — House Mazzutti Agência",
+      "caption": "Presença nos veículos certos · RP estratégica"
+    },
+    {
+      "src": "/images/blog/assessoria-imprensa/rp-reputacao-marca-sao-paulo-house-mazzutti.webp",
+      "fallback": "/images/agencia/house-mazzutti/6.webp",
+      "alt": "Construção de reputação de marca por meio de assessoria de imprensa em São Paulo",
+      "caption": "Reputação como estratégia · Agência HMZT"
+    }
+  ],
   citacao: 'Visibilidade é quando falam de você. Autoridade é quando falam com você para entender o assunto. São coisas diferentes, e só uma delas se acumula.',
+  respostaDireta: "Assessoria de imprensa é o serviço que posiciona uma marca, empresa ou profissional nos meios de comunicação certos — jornalistas, editores, podcasters e veículos formadores de opinião — de forma editorial, não publicitária. Diferente do anúncio, a menção de imprensa tem autoridade: alguém de fora escolheu falar sobre você. Uma marca precisa de assessoria quando quer construir autoridade, crescer por presença orgânica e ser lembrada como referência — não apenas encontrada por quem já a busca.",
   intro: 'A maioria das empresas que procura uma assessoria de imprensa quer aparecer. É um pedido legítimo, mas incompleto. Assessoria de imprensa é a disciplina que administra o que se diz sobre uma marca quando ela não está na sala — e isso começa muito antes da primeira publicação e continua muito depois dela. Este texto explica o serviço para quem nunca contratou, e recoloca o serviço para quem já contratou e achou que tinha comprado outra coisa.',
   sections: [
     {
@@ -8417,9 +8436,28 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     'presença digital corporativa',
     'direção criativa',
   ],
-  cover: null,
-  interior: [],
+  cover: {
+    "src": "/images/blog/gestao-redes-sociais/gestao-redes-sociais-empresas-house-mazzutti.webp",
+    "fallback": "/images/agencia/house-mazzutti/capa.webp",
+    "alt": "Gestão de redes sociais para empresas — Agência House Mazzutti São Paulo",
+    "caption": "Social media estratégico · Agência HMZT"
+  },
+  interior: [
+    {
+      "src": "/images/blog/gestao-redes-sociais/social-media-estrategia-marca-house-mazzutti.webp",
+      "fallback": "/images/agencia/house-mazzutti/4.webp",
+      "alt": "Estratégia de social media para posicionamento de marca — House Mazzutti Agência São Paulo",
+      "caption": "Estratégia · posicionamento digital"
+    },
+    {
+      "src": "/images/blog/gestao-redes-sociais/conteudo-digital-premium-empresa-house-mazzutti.webp",
+      "fallback": "/images/agencia/house-mazzutti/6.webp",
+      "alt": "Produção de conteúdo digital premium para empresas — House Mazzutti São Paulo",
+      "caption": "Conteúdo com intenção · resultado mensurável"
+    }
+  ],
   citacao: 'Quem contrata frequência compra volume. Quem contrata gestão compra percepção — e percepção é a única coisa que continua trabalhando quando você para de postar.',
+  respostaDireta: "Gestão de redes sociais para empresas é o serviço que planeja, produz, publica e analisa o conteúdo digital de uma marca de forma estratégica e contínua. Inclui planejamento editorial, criação de conteúdo, gestão de comunidade e análise de performance. A diferença entre uma gestão que gera resultado e uma que apenas mantém presença está no alinhamento com posicionamento de marca, nos objetivos de negócio e na consistência de linguagem ao longo do tempo.",
   intro: 'A maior parte das empresas que contrata gestão de redes sociais não sabe descrever o que está comprando. Sabe quantos posts vai receber por mês. Sabe o valor da mensalidade. Mas não sabe qual percepção de marca está sendo construída, nem como saberia se ela está sendo construída. Este guia existe para corrigir isso: o que a gestão de redes sociais para empresas realmente é, o que precisa estar dentro do escopo, como medir, quanto custa e o que perguntar antes de assinar.',
   sections: [
     {
@@ -8563,9 +8601,26 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     'narrativa de marca',
     'agência de branding São Paulo'
   ],
-  cover: null,
-  interior: [],
+  cover: {
+    "src": "/images/blog/identidade-visual/identidade-visual-o-que-e-quando-refazer-house-mazzutti.webp",
+    "alt": "Projeto de identidade visual de marca na agência House Mazzutti em São Paulo",
+    "caption": "Identidade visual de marca — Agência House Mazzutti",
+    "fallback": "/images/agencia/mabdo/capa.webp"
+  },
+  interior: [
+    {
+      "src": "/images/blog/identidade-visual/identidade-visual-alem-do-logo-house-mazzutti.webp",
+      "alt": "Sistema de identidade visual completo além do logo em São Paulo",
+      "caption": "Além do logo · sistema de marca"
+    },
+    {
+      "src": "/images/blog/identidade-visual/quando-refazer-identidade-visual-house-mazzutti.webp",
+      "alt": "Processo de reconstrução de identidade visual na House Mazzutti",
+      "caption": "Reposicionamento visual · processo HMZT"
+    }
+  ],
   citacao: 'Identidade visual não é o que a marca mostra. É o que as pessoas conseguem reconhecer sem precisar ler.',
+  respostaDireta: "Identidade visual é o sistema completo pelo qual uma marca é reconhecida — logo, cores, tipografia, linguagem de imagem, aplicações e o comportamento visual em cada ponto de contato. Ela precisa ser refeita quando deixa de representar o que a marca é hoje ou confunde o mercado. A House Mazzutti, em São Paulo, constrói identidade visual a partir do posicionamento, não do gosto.",
   intro: 'Toda semana alguém me procura dizendo que quer "refazer o logo". Quase nunca o problema é o logo. Este texto existe para separar o que é decisão estratégica do que é incômodo estético — e para dar critério a quem precisa decidir se a hora de refazer chegou ou se ainda falta entender o que está realmente quebrado.',
   sections: [
     {
@@ -8685,9 +8740,28 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     'branding pessoal fotografia',
     'retrato corporativo',
   ],
-  cover: null,
-  interior: [],
+  cover: {
+    "src": "/images/blog/diferenca-book-ensaio/diferenca-book-ensaio-fotografico-house-mazzutti.webp",
+    "fallback": "/images/blog/book-modelo-ativo/book-modelo-imagem-ativo-mercado-house-mazzutti.webp",
+    "alt": "Diferença entre book fotográfico e ensaio pessoal — Studio House Mazzutti São Paulo",
+    "caption": "Book vs Ensaio · Studio HMZT"
+  },
+  interior: [
+    {
+      "src": "/images/blog/diferenca-book-ensaio/book-editorial-versus-ensaio-autoridade-house-mazzutti.webp",
+      "fallback": "/images/blog/ensaio-lidera-percepcao/ensaio-pessoal-reposicionamento-marca-pessoal-house-mazzutti.webp",
+      "alt": "Book editorial para modelos e ensaio de autoridade para profissionais — Studio House Mazzutti",
+      "caption": "Dois instrumentos · dois objetivos"
+    },
+    {
+      "src": "/images/blog/diferenca-book-ensaio/direcao-imagem-resultado-house-mazzutti.webp",
+      "fallback": "/images/blog/ensaio-lidera-percepcao/retrato-premium-fine-art-house-mazzutti.webp",
+      "alt": "Resultado de direção de imagem em book e ensaio fotográfico no Studio HMZT",
+      "caption": "Direção de imagem · resultado final"
+    }
+  ],
   citacao: 'Book não é um momento bonito registrado. É uma declaração de como você quer ser lido pelo mercado.',
+  respostaDireta: "Book é um portfólio comercial — serve para circular pelo mercado, chegar a agências, castings e marcas. Ensaio fotográfico é um instrumento de posicionamento pessoal — serve para construir percepção de autoridade, nutrir presença digital e comunicar marca pessoal. A diferença não está no número de fotos nem no tempo de sessão. Está na função: book circula por você; ensaio fala por você.",
   intro: 'Quem pesquisa "sessão de fotos profissional" encontra os dois termos lado a lado — como se fossem sinônimos. Não são. Book e ensaio fotográfico partem de lógicas distintas, atendem objetivos diferentes e produzem resultados que não se substituem. Entender essa diferença antes de contratar poupa tempo, dinheiro e, principalmente, frustração com o produto final.',
   sections: [
     {
@@ -8771,9 +8845,28 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     'book para agência de modelos',
     'quanto investir em book fotográfico',
   ],
-  cover: null,
-  interior: [],
+  cover: {
+    "src": "/images/blog/quanto-custa-book/book-modelo-investimento-sao-paulo-house-mazzutti.webp",
+    "fallback": "/images/blog/book-para-modelos/book-editorial-modelos-direcao-imagem-house-mazzutti.webp",
+    "alt": "Book fotográfico profissional para modelo em São Paulo — investimento e direção de imagem House Mazzutti",
+    "caption": "Book editorial · Studio HMZT São Paulo"
+  },
+  interior: [
+    {
+      "src": "/images/blog/quanto-custa-book/book-editorial-direcao-imagem-sao-paulo-house-mazzutti.webp",
+      "fallback": "/images/blog/book-para-modelos/book-fotografico-profissional-mood-editorial-house-mazzutti.webp",
+      "alt": "Sessão de book com direção criativa no Studio HMZT — retrato editorial de modelo profissional",
+      "caption": "Direção de imagem · sessão editorial"
+    },
+    {
+      "src": "/images/blog/quanto-custa-book/book-fotografico-resultado-premium-house-mazzutti.webp",
+      "fallback": "/images/blog/book-para-modelos/portfolio-modelo-agencia-sao-paulo-house-mazzutti.webp",
+      "alt": "Resultado final de book fotográfico profissional com direção criativa House Mazzutti São Paulo",
+      "caption": "Entrega editorial · acabamento fine art"
+    }
+  ],
   citacao: 'O book não é uma despesa. É o primeiro investimento real que um modelo faz na própria carreira.',
+  respostaDireta: "Um book de modelo profissional em São Paulo custa entre R$ 1.200 e R$ 6.000+, dependendo do escopo: tempo de sessão, número de looks, locação, inclusão de vídeo e nível de direção criativa. No Studio da House Mazzutti, o valor é definido após briefing — porque book não é produto de prateleira, é instrumento de posicionamento. O que mais define o preço não é a câmera: é a profundidade da direção.",
   intro: 'Pesquisar o preço de um book de modelo em São Paulo costuma gerar mais confusão do que clareza. Os valores variam de forma expressiva — e raramente alguém explica por quê. Este guia organiza o que você precisa saber antes de fechar qualquer sessão.',
   sections: [
     {
@@ -8874,9 +8967,28 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     'presença executiva',
     'o que levar para ensaio fotográfico',
   ],
-  cover: null,
-  interior: [],
+  cover: {
+    "src": "/images/blog/preparar-ensaio/como-se-preparar-ensaio-fotografico-house-mazzutti.webp",
+    "fallback": "/images/blog/ensaio-autoridade/ensaio-pessoal-premium-autoridade-executiva-house-mazzutti.webp",
+    "alt": "Preparação para ensaio fotográfico profissional no Studio House Mazzutti São Paulo",
+    "caption": "Preparação e direção · Studio HMZT"
+  },
+  interior: [
+    {
+      "src": "/images/blog/preparar-ensaio/figurino-ensaio-pessoal-direcao-imagem-house-mazzutti.webp",
+      "fallback": "/images/blog/ensaio-autoridade/retrato-corporativo-direcao-imagem-house-mazzutti.webp",
+      "alt": "Curadoria de figurino para ensaio pessoal com direção de imagem — Studio House Mazzutti",
+      "caption": "Curadoria de figurino · direção de looks"
+    },
+    {
+      "src": "/images/blog/preparar-ensaio/resultado-ensaio-autoridade-house-mazzutti.webp",
+      "fallback": "/images/blog/ensaio-autoridade/ensaio-fotografico-marca-pessoal-house-mazzutti.webp",
+      "alt": "Resultado de ensaio fotográfico de autoridade com direção criativa House Mazzutti São Paulo",
+      "caption": "Resultado final · ensaio premium"
+    }
+  ],
   citacao: 'Preparação não é ansiedade antecipada. É a forma mais inteligente de proteger o tempo dentro do estúdio.',
+  respostaDireta: "Para se preparar para um ensaio fotográfico profissional: defina o objetivo (autoridade, book, portfólio), faça o briefing com o fotógrafo, separe 2 a 4 looks com variação de estilo, cuide da pele nos dias anteriores, durma bem na véspera e chegue no horário. O preparo mais importante, porém, não é externo: é interno — confiar na direção. As melhores fotos surgem quando se para de pensar em posar.",
   intro: 'Existe uma suposição silenciosa de quem vai a um ensaio fotográfico pela primeira vez: que o fotógrafo vai resolver tudo. A câmera, a luz, o ângulo, a expressão. E de certa forma resolve. Mas o resultado que chega às imagens finais não começa na câmera — começa dias antes, em decisões que a maioria das pessoas toma de forma impulsiva ou deixa de tomar por completo. Quem chega preparado não economiza só tempo. Economiza retrabalho, protege a imagem que quer construir e sai da sessão com material que sustenta uma narrativa.',
   sections: [
     {
@@ -8977,9 +9089,28 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     'investimento em audiovisual',
     'House Mazzutti',
   ],
-  cover: null,
-  interior: [],
+  cover: {
+    "src": "/images/blog/quanto-custa-video/quanto-custa-video-institucional-2025-house-mazzutti.webp",
+    "fallback": "/images/blog/editorial-moda-narrativa/fashion-film-marca-moda-house-mazzutti.webp",
+    "alt": "Vídeo institucional profissional em São Paulo — custo e investimento 2025 House Mazzutti",
+    "caption": "Produção audiovisual institucional · HMZT"
+  },
+  interior: [
+    {
+      "src": "/images/blog/quanto-custa-video/set-producao-video-institucional-house-mazzutti.webp",
+      "fallback": "/images/blog/editorial-moda-narrativa/lookbook-editorial-direcao-arte-house-mazzutti.webp",
+      "alt": "Set de produção de vídeo institucional profissional — Produtora House Mazzutti São Paulo",
+      "caption": "Set de produção · equipe técnica HMZT"
+    },
+    {
+      "src": "/images/blog/quanto-custa-video/resultado-video-institucional-premium-house-mazzutti.webp",
+      "fallback": "/images/blog/editorial-performance/imagem-ecommerce-premium-conversao-house-mazzutti.webp",
+      "alt": "Resultado de vídeo institucional com direção criativa — House Mazzutti Produtora São Paulo",
+      "caption": "Entrega final · vídeo institucional premium"
+    }
+  ],
   citacao: 'Vídeo institucional caro é o que ninguém assiste. O preço só vira despesa quando a peça não muda percepção nenhuma.',
+  respostaDireta: "Um vídeo institucional profissional em São Paulo custa entre R$ 8.000 e R$ 80.000+, dependendo do escopo: duração, número de diárias de filmagem, equipe técnica, locações, atores/talentos, animação e pós-produção. O que mais define o preço não é a câmera nem o número de horas de edição — é a profundidade da concepção criativa e a qualidade da execução em cada fase.",
   intro: 'A pergunta chega sempre na mesma ordem: primeiro o preço, depois o prazo, e só no fim — quando chega — o objetivo. Vou inverter a ordem aqui. Não porque seja mais elegante, mas porque é a única sequência que produz um número confiável. Este texto entrega faixas reais de investimento praticadas no Brasil, explica o que sustenta cada uma delas e ensina a ler um orçamento de produção audiovisual sem depender da boa-fé de quem o assina. Escrevo como quem já enviou propostas de cinco dígitos e como quem já recusou projetos que não deveriam existir naquele momento.',
   sections: [
     {
@@ -9114,9 +9245,28 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     'direção de arte',
     'vídeo de moda editorial',
   ],
-  cover: null,
-  interior: [],
+  cover: {
+    "src": "/images/blog/fashion-film-colecao/fashion-film-lancamento-colecao-house-mazzutti.webp",
+    "fallback": "/images/blog/editorial-moda-narrativa/editorial-moda-narrativa-visual-fashion-direction-house-mazzutti.webp",
+    "alt": "Fashion film para lançamento de coleção de moda — Produtora House Mazzutti São Paulo",
+    "caption": "Fashion film · lançamento de coleção"
+  },
+  interior: [
+    {
+      "src": "/images/blog/fashion-film-colecao/producao-fashion-film-moda-set-house-mazzutti.webp",
+      "fallback": "/images/blog/editorial-moda-narrativa/lookbook-editorial-direcao-arte-house-mazzutti.webp",
+      "alt": "Produção de fashion film no set — direção criativa e elenco selecionado House Mazzutti",
+      "caption": "Set de fashion film · direção criativa"
+    },
+    {
+      "src": "/images/blog/fashion-film-colecao/fashion-film-resultado-editorial-house-mazzutti.webp",
+      "fallback": "/images/blog/editorial-moda-narrativa/fashion-film-marca-moda-house-mazzutti.webp",
+      "alt": "Resultado de fashion film para coleção de moda — House Mazzutti Produtora São Paulo",
+      "caption": "Entrega final · fashion film de coleção"
+    }
+  ],
   citacao: 'Um fashion film não mostra a coleção. Ele decide como a coleção vai ser lida quando alguém finalmente olhar uma peça de perto.',
+  respostaDireta: "Fashion film para lançamento de coleção é uma peça audiovisual que traduz a identidade e o conceito de uma coleção em narrativa visual. Não é um vídeo de produto — é uma experiência de marca. O custo varia entre R$ 15.000 e R$ 80.000+, dependendo da duração, equipe, locações, elenco e complexidade criativa. É o instrumento certo quando a marca quer gerar desejo, construir universo de marca e chegar ao varejo e ao público com uma proposta de mundo, não apenas de peça.",
   intro: 'Toda coleção chega ao mercado com uma tese — e quase nenhuma chega com a tese instalada. É essa distância que o fashion film ocupa. Bem dirigido, ele define a leitura da coleção antes que qualquer peça seja avaliada isoladamente. Mal dirigido, é apenas o item mais caro do lookbook.',
   sections: [
     {
