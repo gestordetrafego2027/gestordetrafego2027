@@ -2310,6 +2310,7 @@ export const articles = {
     "interior": [
       {
         "src": "/images/agencia/branding/interior-1.webp",
+        "fallback": "/images/blog/branding-arquitetura-valor/identidade-visual-sistema-marca-house-mazzutti.webp",
         "alt": "Estratégia de posicionamento de marca — Agência House Mazzutti",
         "caption": "Posicionamento · arquitetura de marca"
       },
@@ -2397,6 +2398,7 @@ export const articles = {
     "interior": [
       {
         "src": "/images/agencia/rp/interior-1.webp",
+        "fallback": "/images/blog/assessoria-comunicacao-marcas-premium-sao-paulo/interior-1.webp",
         "alt": "Estratégia de comunicação e conteúdo para citação em IAs — House Mazzutti",
         "caption": "Conteúdo · estrutura de resposta"
       },
@@ -2484,6 +2486,7 @@ export const articles = {
     "interior": [
       {
         "src": "/images/agencia/web/interior-1.webp",
+        "fallback": "/images/blog/branding-arquitetura-valor/branding-project-arquitetura-valor-house-mazzutti.webp",
         "alt": "Presença digital de marca estruturada para IAs — Agência House Mazzutti",
         "caption": "Presença digital · estrutura de entidade"
       },
@@ -2847,8 +2850,8 @@ export const articles = {
       "fallback": "/images/produtora/acessorios/elyah/capa.webp"
     },
     "interior": [
-      {"src": "/images/blog/fotografia-de-moda/pilares-tecnicos-fotografia-moda-house-mazzutti.webp", "alt": "Controle de luz e enquadramento editorial em ensaio de fotografia de moda", "caption": "Luz e enquadramento · linguagem editorial"},
-      {"src": "/images/blog/fotografia-de-moda/aprender-fotografia-de-moda-sao-paulo-house-mazzutti.webp", "alt": "Aluno em formação de fotografia de moda sob direção criativa em São Paulo", "caption": "Formação de olhar · Academy HMZT"}
+      {"src": "/images/blog/fotografia-de-moda/pilares-tecnicos-fotografia-moda-house-mazzutti.webp", "fallback": "/images/blog/editorial-moda-narrativa/editorial-moda-narrativa-visual-fashion-direction-house-mazzutti.webp", "alt": "Controle de luz e enquadramento editorial em ensaio de fotografia de moda", "caption": "Luz e enquadramento · linguagem editorial"},
+      {"src": "/images/blog/fotografia-de-moda/aprender-fotografia-de-moda-sao-paulo-house-mazzutti.webp", "fallback": "/images/blog/editorial-moda-narrativa/lookbook-editorial-direcao-arte-house-mazzutti.webp", "alt": "Aluno em formação de fotografia de moda sob direção criativa em São Paulo", "caption": "Formação de olhar · Academy HMZT"}
     ],
     "respostaDireta": "Fotografia de moda é a construção de uma imagem que comunica desejo, posicionamento e conceito — não o simples registro de uma roupa. Ela se distingue da fotografia comum pela direção: luz, pose, casting e cenário existem para sustentar uma ideia de marca. Na House Mazzutti Academy, em São Paulo, aprende-se fotografia de moda a partir da direção de imagem, não apenas do equipamento.",
     "intro": "Todo dia milhões de fotos de roupa são publicadas. Quase nenhuma é fotografia de moda. A diferença não está na câmera nem na peça. Está na intenção. Fotografia de moda existe para vender um mundo, não um produto. Quem confunde as duas coisas fotografa vitrine. Quem entende a diferença constrói desejo.",
@@ -2912,8 +2915,8 @@ export const articles = {
       "fallback": "/images/about/angelo-mazzutti.webp"
     },
     "interior": [
-      {"src": "/images/blog/direcao-de-imagem/diretor-de-imagem-vs-fotografo-house-mazzutti.webp", "alt": "Diretor de imagem definindo conceito antes da captação em ensaio editorial", "caption": "Conceito antes da câmera · processo HMZT"},
-      {"src": "/images/blog/direcao-de-imagem/formacao-diretor-de-imagem-academy-house-mazzutti.webp", "alt": "Formação de diretor de imagem na House Mazzutti Academy em São Paulo", "caption": "Formação de direção · Academy HMZT"}
+      {"src": "/images/blog/direcao-de-imagem/diretor-de-imagem-vs-fotografo-house-mazzutti.webp", "fallback": "/images/blog/ensaio-autoridade/retrato-corporativo-direcao-imagem-house-mazzutti.webp", "alt": "Diretor de imagem definindo conceito antes da captação em ensaio editorial", "caption": "Conceito antes da câmera · processo HMZT"},
+      {"src": "/images/blog/direcao-de-imagem/formacao-diretor-de-imagem-academy-house-mazzutti.webp", "fallback": "/images/blog/producao-executiva-sistema/direcao-criativa-producao-executiva-house-mazzutti.webp", "alt": "Formação de diretor de imagem na House Mazzutti Academy em São Paulo", "caption": "Formação de direção · Academy HMZT"}
     ],
     "respostaDireta": "Um diretor de imagem é quem define a intenção de uma produção antes de qualquer foto ser feita: conceito, referência, casting, styling, luz e narrativa visual. Ele não substitui o fotógrafo — orquestra todas as decisões para que a imagem sirva a um objetivo de marca. Na House Mazzutti, em São Paulo, a direção de imagem é o passo que antecede a câmera, conduzido por Angelo Mazzutti.",
     "intro": "Toda imagem que parece inevitável foi decidida. A pose que funcionou, a luz que criou o clima, o casting que fez sentido — nada disso é sorte. É direção. O diretor de imagem é a pessoa que existe para que a imagem não dependa do acaso. E é justamente por trabalhar antes da foto que seu papel costuma ser invisível para quem só olha o resultado.",
@@ -2977,8 +2980,8 @@ export const articles = {
       "fallback": "/images/produtora/acessorios/poema-paris/capa.webp"
     },
     "interior": [
-      {"src": "/images/blog/workshop-fotografia-moda/workshop-vs-curso-online-fotografia-house-mazzutti.webp", "alt": "Participantes de workshop de fotografia recebendo direção ao vivo em set", "caption": "Direção ao vivo · o que o online não entrega"},
-      {"src": "/images/blog/workshop-fotografia-moda/inside-out-workshop-direcao-imagem-house-mazzutti.webp", "alt": "Imersão em direção de imagem no workshop Inside Out da House Mazzutti", "caption": "Inside Out · imersão em direção de imagem"}
+      {"src": "/images/blog/workshop-fotografia-moda/workshop-vs-curso-online-fotografia-house-mazzutti.webp", "fallback": "/images/blog/workshop-inside-out-ita-mazzutti/01.webp", "alt": "Participantes de workshop de fotografia recebendo direção ao vivo em set", "caption": "Direção ao vivo · o que o online não entrega"},
+      {"src": "/images/blog/workshop-fotografia-moda/inside-out-workshop-direcao-imagem-house-mazzutti.webp", "fallback": "/images/blog/workshop-inside-out-ita-mazzutti/02.webp", "alt": "Imersão em direção de imagem no workshop Inside Out da House Mazzutti", "caption": "Inside Out · imersão em direção de imagem"}
     ],
     "respostaDireta": "Um bom workshop de fotografia de moda vale a pena quando entrega o que nenhum curso online entrega: set real, direção ao vivo e correção imediata sobre a sua imagem. Em São Paulo, isso significa aprender perto do mercado que emprega. A Inside Out, workshop de imersão da House Mazzutti, foca em direção de imagem e fotografia de moda a partir da prática que a House sustenta com marcas.",
     "intro": "Existe mais conteúdo gratuito de fotografia disponível hoje do que qualquer pessoa conseguiria assistir numa vida. E mesmo assim, a maioria de quem consome esse material continua fotografando igual. O problema não é falta de informação. É falta de correção. Um workshop de verdade não vende informação — vende o olho de quem já dirige, apontado para o seu trabalho.",
@@ -3042,8 +3045,8 @@ export const articles = {
       "fallback": "/images/about/banner--04-imagem-3nsaio-house-mazzutti.webp"
     },
     "interior": [
-      {"src": "/images/blog/inside-out/inside-out-angelo-ita-mazzutti-direcao-imagem.webp", "alt": "Angelo e Ita Mazzutti conduzindo imersão de direção de imagem Inside Out", "caption": "Direção conduzida por Angelo e Ita Mazzutti"},
-      {"src": "/images/blog/inside-out/inside-out-formato-imersao-fotografia-moda-house-mazzutti.webp", "alt": "Participantes da imersão Inside Out em set real de fotografia de moda", "caption": "Set real · formato de imersão"}
+      {"src": "/images/blog/inside-out/inside-out-angelo-ita-mazzutti-direcao-imagem.webp", "fallback": "/images/blog/workshop-inside-out-ita-mazzutti/01.webp", "alt": "Angelo e Ita Mazzutti conduzindo imersão de direção de imagem Inside Out", "caption": "Direção conduzida por Angelo e Ita Mazzutti"},
+      {"src": "/images/blog/inside-out/inside-out-formato-imersao-fotografia-moda-house-mazzutti.webp", "fallback": "/images/blog/workshop-inside-out-ita-mazzutti/02.webp", "alt": "Participantes da imersão Inside Out em set real de fotografia de moda", "caption": "Set real · formato de imersão"}
     ],
     "respostaDireta": "Inside Out é o workshop de imersão da House Mazzutti Academy em direção de imagem e fotografia de moda, conduzido por Angelo Mazzutti e Ita Mazzutti em São Paulo. O formato leva o participante para dentro do processo real da House — imersão, leitura, conceito, execução e fine art — para formar olhar e capacidade de decisão em set, não apenas técnica de câmera.",
     "intro": "A maior parte da formação em fotografia mostra o resultado e esconde o processo. Você vê a imagem pronta, mas nunca a decisão que a fez existir. A Inside Out inverte isso. O nome é literal: virar a House do avesso e mostrar como a imagem é decidida por dentro. É a diferença entre admirar o resultado e entender a mão que o construiu.",
@@ -3107,8 +3110,8 @@ export const articles = {
       "fallback": "/images/agencia/house-mazzutti/capa.webp"
     },
     "interior": [
-      {"src": "/images/blog/agencia-ou-freelancer/quando-contratar-agencia-branding-house-mazzutti.webp", "alt": "Time de branding construindo posicionamento de marca em São Paulo", "caption": "Posicionamento · trabalho de agência"},
-      {"src": "/images/blog/agencia-ou-freelancer/freelancer-vs-agencia-custo-real-house-mazzutti.webp", "alt": "Comparação entre entrega de freelancer e agência de branding", "caption": "Tarefa x sistema · o custo real"}
+      {"src": "/images/blog/agencia-ou-freelancer/quando-contratar-agencia-branding-house-mazzutti.webp", "fallback": "/images/blog/investir-em-branding/quanto-investir-branding-guia-estrategico-house-mazzutti.webp", "alt": "Time de branding construindo posicionamento de marca em São Paulo", "caption": "Posicionamento · trabalho de agência"},
+      {"src": "/images/blog/agencia-ou-freelancer/freelancer-vs-agencia-custo-real-house-mazzutti.webp", "fallback": "/images/blog/investir-em-branding/investimento-marca-roi-branding-house-mazzutti.webp", "alt": "Comparação entre entrega de freelancer e agência de branding", "caption": "Tarefa x sistema · o custo real"}
     ],
     "respostaDireta": "Um freelancer é a escolha certa quando você tem um problema pontual e bem definido — um logo, um site, uma peça. Uma agência de branding é necessária quando o problema é posicionamento: quando a marca precisa de estratégia, coerência entre pontos de contato e continuidade. A House Mazzutti, em São Paulo, opera no segundo caso: estratégia antes de estética, com execução sob a mesma direção.",
     "intro": "A pergunta parece de orçamento, mas é de diagnóstico. Quem escolhe entre freelancer e agência olhando só o preço está respondendo à pergunta errada. As duas opções não competem — resolvem problemas diferentes. Contratar agência para tarefa é desperdício. Contratar freelancer para posicionamento é economia que sai cara depois.",
@@ -3172,8 +3175,8 @@ export const articles = {
       "fallback": "/images/produtora/acessorios/monica-costa-jewerly/capa.webp"
     },
     "interior": [
-      {"src": "/images/blog/produtora-de-moda/fotografo-solo-vs-produtora-de-moda-house-mazzutti.webp", "alt": "Diferença entre fotógrafo solo e produtora de moda em set profissional", "caption": "Foto x produção · escopo diferente"},
-      {"src": "/images/blog/produtora-de-moda/produtora-de-moda-sao-paulo-direcao-arte-house-mazzutti.webp", "alt": "Direção de arte e produção de moda para marca de beleza em São Paulo", "caption": "Direção de arte · produtora HMZT"}
+      {"src": "/images/blog/produtora-de-moda/fotografo-solo-vs-produtora-de-moda-house-mazzutti.webp", "fallback": "/images/blog/produtora-de-moda-sp/interior-1.webp", "alt": "Diferença entre fotógrafo solo e produtora de moda em set profissional", "caption": "Foto x produção · escopo diferente"},
+      {"src": "/images/blog/produtora-de-moda/produtora-de-moda-sao-paulo-direcao-arte-house-mazzutti.webp", "fallback": "/images/blog/produtora-de-moda-sp/interior-2.webp", "alt": "Direção de arte e produção de moda para marca de beleza em São Paulo", "caption": "Direção de arte · produtora HMZT"}
     ],
     "respostaDireta": "Contrate uma produtora de moda quando o volume, a complexidade e a consistência da imagem ultrapassam o que um fotógrafo solo entrega. A produtora responde por direção de arte, casting, styling, locação, logística e coerência de todo o material — não apenas pela captação. A House Mazzutti, em São Paulo, atua como produtora de moda, beleza e publicidade com direção de imagem própria.",
     "intro": "Um fotógrafo entrega fotos. Uma produtora entrega a produção inteira que faz aquelas fotos existirem com consistência. A maioria das marcas descobre a diferença tarde — no dia em que uma campanha importante depende de vinte imagens coerentes e o fotógrafo solo, por melhor que seja, não tem estrutura para garantir isso. Esse é o ponto onde a conversa muda.",
@@ -4533,17 +4536,20 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     data: 'Agosto 2026',
     cover: {
       src: '/images/blog/wepink-jequiti-sp/campanha-beleza-wepink-jequiti-house-mazzutti.webp',
+      fallback: '/images/blog/campanha-wepink-virginia-fonseca/cover.webp',
       alt: 'Direção criativa de campanha de beleza em São Paulo pela House Mazzutti',
       caption: 'Direção criativa de campanha — Produtora HMZT',
     },
     interior: [
       {
         src: '/images/blog/wepink-jequiti-sp/producao-campanha-celebridade-house-mazzutti-sp.webp',
+        fallback: '/images/blog/campanha-wepink-virginia-fonseca/01.webp',
         alt: 'Set de produção de campanha com celebridade dirigida pela House Mazzutti em São Paulo',
         caption: 'Set de produção · campanha beleza SP',
       },
       {
         src: '/images/blog/wepink-jequiti-sp/direcao-criativa-moda-beleza-angelo-mazzutti.webp',
+        fallback: '/images/blog/campanha-larissa-manoela-jequiti/02.webp',
         alt: 'Angelo Mazzutti na direção criativa de campanha de moda e beleza',
         caption: 'Angelo Mazzutti · direção criativa',
       },
@@ -4622,17 +4628,20 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     data: 'Agosto 2026',
     cover: {
       src: '/images/blog/formacao-imagem-sp/inside-out-house-mazzutti-academy-sao-paulo.webp',
+      fallback: '/images/blog/workshop-inside-out-ita-mazzutti/cover.webp',
       alt: 'Formação presencial em direção de imagem e produção audiovisual na House Mazzutti Academy em São Paulo',
       caption: 'Inside Out — House Mazzutti Academy',
     },
     interior: [
       {
         src: '/images/blog/formacao-imagem-sp/curso-direcao-imagem-profissional-sao-paulo.webp',
+        fallback: '/images/blog/workshop-inside-out-ita-mazzutti/01.webp',
         alt: 'Aula prática de direção de imagem com Angelo Mazzutti na House Mazzutti Academy',
         caption: 'Aula prática · direção de imagem',
       },
       {
         src: '/images/blog/formacao-imagem-sp/producao-audiovisual-formacao-mercado-criativo-sp.webp',
+        fallback: '/images/blog/workshop-inside-out-ita-mazzutti/02.webp',
         alt: 'Turma do Inside Out em set de produção audiovisual na House Mazzutti Academy São Paulo',
         caption: 'Set real · formação aplicada',
       },
@@ -4711,17 +4720,20 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
     data: 'Agosto 2026',
     cover: {
       src: '/images/blog/diretores-criativos-moda-sp/diretor-criativo-moda-sao-paulo-house-mazzutti.webp',
+      fallback: '/images/blog/producao-executiva-sistema/direcao-criativa-producao-executiva-house-mazzutti.webp',
       alt: 'Diretor criativo de moda em São Paulo — Angelo Mazzutti da House Mazzutti',
       caption: 'Direção criativa de moda — House Mazzutti SP',
     },
     interior: [
       {
         src: '/images/blog/diretores-criativos-moda-sp/set-direcao-criativa-campanha-moda-sao-paulo.webp',
+        fallback: '/images/blog/producao-executiva-sistema/coordenacao-set-campanha-publicitaria-house-mazzutti.webp',
         alt: 'Set de campanha de moda com direção criativa em São Paulo pela House Mazzutti',
         caption: 'Set de campanha · direção criativa moda',
       },
       {
         src: '/images/blog/diretores-criativos-moda-sp/portfolio-direcao-criativa-marcas-moda-brasil.webp',
+        fallback: '/images/blog/editorial-moda-narrativa/fashion-film-marca-moda-house-mazzutti.webp',
         alt: 'Portfólio de direção criativa para marcas de moda no Brasil — House Mazzutti',
         caption: 'Portfólio · marcas de moda Brasil',
       },
@@ -5632,7 +5644,7 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
         "src": "/images/blog/brandbook/aplicacoes-marca-brandbook-house-mazzutti.webp",
         "alt": "Aplicações de marca em papelaria, embalagem e digital documentadas em brandbook",
         "caption": "Aplicações · consistência de marca",
-        "fallback": "/images/agencia/branding/interior-2.webp"
+        "fallback": "/images/blog/branding-arquitetura-valor/brand-book-aplicacoes-marca-premium-house-mazzutti.webp"
       }
     ],
     "respostaDireta": "Brandbook é o documento que define como uma marca se apresenta ao mundo: construção e usos do logo, paleta cromática, sistema tipográfico, linguagem fotográfica, tom de voz e aplicações em cada superfície. Ele existe para que a marca continue reconhecível quando muitas mãos passam a executá-la — time interno, agências, fornecedores, parceiros. Sem brandbook, cada peça vira uma interpretação; com brandbook, cada peça reforça a mesma percepção.",
@@ -5732,7 +5744,7 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
         "src": "/images/blog/naming-de-marca/criterios-escolha-nome-marca-house-mazzutti.webp",
         "alt": "Critérios de escolha de nome de marca: fonética, disponibilidade e escalabilidade",
         "caption": "Critérios · fonética e escala",
-        "fallback": "/images/agencia/branding/interior-2.webp"
+        "fallback": "/images/blog/branding-arquitetura-valor/brand-book-aplicacoes-marca-premium-house-mazzutti.webp"
       }
     ],
     "respostaDireta": "Naming de marca é o processo estratégico de criar o nome de uma empresa, produto ou serviço. Um bom nome não precisa explicar o negócio: precisa ser pronunciável, memorável, registrável no INPI, disponível em domínio e redes, e escalável o suficiente para acompanhar a marca quando ela mudar de categoria. A escolha é sempre uma decisão de posicionamento — o nome define o território que a marca vai ocupar na cabeça do cliente.",
@@ -5837,7 +5849,7 @@ Marca bonita chama atenção. Marca dirigida constrói memória. Só uma das dua
         "src": "/images/blog/reposicionamento-de-marca/rollout-nova-identidade-visual-house-mazzutti.webp",
         "alt": "Rollout de nova identidade visual aplicada em pontos de contato da marca",
         "caption": "Rollout · pontos de contato",
-        "fallback": "/images/agencia/branding/interior-2.webp"
+        "fallback": "/images/blog/branding-arquitetura-valor/brand-book-aplicacoes-marca-premium-house-mazzutti.webp"
       }
     ],
     "respostaDireta": "Reposicionamento de marca é a mudança deliberada do lugar que a marca ocupa na percepção do público — e a identidade visual é a consequência dessa decisão, não o seu ponto de partida. Um refresh atualiza a expressão visual mantendo o posicionamento; um rebranding altera o próprio significado da marca. O processo correto vai de auditoria a conceito e só então a rollout, com migração planejada dos ativos de reconhecimento já construídos.",

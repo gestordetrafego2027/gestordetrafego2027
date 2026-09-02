@@ -881,27 +881,34 @@ section('Tags <img> que NÃO podem migrar (impossibilidade técnica)', notMigrat
 // `ArticleImage` (ArticleContent.js) troca para `fallback` no onError do browser.
 // Logo, `src` quebrado só aparece para o visitante se o `fallback` também quebrar.
 // Mas o OG/JSON-LD usa `cover.src` direto — esse quebra sempre.
+//
+// A leitura é feita IMPORTANDO o módulo, não por regex sobre o texto. A primeira
+// versão localizava o `fallback` por proximidade de linhas e emparelhava a entrada
+// com o `fallback` do objeto vizinho, dando "0 buracos" quando havia 27. O arquivo
+// ainda mistura três formatos (`"src":`, `src:` e objeto em linha única), então
+// qualquer heurística textual erra — só o objeto real é confiável.
 const ART = 'src/app/[locale]/blog/[slug]/articles.js';
-const artAbs = path.join(ROOT, ART);
 const blogHealth = { srcOk: 0, degradado: [], visivel: [] };
-if (fs.existsSync(artAbs)) {
-  const txt = fs.readFileSync(artAbs, 'utf8');
-  const ls = txt.split('\n');
-  const re2 = /"src":\s*"([^"]+)"/g;
-  let mm;
-  while ((mm = re2.exec(txt))) {
-    const lineNo = txt.slice(0, mm.index).split('\n').length;
-    const win = ls.slice(Math.max(0, lineNo - 5), Math.min(ls.length, lineNo + 5)).join('\n');
-    const fb = (win.match(/"fallback":\s*"([^"]+)"/) || [])[1] || null;
-    let slug = '?';
-    for (let i = lineNo - 1; i >= 0; i--) {
-      const km = ls[i].match(/^\s{2}['"]?([a-z0-9-]+)['"]?:\s*\{/);
-      if (km) { slug = km[1]; break; }
+if (fs.existsSync(path.join(ROOT, ART))) {
+  const snippet = `
+    import { articles } from ${JSON.stringify(path.join(ROOT, ART))};
+    const out = [];
+    for (const [slug, a] of Object.entries(articles)) {
+      const es = [];
+      if (a.cover) es.push(['cover', a.cover]);
+      (a.interior || []).forEach((x, i) => es.push(['interior-' + (i + 1), x]));
+      for (const [role, e] of es) if (e && e.src) out.push({ slug, role, src: e.src, fb: e.fallback || null });
     }
-    const rec = { lineNo, src: mm[1], fb, slug };
-    if (publicByPath.has(mm[1])) blogHealth.srcOk++;
-    else if (fb && publicByPath.has(fb)) blogHealth.degradado.push(rec);
-    else blogHealth.visivel.push(rec);
+    process.stdout.write(JSON.stringify(out));
+  `;
+  const raw = require('child_process').execFileSync(
+    process.execPath, ['--input-type=module', '-e', snippet],
+    { cwd: ROOT, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }
+  );
+  for (const e of JSON.parse(raw)) {
+    if (publicByPath.has(e.src)) blogHealth.srcOk++;
+    else if (e.fb && publicByPath.has(e.fb)) blogHealth.degradado.push(e);
+    else blogHealth.visivel.push(e);
   }
 }
 
