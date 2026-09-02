@@ -2,7 +2,8 @@
  * Instagram — últimos conteúdos da House Mazzutti.
  *
  * Duas fontes, nessa ordem:
- *   1. AO VIVO — Instagram Graph API, quando INSTAGRAM_ACCESS_TOKEN está setado.
+ *   1. AO VIVO — Instagram Graph API. O token sai de @/lib/instagram-token,
+ *      que semeia da env e se renova sozinho antes de vencer.
  *      Requer conta Business/Creator (@housemazzutti) e um token de longa duração.
  *      Cache de 1h via `next: { revalidate }` — a API da Meta é chamada no máximo
  *      1x por hora, não a cada visita.
@@ -13,6 +14,7 @@
  * Sem nenhuma das duas, retorna lista vazia — a seção cai no estado "só CTA".
  * Nunca inventar post: card sem post real é desinformação para o visitante.
  */
+import { getInstagramAccessToken } from '@/lib/instagram-token'
 import { logger } from '@/lib/logger'
 import curated from '@/data/instagram-curated.json'
 
@@ -109,7 +111,8 @@ function curatedPosts(limit: number): InstagramPost[] {
 }
 
 async function fetchLive(limit: number): Promise<InstagramPost[]> {
-  const token = process.env.INSTAGRAM_ACCESS_TOKEN
+  // Token vem do store com renovação automática (env → Supabase → refresh).
+  const token = await getInstagramAccessToken()
   if (!token) return []
 
   const res = await fetch(buildEndpoint(token, limit), {
