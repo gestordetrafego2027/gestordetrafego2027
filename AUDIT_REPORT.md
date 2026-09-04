@@ -9,13 +9,13 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Total de referências de mídia | 1735 |
 | — estáticas (inclui `${SITE_URL}` + caminho fixo) | 1689 |
 | — dinâmicas de verdade (slug/índice variável) | 46 |
-| Imagens OK | 1687 |
+| Imagens OK | 1689 |
 | Case mismatch (correção automática) | 0 |
 | Extensão mismatch (correção automática) | 0 |
 | Fuzzy match (correção sugerida) | 0 |
-| **BROKEN irrecuperáveis** | **2** |
+| **BROKEN irrecuperáveis** | **0** |
 | Referências ignoradas (relativas/import) | 0 |
-| Arquivos em /public | 1780 |
+| Arquivos em /public | 1782 |
 | Imagens órfãs em /public | 668 (158.9 MB) |
 | Links internos quebrados | 0 |
 | Links externos (revisão manual) | 146 |
@@ -92,18 +92,14 @@ _Nenhuma ocorrência._
 
 _Nenhuma ocorrência._
 
-## BROKEN — irrecuperáveis — 2
+## BROKEN — irrecuperáveis — 0
 
-| Arquivo:linha | Referência |
-|---|---|
-| `src/app/[locale]/portfolio-produtora/splash-boutique/layout.js:15` | `/images/produtora/moda/splash-boutique/1.webp` |
-| `src/lib/seo/schemas.js:1577` | `${SITE}/images/produtora/moda/splash-boutique/1.webp` |
+_Nenhuma ocorrência._
 
-## Referências DINÂMICAS com ZERO arquivos correspondentes (quebradas) — 2
+## Referências DINÂMICAS com ZERO arquivos correspondentes (quebradas) — 1
 
 | Arquivo:linha | Padrão |
 |---|---|
-| `src/app/[locale]/portfolio-produtora/splash-boutique/page.js:77` | `/images/produtora/moda/splash-boutique/${i+1}.webp` |
 | `src/app/components/PortfolioVideo.js:22` | `/videos/${unit}/${slug}/projeto.mp4` |
 
 ## Referências DINÂMICAS (template literals) — 46
@@ -116,8 +112,8 @@ _Nenhuma ocorrência._
 | `src/app/[locale]/portfolio/page.js:40` | `/images/studio/${slug}/capa.webp` | 44 | `/images/studio/amanda-oliveira/capa.webp`<br>`/images/studio/ana-laura-saar/capa.webp`<br>`/images/studio/ana-rockenbach/capa.webp` |
 | `src/app/[locale]/portfolio/page.js:51` | `/images/produtora/acessorios/${slug}/capa.webp` | 16 | `/images/produtora/acessorios/barbara-porto/capa.webp`<br>`/images/produtora/acessorios/bia/capa.webp`<br>`/images/produtora/acessorios/camila-scarpa/capa.webp` |
 | `src/app/[locale]/portfolio/page.js:61` | `/images/produtora/beleza/${slug}/capa.webp` | 11 | `/images/produtora/beleza/alletto-still/capa.webp`<br>`/images/produtora/beleza/jequiti-ana-castela/capa.webp`<br>`/images/produtora/beleza/jequiti-galisteu/capa.webp` |
-| `src/app/[locale]/portfolio/page.js:70` | `/images/produtora/moda/${slug}/capa.webp` | 7 | `/images/produtora/moda/beatco/capa.webp`<br>`/images/produtora/moda/beatco-2/capa.webp`<br>`/images/produtora/moda/eivi/capa.webp` |
-| `src/app/[locale]/portfolio/page.js:82` | `/images/agencia/${item}/capa.webp` | 7 | `/images/agencia/alletto/capa.webp`<br>`/images/agencia/house-mazzutti/capa.webp`<br>`/images/agencia/knowhol/capa.webp` |
+| `src/app/[locale]/portfolio/page.js:74` | `/images/produtora/moda/${slug}/capa.webp` | 7 | `/images/produtora/moda/beatco/capa.webp`<br>`/images/produtora/moda/beatco-2/capa.webp`<br>`/images/produtora/moda/eivi/capa.webp` |
+| `src/app/[locale]/portfolio/page.js:86` | `/images/agencia/${item}/capa.webp` | 7 | `/images/agencia/alletto/capa.webp`<br>`/images/agencia/house-mazzutti/capa.webp`<br>`/images/agencia/knowhol/capa.webp` |
 | `src/app/[locale]/portfolio-produtora/barbara-porto/page.js:18` | `/images/produtora/acessorios/barbara-porto/${i+1}.webp` | 9 | `/images/produtora/acessorios/barbara-porto/1.webp`<br>`/images/produtora/acessorios/barbara-porto/2.webp`<br>`/images/produtora/acessorios/barbara-porto/3.webp` |
 | `src/app/[locale]/portfolio-produtora/beatco/page.js:73` | `/images/produtora/moda/beatco/${i+1}.webp` | 9 | `/images/produtora/moda/beatco/1.webp`<br>`/images/produtora/moda/beatco/2.webp`<br>`/images/produtora/moda/beatco/3.webp` |
 | `src/app/[locale]/portfolio-produtora/beatco-2/page.js:74` | `/images/produtora/moda/beatco-2/${i+1}.webp` | 7 | `/images/produtora/moda/beatco-2/1.webp`<br>`/images/produtora/moda/beatco-2/2.webp`<br>`/images/produtora/moda/beatco-2/3.webp` |
@@ -146,7 +142,7 @@ _Nenhuma ocorrência._
 | `src/app/[locale]/portfolio-produtora/signus-versolato02/page.js:51` | `/images/produtora/acessorios/signus-versolato02/${i+1}.webp` | 7 | `/images/produtora/acessorios/signus-versolato02/1.webp`<br>`/images/produtora/acessorios/signus-versolato02/2.webp`<br>`/images/produtora/acessorios/signus-versolato02/3.webp` |
 | `src/app/[locale]/portfolio-produtora/signus-vertz/page.js:73` | `/images/produtora/acessorios/signus-vertz/${i+1}.webp` | 6 | `/images/produtora/acessorios/signus-vertz/1.webp`<br>`/images/produtora/acessorios/signus-vertz/2.webp`<br>`/images/produtora/acessorios/signus-vertz/3.webp` |
 | `src/app/[locale]/portfolio-produtora/simony-marca/page.js:73` | `/images/produtora/beleza/simony-marca/${i+1}.webp` | 4 | `/images/produtora/beleza/simony-marca/1.webp`<br>`/images/produtora/beleza/simony-marca/2.webp`<br>`/images/produtora/beleza/simony-marca/3.webp` |
-| `src/app/[locale]/portfolio-produtora/splash-boutique/page.js:77` | `/images/produtora/moda/splash-boutique/${i+1}.webp` | **0** |  |
+| `src/app/[locale]/portfolio-produtora/splash-boutique/page.js:76` | `/images/produtora/moda/splash-boutique/${i+1}.webp` | 1 | `/images/produtora/moda/splash-boutique/1.webp` |
 | `src/app/[locale]/portfolio-produtora/superbia/page.js:71` | `/images/produtora/beleza/superbia/${i+1}.webp` | 8 | `/images/produtora/beleza/superbia/1.webp`<br>`/images/produtora/beleza/superbia/2.webp`<br>`/images/produtora/beleza/superbia/3.webp` |
 | `src/app/[locale]/portfolio-produtora/tf/page.js:73` | `/images/produtora/institucional/tf/${i+1}.webp` | 13 | `/images/produtora/institucional/tf/1.webp`<br>`/images/produtora/institucional/tf/10.webp`<br>`/images/produtora/institucional/tf/11.webp` |
 | `src/app/[locale]/portfolio-produtora/toli/page.js:51` | `/images/produtora/moda/toli/${i+1}.webp` | 11 | `/images/produtora/moda/toli/1.webp`<br>`/images/produtora/moda/toli/10.webp`<br>`/images/produtora/moda/toli/2.webp` |
@@ -880,11 +876,11 @@ Total: 158.9 MB. Nada foi removido — lista apenas para revisão.
 | `/images/blog/README.md` | 9 |
 | `/.DS_Store` | 8 |
 | `/images/.DS_Store` | 8 |
+| `/images-backup/.DS_Store` | 8 |
 | `/images/academy/.DS_Store` | 6 |
 | `/images/agencia/.DS_Store` | 6 |
 | `/images/produtora/.DS_Store` | 6 |
 | `/images/produtora/beleza/.DS_Store` | 6 |
-| `/images-backup/.DS_Store` | 6 |
 | `/images-backup/produtora/.DS_Store` | 6 |
 | `/images-backup/produtora/beleza/.DS_Store` | 6 |
 | `/images-backup/studio/.DS_Store` | 6 |
@@ -945,11 +941,11 @@ Números medidos por esta mesma auditoria, rodando sobre o código já corrigido
 
 | | |
 |---|---:|
-| Referências de mídia resolvidas | 1687 |
+| Referências de mídia resolvidas | 1689 |
 | Case mismatch pendente | 0 |
 | Extensão mismatch pendente | 0 |
 | Fuzzy aguardando decisão | 0 |
-| **BROKEN — arquivo não existe** | **2** |
+| **BROKEN — arquivo não existe** | **0** |
 | Links internos quebrados | 0 |
 | `<img>` restantes (todos com motivo documentado) | 55 |
 | — ainda migráveis para next/image | 0 |
@@ -963,7 +959,7 @@ Números medidos por esta mesma auditoria, rodando sobre o código já corrigido
 
 ### O que sobrou para decisão humana
 
-1. **2 imagens que não existem** — quase todas são o set editorial
+1. **0 imagens que não existem** — quase todas são o set editorial
    de artigos de blog que nunca foi produzido. O `fallback` já cobre a tela; o que
    continua quebrado é o Open Graph, que usa `cover.src` direto. Lista por artigo
    em `BROKEN_IMAGES_TODO.md`.

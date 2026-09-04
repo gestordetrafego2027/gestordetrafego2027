@@ -1572,8 +1572,6 @@ export const portfolioVideoSchemas = {
     '@id': `${SITE}/pt/portfolio-produtora/splash-boutique/#video`,
     name: 'Splash Boutique — Fashion Film | House Mazzutti',
     description: 'Fashion film para Splash Boutique produzido pela House Mazzutti em São Paulo.',
-    // TODO-BROKEN-IMAGE: /images/produtora/moda/splash-boutique/1.webp — o projeto
-    // não tem nenhuma imagem em /public. Ver BROKEN_IMAGES_TODO.md
     thumbnailUrl: `${SITE}/images/produtora/moda/splash-boutique/1.webp`,
     embedUrl: 'https://youtube.com/shorts/crXyeOvnOQQ',
     uploadDate: '2024-11-01',
