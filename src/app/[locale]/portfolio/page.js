@@ -63,6 +63,10 @@ const produtoraBeleza = [
 
 const produtoraModa = [
   'beatco', 'pous', 'toli', 'unique-chic',
+  // TODO-BROKEN-IMAGE: /images/produtora/moda/bonne-sorrie/capa.webp — capa inexistente
+  // em /public (nenhum arquivo, nenhuma página de detalhe). O card renderiza a capa
+  // quebrada no hub /portfolio. Ação: produzir a foto OU remover este slug.
+  // Ver BROKEN_IMAGES_TODO.md. Não detectado pelo audit-assets.cjs (slug em array dinâmico).
   'bonne-sorrie', 'idrissi'
 ].map((slug) => ({
   slug,
@@ -181,7 +185,7 @@ export default function PortfolioPage() {
 
       {/* HEADER EDITORIAL */}
       <section
-        className="border-y border-neutral-200 text-center px-6 py-10 md:py-14"
+        className="border-y border-neutral-200 text-center px-6 py-12 md:py-16"
         style={{ marginTop: '72px', borderTopWidth: '0.5px', borderBottomWidth: '0.5px' }}
       >
         <div className="max-w-5xl mx-auto">

@@ -186,7 +186,7 @@ export default function ComunidadePage() {
                 </section>
 
                 {/* GRID SECTION */}
-                <section className="bg-white py-12 mx-auto" style={{ maxWidth: "95vw" }}>
+                <section className="bg-white py-16 md:py-20 mx-auto" style={{ maxWidth: "95vw" }}>
                     <div className="mb-20 text-center flex flex-col items-center">
                         <span className="text-caption text-zinc-500 block mb-6">{t('grid_label')}</span>
                         <h2 className="text-h2 text-black">{t('grid_titulo')}</h2>
@@ -266,7 +266,7 @@ export default function ComunidadePage() {
                 </section>
 
                 {/* FILOSOFIA */}
-                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-16">
+                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-20 md:py-24">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
                         <div className="w-full lg:w-1/4 flex-shrink-0">

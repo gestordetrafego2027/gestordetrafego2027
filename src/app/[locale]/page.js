@@ -343,7 +343,7 @@ export default function Home() {
 
                 {/* SELECTED WORKS */}
                 <section
-                    className="bg-white py-12 mx-auto"
+                    className="bg-white py-16 md:py-20 mx-auto"
                     style={{ maxWidth: "95vw" }}
                 >
                     <div className="mb-20 text-center flex flex-col items-center">
@@ -451,7 +451,7 @@ export default function Home() {
                 </section>
 
                 {/* ── SOBRE / METODOLOGIA ─────────────────────────────────── */}
-                <section className="bg-white text-black py-40 overflow-hidden relative">
+                <section className="bg-white text-black py-40 md:py-48 overflow-hidden relative">
                     <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-24">
                         <h2 className="text-h2 text-black text-center mb-32 max-w-3xl mx-auto">{t('about.metodo_titulo')}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -502,7 +502,7 @@ export default function Home() {
 
                 {/* TESTIMONIALS SECTION */}
                 <section
-                    className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center py-20"
+                    className="bg-[#000000] px-12 relative overflow-hidden flex items-center justify-center py-20 md:py-28"
                     style={{ minHeight: '500px' }}
                     onMouseEnter={() => {}}
                 >
@@ -578,7 +578,7 @@ export default function Home() {
 
 
                 {/* COMUNIDADE SECTION */}
-                <section className="bg-black py-24 px-6 md:px-12 overflow-hidden">
+                <section className="bg-black py-24 md:py-32 px-6 md:px-12 overflow-hidden">
                     <div className="max-w-[1440px] mx-auto">
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
                             <div>

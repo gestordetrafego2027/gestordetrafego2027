@@ -404,7 +404,7 @@ export default function TourMarcaPessoalPage() {
       </section>
 
       {/* ── CTA MEIO ───────────────────────────────────────────────── */}
-      <section className="bg-black py-16 px-6 text-center">
+      <section className="bg-black py-20 md:py-24 px-6 text-center">
         <a
           href="/pt/canoinhas/checkout?plano=ensaio-01"
           className="cta-blink inline-block px-14 py-7 border-4 font-headline text-[2rem] md:text-[3rem] lg:text-[3.8rem] uppercase tracking-[0.1em] font-black"
@@ -505,7 +505,7 @@ export default function TourMarcaPessoalPage() {
       </section>
 
       {/* ── CTA FINAL ──────────────────────────────────────────────── */}
-      <section className="relative py-36 px-6 overflow-hidden">
+      <section className="relative py-36 md:py-44 px-6 overflow-hidden">
         <Image
           src="/images/studio/francielle-reis/4.webp"
           alt=""
@@ -548,7 +548,7 @@ export default function TourMarcaPessoalPage() {
       </section>
 
       {/* ── SOBRE A HOUSE ──────────────────────────────────────────── */}
-      <section className="bg-black py-24 px-6 md:px-20 border-t border-white/6">
+      <section className="bg-black py-24 md:py-32 px-6 md:px-20 border-t border-white/6">
         <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-start">
           {/* Texto */}
           <div className="flex-1 min-w-0" data-aos="fade-right">
@@ -619,7 +619,7 @@ export default function TourMarcaPessoalPage() {
       </section>
 
       {/* ── CTA FINAL ──────────────────────────────────────────────── */}
-      <section className="bg-black py-20 px-6 text-center">
+      <section className="bg-black py-20 md:py-28 px-6 text-center">
         <a
           href="/pt/canoinhas/checkout?plano=ensaio-01"
           className="cta-blink inline-block px-14 py-7 border-4 font-headline text-[2rem] md:text-[3rem] lg:text-[3.8rem] uppercase tracking-[0.1em] font-black"

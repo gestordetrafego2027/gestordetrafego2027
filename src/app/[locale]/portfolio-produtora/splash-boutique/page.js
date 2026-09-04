@@ -71,10 +71,9 @@ export default function SplashBoutiquePage() {
         };
     }, []);
 
-    // TODO-BROKEN-IMAGE: /images/produtora/moda/splash-boutique/*.webp — nenhuma das 6
-    // imagens existe em /public, esta galeria renderiza vazia em produção.
-    // Ver BROKEN_IMAGES_TODO.md
-    const images = Array.from({length: 6}, (_, i) => `/images/produtora/moda/splash-boutique/${i+1}.webp`);
+    // Galeria limitada as imagens que existem em /public. Ha apenas 1.webp
+    // (frame do fashion film). Ao adicionar 2.webp..6.webp, subir o length.
+    const images = Array.from({length: 1}, (_, i) => `/images/produtora/moda/splash-boutique/${i+1}.webp`);
 
     return (
         <div className="bg-surface text-on-surface antialiased">

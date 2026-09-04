@@ -94,7 +94,7 @@ export default function ProdutoraEventosPage() {
             />
 
             {/* QUOTE */}
-            <section className="relative py-40 w-full flex items-center justify-center overflow-hidden bg-zinc-900">
+            <section className="relative py-40 md:py-48 w-full flex items-center justify-center overflow-hidden bg-zinc-900">
                 <Image src="/images/produtora/banners/banner-3.webp" alt="Eventos com registro editorial em São Paulo — House Mazzutti Produtora" fill className="object-cover opacity-40" sizes="100vw" />
                 <div className="relative z-10 text-center px-8 max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-5xl text-white italic mb-6" data-aos="fade-up">{t('quote_texto')}</h2>
@@ -103,7 +103,7 @@ export default function ProdutoraEventosPage() {
             </section>
 
             {/* COMPARATIVE */}
-            <section className="bg-zinc-50 py-32 px-12 md:px-24">
+            <section className="bg-zinc-50 py-32 md:py-40 px-12 md:px-24">
                 <div className="max-w-[1440px] mx-auto">
                     <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">{t('comparativo_titulo')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
@@ -147,7 +147,7 @@ export default function ProdutoraEventosPage() {
             </section>
 
             {/* FINAL CTA */}
-            <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+            <section className="bg-black py-32 md:py-40 px-12 md:px-24 text-center flex flex-col items-center">
                 <div className="flex items-center justify-center gap-2 text-[11px] font-label mb-6">
                   <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
                   <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>
