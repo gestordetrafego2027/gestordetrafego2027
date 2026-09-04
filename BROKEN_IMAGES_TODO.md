@@ -1,5 +1,5 @@
 # Imagens quebradas — pendentes de decisão manual
-Gerado por `node scripts/audit-assets.cjs` em 2026-09-02. Regenere após qualquer correção.
+Gerado por `node scripts/audit-assets.cjs` em 2026-09-04. Regenere após qualquer correção.
 
 Nenhuma referência foi removida do código. Cada item abaixo continua apontando
 para o caminho original — a ação é sua.
@@ -8,22 +8,6 @@ para o caminho original — a ação é sua.
 
 - **FUZZY** — existe um arquivo parecido em `/public`. Aceitar a sugestão ou indicar o certo.
 - **BROKEN** — não existe nada equivalente. O arquivo precisa ser produzido.
-
----
-
-# BROKEN — imagens de artigo que precisam ser produzidas (2)
-
-Todas em `src/app/[locale]/blog/[slug]/articles.js`. Não é caminho errado: o arquivo não existe.
-O `fallback` de cada entrada já aponta para uma imagem real, então a página
-não fica com buraco — mas mostra uma imagem genérica no lugar da própria, e o
-Open Graph (que usa `cover.src` direto) continua quebrado até o arquivo existir.
-
-Fluxo sugerido: `foto-artigo-blog <slug>` por artigo.
-
-## `fashion-film-sao-paulo-guia-de-producao` — 2 imagem(ns)
-
-- [x] L7212 `/images/produtora/moda/1.webp` — gerado 2026-09-02 (Seedream 5 Pro ∞)
-- [x] L7218 `/images/produtora/moda/2.webp` — gerado 2026-09-02 (Seedream 5 Pro ∞)
 
 ---
 

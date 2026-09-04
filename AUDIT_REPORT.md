@@ -1,5 +1,5 @@
 # Auditoria Forense — House Mazzutti
-Gerado em: 2026-09-02
+Gerado em: 2026-09-04
 Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/**`) + `next.config.mjs` + `tailwind.config.mjs`
 
 ## Sumário Executivo
@@ -9,13 +9,13 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Total de referências de mídia | 1735 |
 | — estáticas (inclui `${SITE_URL}` + caminho fixo) | 1689 |
 | — dinâmicas de verdade (slug/índice variável) | 46 |
-| Imagens OK | 1685 |
+| Imagens OK | 1687 |
 | Case mismatch (correção automática) | 0 |
 | Extensão mismatch (correção automática) | 0 |
 | Fuzzy match (correção sugerida) | 0 |
-| **BROKEN irrecuperáveis** | **2** (2 resolvidos em 2026-09-02) |
+| **BROKEN irrecuperáveis** | **2** |
 | Referências ignoradas (relativas/import) | 0 |
-| Arquivos em /public | 1778 |
+| Arquivos em /public | 1780 |
 | Imagens órfãs em /public | 668 (158.9 MB) |
 | Links internos quebrados | 0 |
 | Links externos (revisão manual) | 146 |
@@ -24,7 +24,7 @@ Escopo: `src/**` (exclui `src/app/crm/**`, `src/app/api/**`, `src/pages_backup/*
 | Imagens SEM atributo alt | 0 |
 | Imagens com alt="" | 9 |
 | Tags `<video>` | 14 |
-| Peso total de /public | 718.4 MB |
+| Peso total de /public | 720.1 MB |
 
 ---
 
@@ -92,14 +92,12 @@ _Nenhuma ocorrência._
 
 _Nenhuma ocorrência._
 
-## BROKEN — irrecuperáveis — 2 (2 resolvidos em 2026-09-02)
+## BROKEN — irrecuperáveis — 2
 
-| Arquivo:linha | Referência | Status |
-|---|---|---|
-| `src/app/[locale]/blog/[slug]/articles.js:7212` | `/images/produtora/moda/1.webp` | ✅ gerado 2026-09-02 |
-| `src/app/[locale]/blog/[slug]/articles.js:7218` | `/images/produtora/moda/2.webp` | ✅ gerado 2026-09-02 |
-| `src/app/[locale]/portfolio-produtora/splash-boutique/layout.js:15` | `/images/produtora/moda/splash-boutique/1.webp` | ⛔ pendente |
-| `src/lib/seo/schemas.js:1577` | `${SITE}/images/produtora/moda/splash-boutique/1.webp` | ⛔ pendente |
+| Arquivo:linha | Referência |
+|---|---|
+| `src/app/[locale]/portfolio-produtora/splash-boutique/layout.js:15` | `/images/produtora/moda/splash-boutique/1.webp` |
+| `src/lib/seo/schemas.js:1577` | `${SITE}/images/produtora/moda/splash-boutique/1.webp` |
 
 ## Referências DINÂMICAS com ZERO arquivos correspondentes (quebradas) — 2
 
@@ -173,7 +171,7 @@ _Nenhuma ocorrência._
 | `src/app/[locale]/page.js:215` | — | — | `/images/hero-poster.webp` | ok | metadata | sim |
 | `src/app/[locale]/produtora/publicidade/page.js:44` | `/videos/house-mazzutti-fashion-film-hero.mp4` | ok | `/images/produtora/beleza/we-pink-ze-felipe/capa.webp` | ok | metadata | sim |
 | `src/app/academy/curso/[slug]/aula/[lessonId]/VideoPlayer.tsx:102` | — | — | **sem poster** | — | metadata | sim |
-| `src/app/academy/workshop-producao-direcao-01/midia-kit/route.ts:514` | — | — | `/images/academy/inside-out/cover.webp` | ok | metadata | sim |
+| `src/app/academy/workshop-producao-direcao-01/midia-kit/route.ts:549` | — | — | `/images/academy/inside-out/cover.webp` | ok | metadata | sim |
 | `src/app/academy/workshop-producao-direcao-01/route.ts:111` | — | — | `/images/academy/banner-workshop-edit02-sp.webp` | ok | metadata | sim |
 | `src/app/academy/workshop-producao-direcao-01/route.ts:120` | — | — | `/images/academy/inside-out/cover.webp` | ok | metadata | sim |
 | `src/app/academy/workshop-producao-direcao-01/route.ts:290` | `/videos/beatco-moda.mp4` | ok | `/images/produtora/moda/beatco/capa.webp` | ok | metadata | sim |
@@ -947,11 +945,11 @@ Números medidos por esta mesma auditoria, rodando sobre o código já corrigido
 
 | | |
 |---|---:|
-| Referências de mídia resolvidas | 1685 |
+| Referências de mídia resolvidas | 1687 |
 | Case mismatch pendente | 0 |
 | Extensão mismatch pendente | 0 |
 | Fuzzy aguardando decisão | 0 |
-| **BROKEN — arquivo não existe** | **4** |
+| **BROKEN — arquivo não existe** | **2** |
 | Links internos quebrados | 0 |
 | `<img>` restantes (todos com motivo documentado) | 55 |
 | — ainda migráveis para next/image | 0 |
@@ -965,7 +963,7 @@ Números medidos por esta mesma auditoria, rodando sobre o código já corrigido
 
 ### O que sobrou para decisão humana
 
-1. **4 imagens que não existem** — quase todas são o set editorial
+1. **2 imagens que não existem** — quase todas são o set editorial
    de artigos de blog que nunca foi produzido. O `fallback` já cobre a tela; o que
    continua quebrado é o Open Graph, que usa `cover.src` direto. Lista por artigo
    em `BROKEN_IMAGES_TODO.md`.
