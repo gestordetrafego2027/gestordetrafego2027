@@ -208,6 +208,38 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
 .footer-brand{font-size:9.5px;font-weight:700;letter-spacing:.2em;color:var(--ink);text-transform:uppercase}
 .footer-info{font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;line-height:1.8;text-align:right}
 @media(max-width:640px){.footer-info{text-align:left}}
+
+/* ── PDF BUTTON ── */
+.btn-pdf{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--line-dark);padding:9px 18px;cursor:pointer;font-family:var(--sans);transition:all .2s;margin-right:8px}
+.btn-pdf:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+
+/* ── PRINT / PDF ── */
+@media print{
+  @page{size:A4 landscape;margin:12mm 14mm}
+  nav,.btn-pdf{display:none!important}
+  body{background:#fff;font-size:9pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hero{padding-top:32pt!important;padding-bottom:28pt!important;page-break-after:avoid}
+  .hero h1{font-size:42pt!important;margin-bottom:20pt!important}
+  .hero-sub{font-size:10pt!important}
+  section{padding:22pt 0!important}
+  .wrap{max-width:100%!important;padding:0!important}
+  .numbers-grid{grid-template-columns:repeat(5,1fr)!important}
+  .num-value{font-size:28pt!important}
+  .num-label{font-size:7pt!important}
+  .section-head{margin-bottom:16pt!important}
+  .h2{font-size:20pt!important}
+  .sets-grid{grid-template-columns:1fr 1fr!important;gap:0!important}
+  .audience-grid{grid-template-columns:repeat(4,1fr)!important}
+  .benefits-grid{grid-template-columns:1fr 1fr 1fr!important}
+  .pkg-grid{grid-template-columns:1fr 1fr!important}
+  .gallery-grid{display:none!important}
+  .gallery-video{display:none!important}
+  .angelo-section{page-break-before:always}
+  .pkg-section{page-break-before:always}
+  .contact-inner{page-break-before:always}
+  .statement-inner p{font-size:13pt!important}
+  a[href]:after{content:none!important}
+}
 </style>
 </head>
 <body>
@@ -217,7 +249,10 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
   <div class="nav-inner">
     <a class="nav-brand" href="https://housemazzutti.com">House Mazzutti</a>
     <img src="/images/academy/inside-out-logo-black.png" alt="Inside Out Workshop" class="nav-logo"/>
-    <a class="nav-cta" href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse." target="_blank">Falar com a gente</a>
+    <div style="display:flex;align-items:center;gap:0">
+      <button class="btn-pdf" onclick="window.print()">Baixar PDF</button>
+      <a class="nav-cta" href="https://wa.me/5511952347533?text=Ol%C3%A1%2C+vi+o+Media+Kit+do+Inside+Out+Edit+2+e+tenho+interesse." target="_blank">Falar com a gente</a>
+    </div>
   </div>
 </nav>
 
