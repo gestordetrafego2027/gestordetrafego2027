@@ -76,7 +76,7 @@ export default function AgenciaBrandingPage() {
             </section>
 
             {/* REFRAME */}
-            <section className="bg-black py-20 px-6 text-center" data-aos="fade-up">
+            <section className="bg-black py-20 md:py-28 px-6 text-center" data-aos="fade-up">
                 <h2 className="font-headline text-white text-2xl md:text-4xl lg:text-5xl leading-tight max-w-4xl mx-auto tracking-tight mb-4">
                     {t('manifesto_texto')}
                 </h2>
@@ -141,7 +141,7 @@ export default function AgenciaBrandingPage() {
             </section>
 
             {/* PROVA — cases */}
-            <section id="marcas" className="bg-zinc-950 py-24 px-6 md:px-16">
+            <section id="marcas" className="bg-zinc-950 py-24 md:py-32 px-6 md:px-16">
                 <div className="max-w-[1440px] mx-auto">
                     <div className="flex items-end justify-between mb-12" data-aos="fade-up">
                         <div>
@@ -270,7 +270,7 @@ export default function AgenciaBrandingPage() {
             </section>
 
             {/* COM / SEM */}
-            <section className="bg-zinc-50 py-32 px-12 md:px-24">
+            <section className="bg-zinc-50 py-32 md:py-40 px-12 md:px-24">
                 <div className="max-w-[1440px] mx-auto">
                     <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">{t('comparativo_titulo')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black/10">
@@ -354,7 +354,7 @@ export default function AgenciaBrandingPage() {
             */}
 
             {/* CTA FINAL */}
-            <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+            <section className="bg-black py-32 md:py-40 px-12 md:px-24 text-center flex flex-col items-center">
                 <div className="flex items-center justify-center gap-2 text-[11px] font-label mb-6">
                   <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
                   <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>

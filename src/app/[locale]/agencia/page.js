@@ -255,7 +255,7 @@ export default function AgenciaPage() {
                 </section>
 
                 {/* ── MANIFESTO / PILARES ── */}
-                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
+                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32 md:py-40">
                     <div className="noise-overlay absolute inset-0" />
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
                         <div className="w-full lg:w-1/4 flex-shrink-0">
@@ -334,7 +334,7 @@ export default function AgenciaPage() {
                 </section>
 
                 {/* ── DIFERENCIAIS ── */}
-                <section className="bg-white py-32 px-12">
+                <section className="bg-white py-32 md:py-40 px-12">
                     <div className="max-w-[1440px] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
                             <div>
@@ -458,7 +458,7 @@ export default function AgenciaPage() {
             </main>
 
             {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
-            <section className="bg-white py-24 px-8 border-t border-zinc-100">
+            <section className="bg-white py-24 md:py-32 px-8 border-t border-zinc-100">
                 <div className="max-w-3xl mx-auto">
                     <p className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-400 mb-6">{t('faq_label')}</p>
                     <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">{t('faq_titulo')}</h2>

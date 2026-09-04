@@ -185,7 +185,7 @@ export default function PortfolioPage() {
 
       {/* HEADER EDITORIAL */}
       <section
-        className="border-y border-neutral-200 text-center px-6 py-10 md:py-14"
+        className="border-y border-neutral-200 text-center px-6 py-12 md:py-16"
         style={{ marginTop: '72px', borderTopWidth: '0.5px', borderBottomWidth: '0.5px' }}
       >
         <div className="max-w-5xl mx-auto">

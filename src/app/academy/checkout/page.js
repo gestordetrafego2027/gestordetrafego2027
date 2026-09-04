@@ -127,7 +127,7 @@ function CheckoutRedirect({ product, order, checkoutUrl }) {
     <>
       <Header />
       <main className="min-h-screen bg-neutral-50 pb-24 pt-24">
-        <section className="mx-auto max-w-2xl px-6 py-16">
+        <section className="mx-auto max-w-2xl px-6 py-20 md:py-24">
           <h1 className="text-3xl font-semibold text-neutral-900">Finalize seu pagamento</h1>
           <p className="mt-2 text-neutral-600">Pedido <span className="font-mono">{order.order_number}</span></p>
 
@@ -169,7 +169,7 @@ function CheckoutError({ message }) {
     <>
       <Header />
       <main className="min-h-screen bg-neutral-50 pb-24 pt-24">
-        <section className="mx-auto max-w-xl px-6 py-16 text-center">
+        <section className="mx-auto max-w-xl px-6 py-20 md:py-24 text-center">
           <h1 className="text-3xl font-semibold text-neutral-900">Algo deu errado</h1>
           <p className="mt-4 text-neutral-600">{message}</p>
           <a href="/academy" className="mt-6 inline-block text-sm text-neutral-900 underline">

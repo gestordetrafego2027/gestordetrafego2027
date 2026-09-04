@@ -120,7 +120,7 @@ export default function StudioBookPage() {
             <LandingPricing service="book" openForm={openForm} />
 
             {/* 8. COMPARATIVE */}
-            <section className="bg-zinc-50 py-32 px-12 md:px-24">
+            <section className="bg-zinc-50 py-32 md:py-40 px-12 md:px-24">
                     <div className="max-w-[1440px] mx-auto">
                         <h2 className="font-headline text-4xl md:text-5xl mb-24 tracking-tight text-black" data-aos="fade-up">{t('comparative_titulo')}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
@@ -163,7 +163,7 @@ export default function StudioBookPage() {
             </section>
 
             {/* 9. FINAL CTA */}
-            <section className="bg-black py-32 px-12 md:px-24 text-center flex flex-col items-center">
+            <section className="bg-black py-32 md:py-40 px-12 md:px-24 text-center flex flex-col items-center">
                     <div className="flex items-center justify-center gap-2 text-[11px] font-label mb-6">
                       <span style={{ color: '#f5c518', letterSpacing: '0.05em' }}>★★★★★</span>
                       <span className="text-zinc-400">5.0 · 32 avaliações no Google</span>
