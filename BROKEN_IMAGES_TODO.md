@@ -37,3 +37,18 @@ Um padrão com zero correspondências significa galeria inteira vazia em produç
 - Padrão: `/videos/${unit}/${slug}/projeto.mp4`
 - Ação: [ ] produzir as imagens  [ ] corrigir o caminho  [ ] despublicar a página
 
+
+---
+
+# Achado manual — NÃO detectado pelo `audit-assets.cjs`
+
+> O script trata `slug` em array como padrão dinâmico e só checa se o diretório-pai
+> tem *algum* arquivo, então não flagra um slug individual sem capa. Esta seção é
+> mantida à mão. **Se rodar `node scripts/audit-assets.cjs`, ela será sobrescrita** —
+> reinsira a partir daqui. O flag durável está no comentário `TODO-BROKEN-IMAGE`
+> no código.
+
+## src/app/[locale]/portfolio/page.js:66 — `bonne-sorrie`
+- Referência: `/images/produtora/moda/bonne-sorrie/capa.webp` (gerada por `produtoraModa.map(... cover: /images/produtora/moda/${slug}/capa.webp)`)
+- Nota: não existe pasta `/public/images/produtora/moda/bonne-sorrie/`, nenhum arquivo homônimo em `/public`, e não há rota de detalhe `/portfolio-produtora/bonne-sorrie`. O card renderiza a capa quebrada no hub `/portfolio`.
+- Ação: [ ] produzir a capa (`foto-artigo-blog` / Seedream)  [ ] remover o slug `'bonne-sorrie'` do array  [ ] apontar para um projeto existente
