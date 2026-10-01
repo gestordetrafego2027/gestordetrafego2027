@@ -94,6 +94,19 @@ Estampa de peito pequeno (tipo `art-director`): `--posicao peito-esquerdo
 
 ## Fase 4 — GERAR e TRAVAR
 
+### 4.0 O rosto, antes de tudo
+
+Para peça de modelo novo — ou sempre que o rosto estiver saindo artificial —
+rode a skill **`rosto-real-hmzt`** ANTES de gerar a primeira foto. A F1 aprovada
+vira a referência de identidade de todas as outras, inclusive das pretas: rosto
+genérico na F1 contamina o produto inteiro, e refazer custa o lookbook todo.
+
+```bash
+python3 docs/shop-confeccao/scripts/ficha_rosto.py verificar <modelo>
+```
+
+Sem "✓ ficha completa", o rosto ainda é a média da base de treino.
+
 ### 4.1 Navegador e plano
 
 Claude in Chrome, sessão do usuário logada no Magnific. Carregue as ferramentas
