@@ -1,0 +1,17 @@
+{
+ "nome": "Videomaker REC",
+ "frente": {
+  "pos": "a horizontal row of small camera-viewfinder icons across the upper chest: a small battery icon on the wearer's right chest and a red dot with the word \"REC\" on the wearer's left chest, each only about 3 cm wide, plus tiny \"HD 4K\" and a green battery mark near the sleeve hems",
+  "desc_escura": "tiny camera viewfinder UI icons — a battery outline, a red recording dot with \"REC\", \"HD\" and \"4K\" labels and a small green battery — in near-black with the red and green accents",
+  "desc_clara": "tiny camera viewfinder UI icons — a battery outline, a red recording dot with \"REC\", \"HD\" and \"4K\" labels and a small green battery — in white with the red and green accents"
+ },
+ "verso": {
+  "pos": "upper back, centered, about 28 cm wide, top edge about 10 cm below the collar",
+  "desc_escura": "the phrase \"YOUR IMAGE\" on the first line and \"OUR ART\" on the second line (with a wide gap between OUR and ART), in a bold wide geometric sans-serif, near-black",
+  "desc_clara": "the phrase \"YOUR IMAGE\" on the first line and \"OUR ART\" on the second line (with a wide gap between OUR and ART), in a bold wide geometric sans-serif, white"
+ },
+ "spell": "Y-O-U-R I-M-A-G-E / O-U-R A-R-T, R-E-C",
+ "uniao": [
+  "front"
+ ]
+}

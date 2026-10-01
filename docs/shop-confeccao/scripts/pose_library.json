@@ -1,0 +1,24 @@
+{
+ "_regra": "Cada produto recebe um conjunto próprio de poses (sorteio determinístico pelo código do produto), sem repetir o conjunto de outro produto. Toda pose mantém o peito esquerdo do modelo (lado DIREITO da imagem) visível para a estampa. Campos: nome PT, descrição EN com corpo + cabeça + olhar + mãos + enquadramento.",
+ "poses": [
+  ["Frontal olhar baixo", "Frontal view with a very slight turn, arms hanging relaxed, head slightly lowered, eyes looking down and off-camera to the camera's left. Framing from the head to upper thigh."],
+  ["Frontal olhar direto, queixo erguido", "Frontal view, standing straight, chin slightly raised, eyes looking straight into the lens with a calm, confident expression; arms relaxed at the sides. Framing from the head to upper thigh."],
+  ["Perfil ao horizonte", "Body turned about 30 degrees toward the camera's left so his left shoulder comes closer to the lens and the left-chest badge faces the camera; head in a clean profile to the camera's left, chin up, eyes on a distant point beyond the frame; arms relaxed. Framing from the head to upper thigh."],
+  ["Olhar por cima do ombro", "Body turned about 45 degrees toward the camera's left with the left shoulder closer to the lens, head turned back over the left shoulder toward the camera, eyes meeting the lens; one hand in the front jeans pocket. Framing from the head to upper thigh."],
+  ["Contra-plongée, meio sorriso", "Low camera angle from waist height looking slightly up; he looks down into the lens with a subtle relaxed half-smile; one hand in the front pocket; torso square to the lens. Framing from the head to mid-thigh."],
+  ["Mão no cabelo, olhar para cima", "Near-frontal, one hand running through the hair at the side of the head (elbow up, not covering the chest), eyes looking up and to the camera's right, candid moment; the other arm relaxed. Framing from the head to upper thigh."],
+  ["3/4 braço cruzado, olhar lateral", "Three-quarter view with the left shoulder toward the camera, head turned to the camera's right with eyes looking off-frame; one forearm crosses in front of the waist, the hand holding the other forearm. Framing from the head to upper thigh."],
+  ["Mãos entrelaçadas, cabeça baixa", "Near-frontal, both hands loosely clasped in front of the waist, head lowered, eyes looking down to the camera's left, shoulders relaxed. Framing from the head to upper thigh."],
+  ["Ajustando a barra", "Frontal, both hands pinching and slightly pulling the front hem at the sides as if straightening the shirt, head tilted a little, eyes looking down at the hem. Framing from the head to upper thigh."],
+  ["Ajustando a manga", "Three-quarter view with the left shoulder toward the camera; his right hand crosses the body and pinches the left sleeve hem, head bowed looking at the sleeve. Framing from the head to upper thigh."],
+  ["Mãos nos bolsos, olhar à esquerda", "Frontal, both hands tucked into the front jeans pockets with thumbs out, head turned three-quarters to the camera's left, eyes looking past the lens. Framing from the head to upper thigh."],
+  ["Plongée suave, olhar para cima", "Slightly high camera angle; he looks up toward the lens with a soft, thoughtful expression, arms relaxed; torso square to the camera. Framing from the head to upper thigh."],
+  ["Passo em movimento", "Mid-stride walking toward the camera's left, captured naturally, the far arm swinging, head turned toward the camera with a relaxed gaze; fabric moving with the step. Framing from the head to the knees."],
+  ["Encostado de lado", "Leaning his right shoulder lightly against an unseen wall at the camera's left edge, body angled so the left chest faces the lens, arms crossed low, eyes looking at the camera. Framing from the head to upper thigh."],
+  ["Mão no queixo, olhar sério", "Near-frontal, right hand lightly touching the chin (not covering the chest), serious focused gaze straight into the lens, left arm relaxed. Framing from the head to mid-chest.", "close"],
+  ["Riso espontâneo", "Frontal, candid genuine laugh with eyes closing slightly and head tilted back a little, arms relaxed, natural moment. Framing from the head to upper thigh."],
+  ["Sentado no banco", "Seated on a simple wooden stool, forearms resting on the thighs, leaning slightly forward, head up looking at the camera; torso turned so the left chest faces the lens. Framing from the head to the knees."],
+  ["Olhos fechados, respirando", "Frontal, eyes closed, face relaxed and slightly lifted as if taking a deep breath, arms loose at the sides. Framing from the head to upper thigh."]
+ ],
+ "detalhe": ["Detalhe gola e ombro", "Tight detail crop from the lips and beard down to the mid chest, off-center, showing the ribbed collar, the shoulder seam and the sleeve hem, with part of the chest badge in frame. Macro-level sharpness on the fabric."]
+}

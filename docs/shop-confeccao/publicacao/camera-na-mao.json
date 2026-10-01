@@ -1,0 +1,122 @@
+{
+ "estampa": "câmera na mão",
+ "estampa_nome": "Câmera na Mão",
+ "estampa_desc": "a ilustração de uma mão segurando uma câmera vintage na frente e, nas costas, a frase EU SIMPLESMENTE CURTI em letras condensadas",
+ "marca": "HMZT",
+ "marca_slug": "hmzt",
+ "produtos": {
+  "P08": {
+   "tipo": "camiseta regular",
+   "nome_curto": "Camiseta",
+   "tecido_curto": "algodao com elastano 170g",
+   "tecido_alt": "malha 170 g/m² de algodão de fibra extra-longa com elastano",
+   "tecido_title": "Algodão com Elastano",
+   "meta": "Camiseta {estampa} {cor} em algodão de fibra extra-longa com elastano, 170 g/m², caimento fluido. Estampa em silk. P ao EG. HMZT.",
+   "curta": "Camiseta {estampa} com a ilustração de uma mão segurando uma câmera vintage na frente.",
+   "longa": "A Camiseta {estampa} tem corte regular de caimento fluido, que acompanha o corpo sem apertar. A malha tem 170 g/m², fio 50/1 de algodão de fibra extra-longa com 8,5% de elastano — lisa, macia e resistente a amassar. A estampa traz {estampa_desc}, aplicada em silk à base d'água, com toque suave na malha.",
+   "bullets": [
+    "91,5% algodão de fibra extra-longa, 8,5% elastano",
+    "Fio 50/1, malha 170 g/m²",
+    "Caimento fluido, volta à forma",
+    "Gola em ribana lisa, costura interna plana",
+    "Barra dupla",
+    "Pré-encolhida",
+    "Estampa em silk à base d'água"
+   ],
+   "ficha": [
+    [
+     "Composição",
+     "91,5% algodão, 8,5% elastano"
+    ],
+    [
+     "Gramatura",
+     "170 g/m²"
+    ],
+    [
+     "Fio",
+     "50/1"
+    ],
+    [
+     "Modelagem",
+     "Regular, caimento fluido"
+    ],
+    [
+     "Gola",
+     "Careca, ribana 2x1 lisa"
+    ],
+    [
+     "Estampa",
+     "Silk à base d'água"
+    ],
+    [
+     "Cores",
+     "Branca/off-white · Preta"
+    ],
+    [
+     "Tamanhos",
+     "P, M, G, GG, EG"
+    ]
+   ],
+   "medidas": [
+    [
+     "Tamanho",
+     "Comprimento",
+     "Largura",
+     "Ombros",
+     "Mangas"
+    ],
+    [
+     "P",
+     70,
+     52,
+     44,
+     16
+    ],
+    [
+     "M",
+     72,
+     54,
+     46,
+     18
+    ],
+    [
+     "G",
+     74,
+     56,
+     48,
+     20
+    ],
+    [
+     "GG",
+     76,
+     58,
+     50,
+     22
+    ],
+    [
+     "EG",
+     78,
+     60,
+     52,
+     24
+    ]
+   ],
+   "medidas_nota": "Medidas da peça em repouso, tolerância de ±2 cm. O modelo tem 1,84 m e veste M.",
+   "cuidados": [
+    "Lavar do avesso em água fria ou até 30 °C",
+    "Não usar alvejante",
+    "Secar à sombra; evitar secadora quente",
+    "Passar do avesso, sem ferro direto sobre a estampa"
+   ],
+   "keywords": [
+    "camiseta câmera",
+    "camiseta fotógrafo",
+    "camiseta vintage",
+    "camiseta com elastano",
+    "camiseta algodão fio 50",
+    "camiseta caimento fluido",
+    "HMZT"
+   ]
+  }
+ }
+}

@@ -1,0 +1,122 @@
+{
+ "estampa": "versão brasileira",
+ "estampa_nome": "Versão Brasileira",
+ "estampa_desc": "uma cadeira de diretor desenhada e o texto VERSÃO BRASILEIRA na vertical na frente e, nas costas, uma lista de créditos em tipografia fina",
+ "marca": "HMZT",
+ "marca_slug": "hmzt",
+ "produtos": {
+  "P04": {
+   "tipo": "camiseta regular",
+   "nome_curto": "Camiseta",
+   "tecido_curto": "suedine 300g",
+   "tecido_alt": "malha suedine 300 g/m² de toque aveludado",
+   "tecido_title": "Suedine 300g",
+   "meta": "Camiseta {estampa} {cor} em suedine 300 g/m², toque aveludado e caimento estruturado. Estampa em silk. P ao EG. HMZT.",
+   "curta": "Camiseta {estampa} com uma cadeira de diretor desenhada e o texto VERSÃO BRASILEIRA na vertical na frente.",
+   "longa": "A Camiseta {estampa} tem corte regular com caimento estruturado. A malha é suedine de 300 g/m² (52% algodão, 48% poliéster), com superfície escovada de toque aveludado e fosco, totalmente opaca. A estampa traz {estampa_desc}, aplicada em silk à base d'água, com toque suave na malha.",
+   "bullets": [
+    "Malha suedine 300 g/m², toque aveludado",
+    "52% algodão, 48% poliéster",
+    "Caimento regular e estruturado",
+    "Opaca, inclusive no off-white",
+    "Gola em ribana reforçada",
+    "Barra dupla, pré-encolhida",
+    "Estampa em silk à base d'água"
+   ],
+   "ficha": [
+    [
+     "Composição",
+     "52% algodão, 48% poliéster"
+    ],
+    [
+     "Gramatura",
+     "300 g/m²"
+    ],
+    [
+     "Acabamento da malha",
+     "Suedine (escovada, toque aveludado)"
+    ],
+    [
+     "Modelagem",
+     "Regular"
+    ],
+    [
+     "Gola",
+     "Careca, ribana reforçada"
+    ],
+    [
+     "Estampa",
+     "Silk à base d'água"
+    ],
+    [
+     "Cores",
+     "Branca/off-white · Preta"
+    ],
+    [
+     "Tamanhos",
+     "P, M, G, GG, EG"
+    ]
+   ],
+   "medidas": [
+    [
+     "Tamanho",
+     "Comprimento",
+     "Largura",
+     "Ombros",
+     "Mangas"
+    ],
+    [
+     "P",
+     70,
+     52,
+     44,
+     16
+    ],
+    [
+     "M",
+     72,
+     54,
+     46,
+     18
+    ],
+    [
+     "G",
+     74,
+     56,
+     48,
+     20
+    ],
+    [
+     "GG",
+     76,
+     58,
+     50,
+     22
+    ],
+    [
+     "EG",
+     78,
+     60,
+     52,
+     24
+    ]
+   ],
+   "medidas_nota": "Medidas da peça em repouso, tolerância de ±2 cm. O modelo tem 1,84 m e veste M.",
+   "cuidados": [
+    "Lavar do avesso em água fria ou até 30 °C",
+    "Não usar alvejante",
+    "Secar à sombra; evitar secadora quente",
+    "Passar do avesso, sem ferro direto sobre a estampa"
+   ],
+   "keywords": [
+    "camiseta cinema brasileiro",
+    "camiseta cadeira de diretor",
+    "camiseta produção audiovisual",
+    "camiseta suedine",
+    "camiseta heavyweight",
+    "camiseta toque aveludado",
+    "HMZT"
+   ]
+  }
+ }
+}

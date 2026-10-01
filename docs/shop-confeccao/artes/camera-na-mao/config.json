@@ -1,0 +1,15 @@
+{
+ "nome": "Câmera na Mão",
+ "frente": {
+  "pos": "large print on the lower front: a hand holding a vintage camera, the camera at mid chest and the hand and wrist running down toward the hem, about 28 cm wide by 40 cm tall",
+  "desc_escura": "a rough-brush silhouette illustration of a hand holding a vintage rangefinder camera, with the lens detail in fine lines, near-black",
+  "desc_clara": "a rough-brush silhouette illustration of a hand holding a vintage rangefinder camera, with the lens detail in fine lines, white"
+ },
+ "verso": {
+  "pos": "a single column of tall condensed letters running vertically down the center of the back, about 9 cm wide and 45 cm tall",
+  "desc_escura": "the phrase \"EU SIMPLESMENTE CURTI\" in tall condensed letters with a stretched, mirrored double-line effect, set vertically, near-black",
+  "desc_clara": "the phrase \"EU SIMPLESMENTE CURTI\" in tall condensed letters with a stretched, mirrored double-line effect, set vertically, white"
+ },
+ "spell": "E-U S-I-M-P-L-E-S-M-E-N-T-E C-U-R-T-I",
+ "uniao": []
+}

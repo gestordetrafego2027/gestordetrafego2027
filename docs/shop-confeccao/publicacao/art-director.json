@@ -1,0 +1,123 @@
+{
+ "estampa": "art director",
+ "estampa_nome": "Art Director",
+ "estampa_desc": "um selo gráfico com a palavra DIRECTOR numa barra e, abaixo, as letras ART em corpo pesado, recortadas pelas bordas do selo",
+ "marca": "HMZT",
+ "marca_slug": "hmzt",
+ "produtos": {
+  "P02": {
+   "tipo": "camiseta oversized",
+   "nome_curto": "Camiseta Oversized",
+   "tecido_curto": "algodao penteado 185g",
+   "tecido_alt": "algodão penteado 185 g/m², ombro caído",
+   "tecido_title": "Algodão Penteado 185g",
+   "meta": "Camiseta oversized {estampa} {cor} em algodão penteado 185 g/m², ombro caído e gola canelada. Estampa em silk no peito. Tamanhos P ao EG. HMZT.",
+   "curta": "Camiseta oversized de ombro caído em algodão penteado 185 g/m², com a estampa {estampa} em silk no peito esquerdo.",
+   "longa": "A Camiseta Oversized {estampa} tem corte amplo e ombro caído: a costura do ombro desce um pouco pelo braço e as mangas terminam logo acima do cotovelo. A malha é 100% algodão penteado de 185 g/m² — encorpada o bastante para manter o volume da modelagem, leve o bastante para o calor. No peito esquerdo, {estampa_desc}, aplicado em silk à base d'água, com toque suave na malha.",
+   "bullets": [
+    "100% algodão penteado, 185 g/m²",
+    "Modelagem oversized com ombro caído",
+    "Gola canelada 2x1 com reforço ombro a ombro",
+    "Barra dupla nas mangas e na barra inferior",
+    "Estampa em silk à base d'água no peito esquerdo",
+    "Pré-encolhida e com tratamento anti-torção"
+   ],
+   "ficha": [
+    [
+     "Composição",
+     "100% algodão penteado"
+    ],
+    [
+     "Gramatura",
+     "185 g/m²"
+    ],
+    [
+     "Modelagem",
+     "Oversized, ombro caído"
+    ],
+    [
+     "Gola",
+     "Canelada 2x1, reforço ombro a ombro"
+    ],
+    [
+     "Acabamento",
+     "Costura ponto cadeia, barra dupla"
+    ],
+    [
+     "Estampa",
+     "Silk à base d'água, peito esquerdo (~9 cm)"
+    ],
+    [
+     "Cores",
+     "Branca · Preta"
+    ],
+    [
+     "Tamanhos",
+     "P, M, G, GG, EG"
+    ]
+   ],
+   "medidas": [
+    [
+     "Tamanho",
+     "Comprimento",
+     "Largura",
+     "Ombros",
+     "Mangas"
+    ],
+    [
+     "P",
+     74,
+     56,
+     48,
+     20
+    ],
+    [
+     "M",
+     76,
+     58,
+     50,
+     22
+    ],
+    [
+     "G",
+     78,
+     60,
+     52,
+     24
+    ],
+    [
+     "GG",
+     80,
+     62,
+     54,
+     26
+    ],
+    [
+     "EG",
+     82,
+     64,
+     56,
+     28
+    ]
+   ],
+   "medidas_nota": "Medidas da peça em repouso, tolerância de ±2 cm. O modelo tem 1,84 m e veste M. Quem usa M em camiseta regular pode manter o M para caimento amplo ou usar P para um oversized mais contido.",
+   "cuidados": [
+    "Lavar do avesso em água fria ou até 30 °C",
+    "Não usar alvejante",
+    "Secar à sombra; evitar secadora quente",
+    "Passar do avesso, sem ferro direto sobre a estampa"
+   ],
+   "keywords": [
+    "camiseta oversized",
+    "camiseta oversized masculina",
+    "camiseta ombro caído",
+    "camiseta algodão penteado",
+    "camiseta estampada",
+    "camiseta art director",
+    "camiseta oversized branca",
+    "camiseta oversized preta",
+    "HMZT"
+   ]
+  }
+ }
+}

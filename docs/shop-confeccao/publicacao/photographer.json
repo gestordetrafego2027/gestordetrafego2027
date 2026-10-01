@@ -1,0 +1,83 @@
+{
+ "estampa": "photographer",
+ "estampa_nome": "Photographer",
+ "estampa_desc": "um círculo listrado sobre uma grade de pontos com a palavra PHOTOGRAPHER em vermelho",
+ "marca": "HMZT",
+ "marca_slug": "hmzt",
+ "produtos": {
+  "P10": {
+   "tipo": "camiseta oversized",
+   "nome_curto": "Camiseta Oversized",
+   "tecido_curto": "heavyweight 300g",
+   "tecido_alt": "malha heavyweight 300 g/m², modelagem oversized de ombro caído",
+   "tecido_title": "Heavyweight 300g",
+   "meta": "Camiseta oversized {estampa} {cor}, malha heavyweight 300 g/m², ombro caído e corpo amplo. Estampa em silk. HMZT.",
+   "curta": "Camiseta Oversized {estampa} com um círculo listrado sobre uma grade de pontos com a palavra PHOTOGRAPHER em vermelho.",
+   "longa": "A Camiseta Oversized {estampa} tem modelagem oversized de corpo amplo e quadrado, ombro bem caído e manga larga até o cotovelo. A malha é heavyweight de 300 g/m², encorpada e opaca, com gola canelada larga. A estampa traz {estampa_desc}, aplicada em silk à base d'água, com toque suave na malha.",
+   "bullets": [
+    "Malha heavyweight 300 g/m²",
+    "Modelagem oversized, ombro caído",
+    "Gola canelada 2,5 cm",
+    "Reforço ombro a ombro",
+    "Barra reta abaixo do quadril",
+    "Estampa em silk à base d'água"
+   ],
+   "ficha": [
+    [
+     "Gramatura",
+     "300 g/m²"
+    ],
+    [
+     "Modelagem",
+     "Oversized, ombro caído"
+    ],
+    [
+     "Gola",
+     "Canelada 2,5 cm"
+    ],
+    [
+     "Composição",
+     "a confirmar com o fornecedor"
+    ],
+    [
+     "Estampa",
+     "Silk à base d'água"
+    ],
+    [
+     "Cores",
+     "Branca/off-white · Preta"
+    ],
+    [
+     "Tamanhos",
+     "P, M, G, GG, EG"
+    ]
+   ],
+   "medidas": [
+    [
+     "Tamanho",
+     "Medidas"
+    ],
+    [
+     "P–EG",
+     "tabela a confirmar com o fornecedor"
+    ]
+   ],
+   "medidas_nota": "Medidas da peça em repouso, tolerância de ±2 cm. O modelo tem 1,84 m e veste M.",
+   "cuidados": [
+    "Lavar do avesso em água fria ou até 30 °C",
+    "Não usar alvejante",
+    "Secar à sombra; evitar secadora quente",
+    "Passar do avesso, sem ferro direto sobre a estampa"
+   ],
+   "keywords": [
+    "camiseta fotógrafo",
+    "camiseta fotografia",
+    "camiseta photographer",
+    "camiseta oversized",
+    "camiseta heavyweight",
+    "camiseta streetwear",
+    "HMZT"
+   ]
+  }
+ }
+}

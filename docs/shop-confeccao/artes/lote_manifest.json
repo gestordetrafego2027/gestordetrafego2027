@@ -1,0 +1,102 @@
+{
+ "02": {
+  "slug": "backstage-popcorn",
+  "base": "P03",
+  "arquivos": {
+   "frente_escura": "arte-escuraacamiseta-clara-preta-modelo -02-popkorn-pipoca-cinema-filme-audiovisual-producao-executiva-publicidade.png",
+   "frente_clara": "arte-clara-frente-camiseta-escura-modelo -02-popkorn-pipoca-cinema-filme-audiovisual-producao-executiva-publicidade.png",
+   "verso_clara": "arte-clara-verso-camiseta-escura-modelo -02-popkorn-pipoca-cinema-filme-audiovisual-producao-executiva-publicidade.png",
+   "verso_escura": "arte-clara-camiseta-escura-verso-preta-modelo -02-popkorn-pipoca-cinema-filme-audiovisual-producao-executiva-publicidade.png",
+   "mock_f": "layout--camiseta-02-popkorn-pipoca-cinema-filme-audiovisual-producao-executiva-publicidade-hmzt-.png",
+   "mock_v": "layout-camiseta-verso-02-popkorn-pipoca-cinema-filme-audiovisual-producao-executiva-publicidade.png"
+  },
+  "tem_verso": true
+ },
+ "03": {
+  "slug": "videomaker-rec",
+  "base": "P10",
+  "arquivos": {
+   "frente_escura": "arte-frente escuro camiseta clara 03 videomaker gravacao rec audiovisual producao filme video captacao.png",
+   "frente_clara": "arte clara frente camiseta 03 videomaker gravacao rec audiovisual producao filme video captacao.png",
+   "verso_clara": " arte clara branco para verso camiseta 03 videomaker gravacao rec audiovisual producao filme video captacao.png",
+   "verso_escura": "arte -verso escuro camiseta clara 03 videomaker gravacao rec audiovisual producao filme video captacao.png",
+   "mock_f": " frente camiseta 03 videomaker gravacao rec audiovisual producao filme video captacao.png",
+   "mock_v": " verso camiseta 03 videomaker gravacao rec audiovisual producao filme video captacao.png"
+  },
+  "tem_verso": true
+ },
+ "04": {
+  "slug": "design-video-heartbeat",
+  "base": "P08",
+  "arquivos": {
+   "frente_escura": "arte escura para frente camiseta 04 tshirt videomaker filme design de sivdeo editor color filme camera canon sony gravação.png",
+   "frente_clara": "arte clara para frente camiseta 04 tshirt videomaker filme design de sivdeo editor color filme camera canon sony gravação.png",
+   "verso_clara": "arte clara para verso camiseta 04 tshirt videomaker filme design de sivdeo editor color filme camera canon sony gravação.png",
+   "verso_escura": "arte escura para verso camiseta 04 tshirt videomaker filme design de sivdeo editor color filme camera canon sony gravação.png",
+   "mock_f": "mokup -modelo - frente-camiseta 04 tshirt videomaker filme design de sivdeo editor color filme camera canon sony gravação.png",
+   "mock_v": "mockup -modeo-verso- camiseta 04 tshirt videomaker filme design de sivdeo editor color filme camera canon sony gravação.pngPrancheta 26@2x.png"
+  },
+  "tem_verso": true
+ },
+ "05": {
+  "slug": "creative-art-director",
+  "base": "P02",
+  "arquivos": {
+   "frente_clara": "arte-clara - frente-mockup-camiseta-05-tshirt-diretor-criativo-art-direcao-imagem-conteudo-moda-agencia-publicidade 2.png",
+   "frente_escura": "arte-clara - frente-mockup-camiseta-clara-tshirt-diretor-criativo-art-direcao-imagem-conteudo-moda-agencia-publicidade.png",
+   "verso_clara": "arte-clara - verso-mockup-camiseta-05-escura- tshirt-diretor-criativo-art-direcao-imagem-conteudo-moda-agencia-publicidade.png",
+   "verso_escura": "arte-clara -verso-mockup-camiseta-clara-tshirt-diretor-criativo-art-direcao-imagem-conteudo-moda-agencia-publicidade.png",
+   "mock_f": "frente-mockup-camiseta-05-tshirt-diretor-criativo-art-direcao-imagem-conteudo-moda-agencia-publicidade.png",
+   "mock_v": "verso-mockup-camiseta-05-tshirt-diretor-criativo-art-direcao-imagem-conteudo-moda-agencia-publicidade.png"
+  },
+  "tem_verso": true
+ },
+ "06": {
+  "slug": "versao-brasileira-cadeira-diretor",
+  "base": "P04",
+  "arquivos": {
+   "frente_clara": "arte-clara-frente- camiseta-tshirt-06-arte-producao-diretor-cinema-cadeira-diretor-arte-cenografia-producao-audiovisual-moda.png",
+   "verso_clara": "arte-clara-vers- camiseta-tshirt-06-arte-producao-diretor-cinema-cadeira-diretor-arte-cenografia-producao-audiovisual-moda.png",
+   "frente_escura": "arte-escura-frente camiseta-clara-tshirt-06-arte-producao-diretor-cinema-cadeira-diretor-arte-cenografia-producao-audiovisual-moda.png",
+   "verso_escura": "arte-escura-verso- camiseta-clara-tshirt-06-arte-producao-diretor-cinema-cadeira-diretor-arte-cenografia-producao-audiovisual-moda.png",
+   "mock_f": "mockup- frente-camiseta-tshirt-06-arte-producao-diretor-cinema-cadeira-diretor-arte-cenografia-producao-audiovisual-moda.png",
+   "mock_v": "mockup- verso-camiseta-tshirt-06-arte-producao-diretor-cinema-cadeira-diretor-arte-cenografia-producao-audiovisual-moda.png"
+  },
+  "tem_verso": true
+ },
+ "07": {
+  "slug": "photographer",
+  "base": "P10",
+  "arquivos": {
+   "frente_escura": "arte-frente-fotografia-camiseta-clara-thsirt-clara-fotografo-frente-mockup-modelo-arte-fotografia-fashion-photography-frente.png",
+   "frente_clara": "arte-frente-fotografia-camiseta-thsirt-escura0-frente-mockup-modelo-arte-fotografia-fashion-photography-frente.png",
+   "mock_f": "camiseta-fotografo-frente-mockup-modelo-arte-fotografia-fashion-photography-frente.png",
+   "mock_v": "camiseta-fotografo-verso-mockup-modelo-arte-fotografia-fashion-photography-frente.png"
+  },
+  "tem_verso": false
+ },
+ "08": {
+  "slug": "sony-retro",
+  "base": "P03",
+  "arquivos": {
+   "frente_clara": "frente-camiseta-sony-brand-marca-clara-branco-retro-mockup-frente -tshirt-08-fotografia video producao produtor fotografo videomaker.png",
+   "frente_escura": "frente-camiseta-sony-brand-marca-escuro-pretro-mockup-frente -tshirt-08-fotografia video producao produtor fotografo videomaker.png",
+   "mock_f": "frente-camiseta-sony-brand-marca-retro-mockup-frente -tshirt-08-fotografia video producao produtor fotografo videomaker.png",
+   "mock_v": "verso-camiseta-sony-brand-marca-retro-mockup-frente -tshirt-08-fotografia video producao produtor fotografo videomaker.png"
+  },
+  "tem_verso": false
+ },
+ "09": {
+  "slug": "camera-na-mao",
+  "base": "P08",
+  "arquivos": {
+   "frente_clara": "arte-frente-camiseta-clara-camera-maos-hands-marca-clara-branco-mockup-frente -tshirt-09-fotografia video producao produtor fotografo videomaker.png",
+   "frente_escura": "frente-camiseta-clara-camera-maos-hands-marca-clara-mockup-frente -tshirt-09-fotografia video producao produtor fotografo videomaker.png",
+   "verso_clara": "verso-camiseta-clara-camera-maos-hands-marca-clara-branco-mockup-frente -tshirt-09-fotografia video producao produtor fotografo videomaker.png",
+   "verso_escura": "verso-camiseta-camera-maos-hands-marca-clara-verso -tshirt-09-fotografia video producao produtor fotografo videomaker.png",
+   "mock_f": "frente-camiseta-camera-maos-hands-marca-clara-branco-mockup-frente -tshirt-09-fotografia video producao produtor fotografo videomaker.png",
+   "mock_v": "verso-camiseta-camera-maos-hands-marca-clara-branco-mockup-frente -tshirt-09-fotografia video producao produtor fotografo videomaker.png"
+  },
+  "tem_verso": true
+ }
+}

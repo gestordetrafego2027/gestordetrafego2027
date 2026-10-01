@@ -1,0 +1,18 @@
+{
+ "nome": "Versão Brasileira",
+ "frente": {
+  "pos": "on the wearer's LEFT side (RIGHT side of the image): a small director's chair drawing on the chest, about 5 cm wide, and below it the words \"VERSÃO BRASILEIRA\" running vertically down toward the hem, about 30 cm tall",
+  "desc_escura": "a small line drawing of a folding director's chair, and the vertical words \"VERSÃO\" (light) \"BRASILEIRA\" (bold) in a geometric sans-serif, near-black",
+  "desc_clara": "a small line drawing of a folding director's chair, and the vertical words \"VERSÃO\" (light) \"BRASILEIRA\" (bold) in a geometric sans-serif, white"
+ },
+ "verso": {
+  "pos": "lower half of the back, right side of the back as seen from behind: a right-aligned list of small text lines and a thin vertical line of text beside it, about 20 cm wide",
+  "desc_escura": "a right-aligned list \"Privacidade / Termos / Cookies / Preferências de cookies / Central de Privacidade e Termos\" and the vertical text \"Edição Autoral. All rights reserved.\", small spaced sans-serif, near-black",
+  "desc_clara": "a right-aligned list \"Privacidade / Termos / Cookies / Preferências de cookies / Central de Privacidade e Termos\" and the vertical text \"Edição Autoral. All rights reserved.\", small spaced sans-serif, white"
+ },
+ "spell": "V-E-R-S-Ã-O B-R-A-S-I-L-E-I-R-A",
+ "uniao": [
+  "front",
+  "back"
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "nome": "Photographer",
+ "frente": {
+  "pos": "centered on the chest, about 16 cm wide, top edge about 9 cm below the collar",
+  "desc_escura": "a circle made of vertical stripes overlapping a square grid of small dots, with the word \"PHOTOGRAPHER\" in red serif capitals running vertically along the right edge; stripes and dots in near-black",
+  "desc_clara": "a circle made of vertical stripes overlapping a square grid of small dots, with the word \"PHOTOGRAPHER\" in red serif capitals running vertically along the right edge; stripes and dots in white"
+ },
+ "verso": null,
+ "spell": "P-H-O-T-O-G-R-A-P-H-E-R",
+ "uniao": [
+  "front"
+ ]
+}

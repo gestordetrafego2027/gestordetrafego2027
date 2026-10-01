@@ -13,8 +13,10 @@ yarn-error.log*
 .DS_Store
 *.local
 
-# Claude Code internal workspace (worktrees, agent state)
-.claude/
+# Claude Code internal workspace (worktrees, agent state).
+# As skills são ativo do projeto, não estado local: ficam versionadas.
+.claude/*
+!.claude/skills/
 
 # TypeScript incremental build info
 *.tsbuildinfo
