@@ -1,10 +1,26 @@
 import os
 OUT='/Users/angelomazzutti/Desktop/gestordetrafego2027/docs/shop-confeccao/prompts'
 
+# A luz mudou de "high-key com fill generoso" para uma razão de 3:1.
+#
+# O problema do rosto achatado não era a POSIÇÃO da luz — já havia um softbox à
+# esquerda. Era "high-key", "gentle fill" e "very soft shadow": as três levantam
+# a sombra até sumir, e sem sombra não há relevo, poro nem osso. Pele sem
+# modelado lê como cera.
+#
+# Baixar o fill para cerca de 3:1 devolve um lado de sombra ao rosto sem custar
+# a cor da peça: a fonte segue grande e difusa, o balanço de branco segue neutro
+# e o f/8 segue cobrindo o caimento. Sombra continua suave — sombra dura
+# quebraria o padrão de catálogo e a linguagem limpa da casa.
+#
+# Um setup só para os 32 planos. Trocar de luz entre o plano largo e o corte de
+# detalhe criaria duas peças com cor diferente na mesma página de produto.
 STUDIO=("Professional e-commerce fashion catalog photo. Seamless light cool-gray studio backdrop (approx. #CDCDD0), "
- "high-key soft diffused lighting from a large softbox slightly left of camera plus gentle fill, very soft shadow, "
- "no hard shadows, neutral color-accurate white balance. Shot on full-frame camera, 85mm lens, f/8, eye-level to chest-level camera height, "
- "tack-sharp focus on the fabric texture, natural skin with real pores, no retouched plastic look.")
+ "large softbox key about 45 degrees to the left of camera with a modest fill opposite it, roughly a 3:1 ratio, "
+ "so the garment stays evenly and accurately lit while the face keeps a soft shadow side that models the cheekbone "
+ "and reveals skin texture; shadows stay soft, never hard. Neutral color-accurate white balance. "
+ "Shot on full-frame camera, 85mm lens, f/8, eye-level to chest-level camera height, "
+ "tack-sharp focus on the fabric texture, matte skin with visible pores, no smoothing.")
 CLOSE=("CRITICAL: absolutely no text, no letters, no logos, no labels, no brand tags visible, no watermark, no graphic overlays, no icons. "
  "Plain garment exactly as described, correct anatomy, five fingers per hand.")
 

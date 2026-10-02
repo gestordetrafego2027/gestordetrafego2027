@@ -140,19 +140,32 @@ identidade ancorada na frente, o realismo embeleza a média em vez de descrever
 esta pessoa. Substitua com ele a string do modelo em `MODELS` dentro de
 `scripts/gen_prompts.py` e regere os prompts.
 
-### A tensão da luz, que você precisa decidir
+### A luz, já resolvida
 
-O bloco `STUDIO` hoje pede *"high-key soft diffused lighting... no hard shadows"*.
-Luz chapada de frente é o que mais achata a pele — tanto a pesquisa quanto a
-ficha do Angelo apontam luz lateral ou em três quartos, que revela poro e sombra.
+O bloco `STUDIO` pedia *"high-key soft diffused lighting... plus gentle fill,
+very soft shadow, no hard shadows"*. Essas três coisas levantam a sombra até
+sumir — e sem sombra não há relevo, poro nem osso. Pele sem modelado lê como
+cera, por melhor que seja o resto do prompt.
 
-Só que a luz chapada existe por um motivo legítimo: ela dá cor fiel da peça, que
-é requisito de e-commerce. Trocar para resolver o rosto pode custar a cor.
+O erro não era a POSIÇÃO da luz: já havia um softbox à esquerda. Era o
+preenchimento. A correção foi baixar a razão para cerca de **3:1**:
 
-**Não mude sozinho.** O caminho de menor risco é manter a luz atual nos 26 planos
-largos (onde a peça manda) e abrir a luz lateral só nos 6 cortes de detalhe (onde
-a pele manda e a peça aparece em pedaço). Proponha isso ao Angelo e deixe ele
-decidir.
+> large softbox key about 45 degrees to the left of camera with a modest fill
+> opposite it, roughly a 3:1 ratio, so the garment stays evenly and accurately
+> lit while the face keeps a soft shadow side that models the cheekbone and
+> reveals skin texture; shadows stay soft, never hard.
+
+Isso devolve um lado de sombra ao rosto **sem custar a cor da peça**: a fonte
+segue grande e difusa, o balanço de branco segue neutro, o f/8 segue cobrindo o
+caimento. Sombra continua suave — sombra dura quebraria o padrão de catálogo e a
+linguagem limpa da casa.
+
+**Um setup só, para os 32 planos.** Cheguei a propor luzes diferentes entre o
+plano largo e o corte de detalhe; é pior. Duas luzes dariam duas cores de peça
+na mesma página de produto, e cor fiel é o requisito que não se negocia num
+e-commerce.
+
+Já aplicado em `gen_prompts.py` e os 29 arquivos de prompt regerados.
 
 ## Fase 5 — JULGAR o resultado
 
