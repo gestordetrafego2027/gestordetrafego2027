@@ -266,7 +266,7 @@ export default function TourCheckoutPage() {
             Reservar agenda
           </h1>
           <p className="font-body text-white/40 text-sm mt-2">
-            01 a 07 de Outubro · Vagas limitadas
+            20 a 27 de Outubro · Vagas limitadas
           </p>
         </div>
 
