@@ -137,6 +137,53 @@ def cmd_verificar(a):
     return 0
 
 
+# ---------------------------------------------------------------- realismo
+
+def carregar_realismo():
+    caminho_r = os.path.join(PASTA, 'realismo.json')
+    if not os.path.exists(caminho_r):
+        erro('modelos/realismo.json não existe.')
+    return json.load(open(caminho_r))
+
+
+def bloco_realismo(nivel, regioes=None):
+    """
+    Monta o bloco de realismo para um enquadramento.
+
+    `nivel`:
+      base    só o mínimo — vai em TUDO
+      retrato plano largo (cabeça à coxa): o que ainda se lê num rosto de ~200 px
+      macro   corte de detalhe: a ficha por região, inteira
+
+    O escalonamento não é economia, é física. Pedir "individual beard hairs
+    visible" num plano de corpo inteiro não produz pelo de barba — produz ruído
+    disputando atenção com o caimento da peça, que é o que a foto vende.
+    """
+    r = carregar_realismo()
+    partes = list(r['base'])
+
+    if nivel in ('retrato', 'macro'):
+        partes += r['retrato']
+
+    if nivel == 'macro':
+        escolhidas = regioes or list(r['macro'].keys())
+        for reg in escolhidas:
+            if reg not in r['macro']:
+                erro(f'região "{reg}" não existe. Opções: {", ".join(r["macro"])}')
+            partes += r['macro'][reg]
+
+    return partes, r['negativo']
+
+
+def cmd_realismo(a):
+    regioes = a.regioes.split(',') if a.regioes else None
+    positivo, negativo = bloco_realismo(a.nivel, regioes)
+    print(', '.join(positivo) + '.')
+    print()
+    print('NEGATIVE: ' + ', '.join(negativo) + '.')
+    return 0
+
+
 def cmd_prompt(a):
     p = caminho(a.modelo)
     if not os.path.exists(p):
@@ -156,7 +203,18 @@ def cmd_prompt(a):
     partes += [f['pele'], f['cabelo'], f['barba'], f['repouso']]
 
     trecho = ', '.join(x.strip().rstrip('.,') for x in partes if x and not str(x).startswith(PENDENTE))
-    print(trecho + '.')
+
+    # Identidade primeiro, realismo depois. A ordem importa: o que vem antes
+    # pesa mais, e sem a identidade ancorada o realismo embeleza a média em vez
+    # de descrever esta pessoa.
+    if a.nivel:
+        regioes = a.regioes.split(',') if a.regioes else None
+        positivo, negativo = bloco_realismo(a.nivel, regioes)
+        print(trecho + '. ' + ', '.join(positivo) + '.')
+        print()
+        print('NEGATIVE: ' + ', '.join(negativo) + '.')
+    else:
+        print(trecho + '.')
     return 0
 
 
@@ -174,9 +232,17 @@ def main():
     v.add_argument('modelo')
     v.set_defaults(fn=cmd_verificar)
 
-    pr = sub.add_parser('prompt')
+    pr = sub.add_parser('prompt', help='trecho de identidade, opcionalmente com o realismo junto')
     pr.add_argument('modelo')
+    pr.add_argument('--nivel', choices=['base', 'retrato', 'macro'],
+                    help='anexa o bloco de realismo desse nível')
+    pr.add_argument('--regioes', help='só no macro: olhos,nariz,barba,pele,tecido')
     pr.set_defaults(fn=cmd_prompt)
+
+    rl = sub.add_parser('realismo', help='só o bloco de realismo, sem identidade')
+    rl.add_argument('nivel', choices=['base', 'retrato', 'macro'])
+    rl.add_argument('--regioes', help='só no macro: olhos,nariz,barba,pele,tecido')
+    rl.set_defaults(fn=cmd_realismo)
 
     a = ap.parse_args()
     sys.exit(a.fn(a))

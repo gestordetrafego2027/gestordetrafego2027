@@ -24,7 +24,7 @@ O arquivo já pede `"natural skin with real pores, no retouched plastic look"`.
 Não adianta: instrução negativa é fraca, e nenhuma delas dá ao gerador um traço
 que ele possa usar para sair da média. **Realismo não se pede, se especifica.**
 
-## As três alavancas, em ordem de força
+## As quatro alavancas, em ordem de força
 
 1. **Foto de referência.** De longe a mais forte. Um rosto real na entrada
    resolve o que nenhuma descrição resolve. O pipeline já faz isso entre fotos
@@ -35,6 +35,9 @@ que ele possa usar para sair da média. **Realismo não se pede, se especifica.*
    quebra a convergência para a média.
 3. **Textura e idade.** Poros na zona T, subtom, dano solar, pés de galinha,
    entradas no cabelo. É o que o olho lê como "foto" e não como "render".
+4. **Micro-detalhe por região.** Olho, nariz, barba, pele e tecido, cada um com
+   a sua ficha. Vem das referências do Angelo e está em `modelos/realismo.json`.
+   É o que separa "pele com poros" (genérico) de uma pele que o olho aceita.
 
 ## Palavras que sabotam
 
@@ -95,22 +98,63 @@ python3 docs/shop-confeccao/scripts/ficha_rosto.py verificar A
 Recusa adjetivo de média, exige 2 assimetrias, 1 marca e 1 sinal de idade, e
 avisa quando não há foto de referência. Só siga com **"✓ ficha completa"**.
 
-## Fase 3 — APLICAR no gerador
+## Fase 3 — CALIBRAR o realismo (por enquadramento)
+
+A identidade diz **quem** é. O realismo diz **como a câmera vê**. São eixos
+separados e os dois precisam estar no prompt.
+
+O bloco vive em `modelos/realismo.json`, em três níveis:
+
+| Nível | Quando | O que entra |
+|---|---|---|
+| `base` | todo plano | retrato editorial, preservar identidade, pele matte com poros sem suavização, lente 85mm |
+| `retrato` | plano largo (cabeça à coxa) | poro na zona T, sobrancelha e barba de densidade desigual, brilho úmido no olho |
+| `macro` | corte de detalhe | a ficha inteira por região: olhos, nariz, barba, pele, tecido |
 
 ```bash
-python3 docs/shop-confeccao/scripts/ficha_rosto.py prompt A
+python3 docs/shop-confeccao/scripts/ficha_rosto.py realismo retrato
+python3 docs/shop-confeccao/scripts/ficha_rosto.py realismo macro --regioes barba,pele
 ```
 
-Imprime o trecho em inglês, na ordem que funciona: estrutura ancora, assimetrias
-quebram a média logo em seguida, textura e idade fecham. Substitua com ele a
-string do modelo em `MODELS` dentro de `scripts/gen_prompts.py` e regere os
-prompts.
+**Por que escalonar, e não jogar tudo em todo plano.** O material de referência é
+macro — foi escrito para close. Num plano de cabeça-à-coxa o rosto ocupa uns
+200 px: "individual beard hairs visible" ali não produz pelo de barba, produz
+ruído disputando atenção com o caimento da peça, que é o que a foto vende. Dos
+32 planos do pipeline, 26 são largos e 6 são corte de detalhe — só esses seis
+levam o bloco macro.
 
-Ajuste também o bloco `STUDIO` quando o rosto for o problema: luz chapada de
-frente é o que mais achata a pele. Luz lateral ou em três quartos revela poro e
-sombra, e é o que faz a pele ler como pele.
+**O negativo entra sempre**, em todos os níveis:
 
-## Fase 4 — JULGAR o resultado
+> no wax skin, no plastic skin, no beauty filter, no CGI render, no airbrushing,
+> no skin smoothing, no uniform pore pattern
+
+## Fase 4 — APLICAR no gerador
+
+```bash
+python3 docs/shop-confeccao/scripts/ficha_rosto.py prompt A --nivel retrato
+python3 docs/shop-confeccao/scripts/ficha_rosto.py prompt A --nivel macro --regioes barba,pele
+```
+
+Sai identidade + realismo + negativo, nessa ordem. **A ordem importa:** sem a
+identidade ancorada na frente, o realismo embeleza a média em vez de descrever
+esta pessoa. Substitua com ele a string do modelo em `MODELS` dentro de
+`scripts/gen_prompts.py` e regere os prompts.
+
+### A tensão da luz, que você precisa decidir
+
+O bloco `STUDIO` hoje pede *"high-key soft diffused lighting... no hard shadows"*.
+Luz chapada de frente é o que mais achata a pele — tanto a pesquisa quanto a
+ficha do Angelo apontam luz lateral ou em três quartos, que revela poro e sombra.
+
+Só que a luz chapada existe por um motivo legítimo: ela dá cor fiel da peça, que
+é requisito de e-commerce. Trocar para resolver o rosto pode custar a cor.
+
+**Não mude sozinho.** O caminho de menor risco é manter a luz atual nos 26 planos
+largos (onde a peça manda) e abrir a luz lateral só nos 6 cortes de detalhe (onde
+a pele manda e a peça aparece em pedaço). Proponha isso ao Angelo e deixe ele
+decidir.
+
+## Fase 5 — JULGAR o resultado
 
 Compare a geração nova com a antiga, lado a lado, e pergunte na ordem:
 
@@ -124,17 +168,35 @@ Compare a geração nova com a antiga, lado a lado, e pergunte na ordem:
 | **Cabelo** | capacete sem fio solto, linha do cabelo desenhada |
 | **Idade** | aparenta 25 numa ficha de 34 — o gerador rejuvenesce por padrão |
 
+Nos cortes de detalhe, cobre região por região contra `modelos/realismo.json`:
+
+| Região | Reprova se… |
+|---|---|
+| **Olhos** | pupila sem brilho úmido; cílios de comprimento idêntico; sobrancelha de densidade uniforme |
+| **Nariz** | sem penugem; sem poro na asa e no dorso; ponta fosca demais ou brilhante demais |
+| **Barba** | fios em bloco sólido em vez de individuais; crescimento uniforme; borda recortada a régua |
+| **Pele** | poro em padrão repetido (o erro mais denunciante); sem relevo nenhum; pele lisa entre os pelos |
+| **Tecido** | malha de textura uniforme; sem fio solto; sem sombra entre os pontos |
+
 Reprovou? Não escreva "more realistic". Volte à ficha, pegue o traço que não
 apareceu e **mova-o para o começo** do trecho. O que vem primeiro pesa mais.
 
 ---
 
-## Referências do Angelo
+## Procedência
 
-Ele tem material salvo no telefone sobre esta técnica. Quando anexar, leia,
-extraia o que for operacional e **adicione às seções acima** — não crie um
-apêndice solto. Se algo contradisser o que está aqui, o material dele ganha:
-foi testado no caso real.
+A fase 3, o checklist por região da fase 5 e o `modelos/realismo.json` vêm das
+**referências do Angelo** (out/2026) — a ficha de olhos, nariz, barba, pele e
+tecido, o negativo anti-IA e a linha de luz e lente. Material testado no caso
+real: em conflito com o resto desta skill, ele ganha.
+
+O escalonamento por enquadramento é acréscimo meu, não dele: a ficha original é
+toda macro, e aplicá-la igual nos 26 planos largos gastaria prompt sem produzir
+detalhe que o tamanho do rosto comporta.
+
+O diagnóstico da média, as assimetrias e o validador de palavras vêm da
+literatura de prompt para imagem, que converge em trocar adjetivo de qualidade
+por token concreto de textura.
 
 ## Onde isto se encaixa
 
