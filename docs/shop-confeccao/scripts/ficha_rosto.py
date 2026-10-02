@@ -184,6 +184,74 @@ def cmd_realismo(a):
     return 0
 
 
+def cmd_rosto(a):
+    """
+    Prompt pronto para GERAR o rosto do modelo — o retrato que vira a foto de
+    referência de identidade de todo o resto.
+
+    É close, então leva o bloco macro inteiro: olho, nariz, barba e pele. Num
+    retrato o rosto enche o quadro, e é o único lugar do pipeline onde a ficha
+    por região pode ser cobrada por completo.
+
+    Funciona com a ficha vazia: aí `--base` entra no lugar da identidade, para
+    o rosto poder nascer antes de existir ficha. O caminho é esse mesmo —
+    gerar, escolher, e o escolhido vira a referência que preenche a ficha.
+    """
+    r = carregar_realismo()
+    f = {}
+    caminho_f = caminho(a.modelo)
+    if os.path.exists(caminho_f):
+        f = json.load(open(caminho_f))
+
+    # Identidade: da ficha quando houver, de --base quando não.
+    preenchidos = [k for k, _ in CAMPOS if f.get(k) and not str(f[k]).startswith(PENDENTE)]
+    if len(preenchidos) >= 4:
+        partes = [f'a {f["idade"]}-year-old Brazilian man', f['estrutura']]
+        partes += f.get('assimetrias', []) + f.get('marcas', []) + f.get('idade_visivel', [])
+        partes += [f.get('pele', ''), f.get('cabelo', ''), f.get('barba', ''), f.get('repouso', '')]
+        identidade = ', '.join(x.strip().rstrip('.,') for x in partes if x and not str(x).startswith(PENDENTE))
+        origem = 'ficha preenchida'
+    elif a.base:
+        identidade = a.base.strip().rstrip('.')
+        origem = '--base'
+    else:
+        erro(f'ficha do modelo {a.modelo.upper()} ainda vazia. '
+             f'Passe --base "34-year-old Brazilian man, medium-length dark brown wavy hair, short beard" '
+             f'ou preencha a ficha primeiro.')
+
+    macro = []
+    for reg in ('olhos', 'nariz', 'barba', 'pele'):
+        macro += r['macro'][reg]
+
+    bloco = [
+        # O enquadramento vem PRIMEIRO: é o que define que isto é um retrato e
+        # não mais uma foto de catálogo com o rosto pequeno.
+        'Editorial portrait headshot, head and shoulders filling the frame, shot on an 85mm lens at f/4',
+        identidade,
+        # A luz é a mesma do catálogo, pelo mesmo motivo: o rosto que nascer
+        # aqui tem de encaixar nas fotos de peça sem parecer outro dia de set.
+        'large softbox key about 45 degrees to the left of camera with a modest fill opposite it, roughly a 3:1 ratio, '
+        'so the face keeps a soft shadow side that models the cheekbone and reveals skin texture; shadows stay soft, never hard',
+        'seamless light cool-gray studio backdrop, neutral color-accurate white balance',
+        'matte skin with visible pores, no smoothing',
+    ] + macro + [
+        # Expressão neutra de propósito: esta foto vai servir de referência de
+        # identidade para dezenas de poses. Sorriso ou careta aqui contaminaria
+        # todas elas.
+        'neutral expression at rest, eyes to the lens, mouth closed and relaxed',
+    ]
+
+    print(f'# ROSTO — modelo {a.modelo.upper()}' + (f" ({f['apelido']})" if f.get('apelido') else '')
+          + f'   [identidade: {origem}]\n')
+    print(', '.join(bloco) + '.')
+    print()
+    print('NEGATIVE: ' + ', '.join(r['negativo']) + ', no glasses, no hat, no jewelry, no logos, no text.')
+    print()
+    print('# Formato 2:3 · Seedream 5 Pro · 1.5K Fast (∞) · AI prompt DESLIGADO')
+    print(f'# Aprovado → salvar em modelos/referencias/modelo-{a.modelo.upper()}.jpg e apontar no campo "referencia"')
+    return 0
+
+
 def cmd_prompt(a):
     p = caminho(a.modelo)
     if not os.path.exists(p):
@@ -238,6 +306,11 @@ def main():
                     help='anexa o bloco de realismo desse nível')
     pr.add_argument('--regioes', help='só no macro: olhos,nariz,barba,pele,tecido')
     pr.set_defaults(fn=cmd_prompt)
+
+    ro = sub.add_parser('rosto', help='prompt pronto para GERAR o rosto do modelo')
+    ro.add_argument('modelo')
+    ro.add_argument('--base', help='identidade em inglês, quando a ficha ainda estiver vazia')
+    ro.set_defaults(fn=cmd_rosto)
 
     rl = sub.add_parser('realismo', help='só o bloco de realismo, sem identidade')
     rl.add_argument('nivel', choices=['base', 'retrato', 'macro'])
