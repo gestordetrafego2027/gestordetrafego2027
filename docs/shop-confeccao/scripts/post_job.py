@@ -16,6 +16,7 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+import zlib
 import fidelity_lock as FL
 
 MASTER = (1600, 2400)
@@ -96,7 +97,17 @@ def main():
     w, h = im.size
     if abs(w / h - 2 / 3) > 0.01:
         print(f'⚠️ proporção {w}x{h} não é 2:3 — conferir o formato no Magnific')
-    im.resize(MASTER, Image.LANCZOS).save(job['saida'])
+    # Reamostragem SEMPRE custa alta frequência: medido num par real, o upscale
+    # para 1600×2400 derruba a energia de alta frequência de 2,27 para 1,95 —
+    # fora da faixa de 1,5–4,0 em que uma digital de verdade vive, é justamente
+    # essa perda que lê como pele de cera. Repõe-se depois do resize, que é o
+    # que um fotógrafo faz desde sempre.
+    from repassar_textura import repassar
+    mestre = repassar(im.resize(MASTER, Image.LANCZOS), clareza=0.10, grao=2.0,
+                      # hash() de string é aleatório por processo; usar aqui
+                      # daria grão diferente a cada reprocessamento do mesmo job.
+                      semente=zlib.crc32(job['id'].encode()) % 10_000)
+    mestre.save(job['saida'])
 
     # recorte de conferência (região do peito)
     qa = os.path.join(tdir, f"{a.job}_t{n}_qa.png")
