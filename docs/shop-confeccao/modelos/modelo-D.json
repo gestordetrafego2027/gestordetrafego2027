@@ -1,15 +1,8 @@
 {
- "modelo": "A",
- "apelido": "modelo principal",
- "observacao": "6 produtos: P01, P02, P03, P04, P07, P09 — é o ÚNICO com tatuagem",
- "usado_em": [
-  "P01",
-  "P02",
-  "P03",
-  "P04",
-  "P07",
-  "P09"
- ],
+ "modelo": "D",
+ "apelido": "modelo 03 cabelão",
+ "observacao": "mockups — sem tatuagem",
+ "usado_em": [],
  "referencia": null,
  "idade": "PENDENTE — idade aparente, em número — \"34\", não \"early 30s\"",
  "estrutura": "PENDENTE — formato do rosto, maxilar, maçãs, testa, em inglês",

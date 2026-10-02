@@ -1,14 +1,11 @@
 {
- "modelo": "A",
- "apelido": "modelo principal",
- "observacao": "6 produtos: P01, P02, P03, P04, P07, P09 — é o ÚNICO com tatuagem",
+ "modelo": "C",
+ "apelido": "modelo cabelo curto",
+ "observacao": "3 produtos: P05, P06, P08 — sem tatuagem",
  "usado_em": [
-  "P01",
-  "P02",
-  "P03",
-  "P04",
-  "P07",
-  "P09"
+  "P05",
+  "P06",
+  "P08"
  ],
  "referencia": null,
  "idade": "PENDENTE — idade aparente, em número — \"34\", não \"early 30s\"",
