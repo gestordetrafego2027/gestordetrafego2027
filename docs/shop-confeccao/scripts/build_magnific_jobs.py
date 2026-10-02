@@ -192,6 +192,23 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
             parts.append(MASTER)
             parts.append(CLOSE_ART if side else G.CLOSE)
             prompt = ' '.join(p.strip() for p in parts if p)
+
+            # A POSE vai também para a FRENTE do prompt.
+            #
+            # O prompt tem ~940 palavras, e a pose caía depois do bloco inteiro
+            # de tecido, construção e medidas — perto do fim. Nessa posição ela
+            # quase não pesa, e o gerador devolve a pose média dele: foi daí que
+            # veio a repetição de peça na primeira rodada. A fila está certa
+            # (medi: zero pose repetida dentro da mesma cor); quem repetia era o
+            # modelo, não o jobs.json.
+            #
+            # Repetir a pose no começo custa ~15 palavras e lhe dá o peso que a
+            # posição confere. Fica curta de propósito: a versão longa continua
+            # no lugar de sempre, com o detalhe de mão, olhar e enquadramento.
+            if pose and not flat:
+                resumo = pose.strip().split('.')[0].strip()
+                if resumo:
+                    prompt = f'POSE: {resumo}. ' + prompt
             if side == 'front' and 'GARMENT ONLY' not in prompt:   # pose nunca pode cobrir a estampa (a trava cola por cima do braço)
                 prompt += ' Both hands and forearms stay away from the chest and belly, so the ENTIRE print is fully visible and unobstructed; nothing covers any part of the print.'
             # o Magnific nomeia as referências anexadas como @img1, @img2… na ordem de anexo
