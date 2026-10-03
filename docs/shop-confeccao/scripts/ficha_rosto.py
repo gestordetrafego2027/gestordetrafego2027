@@ -235,11 +235,18 @@ def cmd_rosto(a):
         'seamless light cool-gray studio backdrop, neutral color-accurate white balance',
         'matte skin with visible pores, no smoothing',
     ] + macro + [
-        # Expressão neutra de propósito: esta foto vai servir de referência de
-        # identidade para dezenas de poses. Sorriso ou careta aqui contaminaria
-        # todas elas.
-        'neutral expression at rest, eyes to the lens, mouth closed and relaxed',
     ]
+
+    # O fecho de expressão depende da ficha.
+    #
+    # A versão fixa dizia "neutral expression at rest". Quando a ficha já
+    # descreve o repouso — e um repouso bom raramente é neutro: este modelo tem
+    # cantos de boca caídos e queixo erguido — as duas frases brigam dentro do
+    # mesmo prompt, e o gerador fica com a que vier por último. Havendo repouso
+    # na ficha, ele manda; a linha fixa cuida só do enquadramento do olhar.
+    tem_repouso = bool(f.get('repouso')) and not str(f['repouso']).startswith(PENDENTE)
+    bloco.append('eyes to the lens, mouth closed' if tem_repouso
+                 else 'neutral expression at rest, eyes to the lens, mouth closed and relaxed')
 
     print(f'# ROSTO — modelo {a.modelo.upper()}' + (f" ({f['apelido']})" if f.get('apelido') else '')
           + f'   [identidade: {origem}]\n')
