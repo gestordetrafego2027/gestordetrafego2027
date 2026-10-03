@@ -13,7 +13,7 @@ Saída:
     ../magnific/<colecao>/<Pxx>/jobs.json   (fila que o Claude executa no Magnific)
     ../magnific/<colecao>/<Pxx>/jobs.md     (mesma fila, legível)
 """
-import argparse, json, os, sys, contextlib, io
+import argparse, json, os, sys, contextlib, io, zlib
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)                      # docs/shop-confeccao
@@ -74,12 +74,84 @@ SLOT_POR_PRODUTO = {
 }
 
 
+# ---- distribuição dos modelos pelo acervo -------------------------------
+#
+# O Angelo quer o modelo 03 na maioria dos ensaios, o 02 menos e o 01 menos
+# ainda. Os pesos abaixo são a proporção; mexer neles muda a divisão.
+PESOS = {'03': 5, '02': 3, '01': 1}
+
+# A escolha é por ENSAIO (coleção × produto), nunca por foto. Identidade tem de
+# ser estável dentro de um produto: três homens diferentes vestindo a mesma
+# camiseta na mesma página é defeito de catálogo, não variedade.
+#
+# E é determinística, por CRC do nome do ensaio: rodar o gerador de novo não
+# pode reatribuir modelo, senão as fotos já aprovadas ficariam órfãs da
+# identidade com que nasceram.
+def _todos_os_ensaios():
+    """Os ensaios que existem hoje: uma pasta por coleção × produto."""
+    base = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'magnific')
+    pares = []
+    if os.path.isdir(base):
+        for col in sorted(os.listdir(base)):
+            d = os.path.join(base, col)
+            if os.path.isdir(d):
+                pares += [(col, prod) for prod in sorted(os.listdir(d))
+                          if os.path.isdir(os.path.join(d, prod))]
+    return pares
+
+
+def _mapa_de_ensaios():
+    """
+    Distribui os modelos pelos ensaios respeitando os pesos, mas garantindo ao
+    menos um ensaio para cada modelo.
+
+    O sorteio puro por peso deixava o modelo 01 em ZERO: com nove ensaios e peso
+    1 em 9, ele simplesmente não caía. "Menos ainda" não é "nunca" — um modelo
+    que nunca aparece não está sub-representado, está ausente. Então, depois do
+    sorteio, quem ficou sem ensaio toma um emprestado de quem está mais acima do
+    que o peso pedia.
+    """
+    pares = _todos_os_ensaios()
+    urna = sorted(s for s, n in PESOS.items() for _ in range(n))
+    mapa = {par: urna[zlib.crc32(f'{par[0]}/{par[1]}'.encode()) % len(urna)] for par in pares}
+
+    if len(pares) >= len(PESOS):
+        for slot in PESOS:
+            if slot in mapa.values():
+                continue
+            # O doador é quem tem mais ensaios acima da sua fatia proporcional.
+            total = sum(PESOS.values())
+            excesso = lambda s: sum(1 for v in mapa.values() if v == s) - PESOS[s] / total * len(pares)
+            doador = max((s for s in PESOS if s != slot), key=excesso)
+            # Cede o ensaio de nome mais alto, para a escolha seguir estável.
+            alvo = max(par for par, v in mapa.items() if v == doador)
+            mapa[alvo] = slot
+    return mapa
+
+
+_MAPA = None
+
+
+def slot_do_ensaio(colecao, pk):
+    global _MAPA
+    if _MAPA is None:
+        _MAPA = _mapa_de_ensaios()
+    if (colecao, pk) in _MAPA:
+        return _MAPA[(colecao, pk)]
+    urna = sorted(s for s, n in PESOS.items() for _ in range(n))
+    return urna[zlib.crc32(f'{colecao}/{pk}'.encode()) % len(urna)]
+
+
 sem_handle = set()
 
 
-def handle_do_modelo(mk, pk=None):
+def handle_do_modelo(mk, pk=None, colecao=None):
     """Handle do personagem, ou '' quando não houver um confirmado."""
-    if pk in SLOT_POR_PRODUTO:
+    if pk in SLOT_POR_PRODUTO and SLOT_POR_PRODUTO[pk] is None:
+        return ''            # produto sem rosto no enquadramento
+    if colecao:
+        slot = slot_do_ensaio(colecao, pk)
+    elif pk in SLOT_POR_PRODUTO:
         slot = SLOT_POR_PRODUTO[pk]
     else:
         slot = SLOT_POR_MODELO.get(mk)
@@ -257,7 +329,7 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
 
             # O handle abre o prompt, antes até da pose: é quem é a pessoa.
             # Foto de peça sem modelo (cabide, macro de tecido) não leva.
-            h = '' if flat else handle_do_modelo(mk, pk)
+            h = '' if flat else handle_do_modelo(mk, pk, colecao)
             if h:
                 prompt = f'{h} ' + prompt
             elif not flat and pk not in SLOT_POR_PRODUTO:
