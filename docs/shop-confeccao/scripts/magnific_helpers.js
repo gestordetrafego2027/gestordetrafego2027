@@ -3,7 +3,7 @@
 //
 // Sequência:
 //   1) cole este arquivo → await hmzt.init()
-//   2) formato 2:3 (clique real na opção marcada por hmzt.markAspect('2:3')), modelo Seedream 5 Pro, 1.5K · Fast, ∞ ON
+//   2) formato 2:3 (clique real na opção marcada por hmzt.markAspect('2:3')), modelo Seedream 5 Pro, 2K · Alto, ∞ OFF (pago desde 02/10)
 //   3) hmzt.mkInputs() → file_upload dos jobs.json no input "hmzt jobs" → await hmztLoadJobs()
 //   4) file_upload das artes de UMA coleção no input "hmzt arts" → hmztLoadArts('<colecao>')
 //      (para identidade, suba também a F1 aprovada no mesmo input e use a chave '<colecao>/<arquivo>')
@@ -23,7 +23,7 @@ window.hmzt = {
   state() {
     const b = this.btns().map(x => this.txt(x)); const ed = document.querySelector('[contenteditable=true]');
     return { traduzida: document.documentElement.className.includes('translated'), modelo: b.find(s => /Seedream|Nano Banana/.test(s)),
-      formato: b.find(s => /^\d+:\d+$/.test(s)), resolucao: (r => r && /R[áa]pido|Fast/.test(r) && /^1[.,]5/.test(r) ? '1.5K · Fast' : r)(b.find(s => /K · |mil · /.test(s))), gerar: b.find(s => /^Generate|^Gerar/.test(s)),
+      formato: b.find(s => /^\d+:\d+$/.test(s)), resolucao: (r => { if (!r) return r; if (/^2\s*K/.test(r) && /Alto|High/.test(r)) return '2K · Alto'; if (/^1[.,]5/.test(r) && /R[áa]pido|Fast/.test(r)) return '1.5K · Fast'; return r; })(b.find(s => /K · |mil · /.test(s))), gerar: b.find(s => /^Generate|^Gerar/.test(s)),
       refs: [...document.querySelectorAll('*')].filter(e => e.children.length === 0 && /^@img\d$/.test((e.textContent || '').trim())).map(e => e.textContent.trim()),
       promptLen: ed ? ed.innerText.length : 0, mencoes: ed ? ed.querySelectorAll('.form-rich-input-mention-key').length : 0 };
   },
@@ -36,12 +36,26 @@ window.hmzt = {
     document.body.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); await this.sleep(400); return this.state();
   },
   replace(oldText, newText) { const ed = document.querySelector('[contenteditable=true]'); const w = document.createTreeWalker(ed, NodeFilter.SHOW_TEXT); let n; while ((n = w.nextNode())) { const i = n.data.indexOf(oldText); if (i >= 0) { ed.focus(); const r = document.createRange(); r.setStart(n, i); r.setEnd(n, i + oldText.length); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('insertText', false, newText); return 'ok'; } } return 'NÃO ENCONTRADO'; },
-  generate({ mencoes, formato = '2:3', modelo = 'Seedream 5 Pro', resolucao = '1.5K · Fast' }) {
+  // A trava mudou de propósito.
+  //
+  // Antes ela exigia "Unlimited" ao lado do botão: no plano grátis, o risco era
+  // gastar crédito sem querer. Agora o Angelo escolheu pagar por 2K, e o
+  // "Unlimited" simplesmente não aparece mais — mantê-la abortaria toda geração.
+  //
+  // O risco virou outro: gastar na configuração ERRADA. Então a trava passa a
+  // conferir o que custa dinheiro se estiver errado — modelo, formato,
+  // resolução, número de menções e prompt não traduzido — e exige `pago: true`
+  // explícito, para que gerar cobrando nunca aconteça por descuido.
+  generate({ mencoes, formato = '2:3', modelo = 'Seedream 5 Pro', resolucao = '2K · Alto', pago = false }) {
     const st = this.state(); const ed = document.querySelector('[contenteditable=true]');
     const pt = / camiseta | estampa | tecido | letras | fundo /i.test(ed.innerText);
     const gb = this.btns().find(x => /^Generate|^Gerar/.test(this.txt(x)));
-    const ok = !pt && st.mencoes === mencoes && st.formato === formato && st.modelo === modelo && st.resolucao === resolucao && /Unlimited|Ilimitad/.test(gb.parentElement.parentElement.innerText);
-    if (!ok) return { ABORT: true, st, prompt_em_portugues: pt }; gb.click(); return 'GERANDO';
+    const ilimitado = /Unlimited|Ilimitad/.test(gb.parentElement.parentElement.innerText);
+    const config = !pt && st.mencoes === mencoes && st.formato === formato
+                && st.modelo === modelo && st.resolucao === resolucao;
+    if (!config) return { ABORT: true, motivo: 'configuração', st, prompt_em_portugues: pt };
+    if (!ilimitado && !pago) return { ABORT: true, motivo: 'cobraria crédito e `pago` não foi passado', st };
+    gb.click(); return ilimitado ? 'GERANDO (∞)' : 'GERANDO (pago)';
   },
   mkInputs() {
     for (const [lab, left] of [['hmzt jobs', 20], ['hmzt arts', 40]]) {
