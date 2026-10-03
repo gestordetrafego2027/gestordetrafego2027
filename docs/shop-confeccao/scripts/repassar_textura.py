@@ -55,7 +55,11 @@ def repassar(im, clareza, grao, semente):
         ruido = rng.normal(0.0, grao, a.shape[:2]).astype(np.float32)
         # O grão some nos brancos estourados e nos pretos fechados, como no
         # material real: aplicar uniforme sujaria o fundo de estúdio.
-        lum = a @ np.array([0.2126, 0.7152, 0.0722], dtype=np.float32)
+        # Soma ponderada explícita, não matmul. O `a @ pesos` num array de três
+        # dimensões dispara divide-by-zero e overflow no numpy desta máquina —
+        # o resultado sai certo, mas o aviso polui toda execução e esconde um
+        # erro de verdade quando aparecer.
+        lum = (a[:, :, 0] * 0.2126 + a[:, :, 1] * 0.7152 + a[:, :, 2] * 0.0722)
         peso = (1.0 - np.clip((lum - 170.0) / 85.0, 0, 1)) * np.clip(lum / 40.0, 0, 1)
         a = a + (ruido * peso)[:, :, None]
         im = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))

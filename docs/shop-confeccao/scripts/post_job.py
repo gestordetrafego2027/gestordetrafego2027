@@ -97,16 +97,34 @@ def main():
     w, h = im.size
     if abs(w / h - 2 / 3) > 0.01:
         print(f'⚠️ proporção {w}x{h} não é 2:3 — conferir o formato no Magnific')
-    # Reamostragem SEMPRE custa alta frequência: medido num par real, o upscale
-    # para 1600×2400 derruba a energia de alta frequência de 2,27 para 1,95 —
-    # fora da faixa de 1,5–4,0 em que uma digital de verdade vive, é justamente
-    # essa perda que lê como pele de cera. Repõe-se depois do resize, que é o
-    # que um fotógrafo faz desde sempre.
-    from repassar_textura import repassar
-    mestre = repassar(im.resize(MASTER, Image.LANCZOS), clareza=0.10, grao=2.0,
-                      # hash() de string é aleatório por processo; usar aqui
-                      # daria grão diferente a cada reprocessamento do mesmo job.
-                      semente=zlib.crc32(job['id'].encode()) % 10_000)
+    # O repasse de textura depende da DIREÇÃO da reamostragem.
+    #
+    # Ampliar custa alta frequência: medido num par real, subir 1248→1600
+    # derrubou a energia de 2,27 para 1,95, fora da faixa de 1,5–4,0 em que uma
+    # digital de verdade vive — e é essa perda que lê como pele de cera. Aí
+    # repor é obrigatório.
+    #
+    # Reduzir faz o contrário: é supersampling, junta vários pixels de origem em
+    # cada pixel final e já devolve nitidez. Repor grão por cima disso seria
+    # somar artifício onde não falta nada — e ainda por cima grão que não veio
+    # de sensor nenhum. Por isso o repasse só entra quando se amplia.
+    #
+    # A decisão é medida, não configurada: desde que o Angelo passou a gerar em
+    # 2K no 2:3, a origem chega MAIOR que o master e o caminho normal virou a
+    # redução. Mas uma geração em 1.5K ainda cai aqui de vez em quando, e o
+    # código tem de acertar nos dois casos sem ninguém lembrar de trocar um
+    # parâmetro.
+    from repassar_textura import repassar, alta_frequencia
+    ampliando = im.size[0] < MASTER[0]
+    mestre = im.resize(MASTER, Image.LANCZOS)
+    if ampliando:
+        mestre = repassar(mestre, clareza=0.10, grao=2.0,
+                          # hash() de string é aleatório por processo; usar aqui
+                          # daria grão diferente a cada reprocessamento do mesmo job.
+                          semente=zlib.crc32(job['id'].encode()) % 10_000)
+    print(f'   {im.size[0]}x{im.size[1]} → {MASTER[0]}x{MASTER[1]} '
+          f'({"ampliou, textura reposta" if ampliando else "reduziu, supersampling"}) '
+          f'· alta frequência {alta_frequencia(mestre):.2f}')
     mestre.save(job['saida'])
 
     # recorte de conferência (região do peito)

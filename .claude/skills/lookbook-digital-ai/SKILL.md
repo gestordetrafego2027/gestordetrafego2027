@@ -115,12 +115,25 @@ Claude in Chrome, sessão do usuário logada no Magnific. Carregue as ferramenta
 
 | Campo | Valor |
 |---|---|
-| Modelo | **Seedream 5 Pro** (acertou o corte das letras; Nano Banana 2 redesenhou a arte) |
-| Resolução | **1.5K · Fast** (∞). Em 2:3 entrega 1248×1872 no download |
-| Formato | **2:3 Portrait** — master do site; o site recorta 4:5 e 1:1 só em cima e embaixo |
-| Master final | `fidelity_lock.py` + upscale para **1600×2400** (mínimo 1000×1500) |
-| Reserva | Nano Banana 2 — só **1K** é ∞; "Thinking High" também é ∞ |
-| Modo ∞ | ligado · **AI prompt desligado** · Quantidade 1 |
+| Modelo (peça com estampa) | **Seedream 5 Pro** — testado em 30/09: acertou o corte das letras, enquanto o Nano Banana 2 **redesenhou a arte** |
+| Modelo (rosto e personagem) | **Nano Banana 2** — melhor em pele e rosto, e sem estampa para errar |
+| Formato | **2:3 Portrait**, sempre |
+| Resolução | **2K · Alto** (~1672×2508 no 2:3) |
+| Modo ∞ | **desligado** — o Angelo optou por pagar em 02/10 |
+| AI prompt | desligado · Quantidade 1 |
+| Master final | `fidelity_lock.py` + **redução** para 1600×2400 |
+
+**Por que 2:3 e não 4:5.** O master do site é 2:3, e a página de produto recorta
+4:5 a partir dele cortando só topo e base. Gerar direto em 4:5 inverteria isso:
+para chegar ao 2:3 da grade da `/use` seria preciso cortar as LATERAIS, perdendo
+largura da peça — que é justamente o que a foto vende.
+
+**Por que 2K muda o pós-processamento.** Em 1.5K a origem chegava com 1248 px e
+o master de 1600 era uma AMPLIAÇÃO de 28% — medido num par real, isso derrubava
+a energia de alta frequência de 2,27 para 1,95 e era o que lia como pele de
+cera. Em 2K a origem chega maior que o master, então o caminho vira REDUÇÃO, que
+é supersampling e devolve nitidez em vez de tirar. O `post_job.py` decide
+sozinho pelo tamanho que chegou e só repõe textura quando amplia.
 
 **Regra de ouro:** antes de clicar em Gerar, confira por JS que o botão diz
 "Generate / Unlimited". Se mostrar créditos, NÃO gere. GPT 2.5, Cinematic e
