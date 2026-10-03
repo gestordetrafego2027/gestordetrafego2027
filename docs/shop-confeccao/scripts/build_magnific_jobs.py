@@ -301,7 +301,20 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
                 parts.append(f"Product photo of {garment}. {G.BEH.get(pk,'')} {pose}")
             else:
                 parts.append(REALISM)
-                parts.append(f"The model is {G.model_txt(mk)}. He wears {garment}, tucked out, paired with {bottom}. {G.BEH.get(pk,'')} {fit}{pose}")
+                # Com personagem salvo, a descrição física do modelo SAI.
+                #
+                # O handle já diz quem é a pessoa. Manter a descrição ao lado
+                # dele faz o prompt se contradizer: o @modelo-02 é o dos dreads,
+                # e a ficha do produto descrevia "Caucasian, shoulder-length
+                # wavy brown hair". São duas pessoas diferentes no mesmo prompt,
+                # e o gerador tem de escolher uma — exatamente o que aconteceu
+                # com a tatuagem.
+                #
+                # Sobra só o que o personagem NÃO cobre: a roupa, a atitude e a
+                # pose. Sem handle, a descrição volta, porque aí ela é a única
+                # âncora que existe.
+                quem = '' if handle_do_modelo(mk, pk, colecao) else f"The model is {G.model_txt(mk)}. "
+                parts.append(f"{quem}He wears {garment}, tucked out, paired with {bottom}. {G.BEH.get(pk,'')} {fit}{pose}")
             if side:
                 dfile = os.path.join(art_dir, 'descricao_' + ('modelo01' if var == 'branca' else 'modelo02') + '.txt')
                 desc = cdesc or ((open(dfile).read().strip() + ' ') if os.path.exists(dfile) else '')
