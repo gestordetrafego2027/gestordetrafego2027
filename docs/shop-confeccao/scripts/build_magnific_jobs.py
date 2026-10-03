@@ -49,6 +49,51 @@ PLACE = {
     'front_detail': ("Placement: FRONT of the shirt, centered on the chest, top edge about {gola} cm below the collar seam. This is a close crop: "
                      "only the part of the print that falls inside the frame is visible, and that part must match the corresponding area of reference image 1 exactly. "),
 }
+# ---- personagens salvos no Magnific -------------------------------------
+#
+# O Angelo salvou os três modelos como personagens nomeados. Chamar o handle
+# vale mais que descrever: a identidade passa a viver DENTRO do Magnific, em vez
+# de depender de anexar a F1 aprovada a cada geração.
+#
+# Isso derruba o problema de arranque que o pipeline tinha: antes, a primeira
+# foto nascia só de texto (logo, rosto médio) e virava a referência de todas as
+# outras — o defeito do começo contaminava o produto inteiro. Com handle, a
+# foto nº 1 já sai com a identidade certa.
+#
+# O mapa de slot é o do Angelo. Note que ele NÃO bate com o número dentro do
+# handle: o slot 01 usa "@modelo-03-…". Está certo, foi ele quem disse.
+SLOT_POR_MODELO = {'A': '01', 'C': '02', 'D': '03'}
+
+# Oito produtos usam model='custom', com a descrição do modelo escrita dentro da
+# própria ficha. Eles também precisam de um personagem, senão geram rosto médio.
+# Mapeados pela descrição que já tinham:
+SLOT_POR_PRODUTO = {
+    'P10': '01', 'P11': '01', 'P27': '01', 'P28': '01', 'P29': '01',
+    'P17': '02', 'P26': '02',
+    'P25': None,  # enquadrado do peito para baixo: não tem rosto na foto
+}
+
+
+sem_handle = set()
+
+
+def handle_do_modelo(mk, pk=None):
+    """Handle do personagem, ou '' quando não houver um confirmado."""
+    if pk in SLOT_POR_PRODUTO:
+        slot = SLOT_POR_PRODUTO[pk]
+    else:
+        slot = SLOT_POR_MODELO.get(mk)
+    if not slot:
+        return ''
+    ficha = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'modelos', f'modelo-{slot}.json')
+    if not os.path.exists(ficha):
+        return ''
+    h = json.load(open(ficha)).get('magnific', '')
+    # Handle com "(confirmar)" dentro é rascunho: usar devolveria rosto errado
+    # em silêncio, que é o pior resultado possível.
+    return h if h.startswith('@') and '(' not in h else ''
+
+
 REALISM = ('REALISM: a real human photographed, not a retouched or AI-perfect face — keep the same person but show natural, subtle signs of life: fine expression lines at the outer corners of the eyes, faint forehead lines, soft nasolabial folds when the face moves, visible skin pores and fine texture, slight natural unevenness of skin tone, a few tiny natural blemishes, individual beard hairs and slightly uneven beard edge, natural lip texture, a few flyaway hairs. No plastic skin, no airbrushing, no over-sharpening, nothing exaggerated or aged. ')
 IDENTITY_OTHER = ("@img2 is the approved photo of this same model: keep exactly the same person (face, hair, beard, skin tone, build), the same studio background and lighting — but in this photo the t-shirt is the {cor} version described below with its own print from @img1, and the pose, head angle and gaze are completely different from @img2. ")
 IDENTITY = ("REFERENCE IMAGE 2 is the approved photo of this same model wearing this same shirt: keep the same person (face, hair, beard, skin tone, build), "
@@ -209,6 +254,16 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
                 resumo = pose.strip().split('.')[0].strip()
                 if resumo:
                     prompt = f'POSE: {resumo}. ' + prompt
+
+            # O handle abre o prompt, antes até da pose: é quem é a pessoa.
+            # Foto de peça sem modelo (cabide, macro de tecido) não leva.
+            h = '' if flat else handle_do_modelo(mk, pk)
+            if h:
+                prompt = f'{h} ' + prompt
+            elif not flat and pk not in SLOT_POR_PRODUTO:
+                # Avisa alto. Job com modelo e sem personagem gera rosto médio —
+                # e o defeito só aparece na foto pronta, com a geração gasta.
+                sem_handle.add((pk, mk))
             if side == 'front' and 'GARMENT ONLY' not in prompt:   # pose nunca pode cobrir a estampa (a trava cola por cima do braço)
                 prompt += ' Both hands and forearms stay away from the chest and belly, so the ENTIRE print is fully visible and unobstructed; nothing covers any part of the print.'
             # o Magnific nomeia as referências anexadas como @img1, @img2… na ordem de anexo
@@ -246,6 +301,13 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
             refs = '\n'.join(f"  - ref {k+1}: `{os.path.relpath(r, ROOT)}`" for k, r in enumerate(j['referencias'])) or '  - (sem referência)'
             f.write(f"## {j['id']}\n\n- {j['rotulo']} · estampa: **{j['lado_estampa']}** · formato {j['formato']}\n- Origem: {j['origem']}\n- Referências:\n{refs}\n- Saída: `{os.path.relpath(j['saida'], ROOT)}`\n\n```text\n{j['prompt']}\n```\n\n")
     print(f"{len(jobs)} jobs → {os.path.relpath(out_dir, ROOT)}/jobs.json")
+
+
+def avisar_sem_handle():
+    if sem_handle:
+        print('\n!  jobs sem personagem do Magnific (vão gerar rosto médio):')
+        for pk, mk in sorted(sem_handle):
+            print(f'     {pk} (model={mk}) — defina o slot em SLOT_POR_PRODUTO')
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
