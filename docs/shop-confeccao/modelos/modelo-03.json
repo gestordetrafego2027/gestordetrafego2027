@@ -1,17 +1,29 @@
 {
- "modelo": "03",
- "apelido": "modelo 03",
- "observacao": "pele clara, cabelo raspado. ATENÇÃO: o handle diz \"modelo-01\" — handle e slot são CRUZADOS.",
- "usado_em": [],
- "referencia": null,
- "idade": "PENDENTE — idade aparente, em número — \"34\", não \"early 30s\"",
- "estrutura": "PENDENTE — formato do rosto, maxilar, maçãs, testa, em inglês",
- "pele": "PENDENTE — textura real: poros, subtom, variação de melanina, marcas de sol",
- "cabelo": "PENDENTE — linha do cabelo, densidade, redemoinho, fios soltos",
- "barba": "PENDENTE — formato, falhas, densidade irregular — ou \"clean-shaven\" com a sombra",
- "repouso": "PENDENTE — o que o rosto faz quando NÃO está posando",
- "assimetrias": [],
- "marcas": [],
- "idade_visivel": [],
- "magnific": "@modelo-01-hmzt-colection-01"
+  "modelo": "03",
+  "apelido": "modelo 03",
+  "observacao": "pele clara, cabelo raspado. ATENÇÃO: o handle diz \"modelo-01\" — handle e slot são CRUZADOS.",
+  "usado_em": [],
+  "referencia": null,
+  "idade": "22",
+  "estrutura": "a long narrow face with a tall flat forehead, high cheekbones, a narrow jaw tapering to a pointed chin, and ears that stand out markedly from the head",
+  "pele": "very pale skin with a cool pink undertone, pores clearly visible across the nose and the inner cheeks, diffuse redness around the nostrils and over the cheekbones, and a light shine on the nose and forehead",
+  "cabelo": "dark brown hair buzzed close to the scalp all over, a straight hairline with shallow recession at the temples and a visible whorl at the crown",
+  "barba": "all but clean-shaven — only sparse dark stubble on the upper lip, the chin and along the jaw, thin enough that the skin reads through everywhere",
+  "repouso": "at rest the chin drops a fraction and the eyes hold the lens without widening, giving a flat, guarded expression rather than a neutral one",
+  "assimetrias": [
+    "the left eyebrow runs straighter and sits higher while the right arches and thins out along its outer third",
+    "the right eye is slightly smaller and sits marginally lower than the left",
+    "the nose tip deviates slightly to his left and the left nostril is the wider of the two",
+    "the left ear protrudes more than the right",
+    "the lower lip is fuller on the left and both mouth corners turn gently down"
+  ],
+  "marcas": [
+    "a small raised blemish on the right cheek near the jawline",
+    "two or three fine spots scattered across the chin"
+  ],
+  "idade_visivel": [
+    "faint bluish shadows under both eyes, the only sign of age on an otherwise very young face",
+    "no lines at rest — the forehead and eye corners stay smooth until he squints"
+  ],
+  "magnific": "@modelo-01-hmzt-colection-01"
 }

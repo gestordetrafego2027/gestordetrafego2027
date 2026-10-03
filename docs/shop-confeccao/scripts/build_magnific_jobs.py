@@ -142,6 +142,39 @@ def slot_do_ensaio(colecao, pk):
     return urna[zlib.crc32(f'{colecao}/{pk}'.encode()) % len(urna)]
 
 
+def tracos_da_ficha(slot):
+    """
+    Os traços que individualizam o rosto, tirados da ficha e prontos para o
+    prompt da peça.
+
+    Elo que faltava: o bloco REALISM é texto fixo — "a real human photographed,
+    not a retouched or AI-perfect face". Isso descreve qualquer um, e descrever
+    qualquer um é pedir a média, que é exatamente o rosto plástico. O handle diz
+    QUEM é a pessoa; a ficha diz o que nela é torto, marcado e gasto.
+
+    Entram só assimetria, marca, sinal de idade e pele. Estrutura, cabelo e
+    barba ficam de fora de propósito: o personagem salvo já os carrega, e
+    repeti-los em texto é o erro que já custou a tatuagem e a descrição do
+    modelo.
+    """
+    if not slot:
+        return ''
+    ficha = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'modelos', f'modelo-{slot}.json')
+    if not os.path.exists(ficha):
+        return ''
+    f = json.load(open(ficha))
+    partes = []
+    for campo in ('assimetrias', 'marcas', 'idade_visivel'):
+        partes += [x for x in (f.get(campo) or []) if not str(x).startswith('PENDENTE')]
+    pele = f.get('pele', '')
+    if pele and not pele.startswith('PENDENTE'):
+        partes.append(pele)
+    if not partes:
+        return ''
+    return ('THIS FACE, NOT A GENERIC ONE — keep these traits visible and unchanged: '
+            + '; '.join(x.strip().rstrip('.;') for x in partes) + '. ')
+
+
 sem_handle = set()
 
 
@@ -313,8 +346,14 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
                 # Sobra só o que o personagem NÃO cobre: a roupa, a atitude e a
                 # pose. Sem handle, a descrição volta, porque aí ela é a única
                 # âncora que existe.
-                quem = '' if handle_do_modelo(mk, pk, colecao) else f"The model is {G.model_txt(mk)}. "
-                parts.append(f"{quem}He wears {garment}, tucked out, paired with {bottom}. {G.BEH.get(pk,'')} {fit}{pose}")
+                h_ = handle_do_modelo(mk, pk, colecao)
+                quem = '' if h_ else f"The model is {G.model_txt(mk)}. "
+                # Os traços da ficha vêm ANTES da roupa: o que vem primeiro pesa
+                # mais, e o bloco da peça tem 400 palavras que abafariam o rosto.
+                slot_ = SLOT_POR_PRODUTO.get(pk) if pk in SLOT_POR_PRODUTO else (
+                    slot_do_ensaio(colecao, pk) if colecao else SLOT_POR_MODELO.get(mk))
+                parts.append(tracos_da_ficha(slot_) +
+                             f"{quem}He wears {garment}, tucked out, paired with {bottom}. {G.BEH.get(pk,'')} {fit}{pose}")
             if side:
                 dfile = os.path.join(art_dir, 'descricao_' + ('modelo01' if var == 'branca' else 'modelo02') + '.txt')
                 desc = cdesc or ((open(dfile).read().strip() + ' ') if os.path.exists(dfile) else '')

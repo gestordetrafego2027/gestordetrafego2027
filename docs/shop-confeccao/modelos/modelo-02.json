@@ -1,21 +1,33 @@
 {
- "modelo": "02",
- "apelido": "modelo 02",
- "observacao": "dreads e barba. O handle é \"campanha\", NÃO \"colection\" — é o único dos três fora do padrão, e já causou uma troca.",
- "usado_em": [
-  "P05",
-  "P06",
-  "P08"
- ],
- "referencia": null,
- "idade": "PENDENTE — idade aparente, em número — \"34\", não \"early 30s\"",
- "estrutura": "PENDENTE — formato do rosto, maxilar, maçãs, testa, em inglês",
- "pele": "PENDENTE — textura real: poros, subtom, variação de melanina, marcas de sol",
- "cabelo": "PENDENTE — linha do cabelo, densidade, redemoinho, fios soltos",
- "barba": "PENDENTE — formato, falhas, densidade irregular — ou \"clean-shaven\" com a sombra",
- "repouso": "PENDENTE — o que o rosto faz quando NÃO está posando",
- "assimetrias": [],
- "marcas": [],
- "idade_visivel": [],
- "magnific": "@modelo-02-hmzt-campanha-01"
+  "modelo": "02",
+  "apelido": "modelo 02",
+  "observacao": "dreads e barba. O handle é \"campanha\", NÃO \"colection\" — é o único dos três fora do padrão, e já causou uma troca.",
+  "usado_em": [
+    "P05",
+    "P06",
+    "P08"
+  ],
+  "referencia": null,
+  "idade": "28",
+  "estrutura": "a broad oval face with a wide high forehead, full cheeks, a strong square jaw and ears that stand well out from the head",
+  "pele": "medium brown skin with a warm golden undertone, pores clearly visible across the nose and inner cheeks, an oily sheen on the forehead and the bridge of the nose, and uneven tone over the cheekbones",
+  "cabelo": "black hair in short twisted locs gathered high on the crown and fanning outward, the sides and temples faded close to the skin with a sharp edged hairline",
+  "barba": "a full dark beard, dense along the jaw and chin and connected to the moustache; the moustache thins under the septum and the growth fades out toward the cheekbones, leaving a high uneven cheek line",
+  "repouso": "at rest the gaze is level and steady and the mouth stays closed and relaxed, giving a calm, unhurried look rather than a stern one",
+  "assimetrias": [
+    "the left eyebrow carries a visible arch while the right one runs almost flat and sits slightly lower",
+    "the right eye reads a touch smaller and more hooded than the left",
+    "the left nostril is wider and the nose tip sits a little off centre toward his left",
+    "the left ear protrudes more than the right",
+    "the lower lip is fuller on the left, so the mouth settles slightly off-centre at rest"
+  ],
+  "marcas": [
+    "a small silver hoop in each earlobe and a thin silver chain at the neck — he never appears without them",
+    "a faint healed mark on the left cheekbone, just below the eye"
+  ],
+  "idade_visivel": [
+    "soft shadows under both eyes, deeper under the right",
+    "the nasolabial folds are just beginning to show when the face is at rest"
+  ],
+  "magnific": "@modelo-02-hmzt-campanha-01"
 }

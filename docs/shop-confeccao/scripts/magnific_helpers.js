@@ -25,7 +25,7 @@ window.hmzt = {
     return { traduzida: document.documentElement.className.includes('translated'), modelo: b.find(s => /Seedream|Nano Banana/.test(s)),
       formato: b.find(s => /^\d+:\d+$/.test(s)), resolucao: (r => { if (!r) return r; if (/^2\s*K/.test(r)) return '2K'; if (/^1[.,]5/.test(r)) return '1.5K'; return r; })(b.find(s => /K · |mil · /.test(s))), // o mesmo cuidado do generate(): os itens do menu lateral também
       // começam com "Gerar", e reportá-los aqui confunde a leitura do log
-      gerar: b.find(s => /^(Generate|Gerar)(\s+\d+)?$/.test(s) && !/imagens|v[íi]deos/i.test(s)),
+      gerar: b.find(s => /^(Generate|Gerar)\b/.test(s) && !/imagens|v[íi]deos/i.test(s)),
       refs: [...document.querySelectorAll('*')].filter(e => e.children.length === 0 && /^@img\d$/.test((e.textContent || '').trim())).map(e => e.textContent.trim()),
       promptLen: ed ? ed.innerText.length : 0, mencoes: ed ? ed.querySelectorAll('.form-rich-input-mention-key').length : 0 };
   },
@@ -52,7 +52,12 @@ window.hmzt = {
   // conferir o que custa dinheiro se estiver errado — modelo, formato,
   // resolução, número de menções e prompt não traduzido — e exige `pago: true`
   // explícito, para que gerar cobrando nunca aconteça por descuido.
-  // O botão de gerar traz o CUSTO na etiqueta: "Gerar 100". Os dois itens do
+  // O botão de gerar tem TRÊS caras, e todas começam com "Gerar":
+  //   "Gerar"            — sem custo declarado
+  //   "Gerar Ilimitado"  — plano gratuito, em duas linhas
+  //   "Gerar 100"        — vai cobrar, e o número são os créditos
+  // Ancorar o regex em $ fazia o terceiro e o segundo escaparem.
+  // O CUSTO na etiqueta: "Gerar 100". Os dois itens do
   // menu lateral — "Gerar imagens" e "Gerar vídeos" — também começam com
   // "Gerar", e o find antigo pegava o primeiro deles: clicava no menu, trocava
   // de página e o pipeline achava que tinha gerado. Nenhum crédito saía, nenhum
@@ -65,7 +70,7 @@ window.hmzt = {
   generate({ mencoes, formato = '2:3', modelo = 'Seedream 5 Pro', resolucao = '1.5K', pago = false }) {
     const st = this.state(); const ed = document.querySelector('[contenteditable=true]');
     const pt = / camiseta | estampa | tecido | letras | fundo /i.test(ed.innerText);
-    const gb = this.btns().find(x => /^(Generate|Gerar)(\s+\d+)?$/.test(this.txt(x)) && !/imagens|v[íi]deos/i.test(this.txt(x)));
+    const gb = this.btns().find(x => /^(Generate|Gerar)\b/.test(this.txt(x)) && !/imagens|v[íi]deos/i.test(this.txt(x)));
     if (!gb) return 'ABORT botão Gerar não encontrado';
     const custo = (this.txt(gb).match(/\d+/) || [])[0] || null;
     const ilimitado = /Unlimited|Ilimitad/.test(gb.parentElement.parentElement.innerText);
