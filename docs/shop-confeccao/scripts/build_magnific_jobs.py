@@ -13,7 +13,7 @@ Saída:
     ../magnific/<colecao>/<Pxx>/jobs.json   (fila que o Claude executa no Magnific)
     ../magnific/<colecao>/<Pxx>/jobs.md     (mesma fila, legível)
 """
-import argparse, json, os, sys, contextlib, io, zlib
+import argparse, json, os, re, sys, contextlib, io, zlib
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)                      # docs/shop-confeccao
@@ -140,6 +140,37 @@ def slot_do_ensaio(colecao, pk):
         return _MAPA[(colecao, pk)]
     urna = sorted(s for s, n in PESOS.items() for _ in range(n))
     return urna[zlib.crc32(f'{colecao}/{pk}'.encode()) % len(urna)]
+
+
+def bloco_realismo(pose_txt):
+    """
+    O bloco de micro-textura do `realismo.json`, escalonado pelo enquadramento.
+
+    Segunda ligação que faltava: a ficha de realismo — olho, nariz, barba, pele,
+    vinda das referências do Angelo — só alimentava o comando de retrato. No
+    prompt da peça entrava o REALISM genérico.
+
+    O escalonamento é física, não economia. Num plano de corpo o rosto ocupa uns
+    200 px: pedir "individual beard hairs visible" ali não produz pelo de barba,
+    produz ruído disputando atenção com o caimento da peça, que é o que a foto
+    vende. Nos cortes de detalhe a pele enche o quadro e a ficha inteira cabe.
+    """
+    caminho_r = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'modelos', 'realismo.json')
+    if not os.path.exists(caminho_r):
+        return ''
+    r = json.load(open(caminho_r))
+    detalhe = bool(re.search(r'detail crop|close-up|Macro-level', pose_txt or '', re.I))
+    partes = list(r.get('retrato', []))
+    if detalhe:
+        for reg in ('olhos', 'nariz', 'barba', 'pele'):
+            partes += r['macro'].get(reg, [])
+    if not partes:
+        return ''
+    neg = r.get('negativo', [])
+    txt = 'SKIN AND HAIR, EXACTLY AS PHOTOGRAPHED: ' + ', '.join(partes) + '. '
+    if neg:
+        txt += 'Never: ' + ', '.join(x.replace('no ', '') for x in neg) + '. '
+    return txt
 
 
 def tracos_da_ficha(slot):
@@ -352,7 +383,7 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
                 # mais, e o bloco da peça tem 400 palavras que abafariam o rosto.
                 slot_ = SLOT_POR_PRODUTO.get(pk) if pk in SLOT_POR_PRODUTO else (
                     slot_do_ensaio(colecao, pk) if colecao else SLOT_POR_MODELO.get(mk))
-                parts.append(tracos_da_ficha(slot_) +
+                parts.append(tracos_da_ficha(slot_) + bloco_realismo(pose) +
                              f"{quem}He wears {garment}, tucked out, paired with {bottom}. {G.BEH.get(pk,'')} {fit}{pose}")
             if side:
                 dfile = os.path.join(art_dir, 'descricao_' + ('modelo01' if var == 'branca' else 'modelo02') + '.txt')
