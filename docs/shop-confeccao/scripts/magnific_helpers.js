@@ -73,7 +73,10 @@ window.hmzt = {
     const gb = this.btns().find(x => /^(Generate|Gerar)\b/.test(this.txt(x)) && !/imagens|v[íi]deos/i.test(this.txt(x)));
     if (!gb) return 'ABORT botão Gerar não encontrado';
     const custo = (this.txt(gb).match(/\d+/) || [])[0] || null;
-    const ilimitado = /Unlimited|Ilimitad/.test(gb.parentElement.parentElement.innerText);
+    // O sinal confiável de cobrança é o NÚMERO na etiqueta, não a palavra
+    // "Ilimitado": o rótulo às vezes vem só "Gerar", e procurar a palavra fazia
+    // a trava abortar uma geração que era gratuita. Número = vai cobrar.
+    const ilimitado = !custo || /Unlimited|Ilimitad/.test(gb.parentElement.parentElement.innerText);
     const config = !pt && st.mencoes === mencoes && st.formato === formato && st.modelo === modelo && st.resolucao === resolucao;
     if (!config) return 'ABORT configuração ' + JSON.stringify(st);
     if (!ilimitado && !pago) return 'ABORT cobraria ' + custo + ' créditos e `pago` não foi passado';

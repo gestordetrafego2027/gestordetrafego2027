@@ -234,6 +234,9 @@ REALISM = ('REALISM: a real human photographed, not a retouched or AI-perfect fa
 IDENTITY_OTHER = ("@img2 is the approved photo of this same model: keep exactly the same person (face, hair, beard, skin tone, build), the same studio background and lighting — but in this photo the t-shirt is the {cor} version described below with its own print from @img1, and the pose, head angle and gaze are completely different from @img2. ")
 IDENTITY = ("REFERENCE IMAGE 2 is the approved photo of this same model wearing this same shirt: keep the same person (face, hair, beard, skin tone, build), "
             "the same shirt cut, fabric and color, the same studio background and lighting. Change only the pose and framing described below. ")
+MASTER_DETALHE = ("Vertical 2:3 frame. This is a CLOSE CROP: keep the tight framing described above exactly — "
+                  "do not pull back, do not add headroom, do not include more of the body than described. "
+                  "Fill the frame with the crop as specified. ")
 MASTER = ("Vertical 2:3 master frame: the site crops this image to 4:5 and 1:1 by trimming the top and bottom only, never the sides — keep the subject horizontally centered, "
           "leave generous empty backdrop above the head and extend the framing a little further down than described, so nothing important sits near the top or bottom edges. ")
 CLOSE_ART = ("CRITICAL: the only text or graphics allowed anywhere in the image are the ones in reference image 1, reproduced exactly. "
@@ -389,7 +392,14 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
                 dfile = os.path.join(art_dir, 'descricao_' + ('modelo01' if var == 'branca' else 'modelo02') + '.txt')
                 desc = cdesc or ((open(dfile).read().strip() + ' ') if os.path.exists(dfile) else '')
                 parts.append(FIDELITY + desc + place)
-            parts.append(MASTER)
+            # O bloco MASTER manda deixar folga acima da cabeça e abrir o
+            # enquadramento, para o site poder recortar 4:5 e 1:1 cortando só
+            # topo e base. Num CORTE DE DETALHE isso é o oposto do pedido — e
+            # como ele vinha no fim, era ele que ganhava: os 14 cortes saíam
+            # como meio corpo. Nesses planos entra uma versão que preserva o
+            # corte fechado e só garante o 2:3.
+            eh_detalhe = bool(re.search(r'detail crop|close-up|Macro-level', pose or '', re.I))
+            parts.append(MASTER_DETALHE if eh_detalhe else MASTER)
             parts.append(CLOSE_ART if side else G.CLOSE)
             prompt = ' '.join(p.strip() for p in parts if p)
 
