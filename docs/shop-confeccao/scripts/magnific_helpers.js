@@ -23,12 +23,18 @@ window.hmzt = {
   state() {
     const b = this.btns().map(x => this.txt(x)); const ed = document.querySelector('[contenteditable=true]');
     return { traduzida: document.documentElement.className.includes('translated'), modelo: b.find(s => /Seedream|Nano Banana/.test(s)),
-      formato: b.find(s => /^\d+:\d+$/.test(s)), resolucao: (r => { if (!r) return r; if (/^2\s*K/.test(r)) return '2K'; if (/^1[.,]5/.test(r)) return '1.5K'; return r; })(b.find(s => /K · |mil · /.test(s))), gerar: b.find(s => /^Generate|^Gerar/.test(s)),
+      formato: b.find(s => /^\d+:\d+$/.test(s)), resolucao: (r => { if (!r) return r; if (/^2\s*K/.test(r)) return '2K'; if (/^1[.,]5/.test(r)) return '1.5K'; return r; })(b.find(s => /K · |mil · /.test(s))), // o mesmo cuidado do generate(): os itens do menu lateral também
+      // começam com "Gerar", e reportá-los aqui confunde a leitura do log
+      gerar: b.find(s => /^(Generate|Gerar)(\s+\d+)?$/.test(s) && !/imagens|v[íi]deos/i.test(s)),
       refs: [...document.querySelectorAll('*')].filter(e => e.children.length === 0 && /^@img\d$/.test((e.textContent || '').trim())).map(e => e.textContent.trim()),
       promptLen: ed ? ed.innerText.length : 0, mencoes: ed ? ed.querySelectorAll('.form-rich-input-mention-key').length : 0 };
   },
   async markAspect(ar) { const ab = this.btns().find(x => /^\d+:\d+$/.test(this.txt(x))); ab.click(); await this.sleep(800); const o = this.btns().find(x => this.txt(x).startsWith(ar)); if (!o) return 'opção não encontrada'; o.setAttribute('aria-label', 'hmzt-ar'); return 'marcado ' + ar; },
-  async clearRefs() { for (let k = 0; k < 8; k++) { const rm = this.btns().find(b => /^Remove @img\d$/.test(b.getAttribute('aria-label') || '')); if (!rm) break; rm.click(); await this.sleep(700); } return this.state().refs; },
+  // O rótulo é "Remover @img1" em português e "Remove @img1" em inglês. Com
+  // só a versão inglesa, clearRefs não limpava NADA e as referências do passo
+  // seguinte empilhavam sobre as do anterior — o step abortava com 4 refs onde
+  // esperava 2, e a arte errada teria ido junto se não abortasse.
+  async clearRefs() { for (let k = 0; k < 10; k++) { const rm = this.btns().find(b => /^(Remove|Remover) @img\d$/.test(b.getAttribute('aria-label') || '')); if (!rm) break; rm.click(); await this.sleep(700); } return this.state().refs; },
   async insertPrompt(text) {
     const jj = Object.entries(window.hmztJobs || {}).find(([k, v]) => v.prompt === text && k.endsWith('@' + window.hmztCurCol)); window.hmztCurJob = jj ? jj[0] : '';
     const ed = document.querySelector('[contenteditable=true]'); ed.focus(); document.execCommand('selectAll'); document.execCommand('delete');
@@ -56,17 +62,17 @@ window.hmzt = {
   // "Unlimited" ao lado do botão, porque o risco era gastar sem querer; agora o
   // risco é gastar na configuração ERRADA, então ela confere modelo, formato,
   // resolução, menções e prompt não traduzido, e exige `pago: true` explícito.
-  generate({ mencoes, formato = '2:3', modelo = 'Seedream 5 Pro', resolucao = '2K', pago = false }) {
+  generate({ mencoes, formato = '2:3', modelo = 'Seedream 5 Pro', resolucao = '1.5K', pago = false }) {
     const st = this.state(); const ed = document.querySelector('[contenteditable=true]');
     const pt = / camiseta | estampa | tecido | letras | fundo /i.test(ed.innerText);
     const gb = this.btns().find(x => /^(Generate|Gerar)(\s+\d+)?$/.test(this.txt(x)) && !/imagens|v[íi]deos/i.test(this.txt(x)));
-    if (!gb) return { ABORT: true, motivo: 'botão Gerar não encontrado' };
+    if (!gb) return 'ABORT botão Gerar não encontrado';
     const custo = (this.txt(gb).match(/\d+/) || [])[0] || null;
     const ilimitado = /Unlimited|Ilimitad/.test(gb.parentElement.parentElement.innerText);
     const config = !pt && st.mencoes === mencoes && st.formato === formato && st.modelo === modelo && st.resolucao === resolucao;
-    if (!config) return { ABORT: true, motivo: 'configuração', st, prompt_em_portugues: pt };
-    if (!ilimitado && !pago) return { ABORT: true, motivo: `cobraria ${custo} créditos e \`pago\` não foi passado`, st };
-    gb.click(); return { ok: true, custo, botao: this.txt(gb) };
+    if (!config) return 'ABORT configuração ' + JSON.stringify(st);
+    if (!ilimitado && !pago) return 'ABORT cobraria ' + custo + ' créditos e `pago` não foi passado';
+    gb.click(); return custo ? 'GERANDO custo=' + custo : 'GERANDO';
   },
   mkInputs() {
     for (const [lab, left] of [['hmzt jobs', 20], ['hmzt arts', 40]]) {
@@ -101,8 +107,17 @@ window.hmztAddRef = async (key) => {
 window.hmztNet = window.hmztNet || []; window.hmztMap = window.hmztMap || {};   // hmztMap: 'job@colecao' → ID da criação (baixar por /app/creation/<id>)
 if (!window._hmztOf) { window._hmztOf = window.fetch; window.fetch = async (...a) => { const r = await window._hmztOf(...a); try { const u = String(a[0] && a[0].url || a[0]); if (/start-tti|render\/v4/.test(u)) { const t = await r.clone().text(); const tg = (t.match(/"tags":\[([^\]]*)\]/) || [])[1] || ''; const idf = (t.match(/"identifier":"([A-Za-z0-9]+)"/) || [])[1] || ''; hmztNet.push({ u: u.split('?')[0].split('/').pop(), s: r.status, credits: /"force_credits":true/.test(t), tags: tg, idf, job: window.hmztCurJob || '', t: Date.now() }); if (idf && window.hmztCurJob) hmztMap[window.hmztCurJob] = idf; } } catch (e) {} return r; }; }
 window.hmztStarted = (since) => hmztNet.some(x => x.u === 'start-tti-v2' && x.t >= since && x.s === 200);
-window.hmztRun = async (q) => { const out = []; const norm = s => s.replace(/@?img\d/g, '').replace(/\s+/g, ''); for (const job of q) { await hmzt.insertPrompt(job.prompt); const ed = document.querySelector('[contenteditable=true]'); if (norm(ed.innerText) !== norm(job.prompt)) { out.push(job.id + ':TEXTO_DIFERENTE'); break; } let g; for (let k = 0; k < 12; k++) { g = hmzt.generate({ mencoes: job.mencoes }); if (g === 'GERANDO') break; await hmzt.sleep(1500); } if (g === 'GERANDO') { for (let tr = 0; tr < 3; tr++) { const t0 = Date.now() - 50; let ok = false; for (let w = 0; w < 20 && !ok; w++) { await hmzt.sleep(500); ok = hmztStarted(t0); } if (ok) break; if (tr === 2) { g = 'NAO_INICIOU'; break; } hmzt.generate({ mencoes: job.mencoes }); } if (hmztNet.some(x => x.credits)) g = 'COBRANCA_DETECTADA'; await hmzt.sleep(2500); const rv = hmztNet.filter(x => x.u === 'v4').pop(); if (rv && rv.tags && !/"2:3"/.test(rv.tags)) g = 'FORMATO_ERRADO ' + rv.tags; } out.push(job.id + ':' + JSON.stringify(g)); if (g !== 'GERANDO') break; await hmzt.sleep(3500); } window.hmztLast = out; return out; };
-window.hmztStep = async (col, refs, ids) => { window.hmztCurCol = col; await hmzt.clearRefs(); for (const r of refs) { const x = await hmztAddRef(r); if (typeof x === 'string') return 'ERRO ref ' + r + ': ' + x; } const st = hmzt.state(); if (st.refs.length !== refs.length) return 'ERRO refs ' + JSON.stringify(st.refs); return await hmztRun(ids.map(id => { const x = hmztJobs[id + '@' + col]; return { id, prompt: x.prompt, mencoes: (x.prompt.match(/@img/g) || []).length }; })); };
+window.hmztRun = async (q) => { const out = []; // Compara o texto digitado com o do job. Toda menção vira chip e PERDE o @
+  // no innerText — inclusive o @modelo-XX do personagem. Normalizar só
+  // @img deixava o handle sempre diferente e abortava todo job com
+  // TEXTO_DIFERENTE. Tirar todo @ dos dois lados resolve sem afrouxar a
+  // checagem: o que ela protege é o Chrome ter traduzido ou comido texto.
+  const norm = s => s.replace(/@/g, '').replace(/\s+/g, ''); for (const job of q) { const tJob = Date.now(); await hmzt.insertPrompt(job.prompt); const ed = document.querySelector('[contenteditable=true]'); if (norm(ed.innerText) !== norm(job.prompt)) { out.push(job.id + ':TEXTO_DIFERENTE'); break; } let g; for (let k = 0; k < 12; k++) { g = hmzt.generate({ mencoes: job.mencoes }); if (/^GERANDO/.test(g)) break; await hmzt.sleep(1500); } if (/^GERANDO/.test(g)) { for (let tr = 0; tr < 3; tr++) { const t0 = Date.now() - 50; let ok = false; for (let w = 0; w < 20 && !ok; w++) { await hmzt.sleep(500); ok = hmztStarted(t0); } if (ok) break; if (tr === 2) { g = 'NAO_INICIOU'; break; } hmzt.generate({ mencoes: job.mencoes }); } // Só a cobrança DESTE job: o histórico guarda o teste em 2K de 03/10,
+      // e olhar tudo marcaria cobrança para sempre.
+      if (hmztNet.some(x => x.credits && x.t >= tJob)) g = 'COBRANCA_DETECTADA'; await hmzt.sleep(2500); const rv = hmztNet.filter(x => x.u === 'v4').pop(); if (rv && rv.tags && !/"2:3"/.test(rv.tags)) g = 'FORMATO_ERRADO ' + rv.tags; } out.push(job.id + ':' + JSON.stringify(g)); if (!/^GERANDO/.test(g)) break; await hmzt.sleep(3500); } window.hmztLast = out; return out; };
+window.hmztStep = async (col, refs, ids) => { window.hmztCurCol = col; await hmzt.clearRefs(); for (const r of refs) { const x = await hmztAddRef(r); if (typeof x === 'string') return 'ERRO ref ' + r + ': ' + x; } const st = hmzt.state(); if (st.refs.length !== refs.length) return 'ERRO refs ' + JSON.stringify(st.refs); return await hmztRun(ids.map(id => { const x = hmztJobs[id + '@' + col]; // O prompt traz @img1 (a arte) E o @modelo-XX do personagem salvo —
+  // contar só @img deixaria a trava sempre reprovando por menção faltando.
+  return { id, prompt: x.prompt, mencoes: (x.prompt.match(/@[\w-]+/g) || []).length }; })); };
 window.hmztPipeLog = [];
 window.hmztQueueSteps = async (steps) => { for (const s of steps) { const r = await hmztStep(s[0], s[1], s[2]); hmztPipeLog.push(JSON.stringify(r)); if (typeof r === 'string' && r.startsWith('ERRO')) break; if (r.some(x => !/GERANDO/.test(x))) break; } hmztPipeLog.push('FIM'); };
 'hmzt helpers carregados';
