@@ -1,7 +1,7 @@
 {
- "modelo": "C",
- "apelido": "modelo cabelo curto",
- "observacao": "3 produtos: P05, P06, P08 — sem tatuagem",
+ "modelo": "02",
+ "apelido": "modelo 02",
+ "observacao": "dreads e barba — slot de produtos a confirmar",
  "usado_em": [
   "P05",
   "P06",
@@ -16,5 +16,6 @@
  "repouso": "PENDENTE — o que o rosto faz quando NÃO está posando",
  "assimetrias": [],
  "marcas": [],
- "idade_visivel": []
+ "idade_visivel": [],
+ "magnific": "@modelo-02-hmzt-campanha-01"
 }

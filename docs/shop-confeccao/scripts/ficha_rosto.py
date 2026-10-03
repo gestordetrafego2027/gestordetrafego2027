@@ -223,9 +223,16 @@ def cmd_rosto(a):
     for reg in ('olhos', 'nariz', 'barba', 'pele'):
         macro += r['macro'][reg]
 
+    # O handle do personagem salvo no Magnific, quando houver, vem ANTES de
+    # tudo. Ele trava a identidade dentro do próprio Magnific — é mais forte
+    # que qualquer descrição em texto, e a descrição passa a ser reforço.
+    handle = f.get('magnific', '')
+    handle = handle if handle.startswith('@') and '(' not in handle else ''
+
     bloco = [
         # O enquadramento vem PRIMEIRO: é o que define que isto é um retrato e
         # não mais uma foto de catálogo com o rosto pequeno.
+        (f'{handle} — ' if handle else '') +
         'Editorial portrait headshot, head and shoulders filling the frame, shot on an 85mm lens at f/4',
         identidade,
         # A luz é a mesma do catálogo, pelo mesmo motivo: o rosto que nascer
