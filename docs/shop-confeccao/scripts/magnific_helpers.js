@@ -3,7 +3,7 @@
 //
 // Sequência:
 //   1) cole este arquivo → await hmzt.init()
-//   2) formato 2:3 (clique real na opção marcada por hmzt.markAspect('2:3')), modelo Seedream 5 Pro, 2K · Alto, ∞ OFF (pago desde 02/10)
+//   2) formato 2:3, modelo Seedream 5 Pro, resolução 2K (o rótulo vem como '2K · Rápido'), ∞ OFF (pago desde 02/10)
 //   3) hmzt.mkInputs() → file_upload dos jobs.json no input "hmzt jobs" → await hmztLoadJobs()
 //   4) file_upload das artes de UMA coleção no input "hmzt arts" → hmztLoadArts('<colecao>')
 //      (para identidade, suba também a F1 aprovada no mesmo input e use a chave '<colecao>/<arquivo>')
@@ -23,7 +23,7 @@ window.hmzt = {
   state() {
     const b = this.btns().map(x => this.txt(x)); const ed = document.querySelector('[contenteditable=true]');
     return { traduzida: document.documentElement.className.includes('translated'), modelo: b.find(s => /Seedream|Nano Banana/.test(s)),
-      formato: b.find(s => /^\d+:\d+$/.test(s)), resolucao: (r => { if (!r) return r; if (/^2\s*K/.test(r) && /Alto|High/.test(r)) return '2K · Alto'; if (/^1[.,]5/.test(r) && /R[áa]pido|Fast/.test(r)) return '1.5K · Fast'; return r; })(b.find(s => /K · |mil · /.test(s))), gerar: b.find(s => /^Generate|^Gerar/.test(s)),
+      formato: b.find(s => /^\d+:\d+$/.test(s)), resolucao: (r => { if (!r) return r; if (/^2\s*K/.test(r)) return '2K'; if (/^1[.,]5/.test(r)) return '1.5K'; return r; })(b.find(s => /K · |mil · /.test(s))), gerar: b.find(s => /^Generate|^Gerar/.test(s)),
       refs: [...document.querySelectorAll('*')].filter(e => e.children.length === 0 && /^@img\d$/.test((e.textContent || '').trim())).map(e => e.textContent.trim()),
       promptLen: ed ? ed.innerText.length : 0, mencoes: ed ? ed.querySelectorAll('.form-rich-input-mention-key').length : 0 };
   },
@@ -46,16 +46,27 @@ window.hmzt = {
   // conferir o que custa dinheiro se estiver errado — modelo, formato,
   // resolução, número de menções e prompt não traduzido — e exige `pago: true`
   // explícito, para que gerar cobrando nunca aconteça por descuido.
-  generate({ mencoes, formato = '2:3', modelo = 'Seedream 5 Pro', resolucao = '2K · Alto', pago = false }) {
+  // O botão de gerar traz o CUSTO na etiqueta: "Gerar 100". Os dois itens do
+  // menu lateral — "Gerar imagens" e "Gerar vídeos" — também começam com
+  // "Gerar", e o find antigo pegava o primeiro deles: clicava no menu, trocava
+  // de página e o pipeline achava que tinha gerado. Nenhum crédito saía, nenhum
+  // erro aparecia, e só a ausência da imagem denunciava.
+  //
+  // A trava mudou de propósito desde que o Angelo passou a pagar. Antes exigia
+  // "Unlimited" ao lado do botão, porque o risco era gastar sem querer; agora o
+  // risco é gastar na configuração ERRADA, então ela confere modelo, formato,
+  // resolução, menções e prompt não traduzido, e exige `pago: true` explícito.
+  generate({ mencoes, formato = '2:3', modelo = 'Seedream 5 Pro', resolucao = '2K', pago = false }) {
     const st = this.state(); const ed = document.querySelector('[contenteditable=true]');
     const pt = / camiseta | estampa | tecido | letras | fundo /i.test(ed.innerText);
-    const gb = this.btns().find(x => /^Generate|^Gerar/.test(this.txt(x)));
+    const gb = this.btns().find(x => /^(Generate|Gerar)(\s+\d+)?$/.test(this.txt(x)) && !/imagens|v[íi]deos/i.test(this.txt(x)));
+    if (!gb) return { ABORT: true, motivo: 'botão Gerar não encontrado' };
+    const custo = (this.txt(gb).match(/\d+/) || [])[0] || null;
     const ilimitado = /Unlimited|Ilimitad/.test(gb.parentElement.parentElement.innerText);
-    const config = !pt && st.mencoes === mencoes && st.formato === formato
-                && st.modelo === modelo && st.resolucao === resolucao;
+    const config = !pt && st.mencoes === mencoes && st.formato === formato && st.modelo === modelo && st.resolucao === resolucao;
     if (!config) return { ABORT: true, motivo: 'configuração', st, prompt_em_portugues: pt };
-    if (!ilimitado && !pago) return { ABORT: true, motivo: 'cobraria crédito e `pago` não foi passado', st };
-    gb.click(); return ilimitado ? 'GERANDO (∞)' : 'GERANDO (pago)';
+    if (!ilimitado && !pago) return { ABORT: true, motivo: `cobraria ${custo} créditos e \`pago\` não foi passado`, st };
+    gb.click(); return { ok: true, custo, botao: this.txt(gb) };
   },
   mkInputs() {
     for (const [lab, left] of [['hmzt jobs', 20], ['hmzt arts', 40]]) {
@@ -72,7 +83,9 @@ window.hmztLoadArts = (prefix) => { for (const f of document.querySelector('[ari
 // A tradução automática do Chrome troca rótulos da página ("Add"→"Adicionar", "1.5K · Fast"→"1,5 mil · Rápido");
 // por isso as buscas aceitam os dois idiomas. O diálogo de referências (portal) costuma ficar em inglês.
 window.hmztByText = (re, root = document) => { const c = [...root.querySelectorAll('*')].filter(e => re.test((e.textContent || '').trim()) && e.offsetParent !== null); return c.filter(e => !c.some(o => o !== e && e.contains(o)))[0]; };
-window.hmztDropLbl = () => [...document.querySelectorAll('*')].find(e => /^(Drop or upload assets|Solte ou (fa[çc]a )?(upload|carregue))/i.test((e.textContent || '').trim()) && (e.textContent || '').trim().length < 40 && e.children.length <= 1);
+// A interface em português diz "Arraste ou carregue recursos" — sem este termo
+// o hmztAddRef devolvia "diálogo não abriu" e nenhuma arte era anexada.
+window.hmztDropLbl = () => [...document.querySelectorAll('*')].find(e => /^(Drop or upload assets|Solte ou (fa[çc]a )?(upload|carregue)|Arraste ou carregue)/i.test((e.textContent || '').trim()) && (e.textContent || '').trim().length < 48 && e.children.length <= 1);
 window.hmztAddRef = async (key) => {
   const f = hmztArts[key]; if (!f) return 'sem arquivo ' + key;
   if (!hmztDropLbl()) { const a = hmztByText(/^(Add|Adicionar)$/); if (!a) return 'sem Add'; a.click(); await hmzt.sleep(2000); }

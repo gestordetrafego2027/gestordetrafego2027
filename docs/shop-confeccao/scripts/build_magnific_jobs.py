@@ -376,20 +376,24 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
                 for k in ('status', 'tentativas', 'arquivo', 'observacoes', 'modelo_usado'):
                     if k in p:
                         jb[k] = p[k]
-    # Configuração paga, decidida em 02/10. A regra antiga mandava NÃO gerar se
-    # aparecesse crédito — agora é o contrário, e deixá-la aqui faria o operador
-    # parar na frente da tela achando que havia erro.
+    # Voltou para o gratuito em 03/10, por MEDIÇÃO e não por economia.
+    #
+    # O 2K custou 100 créditos por imagem e entregou textura PIOR: o bruto veio
+    # com alta frequência 1,12, contra 1,23 a 2,82 do 1.5K. Pagar comprou pixel
+    # (1664 em vez de 1248), não detalhe — e pixel a mais a gente já sabia
+    # compensar no pós-processamento. 13.600 créditos para piorar não se
+    # justifica.
     magnific = dict(
         modelo_principal='Seedream 5 Pro',
         por_que='Testado em 30/09: acertou o corte das letras. O Nano Banana 2 redesenhou a arte — '
                 'use-o para rosto e personagem, nunca para peça com estampa.',
-        resolucao='2K · Alto (~1672x2508 no 2:3)',
+        resolucao='1.5K · Rápido (1248x1872 no 2:3) — o botão "Gerar" sai SEM número, que é o sinal de custo zero',
         formato='2:3 — o master. O site recorta 4:5 e 1:1 cortando só topo e base, nunca as laterais.',
-        modo_ilimitado='DESLIGADO — o Angelo optou por pagar para ganhar nitidez',
+        modo_ilimitado='ligado',
         aviso_ia='desligado',
         quantidade=1,
-        regra='Gerar em 2K custa crédito, e isso está certo. Conferir antes: modelo Seedream 5 Pro, '
-              'formato 2:3, resolução 2K Alto, AI prompt desligado.')
+        regra='Se o botão mostrar "Gerar <número>", o número são os créditos que vão sair: pare e '
+              'baixe a resolução. Em 1.5K ele diz apenas "Gerar".')
     json.dump(dict(produto=pk, colecao=colecao, total=len(jobs), magnific=magnific, jobs=jobs), open(os.path.join(out_dir, 'jobs.json'), 'w'), ensure_ascii=False, indent=1)
     with open(os.path.join(out_dir, 'jobs.md'), 'w') as f:
         f.write(f"# Fila Magnific — {pk} · estampa `{colecao}`\n\n{len(jobs)} imagens ({len(jobs)//2} fotos × 2 versões).\n\n")

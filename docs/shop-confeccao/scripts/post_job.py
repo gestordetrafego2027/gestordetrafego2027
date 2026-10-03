@@ -97,34 +97,32 @@ def main():
     w, h = im.size
     if abs(w / h - 2 / 3) > 0.01:
         print(f'⚠️ proporção {w}x{h} não é 2:3 — conferir o formato no Magnific')
-    # O repasse de textura depende da DIREÇÃO da reamostragem.
+    # O repasse de textura é decidido pela MEDIDA, não pela direção.
     #
-    # Ampliar custa alta frequência: medido num par real, subir 1248→1600
-    # derrubou a energia de 2,27 para 1,95, fora da faixa de 1,5–4,0 em que uma
-    # digital de verdade vive — e é essa perda que lê como pele de cera. Aí
-    # repor é obrigatório.
+    # Eu tinha escrito "amplia → repõe; reduz → não mexe", na teoria de que
+    # reduzir é supersampling e devolve nitidez. A calibragem derrubou isso: o
+    # bruto do Magnific em 2K chegou com alta frequência 1,12 e a redução para
+    # 1600 entregou 1,05 — perdeu 6% em vez de ganhar. A teoria vale para quem
+    # reduz muito (4K → 1600), não para 4%.
     #
-    # Reduzir faz o contrário: é supersampling, junta vários pixels de origem em
-    # cada pixel final e já devolve nitidez. Repor grão por cima disso seria
-    # somar artifício onde não falta nada — e ainda por cima grão que não veio
-    # de sensor nenhum. Por isso o repasse só entra quando se amplia.
-    #
-    # A decisão é medida, não configurada: desde que o Angelo passou a gerar em
-    # 2K no 2:3, a origem chega MAIOR que o master e o caminho normal virou a
-    # redução. Mas uma geração em 1.5K ainda cai aqui de vez em quando, e o
-    # código tem de acertar nos dois casos sem ninguém lembrar de trocar um
-    # parâmetro.
+    # Então o critério passa a ser o número: se o resultado ficar abaixo da
+    # faixa em que uma digital de verdade vive, repõe — tenha ampliado ou
+    # reduzido. Medir custa um décimo de segundo e não depende de eu acertar a
+    # previsão.
+    PISO_AF = 1.5
     from repassar_textura import repassar, alta_frequencia
-    ampliando = im.size[0] < MASTER[0]
     mestre = im.resize(MASTER, Image.LANCZOS)
-    if ampliando:
+    af = alta_frequencia(mestre)
+    if af < PISO_AF:
         mestre = repassar(mestre, clareza=0.10, grao=2.0,
                           # hash() de string é aleatório por processo; usar aqui
                           # daria grão diferente a cada reprocessamento do mesmo job.
                           semente=zlib.crc32(job['id'].encode()) % 10_000)
-    print(f'   {im.size[0]}x{im.size[1]} → {MASTER[0]}x{MASTER[1]} '
-          f'({"ampliou, textura reposta" if ampliando else "reduziu, supersampling"}) '
-          f'· alta frequência {alta_frequencia(mestre):.2f}')
+        af_fim = alta_frequencia(mestre)
+        nota = f'{af:.2f} → {af_fim:.2f} (reposta)'
+    else:
+        nota = f'{af:.2f} (já na faixa)'
+    print(f"   {im.size[0]}x{im.size[1]} → {MASTER[0]}x{MASTER[1]} · alta frequência {nota}")
     mestre.save(job['saida'])
 
     # recorte de conferência (região do peito)

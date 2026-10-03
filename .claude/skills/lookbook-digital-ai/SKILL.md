@@ -117,23 +117,25 @@ Claude in Chrome, sessão do usuário logada no Magnific. Carregue as ferramenta
 |---|---|
 | Modelo (peça com estampa) | **Seedream 5 Pro** — testado em 30/09: acertou o corte das letras, enquanto o Nano Banana 2 **redesenhou a arte** |
 | Modelo (rosto e personagem) | **Nano Banana 2** — melhor em pele e rosto, e sem estampa para errar |
-| Formato | **2:3 Portrait**, sempre |
-| Resolução | **2K · Alto** (~1672×2508 no 2:3) |
-| Modo ∞ | **desligado** — o Angelo optou por pagar em 02/10 |
-| AI prompt | desligado · Quantidade 1 |
-| Master final | `fidelity_lock.py` + **redução** para 1600×2400 |
+| Formato | **2:3**, sempre. Volta sozinho para 16:9 a cada recarga — conferir toda vez. |
+| Resolução | **1.5K · Rápido** (1248×1872 no 2:3) |
+| Custo | **zero**. Em 1.5K o botão diz só "Gerar". Se disser "Gerar 100", o número são os créditos que vão sair. |
+
+**Por que não vale pagar por 2K.** Testado em 03/10, com medida: o bruto do 2K
+chegou com alta frequência **1,12**, contra **1,23 a 2,82** do 1.5K. Os 100
+créditos por imagem compraram pixel (1664 em vez de 1248), não detalhe — e pixel
+a mais o pós-processamento já sabia compensar. Para os 136 jobs seriam 13.600
+créditos para piorar a textura.
 
 **Por que 2:3 e não 4:5.** O master do site é 2:3, e a página de produto recorta
 4:5 a partir dele cortando só topo e base. Gerar direto em 4:5 inverteria isso:
 para chegar ao 2:3 da grade da `/use` seria preciso cortar as LATERAIS, perdendo
 largura da peça — que é justamente o que a foto vende.
 
-**Por que 2K muda o pós-processamento.** Em 1.5K a origem chegava com 1248 px e
-o master de 1600 era uma AMPLIAÇÃO de 28% — medido num par real, isso derrubava
-a energia de alta frequência de 2,27 para 1,95 e era o que lia como pele de
-cera. Em 2K a origem chega maior que o master, então o caminho vira REDUÇÃO, que
-é supersampling e devolve nitidez em vez de tirar. O `post_job.py` decide
-sozinho pelo tamanho que chegou e só repõe textura quando amplia.
+**Sobre repor textura.** O `post_job.py` mede a alta frequência do master e
+repõe quando fica abaixo de 1,5, tenha ampliado ou reduzido. A regra anterior
+decidia pela direção da reamostragem e estava errada: reduzir de 1664 para 1600
+PERDEU 6%, não ganhou. Supersampling só compensa quando a redução é grande.
 
 **Regra de ouro:** antes de clicar em Gerar, confira por JS que o botão diz
 "Generate / Unlimited". Se mostrar créditos, NÃO gere. GPT 2.5, Cinematic e
