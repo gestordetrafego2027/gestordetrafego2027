@@ -1,29 +1,17 @@
 {
  "modelo": "03",
  "apelido": "modelo 03",
- "observacao": "lido das duas imagens em 03/10 — pinta na bochecha direita é a âncora de identidade",
- "referencia": null,
+ "observacao": "pele clara, cabelo raspado. ATENÇÃO: o handle diz \"modelo-01\" — handle e slot são CRUZADOS.",
  "usado_em": [],
- "idade": "27",
- "estrutura": "a long narrow oval face with a tall straight forehead, a low even hairline, flat cheekbones, a narrow jaw tapering to a slightly pointed chin, and ears that stand out from the head",
- "assimetrias": [
-  "the left eyebrow sits higher and carries a visible arch while the right one runs almost flat",
-  "the right eye is slightly smaller and more hooded than the left, so the gaze reads a little uneven",
-  "the left nostril is wider than the right and the nose tip points very slightly to his left",
-  "the left ear protrudes more than the right",
-  "the mouth settles off-centre at rest, the lower lip fuller on the left"
- ],
- "marcas": [
-  "a small dark round mole on his right cheek, about midway between the nose and the ear and just below eye level",
-  "a second small mole on his left shoulder near the deltoid"
- ],
- "idade_visivel": [
-  "pronounced hollow shadows under both eyes, deeper under the right",
-  "one faint horizontal crease across the middle of the forehead"
- ],
- "pele": "pale skin with a cool pink undertone, pores clearly visible across the nose and inner cheeks, patchy redness over the cheekbones, a few small raised blemishes along the jaw, and an uneven matte-to-slight-shine finish",
- "cabelo": "dense black hair, short and tight at the sides, longer and loosely textured on top with a cowlick lifting at the front left; low straight hairline with a shallow dip at the centre",
- "barba": "sparse and patchy — a thin moustache with a bare gap under the septum, a denser tuft under the lower lip, almost no growth on the cheeks beyond scattered single hairs, and uneven stubble along the jaw that thickens toward the chin",
- "repouso": "at rest the mouth corners turn slightly down and the chin lifts a little, giving a flat, unimpressed look rather than a neutral one",
- "magnific": "@modelo-03-hmzt-colection-01"
+ "referencia": null,
+ "idade": "PENDENTE — idade aparente, em número — \"34\", não \"early 30s\"",
+ "estrutura": "PENDENTE — formato do rosto, maxilar, maçãs, testa, em inglês",
+ "pele": "PENDENTE — textura real: poros, subtom, variação de melanina, marcas de sol",
+ "cabelo": "PENDENTE — linha do cabelo, densidade, redemoinho, fios soltos",
+ "barba": "PENDENTE — formato, falhas, densidade irregular — ou \"clean-shaven\" com a sombra",
+ "repouso": "PENDENTE — o que o rosto faz quando NÃO está posando",
+ "assimetrias": [],
+ "marcas": [],
+ "idade_visivel": [],
+ "magnific": "@modelo-01-hmzt-colection-01"
 }

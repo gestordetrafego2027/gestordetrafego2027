@@ -115,6 +115,22 @@ def cmd_verificar(a):
             for b in achar_banidas(str(it)):
                 falhas.append(f'{k}: "{b}" puxa o rosto para a média')
 
+    # Handle x slot: no acervo do Angelo eles estão CRUZADOS — o slot 01 usa o
+    # handle "@modelo-03-…". É exatamente o tipo de troca que falha em silêncio:
+    # o Magnific aceita qualquer handle existente e devolve o rosto errado sem
+    # reclamar, e só se descobre olhando as fotos prontas.
+    h = f.get('magnific', '')
+    if not h or not h.startswith('@'):
+        avisos.append('sem handle do Magnific — a identidade vai depender só do texto')
+    elif '(' in h:
+        falhas.append(f'handle incompleto: {h}')
+    else:
+        import re as _re
+        m = _re.search(r'modelo-(\d+)', h)
+        if m and m.group(1) != f['modelo']:
+            avisos.append(f'handle "{h}" não bate com o slot {f["modelo"]} — '
+                          f'confirmado como cruzado, mas confira antes de gerar')
+
     ref = f.get('referencia')
     if not ref:
         avisos.append('sem foto de referência — é o que mais segura a identidade; '
