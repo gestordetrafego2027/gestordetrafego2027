@@ -376,9 +376,20 @@ def build(pk, colecao, lf, lv, gola, golav, posicao='centro', verso=True):
                 for k in ('status', 'tentativas', 'arquivo', 'observacoes', 'modelo_usado'):
                     if k in p:
                         jb[k] = p[k]
-    magnific = dict(modelo_principal='Seedream 5 Pro', resolucao='maior opção ∞ (download cheio 1365×2048)', modelo_reserva='Google Nano Banana 2', resolucao_reserva='1K · High (só ∞) + upscale para ≥1000×1500',
-                    formato='2:3 (master; o site recorta em cima e embaixo)', modo_ilimitado='∞ ligado', aviso_ia='desligado', quantidade=1,
-                    regra='Só clicar em Gerar se o botão mostrar "Gerações ilimitadas". Se mostrar créditos, NÃO gerar: reduzir resolução ou trocar para o modelo reserva.')
+    # Configuração paga, decidida em 02/10. A regra antiga mandava NÃO gerar se
+    # aparecesse crédito — agora é o contrário, e deixá-la aqui faria o operador
+    # parar na frente da tela achando que havia erro.
+    magnific = dict(
+        modelo_principal='Seedream 5 Pro',
+        por_que='Testado em 30/09: acertou o corte das letras. O Nano Banana 2 redesenhou a arte — '
+                'use-o para rosto e personagem, nunca para peça com estampa.',
+        resolucao='2K · Alto (~1672x2508 no 2:3)',
+        formato='2:3 — o master. O site recorta 4:5 e 1:1 cortando só topo e base, nunca as laterais.',
+        modo_ilimitado='DESLIGADO — o Angelo optou por pagar para ganhar nitidez',
+        aviso_ia='desligado',
+        quantidade=1,
+        regra='Gerar em 2K custa crédito, e isso está certo. Conferir antes: modelo Seedream 5 Pro, '
+              'formato 2:3, resolução 2K Alto, AI prompt desligado.')
     json.dump(dict(produto=pk, colecao=colecao, total=len(jobs), magnific=magnific, jobs=jobs), open(os.path.join(out_dir, 'jobs.json'), 'w'), ensure_ascii=False, indent=1)
     with open(os.path.join(out_dir, 'jobs.md'), 'w') as f:
         f.write(f"# Fila Magnific — {pk} · estampa `{colecao}`\n\n{len(jobs)} imagens ({len(jobs)//2} fotos × 2 versões).\n\n")

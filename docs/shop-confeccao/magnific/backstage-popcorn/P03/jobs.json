@@ -4,14 +4,13 @@
  "total": 14,
  "magnific": {
   "modelo_principal": "Seedream 5 Pro",
-  "resolucao": "maior opção ∞ (download cheio 1365×2048)",
-  "modelo_reserva": "Google Nano Banana 2",
-  "resolucao_reserva": "1K · High (só ∞) + upscale para ≥1000×1500",
-  "formato": "2:3 (master; o site recorta em cima e embaixo)",
-  "modo_ilimitado": "∞ ligado",
+  "por_que": "Testado em 30/09: acertou o corte das letras. O Nano Banana 2 redesenhou a arte — use-o para rosto e personagem, nunca para peça com estampa.",
+  "resolucao": "2K · Alto (~1672x2508 no 2:3)",
+  "formato": "2:3 — o master. O site recorta 4:5 e 1:1 cortando só topo e base, nunca as laterais.",
+  "modo_ilimitado": "DESLIGADO — o Angelo optou por pagar para ganhar nitidez",
   "aviso_ia": "desligado",
   "quantidade": 1,
-  "regra": "Só clicar em Gerar se o botão mostrar \"Gerações ilimitadas\". Se mostrar créditos, NÃO gerar: reduzir resolução ou trocar para o modelo reserva."
+  "regra": "Gerar em 2K custa crédito, e isso está certo. Conferir antes: modelo Seedream 5 Pro, formato 2:3, resolução 2K Alto, AI prompt desligado."
  },
  "jobs": [
   {
