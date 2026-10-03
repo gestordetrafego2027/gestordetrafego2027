@@ -247,7 +247,7 @@
  "descritor": "Moletom masculino canguru regular fit em moletinho 2 cabos peluciado por dentro, 50% algodão / 50% poliéster: capuz duplo encorpado com cordão chato cru contrastante, bolso canguru frontal com aberturas laterais, mangas set-in, punhos e barra em ribana. Fosco, macio. Peça lisa.",
  "prompt": {
   "model": "custom",
-  "model_desc": "a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown hair slicked back and tied into a low bun, short groomed beard with moustache, defined eyebrows, serious calm expression; the long sleeves cover his arms (no tattoos visible)",
+  "model_desc": "a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown hair slicked back and tied into a low bun, short groomed beard with moustache, defined eyebrows, serious calm expression",
   "color_default": "camel beige (warm sand-tan)",
   "garment": "a regular-fit pullover hoodie in 260gsm two-thread fleece (50% cotton / 50% polyester) with a soft brushed fleece inside, {COR}, smooth matte outer face, a lined double-layer hood with a neat crossover at the front of the neck, a flat natural-cream cotton drawcord hanging in two strands to mid-chest, a front kangaroo pocket with slanted side openings and topstitched edges, set-in sleeves with the shoulder seam on the shoulder point, 1x1 ribbed cuffs and a 1x1 ribbed waistband at the hip",
   "bottom": "light-blue faded slim jeans with small rips at the thighs",

@@ -239,7 +239,7 @@
  "descritor": "Camiseta masculina regular fit, manga curta reta até o meio do bíceps, gola careca em ribana fina 1×1 de 2 cm sem pesponto aparente, meia malha leve de algodão com poliéster (160 g/m²), superfície lisa e fosca, cinza claro com aspecto mesclado, caimento leve que acompanha o corpo, barra dupla reta no quadril. Peça lisa, sem logos. Fundo cinza claro de estúdio.",
  "prompt": {
   "model": "custom",
-  "model_desc": "a Caucasian Brazilian man in his early-to-mid 30s, athletic build, shoulder-length dark brown wavy hair with natural volume, full dark groomed beard with moustache, calm confident expression, both forearms covered with dense full-sleeve tattoos (generic ornamental and figurative designs, no readable lettering)",
+  "model_desc": "a Caucasian Brazilian man in his early-to-mid 30s, athletic build, shoulder-length dark brown wavy hair with natural volume, full dark groomed beard with moustache, calm confident expression",
   "color_default": "light heather gray melange",
   "garment": "a regular fit t-shirt in lightweight 160gsm cotton-polyester single jersey, {COR}, smooth matte surface, set-in shoulders, straight short sleeves ending mid-bicep with a double-stitched hem, clean narrow 2 cm 1x1 ribbed crew neck attached without visible topstitching, straight double-stitched hem at the hip",
   "bottom": "light-wash distressed blue jeans with small rips",
@@ -256,7 +256,7 @@
    [
     "F2 — Mão na nuca",
     "Origem: fotos #2 (cinza claro), #5 (preto) e #10 (azul) da galeria",
-    "Near-frontal view, one hand raised to the back of the neck with the tattooed forearm across the upper chest, head tilted, looking at the camera. The raised arm lifts the sleeve and shows the light drape. Framing from the head to upper thigh.",
+    "Near-frontal view, one hand raised to the back of the neck with the forearms across the upper chest, head tilted, looking at the camera. The raised arm lifts the sleeve and shows the light drape. Framing from the head to upper thigh.",
     "4:5"
    ],
    [
@@ -268,7 +268,7 @@
    [
     "F4 — Detalhe gola desagulhada",
     "Origem: fotos #4 (cinza claro), #6 (preto), #9 (azul) e #14 (bege) da galeria",
-    "Tight detail crop from the lips and full beard down to the mid chest, off-center, showing the clean narrow collar without topstitching, the set-in shoulder seam and the double-stitched sleeve hem, tattooed forearm entering the frame. Macro-level sharpness on the fine jersey texture.",
+    "Tight detail crop from the lips and full beard down to the mid chest, off-center, showing the clean narrow collar without topstitching, the set-in shoulder seam and the double-stitched sleeve hem, forearms entering the frame. Macro-level sharpness on the fine jersey texture.",
     "4:5"
    ],
    [

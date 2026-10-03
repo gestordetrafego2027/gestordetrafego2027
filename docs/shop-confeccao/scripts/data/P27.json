@@ -220,7 +220,7 @@
  "descritor": "Blusa masculina manga longa raglan regular fit em malha encorpada 300 g lisa por dentro, costura diagonal da gola à axila, gola careca em ribana fina, punhos e barra com bainha virada lisa, comprimento no quadril. Fosca com leve toque acetinado. Peça lisa.",
  "prompt": {
   "model": "custom",
-  "model_desc": "a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown hair slicked back and tied into a low bun, short groomed beard with moustache, defined eyebrows, serious calm expression; the long sleeves cover his arms (no tattoos visible)",
+  "model_desc": "a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown hair slicked back and tied into a low bun, short groomed beard with moustache, defined eyebrows, serious calm expression",
   "color_default": "off-white",
   "garment": "a regular-fit long-sleeve raglan t-shirt in heavyweight 300gsm two-ply single jersey, {COR}, smooth dense knit with a soft subtle satin touch, raglan sleeves with a clean diagonal seam running from the neckline to the underarm (no shoulder seam), narrow ribbed crew neck about 2 cm wide, long sleeves ending in a plain turned hem at the wrist (no ribbed cuff), straight double-stitched bottom hem at the hip (no ribbed band), smooth on the inside (not fleece)",
   "bottom": "black slim jeans",

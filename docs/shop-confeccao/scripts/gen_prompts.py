@@ -28,7 +28,10 @@ MODELS={
  'A':("Modelo A (P01, P02, P03, P04, P07, P09)",
       "a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown wavy hair swept back with volume, "
       "short groomed beard with moustache, defined eyebrows, serious calm expression",
-      "{TATTOO_A}", "both forearms covered with dense full-sleeve tattoos (generic ornamental and figurative designs, no readable lettering)"),
+      # Sem tatuagem: o personagem salvo no Magnific já define o corpo.
+      # Descrever tatuagem aqui brigaria com o handle — e texto que contradiz o
+      # handle vira ruído disputando o resultado, não detalhe somado.
+      "", ""),
  'C':("Modelo C (P05, P06, P08)",
       "a Caucasian Brazilian man in his late 30s, muscular athletic build with strong arms, short black hair neatly styled up and back, "
       "dark moustache and short chin beard, confident neutral expression",
@@ -57,7 +60,7 @@ P['P01']=dict(title="P01 — Oversized Suedine Peruano 300g", model='A', color_d
    "Framing from the top of the head to mid-thigh, subject centered, small headroom.","4:5"),
   ("F2 — Detalhe gola, ombro caído e manga","2ª foto e 2ª miniatura",
    "Tight detail crop: from the lips and beard down to the lower chest, focused on the collar ribbing, the dropped shoulder seam and the wide sleeve on the camera's left side. "
-   "His left hand pinches and slightly pulls the sleeve hem near the elbow, tattooed forearm entering the frame from below. "
+   "His left hand pinches and slightly pulls the sleeve hem near the elbow, the forearm entering the frame from below. "
    "Macro-level sharpness on the brushed velvety texture.","4:5"),
   ("F3 — Frontal com mãos nos bolsos","3ª foto e 3ª miniatura",
    "Near-frontal view with a very slight turn, looking straight into the camera, head subtly tilted. Both hands tucked into the shorts pockets, thumbs out, "
@@ -110,7 +113,7 @@ P['P04']=dict(title="P04 — Suedine Peruano 300g Regular Fit", model='A', color
    "Frontal view, standing straight with arms relaxed at the sides, looking straight into the camera, a black leather bracelet on the left wrist. Framing from the head to upper thigh.","4:5"),
   ("F2 — Detalhe gola e punho","2ª foto e 2ª miniatura",
    "Tight detail crop from the lips and beard down to the mid chest, off-center to the camera's right to show the collar ribbing, the shoulder seam and the turned sleeve hem on his left arm, "
-   "with the tattooed forearm just entering the frame. Macro-level sharpness on the brushed suede-like texture.","4:5"),
+   "with the forearm just entering the frame. Macro-level sharpness on the brushed suede-like texture.","4:5"),
   ("F3 — Frontal plano aberto","3ª miniatura",
    "Frontal view, arms relaxed, looking at the camera, wider framing from the head to just above the knees, showing the black trousers.","4:5"),
   ("F4 — 3/4 tocando a barra","3ª foto e 4ª miniatura",
@@ -169,7 +172,7 @@ P['P07']=dict(title="P07 — Cotton Peruano 220g com Elastano", model='A', color
    "Arms relaxed, the far hand slightly curled at the hem. Framing from the head to upper thigh.","4:5"),
   ("F2 — Detalhe gola e manga","2ª foto e 2ª miniatura",
    "Tight detail crop from the lips down to the mid chest, off-center to show the narrow collar, the shoulder seam and the double sleeve hem on the camera's right, "
-   "with a thin silver chain necklace and a tattooed forearm just entering the frame.","4:5"),
+   "with a thin silver chain necklace and a forearm just entering the frame.","4:5"),
   ("F3 — Frontal leve 3/4","3ª foto e 3ª miniatura",
    "Near-frontal view turned slightly to the camera's right, looking into the camera, arms relaxed, one hand lightly touching the side hem. Framing from the head to upper thigh.","4:5"),
   ("F4 — Macro da malha","3ª foto do 2º print — close de textura ocupando o quadro",
@@ -206,7 +209,7 @@ P['P09']=dict(title="P09 — Suedine Light", model='A', color_default='warm cara
    "a thin silver chain bracelet on the right wrist. Framing from the head to upper thigh.","4:5"),
   ("F2 — Detalhe gola e ombro","2ª foto e 2ª miniatura",
    "Tight detail crop from the beard down to the mid chest, off-center to show the ribbed collar, the shoulder seam and the sleeve hem on the camera's right, "
-   "with a tattooed forearm just entering the frame. Macro-level sharpness on the soft brushed surface.","4:5"),
+   "with a forearm just entering the frame. Macro-level sharpness on the soft brushed surface.","4:5"),
   ("F3 — Mockup de personalização (versão HMZT)","3ª foto — no original é a arte promocional do fornecedor sobre peça off-white em modelo negro; aqui vira base lisa para arte HMZT",
    "Frontal view, both hands in the pockets of black trousers, looking at the camera, torso square to the lens so the whole front panel is flat and unobstructed for compositing a print later. "
    "The t-shirt is slightly relaxed with dropped shoulders. Framing from the head to upper thigh.","4:5"),
@@ -221,7 +224,7 @@ def build(pk, d):
      f"> Dossiê e ficha: pastas [`dossies/`](../dossies/) e [`catalogo/`](../catalogo/) · Método e configuração: [README](README.md)\n",
      f"**Cores disponíveis:** {d['colors']} — os prompts vêm na cor das fotos originais; para outra cor, troque só o termo de cor (indicado em cada foto)\n",
      "**Ordem de geração:** gere a F1 primeiro. Quando aprovada, use-a como **imagem de referência** nas demais (mesmo rosto, mesma peça, mesma luz).\n",
-     *(["**Tatuagens (Modelo A):** para modelo sem tatuagem, apague do prompt o trecho `both forearms covered with dense full-sleeve tattoos (...)`.\n"] if d['model']=='A' else [])]
+     ]
     shots=list(d['shots'])+d.get('extra_variants',[])
     for name,src,pose,ar in shots:
         mk=d.get('model_override',{}).get(name,d['model'])

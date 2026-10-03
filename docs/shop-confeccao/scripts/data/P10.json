@@ -212,7 +212,7 @@
  "descritor": "Camiseta masculina oversized boxy heavyweight, ombro bem caído no braço, manga curta larga até o cotovelo, gola careca de ribana canelada larga (2,5 cm), malha encorpada de 300 g/m² com superfície fosca e macia, corpo amplo e quadrado que se sustenta, barra reta abaixo do quadril. Peça lisa, sem logos. Fundo cinza claro de estúdio.",
  "prompt": {
   "model": "custom",
-  "model_desc": "a Caucasian Brazilian man in his early-to-mid 30s, athletic build, shoulder-length dark brown wavy hair with natural volume, full dark groomed beard with moustache, calm confident expression, both forearms covered with dense full-sleeve tattoos (generic ornamental and figurative designs, no readable lettering)",
+  "model_desc": "a Caucasian Brazilian man in his early-to-mid 30s, athletic build, shoulder-length dark brown wavy hair with natural volume, full dark groomed beard with moustache, calm confident expression",
   "color_default": "medium steel gray",
   "garment": "a true oversized boxy t-shirt in heavyweight 300gsm suedine knit, {COR}, dense matte surface with a soft peach-skin hand, wide square body, strongly dropped shoulders with the seam falling well down the upper arm, wide short sleeves reaching the elbow with a double-stitched hem, bold 2.5 cm ribbed crew neck, straight hem below the hip, fully opaque",
   "bottom": "black cargo shorts with raw frayed hems (full-body shots: chunky gray-and-white knit sneakers)",
@@ -235,13 +235,13 @@
    [
     "F3 — Detalhe gola e ombro",
     "Origem: fotos #3 (cinza), #8 (branco) e #13 (rose gold) da galeria (close da gola larga e do ombro caído)",
-    "Tight detail crop from the lips and full beard down to the mid chest, off-center to the camera's left, showing the wide dense ribbed collar, the dropped shoulder seam on the upper arm and the wide sleeve with its double-stitched hem on the camera's left side, tattooed forearm just entering the frame. Macro-level sharpness on the matte peach-skin surface.",
+    "Tight detail crop from the lips and full beard down to the mid chest, off-center to the camera's left, showing the wide dense ribbed collar, the dropped shoulder seam on the upper arm and the wide sleeve with its double-stitched hem on the camera's left side, forearms just entering the frame. Macro-level sharpness on the matte peach-skin surface.",
     "4:5"
    ],
    [
     "F4 — Mão na nuca",
     "Origem: fotos #4 (cinza), #7 (branco) e #11 (rose gold) da galeria",
-    "Near-frontal view, one hand raised to the back of the neck with the tattooed forearm across the upper chest, head tilted to the side, looking at the camera. The raised arm lifts the wide sleeve showing the fabric weight. Framing from the head to the hip.",
+    "Near-frontal view, one hand raised to the back of the neck with the forearms across the upper chest, head tilted to the side, looking at the camera. The raised arm lifts the wide sleeve showing the fabric weight. Framing from the head to the hip.",
     "4:5"
    ],
    [

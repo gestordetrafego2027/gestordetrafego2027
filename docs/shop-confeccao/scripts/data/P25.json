@@ -239,7 +239,7 @@
  "descritor": "Calça de moletom masculina confort/jogger em moletom 3 cabos 320 g, felpado por dentro, cós largo com elástico e cordão cru, falsa braguilha pespontada, bolsos laterais inclinados, recorte frontal até o joelho, perna afunilada terminando em punho de ribana no tornozelo. Fosca, encorpada. Peça lisa.",
  "prompt": {
   "model": "custom",
-  "model_desc": "an athletic Caucasian man photographed only from the lower chest (or waistband) down to the floor — the face and head are never in frame; muscular forearms and hands with natural skin, no tattoos, no jewelry",
+  "model_desc": "an athletic Caucasian man photographed only from the lower chest (or waistband) down to the floor — the face and head are never in frame; muscular forearms and hands with natural skin, no jewelry",
   "color_default": "black",
   "garment": "comfort-fit tapered jogger sweatpants in heavyweight 320gsm three-thread fleece (50% cotton / 50% polyester), {COR}, smooth matte outer face with a brushed fleece inside, a wide flat self-fabric waistband (about 5 cm) with covered elastic, an off-white flat cotton drawcord exiting through two small front eyelets and hanging to upper thigh, a stitched faux-fly placket, two side slash pockets with angled openings, a front panel seam running from each pocket down to the knee with a short articulation seam above the knee, legs tapering into 1x1 ribbed ankle cuffs about 7 cm tall",
   "bottom": "a plain heather-grey crew-neck t-shirt (only its hem visible) and plain white leather low-top sneakers with no logos or stripes",

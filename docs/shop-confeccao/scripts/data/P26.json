@@ -254,7 +254,7 @@
  "descritor": "Moletom masculino gola careca regular fit em moletom 3 cabos 320 g, 50% algodão / 50% poliéster, felpado por dentro, face lisa e fosca. Gola em ribana reforçada de 3 cm, mangas set-in, punhos e barra larga em ribana canelada, sem capuz e sem bolso. Encorpado, estruturado. Peça lisa.",
  "prompt": {
   "model": "custom",
-  "model_desc": "a Caucasian Brazilian man in his late 30s, lean athletic build, short dark brown hair with volume brushed up and back, neat dark moustache with light stubble on the chin and jaw, calm confident expression, no visible tattoos",
+  "model_desc": "a Caucasian Brazilian man in his late 30s, lean athletic build, short dark brown hair with volume brushed up and back, neat dark moustache with light stubble on the chin and jaw, calm confident expression",
   "color_default": "black",
   "garment": "a regular-fit crewneck sweatshirt in heavyweight 320gsm three-thread fleece (50% cotton / 50% polyester), {COR}, smooth matte outer face with a brushed fleece inside, set-in sleeves with the shoulder seam on the shoulder point, reinforced 3 cm 1x1 ribbed crew neck, long sleeves ending in 1x1 ribbed cuffs about 6–7 cm tall at the wrist, a wide 1x1 ribbed waistband about 7 cm tall at the hip, no hood, no pocket, no print",
   "bottom": "black slim jeans",
