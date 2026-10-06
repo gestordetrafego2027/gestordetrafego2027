@@ -1,0 +1,15 @@
+{
+ "nome": "Design & Video",
+ "frente": {
+  "pos": "small print on the LEFT chest: a circle of text about 9 cm in diameter, top edge about 8 cm below the collar",
+  "desc_escura": "the sentence \"Design gives it form; video gives it a heartbeat.\" set in a circle in a light condensed sans-serif, near-black",
+  "desc_clara": "the sentence \"Design gives it form; video gives it a heartbeat.\" set in a circle in a light condensed sans-serif, white"
+ },
+ "verso": {
+  "pos": "large print centered on the upper back, about 26 cm wide, top edge about 10 cm below the collar",
+  "desc_escura": "a large solid red circle with a flat geometric video-camera icon (a square body and a trapezoid lens) in near-black overlapping its lower left",
+  "desc_clara": "a large solid red circle with a flat geometric video-camera icon (a square body and a trapezoid lens) in white overlapping its lower left"
+ },
+ "spell": "Design gives it form; video gives it a heartbeat.",
+ "uniao": []
+}

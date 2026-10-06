@@ -10,8 +10,6 @@ export async function generateMetadata({params}) {
     title: 'Splash Boutique — Fashion Film | House Mazzutti São Paulo',
     description: 'Splash Boutique — fashion film e campanha da House Mazzutti, produtora de moda em São Paulo. Direção criativa e direção de imagem. Assista ao filme completo.',
   })
-  // TODO-BROKEN-IMAGE: splash-boutique não tem nenhuma imagem em /public.
-  // Ver BROKEN_IMAGES_TODO.md
   const image = 'https://housemazzutti.com/images/produtora/moda/splash-boutique/1.webp'
   return {
     ...base,

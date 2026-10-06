@@ -1,0 +1,10 @@
+# Saída gerada do LOOKBOOK DIGITAL AI.
+#
+# `lookbook/` são 3,5 GB de fotos que se reproduzem rodando o pipeline de novo a
+# partir das artes, dos configs e dos prompts — que ESTES sim ficam versionados.
+# Git não é lugar de binário gerado: engorda o clone para sempre e nem um dos
+# arquivos é fonte de verdade.
+lookbook/
+
+# Tentativas reprovadas, guardadas só para depurar a trava de fidelidade.
+**/_tentativas/

@@ -39,7 +39,7 @@ export default async function SobrePage() {
         </section>
 
         {/* ORIGEM */}
-        <section className="bg-white text-black px-12 md:px-48 py-32">
+        <section className="bg-white text-black px-12 md:px-48 py-32 md:py-40">
           <div className="max-w-4xl">
             <span className="text-caption text-neutral-400 mb-6 block">{t('origem_label')}</span>
             <h2 className="text-h2 text-black mb-8">
@@ -55,7 +55,7 @@ export default async function SobrePage() {
         </section>
 
         {/* O QUE SOMOS */}
-        <section className="bg-neutral-100 text-black px-12 md:px-48 py-32">
+        <section className="bg-neutral-100 text-black px-12 md:px-48 py-32 md:py-40">
           <div className="max-w-4xl">
             <span className="text-caption text-neutral-400 mb-6 block">{t('strategic_label')}</span>
             <h2 className="text-h2 text-black mb-8">
@@ -68,7 +68,7 @@ export default async function SobrePage() {
         </section>
 
         {/* COMO FUNCIONAMOS — frentes (boutique_cards) */}
-        <section className="bg-white text-black px-12 md:px-48 py-32">
+        <section className="bg-white text-black px-12 md:px-48 py-32 md:py-40">
           <div className="max-w-5xl">
             <span className="text-caption text-neutral-400 mb-6 block">{t('boutique_label')}</span>
             <h2 className="text-h2 text-black mb-16">
@@ -93,7 +93,7 @@ export default async function SobrePage() {
         </section>
 
         {/* METODOLOGIA */}
-        <section className="bg-black text-white px-12 md:px-48 py-32">
+        <section className="bg-black text-white px-12 md:px-48 py-32 md:py-40">
           <div className="max-w-4xl">
             <span className="text-caption text-white/50 mb-6 block">{t('metodo_bg')}</span>
             <h2 className="text-h2 text-white mb-12">
@@ -113,7 +113,7 @@ export default async function SobrePage() {
         </section>
 
         {/* DIFERENCIAL */}
-        <section className="bg-white text-black px-12 md:px-48 py-32">
+        <section className="bg-white text-black px-12 md:px-48 py-32 md:py-40">
           <div className="max-w-4xl">
             <span className="text-caption text-neutral-400 mb-6 block">{t('diferencial_label')}</span>
             <h2 className="text-h2 text-black mb-8">
@@ -131,7 +131,7 @@ export default async function SobrePage() {
         </section>
 
         {/* LIDERANÇA */}
-        <section className="bg-neutral-100 text-black px-12 md:px-48 py-32">
+        <section className="bg-neutral-100 text-black px-12 md:px-48 py-32 md:py-40">
           <div className="max-w-5xl">
             <span className="text-caption text-neutral-400 mb-6 block">{t('origem_label')}</span>
             <h2 className="text-h2 text-black mb-16">
@@ -157,7 +157,7 @@ export default async function SobrePage() {
         </section>
 
         {/* MANIFESTO + CTA */}
-        <section className="bg-black text-white px-12 md:px-48 py-40 text-center">
+        <section className="bg-black text-white px-12 md:px-48 py-40 md:py-48 text-center">
           <div className="max-w-4xl mx-auto space-y-10">
             <h2 className="text-h1 text-white hmzt-hero-title">
               {t('cta_titulo')}

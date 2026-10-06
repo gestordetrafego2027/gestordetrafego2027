@@ -356,7 +356,7 @@ export default function StudioPage() {
                         </Link>
                     </div>
                 </section>
-                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32">
+                <section className="relative bg-zinc-50/50 px-12 overflow-hidden py-32 md:py-40">
                     <div className="noise-overlay absolute inset-0"></div>
                     <div className="relative z-10 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-32">
                         <div className="w-full lg:w-1/4 flex-shrink-0">
@@ -393,7 +393,7 @@ export default function StudioPage() {
                         </div>
                     </div>
                 </section>
-                <section className="bg-white py-32 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
+                <section className="bg-white py-32 md:py-40 px-12 border-t-[0.5px] border-zinc-100 pt-[74px] pb-[138px]">
                     <div className="max-w-[1260px] mx-auto text-center">
                         <div className="mb-24">
                             <span className="text-caption text-zinc-400 block mb-6">{t('metodo_label')}</span>
@@ -594,7 +594,7 @@ export default function StudioPage() {
             </main>
 
             {/* FAQ — obrigatório para FAQPage schema ser válido no Rich Results Test */}
-            <section className="bg-white py-24 px-8 border-t border-zinc-100">
+            <section className="bg-white py-24 md:py-32 px-8 border-t border-zinc-100">
                 <div className="max-w-3xl mx-auto">
                     <p className="font-label uppercase tracking-[0.45em] text-[9px] text-zinc-400 mb-6">{t('faq_label')}</p>
                     <h2 className="font-headline italic text-3xl text-zinc-900 mb-16">{t('faq_titulo')}</h2>

@@ -76,7 +76,7 @@ export default async function CourseHomePage({ params }) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-5xl px-6 py-10">
+        <section className="mx-auto max-w-5xl px-6 py-12 md:py-16">
           {(!modules || modules.length === 0) ? (
             <p className="rounded-2xl border border-dashed border-neutral-300 bg-white p-10 text-center text-neutral-600">
               Conteúdo em preparação.

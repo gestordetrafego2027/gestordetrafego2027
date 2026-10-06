@@ -1,0 +1,64 @@
+{
+ "_fonte": "Referências do Angelo (out/2026) — checklist de realismo por região do rosto, mais o negativo anti-IA e a ficha de luz/lente.",
+ "_regra_de_escala": "O material original é MACRO: foi escrito para close. Num plano de cabeça-à-coxa o rosto ocupa ~200 px e 'individual beard hairs visible' é fisicamente impossível — pedir isso ali gasta orçamento de prompt e compete com o que importa (o caimento da peça). Por isso o bloco é escalonado: 'base' em tudo, 'retrato' no plano largo, 'macro' só no corte de detalhe.",
+ "base": [
+  "editorial portrait, preserve the subject's identity",
+  "matte skin with visible pores, no smoothing",
+  "shot in studio on an 85mm lens"
+ ],
+ "retrato": [
+  "visible pore texture across the nose and forehead, no beauty smoothing",
+  "eyebrows and stubble with uneven density",
+  "a moist catchlight in each eye",
+  "natural specular highlights on the oily T-zone"
+ ],
+ "macro": {
+  "olhos": [
+   "sharp pupil with moist catchlight reflections",
+   "eyelashes of varied length and natural curl",
+   "eyebrows with natural, uneven density",
+   "soft shadows where anything resting on the face touches the skin",
+   "natural specular highlights on the oily areas around the eye and cheek"
+  ],
+  "nariz": [
+   "fine vellus hairs, evenly distributed and slightly reflective — typical peach fuzz",
+   "visible pores on and around the nose",
+   "a slight shine on the tip",
+   "realistic shadowing"
+  ],
+  "barba": [
+   "individual beard hairs visible",
+   "natural density variation",
+   "uneven growth pattern around the lips",
+   "soft hair transitions at the edges",
+   "realistic shadows between the hairs"
+  ],
+  "pele": [
+   "pores distinctly visible, with subtle variation in size",
+   "pore density uneven — dense across the nose and forehead, sparse on the cheeks",
+   "tiny bumps, natural skin oils and fine skin grain visible",
+   "stubble with individual strands discernible, growth slightly uneven with no uniform pattern",
+   "skin texture visible beneath and between the beard hairs"
+  ],
+  "tecido": [
+   "individual fibers and loose threads visible",
+   "knit texture naturally uneven",
+   "fine ribbing following the folds of the fabric",
+   "shadows between the stitches",
+   "soft wear creating realistic surface variation"
+  ]
+ },
+ "negativo": [
+  "no wax skin",
+  "no plastic skin",
+  "no beauty filter",
+  "no CGI render",
+  "no airbrushing",
+  "no skin smoothing",
+  "no uniform pore pattern"
+ ],
+ "_correcoes": [
+  "A ficha original trazia 'pores evenly distributed across the skin surface', que contradizia o próprio negativo 'no uniform pore pattern'. Trocado por densidade desigual (densa na zona T, escassa na maçã), que é como poro se comporta de verdade.",
+  "As linhas de óculos ('transparent glasses with realistic refraction', 'soft shadows from the glasses frame') eram do modelo da referência, que usa óculos. Os modelos HMZT não usam. Ficou só a regra geral de sombra de contato."
+ ]
+}

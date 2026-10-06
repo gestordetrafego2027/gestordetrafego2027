@@ -1,0 +1,11 @@
+{
+ "nome": "Sony Retrô",
+ "frente": {
+  "pos": "centered on the chest and stomach, about 22 cm wide by 36 cm tall, top edge about 9 cm below the collar",
+  "desc_escura": "a tall rectangular frame outline containing the retro \"Sony\" wordmark with a long swooping S, in near-black",
+  "desc_clara": "a tall rectangular frame outline containing the retro \"Sony\" wordmark with a long swooping S, in white"
+ },
+ "verso": null,
+ "spell": "S-o-n-y",
+ "uniao": []
+}

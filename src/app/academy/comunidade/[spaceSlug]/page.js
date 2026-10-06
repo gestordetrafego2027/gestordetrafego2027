@@ -45,7 +45,7 @@ export default async function SpacePage({ params }) {
     <>
       <Header />
       <main className="min-h-screen bg-neutral-50 pb-24 pt-24">
-        <section className="mx-auto max-w-3xl px-6 py-10">
+        <section className="mx-auto max-w-3xl px-6 py-12 md:py-16">
           <Link href="/academy/comunidade" className="text-xs uppercase tracking-widest text-neutral-500 hover:text-neutral-900">
             ← Comunidade
           </Link>

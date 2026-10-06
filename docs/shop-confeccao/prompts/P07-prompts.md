@@ -1,0 +1,62 @@
+# Fluxo de prompts — P07 — Cotton Peruano 220g com Elastano
+
+> Dossiê e ficha: pastas [`dossies/`](../dossies/) e [`catalogo/`](../catalogo/) · Método e configuração: [README](README.md)
+
+**Cores disponíveis:** PRT, OFF, BGE (provável nude da 5ª miniatura), MAR, BDO, VML — os prompts vêm na cor das fotos originais; para outra cor, troque só o termo de cor (indicado em cada foto)
+
+**Ordem de geração:** gere a F1 primeiro. Quando aprovada, use-a como **imagem de referência** nas demais (mesmo rosto, mesma peça, mesma luz).
+
+
+## F1 — Hero 3/4
+
+- **Origem no print:** Foto principal e 1ª miniatura
+- **Modelo:** Modelo A · **Cor:** `black` · **Formato:** 4:5
+
+
+```text
+Professional e-commerce fashion catalog photo. Seamless light cool-gray studio backdrop (approx. #CDCDD0), large softbox key about 45 degrees to the left of camera with a modest fill opposite it, roughly a 3:1 ratio, so the garment stays evenly and accurately lit while the face keeps a soft shadow side that models the cheekbone and reveals skin texture; shadows stay soft, never hard. Neutral color-accurate white balance. Shot on full-frame camera, 85mm lens, f/8, eye-level to chest-level camera height, tack-sharp focus on the fabric texture, matte skin with visible pores, no smoothing. The model is a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown wavy hair swept back with volume, short groomed beard with moustache, defined eyebrows, serious calm expression, . He wears a regular fit t-shirt in 220gsm cotton jersey with 4% elastane, black, smooth fabric with a subtle satin sheen that follows the body without being tight, set-in shoulders, short sleeves hugging the arm and ending mid-bicep with a double hem, narrow ribbed crew neck, straight double-stitched hem at the hip, tucked out, paired with black jeans. Fabric and construction: medium-weight 220gsm cotton jersey with 4% elastane — it follows the shape of the chest and shoulders with gentle tension, smooth and nearly wrinkle-free, recovering its shape instantly; sleeves hug the biceps without squeezing. Subtle satin sheen on the smooth surface. Narrow reinforced ribbed collar lying flat and snug; shoulder-to-shoulder internal tape; reinforced seams; tonal double-needle sleeve hems and an invisible double bottom hem hanging straight. Movement: supple and elastic — the fabric moves with the body, stretching smoothly over the shoulders and relaxing back without bagging. Fit on the model (size M on a 1.84 m, 84 kg man): body length 72 cm ending at the hip, chest width 54 cm giving 2–4 cm of relaxed ease, shoulder width 46 cm with the shoulder seam sitting exactly on the shoulder point, sleeve length 18 cm ending mid-bicep. Three-quarter view, body turned to the camera's left, face toward the camera with a slight head tilt, a fine silver chain necklace just visible at the collar. Arms relaxed, the far hand slightly curled at the hem. Framing from the head to upper thigh. CRITICAL: absolutely no text, no letters, no logos, no labels, no brand tags visible, no watermark, no graphic overlays, no icons. Plain garment exactly as described, correct anatomy, five fingers per hand.
+```
+
+
+## F2 — Detalhe gola e manga
+
+- **Origem no print:** 2ª foto e 2ª miniatura
+- **Modelo:** Modelo A · **Cor:** `black` · **Formato:** 4:5
+
+
+```text
+Professional e-commerce fashion catalog photo. Seamless light cool-gray studio backdrop (approx. #CDCDD0), large softbox key about 45 degrees to the left of camera with a modest fill opposite it, roughly a 3:1 ratio, so the garment stays evenly and accurately lit while the face keeps a soft shadow side that models the cheekbone and reveals skin texture; shadows stay soft, never hard. Neutral color-accurate white balance. Shot on full-frame camera, 85mm lens, f/8, eye-level to chest-level camera height, tack-sharp focus on the fabric texture, matte skin with visible pores, no smoothing. The model is a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown wavy hair swept back with volume, short groomed beard with moustache, defined eyebrows, serious calm expression, . He wears a regular fit t-shirt in 220gsm cotton jersey with 4% elastane, black, smooth fabric with a subtle satin sheen that follows the body without being tight, set-in shoulders, short sleeves hugging the arm and ending mid-bicep with a double hem, narrow ribbed crew neck, straight double-stitched hem at the hip, tucked out, paired with black jeans. Fabric and construction: medium-weight 220gsm cotton jersey with 4% elastane — it follows the shape of the chest and shoulders with gentle tension, smooth and nearly wrinkle-free, recovering its shape instantly; sleeves hug the biceps without squeezing. Subtle satin sheen on the smooth surface. Narrow reinforced ribbed collar lying flat and snug; shoulder-to-shoulder internal tape; reinforced seams; tonal double-needle sleeve hems and an invisible double bottom hem hanging straight. Movement: supple and elastic — the fabric moves with the body, stretching smoothly over the shoulders and relaxing back without bagging. Fit on the model (size M on a 1.84 m, 84 kg man): body length 72 cm ending at the hip, chest width 54 cm giving 2–4 cm of relaxed ease, shoulder width 46 cm with the shoulder seam sitting exactly on the shoulder point, sleeve length 18 cm ending mid-bicep. Tight detail crop from the lips down to the mid chest, off-center to show the narrow collar, the shoulder seam and the double sleeve hem on the camera's right, with a thin silver chain necklace and a forearm just entering the frame. CRITICAL: absolutely no text, no letters, no logos, no labels, no brand tags visible, no watermark, no graphic overlays, no icons. Plain garment exactly as described, correct anatomy, five fingers per hand.
+```
+
+
+## F3 — Frontal leve 3/4
+
+- **Origem no print:** 3ª foto e 3ª miniatura
+- **Modelo:** Modelo A · **Cor:** `black` · **Formato:** 4:5
+
+
+```text
+Professional e-commerce fashion catalog photo. Seamless light cool-gray studio backdrop (approx. #CDCDD0), large softbox key about 45 degrees to the left of camera with a modest fill opposite it, roughly a 3:1 ratio, so the garment stays evenly and accurately lit while the face keeps a soft shadow side that models the cheekbone and reveals skin texture; shadows stay soft, never hard. Neutral color-accurate white balance. Shot on full-frame camera, 85mm lens, f/8, eye-level to chest-level camera height, tack-sharp focus on the fabric texture, matte skin with visible pores, no smoothing. The model is a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown wavy hair swept back with volume, short groomed beard with moustache, defined eyebrows, serious calm expression, . He wears a regular fit t-shirt in 220gsm cotton jersey with 4% elastane, black, smooth fabric with a subtle satin sheen that follows the body without being tight, set-in shoulders, short sleeves hugging the arm and ending mid-bicep with a double hem, narrow ribbed crew neck, straight double-stitched hem at the hip, tucked out, paired with black jeans. Fabric and construction: medium-weight 220gsm cotton jersey with 4% elastane — it follows the shape of the chest and shoulders with gentle tension, smooth and nearly wrinkle-free, recovering its shape instantly; sleeves hug the biceps without squeezing. Subtle satin sheen on the smooth surface. Narrow reinforced ribbed collar lying flat and snug; shoulder-to-shoulder internal tape; reinforced seams; tonal double-needle sleeve hems and an invisible double bottom hem hanging straight. Movement: supple and elastic — the fabric moves with the body, stretching smoothly over the shoulders and relaxing back without bagging. Fit on the model (size M on a 1.84 m, 84 kg man): body length 72 cm ending at the hip, chest width 54 cm giving 2–4 cm of relaxed ease, shoulder width 46 cm with the shoulder seam sitting exactly on the shoulder point, sleeve length 18 cm ending mid-bicep. Near-frontal view turned slightly to the camera's right, looking into the camera, arms relaxed, one hand lightly touching the side hem. Framing from the head to upper thigh. CRITICAL: absolutely no text, no letters, no logos, no labels, no brand tags visible, no watermark, no graphic overlays, no icons. Plain garment exactly as described, correct anatomy, five fingers per hand.
+```
+
+
+## F4 — Macro da malha
+
+- **Origem no print:** 3ª foto do 2º print — close de textura ocupando o quadro
+- **Modelo:** Modelo A · **Cor:** `black` · **Formato:** 1:1
+
+
+```text
+Professional e-commerce fashion catalog photo. Seamless light cool-gray studio backdrop (approx. #CDCDD0), large softbox key about 45 degrees to the left of camera with a modest fill opposite it, roughly a 3:1 ratio, so the garment stays evenly and accurately lit while the face keeps a soft shadow side that models the cheekbone and reveals skin texture; shadows stay soft, never hard. Neutral color-accurate white balance. Shot on full-frame camera, 85mm lens, f/8, eye-level to chest-level camera height, tack-sharp focus on the fabric texture, matte skin with visible pores, no smoothing. Extreme close-up of the fabric only, filling the entire frame: flat jersey knit surface with visible fine knit loops and a subtle satin sheen, soft raking light from the left to reveal the texture. No person visible. The fabric is 220gsm cotton jersey with 4% elastane, black: tight even single-jersey loops from 30/1 extra-long-staple cotton yarn, smooth face with a subtle satin sheen catching the raking light, slightly lifted by the elastane stretch, no pilling, no loose fibers. CRITICAL: absolutely no text, no letters, no logos, no labels, no brand tags visible, no watermark, no graphic overlays, no icons. Plain garment exactly as described, correct anatomy, five fingers per hand.
+```
+
+
+## F5 — Variação de cor
+
+- **Origem no print:** 4ª/5ª miniatura — peça nude/rosé com calça preta
+- **Modelo:** Modelo A · **Cor:** `pale nude pink beige` · **Formato:** 4:5
+
+
+```text
+Professional e-commerce fashion catalog photo. Seamless light cool-gray studio backdrop (approx. #CDCDD0), large softbox key about 45 degrees to the left of camera with a modest fill opposite it, roughly a 3:1 ratio, so the garment stays evenly and accurately lit while the face keeps a soft shadow side that models the cheekbone and reveals skin texture; shadows stay soft, never hard. Neutral color-accurate white balance. Shot on full-frame camera, 85mm lens, f/8, eye-level to chest-level camera height, tack-sharp focus on the fabric texture, matte skin with visible pores, no smoothing. The model is a Caucasian Brazilian man in his early 30s, athletic-lean build, medium-length dark brown wavy hair swept back with volume, short groomed beard with moustache, defined eyebrows, serious calm expression, . He wears a regular fit t-shirt in 220gsm cotton jersey with 4% elastane, pale nude pink beige, smooth fabric with a subtle satin sheen that follows the body without being tight, set-in shoulders, short sleeves hugging the arm and ending mid-bicep with a double hem, narrow ribbed crew neck, straight double-stitched hem at the hip, tucked out, paired with black jeans. Fabric and construction: medium-weight 220gsm cotton jersey with 4% elastane — it follows the shape of the chest and shoulders with gentle tension, smooth and nearly wrinkle-free, recovering its shape instantly; sleeves hug the biceps without squeezing. Subtle satin sheen on the smooth surface. Narrow reinforced ribbed collar lying flat and snug; shoulder-to-shoulder internal tape; reinforced seams; tonal double-needle sleeve hems and an invisible double bottom hem hanging straight. Movement: supple and elastic — the fabric moves with the body, stretching smoothly over the shoulders and relaxing back without bagging. Fit on the model (size M on a 1.84 m, 84 kg man): body length 72 cm ending at the hip, chest width 54 cm giving 2–4 cm of relaxed ease, shoulder width 46 cm with the shoulder seam sitting exactly on the shoulder point, sleeve length 18 cm ending mid-bicep. Frontal view, arms relaxed, looking at the camera. Framing from the head to upper thigh. CRITICAL: absolutely no text, no letters, no logos, no labels, no brand tags visible, no watermark, no graphic overlays, no icons. Plain garment exactly as described, correct anatomy, five fingers per hand.
+```

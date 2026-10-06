@@ -1,0 +1,17 @@
+{
+ "nome": "Backstage Popcorn",
+ "frente": {
+  "pos": "small badge on the wearer's LEFT chest (RIGHT side of the image when he faces the camera), about 8 cm wide, top edge about 8 cm below the collar seam",
+  "desc_escura": "a hand-drawn ink illustration of a striped popcorn bucket labeled \"POPCORN\" overflowing with popcorn, next to a soda cup with a straw — fine engraving-style line work in near-black",
+  "desc_clara": "a hand-drawn ink illustration of a striped popcorn bucket labeled \"POPCORN\" overflowing with popcorn, next to a soda cup with a straw — fine engraving-style line work in white"
+ },
+ "verso": {
+  "pos": "large print covering the upper and middle back: the words \"BACK-STAGE\" set vertically near the upper left of the back (reading bottom to top), and a film-slate style form in the lower right area of the print; overall about 30 cm wide by 45 cm tall, centered on the back",
+  "desc_escura": "the vertical word \"BACK-STAGE\" (BACK in bold, STAGE in light condensed letters) plus a hand-lettered film slate grid with the labels PROD.NO, SCENE, TAKE, ROLL, DATE, SOUND, PROD., DIRECTOR, CAMERA — all in near-black",
+  "desc_clara": "the vertical word \"BACK-STAGE\" (BACK in bold, STAGE in light condensed letters) plus a hand-lettered film slate grid with the labels PROD.NO, SCENE, TAKE, ROLL, DATE, SOUND, PROD., DIRECTOR, CAMERA — all in white"
+ },
+ "spell": "B-A-C-K-S-T-A-G-E, P-O-P-C-O-R-N",
+ "uniao": [
+  "back"
+ ]
+}

@@ -165,7 +165,7 @@ export default async function ProductPage({ params }) {
         </section>
 
         {/* DESCRIÇÃO LONGA + HIGHLIGHTS */}
-        <section className="mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-[1.4fr_1fr]">
+        <section className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-24 lg:grid-cols-[1.4fr_1fr]">
           <div>
             {highlights.length > 0 && (
               <div className="mb-12">

@@ -591,7 +591,21 @@ const redirectsBlock = (() => {
   const i = nextCfgText.indexOf('async redirects()');
   return i === -1 ? '' : nextCfgText.slice(i);
 })();
-const redirectSources = [...redirectsBlock.matchAll(/source:\s*'([^']+)'/g)].map((m) => m[1]);
+// Extrai `source` por objeto, PULANDO entradas com `has:` (condicionais de host).
+// O redirect www -> apex usa `source: '/:path*'` + `has: [{type:'host'}]`: ele so
+// dispara em www.housemazzutti.com e NAO prova que a rota existe. Colhido sem esse
+// filtro, o catch-all fazia routeExists() devolver true para qualquer caminho e
+// zerava a auditoria de links (LINKS_BROKEN=0 vazio).
+const redirectSources = (() => {
+  const objs = redirectsBlock.match(/\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/g) || [];
+  const out = [];
+  for (const o of objs) {
+    if (/\bhas:/.test(o)) continue;
+    const m = /source:\s*'([^']+)'/.exec(o);
+    if (m) out.push(m[1]);
+  }
+  return out;
+})();
 
 // Converte um `source` do next.config (sintaxe path-to-regexp) em RegExp.
 // Trata `:nome(regex)` ANTES de `:nome` — senão `/:year(\\d{4})/:path*` vira
@@ -677,9 +691,24 @@ function routeExists(href) {
 
 // Sanity check: rotas propositalmente inexistentes DEVEM falhar. Se passarem,
 // o matcher está permissivo demais e o resultado de links seria inútil.
-const SELF_TEST = ['/rota-que-nao-existe-xyz', '/pt/rota-que-nao-existe-xyz', '/pt/blog/'];
-for (const t of SELF_TEST) {
-  console.error(`[self-test] ${t} -> ${routeExists(t) ? 'EXISTE' : 'quebrado'}`);
+const SELF_TEST = [
+  ['/rota-que-nao-existe-xyz', false],
+  ['/pt/rota-que-nao-existe-xyz', false],
+  ['/pt/blog/', true],
+];
+let selfTestFailed = false;
+for (const [t, expected] of SELF_TEST) {
+  const got = routeExists(t);
+  console.error(`[self-test] ${t} -> ${got ? 'EXISTE' : 'quebrado'}`);
+  if (got !== expected) {
+    selfTestFailed = true;
+    console.error(`[self-test] FALHOU: esperado ${expected ? 'EXISTE' : 'quebrado'} para ${t}`);
+  }
+}
+if (selfTestFailed) {
+  console.error('\n[self-test] matcher de rotas permissivo demais — LINKS_BROKEN seria vazio.');
+  console.error('Corrija routeExists()/redirectSources antes de confiar no relatorio.');
+  process.exit(1);
 }
 
 const brokenLinks = [];

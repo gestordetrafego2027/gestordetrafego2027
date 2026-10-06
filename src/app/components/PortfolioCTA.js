@@ -41,7 +41,7 @@ export default function PortfolioCTA({ businessUnit = 'studio', projectSlug = nu
 
   return (
     <>
-      <section className="bg-[#0a0a0a] text-white px-12 py-24 border-t border-white/5">
+      <section className="bg-[#0a0a0a] text-white px-12 py-24 md:py-32 border-t border-white/5">
         <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
             <p className="font-label uppercase tracking-[0.2em] text-[10px] text-white/40 mb-4">{cfg.eyebrow}</p>

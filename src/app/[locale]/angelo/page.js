@@ -106,7 +106,7 @@ export default function AngeloPage() {
                 </section>
 
                 {/* 2. Diferenciais */}
-                <section className="bg-black text-white py-40 overflow-hidden relative">
+                <section className="bg-black text-white py-40 md:py-48 overflow-hidden relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                         <span className="text-[20vw] select-none ghost-text font-headline tracking-[-0.05em] font-bold">{t("diferenciais_ghost")}</span>
                     </div>
@@ -161,7 +161,7 @@ export default function AngeloPage() {
                 </section>
 
                 {/* 4. Serviços */}
-                <section className="bg-white py-32 px-12 md:px-24">
+                <section className="bg-white py-32 md:py-40 px-12 md:px-24">
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
                         <div className="md:w-1/3">
                             <span className="text-caption text-neutral-500 mb-6 block">{t("servicos_label")}</span>
@@ -214,7 +214,7 @@ export default function AngeloPage() {
                 </section>
 
                 {/* 6. Valor */}
-                <section className="bg-[#f5f5f5] py-32 px-12 md:px-24">
+                <section className="bg-[#f5f5f5] py-32 md:py-40 px-12 md:px-24">
                     <div className="max-w-4xl mx-auto text-center space-y-16">
                         <h2 className="text-h1 text-black">
                             {t("valor_title")}

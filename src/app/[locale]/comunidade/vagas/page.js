@@ -32,7 +32,7 @@ export default async function ComunidadeVagasPage() {
         </section>
 
         {/* FORM */}
-        <section className="px-12 py-24">
+        <section className="px-12 py-24 md:py-32">
           <div className="max-w-[760px] mx-auto">
             <div className="mb-12">
               <h2 className="text-h2 text-black mb-4">{t('form_titulo')}</h2>
@@ -45,7 +45,7 @@ export default async function ComunidadeVagasPage() {
         </section>
 
         {/* FAQ / CTA SECUNDÁRIO */}
-        <section className="bg-zinc-50/50 px-12 py-24 border-t-[0.5px] border-zinc-200">
+        <section className="bg-zinc-50/50 px-12 py-24 md:py-32 border-t-[0.5px] border-zinc-200">
           <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <span className="text-caption text-zinc-500 block mb-4">{t('faq_label')}</span>

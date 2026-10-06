@@ -22,7 +22,7 @@ export default function ClientLogos() {
   const loop = [...logos, ...logos]
 
   return (
-    <section className="bg-white border-b border-neutral-100 py-20 w-full overflow-hidden">
+    <section className="bg-white border-b border-neutral-100 py-20 md:py-28 w-full overflow-hidden">
       <style>{`
         @keyframes marquee-clientes {
           from { transform: translateX(0); }

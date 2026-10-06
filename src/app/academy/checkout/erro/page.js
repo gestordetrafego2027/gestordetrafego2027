@@ -6,7 +6,7 @@ export default function CheckoutErrorPage() {
     <>
       <Header />
       <main className="min-h-screen bg-neutral-50 pb-24 pt-24">
-        <section className="mx-auto max-w-xl px-6 py-16 text-center">
+        <section className="mx-auto max-w-xl px-6 py-20 md:py-24 text-center">
           <h1 className="text-3xl font-semibold text-neutral-900">Pagamento não aprovado</h1>
           <p className="mt-3 text-neutral-600">
             Algo impediu a confirmação. Tente outra forma de pagamento ou cartão.

@@ -1,0 +1,17 @@
+{
+ "nome": "Creative Art Director",
+ "frente": {
+  "pos": "centered on the chest, about 24 cm wide, top edge about 10 cm below the collar",
+  "desc_escura": "a solid red rectangular band cut by thin horizontal stripes, with the word \"CREATIVE\" in heavy extended capitals knocked through the stripes in near-black, and \"ART DIRECTOR\" in small bold capitals below the band, right-aligned, in near-black",
+  "desc_clara": "a solid red rectangular band cut by thin horizontal stripes, with the word \"CREATIVE\" in heavy extended capitals knocked through the stripes in white, and \"ART DIRECTOR\" in small bold capitals below the band, right-aligned, in white"
+ },
+ "verso": {
+  "pos": "a single thin line of small text on the lower back, centered, about 22 cm wide, about 8 cm above the hem",
+  "desc_escura": "the line \"© 2026 HOUSE MAZZUTTI. TODOS OS DIREITOS RESERVADOS.\" in small widely spaced capitals, near-black",
+  "desc_clara": "the line \"© 2026 HOUSE MAZZUTTI. TODOS OS DIREITOS RESERVADOS.\" in small widely spaced capitals, white"
+ },
+ "spell": "C-R-E-A-T-I-V-E, A-R-T D-I-R-E-C-T-O-R",
+ "uniao": [
+  "front"
+ ]
+}
