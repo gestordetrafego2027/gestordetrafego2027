@@ -171,6 +171,15 @@ export default function BlogPage() {
                 </div>
             </section>
 
+            {/* Sobre este espaço */}
+            <section className="max-w-3xl mx-auto text-center" style={{ padding: '80px 32px 40px 32px' }}>
+                <span className="label-text text-[#5E5E5E] mb-6 block">{t('about_label')}</span>
+                <h2 className="hero-title text-2xl md:text-[1.9rem] mb-10 leading-snug">{t('about_title')}</h2>
+                <p className="excerpt-text mb-6 font-light">{t('about_p1')}</p>
+                <p className="excerpt-text mb-6 font-light">{t('about_p2')}</p>
+                <p className="excerpt-text font-light" style={{ color: '#000' }}>{t('about_p3')}</p>
+            </section>
+
             {/* Filter Bar */}
             <div className="flex justify-center items-center py-12 gap-8 flex-wrap px-4">
                 {['todos', 'studio', 'agencia', 'produtora', 'academy'].map(cat => (

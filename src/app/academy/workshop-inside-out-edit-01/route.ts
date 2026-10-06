@@ -66,7 +66,7 @@ export function GET() {
   </ul>
   <div class="menu-foot">
     <a href="https://instagram.com/housemazzutti">Instagram ↗</a>
-    <a href="mailto:marketing@mztgrupo.com">marketing@mztgrupo.com</a>
+    <a href="mailto:contato@housemazzutti.com">contato@housemazzutti.com</a>
     <span class="mono">Uberlândia · MG · Set 2025</span>
   </div>
 </div>

@@ -8,7 +8,7 @@ const blogSchema = {
   '@id': `${brand.url}/pt/blog/#blog`,
   name: 'Blog House Mazzutti',
   description:
-    'Ideias sobre branding, direção de imagem, moda e campanhas. O pensamento editorial da House Mazzutti.',
+    'O canal onde profissionais, artistas, talentos e criadores da comunidade House Mazzutti escrevem o que pensam, compartilham opiniões e se conectam com outras vivências.',
   url: `${brand.url}/pt/blog/`,
   inLanguage: 'pt-BR',
   publisher: {'@id': `${brand.url}/#organization`},
@@ -20,9 +20,9 @@ export async function generateMetadata({params}) {
   return pageMetadata({
     path: '/blog',
     locale,
-    title: 'Blog House Mazzutti — Branding, Imagem e Moda',
+    title: 'Blog House Mazzutti — Ideias, Vivências e Conexão',
     description:
-      'Ideias sobre branding, direção de imagem, moda e campanhas. O pensamento por trás da House Mazzutti.',
+      'Profissionais, artistas e criadores escrevendo sobre branding, imagem, moda e a vida online. Leve, sincero e sem rodeio — para ninguém pensar sozinho.',
   })
 }
 

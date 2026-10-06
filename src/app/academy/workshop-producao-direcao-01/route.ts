@@ -97,7 +97,7 @@ body.has-announce{padding-top:40px;}
   </ul>
   <div class="menu-foot">
     <a href="https://instagram.com/housemazzutti">Instagram ↗</a>
-    <a href="mailto:marketing@mztgrupo.com">marketing@mztgrupo.com</a>
+    <a href="mailto:contato@housemazzutti.com">contato@housemazzutti.com</a>
     <a href="tel:+5511952347533">+55 11 95234-7533</a>
     <span class="mono">São Paulo · BR</span>
   </div>
