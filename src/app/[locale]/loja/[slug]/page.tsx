@@ -7,9 +7,8 @@ import { createClient } from '@supabase/supabase-js'
 // os fetches do Supabase como no-store (comportamento padrão no Next 15).
 // Criado sob demanda: no topo do módulo, quebrava o build onde as envs do
 // Supabase não existem (CI), mesmo com a loja desligada pela feature flag.
-let supabasePublicClient: ReturnType<typeof createClient> | null = null
-function supabasePublic() {
-  supabasePublicClient ??= createClient(
+function createSupabasePublic() {
+  return createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
@@ -19,6 +18,12 @@ function supabasePublic() {
       },
     },
   )
+}
+// Tipo vem do retorno real: ReturnType<typeof createClient> perde o schema e
+// transforma todo resultado das queries em `never`.
+let supabasePublicClient: ReturnType<typeof createSupabasePublic> | null = null
+function supabasePublic() {
+  supabasePublicClient ??= createSupabasePublic()
   return supabasePublicClient
 }
 import Image from 'next/image'
