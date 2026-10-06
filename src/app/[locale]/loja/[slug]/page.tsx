@@ -5,16 +5,22 @@ import { createClient } from '@supabase/supabase-js'
 
 // fetch customizado com next:{revalidate:60} — evita que o Next.js 15 trate
 // os fetches do Supabase como no-store (comportamento padrão no Next 15).
-const supabasePublic = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-  {
-    global: {
-      fetch: (url: RequestInfo | URL, options: RequestInit = {}) =>
-        fetch(url, { ...options, next: { revalidate: 60 } } as RequestInit),
+// Criado sob demanda: no topo do módulo, quebrava o build onde as envs do
+// Supabase não existem (CI), mesmo com a loja desligada pela feature flag.
+let supabasePublicClient: ReturnType<typeof createClient> | null = null
+function supabasePublic() {
+  supabasePublicClient ??= createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      global: {
+        fetch: (url: RequestInfo | URL, options: RequestInit = {}) =>
+          fetch(url, { ...options, next: { revalidate: 60 } } as RequestInit),
+      },
     },
-  },
-)
+  )
+  return supabasePublicClient
+}
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import type { Metadata } from 'next'
@@ -41,7 +47,7 @@ type Props = { params: Promise<{ slug: string; locale: string }> }
 // Sem isto o Next.js trata a rota como SSR puro (no-store) mesmo com revalidate=60.
 export async function generateStaticParams() {
   if (!featureFlags.isStoreEnabled()) return []
-  const { data: products } = await supabasePublic
+  const { data: products } = await supabasePublic()
     .from('store_products')
     .select('slug')
     .eq('active', true)
@@ -53,7 +59,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!featureFlags.isStoreEnabled()) return {}
   const { slug } = await params
-  const supabase = supabasePublic
+  const supabase = supabasePublic()
   const { data: p } = await supabase
     .from('store_products')
     .select('name, description, seo_title, seo_description, og_image_url, images')
@@ -89,7 +95,7 @@ function formatPrice(cents: number, currency = 'brl') {
 export default async function ProdutoPage({ params }: Props) {
   if (!featureFlags.isStoreEnabled()) notFound()
   const { slug, locale } = await params
-  const supabase = supabasePublic
+  const supabase = supabasePublic()
 
   const { data: product } = await supabase
     .from('store_products')
