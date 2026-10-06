@@ -44,8 +44,12 @@ jobs:
       - name: Unit tests
         run: npm run test:unit --if-present
 
+      # Produção: nada high/critical. Dev (lint/test): só critical bloqueia —
+      # braces (via eslint-config-next) não tem versão corrigida e não vai para o site.
       - name: Security audit (no high/critical)
-        run: npm audit --audit-level=high
+        run: |
+          npm audit --audit-level=high --omit=dev
+          npm audit --audit-level=critical
 
       - name: Build
         run: npm run build
